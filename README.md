@@ -1,4 +1,10 @@
-# UE 5.8 Third Person demos
+# UnrealEnginePython5 Examples
+
+This is the companion examples repository for
+[`AvaloNero/UnrealEnginePython5`](https://github.com/AvaloNero/UnrealEnginePython5).
+Its history was split from the core repository, so the 0.1.0 through 0.6.0
+sample evolution remains available without keeping demo projects in the plugin
+source tree.
 
 The demo driver stages assets from Unreal Engine's official Blueprint Third
 Person template under `.build/Demos`, copies the current plugin into that
@@ -6,6 +12,12 @@ disposable project and builds it against the configured engine. It never edits
 the engine, the engine template, or the reference assets in place. Packaging
 uses UE's loose cooked-package writer so Cook and Stage are not coupled to a
 transient local Zen process.
+
+The driver needs a checkout of the core plugin. When both repositories are
+siblings named `UnrealEnginePython5` and `UnrealEnginePython5Examples`, it finds
+the plugin automatically. For any other layout, pass
+`-PluginRoot <path-to-UnrealEnginePython5>`. A core checkout that uses this
+repository as its `Demos` submodule is also detected automatically.
 
 Two variants are intentionally kept:
 
@@ -59,7 +71,7 @@ run to retain generated project build data.
 Stage or refresh the disposable project without invoking UBT:
 
 ```powershell
-.\Demos\Run-UEPThirdPersonDemo.ps1 `
+.\Run-UEPThirdPersonDemo.ps1 `
     -EngineRoot F:\UnrealEngine `
     -Mode Prepare `
     -Incremental
@@ -72,7 +84,7 @@ building the Editor:
 $env:PYTHONDONTWRITEBYTECODE = "1"
 & F:\UnrealEngine\Engine\Binaries\ThirdParty\Python3\Win64\python.exe `
     -m unittest discover `
-    -s Demos\UEPPythonThirdPerson\Tests `
+    -s UEPPythonThirdPerson\Tests `
     -p "test_*.py" `
     -v
 ```
@@ -80,7 +92,7 @@ $env:PYTHONDONTWRITEBYTECODE = "1"
 Audit the unchanged Blueprint reference assets:
 
 ```powershell
-.\Demos\Run-UEPThirdPersonDemo.ps1 `
+.\Run-UEPThirdPersonDemo.ps1 `
     -EngineRoot F:\UnrealEngine `
     -Variant PythonFirst `
     -Mode Audit `
@@ -90,7 +102,7 @@ Audit the unchanged Blueprint reference assets:
 Run the headless gameplay smoke test:
 
 ```powershell
-.\Demos\Run-UEPThirdPersonDemo.ps1 `
+.\Run-UEPThirdPersonDemo.ps1 `
     -EngineRoot F:\UnrealEngine `
     -Variant PythonFirst `
     -Mode Smoke `
@@ -112,12 +124,12 @@ UDP Messaging and TCP Messaging because the sample uses no gameplay networking.
 The demo Game target also disables Unreal Trace, so newly packaged executables
 do not open its TCP 1985 control listener. Editor Play uses the stable
 `UnrealEditor.exe` path; see the firewall note in
-[`../docs/Third_Person_Demo_0.6.0.md`](../docs/Third_Person_Demo_0.6.0.md).
+[`docs/Third_Person_Demo_0.6.0.md`](https://github.com/AvaloNero/UnrealEnginePython5/blob/dev/release-0.6.0/docs/Third_Person_Demo_0.6.0.md).
 
 Cook, package and execute the same contract in the packaged Win64 build:
 
 ```powershell
-.\Demos\Run-UEPThirdPersonDemo.ps1 `
+.\Run-UEPThirdPersonDemo.ps1 `
     -EngineRoot F:\UnrealEngine `
     -Variant PythonFirst `
     -Mode Package `
@@ -135,7 +147,7 @@ reuse those objects on later package runs; `Prepare` never invokes UBT, and
 Launch a 1280 x 720 standalone window:
 
 ```powershell
-.\Demos\Run-UEPThirdPersonDemo.ps1 `
+.\Run-UEPThirdPersonDemo.ps1 `
     -EngineRoot F:\UnrealEngine `
     -Variant PythonFirst `
     -Mode Play `
@@ -167,6 +179,6 @@ narrow C++ adapter rejects unsafe or non-authoritative writes. The automated
 lane proves the bridge against complete Lyra UE5.8 content while readiness
 automation rejects the content-free Git sample for real gameplay claims. See
 [`UEPLyraIntegration/README.md`](UEPLyraIntegration/README.md) and
-[`../docs/Lyra_Gameplay_Slice_0.5.0.md`](../docs/Lyra_Gameplay_Slice_0.5.0.md),
+[`docs/Lyra_Gameplay_Slice_0.5.0.md`](https://github.com/AvaloNero/UnrealEnginePython5/blob/dev/release-0.6.0/docs/Lyra_Gameplay_Slice_0.5.0.md),
 plus the historical 0.4 boundary in
-[`../docs/Lyra_Integration_0.4.0.md`](../docs/Lyra_Integration_0.4.0.md).
+[`docs/Lyra_Integration_0.4.0.md`](https://github.com/AvaloNero/UnrealEnginePython5/blob/dev/release-0.6.0/docs/Lyra_Integration_0.4.0.md).

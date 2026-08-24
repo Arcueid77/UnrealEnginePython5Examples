@@ -1,0 +1,14 @@
+.build/
+.vs/
+.idea/
+
+**/Binaries/
+**/Build/
+**/DerivedDataCache/
+**/Intermediate/
+**/Saved/
+
+__pycache__/
+*.py[cod]
+*.sln
+*.VC.db

@@ -422,7 +422,7 @@ try {
         }
         Copy-DirectoryContents $overlayScripts $stagedScripts
     }
-    Set-Content -LiteralPath $stageMarker -Value "Managed by Demos/Run-UEPThirdPersonDemo.ps1" -Encoding utf8
+    Set-Content -LiteralPath $stageMarker -Value "Managed by Run-UEPThirdPersonDemo.ps1" -Encoding utf8
 
     New-Item -ItemType Directory -Path $pluginStage -Force | Out-Null
     foreach ($directoryName in @("Source", "Config", "Resources")) {
