@@ -2,7 +2,7 @@
 
 This is the companion examples repository for
 [`AvaloNero/UnrealEnginePython5`](https://github.com/AvaloNero/UnrealEnginePython5).
-Its history was split from the core repository, so the 0.1.0 through 0.6.0
+Its history was split from the core repository, so the 0.1.0 through 0.7.0
 sample evolution remains available without keeping demo projects in the plugin
 source tree.
 
@@ -19,12 +19,31 @@ the plugin automatically. For any other layout, pass
 `-PluginRoot <path-to-UnrealEnginePython5>`. A core checkout that uses this
 repository as its `Demos` submodule is also detected automatically.
 
-Two variants are intentionally kept:
+Three variants are intentionally kept:
 
 | Variant | Purpose | Runtime gameplay owner |
 | --- | --- | --- |
 | `Overlay` | 0.1.0 compatibility sample | Official Blueprint template plus Python pickups and companion |
 | `PythonFirst` | 0.6.0 playable sample | Dynamic Python gameplay classes, collectible loop and viewport HUD |
+| `Mixin` | 0.7.0 retained-class sample | Official Blueprint classes with Python `Move`/`Aim`, collectible loop and viewport HUD |
+
+## Blueprint mixin gameplay
+
+The 0.7.0 `Mixin` variant keeps the runtime types
+`BP_ThirdPersonGameMode_C`, `BP_ThirdPersonPlayerController_C` and
+`BP_ThirdPersonCharacter_C`. The official Enhanced Input EventGraph still
+receives actions, but its `Move` and `Aim` calls are redirected to Python. A
+mixed `ReceiveBeginPlay` explicitly calls the preserved original before adding
+Python behavior. Blueprint/native jump, camera setup and `ABP_Unarmed_C` remain
+unchanged.
+
+The smoke contract unregisters the mixin on the already spawned pawn, proves
+that the original Blueprint `Move` function is restored and playable, then
+registers a new generation on that same object and proves Python movement
+again. It also rejects an invalid Python signature without disturbing the
+active generation and checks per-object init/teardown for both generations.
+This is the live-instance behavior that subclass-based PythonFirst does not
+provide.
 
 ## Python-first gameplay
 
@@ -76,6 +95,27 @@ Stage or refresh the disposable project without invoking UBT:
     -Mode Prepare `
     -Incremental
 ```
+
+Select the retained-class version with `-Variant Mixin`. Its headless runtime
+gate is:
+
+```powershell
+.\Run-UEPThirdPersonDemo.ps1 `
+    -EngineRoot F:\UnrealEngine `
+    -Variant Mixin `
+    -Mode Smoke `
+    -Incremental
+```
+
+That gate requires the original `BP_*_C` class identities, Python Move/Aim,
+an explicit original BeginPlay call, retained Blueprint jump/animation, the
+collectible/HUD loop, live unregister/re-register and final restoration.
+It also checks registration-time signature rejection and per-object lifecycle
+teardown.
+
+Current headless evidence is result `20260829-225225` on UE 5.8.0 and engine
+CPython 3.11.8. The Mixin Cook/package and visible-client lanes have not yet
+been run for 0.7.0.
 
 Test the Unreal-independent round state with UE's bundled CPython 3.11 without
 building the Editor:
@@ -159,6 +199,10 @@ and Space or the gamepad face button to jump. Touch all six floating orbs to
 complete the round. The viewport HUD displays the objective, score, timer, speed
 and Python locomotion state. The staged project is
 `.build/Demos/UEPPythonThirdPerson/UEPPythonThirdPerson.uproject`.
+
+To play the same project with official Blueprint class identities and mixed
+Python Move/Aim, change the command to `-Variant Mixin`. The HUD title shows
+which ownership model is active.
 
 ## 0.1.0 overlay regression
 

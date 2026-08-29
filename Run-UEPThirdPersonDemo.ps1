@@ -2,7 +2,7 @@
 param(
     [string]$EngineRoot = "F:\UnrealEngine",
     [string]$PluginRoot = "",
-    [ValidateSet("Overlay", "PythonFirst")]
+    [ValidateSet("Overlay", "PythonFirst", "Mixin")]
     [string]$Variant = "PythonFirst",
     [ValidateSet("Prepare", "Audit", "Smoke", "Package", "Play", "Editor")]
     [string]$Mode = "Prepare",
@@ -200,7 +200,7 @@ function Assert-PythonFirstReport {
         $Report.engine_version[0] -ne 5 -or
         $Report.engine_version[1] -ne 8 -or
         $Report.python_version -notlike "3.11.*" -or
-        $Report.uep_version -ne "0.6.0" -or
+        $Report.uep_version -ne "0.7.0" -or
         $Report.demo_version -ne "0.6.0" -or
         $Report.game_mode_class -ne "UEPThirdPersonGameMode" -or
         $Report.controller_class -ne "UEPThirdPersonPlayerController" -or
@@ -252,6 +252,78 @@ function Assert-PythonFirstReport {
     }
 }
 
+function Assert-MixinReport {
+    param(
+        [Parameter(Mandatory = $true)][psobject]$Report,
+        [Parameter(Mandatory = $true)][string]$ResultPath,
+        [Parameter(Mandatory = $true)][string]$Label
+    )
+
+    if ($Report.status -ne "passed") {
+        $details = if ($Report.PSObject.Properties.Name -contains "error") {
+            "`n$($Report.error)"
+        }
+        else {
+            ""
+        }
+        throw "Mixin demo $Label reported failure: $ResultPath$details"
+    }
+
+    $expectedFunctions = @("Aim", "Move", "ReceiveBeginPlay")
+    $registeredFunctions = @($Report.registration_before.functions)
+    $reregisteredFunctions = @($Report.registration_after_reregister.functions)
+    if ($Report.schema_version -ne 1 -or
+        @($Report.engine_version).Count -ne 3 -or
+        $Report.engine_version[0] -ne 5 -or
+        $Report.engine_version[1] -ne 8 -or
+        $Report.python_version -notlike "3.11.*" -or
+        $Report.uep_version -ne "0.7.0" -or
+        $Report.demo_version -ne "0.7.0" -or
+        $Report.game_mode_class -ne "BP_ThirdPersonGameMode_C" -or
+        $Report.controller_class -ne "BP_ThirdPersonPlayerController_C" -or
+        $Report.character_class -ne "BP_ThirdPersonCharacter_C" -or
+        $Report.registration_before.target_class -ne "BP_ThirdPersonCharacter_C" -or
+        $registeredFunctions.Count -ne $expectedFunctions.Count -or
+        @(Compare-Object $registeredFunctions $expectedFunctions).Count -ne 0 -or
+        $Report.registration_after_reregister.registration_id -eq
+            $Report.registration_before.registration_id -or
+        $reregisteredFunctions.Count -ne $expectedFunctions.Count -or
+        @(Compare-Object $reregisteredFunctions $expectedFunctions).Count -ne 0 -or
+        !$Report.invalid_registration.rejected -or
+        !$Report.invalid_registration.preserved_active -or
+        !$Report.initial_snapshot.initialized -or
+        $Report.initial_snapshot.initializations -ne 1 -or
+        $Report.initial_snapshot.teardowns -ne 0 -or
+        $Report.initial_snapshot.begin_play -ne 1 -or
+        $Report.initial_snapshot.original_begin_play -ne 1 -or
+        $Report.pre_restore_snapshot.move -le 0 -or
+        $Report.pre_restore_snapshot.aim -le 0 -or
+        $Report.movement_distance -le 25.0 -or
+        $Report.look_delta -le 0.1 -or
+        $Report.jump_height -le 10.0 -or
+        $Report.blueprint_original_move_distance -le 25.0 -or
+        $Report.live_reregister_move_distance -le 25.0 -or
+        !$Report.function_identity.injected_differs_from_restored -or
+        !$Report.function_identity.restored_differs_from_reregistered -or
+        $Report.gameplay.progress.phase -ne "victory" -or
+        $Report.gameplay.progress.round_score -ne 6 -or
+        $Report.gameplay.remaining_pickups -ne 0 -or
+        !$Report.gameplay.companion_valid -or
+        $Report.gameplay.companion_movement -le 1.0 -or
+        !$Report.gameplay.hud.attached -or
+        $Report.gameplay.hud.update_count -le 0 -or
+        $Report.teardown.unregister_all_count -ne 1 -or
+        $Report.teardown.mixin_count -ne 0 -or
+        $Report.teardown.initialization_events -ne 2 -or
+        $Report.teardown.teardown_events -ne 2 -or
+        $Report.teardown.runtime_active -ne $false -or
+        !$Report.teardown.session_released -or
+        !$Report.teardown.class_preserved -or
+        !$Report.teardown.helper_removed) {
+        throw "Mixin demo $Label report failed its contract: $ResultPath"
+    }
+}
+
 $embeddedPluginRoot = Get-FullPath (Join-Path $PSScriptRoot "..")
 $isEmbeddedInPlugin = Test-Path -LiteralPath (
     Join-Path $embeddedPluginRoot "UnrealEnginePython.uplugin"
@@ -280,9 +352,15 @@ $engineRootPath = Get-FullPath $EngineRoot
 $engineVersionPath = Join-Path $engineRootPath "Engine\Build\Build.version"
 $templateRoot = Join-Path $engineRootPath "Templates\TP_ThirdPersonBP"
 $templateResourcesRoot = Join-Path $engineRootPath "Templates\TemplateResources\High"
-$demoName = if ($Variant -eq "PythonFirst") { "UEPPythonThirdPerson" } else { "UEPThirdPersonDemo" }
+$demoName = if ($Variant -eq "Overlay") { "UEPThirdPersonDemo" } else { "UEPPythonThirdPerson" }
 $projectFileName = "$demoName.uproject"
 $overlayRoot = Join-Path $PSScriptRoot "$demoName\Overlay"
+$variantOverlayRoot = if ($Variant -eq "Mixin") {
+    Join-Path $PSScriptRoot "UEPPythonThirdPerson\Mixin"
+}
+else {
+    $null
+}
 $demoBuildRoot = Join-Path $demoWorkspaceRoot ".build\Demos"
 $stageRoot = Join-Path $demoBuildRoot $demoName
 $stageMarker = Join-Path $stageRoot ".uep-demo-stage"
@@ -321,14 +399,19 @@ foreach ($requiredFile in @(
         throw "Required file was not found: $requiredFile"
     }
 }
+if ($variantOverlayRoot -and !(Test-Path -LiteralPath (
+    Join-Path $variantOverlayRoot "Content\Scripts\ue_site.py"
+) -PathType Leaf)) {
+    throw "Mixin overlay was not found: $variantOverlayRoot"
+}
 
 $engineVersion = Get-Content -LiteralPath $engineVersionPath -Raw | ConvertFrom-Json
 if ($engineVersion.MajorVersion -ne 5 -or $engineVersion.MinorVersion -ne 8) {
     throw "Expected Unreal Engine 5.8, found $($engineVersion.MajorVersion).$($engineVersion.MinorVersion).$($engineVersion.PatchVersion)"
 }
 
-if ($Variant -ne "PythonFirst" -and $Mode -in @("Audit", "Package")) {
-    throw "Mode $Mode is available only for the PythonFirst variant"
+if ($Variant -eq "Overlay" -and $Mode -in @("Audit", "Package")) {
+    throw "Mode $Mode is available only for the PythonFirst and Mixin variants"
 }
 
 New-Item -ItemType Directory -Path $demoBuildRoot -Force | Out-Null
@@ -422,6 +505,9 @@ try {
         }
         Copy-DirectoryContents $overlayScripts $stagedScripts
     }
+    if ($variantOverlayRoot) {
+        Copy-DirectoryContents $variantOverlayRoot $stageRoot
+    }
     Set-Content -LiteralPath $stageMarker -Value "Managed by Run-UEPThirdPersonDemo.ps1" -Encoding utf8
 
     New-Item -ItemType Directory -Path $pluginStage -Force | Out-Null
@@ -438,7 +524,7 @@ try {
     $buildLog = $null
     if ($Mode -ne "Prepare") {
         $buildLog = Join-Path $resultRoot "build-editor.log"
-        $editorTarget = if ($Variant -eq "PythonFirst") {
+        $editorTarget = if ($Variant -ne "Overlay") {
             "UEPPythonThirdPersonEditor"
         }
         else {
@@ -456,7 +542,7 @@ try {
             "-MaxParallelActions=$MaxParallelActions",
             "-Log=$buildLog"
         )
-        if ($Variant -ne "PythonFirst") {
+        if ($Variant -eq "Overlay") {
             $buildArguments += "-plugin=$pluginDescriptor"
         }
         Invoke-CheckedProcess -FilePath $dotnetPath -ArgumentList $buildArguments -Label "Build demo plugin" -WorkingDirectory $repoRoot -TimeoutSeconds 3600
@@ -532,11 +618,10 @@ try {
         else {
             "/Game/ThirdPerson/Lvl_ThirdPerson"
         }
-        $smokeResultArgument = if ($Variant -eq "PythonFirst") {
-            "-UEPPythonThirdPersonSmokeResult=$smokeResultPath"
-        }
-        else {
-            "-UEPDemoSmokeResult=$smokeResultPath"
+        $smokeResultArgument = switch ($Variant) {
+            "PythonFirst" { "-UEPPythonThirdPersonSmokeResult=$smokeResultPath" }
+            "Mixin" { "-UEPMixinThirdPersonSmokeResult=$smokeResultPath" }
+            default { "-UEPDemoSmokeResult=$smokeResultPath" }
         }
         $smokeArguments = @(
             $projectPath,
@@ -569,6 +654,12 @@ try {
                 -ResultPath $smokeResultPath `
                 -Label "smoke"
         }
+        elseif ($Variant -eq "Mixin") {
+            Assert-MixinReport `
+                -Report $smokeReport `
+                -ResultPath $smokeResultPath `
+                -Label "smoke"
+        }
         elseif ($smokeReport.status -ne "passed" -or
             !$smokeReport.companion_valid -or
             $smokeReport.pickup_count -ne 6 -or
@@ -589,6 +680,20 @@ try {
                 "UEP_PYTHON_THIRD_PERSON_SMOKE_PASSED"
             )
         }
+        elseif ($Variant -eq "Mixin") {
+            @(
+                "Initialized engine CPython at",
+                "UEP_MIXIN_THIRD_PERSON_SCRIPT_LOADED",
+                "UEP_MIXIN_THIRD_PERSON_REGISTERED",
+                "UEP_MIXIN_THIRD_PERSON_CHARACTER_READY",
+                "UEP_MIXIN_THIRD_PERSON_WORLD_READY",
+                "UEP_PYTHON_THIRD_PERSON_GAMEPLAY_READY",
+                "UEP_PYTHON_THIRD_PERSON_HUD_READY",
+                "UEP_PYTHON_THIRD_PERSON_ROUND_COMPLETE",
+                "UEP_PYTHON_THIRD_PERSON_HUD_RELEASED",
+                "UEP_MIXIN_THIRD_PERSON_SMOKE_PASSED"
+            )
+        }
         else {
             @(
                 "Initialized engine CPython at",
@@ -602,11 +707,10 @@ try {
                 throw "Demo log does not contain '$marker': $smokeLogPath"
             }
         }
-        $variantFailureMarker = if ($Variant -eq "PythonFirst") {
-            "UEP_PYTHON_THIRD_PERSON_SMOKE_FAILED"
-        }
-        else {
-            "UEP_DEMO_SMOKE_FAILED"
+        $variantFailureMarker = switch ($Variant) {
+            "PythonFirst" { "UEP_PYTHON_THIRD_PERSON_SMOKE_FAILED" }
+            "Mixin" { "UEP_MIXIN_THIRD_PERSON_SMOKE_FAILED" }
+            default { "UEP_DEMO_SMOKE_FAILED" }
         }
         foreach ($failureMarker in @(
             "Fatal error:",
@@ -682,7 +786,7 @@ try {
             uebp_LogFolder = $packageLogRoot
             uebp_FinalLogFolder = $packageLogRoot
         }
-        Invoke-CheckedProcess -FilePath $dotnetPath -ArgumentList $packageArguments -Label "Cook and package Python-first demo" -WorkingDirectory $engineRootPath -TimeoutSeconds 3600 -EnvironmentVariables $packageEnvironment
+        Invoke-CheckedProcess -FilePath $dotnetPath -ArgumentList $packageArguments -Label "Cook and package $Variant demo" -WorkingDirectory $engineRootPath -TimeoutSeconds 3600 -EnvironmentVariables $packageEnvironment
         Assert-AutomationLog $packageLog
 
         $packagedExecutable = Get-ChildItem -LiteralPath $packageRoot -Filter "$demoName.exe" -File -Recurse |
@@ -694,7 +798,18 @@ try {
 
         $packagedResultPath = Join-Path $resultRoot "packaged-smoke.json"
         $packagedLogPath = Join-Path $resultRoot "packaged-smoke.log"
-        $packagedGameUrl = "/Game/ThirdPerson/Lvl_ThirdPerson?game=/Engine/Transient.UEPThirdPersonGameMode"
+        $packagedGameUrl = if ($Variant -eq "PythonFirst") {
+            "/Game/ThirdPerson/Lvl_ThirdPerson?game=/Engine/Transient.UEPThirdPersonGameMode"
+        }
+        else {
+            "/Game/ThirdPerson/Lvl_ThirdPerson"
+        }
+        $packagedSmokeArgument = if ($Variant -eq "PythonFirst") {
+            "-UEPPythonThirdPersonSmokeResult=$packagedResultPath"
+        }
+        else {
+            "-UEPMixinThirdPersonSmokeResult=$packagedResultPath"
+        }
         $packagedArguments = @(
             $packagedGameUrl,
             "-unattended",
@@ -706,40 +821,71 @@ try {
             "-DisablePython",
             $disableNetworkPluginsArgument,
             $disableTraceServerArgument,
-            "-UEPPythonThirdPersonSmokeResult=$packagedResultPath",
+            $packagedSmokeArgument,
             "-abslog=$packagedLogPath"
         )
-        Invoke-CheckedProcess -FilePath $packagedExecutable -ArgumentList $packagedArguments -Label "Run packaged Python-first demo" -WorkingDirectory (Split-Path -Parent $packagedExecutable) -TimeoutSeconds 300
+        Invoke-CheckedProcess -FilePath $packagedExecutable -ArgumentList $packagedArguments -Label "Run packaged $Variant demo" -WorkingDirectory (Split-Path -Parent $packagedExecutable) -TimeoutSeconds 300
 
         if (!(Test-Path -LiteralPath $packagedResultPath -PathType Leaf) -or
             !(Test-Path -LiteralPath $packagedLogPath -PathType Leaf)) {
             throw "Packaged demo did not create its smoke result and log"
         }
         $packagedReport = Get-Content -LiteralPath $packagedResultPath -Raw | ConvertFrom-Json
-        Assert-PythonFirstReport `
-            -Report $packagedReport `
-            -ResultPath $packagedResultPath `
-            -Label "packaged smoke"
+        if ($Variant -eq "PythonFirst") {
+            Assert-PythonFirstReport `
+                -Report $packagedReport `
+                -ResultPath $packagedResultPath `
+                -Label "packaged smoke"
+        }
+        else {
+            Assert-MixinReport `
+                -Report $packagedReport `
+                -ResultPath $packagedResultPath `
+                -Label "packaged smoke"
+        }
         $packagedLogContents = Get-Content -LiteralPath $packagedLogPath -Raw
-        foreach ($marker in @(
-            "Initialized engine CPython at",
-            "UEP_PYTHON_THIRD_PERSON_SCRIPT_LOADED",
-            "UEP_PYTHON_THIRD_PERSON_CLASSES_READY",
-            "UEP_PYTHON_THIRD_PERSON_WORLD_READY",
-            "UEP_PYTHON_THIRD_PERSON_GAMEPLAY_READY",
-            "UEP_PYTHON_THIRD_PERSON_HUD_READY",
-            "UEP_PYTHON_THIRD_PERSON_ROUND_COMPLETE",
-            "UEP_PYTHON_THIRD_PERSON_HUD_RELEASED",
-            "UEP_PYTHON_THIRD_PERSON_SMOKE_PASSED"
-        )) {
+        $packagedMarkers = if ($Variant -eq "PythonFirst") {
+            @(
+                "Initialized engine CPython at",
+                "UEP_PYTHON_THIRD_PERSON_SCRIPT_LOADED",
+                "UEP_PYTHON_THIRD_PERSON_CLASSES_READY",
+                "UEP_PYTHON_THIRD_PERSON_WORLD_READY",
+                "UEP_PYTHON_THIRD_PERSON_GAMEPLAY_READY",
+                "UEP_PYTHON_THIRD_PERSON_HUD_READY",
+                "UEP_PYTHON_THIRD_PERSON_ROUND_COMPLETE",
+                "UEP_PYTHON_THIRD_PERSON_HUD_RELEASED",
+                "UEP_PYTHON_THIRD_PERSON_SMOKE_PASSED"
+            )
+        }
+        else {
+            @(
+                "Initialized engine CPython at",
+                "UEP_MIXIN_THIRD_PERSON_SCRIPT_LOADED",
+                "UEP_MIXIN_THIRD_PERSON_REGISTERED",
+                "UEP_MIXIN_THIRD_PERSON_CHARACTER_READY",
+                "UEP_MIXIN_THIRD_PERSON_WORLD_READY",
+                "UEP_PYTHON_THIRD_PERSON_GAMEPLAY_READY",
+                "UEP_PYTHON_THIRD_PERSON_HUD_READY",
+                "UEP_PYTHON_THIRD_PERSON_ROUND_COMPLETE",
+                "UEP_PYTHON_THIRD_PERSON_HUD_RELEASED",
+                "UEP_MIXIN_THIRD_PERSON_SMOKE_PASSED"
+            )
+        }
+        foreach ($marker in $packagedMarkers) {
             if (!$packagedLogContents.Contains($marker)) {
                 throw "Packaged demo log does not contain '$marker': $packagedLogPath"
             }
         }
+        $packagedFailureMarker = if ($Variant -eq "PythonFirst") {
+            "UEP_PYTHON_THIRD_PERSON_SMOKE_FAILED"
+        }
+        else {
+            "UEP_MIXIN_THIRD_PERSON_SMOKE_FAILED"
+        }
         foreach ($failureMarker in @(
             "Fatal error:",
             "Assertion failed:",
-            "UEP_PYTHON_THIRD_PERSON_SMOKE_FAILED"
+            $packagedFailureMarker
         )) {
             if ($packagedLogContents.Contains($failureMarker)) {
                 throw "Packaged demo log contains '$failureMarker': $packagedLogPath"
@@ -763,7 +909,7 @@ try {
         }
         $summaryPath = Join-Path $resultRoot "summary.json"
         $summary | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath $summaryPath -Encoding utf8
-        Write-Host "UEP Third Person PythonFirst packaged smoke test passed."
+        Write-Host "UEP Third Person $Variant packaged smoke test passed."
         Write-Host "Summary: $summaryPath"
     }
     elseif ($Mode -eq "Play") {
@@ -796,7 +942,7 @@ try {
             $disableTraceServerArgument
         ) -WorkingDirectory $stageRoot -PassThru
         Write-Host "Demo editor launched (PID $($process.Id)) for asset inspection."
-        Write-Host "Use -Mode Play to launch the PythonFirst GameMode in Standalone."
+        Write-Host "Use -Mode Play to launch the selected variant in Standalone."
     }
     else {
         Write-Host "UEP Third Person demo is ready."

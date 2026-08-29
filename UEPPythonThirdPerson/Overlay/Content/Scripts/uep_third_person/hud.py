@@ -29,7 +29,13 @@ SECONDARY_SLATE = SlateColor(SpecifiedColor=SECONDARY_LINEAR)
 class ThirdPersonHUD:
     """Own one Slate tree and attach it to one game viewport."""
 
-    def __init__(self):
+    def __init__(
+        self,
+        title="UEP 0.6  |  PYTHON THIRD PERSON",
+        status_label="PYTHON CHARACTER",
+    ):
+        self.title = title
+        self.status_label = status_label
         self.root = None
         self.viewport = None
         self.attached = False
@@ -43,7 +49,7 @@ class ThirdPersonHUD:
 
     def _build(self):
         title = STextBlock(
-            text="UEP 0.6  |  PYTHON THIRD PERSON",
+            text=self.title,
             color_and_opacity=TITLE_SLATE,
         )
         self.objective_text = STextBlock(
@@ -170,7 +176,8 @@ class ThirdPersonHUD:
             )
         )
         self.status_text.set_text(
-            "PYTHON CHARACTER  |  speed {0:03d}  |  {1}".format(
+            "{0}  |  speed {1:03d}  |  {2}".format(
+                self.status_label,
                 int(speed),
                 animation.upper(),
             )
