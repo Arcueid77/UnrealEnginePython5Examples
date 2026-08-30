@@ -6,6 +6,8 @@ import sys
 import traceback
 
 import unreal_engine as ue
+from unreal_engine import FTransform, FVector
+from unreal_engine.classes import Actor
 from unreal_engine.structs import Key
 
 from uep_third_person.constants import PICKUP_COUNT
@@ -13,9 +15,20 @@ from uep_third_person.utils import gameplay_objects, is_valid, request_exit
 
 from . import __version__ as DEMO_VERSION
 from .character_mixin import (
+    BLUEPRINT_FALLBACK_PROFILE,
     BP_THIRD_PERSON_CHARACTER,
     MIXED_FUNCTIONS,
+    PROFILE_FUNCTIONS,
+    PYTHON_PROFILE,
+    arm_reentrancy_probe,
     register_character_mixin,
+    register_character_profiles_direct,
+    reentrancy_probe_snapshot,
+)
+from .interface_probe import (
+    BLUEPRINT_FALLBACK_PROFILE as INTERFACE_FALLBACK_PROFILE,
+    PROBE_CHILD_CLASS_PATH,
+    PROBE_CLASS_PATH,
 )
 
 
@@ -46,18 +59,32 @@ class MixinThirdPersonSmoke:
         self.movement_distance = 0.0
         self.look_delta = 0.0
         self.jump_height = 0.0
+        self.profile_fallback_move_distance = 0.0
         self.original_restore_distance = 0.0
+        self.direct_reregister_distance = 0.0
         self.live_reregister_distance = 0.0
         self.initial_snapshot = None
         self.pre_restore_snapshot = None
         self.restored_move_function = None
         self.injected_move_function = None
+        self.direct_registered_move_function = None
         self.re_registered_move_function = None
         self.registration_before = None
+        self.registration_direct = None
         self.registration_after_reregister = None
         self.first_teardown_events = 0
+        self.declared_initializations_before = 0
+        self.declared_teardowns_before = 0
         self.invalid_registration_rejected = False
         self.invalid_registration_preserved_active = False
+        self.profile_peer = None
+        self.profile_peer_snapshot = None
+        self.profile_router_report = None
+        self.character_interface = None
+        self.interface_contract = None
+        self.interface_probe_owners = []
+        self.interface_probe_components = []
+        self.reentrancy_report = None
         self.gameplay_report = None
         self.teardown_report = None
 
@@ -79,6 +106,13 @@ class MixinThirdPersonSmoke:
         for registration in ue.get_registered_mixins():
             target = registration.get("target_class")
             if target is not None and target.get_name() == "BP_ThirdPersonCharacter_C":
+                return registration
+        return None
+
+    def _registered_mixin(self, class_name):
+        for registration in ue.get_registered_mixins():
+            target = registration.get("target_class")
+            if target is not None and target.get_name() == class_name:
                 return registration
         return None
 
@@ -115,7 +149,174 @@ class MixinThirdPersonSmoke:
                 + ", ".join(actual)
             )
 
-    def _validate_initial_contract(self, game_mode, controller, pawn):
+    def _validate_interface_contract(self, world, pawn):
+        interface_class = ue.find_class("UEPPythonMixinInterface")
+        if interface_class is None:
+            raise RuntimeError("UEPPythonMixinInterface reflection is missing")
+
+        probe_class = ue.load_class(PROBE_CLASS_PATH)
+        child_class = ue.load_class(PROBE_CHILD_CLASS_PATH)
+        if probe_class is None or child_class is None:
+            raise RuntimeError("asset-authored Mixin Interface probe classes are missing")
+
+        registration = self._registered_mixin("BP_MixinInterfaceProbe_C")
+        if registration is None:
+            raise RuntimeError("package-load discovery did not register the Interface BP")
+        if self._registered_mixin("BP_MixinInterfaceProbeChild_C") is not None:
+            raise RuntimeError("inherited Interface child incorrectly owns a second router")
+        mixin_set = registration.get("mixin_set")
+        if mixin_set is None:
+            raise RuntimeError("declared Interface router lost its Mixin Set")
+        if registration.get("default_profile") != INTERFACE_FALLBACK_PROFILE:
+            raise RuntimeError("Interface probe has the wrong default profile")
+        profile_functions = {
+            name: tuple(sorted(profile["functions"]))
+            for name, profile in registration.get("profiles", {}).items()
+        }
+        if profile_functions != {
+            "ArrayRoute": (
+                "AddInstances",
+                "BatchUpdateInstancesTransforms",
+            ),
+            "BlueprintFallback": ("SetCullDistances",),
+        }:
+            raise RuntimeError(
+                "unexpected Interface probe profile union: "
+                + repr(profile_functions)
+            )
+
+        for index, component_class in enumerate((probe_class, child_class)):
+            owner = world.actor_spawn(
+                Actor,
+                pawn.get_actor_location() + FVector(0.0, 800.0 + index * 150.0, 0.0),
+            )
+            if not is_valid(owner):
+                raise RuntimeError("unable to spawn an Interface probe owner")
+            component = owner.add_actor_component(
+                component_class,
+                f"UEPMixinInterfaceProbe{index}",
+            )
+            if not is_valid(component):
+                raise RuntimeError("unable to create an Interface probe component")
+            self.interface_probe_owners.append(owner)
+            self.interface_probe_components.append(component)
+
+        fallback_results = []
+        snapshots = []
+        for index, component in enumerate(self.interface_probe_components):
+            if ue.get_mixin_profile(component) != INTERFACE_FALLBACK_PROFILE:
+                raise RuntimeError("Interface graph did not select its constant profile")
+            explicit_result = component.call_mixin_original(
+                "AddInstances",
+                [FTransform()],
+                True,
+                False,
+                False,
+            )
+            explicit_return = (
+                explicit_result[0]
+                if isinstance(explicit_result, tuple)
+                else explicit_result
+            )
+            if explicit_return != [0]:
+                raise RuntimeError(
+                    "explicit original AddInstances call lost its native return: "
+                    + repr(explicit_result)
+                )
+            component.ClearInstances()
+            call_result = component.AddInstances(
+                [FTransform()],
+                True,
+                False,
+                False,
+            )
+            # UEP's public Python UFunction API retains its historical convention
+            # of echoing const array refs as tuple outputs. The first element is
+            # the real return value populated by the preserved native UFunction.
+            return_value = call_result[0] if isinstance(call_result, tuple) else call_result
+            if return_value != [0]:
+                raise RuntimeError(
+                    "automatic original fallback lost the AddInstances return value: "
+                    + repr(call_result)
+                )
+
+            explicit_scalar_result = component.call_mixin_original(
+                "BatchUpdateInstancesTransforms",
+                0,
+                [FTransform()],
+                False,
+                False,
+                False,
+            )
+            explicit_scalar_return = (
+                explicit_scalar_result[0]
+                if isinstance(explicit_scalar_result, tuple)
+                else explicit_scalar_result
+            )
+            scalar_result = component.BatchUpdateInstancesTransforms(
+                0,
+                [FTransform()],
+                False,
+                False,
+                False,
+            )
+            scalar_return = (
+                scalar_result[0]
+                if isinstance(scalar_result, tuple)
+                else scalar_result
+            )
+            if explicit_scalar_return is not True or scalar_return is not True:
+                raise RuntimeError(
+                    "native scalar/const-array fallback lost its bool return: "
+                    + repr((explicit_scalar_result, scalar_result))
+                )
+            component.SetCullDistances(100 + index, 1000 + index)
+            snapshot = component.interface_probe_snapshot()
+            if snapshot["profile"] != INTERFACE_FALLBACK_PROFILE:
+                raise RuntimeError("Interface probe initialized the wrong profile")
+            if snapshot["initializations"] != 1 or snapshot["python_calls"] != 1:
+                raise RuntimeError("Interface probe lifecycle/call counters are wrong")
+            fallback_results.append(
+                {
+                    "explicit_return_value": list(explicit_return),
+                    "return_value": list(return_value),
+                    "tuple_arity": len(call_result)
+                    if isinstance(call_result, tuple)
+                    else 0,
+                    "const_input_echo_count": len(call_result[1])
+                    if isinstance(call_result, tuple) and len(call_result) > 1
+                    else 0,
+                    "scalar_fallback": {
+                        "explicit_return": explicit_scalar_return,
+                        "automatic_return": scalar_return,
+                        "tuple_arity": len(scalar_result)
+                        if isinstance(scalar_result, tuple)
+                        else 0,
+                        "const_input_echo_count": len(scalar_result[1])
+                        if isinstance(scalar_result, tuple) and len(scalar_result) > 1
+                        else 0,
+                    },
+                }
+            )
+            snapshots.append(snapshot)
+
+        self.interface_contract = {
+            "interface_class": interface_class.get_name(),
+            "mixin_set_class": mixin_set.get_class().get_name(),
+            "mixin_set_asset": mixin_set.get_name(),
+            "default_profile": registration["default_profile"],
+            "profile_count": len(registration["profiles"]),
+            "declaring_class": registration["target_class"].get_name(),
+            "inherited_child_class": child_class.get_name(),
+            "router_owner_count": 1,
+            "profile_functions": profile_functions,
+            "fallback_results": fallback_results,
+            "snapshots": snapshots,
+        }
+
+    def _validate_initial_contract(self, world, game_mode, controller, pawn):
+        self._validate_interface_contract(world, pawn)
+
         self._assert_class_identity(game_mode, controller, pawn)
         registration = self._registered_character_mixin()
         if registration is None:
@@ -125,10 +326,50 @@ class MixinThirdPersonSmoke:
             raise RuntimeError(
                 "unexpected mixed function set: " + ", ".join(functions)
             )
+        profiles = registration.get("profiles", {})
+        actual_profile_functions = {
+            profile_name: tuple(sorted(profile["functions"]))
+            for profile_name, profile in profiles.items()
+        }
+        expected_profile_functions = {
+            profile_name: tuple(sorted(functions))
+            for profile_name, functions in PROFILE_FUNCTIONS.items()
+        }
+        if actual_profile_functions != expected_profile_functions:
+            raise RuntimeError(
+                "unexpected per-profile function map: "
+                + repr(actual_profile_functions)
+            )
+        if registration.get("default_profile") != PYTHON_PROFILE:
+            raise RuntimeError("Python is not the default character profile")
+        character_mixin_set = registration.get("mixin_set")
+        if (
+            character_mixin_set is None
+            or character_mixin_set.get_name() != "DA_ThirdPersonCharacterMixin"
+        ):
+            raise RuntimeError("playable Character was not registered from its Mixin Set")
+        character_cdo = BP_THIRD_PERSON_CHARACTER.get_cdo()
+        cdo_mixin_set = character_cdo.GetPythonMixinSet()
+        cdo_profile = str(character_cdo.GetPythonMixinProfile())
+        if cdo_mixin_set != character_mixin_set:
+            raise RuntimeError("Character CDO returned a different Mixin Set")
+        if cdo_profile != PYTHON_PROFILE:
+            raise RuntimeError("Character CDO profile variable is not Python")
+        if str(pawn.PythonMixinProfile) != PYTHON_PROFILE:
+            raise RuntimeError("spawned Character lost its Blueprint profile default")
+        self.character_interface = {
+            "mixin_set": character_mixin_set.get_name(),
+            "profile_variable": "PythonMixinProfile",
+            "cdo_profile": cdo_profile,
+            "pawn_profile_property": str(pawn.PythonMixinProfile),
+        }
         self.registration_before = {
             "registration_id": registration["registration_id"],
             "target_class": registration["target_class"].get_name(),
             "functions": functions,
+            "default_profile": registration["default_profile"],
+            "profiles": actual_profile_functions,
+            "mixin_set": character_mixin_set.get_name(),
         }
 
         snapshot = pawn.mixin_snapshot()
@@ -140,8 +381,52 @@ class MixinThirdPersonSmoke:
             raise RuntimeError("Python did not call the original BeginPlay implementation")
         if snapshot["initializations"] != 1 or snapshot["teardowns"] != 0:
             raise RuntimeError("initial mixin lifecycle counters are incorrect")
+        if snapshot["profile"] != PYTHON_PROFILE:
+            raise RuntimeError("live pawn did not select the default Python profile")
         self.initial_snapshot = snapshot
         self.injected_move_function = pawn.find_function("Move")
+
+        peer_location = pawn.get_actor_location() + FVector(0.0, 400.0, 50.0)
+        self.profile_peer = world.actor_spawn(
+            BP_THIRD_PERSON_CHARACTER,
+            peer_location,
+            pawn.get_actor_rotation(),
+        )
+        if not is_valid(self.profile_peer):
+            raise RuntimeError("unable to spawn the same-BP profile peer")
+        self.profile_peer.PythonMixinProfile = BLUEPRINT_FALLBACK_PROFILE
+        ue.clear_mixin_profile(self.profile_peer)
+        if ue.get_mixin_profile(self.profile_peer) != BLUEPRINT_FALLBACK_PROFILE:
+            raise RuntimeError("peer did not read its Blueprint profile variable")
+        ue.set_mixin_profile(
+            self.profile_peer,
+            PYTHON_PROFILE,
+        )
+        if ue.get_mixin_profile(self.profile_peer) != PYTHON_PROFILE:
+            raise RuntimeError("explicit profile did not override the Blueprint selector")
+        ue.clear_mixin_profile(self.profile_peer)
+        if ue.get_mixin_profile(self.profile_peer) != BLUEPRINT_FALLBACK_PROFILE:
+            raise RuntimeError("clearing the peer profile did not re-read Blueprint")
+        self.profile_peer.Aim(0.0, 0.0)
+        self.profile_peer_snapshot = self.profile_peer.mixin_snapshot()
+        if self.profile_peer.get_class() != pawn.get_class():
+            raise RuntimeError("profile peer does not share the pawn Blueprint class")
+        if ue.get_mixin_profile(pawn) != PYTHON_PROFILE:
+            raise RuntimeError("main pawn profile changed while configuring peer")
+        if ue.get_mixin_profile(self.profile_peer) != BLUEPRINT_FALLBACK_PROFILE:
+            raise RuntimeError("peer did not retain its per-instance profile")
+        if self.profile_peer_snapshot["profile"] != BLUEPRINT_FALLBACK_PROFILE:
+            raise RuntimeError("peer helper dispatch used the wrong Python class")
+        if self.profile_peer_snapshot["aim"] != 1:
+            raise RuntimeError("peer UFunction did not route to its selected profile")
+        self.profile_router_report = {
+            "same_blueprint_class": True,
+            "selection_source": "Blueprint instance variable",
+            "main_profile": ue.get_mixin_profile(pawn),
+            "peer_profile": ue.get_mixin_profile(self.profile_peer),
+            "peer_profile_property": str(self.profile_peer.PythonMixinProfile),
+            "peer_snapshot": self.profile_peer_snapshot,
+        }
 
         class InvalidSignatureMixin:
             def Move(self):
@@ -184,7 +469,7 @@ class MixinThirdPersonSmoke:
         self.finished = True
         plugin = ue.find_plugin("UnrealEnginePython")
         report = {
-            "schema_version": 1,
+            "schema_version": 4,
             "status": status,
             "engine_version": [
                 ue.ENGINE_MAJOR_VERSION,
@@ -206,18 +491,31 @@ class MixinThirdPersonSmoke:
                 pawn.get_class().get_name() if is_valid(pawn) else None
             ),
             "registration_before": self.registration_before,
+            "registration_direct": self.registration_direct,
             "registration_after_reregister": self.registration_after_reregister,
             "invalid_registration": {
                 "rejected": self.invalid_registration_rejected,
                 "preserved_active": self.invalid_registration_preserved_active,
             },
             "initial_snapshot": self.initial_snapshot,
+            "character_interface": self.character_interface,
+            "profile_router": self.profile_router_report,
+            "interface_contract": self.interface_contract,
+            "reentrancy": self.reentrancy_report,
             "pre_restore_snapshot": self.pre_restore_snapshot,
             "movement_distance": round(self.movement_distance, 3),
+            "profile_fallback_move_distance": round(
+                self.profile_fallback_move_distance,
+                3,
+            ),
             "look_delta": round(self.look_delta, 3),
             "jump_height": round(self.jump_height, 3),
             "blueprint_original_move_distance": round(
                 self.original_restore_distance,
+                3,
+            ),
+            "direct_reregister_move_distance": round(
+                self.direct_reregister_distance,
                 3,
             ),
             "live_reregister_move_distance": round(
@@ -234,6 +532,16 @@ class MixinThirdPersonSmoke:
                     self.restored_move_function is not None
                     and self.re_registered_move_function is not None
                     and self.restored_move_function is not self.re_registered_move_function
+                ),
+                "direct_differs_from_restored": (
+                    self.direct_registered_move_function is not None
+                    and self.restored_move_function is not None
+                    and self.direct_registered_move_function is not self.restored_move_function
+                ),
+                "declared_differs_from_direct": (
+                    self.re_registered_move_function is not None
+                    and self.direct_registered_move_function is not None
+                    and self.re_registered_move_function is not self.direct_registered_move_function
                 ),
             },
             "gameplay": self.gameplay_report,
@@ -256,15 +564,26 @@ class MixinThirdPersonSmoke:
             raise RuntimeError("re-registered mixin did not drive the live pawn")
         if self.live_reregister_distance <= 25.0:
             raise RuntimeError("live pawn did not move after mixin re-registration")
-        if final_snapshot["initializations"] != 2:
-            raise RuntimeError("live pawn was not initialized for the new generation")
-        if final_snapshot["teardowns"] != self.first_teardown_events:
-            raise RuntimeError("mixin teardown state was not retained across generations")
+        if final_snapshot["initializations"] != self.declared_initializations_before + 1:
+            raise RuntimeError("declared Mixin Set did not initialize the live pawn")
+        if final_snapshot["teardowns"] != self.declared_teardowns_before:
+            raise RuntimeError("declared re-registration lost prior lifecycle state")
+
+        self.reentrancy_report = reentrancy_probe_snapshot()
+        if self.reentrancy_report["initializer_mutations_rejected"] < 3:
+            raise RuntimeError("initializer registry mutations were not rejected")
+        if self.reentrancy_report["nested_peer_dispatches"] != 1:
+            raise RuntimeError("nested peer initialization did not run exactly once")
 
         unregister_all_count = ue.unregister_all_mixins()
-        if unregister_all_count != 1:
-            raise RuntimeError("final unregister_all_mixins count was not one")
+        if unregister_all_count != 2:
+            raise RuntimeError("final unregister_all_mixins count was not two")
         self.runtime.shutdown()
+        self.reentrancy_report = reentrancy_probe_snapshot()
+        if self.reentrancy_report["teardown_mutations_rejected"] < 3:
+            raise RuntimeError("teardown registry mutations were not rejected")
+        if is_valid(self.profile_peer):
+            self.profile_peer.actor_destroy()
         self.teardown_report = {
             "unregister_all_count": unregister_all_count,
             "mixin_count": len(ue.get_registered_mixins()),
@@ -276,7 +595,20 @@ class MixinThirdPersonSmoke:
                 pawn.get_class().get_name() == "BP_ThirdPersonCharacter_C"
             ),
             "helper_removed": not hasattr(pawn, "mixin_snapshot"),
+            "interface_probe": {
+                "teardowns": [
+                    component.InterfaceProbeTeardowns
+                    for component in self.interface_probe_components
+                ],
+                "helpers_removed": all(
+                    not hasattr(component, "interface_probe_snapshot")
+                    for component in self.interface_probe_components
+                ),
+            },
         }
+        for owner in self.interface_probe_owners:
+            if is_valid(owner):
+                owner.actor_destroy()
         if any(
             (
                 self.teardown_report["mixin_count"] != 0,
@@ -284,6 +616,8 @@ class MixinThirdPersonSmoke:
                 not self.teardown_report["session_released"],
                 not self.teardown_report["class_preserved"],
                 not self.teardown_report["helper_removed"],
+                self.teardown_report["interface_probe"]["teardowns"] != [1, 1],
+                not self.teardown_report["interface_probe"]["helpers_removed"],
             )
         ):
             raise RuntimeError("mixin/runtime teardown contract failed")
@@ -312,10 +646,44 @@ class MixinThirdPersonSmoke:
             if self.phase == "waiting":
                 if self.phase_elapsed >= 0.5 and self.runtime.session is not None:
                     self._validate_initial_contract(
+                        world,
                         game_mode,
                         controller,
                         pawn,
                     )
+                    self.start_location = pawn.get_actor_location()
+                    pawn.PythonMixinProfile = BLUEPRINT_FALLBACK_PROFILE
+                    ue.clear_mixin_profile(pawn)
+                    self.phase = "profile_fallback_move"
+                    self.phase_elapsed = 0.0
+                    self.phase_ticks = 0
+            elif self.phase == "profile_fallback_move":
+                if "W" not in self.held_keys:
+                    self._set_key(controller, "W", PRESSED, 1.0)
+                self.profile_fallback_move_distance = (
+                    pawn.get_actor_location() - self.start_location
+                ).length()
+                if self.phase_elapsed >= 0.8:
+                    self._set_key(controller, "W", RELEASED, 0.0)
+                    snapshot = pawn.mixin_snapshot()
+                    if snapshot["profile"] != BLUEPRINT_FALLBACK_PROFILE:
+                        raise RuntimeError("main pawn did not switch to fallback profile")
+                    if snapshot["move"] != 0:
+                        raise RuntimeError(
+                            "fallback profile unexpectedly implemented Python Move"
+                        )
+                    if self.profile_fallback_move_distance <= 25.0:
+                        raise RuntimeError(
+                            "missing profile Move did not fall back to Blueprint"
+                        )
+                    pawn.PythonMixinProfile = PYTHON_PROFILE
+                    ue.clear_mixin_profile(pawn)
+                    if ue.get_mixin_profile(self.profile_peer) != (
+                        BLUEPRINT_FALLBACK_PROFILE
+                    ):
+                        raise RuntimeError(
+                            "switching the main pawn changed the peer profile"
+                        )
                     self.start_location = pawn.get_actor_location()
                     self.phase = "moving"
                     self.phase_elapsed = 0.0
@@ -390,7 +758,10 @@ class MixinThirdPersonSmoke:
                     if hasattr(pawn, "mixin_snapshot"):
                         raise RuntimeError("mixin helper survived restoration")
                     self.first_teardown_events = pawn.PythonMixinTeardownEvents
-                    if self.first_teardown_events != 1:
+                    expected_teardown_events = (
+                        self.pre_restore_snapshot["teardowns"] + 1
+                    )
+                    if self.first_teardown_events != expected_teardown_events:
                         raise RuntimeError("per-object mixin teardown hook did not run")
                     self.restored_move_function = pawn.find_function("Move")
                     if self.restored_move_function is self.injected_move_function:
@@ -417,23 +788,85 @@ class MixinThirdPersonSmoke:
                         raise RuntimeError(
                             "restored Blueprint Move did not drive the pawn"
                         )
-                    register_character_mixin()
+                    register_character_profiles_direct()
+                    pawn.PythonMixinProfile = PYTHON_PROFILE
+                    self.profile_peer.PythonMixinProfile = BLUEPRINT_FALLBACK_PROFILE
+                    ue.clear_mixin_profile(pawn)
+                    ue.clear_mixin_profile(self.profile_peer)
+                    arm_reentrancy_probe(self.profile_peer)
                     registration = self._registered_character_mixin()
                     if registration is None:
-                        raise RuntimeError("live pawn mixin re-registration failed")
+                        raise RuntimeError("direct profile registration failed")
+                    if registration.get("mixin_set") is not None:
+                        raise RuntimeError("direct registration unexpectedly retained a Mixin Set")
+                    self.registration_direct = {
+                        "registration_id": registration["registration_id"],
+                        "target_class": registration["target_class"].get_name(),
+                        "functions": tuple(sorted(registration["functions"])),
+                        "default_profile": registration["default_profile"],
+                        "profiles": tuple(sorted(registration["profiles"])),
+                        "mixin_set": None,
+                    }
+                    if (
+                        self.registration_direct["registration_id"]
+                        == self.registration_before["registration_id"]
+                    ):
+                        raise RuntimeError("direct router generation did not change")
+                    self.direct_registered_move_function = pawn.find_function("Move")
+                    if self.direct_registered_move_function is self.restored_move_function:
+                        raise RuntimeError("direct registration kept original Move")
+                    self.start_location = pawn.get_actor_location()
+                    self._set_key(controller, "W", PRESSED, 1.0)
+                    self.phase = "direct_reregistered_move"
+                    self.phase_elapsed = 0.0
+                    self.phase_ticks = 0
+            elif self.phase == "direct_reregistered_move":
+                self.direct_reregister_distance = (
+                    pawn.get_actor_location() - self.start_location
+                ).length()
+                if self.phase_elapsed >= 0.8:
+                    self._set_key(controller, "W", RELEASED, 0.0)
+                    snapshot = pawn.mixin_snapshot()
+                    if snapshot["move"] <= 0 or self.direct_reregister_distance <= 25.0:
+                        raise RuntimeError("direct Python API did not drive the live pawn")
+                    if not ue.unregister_mixin(BP_THIRD_PERSON_CHARACTER):
+                        raise RuntimeError("unable to restore after direct API regression")
+                    if pawn.find_function("Move") is not self.restored_move_function:
+                        raise RuntimeError("direct API unregister did not restore original Move")
+
+                    self.declared_initializations_before = (
+                        pawn.PythonMixinInitializationEvents
+                    )
+                    self.declared_teardowns_before = pawn.PythonMixinTeardownEvents
+                    register_character_mixin()
+                    registration = self._registered_character_mixin()
+                    mixin_set = registration.get("mixin_set") if registration else None
+                    if (
+                        registration is None
+                        or mixin_set is None
+                        or mixin_set.get_name() != "DA_ThirdPersonCharacterMixin"
+                    ):
+                        raise RuntimeError("declared Character Mixin Set re-registration failed")
                     self.registration_after_reregister = {
                         "registration_id": registration["registration_id"],
                         "target_class": registration["target_class"].get_name(),
                         "functions": tuple(sorted(registration["functions"])),
+                        "default_profile": registration["default_profile"],
+                        "profiles": tuple(sorted(registration["profiles"])),
+                        "mixin_set": mixin_set.get_name(),
                     }
-                    if (
-                        self.registration_after_reregister["registration_id"]
-                        == self.registration_before["registration_id"]
+                    if self.registration_after_reregister["registration_id"] in (
+                        self.registration_before["registration_id"],
+                        self.registration_direct["registration_id"],
                     ):
-                        raise RuntimeError("mixin generation did not change")
+                        raise RuntimeError("declared router generation did not change")
+                    pawn.PythonMixinProfile = PYTHON_PROFILE
+                    self.profile_peer.PythonMixinProfile = BLUEPRINT_FALLBACK_PROFILE
+                    ue.clear_mixin_profile(pawn)
+                    ue.clear_mixin_profile(self.profile_peer)
                     self.re_registered_move_function = pawn.find_function("Move")
                     if self.re_registered_move_function is self.restored_move_function:
-                        raise RuntimeError("live re-registration kept original Move")
+                        raise RuntimeError("declared re-registration kept original Move")
                     self.start_location = pawn.get_actor_location()
                     self._set_key(controller, "W", PRESSED, 1.0)
                     self.phase = "reregistered_move"
@@ -454,9 +887,14 @@ class MixinThirdPersonSmoke:
             ue.log_error(details)
             self._release_keys(controller)
             try:
-                ue.unregister_mixin(BP_THIRD_PERSON_CHARACTER)
+                ue.unregister_all_mixins()
             except Exception:
                 pass
+            if is_valid(self.profile_peer):
+                self.profile_peer.actor_destroy()
+            for owner in self.interface_probe_owners:
+                if is_valid(owner):
+                    owner.actor_destroy()
             self.runtime.shutdown()
             self._write_result(
                 "failed",

@@ -25,23 +25,44 @@ Three variants are intentionally kept:
 | --- | --- | --- |
 | `Overlay` | 0.1.0 compatibility sample | Official Blueprint template plus Python pickups and companion |
 | `PythonFirst` | 0.6.0 playable sample | Dynamic Python gameplay classes, collectible loop and viewport HUD |
-| `Mixin` | 0.7.0 retained-class sample | Official Blueprint classes with Python `Move`/`Aim`, collectible loop and viewport HUD |
+| `Mixin` | 0.7.0 retained-class sample | Official Blueprint classes with per-instance Python profiles, BP fallback, collectible loop and viewport HUD |
 
 ## Blueprint mixin gameplay
 
 The 0.7.0 `Mixin` variant keeps the runtime types
 `BP_ThirdPersonGameMode_C`, `BP_ThirdPersonPlayerController_C` and
 `BP_ThirdPersonCharacter_C`. The official Enhanced Input EventGraph still
-receives actions, but its `Move` and `Aim` calls are redirected to Python. A
-mixed `ReceiveBeginPlay` explicitly calls the preserved original before adding
-Python behavior. Blueprint/native jump, camera setup and `ABP_Unarmed_C` remain
+receives actions. The default `Python` profile implements `Move` and `Aim`;
+`BlueprintFallback` implements only `Aim`, so the same class router calls the
+preserved Blueprint `Move`. A second Character with the same `BP_*_C` type holds
+that fallback profile while the player uses Python. A mixed
+`ReceiveBeginPlay` explicitly calls the preserved original before adding Python
+behavior. Blueprint/native jump, camera setup and `ABP_Unarmed_C` remain
 unchanged.
 
-The smoke contract unregisters the mixin on the already spawned pawn, proves
-that the original Blueprint `Move` function is restored and playable, then
-registers a new generation on that same object and proves Python movement
-again. It also rejects an invalid Python signature without disturbing the
-active generation and checks per-object init/teardown for both generations.
+The examples overlay owns the playable Character's
+`DA_ThirdPersonCharacterMixin` plus a same-path project copy of
+`BP_ThirdPersonCharacter`. That copy adds `UEPPythonMixinInterface`, two small
+selector graphs and an instance-editable `PythonMixinProfile` variable while
+retaining the original gameplay graphs. Normal Play registers the plain Python
+profile classes from this declaration rather than using decorators or a startup
+direct-registration side channel.
+
+Three additional regression assets live under `/Game/UEPTests`: a
+`UEPPythonMixinSet`, one component Blueprint that directly declares
+`UEPPythonMixinInterface`, and a child Blueprint that inherits it. They exercise
+late package-load discovery and inherited router ownership. All five assets are
+example-owned overlay files; the generator never edits the installed Engine
+template in place.
+
+The smoke contract switches the live pawn between profiles, invalidates the
+per-instance cache and proves missing-profile `Move` falls back automatically.
+It then unregisters the router on the already spawned pawn and proves that the
+original Blueprint `Move` function is restored and playable. Finally it tests a
+direct-API generation and a second declared-Mixin-Set generation on the same
+object, proving Python movement in both before final restoration. It also
+rejects an invalid Python signature without disturbing the active router and
+checks balanced per-profile init/teardown.
 This is the live-instance behavior that subclass-based PythonFirst does not
 provide.
 
@@ -107,15 +128,41 @@ gate is:
     -Incremental
 ```
 
-That gate requires the original `BP_*_C` class identities, Python Move/Aim,
-an explicit original BeginPlay call, retained Blueprint jump/animation, the
-collectible/HUD loop, live unregister/re-register and final restoration.
-It also checks registration-time signature rejection and per-object lifecycle
-teardown.
+That gate requires the original `BP_*_C` class identities, two simultaneous
+same-class objects with different profiles, Python Move/Aim, automatic original
+BP fallback, an explicit original BeginPlay call, retained Blueprint
+jump/animation, the collectible/HUD loop, live switching,
+unregister/re-register and final restoration. It also checks registration-time
+signature rejection, cache invalidation, callback-reentry guards, inherited
+Interface ownership, native const-array/return fallback and per-profile
+lifecycle teardown.
 
-Current headless evidence is result `20260829-225225` on UE 5.8.0 and engine
-CPython 3.11.8. The Mixin Cook/package and visible-client lanes have not yet
-been run for 0.7.0.
+After changing Mixin reflection or the Interface authoring helper, regenerate
+the five example-owned assets in the disposable stage:
+
+```powershell
+.\Run-UEPThirdPersonDemo.ps1 `
+    -EngineRoot F:\UnrealEngine `
+    -Variant Mixin `
+    -Mode GenerateMixinAssets `
+    -Incremental
+```
+
+The command builds the Editor target and copies only the five verified `.uasset`
+files back into the examples overlay: the playable Character BP/Mixin Set and
+the three regression fixtures. It does not cook/package or edit Engine/template
+content.
+
+Repeat-generation result `20260831-012003` and schema-4 headless smoke result
+`20260831-012054` pass on UE 5.8.0 and engine CPython 3.11.8. Win64 Package
+result `20260831-014230` then builds the Game target, cooks/stages/archives and
+passes the same contract from the packaged executable. Together they cover the
+asset-authored Character MixinSet/profile-variable path, same-BP instance
+selection, package-load fixture, callback-reentry, const-array/return,
+direct-API regression, declared re-registration and final restoration. The Cook
+log proves commandlet bootstrap was skipped and no runtime router was registered
+while assets were being serialized. Strict build, Cook and runtime scans are
+clean. Only the visible-client manual lane remains for this tree.
 
 Test the Unreal-independent round state with UE's bundled CPython 3.11 without
 building the Editor:

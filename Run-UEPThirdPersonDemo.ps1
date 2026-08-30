@@ -4,7 +4,7 @@ param(
     [string]$PluginRoot = "",
     [ValidateSet("Overlay", "PythonFirst", "Mixin")]
     [string]$Variant = "PythonFirst",
-    [ValidateSet("Prepare", "Audit", "Smoke", "Package", "Play", "Editor")]
+    [ValidateSet("Prepare", "GenerateMixinAssets", "Audit", "Smoke", "Package", "Play", "Editor")]
     [string]$Mode = "Prepare",
     [ValidateRange(1, 64)]
     [int]$MaxParallelActions = 4,
@@ -270,9 +270,27 @@ function Assert-MixinReport {
     }
 
     $expectedFunctions = @("Aim", "Move", "ReceiveBeginPlay")
+    $expectedProfiles = @("BlueprintFallback", "Python")
+    $expectedFallbackFunctions = @("Aim", "ReceiveBeginPlay")
     $registeredFunctions = @($Report.registration_before.functions)
+    $directFunctions = @($Report.registration_direct.functions)
     $reregisteredFunctions = @($Report.registration_after_reregister.functions)
-    if ($Report.schema_version -ne 1 -or
+    $registeredProfiles = @(
+        $Report.registration_before.profiles.PSObject.Properties.Name
+    )
+    $reregisteredProfiles = @($Report.registration_after_reregister.profiles)
+    $directProfiles = @($Report.registration_direct.profiles)
+    $interfaceFallbackResults = @($Report.interface_contract.fallback_results)
+    $interfaceSnapshots = @($Report.interface_contract.snapshots)
+    $interfaceTeardowns = @($Report.teardown.interface_probe.teardowns)
+    $interfaceArrayFunctions = @(
+        $Report.interface_contract.profile_functions.ArrayRoute
+    )
+    $expectedInterfaceArrayFunctions = @(
+        "AddInstances",
+        "BatchUpdateInstancesTransforms"
+    )
+    if ($Report.schema_version -ne 4 -or
         @($Report.engine_version).Count -ne 3 -or
         $Report.engine_version[0] -ne 5 -or
         $Report.engine_version[1] -ne 8 -or
@@ -283,12 +301,30 @@ function Assert-MixinReport {
         $Report.controller_class -ne "BP_ThirdPersonPlayerController_C" -or
         $Report.character_class -ne "BP_ThirdPersonCharacter_C" -or
         $Report.registration_before.target_class -ne "BP_ThirdPersonCharacter_C" -or
+        $Report.registration_before.default_profile -ne "Python" -or
+        $Report.registration_before.mixin_set -ne "DA_ThirdPersonCharacterMixin" -or
+        $registeredProfiles.Count -ne $expectedProfiles.Count -or
+        @(Compare-Object $registeredProfiles $expectedProfiles).Count -ne 0 -or
+        @(Compare-Object @($Report.registration_before.profiles.Python) $expectedFunctions).Count -ne 0 -or
+        @(Compare-Object @($Report.registration_before.profiles.BlueprintFallback) $expectedFallbackFunctions).Count -ne 0 -or
         $registeredFunctions.Count -ne $expectedFunctions.Count -or
         @(Compare-Object $registeredFunctions $expectedFunctions).Count -ne 0 -or
+        $Report.registration_direct.mixin_set -ne $null -or
+        $directFunctions.Count -ne $expectedFunctions.Count -or
+        @(Compare-Object $directFunctions $expectedFunctions).Count -ne 0 -or
+        $directProfiles.Count -ne $expectedProfiles.Count -or
+        @(Compare-Object $directProfiles $expectedProfiles).Count -ne 0 -or
+        $Report.registration_direct.registration_id -eq
+            $Report.registration_before.registration_id -or
         $Report.registration_after_reregister.registration_id -eq
             $Report.registration_before.registration_id -or
+        $Report.registration_after_reregister.registration_id -eq
+            $Report.registration_direct.registration_id -or
+        $Report.registration_after_reregister.mixin_set -ne "DA_ThirdPersonCharacterMixin" -or
         $reregisteredFunctions.Count -ne $expectedFunctions.Count -or
         @(Compare-Object $reregisteredFunctions $expectedFunctions).Count -ne 0 -or
+        $reregisteredProfiles.Count -ne $expectedProfiles.Count -or
+        @(Compare-Object $reregisteredProfiles $expectedProfiles).Count -ne 0 -or
         !$Report.invalid_registration.rejected -or
         !$Report.invalid_registration.preserved_active -or
         !$Report.initial_snapshot.initialized -or
@@ -296,15 +332,65 @@ function Assert-MixinReport {
         $Report.initial_snapshot.teardowns -ne 0 -or
         $Report.initial_snapshot.begin_play -ne 1 -or
         $Report.initial_snapshot.original_begin_play -ne 1 -or
+        $Report.initial_snapshot.profile -ne "Python" -or
+        $Report.character_interface.mixin_set -ne "DA_ThirdPersonCharacterMixin" -or
+        $Report.character_interface.profile_variable -ne "PythonMixinProfile" -or
+        $Report.character_interface.cdo_profile -ne "Python" -or
+        $Report.character_interface.pawn_profile_property -ne "Python" -or
+        $Report.interface_contract.interface_class -ne "UEPPythonMixinInterface" -or
+        $Report.interface_contract.mixin_set_class -ne "UEPPythonMixinSet" -or
+        $Report.interface_contract.mixin_set_asset -ne "DA_MixinInterfaceProbe" -or
+        $Report.interface_contract.default_profile -ne "BlueprintFallback" -or
+        $Report.interface_contract.profile_count -ne 2 -or
+        $Report.interface_contract.declaring_class -ne "BP_MixinInterfaceProbe_C" -or
+        $Report.interface_contract.inherited_child_class -ne "BP_MixinInterfaceProbeChild_C" -or
+        $Report.interface_contract.router_owner_count -ne 1 -or
+        @(Compare-Object $interfaceArrayFunctions $expectedInterfaceArrayFunctions).Count -ne 0 -or
+        @($Report.interface_contract.profile_functions.BlueprintFallback).Count -ne 1 -or
+        $Report.interface_contract.profile_functions.BlueprintFallback[0] -ne "SetCullDistances" -or
+        $interfaceFallbackResults.Count -ne 2 -or
+        $interfaceFallbackResults[0].explicit_return_value[0] -ne 0 -or
+        $interfaceFallbackResults[1].explicit_return_value[0] -ne 0 -or
+        $interfaceFallbackResults[0].return_value[0] -ne 0 -or
+        $interfaceFallbackResults[1].return_value[0] -ne 0 -or
+        $interfaceFallbackResults[0].tuple_arity -ne 2 -or
+        $interfaceFallbackResults[1].tuple_arity -ne 2 -or
+        $interfaceFallbackResults[0].const_input_echo_count -ne 1 -or
+        $interfaceFallbackResults[1].const_input_echo_count -ne 1 -or
+        !$interfaceFallbackResults[0].scalar_fallback.explicit_return -or
+        !$interfaceFallbackResults[1].scalar_fallback.explicit_return -or
+        !$interfaceFallbackResults[0].scalar_fallback.automatic_return -or
+        !$interfaceFallbackResults[1].scalar_fallback.automatic_return -or
+        $interfaceFallbackResults[0].scalar_fallback.tuple_arity -ne 2 -or
+        $interfaceFallbackResults[1].scalar_fallback.tuple_arity -ne 2 -or
+        $interfaceFallbackResults[0].scalar_fallback.const_input_echo_count -ne 1 -or
+        $interfaceFallbackResults[1].scalar_fallback.const_input_echo_count -ne 1 -or
+        $interfaceSnapshots.Count -ne 2 -or
+        $interfaceSnapshots[0].profile -ne "BlueprintFallback" -or
+        $interfaceSnapshots[1].profile -ne "BlueprintFallback" -or
+        $Report.reentrancy.initializer_mutations_rejected -lt 3 -or
+        $Report.reentrancy.teardown_mutations_rejected -lt 3 -or
+        $Report.reentrancy.nested_peer_dispatches -ne 1 -or
+        !$Report.profile_router.same_blueprint_class -or
+        $Report.profile_router.selection_source -ne "Blueprint instance variable" -or
+        $Report.profile_router.main_profile -ne "Python" -or
+        $Report.profile_router.peer_profile -ne "BlueprintFallback" -or
+        $Report.profile_router.peer_profile_property -ne "BlueprintFallback" -or
+        $Report.profile_router.peer_snapshot.profile -ne "BlueprintFallback" -or
+        $Report.profile_router.peer_snapshot.aim -ne 1 -or
         $Report.pre_restore_snapshot.move -le 0 -or
         $Report.pre_restore_snapshot.aim -le 0 -or
         $Report.movement_distance -le 25.0 -or
+        $Report.profile_fallback_move_distance -le 25.0 -or
         $Report.look_delta -le 0.1 -or
         $Report.jump_height -le 10.0 -or
         $Report.blueprint_original_move_distance -le 25.0 -or
+        $Report.direct_reregister_move_distance -le 25.0 -or
         $Report.live_reregister_move_distance -le 25.0 -or
         !$Report.function_identity.injected_differs_from_restored -or
         !$Report.function_identity.restored_differs_from_reregistered -or
+        !$Report.function_identity.direct_differs_from_restored -or
+        !$Report.function_identity.declared_differs_from_direct -or
         $Report.gameplay.progress.phase -ne "victory" -or
         $Report.gameplay.progress.round_score -ne 6 -or
         $Report.gameplay.remaining_pickups -ne 0 -or
@@ -312,14 +398,18 @@ function Assert-MixinReport {
         $Report.gameplay.companion_movement -le 1.0 -or
         !$Report.gameplay.hud.attached -or
         $Report.gameplay.hud.update_count -le 0 -or
-        $Report.teardown.unregister_all_count -ne 1 -or
+        $Report.teardown.unregister_all_count -ne 2 -or
         $Report.teardown.mixin_count -ne 0 -or
-        $Report.teardown.initialization_events -ne 2 -or
-        $Report.teardown.teardown_events -ne 2 -or
+        $Report.teardown.initialization_events -ne 5 -or
+        $Report.teardown.teardown_events -ne 5 -or
         $Report.teardown.runtime_active -ne $false -or
         !$Report.teardown.session_released -or
         !$Report.teardown.class_preserved -or
-        !$Report.teardown.helper_removed) {
+        !$Report.teardown.helper_removed -or
+        $interfaceTeardowns.Count -ne 2 -or
+        $interfaceTeardowns[0] -ne 1 -or
+        $interfaceTeardowns[1] -ne 1 -or
+        !$Report.teardown.interface_probe.helpers_removed) {
         throw "Mixin demo $Label report failed its contract: $ResultPath"
     }
 }
@@ -412,6 +502,9 @@ if ($engineVersion.MajorVersion -ne 5 -or $engineVersion.MinorVersion -ne 8) {
 
 if ($Variant -eq "Overlay" -and $Mode -in @("Audit", "Package")) {
     throw "Mode $Mode is available only for the PythonFirst and Mixin variants"
+}
+if ($Mode -eq "GenerateMixinAssets" -and $Variant -ne "Mixin") {
+    throw "Mode GenerateMixinAssets is available only for the Mixin variant"
 }
 
 New-Item -ItemType Directory -Path $demoBuildRoot -Force | Out-Null
@@ -549,7 +642,106 @@ try {
         Assert-BuildLog $buildLog
     }
 
-    if ($Mode -eq "Audit") {
+    if ($Mode -eq "GenerateMixinAssets") {
+        $generatorScript = Join-Path $PSScriptRoot "UEPPythonThirdPerson\Tools\generate_mixin_assets.py"
+        $generatorResultPath = Join-Path $resultRoot "mixin-assets.json"
+        $generatorLogPath = Join-Path $resultRoot "mixin-assets.log"
+        if (!(Test-Path -LiteralPath $generatorScript -PathType Leaf)) {
+            throw "Mixin asset generator was not found: $generatorScript"
+        }
+        $generatorArguments = @(
+            $projectPath,
+            "-unattended",
+            "-nop4",
+            "-NullRHI",
+            "-NoSound",
+            "-NoSplash",
+            "-UTF8Output",
+            "-DisablePython",
+            $disableNetworkPluginsArgument,
+            $disableTraceServerArgument,
+            "-run=Py",
+            $generatorScript,
+            "-UEPGenerateMixinAssetsResult=$generatorResultPath",
+            "-abslog=$generatorLogPath"
+        )
+        Invoke-CheckedProcess -FilePath $editorCmdPath -ArgumentList $generatorArguments -Label "Generate Mixin Interface assets" -WorkingDirectory $stageRoot -TimeoutSeconds 300
+        if (!(Test-Path -LiteralPath $generatorResultPath -PathType Leaf)) {
+            throw "Mixin asset generation result was not created: $generatorResultPath"
+        }
+        $generatorReport = Get-Content -LiteralPath $generatorResultPath -Raw | ConvertFrom-Json
+        if ($generatorReport.schema_version -ne 2 -or
+            $generatorReport.status -ne "passed" -or
+            $generatorReport.direct_interface_owner -ne "BP_MixinInterfaceProbe_C" -or
+            $generatorReport.inherited_child -ne "BP_MixinInterfaceProbeChild_C" -or
+            $generatorReport.default_profile -ne "BlueprintFallback" -or
+            $generatorReport.profile_count -ne 2 -or
+            $generatorReport.character.generated_class -ne "BP_ThirdPersonCharacter_C" -or
+            $generatorReport.character.mixin_set -ne "DA_ThirdPersonCharacterMixin" -or
+            $generatorReport.character.default_profile -ne "Python" -or
+            $generatorReport.character.profile_count -ne 2 -or
+            $generatorReport.character.profile_variable -ne "PythonMixinProfile" -or
+            $generatorReport.character.profile_value -ne "Python") {
+            throw "Mixin asset generation report failed its contract: $generatorResultPath"
+        }
+        $generatorLog = Get-Content -LiteralPath $generatorLogPath -Raw
+        if (!$generatorLog.Contains("UEP_MIXIN_ASSET_GENERATION_PASSED") -or
+            $generatorLog.Contains("UEP_MIXIN_ASSET_GENERATION_FAILED") -or
+            $generatorLog.Contains("Fatal error:") -or
+            $generatorLog.Contains("Assertion failed:")) {
+            throw "Mixin asset generation log failed its contract: $generatorLogPath"
+        }
+
+        $assetMappings = @(
+            @{
+                source = "Content\UEPTests\DA_MixinInterfaceProbe.uasset"
+                destination = "Content\UEPTests\DA_MixinInterfaceProbe.uasset"
+            },
+            @{
+                source = "Content\UEPTests\BP_MixinInterfaceProbe.uasset"
+                destination = "Content\UEPTests\BP_MixinInterfaceProbe.uasset"
+            },
+            @{
+                source = "Content\UEPTests\BP_MixinInterfaceProbeChild.uasset"
+                destination = "Content\UEPTests\BP_MixinInterfaceProbeChild.uasset"
+            },
+            @{
+                source = "Content\UEPMixins\DA_ThirdPersonCharacterMixin.uasset"
+                destination = "Content\UEPMixins\DA_ThirdPersonCharacterMixin.uasset"
+            },
+            @{
+                source = "Content\ThirdPerson\Blueprints\BP_ThirdPersonCharacter.uasset"
+                destination = "Content\ThirdPerson\Blueprints\BP_ThirdPersonCharacter.uasset"
+            }
+        )
+        foreach ($assetMapping in $assetMappings) {
+            $generatedAsset = Join-Path $stageRoot $assetMapping.source
+            if (!(Test-Path -LiteralPath $generatedAsset -PathType Leaf)) {
+                throw "Generated Mixin asset was not found: $generatedAsset"
+            }
+            Copy-FileIfChanged `
+                -Source $generatedAsset `
+                -Destination (Join-Path $variantOverlayRoot $assetMapping.destination)
+        }
+
+        $summary = [ordered]@{
+            schema_version = 1
+            status = "passed"
+            run_id = $runId
+            variant = $Variant
+            engine = "$($engineVersion.MajorVersion).$($engineVersion.MinorVersion).$($engineVersion.PatchVersion)"
+            project = $projectPath
+            build_log = $buildLog
+            generation_log = $generatorLogPath
+            generation = $generatorReport
+            destination = $variantOverlayRoot
+        }
+        $summaryPath = Join-Path $resultRoot "summary.json"
+        $summary | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath $summaryPath -Encoding utf8
+        Write-Host "UEP Mixin Interface assets generated and copied to the overlay."
+        Write-Host "Summary: $summaryPath"
+    }
+    elseif ($Mode -eq "Audit") {
         $auditScript = Join-Path $PSScriptRoot "UEPPythonThirdPerson\Tools\audit_template.py"
         $auditResultPath = Join-Path $resultRoot "template-audit.json"
         $auditLogPath = Join-Path $resultRoot "template-audit.log"
@@ -684,7 +876,8 @@ try {
             @(
                 "Initialized engine CPython at",
                 "UEP_MIXIN_THIRD_PERSON_SCRIPT_LOADED",
-                "UEP_MIXIN_THIRD_PERSON_REGISTERED",
+                "UEP_MIXIN_THIRD_PERSON_PROFILE_CLASSES_LOADED",
+                "UEP_MIXIN_THIRD_PERSON_INTERFACE_REGISTERED",
                 "UEP_MIXIN_THIRD_PERSON_CHARACTER_READY",
                 "UEP_MIXIN_THIRD_PERSON_WORLD_READY",
                 "UEP_PYTHON_THIRD_PERSON_GAMEPLAY_READY",
@@ -788,6 +981,19 @@ try {
         }
         Invoke-CheckedProcess -FilePath $dotnetPath -ArgumentList $packageArguments -Label "Cook and package $Variant demo" -WorkingDirectory $engineRootPath -TimeoutSeconds 3600 -EnvironmentVariables $packageEnvironment
         Assert-AutomationLog $packageLog
+        $cookLog = Get-ChildItem -LiteralPath $packageLogRoot -Filter "Cook-*.txt" -File |
+            Sort-Object LastWriteTime -Descending |
+            Select-Object -First 1 -ExpandProperty FullName
+        if (!$cookLog) {
+            throw "Cook log was not found under $packageLogRoot"
+        }
+        if ($Variant -eq "Mixin") {
+            $cookLogContents = Get-Content -LiteralPath $cookLog -Raw
+            if (!$cookLogContents.Contains("UEP_MIXIN_COMMANDLET_BOOTSTRAP_SKIPPED") -or
+                $cookLogContents.Contains("Registered Python mixin")) {
+                throw "Mixin Cook executed runtime router registration: $cookLog"
+            }
+        }
 
         $packagedExecutable = Get-ChildItem -LiteralPath $packageRoot -Filter "$demoName.exe" -File -Recurse |
             Where-Object { $_.FullName -match '[\\/]Binaries[\\/]Win64[\\/]' } |
@@ -861,7 +1067,8 @@ try {
             @(
                 "Initialized engine CPython at",
                 "UEP_MIXIN_THIRD_PERSON_SCRIPT_LOADED",
-                "UEP_MIXIN_THIRD_PERSON_REGISTERED",
+                "UEP_MIXIN_THIRD_PERSON_PROFILE_CLASSES_LOADED",
+                "UEP_MIXIN_THIRD_PERSON_INTERFACE_REGISTERED",
                 "UEP_MIXIN_THIRD_PERSON_CHARACTER_READY",
                 "UEP_MIXIN_THIRD_PERSON_WORLD_READY",
                 "UEP_PYTHON_THIRD_PERSON_GAMEPLAY_READY",
@@ -903,6 +1110,7 @@ try {
             build_log = $buildLog
             game_build_log = $gameBuildLog
             package_log = $packageLog
+            cook_log = $cookLog
             packaged_executable = $packagedExecutable
             packaged_smoke_log = $packagedLogPath
             packaged_smoke = $packagedReport
