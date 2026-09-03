@@ -22,6 +22,13 @@ bind safely into reflected, game-thread-only APIs:
 - command IDs are consumed once, clients receive `RejectedNotAuthority`, and no
   bridge API silently forwards a client call as an RPC.
 
+The 0.8 overlay additionally configures Lyra's existing `W_Healthbar_C` for a
+declared UEP Mixin Set. CommonUI and the ShooterCore `Add Widgets` action retain
+widget ownership. Python replaces only presentation behavior: it handles the
+widget lifecycle, follows the possessed Pawn, subscribes to Health Component
+delegates, calculates normalized health and invokes the Blueprint's retained
+visual helpers. Dedicated servers must record zero HUD objects or subscriptions.
+
 The source-only smoke lane disables Lyra's content-backed startup systems in
 the disposable stage so it can prove UE5.8 compilation, module loading,
 CPython 3.11 ownership and bridge lifecycle without pretending that gameplay
@@ -30,7 +37,7 @@ works. The complete external project at
 Experience gameplay, synchronized multiplayer, cook/package and packaged
 CPython validation without modifying the reference tree.
 
-To repeat every 0.5.0 gate against a complete project outside the engine tree:
+To repeat every 0.8.0 gate against a complete project outside the engine tree:
 
 ```powershell
 .\Validation\Run-UEP58LyraValidation.ps1 `
@@ -38,6 +45,36 @@ To repeat every 0.5.0 gate against a complete project outside the engine tree:
     -LyraProject F:\LyraStarterGame\LyraStarterGame.uproject `
     -Mode All
 ```
+
+`All` performs a full cook/package. During iteration, use `Standalone` or
+`Network`. Audit the relevant official/staged assets without runtime gameplay:
+
+```powershell
+.\Validation\Run-UEP58LyraValidation.ps1 `
+    -EngineRoot F:\UnrealEngine `
+    -LyraProject F:\LyraStarterGame\LyraStarterGame.uproject `
+    -Mode HUDAudit
+```
+
+Regenerate the example-owned health-bar and Mixin Set assets only after their
+declaration changes:
+
+```powershell
+.\Validation\Run-UEP58LyraValidation.ps1 `
+    -EngineRoot F:\UnrealEngine `
+    -LyraProject F:\LyraStarterGame\LyraStarterGame.uproject `
+    -Mode GenerateHUDAssets `
+    -Incremental
+```
+
+Generation occurs in the disposable stage and SHA-256 checks prove the
+reference `W_Healthbar.uasset` was not changed.
+
+Every driver mode first runs the seven host-side tests in `Tests`. They use fake
+reflected objects to prove source-only asset absence, exact callback identity,
+event-only updates, old-Pawn detachment, Blueprint fallback, Destruct and
+registry teardown without starting Unreal. Runtime lanes then prove the same
+contracts against real Lyra objects.
 
 The Python probe owns the gameplay sequence. In Standalone and the packaged
 game it waits for Lyra damage immunity to end, applies 10 damage, proves the
@@ -55,6 +92,15 @@ the original 100 health. In the network lane:
 
 Both peers then publish a readiness marker and wait behind one driver-owned
 release signal. Only after both markers exist can either process shut down.
+
+After the health sequence, the 0.8 lifecycle phase replaces the authoritative
+Pawn and verifies that the client presenter drops the old Health Component
+before binding the new one. It then performs one same-map Experience
+replacement to exercise the real `LAS_ShooterGame_StandardHUD` `Add Widgets`
+action teardown/recreation, followed by a second independent same-map travel.
+The client must finish with at least three Constructs, two Destructs and one
+balanced active presenter. The server participates in the authority/
+synchronization path but never creates a HUD.
 
 Each process latches the snapshot that produced its readiness marker while it
 waits on the release signal. A client that exits one tick earlier therefore
@@ -76,3 +122,11 @@ hardened to reject ambiguous human targets, exact-source result
 Standalone. No package was rebuilt after that small hardening change; the
 former result remains package evidence and the latter two are current-source
 runtime evidence.
+
+The current 0.8 implementation is covered by HUD audit result
+`20260903-032632`, clean-base generation results `20260903-033001` and
+`20260903-033049`, and formal `All` result `20260903-033426`. The latter passes
+Standalone, synchronized server/client, BuildCookRun and packaged runtime with
+`full_acceptance: true`, CPython 3.11.8, `100 -> 90 -> 100` on every UI role,
+3 Constructs / 2 Destructs after two Experience lifecycles, and zero dedicated-
+server HUD state.

@@ -2,7 +2,7 @@
 
 This is the companion examples repository for
 [`AvaloNero/UnrealEnginePython5`](https://github.com/AvaloNero/UnrealEnginePython5).
-Its history was split from the core repository, so the 0.1.0 through 0.7.0
+Its history was split from the core repository, so the 0.1.0 through 0.8.0
 sample evolution remains available without keeping demo projects in the plugin
 source tree.
 
@@ -26,6 +26,33 @@ Three variants are intentionally kept:
 | `Overlay` | 0.1.0 compatibility sample | Official Blueprint template plus Python pickups and companion |
 | `PythonFirst` | 0.6.0 playable sample | Dynamic Python gameplay classes, collectible loop and viewport HUD |
 | `Mixin` | 0.7.0 retained-class sample | Official Blueprint classes with per-instance Python profiles, BP fallback, collectible loop and viewport HUD |
+
+## Lyra Python health bar
+
+The 0.8.0 Lyra overlay keeps the official `/Game/UI/Hud/W_Healthbar` path and
+`W_Healthbar_C` runtime type. Its example-owned copy adds
+`UEPPythonMixinInterface`, a `PythonMixinProfile` selector and
+`DA_LyraHealthbarMixin`; all existing Blueprint graphs remain available. Lyra's
+Game Feature `Add Widgets` action and CommonUI still create/remove the widget.
+
+The default Python profile owns `Construct`/`Destruct`, follows
+`OnPossessedPawnChanged`, binds the active `ULyraHealthComponent`, normalizes
+health and decides when to refresh. It calls the retained Blueprint
+`SetDynamicMaterials` and `InitializeBarVisuals` functions as visual primitives.
+The `BlueprintFallback` profile runs the preserved Blueprint Construct instead.
+Gameplay Effects, authority and replication remain native Lyra behavior.
+
+The core repository's full-content driver stages this overlay into a disposable
+copy of `F:\LyraStarterGame`, so neither the reference project nor Unreal Engine
+is edited. `GenerateHUDAssets` is the only authoring lane and copies back only
+the two verified overlay assets. `HUDAudit`, `Standalone`, `Network`, `Package`
+and `All` provide progressively stronger validation; `All` includes the heavy
+Win64 cook/package step.
+
+The runtime code is under
+`UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud`; the clean-base
+authoring and read-only audit scripts are under `UEPLyraIntegration/Tools`, and host-side
+presenter contracts are under `UEPLyraIntegration/Tests`.
 
 ## Blueprint mixin gameplay
 

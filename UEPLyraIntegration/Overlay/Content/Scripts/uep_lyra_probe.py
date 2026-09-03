@@ -11,6 +11,8 @@ import traceback
 
 import unreal_engine as ue
 
+from uep_lyra_hud import state as hud_state
+
 
 GAME_WORLD_TYPES = (1, 3, 5)  # Game, PIE, GamePreview
 RESULT_PREFIX = "-UEPLyraSmokeResult="
@@ -26,6 +28,8 @@ READY_RELEASE_PREFIX = "-UEPLyraReadyReleaseFile="
 GAMEPLAY_SLICE = "-UEPLyraGameplaySlice"
 GAMEPLAY_SYNC_DIR_PREFIX = "-UEPLyraGameplaySyncDir="
 GAMEPLAY_DAMAGE_PREFIX = "-UEPLyraGameplayDamage="
+HUD_SLICE = "-UEPLyraHUDSlice"
+HUD_TRAVEL_URL_PREFIX = "-UEPLyraHUDTravelURL="
 
 
 def _command_line_value(prefix, default=None):
@@ -94,9 +98,10 @@ class LyraRuntimeProbe:
         self.gameplay_slice_enabled = _has_argument(GAMEPLAY_SLICE)
         self.gameplay_sync_path = _command_line_value(GAMEPLAY_SYNC_DIR_PREFIX)
         self.gameplay_damage = _command_line_float(GAMEPLAY_DAMAGE_PREFIX, 10.0)
+        self.hud_slice_enabled = _has_argument(HUD_SLICE)
         self.gameplay = {
             "enabled": self.gameplay_slice_enabled,
-            "completed": False,
+            "completed": not self.gameplay_slice_enabled,
             "state": "waiting_readiness" if self.gameplay_slice_enabled else "disabled",
             "damage_amount": self.gameplay_damage,
             "baseline_health": None,
@@ -116,12 +121,50 @@ class LyraRuntimeProbe:
         self.library = ue.find_class("UEPLyraBridgeLibrary").get_cdo()
         self.world = None
         self.bridge = None
+        self.bridge_generation = 0
         self.bound_callback = None
         self.experience_events = 0
         self.last_snapshot_report = None
         self.last_pending = None
         self.last_pending_log_at = -30.0
         self.finished = False
+        self.hud_travel_url = _command_line_value(HUD_TRAVEL_URL_PREFIX, "")
+        self.hud_lifecycle = {
+            "enabled": self.hud_slice_enabled,
+            "completed": not self.hud_slice_enabled,
+            "state": "waiting_readiness" if self.hud_slice_enabled else "disabled",
+            "respawn": {
+                "requested": False,
+                "observed": False,
+                "old_pawn": None,
+                "new_pawn": None,
+                "before": None,
+                "after": None,
+            },
+            "game_feature": {
+                "name": "LAS_ShooterGame_StandardHUD:AddWidgets",
+                "asset": "/ShooterCore/Experiences/LAS_ShooterGame_StandardHUD",
+                "mechanism": "experience_action_travel_cycle",
+                "deactivation_requested": False,
+                "deactivated": False,
+                "reactivation_requested": False,
+                "reactivated": False,
+                "bridge_generation_before": None,
+                "bridge_generation_after": None,
+                "before": None,
+                "after_cycle": None,
+                "client_evidence": None,
+            },
+            "travel": {
+                "url": self.hud_travel_url,
+                "requested": False,
+                "observed": False,
+                "bridge_generation_before": None,
+                "bridge_generation_after": None,
+                "before": None,
+                "after": None,
+            },
+        }
 
     def _wall_elapsed(self):
         return time.monotonic() - self.started_at
@@ -142,11 +185,12 @@ class LyraRuntimeProbe:
         bridge = self.library.call_function("GetBridgeForWorld", world)
         if not _is_valid(bridge):
             return False
-        if _is_valid(self.bridge) and self.bridge.get_path_name() == bridge.get_path_name():
+        if _is_valid(self.bridge) and self.bridge == bridge:
             return True
         self.shutdown_binding()
         self.world = world
         self.bridge = bridge
+        self.bridge_generation += 1
         self.bound_callback = self._on_experience_ready
         bridge.bind_event("OnExperienceReady", self.bound_callback)
         ue.log("UEP_LYRA_BRIDGE_ATTACHED")
@@ -278,6 +322,419 @@ class LyraRuntimeProbe:
             event["health"] = float(health)
         self.gameplay["events"].append(event)
 
+    def _hud_snapshot(self):
+        return hud_state.snapshot()
+
+    def _hud_event_seen(self, expected_health):
+        for event in self._hud_snapshot()["health_events"]:
+            if (
+                event["event"] == "health_changed"
+                and self._nearly_equal(event["health"], expected_health)
+            ):
+                return True
+        return False
+
+    @staticmethod
+    def _object_path(value):
+        if not _is_valid(value):
+            return None
+        return value.get_path_name()
+
+    @staticmethod
+    def _hud_counts(hud):
+        return {
+            "active_widget_count": hud["active_widget_count"],
+            "construct_count": hud["construct_count"],
+            "destruct_count": hud["destruct_count"],
+            "controller_bind_count": hud["controller_bind_count"],
+            "controller_unbind_count": hud["controller_unbind_count"],
+            "health_bind_count": hud["health_bind_count"],
+            "health_unbind_count": hud["health_unbind_count"],
+            "visual_update_count": hud["visual_update_count"],
+        }
+
+    @staticmethod
+    def _hud_bindings_balanced(hud):
+        active = hud["active_widget_count"]
+        return (
+            hud["controller_bind_count"] - hud["controller_unbind_count"] == active
+            and hud["health_bind_count"] - hud["health_unbind_count"] == active
+        )
+
+    @staticmethod
+    def _feature_state(report, feature_name):
+        for feature in report["game_features"]:
+            if feature["name"].lower() == feature_name.lower():
+                return feature
+        return None
+
+    def _controller_and_pawn(self):
+        try:
+            controller = self.world.get_player_controller()
+            pawn = controller.get_controlled_pawn()
+            return controller, pawn
+        except Exception:
+            return None, None
+
+    def _prepare_travel_baseline(self):
+        travel = self.hud_lifecycle["travel"]
+        if travel["bridge_generation_before"] is not None:
+            return
+        travel["bridge_generation_before"] = self.bridge_generation
+        travel["before"] = self._hud_counts(self._hud_snapshot())
+
+    def _prepare_game_feature_baseline(self):
+        feature_cycle = self.hud_lifecycle["game_feature"]
+        if feature_cycle["bridge_generation_before"] is not None:
+            return
+        feature_cycle["bridge_generation_before"] = self.bridge_generation
+        feature_cycle["before"] = self._hud_counts(self._hud_snapshot())
+
+    def _complete_hud_lifecycle(self, state_name="completed"):
+        if self.hud_lifecycle["completed"]:
+            return
+        self.hud_lifecycle["state"] = state_name
+        self.hud_lifecycle["completed"] = True
+        ue.log("UEP_LYRA_HUD_LIFECYCLE_PROBE_PASSED")
+
+    def _advance_hud_lifecycle_probe(self, report):
+        if not self.hud_slice_enabled:
+            return True
+        if self.mode == "server_exit":
+            self._complete_hud_lifecycle("completed_server_zero_ui")
+            return True
+
+        lifecycle = self.hud_lifecycle
+        respawn = lifecycle["respawn"]
+        feature_cycle = lifecycle["game_feature"]
+        travel = lifecycle["travel"]
+        state_name = lifecycle["state"]
+
+        if state_name == "waiting_readiness":
+            controller, pawn = self._controller_and_pawn()
+            if not _is_valid(controller) or not _is_valid(pawn):
+                return False
+            respawn["old_pawn"] = self._object_path(pawn)
+            respawn["before"] = self._hud_counts(self._hud_snapshot())
+            if self.mode == "client":
+                lifecycle["state"] = "waiting_server_respawn_request"
+                return False
+
+            game_mode = self.world.get_auth_game_mode()
+            if not report["server_authority"] or not _is_valid(game_mode):
+                return False
+            game_mode.call_function("RequestPlayerRestartNextFrame", controller, True)
+            respawn["requested"] = True
+            lifecycle["state"] = "waiting_respawn_observation"
+            if self.mode == "server":
+                self._write_sync(
+                    "server-hud-respawn-requested.json",
+                    {"old_pawn": respawn["old_pawn"]},
+                )
+            ue.log("UEP_LYRA_HUD_RESPAWN_REQUESTED " + self.mode)
+            return False
+
+        if state_name == "waiting_server_respawn_request":
+            if self._read_sync("server-hud-respawn-requested.json") is None:
+                return False
+            respawn["requested"] = True
+            lifecycle["state"] = "waiting_respawn_observation"
+            return False
+
+        if state_name == "waiting_respawn_observation":
+            controller, pawn = self._controller_and_pawn()
+            new_pawn = self._object_path(pawn)
+            if (
+                not _is_valid(controller)
+                or not _is_valid(pawn)
+                or new_pawn == respawn["old_pawn"]
+                or not report["health_ready"]
+                or report["health"] <= 0.0
+            ):
+                return False
+            current = self._hud_snapshot()
+            if self.mode not in ("server", "server_exit"):
+                if (
+                    current["active_widget_count"] < 1
+                    or current["health_bind_count"]
+                    <= respawn["before"]["health_bind_count"]
+                    or not self._hud_bindings_balanced(current)
+                ):
+                    return False
+            respawn["new_pawn"] = new_pawn
+            respawn["after"] = self._hud_counts(current)
+            respawn["observed"] = True
+            ue.log("UEP_LYRA_HUD_RESPAWN_PASSED " + self.mode)
+            if self.mode == "server":
+                self._write_sync(
+                    "server-hud-respawned.json",
+                    {"new_pawn": new_pawn, "health": report["health"]},
+                )
+                lifecycle["state"] = "waiting_client_respawn"
+            elif self.mode == "client":
+                self._write_sync(
+                    "client-hud-respawn-observed.json",
+                    {"new_pawn": new_pawn, "health": report["health"]},
+                )
+                self._prepare_game_feature_baseline()
+                lifecycle["state"] = "waiting_server_game_feature_travel_request"
+            else:
+                self._prepare_game_feature_baseline()
+                lifecycle["state"] = "start_game_feature_travel"
+            return False
+
+        if state_name == "waiting_client_respawn":
+            client_respawn = self._read_sync("client-hud-respawn-observed.json")
+            if client_respawn is None:
+                return False
+            respawn["client_evidence"] = client_respawn
+            self._prepare_game_feature_baseline()
+            lifecycle["state"] = "start_game_feature_travel"
+            return False
+
+        if state_name == "start_game_feature_travel":
+            if not self.hud_travel_url:
+                raise RuntimeError("HUD lifecycle requires -UEPLyraHUDTravelURL")
+            self._prepare_game_feature_baseline()
+            if self.mode == "server":
+                self._write_sync(
+                    "server-hud-game-feature-travel-requested.json",
+                    {"url": self.hud_travel_url},
+                )
+            if not self.world.server_travel(self.hud_travel_url):
+                raise RuntimeError("UE rejected the HUD Game Feature action travel")
+            feature_cycle["deactivation_requested"] = True
+            feature_cycle["reactivation_requested"] = True
+            lifecycle["state"] = "waiting_game_feature_travel_observation"
+            ue.log("UEP_LYRA_HUD_GAME_FEATURE_ACTION_CYCLE_REQUESTED " + self.mode)
+            return False
+
+        if state_name == "waiting_server_game_feature_travel_request":
+            request = self._read_sync("server-hud-game-feature-travel-requested.json")
+            if request is None:
+                return False
+            if request.get("url") != self.hud_travel_url:
+                raise RuntimeError("server/client Game Feature action travel URLs do not match")
+            feature_cycle["deactivation_requested"] = True
+            feature_cycle["reactivation_requested"] = True
+            lifecycle["state"] = "waiting_game_feature_travel_observation"
+            return False
+
+        if state_name == "waiting_game_feature_travel_observation":
+            if self.bridge_generation <= feature_cycle["bridge_generation_before"]:
+                return False
+            feature = self._feature_state(report, "ShooterCore")
+            current = self._hud_snapshot()
+            if (
+                feature is None
+                or not feature["active"]
+                or not report["health_ready"]
+                or not report["player_pawn"]
+            ):
+                return False
+            if self.mode in ("server", "server_exit"):
+                if (
+                    current["active_widget_count"] != 0
+                    or current["construct_count"] != 0
+                    or current["controller_bind_count"] != 0
+                    or current["health_bind_count"] != 0
+                ):
+                    raise RuntimeError(
+                        "dedicated server created HUD state during the Game Feature action cycle"
+                    )
+            elif (
+                current["active_widget_count"] < 1
+                or current["construct_count"]
+                <= feature_cycle["before"]["construct_count"]
+                or current["destruct_count"]
+                <= feature_cycle["before"]["destruct_count"]
+                or current["visual_update_count"]
+                <= feature_cycle["before"]["visual_update_count"]
+                or not self._hud_bindings_balanced(current)
+            ):
+                return False
+            feature_cycle["bridge_generation_after"] = self.bridge_generation
+            feature_cycle["after_cycle"] = self._hud_counts(current)
+            feature_cycle["deactivated"] = True
+            feature_cycle["reactivated"] = True
+            ue.log("UEP_LYRA_HUD_GAME_FEATURE_CYCLE_PASSED " + self.mode)
+            if self.mode == "server":
+                self._write_sync(
+                    "server-hud-game-feature-cycle.json",
+                    {
+                        "deactivated": True,
+                        "reactivated": True,
+                        "bridge_generation": self.bridge_generation,
+                    },
+                )
+                lifecycle["state"] = "waiting_client_feature_cycle"
+            elif self.mode == "client":
+                self._write_sync(
+                    "client-hud-game-feature-cycle.json",
+                    {
+                        "deactivated": True,
+                        "reactivated": True,
+                        "bridge_generation": self.bridge_generation,
+                        "after_cycle": feature_cycle["after_cycle"],
+                    },
+                )
+                self._prepare_travel_baseline()
+                lifecycle["state"] = "waiting_server_travel_request"
+            else:
+                self._prepare_travel_baseline()
+                lifecycle["state"] = "start_travel"
+            return False
+
+        if state_name == "waiting_client_feature_cycle":
+            client_cycle = self._read_sync("client-hud-game-feature-cycle.json")
+            if client_cycle is None:
+                return False
+            if not client_cycle.get("deactivated") or not client_cycle.get("reactivated"):
+                raise RuntimeError("client did not complete the HUD Game Feature cycle")
+            feature_cycle["deactivated"] = True
+            feature_cycle["reactivated"] = True
+            feature_cycle["client_evidence"] = client_cycle
+            self._prepare_travel_baseline()
+            lifecycle["state"] = "start_travel"
+            return False
+
+        if state_name == "start_travel":
+            if not self.hud_travel_url:
+                raise RuntimeError("HUD lifecycle requires -UEPLyraHUDTravelURL")
+            self._prepare_travel_baseline()
+            if self.mode == "server":
+                self._write_sync(
+                    "server-hud-travel-requested.json",
+                    {"url": self.hud_travel_url},
+                )
+            if not self.world.server_travel(self.hud_travel_url):
+                raise RuntimeError("UE rejected the HUD lifecycle server travel")
+            travel["requested"] = True
+            lifecycle["state"] = "waiting_travel_observation"
+            ue.log("UEP_LYRA_HUD_TRAVEL_REQUESTED " + self.mode)
+            return False
+
+        if state_name == "waiting_server_travel_request":
+            request = self._read_sync("server-hud-travel-requested.json")
+            if request is None:
+                return False
+            if request.get("url") != self.hud_travel_url:
+                raise RuntimeError("server/client HUD travel URLs do not match")
+            travel["requested"] = True
+            lifecycle["state"] = "waiting_travel_observation"
+            return False
+
+        if state_name == "waiting_travel_observation":
+            if self.bridge_generation <= travel["bridge_generation_before"]:
+                return False
+            feature = self._feature_state(report, "ShooterCore")
+            current = self._hud_snapshot()
+            if (
+                feature is None
+                or not feature["active"]
+                or not report["health_ready"]
+                or not report["player_pawn"]
+            ):
+                return False
+            if self.mode in ("server", "server_exit"):
+                if (
+                    current["active_widget_count"] != 0
+                    or current["construct_count"] != 0
+                    or current["controller_bind_count"] != 0
+                    or current["health_bind_count"] != 0
+                ):
+                    raise RuntimeError("dedicated server created HUD state during travel")
+            elif (
+                current["active_widget_count"] < 1
+                or current["construct_count"] <= travel["before"]["construct_count"]
+                or current["destruct_count"] <= travel["before"]["destruct_count"]
+                or not self._hud_bindings_balanced(current)
+            ):
+                return False
+            travel["bridge_generation_after"] = self.bridge_generation
+            travel["after"] = self._hud_counts(current)
+            travel["observed"] = True
+            ue.log("UEP_LYRA_HUD_TRAVEL_PASSED " + self.mode)
+            if self.mode == "server":
+                self._write_sync(
+                    "server-hud-travel-observed.json",
+                    {"bridge_generation": self.bridge_generation},
+                )
+                lifecycle["state"] = "waiting_client_travel"
+            elif self.mode == "client":
+                self._write_sync(
+                    "client-hud-travel-observed.json",
+                    {"bridge_generation": self.bridge_generation},
+                )
+                self._complete_hud_lifecycle()
+            else:
+                self._complete_hud_lifecycle()
+            return lifecycle["completed"]
+
+        if state_name == "waiting_client_travel":
+            client_travel = self._read_sync("client-hud-travel-observed.json")
+            if client_travel is None:
+                return False
+            travel["client_evidence"] = client_travel
+            self._complete_hud_lifecycle("completed_server_zero_ui")
+            return True
+
+        return lifecycle["completed"]
+
+    def _assert_hud_contract(self, report):
+        if not self.hud_slice_enabled:
+            return
+        hud = self._hud_snapshot()
+        if hud["errors"]:
+            raise RuntimeError("Python HUD presenter recorded errors")
+        if not hud["registered"] or not hud["source_asset_available"]:
+            raise RuntimeError("Python HUD Mixin Set was not registered")
+        if not self.hud_lifecycle["completed"]:
+            raise RuntimeError("Python HUD lifecycle probe did not complete")
+        if (
+            not self.hud_lifecycle["respawn"]["requested"]
+            or not self.hud_lifecycle["respawn"]["observed"]
+            or not self.hud_lifecycle["game_feature"]["deactivated"]
+            or not self.hud_lifecycle["game_feature"]["reactivated"]
+            or self.hud_lifecycle["game_feature"]["bridge_generation_after"]
+            <= self.hud_lifecycle["game_feature"]["bridge_generation_before"]
+            or not self.hud_lifecycle["travel"]["requested"]
+            or not self.hud_lifecycle["travel"]["observed"]
+        ):
+            raise RuntimeError("Python HUD extended lifecycle evidence is incomplete")
+
+        if self.mode in ("server", "server_exit"):
+            if (
+                hud["active_widget_count"] != 0
+                or hud["construct_count"] != 0
+                or hud["controller_bind_count"] != 0
+                or hud["health_bind_count"] != 0
+                or hud["health_events"]
+            ):
+                raise RuntimeError("dedicated server created Python HUD state")
+            return
+
+        if (
+            hud["active_widget_count"] < 1
+            or hud["construct_count"] < 3
+            or hud["destruct_count"] < 2
+            or hud["controller_bind_count"] - hud["controller_unbind_count"]
+            != hud["active_widget_count"]
+            or hud["health_bind_count"] - hud["health_unbind_count"]
+            != hud["active_widget_count"]
+        ):
+            raise RuntimeError("Python HUD lifecycle/delegate balance is inconsistent")
+        if not any(
+            self._nearly_equal(event["health"], report["health"])
+            for event in hud["health_events"]
+        ):
+            raise RuntimeError("Python HUD did not render the final health value")
+        if self.gameplay_slice_enabled:
+            if not self._hud_event_seen(self.gameplay["expected_damaged_health"]):
+                raise RuntimeError("Python HUD did not observe the damaged health event")
+            if not self._hud_event_seen(self.gameplay["baseline_health"]):
+                raise RuntimeError("Python HUD did not observe the restored health event")
+
     def _complete_gameplay_slice(self, restored_health):
         self.gameplay["restored_health"] = float(restored_health)
         self.gameplay["state"] = "completed"
@@ -311,6 +768,8 @@ class LyraRuntimeProbe:
             expected = self.gameplay["expected_damaged_health"]
             if not self._nearly_equal(report["health"], expected):
                 return False
+            if self.hud_slice_enabled and not self._hud_event_seen(expected):
+                return False
             self.gameplay["observed_damaged_health"] = report["health"]
             self._record_gameplay_event("damage_observed", report["health"])
             heal = self._apply_health_delta("uep05.local.heal", self.gameplay_damage, False)
@@ -324,6 +783,10 @@ class LyraRuntimeProbe:
 
         if state == "waiting_restore_observation":
             if not self._nearly_equal(report["health"], self.gameplay["baseline_health"]):
+                return False
+            if self.hud_slice_enabled and not self._hud_event_seen(
+                self.gameplay["baseline_health"]
+            ):
                 return False
             self._complete_gameplay_slice(report["health"])
             return True
@@ -371,6 +834,8 @@ class LyraRuntimeProbe:
             self.gameplay["duplicate_command"] = duplicate_command
             if not self._nearly_equal(report["health"], expected):
                 return False
+            if self.hud_slice_enabled and not self._hud_event_seen(expected):
+                return False
             self.gameplay["observed_damaged_health"] = report["health"]
             self.gameplay["state"] = "waiting_server_restore"
             self._record_gameplay_event("replicated_damage_observed", report["health"])
@@ -390,6 +855,8 @@ class LyraRuntimeProbe:
             expected = float(restored["restored_health"])
             self.gameplay["heal_command"] = heal_command
             if not self._nearly_equal(report["health"], expected):
+                return False
+            if self.hud_slice_enabled and not self._hud_event_seen(expected):
                 return False
             self._record_gameplay_event("replicated_restore_observed", report["health"])
             self._write_sync(
@@ -526,6 +993,32 @@ class LyraRuntimeProbe:
             if report["damage_immune"]:
                 pending.append("Lyra gameplay damage enabled")
 
+        if self.hud_slice_enabled:
+            hud = self._hud_snapshot()
+            if hud["errors"]:
+                pending.append("error-free Python HUD presenter")
+            if not hud["registered"]:
+                pending.append("registered Python HUD Mixin Set")
+            if not hud["source_asset_available"]:
+                pending.append("staged W_Healthbar Mixin asset")
+            if self.mode in ("server", "server_exit"):
+                if (
+                    hud["active_widget_count"] != 0
+                    or hud["construct_count"] != 0
+                    or hud["controller_bind_count"] != 0
+                    or hud["health_bind_count"] != 0
+                ):
+                    pending.append("zero dedicated-server HUD instances")
+            else:
+                if hud["active_widget_count"] < 1:
+                    pending.append("active Python W_Healthbar instance")
+                if hud["controller_bind_count"] < 1:
+                    pending.append("Python HUD controller binding")
+                if hud["health_bind_count"] < 1:
+                    pending.append("Python HUD health binding")
+                if hud["visual_update_count"] < 1:
+                    pending.append("Python HUD initial health render")
+
         feature_states = {
             item["name"].lower(): item for item in report["game_features"] if item["name"]
         }
@@ -602,7 +1095,7 @@ class LyraRuntimeProbe:
             return
         self.finished = True
         report = {
-            "schema_version": 2,
+            "schema_version": 4,
             "status": status,
             "mode": self.mode,
             "python_version": ".".join(str(value) for value in sys.version_info[:3]),
@@ -617,6 +1110,8 @@ class LyraRuntimeProbe:
             "hold_ready_seconds": self.hold_ready_seconds,
             "ready_release_gate": bool(self.ready_release_path),
             "gameplay_slice": self.gameplay,
+            "hud": self._hud_snapshot(),
+            "hud_lifecycle": self.hud_lifecycle,
             "snapshot": snapshot_report,
             "pending_requirements": (
                 self._pending_requirements(snapshot_report) if snapshot_report is not None else []
@@ -628,6 +1123,8 @@ class LyraRuntimeProbe:
         path.write_text(json.dumps(report, indent=2), encoding="utf-8")
         if status == "passed" and self.gameplay_slice_enabled:
             ue.log("UEP_LYRA_GAMEPLAY_SLICE_PASSED")
+        if status == "passed" and self.hud_slice_enabled:
+            ue.log("UEP_LYRA_PYTHON_HUD_PASSED")
         (ue.log if status == "passed" else ue.log_error)(
             "UEP_LYRA_SMOKE_PASSED" if status == "passed" else "UEP_LYRA_SMOKE_FAILED"
         )
@@ -677,10 +1174,31 @@ class LyraRuntimeProbe:
                 if not Path(self.ready_release_path).is_file():
                     return True
                 self._assert_ready(self.ready_snapshot_report)
+                self._assert_hud_contract(self.ready_snapshot_report)
                 self._write_result("passed", snapshot_report=self.ready_snapshot_report)
                 self.shutdown_binding()
                 self._request_quit()
                 return False
+
+            # Respawn, Game Feature transitions and travel intentionally make
+            # ordinary readiness requirements temporarily false. Once the
+            # gameplay sequence has completed and lifecycle work has started,
+            # let its state machine restore those requirements before applying
+            # the final readiness gate again.
+            if (
+                self.gameplay["completed"]
+                and self.hud_slice_enabled
+                and not self.hud_lifecycle["completed"]
+                and self.hud_lifecycle["state"] != "waiting_readiness"
+            ):
+                if not self._advance_hud_lifecycle_probe(snapshot_report):
+                    if self._timed_out():
+                        raise RuntimeError(
+                            "Lyra HUD lifecycle probe timed out in state: {0}".format(
+                                self.hud_lifecycle["state"]
+                            )
+                        )
+                    return True
 
             pending = self._pending_requirements(snapshot_report)
             if pending:
@@ -711,8 +1229,18 @@ class LyraRuntimeProbe:
                     )
                 return True
 
+            if not self._advance_hud_lifecycle_probe(snapshot_report):
+                if self._timed_out():
+                    raise RuntimeError(
+                        "Lyra HUD lifecycle probe timed out in state: {0}".format(
+                            self.hud_lifecycle["state"]
+                        )
+                    )
+                return True
+
             if self.ready_release_path:
                 self._assert_ready(snapshot_report)
+                self._assert_hud_contract(snapshot_report)
                 self.ready_snapshot_report = snapshot_report
                 if not self.ready_announced:
                     ue.log("UEP_LYRA_REQUIREMENTS_READY {0}".format(self.mode))
@@ -721,6 +1249,7 @@ class LyraRuntimeProbe:
                     return True
 
             self._assert_ready(snapshot_report)
+            self._assert_hud_contract(snapshot_report)
             self._write_result("passed", snapshot_report=snapshot_report)
             self.shutdown_binding()
             self._request_quit()
