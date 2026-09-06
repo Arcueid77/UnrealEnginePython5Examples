@@ -29,6 +29,12 @@ widget lifecycle, follows the possessed Pawn, subscribes to Health Component
 delegates, calculates normalized health and invokes the Blueprint's retained
 visual helpers. Dedicated servers must record zero HUD objects or subscriptions.
 
+0.8 is an unreleased candidate. Health data updates are implemented, but
+damage/heal/death animation selection and numeric interpolation are not yet at
+visual parity. Exactly-one active presenter and post-shutdown zero owned
+callbacks are target requirements that the current runtime validator does not
+fully enforce. Existing cleanup paths/logs do not establish an observed leak.
+
 The source-only smoke lane disables Lyra's content-backed startup systems in
 the disposable stage so it can prove UE5.8 compilation, module loading,
 CPython 3.11 ownership and bridge lifecycle without pretending that gameplay
@@ -37,7 +43,8 @@ works. The complete external project at
 Experience gameplay, synchronized multiplayer, cook/package and packaged
 CPython validation without modifying the reference tree.
 
-To repeat every 0.8.0 gate against a complete project outside the engine tree:
+From the core checkout, run the existing combined runtime/package lane against
+a complete project outside the engine tree:
 
 ```powershell
 .\Validation\Run-UEP58LyraValidation.ps1 `
@@ -46,8 +53,10 @@ To repeat every 0.8.0 gate against a complete project outside the engine tree:
     -Mode All
 ```
 
-`All` performs a full cook/package. During iteration, use `Standalone` or
-`Network`. Audit the relevant official/staged assets without runtime gameplay:
+`All` performs a full cook/package, but does not yet run `HUDAudit` or enforce
+all corrected 0.8 release requirements. During iteration, use `Standalone` or
+`Network`. Audit the relevant official/staged assets separately without runtime
+gameplay:
 
 ```powershell
 .\Validation\Run-UEP58LyraValidation.ps1 `
@@ -73,8 +82,10 @@ reference `W_Healthbar.uasset` was not changed.
 Every driver mode first runs the seven host-side tests in `Tests`. They use fake
 reflected objects to prove source-only asset absence, exact callback identity,
 event-only updates, old-Pawn detachment, Blueprint fallback, Destruct and
-registry teardown without starting Unreal. Runtime lanes then prove the same
-contracts against real Lyra objects.
+registry teardown without starting Unreal. Runtime lanes exercise real Lyra
+objects, but the exact-one-presenter and final post-exit contracts still need
+stronger checks and negative tests. After fixing the gates/visuals, repeat full
+current-source and rendered acceptance; host fakes alone cannot certify it.
 
 The Python probe owns the gameplay sequence. In Standalone and the packaged
 game it waits for Lyra damage immunity to end, applies 10 damage, proves the
@@ -99,7 +110,9 @@ before binding the new one. It then performs one same-map Experience
 replacement to exercise the real `LAS_ShooterGame_StandardHUD` `Add Widgets`
 action teardown/recreation, followed by a second independent same-map travel.
 The client must finish with at least three Constructs, two Destructs and one
-balanced active presenter. The server participates in the authority/
+balanced active presenter. This is the target: the present validator accepts
+multiple active presenters if the counts balance, and writes success before
+quit. The server participates in the authority/
 synchronization path but never creates a HUD.
 
 Each process latches the snapshot that produced its readiness marker while it
@@ -120,13 +133,21 @@ packaged game, and reported `full_acceptance: true`. After the selector was
 hardened to reject ambiguous human targets, exact-source result
 `20260813-005436` passed the Network lane and `20260813-005835` passed
 Standalone. No package was rebuilt after that small hardening change; the
-former result remains package evidence and the latter two are current-source
-runtime evidence.
+former result remains historical package evidence and the latter two are
+exact-source runtime evidence for that 0.5 selector change, not today's tree.
 
-The current 0.8 implementation is covered by HUD audit result
+Historical 0.8 supporting records include HUD audit result
 `20260903-032632`, clean-base generation results `20260903-033001` and
 `20260903-033049`, and formal `All` result `20260903-033426`. The latter passes
 Standalone, synchronized server/client, BuildCookRun and packaged runtime with
 `full_acceptance: true`, CPython 3.11.8, `100 -> 90 -> 100` on every UI role,
 3 Constructs / 2 Destructs after two Experience lifecycles, and zero dedicated-
-server HUD state.
+server HUD state. It is a Win64 Development, NullRHI run with `hud_audit: null`:
+the audit/generation above are separate invocations, not steps in `All`.
+It predates the final bootstrap fix/seventh host test and is neither current-
+source release approval nor rendered animation, DebugGame or Shipping evidence.
+
+0.8 closeout stays on the health bar. 0.9 focuses on Mixin engineering plus one
+weapon/ammo HUD chain and a bounded message subscription surface; the remaining
+combat HUD is 1.1+ backlog. Death validation must use native Lyra gameplay or an
+isolated fixture without expanding the bridge's non-lethal authority contract.
