@@ -48,21 +48,33 @@ Gameplay Effects, authority and replication remain native Lyra behavior.
 
 Health data updates are implemented, but damage/heal/death animation selection
 and numeric interpolation still need parity fixes and rendered acceptance.
-Exactly-one presenter and post-shutdown zero owned callbacks remain required
-validation improvements, not currently enforced guarantees.
+Exactly-one presenter and post-shutdown zero owned callbacks now have explicit
+probe/driver checks, host tests and a current-script Unreal Standalone pass;
+network/package and rendered acceptance remain pending.
 
 The core repository's full-content driver stages this overlay into a disposable
 copy of `F:\LyraStarterGame`, so neither the reference project nor Unreal Engine
 is edited. `GenerateHUDAssets` is the only authoring lane and copies back only
 the two verified overlay assets. `Standalone`, `Network`, `Package` and `All`
 exercise runtime lanes; `All` includes the heavy Win64 cook/package step.
-`HUDAudit` currently runs separately, not as part of `All`. The old green
-`full_acceptance` flag therefore does not close the corrected 0.8 release gates.
+HUD-enabled `All` now runs `HUDAudit`; it can also run independently. The old
+green `full_acceptance` flag did not include that audit and cannot close the
+corrected 0.8 release gates.
 
 The runtime code is under
 `UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud`; the clean-base
 authoring and read-only audit scripts are under `UEPLyraIntegration/Tools`, and host-side
 presenter contracts are under `UEPLyraIntegration/Tests`.
+
+Closeout checks pass 17 Python tests plus 28 core-side PowerShell checks. Schema
+5 keeps the active HUD snapshot and only promotes `awaiting_shutdown` after a
+Python exit snapshot proves zero owned callbacks/widget references; the driver
+also requires clean process exit and ordered markers. After official UBT's
+two metadata-only repair actions, a fresh strict audit and current-script
+NullRHI Standalone passed on 2026-09-07: one active presenter, zero final
+presenters/references, controller bindings 3/3 and health bindings 6/6. No C++
+compile, package or asset save was needed. Integrated `All`, synchronized
+network, package and visual gates still require fresh evidence.
 
 The agreed next scope is 0.8 health-bar closeout, 0.9 Mixin engineering plus one
 weapon/ammo HUD chain and bounded message subscriptions, then an RC freeze and

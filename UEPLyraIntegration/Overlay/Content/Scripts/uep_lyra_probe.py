@@ -455,7 +455,7 @@ class LyraRuntimeProbe:
             current = self._hud_snapshot()
             if self.mode not in ("server", "server_exit"):
                 if (
-                    current["active_widget_count"] < 1
+                    current["active_widget_count"] != 1
                     or current["health_bind_count"]
                     <= respawn["before"]["health_bind_count"]
                     or not self._hud_bindings_balanced(current)
@@ -715,7 +715,8 @@ class LyraRuntimeProbe:
             return
 
         if (
-            hud["active_widget_count"] < 1
+            hud["active_widget_count"] != 1
+            or hud["live_widget_reference_count"] != 1
             or hud["construct_count"] < 3
             or hud["destruct_count"] < 2
             or hud["controller_bind_count"] - hud["controller_unbind_count"]
@@ -1095,7 +1096,7 @@ class LyraRuntimeProbe:
             return
         self.finished = True
         report = {
-            "schema_version": 4,
+            "schema_version": 5,
             "status": status,
             "mode": self.mode,
             "python_version": ".".join(str(value) for value in sys.version_info[:3]),
@@ -1112,6 +1113,7 @@ class LyraRuntimeProbe:
             "gameplay_slice": self.gameplay,
             "hud": self._hud_snapshot(),
             "hud_lifecycle": self.hud_lifecycle,
+            "shutdown": None,
             "snapshot": snapshot_report,
             "pending_requirements": (
                 self._pending_requirements(snapshot_report) if snapshot_report is not None else []
@@ -1120,7 +1122,14 @@ class LyraRuntimeProbe:
         }
         path = Path(self.result_path)
         path.parent.mkdir(parents=True, exist_ok=True)
+        if status == "passed" and self.hud_slice_enabled:
+            from uep_lyra_hud.shutdown_validation import defer_until_shutdown
+
+            defer_until_shutdown(report, path)
         path.write_text(json.dumps(report, indent=2), encoding="utf-8")
+        if report["status"] == "awaiting_shutdown":
+            ue.log("UEP_LYRA_AWAITING_SHUTDOWN")
+            return
         if status == "passed" and self.gameplay_slice_enabled:
             ue.log("UEP_LYRA_GAMEPLAY_SLICE_PASSED")
         if status == "passed" and self.hud_slice_enabled:

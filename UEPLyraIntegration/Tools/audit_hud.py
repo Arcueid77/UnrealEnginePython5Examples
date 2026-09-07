@@ -93,20 +93,32 @@ def healthbar_mixin_description(blueprint, cdo, reflected_functions):
     return description
 
 
-def graph_description(graph):
+def graph_description(graph, include_pin_defaults=False):
     nodes = []
     for node in graph.Nodes:
         try:
             title = node.node_get_title()
         except Exception:
             title = object_name(node)
-        nodes.append(
-            {
-                "name": object_name(node),
-                "class": object_class_name(node),
-                "title": title,
-            }
-        )
+        description = {
+            "name": object_name(node),
+            "class": object_class_name(node),
+            "title": title,
+        }
+        if include_pin_defaults:
+            # Read-only, authored defaults used to verify retained visual
+            # primitives. Do not compile, alter pins or save these assets.
+            description["pins"] = [
+                {
+                    "name": pin.name,
+                    "category": pin.category,
+                    "default_value": pin.default_value,
+                    "default_object": object_path_name(pin.default_object),
+                    "linked_pin_names": [link.name for link in pin.get_linked_to()],
+                }
+                for pin in node.node_pins()
+            ]
+        nodes.append(description)
     return {
         "name": graph.get_name(),
         "node_count": len(nodes),
@@ -140,7 +152,7 @@ def blueprint_description(role, path):
     generated_class = blueprint.GeneratedClass
     cdo = generated_class.get_cdo()
     graphs = [
-        graph_description(graph)
+        graph_description(graph, include_pin_defaults=role == "healthbar")
         for graph in ue.blueprint_get_all_graphs(blueprint)
     ]
     reflected_functions = sorted(cdo.functions())

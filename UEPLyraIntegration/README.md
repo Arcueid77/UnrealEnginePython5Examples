@@ -32,8 +32,9 @@ visual helpers. Dedicated servers must record zero HUD objects or subscriptions.
 0.8 is an unreleased candidate. Health data updates are implemented, but
 damage/heal/death animation selection and numeric interpolation are not yet at
 visual parity. Exactly-one active presenter and post-shutdown zero owned
-callbacks are target requirements that the current runtime validator does not
-fully enforce. Existing cleanup paths/logs do not establish an observed leak.
+callbacks have host-tested checks and a current-script Unreal Standalone pass;
+network/package and rendered acceptance remain open. Existing cleanup
+paths/logs do not establish an observed leak.
 
 The source-only smoke lane disables Lyra's content-backed startup systems in
 the disposable stage so it can prove UE5.8 compilation, module loading,
@@ -53,8 +54,8 @@ a complete project outside the engine tree:
     -Mode All
 ```
 
-`All` performs a full cook/package, but does not yet run `HUDAudit` or enforce
-all corrected 0.8 release requirements. During iteration, use `Standalone` or
+`All` performs a full cook/package and now invokes `HUDAudit` when the HUD slice
+is enabled. Visual/current-source release acceptance is still pending. Use `Standalone` or
 `Network`. Audit the relevant official/staged assets separately without runtime
 gameplay:
 
@@ -79,13 +80,15 @@ declaration changes:
 Generation occurs in the disposable stage and SHA-256 checks prove the
 reference `W_Healthbar.uasset` was not changed.
 
-Every driver mode first runs the seven host-side tests in `Tests`. They use fake
+Every driver mode first runs the 17 host-side Python tests in `Tests` and 28
+core-side PowerShell contract checks. They use fake
 reflected objects to prove source-only asset absence, exact callback identity,
 event-only updates, old-Pawn detachment, Blueprint fallback, Destruct and
 registry teardown without starting Unreal. Runtime lanes exercise real Lyra
-objects, but the exact-one-presenter and final post-exit contracts still need
-stronger checks and negative tests. After fixing the gates/visuals, repeat full
-current-source and rendered acceptance; host fakes alone cannot certify it.
+objects. The strengthened exact-one-presenter and final post-exit checks have
+host coverage, including actual CPython-only subprocess finalization, but no
+new Unreal run yet. After the visual fixes, repeat full current-source and
+rendered acceptance; host fakes alone cannot certify it.
 
 The Python probe owns the gameplay sequence. In Standalone and the packaged
 game it waits for Lyra damage immunity to end, applies 10 damage, proves the
@@ -110,9 +113,13 @@ before binding the new one. It then performs one same-map Experience
 replacement to exercise the real `LAS_ShooterGame_StandardHUD` `Add Widgets`
 action teardown/recreation, followed by a second independent same-map travel.
 The client must finish with at least three Constructs, two Destructs and one
-balanced active presenter. This is the target: the present validator accepts
-multiple active presenters if the counts balance, and writes success before
-quit. The server participates in the authority/
+balanced active presenter. The updated validator rejects multiple active
+presenters even if counts balance. Schema 5 writes `awaiting_shutdown`, retains
+the active snapshot in `hud`, and finalizes `shutdown.hud` from Python `atexit`
+after Mixin cleanup. The driver requires zero owned callbacks/references and
+ordered final markers after process exit. This path has host tests and a
+current-script Unreal Standalone pass; the new network/package exit gates
+remain unverified. The server participates in the authority/
 synchronization path but never creates a HUD.
 
 Each process latches the snapshot that produced its readiness marker while it
@@ -146,6 +153,16 @@ server HUD state. It is a Win64 Development, NullRHI run with `hud_audit: null`:
 the audit/generation above are separate invocations, not steps in `All`.
 It predates the final bootstrap fix/seventh host test and is neither current-
 source release approval nor rendered animation, DebugGame or Shipping evidence.
+
+The first 2026-09-07 Editor attempt failed on mismatched module BuildIds.
+Official UBT then repaired the generated records in two metadata-only actions,
+without a manual GUID override, C++ compile, cook or asset save. The fresh strict
+HUD audit and current-script NullRHI Standalone passed: exactly one active
+presenter/reference, then zero of both after actual Python exit, controller
+bindings 3/3 and health bindings 6/6. The core validation history retains
+`20260907-hud-closeout/standalone-shutdown-summary.json` with script/native
+hashes and explicit `full_acceptance: false`. Integrated `All`, synchronized
+network, package and rendered checks remain outstanding.
 
 0.8 closeout stays on the health bar. 0.9 focuses on Mixin engineering plus one
 weapon/ammo HUD chain and a bounded message subscription surface; the remaining

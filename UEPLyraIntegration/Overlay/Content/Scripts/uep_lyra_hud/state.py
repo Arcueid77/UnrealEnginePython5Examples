@@ -169,6 +169,9 @@ def record_error(widget, operation, detail):
 def snapshot():
     result = copy.deepcopy(_state)
     result["active_widget_count"] = len(result["active_widgets"])
+    # Count actual Python-owned widget references as well as the JSON ledger.
+    # Do not call UObject methods: this snapshot also runs during Python exit.
+    result["live_widget_reference_count"] = len(_live_widgets)
     return result
 
 
