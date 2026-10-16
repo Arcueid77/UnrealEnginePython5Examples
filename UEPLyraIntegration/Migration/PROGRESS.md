@@ -13,15 +13,17 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Latest verified checkpoint (2026-10-17):** Character team/cosmetic orchestration
-adds eight original/Python material/stencil/native-device scheduler pairs and
-three-world local software acceptance; ledger 44 below. Seven Character helpers
-are routed through the retained-type Mixin; inherited parent stencil and other
-Character business remain open. Final standalone and network each freeze 1,618
-inputs; all original state/owned roots restore and strict independent gates,
-closed logs and server-last zero exits PASS. All 1,307 host models PASS in the
-isolated Git-index archive; all-index syntax/import closure PASSes 558 Python
-files. Five driver-safety checks and 56 PowerShell parses PASS.
+**Latest verified checkpoint (2026-10-17):** Character inherited stencil decisions
+add twelve direct BP/Python pairs plus the eight team regression pairs; ledger
+45 below. Eight Character helpers are routed through the retained-type Mixin.
+Parent/sibling families and other Character business remain open. Final
+standalone has 40 trials/52 BP calls/24 actual GC calls; three network worlds
+have 120 trials/156 BP calls/72 GC calls. Native child recursion, setter
+clamping, render-enable invariance, child/caller lifetime, original state restore
+and strict independent gates/closed logs/server-last zero exits PASS. Both final
+runs freeze 1,636 inputs. All 1,336 isolated-index host models and 567-file
+all-index syntax/local-import closure checks PASS. Driver safety and all 56
+PowerShell parses PASS.
 Pixels, rendered outlines, hardware output, replicated team changes and
 material replication are not certified by these software tests.
 Nullable native probes, hardware/travel/loss/packages and whole-version gates
@@ -407,6 +409,39 @@ models PASS 1,307; all-index syntax/local-import closure PASSes 558 files, with
 five driver-safety checks and 56 PowerShell parses. The bounded batch is ready
 for local commits; no push/tag/release.
 Official assets/Engine sources remain untouched; no C++ build/cook/package.
+
+**Accepted bounded inherited-stencil batch:** team orchestration is locally
+committed as Examples c47dec6 / core fb92eb3. The original parent graph's
+StencilValue is a function local. Python preserves local AND player control ->
+zero, otherwise forwards TeamId unchanged; native Lyra primitive discovery
+retains recursive ChildActor traversal and the native setter owns 0..255
+clamping/render state. Seven prior helpers are explicit aliases. The parent BP
+stays byte-identical; only this retained Shooter Character's router shadows the
+inherited function. Parent/sibling-family migration is not claimed.
+Assets01 PASSes retained class/full CDO/twelve signatures/all original graphs,
+with a three-node typed stencil caller and unchanged prior typed team caller.
+Earlier Differential01 PASSes 40 trials/52 BP calls/24 real GC calls; inspection
+shows both original and Python team calls really traverse the selected stencil
+entry. The final gate therefore requires exact nested fallback/Python counts,
+not a permissive zero-count baseline. Differential02 PASSes that final gate and
+all original/Python direct cases: real native ChildActor with a BoxComponent,
+extra fixture primitive, local/nonlocal, zero/team/max/negative/overflow/repeat,
+native clamp, unchanged bRenderCustomDepth and actual GC-held references.
+Natural startup has three Python stencil calls/queries and sixteen real
+component writes. All original visual/camera/Profile/CDO/inventory state restores.
+Network01 PASSes 120 trials/156 BP calls/72 actual GC calls in three real worlds.
+Natural Python stencil enters twice/world. Server/clients keep native roles,
+control and absent/present device subsystem boundaries. Test parent/child Actors
+remain nonreplicated and are destroyed; both caller-class root scopes close
+1/1 each/world, device roots close 0/0 + 48/48 + 48/48. Cleanup freezes before
+release; all closed strict logs, independent gates and server-last three zero
+exits PASS. Each final run freezes 1,636 inputs; 1,336 host models PASS. Ledger
+45 contains exactly Assets01/Differential02/Network01 and thirteen scoped files,
+all matched to actual frozen native inputs. Earlier Differential01 is a
+historical earlier-gate pass, not final standalone proof. Isolated-index models
+PASS 1,336 and all-index syntax/local-import closure PASSes 567 files; bounded
+local commits are next. No pixels/stencil/team/material replication,
+hardware/travel/loss/package/whole-Character/family/version claim or publication.
 
 **Accepted pressed-widget pilot and nullable-controller fix (2026-10-16, 23:45 Singapore):**
 Previous held-widget batch is locally committed as Examples b8b9818 / core
