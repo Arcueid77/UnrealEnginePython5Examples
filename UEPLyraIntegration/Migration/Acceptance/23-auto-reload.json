@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "batch": "23-auto-reload",
+  "scope": "Auto-reload LocalOnly polling and reload-intent decisions over original native GAS tasks/weapon idle time. Historical six standalone pairs including 12 real shots and 24 two-owner network rows. Current staged checks/source freeze; no current-DLL auto-reload rerun or full-version claim.",
+  "recorded_utc": "2026-10-16T13:19:00.3369524Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "00ff90a6854809baf49ce8179342d653cf18d53c",
+  "examples_parent_commit": "f342df9babe6816071e500370d58b0787180a46c",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-autoreload/Differential02",
+      "summary_sha256": "DDAB4A20CB3D3BE5408AE95DE96F395BB0F378D35ACCA0FADE4185A88FB9B576",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1317,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "093C35EBBAC43F30BFF7B5C8B7C2F2169B0CBA9229E0DA69B1823F724AB005C1",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-autoreload/Network01",
+      "summary_sha256": "9A3994707632F1E5806737749E155BF54A2A9A97619CA6DDB8A6912EBA898948",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1317,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "A": 0,
+        "B0": 0,
+        "server": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "A438C2E96732D1F367D4694EAD3B6EC5960FED035387D989D20FD68375AC785A",
+          "file": "server.json"
+        },
+        {
+          "sha256": "94817512558B96F1DB00EEEF1E304CF4853640B4124534E51D0622A7523D4C3E",
+          "file": "A.json"
+        },
+        {
+          "sha256": "43BB08CC459022400162CF634D4DAA3396BF9E46F24A0C1AE46565620DB8D244",
+          "file": "B0.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-emote/Network01",
+      "summary_sha256": "4264730AB2567970035E4F256927E03B17162DE6CA96B7ED1C9EA4F131EF0EA0",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1439,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "A": 0,
+        "server": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "4755998CB3FC04250ABA985E9BA7BE176B0563B9D7362C09E67A828A3119C945",
+          "file": "server.json"
+        },
+        {
+          "sha256": "339B99301267A8BC22B0FC810AAEC4FFC6F8654816B8C1B7C661B953ED8D3E6C",
+          "file": "A.json"
+        },
+        {
+          "sha256": "684F13777E42885EBBF00D9D5395D2ACB1B24C92A77ADF13CEF0EF7CAC3B8092",
+          "file": "B0.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "AF9E63247D758A4ABE959EB53B638B56E2F9E85C89E22C97664D9A85A8BE3543",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/autoreload_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "A4DF73750AA044E4DFFBE78C9FCCE56EF004FAB535045540825185C40BB3F5EE",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/autoreload_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "40C2115575C33F5B8D479BBE39070EF04EBB4BBF077D016DC9D9204F48DD0A28",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/autoreload_network_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "6882871ECC9637F7B531E3244213720A2C05207E936E12C7B05982B2077F3891",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/autoreload_network_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "C5DE90E1D87CB10BC4C83D269B40E23BAF1E7BD1A5397CED295155E494F53656",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/autoreload_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "9F3F07E0F69C76A4F2B510F1B8DA79CF908E92FC2F6749F8BAFA558F2163C1EA",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_AutoReloadAbilityMixin.uasset",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "A023C8FF2D38912AADE7B487C5811947127E58EBF96357FC0F1770003C53C13B",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Weapons/GA_Weapon_AutoReload.uasset",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "sha256": "66267478B75417B41E200BAC2ED2A27F8E54E44B514A2213521A06CDB6C3A2C8",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 762,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\CommitVerification\\20261016-23-auto-reload\\workspace\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/CommitVerification/20261016-23-auto-reload/workspace/.build/host.json"
+  }
+}
