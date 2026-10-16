@@ -27,12 +27,13 @@ def validate_listener_row(row, name, profile):
         require(stats["avatar_binds"] >= 1 and stats["health_binds"] >= 1, "Python did not bind actual new Pawn/Health delegates")
 
 
-def validate_peer(report):
-    require(report["death_listener_orchestration_migrated"] is True and report["timer_restart_business_migrated"] is False and
+def validate_peer(report, *, event_business=False):
+    require(report["death_listener_orchestration_migrated"] is True and report["timer_restart_business_migrated"] is event_business and
         report["foreign_native_delegate_delivery_tested"] is True and report["synthetic_delegate_broadcast"] is False,
         "wrong listener-only scope or manufactured delegate delivery")
     closed = report["listener_fixture_shutdown"]
     expected = len(report["cases"])*(1 if report["network_acceptance"] else 2)
+    if event_business: expected += len(report.get("avatar_endplay_cases", []))
     require(closed == dict(created=expected, closed=expected, active=0), "native listener fixture scopes leaked/incomplete")
 
 

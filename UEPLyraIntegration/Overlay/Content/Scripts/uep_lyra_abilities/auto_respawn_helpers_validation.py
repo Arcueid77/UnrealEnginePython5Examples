@@ -105,6 +105,8 @@ class Validation:
 
     def trial_begin_evidence(self): pass
     def trial_end_evidence(self): pass
+    def foreign_begin_evidence(self): pass
+    def foreign_end_evidence(self, row): pass
     def validate_report(self): return validate(self.report)
 
     def authority_state(self):

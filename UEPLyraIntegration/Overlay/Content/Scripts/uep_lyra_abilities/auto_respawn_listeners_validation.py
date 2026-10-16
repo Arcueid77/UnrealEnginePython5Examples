@@ -82,5 +82,5 @@ class Validation(ListenerEvidence, Native): pass
 
 
 result = next((value.split("=", 1)[1] for value in sys.argv if value.startswith("-UEPAutoRespawnHelpersResult=")), None)
-if result and "-UEPAutoRespawnListeners" in sys.argv:
+if result and "-UEPAutoRespawnListeners" in sys.argv and "-UEPAutoRespawnEvents" not in sys.argv:
     validation = Validation(result); atexit.register(validation.finalize); ticker = ue.add_ticker(validation.tick)

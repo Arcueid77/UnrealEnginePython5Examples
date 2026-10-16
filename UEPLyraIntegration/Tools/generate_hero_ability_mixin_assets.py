@@ -62,6 +62,9 @@ def generate():
     if kind == "autorespawnlisteners":
         from generate_auto_respawn_listener_assets import generate as generate_auto_respawn_listeners
         return generate_auto_respawn_listeners(stage)
+    if kind == "autorespawnevents":
+        from generate_auto_respawn_event_assets import generate as generate_auto_respawn_events
+        return generate_auto_respawn_events(stage)
     config = {
         "quickslot": ("/ShooterCore/Game/GA_QuickbarSlots", "quickslot_mixin", "LyraQuickslot", "Quickslot",
                       "Plugins/GameFeatures/ShooterCore/Content/Game/GA_QuickbarSlots.uasset", "K2_ActivateAbility"),

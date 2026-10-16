@@ -257,6 +257,68 @@ script-built native structs. This is scoped source analysis only, not event
 implementation or acceptance. Activation/reset-listener/UI/removal business
 remains separately tracked until migrated and exercised.
 
+**Accepted native AutoRespawn death/Avatar/restart event batch (2026-10-17):**
+Listener pilot is locally committed as Examples 094f3c6 / core 6f75f11. The next
+uncommitted batch implements OnDeathStarted, OnAvatarEndPlay and two explicit
+continuation gates in Python, reusing all five accepted helper/listener function
+objects locally. The original 5-second and 0.1-second native Delay nodes remain
+the only latent backends; two added native entries and four dispatch nodes
+select Python or unchanged original BP continuation. Python builds native
+duration/verb structs through existing typed transport, retains actual ability
+ActivationInfo authority semantics, calls native next-frame GameMode restart
+and reliable GameState RPC, and suppresses dedicated-server cosmetic completion.
+Activation/reset/UI/removal business remains BP and is not claimed migrated.
+No production Python callback, timer, scope or teardown lifetime is introduced.
+
+The fixture extends four real death/restart pairs with a separate original/
+Python live-Pawn K2_DestroyActor pair to exercise actual OnAvatarEndPlay rather
+than replaying it. Native message scopes read real duration/completion payloads,
+require exact player/tag/duration/magnitude/empty-tags identity, and reject
+duplicates. Two actual clients also independently observe the other owner's
+reliable completion payload without changing their own native state. Existing
+helper/listener lifetime, game pause and Profile-handoff gates remain required.
+Eighty-two focused models PASS. Asset authoring, original/native differential
+and network runtime acceptance have not yet passed; this batch stays uncommitted.
+Assets01 now PASSes full CDO/twelve original signatures and retained business
+digests around exactly four declared continuation endpoints. Both original
+native Delay nodes are retained; only two entries/four dispatch/four gate-body
+nodes plus prior exact listener transport are added. Host01 PASSes 1,041 models.
+Differential01 completes four death pairs and both actual live-Pawn destruction
+cases, with real duration/completion payloads and 10/10 closed observer scopes,
+but FAILS the final spec-restoration gate. Both original BP and Python lose the
+same three pistol equipment-granted abilities after bare K2_DestroyActor;
+persistent AutoRespawn/Death handles remain. The fixture now records the raw
+post-restart model separately, requires identical BP/Python equipment-only loss,
+then uses native QuickBar empty-slot/original-slot RPCs for cleanup. It must
+restore the exact logical class model, persistent handles, original slot and
+unchanged inventory identities; no ability/health/inventory write or grant is
+introduced and production behavior is unchanged. The failed normal-exit run is
+retained; fresh Differential02 must pass all original gates before networking.
+Final Differential02 now PASSes all four real death/restart pairs and both
+actual live-Pawn destruction cases. Real duration/completion native payloads,
+pause/mid-delay Profile switch, native two-delay continuation dispatch and
+original/Python raw equipment-gap parity all pass. Both native slot round trips
+restore slot 0, unchanged inventory identities, all logical ability classes and
+the exact persistent handles; no direct grant/property write is used. Both
+observer scope ledgers close 10/10. Strict logs, independent gate, 1,499 frozen
+inputs and real normal exit PASS.
+
+Network01 PASSes twelve authority/owner rows and six actual foreign reliable
+completion payload observations per client. Native owner IDs/payload fields,
+ability authority/Pawn role/GameMode distinction, zero dedicated-server local
+cosmetic completion, original grants and foreign-owner isolation pass. Listener
+scopes close 12/12 + 6/6 + 6/6; message scopes close 12/12 on each peer. Strict
+logs, independent report gate, restoration, 1,499 frozen inputs and three real
+zero exits PASS, server last. No native processes remain. Isolated Git-index
+archive Index01 PASSes 1,042 host tests; all 481 indexed Python files pass
+syntax/eager-import closure. All 55 PowerShell parses and five driver-safety
+checks PASS. Ledger 37 records three accepted native runs and twenty-two scoped
+current source/asset hashes, all matching a listed native input. Only ledger/
+documentation is added afterward; runtime inputs remain unchanged. This batch
+now receives separate local Examples/core commits.
+Activation/Reset/UI/end/removal business and cancellation regressions remain
+open; this is not whole-AutoRespawn or version acceptance.
+
 **Accepted held-widget pilot (2026-10-16, 22:28 Singapore):**
 The held-input root policy is now implemented in
 `uep_lyra_abilities/widget_held_mixin.py`; its two original scoreboard children

@@ -67,10 +67,12 @@ def validate_pair(blueprint, python):
         require(blueprint[field] == python[field], "BP/Python native authority/lifetime differs: "+field)
 
 
-def validate(report, plan=PLAN, *, network=False):
+def validate(report, plan=PLAN, *, network=False, event_business=False):
     require(report["status"] == "passed" and report["error"] is None and report["original_profile_restored"] and
         report["original_specs_restored"] and report["real_lethal_gas_damage"], "native AutoRespawn helper evidence incomplete")
-    for field in FALSE_FLAGS: require(report[field] is False, "unsupported AutoRespawn helper claim: "+field)
+    for field in FALSE_FLAGS:
+        expected = event_business if field == "death_listener_timer_restart_business_migrated" else False
+        require(report[field] is expected, "unsupported AutoRespawn helper claim: "+field)
     require(report["network_acceptance"] is network, "wrong native AutoRespawn lane")
     require([row["name"] for row in report["cases"]] == list(plan), "native AutoRespawn helper matrix incomplete")
     for row in report["cases"]:

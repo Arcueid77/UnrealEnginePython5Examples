@@ -11,7 +11,7 @@ class Client(ListenerEvidence, NativeClient): pass
 class Server(ListenerEvidence, NativeServer): pass
 
 
-if "-UEPAutoRespawnListeners" in sys.argv and any(value.startswith("-UEPAutoRespawnHelpersNetworkResult=") for value in sys.argv):
+if "-UEPAutoRespawnListeners" in sys.argv and "-UEPAutoRespawnEvents" not in sys.argv and any(value.startswith("-UEPAutoRespawnHelpersNetworkResult=") for value in sys.argv):
     result, peer, run = arg("-UEPAutoRespawnHelpersNetworkResult="), arg("-UEPJumpPeer="), arg("-UEPJumpRun=")
     validation = Server(result, run) if peer == "server" else Client(result, peer, run)
     atexit.register(validation.finalize); ticker = ue.add_ticker(validation.tick)

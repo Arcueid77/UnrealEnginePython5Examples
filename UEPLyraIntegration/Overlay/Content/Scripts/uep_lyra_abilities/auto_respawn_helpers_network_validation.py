@@ -28,6 +28,7 @@ def owner_state(controller):
     ability, = instances(asc, ue.load_class(policy.CLASS))
     return dict(native=native_state(controller), specs=specs(asc), profile=str(ue.get_mixin_profile(ability)),
         helper_counts=policy.instance_snapshot(ability), listener_counts=dict(getattr(ability, "_uep_auto_listener_counts", {})),
+        event_counts=dict(getattr(ability, "_uep_auto_event_counts", {})),
         auto_active=bool(ability.get_property("bIsActive")))
 
 
@@ -83,7 +84,7 @@ class Client(Native):
                 native_authority_before=self.authority_state())
             self.enter("death")
         else:
-            self.foreign_before = owner_state(self.controller); self.enter("foreign")
+            self.foreign_before = owner_state(self.controller); self.foreign_begin_evidence(); self.enter("foreign")
         atomic_write(self.root/(self.peer+"-armed.json"), dict(run_id=self.run, peer=self.peer, position=self.position))
 
     def await_native_death(self):
@@ -115,6 +116,7 @@ class Client(Native):
                 require(owner_state(self.controller) == self.foreign_before, "foreign death changed local owner state/helper Profile/specs")
                 if token(self.root, "trial-complete.json", self.run, self.position) is not None:
                     row = dict(position=self.position, target=self.command["target"], local_owner_unchanged=True)
+                    self.foreign_end_evidence(row)
                     self.report["foreign_cases"].append(row)
                     atomic_write(self.root/(self.peer+"-"+str(self.position)+"-foreign-ack.json"), dict(run_id=self.run,
                         peer=self.peer, position=self.position, row=row))

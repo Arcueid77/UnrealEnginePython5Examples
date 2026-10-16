@@ -7,7 +7,7 @@ from .auto_respawn_helpers_contract import NETWORK_PLAN, FALSE_FLAGS, require, v
 PEERS, TRIALS = ("A", "B0"), len(NETWORK_PLAN)*2
 
 
-def validate(reports):
+def validate(reports, *, event_business=False):
     require(set(reports) == {"server", *PEERS}, "two real AutoRespawn clients required")
     server = reports["server"]
     require(server["server_waited_for_client_process_exit"] and server["all_owners_restored"] and server["owners_restored_before_client_release"] and
@@ -20,7 +20,8 @@ def validate(reports):
             report["original_profile_restored"] and report["original_specs_restored"] and report["real_lethal_gas_damage"], "native helper peer report incomplete")
         require(report["peer"] == peer and report["run_id"] == server["run_id"], "wrong native helper peer/run identity")
         for field in FALSE_FLAGS+("gameplay_state_delivered_by_files", "native_rpc_bypassed", "packet_loss_tested", "travel_rejoin_tested"):
-            require(report[field] is False, "unsupported helper network claim: "+field)
+            expected_flag = event_business if field == "death_listener_timer_restart_business_migrated" else False
+            require(report[field] is expected_flag, "unsupported helper network claim: "+field)
     expected = [(peer, index) for peer in PEERS for index in range(TRIALS)]
     require([(row["target"], row["index"]) for row in server["cases"]] == expected, "native helper authority matrix incomplete")
     for peer in PEERS:
