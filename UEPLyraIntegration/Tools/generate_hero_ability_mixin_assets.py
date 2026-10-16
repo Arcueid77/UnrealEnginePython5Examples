@@ -53,6 +53,9 @@ def generate():
     if kind == "widgetheld":
         from generate_widget_held_assets import generate as generate_widget_held
         return generate_widget_held(stage)
+    if kind == "widgetpressed":
+        from generate_widget_pressed_assets import generate as generate_widget_pressed
+        return generate_widget_pressed(stage)
     config = {
         "quickslot": ("/ShooterCore/Game/GA_QuickbarSlots", "quickslot_mixin", "LyraQuickslot", "Quickslot",
                       "Plugins/GameFeatures/ShooterCore/Content/Game/GA_QuickbarSlots.uasset", "K2_ActivateAbility"),

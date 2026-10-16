@@ -4,6 +4,12 @@
 def validation_module(arguments):
     if any(argument.lower().startswith("-run=") for argument in arguments):
         return None
+    if any(argument.startswith("-UEPWidgetPressedContextResult=") for argument in arguments):
+        return "uep_lyra_abilities.widget_pressed_context_validation"
+    if any(argument.startswith("-UEPWidgetPressedNetworkResult=") for argument in arguments):
+        return "uep_lyra_abilities.widget_pressed_network_validation"
+    if any(argument.startswith("-UEPWidgetPressedResult=") for argument in arguments):
+        return "uep_lyra_abilities.widget_pressed_validation"
     if any(argument.startswith("-UEPWidgetHeldNetworkResult=") for argument in arguments):
         return "uep_lyra_abilities.widget_held_network_validation"
     if any(argument.startswith("-UEPWidgetHeldResult=") for argument in arguments):

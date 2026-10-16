@@ -13,6 +13,81 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Accepted pressed-widget pilot and nullable-controller fix (2026-10-16, 23:45 Singapore):**
+Previous held-widget batch is locally committed as Examples b8b9818 / core
+8d03e61. SpawnEffect's nullable-controller repair is separately committed as
+Examples fb1b13d / core 225ae72, with its own evidence ledger 33 and 933 passing
+isolated-index host checks. Pressed-widget acceptance is a separate local batch;
+no push, tag or release is implied by either acceptance.
+`20261016-widget-pressed/Context01` passes read-only native defaults/hash audit
+for ten original assets and the inventory test map. Original ContextPlay01
+fails its incorrect one-instance assumption: the real Experience grants two
+instances per toggle class. ContextPlay02 catches an unstable whole-spec
+baseline/continuous-trigger fixture assumption. ContextPlay03 passes after
+observing the two unchanged grants, waiting for stable native specs and issuing
+one real EnhancedInput press. Both inventory/map UI open, survive release and
+native-close correctly; specs/layer restore. No original asset is changed.
+
+Assets01 preserves root identity/full CDO/three original signatures/business
+graphs and both child files. Its new transport is soft-class path (four nodes),
+exact original delegate cleanup (four), pending/widget bookkeeping (three) and
+guarded empty-native-End notification (three). PythonSmoke01 then passes four
+real native activations/pushes and 8/8 owned scopes, zero original-BP fallback,
+zero active/errors, strict logs/independent gate/normal exit. This is bounded
+smoke, not batch acceptance. Fourteen policy models passed at that checkpoint.
+The original ContextPlay03 report predates the current source_mode report
+field; it is historical discovery evidence, not re-certified by today's schema.
+
+Differential01 PASSes fourteen BP/Python pairs, six Python pending-GC
+regressions and four same-BP/two-instance mixed-Profile cases in the actual
+Inventory Experience. Policy scopes close 74/74, fixture observers 28/28; native
+shutdown and independent/strict-log gates pass. Ordinary End preserves the UI-owned panel;
+explicit active Profile teardown disarms owned/original callbacks before End
+and deactivation. Root defaults stay unconfigured; no fabricated target class.
+Network01 completes all 48 owner trials and three zero exits, but FAILS strict
+logs: client A's previously migrated SpawnEffect raises when CachedController
+is null during startup. The initial commentary calling this a pass was corrected;
+native reports alone are not acceptance. The failed run is retained. New pressed
+policy/report rejection models pass; full live host suite was 955 before the fix.
+
+The separate SpawnEffect repair makes a missing cached Controller a no-lock
+no-op, and keeps EnableInputAgain from consuming a foreign lock that Python
+never acquired. Four new policy/report checks and an actual-native existing-
+instance cache-null/foreign-lock probe are added. The probe changes only the
+instance cache temporarily, preserving real ActorInfo and restoring cache/input;
+it does not claim original BP null-receiver warning parity. SpawnEffect
+Differential01 passed, but Network01 correctly failed its probe's assumption
+that no old native task could remain. The probe now compares before/after
+native counts and policy creation deltas; it forbids new effects/tasks without
+pretending the pre-existing task is absent. Final Differential02 and Network02
+PASS ten original/Python pairs, the immediate handoff, real nullable-cache/
+foreign-lock probes and 28 authority trials with two actual owners. All native
+reports, strict logs, independent gates, real zero exits and 1,468 frozen inputs
+pass. Server/A/B0 scopes close 23/23, 8/8 and 9/9. Failed runs remain preserved.
+
+Pressed Network02 then PASSes all 48 LocalOnly owner trials in the actual
+Inventory Experience, with 24 independent foreign-owner observations per
+client. Authority abilities remain inactive and the two original grants per
+toggle class are unchanged. Policy scopes close 0/0 + 48/48 + 48/48; fixture
+observers close 24/24 on each client. Strict logs, independent report gate,
+1,469 frozen input records and all three real zero exits pass, server last.
+The standalone proof freezes 1,465 inputs. Its own inventory/map Widget BP
+business is NOT migrated: only the pressed-ability orchestration is Python.
+No log-error allowance, timeout widening, Engine edit or compile was introduced.
+The coherent pressed batch receives ledger 34 and a separate local commit.
+Its isolated Git-index archive passes 959 host checks; full-index syntax/local
+import closure passes 458 Python files. All seventeen scoped runtime, asset,
+authoring and driver files match at least one listed native input. Core
+45 HUD/16 weapon/six ledger/five driver-safety/three index-isolation checks and
+55 PowerShell parses pass. These are supporting evidence, never substitutes
+for the completed native runs.
+The inventory/map Widgets' own BP PopContent logic remains a later UI batch.
+Travel/rejoin, packet loss, physical input, filter-token observation, UI pixel/
+text parity and packages are not claimed. Ordinary native warnings remain.
+No Engine build/cook/package or official/test-tool/animation/private-binding
+source changes. Whole 0.10/0.11 acceptance remains OPEN; next investigate a
+separate remaining hero/respawn family rather than declaring the version done.
+
 **Accepted held-widget pilot (2026-10-16, 22:28 Singapore):**
 The held-input root policy is now implemented in
 `uep_lyra_abilities/widget_held_mixin.py`; its two original scoreboard children
