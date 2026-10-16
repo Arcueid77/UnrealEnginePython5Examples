@@ -6,6 +6,10 @@ def validation_module(arguments):
         return None
     if any(argument.startswith("-UEPCharacterAudioResult=") for argument in arguments):
         return "uep_lyra_characters.emote_audio_validation"
+    if any(argument.startswith("-UEPCharacterOutlineNetworkResult=") for argument in arguments):
+        return "uep_lyra_characters.outline_network_validation"
+    if any(argument.startswith("-UEPCharacterOutlineResult=") for argument in arguments):
+        return "uep_lyra_characters.outline_validation"
     if any(argument.startswith("-UEPCharacterLoadoutNetworkResult=") for argument in arguments):
         return "uep_lyra_characters.initial_inventory_network_validation"
     if any(argument.startswith("-UEPCharacterLoadoutResult=") for argument in arguments):

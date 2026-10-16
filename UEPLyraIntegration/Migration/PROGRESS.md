@@ -13,13 +13,14 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Latest verified checkpoint (2026-10-17):** Character AddInitialInventory has
-bounded original/Python loadout, natural first/ten replacement-Pawn grants,
-ClearInventory regression and 24 authority/owner replication/remote-noop trials;
-details and ledger 42 are below. Five Character helpers are routed through the
-retained-type Mixin; remaining Character business is not migrated. All 1,236 host
-models PASS in the isolated Git-index archive; all-index syntax/local-import
-closure PASSes 540 Python files. Bounded local commits follow this verification.
+**Latest verified checkpoint (2026-10-17):** Character outline orchestration has
+bounded original/Python material/camera-interface/native-GC comparison, actual
+natural startup and three-world local software acceptance; ledger 43 below.
+Six Character helpers are routed through the retained-type Mixin; remaining
+Character business is not migrated. All 1,270 host models PASS in the isolated
+Git-index archive; all-index syntax/local-import closure PASSes 549 Python files.
+Pixels/rendered outlines and
+material replication are not certified by this software test.
 Nullable native probes, hardware/travel/loss/packages and whole-version gates
 remain open. No push/tag/release or C++ build/cook/package.
 
@@ -288,6 +289,70 @@ matched to actual frozen native inputs. Isolated-index models PASS 1,236 and
 all-index syntax/local-import closure PASSes 540 files. Five driver-safety checks
 and 56 PowerShell parses PASS. No native process remains; this coherent bounded
 batch is ready for local commits, not push/tag/release.
+
+**Accepted bounded Character outline-helper batch:** loadout orchestration is locally
+committed as Examples a100698 / core b6e654e. Only
+CreateOrUpdateOutlineIfNeeded is new business, with five accepted helper aliases.
+Keep original IsLocallyControlled guard, native material-parent creation only
+when missing, one camera IBlendableInterface add only on creation, scalar TeamID
+then vector TeamColor updates. A valid but detached MID stays detached; repeated
+calls reuse it. Material/rendering/GC implementation remains native. Existing
+UEP FInterfaceProperty conversion is used, no new C++ transport/build.
+Thirteen policy and ten report/cleanup checks PASS (158 Character models total).
+The native fixture will use a real typed second BP caller, original/Python new/
+attached/detached/repeat/negative/HDR cases, a true unpossessed same-class Actor,
+held-reference GC and exact full camera-setting/field/Profile/CDO/inventory undo.
+Only original ordinary material references may be temporarily rooted by the
+fixture; production roots nothing. This is software state, not pixels/rendered
+outline or material replication. Assets/native acceptance are not yet passed.
+
+Outline Assets01 now PASSes retained type/full CDO/ten signatures/all original
+graphs, six routed methods, a stage-only typed three-node BP caller and actual
+native camera TScriptInterface signature. Software01 FAILS after one completed
+original-BP trial: explicit native GC collects the fixture's unowned generated
+BP caller class/CDO. Original material/camera settings and temporary Actor still
+restore/clean up. The fixture now owns that test BP class across GC and releases
+its added root once; two executable regressions cover preexisting-root ownership
+and release. Production material/Actor/ability code is not rooted or changed.
+
+Software02 PASSes all eight original/Python pairs, actual scalar/vector/parent/
+camera interface state, valid-but-detached behavior, repeated MID identity,
+signed/HDR values, real unpossessed nonlocal Actor and held-reference GC.
+Software03 re-runs the final shared fixture and additionally proves the original
+startup BP naturally enters Python three times, creating one MID/one blendable
+and updating three scalar/vector pairs (zero original fallback entries).
+Complete original camera settings/field/Profile/CDO/inventory restore; material
+and test-caller roots balance and the fixture Actor is actually destroyed.
+Strict logs/independent gates/normal exits PASS. All 1,270 host models PASS.
+The active Network01 lane performs local software checks in three actual native
+worlds, not replicated material or pixel tests. Each test-only Character has
+replication disabled. Client release occurs only after local cleanup/semantic
+checks, then the server waits for POD process exits without rereading Actors.
+The original/staged parent material is now hash-checked and frozen by the driver.
+The previous failed lane remains failed; this batch is not committed yet.
+
+Outline Network01 now PASSes three actual native worlds, 48 case trials/54 BP
+invocations and local-control differences: DedicatedServer own-player no-ops,
+two owning clients create/update, unpossessed test Actors no-op. Natural startup
+enters Python twice per world: server creates zero materials, each client creates
+one. Actual material/interface/GC state, complete original camera settings,
+field/Profile/CDO/inventory restore and all owned fixture Actor destruction PASS.
+Material roots balance 0/0 + 1/1 + 1/1; caller-class roots balance 1/1 per world.
+All local cleanup/semantic checks freeze before one-way release. Three normal
+zero exits server last, strict closed logs and independent gate PASS with 1,602
+frozen inputs. Software03 has 1,600 frozen inputs; earlier Software02 has 1,596.
+All 1,270 models PASS. Ledger 43 records the three final authoring/standalone/
+network runs; Software02 remains an earlier-revision pass and Software01 failed.
+This is software-local material state, not pixels/rendered effects, replication
+of materials, eventual reclamation of every transient MID, travel/loss/packages
+or whole-Character/version acceptance. Next independent business is the existing
+OnTeamOrCosmeticsChanged orchestration; current original BP still calls Python
+outline from its original native/team/cosmetic entry chain.
+Ledger 43 contains three final passed runs and fourteen scoped sources/assets,
+all matched to actual frozen native inputs. Isolated-index models PASS 1,270;
+all-index syntax/import closure PASSes 549 files, five driver-safety checks and
+56 PowerShell parses PASS. No native process remains; the bounded helper batch
+is ready for local commits, not publication.
 
 **Accepted pressed-widget pilot and nullable-controller fix (2026-10-16, 23:45 Singapore):**
 Previous held-widget batch is locally committed as Examples b8b9818 / core
