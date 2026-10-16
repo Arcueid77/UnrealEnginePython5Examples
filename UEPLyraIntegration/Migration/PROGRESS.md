@@ -108,6 +108,58 @@ nullable-controller, Character Profile-switch, Character Reset network,
 travel/rejoin, packages and whole-version gates remain open. Native warnings
 remain; no Engine/official project changes or C++ build/cook/package.
 
+**Active Character Emote-audio Interface batch:** clear-helper local commits are
+Examples 70bd747 / core 47a5f1f. Extend the same retained Character with only
+GetEmoteAudioComponent and SetEmoteAudioComponent; explicitly alias the accepted
+ClearInventory method because Mixin collection is local-class-dictionary based.
+The named object out pin is AudioComponent; Python getter uses existing explicit
+named-output opt-in, setter writes only original Emote_AudioComponent state.
+Original ANS_EmoteSound animation-notify BP sends these Interface messages and
+is retained byte-identically; audio/animation engines are not reimplemented.
+A stage-only second BP caller will contain just typed Read/Write Interface
+messages. No native audio, live Interface round-trip or lifetime acceptance yet.
+
+Character-audio Assets01 PASSes the same original class/full CDO/eight public
+signatures/all original graphs. New profiles explicitly route ClearInventory
+plus the two audio Interface accessors. The original animation-notify hash is
+unchanged. Stage-only BP_CharacterAudioInterfaceProbe Read/Write each contain
+three nodes and a true K2Node_Message copied by native FunctionReference, not
+Python handler replay. The previous accepted Character root is recoverably
+archived under 20261017-character-audio/AcceptedInventory01, then only the
+disposable staged root was restored from official before fresh authoring. Old
+accepted Mixin data remains. Eleven policy and ten report/selection models
+are implemented. Native Software01 is the next bounded lane: nullable/object/
+repeat/replace/cross-Profile messages, two actual same-class actors with mixed
+Profiles, held-reference native GC, non-interface targets and owned component/
+field/Profile/CDO/inventory restoration. No playback/hardware sound claim.
+
+Character-audio Software01 PASSes all twelve original/Python/cross-Profile BP
+Interface round trips with exact native nullable/object references, two actual
+same-class Actors holding opposite Profiles/components, a real native GC while
+fields own both components, native non-interface/default handling and actual
+destruction of both owned components. Original fields, Profiles, CDO and
+inventory restore; strict logs, independent gate and normal exit PASS. All
+1,155 host models PASS. Native playback/animation-notify producer and hardware
+audio are not certified by this software test. Seven new network gate models
+precede a server/two-client software-only lane; local property calls must never
+be described as network replication or remote audio playback.
+
+Character-audio Network01 PASSes all 36 round trips in three actual native worlds,
+two mixed-instance cases and real GC per world, with native owner/foreign replica
+roles 2/1 on both clients and role 3 on the server. Fields, Profiles, CDO and
+inventory restore; two owned components are actually destroyed per world.
+The server waits for both actual client process exits; all three exit zero.
+Independent gate and strict closed logs PASS with 1,562 frozen inputs.
+These are local cosmetic references, not replicated audio payloads or playback.
+Software02 re-runs the final shared fixture and PASSes all twelve cases and
+cleanup with the same 1,562-input freeze. All 1,162 host models PASS.
+Ledger 40 records four passed authoring/software/network runs and fourteen
+scoped sources/assets, all matched to actual native frozen inputs. The isolated
+Git-index archive PASSes all 1,162 models; full-index syntax/import closure
+PASSes 519 Python files. Five driver-safety checks and 56 PowerShell parses PASS.
+The bounded batch is ready for local commits. No hardware, actual animation-
+notify producer, travel, package or whole-Character acceptance is implied.
+
 **Accepted pressed-widget pilot and nullable-controller fix (2026-10-16, 23:45 Singapore):**
 Previous held-widget batch is locally committed as Examples b8b9818 / core
 8d03e61. SpawnEffect's nullable-controller repair is separately committed as

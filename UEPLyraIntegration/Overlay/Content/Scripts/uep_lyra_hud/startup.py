@@ -4,6 +4,10 @@
 def validation_module(arguments):
     if any(argument.lower().startswith("-run=") for argument in arguments):
         return None
+    if any(argument.startswith("-UEPCharacterAudioResult=") for argument in arguments):
+        return "uep_lyra_characters.emote_audio_validation"
+    if any(argument.startswith("-UEPCharacterAudioNetworkResult=") for argument in arguments):
+        return "uep_lyra_characters.emote_audio_network_validation"
     if "-UEPCharacterInventory" in arguments and any(argument.startswith("-UEPAutoRespawnResetResult=") for argument in arguments):
         return "uep_lyra_characters.inventory_clear_reset_validation"
     if "-UEPCharacterInventory" in arguments and any(argument.startswith("-UEPAutoRespawnHelpersNetworkResult=") for argument in arguments):

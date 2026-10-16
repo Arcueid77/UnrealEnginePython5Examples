@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "batch": "40-character-emote-audio",
+  "scope": "Two retained Character audio Interface accessors plus the accepted ClearInventory alias. Actual stage-only second BP caller, twelve BP/Python/cross-Profile nullable/object round trips, two native same-class mixed-instance cases, real native GC, non-interface defaults and owned component destruction/restoration in standalone and three actual native software worlds. Original Character/full CDO/eight signatures/all graphs and animation-notify bytes preserved. No actual animation-notify producer, audio playback/hardware, replicated audio property, travel, package or whole-character/version claim.",
+  "recorded_utc": "2026-10-16T21:31:18.7626693Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "47a5f1f56cb7e5b0b5b0c5708d846e88dc914705",
+  "examples_parent_commit": "70bd74707f2a10850c67450a348339fe3b38a866",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-character-audio/Assets01",
+      "summary_sha256": "AD392AADED31ECBCA8153A6DDBB188C97C1B6CE9285FFBEE85330D8B869E8C63",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1330,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-character-audio/Software01",
+      "summary_sha256": "26DA35DA652BF44905D38915E8C9EA8699B0FC397D57130103CFF9B742071BC6",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1558,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "41A8F66AA86DE6112B8416A71655B0F0FE4642CB7F7F226EBD121A8E71F04D26"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-character-audio/Software02",
+      "summary_sha256": "BA40B0DF48B560D528EDB38A34B1F86F89718559B48C98ECBF20AEFC0CCA5120",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1562,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "0B4210770679C07F928ADB07749767D0773D7F42C2753240F289EC8A5D060B22"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-character-audio/Network01",
+      "summary_sha256": "CA6085DBFE52C76E36F8EFDC022162603E8D9510CA30231D2F108889C97E1379",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1562,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "A": 0,
+        "server": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "867EB3177FF78F18FC1E324A6A29E318D2F05AFE42F72C8093D1AA48CC0806B6"
+        },
+        {
+          "file": "A.json",
+          "sha256": "1F53430BF459E57AC12653D6BABF322BC612D35684BA37A3876F1AB77E82E4F8"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "EBBCB0875143C26B7A7E0C4D6E0B421AA2F88A3D7240C7FC495D96A0B34F9683"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/emote_audio_mixin.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/emote_audio_mixin.py",
+      "sha256": "1342512EBAE369A525E1A65568BD43240BA0934D5CEE7CC37F5C62AA79FE7B21"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/emote_audio_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/emote_audio_contract.py",
+      "sha256": "12D32C7A88A0FEA080C1D7FE183183FEBB8938D25C7BEB34D158CAA6B673077A"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/emote_audio_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/emote_audio_validation.py",
+      "sha256": "CB24573E2B624ACF3EA17FF85780AD0A5FB8D3A436A6CF8752538C0181B43E6C"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/emote_audio_network_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/emote_audio_network_contract.py",
+      "sha256": "3BB995F234D5FDC04B4C16112F7836587D7A61E62152A4BB2768678ACA7BBD65"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/emote_audio_network_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/emote_audio_network_validation.py",
+      "sha256": "8F19D1C48D675D9FA742E9C50AA5498404B44B5106AC6B736A8680B2079A7A7A"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/inventory_clear_mixin.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/inventory_clear_mixin.py",
+      "sha256": "094906FEC343536F041EF6ACBA192545C1D20F97C7B4E1EDBBA67034A19BF240"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "22711CC8D242577B1055E03EC58A717CB26C9EF4B5734FD55404A9E276F0783B"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_character_inventory_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_character_inventory_assets.py",
+      "sha256": "2913823D0DB504E64664B551D9B8C9875E9026CB9F934225AD2F6B8E2A74AB0E"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_character_audio_probe.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_character_audio_probe.py",
+      "sha256": "86ABA1FDCD723A190F7C651E6AC0616B293EE4DD0376FE0A04A20F2459F4DDAE"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "E03030EBDAA009789F9E4F38AF7BB5FE84D1DFD1EFE59CF0C42B179E0B1EF504"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_CharacterAudioMixin.uasset",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_CharacterAudioMixin.uasset",
+      "sha256": "20EDDFF9BA55468F60996CC263E16C1580E4F1F1E83011044B5CF90FEF12426B"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/B_Hero_ShooterMannequin.uasset",
+      "path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/B_Hero_ShooterMannequin.uasset",
+      "sha256": "30CAC48E9A2FF3BA11EF8514E3AE695692CC683A56CAC75A41DD2D8FAA518E18"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "96443491995BD76A34888D31BCC6FC7DE855E8199D7571BD24175B30047B93C3"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "4A941611B4577DE8F6BE03491194F46E71DAF08EE9F7FDC5604116B804639A5B"
+    }
+  ],
+  "host_report": {
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 1162,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261017-character-audio/Host02.json",
+    "sha256": "DE80F30E924C32D3B2B049F3BA953F91609EF9DEAAEA513CA63E5D6F3F078864"
+  }
+}
