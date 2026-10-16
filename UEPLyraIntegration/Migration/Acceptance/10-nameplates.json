@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "batch": "10-nameplates",
+  "scope": "Nameplate presentation plus source/manager component policy, native message ingress and weak owner lifetime. Current-DLL combined native source-manager-widget and travel/rejoin evidence. Original native indicator/UMG framework retained. No full-version acceptance.",
+  "recorded_utc": "2026-10-16T13:10:33.4279967Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "b5afcb32ecad699366d79ba3f3a4dc81363af35c",
+  "examples_parent_commit": "91399c21bbc03f716e4ccc23fd8203c87629fba3",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+      "summary_sha256": "9F2E167CDA4F151193F7A7855A8D15181FACAD232C9A51EB328DA1157F8F15AC",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 757,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "A": 0,
+        "B0": 0,
+        "B1": 0,
+        "server": 0
+      },
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "F7F3D83AAB932DE589F396F1B06E49E1993054D49A1B927167D4C28F2D7157F3",
+          "file": "server.json"
+        },
+        {
+          "sha256": "BFCD48199D27814F640AFC0185B4EE3FE605AB64D6AE03863F843D00D6681CB7",
+          "file": "A.json"
+        },
+        {
+          "sha256": "A35F2174D1D4298CFAA9FAF0316139D008259B3F51D5348926DC9008F1A4F8DE",
+          "file": "B0.json"
+        },
+        {
+          "sha256": "7779365601C319731DFC9579EAD83FD581262E615B55A7E8939CF66C2FDC1E38",
+          "file": "B1.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "74B20C64F2307C21110B77262677B18E9606A7F004F33B1F35EBD51DC845006E",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/nameplate_components_contract.py"
+    },
+    {
+      "sha256": "C398AF1643BCFF134591C692C4BDA876A02A37F7B664711BF833579680C23335",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/nameplate_components_validation.py"
+    },
+    {
+      "sha256": "1E65E1C59439E0E95B81EBAA8FDD5399488E62BCBEED50ED00A57DD06E120343",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/nameplate_contract.py"
+    },
+    {
+      "sha256": "478B12826CFB78FB6E514877DD16363CCB93A9D038CB163F6D8CABB058C0B216",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/nameplate_manager_mixin.py"
+    },
+    {
+      "sha256": "611EA15AB26E8512AF4D08CD50C786D4D014D4821C6604A36603EDD3BB287466",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/nameplate_messages.py"
+    },
+    {
+      "sha256": "2AB7649A04EFCCBDB418A95C1E806B56653123A6E7F150DA654C5715EE208F3A",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/nameplate_mixin.py"
+    },
+    {
+      "sha256": "EA092DFAE7C1A5A3CA802A9AC7525EC5E2870197182DFE1DD7F80B1521635400",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/nameplate_refs.py"
+    },
+    {
+      "sha256": "9787F9A653F8735BD6305003762F1F004D08261848502C088CC57B0C41F25B14",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/nameplate_source_mixin.py"
+    },
+    {
+      "sha256": "5B44F8CDEBBB3ADEA4BFF816B961C5BFFE7BBEAF4EEE4DF6708EA7D009CB435F",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/nameplate_validation.py"
+    },
+    {
+      "sha256": "32467D615A9ECB18DD4BBA4004B61E7B980AB6F85A9B8F84B08F49370AF80884",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_nameplate_placement.py"
+    },
+    {
+      "sha256": "CFDC4AA10C37271AE8B3CE1BCF9D04907A8843DBFF40BB066B677D0D72C1F12E",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_nameplate_probe.py"
+    },
+    {
+      "sha256": "E3CC7CEAE8896BDE22FEA2F73A49941E30A125D9C0AD9EBF078DFD60C467F3F0",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_nameplate_protocol.py"
+    },
+    {
+      "sha256": "3960A2D37C9F71FF1A92383485EFE02717C9C74C0CFB2FEC2A01B5063461C02C",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_NameplateManagerComponentMixin.uasset"
+    },
+    {
+      "sha256": "0F1130F73914EE52970DA0742ACE521547B400DA872013F076F3429B09BDACF2",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_NameplateSourceMixin.uasset"
+    },
+    {
+      "sha256": "9D77D63860E2E638C4A1592DE99D9BBF198AC91ADC31E21920A7BE7A9E721B04",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_W_NameplateMixin.uasset"
+    },
+    {
+      "sha256": "24538F8EB0BDD0701D3C270E659381B3F6B54215B6A842573AAE7217B38817BB",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UI/Indicators/NameplateManagerComponent.uasset"
+    },
+    {
+      "sha256": "C3D7E12E323D4D42951F506B3DB9CF9C01134B91F007835D4C08CDAF46F3433A",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UI/Indicators/NameplateSource.uasset"
+    },
+    {
+      "sha256": "C2C068B40B253894CC7252813CB43046DEFBFFA0A5A9C399CAD72193CBF34D72",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UI/Indicators/W_Nameplate.uasset"
+    }
+  ],
+  "host_report": {
+    "sha256": "748FB774336D9090DE10F9231758BDFA52CEB28AB30535343546A84283FD3F23",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 452,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\CommitVerification\\20261016-10-nameplates\\workspace\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/CommitVerification/20261016-10-nameplates/workspace/.build/host.json"
+  }
+}
