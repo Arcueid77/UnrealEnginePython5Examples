@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "batch": "30-audits-producers",
+  "scope": "Read-only original/native graph, policy, scope and runtime-entry audit tools, plus original Chair to native TriggerInteraction/GAS to progress UI producer fixtures. Historical two-owner/two-case native producer proof; not Enhanced Input or replicated message bus. Widget-input audit reads six original assets only; held-widget implementation is NOT accepted. Static regenerated counts 246/182/63 are candidates, not runtime migration acceptance.",
+  "recorded_utc": "2026-10-16T13:41:04.1778182Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "00ff90a6854809baf49ce8179342d653cf18d53c",
+  "examples_parent_commit": "a52fa8af5b106acc6f3c0446343d91a0d0ed7582",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-native-producers/InteractionProducer04",
+      "summary_sha256": "A0CD000395F9C232ED7CA84DF7925B18BA30EF8B65FD70AA3860298E00DF1505",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1079,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "server": 0,
+        "A": 0
+      },
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "C3027D825E28C00169A77AA72321FC8CC6EFE193F0B3C4C8BB77C60A9554931D",
+          "file": "server.json"
+        },
+        {
+          "sha256": "08008674864F2E266EA29D679C672BE95C7B110CF7B800EC07DEFF0D568483CA",
+          "file": "A.json"
+        },
+        {
+          "sha256": "5CA097B370D3331FCB4408A974E6DBD0A55C7A796C013C930703BCC7BC5BB1D8",
+          "file": "B0.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-native-producers/Coverage06",
+      "summary_sha256": "EFDC8EEF10D85ADD70EAE793D9CAAEF014FB7F4B1378445910C603C7D4DC0266",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 860,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "02EBE46DCF5FB3B06EAEF29147D73B20C6DA0BE7F886ACA7B8B3805E22617FC8",
+          "file": "audit.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-widget-input/Audit01",
+      "summary_sha256": "EB5F61AB7D02F5843D838ADD641383E93D1751BC7EE3A92F4E3063B5C78446E5",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 834,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "07FFD3D7EDFE5FD1A8157ECD576D4D4CA6426EAECF00D1BB980F2CBE91B8ECB9",
+          "file": "audit.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-emote/Network01",
+      "summary_sha256": "4264730AB2567970035E4F256927E03B17162DE6CA96B7ED1C9EA4F131EF0EA0",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1439,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "A": 0,
+        "server": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "4755998CB3FC04250ABA985E9BA7BE176B0563B9D7362C09E67A828A3119C945",
+          "file": "server.json"
+        },
+        {
+          "sha256": "339B99301267A8BC22B0FC810AAEC4FFC6F8654816B8C1B7C661B953ED8D3E6C",
+          "file": "A.json"
+        },
+        {
+          "sha256": "684F13777E42885EBBF00D9D5395D2ACB1B24C92A77ADF13CEF0EF7CAC3B8092",
+          "file": "B0.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/interaction_inspection.py",
+      "sha256": "F7B8936BB2DB52552AE2ED22684FDD3050EF330994B7E2772403744A642BE513"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/interaction_producer_network.py",
+      "sha256": "050995CC3F8EFE0BEFEF1BE7D43699E098F385A693F12C943631C652E50DEE33"
+    }
+  ],
+  "host_report": {
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 893,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\CommitVerification\\20261016-30-audits-producers\\workspace\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/CommitVerification/20261016-30-audits-producers/workspace/.build/host.json",
+    "sha256": "2854DE1B6C047046057BCE359E13319CFC7AAD22F2DCC062C1256470EE2BFB9B"
+  }
+}
