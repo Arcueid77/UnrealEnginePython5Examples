@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "batch": "28-spawn-effect",
+  "scope": "Spawn-effect ability owns its native GE handle/input-lock release and native tasks, preserving original defaults. Historical ten standalone pairs plus immediate BP-to-Python handoff. Current-DLL 28-row two-owner network regression passes. No network pause/fraction-boundary/handoff/travel or full-version claim.",
+  "recorded_utc": "2026-10-16T13:38:54.8220945Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "00ff90a6854809baf49ce8179342d653cf18d53c",
+  "examples_parent_commit": "a9bc181c8992a8cf932da12f7d67a77ed8b5d6b0",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-spawn-effect/Differential03",
+      "summary_sha256": "F9A335E80520A3DC0CB3DFF5829137E8DBE35B670D7D50CF5FDA43F429064E3D",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1412,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "302117A031F1CDE00A234C393D03F3FB9B47BFF7258A08B8D68C6350AE30ED2F",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/SpawnNetwork01",
+      "summary_sha256": "923E0D3F931F829CD61CA7B7A7CA1C85E5A554AA5D275094AF5703D71BD34459",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1424,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "B0": 0,
+        "A": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "C05651C9085688AADA909917369F0DE43B9BA5AA3664D3A908BBCD536AB8B822",
+          "file": "server.json"
+        },
+        {
+          "sha256": "E91B6068C0C5E6C20531357E00F7CF1FC28CC70392ED2866C2F2055C37ED8548",
+          "file": "A.json"
+        },
+        {
+          "sha256": "F6B19AE2071E2901682B9819B7890A6D051C6809346E1E4FADFBE00D7544DC10",
+          "file": "B0.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "6AF584D221C9079855D7D95AD447921C1D727E6928A694D1ED583EF466063D7D",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/spawn_effect_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "B314455694E03D3F47ADF2E47DE2EB6977D4B7F7222980BCE493B2E85EBEF21D",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/spawn_effect_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "1CAF549EC3A23EDA6764D67FB6A4ADF66CE2FB085A6DBA5546D2BEFDE3D0AF1C",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/spawn_effect_network_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "BD8C174788B62DBB4460C5820E1380D455F5101EE340DB9B2C59C54EDFD83D29",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/spawn_effect_network_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "1DD0A3C16A7615BF9EE39689A606D5FE3BEB0CA4EEEA1B836EA750E872710262",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/spawn_effect_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "6C7788EE07A0E92C2760E7C8C6180AD7E9DCB1C296E0C01440747B4130F8907F",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_SpawnEffectAbilityMixin.uasset",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "B2D56215544FADF91E610A48A3B8C448713A32400A6F5FFBD033C51C0609D2FC",
+      "path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/Respawn/GA_SpawnEffect.uasset",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "sha256": "1DDD0CFE3D983A439B91188A39640B8E13DFEE48CAFC81945EEFAD5B62127E21",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 871,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\CommitVerification\\20261016-28-spawn-effect\\workspace\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/CommitVerification/20261016-28-spawn-effect/workspace/.build/host.json"
+  }
+}
