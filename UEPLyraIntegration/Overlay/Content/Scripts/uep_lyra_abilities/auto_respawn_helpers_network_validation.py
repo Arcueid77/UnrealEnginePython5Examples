@@ -27,7 +27,8 @@ def owner_state(controller):
     asc = ability_system(controller.get_controlled_pawn())
     ability, = instances(asc, ue.load_class(policy.CLASS))
     return dict(native=native_state(controller), specs=specs(asc), profile=str(ue.get_mixin_profile(ability)),
-        helper_counts=policy.instance_snapshot(ability), auto_active=bool(ability.get_property("bIsActive")))
+        helper_counts=policy.instance_snapshot(ability), listener_counts=dict(getattr(ability, "_uep_auto_listener_counts", {})),
+        auto_active=bool(ability.get_property("bIsActive")))
 
 
 def finalize_network(value, server=False):
@@ -71,6 +72,7 @@ class Client(Native):
             self.before = policy.instance_snapshot(self.ability)
             self.old_pawn, self.old_death = self.pawn.get_path_name(), self.death
             self.switched = self.paused = self.unpaused = False
+            self.trial_begin_evidence()
             self.row = dict(living_query=self.query(), old_pawn=self.old_pawn,
                 health_before=float(self.health.call_function("GetHealth")), original_delay=float(self.ability.RespawnDelayDuration),
                 native_type_preserved=self.ability.get_class().get_path_name() == policy.CLASS,
@@ -254,7 +256,7 @@ class Server(Native):
     def finalize(self): finalize_network(self, server=True)
 
 
-if any(value.startswith("-UEPAutoRespawnHelpersNetworkResult=") for value in sys.argv):
+if "-UEPAutoRespawnListeners" not in sys.argv and any(value.startswith("-UEPAutoRespawnHelpersNetworkResult=") for value in sys.argv):
     result, peer, run = arg("-UEPAutoRespawnHelpersNetworkResult="), arg("-UEPJumpPeer="), arg("-UEPJumpRun=")
     validation = Server(result, run) if peer == "server" else Client(result, peer, run)
     atexit.register(validation.finalize); ticker = ue.add_ticker(validation.tick)

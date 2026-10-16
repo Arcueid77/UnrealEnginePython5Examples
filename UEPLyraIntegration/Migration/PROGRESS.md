@@ -195,6 +195,68 @@ Network pause, loss, travel/rejoin and packaged runtime
 remain unclaimed. The whole AutoRespawn business is not done.
 No C++ build, cook/package, official-source/private-binding changes or push.
 
+**Accepted native AutoRespawn listener orchestration batch (2026-10-17):**
+Helper pilot is locally committed as Examples ea4d49b / core cf9ee97. The next
+uncommitted batch adds Python BindDeathListener/ClearDeathListener while keeping
+the native named delegate targets OnAvatarEndPlay/OnDeathStarted and all
+original BP event/delay/UI/reset/restart business. Four four-node typed native
+add/remove-exact graphs are authored only in the marked disposable copy.
+Python retains the original clear order and LastBoundAvatarActor cache rule;
+it owns no Python callback or ability lifetime. Profile changes keep delivery
+on the same native ability object. The fixture observes independent real
+death/EndPlay callbacks while probing repeated binding and cross-Profile
+clear/rebind, then requires actual original death/avatar events to call the
+selected policy after probe counters are snapshotted. Death/restart/pause,
+native authority and foreign-owner isolation remain required. Fifty-seven
+AutoRespawn helper/listener policy, report rejection and duplicate-entry models
+PASS; this is not runtime acceptance. Asset authoring and native tests follow
+serially using existing binaries. Accepted helper assets are recoverably
+archived before replacing only the disposable stage and example-owned Overlay
+root. Official Lyra/Engine source remains unchanged.
+Assets01 PASSes exact native targets/signatures/four transports (16 nodes),
+original full CDO/twelve signatures/all business graphs and normal commandlet
+exit. Full live host suite PASSes 1,016 models. Differential01 completes all
+four pairs and 8/8 observer scopes, but FAILS the actual helper counter gate:
+new listener Profiles inherited the helper functions without locally declaring
+them, while the native collector intentionally reads only __dict__. The three
+helpers fell through to original BP. Both Profiles now explicitly alias the
+three existing function objects, preserving override/named-output metadata
+without implementation duplication. A local-registration/metadata model guards
+this integration boundary. The failed normally exited run is preserved; a
+fresh Differential02 must verify all five methods together before networking.
+Differential02 now PASSes four BP/Python pairs/eight real deaths and restarts,
+including repeated binding/cross-Profile exact clear/rebind, native pause and
+mid-death Profile handoff. Actual native death/avatar events produce the
+listener calls after explicit-probe counters are snapshotted; foreign Death/
+EndPlay observers each receive one event, with 8/8 fixture scopes closed.
+Helper routing is retained across the explicit local function aliases. Strict
+logs, independent gate, normal zero exit and 1,489 frozen inputs PASS. Full
+live host suite now PASSes 1,017 tests. Network01 is the only running native
+lane; its two owners are in real death/restart trials. No network acceptance or
+new local commit was claimed before its final gates.
+Final Network01 now PASSes all twelve authority/owner trials and six independent
+foreign-owner observations per client. Native repeated/cross-Profile binding,
+cache clear/new-Pawn rebind, exact foreign Death/EndPlay delivery and post-probe
+original event dispatch pass. Fixture scopes close 12/12 on server and 6/6 on
+each client, zero active; production owns no Python delegate scope. Strict logs,
+independent gate, complete owner restoration, 1,489 frozen inputs and three
+actual server-last zero exits PASS. No native processes remain. Isolated-index
+archive Index01 PASSes 1,017 host checks, and all 474 indexed Python files pass
+syntax/eager-import closure. Ledger 36 records the three accepted native runs
+and seventeen current source hashes, all matching a listed native input. The
+ledger/documentation follow the runtime/index checks; runtime inputs remain
+unchanged. This bounded batch now receives separate local Examples/core commits.
+
+Next event/restart batch should reuse the two original native Delay nodes,
+adding typed entry/continuation gates around the existing original BP baseline.
+Python will own OnDeathStarted/OnAvatarEndPlay decisions, duration payload,
+ShouldFinishRestart, EndDeathAbilities, next-frame restart and completion
+payload/cosmetic decisions; native delays, GameMode restart and GameState RPC
+remain. Existing BroadcastDuration/BroadcastVerb typed transport can carry the
+script-built native structs. This is scoped source analysis only, not event
+implementation or acceptance. Activation/reset-listener/UI/removal business
+remains separately tracked until migrated and exercised.
+
 **Accepted held-widget pilot (2026-10-16, 22:28 Singapore):**
 The held-input root policy is now implemented in
 `uep_lyra_abilities/widget_held_mixin.py`; its two original scoreboard children

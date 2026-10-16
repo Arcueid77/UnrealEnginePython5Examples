@@ -4,6 +4,11 @@
 def validation_module(arguments):
     if any(argument.lower().startswith("-run=") for argument in arguments):
         return None
+    if "-UEPAutoRespawnListeners" in arguments:
+        if any(argument.startswith("-UEPAutoRespawnHelpersNetworkResult=") for argument in arguments):
+            return "uep_lyra_abilities.auto_respawn_listeners_network_validation"
+        if any(argument.startswith("-UEPAutoRespawnHelpersResult=") for argument in arguments):
+            return "uep_lyra_abilities.auto_respawn_listeners_validation"
     if any(argument.startswith("-UEPAutoRespawnHelpersNetworkResult=") for argument in arguments):
         return "uep_lyra_abilities.auto_respawn_helpers_network_validation"
     if any(argument.startswith("-UEPAutoRespawnHelpersResult=") for argument in arguments):

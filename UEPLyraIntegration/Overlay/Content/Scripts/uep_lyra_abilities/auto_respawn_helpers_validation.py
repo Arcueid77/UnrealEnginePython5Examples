@@ -103,6 +103,10 @@ class Validation:
         return dict(owner_matches=owner == self.asc.call_function("GetOwner") == self.controller.PlayerState,
             dead=dead)
 
+    def trial_begin_evidence(self): pass
+    def trial_end_evidence(self): pass
+    def validate_report(self): return validate(self.report)
+
     def authority_state(self):
         # K2_HasAuthority reads CurrentActivationInfo, not the Pawn's net role.
         # Observe both without activating the ability or changing either value.
@@ -117,6 +121,7 @@ class Validation:
         self.before, self.trial_started = policy.instance_snapshot(self.ability), self.game_time()
         self.old_pawn, self.old_death = self.pawn.get_path_name(), self.death
         self.switched, self.paused, self.unpaused = False, False, False
+        self.trial_begin_evidence()
         self.row = dict(living_query=self.query(), old_pawn=self.old_pawn,
             health_before=float(self.health.call_function("GetHealth")), original_delay=float(self.ability.RespawnDelayDuration),
             native_type_preserved=self.ability.get_class().get_path_name() == policy.CLASS,
@@ -156,6 +161,7 @@ class Validation:
             native_authority_after=self.authority_state(),
             after_query=self.query(), delay_unchanged=float(self.ability.RespawnDelayDuration) == self.original_delay,
             specs_unchanged=specs(self.asc) == self.original_specs, specs_after=specs(self.asc), counters=counters(self.ability, self.before))
+        self.trial_end_evidence()
         self.complete_trial()
 
     def respawn_ready(self):
@@ -201,11 +207,11 @@ class Validation:
         self.report["policy_shutdown"] = policy.snapshot()
         if self.report["status"] == "awaiting_shutdown":
             try:
-                self.report["status"] = "passed"; validate(self.report)
+                self.report["status"] = "passed"; self.validate_report()
             except Exception: self.report.update(status="failed", error=traceback.format_exc())
         self.write(); (ue.log if self.report["status"] == "passed" else ue.log_error)("UEP_AUTO_RESPAWN_HELPERS_SHUTDOWN_"+self.report["status"].upper())
 
 
 result = next((v.split("=", 1)[1] for v in sys.argv if v.startswith("-UEPAutoRespawnHelpersResult=")), None)
-if result:
+if result and "-UEPAutoRespawnListeners" not in sys.argv:
     validation = Validation(result); atexit.register(validation.finalize); ticker = ue.add_ticker(validation.tick)
