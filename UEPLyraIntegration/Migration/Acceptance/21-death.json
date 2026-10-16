@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "batch": "21-death",
+  "scope": "Death-ability business decisions over native StartDeath/FinishDeath, Cue and GAS timer tasks. Historical five-pair standalone and 20-trial two-viewer authority network evidence, not current-DLL reruns. Declared longer respawn fixture only for timer cases; original respawn duration restored. Current isolated checks/source freeze; no full release.",
+  "recorded_utc": "2026-10-16T13:17:52.0187254Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "00ff90a6854809baf49ce8179342d653cf18d53c",
+  "examples_parent_commit": "5892c93fc36a659db1531c76265feb9efff35c10",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-death/Differential05",
+      "summary_sha256": "0419D16757191DFCB24288A26EF5FF34B4FFA5290764393498ECE583145C0560",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1287,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "5969FD2CC36C4C1F89667E5F6016B0658FAF663C8AB964110EE13C0FFC9FFADE",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-death/Network05",
+      "summary_sha256": "93B06AFE2168C73309246B7469F8E6061CA6E41CCA7F354EEEDD24CC1A019B92",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1284,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "A": 0,
+        "B0": 0,
+        "server": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "22D5A5B5897DC55E61A8756228F2C3A015430EB0B40CE2606CA1B3CEF939B1EF",
+          "file": "server.json"
+        },
+        {
+          "sha256": "C42A95651BC3DABCDB87F66972FC61AD408D68227AF3F312E58F5E271269D360",
+          "file": "A.json"
+        },
+        {
+          "sha256": "66B34BD25050332C1EAACC7EB3F2629236AB6A5B8D8C5C631C82CB7ACC124BBF",
+          "file": "B0.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-emote/Network01",
+      "summary_sha256": "4264730AB2567970035E4F256927E03B17162DE6CA96B7ED1C9EA4F131EF0EA0",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1439,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "A": 0,
+        "server": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "4755998CB3FC04250ABA985E9BA7BE176B0563B9D7362C09E67A828A3119C945",
+          "file": "server.json"
+        },
+        {
+          "sha256": "339B99301267A8BC22B0FC810AAEC4FFC6F8654816B8C1B7C661B953ED8D3E6C",
+          "file": "A.json"
+        },
+        {
+          "sha256": "684F13777E42885EBBF00D9D5395D2ACB1B24C92A77ADF13CEF0EF7CAC3B8092",
+          "file": "B0.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Characters/Heroes/Abilities/GA_Hero_Death.uasset",
+      "sha256": "8C448F53E76087F2BA1A594BBE8C40E85ECF1267B11E5076E467E0ECF99C33DB"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/death_contract.py",
+      "sha256": "4FAFB8B78F1D60204CEF09F758E23633108E8BA4611C8F1926A732DD9975E0FE"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/death_damage.py",
+      "sha256": "9955DC0C4DFA2B340E988A69F8B62A4A02E39312859348D3A768FA66F32408DD"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/death_mixin.py",
+      "sha256": "94742B3FE2C0A3D60D279678C4AEBFFDC7D89012F487C222A991E2312388514A"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/death_network_validation.py",
+      "sha256": "A9233A0D44B02DDD39B720F1D758F7C5B28B8EFE04DDA3EDC196E73A1E4DA8A5"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/death_observation.py",
+      "sha256": "E6A53D906CC621FA2581F67EE2055FC8285F44D83AD93325DA80A6EA809AE834"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/death_validation.py",
+      "sha256": "C58DB2B97FDCBC6EBB12DCF9A6CCE4640F48149ED867CECE24277A207EF31FC1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_DeathAbilityMixin.uasset",
+      "sha256": "923616033010EF621D68132CC930534DB2C4BCCC6F40B29D9252EAB8ECD9036C"
+    }
+  ],
+  "host_report": {
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 727,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\CommitVerification\\20261016-21-death\\workspace\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/CommitVerification/20261016-21-death/workspace/.build/host.json",
+    "sha256": "F83A9033C6DA6C6FF5ACBBF4A55CAA23FF2C59C2954AEB088D10C72CB9BA8BED"
+  }
+}
