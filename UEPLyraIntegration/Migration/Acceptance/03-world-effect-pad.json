@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "batch": "world-effect-pad",
+  "scope": "Retained parent construction and overlap intent migration, historical native physical GAS eight cases and two-owner 16-row differential. Native binaries are historical, not a current-DLL rerun. Current isolated index checks: 133. Current freeze is source provenance only.",
+  "recorded_utc": "2026-10-16T13:05:58.8887433Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "6b42d372a38b404bc0a2d6117b6d529534e37557",
+  "examples_parent_commit": "16d6b2a636d4b69a6ffe776732ce9764eb409579",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261013-batch2b/PhysicalGAS03",
+      "summary_sha256": "641D9AC047C8D491CA866824936874842048B12BC7BB51D17E025D57359B6624",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "CC7BECF673438FE00753B6CCB3D0C4284A212F9E57C8D66504A0001941E52C26"
+      ],
+      "frozen_input_records": 36,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261013-batch2b/PadNetwork02",
+      "summary_sha256": "CF4989F6839958F631BDA94212FB29D2CCDED50375B5D7A15F2334852FDAB334",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "CC7BECF673438FE00753B6CCB3D0C4284A212F9E57C8D66504A0001941E52C26"
+      ],
+      "frozen_input_records": 38,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "A": 0,
+        "B0": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "5D1014EB08D81E97132C367590C3CE59A1DADD4640B6664DE10D1A37FC3CB591",
+          "file": "server.json"
+        },
+        {
+          "sha256": "AA027E83390681AF68629AA8CFB9C474AFEB7F560DC27C9E33B426CC32848C53",
+          "file": "A.json"
+        },
+        {
+          "sha256": "ABE57D8D3C75449F448D3497B6675F064F85009292DFA91D0A4DAC75809EA361",
+          "file": "B0.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+      "summary_sha256": "9F2E167CDA4F151193F7A7855A8D15181FACAD232C9A51EB328DA1157F8F15AC",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 757,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "A": 0,
+        "B0": 0,
+        "B1": 0,
+        "server": 0
+      },
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "F7F3D83AAB932DE589F396F1B06E49E1993054D49A1B927167D4C28F2D7157F3",
+          "file": "server.json"
+        },
+        {
+          "sha256": "BFCD48199D27814F640AFC0185B4EE3FE605AB64D6AE03863F843D00D6681CB7",
+          "file": "A.json"
+        },
+        {
+          "sha256": "A35F2174D1D4298CFAA9FAF0316139D008259B3F51D5348926DC9008F1A4F8DE",
+          "file": "B0.json"
+        },
+        {
+          "sha256": "7779365601C319731DFC9579EAD83FD581262E615B55A7E8939CF66C2FDC1E38",
+          "file": "B1.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "38AA48DF4E5AFFB06A1902BC4763CCD365B528934363BBEEB9D8B87E99008B85",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Environments/Gameplay/BP_GameplayEffectPad.uasset",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "EDA809A99EACCF07436C8CA364C194695E3CE4C92B2813B11C16FFD517C84971",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/__init__.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "8EC1ABCC9A1F6BE805F25E573F94CAF613671B2408DA625862AFBF136DB99705",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/effect_pad_gameplay_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/effect_pad_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "A72296147DA82238EAEA60D360CC4704FC06A019235D280C93835B3FF5A8ABF0",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/effect_pad_network_protocol.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "1079711515A1C0228165FC3F8EEDEDB77F3185C18684C807C69C6CEE8AFC10A2",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/effect_pad_network_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "188A726ADADC52EAD856A43936FABDAAE5062B4B0E4FBB00C26A559A6D163D21",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/effect_pad_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "4BF5A58797CFF14DA0963660404C2E31B51BD4DDD1F92062E218F70AB32835F8",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_BP_GameplayEffectPadMixin.uasset",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "sha256": "A8832C027CFC8A1EF135AFDBBBFEAA52852B28F7B66D3A9BEC0D1E62B421274F",
+    "path": ".build/CommitVerification/20261016-effect-pad-01/workspace/.build/host.json",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 133,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\CommitVerification\\20261016-effect-pad-01\\workspace\\.build\\HostTestTemp",
+      "failed_cases": []
+    }
+  }
+}
