@@ -13,6 +13,59 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Accepted held-widget pilot (2026-10-16, 22:28 Singapore):**
+The held-input root policy is now implemented in
+`uep_lyra_abilities/widget_held_mixin.py`; its two original scoreboard children
+remain byte-identical. Native authoring `20261016-widget-held/Assets02` passes
+the retained type/full-CDO/four-signature/original-graph checks. A four-node
+typed soft-class-path adapter avoids treating an unloaded class as None. Four
+state-callback guard nodes prevent original-BP teardown from reentering a
+mutating router. They suppress dispatch only during explicit teardown.
+
+Differential01 FAILED in the fixture's struct-keyed layer-map conversion;
+the fixture now reads the original named GameMenu stack. Differential02
+FAILED on original-BP state-task reentry during active Profile handoff; its
+exact owned process was terminated after the native error stalled the lane.
+Failed runs and the first unaccepted asset outputs remain in `.build`.
+Differential03 then exposed fixture-only missing-object lookup/removal API
+assumptions and the invalid CP-in-Elimination UI context. The two Experiences
+now use their own existing native grants, scoring components and EnhancedInput;
+no fixture ability/CDO writes remain. Elimination01 caught a queued True input
+reactivating a canceled ability; the fixture no longer adds True in an End
+frame, retaining exact single-activation gates. Elimination02 correctly found
+that original BP and Python both end on pause. EnhancedPlayerInput invalidates
+IA_ShowScoreboard's non-pause input, so the current pause case explicitly
+requires native input release/UI removal while game time is frozen, including
+continuous held injections and read-only native input-policy evidence.
+
+Final Elimination03 and ControlPoint01 each PASS seven original-BP/Python
+pairs in their real native Experience plus three Python pending-cancel/repeat/
+Profile-handoff GC regressions. Each leaves 21/21 scopes, zero active/errors,
+original player/specs/Profiles/CDO and GameMenu layer restored. No ability is
+fixture-granted; both use existing IA_ShowScoreboard bindings. Unconfigured
+root defaults remain untouched and are not exercised as a valid UI target.
+
+Network01 PASSes 24 LocalOnly owner trials, then Network02 repeats that full
+matrix against the hardened acknowledgement-identity/foreign-owner report
+gate and PASSes. A/B0 each independently observe all twelve foreign held
+trials; native server abilities/tasks stay inactive. Server/A/B0 scopes are
+0/0, 12/12, 12/12. All three actual exits are zero, server last; strict logs,
+independent gates and 1,453 frozen input records per final native run pass.
+Networking is Elimination only; CP networking, travel/rejoin, packet loss,
+physical input, pixel/text scoreboard parity and packaged runtime are not
+claimed. Scoreboard UMG/BP content remains for its later UI/scoring batches.
+Original BP's canceled Async Action property differs intentionally: Python
+clears its reference and precisely disarms its completion before cancellation.
+
+Host05 and the isolated Git-index archive pass all 929 policy/report checks;
+full-index syntax/local-import closure passes all 447 Python files. Core
+45 HUD/16 weapon/six ledger-format/five driver-safety checks also pass. The
+bounded evidence snapshot is `Migration/Acceptance/32-held-widget.json`, with
+all twelve scoped runtime/asset/authoring/driver sources matching listed native
+input hashes. This coherent batch receives its own local Examples/core commits;
+the unrelated owner-URL edits are excluded. Whole 0.11 remains open. No Engine
+build/cook/package, push, tag or release.
+
 **Completed accepted-work backfill (2026-10-16):**
 All previously accepted runtime work is now split into local Examples commits
 with 32 bounded evidence ledgers, numbered 00–31 in `Migration/Acceptance/`.
@@ -45,9 +98,11 @@ was not run. Native warnings remain recorded, not a warning-free claim.
 
 Concurrent repository-owner URL changes are preserved and excluded from this
 backfill. No private binding sources were read. Whole 0.10/0.11 acceptance is
-still OPEN. Next implementation is the bounded held-input Widget family,
-starting with the six-asset read-only audit; its two Tools drafts remain
-UNACCEPTED and uncommitted pending original-BP/Python/lifecycle/two-owner tests.
+still OPEN. At that backfill checkpoint the held-input family remained two
+unaccepted Tools drafts; the newer held-widget checkpoint above supersedes
+that state. Next separate family is pressed-input Widgets, before remaining
+fire/melee/grenade and other hero policies. Original UI/scoring business is not
+claimed migrated merely because a Python ability pushes its retained Widget.
 
 **Accepted-batch backfill checkpoint (2026-10-16, 21:24 Singapore):**
 Completed local Examples commits now separate shared HUD/test infrastructure,

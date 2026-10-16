@@ -50,6 +50,9 @@ def generate():
     if kind == "devicecolor":
         from generate_device_color_assets import generate as generate_device_color
         return generate_device_color(stage)
+    if kind == "widgetheld":
+        from generate_widget_held_assets import generate as generate_widget_held
+        return generate_widget_held(stage)
     config = {
         "quickslot": ("/ShooterCore/Game/GA_QuickbarSlots", "quickslot_mixin", "LyraQuickslot", "Quickslot",
                       "Plugins/GameFeatures/ShooterCore/Content/Game/GA_QuickbarSlots.uasset", "K2_ActivateAbility"),

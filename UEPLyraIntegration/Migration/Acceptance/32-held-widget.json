@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "batch": "32-held-widget",
+  "scope": "Held-input root Python activation/create/remove/native-End orchestration on unchanged TDM/CP children; real Elimination and ControlPoint each seven BP/Python pairs plus three Python pending-GC safety regressions, two real Elimination LocalOnly UI owners with 24 trials and independent foreign UI observations, zero authority execution, strict logs and normal server-last exits. Preserve native GAS/streaming/layers, full CDO/signatures/original graphs. Intentional canceled-reference/repeated-pending safety improvements; no CP networking, scoreboard Widget business/pixel/text parity, travel/rejoin, physical input, unconfigured-root target or package claim.",
+  "recorded_utc": "2026-10-16T14:28:14.2604604Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "fc913fd03da56a1d0ebdb77c226a3cd458a59a65",
+  "examples_parent_commit": "8b2a2ec8265d240c510a0e5ad02615edcabfaa3c",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-widget-held/Assets02",
+      "summary_sha256": "D0ED85E4867795BC776BDFB0EE14AA83C02C291298F40100AAA9F73E41365B72",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1254,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-widget-held/Elimination03",
+      "summary_sha256": "A68BB1CEB57D0717AD54FD72F25216928571E2D89FA8ABA199345BAA433E2938",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1453,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "1956CCA9041B24DAC76D15F6E7C76D581135275F7A1E08355033E22B7BA4E953",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-widget-held/ControlPoint01",
+      "summary_sha256": "AB0FFBCD9975112507FA8E160D176117843BCF17B0A14A29989EB7D6652B7EC2",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1453,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "490FFB58C98E2F91378EFAC9F14641C11F5625562DD846C7D4212A9C3540A34C",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-widget-held/Network02",
+      "summary_sha256": "C9ED2BF635446CFB077725E4570298E2037126BE98F0EC61882BF851F9CA39F2",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1453,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "server": 0,
+        "A": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "60999ACCB618944337AE7D6F94A69D2382EBEF931522A4E206D6D78394974BF0",
+          "file": "server.json"
+        },
+        {
+          "sha256": "9739129D4E31B02ED4B15AA72B5EEC57E08257A9024D75053058D313D8E9D241",
+          "file": "A.json"
+        },
+        {
+          "sha256": "EFC8740A620B264C332979AEB9E763DBB2EBC39662FCB43081A87A1B3D5F6E42",
+          "file": "B0.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/widget_held_mixin.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/widget_held_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "B275C226D0AD884979EC3D90352B35165CD5634E93BAEFDF643F6F8D667030E9"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/widget_held_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/widget_held_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "1FCA29898B1C6F6ED006A8B01E1E0D5E8BB346769FC38D4087A0E74D742DAEC0"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/widget_held_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/widget_held_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "C21DB2FAFA5EADE7D2FB883B388405E3D1B66569346825BE1D7258A88D767C71"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/widget_held_network_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/widget_held_network_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "20E058B75CB4AE2EC2980CD472034759531265DF8E3AA2D3E2BB45CBBC72FD16"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/widget_held_network_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/widget_held_network_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "83F3D62F50D891AE46BD1F399C7506306BD0BD7003B4B0623B982AABCF9831E2"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "803D990582372EFF207C58FA433B14D0CA9D868571CE4BA27A01C82929E12F85"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_WidgetHeldAbilityMixin.uasset",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_WidgetHeldAbilityMixin.uasset",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "D55B455501093ABAA518B0C1FA0380D120B0EB81B313093B6FDC80BE435B37D6"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Input/Abilities/GAB_ShowWidget_WhileInputHeld.uasset",
+      "path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Input/Abilities/GAB_ShowWidget_WhileInputHeld.uasset",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "AFAD82207ACAEBB42E6F1CE34D8540D6DBC22A1D43E2439F75D85FF70B88CD40"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_widget_held_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_widget_held_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "C41599D7C4A706691DD72AF89DF81F0C7C68C985A854FB53CE1E4581E2ACDD1F"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "F9F17600D0309E6FAF96FC976D64FE8D4CCC7105F4AAAE9973705490359258DE"
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "9306479E6DE60E5A9B8B27B0405B691388DEBFC5695F2332107EB930D93CE2C8"
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "12E34C05B81477C8264BC57284032460B97B4B336EDA19D5F018B7CE8CBF2FF2"
+    }
+  ],
+  "host_report": {
+    "path": ".build/CommitVerification/20261016-32-held-widget/Index01/workspace/.build/host.json",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 929,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\CommitVerification\\20261016-32-held-widget\\Index01\\workspace\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "sha256": "91159F75D9BBFACF8EAA23CBA72BF4A0F3D6B720E804EAF793560ECECE7F2C65"
+  }
+}
