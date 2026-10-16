@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "batch": "31-third-person-history",
+  "scope": "Historical Mixin/PythonFirst rendered smoke fixtures and safe variant-staging repair. Three current Python fixture/bootstrap hashes match explicit historical stage paths, both old variant exits were zero and three frames each passed. Current isolated host checks and PowerShell parse only; no fresh UE5.8.1 third-person run, current native-binary acceptance, package or release claim.",
+  "recorded_utc": "2026-10-16T13:43:06.0000647Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "0077e26106c137891fe7a7d289db9bf0ac300a7e",
+  "examples_parent_commit": "72b8e383708a307684d4f0b73da9b73d315af221",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261013-batch1a/ThirdPersonRendered05",
+      "summary_sha256": "885FB7DEE82D9FF546EB01E73305829AA60563761CE1BE2B09BABC8985621248",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3C0F1D33E262C83E7E1A643A815C541117085BEBEEE0ABDF768CB0FB279A25F5"
+      ],
+      "frozen_input_records": 52,
+      "process_exit_code": null,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {
+        "Mixin": 0,
+        "PythonFirst": 0
+      },
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "8D4C2598D746B678B27388EF744EA1495993E5FB17FD81A59EB0566AD025E209",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPPythonThirdPerson/Overlay/Content/Scripts/uep_third_person/bootstrap.py",
+      "native_input_path": ".build/Demos/UEPPythonThirdPerson/Content/Scripts/uep_third_person/bootstrap.py"
+    },
+    {
+      "sha256": "E14A7A63DA5EF3FE19574ECE6F90A79E8DEEC8D94893EAA9CEF1BC81FFB74DBC",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPPythonThirdPerson/Overlay/Content/Scripts/uep_third_person/visible_validation.py",
+      "native_input_path": ".build/Demos/UEPPythonThirdPerson/Content/Scripts/uep_third_person/visible_validation.py"
+    },
+    {
+      "sha256": "27CB7F8E0CC7532BE8DBAF60317224088B7FBEC1B9342B08B8C3439CBC828763",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPPythonThirdPerson/Mixin/Content/Scripts/uep_third_person_mixin/bootstrap.py",
+      "native_input_path": ".build/Demos/UEPPythonThirdPerson/Content/Scripts/uep_third_person_mixin/bootstrap.py"
+    }
+  ],
+  "host_report": {
+    "sha256": "B86E6CC359E3C83E6045C117B47B318CE42D590094B9FE446C69A4A8E0931A00",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 893,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\CommitVerification\\20261016-31-third-person-history\\workspace\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/CommitVerification/20261016-31-third-person-history/workspace/.build/host.json"
+  }
+}

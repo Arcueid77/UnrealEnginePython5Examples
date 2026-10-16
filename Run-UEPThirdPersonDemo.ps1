@@ -588,6 +588,22 @@ try {
         }
     }
 
+    # Variants share one disposable stage. Restore template Blueprint shells on
+    # every incremental prepare before applying the selected variant: otherwise
+    # switching Mixin -> PythonFirst keeps a CDO importing removed Mixin scripts.
+    Copy-DirectoryContents (Join-Path $templateRoot 'Content\ThirdPerson\Blueprints') (Join-Path $stageRoot 'Content\ThirdPerson\Blueprints')
+    if ($Variant -ne 'Mixin') {
+        $mixinContent = Join-Path $PSScriptRoot 'UEPPythonThirdPerson\Mixin\Content'
+        foreach ($asset in Get-ChildItem -LiteralPath $mixinContent -Recurse -File -Filter '*.uasset') {
+            $relative = [IO.Path]::GetRelativePath($mixinContent, $asset.FullName)
+            if (!(Test-Path -LiteralPath (Join-Path $templateRoot "Content\$relative")) -and
+                !(Test-Path -LiteralPath (Join-Path $overlayRoot "Content\$relative"))) {
+                $stale = Join-Path $stageRoot "Content\$relative"
+                Assert-PathIsUnder -Path $stale -Parent $stageRoot
+                if (Test-Path -LiteralPath $stale -PathType Leaf) { Remove-Item -LiteralPath $stale -Force }
+            }
+        }
+    }
     Copy-DirectoryContents $overlayRoot $stageRoot
     $overlayScripts = Join-Path $overlayRoot "Content\Scripts"
     $stagedScripts = Join-Path $stageRoot "Content\Scripts"
@@ -604,7 +620,7 @@ try {
     Set-Content -LiteralPath $stageMarker -Value "Managed by Run-UEPThirdPersonDemo.ps1" -Encoding utf8
 
     New-Item -ItemType Directory -Path $pluginStage -Force | Out-Null
-    foreach ($directoryName in @("Source", "Config", "Resources")) {
+    foreach ($directoryName in @("Source", "Config", "Resources", "Content")) {
         $sourceDirectory = Join-Path $repoRoot $directoryName
         if (Test-Path -LiteralPath $sourceDirectory -PathType Container) {
             Copy-DirectoryContents $sourceDirectory (Join-Path $pluginStage $directoryName)

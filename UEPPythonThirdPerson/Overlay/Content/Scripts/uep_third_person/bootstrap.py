@@ -29,3 +29,5 @@ ue.log(
 runtime = ThirdPersonRuntime()
 runtime_ticker = ue.add_ticker(runtime.tick)
 smoke, smoke_ticker = start_smoke_if_requested(runtime)
+from .visible_validation import start_visible_if_requested
+visible, visible_ticker = start_visible_if_requested(smoke)

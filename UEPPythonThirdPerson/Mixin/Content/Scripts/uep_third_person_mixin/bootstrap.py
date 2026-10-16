@@ -21,3 +21,5 @@ ue.log("UEP_MIXIN_THIRD_PERSON_INTERFACE_REGISTERED")
 runtime = MixinThirdPersonRuntime()
 runtime_ticker = ue.add_ticker(runtime.tick)
 smoke, smoke_ticker = start_smoke_if_requested(runtime)
+from uep_third_person.visible_validation import start_visible_if_requested
+visible, visible_ticker = start_visible_if_requested(smoke)
