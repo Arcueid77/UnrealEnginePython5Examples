@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "batch": "07-dash-cooldown",
+  "scope": "Dash cooldown UI policy, owned timer/message scopes and original-BP comparison fixtures. Current-DLL combined native network evidence covers this HUD path. Native dash mechanics remain in original GAS ability. No full release claim.",
+  "recorded_utc": "2026-10-16T13:09:28.6431885Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "b5afcb32ecad699366d79ba3f3a4dc81363af35c",
+  "examples_parent_commit": "e04ca286bbb5c92d1f31356f37e9202f40821b27",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+      "summary_sha256": "9F2E167CDA4F151193F7A7855A8D15181FACAD232C9A51EB328DA1157F8F15AC",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 757,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "A": 0,
+        "B0": 0,
+        "B1": 0,
+        "server": 0
+      },
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "F7F3D83AAB932DE589F396F1B06E49E1993054D49A1B927167D4C28F2D7157F3"
+        },
+        {
+          "file": "A.json",
+          "sha256": "BFCD48199D27814F640AFC0185B4EE3FE605AB64D6AE03863F843D00D6681CB7"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "A35F2174D1D4298CFAA9FAF0316139D008259B3F51D5348926DC9008F1A4F8DE"
+        },
+        {
+          "file": "B1.json",
+          "sha256": "7779365601C319731DFC9579EAD83FD581262E615B55A7E8939CF66C2FDC1E38"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "E03B5D58703F9604CF29DADC49CA7A6629D899EF87FE34FE488136442288ABC8",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_dash_probe.py"
+    },
+    {
+      "sha256": "FD29E55E4EA66A160FBD10F6F90AA91C281356735B29D42182A6ADF49EB76074",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_dash_protocol.py"
+    },
+    {
+      "sha256": "79B6D154F2F09E3FF0D28EF3F6BCBB1F95E74C0470D09A7768D93F048F1623C8",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/dash_cooldown_contract.py"
+    },
+    {
+      "sha256": "73547C9D51067FF3533F0AED2039CE030BFADF729C647A9DD5579FE40342012B",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/dash_cooldown_mixin.py"
+    },
+    {
+      "sha256": "5074FBDFCC9CBC69BAB39CAD92436A90663D484A3DFA89242F205C9A1BE6517E",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/dash_cooldown_validation.py"
+    },
+    {
+      "sha256": "A888C2456F940444A0248CC710AC98713608BF83BF760686F5D9D8A3E07956E5",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/dash_native_contract.py"
+    },
+    {
+      "sha256": "09D6AE43C9CB9CC5D17BC003798705AF5770E5557CCA4060D92CDC85E6D055A2",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/dash_native_validation.py"
+    },
+    {
+      "sha256": "E1CDC080A982E2533272BA0BB3ACA1F1F238006D7C432C35E2B7CE2B5F9A3AD8",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_W_DashCooldownMixin.uasset"
+    },
+    {
+      "sha256": "41F095E0F3335C1229E9F3AC1170BFFB2EE1834E31E02B0AE447550BCAE3439C",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/Dash/W_DashCooldown.uasset"
+    }
+  ],
+  "host_report": {
+    "sha256": "A386B33B48883A86E2FE97CC279DACE1634863AF634A363FB3A18B9CBCD8AEF0",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 317,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\CommitVerification\\20261016-07-dash-cooldown\\workspace\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/CommitVerification/20261016-07-dash-cooldown/workspace/.build/host.json"
+  }
+}
