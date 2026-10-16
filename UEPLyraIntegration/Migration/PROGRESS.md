@@ -13,7 +13,15 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Current checkpoint (2026-10-17):** AutoRespawn activation/reset/UI/End-removal
+**Latest verified checkpoint (2026-10-17):** Character ChangeQuickbarSlot has
+bounded standalone and two-owner native BP-call/GAS/QuickBar-RPC acceptance;
+details and ledger 41 are below. Four Character helpers are routed through the
+new retained-type Mixin; remaining Character business is not migrated. All
+1,192 host models and the isolated index archive PASS. Physical keyboard,
+travel/loss/packages and whole-version gates remain open. Next: original
+AddInitialInventory business, preserving authority and original native grants.
+
+**Earlier checkpoint (2026-10-17):** AutoRespawn activation/reset/UI/End-removal
 business has bounded native acceptance. Final ResetDifferential02 passes eight
 real native requests; ResetNetwork02 passes sixteen authority/owner trials,
 sixteen passive foreign observations, strict logs, independent gates, 1,525
@@ -159,6 +167,54 @@ Git-index archive PASSes all 1,162 models; full-index syntax/import closure
 PASSes 519 Python files. Five driver-safety checks and 56 PowerShell parses PASS.
 The bounded batch is ready for local commits. No hardware, actual animation-
 notify producer, travel, package or whole-Character acceptance is implied.
+
+**Active Character quickbar-input helper batch:** audio Interface helpers are
+locally committed as Examples 0415f06 / core 9715524. Only ChangeQuickbarSlot is
+new business; all three accepted Character helpers are explicit local aliases.
+Original policy checks an occupied native slot, then forwards the supplied
+GameplayTag and double-converted integer magnitude through SendGameplayEventToActor.
+Default payload object fields remain null; GAS supplies MatchingTag in the
+native observer callback. Inventory/equipment/GAS/native QuickBar RPC stay native.
+Python deliberately handles missing Controller/QuickBar and negative/out-of-range
+indices safely; original null/array-warning parity is not claimed. Twelve policy
+and ten report models PASS (83 Character models total). Planned native scope is
+six real BP/Python actor-reference call pairs plus two Python-only invalid-index
+trials, real native event observation, empty/repeated/unrelated-tag checks and
+exact owned observer task/inventory/field/Profile/CDO restoration. A stage-only
+second BP owns the typed Character reference and calls its original virtual
+function; no fixture calls the Python handler directly. Current asset-authoring
+lane is not runtime acceptance. Prior accepted audio roots are recoverably
+archived in 20261017-character-quickbar/AcceptedAudio01. No C++ build/cook/package.
+
+Quickbar Assets01 PASSes retained class/full CDO/nine original signatures/every
+complete graph, adding only Mixin Interface declarations and a stage-only typed
+three-node BP caller. Differential01 PASSes all six BP/Python pairs plus two
+Python-only invalid-index cases: real native local GAS payloads retain supplied
+tag/exact magnitude/null object defaults; native equipment matches exact expected
+definitions. All fourteen owned observer tasks/scopes close, original three
+Quickslot tasks stay active, and inventory/field/Profile/CDO restore. Independent
+gate, strict closed log, 1,568 frozen inputs and normal exit PASS. All 1,184 host
+models PASS. The next lane adds two actual owning clients; the server observes
+original QuickBar RPC equipment results and verifies foreign-owner isolation.
+This does not certify the original physical keyboard producer or replicated
+GameplayEvent delivery. No network pass or whole-Character acceptance yet.
+
+Quickbar Network01 now PASSes twenty-eight real owner BP calls and twenty-eight
+authority equipment observations through original native QuickBar Server RPC.
+Both owners run the full six-pair/two-safety-case matrix; native local payloads
+preserve exact tag/magnitude/null objects, original three GAS tasks stay active,
+and each fourteen-observer scope ledger balances 14/14. The other authority
+owner's inventory/equipment remains exact through every trial; server Character
+helpers are not called by the fixture. Native item/slot identities and original
+equipment restore. Strict closed logs, independent gate, 1,572 frozen inputs and
+three zero exits server last PASS. All 1,192 host models PASS. Ledger 41 records
+three passed native runs and fourteen scoped sources/assets, all matched to
+actual native frozen inputs. The isolated Git-index archive PASSes all 1,192
+models; all-index syntax/local-import closure PASSes 528 Python files. Five
+driver-safety checks and 56 PowerShell parses PASS. This is a bounded local
+input-helper batch, not whole-version acceptance or publication.
+Original physical keyboard production, nullable-controller native probes,
+travel/rejoin, loss, packages and whole-Character/version acceptance stay open.
 
 **Accepted pressed-widget pilot and nullable-controller fix (2026-10-16, 23:45 Singapore):**
 Previous held-widget batch is locally committed as Examples b8b9818 / core

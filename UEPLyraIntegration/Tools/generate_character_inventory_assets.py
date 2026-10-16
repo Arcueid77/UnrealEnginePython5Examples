@@ -12,7 +12,8 @@ RELATIVE = "Plugins/GameFeatures/ShooterCore/Content/Game/B_Hero_ShooterMannequi
 PACKAGE = "/ShooterCore/Game/B_Hero_ShooterMannequin.B_Hero_ShooterMannequin"
 
 
-def generate(stage, audio=False):
+def generate(stage, audio=False, quickbar=False):
+    audio = audio or quickbar
     source = Path(json.loads((stage/".uep-lyra-full-stage.json").read_text(encoding="utf-8-sig"))["source"]).parent
     original = source/RELATIVE; digest = hashlib.sha256(original.read_bytes()).hexdigest()
     if hashlib.sha256((stage/RELATIVE).read_bytes()).hexdigest() != digest: raise RuntimeError("fresh original Character required")
@@ -20,15 +21,15 @@ def generate(stage, audio=False):
     before, cls = cdo_snapshot(bp, "character-before"), bp.GeneratedClass.get_path_name()
     signatures = {name: ue.describe_function(bp.GeneratedClass, name) for name in
         (("ClearInventory", "AddInitialInventory", "K2_OnDeathFinished", "K2_OnReset", "ReceiveBeginPlay", "ReceivePossessed")+
-            (("GetEmoteAudioComponent", "SetEmoteAudioComponent") if audio else ())) }
+            (("GetEmoteAudioComponent", "SetEmoteAudioComponent") if audio else ())+(("ChangeQuickbarSlot",) if quickbar else ())) }
     originals = [(graph, {node.get_name() for node in graph.Nodes}) for graph in ue.blueprint_get_all_graphs(bp)]
     graphs = {graph.get_name(): semantics(graph, names, set()) for graph, names in originals}
-    name = "DA_CharacterAudioMixin" if audio else "DA_CharacterInventoryMixin"
+    name = "DA_CharacterQuickbarMixin" if quickbar else "DA_CharacterAudioMixin" if audio else "DA_CharacterInventoryMixin"
     if ue.find_asset("/Game/UEPMixins/"+name+"."+name) is not None: raise RuntimeError("fresh Character inventory Mixin required")
     factory = DataAssetFactory(); factory.DataAssetClass = UEPPythonMixinSet
     mixin = ue.create_asset(name, "/Game/UEPMixins", UEPPythonMixinSet, factory); mixin.DefaultProfile = "Python"
-    mixin.Profiles = [UEPPythonMixinProfile(ProfileName=profile, PythonModule="uep_lyra_characters."+("emote_audio_mixin" if audio else "inventory_clear_mixin"),
-        PythonClass=("LyraCharacterAudio" if audio else "LyraCharacterInventory")+profile+"Profile") for profile in ("Python", "BlueprintFallback")]
+    mixin.Profiles = [UEPPythonMixinProfile(ProfileName=profile, PythonModule="uep_lyra_characters."+("quickbar_input_mixin" if quickbar else "emote_audio_mixin" if audio else "inventory_clear_mixin"),
+        PythonClass=("LyraCharacterQuickbar" if quickbar else "LyraCharacterAudio" if audio else "LyraCharacterInventory")+profile+"Profile") for profile in ("Python", "BlueprintFallback")]
     ue.blueprint_configure_mixin(bp, mixin, "Python", "PythonMixinProfile"); ue.compile_blueprint(bp); ue.unregister_all_mixins()
     if int(bp.Status) == 2 or bp.GeneratedClass.get_path_name() != cls or cdo_snapshot(bp, "character-after") != before:
         raise RuntimeError("original Character identity/full CDO changed")
@@ -41,12 +42,15 @@ def generate(stage, audio=False):
         raise RuntimeError("original Character business/animation/input graph changed")
     bp.save_package(); mixin.save_package()
     if hashlib.sha256(original.read_bytes()).hexdigest() != digest: raise RuntimeError("official Character asset changed")
-    report = dict(status="passed", kind="characteraudio" if audio else "characterinventory", runtime_acceptance=False, full_acceptance=False, native_end_adapter_nodes=0,
+    report = dict(status="passed", kind="characterquickbar" if quickbar else "characteraudio" if audio else "characterinventory", runtime_acceptance=False, full_acceptance=False, native_end_adapter_nodes=0,
         original_class=cls, original_signature=signatures["ClearInventory"], extra_signatures=signatures,
         original_class_defaults_signature_graphs_preserved=True, original_full_cdo_preserved=True, original_graphs_unmodified=True,
-        original_graphs=graphs, implemented_methods=["ClearInventory"]+(["GetEmoteAudioComponent", "SetEmoteAudioComponent"] if audio else []), added_interface_graphs=["GetPythonMixinSet", "GetPythonMixinProfile"],
+        original_graphs=graphs, implemented_methods=["ClearInventory"]+(["GetEmoteAudioComponent", "SetEmoteAudioComponent"] if audio else [])+(["ChangeQuickbarSlot"] if quickbar else []), added_interface_graphs=["GetPythonMixinSet", "GetPythonMixinProfile"],
         assets=[RELATIVE, "Content/UEPMixins/"+name+".uasset"], reference_hashes={str(original): digest})
-    if audio:
+    if quickbar:
+        from generate_character_quickbar_probe import generate as probe
+        report["caller_probe"] = probe(stage, bp.GeneratedClass)
+    elif audio:
         from generate_character_audio_probe import generate as probe
         report["caller_probe"] = probe(stage, source)
     return report
