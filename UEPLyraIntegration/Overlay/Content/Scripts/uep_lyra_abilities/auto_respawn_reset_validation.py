@@ -147,11 +147,13 @@ class ResetTrials(EventEvidence, Native):
         self.close_observer()
         self.report["observer_shutdown"] = dict(created=self.observers_created, closed=self.observers_closed, active=int(self.reset_observer is not None))
         if self.report["status"] == "awaiting_shutdown":
-            try: self.report["status"] = "passed"; validate(self.report)
+            try: self.report["status"] = "passed"; self.validate_reset_report()
             except Exception: self.report.update(status="failed", error=traceback.format_exc())
         self.write(); (ue.log if self.report["status"] == "passed" else ue.log_error)("UEP_AUTO_RESPAWN_RESET_SHUTDOWN_"+self.report["status"].upper())
 
+    def validate_reset_report(self): return validate(self.report)
+
 
 result = next((value.split("=", 1)[1] for value in sys.argv if value.startswith("-UEPAutoRespawnResetResult=")), None)
-if result:
+if result and "-UEPCharacterInventory" not in sys.argv:
     validation = ResetTrials(result); atexit.register(validation.finalize); ticker = ue.add_ticker(validation.tick)

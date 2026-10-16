@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "batch": "39-character-inventory-clear",
+  "scope": "Only retained Character ClearInventory: native C++ -> unchanged BP death/Reset -> selected original helper, four real death pairs, a bare Avatar pair with exact raw unslotted-item duplicate plus owned native cleanup, four native Reset pairs and twelve authority/owner two-client trials. Native authority, QuickBar-before-inventory operations/replication, empty-before-respawn observation, new item identities and foreign inventory isolation. Default native inventory only; no multi-item/nullable/Character-profile-switch native probe, Character Reset networking, package or whole-character/version acceptance.",
+  "recorded_utc": "2026-10-16T21:08:19.9332897Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "f11819fa7e69defd67c536413315bc70fe6e6ec5",
+  "examples_parent_commit": "c8ef0aca4e1e98aa91ea72e24e3acc7876f826fb",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-character-inventory/Assets01",
+      "summary_sha256": "B7AB6115333CF614A1E018D7101EF4D90A856886BCC553BD565F935874C64214",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1317,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-character-inventory/Differential02",
+      "summary_sha256": "3E5C8B39E1BAD000DB9C75DF72EDBF0F0C4D23A28AF5E7E22EE0B1D2707807BE",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1540,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "FBE9F1AEC20C634A6BD162D7DED72260EC2280E798DDCE76831C37E84C870149"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-character-inventory/Network02",
+      "summary_sha256": "E72BFF7D9D19D6CB9E7E61D8D28FC6785BC31073C7956BCA625A74CF9176018D",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1544,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "B0": 0,
+        "A": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "7D44EA77E878ADA8E9C9DABA227B107314D2D66219C52482D9D95C3B3332B823"
+        },
+        {
+          "file": "A.json",
+          "sha256": "62D243FB3B429D6A19812118EE3C3593FE1835DAAB2DB8CF53CFB7D50953298B"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "B56FB8988D6C307334027CA7265DDC570A04A4D698D56EAF308F5F4E8A10EA19"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-character-inventory/Reset01",
+      "summary_sha256": "769CD7860915D27B5FE13DC497887680079E0D306D4B61881A5048A399D596A5",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1551,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "77028CCFA3B99654B48093E641AEDCCFD9D35D3BB2B8B593C10F86A05F6056EF"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_activation_network_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_activation_network_validation.py",
+      "sha256": "F72DA48CB743B58103DF52A5B3A76BB952CD94B751BFB2C62071B06FE01E9BB2",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_activation_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_activation_validation.py",
+      "sha256": "69831D77B62601DBAA5108E40A0AFE9F60BF012FEAE84F4EB8911010F31BBA2A",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_reset_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_reset_validation.py",
+      "sha256": "63ECA8D025FD33427E850935BACE4C8A640EA12832FC7AA684A0816B9435A0D4",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/inventory_clear_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/inventory_clear_contract.py",
+      "sha256": "2FD253CD1F0676AEC207BF17416FD75598FB5106610DA78F36A87B235B55D60C",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/inventory_clear_mixin.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/inventory_clear_mixin.py",
+      "sha256": "094906FEC343536F041EF6ACBA192545C1D20F97C7B4E1EDBBA67034A19BF240",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/inventory_clear_network_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/inventory_clear_network_contract.py",
+      "sha256": "0063DB03735DC992F7AC4ADBF4B9D06026894DA5D0B574126E83BC11D702A907",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/inventory_clear_network_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/inventory_clear_network_validation.py",
+      "sha256": "B0947308AF3F2DB38F6A1B58981FEA2AA571BB3070A970237EF59A9F333B67D6",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/inventory_clear_reset_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/inventory_clear_reset_validation.py",
+      "sha256": "C39F156A082307EE0ED8D82A562C3992A20DDA5160FAB8B5B9E4046F08B47DE1",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/inventory_clear_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/inventory_clear_validation.py",
+      "sha256": "BC3E4B21F68D45A6700F5D3150CB1CA5BB5DADEBEA51367AB54C48F2470292DC",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "862987EB8024369D5000E68655E29C66EF2ED8D95EF6CA52AEA146B75A5899B1",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_CharacterInventoryMixin.uasset",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_CharacterInventoryMixin.uasset",
+      "sha256": "9E0341C7DD888C25D9A63DDF5492C60D9971128EC150B51D0720C92BE5A319F6",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/B_Hero_ShooterMannequin.uasset",
+      "path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/B_Hero_ShooterMannequin.uasset",
+      "sha256": "300802704F9F173C45AD9D088EDD02F021EE9F26E0AF04CB0FFFF2C29B648983",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_character_inventory_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_character_inventory_assets.py",
+      "sha256": "2C6A853E8A4815CE47DFA869EC6EE7CCB8B813035E0D55CCFD693994010DFA33",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "4BEE2E0ECC2084F5B57CF3D6E42AED0C2455CF9ECACCD7681F1AE805913C9160",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "A1A08FAF582FB4E53B1669B86F0DD082011B927BFF03469EF3D3EDFE4663BD04",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "BE9CF4F29D2ACAB3C2CA77CFC109CCF87B3B79296F85DD466B8C5911B41B944C",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 1134,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261017-character-inventory/Host03.json",
+    "sha256": "40426E8AD6CF7CDB7EEC00F4203F85608DC272A1FAD1F9B26BB1480A18C23C8D"
+  }
+}

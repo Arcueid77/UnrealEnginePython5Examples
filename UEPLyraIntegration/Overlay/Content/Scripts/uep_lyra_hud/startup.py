@@ -4,6 +4,12 @@
 def validation_module(arguments):
     if any(argument.lower().startswith("-run=") for argument in arguments):
         return None
+    if "-UEPCharacterInventory" in arguments and any(argument.startswith("-UEPAutoRespawnResetResult=") for argument in arguments):
+        return "uep_lyra_characters.inventory_clear_reset_validation"
+    if "-UEPCharacterInventory" in arguments and any(argument.startswith("-UEPAutoRespawnHelpersNetworkResult=") for argument in arguments):
+        return "uep_lyra_characters.inventory_clear_network_validation"
+    if "-UEPCharacterInventory" in arguments and any(argument.startswith("-UEPAutoRespawnHelpersResult=") for argument in arguments):
+        return "uep_lyra_characters.inventory_clear_validation"
     if any(argument.startswith("-UEPAutoRespawnResetResult=") for argument in arguments):
         return "uep_lyra_abilities.auto_respawn_reset_validation"
     if any(argument.startswith("-UEPAutoRespawnResetNetworkResult=") for argument in arguments):

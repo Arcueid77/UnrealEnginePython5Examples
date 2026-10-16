@@ -36,6 +36,78 @@ Clear without preceding End, travel/rejoin, loss, physical input, packages and
 whole-version acceptance remain open. Earlier failures below are preserved
 history, not current pass claims.
 
+**Accepted Character inventory-helper batch:** status reconciliation is locally
+committed as Examples c8ef0ac / core f11819f; no native run was added for it.
+Next implement only B_Hero_ShooterMannequin.ClearInventory, called by the
+unchanged original BP K2_OnDeathFinished/K2_OnReset entries from native C++.
+Python retains HasAuthority, the QuickBar-valid guard, all slots before a copied
+GetAllItems removal list and native RemoveItemFromSlot/RemoveItemInstance calls.
+No FastArray, ability-spec, slot, inventory or animation properties are written.
+Controller/missing-inventory safety is an intentional no-warning improvement,
+not original BP null-receiver warning parity. Per-Actor mutable POD evidence has
+no global Actor registry or UObject retention; the fixture can hold that dict
+after old Actor GC without dereferencing the dead Actor. Source and twelve
+models are prepared; assets/native lifetime/two-owner acceptance are not done.
+
+Character Assets01 PASSes retained type/full CDO/six public signatures/every
+complete original graph, adding only the two Interface declarations. Twelve
+policy models and 1,113 full host models PASS. Differential01 records all four
+real BP/Python death pairs with one selected helper call, original native slot/
+item sequence, an independently observed empty-inventory window and restored
+definition model with new item identities. It nevertheless FAILS final gate:
+bare Avatar destruction bypasses ClearInventory, and AddInitialInventory on the
+new Pawn adds exactly one new un-slotted pistol while retaining original slot/
+item identities, in both BP and Python. Earlier Avatar proofs covered QuickBar
+slot identities/specs, not the complete InventoryManager item set. Do not claim
+those older runs proved the absence of un-slotted duplicates. Preserve the raw
+delta; the new fixture removes only the newly observed un-slotted native pistol
+through RemoveItemInstance, then requires exact original items/slots. This is
+fixture recovery, not a production fix. Differential01 remains failed.
+
+Character Differential02 PASSes four actual original/Python death pairs plus
+both bare Avatar trials, 10/10 observation scopes, exact raw orphan delta and
+native removal of only that newly added unslotted item. Original slot/item
+identities are retained; normal deaths really remove/recreate native items.
+Strict logs, independent gate, 1,540 frozen inputs and zero exit PASS.
+Network01 completes all twelve authority/owner trials, exact foreign inventory
+state and 12/12 + 6/6 + 6/6 scopes with three normal exits, but FAILS the report
+gate's fixed role=2 client assumption. Actual helper callback roles are 3 on
+server and 1 (SimulatedProxy) on clients, while initial owner Pawn roles are
+3/2 (one B0 callback also remains role 2). Native Actor::HasAuthority is
+role==Authority; both legal client roles
+must remain no-op. The new gate checks real HasAuthority and valid role 1/2,
+rejects client authority/removal and records the observed role rather than
+relabeling it. Network01 stays failed; fresh Network02 is required. The
+foreign-inventory invariant now reports failures through normal fixture finish.
+
+Character Network02 PASSes twelve authority/owner trials and twelve passive
+foreign observations. Original/Python helper enters exactly once per death;
+only role-3 authority performs removal. Real client callback roles 1/2 stay
+non-authority with zero removal. Native item-definition model and re-created
+identities replicate, and other-owner inventory stays identical through each
+trial. Native inventory scopes close 12/12 + 6/6 + 6/6. Strict logs, independent
+gate, 1,544 frozen inputs and three normal exits server last PASS. All 28 focused
+and 1,129 full host models PASS at this point. Standalone real Reset ingress
+gets its own five report models and final native lane; not yet accepted.
+
+Character Reset01 now PASSes four genuine native Reset BP/Python pairs through
+the original Character BP event, exact selected ClearInventory ingress, native
+empty-inventory observation and native re-grant with explicitly new item
+identities. Inventory scopes close 8/8; strict logs, independent gate, 1,551
+frozen inputs and normal zero exit PASS. All 33 focused and 1,134 full host
+models PASS. Ledger 39 records four passed native runs and sixteen scoped
+inputs, all matched to actual frozen native source/assets. The final isolated
+Git-index archive PASSes all 1,134 models, and all-index syntax/import closure
+PASSes 510 files. The initial index check correctly failed because the manifest
+count was incremented before the new ledger was staged; that failed snapshot is
+preserved and the final complete snapshot is independently re-tested. Five
+driver-safety checks and 56 PowerShell parses PASS. The helper-only batch is
+ready for its paired local commits; no native process remains.
+Earlier failed runs stay failed. Other Character methods and native multi-item,
+nullable-controller, Character Profile-switch, Character Reset network,
+travel/rejoin, packages and whole-version gates remain open. Native warnings
+remain; no Engine/official project changes or C++ build/cook/package.
+
 **Accepted pressed-widget pilot and nullable-controller fix (2026-10-16, 23:45 Singapore):**
 Previous held-widget batch is locally committed as Examples b8b9818 / core
 8d03e61. SpawnEffect's nullable-controller repair is separately committed as

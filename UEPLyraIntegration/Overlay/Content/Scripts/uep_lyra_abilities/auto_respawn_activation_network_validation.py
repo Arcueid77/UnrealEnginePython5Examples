@@ -11,7 +11,7 @@ class Client(ActivationEvidence, EventClient): pass
 class Server(ActivationEvidence, EventServer): pass
 
 
-if "-UEPAutoRespawnActivation" in sys.argv and any(value.startswith("-UEPAutoRespawnHelpersNetworkResult=") for value in sys.argv):
+if "-UEPAutoRespawnActivation" in sys.argv and "-UEPCharacterInventory" not in sys.argv and any(value.startswith("-UEPAutoRespawnHelpersNetworkResult=") for value in sys.argv):
     result, peer, run = arg("-UEPAutoRespawnHelpersNetworkResult="), arg("-UEPJumpPeer="), arg("-UEPJumpRun=")
     validation = Server(result, run) if peer == "server" else Client(result, peer, run)
     atexit.register(validation.finalize); ticker = ue.add_ticker(validation.tick)
