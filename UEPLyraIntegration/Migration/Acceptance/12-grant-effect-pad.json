@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "batch": "12-grant-effect-pad",
+  "scope": "Grant-effect pad gameplay policy and authored 15-second cooldown parity. Historical native six-pair differential and four-row two-owner network evidence; not rerun with current DLL. Current staged isolation checks and source freeze recorded. Native GAS/timeline curve retained.",
+  "recorded_utc": "2026-10-16T13:12:26.2686154Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "00ff90a6854809baf49ce8179342d653cf18d53c",
+  "examples_parent_commit": "6ec37dca366afbfaf21206ad277f0964a89b7cbf",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-grant-ge-pad/Differential02",
+      "summary_sha256": "66B6BFA075FFD332490AC08987CD5D2AEADB2512444ADE22EB3A40FC122CA21E",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "A37911F9105E33A130BE049C93F86911CAD5C2B305CEB04C702CCE8AF5B65555"
+      ],
+      "frozen_input_records": 1014,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-grant-ge-pad/Network04",
+      "summary_sha256": "A37D4A5B51735FDE018EBEECB6C9865DA82F864E4CDAF02AE246B4F63302540D",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "A37911F9105E33A130BE049C93F86911CAD5C2B305CEB04C702CCE8AF5B65555"
+      ],
+      "frozen_input_records": 1019,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "A": 0,
+        "B0": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "7C60FBF89C57A8E9D6DB5D28960AC2790ED3D7ABF113420B8EFAC09002855B6B"
+        },
+        {
+          "file": "A.json",
+          "sha256": "2834D8D198DC2145AEDA0CE72CB8B9208505E23ED5F3FE305BD902EDCCF78DD7"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "72CE4623997D10DCA4866F68BD91E302C71B0F657B59CA3B9ED377D0B176647C"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+      "summary_sha256": "9F2E167CDA4F151193F7A7855A8D15181FACAD232C9A51EB328DA1157F8F15AC",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 757,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "A": 0,
+        "B0": 0,
+        "B1": 0,
+        "server": 0
+      },
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "F7F3D83AAB932DE589F396F1B06E49E1993054D49A1B927167D4C28F2D7157F3"
+        },
+        {
+          "file": "A.json",
+          "sha256": "BFCD48199D27814F640AFC0185B4EE3FE605AB64D6AE03863F843D00D6681CB7"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "A35F2174D1D4298CFAA9FAF0316139D008259B3F51D5348926DC9008F1A4F8DE"
+        },
+        {
+          "file": "B1.json",
+          "sha256": "7779365601C319731DFC9579EAD83FD581262E615B55A7E8939CF66C2FDC1E38"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/grant_ge_pad_contract.py",
+      "sha256": "6A64659941ADE9DABA7428F7D3312BC73D717E29DF1D8E1413E89540C9E4BEAE",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/grant_ge_pad_mixin.py",
+      "sha256": "554A14D826E21846F264C024C6F9C55368D7C07D45A701077259B8BEBBF0BFE2",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/grant_ge_pad_network_protocol.py",
+      "sha256": "4C5AFFB16B505355F1034F85274A7A01AA47E6F9C85FB35312C682A0887B70B8",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/grant_ge_pad_network_validation.py",
+      "sha256": "9F3092EB30AE15D5068A0EB84E6CA6FE6795650C1E82837BD9C03E51BD65B105",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/grant_ge_pad_validation.py",
+      "sha256": "B6F0E6C2311A1ED25DEA67DD2850263F727131FA3AD2861CCBE1BB9D9A14082C",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_GrantGEPadMixin.uasset",
+      "sha256": "CF74814520737BA72D9FA94F7D8CD5D346F718EAB5A6541DC7B8008A20854C99",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Blueprint/B_GrantAbilityPad_ApplyGE.uasset",
+      "sha256": "0232556109255BB449A87CEF8ABF865FEE89BCA6013D96764CA6F8E665236202",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "path": ".build/CommitVerification/20261016-12-grant-effect-pad/workspace/.build/host.json",
+    "sha256": "DD57C05178ECCB8AF08C27A5ADA33A79B917B80E7F4DE0B6D5FBA795023EFA8A",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 498,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\CommitVerification\\20261016-12-grant-effect-pad\\workspace\\.build\\HostTestTemp",
+      "failed_cases": []
+    }
+  }
+}
