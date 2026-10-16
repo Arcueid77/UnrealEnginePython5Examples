@@ -1,0 +1,318 @@
+{
+  "schema_version": 1,
+  "batch": "19-widget-ability-family",
+  "scope": "Coherent shared GA_AbilityWithWidget parent/Profile set with Jump, ADS and Emote implementations. Current-DLL Emote nine pairs/20 authority rows, ADS six pairs/20 rows and shared Widget eight cases. Historical Jump seven-pair/28-row runs remain historical. External LaunchCharacter Emote interruption only; no ordinary movement-input, network movement/crouch/pause or full-release claim.",
+  "recorded_utc": "2026-10-16T13:16:31.4441342Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "00ff90a6854809baf49ce8179342d653cf18d53c",
+  "examples_parent_commit": "dd5c2ff3ef9494232557ef43dac93283f34b5f2c",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-emote/Differential03",
+      "summary_sha256": "8AA259C00D50858A35C3C248CB5A3BC200713AF81BF7B51AEBA5F9B0A8CD6493",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1439,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "7271A3DB6246E24225CE42974F9B84B74180DF453358FA871B4ED6E63CC32B89"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-emote/SharedWidget01",
+      "summary_sha256": "197A862296FF24F908792DFABF091188336E9E26C91035372719014CFC4D6B1E",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1448,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "E5BE10FF7894CFC56CEB2EC4311D33A066BD574D3621D28C88C6A1B7A5CB8EDD"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-emote/ADSStandalone01",
+      "summary_sha256": "4833260D056760699A02FE0A99D9BB83B43115F5C407325994D026CCDA5B7829",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1439,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "A7CB01171F5B44349F15CD9D7AC8744A900552315A5FD12F4FC62091B16C72C6"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-emote/ADSNetwork01",
+      "summary_sha256": "8BE00D7F1F2C4175992FA3E5E356E818C99D78AC2481990A7564774E2AB684F3",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1439,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "A": 0,
+        "server": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "E32C4D6AD0C89BF5BE1E357FDC1CCD17301BE0A3EA639103BE8470362B3791E1"
+        },
+        {
+          "file": "A.json",
+          "sha256": "D4BAAB4225F65EFB32703712159A0B41DB582A8F5788F237A33FC02ABAB84465"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "F77B92AD002B68F6C85E7F166324612AF8AA1C43AB0728E46D3806235AFF794B"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-emote/Network01",
+      "summary_sha256": "4264730AB2567970035E4F256927E03B17162DE6CA96B7ED1C9EA4F131EF0EA0",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1439,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "A": 0,
+        "server": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "4755998CB3FC04250ABA985E9BA7BE176B0563B9D7362C09E67A828A3119C945"
+        },
+        {
+          "file": "A.json",
+          "sha256": "339B99301267A8BC22B0FC810AAEC4FFC6F8654816B8C1B7C661B953ED8D3E6C"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "684F13777E42885EBBF00D9D5395D2ACB1B24C92A77ADF13CEF0EF7CAC3B8092"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-jump/Differential02",
+      "summary_sha256": "9CE3301D9DB9585ADD46797883BFA2F55FF0B618E520700437698DE258C6ABE3",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1248,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "6B4BDBE7384A128583F4BAE0E19BE88A819A353C580698DA341D5DE240F10DD7"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-jump/Network04",
+      "summary_sha256": "1A0D383EA3EDA57A0521D6AF09BC35E0F6FAD70CAA4D7ADC87D5AEDAAC6C0CAB",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1256,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "A": 0,
+        "server": 0,
+        "B0": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "2471B3089B5E99209E61B2DC81D51B06F79F011089E5EBE8CF33A5A2EF2CC458"
+        },
+        {
+          "file": "A.json",
+          "sha256": "6842C3BEE271784E01EA47A99AE724C501261274DC95F8B435F518EF0017EB2A"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "2AD17FD89DCBD2BA2CE7578AD1A44627269B91A62DF820A80DF84D3222FC655F"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "3B45DDAF7A920DAAD34A3AB73ED9CFFFA508922FBC044A83C424EA4DCEE280EE",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Characters/Heroes/Abilities/GA_AbilityWithWidget.uasset"
+    },
+    {
+      "sha256": "EDFA2CB7725340BBE8BB020B8B7746C1D4C7AFF9B5040B5F9D7B0E56277A5A7F",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Characters/Heroes/Abilities/GA_Hero_Jump.uasset"
+    },
+    {
+      "sha256": "02088015240CFC3DFE1AAC1FF0AE606D91A9425E6372DAC0C5D4540FE949A948",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/__init__.py"
+    },
+    {
+      "sha256": "EAC530862A72D6D8DC19B9EB6D986859EF10A06DDB577490EEA8D602390655FD",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/ads_contract.py"
+    },
+    {
+      "sha256": "1A801C78A755EC4ABD1E25DB73C92D1F918E25FF8AEED33A5DC8AA179C1DA0CB",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/ads_mixin.py"
+    },
+    {
+      "sha256": "66A3FB7B395E72C06314CD520AC57CE10BAEF971EB08AB26F906B00D7EF92A5B",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/ads_network_contract.py"
+    },
+    {
+      "sha256": "D62F869049DD1D7884FF80A8C20E6F0095110016C9F6C78706D0720C63972C21",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/ads_network_validation.py"
+    },
+    {
+      "sha256": "59A83DF3E4F2284B0F9037B9B63B15C7644E3E0F801B6640A290502C09AF4543",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/ads_validation.py"
+    },
+    {
+      "sha256": "FE1D1453D795C49518E7C068B002D276709985A01E213E04F459059FE3402615",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/emote_contract.py"
+    },
+    {
+      "sha256": "E81758A63C4999845D903E23C77EAE6D97207BD07A638C9CD8FF707DBD1EA3EC",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/emote_mixin.py"
+    },
+    {
+      "sha256": "F0339897C08D298432092800622A4DC8AB614EFF4C38948272FE0453BE508F12",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/emote_network_contract.py"
+    },
+    {
+      "sha256": "C0709C2265A0DC7BBC86FFE6670A0C2865C112EBC6777D63D5724918A825CF21",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/emote_network_validation.py"
+    },
+    {
+      "sha256": "875FA0629EB3A471C5F1DD787AECCF5784D3E1473AD520FEE0EBB44F6AD33AE5",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/emote_validation.py"
+    },
+    {
+      "sha256": "3D5A9DF7663B5F728A311974407C4F2E70C0DD777096F2115E309BAA6A6BEFEA",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/jump_contract.py"
+    },
+    {
+      "sha256": "4E936941AE09C4D785BA203DA3507BC871B4856490FD46ABCA9E71E32A237E2D",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/jump_mixin.py"
+    },
+    {
+      "sha256": "3BCBD79CF804613DACC23E980857B70C4EACE5F62AEBDC3F4F0F635B0B0174DE",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/jump_network_contract.py"
+    },
+    {
+      "sha256": "6FBD0BF171F8A75899DD5E001D555B14EFA5C2F1A04A9F6D2E4154CD26D76531",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/jump_network_validation.py"
+    },
+    {
+      "sha256": "D57D2C4FBBB753D7FA581B7525E9A968B389C475E0F7BC994DDBA3794DD11D05",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/jump_validation.py"
+    },
+    {
+      "sha256": "AFBC684E548734086885547CBAE9573F9D76068D145E810701613A786C0F85D9",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/widget_contract.py"
+    },
+    {
+      "sha256": "46257046076383A1DB06B2C86D018DBF86BC5A46256814F9D81D3E96D11DFF8E",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/widget_lifecycle.py"
+    },
+    {
+      "sha256": "0039281CDB90A50EEFA1F4640FB4F06389491251618D287E509F1124E3BE007B",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/widget_validation.py"
+    },
+    {
+      "sha256": "ECC5F070A3D88F093194211D7464BF6A68DBCA04F8B330366AE45E94134225B9",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_AbilityWidgetMixin.uasset"
+    },
+    {
+      "sha256": "3F7780CCCD9A6836B266CDE6B4BB8E5C836FC6D08E257888B23E43817AE35F57",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_JumpAbilityMixin.uasset"
+    },
+    {
+      "sha256": "0CF191EE5B7684DC23A70BE1D0F183DF4155578EA796572B481C9DAD8DAD2AB9",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/Emote/GA_Emote.uasset"
+    },
+    {
+      "sha256": "AB57DA4DC4968E64805AF8D4AC21340D6777DFCD3DA11E73A1D6648AE0EA5E2D",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Input/Abilities/GA_ADS.uasset"
+    }
+  ],
+  "host_report": {
+    "sha256": "5BAE27B516A24CEA84F340D0D83EEDFB60B0E2153A2213CB86232DCF535891E6",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 684,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\CommitVerification\\20261016-19-widget-ability-family\\workspace\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/CommitVerification/20261016-19-widget-ability-family/workspace/.build/host.json"
+  }
+}
