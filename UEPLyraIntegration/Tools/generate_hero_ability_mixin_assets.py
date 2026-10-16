@@ -56,6 +56,9 @@ def generate():
     if kind == "widgetpressed":
         from generate_widget_pressed_assets import generate as generate_widget_pressed
         return generate_widget_pressed(stage)
+    if kind == "autorespawnhelpers":
+        from generate_auto_respawn_helper_assets import generate as generate_auto_respawn_helpers
+        return generate_auto_respawn_helpers(stage)
     config = {
         "quickslot": ("/ShooterCore/Game/GA_QuickbarSlots", "quickslot_mixin", "LyraQuickslot", "Quickslot",
                       "Plugins/GameFeatures/ShooterCore/Content/Game/GA_QuickbarSlots.uasset", "K2_ActivateAbility"),

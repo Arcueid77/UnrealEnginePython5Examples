@@ -88,6 +88,113 @@ No Engine build/cook/package or official/test-tool/animation/private-binding
 source changes. Whole 0.10/0.11 acceptance remains OPEN; next investigate a
 separate remaining hero/respawn family rather than declaring the version done.
 
+**Accepted native AutoRespawn helper-only batch (2026-10-17):**
+Pressed-widget local commits are Examples 69a46af / core e735b4b. The next
+batch implements only GetOwningPlayerState, Is Avatar Dead or Dying
+and EndDeathAbilities. Original BP still owns OnAbilityAdded/Removed,
+activation/avatar/death/EndPlay listeners, reset messages, UI registration,
+two latent delays and server restart. This is not a whole-AutoRespawn migration.
+Read-only native Audit01 PASSes original type/hash/default/signature discovery:
+five-second delay, per-actor instancing, LocalPredicted/OnSpawn and
+ServerOnly security. Twelve helper models PASS, not runtime acceptance.
+Assets01 FAILED a graph-set comparison that also counted the two newly required
+Interface declaration graphs as old business. The check now permits exactly
+GetPythonMixinSet/GetPythonMixinProfile as additions and still requires every
+original graph's entire node/link/default digest to be identical. Assets02
+PASSes that original authoring proof, but Differential01 FAILS runtime
+discovery: Is Avatar Dead or Dying has a non-const bool out pin and the new
+method omitted the existing explicit named-output opt-in. Its process exited
+normally; it is not acceptance. No Engine/plugin rebuild is used to widen it.
+Assets03's attempted two-gate transport FAILS Blueprint return-node signature
+validation before saving. Inspection of the existing plugin shows no adapter
+is needed: its explicit uep_named_outputs opt-in already supports this exact
+non-reference out pin. Both profiles now return the IsDeadOrDying mapping;
+the final policy does not introduce any business forwarding graph or node.
+The four unaccepted stage/Overlay asset files are recoverably archived under
+UnacceptedAssets02, and only the disposable staged root was restored from the
+unchanged official file. Final Assets04 PASSes full CDO, twelve public
+signatures and every complete original business graph digest, adding only the
+two Interface declaration graphs. Differential02 FAILS native return-shape
+handling: out-only native calls return tuples, not direct array/bool values.
+The exact failed native process was stopped (exit -1); its errors are retained,
+not allowed by a relaxed log gate. Native tuple unpacking is corrected in the
+production EndDeathAbilities/fallback query and the read-only fixture query;
+model stubs now use the observed native shapes. Twenty-two policy/report
+models PASS. Differential03 PASSes four BP/Python pairs (eight actual lethal
+GAS death/restarts), natural/repeat/Profile-switch/pause behavior, original
+delay and logical spec model restore, strict logs/independent gate/normal exit
+and 1,475 frozen inputs. Native equipment spec handles legitimately renew on
+restart; class multiplicities and both persistent AutoRespawn/Death handles
+are independently retained. Real original BP reaches Python EndDeathAbilities;
+the fixture never calls that helper, writes health/delay or grants an ability.
+The per-owner network fixture additionally has thirty focused policy/report
+checks; all live host models PASS 989. A serialized final-input Differential04
+then Network01 queue is now running (not duplicate native lanes). New network
+gates require twelve authority and twelve owning-client rows, six independent
+foreign-owner observations per client, real client/server identities, native
+original lifetime, exact ack/report agreement, all owner/spec/Profile restore
+and actual client zero exits before server exit. The initial gate incorrectly
+assumed that only authority may execute EndDeathAbilities; Network04 below
+disproves this assumption for the original BP. Differential04 and Differential05 each
+PASS the complete four-pair matrix, strict logs, independent gate, 1,479 frozen
+inputs and a real zero exit. Network01 FAILS fixture readiness before any trial:
+it queried a client-local phase map populated only by authority OnBeginPhase.
+The three exact failed processes were stopped; phase readiness now comes from
+the verified server gate, while each client still requires actual native
+input/health/ability readiness. Two behavior models prevent recurrence; native
+wait-state sidecars expose the current readiness fields.
+Network02 then FAILS at the first owner: Client.death phase method collided
+with Native.attach's self.death ability field. The two later invalid-controller
+errors followed that client's exit, not a newly accepted gameplay failure.
+The method is now await_native_death; an AST field/method collision regression
+covers the whole shared fixture. All thirty-three focused checks PASS.
+Network03 completes all twelve authority/owning rows and six independent
+foreign-owner observations per client; both clients pass and exit zero. It
+still FAILS server cleanup: restore attempted to read a Controller after its
+client process had exited and the native Controller was destroyed. Final
+restoration now runs idempotently before signaling client release; only actual
+exit-code barriers remain afterward. Two focused models verify ordering and
+prove that already-restored server finish never re-reads a disconnected owner.
+Thirty-five focused checks PASS. Network04 reruns the unchanged production
+policy and complete matrix with that cleanup correction. The earlier twelve
+completed rows do not turn Network03 into accepted evidence.
+Network04 completes all twelve authority/owner rows, foreign observations and
+three normal exits with strict closed logs, but FAILS the independent gate's
+incorrect client-EndDeathAbilities-zero assumption. Both original BP and Python
+execute that helper once on each owning client. Read-only engine inspection
+confirms K2_HasAuthority reads CurrentActivationInfo.ActivationMode, whose
+default is Authority, rather than Pawn role. The fixture now records the actual
+ability guard, activation mode, Pawn role and GameMode availability before
+death, at death and after restart. The gate requires those observations plus
+exact final-Profile helper dispatch, original/Python lifetime parity, no local
+damage/activation and unchanged foreign owners. Thirty-nine focused models
+PASS, including missing/contradictory guard evidence and ack-independent
+counter rejections. Fresh Differential06 and Network05 must pass this stronger
+measured contract; no prior failed report is relabeled or timeout/log gate relaxed.
+Differential06 now PASSes all four BP/Python pairs, eight real lethal death/
+restarts, native pause/Profile-switch observations, strict logs, independent
+report gate, a real zero exit and 1,479 frozen inputs. The actual standalone
+guard is Authority mode 0/Pawn role 3/GameMode present at all three points.
+Full live host suite PASSes 998 tests with no failures/errors/skips, supporting
+core gates and all 55 PowerShell parses also PASS. Network05 is the sole
+native lane at that checkpoint. Final Network05 now PASSes all twelve authority
+and owner trials, six foreign observations per client, strict closed logs,
+independent semantic gate, 1,479 frozen inputs and three real zero exits with
+server last. Actual ability ActivationMode is 0 on all three peers; Pawn roles
+are 3/2/2 and GameMode availability true/false/false at all three measured points.
+Each original/Python final Profile calls the helper exactly once. Both owners
+restore Profile, native spec model, delay and living state before release.
+No native process remains. Isolated Git-index archive Index01 PASSes 998 host
+checks; full-index syntax/eager-import closure PASSes all 467 Python files.
+Ledger 35 records Audit01/Assets04/Differential06/Network05 and fourteen scoped
+source hashes, all matching at least one listed native input. The ledger and
+documentation are added after runtime/index verification; runtime inputs are
+unchanged. This bounded batch now receives separate Examples/core local commits
+before listener orchestration starts.
+Network pause, loss, travel/rejoin and packaged runtime
+remain unclaimed. The whole AutoRespawn business is not done.
+No C++ build, cook/package, official-source/private-binding changes or push.
+
 **Accepted held-widget pilot (2026-10-16, 22:28 Singapore):**
 The held-input root policy is now implemented in
 `uep_lyra_abilities/widget_held_mixin.py`; its two original scoreboard children
