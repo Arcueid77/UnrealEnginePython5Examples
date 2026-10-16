@@ -6,14 +6,22 @@ Its history was split from the core repository, so the 0.1.0 through 0.8.0
 sample evolution remains available without keeping demo projects in the plugin
 source tree.
 
-As of the 2026-09-07 review, 0.7.0 is the latest tagged release and 0.8.0 is
-unreleased development on `dev/release-0.8.0`. Its implementation and retained
-test runs are not yet complete release acceptance.
+As of the 2026-10-16 review, 0.7.0 is the latest locally tagged release.
+The current `dev/lyra-blueprint-python` work starts from the unreleased 0.8
+baseline and advances bounded 0.9–0.11 runtime BP batches. Neither implementation
+nor retained test runs alone establish release acceptance.
+
+Accepted work is split into coherent local commits, each checked using only
+the staged Examples tree plus committed core. The
+[progress log](UEPLyraIntegration/Migration/PROGRESS.md) and
+[per-batch evidence](UEPLyraIntegration/Migration/Acceptance/) distinguish newly
+run checks from historical native evidence. Validation now uses upstream
+UE 5.8.1 and bundled Python 3.11; no release or push is implied.
 
 The demo driver stages assets from Unreal Engine's official Blueprint Third
 Person template under `.build/Demos`, copies the current plugin into that
 disposable project and builds it against the configured engine. It never edits
-the engine, the engine template, or the reference assets in place. Packaging
+Engine source, the engine template, or the reference assets in place. Packaging
 uses UE's loose cooked-package writer so Cook and Stage are not coupled to a
 transient local Zen process.
 
@@ -41,23 +49,27 @@ Game Feature `Add Widgets` action and CommonUI still create/remove the widget.
 
 The default Python profile owns `Construct`/`Destruct`, follows
 `OnPossessedPawnChanged`, binds the active `ULyraHealthComponent`, normalizes
-health and decides when to refresh. It calls the retained Blueprint
-`SetDynamicMaterials` and `InitializeBarVisuals` functions as visual primitives.
+health and decides when to refresh. Its current Python `SetDynamicMaterials`,
+`ResetAnimatedState` and `InitializeBarVisuals` methods call native UMG/material
+primitives, retaining the authored material and animation assets.
 The `BlueprintFallback` profile runs the preserved Blueprint Construct instead.
 Gameplay Effects, authority and replication remain native Lyra behavior.
 
-Health data updates are implemented, but damage/heal/death animation selection
-and numeric interpolation still need parity fixes and rendered acceptance.
+Health data, damage/heal/death/respawn animation selection and numeric
+interpolation are implemented and pass an isolated real-UMG rendered fixture.
 Exactly-one presenter and post-shutdown zero owned callbacks now have explicit
 probe/driver checks, host tests and a current-script Unreal Standalone pass;
-network/package and rendered acceptance remain pending.
+current-source combined network/package acceptance remains pending.
 
 The core repository's full-content driver stages this overlay into a disposable
-copy of `F:\LyraStarterGame`, so neither the reference project nor Unreal Engine
-is edited. `GenerateHUDAssets` is the only authoring lane and copies back only
-the two verified overlay assets. `Standalone`, `Network`, `Package` and `All`
+copy of `F:\LyraStarterGame`, so neither the reference project nor Engine source
+is edited. The core `GenerateHUDAssets` lane authors the two health-bar overlay
+assets; the separate stage-guarded weapon authoring tool creates four BP copies
+and four Mixin Sets. Focused runtime lanes never save assets. `Standalone`,
+`Network`, `Package` and `All`
 exercise runtime lanes; `All` includes the heavy Win64 cook/package step.
-HUD-enabled `All` now runs `HUDAudit`; it can also run independently. The old
+HUD-enabled `All` now runs `HUDAudit`, a precompiled cross-Actor caller fixture
+and rendered UMG checks; each can also run independently. The old
 green `full_acceptance` flag did not include that audit and cannot close the
 corrected 0.8 release gates.
 
@@ -66,7 +78,7 @@ The runtime code is under
 authoring and read-only audit scripts are under `UEPLyraIntegration/Tools`, and host-side
 presenter contracts are under `UEPLyraIntegration/Tests`.
 
-Closeout checks pass 17 Python tests plus 28 core-side PowerShell checks. Schema
+Closeout checks pass 29 Python tests plus 40 core-side PowerShell checks. Schema
 5 keeps the active HUD snapshot and only promotes `awaiting_shutdown` after a
 Python exit snapshot proves zero owned callbacks/widget references; the driver
 also requires clean process exit and ordered markers. After official UBT's
@@ -74,11 +86,21 @@ two metadata-only repair actions, a fresh strict audit and current-script
 NullRHI Standalone passed on 2026-09-07: one active presenter, zero final
 presenters/references, controller bindings 3/3 and health bindings 6/6. No C++
 compile, package or asset save was needed. Integrated `All`, synchronized
-network, package and visual gates still require fresh evidence.
+network and package gates still require fresh evidence. On 2026-09-10, the
+cross-Actor routing and eight rendered frames passed with final zero owned
+widget/callback state. The core `Run-UEP58FocusedHUDValidation.ps1` reproduces
+these checks on an already-built marked stage without UBT/cook/package or
+asset saves (a test window and shader-cache work are possible). Its focused
+`All` is not the full driver's `All` and always reports `full_acceptance: false`.
+It also runs a separate mid-animation profile-switch case. Cleanup pauses
+without invoking a completion event during router mutation; the core plugin
+additionally fixes zero-sized native fallback frames exposed by that test.
 
 The agreed next scope is 0.8 health-bar closeout, 0.9 Mixin engineering plus one
-weapon/ammo HUD chain and bounded message subscriptions, then an RC freeze and
-1.0 supported binding. The remaining combat HUD is 1.1+ backlog. Candidate
+weapon/ammo HUD chain and bounded message subscriptions, runtime BP business
+migration in 0.10–0.14, then an RC freeze and 1.0 supported binding. Every small
+behavior batch adds original-BP/Python comparisons and real-UE/two-client checks.
+Animation and editor/test tools remain; game-project C++ migration is later. Candidate
 records must identify both Examples and core commits; a core `Demos` pin must
 match the tested Examples commit. This is release policy, not a new test run.
 
