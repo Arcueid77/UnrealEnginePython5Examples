@@ -13,17 +13,17 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Latest verified checkpoint (2026-10-17):** Character inherited stencil decisions
-add twelve direct BP/Python pairs plus the eight team regression pairs; ledger
-45 below. Eight Character helpers are routed through the retained-type Mixin.
-Parent/sibling families and other Character business remain open. Final
-standalone has 40 trials/52 BP calls/24 actual GC calls; three network worlds
-have 120 trials/156 BP calls/72 GC calls. Native child recursion, setter
-clamping, render-enable invariance, child/caller lifetime, original state restore
-and strict independent gates/closed logs/server-last zero exits PASS. Both final
-runs freeze 1,636 inputs. All 1,336 isolated-index host models and 567-file
-all-index syntax/local-import closure checks PASS. Driver safety and all 56
-PowerShell parses PASS.
+**Latest verified checkpoint (2026-10-17):** Character native death/Reset event
+bodies add four real death pairs, two bare Avatar trials, eight native Reset
+requests and twelve authority/twelve owner network death trials; ledger 46 below.
+Ten Character methods are routed through the retained-type Mixin. Exact selected
+events/forwarding, native inventory empty windows/replication/restoration, foreign
+inventory/event-POD invariance and scopes 10/10, 8/8, 12/12+6/6+6/6 PASS. Original
+native CPP/GAS/destruction/respawn remain. Strict independent gates/closed logs/
+zero exits/server-last network PASS with 1,648 / 1,652 / 1,648 frozen inputs.
+All 1,363 isolated-index host models and 575-file all-index syntax/local-import
+closure checks PASS. Driver safety and 56 PowerShell parses PASS. Other Character
+business, parent/sibling families and whole-version acceptance remain open.
 Pixels, rendered outlines, hardware output, replicated team changes and
 material replication are not certified by these software tests.
 Nullable native probes, hardware/travel/loss/packages and whole-version gates
@@ -442,6 +442,41 @@ historical earlier-gate pass, not final standalone proof. Isolated-index models
 PASS 1,336 and all-index syntax/local-import closure PASSes 567 files; bounded
 local commits are next. No pixels/stencil/team/material replication,
 hardware/travel/loss/package/whole-Character/family/version claim or publication.
+
+**Accepted bounded Character native death/Reset event batch:** inherited stencil is locally
+committed as Examples ff9ffca / core 96cd025. Add only K2_OnDeathFinished and
+K2_OnReset, explicitly aliasing eight accepted methods. Each Python event calls
+the selected ClearInventory once; fallback invokes only its saved original
+event. Native authority checks remain inside ClearInventory, and native Actor
+destruction, GAS, respawn and replication remain unchanged. Evidence is one POD
+dict per Actor; old-Actor GC never requires an Actor/GAS root or dead-wrapper
+access. Assets01 PASSes unchanged class/full CDO/twelve signatures/all graphs,
+ten routed methods and read-only validation/reuse of the prior typed stencil
+caller. Eight policy, eleven natural/Reset/report/lifetime and eight network
+models PASS (262 Character checks). Explicit lifecycle result flags disarm the
+legacy imported fixture footers; only one native lane/ticker is launched.
+Natural01 PASSes all four real lethal-damage BP/Python pairs plus two bare Avatar
+trials. Each real death enters only its selected event/clear helper once; bare
+Avatar enters neither event and preserves the original raw unslotted-pistol
+delta, followed by native removal only of that new fixture-observed orphan.
+Independent empty-inventory windows, native definition restoration with new item
+identities and 10/10 closed inventory scopes PASS. Reset01 PASSes eight real
+existing native Reset requests, exact Reset-not-death event/selected forward and
+8/8 scopes, without manual callback or Reset-message replay. Network01 PASSes
+twelve authority plus twelve owner event trials and twelve passive foreign
+observations. Native owner inventory replicates; actual client callbacks are role
+1 (the non-authority gate permits role 1/2), with
+zero native removals, foreign inventory AND per-Actor event POD stay unchanged.
+Inventory scopes close 12/12 + 6/6 + 6/6. Old Actor evidence reads only a retained
+dict after destruction, never an Actor/GAS root/dead wrapper. All strict closed
+logs/independent gates/normal zero exits PASS; server exits last. Frozen inputs
+are 1,648 / 1,652 / 1,648 for natural/Reset/network. All 1,363 host models PASS.
+Ledger 46 records exactly Assets01/Natural01/Reset01/Network01 and thirteen scoped
+sources/assets, all matching actual frozen native inputs. Isolated-index models
+PASS 1,363 and all-index syntax/local-import closure PASSes 575 files; bounded
+local commits are next, not whole-Character/version release.
+Original Engine/Lyra/animation/editor assets remain unchanged; no C++ build,
+cook/package, push/tag/release.
 
 **Accepted pressed-widget pilot and nullable-controller fix (2026-10-16, 23:45 Singapore):**
 Previous held-widget batch is locally committed as Examples b8b9818 / core

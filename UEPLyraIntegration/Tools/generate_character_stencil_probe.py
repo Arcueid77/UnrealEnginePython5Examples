@@ -9,6 +9,23 @@ PATH = "/Game/UEPValidation/BP_CharacterStencilCallProbe"
 RELATIVE = "Content/UEPValidation/BP_CharacterStencilCallProbe.uasset"
 
 
+def describe_existing(stage, character_class):
+    from unreal_engine.classes import Blueprint
+    bp = ue.load_object(Blueprint, PATH+"."+PATH.rsplit("/", 1)[-1])
+    graphs = [graph for graph in ue.blueprint_get_all_graphs(bp) if graph.get_name() == "UpdateStencil"]
+    if len(graphs) != 1 or len(graphs[0].Nodes) != 3: raise RuntimeError("existing stage-only stencil probe footprint changed")
+    calls = [node for node in graphs[0].Nodes if node.get_class().get_name() == "K2Node_CallFunction"]
+    if len(calls) != 1 or str(calls[0].FunctionReference.MemberName) != "UpdateCustomStencilFromTeamID":
+        raise RuntimeError("existing stencil probe targets another function")
+    entries = [node for node in graphs[0].Nodes if node.get_class().get_name() == "K2Node_FunctionEntry"]
+    if len(entries) != 1 or entries[0].node_find_pin("CharacterRef").sub_category_object != character_class:
+        raise RuntimeError("existing stencil probe is not typed to retained Character")
+    return dict(stage_only=True, gameplay_business=False, reused_existing_stage_probe=True,
+        function="UpdateStencil", target="UpdateCustomStencilFromTeamID", original_parameters=["TeamId"],
+        typed_actor_reference=True, virtual_bp_function_call=True, nodes=3, asset=str(stage/RELATIVE),
+        sha256=hashlib.sha256((stage/RELATIVE).read_bytes()).hexdigest())
+
+
 def generate(stage, character_class):
     if (stage/RELATIVE).exists(): raise RuntimeError("fresh stage-only stencil probe required")
     bp = ue.create_blueprint(ue.find_class("Object"), PATH)
