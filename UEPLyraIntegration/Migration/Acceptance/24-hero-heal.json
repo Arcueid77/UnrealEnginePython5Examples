@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "batch": "24-hero-heal",
+  "scope": "Hero-heal effect, animation task and owned input-lock lifecycle policy. Historical eight standalone pairs plus foreign-lock regressions and 28 network authority rows. Native fixture grant/PressInputID, NOT Enhanced Input. Authority test isolates/restores original foreign locks. Not current-DLL reruns; current staged checks/source provenance.",
+  "recorded_utc": "2026-10-16T13:19:31.2974040Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "00ff90a6854809baf49ce8179342d653cf18d53c",
+  "examples_parent_commit": "35a67807291a7e432f3654f4a8a3ddaa91bcebba",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-hero-heal/Differential03",
+      "summary_sha256": "78765A68D305A381BBDC33FE79AA5056CE245CD12A0FFA4459235C52F1224AF3",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1331,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "17EFC4F2B6B0BA8B67CFD20B8E5A6A64A91BB9F3C000EE710FCE189B2C7B623B"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-hero-heal/Network06",
+      "summary_sha256": "BDF92B60A5C6DD42CA104B950BEF6A6275BFBB87CD7FA257EA418A2D7F87C81F",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1331,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "A": 0,
+        "B0": 0,
+        "server": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "B0BEAAD3AA323517B041985089C88FEA04049B87CFEEAFDFCB9A193BF5197F70"
+        },
+        {
+          "file": "A.json",
+          "sha256": "132217BCA156BAB398D7206E967519558F8328B7D4A688B4F73A8361BAF5C27C"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "FD6DCBAB5C27F6A8500E7F391272741F8F719C039184C40BCFF0B5C0C3FC0619"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-emote/Network01",
+      "summary_sha256": "4264730AB2567970035E4F256927E03B17162DE6CA96B7ED1C9EA4F131EF0EA0",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1439,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "A": 0,
+        "server": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "4755998CB3FC04250ABA985E9BA7BE176B0563B9D7362C09E67A828A3119C945"
+        },
+        {
+          "file": "A.json",
+          "sha256": "339B99301267A8BC22B0FC810AAEC4FFC6F8654816B8C1B7C661B953ED8D3E6C"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "684F13777E42885EBBF00D9D5395D2ACB1B24C92A77ADF13CEF0EF7CAC3B8092"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Characters/Heroes/Abilities/GA_Hero_Heal.uasset",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "DAF088170967F6AFC0B122E701552AC9F0195950DDA1FB0F6EFAB7FFD5B0A3CB"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/hero_heal_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "5B91618F3CB863D5EEE52D9D5EAAE29D05C1F9BEB3D85F5283F79DAF732CFB7C"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/hero_heal_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "A6B909472A0705A67E6E6CBFF2065A648A11C18F86D223365EC59C42157200B5"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/hero_heal_network_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "7CCBCA969A0C227EA00694F64D6D9666FF45594BCE66AFDEBC096ACEEE5CA2BD"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/hero_heal_network_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "AE1DCBD98FA13AB38CAF917AB0E1DD7E99FCDEBF08323114185A4B2A9C4C0445"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/hero_heal_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "78A7283999A1E61B1DDCB26D202663CBC3F1091471F4C3490E3796C82320F999"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_HeroHealAbilityMixin.uasset",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "B2281B69A782F18235F7D52F8C8D11C3BF62E0954C555D379B7460D27C8C30C1"
+    }
+  ],
+  "host_report": {
+    "path": ".build/CommitVerification/20261016-24-hero-heal/workspace/.build/host.json",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 781,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\CommitVerification\\20261016-24-hero-heal\\workspace\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "sha256": "D0B21360F26220DEC2CD849F6DAE5D4539E47E45EA419BEDD5B225BB7EE672BC"
+  }
+}
