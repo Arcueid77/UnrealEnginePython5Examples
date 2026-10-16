@@ -1,7 +1,7 @@
 # UnrealEnginePython5 Examples
 
 This is the companion examples repository for
-[`AvaloNero/UnrealEnginePython5`](https://github.com/AvaloNero/UnrealEnginePython5).
+[`Arcueid77/UnrealEnginePython5`](https://github.com/Arcueid77/UnrealEnginePython5).
 Its history was split from the core repository, so the 0.1.0 through 0.8.0
 sample evolution remains available without keeping demo projects in the plugin
 source tree.
@@ -266,7 +266,7 @@ UDP Messaging and TCP Messaging because the sample uses no gameplay networking.
 The demo Game target also disables Unreal Trace, so newly packaged executables
 do not open its TCP 1985 control listener. Editor Play uses the stable
 `UnrealEditor.exe` path; see the firewall note in
-[`docs/Third_Person_Demo_0.6.0.md`](https://github.com/AvaloNero/UnrealEnginePython5/blob/dev/release-0.6.0/docs/Third_Person_Demo_0.6.0.md).
+[`docs/Third_Person_Demo_0.6.0.md`](https://github.com/Arcueid77/UnrealEnginePython5/blob/dev/release-0.6.0/docs/Third_Person_Demo_0.6.0.md).
 
 Cook, package and execute the same contract in the packaged Win64 build:
 
@@ -325,6 +325,6 @@ narrow C++ adapter rejects unsafe or non-authoritative writes. The automated
 lane proves the bridge against complete Lyra UE5.8 content while readiness
 automation rejects the content-free Git sample for real gameplay claims. See
 [`UEPLyraIntegration/README.md`](UEPLyraIntegration/README.md) and
-[`docs/Lyra_Gameplay_Slice_0.5.0.md`](https://github.com/AvaloNero/UnrealEnginePython5/blob/dev/release-0.6.0/docs/Lyra_Gameplay_Slice_0.5.0.md),
+[`docs/Lyra_Gameplay_Slice_0.5.0.md`](https://github.com/Arcueid77/UnrealEnginePython5/blob/dev/release-0.6.0/docs/Lyra_Gameplay_Slice_0.5.0.md),
 plus the historical 0.4 boundary in
-[`docs/Lyra_Integration_0.4.0.md`](https://github.com/AvaloNero/UnrealEnginePython5/blob/dev/release-0.6.0/docs/Lyra_Integration_0.4.0.md).
+[`docs/Lyra_Integration_0.4.0.md`](https://github.com/Arcueid77/UnrealEnginePython5/blob/dev/release-0.6.0/docs/Lyra_Integration_0.4.0.md).
