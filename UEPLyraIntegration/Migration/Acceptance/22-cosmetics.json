@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "batch": "22-cosmetics",
+  "scope": "Character-selection and random-cosmetic decisions; native character parts, child actors and replication retained. Historical four deterministic pairs plus 16 random trials and 48 authority network trials observed by two viewers. Current staged checks/source freeze; no current-DLL cosmetics rerun or random-sequence replay claim.",
+  "recorded_utc": "2026-10-16T13:18:23.8914576Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "00ff90a6854809baf49ce8179342d653cf18d53c",
+  "examples_parent_commit": "f15db21ed7bf1d3a908d2e9988fd1eca48ca2ff5",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-cosmetics/Differential03",
+      "summary_sha256": "EDD63A97BA63E544DFE2FCF57EF0BFEB40E1C90EA472AFCEC13C325EB116D52E",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1308,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "CBFD1C953C8C8EC606B87FAFD5BCBA923C22AFB5D638805C63E5D15083DDC2AB",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-cosmetics/Network01",
+      "summary_sha256": "22342A405730F458A0ABA59BD8BBA90F624FB5A233928A4AD057397092C03F25",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1308,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "B0": 0,
+        "A": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "127EAEF4144E2F6B6C34DC05B36E967449738310DA2316C7BED58576130873A6",
+          "file": "server.json"
+        },
+        {
+          "sha256": "7BD2B58ADFF46FE313401C2B91865C9A7AB5386819E65D54E16C9E6709D676F6",
+          "file": "A.json"
+        },
+        {
+          "sha256": "40C2AA4B6962ABF1FF35D5B1274E82CC07056FDE45F9D9C0CCA6ABE6DAFE95C8",
+          "file": "B0.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-emote/Network01",
+      "summary_sha256": "4264730AB2567970035E4F256927E03B17162DE6CA96B7ED1C9EA4F131EF0EA0",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1439,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "A": 0,
+        "server": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "4755998CB3FC04250ABA985E9BA7BE176B0563B9D7362C09E67A828A3119C945",
+          "file": "server.json"
+        },
+        {
+          "sha256": "339B99301267A8BC22B0FC810AAEC4FFC6F8654816B8C1B7C661B953ED8D3E6C",
+          "file": "A.json"
+        },
+        {
+          "sha256": "684F13777E42885EBBF00D9D5395D2ACB1B24C92A77ADF13CEF0EF7CAC3B8092",
+          "file": "B0.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "08EAB9A2AFADB44A71A3700035F7D06392CE6283E23BE4F6D750E8A88F95E748",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Characters/Cosmetics/B_CharacterSelection.uasset"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "8C83DD44FC8AD041E3D272BE4F509E1CE17DD52A57AABA6C600231B2336A1966",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Characters/Cosmetics/B_PickRandomCharacter.uasset"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "0C1907E15A55EDB0069A67D4A2B205B571ED232BB21663E7CE9C3763F656A16C",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/__init__.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "E51B9E65C4948458DCC94A0447F4A424B2411BF988739E85E9241B2BB88A38F4",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/cosmetic_contract.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "BE8A7D2666FB8F3FDFC1169829B458ED4EC1B304646ACA8B2B86B276D14AE76C",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/cosmetic_network_contract.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "15C219EEECC17D09AC2E75E9465D094E5A7308C5EE8343A6A54D846ECEF8FE42",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/cosmetic_network_validation.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "31A8AC1C80C8899DFD5F7EEB85CC4E0B9A6215D84B9350B1AD3B387B7CBCE7D4",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/cosmetic_state.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "BB8437DDC73903751E604AB85984D8038E8707670F3E6F5E76B8C5B1CB366F40",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/cosmetic_validation.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "0EC8B912E54178BC2ED95180AB450F1B8027E919C864ADA113772C8D29EA7160",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/cosmetics_mixin.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "8D723FFE7703DD98D715B3A7075B5E637E22CC00E97D6C7B6EA243A7EC94E513",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_CharacterSelectionMixin.uasset"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "1D4F459E6A96C150265C8E7DD20C0E56F008E9714FEB5D0281601F191BB3230D",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_RandomCharacterMixin.uasset"
+    }
+  ],
+  "host_report": {
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 743,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\CommitVerification\\20261016-22-cosmetics\\workspace\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "sha256": "E96D53E760DBFEC79926DD144C8A1C9F4772577B70B832AD04565629F6A3013A",
+    "path": ".build/CommitVerification/20261016-22-cosmetics/workspace/.build/host.json"
+  }
+}
