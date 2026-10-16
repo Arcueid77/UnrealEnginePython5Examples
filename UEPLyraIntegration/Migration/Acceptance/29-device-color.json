@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "batch": "29-device-color",
+  "scope": "Team-color device-property Python decisions and typed native-parent route, preserving original defaults/signature/unconnected DeviceId pin. Current-DLL six software comparison pairs, 15 temporary roots released, native subsystem activation and Profile/pause cases. Public invalid-user entry only; no hardware LED, secondary-user, network or native same-instance reactivation claim.",
+  "recorded_utc": "2026-10-16T13:39:31.3116425Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "00ff90a6854809baf49ce8179342d653cf18d53c",
+  "examples_parent_commit": "cfd0d9276b7c52a1c99428a4285295545501bb75",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/Differential02",
+      "summary_sha256": "F9978EAD176EEBC643E7FD95A53C183536CAD6C6F1C6BE1937FC9DF0830AE43A",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1421,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "19FEB6E06A10E7B6D6C95FCC9F138DE16842F7D8BE7A48AC4406CA0382ED9A96",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CallMatrix01",
+      "summary_sha256": "35144D3498F636E79EEDA44E66F2885A20CEDB061C207EDA6589DD747103954C",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 843,
+      "process_exit_code": null,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/Lifecycle01",
+      "summary_sha256": "323DC0E6BD268FA372686BF9F2B2FD14BC375F59787433B69E5E0A40378CBC1E",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 422,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "79B396E43AC28193B5271EFC9CB222B7B3CA6A1C8C65B8685D8A2080EECFC0D7",
+          "file": "pie.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_devices/__init__.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "ADA6BC9E4CEA83D228B576E868191194435194C8F79C1AE895AC8ECC00FD8E51"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_devices/team_color_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "2133C32BC61A89A3100AB0C64C43E15263E64F680663DA1BE8EDB8A03C67BE61"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_devices/team_color_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "93B7D8AF8C0C99A6AC3DD17C99796B5F5839682971CF462732334C8F2B49A297"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_devices/team_color_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "723F944EE8044C42BAB2B8BEA89042AFA178CD237D800B343EBC6BBF5A745C8F"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_DeviceColorMixin.uasset",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "3E16453BEB25A11CF726F5C9068102632BECC838841319C4781FA791C793D68D"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/B_TeamColor_DeviceProperty.uasset",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "4E5B499ED4B3839E677E1A5D23777A2D57E6D04DB0DFB2589D52C92967B88B0C"
+    }
+  ],
+  "host_report": {
+    "path": ".build/CommitVerification/20261016-29-device-color/workspace/.build/host.json",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 882,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\CommitVerification\\20261016-29-device-color\\workspace\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "sha256": "C17701E55E0259AE9D617E2DA70BA93DB023277D4CED15E7D390CE06992AF9F9"
+  }
+}
