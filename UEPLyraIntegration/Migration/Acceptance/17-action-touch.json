@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "batch": "17-action-touch",
+  "scope": "Action-touch base/mobile policy, native CommonUI click to Enhanced Input/GAS and owner-local message lifetime. Historical native 30 comparison cases, four real click/input jump cases and eight two-owner phases. NOT physical touch or message replication. Not rerun with current DLL; current staged checks/source provenance recorded.",
+  "recorded_utc": "2026-10-16T13:14:33.9073109Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "00ff90a6854809baf49ce8179342d653cf18d53c",
+  "examples_parent_commit": "b1ee233ff0321ad988860b91f489a7e1e6f8d1e1",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-action-touch/Differential05",
+      "summary_sha256": "2AE44BC1BB068DF6026C0400AE29D82381D63D7C4A2114BC996F4E1A56E9A29F",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "A37911F9105E33A130BE049C93F86911CAD5C2B305CEB04C702CCE8AF5B65555"
+      ],
+      "frozen_input_records": 1078,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-action-touch/Click01",
+      "summary_sha256": "ACC45BFAF5C0809428894B655A4774A4E6B316CCA33EAA27D282E52E47B0E17E",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "A37911F9105E33A130BE049C93F86911CAD5C2B305CEB04C702CCE8AF5B65555"
+      ],
+      "frozen_input_records": 1082,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-action-touch/Network02",
+      "summary_sha256": "E4A1C94CFF2500713956EA4327BBE64989F993408943753B3AA59DB40C70FCCD",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "A37911F9105E33A130BE049C93F86911CAD5C2B305CEB04C702CCE8AF5B65555"
+      ],
+      "frozen_input_records": 1068,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "A": 0,
+        "B0": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "87635DBCCF9E9CB8DAD814D90652087F243CB0C9704778C60C6DF06344F0D2B0",
+          "file": "server.json"
+        },
+        {
+          "sha256": "2916261C55E72923FF2D526D691D709E09A324F82E1C14A19C9232C0A56078F0",
+          "file": "A.json"
+        },
+        {
+          "sha256": "C354C0C03021315AAEDC515E3914DE5D69A4547CCF9159F90AD802EE8DFA0A9D",
+          "file": "B0.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+      "summary_sha256": "9F2E167CDA4F151193F7A7855A8D15181FACAD232C9A51EB328DA1157F8F15AC",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 757,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "A": 0,
+        "B0": 0,
+        "B1": 0,
+        "server": 0
+      },
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "F7F3D83AAB932DE589F396F1B06E49E1993054D49A1B927167D4C28F2D7157F3",
+          "file": "server.json"
+        },
+        {
+          "sha256": "BFCD48199D27814F640AFC0185B4EE3FE605AB64D6AE03863F843D00D6681CB7",
+          "file": "A.json"
+        },
+        {
+          "sha256": "A35F2174D1D4298CFAA9FAF0316139D008259B3F51D5348926DC9008F1A4F8DE",
+          "file": "B0.json"
+        },
+        {
+          "sha256": "7779365601C319731DFC9579EAD83FD581262E615B55A7E8939CF66C2FDC1E38",
+          "file": "B1.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "AED781313A2EBE97D4881CD718C52EBBE410E9716A3A9C04647F27BFD9634EB2",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/action_touch_click_contract.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "8F92A37F9135B2BC4AE70D8D412645807258BE437DB2DA11662132A5AAD5034D",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/action_touch_click_validation.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "F0350CEF3D06F1ABD4E9305694DF95D8BF8D09B498B7482908C65F0101E30387",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/action_touch_contract.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "6DD3DDD8FCC1587BB98EB64989940371B348690C815E187C631AA8DBB017CE72",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/action_touch_mixin.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "610DCAA03C2D189C979894D9B4409EF73B29E96E61035903BBA3F59B92A777C2",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/action_touch_network_protocol.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "40C8F7057AC32C2A56AC64E2876CB03B3442E355417E13C533EF03E83212697C",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/action_touch_network_validation.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "06994D7658B30592F9E7B5E37807F692CB4763520E072518CCF62173E23C6550",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/action_touch_validation.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "DAE7CA6FE8786EE6794862F1636B6BEFDFC590F64EE13507CB6EB9E584DE79BC",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_ActionTouchMixin.uasset"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "7EEC65015904C1EBDFC14DA237313E2F684A0F647CF01C59FD221060200A0A37",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UI/Hud/W_ActionTouchButton.uasset"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "CB312931A5DA5454EF3CE7D86F93EA5F97403E978CA4DCCD7FF3EFBD11444AE1",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UI/Hud/W_ActionTouchButton_MobileOnly.uasset"
+    }
+  ],
+  "host_report": {
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 603,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\CommitVerification\\20261016-17-action-touch\\workspace\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "sha256": "63053C26F2EFA334E633E79DF5A385FFB48295A70E8EA8927F4C8438F84B471E",
+    "path": ".build/CommitVerification/20261016-17-action-touch/workspace/.build/host.json"
+  }
+}
