@@ -13,6 +13,8 @@
 #include "GameFramework/GameStateBase.h"
 #include "GameFramework/Pawn.h"
 #include "GameFramework/PlayerController.h"
+#include "GameFramework/PlayerState.h"
+#include "GameModes/LyraGameMode.h"
 #include "GameModes/LyraExperienceDefinition.h"
 #include "GameModes/LyraExperienceManagerComponent.h"
 #include "LyraGameplayTags.h"
@@ -127,6 +129,7 @@ void UUEPLyraWorldSubsystem::Deinitialize()
     CurrentExperience.Reset();
     bExperienceCallbackRegistered = false;
     ConsumedGameplayCommandIds.Reset();
+    PlayerTokens.Reset();
     Super::Deinitialize();
 }
 
@@ -166,6 +169,12 @@ void UUEPLyraWorldSubsystem::HandleExperienceLoaded(const ULyraExperienceDefinit
 
 FUEPLyraRuntimeSnapshot UUEPLyraWorldSubsystem::CaptureSnapshot() const
 {
+    return BuildSnapshot(nullptr, false);
+}
+
+FUEPLyraRuntimeSnapshot UUEPLyraWorldSubsystem::BuildSnapshot(
+    APlayerController* ExplicitTarget, const bool bExplicitTarget) const
+{
     FUEPLyraRuntimeSnapshot Snapshot;
     Snapshot.bIsGameThread = IsInGameThread();
     if (!Snapshot.bIsGameThread)
@@ -182,6 +191,7 @@ FUEPLyraRuntimeSnapshot UUEPLyraWorldSubsystem::CaptureSnapshot() const
 
     Snapshot.bIsGameWorld = World->IsGameWorld();
     Snapshot.WorldName = World->GetPathName();
+    Snapshot.WorldToken = WorldToken;
     Snapshot.NetMode = NetModeToString(World->GetNetMode());
     Snapshot.bHasServerAuthority = World->GetNetMode() != NM_Client;
 
@@ -225,10 +235,24 @@ FUEPLyraRuntimeSnapshot UUEPLyraWorldSubsystem::CaptureSnapshot() const
         Snapshot.CurrentExperience = CurrentExperience.Get();
     }
 
+    if (bExplicitTarget)
+    {
+        PlayerController = ExplicitTarget;
+    }
+    if (PlayerController)
+    {
+        Snapshot.ControllerPath = PlayerController->GetPathName();
+        if (const APlayerState* PlayerState = PlayerController->PlayerState)
+        {
+            Snapshot.PlayerId = PlayerState->GetPlayerId();
+            Snapshot.PlayerName = PlayerState->GetPlayerName();
+        }
+    }
     APawn* Pawn = PlayerController ? PlayerController->GetPawn() : nullptr;
     Snapshot.bHasPlayerPawn = Pawn != nullptr;
     if (Pawn)
     {
+        Snapshot.PawnPath = Pawn->GetPathName();
         Snapshot.bPawnLocallyControlled = Pawn->IsLocallyControlled();
         Snapshot.bPlayerStateReady = Pawn->GetPlayerState() != nullptr;
         Snapshot.PawnLocalRole = NetRoleToString(Pawn->GetLocalRole());
@@ -243,6 +267,7 @@ FUEPLyraRuntimeSnapshot UUEPLyraWorldSubsystem::CaptureSnapshot() const
             PawnExtension->GetLyraAbilitySystemComponent()->HasMatchingGameplayTag(TAG_Gameplay_DamageImmunity);
         if (Snapshot.bHealthReady)
         {
+            Snapshot.HealthComponentPath = Health->GetPathName();
             Snapshot.Health = Health->GetHealth();
             Snapshot.MaxHealth = Health->GetMaxHealth();
         }
@@ -265,10 +290,106 @@ FUEPLyraRuntimeSnapshot UUEPLyraWorldSubsystem::CaptureSnapshot() const
     return Snapshot;
 }
 
+TArray<FUEPLyraRuntimeSnapshot> UUEPLyraWorldSubsystem::CapturePlayerSnapshots()
+{
+    TArray<FUEPLyraRuntimeSnapshot> Snapshots;
+    if (!IsInGameThread())
+    {
+        return Snapshots;
+    }
+    UWorld* World = GetWorld();
+    if (!World)
+    {
+        return Snapshots;
+    }
+    // Weak serial-number-aware references never retarget a collected controller.
+    for (auto It = PlayerTokens.CreateIterator(); It; ++It)
+    {
+        if (!ResolvePlayerToken(It.Key()))
+        {
+            It.RemoveCurrent();
+        }
+    }
+    for (FConstPlayerControllerIterator It = World->GetPlayerControllerIterator(); It; ++It)
+    {
+        APlayerController* Controller = It->Get();
+        if (!IsValid(Controller))
+        {
+            continue;
+        }
+        FString Token;
+        for (const auto& Entry : PlayerTokens)
+        {
+            if (Entry.Value.Get() == Controller)
+            {
+                Token = Entry.Key;
+                break;
+            }
+        }
+        if (Token.IsEmpty())
+        {
+            Token = FGuid::NewGuid().ToString(EGuidFormats::Digits);
+            PlayerTokens.Add(Token, Controller);
+        }
+        FUEPLyraRuntimeSnapshot Snapshot = BuildSnapshot(Controller, true);
+        Snapshot.PlayerToken = Token;
+        Snapshots.Add(MoveTemp(Snapshot));
+    }
+    return Snapshots;
+}
+
+APlayerController* UUEPLyraWorldSubsystem::ResolvePlayerToken(const FString& PlayerToken) const
+{
+    const auto* WeakController = PlayerTokens.Find(PlayerToken);
+    APlayerController* Controller = WeakController ? WeakController->Get() : nullptr;
+    const UWorld* World = GetWorld();
+    if (!IsValid(Controller) || !World || Controller->GetWorld() != World)
+    {
+        return nullptr;
+    }
+    for (FConstPlayerControllerIterator It = World->GetPlayerControllerIterator(); It; ++It)
+    {
+        if (It->Get() == Controller)
+        {
+            return Controller;
+        }
+    }
+    return nullptr;
+}
+
+bool UUEPLyraWorldSubsystem::RequestPlayerRestart(const FString& PlayerToken)
+{
+    if (!IsInGameThread() || !GetWorld() || GetWorld()->GetNetMode() == NM_Client)
+    {
+        return false;
+    }
+    APlayerController* Controller = ResolvePlayerToken(PlayerToken);
+    ALyraGameMode* GameMode = GetWorld()->GetAuthGameMode<ALyraGameMode>();
+    if (!Controller || !GameMode || !Controller->HasAuthority())
+    {
+        return false;
+    }
+    GameMode->RequestPlayerRestartNextFrame(Controller, true);
+    return true;
+}
+
 FUEPLyraGameplayCommandResult UUEPLyraWorldSubsystem::ApplyAuthorityHealthDelta(
     const FString& CommandId,
     const float HealthDelta,
     const bool bTargetRemotePlayer)
+{
+    return ApplyHealthDeltaInternal(CommandId, HealthDelta, bTargetRemotePlayer, FString(), false);
+}
+
+FUEPLyraGameplayCommandResult UUEPLyraWorldSubsystem::ApplyAuthorityHealthDeltaToPlayer(
+    const FString& CommandId, const float HealthDelta, const FString& PlayerToken)
+{
+    return ApplyHealthDeltaInternal(CommandId, HealthDelta, false, PlayerToken, true);
+}
+
+FUEPLyraGameplayCommandResult UUEPLyraWorldSubsystem::ApplyHealthDeltaInternal(
+    const FString& CommandId, const float HealthDelta, const bool bTargetRemotePlayer,
+    const FString& PlayerToken, const bool bExplicitTarget)
 {
     FUEPLyraGameplayCommandResult Result;
     Result.CommandId = CommandId;
@@ -310,13 +431,16 @@ FUEPLyraGameplayCommandResult UUEPLyraWorldSubsystem::ApplyAuthorityHealthDelta(
     }
 
     bool bAmbiguousTarget = false;
-    APlayerController* TargetController = FindGameplayCommandController(
-        World,
-        bTargetRemotePlayer,
-        bAmbiguousTarget);
+    APlayerController* TargetController = bExplicitTarget
+        ? ResolvePlayerToken(PlayerToken)
+        : FindGameplayCommandController(World, bTargetRemotePlayer, bAmbiguousTarget);
     if (bAmbiguousTarget)
     {
         return Reject(TEXT("RejectedAmbiguousTarget"));
+    }
+    if (bExplicitTarget && !TargetController)
+    {
+        return Reject(TEXT("RejectedInvalidPlayerToken"));
     }
     APawn* TargetPawn = TargetController ? TargetController->GetPawn() : nullptr;
     if (!TargetPawn)

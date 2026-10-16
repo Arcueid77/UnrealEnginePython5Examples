@@ -9,6 +9,7 @@
 class ULyraExperienceDefinition;
 class ULyraExperienceManagerComponent;
 class AGameStateBase;
+class APlayerController;
 
 USTRUCT(BlueprintType)
 struct UEPLYRABRIDGE_API FUEPLyraGameFeatureState
@@ -41,6 +42,27 @@ struct UEPLYRABRIDGE_API FUEPLyraRuntimeSnapshot
 
     UPROPERTY(BlueprintReadOnly, Category = "UEP|Lyra")
     FString NetMode;
+
+    UPROPERTY(BlueprintReadOnly, Category = "UEP|Lyra")
+    FString WorldToken;
+
+    UPROPERTY(BlueprintReadOnly, Category = "UEP|Lyra")
+    FString PlayerToken;
+
+    UPROPERTY(BlueprintReadOnly, Category = "UEP|Lyra")
+    int32 PlayerId = -1;
+
+    UPROPERTY(BlueprintReadOnly, Category = "UEP|Lyra")
+    FString PlayerName;
+
+    UPROPERTY(BlueprintReadOnly, Category = "UEP|Lyra")
+    FString ControllerPath;
+
+    UPROPERTY(BlueprintReadOnly, Category = "UEP|Lyra")
+    FString PawnPath;
+
+    UPROPERTY(BlueprintReadOnly, Category = "UEP|Lyra")
+    FString HealthComponentPath;
 
     UPROPERTY(BlueprintReadOnly, Category = "UEP|Lyra")
     bool bHasServerAuthority = false;
@@ -159,6 +181,18 @@ public:
     UFUNCTION(BlueprintPure, Category = "UEP|Lyra")
     FUEPLyraRuntimeSnapshot CaptureSnapshot() const;
 
+    /** One snapshot per live human controller; tokens are local to this World. */
+    UFUNCTION(BlueprintCallable, Category = "UEP|Lyra")
+    TArray<FUEPLyraRuntimeSnapshot> CapturePlayerSnapshots();
+
+    /** The explicit-target alternative; all legacy authority/safety limits apply. */
+    UFUNCTION(BlueprintCallable, Category = "UEP|Lyra|Gameplay")
+    FUEPLyraGameplayCommandResult ApplyAuthorityHealthDeltaToPlayer(
+        const FString& CommandId, float HealthDelta, const FString& PlayerToken);
+
+    UFUNCTION(BlueprintCallable, Category = "UEP|Lyra|Gameplay")
+    bool RequestPlayerRestart(const FString& PlayerToken);
+
     /** Applies one bounded Lyra GAS delta when exactly one controller matches the requested role. */
     UFUNCTION(BlueprintCallable, Category = "UEP|Lyra|Gameplay")
     FUEPLyraGameplayCommandResult ApplyAuthorityHealthDelta(
@@ -176,6 +210,14 @@ protected:
     virtual bool DoesSupportWorldType(EWorldType::Type WorldType) const override;
 
 private:
+    FUEPLyraRuntimeSnapshot BuildSnapshot(APlayerController* ExplicitTarget, bool bExplicitTarget) const;
+    APlayerController* ResolvePlayerToken(const FString& PlayerToken) const;
+    FUEPLyraGameplayCommandResult ApplyHealthDeltaInternal(
+        const FString& CommandId, float HealthDelta, bool bTargetRemotePlayer,
+        const FString& PlayerToken, bool bExplicitTarget);
+
+    FString WorldToken = FGuid::NewGuid().ToString(EGuidFormats::Digits);
+    TMap<FString, TWeakObjectPtr<APlayerController>> PlayerTokens;
     void AttachExperienceManager(AGameStateBase* GameState = nullptr);
     void HandleGameStateSet(AGameStateBase* GameState);
     void HandleExperienceLoaded(const ULyraExperienceDefinition* Experience);

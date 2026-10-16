@@ -139,11 +139,39 @@ class _FakeNumber(_FakeObject):
     def __init__(self, path):
         super().__init__(path)
         self.current_value = None
+        self.target_value = None
+        self.calls = []
 
-    def call_function(self, name, value):
-        if name != "SetCurrentValue":
+    def call_function(self, name, *args):
+        self.calls.append((name, *args))
+        if name == "SetCurrentValue":
+            self.current_value = self.target_value = args[0]
+        elif name == "InterpolateToValue":
+            self.target_value = args[0]
+        else:
             raise AssertionError("unexpected number function: " + name)
-        self.current_value = value
+
+
+class _FakeMaterial(_FakeObject):
+    def __init__(self, path):
+        super().__init__(path)
+        self.scalars = {}
+
+    def call_function(self, name, parameter, value):
+        if name != "SetScalarParameterValue":
+            raise AssertionError("unexpected material function: " + name)
+        self.scalars[parameter] = value
+
+
+class _FakeImage(_FakeObject):
+    def __init__(self, path, material):
+        super().__init__(path)
+        self.material = material
+
+    def call_function(self, name):
+        if name != "GetDynamicMaterial":
+            raise AssertionError("unexpected image function: " + name)
+        return self.material
 
 
 class _PythonHealthbarHarness(LyraHealthbarPythonProfile):
@@ -155,10 +183,34 @@ class _PythonHealthbarHarness(LyraHealthbarPythonProfile):
         self.path = "/Engine/Transient.W_Healthbar_C_{}".format(instance_id)
         self.controller = controller
         self.HealthNumber = _FakeNumber(self.path + ".HealthNumber")
+        for name in ("BarBorderMID", "BarFillMID", "BarGlowMID"):
+            setattr(self, name, _FakeMaterial(self.path + "." + name))
+            setattr(self, name[:-3], _FakeImage(self.path + "." + name[:-3], getattr(self, name)))
+        for name in ("OnDamaged", "OnHealed", "OnEliminated", "OnSpawned"):
+            setattr(self, name, _FakeObject(self.path + "." + name))
+        self.played_animations = []
+        self.playing_animations = set()
+        self.reset_visual_calls = 0
         self.dynamic_material_calls = 0
         self.initialize_visual_calls = 0
         self.original_calls = []
+        self.routed_calls = []
+        self.defer_native_stops = False
+        self.pending_native_stops = []
+        self.flush_calls = 0
         super().__init__()
+
+    def SetDynamicMaterials(self):
+        self.dynamic_material_calls += 1
+        super().SetDynamicMaterials()
+
+    def InitializeBarVisuals(self):
+        self.initialize_visual_calls += 1
+        super().InitializeBarVisuals()
+
+    def ResetAnimatedState(self):
+        self.reset_visual_calls += 1
+        super().ResetAnimatedState()
 
     def is_valid(self):
         return True
@@ -166,19 +218,50 @@ class _PythonHealthbarHarness(LyraHealthbarPythonProfile):
     def get_path_name(self):
         return self.path
 
-    def call_function(self, name):
+    def call_function(self, name, *args):
+        aliases = {"Health Changed": "HealthChanged", "OnPosessedPawnChanged": "OnPosessedPawnChanged",
+                   "EventOnEliminated": "EventOnEliminated"}
+        if name in aliases:
+            self.routed_calls.append(name)
+            return getattr(self, aliases[name])(*args)
         if name == "GetOwningPlayer":
             return self.controller
-        if name == "SetDynamicMaterials":
-            self.dynamic_material_calls += 1
+        if name in ("SetDynamicMaterials", "InitializeBarVisuals", "ResetAnimatedState"):
+            raise AssertionError("project visual helpers must execute in Python")
+        if name == "PlayAnimationForward":
+            self.played_animations.append(args[0])
+            self.playing_animations.add(args[0])
             return None
-        if name == "InitializeBarVisuals":
-            self.initialize_visual_calls += 1
+        if name == "StopAnimation":
+            if args[0] in self.playing_animations:
+                self.playing_animations.remove(args[0])
+                if self.defer_native_stops:
+                    self.pending_native_stops.append(args[0])
+                else:
+                    self.OnAnimationFinished(args[0])
             return None
+        if name == "FlushAnimations":
+            self.flush_calls += 1
+            pending, self.pending_native_stops = self.pending_native_stops, []
+            for animation in pending:
+                if animation == self.OnSpawned:
+                    for field in ("BarBorderMID", "BarFillMID", "BarGlowMID"):
+                        getattr(self, field).scalars["Health_Updated"] = 1.0
+                self.OnAnimationFinished(animation)
+            return None
+        if name == "PauseAnimation":
+            self.playing_animations.discard(args[0])
+            return None
+        if name == "IsAnimationPlaying":
+            return args[0] in self.playing_animations
         raise AssertionError("unexpected widget function: " + name)
 
-    def call_mixin_original(self, name):
+    def call_mixin_original(self, name, *args):
         self.original_calls.append(name)
+
+    def finish_animation(self, animation):
+        self.playing_animations.discard(animation)
+        self.OnAnimationFinished(animation)
 
 
 class _FallbackHarness(LyraHealthbarBlueprintFallbackProfile):
@@ -238,6 +321,30 @@ class LyraHealthbarPresenterTests(unittest.TestCase):
 
         widget.Destruct()
 
+    def test_original_health_and_pawn_entries_are_reflected_production_ingress(self):
+        before = state.snapshot()["public_entry_counts"]
+        widget, controller, _, health = self.make_harness()
+        widget.Construct()
+        health.set_health(90.0)
+        self.assertIn("Health Changed", widget.routed_calls)
+        replacement = _FakePawn("/Game/Test.NewPawn", _FakeHealth("/Game/Test.NewHealth", 80.0))
+        controller.possess(replacement)
+        self.assertIn("OnPosessedPawnChanged", widget.routed_calls)
+        self.assertEqual(widget.HealthNumber.current_value, 80.0)
+        after = state.snapshot()["public_entry_counts"]
+        self.assertEqual(after["Health Changed"]-before["Health Changed"], 1)
+        self.assertEqual(after["OnPosessedPawnChanged"]-before["OnPosessedPawnChanged"], 1)
+        widget.Destruct()
+
+    def test_public_elimination_entry_uses_python_animation_policy(self):
+        widget, _, _, _ = self.make_harness()
+        widget.Construct()
+        widget.call_function("EventOnEliminated")
+        self.assertEqual(widget.played_animations[-1], widget.OnEliminated)
+        self.assertEqual(LyraHealthbarPythonProfile.HealthChanged.override, "Health Changed")
+        self.assertNotIn("EventOnEliminated", widget.original_calls)
+        widget.Destruct()
+
     def test_health_change_is_event_driven_and_normalized(self):
         before = state.snapshot()
         widget, _, _, health = self.make_harness()
@@ -246,7 +353,7 @@ class LyraHealthbarPresenterTests(unittest.TestCase):
         health.set_health(90.0)
 
         after = state.snapshot()
-        self.assertEqual(widget.HealthNumber.current_value, 90.0)
+        self.assertEqual(widget.HealthNumber.target_value, 90.0)
         self.assertAlmostEqual(widget.NormalizedHealth, 0.9)
         self.assertEqual(widget.HealthOldValue, 100.0)
         self.assertEqual(widget.HealthNewValue, 90.0)
@@ -280,10 +387,10 @@ class LyraHealthbarPresenterTests(unittest.TestCase):
         self.assertEqual(len(new_health.callbacks["OnHealthChanged"]), 1)
 
         new_health.set_health(70.0)
-        self.assertEqual(widget.HealthNumber.current_value, 70.0)
+        self.assertEqual(widget.HealthNumber.target_value, 70.0)
         widget.Destruct()
 
-    def test_destruct_removes_exact_callbacks_and_calls_blueprint_destruct(self):
+    def test_destruct_removes_exact_callbacks_without_blueprint_business(self):
         before = state.snapshot()
         widget, controller, _, health = self.make_harness()
         widget.Construct()
@@ -294,7 +401,7 @@ class LyraHealthbarPresenterTests(unittest.TestCase):
         self.assertEqual(controller.callbacks["OnPossessedPawnChanged"], [])
         self.assertEqual(health.callbacks["OnHealthChanged"], [])
         self.assertEqual(health.callbacks["OnMaxHealthChanged"], [])
-        self.assertEqual(widget.original_calls, ["Destruct"])
+        self.assertNotIn("Destruct", widget.original_calls)
         self.assertEqual(after["destruct_count"] - before["destruct_count"], 1)
         self.assertEqual(
             after["controller_bind_count"] - after["controller_unbind_count"],
@@ -315,7 +422,7 @@ class LyraHealthbarPresenterTests(unittest.TestCase):
         after = state.snapshot()
         self.assertEqual(controller.callbacks["OnPossessedPawnChanged"], [])
         self.assertEqual(health.callbacks["OnHealthChanged"], [])
-        self.assertEqual(widget.original_calls, [])
+        self.assertNotIn("Destruct", widget.original_calls)
         self.assertEqual(after["teardown_count"] - before["teardown_count"], 1)
 
     def test_blueprint_fallback_profile_only_calls_original_construct(self):

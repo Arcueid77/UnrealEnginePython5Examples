@@ -19,9 +19,11 @@ _state = {
     "health_bind_count": 0,
     "health_unbind_count": 0,
     "visual_update_count": 0,
+    "public_entry_counts": {"Health Changed": 0, "OnPosessedPawnChanged": 0, "EventOnEliminated": 0},
     "active_widgets": [],
     "instances": {},
     "health_events": [],
+    "animation_events": [],
     "errors": [],
 }
 
@@ -47,6 +49,7 @@ def _entry(widget):
             "health_unbinds": 0,
             "visual_updates": 0,
             "last_pawn": None,
+            "last_controller": None,
             "last_health_component": None,
             "last_health": None,
             "last_max_health": None,
@@ -100,6 +103,7 @@ def record_teardown(widget):
 
 def record_controller_bind(widget, controller):
     _, entry = _entry(widget)
+    entry["last_controller"] = _widget_key(controller)
     entry["controller_binds"] += 1
     _state["controller_bind_count"] += 1
 
@@ -132,6 +136,7 @@ def record_visual_update(
     normalized_health,
     old_value=None,
     new_value=None,
+    transition=None,
 ):
     key, entry = _entry(widget)
     entry["visual_updates"] += 1
@@ -141,17 +146,33 @@ def record_visual_update(
     entry["last_normalized_health"] = normalized_health
     _state["visual_update_count"] += 1
     item = {
+        "sequence": _state["visual_update_count"],
         "widget": key,
+        "pawn": entry["last_pawn"],
+        "health_component": entry["last_health_component"],
         "event": event,
         "health": health,
         "max_health": max_health,
         "normalized_health": normalized_health,
         "old_value": old_value,
         "new_value": new_value,
+        "transition": transition,
     }
     _state["health_events"].append(item)
     if len(_state["health_events"]) > 64:
         del _state["health_events"][:-64]
+
+
+def record_animation(widget, name):
+    _state["animation_events"].append({"widget": _widget_key(widget), "animation": name})
+    if len(_state["animation_events"]) > 64:
+        del _state["animation_events"][:-64]
+
+
+def record_public_entry(widget, name):
+    _state["public_entry_counts"][name] += 1
+    counts = _entry(widget)[1].setdefault("public_entry_counts", {})
+    counts[name] = counts.get(name, 0) + 1
 
 
 def record_error(widget, operation, detail):

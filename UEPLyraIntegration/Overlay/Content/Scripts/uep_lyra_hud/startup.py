@@ -1,0 +1,144 @@
+"""Choose an explicit validation lane; normal play must never auto-quit."""
+
+
+def validation_module(arguments):
+    if any(argument.lower().startswith("-run=") for argument in arguments):
+        return None
+    if any(argument.startswith("-UEPEmoteNetworkResult=") for argument in arguments):
+        return "uep_lyra_abilities.emote_network_validation"
+    if any(argument.startswith("-UEPEmoteResult=") for argument in arguments):
+        return "uep_lyra_abilities.emote_validation"
+    if any(argument.startswith("-UEPDeviceColorResult=") for argument in arguments):
+        return "uep_lyra_devices.team_color_validation"
+    if any(argument.startswith("-UEPSpawnEffectNetworkResult=") for argument in arguments):
+        return "uep_lyra_abilities.spawn_effect_network_validation"
+    if any(argument.startswith("-UEPSpawnEffectResult=") for argument in arguments):
+        return "uep_lyra_abilities.spawn_effect_validation"
+    if any(argument.startswith("-UEPWeaponInstanceDeathResult=") for argument in arguments):
+        return "uep_lyra_weapons.weapon_instance_death_validation"
+    if any(argument.startswith("-UEPWeaponInstanceResult=") for argument in arguments):
+        return "uep_lyra_weapons.weapon_instance_validation"
+    if any(argument.startswith("-UEPReloadMagazineNetworkResult=") for argument in arguments):
+        return "uep_lyra_abilities.reload_magazine_network_validation"
+    if any(argument.startswith("-UEPReloadMagazineResult=") for argument in arguments):
+        return "uep_lyra_abilities.reload_magazine_validation"
+    if any(argument.startswith("-UEPDropWeaponNetworkResult=") for argument in arguments):
+        return "uep_lyra_abilities.drop_weapon_network_validation"
+    if any(argument.startswith("-UEPDropWeaponResult=") for argument in arguments):
+        return "uep_lyra_abilities.drop_weapon_validation"
+    if any(argument.startswith("-UEPADSNetworkResult=") for argument in arguments):
+        return "uep_lyra_abilities.ads_network_validation"
+    if any(argument.startswith("-UEPADSResult=") for argument in arguments):
+        return "uep_lyra_abilities.ads_validation"
+    if any(argument.startswith("-UEPHeroHealNetworkResult=") for argument in arguments):
+        return "uep_lyra_abilities.hero_heal_network_validation"
+    if any(argument.startswith("-UEPHeroHealResult=") for argument in arguments):
+        return "uep_lyra_abilities.hero_heal_validation"
+    if any(argument.startswith("-UEPAutoReloadNetworkResult=") for argument in arguments):
+        return "uep_lyra_abilities.autoreload_network_validation"
+    if any(argument.startswith("-UEPAutoReloadResult=") for argument in arguments):
+        return "uep_lyra_abilities.autoreload_validation"
+    if any(argument.startswith("-UEPCosmeticNetworkResult=") for argument in arguments):
+        return "uep_lyra_characters.cosmetic_network_validation"
+    if any(argument.startswith("-UEPCosmeticResult=") for argument in arguments):
+        return "uep_lyra_characters.cosmetic_validation"
+    if any(argument.startswith("-UEPDeathNetworkResult=") for argument in arguments):
+        return "uep_lyra_abilities.death_network_validation"
+    if any(argument.startswith("-UEPDeathAbilityResult=") for argument in arguments):
+        return "uep_lyra_abilities.death_validation"
+    if any(argument.startswith("-UEPQuickslotNetworkResult=") for argument in arguments):
+        return "uep_lyra_abilities.quickslot_network_validation"
+    if any(argument.startswith("-UEPQuickslotResult=") for argument in arguments):
+        return "uep_lyra_abilities.quickslot_validation"
+    if any(argument.startswith("-UEPJumpNetworkResult=") for argument in arguments):
+        return "uep_lyra_abilities.jump_network_validation"
+    if any(argument.startswith("-UEPJumpAbilityResult=") for argument in arguments):
+        return "uep_lyra_abilities.jump_validation"
+    if any(argument.startswith("-UEPAbilityWidgetResult=") for argument in arguments):
+        return "uep_lyra_abilities.widget_validation"
+    if any(argument.startswith("-UEPInteractionInspectionResult=") for argument in arguments):
+        if "-UEPInteractionProducer" in arguments:
+            return "uep_lyra_world.interaction_producer_network"
+        return "uep_lyra_world.interaction_inspection"
+    if any(argument.startswith("-UEPLyraHUDVisualResult=") for argument in arguments):
+        return "uep_lyra_hud.visual_validation"
+    if any(argument.startswith("-UEPReticleAmmoResult=") for argument in arguments):
+        return "uep_lyra_hud.reticle_validation"
+    if any(argument.startswith("-UEPTypedMessageResult=") for argument in arguments):
+        return "uep_lyra_hud.message_payload_validation"
+    if any(argument.startswith("-UEPWeaponReticleResult=") for argument in arguments):
+        return "uep_lyra_hud.weapon_reticle_validation"
+    if any(argument.startswith("-UEPOpenMenuResult=") for argument in arguments):
+        return "uep_lyra_hud.open_menu_validation"
+    if any(argument.startswith("-UEPReticleHostResult=") for argument in arguments):
+        return "uep_lyra_hud.reticle_host_validation"
+    if any(argument.startswith("-UEPAbilityProgressResult=") for argument in arguments):
+        return "uep_lyra_hud.ability_progress_validation"
+    if any(argument.startswith("-UEPDashResult=") for argument in arguments):
+        return "uep_lyra_hud.dash_cooldown_validation"
+    if any(argument.startswith("-UEPDashNativeResult=") for argument in arguments):
+        return "uep_lyra_hud.dash_native_validation"
+    if any(argument.startswith("-UEPRespawnResult=") for argument in arguments):
+        return "uep_lyra_hud.respawn_timer_validation"
+    if any(argument.startswith("-UEPRespawnNativeResult=") for argument in arguments):
+        return "uep_lyra_hud.respawn_native_validation"
+    if any(argument.startswith("-UEPQuickBarSlotResult=") for argument in arguments):
+        return "uep_lyra_hud.quickbar_slot_validation"
+    if any(argument.startswith("-UEPNameplateComponentsResult=") for argument in arguments):
+        return "uep_lyra_hud.nameplate_components_validation"
+    if any(argument.startswith("-UEPInventoryPadResult=") for argument in arguments):
+        return "uep_lyra_world.inventory_pad_validation"
+    if any(argument.startswith("-UEPInventoryPadPlayerResult=") for argument in arguments):
+        return "uep_lyra_world.inventory_pad_player_validation"
+    if any(argument.startswith("-UEPGrantGEResult=") for argument in arguments):
+        return "uep_lyra_world.grant_ge_pad_validation"
+    if any(argument.startswith("-UEPLauncherResult=") for argument in arguments):
+        return "uep_lyra_world.launcher_validation"
+    if any(argument.startswith("-UEPSpawnerResult=") for argument in arguments):
+        return "uep_lyra_world.spawner_validation"
+    if any(argument.startswith("-UEPTeleporterResult=") for argument in arguments):
+        return "uep_lyra_world.teleporter_validation"
+    if any(argument.startswith("-UEPActionTouchResult=") for argument in arguments):
+        return "uep_lyra_hud.action_touch_validation"
+    if any(argument.startswith("-UEPActionTouchClickResult=") for argument in arguments):
+        return "uep_lyra_hud.action_touch_click_validation"
+    if any(argument.startswith("-UEPHealAbilityResult=") for argument in arguments):
+        return "uep_lyra_world.heal_ability_validation"
+    if any(argument.startswith("-UEPNameplateResult=") for argument in arguments):
+        return "uep_lyra_hud.nameplate_validation"
+    if any(argument.startswith("-UEPAbilityFailureResult=") for argument in arguments):
+        if "-UEPAbilityFailureNativeProducer" in arguments:
+            return "uep_lyra_hud.ability_failure_native_validation"
+        if "-UEPAbilityFailureCulture" in arguments:
+            return "uep_lyra_hud.ability_failure_culture_validation"
+        return "uep_lyra_hud.ability_failure_validation"
+    if any(argument.startswith("-UEPEffectPadResult=") for argument in arguments):
+        return "uep_lyra_world.effect_pad_validation"
+    if any(argument.startswith("-UEPEffectPadGameplayResult=") for argument in arguments):
+        return "uep_lyra_world.effect_pad_gameplay_validation"
+    if "-UEPEffectPadNetwork" in arguments:
+        return "uep_lyra_world.effect_pad_network_validation"
+    if "-UEPInventoryPadNetwork" in arguments:
+        return "uep_lyra_world.inventory_pad_network_validation"
+    if "-UEPGrantGENetwork" in arguments:
+        return "uep_lyra_world.grant_ge_pad_network_validation"
+    if "-UEPLauncherNetwork" in arguments:
+        return "uep_lyra_world.launcher_network_validation"
+    if "-UEPSpawnerNetwork" in arguments:
+        return "uep_lyra_world.spawner_network_validation"
+    if "-UEPTeleporterNetwork" in arguments:
+        return "uep_lyra_world.teleporter_network_validation"
+    if "-UEPActionTouchNetwork" in arguments:
+        return "uep_lyra_hud.action_touch_network_validation"
+    if "-UEPHealAbilityNetwork" in arguments:
+        return "uep_lyra_world.heal_ability_network_validation"
+    if "-UEPLyraWeaponNetwork" in arguments:
+        return "uep_lyra_weapon_network"
+    if "-UEPLyraMultiClient" in arguments:
+        return "uep_lyra_network"
+    if any(argument.startswith("-UEPLyraWeaponHUDResult=") for argument in arguments):
+        return "uep_lyra_hud.weapon_validation"
+    if any(argument.startswith("-UEPLyraSmokeResult=") or argument.startswith("-UEPLyraMode=")
+           for argument in arguments):
+        return "uep_lyra_probe"
+    return None
