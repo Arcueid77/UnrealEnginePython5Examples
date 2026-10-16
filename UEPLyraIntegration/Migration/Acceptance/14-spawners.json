@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "batch": "14-spawners",
+  "scope": "Ability/weapon spawner construction, item selection and owned spawn/despawn policy. Historical native nine comparison pairs and 36 real-level two-owner rows. Not rerun on current DLL. Current staged index checks and source freeze; original native spawn/replication retained.",
+  "recorded_utc": "2026-10-16T13:13:09.2246824Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "00ff90a6854809baf49ce8179342d653cf18d53c",
+  "examples_parent_commit": "8b4babc4a3451b930c67528513bcc952d1ece9ca",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-spawners/Differential03",
+      "summary_sha256": "2C755F222F59B53BB6BC50E31AFFDE4B83AF0F6FB903C3375775F82C6E146D05",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "A37911F9105E33A130BE049C93F86911CAD5C2B305CEB04C702CCE8AF5B65555"
+      ],
+      "frozen_input_records": 1068,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-spawners/Network02",
+      "summary_sha256": "EFE642C11B74C2AA4B8D18E72A3408BC58E6644B2491AA15F75FCE4B82EE0ED9",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "A37911F9105E33A130BE049C93F86911CAD5C2B305CEB04C702CCE8AF5B65555"
+      ],
+      "frozen_input_records": 1059,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "A": 0,
+        "B0": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "99A158100D5DA29BC0A1193297C096E48A7B17378FA2D10AF024312A85E0A860"
+        },
+        {
+          "file": "A.json",
+          "sha256": "DDB6885E2AC3E18DE8265D491109D5CB51C4E33C05FBF822296F9C782D77AB86"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "49977BA9156EADA2151D1519D396217FC06BBF33F755F09F2CACD2D944574C4A"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+      "summary_sha256": "9F2E167CDA4F151193F7A7855A8D15181FACAD232C9A51EB328DA1157F8F15AC",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 757,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "A": 0,
+        "B0": 0,
+        "B1": 0,
+        "server": 0
+      },
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "F7F3D83AAB932DE589F396F1B06E49E1993054D49A1B927167D4C28F2D7157F3"
+        },
+        {
+          "file": "A.json",
+          "sha256": "BFCD48199D27814F640AFC0185B4EE3FE605AB64D6AE03863F843D00D6681CB7"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "A35F2174D1D4298CFAA9FAF0316139D008259B3F51D5348926DC9008F1A4F8DE"
+        },
+        {
+          "file": "B1.json",
+          "sha256": "7779365601C319731DFC9579EAD83FD581262E615B55A7E8939CF66C2FDC1E38"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "09761B9EE368114A6780F66DFF62D69C5C5F99B6D6206698662DD79FE4AA375A",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/spawner_contract.py"
+    },
+    {
+      "sha256": "444A4CAF0A70947ECA96FD81F1654E168730E0C06727778A59738857EAF5C170",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/spawner_mixin.py"
+    },
+    {
+      "sha256": "E95AD47E0F1D6C8536A4EA7818D66B2F8DA772F9F9B4059C39A6E395DCEF8386",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/spawner_network_protocol.py"
+    },
+    {
+      "sha256": "79882102D3DA7186B60C46E6867D4CB37410EF0BEDB588606145A7FE82ACAB97",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/spawner_network_validation.py"
+    },
+    {
+      "sha256": "AC7DC896A0DCE66F017A0AB1932FE132896BA90BA38558A6A7FF150394E77095",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/spawner_validation.py"
+    },
+    {
+      "sha256": "26C107F3F377AA67B9955CEF9B8287C6EBB4B5AF6ECA8ED173703A62BC485A0B",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_SpawnerMixin.uasset"
+    },
+    {
+      "sha256": "6C1764B77F71AB14B3771E58330CA997C1630DFFAC4273628AA0F0F63D718E85",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Blueprint/B_AbilitySpawner.uasset"
+    },
+    {
+      "sha256": "D110EFD566BA6B9608BBAED1BB6ED39045A0323744E2A62314F967EA41D0606F",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Blueprint/B_WeaponSpawner.uasset"
+    }
+  ],
+  "host_report": {
+    "sha256": "F4CE5BB1B94CAACACBD8253ABC2DF9C983D20F516360DA74B55C516B92A483A9",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 550,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\CommitVerification\\20261016-14-spawners\\workspace\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/CommitVerification/20261016-14-spawners/workspace/.build/host.json"
+  }
+}
