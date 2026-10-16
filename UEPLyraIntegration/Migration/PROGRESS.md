@@ -13,14 +13,17 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Latest verified checkpoint (2026-10-17):** Character outline orchestration has
-bounded original/Python material/camera-interface/native-GC comparison, actual
-natural startup and three-world local software acceptance; ledger 43 below.
-Six Character helpers are routed through the retained-type Mixin; remaining
-Character business is not migrated. All 1,270 host models PASS in the isolated
-Git-index archive; all-index syntax/local-import closure PASSes 549 Python files.
-Pixels/rendered outlines and
-material replication are not certified by this software test.
+**Latest verified checkpoint (2026-10-17):** Character team/cosmetic orchestration
+adds eight original/Python material/stencil/native-device scheduler pairs and
+three-world local software acceptance; ledger 44 below. Seven Character helpers
+are routed through the retained-type Mixin; inherited parent stencil and other
+Character business remain open. Final standalone and network each freeze 1,618
+inputs; all original state/owned roots restore and strict independent gates,
+closed logs and server-last zero exits PASS. All 1,307 host models PASS in the
+isolated Git-index archive; all-index syntax/import closure PASSes 558 Python
+files. Five driver-safety checks and 56 PowerShell parses PASS.
+Pixels, rendered outlines, hardware output, replicated team changes and
+material replication are not certified by these software tests.
 Nullable native probes, hardware/travel/loss/packages and whole-version gates
 remain open. No push/tag/release or C++ build/cook/package.
 
@@ -353,6 +356,57 @@ all matched to actual frozen native inputs. Isolated-index models PASS 1,270;
 all-index syntax/import closure PASSes 549 files, five driver-safety checks and
 56 PowerShell parses PASS. No native process remains; the bounded helper batch
 is ready for local commits, not publication.
+
+**Active Character team/cosmetic orchestration batch:** outline software is
+locally committed as Examples 6a1da28 / core 36dfae2. Implement only
+OnTeamOrCosmeticsChanged, explicitly aliasing six accepted helpers. Source
+inspection verifies two actual function parameters (TeamID, TeamDisplayAsset),
+not Actor properties: original VariableGet scope is the function. Preserve the
+three-way Sequence: native GetTeamColorWithFallback -> routed outline -> existing
+parent BP stencil helper; optional display ApplyToActor including children;
+then opaque platform-user validity and native device-property activation. Native
+ActivateDevicePropertyParams defaults are retained and the native scheduler's
+handle is discarded just like BP; no global handle/Actor registry. The inherited
+UpdateCustomStencilFromTeamID business remains original BP for a later batch.
+Assets01 PASSes the retained class/full CDO/eleven signatures/every original
+graph, with seven routed helpers and a stage-only three-node typed caller.
+Differential01 fails: converting native TSet<FActiveDeviceProperty> into a Python
+set raises an unhashable-UScriptStruct error. No business acceptance follows
+from its normal exit. The observation fixture now brackets each synchronous
+call with actual native, disabled-color marker handles. It queries only the
+bounded intervening handle IDs through IsPropertyActive/GetActiveDeviceProperty,
+using cloned POD handles, never changing native handle allocation/active sets
+or production handles. Only fixture markers may receive explicit cleanup.
+Differential02 PASSes eight BP/Python pairs (sixteen trials/twenty real BP calls),
+sixteen naturally evaluated/removed production device properties, thirty-two
+naturally removed marker properties and 48/48 owned roots. Actual visual,
+camera, Profile, CDO and inventory restore, strict closed logs, independent
+gate and zero exit PASS. Callback replay/global device cleanup/hardware/pixels
+and whole-Character acceptance remain false. Network01 fails because the
+fixture assumes InputDeviceSubsystem exists on a dedicated server. Native
+ShouldCreateSubsystem explicitly excludes dedicated servers. The corrected
+fixture records that absence, requires invalid platform users/no activations
+there, and keeps the real native scheduler requirements on clients. A regression
+executes that absent-subsystem branch. All 1,307 host models and 206 Character
+models PASS. Network02 PASSes 48 trials/60 real BP calls in three actual worlds;
+natural Python team callbacks occur twice per world. Server devices/roots are
+0/0, each client's sixteen production properties naturally evaluate/remove,
+and 48/48 marker+production roots release per client. Each test Actor is
+nonreplicated and destroyed; full original visual/camera/Profile/CDO/inventory
+restore freezes before release. Strict closed logs/independent gate, 1,618
+frozen inputs and three zero exits server last PASS. This is local software
+per network world, not replicated team changes or replicated material state.
+Differential03 PASSes the final fixture revision: sixteen trials/twenty BP
+calls, three natural Python team callbacks, sixteen naturally evaluated/removed
+production properties and 48/48 marker+production roots. Full original state,
+strict closed logs/independent gate, 1,618 inputs and zero exit PASS. Ledger 44
+records exactly Assets01, Differential03 and Network02, with all thirteen scoped
+sources/assets matching at least one actual frozen native input. Differential02
+is an earlier-revision pass, not final standalone proof. Final isolated-index
+models PASS 1,307; all-index syntax/local-import closure PASSes 558 files, with
+five driver-safety checks and 56 PowerShell parses. The bounded batch is ready
+for local commits; no push/tag/release.
+Official assets/Engine sources remain untouched; no C++ build/cook/package.
 
 **Accepted pressed-widget pilot and nullable-controller fix (2026-10-16, 23:45 Singapore):**
 Previous held-widget batch is locally committed as Examples b8b9818 / core
