@@ -1,0 +1,293 @@
+{
+  "schema_version": 1,
+  "batch": "26-reload-family",
+  "scope": "Reload parent CanActivate named outputs, magazine transfer, native montage/event tasks and owned firing-tag cleanup. Historical final-input pistol/rifle/shotgun/NetShooter standalone ten pairs each and 36 authority rows per network run. Children unchanged. Native input/notify/replication barriers, no callback replay. Not current-DLL family reruns; current staged checks/source freeze.",
+  "recorded_utc": "2026-10-16T13:20:51.9362332Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "00ff90a6854809baf49ce8179342d653cf18d53c",
+  "examples_parent_commit": "36bfb381772daf45e9d72455a360f8125a05cecf",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-reload-magazine/PostFamily-pistol-Standalone01",
+      "summary_sha256": "2283AC62D5F27EABA345DC73A4B05D0E1BBC117F9AF7C309B5D111BE329E9F00",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1391,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "803C3C171C4809FB7A0C3A39B456E698D9431B4F97872A3DDDAAF2FDCAF31F63",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-reload-magazine/PostFamily-pistol-Network01",
+      "summary_sha256": "E8E011EA196197EEF0ED2656AF5F7CCAA1D379DD6298E990536724C84DC5B8F4",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1391,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "A": 0,
+        "server": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "E8296E01F3710F303B31E19139FE7876FA654CF7993DF5885A9A30502991F500",
+          "file": "server.json"
+        },
+        {
+          "sha256": "C49F752874319F4E16876AE3B97127DDA4255549518E40D23D63CA8934DF65A7",
+          "file": "A.json"
+        },
+        {
+          "sha256": "50BAC8F39069654BB8A78C459532B4AC96A4521B8B286396E9CA66846E30A212",
+          "file": "B0.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-reload-magazine/PostFamily-rifle-Standalone01",
+      "summary_sha256": "119B14301F015FF4CF470B49CFC5810FC6667E3CBFD7506DA6F62EB2BB02838C",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1391,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "1BB282910734EE6343AF374F675C439EFB4BD1FC5A58740E4E42F8F28661AFE3",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-reload-magazine/PostFamily-rifle-Network01",
+      "summary_sha256": "7324A6CA181018AB919075EF0FAEAB64F96AE9AF12147CB462B2528A1100A561",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1391,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "A": 0,
+        "server": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "2AE755A87BD005705F18199FCE3E44C2D3CC091BF43EEB2AB4BC4B44FA54A26B",
+          "file": "server.json"
+        },
+        {
+          "sha256": "A144DF799D0A5B1F6BA3329F4BDC6CF98BC00AFFB094676C07C91B5C1BCD7FE3",
+          "file": "A.json"
+        },
+        {
+          "sha256": "2D939432F9FF289B87D8F7B96F3AC04690E4A58146BF468C51B903F4C5F4B5D7",
+          "file": "B0.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-reload-magazine/PostFamily-shotgun-Standalone01",
+      "summary_sha256": "BFAB8FA88F58903DC5FE21F643E42A0C8C8D4B5095D4EF05738065826DF39956",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1391,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "E437EFAED13E77355F3C1929240577334175DFE1A21852C25A4BF8EC7DA1CA41",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-reload-magazine/PostFamily-shotgun-Network01",
+      "summary_sha256": "553EA99592920AA0F12F70799ECE3F2D87298D9DD9059568ADA5648F85026628",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1391,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "A": 0,
+        "server": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "32F8E135F7F055E5D648E53CBE9783683B306607174228B2A73039E6BCB02E5F",
+          "file": "server.json"
+        },
+        {
+          "sha256": "196E6311A6670D5E95C73F9F6AC508EED9D9DA8691BD6C7F7AB142486B9E6091",
+          "file": "A.json"
+        },
+        {
+          "sha256": "6BBCE68F209C46AF3AA5C8AE1BCB54E0DCCB56D6DDEBB30DF90F223D7DBF47AD",
+          "file": "B0.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-reload-magazine/NetShooterStandalone01",
+      "summary_sha256": "66CB302F637264B2F33A985D51EF5B2E032BF95390A88CD65A911503CC2AF660",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1391,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "3A4E70CB07A68EEA35836BC273D67FF734ABBE336CB185431E022499D5A0D123",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-reload-magazine/NetShooterNetwork01",
+      "summary_sha256": "B9C67FD14EBEE7559252ACF44D3927854842D47E5E188EACD1A9C993D4B28E7C",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1391,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "A": 0,
+        "B0": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "09C7D0196D400ABE94A9D5E387DAA47F37E217BEBE961027E02400C43599BC78",
+          "file": "server.json"
+        },
+        {
+          "sha256": "64D038A9832FDF9149ACDBB0A3B4E03B87B6F8D2203E2EE9932C6FCB868D104B",
+          "file": "A.json"
+        },
+        {
+          "sha256": "19857CF58B991BC9C7F1FBFD120247D64E87602C0873802883219D1CB05F3994",
+          "file": "B0.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-emote/Network01",
+      "summary_sha256": "4264730AB2567970035E4F256927E03B17162DE6CA96B7ED1C9EA4F131EF0EA0",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1439,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "A": 0,
+        "server": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "4755998CB3FC04250ABA985E9BA7BE176B0563B9D7362C09E67A828A3119C945",
+          "file": "server.json"
+        },
+        {
+          "sha256": "339B99301267A8BC22B0FC810AAEC4FFC6F8654816B8C1B7C661B953ED8D3E6C",
+          "file": "A.json"
+        },
+        {
+          "sha256": "684F13777E42885EBBF00D9D5395D2ACB1B24C92A77ADF13CEF0EF7CAC3B8092",
+          "file": "B0.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/reload_magazine_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "09601004CD69056E0C2282D9E5BC0D079640CDD5B428A98E3A128E115282B3B0"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/reload_magazine_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "D8A8282B7537D4EFBD41C35B0DC79F002A3570D0D812F155C9CD30617B3B3907"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/reload_magazine_network_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "2DAFCA2F71CAF900147718551EE28AB9939907886F016380F34FAC68BF65BEBB"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/reload_magazine_network_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "A949DBAEC0E19373CA0388C489352A87B6A089FFCC3256F247FC58E4278D16B8"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/reload_magazine_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "D8DDD4BC7D44D79A6C43C7C7C2EC1B2FC19CB554F73BB53A83A5F0CBDAF4B225"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/reload_weapon_fixture.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "5834BD4AF7016C5BEAF36B66C66A608B894B96CBEF5459347D0C69D66E7C6498"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_ReloadMagazineAbilityMixin.uasset",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "794CE18D3F8C25DC3E0F5BAF9F1A25010FB7A63CDC0686B73AA0256FF45E1739"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Weapons/GA_Weapon_ReloadMagazine.uasset",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "AA39EB90DE3D7806F0CCFF50EB352CE773149B60DEEC4844D1DF0B6A7D2C10F5"
+    }
+  ],
+  "host_report": {
+    "path": ".build/CommitVerification/20261016-26-reload-family/workspace/.build/host.json",
+    "sha256": "24273BA981A3FDAE74AB1ECE475406B58EE2C2B447958ED15EBE387D7CBCE0D9",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 827,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\CommitVerification\\20261016-26-reload-family\\workspace\\.build\\HostTestTemp",
+      "failed_cases": []
+    }
+  }
+}
