@@ -23,7 +23,14 @@ existing natural-death/Avatar/two-client matrix pass. All 1,096 host models
 pass, including the isolated Git-index archive. Ledger 38 records nine passed
 native runs and 23 scoped source/assets, all matched to at least one actual
 native input. Full-index syntax/local-import closure passes 498 Python files.
-The coherent bounded batch is ready for its paired local commits;
+The bounded activation batch is locally committed as Examples 73ede53 / core
+41f9369. Candidate-status reconciliation now fixes three stale rows only:
+device-color regressions were already complete, and the held/pressed ability
+roots already had native acceptance. Existing ledgers 29/32/34 remain the
+authority; no new runtime pass is claimed. Widget business/hardware/full-version
+gates and static candidate totals remain unchanged. Five new consistency
+checks PASS with all 1,101 models in the isolated Git-index archive. This is a
+separate documentation/test-only local batch, not new native acceptance;
 no push/tag/release. Original runtime business is Python-owned, but active
 Clear without preceding End, travel/rejoin, loss, physical input, packages and
 whole-version acceptance remain open. Earlier failures below are preserved

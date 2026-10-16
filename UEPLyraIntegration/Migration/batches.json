@@ -113,6 +113,14 @@
     "full_auto_respawn_acceptance": false,
     "full_version_acceptance": false
   },
+  "candidate_status_reconciliation": {
+    "review_date": "2026-10-17",
+    "documentation_only": true,
+    "new_native_execution_claimed": false,
+    "isolated_index_host_checks": 1101,
+    "evidence_ledgers": ["29-device-color.json", "32-held-widget.json", "34-widget-pressed.json"],
+    "note": "Synchronize three stale candidate-row statuses with their already committed pilot evidence. Do not change candidate totals or promote Widget business, hardware, packages or full-version acceptance."
+  },
   "auto_respawn_event_pilot": {
     "version": "0.11.0",
     "status": "bounded_death_avatar_delay_restart_rpc_business_native_two_owner_verified_release_open",
@@ -1977,8 +1985,8 @@
       "group": "角色、输入与英雄能力",
       "method_candidates": 1,
       "business_nodes": 8,
-      "scope_review": null,
-      "status": "bounded_native_software_verified_new_core_binary_regressions_running_release_open"
+      "scope_review": "Ledger 29 already records software comparison and completed new-core regressions. Hardware LED, same-instance native reactivation, secondary-user and network acceptance remain untested. This reconciliation adds no native execution.",
+      "status": "bounded_native_software_and_new_core_regressions_verified_release_open"
     },
     {
       "path": "/ShooterCore/Game/Dash/GA_Hero_Dash.GA_Hero_Dash",
@@ -2040,8 +2048,8 @@
       "group": "角色、输入与英雄能力",
       "method_candidates": 3,
       "business_nodes": 5,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Ledger 34 already accepts root ability orchestration: fourteen BP/Python pairs, pending/mixed-Profile safety and 48 two-owner LocalOnly trials in the real Inventory Experience. Inventory/map Widget business itself, pixel/text parity, travel/rejoin, physical input and packages remain unclaimed.",
+      "status": "bounded_real_inventory_experience_ui_lifetime_and_two_owner_verified_release_open"
     },
     {
       "path": "/ShooterCore/Input/Abilities/GAB_ShowWidget_WhileInputHeld.GAB_ShowWidget_WhileInputHeld",
@@ -2049,8 +2057,8 @@
       "group": "角色、输入与英雄能力",
       "method_candidates": 4,
       "business_nodes": 24,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Ledger 32 already accepts root ability orchestration: actual TDM/CP comparisons and 24 two-owner Elimination LocalOnly trials. Scoreboard Widget business and pixel/text parity, CP networking, travel/rejoin, physical input and packages remain unclaimed.",
+      "status": "bounded_real_experience_ui_input_lifetime_and_two_owner_verified_release_open"
     },
     {
       "path": "/ShooterCore/Input/Abilities/GA_ADS.GA_ADS",
