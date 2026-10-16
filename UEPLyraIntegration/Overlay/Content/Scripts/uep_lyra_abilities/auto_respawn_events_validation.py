@@ -155,5 +155,5 @@ class Validation(EventEvidence, ListenerValidation):
 
 
 result = next((value.split("=", 1)[1] for value in sys.argv if value.startswith("-UEPAutoRespawnHelpersResult=")), None)
-if result and "-UEPAutoRespawnEvents" in sys.argv:
+if result and "-UEPAutoRespawnEvents" in sys.argv and "-UEPAutoRespawnActivation" not in sys.argv:
     validation = Validation(result); atexit.register(validation.finalize); ticker = ue.add_ticker(validation.tick)

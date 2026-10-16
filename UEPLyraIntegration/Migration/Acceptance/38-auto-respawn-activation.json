@@ -1,0 +1,349 @@
+{
+  "schema_version": 1,
+  "batch": "38-auto-respawn-activation",
+  "scope": "Twelve original AutoRespawn runtime methods now have Python business through original entries/retained-parent End and sixteen routed functions. Natural BP/Python startup variants and two-owner death regression, six native End-observe-Clear-Give cases, eight genuine native Reset requests and sixteen two-owner Reset trials with exact typed owners/foreign filtering/reliable completion. Explicit cancellation lifetime extension; active Clear without preceding End, travel/rejoin/loss/input/packages/full-version acceptance remain unclaimed.",
+  "recorded_utc": "2026-10-16T20:34:18.0495061Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "0f59f6a91e03d571b5c7a1efa0e42e2d97b8651a",
+  "examples_parent_commit": "eb90edbff46478bae20776cebb4d089220c56807",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-auto-respawn-activation/AssetsPython01",
+      "summary_sha256": "3269E582EE5B71C2F603F1247C494AE3901287EA9BF16C6C38DC6882A29AB66E",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1299,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-auto-respawn-activation/AssetsBlueprint01",
+      "summary_sha256": "BCC605BA951647B0F43CEF5868E137BD97E056393FCCF36E4C2AD70343457934",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1305,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-auto-respawn-activation/Differential01",
+      "summary_sha256": "24A16170D7653168E732C7B981FAF79071854566F04CA698CB7532DA52247528",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1509,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "26570A0C6C89129E17F6992C8AF088EE0BA82332B1B47F3C61B15B5007A07B64",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-auto-respawn-activation/DifferentialBlueprint01",
+      "summary_sha256": "7A2E31CD7295A0AB138CC4F22D3E712BB91E65EB33AD6D2ECF2C82A8267D31FA",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1511,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "D4613556D70960DA71691CC2959945CF9FE040D36FCB8FE708D00FEE5FA35A43",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-auto-respawn-activation/Network01",
+      "summary_sha256": "4AB9B8557B30C37107D993C74FC5C31537407B735A9CB844B55361F8FD635228",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1509,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "A": 0,
+        "B0": 0,
+        "server": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "DBAA0A64B621C833877DA69527D5002FFD39C2739D88607AF54511551D9963A2",
+          "file": "server.json"
+        },
+        {
+          "sha256": "511C6783F5793B826D42FF29DDF317E1CCACE535D77C190DD50D6A2C13F8BFEA",
+          "file": "A.json"
+        },
+        {
+          "sha256": "AAE91361D48507BFCC773C26C21FF16EECBC8E458115D79CDCD5E57475A157B7",
+          "file": "B0.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-auto-respawn-activation/Lifecycle03",
+      "summary_sha256": "BB682DFFCE3BE8BA8CD279C24AC8D7157E5EC498960222ABC6F92F4B4FDD9275",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1513,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "D815B543ABE976558C2D30106027C3291783CBA32715B472EA8CBE8E2DD95729",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-auto-respawn-activation/ResetProbeAssets02",
+      "summary_sha256": "D851394D1250DFE4797FEB591CFC6C6ECDEB5AD18B82E63CAD7F552502A3E099",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 9,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-auto-respawn-activation/ResetDifferential02",
+      "summary_sha256": "026BBDFD01A54B21711185A6E64E5EE21C4D5481441F5C3A75DD8F23914D71A9",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1525,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "8948C5694CC8ABDBD774AA4F1A711648655582A30AD87A8898D32451A2568BF7",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-auto-respawn-activation/ResetNetwork02",
+      "summary_sha256": "23C2D98A5B9D4DD7DE548E3336D2FC470034785A6A7F4795EA94D15F9BAA76B5",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1525,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "server": 0,
+        "A": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "C0599C4F8B3A35D253A7579615E90569F7413195351457B8945C539BF46F7D07",
+          "file": "server.json"
+        },
+        {
+          "sha256": "7E8BB192BBE3459DFE39C1D15D8A9929A002843E789D9E76AB7CD1FA82CFA283",
+          "file": "A.json"
+        },
+        {
+          "sha256": "4D8F423AB9F357CBC80348035AB2AE0A8648EEE5ABC021D70FDC3221662B508A",
+          "file": "B0.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_activation_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_activation_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "322CB87B373830275D39108F7CC76DAE6DE1A2F874270A083DCA7B1AAA527566"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_activation_mixin.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_activation_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "BA3496A925900A761870E4ACA7D3FE65D2C0E9833876E59BDE16F530879CCEB9"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_activation_network_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_activation_network_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "EB7E8AB3BFF442F874654643405CF1C6CC617D4BFCE17924D65767ECBFA6DF84"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_activation_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_activation_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "ED9712B7F50A137CF8CD293C9490DB494B585A434A89733D2F7C25F01613A240"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_events_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_events_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "6E6990F0664665F17D5BBC26F291CC3E44E1FAEE98DFDA5E6DB2A25C5219E4F5"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_events_network_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_events_network_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "C5264A795A3F5383D9AA24686B145754B42CF765147E2FCF4FB42FC38A9C8E3A"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_events_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_events_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "7F5465CA907798BD4378F3CF87F33DDDCCC5AB0C8C675E911615612313361AEB"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_lifecycle_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_lifecycle_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "BF539BBC5D7BA286D86FBE335C963085DF14284D741BEE32517748727E70FCA4"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_lifecycle_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_lifecycle_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "52B98004A0D2915A2A93E17C8F7111129104DEF711B54A142C0BD294533A1791"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_reset_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_reset_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "A46C3FB75271C4721977B893288C122DD72923FF578682389DDC745C2082F53B"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_reset_network_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_reset_network_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "2E9CE2A2BE80C13E41225FE515EAF42D409A1F662324995A7B7FF4AAD40459F1"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_reset_network_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_reset_network_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "3F01720DEA64B0AD634E9FF492A9872CE01AF2343105CC50AB922A426E1B0A06"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_reset_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/auto_respawn_reset_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "FB32EE02C418FF83D9622BB7738BD714DDFB302ABDDC81690010AD45C7366830"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "E0AA03EEB5501652B5241250AEA0F0C8A564AD0D13EFC4314D85979B2B4C4E66"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_AutoRespawnActivationMixin.uasset",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_AutoRespawnActivationMixin.uasset",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "D5B4FA71CD2F5979F7EB69F7CCF5B06FBD29A38172B92586A2885D76DDC9063E"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/Respawn/GA_AutoRespawn.uasset",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/Respawn/GA_AutoRespawn.uasset",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "21334ED713C323BFD17ABD0DC1DF4C9CDE21811C8D53E8B26A826DA3C6C8F8C4"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_auto_respawn_activation_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_auto_respawn_activation_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "3F701BEEBA4121DE8A92CA2BF2FA9CE004F7A9C1C7DD4EB8C6F4C833EE9269A9"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_auto_respawn_helper_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_auto_respawn_helper_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "E97181EADD11188B23D98F5C76C5E46856870574B727E9FA51D13B3C274974EF"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_auto_respawn_reset_probe.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_auto_respawn_reset_probe.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "F4A86349E197674F979D592F559BDD03CD18351450888B99975CA9BB32614381"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "57F0AD34EE54FC4A468215B82E4A015D81A87B8CE86F40E2E19C1AD50FEFD6BE"
+    },
+    {
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "7E97C5E91ACB6409476B6377B8CECE79073089D3AFC54EFB9184AB5848612F87"
+    },
+    {
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "9BBCF7E6AED04860428B177758FCA723F6DDB8E0C7D9AC954F9A8F51825D2DBB"
+    },
+    {
+      "path": "Validation/Run-UEP58AutoRespawnResetProbeAuthoring.ps1",
+      "native_input_path": "Validation/Run-UEP58AutoRespawnResetProbeAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "96978CC1860202DBF5CCF6D87B3563CE3DC36A9E67EE10C0C57567949DC80C41"
+    }
+  ],
+  "host_report": {
+    "path": ".build/CommitVerification/38-auto-respawn-activation/workspace/.build/host.json",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 1096,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\CommitVerification\\38-auto-respawn-activation\\workspace\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "sha256": "4EF8A834855A6BA482050F55919CDF076633CB0CF12228364DCE21318F3B26A3"
+  }
+}

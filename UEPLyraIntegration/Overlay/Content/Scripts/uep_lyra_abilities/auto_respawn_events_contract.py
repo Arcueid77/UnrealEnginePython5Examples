@@ -23,10 +23,10 @@ def check_messages(messages, owner_id, *, completion, foreign=False, duration_ex
             row["instigator_tags"] == row["target_tags"] == row["context_tags"] == [], "native completion payload differs")
 
 
-def check_peer(report):
+def check_peer(report, *, activation_business=False):
     listeners_peer(report, event_business=True)
     require(report["death_avatar_event_business_migrated"] is True and report["original_two_native_delay_nodes_reused"] is True and
-        report["activation_reset_ui_removal_business_migrated"] is False and report["duration_completion_broadcast_by_fixture"] is False,
+        report["activation_reset_ui_removal_business_migrated"] is activation_business and report["duration_completion_broadcast_by_fixture"] is False,
         "wrong event batch scope or manufactured messages")
     count = len(report["cases"])*(1 if report["network_acceptance"] else 2)+len(report.get("foreign_cases", []))+len(report.get("avatar_endplay_cases", []))
     require(report["event_fixture_shutdown"] == dict(created=count, closed=count, active=0), "native event message observers leaked")
@@ -90,8 +90,8 @@ def check_avatar_row(row, profile):
     check_messages(row["event_messages"], row["native_player_id"], completion=True, duration_expected=False)
 
 
-def validate(report):
-    result = helpers(report, event_business=True); check_peer(report)
+def validate(report, *, activation_business=False):
+    result = helpers(report, event_business=True); check_peer(report, activation_business=activation_business)
     for case in report["cases"]:
         for key, profile in (("blueprint", "BlueprintFallback"), ("python", "Python")): check_row(case[key], case["name"], profile)
     require(len(report["avatar_endplay_cases"]) == 2 and report["native_avatar_destroy_called_by_fixture"] is True,
@@ -102,10 +102,10 @@ def validate(report):
     return dict(result, death_restart_event_business_verified=True, forced_avatar_endplay_tested=True, whole_auto_respawn_migrated=False)
 
 
-def validate_network(reports):
+def validate_network(reports, *, activation_business=False):
     result = network_helpers(reports, event_business=True)
     for peer, report in reports.items():
-        check_peer(report)
+        check_peer(report, activation_business=activation_business)
         for row in report["cases"]:
             check_row(row, row["name"], row["profile"], server=peer == "server")
             require(row["native_player_id"] == reports["server"]["player_ids"][row["target"]], "event trial native player differs")

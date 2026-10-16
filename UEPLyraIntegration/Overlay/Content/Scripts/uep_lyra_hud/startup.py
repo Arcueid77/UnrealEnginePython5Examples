@@ -4,6 +4,17 @@
 def validation_module(arguments):
     if any(argument.lower().startswith("-run=") for argument in arguments):
         return None
+    if any(argument.startswith("-UEPAutoRespawnResetResult=") for argument in arguments):
+        return "uep_lyra_abilities.auto_respawn_reset_validation"
+    if any(argument.startswith("-UEPAutoRespawnResetNetworkResult=") for argument in arguments):
+        return "uep_lyra_abilities.auto_respawn_reset_network_validation"
+    if any(argument.startswith("-UEPAutoRespawnLifecycleResult=") for argument in arguments):
+        return "uep_lyra_abilities.auto_respawn_lifecycle_validation"
+    if "-UEPAutoRespawnActivation" in arguments:
+        if any(argument.startswith("-UEPAutoRespawnHelpersNetworkResult=") for argument in arguments):
+            return "uep_lyra_abilities.auto_respawn_activation_network_validation"
+        if any(argument.startswith("-UEPAutoRespawnHelpersResult=") for argument in arguments):
+            return "uep_lyra_abilities.auto_respawn_activation_validation"
     if "-UEPAutoRespawnEvents" in arguments:
         if any(argument.startswith("-UEPAutoRespawnHelpersNetworkResult=") for argument in arguments):
             return "uep_lyra_abilities.auto_respawn_events_network_validation"

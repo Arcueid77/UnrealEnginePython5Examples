@@ -65,6 +65,11 @@ def generate():
     if kind == "autorespawnevents":
         from generate_auto_respawn_event_assets import generate as generate_auto_respawn_events
         return generate_auto_respawn_events(stage)
+    if kind == "autorespawnactivation":
+        from generate_auto_respawn_activation_assets import generate as generate_auto_respawn_activation
+        default = next((value.split("=", 1)[1] for value in sys.argv if value.startswith("-UEPAutoRespawnDefaultProfile=")), "Python")
+        if default not in ("Python", "BlueprintFallback"): raise RuntimeError("explicit AutoRespawn Profile required")
+        return generate_auto_respawn_activation(stage, default)
     config = {
         "quickslot": ("/ShooterCore/Game/GA_QuickbarSlots", "quickslot_mixin", "LyraQuickslot", "Quickslot",
                       "Plugins/GameFeatures/ShooterCore/Content/Game/GA_QuickbarSlots.uasset", "K2_ActivateAbility"),

@@ -13,6 +13,22 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Current checkpoint (2026-10-17):** AutoRespawn activation/reset/UI/End-removal
+business has bounded native acceptance. Final ResetDifferential02 passes eight
+real native requests; ResetNetwork02 passes sixteen authority/owner trials,
+sixteen passive foreign observations, strict logs, independent gates, 1,525
+frozen inputs and server-last three zero exits. Lifecycle03 separately passes
+six real End/observe/Clear/Give trials. Both original startup variants and the
+existing natural-death/Avatar/two-client matrix pass. All 1,096 host models
+pass, including the isolated Git-index archive. Ledger 38 records nine passed
+native runs and 23 scoped source/assets, all matched to at least one actual
+native input. Full-index syntax/local-import closure passes 498 Python files.
+The coherent bounded batch is ready for its paired local commits;
+no push/tag/release. Original runtime business is Python-owned, but active
+Clear without preceding End, travel/rejoin, loss, physical input, packages and
+whole-version acceptance remain open. Earlier failures below are preserved
+history, not current pass claims.
+
 **Accepted pressed-widget pilot and nullable-controller fix (2026-10-16, 23:45 Singapore):**
 Previous held-widget batch is locally committed as Examples b8b9818 / core
 8d03e61. SpawnEffect's nullable-controller repair is separately committed as
@@ -318,6 +334,211 @@ documentation is added afterward; runtime inputs remain unchanged. This batch
 now receives separate local Examples/core commits.
 Activation/Reset/UI/end/removal business and cancellation regressions remain
 open; this is not whole-AutoRespawn or version acceptance.
+
+**AutoRespawn activation/reset/UI/lifecycle batch work log (2026-10-17):**
+The accepted event batch is locally committed as Examples eb90edb / core
+0f59f6a. The new uncommitted activation policy completes source implementation
+of the remaining four original entry methods and three gates: native Reset
+subscription completion, typed Reset owner filtering and End cleanup. All
+sixteen reflected methods are explicitly local, retaining the accepted helper/
+listener/death/latent implementation. Activation and AvatarSet register the
+single native reset listener idempotently, then dispatch existing live/dead
+logic. Added registers the original respawn Widget class/reticle slot/PS/-1
+priority; End and removal unregister UI and cancel the stored native listener.
+The End gate's Python branch must forward only to the retained native parent.
+Profile switches preserve ability-owned resources. Native End/removal disarms
+both pending latent business continuations; this and listener cancellation are
+intentional lifetime improvements, not exact original stale-callback parity.
+
+Sixteen new policy models PASS (99 AutoRespawn focused models total). The asset
+generator is written but not yet accepted: reuse the original native Reset
+async/typed payload node, add one native entry/proxy capture, three gates/six
+dispatch nodes, preserve parent End and all original business around exactly
+ten declared transport endpoints. Two new default reflected fields hold the
+native proxy and ended flag; original full CDO otherwise stays unchanged.
+No activation assets or native runtime tests are accepted yet. Authoring can
+select Python or BlueprintFallback startup variants explicitly, so actual
+OnAbilityAdded/AvatarSet/activation can be compared from natural native grants
+without mutating a live CDO or manufacturing lifecycle callbacks.
+
+Required next verification: actual native Reset producer (the already granted
+LyraGameplayAbility_Reset, triggered by GameplayEvent.RequestReset), own and
+foreign Reset payloads, pending long/short delay cancellation on real native
+End/removal, UI/async proxy restoration, re-grant/re-activation lifecycle and
+the existing natural death/Avatar/pause/Profile/two-client reliable-payload
+matrix. Native ASC exposes K2_GiveAbility and ClearAbility; any separate
+test-owned lifecycle re-grant proof must explicitly record new spec handles,
+level/input/source assumptions instead of claiming the old handle was restored.
+Keep original and Python startup variants in fresh marked-stage evidence
+directories, archive/restore only the exact two owned asset leaves, and leave
+canonical Python assets selected afterward. Do not weaken existing natural-
+grant/spec restoration gates to fit a lifecycle re-grant fixture. No Engine/
+plugin C++ build, cook/package, official-source edits or private binding reads.
+AssetsPython01 now PASSes original class/full CDO/twelve signatures, exact
+native listener, parent End forwarding and all original business around ten
+declared transport endpoints. Default Profile is explicitly Python. No live
+CDO mutation is used. The full policy adds sixteen reflected methods; the only
+extra CDO defaults are the empty native proxy reference and false ended flag.
+Eight new natural-report/entry-isolation models bring focused AutoRespawn
+checks to 107, all passing. Differential01 is currently the sole native lane,
+running the existing four natural death pairs plus live-Pawn destruction pair
+against the full policy. Its new bounded gate observes actual startup Added/
+AvatarSet/OnSpawn activation and the live native reset proxy at every natural
+phase; it explicitly cannot certify full Reset/end/removal lifecycle. The
+separate lifecycle producer, startup BP variant and two-client full-policy
+regression are still required. This activation batch remains uncommitted.
+Differential01 now PASSes the full natural four-pair/eight-lethal-death matrix
+and both live-Pawn destruction cases under the full policy, including native
+QuickBar cleanup. Actual startup records Added 1/UI register 1/Activate 1/
+AvatarSet 2/native reset starts 1; native Warmup also delivers four Reset
+messages (one owner handled, three foreign ignored). Both reset ownership
+branches have actual dispatch, but explicit producer/payload/cancellation
+lifecycle evidence is still required. Strict logs, independent gate, a real
+normal exit and 1,509 frozen inputs PASS. Host01 PASSes 1,066 models.
+
+Next generate a BlueprintFallback startup variant with a distinct Set asset
+name, archiving only the exact accepted-candidate Python root/Set leaves under
+Variants/Python. Keep the canonical Python Set present; only root is swapped.
+Run the same full natural matrix from actual original-BP startup, then archive
+the two BF outputs and restore the byte-identical Python root before networking
+and lifecycle work. This is asset-authoring configuration in the marked copy,
+never a live CDO edit. Variant evidence/archives stay preserved independently.
+AssetsBlueprint01 PASSes BlueprintFallback startup configuration with a
+distinct DA_AutoRespawnActivationMixinBlueprintFallbackStartup Set, preserving
+the canonical Python Set in both Stage/Overlay. Canonical Python root/Set bytes
+are archived in Variants/Python (including stage/overlay copies). The sole
+native lane is DifferentialBlueprint01, same full natural matrix using actual
+original-BP startup; its final gate is pending. Current Stage/Overlay root is
+the BF startup variant until it finishes and canonical Python root is restored.
+
+Lifecycle fixture design to implement after source freeze ends: use reflected
+native ASC ClearAbility/K2_GiveAbility in a separate test-owned proof, capture
+old handle/Level/InputID/SourceObject assumptions, keep root count exactly 1/0/1
+and never claim a replacement handle equals the old one. Observe real native
+End/removal, native proxy cancellation and empty UI handle. Test both pending
+native long and short continuations; hold only the exact old ability/proxy as
+balanced fixture roots if needed to observe late callbacks, then release them.
+Short-delay removal can leave the native Pawn absent, so explicit native
+GameMode restart is fixture recovery only, before granting a fresh root to a
+living ready Pawn; do not claim that recovery as production restart behavior.
+Pending-short cleanup may expose stale cached Avatar/Health wrappers in the
+accepted listener helper; inspect actual failure before repairing optional
+reference handling, preserving original bookkeeping and all existing gates.
+Use the already granted native Reset ability's GameplayEvent.RequestReset
+producer for owned Reset tests, and actual two-owner network delivery for
+foreign filtering. Keep any Clear/Give lifecycle acceptance separate from the
+natural lane's no-grant/exact-persistent-handle restoration contract.
+Full-policy Network01 now PASSes the twelve authority/owner natural trials,
+six real foreign completion observations per client, actual inactive-client
+AvatarSet startup and retained native reset proxy. Strict logs/independent gate,
+1,509 frozen inputs and all three real zero exits pass, server last. Startup
+BF natural DifferentialBlueprint01 also PASSes four pairs/two Avatar cases and
+actual fallback Added 1/Activate 1/AvatarSet 2/subscribed 1/reset messages 4,
+with 1,511 frozen inputs and normal exit. Its assets are archived under
+Variants/BlueprintFallback; byte-identical canonical Python root and Set are
+restored and hash-checked. These remain bounded natural regressions, not full
+lifecycle or complete asset acceptance.
+
+Lifecycle01 FAILS a fixture-rooting error: native ASC ClearAbility calls
+MarkAbilityAsGarbage, which asserts !IsRooted. Exit 3 and the original crash log
+are preserved. The exact process had already exited before the attempted owned
+stop; no unrelated process was stopped. The revised fixture never roots GAS
+instances/proxies: actual K2_EndAbility leaves the per-actor instance in its
+native spec while the original long/short deadlines are observed. It then calls
+ClearAbility on the inactive instance, observes removal through module counters
+and ASC state, and never dereferences the garbage-marked old instance. Native
+K2_GiveAbility creates an explicitly new handle with the captured null-source/
+level/input assumptions, and final test-owned root is removed before exit.
+Lifecycle02 completes all six native End/Clear/Give trials and exits 0, but
+FAILS its independent UI assertion: IsValid(FUIExtensionHandle&) returns a
+(bool, reference) tuple; the fixture incorrectly used tuple truthiness. Its
+native reports/log remain failed evidence. The fixture now decodes exactly two
+values with a strict bool return and records the observed return/reference
+shape. GameplayAbility.cpp EndAbility explicitly removes latent actions, so
+the fresh gate requires the same still-valid inactive native instance/spec at
+the original deadline, zero late callbacks/restart/completion, then real removal
+and new-handle Give. It does not require or replay a cancelled callback.
+All 117 focused models PASS; no End/Clear/Give/cancellation native gate has
+passed yet. This activation batch remains uncommitted; separate native Reset
+producer/payload verification remains.
+
+Lifecycle03 PASSes six actual native End/observation/Clear/Give cases, including
+both original delayed windows in both Profiles. Its typed UI return is observed
+as (bool, UScriptStruct); registration is false after End. The same inactive
+native spec/instance survives through each original deadline with no late
+callback, restart or completion. Clear removes exactly one instance, Give
+executes real Added/OnSpawn with a new handle, and the final test-owned grant is
+removed before exit. Independent gate, strict error/fatal/ensure log check,
+1,513 frozen inputs and real zero exit PASS. Native Hero ClearInventory warnings
+remain in forced fixture recovery; there is no warning-free claim. All 1,076
+host models PASS. Full AutoRespawn acceptance remains open pending a genuine
+native Reset producer and two-owner filtering/duplicate regression. A four-node
+stage-only typed ReadReset probe is being authored for independent payload
+observation; it contains no broadcast or gameplay logic and is not copied into
+the production Overlay.
+
+ResetProbeAssets01 passes its four-node BP generation but FAILS the driver's
+wrong marker-order assertion (authoring logs its marker before Python shutdown).
+The failed asset is recoverably archived. ResetProbeAssets02 PASSes with the
+proper authoring marker -> Goodbye Python -> closed-log sequence. The original
+production message adapter is unchanged; only a stage-owned fixture is added.
+ResetDifferential01 PASSes four native BP/Python pairs: live, repeat, pending
+five-second death and mid-pending Profile switch. Eight actual existing native
+LyraGameplayAbility_Reset requests use SendGameplayEventToActor(RequestReset),
+not a fixture Reset broadcast. Independent typed Reset/Duration/Verb readers
+observe exact owners and one completion, with no second restart through the
+old deadline. UI/listener/spec/Profile restore, strict logs, independent gate,
+1,521 frozen inputs and normal exit PASS; native timeline warnings remain.
+All 1,087 host models passed at this checkpoint. A new two-owner Reset lane is
+implemented next, with passive clients and original server-initiated Reset,
+explicit server foreign filtering and reliable completion observation; it is
+not yet native accepted. No build/cook/package, commit/push/tag/release.
+
+ResetNetwork01 is the sole native lane. One new static safety test FAILS before
+launch because its substring check mistakes the report's trigger_entry text for
+an actual client call. PowerShell did not stop on that Python exit status, so
+the runtime lane did launch; no model-suite pass is claimed. Retain the failure,
+freeze native inputs, then replace the static check with an actual AST-call
+inspection and require the host exit code before any further launch.
+
+ResetNetwork01 completes 16 authority trials, eight owner and eight passive
+foreign observations per client, 16/16 owned message scopes on each peer and
+three actual zero exits server last, but FAILS the independent UI check.
+Its server reports false UI handles for every BP and Python trial; both clients
+report true. No runtime/strict-log failure was observed, but process/report
+completion is not acceptance. The revised fixture records the pre-Reset native
+UI validity too, requiring exact role-specific before/after preservation, rather
+than assuming a dedicated server has a local widget extension. Failed run is
+preserved, and a fresh native run is required. The static safety model now
+inspects actual AST call nodes, not report text. No production policy changes.
+
+ResetNetwork02 PASSes all 16 authority/owner trials and sixteen passive foreign
+client observations. Typed real Reset payloads have exact native PlayerState
+owners; the foreign authority ability receives but filters exactly one Reset,
+whereas the foreign client receives no replicated Reset router payload and
+observes the native reliable completion RPC. Both clients preserve their own
+state/Profile/specs. Measured UI baseline stays false/false on dedicated server
+and true/true on each owning client, in both BP and Python. Original five-second
+deadlines and mid-delay Profile switching produce no duplicate restart or
+completion. All three observer ledgers close 16/16, zero active. Strict logs,
+independent gate, 1,525 frozen inputs and three real zero exits server last PASS.
+All 137 focused and 1,096 full host models PASS. ResetDifferential02 is a fresh
+standalone replay of the final shared fixture/schema; it is currently the only
+native lane. The batch remains uncommitted until this final gate and isolated
+Git-index checks finish. Whole version, travel/rejoin, loss and packages remain
+open. Native warnings are retained, never described as warning-free.
+
+ResetDifferential02 now PASSes all eight final-schema requests with the same
+1,525 frozen inputs, independent gate, strict log and normal zero exit. No
+native process remains. The 45 HUD/16 weapon/six ledger/five driver-safety/
+three isolated-index support checks and 56 PowerShell parses PASS. These remain
+supporting evidence, not native acceptance substitutes. The isolated staged
+archive PASSes all 1,096 models; all-index syntax/import closure PASSes 498
+files. Ledger 38 retains the exact nine native runs, report and DLL hashes and
+all 23 scoped input matches. Commit the coherent activation batch only,
+preserving unrelated user URL edits. Next reconcile earlier candidate status
+entries against their already committed ledgers, then take a small Character/
+inventory helper batch before broader character events.
 
 **Accepted held-widget pilot (2026-10-16, 22:28 Singapore):**
 The held-input root policy is now implemented in
