@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "batch": "25-drop-weapon",
+  "scope": "Drop-weapon ability deletes active native inventory item and cycles quickbar, matching original BP; not a world pickup. Historical four standalone pairs and 16 authority network rows. No current-DLL rerun; current isolated staged checks and source freeze. Native inventory/RPC/equipment replication retained.",
+  "recorded_utc": "2026-10-16T13:20:04.9273456Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "00ff90a6854809baf49ce8179342d653cf18d53c",
+  "examples_parent_commit": "12e148245bb2425a07c19480de7006d0c827f552",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-drop-weapon/Differential03",
+      "summary_sha256": "E01EB32918F23EF1EAA562E34D5495A054FE9802EC27FA8000B61B3B80850D58",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1357,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "DD51AB2D752196FE66D1351D7315E70E97B13488D3D2DF87D42DBBECB1642C28",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-drop-weapon/Network01",
+      "summary_sha256": "69E9136981D3E8801DF26ABB07A06E0CFDD075EF11319DBA0AFC3331AF48D46C",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1357,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "A": 0,
+        "server": 0,
+        "B0": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "0C2E3317AF52ABF207171C11FC93E4E7F1388FB4505B22250F5460D07A8D60C9",
+          "file": "server.json"
+        },
+        {
+          "sha256": "F6C540D374170ECFC70D071DB5253ED23FD218A8775BDE1E42F38B88A5F673F1",
+          "file": "A.json"
+        },
+        {
+          "sha256": "86F2F6ABE69FF9ACF136E3F06275EA5CE17E510D773AE46A87FF5E33F65ABCCB",
+          "file": "B0.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-emote/Network01",
+      "summary_sha256": "4264730AB2567970035E4F256927E03B17162DE6CA96B7ED1C9EA4F131EF0EA0",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1439,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "A": 0,
+        "server": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "4755998CB3FC04250ABA985E9BA7BE176B0563B9D7362C09E67A828A3119C945",
+          "file": "server.json"
+        },
+        {
+          "sha256": "339B99301267A8BC22B0FC810AAEC4FFC6F8654816B8C1B7C661B953ED8D3E6C",
+          "file": "A.json"
+        },
+        {
+          "sha256": "684F13777E42885EBBF00D9D5395D2ACB1B24C92A77ADF13CEF0EF7CAC3B8092",
+          "file": "B0.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "BFC9F28B4B21775869F56155830524D1A2E2C03746F9FAADAFA0CE0AAD82CB10",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/drop_weapon_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "049E1BAEEA5DF77046C3B63ED0D3D5B0BE22E58D97CB0F13BE14F1580E460A96",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/drop_weapon_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "05FCBD3513F7ADCD23850F13D03D0A3F984CAEA921DFD34C05A2757E7FBB0845",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/drop_weapon_network_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "AAF21E1FD323D5398FF3F1FD3FFE71712D6633E34AF8D41DAF4F4D54A0C59AE4",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/drop_weapon_network_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "8B40A2FBD430CE544BB19718624ECCB237F038380035ED9F24DD99C61B2754E6",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/drop_weapon_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "DD42825255EA879CFC16B1F0EA5129E0930950C6553632FD53309F86DDD53E39",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_DropWeaponAbilityMixin.uasset",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "703203C4566E801AD466390A565D203CA5D14102B19D57E9B7DEC9ADE5EB89E8",
+      "path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Input/Abilities/GA_DropWeapon.uasset",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "sha256": "6DF7CBE8DAFBCFB7CF7EEAE9BBA041105FF25E83E4259D3014F6ABAEB3AF773C",
+    "path": ".build/CommitVerification/20261016-25-drop-weapon/workspace/.build/host.json",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 795,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\CommitVerification\\20261016-25-drop-weapon\\workspace\\.build\\HostTestTemp",
+      "failed_cases": []
+    }
+  }
+}
