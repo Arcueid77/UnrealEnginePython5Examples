@@ -67,7 +67,7 @@ not force feature activation from Python. Runtime URLs request three Lyra AI
 bots to advance the real Warmup phase; bots use `AModularAIController` and are
 not candidates for the remote `APlayerController` target selector.
 
-See [`docs/Lyra_Gameplay_Slice_0.5.0.md`](https://github.com/AvaloNero/UnrealEnginePython5/blob/dev/release-0.6.0/docs/Lyra_Gameplay_Slice_0.5.0.md)
+See [`docs/Lyra_Gameplay_Slice_0.5.0.md`](https://github.com/Arcueid77/UnrealEnginePython5/blob/dev/release-0.6.0/docs/Lyra_Gameplay_Slice_0.5.0.md)
 for the ownership table, rejection contract and machine-readable evidence.
 Formal result `20260812-234501` passed the complete `All` lane, including the
 packaged game, and reported `full_acceptance: true`. After the selector was
