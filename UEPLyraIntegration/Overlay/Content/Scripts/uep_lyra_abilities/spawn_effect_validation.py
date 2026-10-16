@@ -24,7 +24,8 @@ class Validation:
         self.report = dict(status="running", error=None, cases=[], original_player_restored=False,
             original_ability_specs_restored=False, original_fraction_restored=False,
             native_default_on_spawn_observed=False, fixture_native_existing_spec_activation=True,
-            fixture_input_fraction_per_instance_written=True, native_immediate_handoff_tested=False)
+            fixture_input_fraction_per_instance_written=True, native_immediate_handoff_tested=False,
+            nullable_cached_controller_regressions=[])
         for field in ("full_acceptance", "network_acceptance", "packaged_runtime", "activation_handler_replayed", "task_callbacks_replayed",
             "health_properties_written", "animation_assets_modified", "original_montage_or_effect_written"): self.report[field] = False
 
@@ -69,6 +70,34 @@ class Validation:
         require(self.report["native_default_on_spawn_observed"], "actual existing OnSpawn instance did not naturally run Python")
         self.report.update(native_policy=[int(self.ability.NetExecutionPolicy), int(self.ability.InstancingPolicy), int(self.ability.ActivationPolicy)],
             original_montage=self.ability.SpawnMontage.get_path_name(), original_effect=policy.EFFECT, original_input_fraction=self.original_fraction)
+        self.nullable_controller_regression()
+
+    def nullable_controller_regression(self):
+        # Real existing native instance + real Controller foreign lock. Only
+        # its cache is temporarily made null, never its ActorInfo/CDO/owner.
+        cached, held = self.ability.CachedController, False
+        before = policy.instance_snapshot(self.ability)
+        effects_before, tasks_before = self.effects(), self.tasks()
+        row = dict(fixture_cached_controller_per_instance_written=True, original_bp_null_warning_parity_claimed=False,
+            actual_existing_instance=self.ability.get_class() == self.cls, native_actor_info_controller_preserved=False)
+        try:
+            self.controller.call_function("SetIgnoreMoveInput", True); held = True
+            self.ability.set_property("CachedController", None)
+            row["native_actor_info_controller_preserved"] = self.ability.call_function("GetControllerFromActorInfo") == self.controller
+            self.ability.call_function("DisableInput"); self.ability.call_function("EnableInputAgain")
+            row["foreign_native_input_lock_preserved"] = self.ignored()
+            after = policy.instance_snapshot(self.ability)
+            effects_after, tasks_after = self.effects(), self.tasks()
+            row.update(effects_before=effects_before, effects_after=effects_after, tasks_before=tasks_before, tasks_after=tasks_after,
+                effects_created=after["effects_applied"]-before["effects_applied"], tasks_created=after["tasks_created"]-before["tasks_created"])
+            row["no_effect_or_task_created"] = effects_after <= effects_before and tasks_after <= tasks_before and row["effects_created"] == row["tasks_created"] == 0
+            row.update(nullable_entries=after["controller_unavailable"]-before["controller_unavailable"],
+                owned_locks=after["movement_locks"]-before["movement_locks"], owned_unlocks=after["movement_unlocks"]-before["movement_unlocks"])
+        finally:
+            self.ability.set_property("CachedController", cached)
+            if held: self.controller.call_function("SetIgnoreMoveInput", False)
+        row.update(original_cache_restored=self.ability.CachedController == cached, native_input_baseline_restored=not self.ignored())
+        self.report["nullable_cached_controller_regressions"].append(row)
 
     def begin(self):
         self.prepare_trial()

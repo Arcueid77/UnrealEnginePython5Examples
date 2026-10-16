@@ -94,3 +94,27 @@ class SpawnEffectPolicy(unittest.TestCase):
         self.call("K2_EndAbility")
         self.assertEqual(self.module.instance_snapshot(self.ability)["enable_requests"], 2)
         self.assertEqual(self.module.snapshot()["movement_unlocks"], 1)
+
+    def test_nullable_cached_controller_does_not_abort_effect_or_three_native_tasks(self):
+        self.controller = None
+        self.module.activate(self.ability)
+        self.assertEqual(len(self.tasks), 3)
+        self.assertTrue(self.ability._uep_spawn_effect_live)
+        self.assertFalse(self.ability._uep_spawn_input_live)
+        self.assertEqual(self.module.snapshot()["controller_unavailable"], 1)
+        self.assertEqual(self.module.snapshot()["errors"], [])
+        self.assertFalse(any(name == "SetIgnoreMoveInput" for name, args, kw in self.calls))
+
+    def test_later_controller_does_not_allow_unlocking_a_lock_we_never_took(self):
+        self.controller = None; self.module.activate(self.ability)
+        self.set_property("CachedController", types.SimpleNamespace(call_function=lambda name, *args: self.calls.append((name, args, {}))))
+        self.module.enable_input(self.ability)
+        self.assertFalse(any(name == "SetIgnoreMoveInput" for name, args, kw in self.calls))
+        self.assertEqual(self.module.snapshot()["movement_unlocks"], 0)
+
+    def test_nullable_controller_end_still_removes_only_own_effect_and_scope(self):
+        self.controller = None; self.module.activate(self.ability)
+        self.call("K2_EndAbility")
+        stats = self.module.snapshot()
+        self.assertEqual((stats["effects_applied"], stats["effects_removed"], stats["scopes_created"], stats["scopes_closed"]), (1, 1, 1, 1))
+        self.assertEqual((stats["movement_locks"], stats["movement_unlocks"], stats["active_count"]), (0, 0, 0))

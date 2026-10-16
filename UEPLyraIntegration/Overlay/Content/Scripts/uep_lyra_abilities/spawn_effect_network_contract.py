@@ -2,7 +2,7 @@
 import argparse
 import json
 from pathlib import Path
-from .spawn_effect_contract import require
+from .spawn_effect_contract import require, validate_nullable_controller
 
 PEERS = ("A", "B0")
 NETWORK_PLAN = ("natural-duration", "montage-interrupt", "native-cancel", "external-native-end", "active-profile-switch", "repeat", "foreign-input-lock")
@@ -53,6 +53,8 @@ def validate(reports):
         for flag in ("full_acceptance", "packaged_runtime", "activation_handler_replayed", "task_callbacks_replayed", "health_properties_written",
             "animation_assets_modified", "original_montage_or_effect_written", "native_rpc_bypassed", "gameplay_state_delivered_by_files", "packet_loss_tested", "travel_rejoin_tested", "physical_input_tested"):
             require(report[flag] is False, "unsupported native spawn network claim: "+flag)
+        if "nullable_cached_controller_regressions" in report:
+            validate_nullable_controller(report["nullable_cached_controller_regressions"])
         stats = report["policy_shutdown"]
         require(stats["errors"] == [] and stats["active_count"] == 0 and stats["scopes_created"] == stats["scopes_closed"], "native network spawn scope leak")
         if peer != "server":

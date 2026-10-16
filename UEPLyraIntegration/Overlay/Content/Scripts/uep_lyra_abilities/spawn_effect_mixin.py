@@ -12,7 +12,7 @@ _instances = {}
 _stats = dict(activations=0, scopes_created=0, scopes_closed=0, tasks_created=0, native_ends=0,
     effects_applied=0, effects_removed=0, movement_locks=0, movement_unlocks=0,
     duration_finished=0, input_delay_finished=0, montage_completed=0,
-    enable_requests=0, fallback_activations=0, fallback_native_ends=0, errors=[])
+    enable_requests=0, controller_unavailable=0, fallback_activations=0, fallback_native_ends=0, errors=[])
 
 
 def snapshot(): return dict(copy.deepcopy(_stats), active_count=len(_active), active_abilities=list(_active.values()))
@@ -36,7 +36,11 @@ def close(ability):
 
 def disable_input(ability):
     controller = ability.CachedController
-    if not valid(controller): raise RuntimeError("SpawnEffect requires its original native controller")
+    # A ServerInitiated activation can reach an owning client before its
+    # Controller has arrived. The original BP's null receiver performs no lock;
+    # do not invent a fatal precondition or mark an input lock as owned.
+    if not valid(controller):
+        note(ability, "controller_unavailable"); return
     controller.call_function("SetIgnoreMoveInput", True)
     ability._uep_spawn_input_live = True; note(ability, "movement_locks")
 

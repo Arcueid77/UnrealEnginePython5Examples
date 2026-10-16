@@ -11,6 +11,19 @@ def require(condition, message):
     if not condition: raise RuntimeError(message)
 
 
+def validate_nullable_controller(rows):
+    require(bool(rows), "native nullable-controller regression missing")
+    for row in rows:
+        for field in ("fixture_cached_controller_per_instance_written", "actual_existing_instance", "native_actor_info_controller_preserved",
+                      "foreign_native_input_lock_preserved", "no_effect_or_task_created", "original_cache_restored", "native_input_baseline_restored"):
+            require(row[field] is True, "nullable-controller ownership/restoration missing: " + field)
+        require(row["nullable_entries"] == 1 and row["owned_locks"] == row["owned_unlocks"] == 0 and
+                row["original_bp_null_warning_parity_claimed"] is False, "nullable receiver must not own/unlock input or claim BP warning parity")
+        if "tasks_before" in row:
+            require(0 <= row["effects_after"] <= row["effects_before"] and 0 <= row["tasks_after"] <= row["tasks_before"] and
+                    row["effects_created"] == row["tasks_created"] == 0, "nullable input helper created native effects/tasks")
+
+
 def validate(report):
     require(report["status"] == "passed" and report["error"] is None and report["original_player_restored"] and
         report["original_ability_specs_restored"] and report["original_fraction_restored"] and report["native_default_on_spawn_observed"],
@@ -44,6 +57,8 @@ def validate(report):
         require(stats["native_ends"] == int(row["name"] != "active-profile-switch"), "spawn native End route differs")
     stats = report["policy_shutdown"]
     require(stats["errors"] == [] and stats["active_count"] == 0 and stats["scopes_created"] == stats["scopes_closed"], "SpawnEffect shutdown error/leak")
+    if "nullable_cached_controller_regressions" in report:
+        validate_nullable_controller(report["nullable_cached_controller_regressions"])
     if "native_immediate_handoff_tested" in report:
         require(report["native_immediate_handoff_tested"], "immediate BP/Python handoff not tested")
         handoff = report["blueprint_to_python_immediate_handoff"]

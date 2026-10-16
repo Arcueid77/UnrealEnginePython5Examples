@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "batch": "33-spawn-null-controller",
+  "scope": "SpawnEffect nullable cached Controller no-op, input-lock ownership and late-controller regression. Bounded 10 BP/Python pairs, native nullable probe and two-owner 28-trial authority regression; no original asset or engine change, no exact null-receiver warning parity.",
+  "recorded_utc": "2026-10-16T15:36:43.5591071Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "8d03e61526d0abf2558258057a0728251e84b977",
+  "examples_parent_commit": "b8b981848cbf7692b57a4d58bfb151d7dd195782",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-spawn-controller/Differential02",
+      "summary_sha256": "CE27447897BDA56A5D8767112389A7199C3D1B75CFC63447FFC5BDF56EC81F47",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1468,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "6C0AFECACA62C33E4CDB85EC84120C1C50BF65203D0C8D7AFAA160A26E01ACE6",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-spawn-controller/Network02",
+      "summary_sha256": "6769A86771CEAC8DB2B8A2B61F935AA73CB581E20E0AD6DCE9DEEAEF138B5F2D",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1468,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "A": 0,
+        "B0": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "9EB70FC5C558A4ED10A08EF5376F681D2D75A12615D1262371E500B00B2A36FE",
+          "file": "server.json"
+        },
+        {
+          "sha256": "C9D5858D3F38F7BAF49098626DDFE9E54F68B6DCB9BB20076D7CF93126AFF89A",
+          "file": "A.json"
+        },
+        {
+          "sha256": "D5527A0027728638683CB6DCFB2B35E1FCB57EBFA2B8C7D9F46EC3D8C019F386",
+          "file": "B0.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "E5D55620FAB41D06D7635B89518F39786F43168B5450B069B811CF869F9D39C2",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/spawn_effect_mixin.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/spawn_effect_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "32E53D011664738680EE4E8FF136A766FF4FA95E7D2C64BC2630BF6A9D3B49E2",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/spawn_effect_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/spawn_effect_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "FA9BB2CF183E330B710D4FC7F38D3854F2824EF09320F99142F0B93C18E4EF06",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/spawn_effect_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/spawn_effect_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "6B227897904AA9E6F7943CC3B7D31EDC92F4BB7F65724D98B7D110AA3DB89961",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/spawn_effect_network_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/spawn_effect_network_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "sha256": "352F4E0937E9A2C76D60C78862E1EDA5615BF879FDE7427EB29E60AC3D2BF82A",
+    "path": ".build/CommitVerification/20261016-33-spawn-null-controller/Index01/workspace/.build/host.json",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 933,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\CommitVerification\\20261016-33-spawn-null-controller\\Index01\\workspace\\.build\\HostTestTemp",
+      "failed_cases": []
+    }
+  }
+}

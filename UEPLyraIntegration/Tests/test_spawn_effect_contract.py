@@ -29,6 +29,22 @@ def report():
 class SpawnEffectGate(unittest.TestCase):
     def test_complete_matrix(self): self.assertEqual(gate.validate(report())["pairs"], 10)
 
+    def test_nullable_receiver_must_not_consume_foreign_lock_or_create_effects(self):
+        row = dict(fixture_cached_controller_per_instance_written=True, actual_existing_instance=True,
+            native_actor_info_controller_preserved=True, foreign_native_input_lock_preserved=True,
+            no_effect_or_task_created=True, original_cache_restored=True, native_input_baseline_restored=True,
+            nullable_entries=1, owned_locks=0, owned_unlocks=0, original_bp_null_warning_parity_claimed=False)
+        gate.validate_nullable_controller([row])
+        existing = dict(row, effects_before=0, effects_after=0, tasks_before=2, tasks_after=2, effects_created=0, tasks_created=0)
+        gate.validate_nullable_controller([existing])
+        for field, invalid in (("tasks_after", 3), ("tasks_created", 1), ("effects_created", 1)):
+            value = dict(existing); value[field] = invalid
+            with self.subTest(field=field), self.assertRaises(RuntimeError): gate.validate_nullable_controller([value])
+        for field, invalid in (("foreign_native_input_lock_preserved", False), ("original_cache_restored", False),
+                               ("owned_unlocks", 1), ("nullable_entries", 0)):
+            value = dict(row); value[field] = invalid
+            with self.subTest(field=field), self.assertRaises(RuntimeError): gate.validate_nullable_controller([value])
+
     def test_immediate_handoff_requires_old_delays_blocked_during_new_activation(self):
         value = report(); value["native_immediate_handoff_tested"] = True
         value["blueprint_to_python_immediate_handoff"] = dict(old_activation_ended=True, new_python_activated=True,
