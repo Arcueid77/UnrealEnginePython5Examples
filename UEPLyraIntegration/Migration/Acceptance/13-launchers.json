@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "batch": "13-launchers",
+  "scope": "Launcher parent/directional children construction and overlap intent. Historical native eight comparison pairs and 12 real-owner network rows; not a current-DLL rerun. Current staged index checks and frozen-source provenance. Native CharacterMovement launch retained.",
+  "recorded_utc": "2026-10-16T13:12:48.4719401Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "00ff90a6854809baf49ce8179342d653cf18d53c",
+  "examples_parent_commit": "8562627ab940bea59a6236a5d3d619219c2bc3f4",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-launchers/Differential04",
+      "summary_sha256": "5B7F7E0E75F8BD317BE48D62B3ADD41D355DF6A80CC1539F72B94AF2B7F3E852",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "A37911F9105E33A130BE049C93F86911CAD5C2B305CEB04C702CCE8AF5B65555"
+      ],
+      "frozen_input_records": 1045,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-launchers/Network05",
+      "summary_sha256": "7B012D7AF0DE0D926976702A7C0C3F5DDAE1A78CEC7359003E4542FC3073AD26",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "A37911F9105E33A130BE049C93F86911CAD5C2B305CEB04C702CCE8AF5B65555"
+      ],
+      "frozen_input_records": 1037,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "A": 0,
+        "B0": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "072D6F4AD261A57FAD0A1E15D7377546B521E43D715199F8B7F07162AA8CF6D6",
+          "file": "server.json"
+        },
+        {
+          "sha256": "E3E33885ED529DE0861464177C614D0E359ED84190611F8A188638C01BE40287",
+          "file": "A.json"
+        },
+        {
+          "sha256": "62604335335DC90E09DB34E23883E5FB4865DD1AB61E90BD58A2C37193C1D76A",
+          "file": "B0.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+      "summary_sha256": "9F2E167CDA4F151193F7A7855A8D15181FACAD232C9A51EB328DA1157F8F15AC",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 757,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "A": 0,
+        "B0": 0,
+        "B1": 0,
+        "server": 0
+      },
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "F7F3D83AAB932DE589F396F1B06E49E1993054D49A1B927167D4C28F2D7157F3",
+          "file": "server.json"
+        },
+        {
+          "sha256": "BFCD48199D27814F640AFC0185B4EE3FE605AB64D6AE03863F843D00D6681CB7",
+          "file": "A.json"
+        },
+        {
+          "sha256": "A35F2174D1D4298CFAA9FAF0316139D008259B3F51D5348926DC9008F1A4F8DE",
+          "file": "B0.json"
+        },
+        {
+          "sha256": "7779365601C319731DFC9579EAD83FD581262E615B55A7E8939CF66C2FDC1E38",
+          "file": "B1.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "CFF2FCAA69103823210C7019704AF9676736CFBFACB3E603F13D738C76752EA8",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/launcher_contract.py"
+    },
+    {
+      "sha256": "5E7E6D811577EB34FFE59E76147736D1305860C56F95E5ADA0B5ABAE0C60549A",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/launcher_mixin.py"
+    },
+    {
+      "sha256": "F8E0E89162FCB78CC4F9850EC157B3CE05AA803136003F884DA96EEB6645A3AB",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/launcher_network_protocol.py"
+    },
+    {
+      "sha256": "9A8E74FA863ABB2DD65A4AC3D9BEC2C8DA0D3760EEE27DAAF3525118E0C40C3E",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/launcher_network_validation.py"
+    },
+    {
+      "sha256": "B19A8E719E0EFF707EDED93F74E20CA784F2C96FD57DE634D367312A6BC31772",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/launcher_observation.py"
+    },
+    {
+      "sha256": "CE1ECB9C6A6EEB88AC0E1E6D762151C05504139AF6162370DE8EF8409ED425F2",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/launcher_validation.py"
+    },
+    {
+      "sha256": "C2CD872242CA4CFCCA2D431B0D110A13BCF765E9C6139429F39C339A3469FCED",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_LauncherMixin.uasset"
+    },
+    {
+      "sha256": "EF2E07205E76D73DD5424CF4EF7FFFD97D3E76232A8EE6A5260AAD3F47F6B21C",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Blueprint/B_Launcher.uasset"
+    },
+    {
+      "sha256": "E1F44E63062299A73EE82E088916CE7104FDECF47B5EBB00613CF085F567F7BE",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Blueprint/B_Launcher_Push.uasset"
+    },
+    {
+      "sha256": "DF0450017D08F0E5EEB727196650D404603FE45A1A9CC50AD70F9BCDEC7A36EF",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Blueprint/B_Launcher_Up.uasset"
+    }
+  ],
+  "host_report": {
+    "sha256": "21BCBCC169E0B19BB18FDAA1042C6B298DE5AE409E98B996E60DE8A8B86F779A",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 525,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\CommitVerification\\20261016-13-launchers\\workspace\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/CommitVerification/20261016-13-launchers/workspace/.build/host.json"
+  }
+}
