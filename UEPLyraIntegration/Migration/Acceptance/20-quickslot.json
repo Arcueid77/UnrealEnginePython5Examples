@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "batch": "20-quickslot",
+  "scope": "Quickbar ability three native GameplayEvent task subscriptions and slot-selection policy. Historical ten standalone pairs and 40 authority network rows; no current-DLL rerun. Current staged isolation/source provenance. Native quickbar RPC/equipment replication retained; fixture explicitly reactivates after grant.",
+  "recorded_utc": "2026-10-16T13:17:18.5617144Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "00ff90a6854809baf49ce8179342d653cf18d53c",
+  "examples_parent_commit": "5fd7cccee1563cda25fa7e7f74a99d6db1e605ad",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-quickslot/Differential01",
+      "summary_sha256": "3DC49092643A5718FF5ABC6BBB49A5083CB82260FD3320D9FE0C9D87B2752E65",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1261,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "93C285D26EADBCEEDEC671CA5CBF20C97BDEFF95BB4931CCAB7235FA98D1D5E4"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-quickslot/Network01",
+      "summary_sha256": "CF85B483BC60BD18D46790A95B8808F905825C1DAA90CE6F59AD6F2E204BFE00",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1265,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "server": 0,
+        "A": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "6E7DE324956FF2D0ACDFCC955F9A8EA527617EC1564C0A2DF45B0BA538347BCE"
+        },
+        {
+          "file": "A.json",
+          "sha256": "058C2348177CC520E6C039F923B8F3F9EB741EB27D9400115F1B8F3CE7999A4B"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "2C74A813108962148F815436075A36BB9C9D2824389369619B4176E4DD1862CD"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-emote/Network01",
+      "summary_sha256": "4264730AB2567970035E4F256927E03B17162DE6CA96B7ED1C9EA4F131EF0EA0",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1439,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "A": 0,
+        "server": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "4755998CB3FC04250ABA985E9BA7BE176B0563B9D7362C09E67A828A3119C945"
+        },
+        {
+          "file": "A.json",
+          "sha256": "339B99301267A8BC22B0FC810AAEC4FFC6F8654816B8C1B7C661B953ED8D3E6C"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "684F13777E42885EBBF00D9D5395D2ACB1B24C92A77ADF13CEF0EF7CAC3B8092"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/quickslot_contract.py",
+      "sha256": "7799C52BB75DD73284331B7CF918D2163F41EEF3D366B6C14588F378A5BE2559",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/quickslot_mixin.py",
+      "sha256": "AD114A137D5FAA50F64AD1F7B17CB3BDD3D99BF3CB4B33749DD18E9C1FAD4EAA",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/quickslot_network_contract.py",
+      "sha256": "AE3D153BABC0367A6A107A0CE3C69C81ABE0DD32559FFF8C7C5B89F6DA2DAD0E",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/quickslot_network_validation.py",
+      "sha256": "840088818FE035EBB42254404E67AD00557346CEC3431736135AAD788658B255",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/quickslot_validation.py",
+      "sha256": "2B8BDABD315EDBDEBBFD651217011D011806514ED779DC351A4BB4D67A9774A8",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_QuickslotAbilityMixin.uasset",
+      "sha256": "1FF7285763F8B301DF81C33C9C0AABFB6052AB69EBA869DC0B7E469547F16BB6",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/GA_QuickbarSlots.uasset",
+      "sha256": "5EBFD689A3733FBD8ED8946AD7E70598EB451A3FC063758C2AA3DD1CBC4FD7B6",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 702,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\CommitVerification\\20261016-20-quickslot\\workspace\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/CommitVerification/20261016-20-quickslot/workspace/.build/host.json",
+    "sha256": "E3CE4CC1C071349D01B99DB33C3554EA91588ED67CA6FDCE7735C6F97CDBE155"
+  }
+}
