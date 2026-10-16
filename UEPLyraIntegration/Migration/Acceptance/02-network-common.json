@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "batch": "network-common",
+  "scope": "Multi-client test orchestration, restart/screenshot/report contracts and probe opt-in guard; 118 isolated host checks plus listed current-binary combined native scenario (19 phases, travel/rejoin). Not a complete game migration or physical input certification.",
+  "recorded_utc": "2026-10-16T13:04:30.3381814Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "86344e35b9c92d7056f54329ed5ee9bcf9e404dc",
+  "examples_parent_commit": "b650485829fe94a610bffae6ec78b33c5d54cbbb",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+      "summary_sha256": "9F2E167CDA4F151193F7A7855A8D15181FACAD232C9A51EB328DA1157F8F15AC",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 757,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "A": 0,
+        "B0": 0,
+        "B1": 0,
+        "server": 0
+      },
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "F7F3D83AAB932DE589F396F1B06E49E1993054D49A1B927167D4C28F2D7157F3",
+          "file": "server.json"
+        },
+        {
+          "sha256": "BFCD48199D27814F640AFC0185B4EE3FE605AB64D6AE03863F843D00D6681CB7",
+          "file": "A.json"
+        },
+        {
+          "sha256": "A35F2174D1D4298CFAA9FAF0316139D008259B3F51D5348926DC9008F1A4F8DE",
+          "file": "B0.json"
+        },
+        {
+          "sha256": "7779365601C319731DFC9579EAD83FD581262E615B55A7E8939CF66C2FDC1E38",
+          "file": "B1.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_network.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "90AF80FE9F3864CD4F1C1411E51C579FFA3F2417EE7DACDE3680B2CE2746F8A1"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_network_protocol.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "914B2E12954F8BDA6E597BB270DBCEA7456A53A52CA7B8CF1E8EE904F4FA78A4"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_network_restart.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "28C950A82923ED5CD248DCDBFEFB54215805CCD71048EE88EFE63898E694DC82"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_network_screenshots.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "7846E85E074D6E1F17166F86695F65316DA4E088128BFC5761AC24688BEA4035"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_probe.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "2851E6272A1665ABE7753BCC9A22E39D09835DC2123CBD9CF114060D9FB855AD"
+    }
+  ],
+  "host_report": {
+    "path": ".build/CommitVerification/20261016-network-common-01/workspace/.build/host.json",
+    "sha256": "F2F8E56FC3746518603FAAE87928E3DF06E9A292862EA11D39B80536431A9295",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 118,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\CommitVerification\\20261016-network-common-01\\workspace\\.build\\HostTestTemp",
+      "failed_cases": []
+    }
+  }
+}

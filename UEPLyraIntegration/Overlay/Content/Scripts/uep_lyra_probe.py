@@ -1281,5 +1281,6 @@ try:
 except Exception:
     ue.log_error(traceback.format_exc())
 
-runtime = LyraRuntimeProbe()
-ticker = ue.add_ticker(runtime.tick)
+if not _has_argument("-UEPLyraMultiClient"):
+    runtime = LyraRuntimeProbe()
+    ticker = ue.add_ticker(runtime.tick)
