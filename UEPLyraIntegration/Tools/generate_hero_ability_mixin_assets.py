@@ -44,9 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
-    if kind in ("characterinventory", "characteraudio", "characterquickbar"):
+    if kind in ("characterinventory", "characteraudio", "characterquickbar", "characterloadout"):
         from generate_character_inventory_assets import generate as generate_character_inventory
-        return generate_character_inventory(stage, audio=kind == "characteraudio", quickbar=kind == "characterquickbar")
+        return generate_character_inventory(stage, audio=kind == "characteraudio", quickbar=kind == "characterquickbar", loadout=kind == "characterloadout")
     if kind == "weaponinstance":
         from generate_weapon_instance_assets import generate as generate_weapon_instance
         return generate_weapon_instance(stage)

@@ -13,13 +13,15 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Latest verified checkpoint (2026-10-17):** Character ChangeQuickbarSlot has
-bounded standalone and two-owner native BP-call/GAS/QuickBar-RPC acceptance;
-details and ledger 41 are below. Four Character helpers are routed through the
-new retained-type Mixin; remaining Character business is not migrated. All
-1,192 host models and the isolated index archive PASS. Physical keyboard,
-travel/loss/packages and whole-version gates remain open. Next: original
-AddInitialInventory business, preserving authority and original native grants.
+**Latest verified checkpoint (2026-10-17):** Character AddInitialInventory has
+bounded original/Python loadout, natural first/ten replacement-Pawn grants,
+ClearInventory regression and 24 authority/owner replication/remote-noop trials;
+details and ledger 42 are below. Five Character helpers are routed through the
+retained-type Mixin; remaining Character business is not migrated. All 1,236 host
+models PASS in the isolated Git-index archive; all-index syntax/local-import
+closure PASSes 540 Python files. Bounded local commits follow this verification.
+Nullable native probes, hardware/travel/loss/packages and whole-version gates
+remain open. No push/tag/release or C++ build/cook/package.
 
 **Earlier checkpoint (2026-10-17):** AutoRespawn activation/reset/UI/End-removal
 business has bounded native acceptance. Final ResetDifferential02 passes eight
@@ -215,6 +217,77 @@ driver-safety checks and 56 PowerShell parses PASS. This is a bounded local
 input-helper batch, not whole-version acceptance or publication.
 Original physical keyboard production, nullable-controller native probes,
 travel/rejoin, loss, packages and whole-Character/version acceptance stay open.
+
+**Active Character initial-inventory batch:** quickbar-input helpers are locally
+committed as Examples f7a9675 / core c6e63a1. Only AddInitialInventory is new
+business; four accepted helpers remain explicit aliases. Preserve Authority ->
+valid Controller -> valid InventoryManager, original array order and interleaved
+native AddItemDefinition(stack=1)/AddItemToSlot(index), then SetActiveSlotIndex(0)
+only for nonempty configuration. Native QuickBar retains occupied/out-of-range
+insertion semantics: original BP still creates the unslotted extras. Missing
+QuickBar is a deliberate safe no-op, not original null-receiver warning parity.
+Fifteen policy, eleven manual-report and five natural-replacement report models
+PASS (122 Character models total). Planned native scopes: six original/Python
+configuration pairs (empty/one/three/duplicate/overflow/occupied first), natural
+first/new-Pawn grants plus original ClearInventory/death/Avatar regression, then
+two-client authority-only native grants with owner replica/non-authority checks.
+The fixture retains original inventory objects and undoes only newly created
+items through native APIs; configuration overrides are explicit and restored.
+Original inventory/slot identities, configuration/Profile/CDO are required;
+recreated native equipment instances are not claimed as the old instance IDs.
+Accepted quickbar roots are recoverably archived under
+20261017-character-loadout/AcceptedQuickbar01. Asset authoring is active, not
+runtime acceptance. No Engine/official project edits or C++ build/cook/package.
+
+Loadout Assets01 PASSes retained type/full CDO/nine signatures/every graph and
+the stage-only typed three-node caller. Differential01 PASSes all six real
+original/Python pairs, including actual native stack count one, repeated item
+definitions, overflow and occupied-slot unslotted extras. The original first
+Pawn naturally executes Python AddInitialInventory exactly once: empty native
+inventory -> one new pistol -> slot zero. Each trial/final state restores exact
+original inventory/slot identities and configuration/Profile/CDO. Strict closed
+log, independent gate, 1,584 frozen inputs and normal zero exit PASS.
+
+Natural01 completes four death pairs/two bare Avatar trials and its final
+semantic gate, but the driver FAILS strict logs: the new wrapper emits an Error
+marker when its parent's finish only transitions from death cases to Avatar
+cases. Preserve that failed lane; do not accept it based on exit zero or the
+internal gate. The wrapper now requires the actual finished transition before
+logging a final marker. Two explicit executable wrapper models cover the
+transition and true finish. Natural02 is the fresh complete native rerun.
+All 1,234 host models PASS; network authority/replica/no-op gates are prepared,
+not native passes yet. Natural client entry is recorded as observed (including
+zero entry), never invented; explicit real client calls must prove remote no-op.
+
+Loadout Natural02 now PASSes four death pairs/two bare Avatar cases, natural
+first/ten replacement-Pawn Python grants, unchanged original ClearInventory
+ordering and 10/10 inventory observers. Strict closed log/independent gate,
+1,588 frozen inputs and normal zero exit PASS. Natural01 remains failed.
+Network01 completes all 24 business trials but FAILS when its server rereads a
+PlayerController after publishing release and client disconnect destroys it.
+The fix freezes exact restored native state once, before release; subsequent
+ticks consume process-exit POD records only. An executable regression destroys
+native access after release and proves no post-release read. No actor rooting
+or weakened lifetime/semantic/log gate is used.
+
+Fresh Network02 PASSes 24 actual authority grants/owner replica observations and
+24 client BP remote-noop calls, exact native stack/slot/equipment models and
+other-owner isolation. Original inventory/slot identities and configuration/
+Profile/CDO restore. Both client inventory observers close 1/1; actual native
+inventory notifications are recorded without a signal-payload-owner claim.
+Restore is frozen before release, both actual client exits are awaited and the
+server exits last, all zero. Strict closed logs/independent gate PASS with 1,588
+frozen inputs. Both clients actually record zero natural startup helper calls;
+the explicit native BP calls, not invented startup execution, prove remote
+authority protection. All 1,236 host models PASS. Ledger 42 records the four
+passed authoring/manual/natural/network runs; prior failed lanes remain failed.
+Travel/rejoin, loss, nullable native probes, packages and whole-version gates
+remain open. Missing QuickBar's safe behavior has model coverage only.
+Ledger 42 contains four passed runs and sixteen scoped sources/assets, all
+matched to actual frozen native inputs. Isolated-index models PASS 1,236 and
+all-index syntax/local-import closure PASSes 540 files. Five driver-safety checks
+and 56 PowerShell parses PASS. No native process remains; this coherent bounded
+batch is ready for local commits, not push/tag/release.
 
 **Accepted pressed-widget pilot and nullable-controller fix (2026-10-16, 23:45 Singapore):**
 Previous held-widget batch is locally committed as Examples b8b9818 / core
