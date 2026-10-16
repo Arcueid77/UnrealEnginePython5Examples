@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "batch": "27-weapon-instances-current",
+  "scope": "Weapon equip/unequip cosmetic-tag, native anim-layer and montage policy. Current-DLL rifle/shotgun each pass 36 authority rows and two-owner equipment observations with strict logs, normal exits and frozen inputs. Historical four-family standalone/proxy-GC, NetShooter network and five death pairs retain older DLL provenance. Old report schema recheck failed; fresh shotgun attempt01 timed out during exit, attempt02 passes with process-only NoDDCCleanup. No engine/RHI/gameplay/gate changes, full pistol equip network, remote-viewer or natural destroy-unequip claim.",
+  "recorded_utc": "2026-10-16T13:38:21.0817060Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "00ff90a6854809baf49ce8179342d653cf18d53c",
+  "examples_parent_commit": "d23f25a4dc832743dfc4c2df94e548a9d4495e8c",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-weapon-instance/Differential01",
+      "summary_sha256": "544ADDBF40A7BC7F299734BB6FAD4C7E78DC413E4C08F4E6E88AAADFC1B42DC1",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1387,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "A739FCDAFDB2FF8D449CDC8535BF549CDAC25D96F6C5CBEEAB590F64EA8477C8",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-weapon-instance/GCLifetime02",
+      "summary_sha256": "148B88C41ABDE11DE54CBE7AEFC2AEA9E372083A89592CF04823A19C06C64872",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1387,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "F9C499239D8AF77961765A9AD334A220E3E6D71F68953091302E7D3F4D0170EB",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-batch-backfill/rifle-Network01",
+      "summary_sha256": "2E4C2A1E76E06D0AA763965356212F3DFCC983CFA4F23FD1E12290391B30C46D",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1457,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "server": 0,
+        "A": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "DB7627A2B971C6671CDA899E0BAB0D99106FBB670E6EE4638C744AE471F938AB",
+          "file": "server.json"
+        },
+        {
+          "sha256": "307A7B62771B86735493D42FED741F06A8A07A1D2E842CF04483677F047391BD",
+          "file": "A.json"
+        },
+        {
+          "sha256": "3AA8F2B1B8488D8F280A38F3515748084CB12E1A5163CCBF7C4BF814088F3440",
+          "file": "B0.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-batch-backfill/shotgun-Network02",
+      "summary_sha256": "35BB7D321E9EFB7840FBF154B3C598F1E32B2FE43553399277D1FF2C16A77244",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1457,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "A": 0,
+        "server": 0,
+        "B0": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "E7E81920DEF52AEF46CAE763CC4A7EB4D8002EA5AD7AB31E0D038015E7A9F126",
+          "file": "server.json"
+        },
+        {
+          "sha256": "2FF9AF87A3B86410134CA34820EA0F878E590CA8D4CEC8E2C5B034420153FDD1",
+          "file": "A.json"
+        },
+        {
+          "sha256": "CA1F9ADE88AABA7BDDFC8D7B0B8D96329848BE03EE766A4C7AB0499E90685C62",
+          "file": "B0.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-weapon-instance/NetShooterNetwork02",
+      "summary_sha256": "7958042CBF745ED1E759EE40FD4417CB5057E00F304AEA32574670A79C5A4B0F",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1419,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "A": 0,
+        "server": 0
+      },
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "E457C238862DC188A70D9D1959647D578662EE4D0D4A2609EC7C325CFBD484A2",
+          "file": "server.json"
+        },
+        {
+          "sha256": "EA1ADEE0F625E27C77FC28F61A118C34091BD1EDB0184E176E119A82751608B4",
+          "file": "A.json"
+        },
+        {
+          "sha256": "3F1EBF10C2D865CF9BADAB81E2CE11F8E392ED52C3794789E87B46107BC5EE0D",
+          "file": "B0.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261016-weapon-instance/DeathDifferential01",
+      "summary_sha256": "1B26EEB58834176DDB1EABDE69CE9D74039881FBE7C2F98E8C718722B3FE0F7F",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "3FF11B4DF909ED763D294A3B08A4E63DA1881BD01FA883C91E91300660622526"
+      ],
+      "frozen_input_records": 1403,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "1BF5B64BC4A00513161812DADE4566A5956A3DB6E5094B5CAFE743BB1F86F4EF",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "D776D856C8DEE1B11E42150606D52287B35B185677D108DFCDA4AB658937252E",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/__init__.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "7F87FEBC4AAC0EB8B360D2E562121D79EC3324585BFA2E993C38F779D3A295C5",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_instance_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "F53260CF02F7597F7E871F5166EA0BA63C3377F37464ACF6CAE378340EA2A24D",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_instance_death_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "FD52BD82F1C1715A54E7E68B7589B8514DF3DB2CBF9BE6DA43760C78EA0D4FFF",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_instance_death_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "D5A46F40141D3A0870F439F666B9F0638CA876D715CB340FFF3F8F8BD0C0E20F",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_instance_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "3A3386E13116D042C8F0286BA4DBE772495684D2C48D854690D9909BDB4048D2",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_instance_network_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "F846109ADC016165FBD4C3BDAAFFD83DF6F45F3691CC60C951F13A23AB7FBF77",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_instance_network_observer.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "8DD312C10D8484B114E91B86799463573CAA17EE337A008E8667E78A4BB8736F",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_instance_observation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "85D52ADF14CEC05A9CBB6426CADEBAB9D0D4E582CB422EB7FFE8384EF784C9BA",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_instance_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "0692A1D4E893B05B156E52D8F4D79575391F4E77783E76D71807EFC995D3B3CA",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_WeaponInstanceMixin.uasset",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "6C73DA4D92DB7C7D2287FFD1C43E0FEC83833FD467A5615639DD3C36FF4DAFAA",
+      "path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Weapons/B_WeaponInstance_Base.uasset",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "sha256": "9C085CC283EC152DA5C6D3B78BE7E19F3CC9BEACA99E749A6D34A44EAC81DA00",
+    "path": ".build/CommitVerification/20261016-27-weapon-instances/workspace/.build/host.json",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 851,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\CommitVerification\\20261016-27-weapon-instances\\workspace\\.build\\HostTestTemp",
+      "failed_cases": []
+    }
+  }
+}
