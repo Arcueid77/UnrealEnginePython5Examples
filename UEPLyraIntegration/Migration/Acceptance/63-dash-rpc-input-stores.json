@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "batch": "63-dash-rpc-input-stores",
+  "scope": "Only Direction/Montage stores after unchanged native reliable-server SendInfo, four transport nodes preserving original class/full CDO/three signatures/other business graphs. Final real native ASC/Pawn intent two-owner lane:8 RPC ingresses,4 Python rows changing BOTH stale native fields, forward/left original/Python payload parity, foreign location/velocity/Health/spec/config/data/Profile invariance, retained native montage/RootMotion/end/task cleanup/cooldown repeat rejection/20 quiet frames and three server-last zero exits.8 native collision-checked trial pose resets are explicit fixtures.42-pair standalone selector regression, not standalone RPC ingress. Initial Network01 weaker stale-value control not final acceptance. No C++ build, whole Dash activation/task/Cue/UI migration, Enhanced Input/physical key, quantitative movement, travel/loss/package/full-version acceptance.",
+  "recorded_utc": "2026-10-17T07:50:57.3650231Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "5ad21ecffbcfeea7190af686586876eb1f9744be",
+  "examples_parent_commit": "36ab839ca8a60ec126e06a89d53f4e8d6bb50813",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-dash-rpc-input/Assets01",
+      "summary_sha256": "D60ACB113FDE8BCF7740428BA8A892269D5CF9423DA222F5753699F36A6AF74C",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1592,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-dash-rpc-input/SelectorRegression01",
+      "summary_sha256": "74AD581FC3FBE23EA8603DDE51EAA89FB047B1C0ED0D8920F98BFCDD8541277B",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1868,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "1B89C7A0429EA86423DA9540B8D30D3909FE14AD63FE12C705D98460AFF55F08"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-dash-rpc-input/Network02",
+      "summary_sha256": "4499D48750C7B1311FDB16B85A5672A3D39D1A1766F14E61BAA39D14751476C2",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1868,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "A": 0,
+        "B0": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "C4E0CCA50A1AF3085A4CC000E2547E8F1CA9ADEFA8A84084F511172B5F1DC806"
+        },
+        {
+          "file": "A.json",
+          "sha256": "478102B2B94239F81DA153AAED35D42807A70970F0BD6823BE7C4897680ABE32"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "3A9E90D21729982B4D36AF56A036B8C40CF50B7E8B948D769F0A65F19F052107"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "FBCFAFD5A66623C4A2B7CBC66339F6255346EA746F1017BE5E52AFE607F8F750"
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58DashRPCInputAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58DashRPCInputAssetAuthoring.ps1",
+      "sha256": "4F51B64B9408A09EBB68FF83CD2CE16C16D286CBDA28839083039D48FCB715EA"
+    },
+    {
+      "native_input_path": "Validation/UEPDashAssetProvenance.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/UEPDashAssetProvenance.ps1",
+      "sha256": "7653B87301CE39458D000345B88B61613E2B053167F8F863CA68B90BBB02209B"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "11B7DDDEEBC3FCB77B4DA837F3EB1D6824C9EFD5076C1550B8536C5D3636EDB8"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/dash_rpc_input_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/dash_rpc_input_mixin.py",
+      "sha256": "A8B685A45B14E3035A32266CEDE8FA9237FF7842F0A259ABC5F3CA4227903B03"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/dash_rpc_input_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/dash_rpc_input_contract.py",
+      "sha256": "EF2AC9F7404006CF166A2E80C9A521B0DE4550455F1D858EAE2738D04BB5151F"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/dash_rpc_input_network_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/dash_rpc_input_network_validation.py",
+      "sha256": "0249D9CE44EBA69E9133FCE3B7B496543603A4CE005A5467781AA1DD7FAE691F"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_dash_rpc_input_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_dash_rpc_input_assets.py",
+      "sha256": "FB179F764CFD593097759F3C381CA1C7B5B5F4A6B1BC208DAE5312408018130E"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_DashSelectorMixin.uasset",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_DashSelectorMixin.uasset",
+      "sha256": "F291BDF062732C02BFE40D1817D42C9C77D44CC2AC8996B587FCE9020A2F6B45"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/Dash/GA_Hero_Dash.uasset",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/Dash/GA_Hero_Dash.uasset",
+      "sha256": "E3AA96AA8875014A9F623457B1988050F244E482A199092CF9643CF4EC10902F"
+    }
+  ],
+  "host_report": {
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 2081,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261017-dash-rpc-input/Host05.json",
+    "sha256": "31B60736DA1C60F501A8A7742E74BF43D2E07AE68E0AB3110825501A5572132C"
+  }
+}

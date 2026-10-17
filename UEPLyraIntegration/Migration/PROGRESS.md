@@ -13,12 +13,71 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active next bounded batch 63 (2026-10-17):** continue Dash activation/RPC body
+**Active next bounded batch 64 (2026-10-17):** continue Dash local direction /
+navigation and activation decisions, followed by task/cancel/Cue/UI business;
+keep native RPC transport, GAS, navigation, animation and movement primitives.
+The accepted helper and RPC-input-store slices do not close the full Dash asset.
+
+**Bounded batch63 (2026-10-17):** continue Dash activation/RPC body
 and task/movement decisions in small native-compared steps. Retain native RPC
 transport, GAS, animation and movement implementation. Batch62's helper and
 inherited-router prerequisite pass their bounded native gates below. Commit
 gates include2,038 isolated-index models,729-file syntax/import closure and the
 eight-run/sixteen-source evidence ledger; no whole-version promotion is implied.
+
+Batch62 is locally committed as Examples36ab839/core5ad21ec; the six pre-existing
+user-edited files remain byte-for-byte unchanged and unstaged. No push/release.
+
+Batch63: `dash_rpc_input_mixin.py` moves only Direction/Montage
+stores after native reliable-server SendInfo ingress. A typed boolean gate
+rejoins the unchanged native Commit after those two stores; BlueprintFallback
+takes the original stores. Native RPC flags, full CDO, selector and all other
+activation/montage/RootMotion/delay/cue/UI business remain. The generator keeps
+the original RPC UFunction and adds only four transport nodes, not Net-flag
+patching or a new RPC endpoint. The revision driver independently backs up and
+validates both accepted selector assets, checks source/BuildId parity, has no
+build/cook path and rolls back failed task-owned outputs. Original selector
+proof is retained through explicit revision provenance. Host01 FAILS a quoted
+keyword source-assertion spelling; no native process was launched by that failed
+preflight. Host02 PASSes2,052 models. Assets01 PASSes original class/full CDO/
+three signatures including reliable-server Net flags, original business graph
+semantics except the declared entry dispatch, four transport nodes and native
+Python2/fallback2 registration/restoration. Both old selector asset pairs remain
+recoverable with SHA-checked revision provenance; no C++ build/cook/package.
+SelectorRegression01 PASSes all42 unchanged helper comparisons, configuration/
+Profile/spec restoration, strict closed logs/independent gate/exit0 and1,868
+frozen inputs. It is helper regression, not standalone RPC ingress.
+
+Host04 PASSes2,079 models (41 new policy/report/source checks). The network
+fixture reads actual Bridge NetMode and Pawn roles. Native ASC requests and
+Pawn movement intent produce the original client activation and reliable
+SendInfo; neither the RPC receiver nor activation event is replayed. Server
+payload and stored fields are compared to independently captured owner values;
+foreign owner location/velocity/Health/spec/config/data/Profile stay invariant.
+Collision-checked native K2_TeleportTo resets are a declared trial fixture, not
+raw velocity or ability-data writes. Native task/end/cooldown/repeat rejection,
+quiet frames and actual process exits are gated; transient last-input variables
+are not reset to fake initial values. Network01 PASSes its initial eight-ingress
+gate, but post-run review finds that same-input BP/Python ordering could mask a
+missing Python store with matching stale fields. Preserve that run as initial
+evidence, not the final batch gate. The stronger matrix first runs original BP
+forward/left, then Python forward/left; each Python RPC must differ from BOTH
+old native Direction and Montage. It also compares each BP/Python input control
+and requires genuinely distinct native direction/montage pairs. Host05 PASSes
+2,081 models. Network02 PASSes the stronger eight actual reliable-server RPC
+ingresses (both native owners, original/Python and forward/left),4 real Python
+stale-value changes, unchanged foreign location/velocity/Health/spec/config/
+data/Profile, original native montage/RootMotion tasks and zero final tasks,
+native cooldown repeat rejection,20-frame quiet windows and eight declared
+collision-checked native trial pose resets. Only Profile/spec/config are restored;
+transient input fields intentionally retain their last native gameplay result.
+Independent gate/strict closed logs/server-last three zero exits and1,868 frozen
+inputs PASS. The preceding standalone42-pair helper regression consumes unchanged
+standalone policy/fixture/contract; later changes only strengthen the network
+fixture/gate. No Enhanced Input/physical key, quantitative movement parity,
+network pause/travel/loss/package or full Dash/version acceptance. No C++ build.
+Commit gates: ledger63,2,081 isolated-index models and735-file syntax/import
+closure; only the accepted bounded source/assets belong in the local commit.
 
 **Bounded batch62 (2026-10-17):** start Dash business with the
 original SelectDirectionalMontage helper's native vector/rotator math and
