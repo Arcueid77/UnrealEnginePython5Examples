@@ -9,7 +9,7 @@ PLAN = [(name, peer, calls, profiles[peer]) for name, calls, profiles in (
     ("opposing-repeat", 2, dict(A="Python", B0="BlueprintFallback")), ("swapped-repeat", 2, dict(A="BlueprintFallback", B0="Python"))) for peer in ("A", "B0")]
 
 
-def validate(server, a, b):
+def validate(server, a, b, *, listener=False):
     reports = {"server": server, "A": a, "B0": b}
     require(server["server_waited_for_client_process_exit"] is True and server["all_cleanup_frozen_before_release"] is True and len(set(server["player_ids"].values())) == 2, "native observer clients/cleanup/server-last incomplete")
     for peer, report in reports.items():
@@ -28,8 +28,9 @@ def validate(server, a, b):
         require(cleanup["device_roots_created"] == cleanup["device_roots_released"] == (0 if authority else 30) and
             cleanup["native_observation_markers"] == (0 if authority else 24) and cleanup["caller_roots_created"] == cleanup["caller_roots_released"] == 1, "native observer peer root/marker ownership differs")
         for key in ("callback_replayed", "team_properties_written", "observer_delegate_broadcast_by_fixture", "all_native_observers_cancelled", "replicated_team_changes_tested",
-            "listener_factory_orchestration_migrated", "hardware_output_tested", "pixels_verified", "whole_character_migrated", "full_acceptance"):
+            "hardware_output_tested", "pixels_verified", "whole_character_migrated", "full_acceptance"):
             require(report[key] is False, "native observer peer overclaims "+key)
+        require(report["listener_factory_orchestration_migrated"] is listener, "native listener peer migration scope differs")
         if not authority: require(report["player_id"] == server["player_ids"][peer], "native observer local identity differs")
     return dict(status="passed", native_observer_callbacks=36, same_bp_two_instances_three_worlds=True, native_proxy_cancellation_gc=True, replicated_team_changes_tested=False, full_acceptance=False)
 

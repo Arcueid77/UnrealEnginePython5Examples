@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "batch": "51-character-team-listener-factory",
+  "scope": "One retained ListenForTeam factory/bind/activation policy, exact named native multicast transport and initial callbacks; real team changes remain unaccepted",
+  "recorded_utc": "2026-10-17T01:52:34.6791468Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "9f3a7366037e687079939528d3af3330b35ad296",
+  "examples_parent_commit": "ec99a4142b3833dcd459c603a3898930354a6474",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-character-listener/Assets03",
+      "summary_sha256": "68C7BAE191599C92FB21E2BF664B24B3E298AF05BEFD54D20BDEE5FBCB9F9491",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1468,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-character-listener/Differential01",
+      "summary_sha256": "C4D4A3FEB17A080F34DEED27789139BADFC5264DD3C5B6892F8765ABF333E8F5",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1742,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "51B649AAA0CEDFACC1CACBC2294B1FFBDCC74652923D56E71A15197A547C7B4A",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-character-listener/Network01",
+      "summary_sha256": "206C7D0DD8E31CB6E7C06410BB0E80B0644F2AE15B151577CE0A6C2751AF3DA2",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1742,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "A": 0,
+        "server": 0,
+        "B0": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "5D394FAA4B9EFCC49F47A9E462A81EA30405EAC011E9481C74BD09C15ED04502",
+          "file": "server.json"
+        },
+        {
+          "sha256": "E77AAFEA3F1A5F116BA3B3913637E9887B1BFEFACEC7D19BFF933909F906DABD",
+          "file": "A.json"
+        },
+        {
+          "sha256": "BCFED97E01E98B07203B0BEC572B704E34EDD33903DF785B43723F031A064DC7",
+          "file": "B0.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "B626AE7D236AF5272FFB8C2284E7341BF0E13F997BE7B8B667EB6CD1EA964290"
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "3AADB27E1D66272691726FD83618477B7252573EA0898EE61A4B97658F6A4431"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_character_inventory_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_character_inventory_assets.py",
+      "sha256": "DBB079E6B9CF7E5F5D0C4F8868091614FE81643286DF1358658F8A8A3D049536"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "B673A1DDAD29473CDCA46C802D0A1AFEE8A9DD8EB85AFC6B1A8FEE4E13E6459B"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_character_team_listener_probe.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_character_team_listener_probe.py",
+      "sha256": "F35CEECEFEAFFE9C25CB70226B807C92118DF6D15A0EC8E61FD412FEA7E967A2"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_character_team_listener_transport.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_character_team_listener_transport.py",
+      "sha256": "986872A806E9346B1AB052FF8BC0462EA587067A6AA0E13F8F2EF3794BE2E58F"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "23F12AA327907D081246C9307E8E796676D026D4BBA2553496C0DD879783982D"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/B_Hero_ShooterMannequin.uasset",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/B_Hero_ShooterMannequin.uasset",
+      "sha256": "69E0721CE0F2B0E0A33B1DBD15AD5CCD20E33F0D24958A2DC9F5BBFBD752952E"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_CharacterTeamListenerMixin.uasset",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_CharacterTeamListenerMixin.uasset",
+      "sha256": "DBD4C13D70E04AA7D83F4031F938E1B7C103C65D84B49F019457113EBD845B0F"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/team_listener_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/team_listener_mixin.py",
+      "sha256": "5ACDD0BC27BA73E070859EED1CCC64FD37182D02F0F007A1C8D3D4551B7966EE"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/team_listener_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/team_listener_contract.py",
+      "sha256": "E7CA90ACDCEB8DE70811CFC3126B74BEFC0BDA5ADEBEB0DC365937DCCD82ECF2"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/team_listener_observation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/team_listener_observation.py",
+      "sha256": "24EBC9AA625E67EA117C3FB81C0638C4A2A92AA77F0BB64C99CA104CA6BBBA27"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/team_listener_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/team_listener_validation.py",
+      "sha256": "68CAA586CD9E31C93C0E47D9FCEB0016EACFD5AD897DEB8E7AB7A977019DA249"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/team_listener_network_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/team_listener_network_contract.py",
+      "sha256": "0F82B7EBD0EFE381297F7C057CAA98681DDF46375E022193CBF1CFA23D4919B3"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/team_listener_network_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/team_listener_network_validation.py",
+      "sha256": "4B9E3CD8199F7B3028B9FBAEA97DC920C23029157C9F46CA1F0FC578C253A09D"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/team_observer_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/team_observer_contract.py",
+      "sha256": "C1DB551B8517B86D82DAC8E733BF1F71687400BBCC98079B2101A7DB5F2330B3"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/team_observer_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/team_observer_validation.py",
+      "sha256": "EF65E8D1CE1D06DE0E87E186F290E5530BC62F96721AAC94DB5C5BE87159E2AE"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/team_observer_network_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/team_observer_network_contract.py",
+      "sha256": "1482E9215D970B7F31F82BDD5A09EEF50ED1BC8A709EAD3177E04F8329E371DC"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/team_observer_network_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/team_observer_network_validation.py",
+      "sha256": "217F1FF8D1C478819751E117F8BC9CBF229B504A1AD5901B6A314B6592325514"
+    }
+  ],
+  "host_report": {
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 1577,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261017-character-listener/Host02.json",
+    "sha256": "B8F75A7B99FB0B97A54779FBAAB16B33FD1616A297A4A8588474549B74D7B053"
+  }
+}

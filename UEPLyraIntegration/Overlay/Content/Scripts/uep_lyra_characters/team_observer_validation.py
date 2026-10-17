@@ -10,6 +10,9 @@ from .team_observer_observation import Context, proxies
 
 
 class Validation(Ready):
+    context_type = Context
+    validate_report = staticmethod(validate)
+    marker = "UEP_CHARACTER_OBSERVER"
     def __init__(self, result):
         super().__init__(result); self.context = self.bare = None
         self.report.update(retained_character_class=CLASS, callback_replayed=False, team_properties_written=False, observer_delegate_broadcast_by_fixture=False,
@@ -20,7 +23,7 @@ class Validation(Ready):
         before = set(proxies()); self.bare = self.world.actor_spawn(ue.load_class(CLASS), ue.FVector(200000., 200000., 2000.)); self.bare.call_function("SetReplicates", False)
         owned = [value for key, value in proxies().items() if key not in before]
         require(len(owned) == 1, "owned unassigned Actor did not run one original startup listener")
-        self.context = Context(dict(owner=self.pawn, unassigned=self.bare), dict(owner=self.controller), before, owned)
+        self.context = self.context_type(dict(owner=self.pawn, unassigned=self.bare), dict(owner=self.controller), before, owned)
         self.report.update(native_net_mode=self.context.net_mode, natural_startup_python_dispatch=self.context.startup)
         self.prepare()
 
@@ -35,7 +38,7 @@ class Validation(Ready):
 
     def after_collection(self):
         row = self.context.settle_collection(self.row)
-        self.report["cases"].append(row); ue.log("UEP_CHARACTER_OBSERVER_CASE_PASSED "+row["name"]+"/"+row["profile"])
+        self.report["cases"].append(row); ue.log(self.marker+"_CASE_PASSED "+row["name"]+"/"+row["profile"])
         self.index += 1
         if self.index == len(PLAN):
             self.report["cleanup"] = self.context.cleanup(self.bare); self.enter("cleanup-gc")
@@ -60,13 +63,13 @@ class Validation(Ready):
             if self.context is not None: self.report["cleanup"] = self.context.cleanup(self.bare)
         except Exception: error = (error or "")+traceback.format_exc()
         self.report.update(status="failed" if error else "awaiting_shutdown", error=error); self.write()
-        (ue.log_error if error else ue.log)("UEP_CHARACTER_OBSERVER_DIFFERENTIAL_"+("FAILED "+error if error else "PASSED")); ue.request_exit()
+        (ue.log_error if error else ue.log)(self.marker+"_DIFFERENTIAL_"+("FAILED "+error if error else "PASSED")); ue.request_exit()
 
     def finalize(self):
         if self.report["status"] == "awaiting_shutdown":
-            try: self.report["status"] = "passed"; validate(self.report)
+            try: self.report["status"] = "passed"; self.validate_report(self.report)
             except Exception: self.report.update(status="failed", error=traceback.format_exc())
-        self.write(); (ue.log if self.report["status"] == "passed" else ue.log_error)("UEP_CHARACTER_OBSERVER_SHUTDOWN_"+self.report["status"].upper())
+        self.write(); (ue.log if self.report["status"] == "passed" else ue.log_error)(self.marker+"_SHUTDOWN_"+self.report["status"].upper())
 
 
 result = next((value.split("=", 1)[1] for value in sys.argv if value.startswith("-UEPCharacterObserverResult=")), None)

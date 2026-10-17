@@ -24,7 +24,8 @@ def input_bindings(cls):
     return sorted(values, key=lambda value: value["function"])
 
 
-def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, team=False, stencil=False, lifecycle=False, parts=False, health=False, enhanced=False, observer=False):
+def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, team=False, stencil=False, lifecycle=False, parts=False, health=False, enhanced=False, observer=False, listener=False):
+    observer = observer or listener
     enhanced = enhanced or observer
     health = health or enhanced
     parts = parts or health
@@ -36,6 +37,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     quickbar = quickbar or loadout
     audio = audio or quickbar
     kind, prefix, module = next((kind, prefix, module) for enabled, kind, prefix, module in (
+        (listener, "characterlistener", "TeamListener", "team_listener_mixin"),
         (observer, "characterobserver", "TeamObserver", "team_observer_mixin"),
         (enhanced, "characterinput", "EnhancedInput", "enhanced_input_mixin"),
         (health, "characterhealth", "HealthChanged", "health_changed_mixin"),
@@ -74,6 +76,10 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     mixin = ue.create_asset(name, "/Game/UEPMixins", UEPPythonMixinSet, factory); mixin.DefaultProfile = "Python"
     mixin.Profiles = [UEPPythonMixinProfile(ProfileName=profile, PythonModule="uep_lyra_characters."+module,
         PythonClass="LyraCharacter"+prefix+profile+"Profile") for profile in ("Python", "BlueprintFallback")]
+    transport = None
+    if listener:
+        from generate_character_team_listener_transport import generate as listener_transport
+        transport = listener_transport(bp)
     ue.blueprint_configure_mixin(bp, mixin, "Python", "PythonMixinProfile"); ue.compile_blueprint(bp); ue.unregister_all_mixins()
     if int(bp.Status) == 2 or bp.GeneratedClass.get_path_name() != cls or cdo_snapshot(bp, "character-after") != before:
         raise RuntimeError("original Character identity/full CDO changed")
@@ -89,7 +95,8 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
             if actual != input_signatures[value["action"]]: raise RuntimeError("compiler-generated input receiver signature changed")
             signatures[value["function"]] = actual
     all_graphs = ue.blueprint_get_all_graphs(bp)
-    if set(graph.get_name() for graph in all_graphs)-set(graphs) != {"GetPythonMixinSet", "GetPythonMixinProfile"}:
+    extra_graphs = {"GetPythonMixinSet", "GetPythonMixinProfile"} | ({transport["function"]} if listener else set())
+    if set(graph.get_name() for graph in all_graphs)-set(graphs) != extra_graphs:
         raise RuntimeError("unexpected Character graph additions")
     if any(semantics(graph, names, set()) != graphs[graph.get_name()] for graph, names in originals):
         raise RuntimeError("original Character business/animation/input graph changed")
@@ -100,6 +107,10 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
         original_class_defaults_signature_graphs_preserved=True, original_full_cdo_preserved=True, original_graphs_unmodified=True,
         original_graphs=graphs, implemented_methods=["ClearInventory"]+(["GetEmoteAudioComponent", "SetEmoteAudioComponent"] if audio else [])+(["ChangeQuickbarSlot"] if quickbar else [])+(["AddInitialInventory"] if loadout else [])+(["CreateOrUpdateOutlineIfNeeded"] if outline else [])+(["OnTeamOrCosmeticsChanged"] if team else [])+(["UpdateCustomStencilFromTeamID"] if stencil else [])+(["K2_OnDeathFinished", "K2_OnReset"] if lifecycle else [])+([BOUND_EVENT] if parts else [])+([HEALTH_EVENT] if health else [])+([value["function"] for value in bindings_after] if enhanced else [])+([OBSERVER_EVENT] if observer else []), added_interface_graphs=["GetPythonMixinSet", "GetPythonMixinProfile"],
         assets=[RELATIVE, "Content/UEPMixins/"+name+".uasset"], reference_hashes={str(original): digest})
+    if listener:
+        report["implemented_methods"].append("ListenForTeam")
+        report["native_team_listener_transport"] = transport
+        report["native_team_listener_transport_signature"] = ue.describe_function(bp.GeneratedClass, transport["function"])
     if team:
         if stencil:
             if lifecycle:
@@ -164,9 +175,9 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
                 ("EnhancedInputLocalPlayerSubsystem", "InjectInputVectorForAction"), ("SubsystemBlueprintLibrary", "GetLocalPlayerSubsystem"))})
     if observer:
         from generate_character_team_listener_probe import generate as listener_probe
-        report["team_listener_probe"] = listener_probe(stage, bp.GeneratedClass)
+        report["team_listener_probe"] = listener_probe(stage, bp.GeneratedClass, reuse=listener)
         report["native_team_observer_signatures"] = {name: ue.describe_function(ue.find_class(cls), name) for cls, name in (
             ("AsyncAction_ObserveTeamColors", "ObserveTeamColors"), ("CancellableAsyncAction", "Cancel"), ("CancellableAsyncAction", "IsActive"))}
         report["team_observer_callback"] = OBSERVER_EVENT
-        report["original_listener_factory_orchestration_remains_bp"] = True
+        report["original_listener_factory_orchestration_remains_bp"] = not listener
     return report

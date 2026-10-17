@@ -13,13 +13,42 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active next bounded batch 51 (2026-10-17):** migrate ListenForTeam factory/bind/
-activation decisions into Python, retaining the native observer, exact named
-native result delegate and all eighteen accepted routes. First verify an exact
-named-delegate transport; do not substitute a long-lived Python closure or
-invent repeated-call cancellation. Native factory repetitions, initial callback,
-per-instance Profile isolation and owned-proxy cancellation/GC remain gates.
-No native acceptance or local commit for this next batch yet.
+**Active next bounded batch 52 (2026-10-17):** inspect remaining retained Character
+initialization/possession and legacy OnRep_PlayerInfo business, then migrate one
+coherent next group with original BP comparison and two-client verification.
+Real team-change replication/lifetime, initialization readiness and parent/
+sibling business remain open; no implementation or acceptance claim for52 yet.
+
+**Latest accepted bounded batch 51 (2026-10-17):** ListenForTeam factory/bind/
+activation decisions are Python-owned, retaining the native observer, exact named
+native result delegate and all eighteen accepted routes. No long-lived Python
+closure, proxy root, deduplication or invented repeated-call cancellation.
+Batch50 is locally committed as Examples ec99a41 / core 9f3a736. Thirty-one new /
+1,577 total host models PASS; five driver-safety checks PASS. Assets01/02 FAIL
+before save: assigning the borrowed MemberReference view back to its own
+property loses the native member owner. A separate reflected MemberReference
+value fixes the transport without forced connections or a C++ change. Assets03
+PASSes Python19/BlueprintFallback14, eighteen accepted aliases, all twenty-one
+original logical signatures/type/full CDO/every graph, and the exact four-node
+native named multicast binding. Differential01 PASSes the six/eight native
+matrix, natural BeginPlay Python factory ingress, per-call factory/bind/activate
+decisions, actual native initial callbacks/software properties and zero owned
+proxy retention after deferred GC. Strict closed logs, independent gate and
+1,742 frozen inputs PASS. Network01 PASSes the same eight-step/twelve-callback
+matrix in all three actual native worlds, thirty-six callbacks total, and
+natural Python factory ingress on both Pawn identities in each world. Six
+local device properties/client, zero foreign/server output, roots0/0+30/30+30/30,
+exact original state/live proxy set and zero owned proxy retention PASS. Cleanup
+freezes before release; server-last three actual zero exits, independent semantic
+gate, strict closed logs and 1,742 frozen inputs PASS. Standalone roots22/22 and
+the owned bare Actor/startup proxy cleanup also PASS. This is only initial
+activation and creation semantics: real replicated team changes, post-Cancel
+display updates, complete initialization/possession/family/version, hardware/
+pixels/travel/loss/package acceptance remain open. No C++ build, Engine/official
+Lyra/animation changes or push/tag/release. Ledger51 lists exactly Assets03/
+Differential01/Network01 and nineteen matched scoped sources/assets; all 1,577
+isolated Git-index models and 622-file all-index syntax/import closure PASS.
+Five driver-safety and 56 PowerShell parse checks PASS.
 
 **Latest accepted bounded batch 50 (2026-10-17):** only the generated
 ObserveTeamColors result receiver's assigned-team branch migrates; original

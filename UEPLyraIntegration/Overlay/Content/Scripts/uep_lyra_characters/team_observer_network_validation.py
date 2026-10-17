@@ -19,6 +19,9 @@ PEERS = ("A", "B0")
 
 
 class Peer(Ready):
+    context_type = Context
+    marker = "UEP_CHARACTER_OBSERVER"
+    listener_migrated = False
     def __init__(self, result, peer, run):
         super().__init__(result)
         self.root, self.peer, self.run, self.position = Path(result).parent, peer, run, 0
@@ -26,7 +29,7 @@ class Peer(Ready):
         self.require_auto_active = self.require_local_playing_phase = False
         self.report.update(peer=peer, run_id=run, network_acceptance=True, callback_replayed=False, team_properties_written=False,
             observer_delegate_broadcast_by_fixture=False, all_native_observers_cancelled=False, replicated_team_changes_tested=False,
-            listener_factory_orchestration_migrated=False, hardware_output_tested=False, pixels_verified=False, whole_character_migrated=False, full_acceptance=False)
+            listener_factory_orchestration_migrated=self.listener_migrated, hardware_output_tested=False, pixels_verified=False, whole_character_migrated=False, full_acceptance=False)
 
     def status(self): atomic_write(self.root/(self.peer+"-status.json"), dict(run_id=self.run, phase=self.phase, position=self.position, complete=self.complete, elapsed_seconds=time.monotonic()-self.started))
 
@@ -41,11 +44,11 @@ class Peer(Ready):
             try: self.clean()
             except Exception: error = (error or "")+traceback.format_exc()
         self.report.update(status="failed" if error else "awaiting_shutdown", error=error); self.write()
-        (ue.log_error if error else ue.log)("UEP_CHARACTER_OBSERVER_"+("FAILED "+error if error else "NETWORK_READY")); ue.request_exit()
+        (ue.log_error if error else ue.log)(self.marker+"_"+("FAILED "+error if error else "NETWORK_READY")); ue.request_exit()
 
     def finalize(self):
         if self.report["status"] == "awaiting_shutdown": self.report["status"] = "passed"
-        self.write(); marker = "UEP_CHARACTER_OBSERVER_NETWORK_" if self.peer == "server" else "UEP_CHARACTER_OBSERVER_SHUTDOWN_"
+        self.write(); marker = self.marker+("_NETWORK_" if self.peer == "server" else "_SHUTDOWN_")
         (ue.log if self.report["status"] == "passed" else ue.log_error)(marker+self.report["status"].upper())
 
 
@@ -64,7 +67,7 @@ class Client(Peer):
         if plan is None: return
         actors = native_actors(self.world, plan["player_ids"])
         if set(actors) != set(PEERS) or not all(query(actor)["team_set"] for actor in actors.values()): return
-        self.context = Context(actors, {self.peer: self.controller})
+        self.context = self.context_type(actors, {self.peer: self.controller})
         self.report.update(player_ids=plan["player_ids"], native_net_mode=self.context.net_mode, natural_startup_python_dispatch=self.context.startup)
         atomic_write(self.root/(self.peer+"-context-ready.json"), dict(run_id=self.run)); self.enter("idle")
 
@@ -105,7 +108,7 @@ class Server(Peer):
                 if not self.fixture.playing_gate: self.fixture.wait_playing()
                 elif not self.fixture.owners: self.fixture.setup()
                 elif self.context is None:
-                    self.context = Context({peer: value["controller"].get_controlled_pawn() for peer, value in self.fixture.owners.items()}, {peer: value["controller"] for peer, value in self.fixture.owners.items()})
+                    self.context = self.context_type({peer: value["controller"].get_controlled_pawn() for peer, value in self.fixture.owners.items()}, {peer: value["controller"] for peer, value in self.fixture.owners.items()})
                     self.report.update(player_ids=self.fixture.report["player_ids"], native_net_mode=self.context.net_mode,
                         native_playing_gate=self.fixture.report["native_playing_gate"], natural_startup_python_dispatch=self.context.startup)
                     atomic_write(self.root/"observer-plan.json", dict(run_id=self.run, player_ids=self.report["player_ids"]))

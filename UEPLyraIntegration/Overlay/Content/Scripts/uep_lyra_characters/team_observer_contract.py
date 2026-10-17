@@ -29,7 +29,7 @@ def check_row(row, *, profile, calls, assigned, user):
         require(stats["evaluations"] == stats["valid_controllers"] == stats["colors_written"] == 1 and stats["fallback_evaluations"] == 0, "native team callback property did not execute its actual policy")
 
 
-def validate(report):
+def validate(report, *, listener=False):
     require(report["status"] == "passed" and not report.get("error") and report["retained_character_class"] == CLASS and len(report["cases"]) == len(PLAN), "native team observer standalone incomplete")
     for row, expected in zip(report["cases"], PLAN):
         name, target, calls, profile = expected
@@ -47,8 +47,9 @@ def validate(report):
     require(cleanup["native_observation_markers"] == 16 and cleanup["device_roots_created"] == cleanup["device_roots_released"] == 22 and
         cleanup["caller_roots_created"] == cleanup["caller_roots_released"] == 1, "native observer marker/caller ownership differs")
     for key in ("callback_replayed", "team_properties_written", "observer_delegate_broadcast_by_fixture", "all_native_observers_cancelled",
-        "replicated_team_changes_tested", "listener_factory_orchestration_migrated", "hardware_output_tested", "pixels_verified", "whole_character_migrated", "full_acceptance"):
+        "replicated_team_changes_tested", "hardware_output_tested", "pixels_verified", "whole_character_migrated", "full_acceptance"):
         require(report[key] is False, "native observer report overclaims "+key)
+    require(report["listener_factory_orchestration_migrated"] is listener, "native listener migration scope differs")
     return dict(status="passed", typed_bp_listener_calls=8, native_observer_callbacks=8, native_owned_proxies_cancelled=8,
         native_latest_cancelled_proxy_retained=cleanup["native_latest_cancelled_proxies_retained"], native_device_properties=6, full_acceptance=False)
 
