@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPGrenadeWidgetResult=") for argument in arguments):
+        return "uep_lyra_abilities.grenade_widget_validation"
     if any(argument.lower().startswith("-run=") for argument in arguments):
         return None
     if any(argument.startswith("-UEPMeleeTraceNetworkResult=") for argument in arguments):

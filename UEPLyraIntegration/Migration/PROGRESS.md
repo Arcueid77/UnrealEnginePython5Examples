@@ -13,10 +13,61 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active next bounded batch 70b (2026-10-17):** audit the intermittent remote
-Bot Health0/canonical Pawn/HealthSet/ASC initialization-replication discrepancy;
-keep native RPC transport, GAS, navigation, animation and movement primitives.
+**Active bounded batch71 (2026-10-18):** Grenade UI native grant/avatar/removal
+policy. The70b intermittent remote Bot Health0/canonical Pawn/HealthSet/ASC
+discrepancy remains open; keep native RPC, GAS, navigation, animation and movement.
 The accepted helper and RPC-input-store slices do not close the full Dash asset.
+
+2026-10-18:70b diagnostic/test infrastructure is locally committed as
+Examples841d2fa/core7570b05 after isolated2,469 models/799-file closure. The
+intermittent native warmup-boundary binding issue remains open, not repaired.
+Next bounded implementation71: GA_Grenade K2_OnPawnAvatarSet/OnAbilityRemoved
+UIExtension ownership only. Python policy and original-graph-preserving asset
+authoring are drafted; no native runtime acceptance yet. Preserve valid-handle,
+local-owner and missing-subsystem no-ops, owning-Actor PlayerState context,
+HUD.Slot.ExtraEquipment/W_GrenadeCooldown/priority-1, unconditional native
+Unregister and the original opaque empty-literal no-op semantics. Do not migrate/claim throw, aim, montage,
+projectile or damage in this small batch; native grant/avatar-change/removal
+and original/Python widget-state comparisons still require actual execution.
+71 Host01 fails at test import before Unreal stubs exist; Host02 passes2,480
+after isolating that policy model's native dependencies. Assets01 terminal
+PASSes native Blueprint compilation/serialized Interface/CDO, all original
+graphs/full defaults/class/signatures, two handlers per Profile and native
+register/restore; no new gameplay graph nodes. Two canonical Overlay assets
+are generated but NOT runtime accepted/committed. The native probe now uses
+real Give/Reset/Avatar replacement twice/Clear and UIExtension GetAllEntries
+pool membership (not GetParent or UObject survival), with around-event
+witnesses executing the chosen production handler once. This native lane
+still requires host checks and actual execution; no whole Grenade migration.
+71 Host03/04 pass2,500/2,501 models. Differential01 completes both native
+Give/two-reset/Clear trials and actual pool restoration, but final FAILS:
+original BP keeps IsValid true after Unregister/empty-struct assignment,
+whereas a Python C++-constructed empty handle makes it false. Native source
+confirms IsValid is opaque DataPtr validity, not extension-map membership;
+Unregister does not reset that pointer. Preserve the original no-op empty
+literal semantics instead of constructing a new native empty handle. Actual
+GetAllEntries restoration remains mandatory; a valid stale pointer is not UI
+registration evidence. Retain Differential01 failed and rerun unchanged gates
+with this explicitly evidenced original-state correction; no runtime pass yet.
+71 Host05 passes2,501 models after the native opaque-handle correction.
+Differential02 terminal PASSes two actual Profile trials: test-owned native
+Give, two real Reset/Pawn replacements each, four native Avatar callbacks,
+two native removal callbacks, exactly one additional active native pool entry,
+no duplicate on repeated Avatar, original entry/spec class multiset/persistent
+Grenade handle restored,20 quiet ticks, observed-handler classes restored,
+independent gate/strict closed logs/actual exit0;1,941 frozen inputs. Both
+original and Python retain IsValid true on the removed opaque handle while
+the native extension pool correctly removes its entry. No callbacks replayed,
+raw Health/inventory/spec/pool writes, Cpp build or package. Differential03
+repeats unchanged code before a bounded local UI-lifecycle commit. Dedicated
+server/two-client UI, throw/aim/projectile/damage and70b stability stay open.
+71 Differential03 terminal PASSes the unchanged full native two-Profile
+lifecycle/pool/handle/cleanup matrix again, independent gate/closed logs/exit0.
+Record Assets01+Differential02/03 and matching sources as a bounded UI-only
+ledger; run isolated exact-index2,501 models/806-file closure before committing
+the two shared canonical assets with their implementation. No network/full
+Grenade or full-version acceptance. Next72 adds real dedicated-server/two-owner
+UI lifecycle/nonlocal branches before expanding activation/aim/projectile work.
 
 Batch69 is locally committed as Examplesa72cd16/corebcf8d50. Exact index passes
 2,375 models/788-file closure; five final native runs and nine scoped sources

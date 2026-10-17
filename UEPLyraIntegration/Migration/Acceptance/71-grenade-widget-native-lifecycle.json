@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "batch": "71-grenade-widget-native-lifecycle",
+  "scope": "Bounded standalone Grenade UI ownership only,two original native events per Profile:K2_OnPawnAvatarSet/K2_OnAbilityRemoved. Native authoring preserves original GA_Grenade_C/full CDO/all original business graphs/signatures;2 handlers per Profile,no new business nodes. Two unchanged-code final differentials each prove actual test-owned native Give,two real Reset/Pawn replacements per Profile,4 native avatar and2 native removal callbacks,UIExtension active pool membership1->2->1,no duplicate on repeated Avatar,owning PlayerState context,original widget/persistent Grenade handle/spec class multiset restoration,20 quiet ticks,handler-class restoration,independent gate/strict closed logs/real exit0. UI slot/tag/class/priority and local/valid/subsystem guards follow original BP. Original opaque DataPtr remains IsValid after Unregister/empty BP literal;Python preserves that actual state,not a Cpp-constructed empty handle;pool removal independently required. Differential01 failed that mismatch and remains failed.2501 host models. No callback replay,raw Health/inventory/spec/pool writes,Engine/official-source edits,Cpp build,cook/package,physical input,network UI/nonlocal native branch,throw/aim/montage/projectile/damage/full Grenade/version/stability/publication claim.70b native warmup-boundary binding issue remains open.",
+  "recorded_utc": "2026-10-17T18:44:31.8128704Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "7570b050431774426293a8a61b52b96801677a86",
+  "examples_parent_commit": "841d2fa2a10650773c14d16c5988c24c36d86a83",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-grenade-widget/Assets01",
+      "summary_sha256": "5439CE2EE7FE7334AF7DD203DDAB1E10EE7A70670DAA4E34E891D74D1357B8DD",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1665,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-grenade-widget/Differential02",
+      "summary_sha256": "E4BB90BFE876D55806389ADA934AACA2A26D2BC05F72D712B21DACA6BE4F4AB3",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1941,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "7E378E7CB5B5F151E7DA146470142E5C782596810ECD5E7219DFB63FB7FF2753"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-grenade-widget/Differential03",
+      "summary_sha256": "40A54BEBBE110F1B9FC650B339DFD749B50A651F08EF607B305A747445FB7A49",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1941,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "7E378E7CB5B5F151E7DA146470142E5C782596810ECD5E7219DFB63FB7FF2753"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "3E2457B0C7A0C38E0ACFCC9571F25019E30C1AAB6BC9488E51F5B17172C47A2A",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "2055F7C7AC219C7A7D6A55405A82274D3BDBB8490EA1E6C8C5F7AE1B483721DE",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "path": "Validation/Run-UEP58JumpValidation.ps1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "84C7FF1C176D57B733C67373FA7E7E75B16F065A090D2850B61E3A03842EBC1E",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "C028974266ECE3C5E1E910F0149A2C35E8D3D4247E1BB197CA44703A6C222DFE",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_grenade_widget_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_grenade_widget_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "6D8EFD2AB31AD4BC43230CCF7F33B5A1705AA85E7C15FD3E590C955A1DAE96A5",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "891B9C9C55CF570616825DA48CC36960B12382AA1EF41F676B959F017AA0F74B",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/grenade_widget_mixin.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/grenade_widget_mixin.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "B541A5CF81E77451C12CD1659182EA49E94938525098E79CE3128A3EA9292D9B",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/grenade_widget_observation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/grenade_widget_observation.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "286321C10C8D14BE221036F5D4ED833A0530BC7DB2AFDCE7A684A96614783A09",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/grenade_widget_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/grenade_widget_validation.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "3EFBD70045DB811B80B0CA2272A77C6078AC4F8BCD8301616A0F78D6D3B16C1D",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/grenade_widget_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/grenade_widget_contract.py"
+    }
+  ],
+  "host_report": {
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 2501,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "sha256": "D75B9C0E23DFDEDACB4F61135EF72A483E70E93F3E2D67A769E0791D4B15E6DB",
+    "path": ".build/LyraValidation/BlueprintPython/20261018-grenade-widget/Host05.json"
+  }
+}
