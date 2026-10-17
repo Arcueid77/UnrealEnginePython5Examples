@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "batch": "47-character-parts-changed-receiver",
+  "scope": "Only original PawnCosmeticsComponent generated OnCharacterPartsChanged receiver, ten explicit accepted aliases and eleven retained Character methods. Exact native FindTeamFromObject(Self,false) assigned-team branch; opaque component payload remains unused. Actual native registration/unregister proof on both eleven-function Profiles; original class/full CDO/thirteen signatures/every graph unchanged, two interface graphs only. Final standalone: six native Add/Remove/repeated-remove cycles/eighteen operations/twelve independent native delegates, Profile switch, unassigned-team noop, real temporary part Actors and exact original part/Actor/visual/camera/Profile/CDO/inventory restore, one scope/two bindings closed, 44/44 native marker+property roots. Final actual server/two-client FastArray: eighteen authority part operations/thirty-six client Actor observations/twenty-four independent native delegates, two same-type Pawn instances use opposing Profiles then swap. Native dedicated server does not spawn render parts/broadcast these changes, zero callbacks; each client has twelve callbacks, local role2/foreign role1, six real one-shot device properties captured inside the genuine multicast before tick expiry, thirty naturally removed markers and 36/36 roots. Native part data/Actors replicate, files carry only test scheduling/Profile/IDs, never gameplay state. Cleanup freezes before one-way release; strict closed logs/independent gates/server-last three zero exits. Network01 remains failed due to missing fixture validity import; executable cleanup/cached-POD regression and fresh Network02 fix it. Earlier Differential01/02 are earlier-observation passes, not final proof. No pixels/hardware/travel/loss/package/whole Character/version/publication claim; engine/general native part machinery and animations remain native/unchanged.",
+  "recorded_utc": "2026-10-17T00:06:11.1098529Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "47f9e0ab617fc53588884c56d11605a2f4e225d9",
+  "examples_parent_commit": "ce9cff64f53b1291a569edb4b38de4e546f25a20",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-character-parts/Assets01",
+      "summary_sha256": "A5A0BC15746C30A996DABC9CF12DCB771A045C44871E6D0F5D783493B64806C3",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1408,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-character-parts/Differential03",
+      "summary_sha256": "481CC6C0006D8A8A2C35A388A27524820C1CE5CCAE1ED2E684F2BC64DAFBE970",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1665,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "A9BAD2BA067C56C5A5CDE82C6E0FCD12BE551126E81007FAF162B5E9A377D653",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-character-parts/Network02",
+      "summary_sha256": "867ED77BA4EFB40527909539B9542B35BEB9D4DA4AD7AA49379098B444F458A4",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1665,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "A": 0,
+        "B0": 0,
+        "server": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "5E6592D32BBB6C88A8F5DFE5724A8349FBF69A1D72924F7DB00AAA9DAE89E089",
+          "file": "server.json"
+        },
+        {
+          "sha256": "25ACE55A2BDAC370D935B1D47B3FFBECBD37420357780176E63CFF3FC189E749",
+          "file": "A.json"
+        },
+        {
+          "sha256": "55ABEF7858EBAEB5D63A27CFA868F82E7536769681E622FCEFBC565F79B68FFC",
+          "file": "B0.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "6325D19676298C8952B367427D1D30A3709DD69720D41042E6FF4FAA92CBFDB0"
+    },
+    {
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "A665A6EFDE393147845AA99BC21C5801E4A7A2FFE994CFEE4336ABA3E544C241"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "028A451511DC9F92ECDC9EE00D16332C915A92296A7FAF4398F865AE50C1FAAF"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/parts_changed_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/parts_changed_mixin.py",
+      "sha256": "0F8AD096032AD1B03B0A7180DABAD90A3919B6D482B672BABB3B5475CB9E5163"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/parts_changed_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/parts_changed_validation.py",
+      "sha256": "1B0CF0172CF74829E747B28B63313072C7D14EEB83490F167C3CE4FD4F28ABD7"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/parts_changed_observation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/parts_changed_observation.py",
+      "sha256": "21C53B4C7517B860F48B5B8DED7B9AAF63AE77E8809D5A65B33F77BDFD4867FF"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/parts_changed_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/parts_changed_contract.py",
+      "sha256": "CB983B88DDAF5BFF36F8D5559DED6119549C9012B92D346381CA90C3ADAC053C"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/parts_changed_network_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/parts_changed_network_validation.py",
+      "sha256": "D1089A1D54C92DD821312EDFAF48951FD3A05EC787F8761644162D6F943270DF"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/parts_changed_network_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/parts_changed_network_contract.py",
+      "sha256": "C8F96C8463D2054A58A6B3887DE41383CC59DB3FF63C39CCC9246B20786C8DAA"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/B_Hero_ShooterMannequin.uasset",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/B_Hero_ShooterMannequin.uasset",
+      "sha256": "7658FAEA8C5D09B5FC013002C2DDEBE780F2CA5F1A4134C8C6C5CB3D0D32A870"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_CharacterPartsChangedMixin.uasset",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_CharacterPartsChangedMixin.uasset",
+      "sha256": "DB3465E8767B54A4973B5136A009CF8A505DDCF7369E3BF0468746CF2EECA706"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_character_inventory_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_character_inventory_assets.py",
+      "sha256": "01B1F329C950A575032A43A3A7FB7F6AC5463508AEFD5C213FE0F144FEFD8461"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "AB5E60F7B1DE92A2546D56B74B55F602DE601CEB484DD72AB4D9D7334E359AAE"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261017-character-parts/Host03.json",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 1399,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "sha256": "FB8D0EC5FFE93E6A5B6FD253FCEEE829996F411E75BA7CB2DD90DB825F29BD0F"
+  }
+}

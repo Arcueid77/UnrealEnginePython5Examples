@@ -13,16 +13,19 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Latest verified checkpoint (2026-10-17):** Character native death/Reset event
-bodies add four real death pairs, two bare Avatar trials, eight native Reset
-requests and twelve authority/twelve owner network death trials; ledger 46 below.
-Ten Character methods are routed through the retained-type Mixin. Exact selected
-events/forwarding, native inventory empty windows/replication/restoration, foreign
-inventory/event-POD invariance and scopes 10/10, 8/8, 12/12+6/6+6/6 PASS. Original
-native CPP/GAS/destruction/respawn remain. Strict independent gates/closed logs/
-zero exits/server-last network PASS with 1,648 / 1,652 / 1,648 frozen inputs.
-All 1,363 isolated-index host models and 575-file all-index syntax/local-import
-closure checks PASS. Driver safety and 56 PowerShell parses PASS. Other Character
+**Latest verified checkpoint (2026-10-17):** Character parts-changed component
+receiver adds six real part cycles/eighteen operations/twelve independent native
+delegates and actual two-client FastArray acceptance; ledger 47 below. Eleven
+Character methods are routed through the retained-type Mixin. Two same-type
+Pawns use opposing and swapped Profiles; eighteen native authority operations,
+thirty-six client Actor observations/twenty-four native delegates pass. Dedicated
+server has zero rendered-part callbacks, clients have actual local role2/foreign
+role1. Original part/Actor identities/visual/camera/Profile/CDO/inventory,
+observer scope/bindings and roots 44/44 standalone + 0/0,36/36,36/36 network restore.
+Strict independent gates/closed logs/server-last zero exits pass, 1,665 inputs
+per final run. All 1,399 host models PASS in the isolated Git-index archive;
+all-index syntax/local-import closure PASSes 584 Python files. Driver safety/56
+PowerShell parses pass. Remaining Character
 business, parent/sibling families and whole-version acceptance remain open.
 Pixels, rendered outlines, hardware output, replicated team changes and
 material replication are not certified by these software tests.
@@ -477,6 +480,66 @@ PASS 1,363 and all-index syntax/local-import closure PASSes 575 files; bounded
 local commits are next, not whole-Character/version release.
 Original Engine/Lyra/animation/editor assets remain unchanged; no C++ build,
 cook/package, push/tag/release.
+
+**Accepted bounded Character parts-changed component callback batch:** native death/Reset
+events are locally committed as Examples ce9cff6 / core 47f9e0a. Add only the
+original generated PawnCosmeticsComponent OnCharacterPartsChanged receiver,
+explicitly aliasing ten accepted methods. Python keeps original FindTeamFromObject
+on Self with bLogIfNotSet=false, then calls the virtual team helper only when
+the native result says assigned. The component payload is deliberately unused,
+matching original BP. No new authority/local-control guard is invented.
+Assets01 PASSes class/full CDO/thirteen signatures/all graphs and an actual native
+register/unregister cycle: both Profiles really route eleven functions, including
+the component-bound receiver, then restore original signatures. The authoring
+helper's mode table replaces repeated profile-name ternaries without changing
+prior mode names or runtime business. Eleven policy checks PASS.
+Differential01 PASSes six native Add/Remove/repeated-remove cycles/eighteen
+operations/twelve receiver entries, assigned/unassigned team branches, real
+temporary part Actor creation/destruction, add/remove Profile switch and exact
+original native parts/Actor identities/player visual/camera/Profile/CDO/inventory
+restore. Differential02 adds an independent native multicast observer and PASSes
+twelve actual component/Owner-matched deliveries with one scope/two closed
+bindings, natural Python startup and all software/device/cleanup comparisons.
+The observer now supports inline capture of actual one-shot native device
+properties during the real replicated multicast, before later tick expiry;
+errors are retained and fail the gate. Differential03 below is the final
+standalone rerun after this observational revision.
+Network01 runs real authority FastArray Add/Remove on both actual Pawns,
+two clients observing spawned/removed part Actors and independent native
+delegates. Both same-type actors use opposing Profiles and then swap them.
+Native C++ deliberately does not spawn render parts/broadcast these changes on
+dedicated servers; that world must have zero such callbacks, not fake success.
+Files carry only IDs/readiness/Profile/test-phase metadata, never part state.
+It completes all nine coordinated operations, but FAILS client final cleanup:
+the new fixture omitted its `valid` import while checking destroyed temporary
+Actor references. The run remains failed, not accepted because gameplay rows
+exist. The import is repaired; an executable AST regression performs cleanup,
+checks the live validity import and proves cached cleanup never re-reads dead
+native objects after one-way release. Reporting now reads actual native bridge
+NetMode and explicitly sets the scoped network-acceptance flag, rather than
+retaining the base standalone default. Fresh Network02 PASSes all nine coordinated
+steps/eighteen actual authority part operations/thirty-six client Actor
+observations and twenty-four independently observed native delegates. Both
+same-type Pawns use opposing Profiles and swap them; original/Python software
+visual/device results match. Authority really has zero rendered part callbacks;
+clients each observe twelve, including local role-2 and foreign role-1 actors.
+Native FastArray entries and actual part Actor lifetimes, original entry/Actor
+identities/visual/Profile/CDO/inventory restore and three server-last zero exits
+PASS. Each world closes one observer scope/two bindings; native device roots
+balance 0/0 + 36/36 + 36/36. The six one-shot properties/client are captured
+inside the actual multicast before later engine-tick expiry, never replayed.
+All 1,399 host/thirty-six focused models PASS. Differential03 PASSes final
+standalone sources/observer schema: natural Python callback once, six native
+cycles/eighteen operations/twelve independently observed delegates, correct
+component/Owner payload, original state/part identities and 44/44 roots. One
+scope/two bindings close, with no observer errors. Both final runs freeze 1,665
+inputs and pass strict closed logs/independent gates/normal exits. Ledger 47
+contains exactly Assets01/Differential03/Network02 and thirteen scoped sources,
+all matching at least one actual native frozen input. Earlier Differential01/02
+are earlier-observation passes, not final standalone proof. Final isolated-index
+archive PASSes all 1,399 models; all-index syntax/local-import closure PASSes
+584 Python files. This bounded local batch is not whole-Character/version acceptance;
+no C++ build/cook/package, original Engine/Lyra/animation assets, push/tag/release.
 
 **Accepted pressed-widget pilot and nullable-controller fix (2026-10-16, 23:45 Singapore):**
 Previous held-widget batch is locally committed as Examples b8b9818 / core
