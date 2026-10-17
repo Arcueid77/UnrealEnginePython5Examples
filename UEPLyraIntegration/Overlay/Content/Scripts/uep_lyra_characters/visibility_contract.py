@@ -42,8 +42,8 @@ def scope(report):
         "visibility migration/native backend/scope differs")
 
 
-def validate(report):
-    result = possession_validate(report); scope(report)
+def validate(report, *, begin_play_migrated=False):
+    result = possession_validate(report, begin_play_migrated=begin_play_migrated); scope(report)
     natural(report["natural_startup_visibility"], report["natural_startup_visibility_actor"], report["natural_startup_hidden"])
     for row in report["readiness_transition_cases"]:
         py = row["profile"] == "Python"; values = row["visibility_before_destroy"]

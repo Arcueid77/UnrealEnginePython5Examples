@@ -60,7 +60,23 @@ def visibility_graph(originals):
     return dict(callback=SHOW, payload_ignored=True, scheduler="DelayUntilNextTick", hidden_after_resume=False, whole_begin_play_migrated=False)
 
 
-def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, team=False, stencil=False, lifecycle=False, parts=False, health=False, enhanced=False, observer=False, listener=False, legacy=False, ready=False, waiting=False, possessed=False, visibility=False):
+def begin_play_graph(originals):
+    graph, = [graph for graph, _ in originals if graph.get_name() == "EventGraph"]
+    event, = [node for node in graph.Nodes if node.get_class().get_name() == "K2Node_Event" and str(node.EventReference.MemberName) == "ReceiveBeginPlay"]
+    pin, = event.node_find_pin("then").get_linked_to(); parent = pin.owning_node
+    if parent.get_class().get_name() != "K2Node_CallParentFunction" or str(parent.FunctionReference.MemberName) != "ReceiveBeginPlay": raise RuntimeError("original BeginPlay parent call differs")
+    pin, = parent.node_find_pin("then").get_linked_to(); listen = pin.owning_node
+    pin, = listen.node_find_pin("then").get_linked_to(); hide = pin.owning_node
+    pin, = hide.node_find_pin("then").get_linked_to(); register = pin.owning_node
+    if str(listen.FunctionReference.MemberName) != "ListenForTeam" or str(hide.FunctionReference.MemberName) != "SetActorHiddenInGame" or hide.node_find_pin("bNewHidden").default_value != "true" or hide.node_find_pin("bNewHidden").get_linked_to() or str(register.FunctionReference.MemberName) != "RegisterAndCallForInitStateChange" or register.node_find_pin("RequiredState").default_value != '(TagName="InitState.GameplayReady")' or register.node_find_pin("bCallImmediately").default_value != "true" or register.node_find_pin("then").get_linked_to():
+        raise RuntimeError("original BeginPlay ordered listener/hide/InitState registration differs")
+    component, = register.node_find_pin("self").get_linked_to(); callback, = register.node_find_pin("Delegate").get_linked_to()
+    if str(component.owning_node.VariableReference.MemberName) != "PawnExtComponent" or str(callback.owning_node.CustomFunctionName) != "ShowPawnAgainNextFrame": raise RuntimeError("original BeginPlay component/named delegate differs")
+    return parent, dict(order=["parent", "listen", "hide", "register"], component="PawnExtComponent", tag="InitState.GameplayReady", call_immediately=True)
+
+
+def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, team=False, stencil=False, lifecycle=False, parts=False, health=False, enhanced=False, observer=False, listener=False, legacy=False, ready=False, waiting=False, possessed=False, visibility=False, beginning=False):
+    visibility = visibility or beginning
     possessed = possessed or visibility
     waiting = waiting or possessed
     ready = ready or waiting
@@ -78,6 +94,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     quickbar = quickbar or loadout
     audio = audio or quickbar
     kind, prefix, module = next((kind, prefix, module) for enabled, kind, prefix, module in (
+        (beginning, "characterbeginplay", "BeginPlay", "begin_play_mixin"),
         (visibility, "charactervisibility", "Visibility", "visibility_mixin"),
         (possessed, "characterpossessed", "Possessed", "possessed_mixin"),
         (waiting, "characterwait", "InventoryWait", "inventory_wait_mixin"),
@@ -127,6 +144,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     originals = [(graph, {node.get_name() for node in graph.Nodes}) for graph in ue.blueprint_get_all_graphs(bp)]
     possession = possession_graph(originals) if possessed else None
     visibility_original = visibility_graph(originals) if visibility else None
+    parent_source, begin_original = begin_play_graph(originals) if beginning else (None, None)
     graphs = {graph.get_name(): semantics(graph, names, set()) for graph, names in originals}
     if legacy:
         graph, = [value for value, _ in originals if value.get_name() == "OnRep_PlayerInfo"]
@@ -153,6 +171,9 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
         visibility_stub = resume_stub(bp, VISIBILITY_RESUME)
         from generate_character_visibility_transport import generate as visibility_registration
         visibility_transport = visibility_registration(bp)
+    if beginning:
+        from generate_character_begin_play_parent import generate as begin_parent
+        parent_transport = begin_parent(bp, parent_source)
     ue.blueprint_configure_mixin(bp, mixin, "Python", "PythonMixinProfile"); ue.compile_blueprint(bp); ue.unregister_all_mixins()
     if int(bp.Status) == 2 or bp.GeneratedClass.get_path_name() != cls or cdo_snapshot(bp, "character-after") != before:
         raise RuntimeError("original Character identity/full CDO changed")
@@ -170,6 +191,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     all_graphs = ue.blueprint_get_all_graphs(bp)
     extra_graphs = {"GetPythonMixinSet", "GetPythonMixinProfile"} | ({transport["function"]} if listener else set()) | ({ready_transport["function"]} if ready else set()) | ({wait_stub["function"]} if waiting else set())
     if visibility: extra_graphs |= {visibility_stub["function"], visibility_transport["function"]}
+    if beginning: extra_graphs.add(parent_transport["function"])
     if set(graph.get_name() for graph in all_graphs)-set(graphs) != extra_graphs:
         raise RuntimeError("unexpected Character graph additions")
     if any(semantics(graph, names, set()) != graphs[graph.get_name()] for graph, names in originals):
@@ -217,6 +239,9 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
             native_visibility_resume_signature=ue.describe_function(bp.GeneratedClass, VISIBILITY_RESUME),
             native_visibility_signatures={name: ue.describe_function(ue.find_class(cls), name) for cls, name in (
                 ("GameFrameworkInitStateInterface", "RegisterAndCallForInitStateChange"), ("Actor", "SetActorHiddenInGame"))})
+    if beginning:
+        report["implemented_methods"].append("ReceiveBeginPlay")
+        report.update(begin_play_business_migrated=True, original_begin_play_semantics=begin_original, native_begin_play_parent_transport=parent_transport)
     if team:
         if stencil:
             if lifecycle:

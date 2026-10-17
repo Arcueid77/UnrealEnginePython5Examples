@@ -7,24 +7,24 @@ from .possessed_contract import counts, scope
 from .initial_inventory_contract import require
 
 
-def server_gate(report):
-    result = wait_server(report, factory_migrated=True); scope(report)
+def server_gate(report, *, begin_play_migrated=False):
+    result = wait_server(report, factory_migrated=True); scope(report, begin_play_migrated=begin_play_migrated)
     require(set(report["natural_startup_possession"]) == {"A", "B0"}, "native possession authority players missing")
     for peer, value in report["natural_startup_possession"].items(): counts(value, "Python", report["natural_startup_controllers"][peer])
     return result
 
 
-def client_gate(report):
-    result = wait_client(report, factory_migrated=True); scope(report)
+def client_gate(report, *, begin_play_migrated=False):
+    result = wait_client(report, factory_migrated=True); scope(report, begin_play_migrated=begin_play_migrated)
     value = report["natural_startup_possession"]
     require(all(value[key] == 0 for key in ("python_calls", "fallback_calls", "authority_noops", "factories", "binds", "activations", "null_factories")) and
         value["last_controller"] is value["last_proxy"] is None, "client invented native server-only ReceivePossessed/factory ingress")
     return result
 
 
-def validate(reports):
-    result = wait_validate(reports, factory_migrated=True); server_gate(reports["server"])
-    for peer in ("A", "B0"): client_gate(reports[peer])
+def validate(reports, *, begin_play_migrated=False):
+    result = wait_validate(reports, factory_migrated=True); server_gate(reports["server"], begin_play_migrated=begin_play_migrated)
+    for peer in ("A", "B0"): client_gate(reports[peer], begin_play_migrated=begin_play_migrated)
     return dict(result, native_authority_possession_factory=True, client_possession_event_invented=False)
 
 

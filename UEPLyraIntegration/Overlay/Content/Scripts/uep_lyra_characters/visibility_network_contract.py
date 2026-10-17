@@ -7,24 +7,24 @@ from .visibility_contract import scope, natural
 from .initial_inventory_contract import require
 
 
-def server_gate(report):
-    result = possession_server(report); scope(report)
+def server_gate(report, *, begin_play_migrated=False):
+    result = possession_server(report, begin_play_migrated=begin_play_migrated); scope(report)
     require(report["network_visibility_repeat_destroy_matrix_tested"] is False, "startup-only network lane cannot certify visibility repeat/destroy matrix")
     require(set(report["natural_startup_visibility"]) == {"A", "B0"}, "authority native visibility owners missing")
     for row in report["natural_startup_visibility"].values(): natural(row["counters"], row["actor"], row["hidden"])
     return result
 
 
-def client_gate(report):
-    result = possession_client(report); scope(report)
+def client_gate(report, *, begin_play_migrated=False):
+    result = possession_client(report, begin_play_migrated=begin_play_migrated); scope(report)
     require(report["network_visibility_repeat_destroy_matrix_tested"] is False, "startup-only client lane cannot certify visibility repeat/destroy matrix")
     row = report["natural_startup_visibility"]; natural(row["counters"], row["actor"], row["hidden"])
     return result
 
 
-def validate(reports):
-    result = possession_validate(reports); server_gate(reports["server"])
-    for peer in ("A", "B0"): client_gate(reports[peer])
+def validate(reports, *, begin_play_migrated=False):
+    result = possession_validate(reports, begin_play_migrated=begin_play_migrated); server_gate(reports["server"], begin_play_migrated=begin_play_migrated)
+    for peer in ("A", "B0"): client_gate(reports[peer], begin_play_migrated=begin_play_migrated)
     return dict(result, native_network_startup_visibility=True, network_visibility_repeat_destroy_matrix_tested=False)
 
 

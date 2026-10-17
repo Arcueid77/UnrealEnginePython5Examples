@@ -15,14 +15,14 @@ def counts(value, profile, controller, *, proxies=()):
     if proxies and py: require(value["last_proxy"] in proxies, "Python reported proxy is not the actual independently observed native factory")
 
 
-def scope(report):
+def scope(report, *, begin_play_migrated=False):
     require(report["experience_ready_factory_migrated"] is True and report["native_possession_ingress_tested"] is True and
-        report["possession_event_manually_called_by_fixture"] is False and report["begin_play_business_migrated"] is False,
+        report["possession_event_manually_called_by_fixture"] is False and report["begin_play_business_migrated"] is begin_play_migrated,
         "possession factory report scope/ingress differs")
 
 
-def validate(report):
-    result = wait_validate(report, factory_migrated=True); scope(report)
+def validate(report, *, begin_play_migrated=False):
+    result = wait_validate(report, factory_migrated=True); scope(report, begin_play_migrated=begin_play_migrated)
     counts(report["natural_startup_possession"], "Python", report["natural_startup_controller"])
     for row in report["readiness_transition_cases"]:
         require(row["possession_event_manually_called_by_fixture"] is False and row["native_possession_factory_proxies_created"] == 2 and

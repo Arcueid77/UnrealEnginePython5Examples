@@ -13,13 +13,48 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active next bounded batch 57 (2026-10-17):** migrate ReceiveBeginPlay's
+**Active next bounded batch 58 (2026-10-17):** audit and migrate inherited
+Hero-default equipment hiding/death runtime business in dependency-sized
+groups. Character_Default construction currently only forwards to native parent
+and its BeginPlay graph is empty; retain structural forwarding, animation/ABPs,
+editor/test tools and native physics/animation execution. Do not infer whole
+ancestor/sibling/version completion from the Shooter Character entrypoints.
+
+**Latest accepted bounded batch 57 (2026-10-17):** migrate ReceiveBeginPlay's
 parent-call / ListenForTeam / hide / native InitState registration orchestration.
 Preserve exact named native delegates and ordered calls without replaying
 BeginPlay on existing actors. Ancestor construction/death business and sibling /
 whole-version gates remain separate.
 
-**Latest accepted bounded batch 56 (2026-10-17):** migrate the native InitState
+Batch57: `begin_play_mixin.py` implements exactly parent -> ListenForTeam ->
+SetActorHiddenInGame(true) -> original PawnExt GameplayReady named registration
+(call-immediately true), with no replay of existing actors' BeginPlay. A two-node
+thin parent-call transport targets the original Character_Default ancestor.
+Host01 passes1,812 models, including synchronous test-default restoration on
+spawn failure. Assets01 PASSes strict logs/exit0, Python26/fallback21 and original
+type/full CDO/all original graphs/twenty-four signatures. Differential01 PASSes
+complete prior regressions and four new native pending/ready Actor BP/Python
+startup cases, with natural exact parent/listen/hide/register order. Only the disposable test process temporarily sets the
+ordinary CDO Profile default while synchronously creating test-owned actors,
+then immediately restores and checks it; it never saves that default or replays
+BeginPlay. Both pending actors remain hidden without premature callback; ready
+original/Python actors show and have equal native inventory. All default/owner/
+observer/pool gates, strict closed logs, independent gate, normal exit0 and1,856
+frozen inputs PASS. Network01 PASSes natural startup/visibility/inventory
+replicas without a test-CDO override. Both authority Pawns and both owning
+clients each naturally enter exactly one Python BeginPlay with exact parent /
+listen/hide/register order, plus one actual native InitState delayed-show and
+the full24 authority/24 owner replica-noop inventory comparison. Exact original
+state/Profile/CDO restoration, all test proxies24/12/12 collected, caller roots
+1/1 each world, strict closed logs, independent gate, server-last three zero
+exits and1,856 frozen inputs PASS. Host01/isolated staged tree pass1,812 models;
+683-file index closure and ledger57 precede local commit. No replay, extra C++
+build/cook/package, Engine/official Lyra/animation changes or publication.
+Inherited death/equipment, siblings, broader network lifecycle/physical/pixels /
+travel/loss/package/whole-version gates remain separate. Batch56 is committed as
+Examplesa910850/core9900fd2.
+
+**Previously accepted bounded batch 56 (2026-10-17):** migrate the native InitState
 callback ShowPawnAgainNextFrame's delayed visibility continuation, preserving
 the original native next-tick backend, original BP fallback and weak-owner
 cancellation. ReceiveBeginPlay's parent/ListenForTeam/hide/register orchestration
