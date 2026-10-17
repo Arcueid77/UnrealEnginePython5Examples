@@ -1,0 +1,111 @@
+"""Read-only native replica bindings; never initialize, repair or write Health."""
+import copy
+import json
+import time
+import unreal_engine as ue
+from uep_runtime import SubscriptionScope
+from uep_lyra_network_io import atomic_write
+from uep_lyra_world.effect_pad_mixin import valid, ability_system
+
+
+def path(value): return value.get_path_name() if valid(value) else None
+
+
+def asc_state(asc):
+    if not valid(asc): return None
+    attributes = []
+    for value in asc.get_property("SpawnedAttributes"):
+        if valid(value) and value.is_a(ue.find_class("LyraHealthSet")):
+            health, maximum = value.get_property("Health"), value.get_property("MaxHealth")
+            attributes.append(dict(object=path(value), health=float(health.CurrentValue), health_base=float(health.BaseValue),
+                max_health=float(maximum.CurrentValue), max_health_base=float(maximum.BaseValue)))
+    return dict(object=path(asc), owner=path(asc.get_property("OwnerActor")), avatar=path(asc.get_property("AvatarActor")), health_attributes=attributes)
+
+
+def snapshot(pawn, health):
+    state = pawn.get_property("PlayerState")
+    extension = pawn.get_component_by_type(ue.find_class("LyraPawnExtensionComponent"))
+    actor_asc = ability_system(pawn); health_asc = health.get_property("AbilitySystemComponent")
+    state_asc = state.get_property("AbilitySystemComponent") if valid(state) else None
+    features = pawn.call_function("GetComponentsByInterface", ue.find_class("GameFrameworkInitStateInterface"))
+    feature_states = [dict(component=path(value), cls=path(value.get_class()), feature=str(value.call_function("GetFeatureName")),
+        state=str(value.call_function("GetInitState").TagName)) for value in features]
+    return dict(actor=path(pawn), actor_class=path(pawn.get_class()), role=int(pawn.call_function("GetLocalRole")),
+        character_profile_property=str(pawn.get_property("PythonMixinProfile")),
+        destroying=bool(pawn.call_function("IsActorBeingDestroyed")), health=float(health.call_function("GetHealth")),
+        hidden=bool(pawn.get_property("bHidden")), tear_off=bool(pawn.get_property("bTearOff")), life_span=float(pawn.call_function("GetLifeSpan")),
+        controller=path(pawn.get_property("Controller")), input_component=path(pawn.get_property("InputComponent")),
+        locally_controlled=bool(pawn.call_function("IsLocallyControlled")),
+        lifecycle=copy.deepcopy(getattr(pawn,"_uep_character_lifecycle",None)),
+        inventory_wait=copy.deepcopy(getattr(pawn,"_uep_character_inventory_wait",None)),
+        inventory_ready=copy.deepcopy(getattr(pawn,"_uep_character_inventory_ready",None)),
+        possessed=copy.deepcopy(getattr(pawn,"_uep_character_possessed",None)),
+        max_health=float(health.call_function("GetMaxHealth")), death_state=int(health.call_function("GetDeathState")),
+        health_set=path(health.get_property("HealthSet")), health_asc=asc_state(health_asc), actor_asc=asc_state(actor_asc),
+        player_state=path(state), player_state_pawn=path(state.call_function("GetPawn")) if valid(state) else None,
+        player_state_asc=asc_state(state_asc), extension=path(extension),
+        extension_asc=path(extension.get_property("AbilitySystemComponent")) if valid(extension) else None,
+        init_features=sorted(feature_states,key=lambda value:value["feature"]),
+        pawn_data=path(extension.get_property("PawnData")) if valid(extension) else None,
+        net_dormancy=int(pawn.get_property("NetDormancy")), always_relevant=bool(pawn.get_property("bAlwaysRelevant")),
+        net_cull_distance_squared=float(pawn.get_property("NetCullDistanceSquared")))
+
+
+def view_state(controller):
+    camera = controller.get_property("PlayerCameraManager")
+    location = camera.call_function("GetCameraLocation") if valid(camera) else None
+    eye, _ = controller.call_function("GetPlayerViewPoint")
+    return dict(view_target=path(controller.call_function("GetViewTarget")), view_point=[float(getattr(eye,name)) for name in ("x","y","z")],
+        camera_location=[float(getattr(location,name)) for name in ("x","y","z")] if location is not None else None)
+
+
+class EarlyWatch:
+    """Bounded change-only snapshots before local combat readiness, no repair."""
+    def __init__(self, root, peer, run):
+        self.root,self.peer,self.run=root,peer,run; self.scopes={}; self.closed=False
+        self.started=time.monotonic();self.last={};self.files=[];self.watched=set()
+    def publish(self, kind, data):
+        if self.closed: return
+        if len(self.files) >= 2048: raise RuntimeError("bounded native early-readiness history exhausted")
+        name=self.peer+"-early-readiness-"+str(len(self.files))+".json"
+        atomic_write(self.root/name,dict(run_id=self.run,kind=kind,elapsed=time.monotonic()-self.started,data=data));self.files.append(name)
+    def ended(self, actor_path, reason):
+        # Detach while the Actor's delegate property still exists. Keeping one
+        # process-wide scope retains dead wrappers until native class teardown.
+        scope=self.scopes.pop(actor_path,None)
+        if scope is not None: scope.close()
+        self.publish("native-end-play",dict(actor=actor_path,reason=int(reason)))
+    def watch(self, pawn, actor_path):
+        scope=SubscriptionScope()
+        scope.bind_event(pawn,"OnEndPlay",lambda actor,reason,key=actor_path:self.ended(key,reason))
+        self.scopes[actor_path]=scope;self.watched.add(actor_path)
+    def birth(self, pawn):
+        if self.closed: return
+        actor_path=path(pawn)
+        if actor_path not in self.watched: self.watch(pawn,actor_path)
+        health=pawn.get_component_by_type(ue.find_class("LyraHealthComponent"))
+        self.publish("native-begin-play",snapshot(pawn,health) if valid(health) else dict(actor=actor_path))
+    def poll(self):
+        if self.closed: return
+        statics=ue.find_class("GameplayStatics").get_cdo()
+        for world in ue.all_worlds():
+            if world.get_world_type() not in (1,3,5) or "L_Expanse" not in world.get_name(): continue
+            actors,=statics.call_function("GetAllActorsOfClass",world,ue.find_class("LyraCharacter"))
+            for pawn in actors:
+                health=pawn.get_component_by_type(ue.find_class("LyraHealthComponent"))
+                if not valid(health): continue
+                actor_path=path(pawn)
+                if actor_path not in self.watched:
+                    self.watch(pawn,actor_path)
+                row=snapshot(pawn,health);fingerprint=json.dumps(row,sort_keys=True)
+                if self.last.get(actor_path)!=fingerprint:
+                    self.last[actor_path]=fingerprint;self.publish("native-binding-change",row)
+    def close(self):
+        if self.closed: return
+        self.closed=True
+        scopes,self.scopes=self.scopes,{}
+        errors=[]
+        for scope in scopes.values():
+            try: scope.close()
+            except Exception as error: errors.append(error)
+        if errors: raise RuntimeError("early-readiness listener cleanup failed") from errors[0]

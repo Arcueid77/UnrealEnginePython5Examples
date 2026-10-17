@@ -46,6 +46,25 @@ class TestMeleeTraceNetworkContract(unittest.TestCase):
     def reject(self):
         with self.assertRaises((AssertionError,RuntimeError)): validate(self.server,self.clients)
     def test_complete_model(self): self.assertEqual(validate(self.server,self.clients)["native_authority_trials"],20)
+    def add_warmup(self):
+        joins=[];self.server["run_id"]="run"
+        for peer in PEERS:
+            join=dict(peer=peer,run_id="run",player_id=self.server["player_ids"][peer],native_role=2,health=100.,pawn=peer+"old")
+            joins.append(join);self.clients[peer].update(post_warmup_pawn=peer+"new",controlled_warmup_join=dict(enabled=True,
+                server_time_dilation_written=False,health_written=False,join_beacon_written=True,join=copy.deepcopy(join)))
+        self.server["controlled_warmup_join"]=dict(enabled=True,server_time_dilation_written=True,health_written=False,
+            native_warmup_observed=True,native_warmup_active_at_release=True,restored=True,held_time_dilation=.1,original_time_dilation=1.,joined_clients=joins)
+    def test_controlled_native_warmup_model(self): self.add_warmup();validate(self.server,self.clients)
+    def test_controlled_warmup_requires_native_phase_at_release(self):
+        self.add_warmup();self.server["controlled_warmup_join"]["native_warmup_active_at_release"]=False;self.reject()
+    def test_controlled_warmup_requires_time_restoration(self):
+        self.add_warmup();self.server["controlled_warmup_join"]["restored"]=False;self.reject()
+    def test_controlled_warmup_requires_real_pawn_replacement(self):
+        self.add_warmup();self.clients["A"]["post_warmup_pawn"]="Aold";self.reject()
+    def test_controlled_warmup_rejects_client_time_write(self):
+        self.add_warmup();self.clients["B0"]["controlled_warmup_join"]["server_time_dilation_written"]=True;self.reject()
+    def test_controlled_warmup_rejects_partial_treatment(self):
+        self.add_warmup();self.server.pop("controlled_warmup_join");self.reject()
     def test_one_owner(self): self.clients.pop("B0"); self.reject()
     def test_same_native_owner(self): self.server["player_ids"]["B0"]=256; self.reject()
     def test_wrong_owner_id(self): self.clients["A"]["player_id"]=99; self.reject()

@@ -48,11 +48,37 @@ def client(report):
     return True
 
 
+def warmup_join(server,viewers):
+    treatment=server.get("controlled_warmup_join")
+    if treatment is None:
+        require(not any("controlled_warmup_join" in value for value in viewers.values()),"partial controlled warmup treatment")
+        return
+    require(treatment.get("enabled") is True and treatment.get("server_time_dilation_written") is True and
+        treatment.get("health_written") is False and treatment.get("native_warmup_observed") is True and
+        treatment.get("native_warmup_active_at_release") is True and treatment.get("restored") is True,
+        "controlled native warmup/time restoration proof missing")
+    require(math.isclose(treatment.get("held_time_dilation",float("nan")),.1,abs_tol=1e-6) and
+        math.isfinite(treatment.get("original_time_dilation",float("nan"))) and treatment["original_time_dilation"]>0,
+        "native warmup scheduling limits differ")
+    joins=treatment.get("joined_clients",[])
+    require(len(joins)==2,"controlled native warmup client beacons missing")
+    for peer,join in zip(PEERS,joins):
+        require(join.get("peer")==peer and join.get("run_id")==server.get("run_id") and
+            join.get("player_id")==server["player_ids"][peer] and join.get("native_role")==2 and join.get("health",0)>0,
+            "controlled native warmup owner identity/Health missing")
+        local=viewers[peer].get("controlled_warmup_join",{})
+        require(local.get("enabled") is True and local.get("join_beacon_written") is True and
+            local.get("server_time_dilation_written") is False and local.get("health_written") is False and
+            local.get("join")==join and viewers[peer].get("post_warmup_pawn") and
+            viewers[peer]["post_warmup_pawn"]!=join.get("pawn"),"actual warmup Pawn replacement not observed on client")
+
+
 def validate(server, viewers):
     require(server["status"] == "passed" and server["error"] is None and server["native_net_mode"] == "DedicatedServer" and
         set(viewers) == set(PEERS) and len(set(server["player_ids"].values())) == 2, "two real native owners/authority missing")
     for peer in PEERS:
         client(viewers[peer]); require(viewers[peer]["player_id"] == server["player_ids"][peer], "native owner identity does not match authority")
+    warmup_join(server,viewers)
     for name in ("server_waited_for_client_process_exit", "profiles_restored", "specs_config_unchanged", "activation_observers_restored", "fixtures_destroyed", "observer_scope_closed"):
         require(server[name] is True, "authority cleanup missing: "+name)
     require(server["observation_errors"] == [] and server["shutdown"]["active_count"] == 0 and server["shutdown"]["errors"] == [] and

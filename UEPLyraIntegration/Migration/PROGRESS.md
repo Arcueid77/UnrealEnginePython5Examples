@@ -39,6 +39,156 @@ commit does not close70b/full Melee/version or the entire migration objective.
 Next exact index/793-file closure, local commit, then continue70b investigation;
 no native lane is live at this checkpoint.
 
+Batch70 functional/test-infrastructure scope is locally committed as
+Examples9015bda/core230edf7. Exact isolated index passes2,423 models and793-file
+syntax/import closure; four final passed runs/eight matched scoped sources.
+All six original user-dirty files preserve their hashes; no push/tag/release.
+70b stays open: add read-only native ASC OwnerActor/AvatarActor/SpawnedAttributes,
+HealthSet/Base/Current, PawnExtension PawnData/ASC, canonical PS Pawn and view
+target/camera snapshots. Persist bounded immutable binding-change events so a
+failed live ReplaceFile/peer teardown cannot erase the decisive observation.
+Never manually initialize ASC, alter Health/tags or substitute an easier target
+to pass. These diagnostics/models are not proof of the underlying fix.
+
+70b Host01 PASSes2,430 models. Native Network01 FAILS/reproduces friendly
+arming discrepancy with immutable snapshot A-replica-binding-0: target is
+canonical PS Pawn,role1,not destroying,death0,PawnData present; HealthComponent
+HealthSet/ASC and PawnExtension ASC are null. PS ASC has Health/MaxHealth100
+and AvatarActor null. This is absent Pawn ability-system initialization, not
+real damage, stale actor selection or lost attribute replication. View/camera
+are at the correct remote fixture. Add native GetComponentsByInterface plus
+GetFeatureName/GetInitState reads to identify the waiting feature chain; do
+not call initialization/advance-state/write-Health as a test workaround.
+
+70b Host02 PASSes2,432 models. Network02 reproduces on viewerB0: Hero and
+PawnExtension both report native GameplayReady despite empty ASC/Health
+bindings, canonical Pawn valid/death0/PS attributes100. Therefore this is NOT
+a feature still waiting to initialize: inspect loss/clear after ready. Native
+UninitializeAbilitySystem call sites are end-play, changed-avatar/controller
+and Character UninitAndDestroy (Reset/death paths). Add bounded immutable
+early-world binding-change/EndPlay observations plus existing production
+lifecycle counters, hidden/tearoff/lifespan/controller and native server view
+points; no native state repair. Network02 remains failed, not acceptance.
+
+70b Host03 PASSes2,434 models; Network03 failed again before friendly
+activation (a viewer cannot resolve the source/target after warmup). Immutable
+early history captures healthy old Pawns, native reset/hidden/ASC-clear, real
+EndPlay0, then healthy new Pawns; authority view points are correctly near the
+fixture. This is evidence about timing, not yet the causal fix. Add matched
+explicit Character startup variants: preloaded Python versus BlueprintFallback
+CDO profile in each disposable process, restore at cleanup, never save assets.
+Report actual actor profile property and keep other code/native conditions the
+same; do not infer that simply preloading or switching to BP fixes migration.
+
+70b Host04 PASSes2,439 models. Matched preload controls: OriginalCharacter01
+terminal PASSes20 authority/40 viewer rows, actual early Actor profiles all
+BlueprintFallback and CDO defaults restored in all three processes. Matched
+PythonCharacter01 FAILS at friendly arming again. Same preload alone does not
+explain this pair. Next diagnostic keeps full Python Character routing except
+ReceiveBeginPlay calls the original BP handler, with class/profile restoration
+on cleanup. This is an explicitly flagged method-isolation experiment, not a
+production fallback or a claimed fix.
+
+70b Host05 PASSes2,440 models. OriginalBeginPlay01 (otherwise Python) still
+fails on friendly target Health0, so BeginPlay alone is not a sufficient cause
+or repair. Next use disjoint original-method halves in a full-Python treatment,
+report exact selected names, and verify actual registered python_class every
+tick; overwritten diagnostic treatments must fail rather than mislead. These
+runtime-only experiments are not source migration acceptance or permanent BP
+fallback. No running native lane from OriginalBeginPlay01 remains.
+
+70b Host06 PASSes2,443 models. FirstHalf01 and SecondHalf01 both complete20
+authority/40 viewer functional rows while runtime handler class is verified.
+They are still FAILED final runs: our monitor continues checking its custom
+class after cleanup correctly restores the production class, then misreports
+an overwrite in phase release. Fix monitor to stop after close, retain failed
+reports and add a closed-monitor regression. Since both method halves reach
+the matrix, test exact production-Python re-registration and cloned identical
+Python class controls before attributing effects to a specific BP method.
+
+70b Host07 PASSes2,444 models. Exact production-class refresh and an identical
+cloned Python handler class both reproduce friendly arming failure; simply
+re-registering/cloning is not a fix. The next flagged controls separately use
+original AddInitialInventory or original Possessed/ExperienceReady/wait-resume
+chain (all other handlers Python), followed by team producer/consumer if needed.
+These are runtime-only failure-isolation treatments, not shipped BP fallback.
+
+70b Host08 PASSes2,446 models. OriginalInventory01 (only AddInitialInventory
+original) still FAILS on friendly replica readiness. OriginalPossession01
+(ReceivePossessed/PythonExperienceReady/PythonInventoryWaitResume original,
+all other Character handlers Python) terminal PASSes20 authority/40 viewer
+rows/independent gate/strict closed logs/server-last exits; active treatment
+verified and defaults/handlers restored. Narrow next to native experience
+factory/bind/activation entry versus readiness/wait continuation; native
+ExperienceReady already-loaded path deliberately next-ticks, so preserve it.
+No production repair or stability completion has been claimed/committed.
+
+70b Host09 PASSes2,447 models. OriginalPossessionFactory01 (only
+ReceivePossessed original) FAILS; OriginalExperience01 (only
+PythonExperienceReady/PythonInventoryWaitResume original) terminal PASSes
+20 authority/40 viewer rows/independent gate/strict logs/server-last exits.
+This narrows the next comparison to first OnReady entry versus native
+next-tick resume. No permanent original-BP fallback is being shipped; runtime
+class/default controls restore and no asset/Engine/official source is saved.
+
+70b first-entry versus resume controls are terminal: original first OnReady
+entry alone FAILS; original wait-resume alone PASSes20 authority/40 viewer
+rows/independent gate/closed logs/server-last exits. Original native macro
+exec links confirm three distinct checkpoint retries. Before changing that
+policy, capture actual server pending stages/resumes/Controller relationships
+alongside client replicas: possession/readiness/wait counters are read as POD,
+and the same bounded early watcher now runs on authority. No source repair
+has yet been verified; do not promote this isolation result to causal proof.
+
+70b Host11 passes2,448 models. FullPythonTimeline01 reaches20 authority/40
+viewer rows but is terminal FAILED: the new authority diagnostic kept EndPlay
+delegates until class teardown and cannot detach one stale Actor property.
+All captured server inventory waits have zero delay/resume requests, so this
+run does not support the wait-resume causal hypothesis. Detach each diagnostic
+listener at that Actor's actual EndPlay, close remaining live scopes at exit,
+and fail cleanup durably without recursively retrying Server.finish. The
+original readiness/Health discrepancy remains open; no production policy fix.
+
+Host12 fails three new cleanup checks because test discovery supplies an old
+minimal Scope stub; Host13 passes2,452 using the real SubscriptionScope for
+the lifecycle regression. FullPythonTimeline02 fails again at position4.
+Native verbose logs show newly initialized client Pawns that never survive
+until the next poll, while old canonical candidates have their ASC cleared.
+Add a diagnostic-only wrapper around the selected ReceiveBeginPlay handler:
+attach EndPlay observation immediately at actual birth, then execute that
+unchanged selected handler exactly once. Catching same-frame lifetimes is
+evidence collection, not a new gameplay fallback or an accepted repair.
+
+FullPythonBirth01 is a failed diagnostic startup: native Mixin registrations
+are still queued during script loading. Its three owned processes were stopped
+after the actual traceback; do not wait out or relabel a missing fixture.
+Host15 passes2,454 models with queued-registration preservation. FullPythonBirth02
+terminal PASSes20 authority/40 viewer rows, independent gate, closed logs and
+three real exits; per-Actor diagnostic cleanup passes. Clients joined after the
+native warmup reset, so this is not a fix for the intermittent startup race.
+Next explicitly slow only the disposable authority world until both real
+clients report healthy autonomous Pawns, restore exact native time dilation,
+then observe the unmodified native warmup reset/respawn. No Health/ASC repair,
+asset save, Engine edit or complete-version acceptance is claimed.
+
+70b diagnostic/test-infrastructure closeout (not a production race fix): Host17
+passes2,469 models; native ControlledWarmup01 terminal PASSes20 authority/40
+viewer rows/four hostile100-damage hits, the independent strict gate, closed
+logs and server-last actual exits0/0/0. Both real clients first own healthy
+autonomous warmup Pawns, native phase is still Warmup when authority restores
+time dilation1.0 from0.1, then both actual post-warmup Pawn paths differ.
+Native EndPlay and new births are captured; no Reset/EndPlay callback replay,
+Health/ASC repair or timeout widening. FullPythonBirth02 is an additional
+passed late-join diagnostic lane; startup-failed Birth01 and failed timelines
+remain failed. No waits/resumes in the captured authority history support the
+earlier resume-only causal hypothesis. Joining exactly across the native
+warmup boundary and the original Health0 binding discrepancy remain OPEN.
+Create a bounded diagnostic acceptance snapshot and exact-index local commit;
+do not close general stability, the full Melee asset/version or migration goal.
+The first isolated index correctly fails the ledger-count consistency check
+(72 actual ledgers versus old manifest71). Update only documentation counts
+and diagnostic references; preserve the failed Index01 and rerun a fresh index.
+
 Batch70 FixtureAssets01 PASSes a stage-only replicated native BoxComponent
 archetype floor,5000/5000/20 extent,WorldStatic,BlockAll and matching replication
 defaults; no gameplay calls/Overlay/official edits. Two-owner trace protocol

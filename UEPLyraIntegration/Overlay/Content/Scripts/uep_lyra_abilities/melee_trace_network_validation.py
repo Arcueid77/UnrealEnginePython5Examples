@@ -1,6 +1,7 @@
 """Two real native owners, original/Python authority trace, two passive viewers."""
 import atexit
 import copy
+import json
 import sys
 import time
 import traceback
@@ -22,6 +23,7 @@ from .death_observation import cue as cue_values
 from .dash_local_direction_validation import restore_control
 from .melee_hit_montage_mixin import CLASS
 from . import melee_trace_mixin as policy, melee_activation_mixin as activation, melee_trace_network_observation as observation
+from . import melee_replica_readiness as readiness
 
 
 def player_id(pawn):
@@ -66,13 +68,14 @@ class Client(Activation):
         super().__init__(result); self.peer, self.run, self.root = peer, run, self.path.parent
         self.require_local_playing_phase = False; self.position = 0; self.command = None; self.observer = None
         self.events = []; self.cues = []; self.observation_errors = []; self.installed = False
+        self.early_watch=readiness.EarlyWatch(self.root,peer,run)
         self.report.update(peer=peer, run_id=run, requests=[], views=[], activation_event_replayed=False, callback_replay=False,
             health_properties_written=False, ability_granted_by_fixture=False, packet_loss_tested=False, travel_rejoin_tested=False,
             observation_errors=self.observation_errors)
     def ready(self):
         if token(self.root, "playing-ready.json", self.run) is not None: Ready.ready(self)
     def begin(self):
-        super().begin(); self.report.update(player_id=player_id(self.pawn), native_net_mode=str(ue.find_class("UEPLyraBridgeLibrary").get_cdo().call_function("GetBridgeForWorld", self.world).call_function("CaptureSnapshot").NetMode))
+        super().begin(); self.report.update(player_id=player_id(self.pawn),post_warmup_pawn=path(self.pawn), native_net_mode=str(ue.find_class("UEPLyraBridgeLibrary").get_cdo().call_function("GetBridgeForWorld", self.world).call_function("CaptureSnapshot").NetMode))
         observation.install(self); self.installed = True; self.cue_class = ue.load_class(CUE)
         require(not any(row["target_class"] == self.cue_class for row in ue.get_registered_mixins()), "do not replace production Cue routing")
         self.original_cue = self.cue_class.get_cdo().find_function("OnBurst"); owner = self
@@ -112,6 +115,16 @@ class Client(Activation):
                 health_asc=path(health.get_property("AbilitySystemComponent")), actor_asc=path(ability_system(target)),
                 player_state_pawn=path(target.get_property("PlayerState").call_function("GetPawn")),
                 death_state=int(health.call_function("GetDeathState")), max_health=float(health.call_function("GetMaxHealth")))
+            binding = readiness.snapshot(target, health)
+            state["native_replica_state"] = binding
+            fingerprint = json.dumps(dict(position=self.position, binding=binding), sort_keys=True)
+            if fingerprint != getattr(self,"_last_replica_fingerprint",None):
+                self._last_replica_fingerprint = fingerprint
+                files = self.report.setdefault("replica_binding_event_files",[])
+                require(len(files) < 256, "bounded native replica diagnostic history exhausted")
+                name = self.peer+"-replica-binding-"+str(len(files))+".json"
+                atomic_write(self.root/name, dict(run_id=self.run, position=self.position, binding=binding, view=readiness.view_state(self.controller)))
+                files.append(name)
         if command["target_player_name"] is not None and not valid(target):
             actors, = self.statics.call_function("GetAllActorsOfClass", self.world, ue.find_class("Pawn"))
             state["native_pawn_names"] = [dict(path=path(pawn), player_name=player_name(pawn), player_id=player_id(pawn)) for pawn in actors]
@@ -162,6 +175,9 @@ class Client(Activation):
         atomic_write(self.root/(self.peer+"-"+str(self.position)+"-ack.json"), dict(run_id=self.run, position=self.position, row=value)); self.enter("accepted")
     def cleanup(self):
         if self.cleaned: return
+        if getattr(self,"warmup_join_control",None) is not None: self.warmup_join_control.close()
+        if getattr(self,"character_default_control",None) is not None: self.character_default_control.restore()
+        self.early_watch.close(); self.report["early_readiness_event_files"]=list(self.early_watch.files)
         if self.observer is not None: self.observer.close(); self.observer = None
         self.report["observer_scope_closed"] = self.observer is None
         if hasattr(self, "cue_class"):
@@ -177,6 +193,9 @@ class Client(Activation):
         if self.finished: return False
         try:
             require(time.monotonic()-self.started < 500., "native trace owner/viewer total timeout")
+            if getattr(self,"warmup_join_control",None) is not None: self.warmup_join_control.client_poll()
+            if getattr(self,"character_default_control",None) is not None: self.character_default_control.observe_registration()
+            self.early_watch.poll();self.report["early_readiness_event_files"]=list(self.early_watch.files)
             if self.phase == "ready": self.ready()
             elif self.phase == "idle":
                 command = token(self.root, "arm.json", self.run)
@@ -213,6 +232,7 @@ class Server(Playing):
     box, v, living_bots, preflight, root_task, effect_context = Trace.box, Trace.v, Trace.living_bots, Trace.preflight, Trace.root_task, Trace.effect_context
     def __init__(self, result, run):
         super().__init__(result, run); self.ability_class = CLASS; self.prepared = False; self.released = False; self.scope = None
+        self.early_watch=readiness.EarlyWatch(self.root,"server",run)
         self.fixtures = []; self.bot_states = []; self.events = []; self.observation_errors = []
         self.report.update(native_net_mode="DedicatedServer", observation_errors=self.observation_errors,
             health_properties_written=False, activation_event_replayed=False, native_fixture_teleports=True)
@@ -262,7 +282,8 @@ class Server(Playing):
             native_role=int(self.pawn.call_function("GetLocalRole")), original_config=config(self.melee), target=path(self.target),
             target_player_name=player_name(self.target) if valid(self.target_health) else None, native_activation_observed=False)
         command = dict(self.current, run_id=self.run, source_location=vector(self.pawn.get_actor_location()), target_player_id=player_id(self.target) if valid(self.target_health) else None,
-            target_health=float(self.target_health.call_function("GetHealth")) if valid(self.target_health) else None)
+            target_health=float(self.target_health.call_function("GetHealth")) if valid(self.target_health) else None,
+            native_authority_views={name:readiness.view_state(value["controller"]) for name,value in self.owners.items()})
         self.case_started = time.monotonic(); self.permitted = self.end_sent = False; self.quiet_ticks = 0; self.events = []
         atomic_write(self.root/"arm.json", command)
     def before_activation(self, instance):
@@ -326,6 +347,9 @@ class Server(Playing):
         if self.finished: return False
         try:
             require(time.monotonic()-self.started < 500., "native authority trace total timeout")
+            if getattr(self,"warmup_join_control",None) is not None: self.warmup_join_control.server_poll()
+            self.early_watch.poll();self.report["early_readiness_event_files"]=list(self.early_watch.files)
+            if getattr(self,"character_default_control",None) is not None: self.character_default_control.observe_registration()
             if not self.playing_gate: self.wait_playing()
             elif not self.owners: self.setup()
             elif not self.prepared: self.prepare()
@@ -345,9 +369,33 @@ class Server(Playing):
     def finalize(self):
         if self.report["status"] == "awaiting_shutdown": self.report["status"] = "passed"
         atomic_write(self.path, self.report); (ue.log if self.report["status"] == "passed" else ue.log_error)("UEP_MELEE_TRACE_NETWORK_"+self.report["status"].upper())
+    def finish(self, error=None):
+        if self.finished: return
+        try:
+            if getattr(self,"warmup_join_control",None) is not None: self.warmup_join_control.close()
+            if getattr(self,"character_default_control",None) is not None: self.character_default_control.restore()
+            self.early_watch.close()
+        except Exception: error=(error or "")+traceback.format_exc()
+        self.report["early_readiness_event_files"]=list(self.early_watch.files)
+        super().finish(error)
 
 
 if any(value.startswith("-UEPMeleeTraceNetworkResult=") for value in sys.argv):
     result, peer, run = arg("-UEPMeleeTraceNetworkResult="), arg("-UEPJumpPeer="), arg("-UEPJumpRun=")
+    mode=next((value.split("=",1)[1] for value in sys.argv if value.startswith("-UEPReplicaCharacterStartupProfile=")),None)
+    if mode:
+        from .melee_character_default_control import CharacterDefaultControl
+        subset=next((value.split("=",1)[1] for value in sys.argv if value.startswith("-UEPReplicaCharacterOriginalSubset=")),None)
+        character_default_control=CharacterDefaultControl(mode,original_begin_play="-UEPReplicaCharacterOriginalBeginPlay" in sys.argv,original_subset=subset)
+    else: character_default_control=None
     validation = Server(result, run) if peer == "server" else Client(result, peer, run)
+    validation.character_default_control=character_default_control
+    validation.warmup_join_control=None
+    if "-UEPReplicaWarmupJoin" in sys.argv:
+        from .melee_warmup_join_control import WarmupJoinControl
+        validation.warmup_join_control=WarmupJoinControl(validation.root,peer,run)
+        validation.report["controlled_warmup_join"]=validation.warmup_join_control.report
+    if character_default_control is not None:
+        character_default_control.observe_births(validation.early_watch)
+        validation.report["character_startup_control"]=character_default_control.report
     atexit.register(validation.finalize); ticker = ue.add_ticker(validation.tick)

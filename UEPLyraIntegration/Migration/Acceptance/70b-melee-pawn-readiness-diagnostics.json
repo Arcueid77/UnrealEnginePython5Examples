@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "batch": "70b-melee-pawn-readiness-diagnostics",
+  "scope": "Diagnostic and test-infrastructure acceptance only; original intermittent remote Health0/empty-ASC race is OPEN,not fixed. FullPythonBirth02 passes20 authority/40 viewer rows after late join. ControlledWarmup01 additionally proves two real autonomous clients joined healthy before native Warmup ended; temporary authority time dilation0.1 is restored exactly to1 before the original native reset/respawn; both post-warmup Pawn paths differ.20 native owner requests/authority activations,40 viewer rows,4 hostile100-damage hits,unchanged native prediction Cue filtering,scope balance,independent gates/strict closed logs/server-last actual exits. Read-only HealthSet/ASC/Avatar/canonical-Pawn/init-state/inventory-stage/native-viewpoint snapshots and immutable same-frame birth/EndPlay history; per-Actor EndPlay detaches before native property destruction. Explicit runtime-only original/Python method controls restore CDO and handlers,no saved assets/no permanent BP fallback.2469 host models. Captured server waits/resumes are zero; prior resume-only isolation is not causal proof. Failed experiments and startup-failed Birth01 remain failed. No production Character/Melee policy repair,no exact-boundary startup stability,PvP/physical-input/loss/travel/rejoin/quantitative movement/full asset/version/package/publication claim. No Cpp build,Engine or official-source changes.",
+  "recorded_utc": "2026-10-17T18:18:38.0442125Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "230edf7bc1366bef2a48ad1b7ba56af8ba0659be",
+  "examples_parent_commit": "9015bdae51b30a2aefd17d230bb291fcd4a8a85e",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-melee-replica-readiness/FullPythonBirth02",
+      "summary_sha256": "F064A452C00977EFA910B85952984E9BE491ECECD442E37388A397A97C4FAC7C",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1940,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "server": 0,
+        "A": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "0FC5229F41EDEF3C5577EE6040037130C8BAD5E4751A1A2716D43A6B9CE0E99E"
+        },
+        {
+          "file": "A.json",
+          "sha256": "2DBCC8B12CA9DFD661F80BDD1002E42D47DA2A2EBFDD8E879E5CB4B688F2548B"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "AABB3D00F16E359AD30E195AA9762F7C41166C38BAFBF56E26E51169C5CBA4EF"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-melee-replica-readiness/ControlledWarmup01",
+      "summary_sha256": "4D1263C76F9F54B73AAC671FEB06447B793ACB3E2E67460A58F934165CED45D9",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1942,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "A": 0,
+        "B0": 0,
+        "server": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "C07A90A087E6F45F9A89CBE4ADE0808B4CA26F8883F6300FD558176615918787"
+        },
+        {
+          "file": "A.json",
+          "sha256": "88B9BE9FA3A265FF8BE488DEC3C3C00262C460B879B117BD17F3C2A329C7653D"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "83EC14CAD794448A19D3D76C813B596CBAAF33208D73687063FBC3C9349963DF"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "720BC5F2A5B73E5BBF6E490664CE0196E4E3A1062735BA67D07B73575C7366CB",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58JumpValidation.ps1"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_trace_network_validation.py",
+      "sha256": "D19AF110582B06D78B75F5898125A42152300C988C458C8F6593D39A9B76FDB6",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_trace_network_validation.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_trace_network_contract.py",
+      "sha256": "D154D0D6E25F0BD6B14CA5198E4026E761F2F8E60F054FFD1DF2EC0473E3C394",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_trace_network_contract.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_character_default_control.py",
+      "sha256": "B28B9D13103AA361C9B52319B6B6B5B9703C0314BAA41401532156EA90BC6407",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_character_default_control.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_replica_readiness.py",
+      "sha256": "05FE0BE5D03E8A4F7D28DC52E280AF1A568156F9FB664985ADEEDF02725498FE",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_replica_readiness.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_warmup_join_control.py",
+      "sha256": "D76478C349B1F09C47F69550FEA7BEB552E54A2B68C4311A8CAFBB80092B1E61",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_warmup_join_control.py"
+    }
+  ],
+  "host_report": {
+    "sha256": "22BD9062D14882DDDA81C66A88769A4C944E0035F8079997F57D746E366F4B83",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 2469,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261018-melee-replica-readiness/Host17.json"
+  }
+}
