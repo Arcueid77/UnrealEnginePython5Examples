@@ -16,13 +16,29 @@ from .dash_local_direction_contract import STANDALONE_TRIALS, require, standalon
 
 
 def rotation(value): return [float(value.roll), float(value.pitch), float(value.yaw)]
+def restore_control(controller, expected):
+    before = rotation(controller.call_function("GetControlRotation"))
+    controller.call_function("SetControlRotation", expected)
+    forced = rotation(controller.call_function("GetControlRotation")) != rotation(expected)
+    if forced:
+        # AController deliberately skips changes within 1e-3 degrees. Force
+        # exact fixture restoration through two public native calls, no writes.
+        controller.call_function("SetControlRotation", ue.FRotator(expected.roll, expected.pitch, expected.yaw+1.))
+        controller.call_function("SetControlRotation", expected)
+    actual = rotation(controller.call_function("GetControlRotation"))
+    return dict(control_rotation=actual == rotation(expected), control_expected=rotation(expected), control_before=before,
+        control_after=actual, native_control_reset_forced=forced)
+
+
 def counters(ability):
     return dict(local=copy.deepcopy(evidence(ability)), selector=copy.deepcopy(selector_evidence(ability)), rpc=copy.deepcopy(rpc_evidence(ability)))
 
 
 class Validation(Ready):
+    marker = "UEP_DASH_LOCAL_DIRECTION"
     def __init__(self, result):
         super().__init__(result); self.require_auto_active = False; self.cleaned = False
+        self.plan = STANDALONE_TRIALS
         self.report = dict(schema_version=1, status="running", error=None, cases=[],
             full_acceptance=False, network_acceptance=False, packaged_runtime=False, physical_input_tested=False,
             enhanced_input_tested=False, whole_dash_activation_migrated=False, dash_task_business_migrated=False,
@@ -58,7 +74,7 @@ class Validation(Ready):
         self.enter("start")
 
     def start(self):
-        name, profile = STANDALONE_TRIALS[self.index]
+        name, profile = self.plan[self.index]
         self.current = self.actors["ai" if name == "ai-navigation" else "player"]
         actor = self.current; ability, pawn = actor["ability"], actor["pawn"]
         if ability.get_property("bIsActive") or ability.call_function("GetCooldownTimeRemaining") > 0 or int(pawn.CharacterMovement.MovementMode) != 1: return
@@ -72,7 +88,13 @@ class Validation(Ready):
             native_role=int(pawn.call_function("GetLocalRole")), native_pose_reset=moved, control_pitch_fixture=pitch,
             native_active_observed=False, native_root_motion_task_observed=False, native_montage_task_observed=False,
             max_motion_distance=0., max_native_speed=0., cooldown_repeat_rejected=None)
+        self.trial_begin_evidence()
         self.enter("settle")
+
+    def trial_begin_evidence(self): pass
+    def trial_end_evidence(self): pass
+    def intent_name(self): return self.row["name"]
+    def validate_report(self): return standalone(self.report)
 
     def input_snapshot(self):
         actor = self.current; pawn, ability = actor["pawn"], actor["ability"]
@@ -98,7 +120,7 @@ class Validation(Ready):
 
     def intent(self):
         actor = self.current; pawn, ability, asc = actor["pawn"], actor["ability"], actor["asc"]
-        name = self.row["name"]
+        name = self.intent_name()
         if name in ("forward", "left", "camera-pitch"):
             direction = pawn.call_function("GetActorRightVector" if name == "left" else "GetActorForwardVector")
             pawn.call_function("AddMovementInput", direction, -1. if name == "left" else 1., False)
@@ -139,10 +161,11 @@ class Validation(Ready):
             native_ability_ended=not bool(ability.get_property("bIsActive")), native_tasks_after=task_state(ability)["count"],
             quiet_ticks=self.quiet_ticks, specs_unchanged=specs(actor["asc"]) == actor["specs"],
             native_configuration_unchanged=configuration(ability) == actor["config"], health_unchanged=float(actor["health"].call_function("GetHealth")) == actor["initial_health"])
+        self.trial_end_evidence()
         self.report["cases"].append(copy.deepcopy(self.row))
         ue.log("UEP_DASH_LOCAL_DIRECTION_CASE_OBSERVED "+self.row["name"]+"/"+self.row["profile"])
         self.index += 1
-        if self.index == len(STANDALONE_TRIALS): self.finish()
+        if self.index == len(self.plan): self.finish()
         else: self.enter("start")
 
     def tick(self, seconds):
@@ -165,11 +188,10 @@ class Validation(Ready):
         restored = []
         for actor in getattr(self, "actors", {}).values():
             ability = actor["ability"]; ue.set_mixin_profile(ability, actor["profile"])
-            actor["controller"].call_function("SetControlRotation", actor["control"])
             moved = bool(actor["pawn"].call_function("K2_TeleportTo", actor["location"], actor["rotation"]))
             restored.append(dict(profile=str(ue.get_mixin_profile(ability)) == actor["profile"],
                 specs=specs(actor["asc"]) == actor["specs"], configuration=configuration(ability) == actor["config"], pose_reset=moved,
-                control_rotation=rotation(actor["controller"].call_function("GetControlRotation")) == rotation(actor["control"])))
+                **restore_control(actor["controller"], actor["control"])))
         self.report["restoration"] = restored; self.cleaned = True
 
     def finish(self, error=None):
@@ -178,13 +200,13 @@ class Validation(Ready):
         try: self.cleanup()
         except Exception: error = (error or "")+traceback.format_exc()
         self.report.update(status="failed" if error else "awaiting_shutdown", error=error); self.write()
-        (ue.log_error if error else ue.log)("UEP_DASH_LOCAL_DIRECTION_DIFFERENTIAL_"+("FAILED "+error if error else "PASSED")); ue.request_exit()
+        (ue.log_error if error else ue.log)(self.marker+"_DIFFERENTIAL_"+("FAILED "+error if error else "PASSED")); ue.request_exit()
 
     def finalize(self):
         if self.report["status"] == "awaiting_shutdown":
-            try: self.report["status"] = "passed"; standalone(self.report)
+            try: self.report["status"] = "passed"; self.validate_report()
             except Exception: self.report.update(status="failed", error=traceback.format_exc())
-        self.write(); (ue.log if self.report["status"] == "passed" else ue.log_error)("UEP_DASH_LOCAL_DIRECTION_SHUTDOWN_"+self.report["status"].upper())
+        self.write(); (ue.log if self.report["status"] == "passed" else ue.log_error)(self.marker+"_SHUTDOWN_"+self.report["status"].upper())
 
 
 result = next((value.split("=", 1)[1] for value in sys.argv if value.startswith("-UEPDashLocalDirectionResult=")), None)

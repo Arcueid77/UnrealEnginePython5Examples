@@ -13,8 +13,8 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active next bounded batch 65 (2026-10-17):** continue Dash local activation,
-zero/cancel/Commit/crouch decisions, followed by task/Cue/UI business;
+**Active next bounded batch 66 (2026-10-17):** continue Dash native task,
+callback/Delay/Cue/UI orchestration and cleanup in Python;
 keep native RPC transport, GAS, navigation, animation and movement primitives.
 The accepted helper and RPC-input-store slices do not close the full Dash asset.
 
@@ -62,10 +62,70 @@ Network02 reruns the eight actual owner activations using the final standalone/
 network contract/startup sources; its independent gate, strict closed logs,
 server-last3 zero exits and1,878 frozen inputs PASS. Network01 remains an earlier
 passed player-only observation, not final exact-source acceptance. This bounded
-local-direction batch may be committed after isolated-index/closure gates; full
+local-direction batch passes2,132 isolated-index models and743-file closure;
+Examples4d0bfb1/coreef589ff commit it locally. The six original user-edited files
+retain their pre-commit SHA256 values. Full
 Dash activation/task/Cue/UI business, quantitative movement parity, Enhanced/
 physical input, network travel/loss/package and whole-version acceptance remain
 open. No C++ build/cook/package/push/tag/release.
+
+Batch65 implementation now overrides the actual retained-class
+`K2_ActivateAbility` event. Python performs original IsLocallyControlled,
+local preparation, native Vector_IsNearlyZero tolerance0.0001/cancel,
+K2_CommitAbility/cancel, crouch/native UnCrouch, K2_HasAuthority and original
+reliable SendInfo. One non-Net custom event enters the original native task
+merge without cloning/removing business nodes; remote authority still waits
+for original SendInfo. Four explicit Profile methods retain all three accepted
+helpers. No automatic call-original after Python. The fallback invokes the
+preserved actual activation event. Host01 fails missing host test UE-module
+stand-in before any native launch; corrected Host02 PASSes2,146 models.
+Assets01 PASSes one additional non-Net task-entry node, unchanged original
+class/full CDO/five existing signatures/business graphs and Python4/fallback4
+registration/restoration, with complete Stage/Overlay backups and the existing
+matching binary; no C++ build. Host03 fails a negative-test sample that selected
+a nonzero no-input control; the corrected test selects the actual zero case.
+Host04 PASSes2,163 models,7 driver safety checks,8 inherited declaration guards,
+PowerShell parse and the strict62->63->64->65 asset chain. Standalone01 is
+running12 actual native ASC activations: the accepted five original/Python
+controls plus native Character.Crouch/UnCrouch. Network01 follows serially only
+after standalone acceptance. Actual standalone crouch/entry and two-owner
+activation/RPC acceptance are still pending. Native Commit failure requires
+separate evidence; a policy-model failure branch is not native proof.
+
+Standalone01 completes12 actual native cases but FAILS its shutdown gate:
+only the player's exact control-rotation restoration is false (Profile/spec/
+configuration/native pose and AI restoration pass). This is retained as a
+failed run, not accepted because exit0 or cases exist; Network01 is not
+launched. Engine AController::SetControlRotation skips changes within1e-3
+degrees, so a near original angle may be left numerically unequal. The fixture
+now records before/expected/actual and, only when exact native restoration was
+skipped, uses public native SetControlRotation at yaw+1 then the original
+rotation. The exact gate is unchanged; no raw rotation/property/Engine edit or
+widened tolerance. Four executable tiny-delta/wrapped/direct restoration models
+plus a report counterexample bring Host05 to2,168 PASS. Standalone02 and then
+Network01 run serially with this fixture repair. Standalone02 PASSes12 native
+original/Python activations, including actual crouch then native UnCrouch,
+selected actual activation dispatch exactly once, zero cancel, Commit/task/RPC
+order, native montage/RootMotion/end/cooldown/quiet checks and both actor
+restoration. The player native angle actually requires the forced public-API
+reset: before-179.99977111816406, expected/after-179.999771; the exact gate now
+passes. Independent semantic gate/strict closed log/exit0 and1,888 frozen inputs
+PASS. Network01 is now running; no whole batch/version claim yet.
+
+Network01 PASSes8 actual owner and8 remote-authority activation event
+dispatches plus8 unchanged reliable SendInfo ingresses across2 owners. Python
+local-control/zero/Commit/authority/RPC/task order is gated, remote authority
+does no local work before RPC, foreign state stays invariant and native tasks/
+end/cooldown/quiet checks pass. Three server-last zero exits, independent gate,
+strict closed logs and1,888 frozen inputs PASS. One native GameplayTag
+BlueprintPropertyMap invalid/corrupted weak-owner warning is observed on the
+server; the same warning already occurs in62/ADSRegression01. Root cause is
+not established or fixed; no warning-free/animation/Engine stability claim.
+SelectorRegression01 PASSes42 pairs on the65 asset, with strict independent
+gate/closed log/exit0 and1,888 inputs. All four accepted runs now support the
+bounded implementation;2,168 isolated-index models/751-file closure are the
+remaining local-commit gates. Remaining task/Cue/UI/Delay business and native
+Commit failure/full-version/package/physical-input acceptance stay open.
 
 **Bounded batch63 (2026-10-17):** continue Dash activation/RPC body
 and task/movement decisions in small native-compared steps. Retain native RPC
