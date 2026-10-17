@@ -25,6 +25,7 @@ def delta(after, before, skip): return {key: value-before[key] for key, value in
 
 
 class Context:
+    probe_path = PROBE
     def __init__(self, actors, controllers, original_proxy_paths=None, startup_owned=()):
         self.actors, self.controllers, self.closed = actors, controllers, False
         self.states = {key: ActorState(actor) for key, actor in actors.items()}
@@ -32,7 +33,7 @@ class Context:
         self.original_proxies = set(proxies()) if original_proxy_paths is None else set(original_proxy_paths)
         self.startup_owned, self.owned, self.cancelled, self.latest = list(startup_owned), [], [], {}
         self.cdo = next(iter(actors.values())).get_class().get_cdo(); self.cdo_profile = str(ue.get_mixin_profile(self.cdo))
-        self.devices = DeviceObserver(); self.caller_class = ue.load_class(PROBE); self.caller = self.caller_class.get_cdo()
+        self.devices = DeviceObserver(); self.caller_class = ue.load_class(self.probe_path); self.caller = self.caller_class.get_cdo()
         self.caller_root = not self.caller_class.is_rooted(); self.caller_released = False
         if self.caller_root: self.caller_class.add_to_root()
         self.startup = {key: copy.deepcopy(policy.evidence(actor)) for key, actor in actors.items()}

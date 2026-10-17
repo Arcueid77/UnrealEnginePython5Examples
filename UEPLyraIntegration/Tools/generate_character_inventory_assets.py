@@ -24,7 +24,8 @@ def input_bindings(cls):
     return sorted(values, key=lambda value: value["function"])
 
 
-def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, team=False, stencil=False, lifecycle=False, parts=False, health=False, enhanced=False, observer=False, listener=False):
+def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, team=False, stencil=False, lifecycle=False, parts=False, health=False, enhanced=False, observer=False, listener=False, legacy=False):
+    listener = listener or legacy
     observer = observer or listener
     enhanced = enhanced or observer
     health = health or enhanced
@@ -37,6 +38,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     quickbar = quickbar or loadout
     audio = audio or quickbar
     kind, prefix, module = next((kind, prefix, module) for enabled, kind, prefix, module in (
+        (legacy, "characterlegacy", "LegacyPlayerInfo", "legacy_player_info_mixin"),
         (listener, "characterlistener", "TeamListener", "team_listener_mixin"),
         (observer, "characterobserver", "TeamObserver", "team_observer_mixin"),
         (enhanced, "characterinput", "EnhancedInput", "enhanced_input_mixin"),
@@ -66,10 +68,15 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     bindings_before = input_bindings(bp.GeneratedClass) if enhanced else None
     signatures = {name: ue.describe_function(bp.GeneratedClass, name) for name in
         (("ClearInventory", "AddInitialInventory", "K2_OnDeathFinished", "K2_OnReset", "ReceiveBeginPlay", "ReceivePossessed")+
-            (("GetEmoteAudioComponent", "SetEmoteAudioComponent") if audio else ())+(("ChangeQuickbarSlot",) if quickbar else ())+(("CreateOrUpdateOutlineIfNeeded",) if outline else ())+(("OnTeamOrCosmeticsChanged",) if team else ())+(("UpdateCustomStencilFromTeamID",) if stencil else ())+((BOUND_EVENT,) if parts else ())+((HEALTH_EVENT,) if health else ())+((OBSERVER_EVENT, "ListenForTeam") if observer else ())) }
+            (("GetEmoteAudioComponent", "SetEmoteAudioComponent") if audio else ())+(("ChangeQuickbarSlot",) if quickbar else ())+(("CreateOrUpdateOutlineIfNeeded",) if outline else ())+(("OnTeamOrCosmeticsChanged",) if team else ())+(("UpdateCustomStencilFromTeamID",) if stencil else ())+((BOUND_EVENT,) if parts else ())+((HEALTH_EVENT,) if health else ())+((OBSERVER_EVENT, "ListenForTeam") if observer else ())+(("OnRep_PlayerInfo",) if legacy else ())) }
     input_signatures = {value["action"]: ue.describe_function(bp.GeneratedClass, value["function"]) for value in bindings_before} if enhanced else {}
     originals = [(graph, {node.get_name() for node in graph.Nodes}) for graph in ue.blueprint_get_all_graphs(bp)]
     graphs = {graph.get_name(): semantics(graph, names, set()) for graph, names in originals}
+    if legacy:
+        graph, = [value for value, _ in originals if value.get_name() == "OnRep_PlayerInfo"]
+        call, = [node for node in graph.Nodes if node.get_class().get_name() == "K2Node_CallFunction"]
+        if len(graph.Nodes) != 2 or str(call.FunctionReference.MemberName) != "OnTeamOrCosmeticsChanged" or call.node_find_pin("TeamID").default_value != "0" or call.node_find_pin("TeamDisplayAsset").default_object is not None or call.node_find_pin("TeamID").get_linked_to() or call.node_find_pin("TeamDisplayAsset").get_linked_to():
+            raise RuntimeError("original legacy team refresh literal defaults differ")
     name = "DA_Character"+prefix+"Mixin"
     if ue.find_asset("/Game/UEPMixins/"+name+"."+name) is not None: raise RuntimeError("fresh Character inventory Mixin required")
     factory = DataAssetFactory(); factory.DataAssetClass = UEPPythonMixinSet
@@ -111,6 +118,10 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
         report["implemented_methods"].append("ListenForTeam")
         report["native_team_listener_transport"] = transport
         report["native_team_listener_transport_signature"] = ue.describe_function(bp.GeneratedClass, transport["function"])
+    if legacy:
+        report["implemented_methods"].append("OnRep_PlayerInfo")
+        report["legacy_player_info_literal_defaults"] = dict(team_id=0, display_asset=None)
+        report["legacy_named_player_info_property_present"] = "PlayerInfo" in bp.GeneratedClass.get_cdo().properties()
     if team:
         if stencil:
             if lifecycle:
@@ -180,4 +191,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
             ("AsyncAction_ObserveTeamColors", "ObserveTeamColors"), ("CancellableAsyncAction", "Cancel"), ("CancellableAsyncAction", "IsActive"))}
         report["team_observer_callback"] = OBSERVER_EVENT
         report["original_listener_factory_orchestration_remains_bp"] = not listener
+    if legacy:
+        from generate_character_legacy_player_info_probe import generate as legacy_probe
+        report["legacy_player_info_probe"] = legacy_probe(stage, bp.GeneratedClass)
     return report

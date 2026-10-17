@@ -18,6 +18,10 @@ def validation_module(arguments):
         return "uep_lyra_characters.enhanced_input_network_validation"
     if any(argument.startswith("-UEPCharacterInputResult=") for argument in arguments):
         return "uep_lyra_characters.enhanced_input_validation"
+    if any(argument.startswith("-UEPCharacterLegacyNetworkResult=") for argument in arguments):
+        return "uep_lyra_characters.legacy_player_info_network_validation"
+    if any(argument.startswith("-UEPCharacterLegacyResult=") for argument in arguments):
+        return "uep_lyra_characters.legacy_player_info_validation"
     if any(argument.startswith("-UEPCharacterListenerNetworkResult=") for argument in arguments):
         return "uep_lyra_characters.team_listener_network_validation"
     if any(argument.startswith("-UEPCharacterListenerResult=") for argument in arguments):

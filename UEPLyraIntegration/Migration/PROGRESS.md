@@ -13,11 +13,43 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active next bounded batch 52 (2026-10-17):** inspect remaining retained Character
-initialization/possession and legacy OnRep_PlayerInfo business, then migrate one
-coherent next group with original BP comparison and two-client verification.
-Real team-change replication/lifetime, initialization readiness and parent/
-sibling business remain open; no implementation or acceptance claim for52 yet.
+**Active next bounded batch 53 (2026-10-17):** migrate only the generated
+ExperienceReady OnReady inventory-readiness continuation's immediately-ready
+branch; pending components initially retain the original native BP wait chain.
+Preserve actual
+Controller -> InventoryManager -> Quickbar readiness checks, native Experience
+delivery, native grants/replication and all twenty accepted routes. Original
+ReceivePossessed async creation and BeginPlay/visibility/init-state business
+remain later groups. Repeated readiness, deferred original fallback, natural
+startup and two-client inventory parity need evidence; no53 acceptance yet.
+
+**Latest accepted bounded batch 52 (2026-10-17):** migrate only legacy OnRep_PlayerInfo's
+literal OnTeamOrCosmeticsChanged(0, null) forwarding, preserving nineteen raw
+accepted Python aliases/fourteen fallback aliases, including input descriptors.
+Batch51 is locally committed as Examples1586f4b / coref16493e. Twenty-nine new /
+1,606 total host models PASS. Host01 remains failed on a fixture expectation:
+unassigned legacy refresh still forwards; it is not the ObserveTeamColors false
+branch noop. Models now distinguish these paths and avoid rediscovering imported
+test classes as duplicate tests. Assets01 PASSes Python20/BlueprintFallback15,
+all twenty-two original logical signatures/type/full CDO/every graph and literal
+zero/null defaults. The current native class has no property named PlayerInfo;
+do not infer real replication coverage from its retained helper name.
+Differential01 PASSes six comparisons/eight manually typed second-BP calls,
+native zero/null outline results, six actual software device properties,
+unchanged native teams/live observer set, exact original restoration and owned
+bare Actor/startup observer GC. Roots22/22, strict closed logs, independent gate
+and 1,757 frozen inputs PASS. Network01 PASSes eight steps/twelve typed calls per
+world, thirty-six total, actual DedicatedServer/Client/Client and role3/local2/
+foreign1, opposing/swapped Profiles, six local device properties/client and zero
+foreign/server output. Exact original state/live proxy sets, roots0/0+30/30+30/30,
+zero retained owned proxy, frozen cleanup/server-last three zero exits,
+independent semantic gate/strict closed logs and 1,757 frozen inputs PASS.
+These tests explicitly report the helper callback as manually replayed, not real
+RepNotify delivery. Initialization/possession, real team-change replication and
+parent/sibling/version work remain open. No C++ build, Engine/official Lyra/
+animation changes, push/tag/release. Ledger52 lists exactly Assets01/
+Differential01/Network01 and fifteen matched scoped sources/assets. All 1,606
+isolated Git-index models and 632-file all-index syntax/import closure PASS.
 
 **Latest accepted bounded batch 51 (2026-10-17):** ListenForTeam factory/bind/
 activation decisions are Python-owned, retaining the native observer, exact named
