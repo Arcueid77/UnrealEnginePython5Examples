@@ -47,7 +47,21 @@ def possession_graph(originals):
         original_continuation="WaitForInventoryReadiness")
 
 
-def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, team=False, stencil=False, lifecycle=False, parts=False, health=False, enhanced=False, observer=False, listener=False, legacy=False, ready=False, waiting=False, possessed=False):
+def visibility_graph(originals):
+    from uep_lyra_characters.visibility_mixin import SHOW
+    graph, = [graph for graph, _ in originals if graph.get_name() == "EventGraph"]
+    event, = [node for node in graph.Nodes if node.get_class().get_name() == "K2Node_CustomEvent" and str(node.CustomFunctionName) == SHOW]
+    pin, = event.node_find_pin("then").get_linked_to(); delay = pin.owning_node
+    if str(delay.FunctionReference.MemberName) != "DelayUntilNextTick" or event.node_find_pin("Params").get_linked_to() or delay.node_find_pin("WorldContextObject").get_linked_to() or delay.node_find_pin("LatentInfo").get_linked_to():
+        raise RuntimeError("original visibility input/native delay semantics differ")
+    pin, = delay.node_find_pin("then").get_linked_to(); show = pin.owning_node
+    if str(show.FunctionReference.MemberName) != "SetActorHiddenInGame" or show.node_find_pin("bNewHidden").default_value != "false" or show.node_find_pin("bNewHidden").get_linked_to() or show.node_find_pin("then").get_linked_to():
+        raise RuntimeError("original visibility continuation is not exactly SetActorHiddenInGame(false)")
+    return dict(callback=SHOW, payload_ignored=True, scheduler="DelayUntilNextTick", hidden_after_resume=False, whole_begin_play_migrated=False)
+
+
+def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, team=False, stencil=False, lifecycle=False, parts=False, health=False, enhanced=False, observer=False, listener=False, legacy=False, ready=False, waiting=False, possessed=False, visibility=False):
+    possessed = possessed or visibility
     waiting = waiting or possessed
     ready = ready or waiting
     legacy = legacy or ready
@@ -64,6 +78,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     quickbar = quickbar or loadout
     audio = audio or quickbar
     kind, prefix, module = next((kind, prefix, module) for enabled, kind, prefix, module in (
+        (visibility, "charactervisibility", "Visibility", "visibility_mixin"),
         (possessed, "characterpossessed", "Possessed", "possessed_mixin"),
         (waiting, "characterwait", "InventoryWait", "inventory_wait_mixin"),
         (ready, "characterready", "InventoryReady", "inventory_ready_mixin"),
@@ -91,6 +106,8 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
         from uep_lyra_characters.team_observer_mixin import BOUND_EVENT as OBSERVER_EVENT
     if ready:
         from uep_lyra_characters.inventory_ready_mixin import READY
+    if visibility:
+        from uep_lyra_characters.visibility_mixin import SHOW, RESUME as VISIBILITY_RESUME
     source = Path(json.loads((stage/".uep-lyra-full-stage.json").read_text(encoding="utf-8-sig"))["source"]).parent
     original = source/RELATIVE; digest = hashlib.sha256(original.read_bytes()).hexdigest()
     if hashlib.sha256((stage/RELATIVE).read_bytes()).hexdigest() != digest: raise RuntimeError("fresh original Character required")
@@ -105,10 +122,11 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     bindings_before = input_bindings(bp.GeneratedClass) if enhanced else None
     signatures = {name: ue.describe_function(bp.GeneratedClass, name) for name in
         (("ClearInventory", "AddInitialInventory", "K2_OnDeathFinished", "K2_OnReset", "ReceiveBeginPlay", "ReceivePossessed")+
-            (("GetEmoteAudioComponent", "SetEmoteAudioComponent") if audio else ())+(("ChangeQuickbarSlot",) if quickbar else ())+(("CreateOrUpdateOutlineIfNeeded",) if outline else ())+(("OnTeamOrCosmeticsChanged",) if team else ())+(("UpdateCustomStencilFromTeamID",) if stencil else ())+((BOUND_EVENT,) if parts else ())+((HEALTH_EVENT,) if health else ())+((OBSERVER_EVENT, "ListenForTeam") if observer else ())+(("OnRep_PlayerInfo",) if legacy else ())+((READY,) if ready else ())) }
+            (("GetEmoteAudioComponent", "SetEmoteAudioComponent") if audio else ())+(("ChangeQuickbarSlot",) if quickbar else ())+(("CreateOrUpdateOutlineIfNeeded",) if outline else ())+(("OnTeamOrCosmeticsChanged",) if team else ())+(("UpdateCustomStencilFromTeamID",) if stencil else ())+((BOUND_EVENT,) if parts else ())+((HEALTH_EVENT,) if health else ())+((OBSERVER_EVENT, "ListenForTeam") if observer else ())+(("OnRep_PlayerInfo",) if legacy else ())+((READY,) if ready else ())+((SHOW,) if visibility else ())) }
     input_signatures = {value["action"]: ue.describe_function(bp.GeneratedClass, value["function"]) for value in bindings_before} if enhanced else {}
     originals = [(graph, {node.get_name() for node in graph.Nodes}) for graph in ue.blueprint_get_all_graphs(bp)]
     possession = possession_graph(originals) if possessed else None
+    visibility_original = visibility_graph(originals) if visibility else None
     graphs = {graph.get_name(): semantics(graph, names, set()) for graph, names in originals}
     if legacy:
         graph, = [value for value, _ in originals if value.get_name() == "OnRep_PlayerInfo"]
@@ -121,7 +139,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     mixin = ue.create_asset(name, "/Game/UEPMixins", UEPPythonMixinSet, factory); mixin.DefaultProfile = "Python"
     mixin.Profiles = [UEPPythonMixinProfile(ProfileName=profile, PythonModule="uep_lyra_characters."+module,
         PythonClass="LyraCharacter"+prefix+profile+"Profile") for profile in ("Python", "BlueprintFallback")]
-    transport = ready_transport = wait_stub = None
+    transport = ready_transport = wait_stub = visibility_stub = visibility_transport = None
     if listener:
         from generate_character_team_listener_transport import generate as listener_transport
         transport = listener_transport(bp)
@@ -131,6 +149,10 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     if waiting:
         from generate_character_inventory_wait_stub import generate as resume_stub
         wait_stub = resume_stub(bp)
+    if visibility:
+        visibility_stub = resume_stub(bp, VISIBILITY_RESUME)
+        from generate_character_visibility_transport import generate as visibility_registration
+        visibility_transport = visibility_registration(bp)
     ue.blueprint_configure_mixin(bp, mixin, "Python", "PythonMixinProfile"); ue.compile_blueprint(bp); ue.unregister_all_mixins()
     if int(bp.Status) == 2 or bp.GeneratedClass.get_path_name() != cls or cdo_snapshot(bp, "character-after") != before:
         raise RuntimeError("original Character identity/full CDO changed")
@@ -147,6 +169,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
             signatures[value["function"]] = actual
     all_graphs = ue.blueprint_get_all_graphs(bp)
     extra_graphs = {"GetPythonMixinSet", "GetPythonMixinProfile"} | ({transport["function"]} if listener else set()) | ({ready_transport["function"]} if ready else set()) | ({wait_stub["function"]} if waiting else set())
+    if visibility: extra_graphs |= {visibility_stub["function"], visibility_transport["function"]}
     if set(graph.get_name() for graph in all_graphs)-set(graphs) != extra_graphs:
         raise RuntimeError("unexpected Character graph additions")
     if any(semantics(graph, names, set()) != graphs[graph.get_name()] for graph, names in originals):
@@ -187,6 +210,13 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
         report["experience_ready_factory_migrated"] = True
         report["native_possession_factory_signatures"] = {name: ue.describe_function(ue.find_class(cls), name) for cls, name in (
             ("AsyncAction_ExperienceReady", "WaitForExperienceReady"), ("AsyncAction_ExperienceReady", "Activate"), ("Actor", "HasAuthority"))}
+    if visibility:
+        report["implemented_methods"] += [SHOW, VISIBILITY_RESUME]
+        report.update(visibility_callback_business_migrated=True, original_visibility_semantics=visibility_original,
+            native_visibility_resume_stub=visibility_stub, native_visibility_registration_transport=visibility_transport,
+            native_visibility_resume_signature=ue.describe_function(bp.GeneratedClass, VISIBILITY_RESUME),
+            native_visibility_signatures={name: ue.describe_function(ue.find_class(cls), name) for cls, name in (
+                ("GameFrameworkInitStateInterface", "RegisterAndCallForInitStateChange"), ("Actor", "SetActorHiddenInGame"))})
     if team:
         if stencil:
             if lifecycle:
@@ -266,4 +296,6 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
         report["native_component_receiver_register_restore_passed"] = True
         if waiting and ue.describe_function(bp.GeneratedClass, wait_stub["function"]) != report["native_inventory_wait_resume_signature"]:
             raise RuntimeError("native inventory wait resume signature not restored")
+        if visibility and ue.describe_function(bp.GeneratedClass, VISIBILITY_RESUME) != report["native_visibility_resume_signature"]:
+            raise RuntimeError("native visibility resume signature not restored")
     return report

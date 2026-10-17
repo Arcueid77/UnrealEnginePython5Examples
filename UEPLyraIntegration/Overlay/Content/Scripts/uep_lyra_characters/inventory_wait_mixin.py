@@ -1,9 +1,9 @@
 """Three original readiness checkpoints; native latent action owns scheduling."""
-import uuid
 import unreal_engine as ue
 from unreal_engine.structs import LatentActionInfo
 from uep_lyra_world.effect_pad_mixin import valid
 from . import inventory_ready_mixin as ready
+from .latent_keys import allocate
 
 RESUME = "UEPInventoryWaitResume"
 CLASSES = (None, "LyraInventoryManagerComponent", "LyraQuickBarComponent")
@@ -30,9 +30,7 @@ def defer(actor, stage):
     if values["uuids"] is None:
         # UUID keys belong to this CallbackTarget only. Keep three independent,
         # stable keys per Actor; never cancel other Actor/native latent actions.
-        ids = set()
-        while len(ids) < 3: ids.add((uuid.uuid4().int & 0x7fffffff) or 1)
-        values["uuids"] = list(ids)
+        values["uuids"] = allocate(actor, "inventory-readiness", 3)
     info = LatentActionInfo(Linkage=stage, UUID=values["uuids"][stage], ExecutionFunction=RESUME, CallbackTarget=actor)
     ue.find_class("KismetSystemLibrary").get_cdo().call_function("DelayUntilNextTick", actor, info)
     values["delay_requests"] += 1; values["stage_requests"][stage] += 1; values["pending"][stage] = True

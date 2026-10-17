@@ -13,13 +13,48 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active next bounded batch 56 (2026-10-17):** migrate the native InitState
+**Active next bounded batch 57 (2026-10-17):** migrate ReceiveBeginPlay's
+parent-call / ListenForTeam / hide / native InitState registration orchestration.
+Preserve exact named native delegates and ordered calls without replaying
+BeginPlay on existing actors. Ancestor construction/death business and sibling /
+whole-version gates remain separate.
+
+**Latest accepted bounded batch 56 (2026-10-17):** migrate the native InitState
 callback ShowPawnAgainNextFrame's delayed visibility continuation, preserving
 the original native next-tick backend, original BP fallback and weak-owner
 cancellation. ReceiveBeginPlay's parent/ListenForTeam/hide/register orchestration
 and parent/sibling/version gates remain separate later groups.
 
-**Latest accepted bounded batch 55 (2026-10-17):** migrate ReceivePossessed's
+Batch56: visibility policy/native named int32 resumption and a four-node
+exact InitState registration transport are implemented. Stable per-Actor latent
+site keys keep inventory/visibility namespaces disjoint. Host01 passes1,788
+models; Assets01 PASSes strict logs/exit0, Python25/fallback20, original type /
+full CDO/all original graphs/twenty-four logical signatures. BeginPlay still
+performs original parent/ListenForTeam/hide/register orchestration. The native
+GameplayReady callback's original DelayUntilNextTick -> SetActorHiddenInGame
+(false) branch is the only new business migration. Differential01 PASSes natural
+startup/owned possession+readiness regressions and eight real native InitState
+single/repeat/destroy/Profile-switch trials. Native actual Params actor/component/
+PawnExtension/GameplayReady identity, hidden-before-resume/shown-after, repeated
+coalescing, both-direction pending Profile switches and destroyed-owner silence
+PASS. Main startup records received/delay at frame6438 while hidden, native
+resumption/show at6439, without a universal whole-frame-delay promise. Original
+state/resource/Cue pool gates remain; strict logs/independent gate/exit0 and1,838
+frozen inputs PASS. Network01 PASSes natural authority/owner visibility and
+the existing24 authority/24 replica inventory lane. Both authority Pawns and
+both owning clients each receive exactly one real PawnExtension GameplayReady
+payload, native delay/resume/show and end unhidden; no callback replay or direct
+hidden-field writes. Inventory FastArray/Quickbar replication, foreign owner
+isolation, exact original identities/Profile/CDO restoration, all test proxies
+24/12/12 collected and caller roots1/1 each world PASS. Strict closed logs,
+independent gate, server-last three zero exits and1,838 frozen inputs PASS.
+Network repeat/destroy/Profile-switch visibility and physical pixels are not
+certified by that lane. No C++ build/cook/package, Engine/official Lyra/animation
+changes or publication; BeginPlay/ancestor/sibling/full-version gates remain
+open. Ledger56 and isolated staged-tree checks precede local commit. Batch55
+is committed as Examples8cb0056/core33c945b.
+
+**Previously accepted bounded batch 55 (2026-10-17):** migrate ReceivePossessed's
 authority decision and actual ExperienceReady factory/bind/activation. Preserve
 natural native possession, original BP fallback, native delayed delivery and
 batch54's three-stage Python wait. BeginPlay/visibility/init-state, parent/
