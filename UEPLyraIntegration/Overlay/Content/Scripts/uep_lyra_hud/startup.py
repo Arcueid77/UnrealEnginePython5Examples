@@ -18,6 +18,8 @@ def validation_module(arguments):
         return "uep_lyra_characters.enhanced_input_network_validation"
     if any(argument.startswith("-UEPCharacterInputResult=") for argument in arguments):
         return "uep_lyra_characters.enhanced_input_validation"
+    if any(argument.startswith("-UEPCharacterDeathReplicationNetworkResult=") for argument in arguments):
+        return "uep_lyra_characters.death_replication_network_validation"
     if any(argument.startswith("-UEPCharacterDeathStartedNetworkResult=") for argument in arguments):
         return "uep_lyra_characters.death_started_network_validation"
     if any(argument.startswith("-UEPCharacterDeathStartedResult=") for argument in arguments):

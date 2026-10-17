@@ -13,17 +13,75 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active next bounded batch 61 (2026-10-17):** verify batch60's actual native
-death receiver through authority/owner/foreign replicas and native respawn.
-Do not substitute the accepted inventory/local-body network regression for
-real death ingress. Preserve native signals/RPCs, weak-owner latent behavior,
-animation/physics and original BP fallback. Broader/sibling/version gates stay open.
+**Active next bounded batch 62 (2026-10-17):** start Dash business with the
+original SelectDirectionalMontage helper's native vector/rotator math and
+direction/bias decisions. Preserve original helper signature/graphs, use actual
+granted ability instances and typed BP/Python comparison, and keep Dash
+activation/RPC/movement/task orchestration as subsequent bounded work. Animation
+implementation/ABPs remain native/retained. Broader/sibling/version gates stay open.
+
+**Latest accepted bounded batch 61 (2026-10-17):** `death_replication_network_validation.py` composes the
+accepted real lethal-GAS/two-owner/native-respawn lifecycle protocol with a
+read-only Health.OnDeathStarted/body witness. It does not replay a receiver,
+write Health/animation/physics or root Actors. Native PlayerState identity
+matches authority, owner and foreign dying replicas; foreign own-controller
+inventory/event invariance stays separate. Each original dying Actor must
+dispatch only its selected BP/Python Profile, resume the native random Delay,
+produce native full-rig body/hidden weapon state and stay script-quiet for at
+least0.75 game seconds after actual native invalidation. Native perception
+system presence is recorded per world, so a client without that native system
+is not falsely required to mutate its Sight configuration. This observes local
+replica death presentation, not replicated Chaos poses. Host01 passes1,988
+models;56 PowerShell scripts parse and five safe-launch checks PASS. Network01
+FAILS before the first authority damage: TObjectIterator includes a valid
+worldless perception-system CDO, whose UEP get_world convenience getter raises.
+Preserve that run, exclude worldless/default/other-world objects in the read-only
+world ownership helper and model all four conditions. Network02 is pending
+with the exact accepted DeathStarted assets/binaries. Network02 completes the
+first authority/owner/foreign BP/Python death pair, then FAILS A exit3: Renderer
+FSceneExtensionsUpdaters::End / RDG async allocator destruction / TaskBase
+AddPrerequisites access violation. The server's later invalid Controller is
+after A disconnects, not accepted as the primary failure. Preserve logs and
+retry unchanged inputs/settings as Network03; no engine patch or relaxed gates.
+Network03 FAILS pre-damage arming: the foreign client cannot match the target
+Pawn, while the owner is already armed; no renderer crash is reproduced in
+that shorter run. Random original spawns/native relevance were not constrained.
+Network04 declares a nearby authority fixture: collision-checked native
+K2_TeleportTo plus ForceNetUpdate before per-trial baselines/damage, repeated for
+new native respawns; do not change relevance fields/CDOs or deliver game state
+through files. Save native positions and foreign actual-PlayerState matching
+diagnostics. A closed Network02 partial witness check also exposes that merely
+catching get_world exceptions hides live perception systems: UEP's helper only
+accepts World/Actor/Component. Read exact reflected World.AISystem.PerceptionSystem,
+matching the inspected native GetCurrent path, with null-AI/null-system tests.
+Host03 passes1,992 models. Network04 PASSes unchanged binaries/assets/render
+settings with these fixture corrections:12 authority/12 owner/12 foreign actual
+death receiver witnesses, both real owner turns and BP/Python Profiles, actual
+native signal montage/senses, native random Delay, full-rig local replica body /
+hidden weapons, inventory empty/rebuild/lifecycle and foreign own-owner invariance.
+Native roles are3/2/1. The server's actual perception-system count is1; clients'
+count is0 and retain both configured senses, matching original native behavior.
+All36 old Actors are invalid and script-quiet for at least2.7321385 game seconds;
+death scopes12/12/0 each process and inventory scopes12/12,6/6,6/6 balance.
+Thirteen native relevance teleports precede damage/baselines. Independent gate,
+strict closed logs, server-last three zero exits and1,921 frozen inputs PASS.
+All1,992 isolated-index models and719-file closure precede ledger61/local commit.
+Index01 FAILS a new Examples test that inspects the concurrently edited core
+driver, while isolation correctly uses core HEAD. Move that source guard to
+the core safety suite (now7 checks), replace the cross-repository model with
+an Examples-local close-before-shutdown AST guard and rerun Index02. Native
+Network04 inputs do not change; do not claim a new native run from test edits.
+This is local replica death/Ragdoll/hide business, not Chaos pose replication.
+The preserved Network02 Renderer failure remains an unresolved stability
+observation, not a fixed engine claim. No asset
+regeneration, C++ build/cook/package or publication. Batch60 is committed as
+Examples7c2bf59/core0441416.
 Character_Default construction currently only forwards to native parent
 and its BeginPlay graph is empty; retain structural forwarding, animation/ABPs,
 editor/test tools and native physics/animation execution. Do not infer whole
 ancestor/sibling/version completion from the Shooter Character entrypoints.
 
-**Latest accepted bounded batch 60 (2026-10-17):** `death_started_mixin.py` implements the actual inherited
+**Previously accepted bounded batch 60 (2026-10-17):** `death_started_mixin.py` implements the actual inherited
 Health.OnDeathStarted generated receiver: native random montage index ->
 PlayAnimMontage(1,None) -> native sight-source unregister -> native random
 Delay(0.1..0.6) -> virtual Ragdoll/HideEquippedWeapons/empty Death. No replay of
