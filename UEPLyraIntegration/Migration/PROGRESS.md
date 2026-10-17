@@ -13,8 +13,8 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active next bounded batch 68 (2026-10-17):** continue Melee activation,
-trace/target/team/occlusion/damage and native task/Cue orchestration in Python;
+**Active next bounded batch 69 (2026-10-17):** continue Melee authority trace,
+target/team/occlusion/damage/root-motion/Cue business in Python;
 keep native RPC transport, GAS, navigation, animation and movement primitives.
 The accepted helper and RPC-input-store slices do not close the full Dash asset.
 
@@ -77,6 +77,114 @@ models. Four atomic publication/7 driver safety/8 inherited guards and61
 PowerShell parse checks pass. The exact staged-tree models and772-file syntax/
 import closure remain the only bounded helper-commit gates; no full Melee/
 version claim. Preserve the six user-dirty files and do not push/tag/release.
+
+Batch67 exact index PASSes2,284 models/772-file closure and is locally committed
+as Examples2d0cd2f/core34216b3, no push/tag/release. Only the six original user
+files remain dirty before this next checkpoint; all own67 code/assets are in
+that verified pair. No owned native test process remains.
+
+Batch68 source audit of the original Melee body: Commit's return is ignored;
+native equipment-manager GetEquipmentInstancesOfType selects index0 then casts
+to B_WeaponInstance_Base for MeleeAttackMontage. Montage task binds Completed,
+BlendOut,Interrupted,Cancelled to native End with stop-when-ended true. Its
+initial continuation checks actual ability authority, then performs original
+capsule query(ObjectTypeQuery3), target ASC validity, DifferentTeams and
+occlusion line query(TraceTypeQuery4). Unoccluded target runs Sequence root
+motion then effect-context/hit/native GE_Damage_Melee level1 and owner Cue.
+Root motion is additive, gravity enabled, MaintainLastRootMotionVelocity; do
+not reuse Dash's clamp/gravity settings. Trace begins at native hand_r socket
+and native Actor forward/trace-distance logic, not camera aim. MontageHit's
+one-entry function is empty and does not drive damage. These are static
+source findings, not native gameplay acceptance. Next migrate the actual
+activation/equipment/montage entry with a guarded End and native trace entry,
+then the target/team/occlusion/damage/Cue body, proving real native hostile/
+friendly/occluded/no-hit and two-owner outcomes in bounded batches. Retain
+GAS/physics/animation/RPC/general-plugin C++ and all official assets.
+Checkpoint2026-10-17 11:50UTC: no new68 source/asset authoring/native run yet;
+full objective remains open. Preserve both repos' mixed worktrees.
+
+Batch68 implementation: `melee_activation_mixin.py` keeps native Commit's
+ignored return, actual first equipment index0/cast/MeleeAttackMontage, native
+montage task flags and all four end delegates, native ability authority and a
+separate original authority-trace entry. Three local Profile methods retain
+the67 named helper. A false-default native End guard and an actual BP End
+override prevent teardown reentry; original trace/team/occlusion/damage/Cue
+body is deliberately still BP and NOT claimed migrated.
+
+Host01 PASSes2,299 models; Assets01 PASSes accepted67 before/current hash chain,
+original class/full CDO/three accepted signatures/all graphs,7 added native
+transport nodes, actual target-owned End override/guard, non-Net trace entry,
+Python3/fallback3 native registration/restoration. No C++ build. Host02 PASSes
+2,311 with12 report/source counterexamples. Differential01 PASSes8 actual ASC
+original/Python natural/interruption/cancel/active-Profile controls using the
+actual first equipped AM_MM_Pistol_Melee, no fixture activation/callback replay,
+all Pawn Health invariant, original config/spec/pose/control restore,20 quiet
+ticks and zero final tasks. Production scopes4/4, active/errors0, four script
+authority trace entries; these are retained native/BP trace-body calls, not
+Python damage proof. Independent gate/closed logs/exit0 and1,911 inputs PASS.
+
+HelperRegression01 is running on the68 revision to recheck32 original helper
+pairs/ABI with current three-method class routing. Native multiplayer activation/
+lifecycle, genuine hostile/friendly/occluded/no-hit damage and final batch68
+acceptance remain pending. No commit68/push/tag/release or broad version claim.
+Keep sources/assets/tests frozen until this owned native lane is terminal.
+
+HelperRegression01 is terminal PASS on the68 three-method revision:32 actual
+BP/Python helper pairs, native class/ABI/basis/raw double boundaries and
+same-frame state invariance, restored Profile/specs/caller roots/owned Actor,
+independent gate/strict closed log/exit0 and1,911 inputs. Both owned native
+lanes are now terminal; no compiler/cook/package/push/release is running.
+
+Checkpoint2026-10-17 12:02UTC: batch68 still UNCOMMITTED. Current draft source
+is melee_activation_mixin/validation/contract, its two host test modules and
+generate_melee_activation_assets; existing revision author/runtime drivers and
+startup dispatch are edited. Accepted authoring is
+`20261017-melee-activation/Assets01` (previous67 path retained in legacy
+previous_dash_directory); preserve its two independent before backups. Runtime
+driver supports helper regression with current activation proof and standalone
+activation only; it intentionally rejects Network for MeleeActivation until
+implemented. Next implement actual two-owner native ASC natural/cancel/active
+Profile cleanup using authority-task confirmation and foreign Health/spec/
+config invariants, then stage/index/evidence gates. Keep no-damage activation
+proof separate from real hostile/friendly/occluded/no-hit trace/damage/Cue
+producer acceptance. The original BP authority trace body remains, not Python
+business completion. No source/runtime success may close the full objective.
+
+Batch68 native network activation/lifecycle is now implemented separately
+from damage migration. Two real owners each issue6 native ASC requests:
+natural, native cancel and active Profile switch under original/Python. Server
+confirms actual native montage activity before interventions, preserves other
+owner location/velocity/active/spec/config/Profile/equipment and all Pawn
+Health, then requires post-end quiet and real server-last exits. Native End
+replication may preempt the other world's montage completion, so paired worlds
+must have an actual continuation, never replayed callbacks. Host03 PASSes2,324
+models (13 network report counterexamples).
+
+Network01 PASSes12 owner requests/12 actual authority activations, identities,
+equipped montage controls, native natural/cancel/Profile cleanup, source and
+foreign invariants, independent gate/strict closed logs/server-last3 zero exits,
+1,915 inputs. Production scopes server/A/B0=6/6,3/3,3/3; all active/errors0.
+No trace/damage business, travel/rejoin/loss or package acceptance implied.
+HelperNetworkRegression01 is running32 helper pairs per native world on the
+same68 revision; freeze source/tests/assets until terminal. Then record final
+evidence and exact staged-tree/full Python closure before any batch68 commit.
+
+Final68 evidence is now terminal passed: HelperNetworkRegression01 completes,
+no owned native process remains. Ledger68 records5 final native runs/11 scoped
+sources matched to real frozen inputs and2,324 models. Four atomic publication,
+7 driver safety,8 inheritance guards and61 PowerShell parse checks pass. Only
+the exact isolated Examples index and781-file full syntax/import closure remain
+before a bounded local frontend commit; do not stage any of the six original
+user-edited files or claim the preserved BP trace body is Python business.
+
+HelperNetworkRegression01 PASSes32 native helper pairs per world on the68
+revision, roles3/2/2 and two actual owners, profile/spec/caller-root/control
+Actor restoration, foreign Health/spec invariance, independent gate/strict
+closed logs/server-last3 zero exits;1,915 inputs. No native lane remains live.
+Final68 scope remains the activation/equipment/montage lifecycle and its native
+trace entry, not Python authority-trace business. Record5 final native runs,
+11 matching scoped sources and exact staged-tree/781-file closure before
+local commit; no source or process-only success can close the whole objective.
 
 Batch63 is locally committed as Examples1023942/corecca98d8. The six original
 user-dirty files remain unchanged; no push/tag/release. Batch64 implementation
