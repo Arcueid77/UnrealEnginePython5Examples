@@ -4,6 +4,10 @@
 def validation_module(arguments):
     if any(argument.lower().startswith("-run=") for argument in arguments):
         return None
+    if any(argument.startswith("-UEPMeleeHitMontageNetworkResult=") for argument in arguments):
+        return "uep_lyra_abilities.melee_hit_montage_network_validation"
+    if any(argument.startswith("-UEPMeleeHitMontageResult=") for argument in arguments):
+        return "uep_lyra_abilities.melee_hit_montage_validation"
     if any(argument.startswith("-UEPDashTasksNetworkLifecycleResult=") for argument in arguments):
         return "uep_lyra_abilities.dash_tasks_network_lifecycle_validation"
     if any(argument.startswith("-UEPDashTasksLifecycleResult=") for argument in arguments):

@@ -13,10 +13,70 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active next bounded batch 66 (2026-10-17):** continue Dash native task,
-callback/Delay/Cue/UI orchestration and cleanup in Python;
+**Active next bounded batch 68 (2026-10-17):** continue Melee activation,
+trace/target/team/occlusion/damage and native task/Cue orchestration in Python;
 keep native RPC transport, GAS, navigation, animation and movement primitives.
 The accepted helper and RPC-input-store slices do not close the full Dash asset.
+
+Batch66 is now locally committed: Examplesbd3630d/corece72b5d. The exact index
+passes2,247 models/765-file closure; ledger66 has6 final native runs/16 matched
+sources. All six original user-dirty files retain their pre-work SHA256 values.
+No push/tag/release. Native Commit failure, quantitative movement/physical
+input, broader stability and the remaining complete inventory remain open.
+
+Batch67 source audit selects GA_Melee (67 EventGraph nodes,13 collapsed trace
+nodes and24-node public `Slelect Hit Montage` helper). The first policy draft
+keeps raw hit normal/native Actor basis and native Dot/InRange, inclusive
+right-dot[-0.5,0.5], strict forward/right>0 and the exact four original montage
+assets. No animation asset/code copying. Null actor explicitly retains original
+VM behavior through call-original rather than inventing validity semantics.
+This draft and its host models are not authored/built/native accepted yet.
+
+Melee Host01 PASSes2,261 models (14 new raw-dot/inclusive-half/strict-zero/
+native-basis/named-output/no-original-fallthrough checks). The public helper
+has reflected input/output names containing spaces; current core signature
+validation binds positional inputs, so the Python parameter spelling need not
+alter that authored ABI. Its real native named-output signature still needs
+asset authoring and differential proof. Next author an Interface/Mixin Set on
+the disposable untouched Melee copy, preserve original class/full CDO/three
+method signatures/all graphs, then compare original/Python hit montage values
+on actual granted ability and real target actors, including exact boundaries.
+Do not count this host draft as native helper or full Melee migration. Trace,
+team/occlusion, native GAS damage, task/Cue and two-owner gameplay remain open.
+Checkpoint2026-10-17 11:32UTC: all owned native lanes and host processes from
+this checkpoint are terminal; no new compiler/cook/package/push/release run.
+
+Melee Assets01 PASSes unchanged original class/full CDO/three signatures/all
+graphs, native24-node helper thresholds/literal montage controls, Python1/
+fallback1 registration/restoration and a3-node stage-only typed external BP
+caller. No added business nodes/activation edits or animation asset changes.
+Host03 PASSes2,275 models. Differential01 PASSes32 actual granted-Melee helper
+pairs on a test-owned native identity Actor and actual player Pawn, double
+MakeVector inputs (including adjacent +/-0.5 boundaries), selected routing,
+same-frame native location/velocity/Health/montage/spec invariance and Profile/
+caller-root/control-Actor cleanup. Independent gate/strict closed log/exit0.
+
+Three-world/two-owner helper coordination is now implemented separately from
+predicted activation/RPC/trace/damage. Host04 PASSes2,284 models (nine new world/
+role/owner/foreign-state/real-exit counterexamples). Network01 is running32
+local BP/Python pairs per actual native world, server-last real exits and all
+helpers restored before release. Keep scripts/tests/assets frozen while live.
+No full Melee or release acceptance, C++ build/cook/package or commit67 yet.
+
+Network01 is terminal PASS:32 helper BP/Python pairs per actual native world,
+two distinct native owners, roles server/A/B0=3/2/2 and actual native modes
+DedicatedServer/Client/Client. Profile/specs/caller roots/control Actor restore,
+foreign authority Health/spec state remains invariant and all helpers clean up
+before release. Independent gate/strict closed logs/server-last3 zero exits,
+1,903 inputs PASS; standalone freezes1,901. Ledger67 and exact staged-tree/
+772-file closure gates remain before local commit. No native lane is active.
+The helper-only boundary is explicit; continue the remaining full Melee body.
+
+Ledger67 now records3 final native runs/11 matched scoped sources and2,284
+models. Four atomic publication/7 driver safety/8 inherited guards and61
+PowerShell parse checks pass. The exact staged-tree models and772-file syntax/
+import closure remain the only bounded helper-commit gates; no full Melee/
+version claim. Preserve the six user-dirty files and do not push/tag/release.
 
 Batch63 is locally committed as Examples1023942/corecca98d8. The six original
 user-dirty files remain unchanged; no push/tag/release. Batch64 implementation

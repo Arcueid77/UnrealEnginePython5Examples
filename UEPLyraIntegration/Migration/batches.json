@@ -18,10 +18,10 @@
     "review_date": "2026-10-16",
     "cadence": "modify, verify the isolated index, commit one coherent bounded batch",
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 67,
+    "bounded_evidence_ledgers": 68,
     "shared_binary_profile_families_committed_together": true,
-    "host_checks_passed": 2247,
-    "full_index_python_files_checked": 765,
+    "host_checks_passed": 2284,
+    "full_index_python_files_checked": 772,
     "native_provenance_note": "Per-pilot current means that pilot revision; actual binary hashes in its ledger decide whether a run is historical. A later file freeze is not re-execution.",
     "current_dll_equipment_rifle_run": "20261016-batch-backfill/rifle-Network01",
     "current_dll_equipment_shotgun_run": "20261016-batch-backfill/shotgun-Network02",
@@ -74,6 +74,36 @@
     "network_fixture_repair": "Assert foreign-owner invariance before permitting native disconnect; release once, then wait for actual exits without reading destroyed Controllers",
     "full_acceptance": false,
     "packaged_runtime_verified": false
+  },
+  "melee_hit_montage_pilot": {
+    "version": "0.11.0",
+    "status": "bounded_native_hit_helper_three_world_two_owner_verified_commit_gates_pending",
+    "evidence_ledger": "67-melee-hit-montage.json",
+    "owner": "uep_lyra_abilities.melee_hit_montage_mixin.LyraMeleeHitMontagePythonProfile",
+    "authored_public_method_preserved": "Slelect Hit Montage",
+    "native_asset_authoring": "20261017-melee/Assets01",
+    "original_class_full_cdo_three_signatures_all_graphs_preserved": true,
+    "original_helper_nodes": 24,
+    "new_business_nodes": 0,
+    "registered_methods_per_profile": 1,
+    "stage_only_external_bp_caller_nodes": 3,
+    "native_standalone_run": "20261017-melee/Differential01",
+    "native_standalone_pairs": 32,
+    "native_network_run": "20261017-melee/Network01",
+    "native_pairs_per_world": 32,
+    "native_worlds": 3,
+    "actual_owners": 2,
+    "native_roles_server_A_B0": [3, 2, 2],
+    "double_boundary_inputs_via_native_makevector": true,
+    "original_actor_dot_inclusive_half_and_strict_sign_preserved": true,
+    "raw_hit_normal_not_normalized": true,
+    "helper_native_state_invariance_profile_root_actor_cleanup_verified": true,
+    "null_actor_native_vm_fallback_tested_in_runtime": false,
+    "whole_melee_activation_trace_damage_migrated": false,
+    "predicted_activation_rpc_damage_tested": false,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_acceptance": false
   },
   "dash_tasks_pilot": {
     "version": "0.11.0",
@@ -3065,7 +3095,7 @@
       "method_candidates": 3,
       "business_nodes": 87,
       "scope_review": "Ledger62 accepts SelectDirectionalMontage:42 original/Python pairs and42 per network world, preserved original class/full CDO/graphs/three signatures; six private inherited-router controls and affected current-DLL death/ADS/Emote regressions. Ledger63 adds only two Direction/Montage stores after unchanged native reliable-server SendInfo via four-node typed transport. Eight actual RPC ingresses/two owners, four Python rows changing both stale fields, forward/left BP/Python payload parity, native task/end/cooldown/foreign-owner isolation/strict exits and42-pair selector regression pass. No receiver replay or fixture ability-data writes. Remaining local direction/navigation/activation, task/cancel/Cue/UI business stays subsequent work; native Engine/GAS/navigation/animation/movement/RPC remain. No quantitative movement, Enhanced Input/physical key, travel/loss/package/full-version claim.",
-      "status": "bounded_native_selector_and_rpc_input_stores_verified_whole_dash_activation_open"
+      "status": "bounded_native_default_activation_task_cue_ui_delay_single_and_two_owner_lifecycle_verified_release_open"
     },
     {
       "path": "/ShooterCore/Game/Emote/GA_Emote.GA_Emote",
@@ -3091,8 +3121,8 @@
       "group": "角色、输入与英雄能力",
       "method_candidates": 3,
       "business_nodes": 67,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Ledger67 covers only the public Slelect Hit Montage helper: unchanged class/full CDO/three signatures/all graphs,24-node original helper,32 native BP/Python pairs standalone and32 per actual world in a two-owner network lane. Native Actor basis/raw dot/inclusive +/-0.5/strict sign and original montage assets are retained; native MakeVector preserves adjacent double boundaries. Typed external BP caller, helper native-state invariance, Profile/roots/control Actor/foreign-owner cleanup and real server-last exits pass. Native helper does not activate Melee or test predicted activation/RPC/trace/team/occlusion/damage/task/Cue business; these remain open. Null-Actor VM fallback has models but no runtime claim.",
+      "status": "bounded_native_hit_montage_helper_three_world_two_owner_verified_activation_trace_damage_open"
     },
     {
       "path": "/ShooterCore/Game/Respawn/GA_AutoRespawn.GA_AutoRespawn",

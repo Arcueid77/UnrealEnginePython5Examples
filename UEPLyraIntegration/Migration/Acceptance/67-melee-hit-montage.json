@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "batch": "67-melee-hit-montage",
+  "scope": "Only original public Slelect Hit Montage helper, preserved misspelling/spaced reflected inputs/one named AnimMontage output/raw hit normal/native Actor basis and Dot/InRange/inclusive right-dot half bounds/strict sign/original four animation assets. Original class/fullCDO/three signatures/all graphs preserved;24 original helper nodes and3-node stage-only external typed BP caller;1 method/Profile registered/restored,0 added business nodes.32 actual native helper BP/Python pairs standalone and32 per native world in real two-owner lane (roles3/2/2,modesDedicatedServer/Client/Client), native MakeVector adjacent double inputs, helper native-state invariance/Profile/spec/caller-root/ownedActor cleanup, foreign authority Health/spec invariance,20 quiet ticks, actual server-last3 zero exits and strict independent gates/closed logs.2284 host models. No fixture activation/grant, actual nullActor VM behavior, predicted activation/RPC/trace/team/occlusion/damage/task/Cue acceptance, C++ build/cook/package/fullMelee/fullVersion or publication claim.",
+  "recorded_utc": "2026-10-17T11:47:30.4051880Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "ce72b5dfa7015742537a9e59e89fd6c231342a22",
+  "examples_parent_commit": "bd3630da491b6160ca64285c35b196de17dfb932",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-melee/Assets01",
+      "summary_sha256": "D3F2B763C1FDCCF5E4BAEFA5B7235097553B2507D762C82365E83A745A0D518B",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1629,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-melee/Differential01",
+      "summary_sha256": "8FDB74AE23FFD27C9F4DCB2343CAAC62745A27B853DAB87B43B373FB59CABA9C",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1901,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "8E553F7633C295BFA202E52F0921FFDCA6D8905E0E3992E67F9D6F1414BE5EF8"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-melee/Network01",
+      "summary_sha256": "0A032D7CA03453411984386811717D9474AE7315E58286C4A55E6677224178E3",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1903,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "A": 0,
+        "server": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "1C648CC9662A802A003F5888A3F732F02E4389BE4A16ADADB56B3CEA394F3771"
+        },
+        {
+          "file": "A.json",
+          "sha256": "DEDE82A9DF5D3DF2E83F2C01FAD76B37200FF27FD103038B47BEBFC9414DDE26"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "140B15492EA874CD955EC0CF04060242116D556C46DE43049950FDE12B32178A"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "F228B02A0036C87D01CC5AF7AED4301A1B242B1021AA2FBB556E32A9D95134B9"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "49E93D2B55AC091E8ABBA90699F20E6686982428000E818964E5220E579CEDE5"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "2B5C87C2F26FBD0F574EF000E44DD8585E4F7DB0386087A059E3B6F6F5462574"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_melee_hit_montage_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_melee_hit_montage_assets.py",
+      "sha256": "D79910605616770BE746B4E58E8586C0454D7DE614BEE3D54466749AB84D522E"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_hit_montage_mixin.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_hit_montage_mixin.py",
+      "sha256": "DEE7FA1F61B28D7D1B5C12E8E76A6D82830138A61DC51DCAED2A374CCD3D4663"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_hit_montage_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_hit_montage_contract.py",
+      "sha256": "43B5ACCD3F72E3421445F53BDE6DCF9813FE4633F7168E00A0297BACFBCE53DB"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_hit_montage_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_hit_montage_validation.py",
+      "sha256": "07A594EEB8633FD7056B64C203549D256127978AB07CD883AB5BB7FEBDED85BB"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_hit_montage_network_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_hit_montage_network_validation.py",
+      "sha256": "6EBABC6B95C35517FB6892A8097BF25D839302C805E70CA250226A8CA6D0CFEA"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "746744DCB0CEA667ACA1FB8CD8F3A9AB426A7568A0F0B4A724ADAE4854DD1ADC"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_MeleeHitMontageMixin.uasset",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_MeleeHitMontageMixin.uasset",
+      "sha256": "FF737AFF07CECA42F013539485AD9A9B0F4E8A91A424D6D86E67ED9744049BE0"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/Melee/GA_Melee.uasset",
+      "path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/Melee/GA_Melee.uasset",
+      "sha256": "1EFC52769C8B9D2C2DA2D95D74FFCEA44B2E77BDD3D53A25C9D5446CE11F0176"
+    }
+  ],
+  "host_report": {
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 2284,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261017-melee/Host04.json",
+    "sha256": "C919C36B0BB1E06962FDC08AFD8174940C952725B411EB1A026A38DDBFD38559"
+  }
+}

@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "meleehitmontage":
+        from generate_melee_hit_montage_assets import generate as generate_melee
+        return generate_melee(stage)
     if kind == "dashselector":
         from generate_dash_selector_assets import generate as generate_dash_selector
         return generate_dash_selector(stage)
