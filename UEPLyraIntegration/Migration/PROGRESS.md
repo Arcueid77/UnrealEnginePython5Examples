@@ -13,7 +13,15 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active next bounded batch 53 (2026-10-17):** migrate only the generated
+**Active next bounded batch 54 (2026-10-17):** replace the remaining original
+three-stage Controller/InventoryManager/Quickbar wait with Python decisions,
+retaining native next-tick latent scheduling and named UFunction resumption.
+Prove repeated/reentrant waits, readiness transitions and destroyed-owner
+cancellation without Python callback roots or cancelling unrelated native work.
+ReceivePossessed factory creation, BeginPlay/visibility/init-state, parent/
+sibling and version gates remain open; no54 implementation/acceptance yet.
+
+**Latest accepted bounded batch 53 (2026-10-17):** migrate only the generated
 ExperienceReady OnReady inventory-readiness continuation's immediately-ready
 branch; pending components initially retain the original native BP wait chain.
 Preserve actual
@@ -21,7 +29,46 @@ Controller -> InventoryManager -> Quickbar readiness checks, native Experience
 delivery, native grants/replication and all twenty accepted routes. Original
 ReceivePossessed async creation and BeginPlay/visibility/init-state business
 remain later groups. Repeated readiness, deferred original fallback, natural
-startup and two-client inventory parity need evidence; no53 acceptance yet.
+startup and two-client inventory parity are bounded gates, not a full wait migration.
+Batch52 is locally committed as Examples26b5387 / coref66d7b9. Thirty-four new /
+1,640 host models PASS, including actual working-tree runtime/tool/test syntax
+without importing Unreal. Host01 initially failed a test-only AST namespace
+dependency; Host02-04 predate the new syntax gate. Assets01 FAILS the attempted
+direct generated OnReady call's missing execution pin. The replacement is a
+five-node stage-only actual native Experience factory/bind/activation producer,
+with a four-node exact named delegate transport on the unchanged Character.
+It never directly invokes/replays the callback. Assets02's data report passes
+but the whole run FAILS on a dependent legacy probe Editor compile error.
+Preload dependencies against the fresh original and perform temporary native
+registration checks only after compiler work; final Assets03 PASSes strict logs,
+Python21/BlueprintFallback16, twenty-three original signatures/type/full CDO/all
+original graphs, while retaining the original three-delay pending macro.
+Differential01 FAILS before validation starts on an indentation error in a reused
+runtime fixture; only that owned test process65468 was terminated (exit-1), not
+accepted. Fix the indent and add the working-tree syntax gate. Differential02 is
+PASSes six original/Python inventory pairs/twelve actual delayed Experience
+factory signals and two real missing-controller original-wait controls. Empty/
+one/three/duplicate/overflow/occupied-slot native models, distinct new items,
+exact original inventory/configuration/Profile/CDO undo, no early/late grants
+around owned Actor destruction, original team-observer preservation and all
+fourteen owned Experience proxies collecting PASS; caller root1/1. Network01
+FAILS final authority semantics despite completing all cases: a new async fixture
+recaptured restored inventory and overwrote the measured grant. Freeze captures
+once restore begins and add an AST execution regression; Network02 PASSes 24
+authority/24 owner replica-noop trials, native FastArray/Quickbar replication,
+both natural authority callbacks and zero invented client startup callbacks,
+other-owner isolation, original identity/configuration/CDO restore and balanced
+native inventory observation scopes. Owned Experience proxies24/12/12 all collect;
+caller roots1/1 in every world. Frozen cleanup/server-last three zero exits,
+independent gates, strict closed logs and 1,776 frozen inputs/final run PASS.
+Standalone production/fixture sources are unchanged by the network-only capture
+repair; that repair is executed in Network02, not retroactively in Differential02.
+Keep Assets01/02, Differential01 and Network01 failed. Full deferred wait/factory/
+Character/version, physical input/hardware/pixels/travel/loss/package acceptance
+remain open. No Engine/official Lyra/animation changes, C++ build or publication.
+Ledger53 lists exactly Assets03/Differential02/Network02 and seventeen matched
+scoped sources/assets; all 1,640 isolated Git-index models and 643-file all-index
+syntax/import closure PASS. Five driver-safety/56 PowerShell parse checks PASS.
 
 **Latest accepted bounded batch 52 (2026-10-17):** migrate only legacy OnRep_PlayerInfo's
 literal OnTeamOrCosmeticsChanged(0, null) forwarding, preserving nineteen raw

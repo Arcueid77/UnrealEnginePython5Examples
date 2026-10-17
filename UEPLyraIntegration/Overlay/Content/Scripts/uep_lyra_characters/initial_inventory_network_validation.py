@@ -23,6 +23,9 @@ PEERS = ("A", "B0")
 
 
 class Client(Ready):
+    trial_type = Trial
+    marker = "UEP_CHARACTER_LOADOUT"
+    validate_report = staticmethod(client_gate)
     def __init__(self, result, peer, run):
         super().__init__(result)
         self.root, self.peer, self.run, self.trial = Path(result).parent, peer, run, None
@@ -46,7 +49,7 @@ class Client(Ready):
 
     def begin(self):
         if self.replica() is None: return
-        self.trial = Trial(self.controller)
+        self.trial = self.trial_type(self.controller)
         bridge = ue.find_class("UEPLyraBridgeLibrary").get_cdo().call_function("GetBridgeForWorld", self.world)
         self.report.update(player_id=int(self.controller.PlayerState.PlayerId), native_role=int(self.pawn.call_function("GetLocalRole")),
             native_net_mode=str(bridge.call_function("CaptureSnapshot").NetMode), natural_remote_startup=copy.deepcopy(policy.evidence(self.pawn)))
@@ -77,9 +80,12 @@ class Client(Ready):
             original_item_retained=all(value in self.trial.inventory.call_function("GetAllItems") for value in self.trial.original_items),
             added_definitions=sorted(added), profile_configuration_cdo_restored=self.fields_restored(),
             counters={key: after[key]-before[key] for key in after if key != "last_call"})
+        self.augment_row(row)
         self.report["cases"].append(row)
         atomic_write(self.root/(self.peer+"-"+str(self.index)+"-ack.json"), dict(run_id=self.run, row=copy.deepcopy(row)))
         self.enter("restore")
+
+    def augment_row(self, row): pass
 
     def fields_restored(self):
         return str(ue.get_mixin_profile(self.pawn)) == self.trial.profile and list(self.pawn.get_property("InitialInventoryItems")) == self.trial.configuration and self.trial.cdo_state() == self.trial.cdo_before
@@ -116,16 +122,19 @@ class Client(Ready):
             self.scope = None
         if self.trial is not None: ue.set_mixin_profile(self.pawn, self.trial.profile)
         self.report.update(status="failed" if error else "awaiting_shutdown", error=error); self.write()
-        (ue.log_error if error else ue.log)("UEP_CHARACTER_LOADOUT_DIFFERENTIAL_"+("FAILED "+error if error else "PASSED")); ue.request_exit()
+        (ue.log_error if error else ue.log)(self.marker+"_DIFFERENTIAL_"+("FAILED "+error if error else "PASSED")); ue.request_exit()
 
     def finalize(self):
         if self.report["status"] == "awaiting_shutdown":
-            try: self.report["status"] = "passed"; client_gate(self.report)
+            try: self.report["status"] = "passed"; self.validate_report(self.report)
             except Exception: self.report.update(status="failed", error=traceback.format_exc())
-        self.write(); (ue.log if self.report["status"] == "passed" else ue.log_error)("UEP_CHARACTER_LOADOUT_SHUTDOWN_"+self.report["status"].upper())
+        self.write(); (ue.log if self.report["status"] == "passed" else ue.log_error)(self.marker+"_SHUTDOWN_"+self.report["status"].upper())
 
 
 class Server:
+    trial_type = Trial
+    marker = "UEP_CHARACTER_LOADOUT"
+    validate_report = staticmethod(server_gate)
     def __init__(self, result, run):
         self.path, self.root, self.run = Path(result), Path(result).parent, run
         self.fixture = PlayingFixture(result, run); self.fixture.ability_class = ABILITY
@@ -141,7 +150,7 @@ class Server:
         self.report.update(player_ids=self.fixture.report["player_ids"], native_playing_gate=self.fixture.report["native_playing_gate"])
         for peer, owner in self.fixture.owners.items():
             self.report["natural_startup_grants"][peer] = copy.deepcopy(policy.evidence(owner["pawn"]))
-            self.trials[peer] = Trial(owner["controller"])
+            self.trials[peer] = self.trial_type(owner["controller"])
 
     def start_trial(self):
         peer, index = PEERS[self.position//len(PLAN)], self.position % len(PLAN)
@@ -164,7 +173,7 @@ class Server:
             atomic_write(self.root/"restored.json", dict(run_id=self.run, peer=peer, index=index))
         elif token(self.root, peer+"-"+str(index)+"-restored.json", self.run) is not None:
             self.report["cases"].append(copy.deepcopy(row)); self.current = None; self.position += 1
-            ue.log("UEP_CHARACTER_LOADOUT_NETWORK_CASE_PASSED "+peer+"/"+str(index))
+            ue.log(self.marker+"_NETWORK_CASE_PASSED "+peer+"/"+str(index))
 
     def release_clients(self):
         if not self.release_started:
@@ -205,13 +214,13 @@ class Server:
                 try: value.restore()
                 except Exception: error += traceback.format_exc()
         self.report.update(status="failed" if error else "awaiting_shutdown", error=error); atomic_write(self.path, self.report)
-        (ue.log_error if error else ue.log)("UEP_CHARACTER_LOADOUT_NETWORK_READY" if not error else error); ue.request_exit()
+        (ue.log_error if error else ue.log)(self.marker+"_NETWORK_READY" if not error else error); ue.request_exit()
 
     def finalize(self):
         if self.report["status"] == "awaiting_shutdown":
-            try: self.report["status"] = "passed"; server_gate(self.report)
+            try: self.report["status"] = "passed"; self.validate_report(self.report)
             except Exception: self.report.update(status="failed", error=traceback.format_exc())
-        atomic_write(self.path, self.report); (ue.log if self.report["status"] == "passed" else ue.log_error)("UEP_CHARACTER_LOADOUT_NETWORK_"+self.report["status"].upper())
+        atomic_write(self.path, self.report); (ue.log if self.report["status"] == "passed" else ue.log_error)(self.marker+"_NETWORK_"+self.report["status"].upper())
 
 
 if any(value.startswith("-UEPCharacterLoadoutNetworkResult=") for value in sys.argv):

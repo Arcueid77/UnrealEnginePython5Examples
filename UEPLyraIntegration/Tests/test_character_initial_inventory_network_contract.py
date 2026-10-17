@@ -93,7 +93,7 @@ class CharacterLoadoutNetworkModels(unittest.TestCase):
         def native_read(controller):
             if published: raise AssertionError("native owner has already disconnected")
             reads.append(controller); return "original"
-        namespace = dict(fingerprint=native_read, state=native_read, require=gate.require, PEERS=("A", "B0"),
+        namespace = dict(fingerprint=native_read, state=native_read, require=gate.require, PEERS=("A", "B0"), Trial=None, server_gate=lambda report: None,
             atomic_write=lambda *args: published.append(args), token=lambda *args: dict(exit_code=0) if len(reads) == 4 and len(published) == 2 else None)
         exec(compile(ast.Module(body=[cls], type_ignores=[]), str(file), "exec"), namespace)
         server = namespace["Server"].__new__(namespace["Server"])

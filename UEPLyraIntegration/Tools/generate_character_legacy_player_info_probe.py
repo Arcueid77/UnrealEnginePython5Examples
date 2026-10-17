@@ -9,8 +9,16 @@ PATH = "/Game/UEPValidation/BP_CharacterLegacyPlayerInfoProbe"
 RELATIVE = "Content/UEPValidation/BP_CharacterLegacyPlayerInfoProbe.uasset"
 
 
-def generate(stage, character_class):
-    if (stage/RELATIVE).exists(): raise RuntimeError("fresh legacy typed BP caller required")
+def generate(stage, character_class, reuse=False):
+    if (stage/RELATIVE).exists():
+        if not reuse: raise RuntimeError("fresh legacy typed BP caller required")
+        from unreal_engine.classes import Blueprint
+        bp = ue.load_object(Blueprint, PATH+".BP_CharacterLegacyPlayerInfoProbe")
+        graph, = [value for value in ue.blueprint_get_all_graphs(bp) if value.get_name() == "Refresh"]
+        call, = [node for node in graph.Nodes if node.get_class().get_name() == "K2Node_CallFunction"]
+        if len(graph.Nodes) != 3 or str(call.FunctionReference.MemberName) != "OnRep_PlayerInfo": raise RuntimeError("existing legacy caller differs")
+        return dict(stage_only=True, gameplay_business=False, function="Refresh", target="OnRep_PlayerInfo", typed_actor_reference=True,
+            virtual_bp_function_call=True, nodes=3, real_repnotify_ingress=False, asset=str(stage/RELATIVE), sha256=hashlib.sha256((stage/RELATIVE).read_bytes()).hexdigest())
     bp = ue.create_blueprint(ue.find_class("Object"), PATH)
     graph = ue.blueprint_add_function(bp, "Refresh"); entry = graph.Nodes[0]
     entry.node_create_pin(1, EdGraphPinType(PinCategory="object", PinSubCategoryObject=character_class), "CharacterRef")

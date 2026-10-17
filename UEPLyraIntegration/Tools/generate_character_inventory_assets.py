@@ -24,7 +24,8 @@ def input_bindings(cls):
     return sorted(values, key=lambda value: value["function"])
 
 
-def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, team=False, stencil=False, lifecycle=False, parts=False, health=False, enhanced=False, observer=False, listener=False, legacy=False):
+def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, team=False, stencil=False, lifecycle=False, parts=False, health=False, enhanced=False, observer=False, listener=False, legacy=False, ready=False):
+    legacy = legacy or ready
     listener = listener or legacy
     observer = observer or listener
     enhanced = enhanced or observer
@@ -38,6 +39,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     quickbar = quickbar or loadout
     audio = audio or quickbar
     kind, prefix, module = next((kind, prefix, module) for enabled, kind, prefix, module in (
+        (ready, "characterready", "InventoryReady", "inventory_ready_mixin"),
         (legacy, "characterlegacy", "LegacyPlayerInfo", "legacy_player_info_mixin"),
         (listener, "characterlistener", "TeamListener", "team_listener_mixin"),
         (observer, "characterobserver", "TeamObserver", "team_observer_mixin"),
@@ -60,15 +62,23 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
         from uep_lyra_characters.enhanced_input_contract import ACTIONS
     if observer:
         from uep_lyra_characters.team_observer_mixin import BOUND_EVENT as OBSERVER_EVENT
+    if ready:
+        from uep_lyra_characters.inventory_ready_mixin import READY
     source = Path(json.loads((stage/".uep-lyra-full-stage.json").read_text(encoding="utf-8-sig"))["source"]).parent
     original = source/RELATIVE; digest = hashlib.sha256(original.read_bytes()).hexdigest()
     if hashlib.sha256((stage/RELATIVE).read_bytes()).hexdigest() != digest: raise RuntimeError("fresh original Character required")
     bp = ue.load_object(Blueprint, PACKAGE); ue.unregister_all_mixins()
+    if ready:
+        # Loading existing dependent Blueprints can compile them. Do that while
+        # the root is still the untouched original, before declaring routers.
+        for name in ("BP_CharacterTeamListenProbe", "BP_CharacterLegacyPlayerInfoProbe"):
+            ue.load_object(Blueprint, "/Game/UEPValidation/"+name+"."+name)
+            ue.unregister_all_mixins()
     before, cls = cdo_snapshot(bp, "character-before"), bp.GeneratedClass.get_path_name()
     bindings_before = input_bindings(bp.GeneratedClass) if enhanced else None
     signatures = {name: ue.describe_function(bp.GeneratedClass, name) for name in
         (("ClearInventory", "AddInitialInventory", "K2_OnDeathFinished", "K2_OnReset", "ReceiveBeginPlay", "ReceivePossessed")+
-            (("GetEmoteAudioComponent", "SetEmoteAudioComponent") if audio else ())+(("ChangeQuickbarSlot",) if quickbar else ())+(("CreateOrUpdateOutlineIfNeeded",) if outline else ())+(("OnTeamOrCosmeticsChanged",) if team else ())+(("UpdateCustomStencilFromTeamID",) if stencil else ())+((BOUND_EVENT,) if parts else ())+((HEALTH_EVENT,) if health else ())+((OBSERVER_EVENT, "ListenForTeam") if observer else ())+(("OnRep_PlayerInfo",) if legacy else ())) }
+            (("GetEmoteAudioComponent", "SetEmoteAudioComponent") if audio else ())+(("ChangeQuickbarSlot",) if quickbar else ())+(("CreateOrUpdateOutlineIfNeeded",) if outline else ())+(("OnTeamOrCosmeticsChanged",) if team else ())+(("UpdateCustomStencilFromTeamID",) if stencil else ())+((BOUND_EVENT,) if parts else ())+((HEALTH_EVENT,) if health else ())+((OBSERVER_EVENT, "ListenForTeam") if observer else ())+(("OnRep_PlayerInfo",) if legacy else ())+((READY,) if ready else ())) }
     input_signatures = {value["action"]: ue.describe_function(bp.GeneratedClass, value["function"]) for value in bindings_before} if enhanced else {}
     originals = [(graph, {node.get_name() for node in graph.Nodes}) for graph in ue.blueprint_get_all_graphs(bp)]
     graphs = {graph.get_name(): semantics(graph, names, set()) for graph, names in originals}
@@ -83,10 +93,13 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     mixin = ue.create_asset(name, "/Game/UEPMixins", UEPPythonMixinSet, factory); mixin.DefaultProfile = "Python"
     mixin.Profiles = [UEPPythonMixinProfile(ProfileName=profile, PythonModule="uep_lyra_characters."+module,
         PythonClass="LyraCharacter"+prefix+profile+"Profile") for profile in ("Python", "BlueprintFallback")]
-    transport = None
+    transport = ready_transport = None
     if listener:
         from generate_character_team_listener_transport import generate as listener_transport
         transport = listener_transport(bp)
+    if ready:
+        from generate_character_inventory_ready_probe import transport as experience_transport
+        ready_transport = experience_transport(bp)
     ue.blueprint_configure_mixin(bp, mixin, "Python", "PythonMixinProfile"); ue.compile_blueprint(bp); ue.unregister_all_mixins()
     if int(bp.Status) == 2 or bp.GeneratedClass.get_path_name() != cls or cdo_snapshot(bp, "character-after") != before:
         raise RuntimeError("original Character identity/full CDO changed")
@@ -102,7 +115,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
             if actual != input_signatures[value["action"]]: raise RuntimeError("compiler-generated input receiver signature changed")
             signatures[value["function"]] = actual
     all_graphs = ue.blueprint_get_all_graphs(bp)
-    extra_graphs = {"GetPythonMixinSet", "GetPythonMixinProfile"} | ({transport["function"]} if listener else set())
+    extra_graphs = {"GetPythonMixinSet", "GetPythonMixinProfile"} | ({transport["function"]} if listener else set()) | ({ready_transport["function"]} if ready else set())
     if set(graph.get_name() for graph in all_graphs)-set(graphs) != extra_graphs:
         raise RuntimeError("unexpected Character graph additions")
     if any(semantics(graph, names, set()) != graphs[graph.get_name()] for graph, names in originals):
@@ -122,6 +135,16 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
         report["implemented_methods"].append("OnRep_PlayerInfo")
         report["legacy_player_info_literal_defaults"] = dict(team_id=0, display_asset=None)
         report["legacy_named_player_info_property_present"] = "PlayerInfo" in bp.GeneratedClass.get_cdo().properties()
+    if ready:
+        report["implemented_methods"].append(READY)
+        macro, = [graph for graph, _ in originals if graph.get_name() == "WaitForInventoryReadiness"]
+        delays = [node for node in macro.Nodes if node.get_class().get_name() == "K2Node_CallFunction" and str(node.FunctionReference.MemberName) == "DelayUntilNextTick"]
+        if len(delays) != 3: raise RuntimeError("original deferred inventory wait macro differs")
+        report["inventory_ready_immediate_branch_migrated"] = True
+        report["inventory_ready_receiver"] = READY
+        report["native_inventory_ready_transport"] = ready_transport
+        report["inventory_ready_pending_wait_migrated"] = False
+        report["original_inventory_readiness_macro_retained"] = True
     if team:
         if stencil:
             if lifecycle:
@@ -155,24 +178,6 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     elif audio:
         from generate_character_audio_probe import generate as probe
         report["caller_probe"] = probe(stage, source)
-    if parts:
-        report["native_parts_signatures"] = {name: ue.describe_function(ue.find_class(cls), name) for cls, name in (
-            ("LyraTeamStatics", "FindTeamFromObject"), ("LyraPawnComponent_CharacterParts", "AddCharacterPart"),
-            ("LyraPawnComponent_CharacterParts", "RemoveCharacterPart"))}
-        try:
-            ue.register_declared_mixin(bp.GeneratedClass)
-            registered, = [entry for entry in ue.get_registered_mixins() if entry["target_class"] == bp.GeneratedClass]
-            expected = set(report["implemented_methods"])
-            fallback_expected = expected-{value["function"] for value in bindings_after} if enhanced else expected
-            if set(registered["functions"]) != expected or set(registered["profiles"]["Python"]["functions"]) != expected or set(registered["profiles"]["BlueprintFallback"]["functions"]) != fallback_expected:
-                raise RuntimeError("component-bound receiver is not actually routed on both profiles")
-            report["actual_native_registered_profile_method_counts"] = {name: len(value["functions"]) for name, value in registered["profiles"].items()}
-        finally:
-            ue.unregister_all_mixins()
-        if any(ue.describe_function(bp.GeneratedClass, name) != signature for name, signature in signatures.items()):
-            raise RuntimeError("native component receiver registration did not restore original signatures")
-        report["component_bound_receiver"] = BOUND_EVENT
-        report["native_component_receiver_register_restore_passed"] = True
     if health:
         report["health_component_bound_receiver"] = HEALTH_EVENT
         report["native_health_signatures"] = {name: ue.describe_function(ue.find_class(cls), name) for cls, name in (
@@ -193,5 +198,28 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
         report["original_listener_factory_orchestration_remains_bp"] = not listener
     if legacy:
         from generate_character_legacy_player_info_probe import generate as legacy_probe
-        report["legacy_player_info_probe"] = legacy_probe(stage, bp.GeneratedClass)
+        report["legacy_player_info_probe"] = legacy_probe(stage, bp.GeneratedClass, reuse=ready)
+    if ready:
+        from generate_character_inventory_ready_probe import generate as ready_probe
+        report["inventory_ready_probe"] = ready_probe(stage, bp.GeneratedClass)
+    if parts:
+        # Verify temporary injection only after all Blueprint compiler work.
+        # No dependent fixture is compiled against a transient router function.
+        report["native_parts_signatures"] = {name: ue.describe_function(ue.find_class(cls), name) for cls, name in (
+            ("LyraTeamStatics", "FindTeamFromObject"), ("LyraPawnComponent_CharacterParts", "AddCharacterPart"),
+            ("LyraPawnComponent_CharacterParts", "RemoveCharacterPart"))}
+        try:
+            ue.register_declared_mixin(bp.GeneratedClass)
+            registered, = [entry for entry in ue.get_registered_mixins() if entry["target_class"] == bp.GeneratedClass]
+            expected = set(report["implemented_methods"])
+            fallback_expected = expected-{value["function"] for value in bindings_after} if enhanced else expected
+            if set(registered["functions"]) != expected or set(registered["profiles"]["Python"]["functions"]) != expected or set(registered["profiles"]["BlueprintFallback"]["functions"]) != fallback_expected:
+                raise RuntimeError("component-bound receiver is not actually routed on both profiles")
+            report["actual_native_registered_profile_method_counts"] = {name: len(value["functions"]) for name, value in registered["profiles"].items()}
+        finally:
+            ue.unregister_all_mixins()
+        if any(ue.describe_function(bp.GeneratedClass, name) != signature for name, signature in signatures.items()):
+            raise RuntimeError("native component receiver registration did not restore original signatures")
+        report["component_bound_receiver"] = BOUND_EVENT
+        report["native_component_receiver_register_restore_passed"] = True
     return report

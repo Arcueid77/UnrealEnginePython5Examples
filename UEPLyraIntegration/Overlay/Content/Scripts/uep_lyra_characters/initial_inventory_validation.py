@@ -29,9 +29,10 @@ def state(controller):
 
 
 class Trial:
+    probe_path = PROBE
     def __init__(self, controller):
         self.controller = controller; self.pawn = controller.get_controlled_pawn()
-        self.inventory, self.quickbar = services(controller); self.probe = ue.load_class(PROBE).get_cdo()
+        self.inventory, self.quickbar = services(controller); self.probe = ue.load_class(self.probe_path).get_cdo()
         self.original, self.original_model = fingerprint(controller), state(controller)
         self.original_items = list(self.inventory.call_function("GetAllItems")); self.original_slots = list(self.quickbar.call_function("GetSlots"))
         self.profile, self.configuration = str(ue.get_mixin_profile(self.pawn)), list(self.pawn.get_property("InitialInventoryItems"))
@@ -70,6 +71,9 @@ class Trial:
 
 
 class Validation(Ready):
+    trial_type = Trial
+    marker = "UEP_CHARACTER_LOADOUT"
+    validate_report = staticmethod(validate)
     def __init__(self, result):
         super().__init__(result); self.trial = None
         self.report.update(inventory_properties_written=False, python_handler_replayed=False, whole_character_migrated=False,
@@ -80,7 +84,7 @@ class Validation(Ready):
         if self.trial is None:
             self.report["natural_startup_python_grant"] = copy.deepcopy(policy.evidence(self.pawn))
             natural_grant(self.report["natural_startup_python_grant"])
-            self.trial = Trial(self.controller)
+            self.trial = self.trial_type(self.controller)
         self.trial.execute(self.index); self.enter("observe")
 
     def tick(self, seconds):
@@ -91,7 +95,7 @@ class Validation(Ready):
             elif self.phase == "observe" and time.monotonic()-self.phase_started >= .1:
                 require(state(self.controller) == self.trial.row["native_model"], "native loadout state changed before observation")
                 self.trial.row.update(self.trial.restore()); self.report["cases"].append(copy.deepcopy(self.trial.row))
-                ue.log("UEP_CHARACTER_LOADOUT_CASE_PASSED "+PLAN[self.index][0]+"/"+PLAN[self.index][1])
+                ue.log(self.marker+"_CASE_PASSED "+PLAN[self.index][0]+"/"+PLAN[self.index][1])
                 self.index += 1
                 if self.index == len(PLAN): self.finish()
                 else: self.begin()
@@ -105,13 +109,13 @@ class Validation(Ready):
             if self.trial is not None: self.report.update(self.trial.restore())
         except Exception: error = (error or "")+traceback.format_exc()
         self.report.update(status="failed" if error else "awaiting_shutdown", error=error); self.write()
-        (ue.log_error if error else ue.log)("UEP_CHARACTER_LOADOUT_DIFFERENTIAL_"+("FAILED "+error if error else "PASSED")); ue.request_exit()
+        (ue.log_error if error else ue.log)(self.marker+"_DIFFERENTIAL_"+("FAILED "+error if error else "PASSED")); ue.request_exit()
 
     def finalize(self):
         if self.report["status"] == "awaiting_shutdown":
-            try: self.report["status"] = "passed"; validate(self.report)
+            try: self.report["status"] = "passed"; self.validate_report(self.report)
             except Exception: self.report.update(status="failed", error=traceback.format_exc())
-        self.write(); (ue.log if self.report["status"] == "passed" else ue.log_error)("UEP_CHARACTER_LOADOUT_SHUTDOWN_"+self.report["status"].upper())
+        self.write(); (ue.log if self.report["status"] == "passed" else ue.log_error)(self.marker+"_SHUTDOWN_"+self.report["status"].upper())
 
 
 result = next((value.split("=", 1)[1] for value in sys.argv if value.startswith("-UEPCharacterLoadoutResult=")), None)
