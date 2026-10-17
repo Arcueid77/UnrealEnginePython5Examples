@@ -4,6 +4,10 @@
 def validation_module(arguments):
     if any(argument.lower().startswith("-run=") for argument in arguments):
         return None
+    if any(argument.startswith("-UEPDashLocalDirectionNetworkResult=") for argument in arguments):
+        return "uep_lyra_abilities.dash_local_direction_network_validation"
+    if any(argument.startswith("-UEPDashLocalDirectionResult=") for argument in arguments):
+        return "uep_lyra_abilities.dash_local_direction_validation"
     if any(argument.startswith("-UEPDashRPCInputNetworkResult=") for argument in arguments):
         return "uep_lyra_abilities.dash_rpc_input_network_validation"
     if any(argument.startswith("-UEPDashSelectorNetworkResult=") for argument in arguments):

@@ -55,6 +55,8 @@ class Client(Ready):
         self.request()
     def request(self):
         atomic_write(self.root/(self.peer+"-request.json"), dict(run_id=self.run, index=self.index)); self.enter("permit")
+    def trial_begin_evidence(self): pass
+    def trial_end_evidence(self): pass
     def start(self):
         if self.dash.get_property("bIsActive") or self.dash.call_function("GetCooldownTimeRemaining") > 0 or int(self.pawn.CharacterMovement.MovementMode) != 1: return
         name, self.profile = TRIALS[self.index]; ue.set_mixin_profile(self.dash, self.profile)
@@ -62,6 +64,7 @@ class Client(Ready):
         self.row = dict(index=self.index, name=name, profile=self.profile, native_request_accepted=False,
             native_active_observed=False, native_root_motion_task_observed=False, native_montage_task_observed=False,
             cooldown_repeat_rejected=False, max_motion_distance=0., max_native_speed=0.)
+        self.trial_begin_evidence()
         self.enter("intent")
     def intent(self):
         direction = self.pawn.call_function("GetActorForwardVector" if self.row["name"] == "forward" else "GetActorRightVector")
@@ -92,6 +95,7 @@ class Client(Ready):
             quiet_after_end=True, native_configuration_unchanged=configuration(self.dash) == self.original["config"],
             specs_unchanged=specs(self.asc) == self.original["specs"], rpc_counters=delta(evidence(self.dash), self.before),
             selector_counters=delta(selector_evidence(self.dash), self.selector_before))
+        self.trial_end_evidence()
         atomic_write(self.root/(self.peer+"-"+str(self.index)+"-ack.json"), dict(run_id=self.run, peer=self.peer, index=self.index, row=self.row))
         self.enter("authority")
     def tick(self, delta_seconds):
@@ -143,6 +147,8 @@ class Server(PlayingFixture):
         self.report.update(rpc_receiver_replayed=False, activation_event_replayed=False, native_rpc_bypassed=False,
             gameplay_state_delivered_by_files=False, whole_dash_activation_migrated=False, native_pose_resets=[],
             original_profiles_restored=False, specs_and_configuration_preserved=False)
+    def trial_begin_evidence(self): pass
+    def trial_end_evidence(self): pass
     def state(self, peer):
         owner = self.owners[peer]; pawn, ability = owner["pawn"], owner["ability"]
         return dict(pawn=path(pawn), health=float(pawn.get_component_by_type(ue.find_class("LyraHealthComponent")).call_function("GetHealth")),
@@ -172,6 +178,7 @@ class Server(PlayingFixture):
             actual_ability_class=path(ability.get_class()),
             stores_before_rpc=payload(ability),
             native_active_observed=False, native_root_motion_task_observed=False, native_montage_task_observed=False, foreign_owner_unchanged=True)
+        self.trial_begin_evidence()
         self.case_started, self.quiet_count, self.quiet_snapshot = time.monotonic(), 0, None
         atomic_write(self.root/(peer+"-permit.json"), dict(run_id=self.run, index=index))
     def observe(self):
@@ -191,6 +198,7 @@ class Server(PlayingFixture):
         require((ack["peer"], ack["index"]) == (peer, row["index"]), "foreign Dash owner acknowledgement")
         row.update(rpc_counters=diff, client=ack, quiet_after_end=True, native_ability_ended=True, native_tasks_after=tasks["count"],
             native_configuration_unchanged=configuration(ability) == self.originals[peer]["config"], specs_unchanged=specs(ability_system(owner["pawn"])) == self.originals[peer]["specs"])
+        self.trial_end_evidence()
         self.report["cases"].append(copy.deepcopy(row)); atomic_write(self.root/("authority-"+str(self.position)+".json"), dict(run_id=self.run, row=row))
         atomic_write(self.root/(peer+"-restored.json"), dict(run_id=self.run, index=row["index"]))
         ue.log("UEP_DASH_RPC_INPUT_NETWORK_CASE_OBSERVED "+peer+"/"+str(row["index"])); self.position += 1; self.current = None

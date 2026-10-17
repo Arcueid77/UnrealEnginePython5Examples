@@ -13,10 +13,59 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active next bounded batch 64 (2026-10-17):** continue Dash local direction /
-navigation and activation decisions, followed by task/cancel/Cue/UI business;
+**Active next bounded batch 65 (2026-10-17):** continue Dash local activation,
+zero/cancel/Commit/crouch decisions, followed by task/Cue/UI business;
 keep native RPC transport, GAS, navigation, animation and movement primitives.
 The accepted helper and RPC-input-store slices do not close the full Dash asset.
+
+Batch63 is locally committed as Examples1023942/corecca98d8. The six original
+user-dirty files remain unchanged; no push/tag/release. Batch64 implementation
+uses `dash_local_direction_mixin.py`: original Actor facing/raw player input,
+camera forward*(1,1,1.2), or native AI projection of current Actor location with
+extent(500,500,500), flattened projected delta and Normal tolerance0.0001.
+Native projection failure outputs are retained rather than replaced with a new
+fallback. The original Positive/OR output is unused and remains unconnected.
+The bool gateway bypasses original selector/stores only after Python prepares
+them, then rejoins original zero/cancel/Commit/remaining business. A live native
+Direction getter avoids relying on skipped setter Output_Get data.
+
+Host01 PASSes2,101 models. Assets01 PASSes original class/full CDO/four existing
+signatures, original24-node direction graph/selector/RPC semantics except two
+declared dispatch/data endpoints, five transport nodes and Python3/fallback3
+registration/restoration. No graph relocation/clone or C++ build. The strict
+62-selector ->63-RPC ->64-local revision chain validates accepted before-backups
+and current Stage/Overlay bytes; historical intermediate proof is not treated as
+current bytes. New hook-only witnesses extend the prior real two-owner RPC
+protocol without replaying its receiver. Host02 PASSes2,110 models;
+SelectorRegression01 PASSes42 helper pairs. Network01 PASSes8 actual native
+ASC/Pawn-intent activations across2 owning clients, selected local gates on the
+clients and no local preparation on remote authority, unchanged real reliable
+SendInfo, foreign-owner invariants, native task/end/cooldown/quiet checks,
+independent gate, strict closed logs and server-last3 zero exits;1,876 frozen
+inputs. Its explicit scope still excludes AI and standalone camera/no-input.
+
+Host03 PASSes2,132 models after adding a separate native standalone matrix and
+22 report/source guards. Standalone01 PASSes10 original/Python native ASC
+activations: no-input, forward, left, camera-pitch and actual granted idle bot
+navigation. Native no-input/AI projection success with zero XY direction both
+cancel immediately; forward/left/pitched-camera retain actual montage and
+RootMotion tasks, cooldown repeat rejection, end/zero final tasks and20 quiet
+ticks. Camera pitch20 degrees produces native scaled Z0.4104241883. Both real
+actors' Profile/spec/configuration/control rotation/native pose resets restore.
+Collision-checked pose resets and Controller.SetControlRotation are declared
+fixtures; no activation/RPC replay, raw velocity/Health or ability Direction/
+Montage writes. AI nonzero projected delta/failure is covered by policy models,
+not a claimed native off-nav/navigating-AI scenario. No default forward Dash
+was invented. Independent gate/strict closed log/exit0 and1,878 inputs PASS.
+
+Network02 reruns the eight actual owner activations using the final standalone/
+network contract/startup sources; its independent gate, strict closed logs,
+server-last3 zero exits and1,878 frozen inputs PASS. Network01 remains an earlier
+passed player-only observation, not final exact-source acceptance. This bounded
+local-direction batch may be committed after isolated-index/closure gates; full
+Dash activation/task/Cue/UI business, quantitative movement parity, Enhanced/
+physical input, network travel/loss/package and whole-version acceptance remain
+open. No C++ build/cook/package/push/tag/release.
 
 **Bounded batch63 (2026-10-17):** continue Dash activation/RPC body
 and task/movement decisions in small native-compared steps. Retain native RPC
