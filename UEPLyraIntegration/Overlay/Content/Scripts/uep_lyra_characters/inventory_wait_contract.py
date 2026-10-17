@@ -11,6 +11,13 @@ TRANSITIONS = [(name, stage, calls, profile) for name, stage, calls in (
     ("inventory-repeat", 1, 2), ("quickbar", 2, 1), ("quickbar-repeat", 2, 2)) for profile in ("BlueprintFallback", "Python")]
 
 
+def check_pooled_cues(row):
+    for cue in row["native_pooled_cue_observers"]:
+        require(cue["cue_class"] == "/ShooterCore/GameplayCues/GCNL_Spawning.GCNL_Spawning_C" and cue["cue"] and cue["observer"] and
+            all(cue[key] is True for key in ("observed_target_was_test_owned", "inactive", "unrooted", "native_cue_field_never_written",
+                "native_cue_handle_still_matches", "native_cue_hidden_owner_cleared")), "retained native pooled Cue observer is not inactive/exact/owned-target/read-only")
+
+
 def check_transition(row, scenario):
     name, stage, calls, profile = scenario; py = profile == "Python"; grants = 2 if stage == 0 else 1
     require((row["name"], row["stage"], row["calls"], row["profile"]) == scenario and row["native_character_class"] == CLASS,
@@ -22,10 +29,7 @@ def check_transition(row, scenario):
     require(row["private_inventory_properties_written"] is False and row["native_grants"] == grants and
         row["actual_item_definition"] == P and len(set(row["native_new_item_paths"])) == grants and
         all(value is True for value in row["cleanup"].values()), "native readiness grants/cleanup differ")
-    for cue in row["native_pooled_cue_observers"]:
-        require(cue["cue_class"] == "/ShooterCore/GameplayCues/GCNL_Spawning.GCNL_Spawning_C" and cue["cue"] and cue["observer"] and
-            all(cue[key] is True for key in ("observed_target_was_test_owned", "inactive", "unrooted", "native_cue_field_never_written",
-                "native_cue_handle_still_matches", "native_cue_hidden_owner_cleared")), "retained native pooled Cue observer is not inactive/exact/owned-target/read-only")
+    check_pooled_cues(row)
     model = row["native_model"]
     require(model == dict(items=[P]*grants, slots=[P, None, None], active=0, definition=P,
         equipment_class=P.replace("/ID_", "/B_WeaponInstance_").replace(".ID_", ".B_WeaponInstance_"), stacks=[[P, 1]]*grants),

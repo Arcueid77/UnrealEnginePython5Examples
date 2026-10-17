@@ -33,7 +33,7 @@ class Transition:
     def __init__(self, world, probe, scenario):
         self.world, self.probe, self.scenario = world, probe, scenario
         self.started = self.phase_started = time.monotonic(); self.phase = "owner-ready"
-        self.actor = self.added_component = None; self.closed = False; self.original_proxies = set(proxies())
+        self.actor = self.added_component = None; self.closed = False; self.original_proxies = set(proxies()); self.owned_cue_witnesses = {}
         self.owner = None
         try:
             self.owner = OwnedAI(world); self.owner.pawn.call_function("SetReplicates", False)
@@ -41,6 +41,20 @@ class Transition:
             self.close(); raise
 
     def enter(self, phase): self.phase, self.phase_started = phase, time.monotonic()
+
+    def observe_owned_cue_handles(self):
+        # Observe while the native Cue still names the owned target. Recycling
+        # clears TargetActor but can legitimately keep the same inactive handle.
+        targets = (self.actor, self.owner.pawn if self.owner is not None else None)
+        if self.owner is not None:
+            owned_paths = {path(value) for value in targets if valid(value)}
+            for key, target in self.owner.spawn_cue_witnesses.items():
+                if target in owned_paths and key[1] not in self.original_proxies: self.owned_cue_witnesses[key] = target
+        for cue in ue.tobject_iterator(ue.load_class(CUE)):
+            if not valid(cue) or cue.get_world() != self.world: continue
+            target, value = cue.get_property("TargetActor"), cue.get_property("TeamColorWatcherHandle")
+            if valid(target) and target in targets and valid(value) and path(value) not in self.original_proxies:
+                self.owned_cue_witnesses[(path(cue), path(value))] = path(target)
 
     def spawn(self):
         _, stage, _, profile = self.scenario
@@ -111,6 +125,10 @@ class Transition:
                 if time.monotonic()-self.phase_started < 2.:
                     gc(); return False
                 self.row["retained_observer_diagnostics"] = [dict(path=path(value), rooted=value.is_rooted(), active=bool(value.call_function("IsActive"))) for value in self.owned_proxies if valid(value)]
+                self.row["native_cue_identity_diagnostics"] = [dict(cue=path(cue), handle=path(cue.get_property("TeamColorWatcherHandle")),
+                    target=path(cue.get_property("TargetActor")), owner=path(cue.call_function("GetOwner")), hidden=bool(cue.get_property("bHidden")))
+                    for cue in ue.tobject_iterator(ue.load_class(CUE)) if valid(cue) and cue.get_world() == self.world]
+                self.row["owned_cue_witness_diagnostics"] = [dict(cue=key[0], observer=key[1], target=value) for key, value in self.owned_cue_witnesses.items()]
                 require(False, "owned Character observer still retained after repeated native GC")
             pooled = [dict(cue=cue_path, cue_class=CUE, observed_target_was_test_owned=True,
                 observer=observer_path, collected=not valid(value), inactive=not valid(value) or not value.call_function("IsActive"),
@@ -133,11 +151,14 @@ class Transition:
         # GCNL_Spawning is retained native GameplayCue pooling, not a Character
         # wait resource. Identify its exact public BP handle AND owned target;
         # never clear the handle, destroy the shared Cue or cancel its watcher.
-        self.pooled_cues = []
+        self.observe_owned_cue_handles(); self.pooled_cues = []
+        owned_targets = {path(value) for value in (self.actor, self.owner.pawn if self.owner is not None else None) if valid(value)}
         for cue in ue.tobject_iterator(ue.load_class(CUE)):
             if not valid(cue) or cue.get_world() != self.world: continue
             value = cue.get_property("TeamColorWatcherHandle")
-            if path(value) in added and cue.get_property("TargetActor") in (self.actor, self.owner.pawn if self.owner is not None else None):
+            target = cue.get_property("TargetActor")
+            witnessed = self.owned_cue_witnesses.get((path(cue), path(value)))
+            if path(value) in added and (valid(target) and path(target) in owned_targets or witnessed is not None and witnessed in owned_targets):
                 self.pooled_cues.append((cue, value, path(cue), path(value)))
         pooled_paths = {value[3] for value in self.pooled_cues}
         self.owned_proxies = [value for name, value in added.items() if name not in pooled_paths]

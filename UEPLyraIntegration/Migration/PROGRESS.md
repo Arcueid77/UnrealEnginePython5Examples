@@ -13,14 +13,68 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active next bounded batch 58 (2026-10-17):** audit and migrate inherited
-Hero-default equipment hiding/death runtime business in dependency-sized
-groups. Character_Default construction currently only forwards to native parent
+**Active next bounded batch 59 (2026-10-17):** migrate inherited Hero-default
+Ragdoll project orchestration: collision profile, bone simulation selection and
+velocity-derived impulse through unchanged native APIs. The parent death-event
+montage/sense/random-delay orchestration remains a subsequent batch.
+Character_Default construction currently only forwards to native parent
 and its BeginPlay graph is empty; retain structural forwarding, animation/ABPs,
 editor/test tools and native physics/animation execution. Do not infer whole
 ancestor/sibling/version completion from the Shooter Character entrypoints.
 
-**Latest accepted bounded batch 57 (2026-10-17):** migrate ReceiveBeginPlay's
+**Latest accepted bounded batch 58 (2026-10-17):** inherited HideEquippedWeapons iterates native weapon
+instances/spawned Actors and calls native SetActorHiddenInGame(true), with the
+original missing-manager no-op and no added authority gate. Assets01 PASSes
+original parent byte identity, root type/full CDO/original graphs/twenty-five
+signatures, Python27/fallback22 and a three-node second-BP virtual caller.
+Host06 passes1,865 models. Differential05 PASSes the full prior regression and
+twelve new typed BP/native-lethal-GAS scenarios. Original random death Delay
+is genuinely awaited (BP0.567s/Python0.542s game time); no callback replay,
+direct hidden-field or Health writes. All weapon Actors hide; missing/empty
+manager controls and repeated calls agree. Three original bot identities and
+100 Health remain exactly unchanged, every row's complete original active
+proxy set is equal (no pre-existing Cue exemption is needed in this accepted
+run), all owned resources collect and caller roots1/1 balance. Strict closed
+logs, independent semantic gate, exit0 and1,873 frozen inputs PASS. Network01
+PASSes eight local typed calls (server4/A2/B02) on real native weapon Actors,
+each exact native visibility/inventory/Profile undo and caller roots1/1 per
+world. Natural startup/visibility and24 authority/24 replica-noop inventory
+regressions remain; all factory proxies24/12/12 collect. Strict closed logs,
+independent gate, server-last three zero exits and1,873 frozen inputs PASS.
+This does not certify hidden-flag replication, network death-hide ingress,
+physical pixels, inherited Ragdoll/death orchestration, siblings or a release.
+All1,865 isolated-index models and694-file all-index closure precede local
+commit/ledger58. No C++ build/cook/package, Engine/official Lyra/animation edits
+or push/tag/release. Batch57 is Examplesf05dd86/core48f7f62.
+
+Preserved failed attempts: Differential01 FAILS an inactive unrooted observer
+retained after repeated GC; native Cue recycling is an initial hypothesis, not
+an uninspected reference-chain conclusion for that handle. Record exact owned
+Cue/handle/target identities while live; never clear native fields or cancel a
+native pooled handle to force GC. Differential02 executes all twelve
+new cases, including real native lethal GAS -> original random Delay -> hidden
+weapon actors (BP0.481s/Python0.533s game time), but FAILS final whole-global-proxy
+equality in two earlier rows. Do not treat per-case log markers as acceptance.
+Differential03 FAILS inactive-observer collection in the prior ready/Python
+BeginPlay fixture, before reaching new hide cases. Shared OwnedAI
+readiness now records exact native Cue/handle/owned-Pawn identities before
+immunity/readiness completes, so every lifecycle fixture can preserve that
+read-only ownership witness. Differential04 FAILS collection in repeat/BP and
+records two unexpected newly active handles175/176 in an earlier Python row.
+The later native Cue retirement of handle176 is identified exactly, but the
+unknown new handle175 is not exempted. Controller BP's real asynchronous
+ExperienceReady -> RunBehaviorTree may run after the constructor-only StopLogic;
+overridden fixture ticks also bypassed the original global AI quarantine.
+OwnedAI readiness and the entire new fixture now reapply native AI isolation,
+with original bot Pawn-identity/Health equality as a strict control.
+Differential05's final gate includes explicit pre-existing exact Cue-handle
+snapshots for the new hide trials:
+allow only their native timeline retirement, require every persistent original
+Character observer unchanged, reject unknown proxy changes, and record exact
+global equality honestly. Final native evidence above, not these historical
+failed case markers, defines bounded batch58 acceptance.
+
+**Previously accepted bounded batch 57 (2026-10-17):** migrate ReceiveBeginPlay's
 parent-call / ListenForTeam / hide / native InitState registration orchestration.
 Preserve exact named native delegates and ordered calls without replaying
 BeginPlay on existing actors. Ancestor construction/death business and sibling /

@@ -32,6 +32,7 @@ class OwnedAI:
     """Native bot creation includes GenericPlayerInitialization and team assignment."""
     def __init__(self, world):
         self.controller = self.pawn = self.state = self.perception = self.creator = self.template = None
+        self.spawn_cue_witnesses = {}
         try:
             game_state = ue.find_class("GameplayStatics").get_cdo().call_function("GetGameState", world)
             self.template = game_state.get_component_by_type(ue.find_class("LyraBotCreationComponent"))
@@ -59,7 +60,22 @@ class OwnedAI:
         except Exception:
             self.close(); raise
 
+    def observe_spawn_cue_handles(self):
+        if not valid(self.pawn): return
+        cue_class = ue.load_class("/ShooterCore/GameplayCues/GCNL_Spawning.GCNL_Spawning_C")
+        for cue in ue.tobject_iterator(cue_class):
+            if not valid(cue) or cue.get_world() != self.pawn.get_world() or cue.get_property("TargetActor") != self.pawn: continue
+            value = cue.get_property("TeamColorWatcherHandle")
+            if valid(value): self.spawn_cue_witnesses[(path(cue), path(value))] = path(self.pawn)
+
     def ready(self):
+        self.observe_spawn_cue_handles()
+        # Controller BP starts its tree asynchronously after ExperienceReady;
+        # stopping once in __init__ can precede that real bootstrap callback.
+        if valid(self.controller):
+            brain = self.controller.get_property("BrainComponent")
+            if valid(brain) and brain.call_function("IsRunning"): brain.call_function("StopLogic", "UEP owned bot readiness isolation")
+            self.controller.call_function("StopMovement")
         return valid(self.pawn) and valid(ability_system(self.pawn)) and health(self.pawn) > 20. and not health_component(self.pawn).call_function("IsDeadOrDying") and not ability_system(self.pawn).call_function("HasMatchingGameplayTag", GameplayTag(TagName="Gameplay.DamageImmunity"))
 
     def close(self):

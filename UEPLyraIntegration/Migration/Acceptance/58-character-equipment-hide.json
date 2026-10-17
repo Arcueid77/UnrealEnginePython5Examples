@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "batch": "58-character-equipment-hide",
+  "scope": "Inherited HideEquippedWeapons native typed BP calls and real lethal GAS delayed ingress; actual weapon actor visibility, owned/persistent resource isolation, original bot identity/Health controls, local server/owner hide/undo and full preceding startup/inventory regression. No hidden-flag replication, network death ingress or whole-version claim.",
+  "recorded_utc": "2026-10-17T04:46:38.5031712Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "48f7f62ec467572b8989cde74578bbc4ad52e196",
+  "examples_parent_commit": "f05dd86ca6291510c52cb14807a47c834fa8ad78",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-character-equipment-hide/Assets01",
+      "summary_sha256": "83201437852BC3F0527129CE227189A7B5FCE6A81A612256C399F232FAACE0A7",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1561,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-character-equipment-hide/Differential05",
+      "summary_sha256": "4F9E9A4391ECAB78FF36542092F1536E9DA4AD7C20595FF5230FCEDFBB7226E6",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1873,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "F5F1E1C2B1340DA4D1E4F999C4D2A51D49712156F1370B78FA55EECDA1466CF9"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-character-equipment-hide/Network01",
+      "summary_sha256": "DAF56AB2AE3895B0283F85CDA0F19923AE65A545EF73D3E90912FA584C997051",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1873,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "A": 0,
+        "server": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "58A990712BF22EE1CA521B5116C0B055DFE727B3F6AC910BBB5F0FB8382252C5"
+        },
+        {
+          "file": "A.json",
+          "sha256": "250DC6E0956A255DD58C9633ED9644C6FFDAE4CEB598EDCAB72469B9178D56AB"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "D48CF35D843BB87CDC8BD9511F8DF91C7EEC3099FE84F852BB8967A9487EBE60"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "F3677D200B009074B7F602EC976F8E8DCC38E3BEA7C4BC9DB171549BC57A0DD4"
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "4026DBAD4331EFB5BB9E0DDFF1E13098442ED26190F9C047C4B2DFAF51459612"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "948A728AE7A1B1E0BEACCC41682343C77C87201F3F650525465B8894D3C7DFA9"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/health_changed_observation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/health_changed_observation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "9BBB825EC6C72B11D5FC28ED582291AE99BFE7BB5E05EAF1F5DCA5BF943AC5FF"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/inventory_wait_transitions.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/inventory_wait_transitions.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "F28A85265C4C187D1375F92AD67852A85662E8A51751DA57AA31FA1765495BBC"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/inventory_wait_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/inventory_wait_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "7537FCE2331292C0BFBE9CCE2DDAEF8193E2F7B798815DFA2116A7287394DCE2"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/equipment_hide_mixin.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/equipment_hide_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "408F9F65F0F529AF192270E7BE41EB34C94124A5034F07417E519822ACC5BAD1"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/equipment_hide_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/equipment_hide_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "DE7B1992D5DB6A46A9581F66DFCC7AEAB0A07E6BCB5AD3C94BF2DAC84F7076BE"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/equipment_hide_network_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/equipment_hide_network_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "A98501EEA91DE13F5FDEEEDF8FA14A831B1B3D351480FF7F63A2BDB4A05A55BB"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/equipment_hide_network_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/equipment_hide_network_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "A8669A9F5CEF4AE1ABD0BA5C97E580208A50BD6E5BA1F40B4B6CB27CCB2FCA3D"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/equipment_hide_observation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/equipment_hide_observation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "6F0050F1FCBF3A45ADE9300CF03FBDC3DCF9BEAE6B8515583A4A1B467F41F1B1"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/equipment_hide_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/equipment_hide_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "038EDEA62DE1164CB95EEDB3D13C2D1752572D5CDD296C06A777181458BD0B1D"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_character_inventory_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_character_inventory_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "FBC83877061D84B609F1CB905EDFCEADD645CAB9ECB0E78101FD252B55D446A1"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "B944C94CE089B0C6C01FDBAAB9793F5D9D8B2C3B8665600D9872986617BD25FB"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_character_equipment_hide_probe.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_character_equipment_hide_probe.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "77964F72CA9BD73DD92DC75CD1B97CB21E88DBB06492568A5BBA6F8C48AE0D10"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_CharacterEquipmentHideMixin.uasset",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_CharacterEquipmentHideMixin.uasset",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "B4452253085880C3EB84F50384AABFCE763EE1C8C79ED6D1901CE211546DC5A8"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/B_Hero_ShooterMannequin.uasset",
+      "path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/B_Hero_ShooterMannequin.uasset",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "AD9946C8E12258BB230ABCC1ECC6D795AF753FD2562D21719E81D006A8A0F7A9"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261017-character-equipment-hide/Host06.json",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 1865,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "sha256": "CFA130F717C43B44C9FC2F0C91AAAF202521184D0AC04C010BEF6217772A9EB4"
+  }
+}

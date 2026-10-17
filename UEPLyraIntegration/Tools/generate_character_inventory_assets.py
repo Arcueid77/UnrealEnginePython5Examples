@@ -75,7 +75,8 @@ def begin_play_graph(originals):
     return parent, dict(order=["parent", "listen", "hide", "register"], component="PawnExtComponent", tag="InitState.GameplayReady", call_immediately=True)
 
 
-def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, team=False, stencil=False, lifecycle=False, parts=False, health=False, enhanced=False, observer=False, listener=False, legacy=False, ready=False, waiting=False, possessed=False, visibility=False, beginning=False):
+def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, team=False, stencil=False, lifecycle=False, parts=False, health=False, enhanced=False, observer=False, listener=False, legacy=False, ready=False, waiting=False, possessed=False, visibility=False, beginning=False, hiding=False):
+    beginning = beginning or hiding
     visibility = visibility or beginning
     possessed = possessed or visibility
     waiting = waiting or possessed
@@ -94,6 +95,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     quickbar = quickbar or loadout
     audio = audio or quickbar
     kind, prefix, module = next((kind, prefix, module) for enabled, kind, prefix, module in (
+        (hiding, "characterequipmenthide", "EquipmentHide", "equipment_hide_mixin"),
         (beginning, "characterbeginplay", "BeginPlay", "begin_play_mixin"),
         (visibility, "charactervisibility", "Visibility", "visibility_mixin"),
         (possessed, "characterpossessed", "Possessed", "possessed_mixin"),
@@ -139,7 +141,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     bindings_before = input_bindings(bp.GeneratedClass) if enhanced else None
     signatures = {name: ue.describe_function(bp.GeneratedClass, name) for name in
         (("ClearInventory", "AddInitialInventory", "K2_OnDeathFinished", "K2_OnReset", "ReceiveBeginPlay", "ReceivePossessed")+
-            (("GetEmoteAudioComponent", "SetEmoteAudioComponent") if audio else ())+(("ChangeQuickbarSlot",) if quickbar else ())+(("CreateOrUpdateOutlineIfNeeded",) if outline else ())+(("OnTeamOrCosmeticsChanged",) if team else ())+(("UpdateCustomStencilFromTeamID",) if stencil else ())+((BOUND_EVENT,) if parts else ())+((HEALTH_EVENT,) if health else ())+((OBSERVER_EVENT, "ListenForTeam") if observer else ())+(("OnRep_PlayerInfo",) if legacy else ())+((READY,) if ready else ())+((SHOW,) if visibility else ())) }
+            (("GetEmoteAudioComponent", "SetEmoteAudioComponent") if audio else ())+(("ChangeQuickbarSlot",) if quickbar else ())+(("CreateOrUpdateOutlineIfNeeded",) if outline else ())+(("OnTeamOrCosmeticsChanged",) if team else ())+(("UpdateCustomStencilFromTeamID",) if stencil else ())+((BOUND_EVENT,) if parts else ())+((HEALTH_EVENT,) if health else ())+((OBSERVER_EVENT, "ListenForTeam") if observer else ())+(("OnRep_PlayerInfo",) if legacy else ())+((READY,) if ready else ())+((SHOW,) if visibility else ())+(("HideEquippedWeapons",) if hiding else ())) }
     input_signatures = {value["action"]: ue.describe_function(bp.GeneratedClass, value["function"]) for value in bindings_before} if enhanced else {}
     originals = [(graph, {node.get_name() for node in graph.Nodes}) for graph in ue.blueprint_get_all_graphs(bp)]
     possession = possession_graph(originals) if possessed else None
@@ -242,6 +244,24 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     if beginning:
         report["implemented_methods"].append("ReceiveBeginPlay")
         report.update(begin_play_business_migrated=True, original_begin_play_semantics=begin_original, native_begin_play_parent_transport=parent_transport)
+    if hiding:
+        report["implemented_methods"].append("HideEquippedWeapons")
+        parent_path = "Content/Characters/Heroes/B_Hero_Default.uasset"
+        parent_bp = ue.load_object(Blueprint, "/Game/Characters/Heroes/B_Hero_Default.B_Hero_Default")
+        graph, = [value for value in ue.blueprint_get_all_graphs(parent_bp) if value.get_name() == "HideEquippedWeapons"]
+        functions = [str(node.FunctionReference.MemberName) for node in graph.Nodes if node.get_class().get_name() == "K2Node_CallFunction"]
+        if sorted(functions) != sorted(("GetComponentByClass", "GetEquipmentInstancesOfType", "GetSpawnedActors", "SetActorHiddenInGame")) or len(graph.Nodes) != 8:
+            raise RuntimeError("original inherited equipment-hide graph differs")
+        call, = [node for node in graph.Nodes if node.get_class().get_name() == "K2Node_CallFunction" and str(node.FunctionReference.MemberName) == "SetActorHiddenInGame"]
+        if call.node_find_pin("bNewHidden").default_value != "true" or call.node_find_pin("bNewHidden").get_linked_to(): raise RuntimeError("original inherited equipment hide literal differs")
+        hashes = {str(root/parent_path): hashlib.sha256((root/parent_path).read_bytes()).hexdigest() for root in (source, stage)}
+        if len(set(hashes.values())) != 1: raise RuntimeError("official/staged inherited Hero parent drift")
+        from generate_character_equipment_hide_probe import generate as hide_probe
+        report.update(inherited_equipment_hide_migrated=True, inherited_equipment_hide_owner=signatures["HideEquippedWeapons"]["owner"],
+            inherited_equipment_hide_graph=semantics(graph, {node.get_name() for node in graph.Nodes}, set()), inherited_equipment_parent_hashes=hashes,
+            equipment_hide_probe=hide_probe(stage, bp.GeneratedClass))
+        report["native_equipment_hide_signatures"] = {name: ue.describe_function(ue.find_class(cls), name) for cls, name in (
+            ("LyraEquipmentManagerComponent", "GetEquipmentInstancesOfType"), ("LyraEquipmentInstance", "GetSpawnedActors"), ("Actor", "SetActorHiddenInGame"))}
     if team:
         if stencil:
             if lifecycle:
