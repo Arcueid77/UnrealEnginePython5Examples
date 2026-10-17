@@ -13,6 +13,47 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Active next bounded batch 51 (2026-10-17):** migrate ListenForTeam factory/bind/
+activation decisions into Python, retaining the native observer, exact named
+native result delegate and all eighteen accepted routes. First verify an exact
+named-delegate transport; do not substitute a long-lived Python closure or
+invent repeated-call cancellation. Native factory repetitions, initial callback,
+per-instance Profile isolation and owned-proxy cancellation/GC remain gates.
+No native acceptance or local commit for this next batch yet.
+
+**Latest accepted bounded batch 50 (2026-10-17):** only the generated
+ObserveTeamColors result receiver's assigned-team branch migrates; original
+ListenForTeam factory/activation remains BP. Seventeen accepted Python aliases
+include the actual five callable descriptors, not unwrapped class attributes.
+Assets01 PASSes eighteen class routes, Python18/BlueprintFallback13 and twenty-one
+unchanged logical signatures, original type/full CDO/every graph. Five input
+overrides remain omitted on fallback for automatic native Original input frames.
+Differential01 FAILS its same-tick proxy collection gate despite completing six
+functional comparisons: Kismet CollectGarbage requests end-of-frame GC. Preserve
+that failed run. Differential02 investigates deferred collection and actually
+collects all owned proxies; native BP-frame retention was only a possibility,
+not an observed result. Final Differential03 requires zero retained owned
+observers after engine ticks, without clearing native BP frames. It PASSes six
+comparisons/eight real factory activations, assigned/unassigned initial branches,
+repeat calls, six actual native device properties, visual/software parity and
+exact original Actor/inventory/Profile/CDO/live-proxy-set restoration. Test-owned
+bare Actor and startup observer collect; device roots22/22, marker removals16/16
+and caller pin1/1 PASS. Network01 PASSes eight steps/twelve real callbacks per
+world, thirty-six total, on actual two Pawn identities with opposing/swapped
+Profiles, DedicatedServer/Client/Client and role3/local2/foreign1. Each client
+executes six actual local device properties, foreign/server zero; roots are
+0/0+30/30+30/30. All owned proxies collect and original active proxies remain;
+cleanup freezes before release, server exits last and all three exits are zero.
+Both final runs PASS independent semantic gates, strict closed logs and 1,728
+frozen inputs. Ledger50 lists exactly Assets01/Differential03/Network01 and
+fourteen matched scoped sources/assets. Fifty-one focused / all 1,546 isolated
+Git-index models and 612-file all-index syntax/import closure PASS; five driver-
+safety and 56 PowerShell parse checks PASS. This is initial native observer activation,
+not real replicated team changes, all future post-Cancel display callbacks,
+listener-creation migration, hardware/pixels/travel/loss/package/full Character
+or version acceptance. No C++ build, Engine/official Lyra/animation changes,
+push/tag/release.
+
 **Latest accepted bounded batch 49 (2026-10-17):** batch 48 is locally committed as
 Examples 750715c / core 7f221dd. Migrate only five original generated QuickSlot
 EnhancedInput receivers, aliasing twelve accepted Character methods. Preserve

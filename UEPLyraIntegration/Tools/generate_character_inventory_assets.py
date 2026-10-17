@@ -24,7 +24,8 @@ def input_bindings(cls):
     return sorted(values, key=lambda value: value["function"])
 
 
-def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, team=False, stencil=False, lifecycle=False, parts=False, health=False, enhanced=False):
+def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, team=False, stencil=False, lifecycle=False, parts=False, health=False, enhanced=False, observer=False):
+    enhanced = enhanced or observer
     health = health or enhanced
     parts = parts or health
     lifecycle = lifecycle or parts
@@ -35,6 +36,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     quickbar = quickbar or loadout
     audio = audio or quickbar
     kind, prefix, module = next((kind, prefix, module) for enabled, kind, prefix, module in (
+        (observer, "characterobserver", "TeamObserver", "team_observer_mixin"),
         (enhanced, "characterinput", "EnhancedInput", "enhanced_input_mixin"),
         (health, "characterhealth", "HealthChanged", "health_changed_mixin"),
         (parts, "characterparts", "PartsChanged", "parts_changed_mixin"),
@@ -52,6 +54,8 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
         from uep_lyra_characters.health_changed_mixin import BOUND_EVENT as HEALTH_EVENT
     if enhanced:
         from uep_lyra_characters.enhanced_input_contract import ACTIONS
+    if observer:
+        from uep_lyra_characters.team_observer_mixin import BOUND_EVENT as OBSERVER_EVENT
     source = Path(json.loads((stage/".uep-lyra-full-stage.json").read_text(encoding="utf-8-sig"))["source"]).parent
     original = source/RELATIVE; digest = hashlib.sha256(original.read_bytes()).hexdigest()
     if hashlib.sha256((stage/RELATIVE).read_bytes()).hexdigest() != digest: raise RuntimeError("fresh original Character required")
@@ -60,7 +64,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     bindings_before = input_bindings(bp.GeneratedClass) if enhanced else None
     signatures = {name: ue.describe_function(bp.GeneratedClass, name) for name in
         (("ClearInventory", "AddInitialInventory", "K2_OnDeathFinished", "K2_OnReset", "ReceiveBeginPlay", "ReceivePossessed")+
-            (("GetEmoteAudioComponent", "SetEmoteAudioComponent") if audio else ())+(("ChangeQuickbarSlot",) if quickbar else ())+(("CreateOrUpdateOutlineIfNeeded",) if outline else ())+(("OnTeamOrCosmeticsChanged",) if team else ())+(("UpdateCustomStencilFromTeamID",) if stencil else ())+((BOUND_EVENT,) if parts else ())+((HEALTH_EVENT,) if health else ())) }
+            (("GetEmoteAudioComponent", "SetEmoteAudioComponent") if audio else ())+(("ChangeQuickbarSlot",) if quickbar else ())+(("CreateOrUpdateOutlineIfNeeded",) if outline else ())+(("OnTeamOrCosmeticsChanged",) if team else ())+(("UpdateCustomStencilFromTeamID",) if stencil else ())+((BOUND_EVENT,) if parts else ())+((HEALTH_EVENT,) if health else ())+((OBSERVER_EVENT, "ListenForTeam") if observer else ())) }
     input_signatures = {value["action"]: ue.describe_function(bp.GeneratedClass, value["function"]) for value in bindings_before} if enhanced else {}
     originals = [(graph, {node.get_name() for node in graph.Nodes}) for graph in ue.blueprint_get_all_graphs(bp)]
     graphs = {graph.get_name(): semantics(graph, names, set()) for graph, names in originals}
@@ -94,7 +98,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     report = dict(status="passed", kind=kind, runtime_acceptance=False, full_acceptance=False, native_end_adapter_nodes=0,
         original_class=cls, original_signature=signatures["ClearInventory"], extra_signatures=signatures,
         original_class_defaults_signature_graphs_preserved=True, original_full_cdo_preserved=True, original_graphs_unmodified=True,
-        original_graphs=graphs, implemented_methods=["ClearInventory"]+(["GetEmoteAudioComponent", "SetEmoteAudioComponent"] if audio else [])+(["ChangeQuickbarSlot"] if quickbar else [])+(["AddInitialInventory"] if loadout else [])+(["CreateOrUpdateOutlineIfNeeded"] if outline else [])+(["OnTeamOrCosmeticsChanged"] if team else [])+(["UpdateCustomStencilFromTeamID"] if stencil else [])+(["K2_OnDeathFinished", "K2_OnReset"] if lifecycle else [])+([BOUND_EVENT] if parts else [])+([HEALTH_EVENT] if health else [])+([value["function"] for value in bindings_after] if enhanced else []), added_interface_graphs=["GetPythonMixinSet", "GetPythonMixinProfile"],
+        original_graphs=graphs, implemented_methods=["ClearInventory"]+(["GetEmoteAudioComponent", "SetEmoteAudioComponent"] if audio else [])+(["ChangeQuickbarSlot"] if quickbar else [])+(["AddInitialInventory"] if loadout else [])+(["CreateOrUpdateOutlineIfNeeded"] if outline else [])+(["OnTeamOrCosmeticsChanged"] if team else [])+(["UpdateCustomStencilFromTeamID"] if stencil else [])+(["K2_OnDeathFinished", "K2_OnReset"] if lifecycle else [])+([BOUND_EVENT] if parts else [])+([HEALTH_EVENT] if health else [])+([value["function"] for value in bindings_after] if enhanced else [])+([OBSERVER_EVENT] if observer else []), added_interface_graphs=["GetPythonMixinSet", "GetPythonMixinProfile"],
         assets=[RELATIVE, "Content/UEPMixins/"+name+".uasset"], reference_hashes={str(original): digest})
     if team:
         if stencil:
@@ -158,4 +162,11 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
             original_enhanced_input_bindings=bindings_before, enhanced_input_bindings=bindings_after,
             native_input_signatures={name: ue.describe_function(ue.find_class(cls), name) for cls, name in (
                 ("EnhancedInputLocalPlayerSubsystem", "InjectInputVectorForAction"), ("SubsystemBlueprintLibrary", "GetLocalPlayerSubsystem"))})
+    if observer:
+        from generate_character_team_listener_probe import generate as listener_probe
+        report["team_listener_probe"] = listener_probe(stage, bp.GeneratedClass)
+        report["native_team_observer_signatures"] = {name: ue.describe_function(ue.find_class(cls), name) for cls, name in (
+            ("AsyncAction_ObserveTeamColors", "ObserveTeamColors"), ("CancellableAsyncAction", "Cancel"), ("CancellableAsyncAction", "IsActive"))}
+        report["team_observer_callback"] = OBSERVER_EVENT
+        report["original_listener_factory_orchestration_remains_bp"] = True
     return report
