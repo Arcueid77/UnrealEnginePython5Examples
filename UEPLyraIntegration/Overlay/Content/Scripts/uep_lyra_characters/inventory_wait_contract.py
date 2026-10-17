@@ -44,16 +44,16 @@ def check_transition(row, scenario):
     else: require(resumed["resumes"] == resumed["delay_requests"] == resumed["grant_forwards"] == 0, "original BP wait entered Python scheduling")
 
 
-def scope(report):
+def scope(report, *, factory_migrated=False):
     require(report["experience_callback_manually_called_by_typed_bp"] is False and report["native_experience_factory_signal_tested"] is True and
-        report["experience_ready_factory_migrated"] is False and report["pending_inventory_wait_migrated"] is True and
+        report["experience_ready_factory_migrated"] is factory_migrated and report["pending_inventory_wait_migrated"] is True and
         report["immediate_inventory_ready_branch_migrated"] is True and report["native_wait_backend"] == "DelayUntilNextTick" and
         report["python_wait_ticker_registered"] is False, "native wait backend/scope differs")
     require(report["caller_roots"] == dict(created=1, released=1) and report["owned_experience_proxies_collected"] is True, "native wait caller/proxy cleanup differs")
 
 
-def validate(report):
-    result = loadout_validate(report); scope(report); natural(report["natural_startup_readiness"], True)
+def validate(report, *, factory_migrated=False):
+    result = loadout_validate(report); scope(report, factory_migrated=factory_migrated); natural(report["natural_startup_readiness"], True)
     for row in report["cases"]: check_ready(row)
     require(report["owned_experience_proxies_created"] == 32 and len(report["deferred_original_cases"]) == 2, "native wait request matrix incomplete")
     for row, profile in zip(report["deferred_original_cases"], ("BlueprintFallback", "Python")):

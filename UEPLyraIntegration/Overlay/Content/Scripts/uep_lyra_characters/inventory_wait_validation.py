@@ -16,6 +16,7 @@ from .outline_validation import gc
 class Validation(ReadyValidation):
     marker = "UEP_CHARACTER_WAIT"
     validate_report = staticmethod(validate)
+    transition_type = Transition
 
     def __init__(self, result):
         super().__init__(result)
@@ -53,7 +54,7 @@ class Validation(ReadyValidation):
         return super().tick(seconds)
 
     def start_transition(self):
-        self.transition = Transition(self.world, self.trial.probe, SCENARIOS[len(self.report["readiness_transition_cases"])])
+        self.transition = self.transition_type(self.world, self.trial.probe, SCENARIOS[len(self.report["readiness_transition_cases"])])
         self.enter("transition")
 
     def finish(self, error=None):

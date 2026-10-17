@@ -13,13 +13,51 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active next bounded batch 55 (2026-10-17):** migrate ReceivePossessed's
+**Active next bounded batch 56 (2026-10-17):** migrate the native InitState
+callback ShowPawnAgainNextFrame's delayed visibility continuation, preserving
+the original native next-tick backend, original BP fallback and weak-owner
+cancellation. ReceiveBeginPlay's parent/ListenForTeam/hide/register orchestration
+and parent/sibling/version gates remain separate later groups.
+
+**Latest accepted bounded batch 55 (2026-10-17):** migrate ReceivePossessed's
 authority decision and actual ExperienceReady factory/bind/activation. Preserve
 natural native possession, original BP fallback, native delayed delivery and
 batch54's three-stage Python wait. BeginPlay/visibility/init-state, parent/
 sibling and version gates remain open.
 
-**Latest accepted bounded batch 54 (2026-10-17):** replace the remaining original
+Batch55: `possessed_mixin.py` implements authority -> native
+WaitForExperienceReady(Self) -> exact named Actor delegate -> Activate, without
+using NewController as an extra gate or calling a parent event absent from the
+original. Host03 passes1,739 models. Assets01/02 FAIL overly specific macro-name /
+library assumptions before asset writing; preserve them. Assets03 PASSes strict
+logs/process exit0, Python23/fallback18 and all original type/full CDO/graphs/
+twenty-three signatures. Actual original macro is
+ActorMacros:Switch Has Authority; inspect its HasAuthority -> branch condition
+and freeze its original asset, not a guessed library/name. Differential01 FAILS
+an overly broad bot-startup factory count: the retained original AI Controller
+BP also creates its own ExperienceReady task. Identify the exact Character
+proxy independently, record Controller bootstrap tasks separately and require
+both groups' cleanup. Capture their path identities while live (never infer
+paths from already GC'd objects), close owned state on constructor failure and
+add regression models. Host04 passes1,741. Final Differential02 PASSes all
+six immediate inventory pairs/two destroyed waits/six late-readiness pairs,
+twenty-four actual native owned Pawn possessions and twelve separate original
+Controller-BP bootstrap tasks. All these factory tasks plus32 typed-producer
+proxies collect; original state/Character observers/Cue pool gates remain
+strict. Main player naturally enters Python ReceivePossessed once with actual
+Controller payload/factory/bind/activation. Network01 PASSes24 authority/24
+owner replica-noop trials: both server players naturally create one Python
+possession task each, while clients invent no server-only possession callback.
+All test proxies24/12/12 collect, caller roots1/1 each world, strict closed logs,
+independent gates, server-last three zero exits and1,817 frozen inputs/final run
+PASS. Actor class/full CDO/all original graphs/signatures and exact inventory /
+Profile restoration remain. No BeginPlay/parent/sibling/full-version, pending
+component replication, physical/pixels/travel/loss/package claim; no C++ build,
+Engine/official Lyra/animation changes or publication. Ledger55 and isolated
+staged-tree checks precede local commit. Batch54 is committed as
+Examples6554190/core3264dda.
+
+**Previously accepted bounded batch 54 (2026-10-17):** replace the remaining original
 three-stage Controller/InventoryManager/Quickbar wait with Python decisions,
 retaining native next-tick latent scheduling and named UFunction resumption.
 Prove repeated/reentrant waits, readiness transitions and destroyed-owner

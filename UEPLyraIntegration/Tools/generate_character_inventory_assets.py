@@ -24,7 +24,31 @@ def input_bindings(cls):
     return sorted(values, key=lambda value: value["function"])
 
 
-def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, team=False, stencil=False, lifecycle=False, parts=False, health=False, enhanced=False, observer=False, listener=False, legacy=False, ready=False, waiting=False):
+def possession_graph(originals):
+    graph, = [graph for graph, _ in originals if graph.get_name() == "EventGraph"]
+    event, = [node for node in graph.Nodes if node.get_class().get_name() == "K2Node_Event" and str(node.EventReference.MemberName) == "ReceivePossessed"]
+    output, = event.node_find_pin("then").get_linked_to(); authority = output.owning_node
+    if authority.get_class().get_name() != "K2Node_MacroInstance": raise RuntimeError("original possession authority is not a macro")
+    macro = authority.node_get_macro_graph()
+    calls = [node for node in macro.Nodes if node.get_class().get_name() == "K2Node_CallFunction" and str(node.FunctionReference.MemberName) == "HasAuthority"]
+    if macro.get_path_name() != "/Engine/EditorBlueprintResources/ActorMacros.ActorMacros:Switch Has Authority" or len(calls) != 1:
+        raise RuntimeError("original possession macro does not call native HasAuthority: "+macro.get_path_name())
+    branch, = [node for node in macro.Nodes if node.get_class().get_name() == "K2Node_IfThenElse"]
+    condition, = branch.node_find_pin("Condition").get_linked_to()
+    if condition.owning_node != calls[0] or condition.name != "ReturnValue": raise RuntimeError("original authority branch does not use native HasAuthority result")
+    target, = authority.node_find_pin("Authority").get_linked_to(); factory = target.owning_node
+    if authority.node_find_pin("Remote").get_linked_to() or event.node_find_pin("NewController").get_linked_to() or factory.get_class().get_name() != "K2Node_AsyncAction" or str(factory.ProxyFactoryFunctionName) != "WaitForExperienceReady" or factory.ProxyFactoryClass != ue.find_class("AsyncAction_ExperienceReady") or factory.node_find_pin("WorldContextObject").get_linked_to() or factory.node_find_pin("then").get_linked_to():
+        raise RuntimeError("original possession authority/factory/context/controller semantics differ")
+    continuation, = factory.node_find_pin("OnReady").get_linked_to()
+    if continuation.owning_node.node_get_macro_graph().get_name() != "WaitForInventoryReadiness":
+        raise RuntimeError("original possession Experience continuation differs")
+    return dict(authority_macro=macro.get_path_name(), authority_macro_semantics=semantics(macro, {node.get_name() for node in macro.Nodes}, set()), factory="WaitForExperienceReady",
+        remote_branch_noop=True, controller_parameter_unused=True, implicit_self_world_context=True, parent_event_called=False,
+        original_continuation="WaitForInventoryReadiness")
+
+
+def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, team=False, stencil=False, lifecycle=False, parts=False, health=False, enhanced=False, observer=False, listener=False, legacy=False, ready=False, waiting=False, possessed=False):
+    waiting = waiting or possessed
     ready = ready or waiting
     legacy = legacy or ready
     listener = listener or legacy
@@ -40,6 +64,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     quickbar = quickbar or loadout
     audio = audio or quickbar
     kind, prefix, module = next((kind, prefix, module) for enabled, kind, prefix, module in (
+        (possessed, "characterpossessed", "Possessed", "possessed_mixin"),
         (waiting, "characterwait", "InventoryWait", "inventory_wait_mixin"),
         (ready, "characterready", "InventoryReady", "inventory_ready_mixin"),
         (legacy, "characterlegacy", "LegacyPlayerInfo", "legacy_player_info_mixin"),
@@ -83,6 +108,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
             (("GetEmoteAudioComponent", "SetEmoteAudioComponent") if audio else ())+(("ChangeQuickbarSlot",) if quickbar else ())+(("CreateOrUpdateOutlineIfNeeded",) if outline else ())+(("OnTeamOrCosmeticsChanged",) if team else ())+(("UpdateCustomStencilFromTeamID",) if stencil else ())+((BOUND_EVENT,) if parts else ())+((HEALTH_EVENT,) if health else ())+((OBSERVER_EVENT, "ListenForTeam") if observer else ())+(("OnRep_PlayerInfo",) if legacy else ())+((READY,) if ready else ())) }
     input_signatures = {value["action"]: ue.describe_function(bp.GeneratedClass, value["function"]) for value in bindings_before} if enhanced else {}
     originals = [(graph, {node.get_name() for node in graph.Nodes}) for graph in ue.blueprint_get_all_graphs(bp)]
+    possession = possession_graph(originals) if possessed else None
     graphs = {graph.get_name(): semantics(graph, names, set()) for graph, names in originals}
     if legacy:
         graph, = [value for value, _ in originals if value.get_name() == "OnRep_PlayerInfo"]
@@ -155,6 +181,12 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
         report["native_inventory_wait_stub"] = wait_stub
         report["native_inventory_wait_resume_signature"] = ue.describe_function(bp.GeneratedClass, wait_stub["function"])
         report["native_inventory_wait_signatures"] = {name: ue.describe_function(ue.find_class("KismetSystemLibrary"), name) for name in ("DelayUntilNextTick", "GetFrameCount")}
+    if possessed:
+        report["implemented_methods"].append("ReceivePossessed")
+        report["original_possession_semantics"] = possession
+        report["experience_ready_factory_migrated"] = True
+        report["native_possession_factory_signatures"] = {name: ue.describe_function(ue.find_class(cls), name) for cls, name in (
+            ("AsyncAction_ExperienceReady", "WaitForExperienceReady"), ("AsyncAction_ExperienceReady", "Activate"), ("Actor", "HasAuthority"))}
     if team:
         if stencil:
             if lifecycle:
