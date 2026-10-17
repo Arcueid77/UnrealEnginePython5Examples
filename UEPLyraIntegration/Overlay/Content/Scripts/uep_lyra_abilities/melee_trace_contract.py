@@ -9,6 +9,13 @@ SCENARIOS = ("miss", "invalid-asc", "friendly", "occluded", "hostile")
 PLAN = tuple((name, profile) for name in SCENARIOS for profile in ("BlueprintFallback", "Python"))
 
 
+def direction_matches_trace(root, trace, original):
+    # The original query uses ActorForward*Distance. Derive the independent
+    # native facing from its recorded world endpoints, not a fixed world axis.
+    expected = [(end-start)/original["Distance"] for start,end in zip(trace["start"],trace["end"])]
+    return len(root["direction"]) == len(expected) == 3 and all(math.isclose(actual,wanted,rel_tol=1e-9,abs_tol=1e-9) for actual,wanted in zip(root["direction"],expected))
+
+
 def validate(report):
     require(report["status"] == "passed" and report["error"] is None, "native trace report failed")
     require(report["actual_granted_primary_instance"] and report["native_role"] == 3 and
@@ -49,7 +56,7 @@ def validate(report):
             event = row["health_events"][0]
             require(event["target"] == row["target"] and math.isclose(event["old"]-event["new"], row["health_delta"], abs_tol=1e-5), "native Health delegate does not match damage")
             root = row["root_tasks"][0]; original = row["original_config"]
-            require(root["direction"] == [1., 0., 0.] and root["additive"] and root["gravity"] and root["finish_mode"] == 0 and root["curve"] is None and
+            require(direction_matches_trace(root, trace, original) and root["additive"] and root["gravity"] and root["finish_mode"] == 0 and root["curve"] is None and
                 math.isclose(root["duration"], original["Duration"], abs_tol=1e-6) and root["finish_velocity"] == [0., 0., 0.] and root["clamp"] == 1000., "native root-motion original options differ")
             require(math.isclose(root["strength"], original["Strength"]*trace["distance"]/original["Distance"], abs_tol=.01), "native unclamped hit-distance strength differs")
             context = row["stored_effect_context"]

@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "batch": "70-melee-two-owner-damage",
+  "scope": "Bounded functional/native test-infrastructure evidence only,not general stability. Four final runs:private replicated native collision floor,10 current standalone controls,two current unchanged-code real-network repeats. Each repeat has20 native owner ASC requests/20 authority activations from2 distinct owners,40 native viewer observations,original/Python miss/no-ASC/friendly/occluded/hostile and4 native100-damage hostile hits. Real predicting mode2,no client trace business,native root-task options/formula/query-derived direction at1e-9,empty original hit context,unique replicated Bot names and zero native immunity at activation. Both receive Health100->0; native GAS prediction filtering preserves0 owner/1 foreign Hit Cue,not local replay. Original handler called once,observers/Profile/spec/config/pose/fixtures restored,quiet20 ticks,scopes10/10,5/5,5/5 active/errors0,independent gates/strict closed logs/real server-last exits.2423 host models. Production Melee policy unchanged from69. UNRESOLVED Native05/07 readiness failure before friendly activation:authority and one viewer Health100,another viewer Health0. New HealthSet/ASC/canonical-Pawn diagnostics and two successful repeats do not prove this fixed;70b remains open. Preserve all failed runs;no timeout widening,Health writes or manual initialization. No physical input,PvP avatar turnover,quantitative movement,loss/travel/rejoin,Engine/Cpp build,cook/package/full asset/version/stability/publication claim.",
+  "recorded_utc": "2026-10-17T15:29:54.2504524Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "bcf8d50d065ab1045a294e653aae56232df79571",
+  "examples_parent_commit": "a72cd16f8ef888953996134275ab4dad20c2c228",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-melee-trace-network/FixtureAssets01",
+      "summary_sha256": "AB0B32F3C59A552820A3B6A443F8E949CC38D7003FE74F52F48ADC0A53847600",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 827,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-melee-trace-network/StandaloneRegression02",
+      "summary_sha256": "D5863D1771DDE1AB9D5EAF22060A46431B86143C941065FC0F18A396ED602F05",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1933,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "B39FB4126D6CFF6A1D0483615DBAF21B707B86D3B7F4C48F77876C72F28A5B8B"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-melee-trace-network/Network08",
+      "summary_sha256": "C7806A22B1E3F2E8E9EDCA67580BA47C54C2443F1DAB76EDF84FC25288831ACE",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1936,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "A": 0,
+        "B0": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "FB5600070775F13F88A477EE7F237A019DDE3698AFAB9BC0E654BA802EF21CAC"
+        },
+        {
+          "file": "A.json",
+          "sha256": "864AA8C74253ADAF12AEC7D7BAEA3C899DE759F837E6801730C87AEA99BC198D"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "EB8887AA5B0611EA2BEC9760E4E5DAB6117E0EA250D03BC351C4ABD5D827E761"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-melee-trace-network/Network09",
+      "summary_sha256": "14C381ED3E57D9363A31EA90BBF18FC2A1C98AAC9584AA9F5C3C6B9CB32A769A",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1936,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "B0": 0,
+        "A": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "8DC5938D848CEA837456FD98F8959181FEF2569B18792094BB3188B70551A8BC"
+        },
+        {
+          "file": "A.json",
+          "sha256": "4AA5D96CFE629EDBDA4A2BF2BE20277826F8F81B4650702550B6C74F9971525C"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "7DB40C065EFA8CD293B774D94C7AAB1A20960D3A61DFDD8FD785BB3B3ECEBBCC"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_trace_network_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "1B319DA2DB9BF3F602844F3408A9F98077AE2E784B21E54581080934AA6C906D",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_trace_network_contract.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_trace_network_observation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "A681CDF0B21E04973A6E9821356EB979E05FFEA7C71ACE85B395A6D818768F37",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_trace_network_observation.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_trace_network_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "B82EFD4C232B2C7C766F0DB92B39E455A51EB94ACD641F8DD51C4D375DFCF00B",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_trace_network_validation.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_trace_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "69B22E76A65694EB7388975613A406E07E60B19828007D73B5E76484D6EC432B",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_trace_contract.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "86F7B18D2C9BD4B6DE03ABF9F01A3229962BD074212CB3720B4EA062962FF77D",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_melee_network_fixture.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "28C835DC8BDB98F645E1C5D2F6BAE3B5E68C3A4EB19B3084DC4C122E235495A5",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_melee_network_fixture.py"
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "71CB564C066AF69AA1EE669F732E003DC7B9837D44D4B01BE33E31D2938CB61F",
+      "path": "Validation/Run-UEP58JumpValidation.ps1"
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58MeleeNetworkFixture.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "F924B6484FEEBE27FE0F5EED5986D2971A03D415659221958DDA91F45BFDCA87",
+      "path": "Validation/Run-UEP58MeleeNetworkFixture.ps1"
+    }
+  ],
+  "host_report": {
+    "sha256": "1CCDD4B82E75FE5AD86736C6F31CB7901764B3915604C12126F854A0DF77FA60",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 2423,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261017-melee-trace-network/Host08.json"
+  }
+}

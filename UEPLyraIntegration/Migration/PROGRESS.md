@@ -13,10 +13,111 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active next bounded batch 69 (2026-10-17):** continue Melee authority trace,
-target/team/occlusion/damage/root-motion/Cue business in Python;
+**Active next bounded batch 70b (2026-10-17):** audit the intermittent remote
+Bot Health0/canonical Pawn/HealthSet/ASC initialization-replication discrepancy;
 keep native RPC transport, GAS, navigation, animation and movement primitives.
 The accepted helper and RPC-input-store slices do not close the full Dash asset.
+
+Batch69 is locally committed as Examplesa72cd16/corebcf8d50. Exact index passes
+2,375 models/788-file closure; five final native runs and nine scoped sources
+are ledgered. Six original user-dirty files stay unchanged. No push/tag/release.
+Batch70 starts a private replicated collision floor: its native component
+archetype must exist on both clients before moving the actual authority Pawns.
+Server-only collision geometry would invalidate predicted-client conditions.
+This fixture draft is not native network/damage acceptance.
+
+Current70 bounded functional evidence: FixtureAssets01,StandaloneRegression02,
+Network08/09 terminal PASS. Each network run has20 real authority activations,
+40 viewer rows/four100-damage hits/native query-direction root proof/native
+prediction filtering and scopes10/10,5/5,5/5 (active/errors0), independent gate/
+strict closed logs/real server-last exits;1,936 frozen inputs. Host08 PASSes2,423
+models. Current code runs two complete repeats, but Network05/07 readiness
+Health100/0 discrepancy is NOT FIXED and general stability remains open.
+Native binding diagnostics now record HealthSet/ASC/canonical PS Pawn/death/
+MaxHealth. Keep failures as failures. A bounded functional/test-infrastructure
+commit does not close70b/full Melee/version or the entire migration objective.
+Next exact index/793-file closure, local commit, then continue70b investigation;
+no native lane is live at this checkpoint.
+
+Batch70 FixtureAssets01 PASSes a stage-only replicated native BoxComponent
+archetype floor,5000/5000/20 extent,WorldStatic,BlockAll and matching replication
+defaults; no gameplay calls/Overlay/official edits. Two-owner trace protocol
+draft coordinates both passive viewers before actual owner ASC requests,
+reads authority query/Health/root task immediately around the original handler
+once, waits real End/20 quiet ticks, restores observers and exits server-last.
+Host01 PASSes2,410 models (35 new native network report/source counterexamples).
+Native20-authority/40-viewer damage matrix remains UNVERIFIED before Network01.
+
+Network01 FAILED on the first hostile viewer observation after eight rejected
+trace controls completed. Both viewers timed out; their disconnect then made
+the authority ability wrapper invalid (secondary error). Bots expose PlayerId0,
+so that identifier cannot safely select a unique replicated target. Retain
+native source-player IDs for actual owners, require a unique native replicated
+PlayerName match for Bot target and compare it across authority/viewers.
+Add live pending witness/Health/Cue records and identity counterexamples; no
+gameplay success/entire batch acceptance is claimed from this failed run.
+
+Network02 FAILED because its Cue expectation ignored original GAS prediction:
+actual BP hostile authority witness has100 Health damage/one native root task;
+both viewers receive native100->0 Health. Source ownerA receives0 Hit Cue,
+foreignB0 receives1 real native Cue (B0-8-ack). Official AbilitySystemComponent
+NetMulticast_InvokeGameplayCueExecuted_WithParams filters IsLocalClientKey on
+the predicting owner. Preserve original behavior, require exactly0 owner/1
+foreign (not optional0/1) and real native predicting activation mode2, with no
+local Cue replay/Engine edit. Failed live ReplaceFile temporaries remain as
+diagnostics, never final passed reports. Add immutable per-activation snapshots
+before waiting/possible peer teardown. Next fresh native Network03.
+
+Network03 FAILED at final Python hostile position19 after19 coordinated cases:
+the native target is a newly respawned Eliza Pawn(_12 replaces prior_6), root
+and foreign Cue exist, but native authority/clients Health damage is0. Existing
+native HealthSet protects Gameplay.DamageImmunity; living Health100 alone is
+not a combat-ready predicate. Filter/wait via native ASC GetGameplayTagCount
+and require/record zero immunity at the actual activation; never remove tags,
+alter spawn timing or write Health. Preserve failed snapshots; Network04 will
+test this fixture condition and the complete matrix, not claim a prior pass.
+
+Host04 PASSes2,418 models. Network04 is terminal PASS:20 actual owner ASC
+requests/20 authority activations (two owners),40 actual client viewer rows,
+miss/no-ASC/friendly/occluded/hostile BP/Python controls and four100-damage
+native hostile hits. Both viewers receive native100->0 Health; native GAS
+prediction filters Cue to exactly0 on predictor/1 on foreign viewer. Actual
+predicting mode2, authority-only trace, native query/root-task/empty-context
+proofs, unique replicated Bot names and zero native immunity at activation
+pass. Source/foreign invariants, observer/Profile/spec/config/fixture cleanup,
+20 quiet ticks, scopes server/A/B0=10/10,5/5,5/5 (active/errors0), independent
+gate/strict closed logs/real server-last3 zero exits and1,936 frozen inputs
+PASS. After resumption current non-binary frozen inputs rehash unchanged.
+No native lane remains from Network04. Next current standalone authority
+regression and ledger/exact-index gates before local batch70 commit; no
+physical input, PvP avatar turnover, quantitative movement, loss/travel/rejoin,
+package/full asset/version or publication acceptance is implied.
+
+Current StandaloneRegression01 FAILED at its final gate despite10 completed
+native outcomes: BP and Python root directions exactly match each other,
+[.9999999999921517,3.9618970923982785e-6,0], but the old gate wrongly requires
+the literal world X axis. Compare native root direction to independent native
+query(end-start)/originalDistance at1e-9, preserving tiny real Actor yaw; keep
+force/duration/gravity/finish/Health/Cue gates unchanged. Add rotated/wrong-axis/
+actual-small-yaw counterexamples and rerun both standalone/network with current
+frozen gates. Do not relabel the failed closed run as passed.
+
+Host05 PASSes2,421 models; StandaloneRegression02 terminal PASSes10 real
+controls with native query-derived root direction at1e-9 and unchanged other
+gates. Network05 FAILED during position4 arming, before that native activation:
+both viewers remain idle, so this is not another accepted matrix. Add explicit
+native floor/source-pose/unique-target/Health wait diagnostics and preserve
+the failed run; no arbitrary timeout/tolerance widening or production changes.
+
+Host06 PASSes2,422 models. Network06 terminal PASSes20 authority/40 viewer
+rows with current native-direction gate. Unchanged-code repeat Network07
+FAILED at same-team arming: authoritative Tinplate Health100, viewerB0 Health100,
+viewerA selected same-name Pawn Health0; floor/source pose are ready. Do NOT
+label this stable or skip the failed viewer. Native HealthComponent.GetHealth
+returns0 also when its HealthSet is absent; next diagnostics read HealthSet/ASC,
+canonical PlayerState Pawn/death/max-health bindings before deciding whether
+this is stale target selection or initialization/replication. Bounded network
+passes remain evidence, but batch70 is UNCOMMITTED pending this failure audit.
 
 Batch68 is locally committed as Examples2e5968b/cored249007. Its five final
 native lanes,2,324 isolated-index models and781-file import/syntax closure

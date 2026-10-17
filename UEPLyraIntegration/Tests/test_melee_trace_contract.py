@@ -10,6 +10,7 @@ def example():
     for index, (scenario, profile) in enumerate(PLAN):
         python = profile == "Python"; applied = scenario == "hostile"
         trace = dict(hit=scenario != "miss", target=None if scenario == "miss" else "target", target_asc_valid=scenario != "invalid-asc", distance=100.,
+            start=[0.,0.,0.], end=[350.,0.,0.],
             team_comparison=0 if scenario == "friendly" else 1, occluded=scenario == "occluded")
         root = dict(direction=[1., 0., 0.], strength=2200.*100./350., duration=.05, additive=True, gravity=True, finish_mode=0,
             curve=None, finish_velocity=[0., 0., 0.], clamp=1000.)
@@ -56,6 +57,18 @@ class TestMeleeTraceContract(unittest.TestCase):
     def test_health_delegate_missing(self): self.report["cases"][-1]["health_events"] = []; self.reject()
     def test_native_root_missing(self): self.report["cases"][-1]["root_tasks"] = []; self.reject()
     def test_native_root_wrong_strength(self): self.report["cases"][-1]["root_tasks"][0]["strength"] = 2200.; self.reject()
+    def test_native_root_follows_actual_rotated_trace(self):
+        for row in self.report["cases"][-2:]:
+            row["preflight"]["end"]=[0.,350.,0.]; row["root_tasks"][0]["direction"]=[0.,1.,0.]
+        self.assertEqual(validate(self.report)["status"],"passed")
+    def test_world_x_is_not_actual_actor_facing(self):
+        self.report["cases"][-1]["preflight"]["end"]=[0.,350.,0.]; self.reject()
+    def test_real_small_actor_yaw_not_clamped_to_world_axis(self):
+        for row in self.report["cases"][-2:]:
+            row["preflight"]["start"]=[200000.,200000.,2100.]
+            row["preflight"]["end"]=[200349.99999999726,200000.001386664,2100.]
+            row["root_tasks"][0]["direction"]=[.9999999999921517,3.9618970923982785e-6,0.]
+        self.assertEqual(validate(self.report)["status"],"passed")
     def test_native_root_wrong_finish(self): self.report["cases"][-1]["root_tasks"][0]["finish_mode"] = 2; self.reject()
     def test_native_root_wrong_gravity(self): self.report["cases"][-1]["root_tasks"][0]["gravity"] = False; self.reject()
     def test_copied_real_hit_context(self): self.report["cases"][-1]["stored_effect_context"]["hit_actor"] = "target"; self.reject()
