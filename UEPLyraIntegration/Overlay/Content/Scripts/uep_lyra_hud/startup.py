@@ -18,6 +18,10 @@ def validation_module(arguments):
         return "uep_lyra_characters.enhanced_input_network_validation"
     if any(argument.startswith("-UEPCharacterInputResult=") for argument in arguments):
         return "uep_lyra_characters.enhanced_input_validation"
+    if any(argument.startswith("-UEPCharacterRagdollNetworkResult=") for argument in arguments):
+        return "uep_lyra_characters.ragdoll_network_validation"
+    if any(argument.startswith("-UEPCharacterRagdollResult=") for argument in arguments):
+        return "uep_lyra_characters.ragdoll_validation"
     if any(argument.startswith("-UEPCharacterEquipmentHideNetworkResult=") for argument in arguments):
         return "uep_lyra_characters.equipment_hide_network_validation"
     if any(argument.startswith("-UEPCharacterEquipmentHideResult=") for argument in arguments):

@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "batch": "59-character-ragdoll",
+  "scope": "Inherited Ragdoll three-native-API orchestration; full-rig real lethal death and stationary body state; quantitative deferred additive impulse on an explicitly owned single-body/no-constraint native physics control; local nonreplicated actor body/cleanup in server/two clients after global restoration barrier. No full-rig trajectory, owner physics/death replication or version claim.",
+  "recorded_utc": "2026-10-17T05:18:37.7692864Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "2613313e855a94c26a06104503ab156295fa1eb4",
+  "examples_parent_commit": "8cc4e8f1d129b17ade768c190c4e5b4f16b9317c",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-character-ragdoll/Assets03",
+      "summary_sha256": "E30D58051EDC9885E03A524A51317373D10DBE2CA7E1EBBBB1237F9936E51394",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1574,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-character-ragdoll/Differential02",
+      "summary_sha256": "9C5A293BD7280ADA1D9607F239EC6B327145368236FF52B53ECEC1FFC2897F43",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1897,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "28776D5015540FF4F2E09D58F26A6C6C60C6AE2E5AAC534813FD90202EDF7EBF"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-character-ragdoll/Network02",
+      "summary_sha256": "901FFC84572436616892FB567F2C2649AE7ABE7D2FCDF28DE791F97A7C8AEF75",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1897,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "B0": 0,
+        "A": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "EB5ECD2899DDA5663C4C97C81ECCD96EC405F75700D0018F5D534EC9F7DD4CB0"
+        },
+        {
+          "file": "A.json",
+          "sha256": "EE3276062D0F9A37EB30DD0B92AE98578D726A3347FE5576711C7F96518D9AFD"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "60BF46B33D5B041DC7959B6415B89DDAA67F546C7591EEB8EBE4330814145050"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "51B623AE062B7317386D8695817DDE5ED54DF8802DF41EF4ABA5C5A1EFF78238"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "265F1580403833E994180C73CE54FF32A0ECE54A3AB34A912C6BF1C243E3818E"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "A4E1C9945CB7EDB1671EB33603C539C2EABC05A9ECEC9B09BF3E0E9CDB356BAD"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/equipment_hide_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/equipment_hide_validation.py",
+      "sha256": "0C65236626E507DCA13B4F067BF115C39A2BD49BB70AE70CF629DD9B36916DB3"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/ragdoll_mixin.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/ragdoll_mixin.py",
+      "sha256": "C193AF1CA668551109EFB29F75CDF39F52697E94A328EE60635D624AD0F7600F"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/ragdoll_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/ragdoll_contract.py",
+      "sha256": "F073614E34CB229633D1CF3085255115802401B972C304ADD8D27BFE50C92195"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/ragdoll_network_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/ragdoll_network_contract.py",
+      "sha256": "761BD1C0DEB4D77CEA28F0559119EC7D52A6209BF514BDD7DE2D315BE9C0446C"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/ragdoll_network_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/ragdoll_network_validation.py",
+      "sha256": "3CCCB5D57B24312429105D51B6D1FF61725E39B11A8B7E7D54DF0D00601D1A46"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/ragdoll_observation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/ragdoll_observation.py",
+      "sha256": "767B638F3362622C7E54924F254E323534AEB1F70E6C7049FAAF33AAFC766FFC"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/ragdoll_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/ragdoll_validation.py",
+      "sha256": "520DC0AB0E4F456972B062BC7708481B7863DDFC2BAA58293858EA7B335E9CEE"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_character_inventory_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_character_inventory_assets.py",
+      "sha256": "877CFADB439A9CC15ADA3ECA435FEB13D522C7C71EE3BF7ACA412870A158BAB1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "C271C87FA16E226E895C8D7BA5887FCF0D822E40EFC46696E1DE8944084EA108"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_character_ragdoll_probe.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_character_ragdoll_probe.py",
+      "sha256": "9D2088B47141416517F583F15E6E69002E42DBA525AD9F12DCF95EE93B0E1CA4"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_CharacterRagdollMixin.uasset",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_CharacterRagdollMixin.uasset",
+      "sha256": "AC7529DD52292CAE9C89754058DCC6F2BD64F9A6303806A4808EDE0EF0453C84"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/B_Hero_ShooterMannequin.uasset",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/B_Hero_ShooterMannequin.uasset",
+      "sha256": "A5B09B3CC95A14B87E92781B9553DA59FDC869D44CE4CC02F4ED963181200A79"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": ".build/LyraValidation/Full/Stage/Lyra/Content/UEPValidation/PA_CharacterRagdollProbe.uasset",
+      "native_input_path": ".build/LyraValidation/Full/Stage/Lyra/Content/UEPValidation/PA_CharacterRagdollProbe.uasset",
+      "sha256": "BC5447A622B3FF0E1103A55D8AC34B3D7A8FE86202EF093E0CCCBD37C26DFB32"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261017-character-ragdoll/Host05.json",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 1912,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "sha256": "D85C7DB24FFE8E712283DD3519B8FB2B6B8C7E76F8178476A74AC531B0F3C30D"
+  }
+}

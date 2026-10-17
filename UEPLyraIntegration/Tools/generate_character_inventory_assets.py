@@ -75,7 +75,8 @@ def begin_play_graph(originals):
     return parent, dict(order=["parent", "listen", "hide", "register"], component="PawnExtComponent", tag="InitState.GameplayReady", call_immediately=True)
 
 
-def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, team=False, stencil=False, lifecycle=False, parts=False, health=False, enhanced=False, observer=False, listener=False, legacy=False, ready=False, waiting=False, possessed=False, visibility=False, beginning=False, hiding=False):
+def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, team=False, stencil=False, lifecycle=False, parts=False, health=False, enhanced=False, observer=False, listener=False, legacy=False, ready=False, waiting=False, possessed=False, visibility=False, beginning=False, hiding=False, ragdoll=False):
+    hiding = hiding or ragdoll
     beginning = beginning or hiding
     visibility = visibility or beginning
     possessed = possessed or visibility
@@ -95,6 +96,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     quickbar = quickbar or loadout
     audio = audio or quickbar
     kind, prefix, module = next((kind, prefix, module) for enabled, kind, prefix, module in (
+        (ragdoll, "characterragdoll", "Ragdoll", "ragdoll_mixin"),
         (hiding, "characterequipmenthide", "EquipmentHide", "equipment_hide_mixin"),
         (beginning, "characterbeginplay", "BeginPlay", "begin_play_mixin"),
         (visibility, "charactervisibility", "Visibility", "visibility_mixin"),
@@ -141,7 +143,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     bindings_before = input_bindings(bp.GeneratedClass) if enhanced else None
     signatures = {name: ue.describe_function(bp.GeneratedClass, name) for name in
         (("ClearInventory", "AddInitialInventory", "K2_OnDeathFinished", "K2_OnReset", "ReceiveBeginPlay", "ReceivePossessed")+
-            (("GetEmoteAudioComponent", "SetEmoteAudioComponent") if audio else ())+(("ChangeQuickbarSlot",) if quickbar else ())+(("CreateOrUpdateOutlineIfNeeded",) if outline else ())+(("OnTeamOrCosmeticsChanged",) if team else ())+(("UpdateCustomStencilFromTeamID",) if stencil else ())+((BOUND_EVENT,) if parts else ())+((HEALTH_EVENT,) if health else ())+((OBSERVER_EVENT, "ListenForTeam") if observer else ())+(("OnRep_PlayerInfo",) if legacy else ())+((READY,) if ready else ())+((SHOW,) if visibility else ())+(("HideEquippedWeapons",) if hiding else ())) }
+            (("GetEmoteAudioComponent", "SetEmoteAudioComponent") if audio else ())+(("ChangeQuickbarSlot",) if quickbar else ())+(("CreateOrUpdateOutlineIfNeeded",) if outline else ())+(("OnTeamOrCosmeticsChanged",) if team else ())+(("UpdateCustomStencilFromTeamID",) if stencil else ())+((BOUND_EVENT,) if parts else ())+((HEALTH_EVENT,) if health else ())+((OBSERVER_EVENT, "ListenForTeam") if observer else ())+(("OnRep_PlayerInfo",) if legacy else ())+((READY,) if ready else ())+((SHOW,) if visibility else ())+(("HideEquippedWeapons",) if hiding else ())+(("Ragdoll",) if ragdoll else ())) }
     input_signatures = {value["action"]: ue.describe_function(bp.GeneratedClass, value["function"]) for value in bindings_before} if enhanced else {}
     originals = [(graph, {node.get_name() for node in graph.Nodes}) for graph in ue.blueprint_get_all_graphs(bp)]
     possession = possession_graph(originals) if possessed else None
@@ -262,6 +264,17 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
             equipment_hide_probe=hide_probe(stage, bp.GeneratedClass))
         report["native_equipment_hide_signatures"] = {name: ue.describe_function(ue.find_class(cls), name) for cls, name in (
             ("LyraEquipmentManagerComponent", "GetEquipmentInstancesOfType"), ("LyraEquipmentInstance", "GetSpawnedActors"), ("Actor", "SetActorHiddenInGame"))}
+    if ragdoll:
+        from generate_character_ragdoll_probe import audit as ragdoll_audit, generate as ragdoll_probe, physics_fixture
+        report["implemented_methods"].append("Ragdoll")
+        report.update(ragdoll_orchestration_migrated=True, ragdoll_original_owner=signatures["Ragdoll"]["owner"],
+            original_ragdoll_semantics=ragdoll_audit(), ragdoll_probe=ragdoll_probe(stage, bp.GeneratedClass),
+            ragdoll_physics_fixture=physics_fixture(stage, bp.GeneratedClass),
+            native_physics_or_animation_implementation_changed=False,
+            native_ragdoll_signatures={cls+"."+name: ue.describe_function(ue.find_class(cls), name) for cls, name in (
+                ("PrimitiveComponent", "SetCollisionProfileName"), ("SkeletalMeshComponent", "SetAllBodiesBelowSimulatePhysics"),
+                ("PrimitiveComponent", "AddImpulse"), ("CharacterMovementComponent", "GetLastUpdateVelocity"),
+                ("KismetMathLibrary", "Normal"), ("KismetMathLibrary", "Multiply_VectorFloat"), ("KismetMathLibrary", "Add_VectorVector"))})
     if team:
         if stencil:
             if lifecycle:

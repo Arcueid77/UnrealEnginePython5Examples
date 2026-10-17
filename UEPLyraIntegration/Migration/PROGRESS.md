@@ -13,16 +13,66 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active next bounded batch 59 (2026-10-17):** migrate inherited Hero-default
-Ragdoll project orchestration: collision profile, bone simulation selection and
-velocity-derived impulse through unchanged native APIs. The parent death-event
-montage/sense/random-delay orchestration remains a subsequent batch.
+**Active next bounded batch 60 (2026-10-17):** migrate the inherited real
+Health.OnDeathStarted receiver's montage/sense/random-native-delay and
+Ragdoll/Hide/Death continuation. Preserve native signal ingress, weak-owner
+latent cancellation and original BP fallback; retain the empty Death endpoint,
+animation execution and native physics. Broader/sibling/version gates stay open.
 Character_Default construction currently only forwards to native parent
 and its BeginPlay graph is empty; retain structural forwarding, animation/ABPs,
 editor/test tools and native physics/animation execution. Do not infer whole
 ancestor/sibling/version completion from the Shooter Character entrypoints.
 
-**Latest accepted bounded batch 58 (2026-10-17):** inherited HideEquippedWeapons iterates native weapon
+**Latest accepted bounded batch 59 (2026-10-17):** `ragdoll_mixin.py` preserves original collision ->
+bone simulation -> additive velocity-change impulse order. Exact native
+Kismet normalization/math stays native; the formula is last-update velocity +
+Normal(velocity,0.0001) * RagdollImpulseStrength, with original bone/true flags.
+Host05 passes1,912 models. Assets01 PASSes original14-node parent graph dataflow,
+parent byte identity/root type/full CDO/original graphs/twenty-six signatures,
+Python28/fallback23 and a stage-only three-node second-BP virtual caller.
+Differential01 FAILS the immediate-velocity gate: original BP and Python both
+still return the known initial velocity(3,4,5) immediately after AddImpulse.
+PhysicsCore's actual AddVelocity path accumulates mass * velocity-change as a
+pending impulse, consumed by subsequent Chaos steps. Preserve this failed run;
+do not widen the0.02 numerical tolerance or treat case markers as acceptance.
+Assets02 FAILS an unreflected GetPhysicsAsset call before producing a physics
+fixture. Use reflected PhysicsAssetOverride / SkinnedAsset.PhysicsAsset reads,
+not an assumed UFunction. Assets03 PASSes the same root/graph/signature gates
+plus a stage-only deep-copied Pelvis body, one body/zero constraints/bounds0;
+official/staged PA_Mannequin bytes remain equal and unchanged. Quantitative
+moving cases select that explicit test-only control on the owned mesh, disable
+gravity/damping through native APIs, establish native velocity(3,4,5), stop
+movement after sampling its last-update velocity and measure after at least two
+engine frames. No default/asset/game physics implementation is replaced; natural
+death and stationary cases retain the full original rig. Differential02 PASSes
+eight direct cases, the full prior regression and both natural death profiles,
+with unchanged0.02 velocity tolerance; largest observed velocity-component
+error is0.0000578486. Actual full-rig collision/simulation, controlled next-step
+velocity, all ownership/quiet/GC/original-bot gates, strict closed logs,
+independent semantic gate, exit0 and1,897 frozen inputs PASS. This is not an
+exact full-rig trajectory/pose comparison: gravity/constraints produce different
+stationary physical velocities, explicitly outside the quantitative control.
+Network01 FAILS A's whole original active-proxy equality, although both local
+body/receiver/destroy/owned-proxy checks complete. A began its own new fixture
+while B0 was still running inventory trials. Network02 PASSes with a server
+global barrier after all24 inventory grants/restores/ACKs and both clients'
+hide/undo tokens; both clients must observe that same run's barrier before any
+local Ragdoll trial. Each server/client world passes two typed BP/Python calls
+on fresh nonreplicated original-type local Actors with real full-rig collision /
+bone simulation, one actual owned team proxy per Actor collected, native Actor
+destruction and quiet post-destroy script state. All original active proxy sets
+are exactly equal, with no filtering. Ragdoll caller roots1/1 per world balance;
+the eight native weapon hide/undo calls and24 authority/24 replica inventory
+regressions remain. Strict closed logs, independent gate, server-last three zero
+exits and1,897 frozen inputs PASS. Network02 adds only the network fixture
+barrier; standalone consumed code remains the Differential02 revision. All1,912
+host/isolated-index models and704-file closure precede ledger59/local commit.
+Preserve failures and per-case before/after proxy paths. Real
+player Pawn physics, owner death replication and visual pixels are not claimed.
+No C++ build/cook/package, Engine/official Lyra/animation modifications or push/
+tag/release. Batch58 is committed as Examples8cc4e8f/core2613313.
+
+**Previously accepted bounded batch 58 (2026-10-17):** inherited HideEquippedWeapons iterates native weapon
 instances/spawned Actors and calls native SetActorHiddenInGame(true), with the
 original missing-manager no-op and no added authority gate. Assets01 PASSes
 original parent byte identity, root type/full CDO/original graphs/twenty-five

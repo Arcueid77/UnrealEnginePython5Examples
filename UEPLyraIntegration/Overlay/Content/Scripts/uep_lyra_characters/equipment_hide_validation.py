@@ -14,6 +14,7 @@ from uep_lyra_network_bots import isolate_bots
 
 
 class Validation(BeginValidation):
+    hide_trial_type = Trial
     marker = "UEP_CHARACTER_EQUIPMENT_HIDE"
     validate_report = staticmethod(validate)
     def __init__(self, result):
@@ -30,7 +31,7 @@ class Validation(BeginValidation):
         super().begin()
     def start_hide(self):
         if self.hide_caller is None: self.hide_caller = Caller()
-        self.hide_trial = Trial(self.world, self.hide_caller, SCENARIOS[len(self.report["equipment_hide_cases"])]); self.enter("equipment-hide")
+        self.hide_trial = self.hide_trial_type(self.world, self.hide_caller, SCENARIOS[len(self.report["equipment_hide_cases"])]); self.enter("equipment-hide")
     def tick(self, seconds):
         if not self.finished and hasattr(self, "world"):
             try: isolate_bots(self.statics, self.world, ue.find_class("LyraPlayerBotController"))
