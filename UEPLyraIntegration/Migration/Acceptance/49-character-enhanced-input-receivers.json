@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "batch": "49-character-enhanced-input-receivers",
+  "scope": "Only five original generated QuickSlot EnhancedInput receiver bodies plus twelve accepted aliases/seventeen retained Character routes. Original class/full CDO/nineteen logical signatures/every graph and five action/Triggered binding semantics preserved. UE recompiles/renumbers receiver suffixes; existing callable-descriptor support resolves current native symbols at every registration. Python17/BlueprintFallback12: omitted fallback input methods use existing native Original dispatch with full input parameter frames, not unsupported Python bool/vector inverse conversion. Actual input injection only, no direct BP/Python receiver or helper calls by fixture. Sixteen standalone input trials/eight original-Python pairs/twelve native GAS events; two real native input-owner clients/sixteen trials each/thirty-two authority native RPC/equipment comparisons/twenty-four GAS events. All five actions/repeat selection/empty select/empty default-zero cycle match original tags/raw zero cycle magnitude and native equipment; independent GAS observer tasks/scopes close. Client native role2, foreign Actor input/helper/Profile unchanged, other authority inventory unchanged, zero server Character input/helper calls, original item/slot/Profile/CDO identity restore, frozen cleanup before one-way release/server-last three actual zero exits. Assets01/02 and Differential01 remain failed history, Assets03 earlier prototype only. No input mapping/Engine/native machinery changes, C++ build/cook/package, physical keyboard/hardware/pixels/travel/loss/whole Character/version/publication claim.",
+  "recorded_utc": "2026-10-17T01:12:54.1554792Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "7f221dd98ba3dbeea2f6c1ccfeff997c9a9e967d",
+  "examples_parent_commit": "750715c81393b1326cda973703e08056b4adf0ca",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-character-input/Assets04",
+      "summary_sha256": "5BB3AF4A4BC6099FA82703E8888C067054EB3962F68BDC61A1A2A3CA7AB7DD0C",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1442,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-character-input/Differential02",
+      "summary_sha256": "E91866418F0719C9F25CB760A01D7EE135516795A7F5B37ED80CE0D2D68EF28D",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1710,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "278AC291A62B6C49AA6A0D9D69B36C077063116EC0CFDB1AA84361CB8D203887",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-character-input/Network01",
+      "summary_sha256": "656F7B19543F0AA3DEC8A45AFC3ECDFFF1D0AFA7CCDA8973EC374717C5EFDB47",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1710,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "A": 0,
+        "server": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "F4918229269BCAF76379122B48CCE9FC882ACB5D3AF5A3B90D612A5F2798DCEC",
+          "file": "server.json"
+        },
+        {
+          "sha256": "3CF0A2AF1A1B0CE9165033F83D1DB7304DDC74272D6FC8F17E69AD2DECC6B910",
+          "file": "A.json"
+        },
+        {
+          "sha256": "0B13D2E454731966457F2A1ADC89547644308E8F48425D055D0F44FBB8722151",
+          "file": "B0.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "BBDE4A32282CC4FB6C5140C898B0C3A9296D924AFFF7C5698705454B702A4AEB",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "B6A96C4F1589CC53A0BC65C75949FAE0F351FAA64CA5ACFE41C7F0DE4FA264E9",
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_character_inventory_assets.py",
+      "sha256": "F82DEC43D4DB82A6D9124DAC4CB8981C53549C7BCCEEF93E3BF3E06A3C48A63B",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_character_inventory_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "0491919F49EB51FB079F5461A81925B0DE3CFE3583C8A3D1E2565B11832E039B",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "952489B8B26A07B8CFF2D093972C896FCA2D91A848AD8C26BFB3A5005DCC4EF3",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_CharacterEnhancedInputMixin.uasset",
+      "sha256": "90CBE9AE106893ECB42298BB3C77D9618125FAE3FE90A67BB5CA68356BE9DE3D",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_CharacterEnhancedInputMixin.uasset",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/B_Hero_ShooterMannequin.uasset",
+      "sha256": "08B65DC6A2B890D7E0D677161CF4B8929E164A31782AE13538CDBDF70AFBAF36",
+      "path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/B_Hero_ShooterMannequin.uasset",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/enhanced_input_bindings.py",
+      "sha256": "82C23DF7079B7FBA2E3F4D158241C956629D7C4140265C878508876B98E76A04",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/enhanced_input_bindings.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/enhanced_input_contract.py",
+      "sha256": "3B69D9273226BA634978E53B93AFF443AC8848EDA8290A2DA94B1A5FA753CC82",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/enhanced_input_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/enhanced_input_mixin.py",
+      "sha256": "32A4DD7A341C8E354F2BD04ECB5E7AB56F36B4B3CFF4D53ED1ADBD0B15113401",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/enhanced_input_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/enhanced_input_network_contract.py",
+      "sha256": "3AAAEB58A6AD25C0DF06864ED64F93643CC9C79DADE92F30F0F1C4DFD15ABA82",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/enhanced_input_network_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/enhanced_input_network_validation.py",
+      "sha256": "80922D80B981035D5D7147FEC1C38D77297847037BFA9830044489CF01875C0D",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/enhanced_input_network_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/enhanced_input_validation.py",
+      "sha256": "433DFCE8FA3A241630BF24121B7B69025F5D8BF835D940DE2444682A635271D1",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/enhanced_input_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "sha256": "10BFA06116A7B74C678929EB6B6E1D837DCEF56551C185C8AD0CA2EEC01D32CB",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 1495,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261017-character-input/Host04.json"
+  }
+}

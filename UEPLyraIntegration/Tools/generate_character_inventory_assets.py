@@ -12,7 +12,20 @@ RELATIVE = "Plugins/GameFeatures/ShooterCore/Content/Game/B_Hero_ShooterMannequi
 PACKAGE = "/ShooterCore/Game/B_Hero_ShooterMannequin.B_Hero_ShooterMannequin"
 
 
-def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, team=False, stencil=False, lifecycle=False, parts=False, health=False):
+def input_bindings(cls):
+    values = []
+    # UClass.get_property addresses instance fields, not class-object fields.
+    # Existing typed UObject iteration can read only this generated class's
+    # owned binding objects without reinterpreting memory or modifying C++.
+    for binding in ue.tobject_iterator(ue.find_class("EnhancedInputActionDelegateBinding")):
+        if binding.get_outer() == cls:
+            for entry in binding.get_property("InputActionDelegateBindings"):
+                values.append(dict(action=entry.InputAction.get_path_name(), trigger=int(entry.TriggerEvent), function=str(entry.FunctionNameToBind)))
+    return sorted(values, key=lambda value: value["function"])
+
+
+def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, team=False, stencil=False, lifecycle=False, parts=False, health=False, enhanced=False):
+    health = health or enhanced
     parts = parts or health
     lifecycle = lifecycle or parts
     stencil = stencil or lifecycle
@@ -22,6 +35,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     quickbar = quickbar or loadout
     audio = audio or quickbar
     kind, prefix, module = next((kind, prefix, module) for enabled, kind, prefix, module in (
+        (enhanced, "characterinput", "EnhancedInput", "enhanced_input_mixin"),
         (health, "characterhealth", "HealthChanged", "health_changed_mixin"),
         (parts, "characterparts", "PartsChanged", "parts_changed_mixin"),
         (lifecycle, "characterlifecycle", "Lifecycle", "lifecycle_mixin"),
@@ -36,14 +50,18 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
         from uep_lyra_characters.parts_changed_mixin import BOUND_EVENT
     if health:
         from uep_lyra_characters.health_changed_mixin import BOUND_EVENT as HEALTH_EVENT
+    if enhanced:
+        from uep_lyra_characters.enhanced_input_contract import ACTIONS
     source = Path(json.loads((stage/".uep-lyra-full-stage.json").read_text(encoding="utf-8-sig"))["source"]).parent
     original = source/RELATIVE; digest = hashlib.sha256(original.read_bytes()).hexdigest()
     if hashlib.sha256((stage/RELATIVE).read_bytes()).hexdigest() != digest: raise RuntimeError("fresh original Character required")
     bp = ue.load_object(Blueprint, PACKAGE); ue.unregister_all_mixins()
     before, cls = cdo_snapshot(bp, "character-before"), bp.GeneratedClass.get_path_name()
+    bindings_before = input_bindings(bp.GeneratedClass) if enhanced else None
     signatures = {name: ue.describe_function(bp.GeneratedClass, name) for name in
         (("ClearInventory", "AddInitialInventory", "K2_OnDeathFinished", "K2_OnReset", "ReceiveBeginPlay", "ReceivePossessed")+
             (("GetEmoteAudioComponent", "SetEmoteAudioComponent") if audio else ())+(("ChangeQuickbarSlot",) if quickbar else ())+(("CreateOrUpdateOutlineIfNeeded",) if outline else ())+(("OnTeamOrCosmeticsChanged",) if team else ())+(("UpdateCustomStencilFromTeamID",) if stencil else ())+((BOUND_EVENT,) if parts else ())+((HEALTH_EVENT,) if health else ())) }
+    input_signatures = {value["action"]: ue.describe_function(bp.GeneratedClass, value["function"]) for value in bindings_before} if enhanced else {}
     originals = [(graph, {node.get_name() for node in graph.Nodes}) for graph in ue.blueprint_get_all_graphs(bp)]
     graphs = {graph.get_name(): semantics(graph, names, set()) for graph, names in originals}
     name = "DA_Character"+prefix+"Mixin"
@@ -57,6 +75,15 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
         raise RuntimeError("original Character identity/full CDO changed")
     for method, signature in signatures.items():
         if ue.describe_function(bp.GeneratedClass, method) != signature: raise RuntimeError("original Character signature changed: "+method)
+    bindings_after = input_bindings(bp.GeneratedClass) if enhanced else None
+    if enhanced:
+        logical = lambda rows: sorted((value["action"], value["trigger"]) for value in rows)
+        if logical(bindings_before) != logical(bindings_after) or len(bindings_after) != 5 or any(value["trigger"] != 1 for value in bindings_after):
+            raise RuntimeError("original native input action/trigger binding semantics changed")
+        for value in bindings_after:
+            actual = ue.describe_function(bp.GeneratedClass, value["function"])
+            if actual != input_signatures[value["action"]]: raise RuntimeError("compiler-generated input receiver signature changed")
+            signatures[value["function"]] = actual
     all_graphs = ue.blueprint_get_all_graphs(bp)
     if set(graph.get_name() for graph in all_graphs)-set(graphs) != {"GetPythonMixinSet", "GetPythonMixinProfile"}:
         raise RuntimeError("unexpected Character graph additions")
@@ -67,7 +94,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     report = dict(status="passed", kind=kind, runtime_acceptance=False, full_acceptance=False, native_end_adapter_nodes=0,
         original_class=cls, original_signature=signatures["ClearInventory"], extra_signatures=signatures,
         original_class_defaults_signature_graphs_preserved=True, original_full_cdo_preserved=True, original_graphs_unmodified=True,
-        original_graphs=graphs, implemented_methods=["ClearInventory"]+(["GetEmoteAudioComponent", "SetEmoteAudioComponent"] if audio else [])+(["ChangeQuickbarSlot"] if quickbar else [])+(["AddInitialInventory"] if loadout else [])+(["CreateOrUpdateOutlineIfNeeded"] if outline else [])+(["OnTeamOrCosmeticsChanged"] if team else [])+(["UpdateCustomStencilFromTeamID"] if stencil else [])+(["K2_OnDeathFinished", "K2_OnReset"] if lifecycle else [])+([BOUND_EVENT] if parts else [])+([HEALTH_EVENT] if health else []), added_interface_graphs=["GetPythonMixinSet", "GetPythonMixinProfile"],
+        original_graphs=graphs, implemented_methods=["ClearInventory"]+(["GetEmoteAudioComponent", "SetEmoteAudioComponent"] if audio else [])+(["ChangeQuickbarSlot"] if quickbar else [])+(["AddInitialInventory"] if loadout else [])+(["CreateOrUpdateOutlineIfNeeded"] if outline else [])+(["OnTeamOrCosmeticsChanged"] if team else [])+(["UpdateCustomStencilFromTeamID"] if stencil else [])+(["K2_OnDeathFinished", "K2_OnReset"] if lifecycle else [])+([BOUND_EVENT] if parts else [])+([HEALTH_EVENT] if health else [])+([value["function"] for value in bindings_after] if enhanced else []), added_interface_graphs=["GetPythonMixinSet", "GetPythonMixinProfile"],
         assets=[RELATIVE, "Content/UEPMixins/"+name+".uasset"], reference_hashes={str(original): digest})
     if team:
         if stencil:
@@ -110,7 +137,8 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
             ue.register_declared_mixin(bp.GeneratedClass)
             registered, = [entry for entry in ue.get_registered_mixins() if entry["target_class"] == bp.GeneratedClass]
             expected = set(report["implemented_methods"])
-            if set(registered["functions"]) != expected or any(set(value["functions"]) != expected for value in registered["profiles"].values()):
+            fallback_expected = expected-{value["function"] for value in bindings_after} if enhanced else expected
+            if set(registered["functions"]) != expected or set(registered["profiles"]["Python"]["functions"]) != expected or set(registered["profiles"]["BlueprintFallback"]["functions"]) != fallback_expected:
                 raise RuntimeError("component-bound receiver is not actually routed on both profiles")
             report["actual_native_registered_profile_method_counts"] = {name: len(value["functions"]) for name, value in registered["profiles"].items()}
         finally:
@@ -124,4 +152,10 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
         report["native_health_signatures"] = {name: ue.describe_function(ue.find_class(cls), name) for cls, name in (
             ("AISense_Damage", "ReportDamageEvent"), ("AIBlueprintHelperLibrary", "GetAIController"),
             ("AIPerceptionComponent", "GetActorsPerception"))}
+    if enhanced:
+        report.update(original_enhanced_input_binding_semantics_preserved=True, compiler_receiver_names_resolved_dynamically=True,
+            automatic_native_original_input_fallback=True, python_input_action_value_roundtrip_supported=False,
+            original_enhanced_input_bindings=bindings_before, enhanced_input_bindings=bindings_after,
+            native_input_signatures={name: ue.describe_function(ue.find_class(cls), name) for cls, name in (
+                ("EnhancedInputLocalPlayerSubsystem", "InjectInputVectorForAction"), ("SubsystemBlueprintLibrary", "GetLocalPlayerSubsystem"))})
     return report

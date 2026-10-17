@@ -13,7 +13,59 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Latest accepted bounded batch 48 (2026-10-17):** batch 47 is locally committed as
+**Latest accepted bounded batch 49 (2026-10-17):** batch 48 is locally committed as
+Examples 750715c / core 7f221dd. Migrate only five original generated QuickSlot
+EnhancedInput receivers, aliasing twelve accepted Character methods. Preserve
+four opaque dynamic-delegate parameters and original slot/tag constants,
+including cycle nodes' default index zero and its empty-zero-slot noop.
+Planned native acceptance is actual InjectInputVectorForAction -> retained
+receiver -> virtual helper -> GAS payload -> native equipment/server RPC,
+not direct BP/Python receiver calls or physical keyboard certification.
+Original native input dynamic binding table, class/CDO/nineteen signatures and
+every graph must survive authoring. Eight BP/Python pairs cover five actions,
+repeated selection and empty slots; two real input owners/foreign isolation,
+closed observer tasks/scopes and exact original item/slot identities are required.
+Forty-four focused / 1,495 host models PASS. Assets01 FAILS because UClass property
+access targets instance fields, not the class object's DynamicBindingObjects;
+typed native UObject iteration restricted to the target outer fixes the probe.
+Assets02 FAILS on a real compile-time behavior: EnhancedInput generated receiver
+suffixes are renumbered when the Interface is compiled. Native binding semantics
+and per-action logical signatures are now compared independently of those
+compiler symbols. Callable descriptors resolve `.override` from the current
+native binding table at every registration, without module-reload assumptions.
+Assets03 PASSes the earlier 17/17 prototype but is not final native acceptance:
+Differential01 FAILS because FInputActionValue is flattened to Python bool/vector
+and the generic inverse conversion is unsupported. BlueprintFallback now
+intentionally omits the five input overrides; existing UEP native Original
+dispatch preserves/copies the original parameter frame without Python conversion.
+Final Assets04 PASSes seventeen routed methods, Python17/BlueprintFallback12,
+nineteen unchanged logical signatures, same five action/Triggered bindings,
+type/full CDO/every original graph. Prototype assets are recoverably moved into
+the evidence directory, not overwritten or included as final proof. Differential02
+PASSes sixteen native EnhancedInput trials/eight original-Python pairs, twelve
+independently observed GAS events, exact native equipment, raw cycle magnitude
+zero, empty-zero-slot cycle noop, no repeated/release receiver, sixteen closed
+scopes/tasks and exact original item/slot/Profile/CDO restore. Native method sets
+are seventeen Python vs twelve fallback methods, with all seventeen class routes;
+BP input parameters stay wholly native through automatic Original dispatch.
+Network01 PASSes two real input-owner clients/sixteen trials each, thirty-two
+authority RPC/equipment comparisons and twenty-four actual owner GAS events.
+Each client has actual role2/Client, sixteen closed observer scopes and unchanged
+foreign Actor input/helper/Profile; the other authority owner's inventory stays
+unchanged. Server input receivers/helpers never execute, inventory identities
+restore and cleanup is frozen before release; server-last three zero exits PASS.
+Both final runs have 1,710 frozen inputs and PASS independent semantic gates and
+strict closed logs. Ledger 49 contains exactly Assets04/Differential02/Network01,
+with thirteen scoped sources/assets all matched to actual native frozen inputs.
+All 1,495 isolated Git-index models and 602-file all-index syntax/local-import
+closure PASS; five driver-safety and 56 PowerShell parse checks PASS. This bounded
+local batch does not close the whole Character, parent/sibling families or version.
+Manual Python-to-BP FInputActionValue roundtrip remains unsupported; no C++
+change/build is used to conceal or claim a general fix for that limitation.
+No Engine/general native input changes, original Lyra/animation changes, C++
+build/cook/package, push/tag/release or whole-Character/version completion claim.
+
+**Earlier accepted bounded batch 48 (2026-10-17):** batch 47 is locally committed as
 Examples 74deb06 / core 9adf035. Next is only the original HealthComponent
 OnHealthChanged generated receiver, retaining the eleven accepted Character
 aliases. Python preserves authority, PlayerState cast, self-Pawn and native AI
