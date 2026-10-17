@@ -13,7 +13,53 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Latest verified checkpoint (2026-10-17):** Character parts-changed component
+**Latest accepted bounded batch 48 (2026-10-17):** batch 47 is locally committed as
+Examples 74deb06 / core 9adf035. Next is only the original HealthComponent
+OnHealthChanged generated receiver, retaining the eleven accepted Character
+aliases. Python preserves authority, PlayerState cast, self-Pawn and native AI
+Controller guards, raw Old-New damage, original zero HitLocation and default Tag.
+Real GAS -> native health delegate -> actual AI damage-sense multicast/memory
+and dedicated-server/two-client Health replication are the planned native gates.
+Fifty-two focused / 1,451 total host models and five driver-safety checks PASS.
+Assets01 PASSes native registration of twelve functions on both Profiles,
+fourteen preserved signatures, original type/full CDO/every business graph.
+Differential01 fails on a fixture-only C++-only SetPlayerName call; the reflected
+GameMode.ChangeName replaces it with an executable constructor regression.
+Differential02 fails on an unassigned fixture bot's TDM spawn ensure and invalid
+negative-Damage restoration; official Healing GE and explicit native spawning
+are introduced, with real Controller destruction instead of K2's deliberate noop.
+Differential03 fails because the unassigned source cannot cause cross-team
+damage. These remain failures, not accepted partial gameplay. Final fixture uses
+an unregistered, test-owned concrete BotCreation component's native SpawnOneBot:
+normal GenericPlayerInitialization assigns its team, and actual opposing-team
+sources obey native damage rules. Original bot producer/list remain untouched.
+Differential04 PASSes ten actual GAS primary trials, twenty-two independent
+primary/prime/restore health delegates and four actual AI Damage stimuli/memory
+including original negative healing strength. Original player Health/Profile/
+inventory/CDO restore, one scope/three bindings close, owned Pawn/Controller/
+PlayerState/producer destruction and original bot-list preservation PASS.
+Network01 PASSes fourteen real authority GAS primary trials, twenty-eight client
+primary observations and thirty primary/prime/restore native health delegates
+per world. Actual native NetModes are DedicatedServer/Client/Client; client local
+role2 and foreign role1, authority-only Damage sensing (4/0/0) and native null
+replica instigators PASS. One scope/four server bindings and one scope/three
+bindings per client close; health/inventory/Profile/CDO restore, original bot
+list preservation and owned Pawn/Controller/PlayerState/producer cleanup PASS.
+Cleanup freezes before release, server exits last, all three actual exit codes
+are zero. Final standalone/network runs each freeze 1,684 inputs and PASS strict
+closed logs and independent semantic gates. Ledger 48 lists exactly Assets01/
+Differential04/Network01 and thirteen scoped sources/assets, all matched to actual
+native frozen inputs. All 1,451 isolated Git-index models and 593-file all-index
+syntax/local-import closure PASS; five driver-safety and 56 PowerShell parse
+checks PASS. This bounded local batch is not whole-Character/version acceptance.
+Valid non-PlayerState instigators remain host-only; naturally
+emitted null-instigator startup is recorded separately, without callback replay.
+No Engine/general plugin C++ migration, original Lyra/animation changes, C++
+build/cook/package, push/tag/release. A missing instigating Pawn preserves BP's
+zero-vector/null-source behavior without its null-receiver warning; this
+intentional safety difference has host coverage, not live native certification.
+
+**Earlier verified checkpoint (2026-10-17):** Character parts-changed component
 receiver adds six real part cycles/eighteen operations/twelve independent native
 delegates and actual two-client FastArray acceptance; ledger 47 below. Eleven
 Character methods are routed through the retained-type Mixin. Two same-type

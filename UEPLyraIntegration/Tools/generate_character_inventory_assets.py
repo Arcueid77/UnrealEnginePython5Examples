@@ -12,7 +12,8 @@ RELATIVE = "Plugins/GameFeatures/ShooterCore/Content/Game/B_Hero_ShooterMannequi
 PACKAGE = "/ShooterCore/Game/B_Hero_ShooterMannequin.B_Hero_ShooterMannequin"
 
 
-def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, team=False, stencil=False, lifecycle=False, parts=False):
+def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, team=False, stencil=False, lifecycle=False, parts=False, health=False):
+    parts = parts or health
     lifecycle = lifecycle or parts
     stencil = stencil or lifecycle
     team = team or stencil
@@ -21,6 +22,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     quickbar = quickbar or loadout
     audio = audio or quickbar
     kind, prefix, module = next((kind, prefix, module) for enabled, kind, prefix, module in (
+        (health, "characterhealth", "HealthChanged", "health_changed_mixin"),
         (parts, "characterparts", "PartsChanged", "parts_changed_mixin"),
         (lifecycle, "characterlifecycle", "Lifecycle", "lifecycle_mixin"),
         (stencil, "characterstencil", "Stencil", "stencil_mixin"),
@@ -32,6 +34,8 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
         (True, "characterinventory", "Inventory", "inventory_clear_mixin")) if enabled)
     if parts:
         from uep_lyra_characters.parts_changed_mixin import BOUND_EVENT
+    if health:
+        from uep_lyra_characters.health_changed_mixin import BOUND_EVENT as HEALTH_EVENT
     source = Path(json.loads((stage/".uep-lyra-full-stage.json").read_text(encoding="utf-8-sig"))["source"]).parent
     original = source/RELATIVE; digest = hashlib.sha256(original.read_bytes()).hexdigest()
     if hashlib.sha256((stage/RELATIVE).read_bytes()).hexdigest() != digest: raise RuntimeError("fresh original Character required")
@@ -39,7 +43,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     before, cls = cdo_snapshot(bp, "character-before"), bp.GeneratedClass.get_path_name()
     signatures = {name: ue.describe_function(bp.GeneratedClass, name) for name in
         (("ClearInventory", "AddInitialInventory", "K2_OnDeathFinished", "K2_OnReset", "ReceiveBeginPlay", "ReceivePossessed")+
-            (("GetEmoteAudioComponent", "SetEmoteAudioComponent") if audio else ())+(("ChangeQuickbarSlot",) if quickbar else ())+(("CreateOrUpdateOutlineIfNeeded",) if outline else ())+(("OnTeamOrCosmeticsChanged",) if team else ())+(("UpdateCustomStencilFromTeamID",) if stencil else ())+((BOUND_EVENT,) if parts else ())) }
+            (("GetEmoteAudioComponent", "SetEmoteAudioComponent") if audio else ())+(("ChangeQuickbarSlot",) if quickbar else ())+(("CreateOrUpdateOutlineIfNeeded",) if outline else ())+(("OnTeamOrCosmeticsChanged",) if team else ())+(("UpdateCustomStencilFromTeamID",) if stencil else ())+((BOUND_EVENT,) if parts else ())+((HEALTH_EVENT,) if health else ())) }
     originals = [(graph, {node.get_name() for node in graph.Nodes}) for graph in ue.blueprint_get_all_graphs(bp)]
     graphs = {graph.get_name(): semantics(graph, names, set()) for graph, names in originals}
     name = "DA_Character"+prefix+"Mixin"
@@ -63,7 +67,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     report = dict(status="passed", kind=kind, runtime_acceptance=False, full_acceptance=False, native_end_adapter_nodes=0,
         original_class=cls, original_signature=signatures["ClearInventory"], extra_signatures=signatures,
         original_class_defaults_signature_graphs_preserved=True, original_full_cdo_preserved=True, original_graphs_unmodified=True,
-        original_graphs=graphs, implemented_methods=["ClearInventory"]+(["GetEmoteAudioComponent", "SetEmoteAudioComponent"] if audio else [])+(["ChangeQuickbarSlot"] if quickbar else [])+(["AddInitialInventory"] if loadout else [])+(["CreateOrUpdateOutlineIfNeeded"] if outline else [])+(["OnTeamOrCosmeticsChanged"] if team else [])+(["UpdateCustomStencilFromTeamID"] if stencil else [])+(["K2_OnDeathFinished", "K2_OnReset"] if lifecycle else [])+([BOUND_EVENT] if parts else []), added_interface_graphs=["GetPythonMixinSet", "GetPythonMixinProfile"],
+        original_graphs=graphs, implemented_methods=["ClearInventory"]+(["GetEmoteAudioComponent", "SetEmoteAudioComponent"] if audio else [])+(["ChangeQuickbarSlot"] if quickbar else [])+(["AddInitialInventory"] if loadout else [])+(["CreateOrUpdateOutlineIfNeeded"] if outline else [])+(["OnTeamOrCosmeticsChanged"] if team else [])+(["UpdateCustomStencilFromTeamID"] if stencil else [])+(["K2_OnDeathFinished", "K2_OnReset"] if lifecycle else [])+([BOUND_EVENT] if parts else [])+([HEALTH_EVENT] if health else []), added_interface_graphs=["GetPythonMixinSet", "GetPythonMixinProfile"],
         assets=[RELATIVE, "Content/UEPMixins/"+name+".uasset"], reference_hashes={str(original): digest})
     if team:
         if stencil:
@@ -115,4 +119,9 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
             raise RuntimeError("native component receiver registration did not restore original signatures")
         report["component_bound_receiver"] = BOUND_EVENT
         report["native_component_receiver_register_restore_passed"] = True
+    if health:
+        report["health_component_bound_receiver"] = HEALTH_EVENT
+        report["native_health_signatures"] = {name: ue.describe_function(ue.find_class(cls), name) for cls, name in (
+            ("AISense_Damage", "ReportDamageEvent"), ("AIBlueprintHelperLibrary", "GetAIController"),
+            ("AIPerceptionComponent", "GetActorsPerception"))}
     return report

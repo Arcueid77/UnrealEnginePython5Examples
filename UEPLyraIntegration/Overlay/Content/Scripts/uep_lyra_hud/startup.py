@@ -10,6 +10,10 @@ def validation_module(arguments):
         return "uep_lyra_characters.parts_changed_network_validation"
     if any(argument.startswith("-UEPCharacterPartsResult=") for argument in arguments):
         return "uep_lyra_characters.parts_changed_validation"
+    if any(argument.startswith("-UEPCharacterHealthNetworkResult=") for argument in arguments):
+        return "uep_lyra_characters.health_changed_network_validation"
+    if any(argument.startswith("-UEPCharacterHealthResult=") for argument in arguments):
+        return "uep_lyra_characters.health_changed_validation"
     if any(argument.startswith("-UEPCharacterLifecycleNetworkResult=") for argument in arguments):
         return "uep_lyra_characters.lifecycle_network_validation"
     if any(argument.startswith("-UEPCharacterLifecycleResetResult=") for argument in arguments):
