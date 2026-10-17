@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "batch": "69-melee-authority-trace",
+  "scope": "Only retained-class Melee authority trace business: native hand_r/socket/forward capsule query,ASC validity,DifferentTeams,occlusion line query,unclamped native distance/root force,GAS GE_Damage_Melee and owner default Cue. Original empty HitResult context/default Cue retained. One authority dispatch call,no original fallthrough;4 methods/Profile,unchanged class/fullCDO/six signatures and retained original BP fallback.10 actual standalone ASC BP/Python miss/no-ASC/friendly/occluded/hostile trials:zero damage/root/Cue on rejected branches,100 native Health damage/one native root task/one real Cue each hostile side. Current8 lifecycle controls,32 helper pairs and12 two-owner native ASC requests/authority activations are regressions with no damage,not network hostile-damage proof. Profile/spec/config/pose/control,observer/fixture cleanup,20 quiet ticks,foreign invariants,strict independent gates/closed logs/real server-last exits pass.2375 host models. Preserve failed01-03 and read-only ABI diagnostic. No native Commit/no-weapon warning parity,null-actor native warning parity,quantitative movement/physical input,network damage/pause/travel/rejoin/loss,C++build/cook/package/fullMelee/fullVersion/publication claim.",
+  "recorded_utc": "2026-10-17T12:43:04.6024317Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "d2490079a47c36286a44b6eb3760e37939b5ad43",
+  "examples_parent_commit": "2e5968b60c1af886dfbe54f0ad89c4923423e2d6",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-melee-trace/Assets01",
+      "summary_sha256": "319C9D74FB9A88A6386F95A8CAAAF45549579A8A536F8220A69980FA0562DB03",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1651,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-melee-trace/Differential04",
+      "summary_sha256": "E01AEE179A7701AC3CFB14AB8450FEED7F9715D8567458F757D44061C13FFD7E",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1927,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "848D9F71474CE00FF1F3447DE04648BB7039203D9A90A993156DE2E88D65955B"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-melee-trace/ActivationRegression01",
+      "summary_sha256": "B98ABC142626CF0EC5767C2375DCC85549ACDCF0C5F54BB4509A5C8AAC60D18F",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1927,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "BA35C2F9E3A64F6D9516C377559B79C448354D6D78FB63851CF55841B12A80EB"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-melee-trace/HelperRegression01",
+      "summary_sha256": "A0F1752C8C13A772900813F48320982A1B3C3D5F53CE3F5EA1F6163778FAE8BD",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1927,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "15C86B1EAA5B85DA2A4AC29577BBE0E525D44F84EBF984043A2C6B64089692D3"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-melee-trace/ActivationNetworkRegression01",
+      "summary_sha256": "E4FADC2215CE25FE39A3AA7A569CB6F1B63DB41F1E6FB791EFB2B92487FBD605",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1927,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "server": 0,
+        "A": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "E917F001D7217299601A34F2505AB0C458A8B4BCF56FAABF8D5B4DBD84ADDEC2"
+        },
+        {
+          "file": "A.json",
+          "sha256": "38B871FF030754D49177C4468B4A72589AED96A73E50412192D7121710908355"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "863C1D311EFE98B945545BC283C31B6A186E8E67F897EF08A079AE51668FC0F3"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "D1DBE45B3A5469F52081A32BA867644C3B3C6821BFB035E8E870D9F5BBE430DD",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_trace_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_trace_mixin.py"
+    },
+    {
+      "sha256": "B2428394DA1A65D7A8A24EB3F777EF3E51432673DA285EAD4B71696A0F2FBAE2",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_trace_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_trace_validation.py"
+    },
+    {
+      "sha256": "7E987B3085219C406AA184DBDB69B95150B76EC4745EDE4FCD3D75B61FB99F88",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_trace_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_trace_contract.py"
+    },
+    {
+      "sha256": "1163DC3D8CC038FC06C6A93EE77342657847B885DAE49E2BD0E704B584FF1E36",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "sha256": "1C60700016542E656D90860F2FBC8F7A75594598056CC0660782DA62C08F2251",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_melee_trace_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_melee_trace_assets.py"
+    },
+    {
+      "sha256": "4F62CBE96BD4BD0E9B90A26A275611150BC14ADA4CB04F755CB67ABB57EF7873",
+      "native_input_path": "Validation/Run-UEP58DashRPCInputAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58DashRPCInputAssetAuthoring.ps1"
+    },
+    {
+      "sha256": "21CCDFFFB92D4DBC05596D3554D4C1D8FE34F9A3B7FB1BBAD33A69A82B5721FC",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58JumpValidation.ps1"
+    },
+    {
+      "sha256": "BD6D39B83DFA93BFEBF0B55BF8216EE47D09D55D8C12DD77B027AF5A8F37400C",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_MeleeHitMontageMixin.uasset",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_MeleeHitMontageMixin.uasset"
+    },
+    {
+      "sha256": "FE2F96F895E239F2BE567732FB088F2D51DAA93B9B2B01EF288A33ED725FA1C1",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/Melee/GA_Melee.uasset",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/Melee/GA_Melee.uasset"
+    }
+  ],
+  "host_report": {
+    "sha256": "3013240339BE3012EBA99D12915016190C34C73D5713950799CA04729ECE27E9",
+    "path": ".build/LyraValidation/BlueprintPython/20261017-melee-trace/Host05.json",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 2375,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    }
+  }
+}

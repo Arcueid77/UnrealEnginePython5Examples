@@ -18,6 +18,60 @@ target/team/occlusion/damage/root-motion/Cue business in Python;
 keep native RPC transport, GAS, navigation, animation and movement primitives.
 The accepted helper and RPC-input-store slices do not close the full Dash asset.
 
+Batch68 is locally committed as Examples2e5968b/cored249007. Its five final
+native lanes,2,324 isolated-index models and781-file import/syntax closure
+pass, with11 scoped sources matched to frozen evidence. No push/tag/release.
+Batch69 draft authority trace uses native capsule/team/occlusion queries,
+root-motion/GAS damage and owner Cue; Host01 PASSes2,341 models. This is NOT
+native trace/damage acceptance. Preserve original unconnected empty HitResult
+and Cue defaults, team argument order and unclamped root-motion strength.
+Next native authoring adds one dispatch call on the retained authority path;
+all original BP business stays available only through explicit call-original.
+
+Batch69 Assets01 PASSes class/full CDO/all six accepted signatures and original
+graphs except two declared authority-dispatch endpoints, one added call node,
+native guarded End and4/4 Profile registration/restoration. Host02 PASSes2,369
+models. Differential01 FAILED before gameplay: a bare fixture Actor had a
+non-root BoxComponent and K2_TeleportTo refused. Closed log/real exit preserved;
+fix uses existing native add_actor_root_component, not Engine/C++ changes.
+No trace/damage/native gameplay acceptance is claimed from that failure.
+
+Differential02 FAILED before its first gameplay request: existing UEP's native
+call wrapper returns const reference arrays in collision-query out tuples,
+so capsule is not a bool/HitResult pair. Preserve this failure and the existing
+wrapper; the Melee adapter now resolves ReturnValue/OutHit from reflected
+parameter flags in native wrapper order, including const TArray outputs.
+Add short-shape/non-bool/return-order models before a fresh native attempt.
+
+Differential03 FAILED in reflected output decoding before gameplay. Read-only
+Abi01 diagnostic confirms native GetCPPType exposes const arrays as bare
+`TArray`, not `TArray<...>`; retain both spellings and actual property-flag
+models. Native CDO tags also prove Hit maps to GCN_Weapon_Melee, while the
+Impact asset maps to a different tag; fix the test-only observer accordingly.
+Abi01 is a diagnostic, never gameplay evidence. No Engine/C++ build performed.
+
+Host05 PASSes2,375 models. Differential04 is terminal PASS:10 real ASC Melee
+activations, BP/Python miss/no-ASC/friendly/occluded/hostile controls; first
+four reject damage/root/Cue, hostile produces100 native Health damage and one
+actual native root-motion task/owner Cue on each side. Native property reads
+prove original strength/finish/gravity/empty HitResult context/default Cue;
+foreign Health, Profile/spec/config/pose/control, fixture/observer cleanup and
+20 quiet ticks pass. Independent gate/strict closed log/real exit0 and frozen
+inputs pass. This is bounded standalone authority business, NOT two-owner
+damage, physical input, quantitative movement parity or full asset/version
+acceptance. Next current-revision helper/lifecycle/two-client regressions,
+then ledger/exact-index gates before the bounded local batch69 commit.
+
+Current69 regressions are terminal PASS: ActivationRegression01 completes8
+actual native lifecycle trials; HelperRegression01 completes32 original helper
+pairs; ActivationNetworkRegression01 completes12 real owner requests and12
+authority activations across two owners with scopes server/A/B0=6/6,3/3,3/3,
+active/errors0, foreign Health/state invariants and real server-last exits.
+Each runtime lane freezes1,927 inputs. Four atomic publication/7 driver safety/
+8 inherited guards and61 PowerShell parse checks pass. No owned native lane
+remains. Record five final native runs and exact index/closure before commit;
+batch70 will address actual two-owner damage, not relabel no-damage regression.
+
 Batch66 is now locally committed: Examplesbd3630d/corece72b5d. The exact index
 passes2,247 models/765-file closure; ledger66 has6 final native runs/16 matched
 sources. All six original user-dirty files retain their pre-work SHA256 values.

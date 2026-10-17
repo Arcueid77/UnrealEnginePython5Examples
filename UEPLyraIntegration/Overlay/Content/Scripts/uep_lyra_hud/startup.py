@@ -4,6 +4,8 @@
 def validation_module(arguments):
     if any(argument.lower().startswith("-run=") for argument in arguments):
         return None
+    if any(argument.startswith("-UEPMeleeTraceResult=") for argument in arguments):
+        return "uep_lyra_abilities.melee_trace_validation"
     if any(argument.startswith("-UEPMeleeActivationNetworkResult=") for argument in arguments):
         return "uep_lyra_abilities.melee_activation_network_validation"
     if any(argument.startswith("-UEPMeleeActivationResult=") for argument in arguments):
