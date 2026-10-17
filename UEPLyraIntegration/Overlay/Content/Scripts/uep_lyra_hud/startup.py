@@ -4,6 +4,10 @@
 def validation_module(arguments):
     if any(argument.lower().startswith("-run=") for argument in arguments):
         return None
+    if any(argument.startswith("-UEPDashSelectorNetworkResult=") for argument in arguments):
+        return "uep_lyra_abilities.dash_selector_network_validation"
+    if any(argument.startswith("-UEPDashSelectorResult=") for argument in arguments):
+        return "uep_lyra_abilities.dash_selector_validation"
     if any(argument.startswith("-UEPCharacterAudioResult=") for argument in arguments):
         return "uep_lyra_characters.emote_audio_validation"
     if any(argument.startswith("-UEPCharacterPartsNetworkResult=") for argument in arguments):

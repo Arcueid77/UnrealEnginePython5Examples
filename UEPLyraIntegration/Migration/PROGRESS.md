@@ -13,12 +13,132 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active next bounded batch 62 (2026-10-17):** start Dash business with the
+**Active next bounded batch 63 (2026-10-17):** continue Dash activation/RPC body
+and task/movement decisions in small native-compared steps. Retain native RPC
+transport, GAS, animation and movement implementation. Batch62's helper and
+inherited-router prerequisite pass their bounded native gates below. Commit
+gates include2,038 isolated-index models,729-file syntax/import closure and the
+eight-run/sixteen-source evidence ledger; no whole-version promotion is implied.
+
+**Bounded batch62 (2026-10-17):** start Dash business with the
 original SelectDirectionalMontage helper's native vector/rotator math and
 direction/bias decisions. Preserve original helper signature/graphs, use actual
 granted ability instances and typed BP/Python comparison, and keep Dash
 activation/RPC/movement/task orchestration as subsequent bounded work. Animation
 implementation/ABPs remain native/retained. Broader/sibling/version gates stay open.
+
+Batch62: `dash_selector_mixin.py` uses native vector-to-rotator,
+normalized yaw delta and Abs, then the original strict45/135/zero decisions;
+both named outputs and a null montage are retained. Host01 passes2,005 models.
+Assets01/02 FAIL actual native registration, not original graph/CDO/signature
+audits. Saving before registration does not fix it. Assets02 records the real
+child class and owned GetPythonMixinSet/Profile functions but zero direct
+Interface descriptors. Engine ConformInterfaceByName deliberately removes a
+duplicate inherited Interface and promotes the child's functions to overrides;
+UEP's old direct-interface-only discovery misses this explicit child declaration.
+Do not bypass that native safety gate or modify Engine source. The bounded UEP
+plugin fix accepts an inherited Interface only when this class owns the Mixin
+Set provider; ordinary inherited providers remain excluded. Also search each
+ancestor's registered function map for call_mixin_original, so a disjoint child
+router cannot hide a parent's original. Same-name nested-super semantics are
+not claimed by this disjoint-function fix.
+
+The previously announced no-build Python lane now requires this small plugin
+prerequisite. ModulePlan01 FAILS the wrong LyraStarterGameEditor target before
+compilation; ModulePlan02 uses actual LyraEditor and reviews exactly three UEP
+actions, all products inside the staged plugin. PluginBuild01 PASSes one
+UEPyMixin.cpp compile plus DLL/LIB links in26.101s with -Module=UnrealEnginePython
+and -NoEngineChanges. Independent prior DLL recovery copies are preserved;
+checked Engine binaries/reference hashes are unchanged and BuildId stays
+2f7b5df8-1c9a-4414-a598-6d3b022aa38d. New UEP DLL SHA is
+6D5CEC62923A40525AD83E79E7FD1CD4805205AD4978FF148E6ED3D4E47754D1.
+Five source guards PASS; compilation alone is not acceptance. Earlier ledger
+runs retain their actual older DLL hashes and are not re-executed by this build.
+Assets03 is running against the fresh DLL, adding private literal-only Object
+BP parent/explicit-child/ordinary-sibling controls and native original calls
+through the disjoint child router. Failed test-owned Dash/Set/probe assets were
+moved into Assets02/PreviousAssets/After02 and the disposable Dash restored from
+the unchanged official asset before retry. Assets03 FAILS the explicit old0.7
+related-class router prohibition in the new native Object hierarchy control.
+Do not remove all conflict checks: allow only disjoint related-class function
+maps, reject intersecting names before any candidate is injected. ModulePlan03
+again reviews exactly the same three actions; PluginBuild02 PASSes in9.217s,
+checked Engine files/BuildId unchanged, UEP DLL SHA now
+1A86096CCDD3136D3F0955F43AD0DF1EA5EB05DEBACBF695372319CCD3B03388.
+Six source guards PASS. Assets04 PASSes original Dash full CDO/class/all graphs/
+three original signatures, unchanged26-node selector, Python1/fallback1 native
+registration and restoration, and a three-node typed second-BP named-output
+caller. The private Object controls prove parent/explicit-child disjoint routes
+in both orders, ancestor original calls through the child, ordinary inherited
+sibling rejection, overlapping-name rejection in both orders, unchanged live
+child after rejected parent registration and original signature restoration.
+These controls use only private literal functions17/11 (Python117/211), not
+gameplay objects. The compiler leaves child direct Interface count0 while its
+own provider is recognized. All5 control assets remain stage-only. Earlier
+failed owned assets are recoverable under each failed run's PreviousAssets.
+
+Host03 passes2,031 models. Differential01 completes all42 helper comparisons,
+but FAILS strict closed logs: discovery finds real ADS/Emote child declarations
+overlapping GA_AbilityWithWidget.K2_OnAbilityAdded. The interim disjoint-only
+restriction is not compatible with that existing hierarchy; do not suppress
+those errors or accept its intermediate rows. Replace it with lexical weak-object
+router invocation scopes, unwrapped preserved inherited originals, and scoped
+initialization/teardown/helper lookup. No implicit parent/BP execution is added.
+ModulePlan04 reviews exactly four UEP CPP compiles and two plugin links;
+PluginBuild03 completes in22.299s with -NoEngineChanges, unchanged checked Engine
+files/BuildId, and DLL ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14.
+Earlier ledgers still describe their older binaries. Eight core source guards
+are supporting checks, not native acceptance.
+
+Assets05 FAILS private child SharedValue return-pin authoring: a new output is
+not a reflected parent override. Preserve failed assets under After05 and reuse
+the parent MemberReference/signature instead. Assets06 PASSes the original Dash
+audits plus six stage-only literal Object controls: own override37 versus parent23,
+same-name nested class-qualified parent calls and return to child, inherited
+original unwrapping, initialization/teardown, Profile fallback, both registration
+orders, both unregister orders, ordinary inherited-sibling rejection and original
+signature restoration. Private return values3097/3069 and1023/2097/2069 verify
+the actual native routes, not models. None of these controls enter gameplay.
+
+Host07 passes2,038 models. Differential02 PASSes42 typed BP/Python pairs on the
+actual granted inactive Dash primary instance, angle boundaries,
+rotated/scaled/pitched/zero directions and four null montage configurations,
+named output identity/bool, same-frame native state/spec invariance, instance
+configuration/Profile/CDO restoration, caller class root balance and twenty
+quiet engine ticks. Independent gate, strict closed logs/exit0 and1,857 frozen
+inputs PASS. No Dash activation/RPC/movement claim. Network01 FAILS after all
+three worlds complete42 comparisons: the server re-reads a native Controller
+after permitting its client's disconnect. Keep the foreign-owner state assertion
+before release, issue release exactly once, then wait only for actual process
+exit. The new executable server-tick model rejects any post-release owner read.
+Network02 PASSes42 comparisons per world, native roles3/2/2, two actual owners,
+pre-disconnect foreign authority invariance, complete restoration, independent
+gate/strict closed logs/server-last three zero exits and1,857 frozen inputs.
+DeathRegression01 PASSes actual lethal GAS/death/respawn on the new DLL:
+36 authority/owning/foreign death observations, minimum2.7439733 game seconds
+quiet after old-Actor destruction,12/12/0 witness scopes in every process,
+independent gate/strict closed logs/server-last three zero exits and1,935 frozen
+inputs. No Chaos pose replication or renderer stability-fix claim. ADSRegression01
+PASSes six native input/camera/speed/mapping/UI/task/Profile/pause pairs;
+EmoteRegression01 PASSes nine native input/montage/external movement/crouch/
+cancel/Profile/pause pairs,18/18 scopes and no active ability. Both have strict
+closed logs/independent gates/exit0 and1,849 frozen inputs. ADSNetworkRegression01
+PASSes20 actual authority trials, five BP/Python pairs per actual client, foreign
+owner invariance, native GAS cleanup and server-last three zero exits. Its
+1,849-input freeze and strict independent gates PASS; no replicated message or
+network-pause claim. EmoteNetworkRegression01 also PASSes20 authority trials,
+five pairs per actual client, native RPC/GAS/montage/task and foreign-owner
+invariance, cleanup, strict independent gates and server-last three zero exits,
+with1,849 frozen inputs. It does not add network movement/crouch/pause, travel,
+loss or package coverage. All listed runs use the final ED133E... DLL except
+the explicitly retained earlier failures/build stages. The standalone selector
+run predates the network-release-only fixture repair; its consumed standalone
+policy/fixture/contract is unchanged. Eight inherited-router source guards,
+seven driver-safety checks and58-file PowerShell parsing PASS. No Engine/official
+Lyra edit, full Engine compile, cook/package or push/tag/release. Local accepted
+batch only: ledger62 records eight native passed directories and sixteen matched
+scoped files; Index01 PASSes2,038 isolated models and729-file closure, followed
+by final-document Index03 verification. Earlier accepted batches stay intact.
 
 **Latest accepted bounded batch 61 (2026-10-17):** `death_replication_network_validation.py` composes the
 accepted real lethal-GAS/two-owner/native-respawn lifecycle protocol with a
