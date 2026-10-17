@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "batch": "60-character-death-started",
+  "scope": "Real inherited Health death receiver native montage/sight/random Delay and ordered Ragdoll/Hide/empty Death; actual lethal GAS, destroyed weak owner and pending Profile changes. Existing two-owner inventory/local-body network regression only, not death receiver replication or a full version.",
+  "recorded_utc": "2026-10-17T05:58:54.4446979Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "25d0ee6c834ccb9433bfa45452e6e90f6a4c5909",
+  "examples_parent_commit": "0513de6a4d3bf9d7bab9bd0322d6411a170aa44b",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-character-death-started/Assets01",
+      "summary_sha256": "65F9B3B16BC325FF4C2CED730A9B2FA071CE1FA4BE94BB8E2921955B2576B208",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1577,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-character-death-started/Differential04",
+      "summary_sha256": "59BB79003ACF770AC4F5762C020521983F56C9A2F600A4C3DD36DE7F419B85DE",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1915,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "02DA98573FAAE63E3F6E6801C6E1A9C30CA37D6BE08333C7644840F5CAFFE816"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261017-character-death-started/Network02",
+      "summary_sha256": "0096AC9E4CB6F3FCB502A851C6370EE2294CBB220184257C4E7C8EFA1ED13A55",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "41271D075921BF076FD4C6BE0B404544150BCC34C5E7E2D2CC2F5F95325E72D5"
+      ],
+      "frozen_input_records": 1915,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "A": 0,
+        "server": 0,
+        "B0": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "0C986B1E8289BFB18E75CE1E55EFBEC85615F9B79487D5580ADFF6662CB62B05"
+        },
+        {
+          "file": "A.json",
+          "sha256": "F9F2E945DDABBE4BAA001FE73397CEEF4FF40F7A256748DB03D23ED0B30EEA7F"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "4CE9A9972093445E569CE1753462E733F77E669D12892910335341AE8C3720BB"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "8ED24AA4E2E037ED163852E63E800FE9CCFDEA7019CAB45BEF84B6658FB9AFCC",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1"
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "DFD05186BB44E4EEC7D81AC9578018F9E1D4C13EB38753DB61AA8C1F0E0C65EC",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58JumpValidation.ps1"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "E942904571FB857D51E7354A709F353C626ED10E28DB6CD663D4690DAF46F5E3",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/visibility_network_validation.py",
+      "sha256": "2C7B6A78FFE73437CDA261FAE11C30ABD0826C6ED53698AE59F73EBF546A7F40",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/visibility_network_validation.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_character_inventory_assets.py",
+      "sha256": "58C018565D9925A3A448576F3970F2E1E96676ED18F7E1291F158B13FCCD7B26",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_character_inventory_assets.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "C36C33B699B977FD02521A702B5BE81CBDCAC85E22C5471B7261368249E9AE23",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_character_death_transport.py",
+      "sha256": "AB30F7B33FE58073C058AFE35947A9DF52506115817DB37A0335FA4678822169",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_character_death_transport.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_CharacterDeathStartedMixin.uasset",
+      "sha256": "64FB85A3E0413267B42A4AF310E503EEF897B6732D68D1C248FFDFD03F561A9B",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/UEPMixins/DA_CharacterDeathStartedMixin.uasset"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/B_Hero_ShooterMannequin.uasset",
+      "sha256": "B7D323F806ECBA1A4B84CE6874FD7B51D545E5EFABE873959888ECB563BEEADD",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Plugins/GameFeatures/ShooterCore/Content/Game/B_Hero_ShooterMannequin.uasset"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/death_started_contract.py",
+      "sha256": "EDD0D1F46C5690D312547013061D589A663EB067C5BF8043BB6D43DCEC09FAED",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/death_started_contract.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/death_started_mixin.py",
+      "sha256": "3D7FBFDC288C8F45C9620D80188E13CD0C537CE0C86136AC21A412A8228B2CE7",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/death_started_mixin.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/death_started_network_contract.py",
+      "sha256": "C1EEB4C1CA2127B649C8C256228FE0F36B740CA662C70352C5600A0754293820",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/death_started_network_contract.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/death_started_network_validation.py",
+      "sha256": "EEA2236CAA5EE19846D9A683772B1E4974EE6537289CD354D67E1E2BF536755D",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/death_started_network_validation.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/death_started_observation.py",
+      "sha256": "601A9F4C40A7DD9EE7FBBACCE924AB2274572F43098132A3157ADEBAE2FFBFB0",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/death_started_observation.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/death_started_validation.py",
+      "sha256": "FED1CA6D4B371BB0209ED4BB1D6D4D8501D9439F65E526AA46C461FD26AD30A5",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/death_started_validation.py"
+    }
+  ],
+  "host_report": {
+    "sha256": "028FD9A4B54B48A9F6A948D49B4AFE493A320D5FDD5452B6285AA509EF0DBE9A",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 1963,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261017-character-death-started/Host08.json"
+  }
+}

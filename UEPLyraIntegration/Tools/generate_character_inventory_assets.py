@@ -75,7 +75,8 @@ def begin_play_graph(originals):
     return parent, dict(order=["parent", "listen", "hide", "register"], component="PawnExtComponent", tag="InitState.GameplayReady", call_immediately=True)
 
 
-def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, team=False, stencil=False, lifecycle=False, parts=False, health=False, enhanced=False, observer=False, listener=False, legacy=False, ready=False, waiting=False, possessed=False, visibility=False, beginning=False, hiding=False, ragdoll=False):
+def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, team=False, stencil=False, lifecycle=False, parts=False, health=False, enhanced=False, observer=False, listener=False, legacy=False, ready=False, waiting=False, possessed=False, visibility=False, beginning=False, hiding=False, ragdoll=False, dying=False):
+    ragdoll = ragdoll or dying
     hiding = hiding or ragdoll
     beginning = beginning or hiding
     visibility = visibility or beginning
@@ -96,6 +97,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     quickbar = quickbar or loadout
     audio = audio or quickbar
     kind, prefix, module = next((kind, prefix, module) for enabled, kind, prefix, module in (
+        (dying, "characterdeathstarted", "DeathStarted", "death_started_mixin"),
         (ragdoll, "characterragdoll", "Ragdoll", "ragdoll_mixin"),
         (hiding, "characterequipmenthide", "EquipmentHide", "equipment_hide_mixin"),
         (beginning, "characterbeginplay", "BeginPlay", "begin_play_mixin"),
@@ -129,6 +131,8 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
         from uep_lyra_characters.inventory_ready_mixin import READY
     if visibility:
         from uep_lyra_characters.visibility_mixin import SHOW, RESUME as VISIBILITY_RESUME
+    if dying:
+        from uep_lyra_characters.death_started_mixin import BOUND_EVENT as DEATH_EVENT, RESUME as DEATH_RESUME
     source = Path(json.loads((stage/".uep-lyra-full-stage.json").read_text(encoding="utf-8-sig"))["source"]).parent
     original = source/RELATIVE; digest = hashlib.sha256(original.read_bytes()).hexdigest()
     if hashlib.sha256((stage/RELATIVE).read_bytes()).hexdigest() != digest: raise RuntimeError("fresh original Character required")
@@ -143,7 +147,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     bindings_before = input_bindings(bp.GeneratedClass) if enhanced else None
     signatures = {name: ue.describe_function(bp.GeneratedClass, name) for name in
         (("ClearInventory", "AddInitialInventory", "K2_OnDeathFinished", "K2_OnReset", "ReceiveBeginPlay", "ReceivePossessed")+
-            (("GetEmoteAudioComponent", "SetEmoteAudioComponent") if audio else ())+(("ChangeQuickbarSlot",) if quickbar else ())+(("CreateOrUpdateOutlineIfNeeded",) if outline else ())+(("OnTeamOrCosmeticsChanged",) if team else ())+(("UpdateCustomStencilFromTeamID",) if stencil else ())+((BOUND_EVENT,) if parts else ())+((HEALTH_EVENT,) if health else ())+((OBSERVER_EVENT, "ListenForTeam") if observer else ())+(("OnRep_PlayerInfo",) if legacy else ())+((READY,) if ready else ())+((SHOW,) if visibility else ())+(("HideEquippedWeapons",) if hiding else ())+(("Ragdoll",) if ragdoll else ())) }
+            (("GetEmoteAudioComponent", "SetEmoteAudioComponent") if audio else ())+(("ChangeQuickbarSlot",) if quickbar else ())+(("CreateOrUpdateOutlineIfNeeded",) if outline else ())+(("OnTeamOrCosmeticsChanged",) if team else ())+(("UpdateCustomStencilFromTeamID",) if stencil else ())+((BOUND_EVENT,) if parts else ())+((HEALTH_EVENT,) if health else ())+((OBSERVER_EVENT, "ListenForTeam") if observer else ())+(("OnRep_PlayerInfo",) if legacy else ())+((READY,) if ready else ())+((SHOW,) if visibility else ())+(("HideEquippedWeapons",) if hiding else ())+(("Ragdoll",) if ragdoll else ())+((DEATH_EVENT, "Death") if dying else ())) }
     input_signatures = {value["action"]: ue.describe_function(bp.GeneratedClass, value["function"]) for value in bindings_before} if enhanced else {}
     originals = [(graph, {node.get_name() for node in graph.Nodes}) for graph in ue.blueprint_get_all_graphs(bp)]
     possession = possession_graph(originals) if possessed else None
@@ -178,6 +182,9 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     if beginning:
         from generate_character_begin_play_parent import generate as begin_parent
         parent_transport = begin_parent(bp, parent_source)
+    if dying:
+        from generate_character_death_transport import generate as death_transport, audit as death_audit
+        death_original = death_audit(); death_stub = death_transport(bp)
     ue.blueprint_configure_mixin(bp, mixin, "Python", "PythonMixinProfile"); ue.compile_blueprint(bp); ue.unregister_all_mixins()
     if int(bp.Status) == 2 or bp.GeneratedClass.get_path_name() != cls or cdo_snapshot(bp, "character-after") != before:
         raise RuntimeError("original Character identity/full CDO changed")
@@ -196,6 +203,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     extra_graphs = {"GetPythonMixinSet", "GetPythonMixinProfile"} | ({transport["function"]} if listener else set()) | ({ready_transport["function"]} if ready else set()) | ({wait_stub["function"]} if waiting else set())
     if visibility: extra_graphs |= {visibility_stub["function"], visibility_transport["function"]}
     if beginning: extra_graphs.add(parent_transport["function"])
+    if dying: extra_graphs.add(death_stub["function"])
     if set(graph.get_name() for graph in all_graphs)-set(graphs) != extra_graphs:
         raise RuntimeError("unexpected Character graph additions")
     if any(semantics(graph, names, set()) != graphs[graph.get_name()] for graph, names in originals):
@@ -275,6 +283,14 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
                 ("PrimitiveComponent", "SetCollisionProfileName"), ("SkeletalMeshComponent", "SetAllBodiesBelowSimulatePhysics"),
                 ("PrimitiveComponent", "AddImpulse"), ("CharacterMovementComponent", "GetLastUpdateVelocity"),
                 ("KismetMathLibrary", "Normal"), ("KismetMathLibrary", "Multiply_VectorFloat"), ("KismetMathLibrary", "Add_VectorVector"))})
+    if dying:
+        report["implemented_methods"] += [DEATH_EVENT, DEATH_RESUME]
+        report.update(death_started_business_migrated=True, original_death_started_semantics=death_original,
+            death_started_original_owner=signatures[DEATH_EVENT]["owner"], native_death_resume_stub=death_stub,
+            native_death_resume_signature=ue.describe_function(bp.GeneratedClass, DEATH_RESUME),
+            native_death_started_signatures={cls+"."+name: ue.describe_function(ue.find_class(cls), name) for cls, name in (
+                ("Character", "PlayAnimMontage"), ("AIPerceptionStimuliSourceComponent", "UnregisterFromSense"),
+                ("KismetMathLibrary", "RandomIntegerInRange"), ("KismetMathLibrary", "RandomFloatInRange"), ("KismetSystemLibrary", "Delay"))})
     if team:
         if stencil:
             if lifecycle:
@@ -356,4 +372,6 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
             raise RuntimeError("native inventory wait resume signature not restored")
         if visibility and ue.describe_function(bp.GeneratedClass, VISIBILITY_RESUME) != report["native_visibility_resume_signature"]:
             raise RuntimeError("native visibility resume signature not restored")
+        if dying and ue.describe_function(bp.GeneratedClass, DEATH_RESUME) != report["native_death_resume_signature"]:
+            raise RuntimeError("native death resume signature not restored")
     return report

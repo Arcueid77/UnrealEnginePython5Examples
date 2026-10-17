@@ -25,6 +25,20 @@ class CharacterVisibilityNetworkReportModels(unittest.TestCase):
     def test_visibility_repeat_network_not_overclaimed(self): self.reports["server"]["network_visibility_repeat_destroy_matrix_tested"] = True; self.reject()
     def test_pixel_claim_rejected(self): self.reports["A"]["visibility_physical_pixels_tested"] = True; self.reject()
     def test_inventory_replica_regression_still_required(self): self.reports["A"]["cases"][0]["replica_model"]["items"] = []; self.reject()
+    def test_pending_startup_is_not_accepted(self):
+        self.reports["B0"]["natural_startup_visibility"]["counters"].update(pending=True, resumes=0, show_calls=0)
+        self.reject()
+    def test_fixture_waits_before_begin_and_snapshot_without_changing_gate(self):
+        import ast
+        from pathlib import Path
+        path = Path(__file__).parents[1]/"Overlay/Content/Scripts/uep_lyra_characters/visibility_network_validation.py"
+        client = next(node for node in ast.parse(path.read_text(encoding="utf-8")).body if isinstance(node, ast.ClassDef) and node.name == "Client")
+        begin = next(node for node in client.body if isinstance(node, ast.FunctionDef) and node.name == "begin")
+        self.assertEqual(ast.unparse(begin.body[0].test), "policy.evidence(self.pawn)['pending']")
+        self.assertIsInstance(begin.body[0].body[0], ast.Return)
+        self.assertEqual(ast.unparse(begin.body[1]), "super().begin()")
+        self.assertNotIn("set_property", ast.unparse(begin))
+        self.assertNotIn("call_function", ast.unparse(begin))
     def test_private_selector(self):
         from uep_lyra_hud.startup import validation_module
         self.assertEqual(validation_module(["-UEPCharacterVisibilityNetworkResult=x"]), "uep_lyra_characters.visibility_network_validation")

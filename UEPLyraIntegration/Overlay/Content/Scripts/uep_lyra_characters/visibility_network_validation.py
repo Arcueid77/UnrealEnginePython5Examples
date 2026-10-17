@@ -24,6 +24,10 @@ class Scope:
 class Client(Scope, PossessionClient):
     validate_report = staticmethod(client_gate)
     def begin(self):
+        # GameplayReady can arrive in this ticker's frame, before the native
+        # next-tick action runs. Do not freeze a still-pending startup snapshot.
+        # Only wait; the unchanged final gate still requires one real show.
+        if policy.evidence(self.pawn)["pending"]: return
         super().begin()
         if self.trial is not None: self.report["natural_startup_visibility"] = snapshot(self.pawn)
 

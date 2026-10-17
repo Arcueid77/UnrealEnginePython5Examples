@@ -13,15 +13,65 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active next bounded batch 60 (2026-10-17):** migrate the inherited real
-Health.OnDeathStarted receiver's montage/sense/random-native-delay and
-Ragdoll/Hide/Death continuation. Preserve native signal ingress, weak-owner
-latent cancellation and original BP fallback; retain the empty Death endpoint,
-animation execution and native physics. Broader/sibling/version gates stay open.
+**Active next bounded batch 61 (2026-10-17):** verify batch60's actual native
+death receiver through authority/owner/foreign replicas and native respawn.
+Do not substitute the accepted inventory/local-body network regression for
+real death ingress. Preserve native signals/RPCs, weak-owner latent behavior,
+animation/physics and original BP fallback. Broader/sibling/version gates stay open.
 Character_Default construction currently only forwards to native parent
 and its BeginPlay graph is empty; retain structural forwarding, animation/ABPs,
 editor/test tools and native physics/animation execution. Do not infer whole
 ancestor/sibling/version completion from the Shooter Character entrypoints.
+
+**Latest accepted bounded batch 60 (2026-10-17):** `death_started_mixin.py` implements the actual inherited
+Health.OnDeathStarted generated receiver: native random montage index ->
+PlayAnimMontage(1,None) -> native sight-source unregister -> native random
+Delay(0.1..0.6) -> virtual Ragdoll/HideEquippedWeapons/empty Death. No replay of
+the native callback, no production ticker/rooting and no animation/physics
+implementation change. A two-node empty int32 resumption declaration preserves
+native weak Actor ownership and pending Python continuation across Profile
+changes; fresh BP fallback still uses original BP Delay. Host07 passes1,961
+models. Assets01 PASSes original fourteen-node death-span dataflow/binding,
+empty Death endpoint, parent bytes/root type/full CDO/original graphs/twenty-eight
+signatures, Python30/fallback25 and all prior thin transport/physics controls.
+Differential01 FAILS a fixture max_delta read before owner-ready initialization,
+before exercising the new death cases. Initialize it in the constructor and
+retain an AST regression. Differential02 reaches real Python death/prefix/
+delayed Ragdoll/hide, then FAILS reporting because the generic integer delta
+mistook first-assigned UUID(None -> int) for a counter. Preserve it; copy UUID
+identity unchanged, add a direct helper regression and require all non-Sight
+sense entries unchanged (actual native source retains Hearing).
+Differential03 observes all ten cases but FAILS the final montage assertion:
+after the complete native damage call, both profiles' current montage is a
+later HitReact, not the selected Death montage. Do not accept any montage or
+alter gameplay. The fixture now appends a read-only real OnDeathStarted
+SubscriptionScope after the original binding, observes native montage/sight /
+Actor payload at that actual delegate boundary, and immediately closes it.
+ScriptDelegates.h confirms forward invocation-list order and is frozen; retain
+the separate after-damage HitReact observation rather than discarding it.
+Require exactly one real signal, matched Actor and a closed/empty observer.
+Differential04 PASSes: all prior regressions, both natural death profiles
+and ten new real lethal-GAS default/single-montage/empty-montages/destroy-pending/
+switch-pending BP/Python trials. Native current montage, actual reflected sense
+list removal, game-clock delay/frame boundary and quiet destroyed owners are
+gated, not only counters. Strict closed logs, independent semantic gate, normal
+exit0 and1,915 frozen inputs PASS. Network01 FAILS B0's startup visibility
+snapshot: the natural InitState next-tick action is still pending when the
+client first freezes it (one receiver/request, zero resumes/show, hidden true).
+Retain the failure; wait only while that native action is pending before
+starting the client fixture, with the final one-show/unhidden gate unchanged.
+Two host regressions reject pending snapshots and audit wait-before-begin;
+Host08 passes1,963 models. Network02 PASSes the complete two-owner
+inventory/local-body regression under that fixture correction:24 authority/
+24 replica inventory trials,8 hide/undo calls,6 local nonreplicated Ragdoll
+calls, roots/owned proxies/quiet destroyed Actors, strict closed logs,
+independent gate, server-last three zero exits and1,915 frozen inputs. It explicitly
+does not certify new death-receiver network ingress. Real authority/owner/
+foreign death replication remains the next acceptance group. The new network
+fixture wait is not a rerun of standalone consumed code. All1,963 isolated-index
+models and714-file Python closure precede ledger60/local commit. No whole-version
+claim, C++ build/cook/package, Engine/official Lyra edits or publication. Batch59 is
+committed as Examples0513de6/core25d0ee6.
 
 **Latest accepted bounded batch 59 (2026-10-17):** `ragdoll_mixin.py` preserves original collision ->
 bone simulation -> additive velocity-change impulse order. Exact native
