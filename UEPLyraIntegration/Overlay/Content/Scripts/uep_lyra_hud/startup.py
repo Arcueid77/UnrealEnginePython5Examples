@@ -4,6 +4,14 @@
 def validation_module(arguments):
     if any(argument.lower().startswith("-run=") for argument in arguments):
         return None
+    if any(argument.startswith("-UEPDashTasksNetworkLifecycleResult=") for argument in arguments):
+        return "uep_lyra_abilities.dash_tasks_network_lifecycle_validation"
+    if any(argument.startswith("-UEPDashTasksLifecycleResult=") for argument in arguments):
+        return "uep_lyra_abilities.dash_tasks_lifecycle_validation"
+    if any(argument.startswith("-UEPDashTasksNetworkResult=") for argument in arguments):
+        return "uep_lyra_abilities.dash_tasks_network_validation"
+    if any(argument.startswith("-UEPDashTasksResult=") for argument in arguments):
+        return "uep_lyra_abilities.dash_tasks_validation"
     if any(argument.startswith("-UEPDashActivationNetworkResult=") for argument in arguments):
         return "uep_lyra_abilities.dash_activation_network_validation"
     if any(argument.startswith("-UEPDashActivationResult=") for argument in arguments):

@@ -127,6 +127,228 @@ bounded implementation;2,168 isolated-index models/751-file closure are the
 remaining local-commit gates. Remaining task/Cue/UI/Delay business and native
 Commit failure/full-version/package/physical-input acceptance stay open.
 
+Batch65 isolated-index2,168 models and751-file syntax/import closure PASS;
+Examplesedb46d7/core544f654 commit it locally. The six original user-edited files
+retain their SHA256 values; no push/tag/release.
+
+Batch66 starts `dash_tasks_mixin.py`: native montage and constant-force task
+factories/ReadyForActivation, original additive/root finish-velocity/montage
+flags, authority Cue parameters, typed cooldown UI message, root-finish -> the
+same original Kismet Delay and script continuation/End, exact delegate scope
+ownership/native End/teardown. Python remote input now owns original native
+Commit (return deliberately ignored as in BP) then task start, with no second
+BP body. `generate_dash_tasks_assets.py` retains original business graphs
+behind9 transport nodes/12 declared endpoints and one zero-default duration
+transport field, without cloning/removing original business nodes. These are
+implementation claims, not runtime acceptance. Host01/02 fail five legacy HUD
+models because a test dependency was imported too early; test-only dependency
+isolation is repaired, and Host03 PASSes2,191 models (23 task-policy models).
+Assets01 is running with accepted65 backup/source/binary guards; no new C++
+compile. Native task/Cue/UI producer, delay/pause/interruption/lifetime and
+two-owner acceptance remain pending. Batch66 remains uncommitted.
+
+Assets01 PASSes original class/CDO/signatures/graphs with only the declared9
+transport nodes/12 endpoints/zero duration-field default, Python7/fallback7
+registration and exact function restoration. The native inherited empty End
+event is checked rather than hiding parent BP business. Host04 PASSes2,210
+models; seven driver safety/eight inherited guards, PowerShell parse and the
+strict62->63->64->65->66 current-asset chain pass. Standalone01 is running12
+native ASC controls with actual GCNL_Dash.OnBurst observation (forwarding
+original Cue exactly once), typed real duration-message reading and production
+task/delegate-scope counters/cleanup. No fixture Cue/message producer or task
+callback replay. Official Cue bytes and shared typed VM reader/broadcaster are
+explicitly frozen. This is an initial task-producer matrix, not yet extended
+pause/interruption/Profile-teardown/lifetime or two-owner acceptance.
+
+Standalone01 PASSes all12 normal original/Python native ASC controls with actual
+native Cue parameters and typed UI payloads, original root-finish/Delay/script
+End continuations and selected task business. Four Python montage/root/delay/
+Cue/UI groups run; production scopes4/4, active0, errors0. Native End events6
+per Profile include the original zero-direction cancellations; no zero-case
+producer is invented. The Cue observer restores its exact original function
+and its typed-message scope closes. Independent gate/strict closed log/exit0
+and1,904 frozen inputs PASS. Network01 is now running two owners with unchanged
+ASC/reliable-RPC ingress, actual client Cue reception, local typed UI and
+remote task/Commit ownership. Extended lifecycle and batch acceptance remain
+pending; no commit/push/release or full Dash/version promotion.
+
+Network01 completes8 real owner/RPC/authority cases and3 zero exits but FAILS
+the independent task gate: it incorrectly requires a Delay continuation in
+both native worlds. Original BP authority rows also lack that continuation
+when the owning client completes first; native GameplayAbility::EndAbility
+removes pending latent actions on the replicated end. Preserve Network01 as
+failed acceptance, not an exit0 pass. The reviewed gate now pairs each actual
+owner/authority observation, requires one or two real selected continuations
+across the pair, rejects zero in both/duplicates/wrong route, and keeps exact
+native End/task/scope/producer checks. No callback is manufactured and no
+production timing or Engine source changes. Full observed Cue fields are now
+compared across BP/Python, excluding only game time and the already-declared
+native vector tolerance. The initial raw JSON differences were only native
+normal floating precision (up to1.63e-8), not other Cue fields.
+
+Host05 PASSes2,215 models including replicated-end counterexamples. Re-evaluating
+the old closed reports checks the stronger paired rule but does not relabel
+Network01; fresh Network02 then Standalone02 run serially with final sources.
+Extended pause/interruption/Profile-teardown/lifetime and complete66 acceptance
+remain pending; do not commit the candidate yet.
+
+Final basic producer matrices now PASS: Network02 has8 actual owner/RPC/
+authority cases, one or two real native Delay continuations per paired worlds,
+complete BP/Python Cue parameter controls and local typed UI. Production scopes
+server/A/B0 balance4/4,2/2,2/2; active/errors0 everywhere. Client Cue receptions
+are4 per client; dedicated authority has0 cosmetic Cue receivers as declared.
+All three observer functions/scopes restore/close. Independent gate/strict
+closed logs/server-last3 zero exits and1,904 frozen inputs PASS. Standalone02
+reruns12 controls under the final full-Cue/paired-end contract sources and
+PASSes independent gate/closed log/exit0,1,904 inputs. Network01 remains failed
+historical acceptance; no rerun report overwrites it.
+
+Checkpoint2026-10-17 10:56UTC: no owned Unreal/UBT test process remains. Batch66
+is still UNCOMMITTED and NOT fully accepted. Next implement separate native
+original/Python lifecycle controls for paused root and paused original Delay,
+real montage interruption/native cancellation, active Profile teardown/rebind,
+post-end quiet windows and corresponding multi-client lifetime regressions.
+Capture actual native root/end game times as well as counts; do not replay
+callbacks or replace the original native Delay. Then run selector regression,
+save the final evidence ledger and isolated-index/import-closure gates before
+committing66. Native Commit failure, quantitative movement/physical-input,
+broader stability, package/release and the rest of the authorized migration
+remain open. Preserve all current mixed-tree changes and the six user files.
+
+Lifecycle continuation: `dash_tasks_lifecycle_validation.py` now drives10 real
+original/Python cases: pause during root, pause during the same original Delay,
+Character.StopAnimMontage, native K2_CancelAbility and active Profile switch.
+It captures actual native active/root/montage/task game-time samples, pause
+freeze/unpause proof, native request entries and post-end producer/task quiet
+windows; no callback replay. The separate report gate checks measured frame
+bounds, root0.25/end0.55 game-time boundaries and scope/observer restoration.
+Host06 PASSes2,231 models (16 additional lifecycle report/source checks).
+Lifecycle01 is running using existing binaries; no C++ build/cook/package.
+Extended multi-client lifecycle, final selector regression and the complete66
+acceptance/isolated-index commit gates are still pending.
+
+Lifecycle01 completes10 native cases but FAILS. Strict logs contain
+`mixin dispatch target or router is not currently available` during both active
+Profile switches: direct mixed K2_OnEndAbility is entered while teardown has
+disarmed the router. Native ability end/scope release alone is not acceptance.
+Native cancellation also reports montage interruption (the stop dispatches it
+before the cancellation delegate can broadcast), so the gate now requires
+exactly one interrupted/cancelled native event rather than a guessed label.
+
+Repair in progress: replace direct End interception with original-parameter
+BP End transport and `UEPDashTearingDown` native guard, skipping the mixed
+cleanup gate only during teardown, where scope cleanup has already run. Seven
+Profile methods remain; transport15 nodes/12 old endpoints, one additional
+false-default guard, no new game business/Engine/C++ edit. Host07 PASSes2,232.
+The failed candidate's exact two Stage/Overlay pairs are preserved in
+`20261017-dash-tasks/PreNativeEndGuard01`. Both current candidate hashes and
+accepted65 before-backups were checked before restoring65 inputs, with no
+recursive delete/move or overwriting concurrent changes. Assets02 now authors
+the guarded candidate from that accepted65 base. All earlier66 runs remain
+historical unguarded-candidate evidence; rerun lifecycle and affected normal/
+network gates after Assets02 acceptance. Batch66 remains uncommitted.
+
+Lifecycle02 has no unavailable-router error but still FAILS: normal native
+End never enters the new event, so scopes stay until Profile teardown. The
+closed Assets02 descriptor proves its End owner is still native GameplayAbility,
+not the Dash class. The legacy graph event API also needs explicit
+`bOverrideFunction=True`, as existing generators already do. Add that flag and
+require End signature.owner==original Dash class in generator, authoring gate,
+revision provenance and a host regression. Assets02's earlier weak static pass
+is retained as insufficient evidence, never promoted to acceptance.
+
+Host08 PASSes2,233; Assets03 PASSes seven Profile methods, actual Dash-owned
+End override, native teardown bypass,15 transport nodes/12 endpoints, original
+class/CDO/six accepted signatures and exact restoration of guarded signatures.
+The Assets02 pairs are recoverably preserved in `PreEndOverride01` after current
+hash/before-backup checks and verified65 restore. No Engine/CPP build changes.
+Next run Lifecycle03, then fresh normal Standalone04/Network04 on Assets03;
+neither old normal matrices nor a process exit can accept this repaired code.
+
+Lifecycle03 PASSes10 actual native original/Python cases on Assets03: root and
+original Delay pause/freeze/unpause, real StopAnimMontage/native cancellation,
+active Profile teardown with no unavailable-router error, measured game-clock
+root/end boundaries, no late task/producer work, zero final tasks, balanced
+production and observer scopes and exact actor restoration. Independent gate,
+strict closed logs/exit0 and1,908 frozen inputs PASS. Native cancellation's
+actual montage interruption is gated as exactly one interruption/cancellation
+event, not replayed. Host08 remains2,233 passed supporting models.
+
+Checkpoint2026-10-17 11:10UTC: native orchestration session40258 continues
+serially. Lifecycle03 is terminal passed; Standalone04 is live (owned Editor
+PID2388 at11:10:53UTC), and Network04 follows only if its normal12-case gate
+passes. Do NOT edit scripts/drivers/tests/assets while this lane runs or start
+another lane. Inspect process/reports/current session first after resuming.
+Next still add multi-client lifecycle intervention/rebind regression, final
+selector comparison and full evidence/index gates before committing66. No
+version/full-Dash acceptance, push, tag, package or Engine/CPP build claim.
+
+Assets03 normal regressions PASS: Standalone04 has12 actual original/Python
+controls, Network04 has8 actual owner/RPC/authority cases, complete native Cue
+and typed UI controls, task/end/cooldown/quiet and both-actor restoration.
+Both independent gates/strict closed logs pass; standalone exits0, network
+waits server-last3 zero exits; each freezes1,908 inputs. No owned lane remains
+from that orchestration (session40258 terminal passed).
+
+Two-owner lifecycle extension now implements8 owner interventions: native
+cancellation for forward controls and active Profile switch for left controls,
+both original/Python and both players. Authority first confirms actual native
+RPC receipt plus active montage/root tasks; files only coordinate permission,
+never deliver gameplay state. Owner request bodies/callbacks are not replayed.
+Native input/activation snapshots are captured before rebinding, and cleanup/
+late producer quiet windows plus replicated authority task/scope closure are
+gated. No network pause/travel/rejoin claim. Host09 PASSes2,246 models (13 new
+network lifecycle counterexamples/source guards). NetworkLifecycle01 is now
+running on Assets03; batch66 remains uncommitted until it and final evidence/
+selector/isolated-index closure gates pass.
+
+NetworkLifecycle01 observes all8 native interventions; both client reports
+pass, but authority FAILS while reading a partially created `*-exited.json`.
+The old driver used Set-Content directly on the visible token, so the strict
+JSON reader correctly rejects an empty stream. Preserve this failed run; do
+not mask malformed JSON as a missing ACK. The driver now validates the exact
+owned directory/peer/zero-exit token, writes a private UTF-8 temporary stream,
+closes it, then atomically renames on first publication. It refuses overwrites
+and removes only its exact private temporary on failure. Four executable
+publisher checks PASS (roundtrip/no temp, no overwrite, no path escape, no
+nonzero exit success); existing7 driver safety/8 inheritance checks PASS.
+NetworkLifecycle02 and then SelectorRegression01 run serially on Assets03;
+no source/asset/test edits while they run. Final66 evidence/index gates and
+remaining authorized migration are still open, with no push/release.
+
+NetworkLifecycle02 has all3 real zero exits and fixes the partial exit-token
+race, but FAILS the independent gate: native authority also receives exactly
+one montage interruption on replicated cancellation. The first gate wrongly
+required that event only on owner. Actual A/B0 authority cancellation rows
+both show interruption1/nativeEnd1/closed scope1; Profile-switch rows show no
+interruption. Require exactly one interruption/cancellation on each Python
+world for cancellation and none for Profile switch. Host10 PASSes2,247 with a
+server-cancellation counterexample. Re-evaluating old closed reports checks
+that rule without relabeling02; NetworkLifecycle03 then SelectorRegression01
+are running serially on Assets03. Keep sources frozen until both finish.
+No batch66 commit, release or full-migration acceptance yet.
+
+Final66 native gates are now terminal passed: NetworkLifecycle03 and42-pair
+SelectorRegression01 complete, no owned Unreal/UBT process remains. Ledger66
+records6 final passed runs,16 scoped sources matched to actual frozen inputs,
+2,247 supporting host models and all exact binary/report hashes. Four atomic
+exit-publication,7 driver safety,8 inheritance source guards and61 PowerShell
+parse checks pass. Only the exact isolated Examples index and765-file closure
+remain before the bounded local commit; do not stage the six user files or
+publish a version. The next work remains the complete authorized inventory,
+not a claim that this one Dash asset closes0.11 or the overall migration.
+
+NetworkLifecycle03 PASSes all8 real interventions (both owners, original/Python,
+native cancellation and active Profile switch), authority native-RPC/active-task
+barrier, per-world exactly-one cancellation montage event, replicated end and
+scope cleanup, no late root/Delay/producer callbacks and original Cue/typed UI
+controls. Independent gate/strict closed logs/server-last3 zero exits and1,912
+frozen inputs PASS, including atomic exit tokens. No network pause/travel/rejoin
+claim. SelectorRegression01 is now the only live owned native lane; after its
+42 pairs pass, record final66 evidence and verify exact staged-tree models/
+full Python closure before a bounded local commit. Failed lifecycle/asset/
+coordination/gate iterations remain recoverable and unaccepted.
+
 **Bounded batch63 (2026-10-17):** continue Dash activation/RPC body
 and task/movement decisions in small native-compared steps. Retain native RPC
 transport, GAS, animation and movement implementation. Batch62's helper and
