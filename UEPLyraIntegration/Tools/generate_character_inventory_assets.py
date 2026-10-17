@@ -24,7 +24,8 @@ def input_bindings(cls):
     return sorted(values, key=lambda value: value["function"])
 
 
-def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, team=False, stencil=False, lifecycle=False, parts=False, health=False, enhanced=False, observer=False, listener=False, legacy=False, ready=False):
+def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, team=False, stencil=False, lifecycle=False, parts=False, health=False, enhanced=False, observer=False, listener=False, legacy=False, ready=False, waiting=False):
+    ready = ready or waiting
     legacy = legacy or ready
     listener = listener or legacy
     observer = observer or listener
@@ -39,6 +40,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     quickbar = quickbar or loadout
     audio = audio or quickbar
     kind, prefix, module = next((kind, prefix, module) for enabled, kind, prefix, module in (
+        (waiting, "characterwait", "InventoryWait", "inventory_wait_mixin"),
         (ready, "characterready", "InventoryReady", "inventory_ready_mixin"),
         (legacy, "characterlegacy", "LegacyPlayerInfo", "legacy_player_info_mixin"),
         (listener, "characterlistener", "TeamListener", "team_listener_mixin"),
@@ -93,13 +95,16 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
     mixin = ue.create_asset(name, "/Game/UEPMixins", UEPPythonMixinSet, factory); mixin.DefaultProfile = "Python"
     mixin.Profiles = [UEPPythonMixinProfile(ProfileName=profile, PythonModule="uep_lyra_characters."+module,
         PythonClass="LyraCharacter"+prefix+profile+"Profile") for profile in ("Python", "BlueprintFallback")]
-    transport = ready_transport = None
+    transport = ready_transport = wait_stub = None
     if listener:
         from generate_character_team_listener_transport import generate as listener_transport
         transport = listener_transport(bp)
     if ready:
         from generate_character_inventory_ready_probe import transport as experience_transport
         ready_transport = experience_transport(bp)
+    if waiting:
+        from generate_character_inventory_wait_stub import generate as resume_stub
+        wait_stub = resume_stub(bp)
     ue.blueprint_configure_mixin(bp, mixin, "Python", "PythonMixinProfile"); ue.compile_blueprint(bp); ue.unregister_all_mixins()
     if int(bp.Status) == 2 or bp.GeneratedClass.get_path_name() != cls or cdo_snapshot(bp, "character-after") != before:
         raise RuntimeError("original Character identity/full CDO changed")
@@ -115,7 +120,7 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
             if actual != input_signatures[value["action"]]: raise RuntimeError("compiler-generated input receiver signature changed")
             signatures[value["function"]] = actual
     all_graphs = ue.blueprint_get_all_graphs(bp)
-    extra_graphs = {"GetPythonMixinSet", "GetPythonMixinProfile"} | ({transport["function"]} if listener else set()) | ({ready_transport["function"]} if ready else set())
+    extra_graphs = {"GetPythonMixinSet", "GetPythonMixinProfile"} | ({transport["function"]} if listener else set()) | ({ready_transport["function"]} if ready else set()) | ({wait_stub["function"]} if waiting else set())
     if set(graph.get_name() for graph in all_graphs)-set(graphs) != extra_graphs:
         raise RuntimeError("unexpected Character graph additions")
     if any(semantics(graph, names, set()) != graphs[graph.get_name()] for graph, names in originals):
@@ -143,8 +148,13 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
         report["inventory_ready_immediate_branch_migrated"] = True
         report["inventory_ready_receiver"] = READY
         report["native_inventory_ready_transport"] = ready_transport
-        report["inventory_ready_pending_wait_migrated"] = False
+        report["inventory_ready_pending_wait_migrated"] = waiting
         report["original_inventory_readiness_macro_retained"] = True
+    if waiting:
+        report["implemented_methods"].append(wait_stub["function"])
+        report["native_inventory_wait_stub"] = wait_stub
+        report["native_inventory_wait_resume_signature"] = ue.describe_function(bp.GeneratedClass, wait_stub["function"])
+        report["native_inventory_wait_signatures"] = {name: ue.describe_function(ue.find_class("KismetSystemLibrary"), name) for name in ("DelayUntilNextTick", "GetFrameCount")}
     if team:
         if stencil:
             if lifecycle:
@@ -222,4 +232,6 @@ def generate(stage, audio=False, quickbar=False, loadout=False, outline=False, t
             raise RuntimeError("native component receiver registration did not restore original signatures")
         report["component_bound_receiver"] = BOUND_EVENT
         report["native_component_receiver_register_restore_passed"] = True
+        if waiting and ue.describe_function(bp.GeneratedClass, wait_stub["function"]) != report["native_inventory_wait_resume_signature"]:
+            raise RuntimeError("native inventory wait resume signature not restored")
     return report

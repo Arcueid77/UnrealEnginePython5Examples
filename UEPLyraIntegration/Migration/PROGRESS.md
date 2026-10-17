@@ -13,15 +13,61 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active next bounded batch 54 (2026-10-17):** replace the remaining original
+**Active next bounded batch 55 (2026-10-17):** migrate ReceivePossessed's
+authority decision and actual ExperienceReady factory/bind/activation. Preserve
+natural native possession, original BP fallback, native delayed delivery and
+batch54's three-stage Python wait. BeginPlay/visibility/init-state, parent/
+sibling and version gates remain open.
+
+**Latest accepted bounded batch 54 (2026-10-17):** replace the remaining original
 three-stage Controller/InventoryManager/Quickbar wait with Python decisions,
 retaining native next-tick latent scheduling and named UFunction resumption.
 Prove repeated/reentrant waits, readiness transitions and destroyed-owner
 cancellation without Python callback roots or cancelling unrelated native work.
 ReceivePossessed factory creation, BeginPlay/visibility/init-state, parent/
-sibling and version gates remain open; no54 implementation/acceptance yet.
+sibling and version gates remain open. Batch53 is committed as
+Examples0340ca2/core9c40839. Batch54 implementation now routes all three
+checkpoints through native DelayUntilNextTick and an Actor/int32 named
+UFunction, without Python ticker/callback roots. Assets01 and ResumeSmoke01
+PASS (22 Python /17 fallback routes); smoke proves repeated real native stage0
+resumption and destroyed-owner silence, not late readiness. Host05 passes1,684
+models. Differential01 executes twelve immediate-loadout rows, two destroyed
+pending controls and twelve late-readiness/repeated-request rows, but FAILS
+final owned-TeamObserver collection. The observed grants/models match; the
+test's Python-owned unregistered bot-producer wrapper may retain destroyed
+Controller frames. Release that wrapper after native cleanup, compare wait
+grants relative to the pre-release snapshot, preserve strict all-owned-GC
+requirements and rerun as Differential02. Differential02 fails its Editor-only
+console diagnostic in Game mode. Differential03's actual reference chain shows
+the residual is not the Character wait/producer hypothesis: native GameplayCue
+preallocation holds GCNL_Spawning.TeamColorWatcherHandle after cancellation.
+The reference search itself also emits an Engine ensure, so that diagnostic run
+is strictly failed/preserved. Differential04 separates only exact Cue-class /
+native handle / test-owned target matches from Character-owned observers.
+Character observers still must all collect; native-pooled Cue watchers must
+be inactive/unrooted, still match the unchanged native field, and have hidden /
+ownerless recycled Cues. No Cue field/pool is modified to force GC. Its original
+asset and native recycle sources are frozen. Final Differential04 PASSes all
+twelve immediate inventory rows, two destroyed-pending controls and twelve
+three-checkpoint late-readiness/single/repeated-request rows. Native possession
+adds an independent ready signal while the existing wait resumes: both original
+BP and Python grant twice; repeated pending calls coalesce identically. All
+thirty-two owned Experience proxies and all Character-owned observers collect;
+caller root1/1. Each row separately records one inactive/unrooted native-pooled
+Cue handle retained by its unchanged hidden/ownerless Cue; no zero-Cue-retention
+claim. Network01 PASSes24 authority/24 owner replica-noop trials with actual
+FastArray/Quickbar replication, natural authority startup/zero invented client
+startup, foreign-owner isolation, exact original inventory/configuration/CDO
+restoration, all owned proxies24/12/12 collected and caller roots1/1 each world.
+Strict closed logs, independent gates, normal three zero exits/server last and
+1,796 frozen inputs/final run PASS. Host07 passes1,702 models. Partial
+ResumeSmoke01 remains partial, failed Differential01-03 remain failed. Pending
+Profile-switch native behavior, deferred-component replication, full Character/
+version, travel/loss/hardware/pixels/package gates are not certified here.
+No Engine/official Lyra/animation changes, C++ build/cook/package or publication.
+Ledger54 and isolated staged-tree checks are recorded before the local commit.
 
-**Latest accepted bounded batch 53 (2026-10-17):** migrate only the generated
+**Previously accepted bounded batch 53 (2026-10-17):** migrate only the generated
 ExperienceReady OnReady inventory-readiness continuation's immediately-ready
 branch; pending components initially retain the original native BP wait chain.
 Preserve actual
