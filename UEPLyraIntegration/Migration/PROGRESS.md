@@ -13,6 +13,38 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Completed bounded batch85 (2026-10-19):** actual owning-client predicted
+Grenade ability -> authority spawn -> unmodified native flight/bounce ->
+original fuse -> replicated explosion/destruction. 84 parent commits:
+Examples `6406bff` / core `b4ac0d6`. Final Network03NativeRPC passes four actual
+owning ASC requests, four authority ability spawns and eight naturally moving
+client replicas, across both owners and original/Python Profiles. Observers
+never spawn/detonate/destroy projectiles or write movement/velocity/pose/timers.
+Native movement starts active (speed2500/gravity1); trajectories contain42-91
+client samples and48-78 authority samples, with real ceiling/floor bounces.
+Natural self-damage and both players' post-throw Health match on all three peers.
+Native source-control synchronization, prediction mode2/authority mode0,
+authority-only spawn, single body and same source/projectile GUIDs verified.
+Process-scoped LogNetTraffic/LogRepTraffic additionally proves exactly two
+native Detonate sends per authority Actor and one native receive per client.
+Actor GUID destruction logs and body markers correlate all eight receives;
+in final03 all receive records precede body execution. Local fuse/RPC timing
+is preserved, not used as a substitute for transport proof. Independent gate,
+all three strict closed logs/actual exits0, server-last client exit gate,
+profile/observer/control restoration and zero remaining projectiles pass.
+Host03 passes2,931; four incomplete driver requests rejected before launch.
+Preserve failed01: previously injured A was not reset before selecting B.
+Use only native Reset for selected/injured owners, with canonical new Pawns.
+Preserve failed02: callback-only TTL inference could not certify RPC receipt
+when an original client fuse was already due. Native network logging resolves
+the evidence gap; no production behavior/asset/C++/Engine changes were made.
+Original GA_Grenade OnRep_Cooldown Time contains only an empty entry; its spawn
+location/rotation graphs are collapsed graphs covered by migrated activation.
+Next: remaining runtime weapon/business candidates (starting with B_Weapon),
+then combined lifecycle/package/version gates. Quantitative trajectory parity,
+authored particle expiry/audio/pixels/physical input and general stress remain
+unclaimed. 70b original Pawn binding race stays OPEN. No push/tag/release.
+
 **Completed bounded batch84 (2026-10-19):** current Grenade explosion body
 verified on one real dedicated NullRHI server and two rendered native clients.
 83 parent commits: Examples `527da0b` / core `e1199d2`. Network02Preselected

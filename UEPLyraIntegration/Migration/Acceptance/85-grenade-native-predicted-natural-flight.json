@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "batch": "85-grenade-native-predicted-natural-flight",
+  "scope": "Bounded normal predicted Grenade chain,not full version/stress/package. Final Network03NativeRPC:one actual dedicated server/two native clients,both real owners and original/Python Profiles. Four owning ASC.TryActivateAbilityByClass requests(mode2),four authority native ability activations(mode0)/spawns,eight native moving replicas;fixture never spawns/detonates/destroys projectiles or changes projectile movement/velocity/pose/timers. Native initial speed2500/gravity1,real ceiling/floor bounces,original2s fuse,one explosion body,actual self-damage and player Health agreement on all three peers. Native control-rotation sync and source/projectile wire identities verified. Process-scoped native network logs prove two Detonate sends per authority Actor and exactly one receive per client,correlated through Actor GUID cleanup and body markers;all final receives precede body. Runtime original timer/RPC/DoOnce behavior unchanged;TTL alone is not transport proof. Native class/profile/control restoration,zero projectiles,strict closed logs,independent gate,three actual exits0 and server waited for client exits.2931 host models. Failed01 incomplete native reset preparation after prior self-damage and02 ambiguous TTL-only receipt inference preserved. Native Reset prepares injured/selected owners;no raw Health/ASC repair,Pawn teleport or file gameplay transport. No production gameplay/asset/Engine/Cpp changes,build/cook/package/push/tag/release. No quantitative trajectory equivalence,authored particle expiry/audio/pixels/physical input/general network stress/full acceptance. Empty original OnRep_Cooldown Time is retained;spawn helper graphs are activation composites.70b original Pawn binding race remains open.",
+  "recorded_utc": "2026-10-18T17:34:43.2272507Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "b4ac0d6767e339f71f59afe8c5588a9baf7e4b9d",
+  "examples_parent_commit": "6406bff7d173ee23bdecc7ab48fbfc5aae78007f",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-grenade-natural-flight/Network03NativeRPC",
+      "summary_sha256": "A7A31E2CA3E68CB09DC6E7F4AC9B25AA52F899617FAC1215F6C6010F82B2B8C6",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2043,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "A": 0,
+        "server": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "665392AE8B43DA016160BAA7B37FBDAF17D76F7A8A83D3D2D78C660C78664DD0",
+          "file": "server.json"
+        },
+        {
+          "sha256": "B46C6A8988AD19A24D11D5B9D920BD9488B281B74F86106582D057BBD43765C0",
+          "file": "A.json"
+        },
+        {
+          "sha256": "0732E46E5093FA177B9AFCC5053581CFD135A838F94DD5F4E1A51154D33851A4",
+          "file": "B0.json"
+        },
+        {
+          "sha256": "6B16186174CBEABDBAD81FA6A2614D9CE9999349D8FB89CBC09D2349BA4BC070",
+          "file": "native-rpc-log-proof.json"
+        },
+        {
+          "sha256": "D2A620FB82FA1CE26626B9B6B394BB19E3F76B2004D40510E340230771F029E1",
+          "file": "server.log"
+        },
+        {
+          "sha256": "08D4B15E971BF0245156A8974BF204FAE11C05C2FC7E46F5DD9399D59706E10A",
+          "file": "A.log"
+        },
+        {
+          "sha256": "D449D907B749B48951DD8D7616D0FFF4766FE08EA5DF615E6F088FF77D8B2A8B",
+          "file": "B0.log"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_flight_network_validation.py",
+      "sha256": "7D78605BE35E6F434737B05DC18301940DBB5E61332569B034F3AB01FD1D0ACD",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_flight_network_validation.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_flight_network_contract.py",
+      "sha256": "ADD0BEEAFAE52DE9E1F0EAF954687704AC168D284A544958F32BCCF9F71D63F6",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_flight_network_contract.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_rpc_log_evidence.py",
+      "sha256": "65C1A1C9C41023DD6678C4AD468EC2F347CDE5BC39BDD0395CDD250C8B2D7A2C",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_rpc_log_evidence.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "8AB027D20C2A1C3A14C40D2EF074D9FE35163F9E8D88DF9DB21A17354CC4DEC3",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "7AFDBCA5637DEAE4EE7AD1A8C7F9C4876608FCDCFB0349285C5FC7BA4F97D154",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261019-grenade-natural-flight/Host03.json",
+    "sha256": "29CC120416C99944A5675D5767AFD1DAA4C1116B59012D9D6972DA8AAE02DAE6",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 2931,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    }
+  }
+}
