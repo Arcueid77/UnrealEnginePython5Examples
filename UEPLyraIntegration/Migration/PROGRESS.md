@@ -13,8 +13,8 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active bounded batch72 (2026-10-18):** Grenade UI real dedicated-server/two-owner
-grant/avatar/removal replication/nonlocal branches. The70b intermittent remote Bot Health0/canonical Pawn/HealthSet/ASC
+**Active bounded batch73 (2026-10-18):** read-only cross-peer network object
+identity/lifetime for the startup binding race. The70b intermittent remote Bot Health0/canonical Pawn/HealthSet/ASC
 discrepancy remains open; keep native RPC, GAS, navigation, animation and movement.
 The accepted helper and RPC-input-store slices do not close the full Dash asset.
 
@@ -124,6 +124,73 @@ fails only because the new ledger-count metadata was advanced before ledger72
 was generated. Retain it; generate the final ledger and repeat the complete
 host/index checks, not suppress the consistency test. Six current scoped
 runtime sources match the frozen final04/05 input records.
+72 is locally committed as Examplesde3be6b/cored604857 after exact2,533
+models/809-file closure; six user-dirty hashes preserved, no push/tag/release.
+73 adds a BlueprintPure validation bridge getter for existing Legacy NetGUID
+or Iris wire id,object/world/driver path,role and local lifetime. IDs are only
+identity, never generation/order. No allocation/registration/ASC or Health
+repair. This draft is not compiled or native accepted. Copy only this owned
+plugin source into the marked stage, export/review module-only actions and
+stop if any Engine compile is requested; only then refresh UEPLyraBridge.
+Engine/official source remain untouched, no full build/cook/package. Native
+cross-peer identity agreement must be proven before using it for race RCA.
+73 Host01 passes2,536 source/model checks. Plan01/02 export only, no compile,
+but include three LyraGame unity compiles/import-library regeneration plus a
+project-owned shared PCH. Do not execute that broader plan. Move the owned
+draft getter into independent UEPNetworkIdentity runtime module in the same
+plugin (Engine/NetCore/Iris only), restore original UEPLyraBridge build rules,
+then re-export/review. No Engine/official source edits and no Cpp compile yet.
+Plan03IdentityOnly shows exactly one new-module unity compile/two links.
+After restoring original bridge rules, Plan04 attempts stale Engine NetCore
+import regeneration and is stopped by NoEngineChanges before compilation;
+protected Engine bytes remain unchanged. Re-export with existing precompiled
+Engine reuse and retain that same mode in the reviewed execution. Do not
+remove the Engine guard or build NetCore/Lyra to make this diagnostic work.
+Plan05/06 still reject cached NetCore regeneration before any compile. Use
+UBT's documented-in-source Execute mode on the successful exact Plan03 export,
+not a broader graph: validate all three output/delete paths, captured response
+files and SDK import/DLL hashes. Build04ExactActions actually compiles only the
+new unity source but FAILS old32-bit Guid.Value usage; UE5.8 uses64-bit ObjectId.
+Use native Guid.ToString. Execute-mode import loses prerequisite-index edges,
+so links ran before the object existed; replay the identical reviewed commands
+as compile-success first, then two links. Existing Engine/Lyra/UEP/bridge bytes
+remain unchanged. No runtime acceptance from compile or process exit alone.
+Build05ExactPhases compiles the one new unity source then links two outputs,
+all exit0 in5.802s+1.936s;new DLL3E24CA36...,actual Engine BuildId retained,
+all protected Engine/SDK import libs/existing Lyra/UEP/bridge DLL hashes unchanged.
+Only the new plugin manifest entry is added,not an old binary BuildId rewrite.
+Native InvalidProbe01 enters the getter but FAILS test scaffolding trying to
+instantiate abstract UObject. Use an existing UObject class-default object for
+the non-world case; retain failure and rerun before any network identity claim.
+InvalidProbe02 returns correct native InvalidObject/NoWorld DTOs with empty
+wire ids and exit0, but remains failed: the shared RequirePythonExit flag
+expects a runtime atexit marker after Goodbye Python,whereas this commandlet
+marks success before shutdown. Keep error/closed-log checks plus explicit
+marker->Goodbye Python->closed ordering; repeat as a new final probe.
+InvalidProbe03 terminal PASSes actual native null/non-world calls,empty ids,
+no object/id allocation,strict commandlet shutdown/closed log and real exit0.
+It does not prove network identity. The new opt-in PawnWireIdentity lane requires
+the exact reviewed DLL/source proof,checks authority and both viewers' wire ids
+(not local names or float-converted ids),native roles and distinct ids across
+the two real respawns. Authority waits for its actual new mapped Pawn before
+publishing a viewer checkpoint; no callbacks/repl data or Health are replayed.
+Binding/lifecycle diagnostics carry the existing native id when available.
+73 Host03 passes2,557 models. Network01Wire and unchanged Network02Wire both
+terminal PASS the full four owner/Profile/8 native Reset/16 viewer-wave UI
+matrix plus native wire-id/role equality across authority/owner/simulated
+viewer and distinct native ids between real new Pawns. All independent
+gates/strict closed logs/actual0/0/0 server-last exits pass;1,967 frozen inputs.
+The actual transport is Legacy (sample id258 on roles3/2/1 despite different
+local clocks). Native null/NoWorld probe03 also passes. Iris code compiles and
+models cover its key format; native Iris networking is NOT accepted here.
+This accepts only the read-only identity tool and stronger bounded replica
+proof,not the original intermittent binding race,full Grenade/migration or
+version. Preserve all rejected broader plans and failed builds/probes.
+73 final ledger records three native final runs and12 matched current scoped
+sources; reviewed build proof remains explicitly built_requires_native_acceptance
+and is hashed as an input,not relabeled a passed runtime run. Exact-index2557
+models/813-file closure and narrow tooling safety checks are required before
+local commit. General game-facing migration remains incomplete; no push/tag.
 
 Batch69 is locally committed as Examplesa72cd16/corebcf8d50. Exact index passes
 2,375 models/788-file closure; five final native runs and nine scoped sources

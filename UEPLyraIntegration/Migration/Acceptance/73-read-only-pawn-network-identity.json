@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "batch": "73-read-only-pawn-network-identity",
+  "scope": "Read-only existing native Legacy/Iris wire-id lookup and stronger bounded replica proof,not a race repair. New independent UEPNetworkIdentity module avoids LyraGame linkage. Reviewed UBT exported exact one unity compile/two links replayed as compile then links;Build05ExactPhases exits0/0,actual matching Engine BuildId retained,new module entry only. Protected Engine DLLs/SDK import libs/existing Lyra/UEP/bridge DLLs unchanged;no Engine/Lyra implementation compile or edits. Native InvalidProbe03 proves null and non-world existing CDO return explicit invalid/no fabricated id,strict shutdown and exit0. Two unchanged normal-startup real dedicated-server+two-client runs Network01Wire/02Wire each pass4 owner/Profile Give/Clear trials,8 native Reset requests,16 healthy canonical own/foreign replica waves with actual authority/owner/simulated wire-id equality and native roles3/2/1,distinct network Actor ids across resets,UI pool/restoration/quiet/pre-release spec proof and actual0/0/0 server-last exits,independent gates/closed logs. Actual runtime transport Legacy;Iris branch compiles and key models pass but native Iris networking NOT accepted. Never use local name/clock,32-bit truncation or float conversion as identity.2557 host models. All rejected broad plans/failed scaffolding/build/probe records retained. Getter never allocates/assigns ids or repairs ASC/Health. No callback/repl replay,packet-loss/travel/rejoin/physical-input/full Grenade/full version/publication claim. Original intermittent initial-join empty-ASC/Health0 race still OPEN.",
+  "recorded_utc": "2026-10-18T06:28:16.0702203Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "d60485797361bd69f736fa512928b777242e64b3",
+  "examples_parent_commit": "de3be6b676e20a69180dedb5ab3cb4b3e5807b99",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-pawn-wire-identity/InvalidProbe03",
+      "summary_sha256": "001C0CE4948235F1FB43A06792499701FFE2865A358EFFA8FCF6B8F087B105EA",
+      "status": "passed",
+      "uep_dll_sha256": [],
+      "frozen_input_records": 16,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-pawn-wire-identity/Network01Wire",
+      "summary_sha256": "1CDBB0AE3BD5C48EE9DDC3D346C7264B99E16C8D7130260F1365C83438CDD73E",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1967,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "A": 0,
+        "B0": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "A78D6CBC0652DB51E1AF2539A24B0E3E6E0E40A3A3EB3593A74DFDD78DE48B9D"
+        },
+        {
+          "file": "A.json",
+          "sha256": "12F2F94396FBFE58CDA77A20CADFC420F48FD9BFDD545C5D587622889C8E9DC7"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "88F229F49EEC31704D87E6AF8CD340A085E059678FB417048C2AF33D94EA8FB1"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-pawn-wire-identity/Network02Wire",
+      "summary_sha256": "3A247F7F2BE315CB9AD9EC4D445C725A239488A7ACC33AF63812A090E91AB629",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1967,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "A": 0,
+        "B0": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "D53CB3A409E5629CE4F6DB44743954FB8A23700D1EFE7B254F0ACF05595192AC"
+        },
+        {
+          "file": "A.json",
+          "sha256": "AC456947BB50684A0F3032DA5F36FE614E32E967AA3681F1DA9DA64309C73932"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "8EA9FCC821119549C8B37B5F40D642FB9A02B03A05EA3AF90C54CF6F68B601CF"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "08F0C252749AE74E454300789C0FD7367F6BA5D4D83C9EAC4D91A5857C21379E",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Validation/Run-UEP58NetworkIdentityProbe.ps1",
+      "native_input_path": "Validation/Run-UEP58NetworkIdentityProbe.ps1",
+      "sha256": "14ABD53746BD90FB1F5D1D053A36A6B749AF9F3AA04E303EFFE65DF9E5194C21",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Plugins/UEPLyraBridge/UEPLyraBridge.uplugin",
+      "native_input_path": "Demos/UEPLyraIntegration/Plugins/UEPLyraBridge/UEPLyraBridge.uplugin",
+      "sha256": "ED04A2FC6C453869964F7C97AEAB19E7DA1FF792E7787EB1A2C050F3C6AD3F17",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Plugins/UEPLyraBridge/Source/UEPNetworkIdentity/UEPNetworkIdentity.Build.cs",
+      "native_input_path": "Demos/UEPLyraIntegration/Plugins/UEPLyraBridge/Source/UEPNetworkIdentity/UEPNetworkIdentity.Build.cs",
+      "sha256": "B72C05C11E64B83BCBE5F297B46D24F84243A0EAAB5A88D4A5FA5599861B5F27",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Plugins/UEPLyraBridge/Source/UEPNetworkIdentity/Public/UEPLyraNetworkIdentityLibrary.h",
+      "native_input_path": "Demos/UEPLyraIntegration/Plugins/UEPLyraBridge/Source/UEPNetworkIdentity/Public/UEPLyraNetworkIdentityLibrary.h",
+      "sha256": "47AF96161D884F41213CA2ED6E8FF023E6D17BFB7D6F3B2739C5D61D680021A9",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Plugins/UEPLyraBridge/Source/UEPNetworkIdentity/Private/UEPLyraNetworkIdentityLibrary.cpp",
+      "native_input_path": "Demos/UEPLyraIntegration/Plugins/UEPLyraBridge/Source/UEPNetworkIdentity/Private/UEPLyraNetworkIdentityLibrary.cpp",
+      "sha256": "DD58660F187A1A979DF3AD6FD3D8C34346792A31472A6ACFB17887548DF6BB19",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Plugins/UEPLyraBridge/Source/UEPNetworkIdentity/Private/UEPNetworkIdentityModule.cpp",
+      "native_input_path": "Demos/UEPLyraIntegration/Plugins/UEPLyraBridge/Source/UEPNetworkIdentity/Private/UEPNetworkIdentityModule.cpp",
+      "sha256": "CAE71F1C9F026C86E46197D1E0632B8A74E711C2014FAE3B31FEB43E7D362C7B",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/network_identity.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/network_identity.py",
+      "sha256": "757128A525520D490C4AE9E5D12D72D09E6A578744735A2176C39208C1B761D0",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/probe_network_identity.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/probe_network_identity.py",
+      "sha256": "45273DF8C1CC62CACBFF22199B7B35658AECB12735A527962FE67D8066496D29",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/grenade_widget_network_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/grenade_widget_network_validation.py",
+      "sha256": "0578336DC15B9A48BFCBD4BCD1B94B0BF31185F69F926970A27E64DED3EBFF27",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/grenade_widget_network_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/grenade_widget_network_contract.py",
+      "sha256": "9F6DC3658E54B78C177E334AB4D34B8A7E47760E2960F925C724045BA8249C07",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_replica_readiness.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_replica_readiness.py",
+      "sha256": "CEA83C7C3B64C48C3964CF33B51C9488F5E4EB54708A6D0936E9FF25E5C33B83",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 2557,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261018-pawn-wire-identity/Host03.json",
+    "sha256": "D4EC23BB0D1ED5A96C4E044FD939B4A15CECA366E4CDC41B5C69A42518721970"
+  }
+}

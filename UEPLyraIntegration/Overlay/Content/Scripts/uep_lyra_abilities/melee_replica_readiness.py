@@ -1,6 +1,7 @@
 """Read-only native replica bindings; never initialize, repair or write Health."""
 import copy
 import json
+import sys
 import time
 import traceback
 import unreal_engine as ue
@@ -31,7 +32,7 @@ def snapshot(pawn, health):
     features = pawn.call_function("GetComponentsByInterface", ue.find_class("GameFrameworkInitStateInterface"))
     feature_states = [dict(component=path(value), cls=path(value.get_class()), feature=str(value.call_function("GetFeatureName")),
         state=str(value.call_function("GetInitState").TagName)) for value in features]
-    return dict(actor=path(pawn), actor_class=path(pawn.get_class()), role=int(pawn.call_function("GetLocalRole")),
+    row=dict(actor=path(pawn), actor_class=path(pawn.get_class()), role=int(pawn.call_function("GetLocalRole")),
         character_profile_property=str(pawn.get_property("PythonMixinProfile")),
         destroying=bool(pawn.call_function("IsActorBeingDestroyed")), health=float(health.call_function("GetHealth")),
         hidden=bool(pawn.get_property("bHidden")), tear_off=bool(pawn.get_property("bTearOff")), life_span=float(pawn.call_function("GetLifeSpan")),
@@ -50,6 +51,11 @@ def snapshot(pawn, health):
         pawn_data=path(extension.get_property("PawnData")) if valid(extension) else None,
         net_dormancy=int(pawn.get_property("NetDormancy")), always_relevant=bool(pawn.get_property("bAlwaysRelevant")),
         net_cull_distance_squared=float(pawn.get_property("NetCullDistanceSquared")))
+    if "-UEPRequireNetworkIdentity" in sys.argv:
+        from .network_identity import read
+        row["network_identity"]=read(pawn)
+        row["player_state_network_identity"]=read(state)
+    return row
 
 
 def view_state(controller):
@@ -75,22 +81,33 @@ class EarlyWatch:
         # process-wide scope retains dead wrappers until native class teardown.
         scope=self.scopes.pop(actor_path,None)
         if scope is not None: scope.close()
-        self.publish("native-end-play",dict(actor=actor_path,reason=int(reason),python_stack=traceback.format_stack(limit=16)))
-    def destroyed(self,actor_path):
+        row=dict(actor=actor_path,reason=int(reason),python_stack=traceback.format_stack(limit=16))
+        if "-UEPRequireNetworkIdentity" in sys.argv:
+            from .network_identity import read
+            row["network_identity"]=read(actor)
+        self.publish("native-end-play",row)
+    def destroyed(self,actor_path,actor=None):
         scope=self.scopes.pop(actor_path,None)
         if scope is not None: scope.close()
-        self.publish("native-destroyed-before-end-play",dict(actor=actor_path,python_stack=traceback.format_stack(limit=16)))
+        row=dict(actor=actor_path,python_stack=traceback.format_stack(limit=16))
+        if "-UEPRequireNetworkIdentity" in sys.argv:
+            from .network_identity import read
+            row["network_identity"]=read(actor)
+        self.publish("native-destroyed-before-end-play",row)
     def watch(self, pawn, actor_path, construction=False):
         scope=SubscriptionScope()
         scope.bind_event(pawn,"OnEndPlay",lambda actor,reason,key=actor_path:self.ended(key,reason,actor))
-        if construction: scope.bind_event(pawn,"OnDestroyed",lambda actor,key=actor_path:self.destroyed(key))
+        if construction: scope.bind_event(pawn,"OnDestroyed",lambda actor,key=actor_path:self.destroyed(key,actor))
         self.scopes[actor_path]=scope;self.watched.add(actor_path)
     def constructed(self,pawn):
         if self.closed: return
         actor_path=path(pawn)
         if actor_path not in self.watched: self.watch(pawn,actor_path,construction=True)
-        self.publish("native-construction",dict(actor=actor_path,actor_class=path(pawn.get_class()),
-            role=int(pawn.call_function("GetLocalRole")),python_stack=traceback.format_stack(limit=16)))
+        row=dict(actor=actor_path,actor_class=path(pawn.get_class()),role=int(pawn.call_function("GetLocalRole")),python_stack=traceback.format_stack(limit=16))
+        if "-UEPRequireNetworkIdentity" in sys.argv:
+            from .network_identity import read
+            row["network_identity"]=read(pawn)
+        self.publish("native-construction",row)
     def birth(self, pawn):
         if self.closed: return
         actor_path=path(pawn)

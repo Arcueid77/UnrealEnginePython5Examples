@@ -18,6 +18,7 @@ from .grenade_widget_validation import Validation as Single,roots
 from . import grenade_widget_mixin as policy,grenade_widget_observation as observation
 from . import melee_replica_readiness as readiness
 from .grenade_widget_network_contract import PEERS,PLAN,require,client,validate
+from . import network_identity as wire
 
 
 def handles(asc): return [int(item.Handle.Handle) for item in roots(asc)]
@@ -42,14 +43,16 @@ class Client(Single):
     def __init__(self,result,peer,run):
         super().__init__(result);self.peer,self.run,self.root=peer,run,self.path.parent
         self.require_local_playing_phase=False;self.require_auto_active=False
+        self.wire_required="-UEPRequireNetworkIdentity" in sys.argv
         self.position=0;self.processed=None;self.command=None
         self.report.update(peer=peer,run_id=run,client_native_give_clear_called=False,native_give_clear_called_by_fixture=False,
-            packet_loss_tested=False,travel_rejoin_tested=False)
+            packet_loss_tested=False,travel_rejoin_tested=False,network_identity_required=self.wire_required)
     def ready(self):
         if token(self.root,"playing-ready.json",self.run) is not None: super().ready()
     def begin(self):
         super().begin();require(self.report["native_mode"]=="Client","actual native client mode required")
         self.report.update(player_id=int(self.controller.PlayerState.PlayerId),native_role=int(self.pawn.call_function("GetLocalRole")))
+        if self.wire_required: self.report["native_identity_null_probe"]=wire.read(None)
         atomic_write(self.root/(self.peer+"-ready.json"),dict(run_id=self.run,player_id=self.report["player_id"]))
         self.enter("network")
     def source_pawn(self):
@@ -57,12 +60,18 @@ class Client(Single):
         found=[]
         for pawn in values:
             state=pawn.get_property("PlayerState")
-            if valid(state) and int(state.PlayerId)==self.command["player_id"] and state.call_function("GetPawn")==pawn: found.append(pawn)
+            if not valid(state) or int(state.PlayerId)!=self.command["player_id"]: continue
+            if self.wire_required:
+                identity=wire.read(pawn)
+                self.report.setdefault("pending_wire_candidates",{})[pawn.get_path_name()]=identity
+                if not wire.same(identity,self.command["source_identity"]): continue
+            elif state.call_function("GetPawn")!=pawn: continue
+            found.append(pawn)
         if len(found)!=1: return None
         pawn=found[0];health=pawn.get_component_by_type(ue.find_class("LyraHealthComponent"))
         if not valid(health): return None
         row=readiness.snapshot(pawn,health);self.report["pending_target_binding"]=row
-        if row["health"]!=100. or row["destroying"] or row["actor_asc"] is None or row["actor_asc"]["avatar"]!=row["actor"]: return None
+        if row["health"]!=100. or row["destroying"] or row["player_state_pawn"]!=row["actor"] or row["actor_asc"] is None or row["actor_asc"]["avatar"]!=row["actor"]: return None
         return pawn
     def ack(self,stage,row):
         atomic_write(self.root/(self.peer+"-"+str(self.position)+"-"+stage+".json"),dict(run_id=self.run,position=self.position,row=row))
@@ -94,6 +103,7 @@ class Client(Single):
         if number==2: require(widgets==self.waves[0]["widgets"],"network repeated Avatar duplicated/replaced native UI")
         row=dict(number=number,pawn=pawn.get_path_name(),old_pawn=self.previous_pawn,source_role=int(pawn.call_function("GetLocalRole")),
             health=100.,canonical_bound_asc=True,widgets=widgets,own=own)
+        if self.wire_required: row["network_identity"]=wire.read(pawn)
         self.waves.append(row);self.previous_pawn=row["pawn"];self.ack("respawn"+str(number),row)
     def cleared(self):
         own=self.command["owner"]==self.peer
@@ -154,8 +164,9 @@ class Server(Playing):
     def __init__(self,result,run):
         super().__init__(result,run);self.ability_class=policy.CLASS;self.installed=False;self.clone=None;self.target_path=None
         self.native_events=[];self.observation_errors=[];self.stage=None
+        self.wire_required="-UEPRequireNetworkIdentity" in sys.argv
         self.report.update(native_mode="DedicatedServer",observation_errors=self.observation_errors,health_properties_written=False,
-            callback_replay=False,native_ui_pool_written=False,packet_loss_tested=False,travel_rejoin_tested=False)
+            callback_replay=False,native_ui_pool_written=False,packet_loss_tested=False,travel_rejoin_tested=False,network_identity_required=self.wire_required)
     def capture_spec_cleanup(self):
         rows={}
         for peer,value in self.owners.items():
@@ -171,6 +182,7 @@ class Server(Playing):
             value["specs"]=specs(value["asc"]);value["handles"]=handles(value["asc"])
             require(len(value["handles"])==1,"one original authority Grenade handle required")
         self.report["native_mode"]=str(ue.find_class("UEPLyraBridgeLibrary").get_cdo().call_function("GetBridgeForWorld",self.world).call_function("CaptureSnapshot").NetMode)
+        if self.wire_required: self.report["native_identity_null_probe"]=wire.read(None)
         observation.install(self);self.installed=True
     def publish(self,stage):
         self.stage=stage;self.stage_started=time.monotonic()
@@ -180,6 +192,8 @@ class Server(Playing):
         return values if all(values.values()) else None
     def start(self):
         peer,profile=PLAN[self.position];self.owner=self.owners[peer];self.asc=self.owner["asc"]
+        identity=wire.read(self.owner["controller"].get_controlled_pawn()) if self.wire_required else None
+        if self.wire_required: require(wire.key(identity) is not None,"authority ready Pawn lacks assigned native wire identity")
         self.handle=self.asc.call_function("K2_GiveAbility",ue.load_class(policy.CLASS),1,-1)
         item,=[item for item in roots(self.asc) if int(item.Handle.Handle)==int(self.handle.Handle)]
         values=[value for value in list(item.NonReplicatedInstances)+list(item.ReplicatedInstances) if valid(value)]
@@ -187,6 +201,7 @@ class Server(Playing):
         self.clone=values[0];self.target_path=self.clone.get_path_name();self.native_events=[];ue.set_mixin_profile(self.clone,profile)
         require(not self.clone.call_function("IsLocallyControlled") and not ui_probe(self.clone)["valid"],"dedicated remote owner unexpectedly owns UI")
         self.command=dict(owner=peer,profile=profile,handle=int(self.handle.Handle),player_id=self.owner["player_id"])
+        if self.wire_required: self.command["source_identity"]=identity
         self.row=dict(position=self.position,owner=peer,profile=profile,owning_player_state=self.owner["controller"].PlayerState.get_path_name(),
             reset_requests=0,native_callbacks=[],waves=[],native_locally_controlled=False)
         self.publish("attach")
@@ -194,7 +209,10 @@ class Server(Playing):
         self.old_pawn=self.owner["controller"].get_controlled_pawn().get_path_name()
         tag=GameplayTag(TagName="GameplayEvent.RequestReset");state=self.owner["controller"].PlayerState
         ue.find_class("AbilitySystemBlueprintLibrary").get_cdo().call_function("SendGameplayEventToActor",state,tag,GameplayEventData(EventTag=tag,Instigator=state,Target=state))
-        self.row["reset_requests"]+=1;self.publish("respawn"+str(number))
+        self.row["reset_requests"]+=1
+        if self.wire_required:
+            self.stage="await-identity-respawn"+str(number);self.stage_started=time.monotonic()
+        else: self.publish("respawn"+str(number))
     def respawned(self,number):
         pawn=self.owner["controller"].get_controlled_pawn()
         if not valid(pawn) or pawn.get_path_name()==self.old_pawn: return False
@@ -208,10 +226,18 @@ class Server(Playing):
         require(time.monotonic()-self.stage_started<45.,"authority Grenade UI stage timeout: "+str(self.stage))
         if self.stage=="attach":
             if self.acks("attach"): self.reset(1)
+        elif self.stage.startswith("await-identity-respawn"):
+            number=int(self.stage[-1])
+            if not self.respawned(number): return
+            identity=wire.read(self.owner["pawn"])
+            if wire.key(identity) is None: return
+            self.command["source_identity"]=identity;self.publish("respawn"+str(number))
         elif self.stage.startswith("respawn"):
             number=int(self.stage[-1]);acks=self.acks(self.stage)
             if not self.respawned(number) or not acks: return
-            self.row["waves"].append(dict(number=number,pawn=self.owner["pawn"].get_path_name(),old_pawn=self.old_pawn,health=100.,viewers={peer:value["row"] for peer,value in acks.items()}))
+            wave=dict(number=number,pawn=self.owner["pawn"].get_path_name(),old_pawn=self.old_pawn,health=100.,viewers={peer:value["row"] for peer,value in acks.items()})
+            if self.wire_required: wave["network_identity"]=wire.read(self.owner["pawn"])
+            self.row["waves"].append(wave)
             if number==1: self.reset(2)
             else:
                 self.asc.call_function("ClearAbility",self.handle);self.clone=None;self.clear_events=copy.deepcopy(self.native_events);self.publish("clear")

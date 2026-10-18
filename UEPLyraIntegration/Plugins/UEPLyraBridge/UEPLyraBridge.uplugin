@@ -10,6 +10,11 @@
   "Installed": false,
   "Modules": [
     {
+      "Name": "UEPNetworkIdentity",
+      "Type": "Runtime",
+      "LoadingPhase": "PostDefault"
+    },
+    {
       "Name": "UEPLyraBridge",
       "Type": "Runtime",
       "LoadingPhase": "PostDefault"

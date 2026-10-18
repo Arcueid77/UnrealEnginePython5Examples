@@ -41,8 +41,42 @@ def model():
 class TestGrenadeWidgetNetworkContract(unittest.TestCase):
     def setUp(self): self.server,self.clients=model()
     def reject(self):
-        with self.assertRaises(RuntimeError): validate(self.server,self.clients)
+        with self.assertRaises((RuntimeError,ValueError)): validate(self.server,self.clients)
+    def add_wire_identity(self):
+        probe=dict(valid=False,transport="InvalidObject",wire_id="")
+        self.server.update(network_identity_required=True,native_identity_null_probe=probe)
+        for value in self.clients.values(): value.update(network_identity_required=True,native_identity_null_probe=probe)
+        for position,row in enumerate(self.server["cases"]):
+            for index,wave in enumerate(row["waves"]):
+                value=str(18446744073709550000+position*4+index*2)
+                wave["network_identity"]=dict(valid=True,transport="Legacy",wire_id=value,local_role=3,object_path="server-pawn")
+                for peer in PEERS:
+                    local=self.clients[peer]["cases"][position]["waves"][index]
+                    local["network_identity"]=dict(valid=True,transport="Legacy",wire_id=value,local_role=local["source_role"],object_path=peer+"-pawn")
+        self.sync_wire_acks()
+    def sync_wire_acks(self):
+        for position,row in enumerate(self.server["cases"]):
+            for index,wave in enumerate(row["waves"]):
+                wave["viewers"]={peer:copy.deepcopy(value["cases"][position]["waves"][index]) for peer,value in self.clients.items()}
+            row["viewers"]={peer:copy.deepcopy(value["cases"][position]) for peer,value in self.clients.items()}
     def test_complete_model(self): self.assertEqual(validate(self.server,self.clients)["native_reset_requests"],8)
+    def test_wire_ids_match_across_different_local_actor_paths(self): self.add_wire_identity();validate(self.server,self.clients)
+    def test_same_player_and_health_do_not_replace_wire_identity_proof(self):
+        self.add_wire_identity();self.clients["B0"]["cases"][0]["waves"][0]["network_identity"]["wire_id"]="999";self.sync_wire_acks();self.reject()
+    def test_wire_namespace_transport_matches(self):
+        self.add_wire_identity();self.clients["A"]["cases"][0]["waves"][0]["network_identity"]["transport"]="Iris";self.sync_wire_acks();self.reject()
+    def test_no_float_wire_identity(self):
+        self.add_wire_identity();self.clients["A"]["cases"][0]["waves"][0]["network_identity"]["wire_id"]=18446744073709550000.;self.sync_wire_acks();self.reject()
+    def test_no_unassigned_wire_identity(self):
+        self.add_wire_identity();self.clients["B0"]["cases"][1]["waves"][0]["network_identity"]["valid"]=False;self.sync_wire_acks();self.reject()
+    def test_partial_wire_treatment_rejected(self):
+        self.add_wire_identity();self.clients["A"]["network_identity_required"]=False;self.reject()
+    def test_native_null_id_not_fabricated(self):
+        self.add_wire_identity();self.server["native_identity_null_probe"]=dict(valid=True,transport="Legacy",wire_id="1");self.reject()
+    def test_native_role_not_a_local_name_assumption(self):
+        self.add_wire_identity();self.clients["B0"]["cases"][0]["waves"][0]["network_identity"]["local_role"]=2;self.sync_wire_acks();self.reject()
+    def test_two_reset_waves_are_two_real_network_actors(self):
+        self.add_wire_identity();self.server["cases"][0]["waves"][1]["network_identity"]=copy.deepcopy(self.server["cases"][0]["waves"][0]["network_identity"]);self.reject()
     def test_one_client_missing(self): self.clients.pop("B0");self.reject()
     def test_not_dedicated(self): self.server["native_mode"]="Standalone";self.reject()
     def test_same_actual_owner(self): self.server["player_ids"]["B0"]=256;self.reject()

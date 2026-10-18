@@ -3,6 +3,7 @@ import argparse
 import json
 from pathlib import Path
 from .grenade_widget_contract import require
+from .network_identity import key as wire_key,same as same_wire
 
 PEERS=("A","B0")
 PLAN=tuple((peer,profile) for peer in PEERS for profile in ("BlueprintFallback","Python"))
@@ -29,6 +30,9 @@ def client(report):
         require(report[field] is False,"client UI scope overclaim: "+field)
     require(report["observers_restored"] and report["test_owned_specs_removed"] and report["observation_errors"]==[],"client native cleanup/observation error")
     require(len(report["cases"])==len(PLAN),"native client UI matrix incomplete")
+    if report.get("network_identity_required"):
+        probe=report["native_identity_null_probe"]
+        require(probe["valid"] is False and probe["transport"]=="InvalidObject" and probe["wire_id"]=="","native null identity fabricated")
     for position,(row,(owner,profile)) in enumerate(zip(report["cases"],PLAN)):
         local=owner==report["peer"]
         require((row["position"],row["owner"],row["profile"],row["own"])==(position,owner,profile,local),"native viewer case identity differs")
@@ -39,6 +43,9 @@ def client(report):
                 wave["health"]==100. and wave["canonical_bound_asc"] is True and wave["own"] is local,
                 "actual native owner/foreign healthy canonical Pawn replacement missing")
             require(len(wave["widgets"])==(2 if local else 1),"own UI duplicate or foreign UI interference")
+            if report.get("network_identity_required"):
+                identity=wave["network_identity"]
+                require(wire_key(identity) is not None and identity["local_role"]==wave["source_role"],"native viewer wire identity/role missing")
         require(row["waves"][0]["pawn"]==row["waves"][1]["old_pawn"] and row["waves"][0]["widgets"]==row["waves"][1]["widgets"],"native reset sequence/UI persistence differs")
         if local: events(row["native_callbacks"],profile,report["owning_player_state"],local=True)
         else: require(row["native_callbacks"]==[],"foreign owner executed local cloned ability")
@@ -60,14 +67,26 @@ def validate(server,viewers):
             row["original_specs_restored"] is True,"authority spec restoration was not proven before native peer teardown")
     for peer,value in viewers.items():
         client(value);require(value["player_id"]==server["player_ids"][peer],"real native player identity differs")
+        require(bool(value.get("network_identity_required"))==bool(server.get("network_identity_required")),"partial native wire identity treatment")
+    if server.get("network_identity_required"):
+        probe=server["native_identity_null_probe"]
+        require(probe["valid"] is False and probe["transport"]=="InvalidObject" and probe["wire_id"]=="","authority null identity fabricated")
     for position,(row,(owner,profile)) in enumerate(zip(server["cases"],PLAN)):
         require((row["position"],row["owner"],row["profile"])==(position,owner,profile) and row["reset_requests"]==2 and
             row["native_locally_controlled"] is False and row["original_specs_restored"],"authority remote-owner lifecycle differs")
         events(row["native_callbacks"],profile,row["owning_player_state"],local=False)
         require(len(row["waves"])==2 and row["waves"][0]["pawn"]==row["waves"][1]["old_pawn"],"authority native reset sequence missing")
+        if server.get("network_identity_required"):
+            require(not same_wire(row["waves"][0]["network_identity"],row["waves"][1]["network_identity"]),"native resets reused one network Actor identity")
         for number,wave in enumerate(row["waves"],1):
             require(wave["number"]==number and wave["pawn"]!=wave["old_pawn"] and wave["health"]==100.,"authority new native healthy Pawn missing")
-            for peer in PEERS: require(wave["viewers"][peer]==viewers[peer]["cases"][position]["waves"][number-1],"native wave acknowledgement differs")
+            if server.get("network_identity_required"):
+                identity=wave["network_identity"]
+                require(wire_key(identity) is not None and identity["local_role"]==3,"native authority wire identity missing")
+            for peer in PEERS:
+                require(wave["viewers"][peer]==viewers[peer]["cases"][position]["waves"][number-1],"native wave acknowledgement differs")
+                if server.get("network_identity_required"):
+                    require(same_wire(identity,wave["viewers"][peer]["network_identity"]),"viewer bound a different network Actor despite matching player/health")
         for peer in PEERS: require(row["viewers"][peer]==viewers[peer]["cases"][position],"native final viewer acknowledgement differs")
     return dict(status="passed",actual_owners=2,native_grant_clear_trials=4,native_reset_requests=8,
         authority_avatar_callbacks=8,owner_avatar_callbacks=8,native_removal_callbacks=8,replicated_viewer_waves=16,full_acceptance=False)
