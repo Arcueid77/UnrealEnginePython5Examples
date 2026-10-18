@@ -59,7 +59,26 @@ class TestGrenadeWidgetNetworkContract(unittest.TestCase):
             for index,wave in enumerate(row["waves"]):
                 wave["viewers"]={peer:copy.deepcopy(value["cases"][position]["waves"][index]) for peer,value in self.clients.items()}
             row["viewers"]={peer:copy.deepcopy(value["cases"][position]) for peer,value in self.clients.items()}
+    def add_join_stress(self):
+        self.add_wire_identity()
+        requests=[]
+        for peer in PEERS:
+            self.clients[peer]["join_reset_stress_requested"]=True
+            for number in (1,2):
+                requests.append(dict(player_id=self.server["player_ids"][peer],old_actor=peer+str(number),request_number=number,
+                    old_network_identity=dict(valid=True,transport="Legacy",wire_id=str(self.server["player_ids"][peer]*10+number),local_role=3),
+                    native_reset_class="/Script/LyraGame.LyraGameplayAbility_Reset",native_reset_existing_specs=1,native_reset_callback_delta=1))
+        self.server["join_reset_stress"]=dict(enabled=True,completed=True,callback_replay=False,health_or_asc_written=False,
+            entry="SendGameplayEventToActor(GameplayEvent.RequestReset)",requests_per_owner=2,requests=requests)
     def test_complete_model(self): self.assertEqual(validate(self.server,self.clients)["native_reset_requests"],8)
+    def test_actual_bounded_join_input_model(self): self.add_join_stress();validate(self.server,self.clients)
+    def test_join_input_not_simply_enabled_without_exercising(self): self.add_join_stress();self.server["join_reset_stress"]["completed"]=False;self.reject()
+    def test_join_input_exact_budget_required(self): self.add_join_stress();self.server["join_reset_stress"]["requests"].pop();self.reject()
+    def test_join_input_native_callback_required(self): self.add_join_stress();self.server["join_reset_stress"]["requests"][0]["native_reset_callback_delta"]=0;self.reject()
+    def test_join_input_existing_native_spec_required(self): self.add_join_stress();self.server["join_reset_stress"]["requests"][1]["native_reset_existing_specs"]=0;self.reject()
+    def test_join_input_native_class_not_python_callback(self): self.add_join_stress();self.server["join_reset_stress"]["requests"][0]["native_reset_class"]="fake";self.reject()
+    def test_join_input_not_state_repair(self): self.add_join_stress();self.server["join_reset_stress"]["health_or_asc_written"]=True;self.reject()
+    def test_join_input_never_client_authority(self): self.add_join_stress();self.server["join_reset_stress"]["requests"][0]["old_network_identity"]["local_role"]=2;self.reject()
     def test_wire_ids_match_across_different_local_actor_paths(self): self.add_wire_identity();validate(self.server,self.clients)
     def test_same_player_and_health_do_not_replace_wire_identity_proof(self):
         self.add_wire_identity();self.clients["B0"]["cases"][0]["waves"][0]["network_identity"]["wire_id"]="999";self.sync_wire_acks();self.reject()
@@ -77,6 +96,12 @@ class TestGrenadeWidgetNetworkContract(unittest.TestCase):
         self.add_wire_identity();self.clients["B0"]["cases"][0]["waves"][0]["network_identity"]["local_role"]=2;self.sync_wire_acks();self.reject()
     def test_two_reset_waves_are_two_real_network_actors(self):
         self.add_wire_identity();self.server["cases"][0]["waves"][1]["network_identity"]=copy.deepcopy(self.server["cases"][0]["waves"][0]["network_identity"]);self.reject()
+    def test_lazy_observer_must_have_really_installed(self):
+        self.server["lazy_lifecycle_observation"]=dict(installed=False,restored=True,preloaded=False,cdo_written=False,event_files=["event.json"]);self.reject()
+    def test_lazy_observer_never_preloads(self):
+        self.clients["A"]["lazy_lifecycle_observation"]=dict(installed=True,restored=True,preloaded=True,cdo_written=False,event_files=["event.json"]);self.reject()
+    def test_lazy_observer_must_restore_after_close(self):
+        self.clients["B0"]["lazy_lifecycle_observation"]=dict(installed=True,restored=False,preloaded=False,cdo_written=False,event_files=["event.json"]);self.reject()
     def test_one_client_missing(self): self.clients.pop("B0");self.reject()
     def test_not_dedicated(self): self.server["native_mode"]="Standalone";self.reject()
     def test_same_actual_owner(self): self.server["player_ids"]["B0"]=256;self.reject()

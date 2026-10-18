@@ -10,6 +10,13 @@ PLAN=tuple((peer,profile) for peer in PEERS for profile in ("BlueprintFallback",
 CLASS="/ShooterCore/Input/Abilities/GA_Grenade.GA_Grenade_C"
 
 
+def lazy_observation(report):
+    value=report.get("lazy_lifecycle_observation")
+    if value is None: return
+    require(value["installed"] is True and value["restored"] is True and value["preloaded"] is False and
+        value["cdo_written"] is False and bool(value["event_files"]),"lazy lifecycle observation was not actually installed/restored without preload")
+
+
 def events(rows,profile,owner,*,local):
     require(len(rows)==3,"native Grenade avatar/avatar/removal event count differs")
     before=(False,True,True) if local else (False,False,False)
@@ -29,6 +36,7 @@ def client(report):
     for field in ("client_native_give_clear_called","native_give_clear_called_by_fixture","callback_replay","health_properties_written","ability_spec_properties_written","inventory_properties_written","native_ui_pool_written","full_acceptance","network_acceptance","packaged_runtime","physical_input_tested","grenade_throw_projectile_damage_migrated","packet_loss_tested","travel_rejoin_tested"):
         require(report[field] is False,"client UI scope overclaim: "+field)
     require(report["observers_restored"] and report["test_owned_specs_removed"] and report["observation_errors"]==[],"client native cleanup/observation error")
+    lazy_observation(report)
     require(len(report["cases"])==len(PLAN),"native client UI matrix incomplete")
     if report.get("network_identity_required"):
         probe=report["native_identity_null_probe"]
@@ -55,6 +63,7 @@ def client(report):
 def validate(server,viewers):
     require(server["status"]=="passed" and server["error"] is None and server["native_mode"]=="DedicatedServer" and
         set(viewers)==set(PEERS) and len(set(server["player_ids"].values()))==2,"two real owners/dedicated authority missing")
+    lazy_observation(server)
     for name in ("server_waited_for_client_process_exit","observers_restored","test_owned_specs_removed"):
         require(server[name] is True,"authority cleanup/exit gate missing: "+name)
     for name in ("health_properties_written","callback_replay","native_ui_pool_written","full_acceptance","packaged_runtime","physical_input_tested","packet_loss_tested","travel_rejoin_tested"):
@@ -68,6 +77,19 @@ def validate(server,viewers):
     for peer,value in viewers.items():
         client(value);require(value["player_id"]==server["player_ids"][peer],"real native player identity differs")
         require(bool(value.get("network_identity_required"))==bool(server.get("network_identity_required")),"partial native wire identity treatment")
+        require(bool(value.get("join_reset_stress_requested"))==bool(server.get("join_reset_stress")),"partial native join Reset treatment")
+    stress=server.get("join_reset_stress")
+    if stress is not None:
+        require(stress["enabled"] is True and stress["completed"] is True and stress["callback_replay"] is False and stress["health_or_asc_written"] is False and
+            stress["entry"]=="SendGameplayEventToActor(GameplayEvent.RequestReset)" and stress["requests_per_owner"]==2,"native bounded join Reset input proof missing")
+        requests=stress["requests"]
+        require(len(requests)==4 and {row["player_id"] for row in requests}==set(server["player_ids"].values()),"two-owner native join input budget not actually exercised")
+        for player_id in server["player_ids"].values():
+            rows=[row for row in requests if row["player_id"]==player_id]
+            require([row["request_number"] for row in rows]==[1,2] and rows[0]["old_actor"]!=rows[1]["old_actor"] and
+                not same_wire(rows[0]["old_network_identity"],rows[1]["old_network_identity"]),"join inputs did not target successive real native Pawns")
+            require(all(row["native_reset_class"]=="/Script/LyraGame.LyraGameplayAbility_Reset" and row["native_reset_existing_specs"]==1 and
+                row["native_reset_callback_delta"]==1 and row["old_network_identity"]["local_role"]==3 and wire_key(row["old_network_identity"]) is not None for row in rows),"join input lacks native existing Reset/actual callback/authoritative mapped Pawn")
     if server.get("network_identity_required"):
         probe=server["native_identity_null_probe"]
         require(probe["valid"] is False and probe["transport"]=="InvalidObject" and probe["wire_id"]=="","authority null identity fabricated")

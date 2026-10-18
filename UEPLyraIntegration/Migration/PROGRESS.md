@@ -191,6 +191,45 @@ sources; reviewed build proof remains explicitly built_requires_native_acceptanc
 and is hashed as an input,not relabeled a passed runtime run. Exact-index2557
 models/813-file closure and narrow tooling safety checks are required before
 local commit. General game-facing migration remains incomplete; no push/tag.
+73 is locally committed as Examplesea4f898/coree28a457 after exact2,557/813
+closure,six original dirty hashes unchanged.74 keeps the actual binding race
+open and installs an opt-in observer only after the normal Character binding
+already exists:no class preload/CDO write,selected Construction/BeginPlay once,
+native End/Destroyed and wire-id history. It must not use the earlier explicit
+startup treatment or repair ASC/Health. Models and a real reproduction still
+required; no defect cause/repair/stability acceptance is claimed.
+74 Host01/02 pass2,562/2,565 models. Network01LazyLifecycle fails the bounded
+history budget before gameplay: wire DTO local clocks/Actor age change each
+tick and were included in the state fingerprint. Keep the2,048-record budget;
+exclude only local clocks from change comparison,retain them in emitted rows,
+and prove Health/ASC/wire identity changes still trigger snapshots. No native
+state repair or successful gameplay/reproduction claim from this failed run.
+74 Host03 passes2,567. Network02LazyLifecycle passes4 native UI owner/Profile
+trials/wire equality and real exits,with lazy observer actually installed/
+restored and bounded119/86/85 histories. No pathological GameplayReady+empty
+canonical binding or destruction-before-Begin is captured; not a race fix.
+Network03JoinResetStress emits zero requests and fails its120s budget;
+Network04JoinEligibility records one inactive AutoRespawn root per owner.
+That unrelated active-root precondition is replaced by an already granted
+native LyraGameplayAbility_Reset spec plus an actual exactly-once native
+Character K2_OnReset counter delta after SendGameplayEventToActor. No callback
+is invoked by the fixture.04 is stopped with failed evidence preserved.
+Host06 passes2,576. Network05NativeJoinReset actually executes4 mapped native
+Reset requests(two successive distinct Pawns per real owner),callback delta1
+each,then terminal PASSes the original full UI/native-wire/role/cleanup/exits
+matrix. Lazy histories remain bounded,all observed constructions reach Begin,
+zero pathological canonical-ready-empty-bindings. It does not reproduce/fix
+the original issue. Add independent input-budget/callback counterexamples,
+repeat unchanged native stress,keep race open and continue migration work.
+74 Host07 passes2,584 including independent actual-input budget/callback/
+authority counterexamples. Network06NativeJoinReset repeats unchanged runtime
+and terminal PASSes real4 native join Reset inputs plus the full4 normal UI
+owner/Profile/8 additional Reset/16 wire viewer-wave matrix and all exits/gates.
+Three final native runs/six matched sources are ledgered as infrastructure,
+not a defect fix. Verify exact2,584 models/817-file closure before committing.
+Keep the original failure as a tracked unresolved risk; next75 advances real
+Grenade activation/aim/montage/spawn business,with native original/Python
+differentials and current multiplayer regressions,not a smaller goal.
 
 Batch69 is locally committed as Examplesa72cd16/corebcf8d50. Exact index passes
 2,375 models/788-file closure; five final native runs and nine scoped sources

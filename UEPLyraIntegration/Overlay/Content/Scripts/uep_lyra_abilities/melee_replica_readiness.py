@@ -13,6 +13,14 @@ from uep_lyra_world.effect_pad_mixin import valid, ability_system
 def path(value): return value.get_path_name() if valid(value) else None
 
 
+def change_fingerprint(value):
+    def stable(data):
+        if isinstance(data,dict): return {key:stable(item) for key,item in data.items() if key not in ("world_seconds","actor_age_seconds")}
+        if isinstance(data,list): return [stable(item) for item in data]
+        return data
+    return json.dumps(stable(value),sort_keys=True)
+
+
 def asc_state(asc):
     if not valid(asc): return None
     attributes = []
@@ -126,7 +134,7 @@ class EarlyWatch:
                 actor_path=path(pawn)
                 if actor_path not in self.watched:
                     self.watch(pawn,actor_path)
-                row=snapshot(pawn,health);fingerprint=json.dumps(row,sort_keys=True)
+                row=snapshot(pawn,health);fingerprint=change_fingerprint(row)
                 if self.last.get(actor_path)!=fingerprint:
                     self.last[actor_path]=fingerprint;self.publish("native-binding-change",row)
     def close(self):

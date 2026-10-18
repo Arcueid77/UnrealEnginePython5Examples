@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "batch": "74-bounded-lazy-lifecycle-join-inputs",
+  "scope": "Diagnostic/test infrastructure only,NOT original empty-ASC/Health0 race cause or repair. Network02LazyLifecycle proves observer installs only after normal Character binding,no class preload/CDO write,selected Construction/Begin once,native End/Destroyed bounded immutable wire-id history and restored classes. Local clock/Actor age excluded only from change fingerprint,kept in emitted snapshots;2048 cap unchanged. Network05NativeJoinReset/06 unchanged repeats actually send4 native GameplayEvent.RequestReset inputs(two successive mapped Pawns per real owner),existing native LyraGameplayAbility_Reset spec,actual exactly-one native Character Reset callback delta each;UI checkpoints start only after input budget completes. Both then pass4 actual owner/Profile Give/Clear trials,8 additional native Reset requests,16 wire-matched healthy own/foreign Pawn viewer waves,local/foreign UI/spec/quiet/cleanup/live-before-release snapshots and independent gates/strict closed logs/real0/0/0 server-last exits.2584 host models. Failed01 history fingerprint,03 zero-input timeout,04 eligibility diagnostic retained. Unrelated AutoRespawn-active gate was replaced by native Reset spec+actual callback evidence,not forced activation. No raw Health/ASC/spec/pool repair,callback/repl replay,Cpp build,cook/package,Engine/official edits,physical-input/loss/travel/rejoin/full Grenade/version/publication claim. Current observed histories do NOT reproduce the original canonical GameplayReady+empty binding;race stays OPEN while further business migration proceeds.",
+  "recorded_utc": "2026-10-18T07:08:07.4189682Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "e28a457174ec26109d7e3a756cb3ebc0d85ea736",
+  "examples_parent_commit": "ea4f898e4d3e8836321b20031e52a8a0f87343b4",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-pawn-binding-race/Network02LazyLifecycle",
+      "summary_sha256": "3C1757975B890176C6164B0B6EB36E49920322E23DED6D80FC9F821B0F9F0CF6",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1969,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "server": 0,
+        "A": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "4A2BB1ACBBD13E16FAFEA0A9BA174E919C71304FB4D3D690E76E3DE801644934",
+          "file": "server.json"
+        },
+        {
+          "sha256": "A1E0D7B831F0C0050BD818A346EEBD25D9F36A6EA67987DF9BA691611029199C",
+          "file": "A.json"
+        },
+        {
+          "sha256": "00C58DBD552B24DC70945404926122725C48CF5D1FA0C47506B493EA67F8AA6D",
+          "file": "B0.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-pawn-binding-race/Network05NativeJoinReset",
+      "summary_sha256": "D048DF4739D46DA6C0C158664848756629C203C3C88693BF4400B890CB6CB53F",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1971,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "server": 0,
+        "A": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "CC69A57934542C053C5A0319EA6AC88FC26D1C8370ACBF017EFF69335A0DA11F",
+          "file": "server.json"
+        },
+        {
+          "sha256": "89EB5D5438D68AE1104A79AE333AE0E39B0433A08DD638B2601DC2D26BD2C31F",
+          "file": "A.json"
+        },
+        {
+          "sha256": "51519EBD4A555637FB92704BCC43B0F22EF3776A699B7239F6F7C26A3DE2FA79",
+          "file": "B0.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-pawn-binding-race/Network06NativeJoinReset",
+      "summary_sha256": "2C3882162E7B530B10621C3A0FE3783D560A034C089805622FEF36B1F8C66548",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1971,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "A": 0,
+        "server": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "AC5910AEF8803DBCCE189CB99B76DC6E8013235021D18DB785D12375D94F3103",
+          "file": "server.json"
+        },
+        {
+          "sha256": "7F088B876483287467196654E54CB7792A54EE54E63CC9DE31BA44A88AD288B0",
+          "file": "A.json"
+        },
+        {
+          "sha256": "800E4F0F462A947AA1C3E71CB682A4569D05B815D613F514D325C1040445B922",
+          "file": "B0.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "696050BFDB5710729EF8E4A100539C2C5BB754F0E983439E9643CB7D793CCFF6",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "path": "Validation/Run-UEP58JumpValidation.ps1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "F8DDFC9423D77B16F3DE6E4E6776578AF0B8801FE1201EF0CD67A64EF860AAC0",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/grenade_widget_network_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/grenade_widget_network_validation.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "49A0C708B54DF8F5793B2DF0DB2EF80CD0130BF7E1B7FDC76573A808D87F257A",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/grenade_widget_network_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/grenade_widget_network_contract.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "42DDCE2E9333D3EC83F74735FB4B048B6DDC8C327CC685FFE4C69C447BA37B4C",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_replica_readiness.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_replica_readiness.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "3B2B761ADCF96A7F0C7C3C1F6E26F9BD60CA8E34F0380A68217A10FBFF2DE788",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/lazy_pawn_lifecycle_observation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/lazy_pawn_lifecycle_observation.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "5CC5E4CE8B386BEC9729FF757BC1376A7BDE40646D400720D2B585C1087D5B38",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/join_reset_stress.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/join_reset_stress.py"
+    }
+  ],
+  "host_report": {
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 2584,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "sha256": "246AC3CCD2146883F3D683026F7613581D58317B616706DFA6485EF6FE793CA4",
+    "path": ".build/LyraValidation/BlueprintPython/20261018-pawn-binding-race/Host07.json"
+  }
+}

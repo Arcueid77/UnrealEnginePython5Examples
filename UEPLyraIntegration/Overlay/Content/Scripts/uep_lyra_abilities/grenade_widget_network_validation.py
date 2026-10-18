@@ -26,6 +26,8 @@ def object_path(value): return value.get_path_name() if valid(value) else None
 
 
 def poll_diagnostics(validation):
+    lazy=getattr(validation,"lazy_lifecycle_observation",None)
+    if lazy is not None: lazy.poll()
     diagnostic=getattr(validation,"lifecycle_diagnostic",None)
     if diagnostic is not None:
         control,watch=diagnostic;control.observe_registration();watch.poll()
@@ -33,6 +35,8 @@ def poll_diagnostics(validation):
 
 
 def close_diagnostics(validation):
+    lazy=getattr(validation,"lazy_lifecycle_observation",None)
+    if lazy is not None: lazy.close()
     diagnostic=getattr(validation,"lifecycle_diagnostic",None)
     if diagnostic is not None:
         control,watch=diagnostic;control.restore();watch.close()
@@ -46,7 +50,8 @@ class Client(Single):
         self.wire_required="-UEPRequireNetworkIdentity" in sys.argv
         self.position=0;self.processed=None;self.command=None
         self.report.update(peer=peer,run_id=run,client_native_give_clear_called=False,native_give_clear_called_by_fixture=False,
-            packet_loss_tested=False,travel_rejoin_tested=False,network_identity_required=self.wire_required)
+            packet_loss_tested=False,travel_rejoin_tested=False,network_identity_required=self.wire_required,
+            join_reset_stress_requested="-UEPJoinResetStress" in sys.argv)
     def ready(self):
         if token(self.root,"playing-ready.json",self.run) is not None: super().ready()
     def begin(self):
@@ -167,6 +172,10 @@ class Server(Playing):
         self.wire_required="-UEPRequireNetworkIdentity" in sys.argv
         self.report.update(native_mode="DedicatedServer",observation_errors=self.observation_errors,health_properties_written=False,
             callback_replay=False,native_ui_pool_written=False,packet_loss_tested=False,travel_rejoin_tested=False,network_identity_required=self.wire_required)
+        self.join_stress=None
+        if "-UEPJoinResetStress" in sys.argv:
+            from .join_reset_stress import JoinResetStress
+            self.join_stress=JoinResetStress(self.root,run);self.report["join_reset_stress"]=self.join_stress.report
     def capture_spec_cleanup(self):
         rows={}
         for peer,value in self.owners.items():
@@ -264,7 +273,8 @@ class Server(Playing):
         try:
             require(time.monotonic()-self.started<500.,"native Grenade UI authority total timeout")
             poll_diagnostics(self)
-            if not self.playing_gate: self.wait_playing()
+            if self.join_stress is not None and not self.join_stress.done: self.join_stress.poll()
+            elif not self.playing_gate: self.wait_playing()
             elif not self.owners: self.setup()
             elif not self.installed and self.stage is None: self.prepare();self.start()
             else:
@@ -299,6 +309,12 @@ if result:
     else: diagnostic_control=None
     validation=Server(result,run) if peer=="server" else Client(result,peer,run)
     validation.lifecycle_diagnostic=None
+    validation.lazy_lifecycle_observation=None
+    if "-UEPLazyPawnLifecycle" in sys.argv:
+        if diagnostic_control is not None: raise RuntimeError("lazy observation must not use a preloaded Character treatment")
+        from .lazy_pawn_lifecycle_observation import LazyPawnLifecycleObservation
+        validation.lazy_lifecycle_observation=LazyPawnLifecycleObservation(validation.root,peer,run)
+        validation.report["lazy_lifecycle_observation"]=validation.lazy_lifecycle_observation.report
     if diagnostic_control is not None:
         watch=readiness.EarlyWatch(validation.root,peer,run);diagnostic_control.observe_births(watch,construction=True)
         validation.lifecycle_diagnostic=(diagnostic_control,watch)

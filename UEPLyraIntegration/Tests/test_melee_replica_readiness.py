@@ -77,6 +77,17 @@ class TestMeleeReplicaReadiness(unittest.TestCase):
         text=Path(observation.__file__).read_text(encoding="utf-8")
         for forbidden in ("set_property(","InitializeWithAbilitySystem","UninitializeFromAbilitySystem","SetNumericAttribute", "RemoveLooseGameplayTag"):
             self.assertTrue(forbidden not in text,forbidden)
+    def test_wire_identity_clocks_do_not_turn_change_history_into_tick_history(self):
+        first=dict(health=100.,network_identity=dict(valid=True,transport="Legacy",wire_id="42",world_seconds=1.,actor_age_seconds=.2))
+        second=dict(health=100.,network_identity=dict(valid=True,transport="Legacy",wire_id="42",world_seconds=2.,actor_age_seconds=1.2))
+        self.assertEqual(observation.change_fingerprint(first),observation.change_fingerprint(second))
+        self.assertEqual(first["network_identity"]["world_seconds"],1.)
+    def test_wire_or_binding_change_still_publishes(self):
+        first=dict(health=100.,network_identity=dict(valid=True,wire_id="42",world_seconds=1.))
+        second=dict(health=0.,network_identity=dict(valid=True,wire_id="42",world_seconds=2.))
+        third=dict(health=100.,network_identity=dict(valid=True,wire_id="44",world_seconds=2.))
+        self.assertNotEqual(observation.change_fingerprint(first),observation.change_fingerprint(second))
+        self.assertNotEqual(observation.change_fingerprint(first),observation.change_fingerprint(third))
 
 
 class EndPlayActor:
