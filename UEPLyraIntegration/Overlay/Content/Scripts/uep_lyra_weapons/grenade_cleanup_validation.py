@@ -36,7 +36,9 @@ class Validation(Ready):
         self.other=self.world.actor_spawn(ue.find_class("SpectatorPawn"),ue.FVector(200000.,200000.,2000.));self.actors.append(self.other)
         require(valid(self.other) and not self.other.is_a(ue.find_class("Character")),"actual non-Character Pawn source missing")
         self.other.call_function("SetActorEnableCollision",False);owner=self
-        for name,base in (("Python",policy.LyraGrenadeCleanupPythonProfile),("BlueprintFallback",policy.LyraGrenadeCleanupBlueprintFallbackProfile)):
+        binding,=[value for value in ue.get_registered_mixins() if value["target_class"]==self.cls]
+        self.original_profile_classes={name:value["python_class"] for name,value in binding["profiles"].items()}
+        for name,base in self.original_profile_classes.items():
             def around(handler,profile):
                 def invoke(actor):
                     watched=actor==owner.target;row=None
@@ -48,7 +50,9 @@ class Validation(Ready):
                         try: row.update(after=owner.state(actor),stats=copy.deepcopy(policy.evidence(actor)));owner.events.append(row)
                         except Exception: owner.report["observation_errors"].append(traceback.format_exc())
                 return invoke
-            ue.register_mixin_profile(self.cls,name,type("ObservedGrenadeCleanup"+name,(),dict(SetupVFX=base.SetupVFX,PostLaunchCleanup=around(base.PostLaunchCleanup,name))))
+            methods={key:value for key,value in vars(base).items() if not key.startswith("__") and callable(value)}
+            methods["PostLaunchCleanup"]=around(base.PostLaunchCleanup,name)
+            ue.register_mixin_profile(self.cls,name,type("ObservedGrenadeCleanup"+name,(),methods))
         self.installed=True;self.enter("spawn")
     def spawn(self):
         name,profile=PLAN[self.index];instigator=self.pawn if name=="character" else self.other if name=="non-character-pawn" else None
@@ -88,9 +92,9 @@ class Validation(Ready):
         for actor in self.actors:
             if valid(actor) and not actor.call_function("IsActorBeingDestroyed"): actor.call_function("K2_DestroyActor")
         if self.installed:
-            for name,base in (("Python",policy.LyraGrenadeCleanupPythonProfile),("BlueprintFallback",policy.LyraGrenadeCleanupBlueprintFallbackProfile)): ue.register_mixin_profile(self.cls,name,base)
+            for name,base in self.original_profile_classes.items(): ue.register_mixin_profile(self.cls,name,base)
             binding,=[value for value in ue.get_registered_mixins() if value["target_class"]==self.cls]
-            self.report["production_classes_restored"]=all(binding["profiles"][name]["python_class"] is base for name,base in (("Python",policy.LyraGrenadeCleanupPythonProfile),("BlueprintFallback",policy.LyraGrenadeCleanupBlueprintFallbackProfile)))
+            self.report["production_classes_restored"]=all(binding["profiles"][name]["python_class"] is base for name,base in self.original_profile_classes.items())
         self.report.update(remaining_test_actors=len([actor for actor in self.actors if valid(actor) and not actor.call_function("IsActorBeingDestroyed")]),
             all_pawn_health_unchanged=self.healths()==self.health_before if hasattr(self,"health_before") else False,
             source_capsule_ignores_restored=ignored(self.pawn.get_property("CapsuleComponent"))==self.original_capsule_ignores if hasattr(self,"original_capsule_ignores") else False)

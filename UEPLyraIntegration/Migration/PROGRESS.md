@@ -13,7 +13,58 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active bounded batch78 (2026-10-18):** retained Actor PostLaunchCleanup
+**Active bounded batch79 (2026-10-18):** retained Actor Teleport Grenade/
+Destroy Grenade ordinary entries.78 locally committed Examplese49edd5/
+core2b8b63b after isolated2,742 models/838-file closure. Current79 Host01
+passes2,755 but Assets01 fails native registration because unused Niagara
+OnSystemFinished PSystem parameter was omitted from DestroyGrenade signature.
+Exact Stage/Overlay hashes verified rolled back to accepted78;failure retained.
+Preserve PSystem in both Profiles/fallback call;Host02 passes2,756 and Assets02
+terminal PASSes4 methods per Profile,same Actor/full CDO/all original graphs/
+seven signatures/reliable RPC flags/native register+restore,no new business
+nodes. Both canonical shared assets revised but NOT runtime accepted yet.
+Teleport saves native ProjectileMovement.Velocity magnitude before validated
+NS_Trail guard;missing trail stops there. Otherwise deactivate old trail,
+native no-sweep/teleport location,set native movement Activate(reset=True),
+assign forward*(conserved/2) without normalizing input,then existing Setup VFX.
+Destroy forwards the unused PSystem argument on fallback and uses native
+K2_DestroyActor in Python. Original timers/fuse/reliable Detonate stay BP.
+Host/native ordinary-entry differential drafted;Differential01 is starting
+with unit/nonunit/zero/native-component-destroyed guard cases. Fixture's
+zero velocity uses native SetVelocityInLocalSpace,not raw property writes;
+Host03 passes2,776 models. Differential01 completes8 teleport/destroy entries
+but final FAILS the fixture assumption that Niagara Deactivate means inactive
+in the same frame. Native original BP also keeps IsActive until its particles
+complete;NiagaraComponent::DeactivateInternal explicitly sets active to
+!IsComplete. Keep original Deactivate,never substitute DeactivateImmediate.
+First original has a cold-not-ready component,so common native Niagara warmup
+is now required before pairs,paired old-component active flags compared and
+natural trail-completion/particle playback explicitly NOT claimed. Host04/
+Differential02NativeDeactivate are running;no native action pass yet.
+Corrected02NativeDeactivate and current03Final now terminal PASS all8 native
+ordinary teleport/destroy cases:half conserved speed/nonunit forward/zero/
+native component-destroyed guard,actual location/velocity/trail replacement/
+paired delayed old-component state,all Actor destruction/Health/quiet/current
+class checks,independent gates/strict closed logs/actual exit0. Host05 passes
+2,779;launcher safety17. Current CleanupRegression01 also terminal PASSes6
+actual native timer cases on the complete four-method family,which its
+observer now preserves/restores dynamically. VFXRegression01 is running with
+strict77->78->79 revision hashes/current asset proof;unchanged action repeat
+still required before local commit. No natural trail completion or particle
+pixels/playback/physics/network/fuse/Detonate/damage/full Actor claim.
+no BeginPlay or native completion delegate replay. Shared-family VFX/cleanup
+regressions,headless/network/flight/collision/Hit/fuse/Detonate/damage/full
+Actor/version still open. No Engine/official edits,Cpp build/package/push/tag.
+79 current VFXRegression01 now terminal PASSes6 cases/12 native color-store
+reads on the full four-method family. Unchanged Differential04 terminal
+PASSes all8 ordinary teleport/destroy cases again;all independent gates/
+strict closed logs/actual exit0. Native03/04,cleanup and VFX current-family
+regressions are final79 evidence. Record bounded79 ledger and isolate exact
+2,779 models/844-file closure before local commit. Actor BeginPlay/Hit/fuse/
+reliable Detonate/damage,natural particle completion/headless/physics/network
+and full Actor/version remain open;70b race is not fixed.
+
+**Completed bounded batch78 (2026-10-18):** retained Actor PostLaunchCleanup
 callback.77 is locally committed Examples2379248/core61a3d98 after isolated
 2,709 models/832-file closure. Preserve the six original user-dirty files.
 78 Host01 failed only the new isolated test module's relative-import package

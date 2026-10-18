@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "batch": "79-grenade-native-teleport-destroy",
+  "scope": "Bounded standalone retained Actor ordinary Teleport Grenade/Destroy Grenade entries,not full Actor/version. Assets02 preserves Actor/full CDO/all original graphs/seven signatures/reliable RPC flags/native timers,4 methods per Profile,no new business nodes. Assets01 native registration failed omitted unused Niagara completion PSystem input;both Stage/Overlay exact78 bytes rollback verified,parameter/fallback retained then02 passes. Final current03Final/unchanged04 each prove8 actual native ordinary-entry pairs:original projectile speed saved before trail validity,valid/no-sweep native location/reset movement activation/forward*(speed/2) not normalized/new VFX,zero velocity via native SetVelocityInLocalSpace,destroyed native component invalid guard changing conserved only,actual Actor destruction/Health/quiet/current classes/strict closed logs/independent gate/exit0. Native01 fails wrong instant Niagara inactivity assumption;native source and BP keep IsActive until completion. Common harmless plain-Actor native system/PSO warmup3 active ticks;paired old-component active states match,do not use DeactivateImmediate or claim natural completion. Current CleanupRegression01 proves6 actual0.16s native timer callbacks/ignore/rotation;VFXRegression01 proves6 cases/12 actual native parameter-store RGBA reads,complete4-method family retained/restored and strict77->78->79 revision hashes.2779 host models. Test collision disabled,no raw fixture velocity/Health/timer writes,no lifecycle/completion delegate replay;ordinary business entries intentionally called by fixture. No quantitative flight/collision,particle pixels/natural completion/headless/projectile replication,remaining BeginPlay/Hit/fuse/reliable Detonate/damage,physical input,loss/travel/rejoin/full Actor/version/publication claim. No Engine/official edits,Cpp build or package.70b original startup binding race stays OPEN.",
+  "recorded_utc": "2026-10-18T09:50:02.8439468Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "2b8b63ba1b81ff07aba38eb93ad22e6232db7e3a",
+  "examples_parent_commit": "e49edd55548bc148d752ecc8aadc9e2b827be5b5",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-grenade-actions/Assets02",
+      "summary_sha256": "6E56935F4ED76FDF1203306914FEFAB3C322429AF179FBE4B31910A30C4741A3",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1717,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-grenade-actions/Differential03Final",
+      "summary_sha256": "21F1B04EF754835C358C9EE180F29A8BACB37B6E44396F14924CC6FAF18D1328",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1992,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "4ADB26D0DFD17C9B902B9A6EA90A33B8C7A4644AD327889633B355ABD830A4DA",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-grenade-actions/Differential04",
+      "summary_sha256": "31EE67C4FAAE2FFA5DF07D51BDDDA277772F5A1A6B0B6CAEC988EED69D090C55",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1992,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "4B3B6F2DF4F8A4C45ABCF6C3C33B7262A72976ABB60912C59B434B793DF970E6",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-grenade-actions/CleanupRegression01",
+      "summary_sha256": "D4EADD4CB66BCAFF5CDBD76A87E7E93F089D735AD6BAE30717F360B5C3AFB00C",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1997,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "940BDEC4A45149EAE8FCA3BD4E953B26983D88BF33E38171336DD6419F36772A",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-grenade-actions/VFXRegression01",
+      "summary_sha256": "F707176F6E14B49AB5D24435EEC9081721667B09B24E9DD427FB0372EA5363A8",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2001,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "768B7D543EB568EE149645F1A768DC45D12A707BE592EF2B1F0E313A0EDE77C3",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_actions_mixin.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_actions_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "B32CC0F72307A1954CF87181345E4A50C3C2E8610FD242A5A181269BB769A7CA"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_actions_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_actions_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "CE2B6F9DCB5D2DCF387278329726B521BB67587039BBC0F625D78E1CBB3069CC"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_actions_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_actions_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "524CE6183CF1E69E79236047805482E5F67646A203B71E26538CBC99F553516A"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_cleanup_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_cleanup_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "08D9C13810D1E79A7198851E1AD5711A0AFCA710328E7D26E31121137EF45B86"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_grenade_actions_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_grenade_actions_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "6EBE54D586AD39419D99B57C75CC864BAB672915EACF0792FCF25FADE2DEE1E2"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "8A7F41C8C0E3FB4A3A6CBC85408E05D3F4F4724B729B7863A026D177BF516D0B"
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58DashRPCInputAssetAuthoring.ps1",
+      "path": "Validation/Run-UEP58DashRPCInputAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "8F02E869CD18DFE42D19BC5F9179A4B9122E830D9DE933F2857C67320E9ADF62"
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "B4389A7EC982CFF0F2B7CCDC39F1ACDF5533B21970C253B322D3119C23CCDB5A"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261018-grenade-actions/Host05.json",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 2779,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "sha256": "73FF407206585C9C60562F2EA81EDBFF50279B1AE86BD0613F9329D39833D64C"
+  }
+}
