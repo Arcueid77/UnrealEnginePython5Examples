@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "batch": "82-grenade-native-blocking-hit-policy",
+  "scope": "Bounded standalone native ReceiveHit policy/non-detonating contacts only,not full Hit/Actor/version. Assets01 same Actor/full CDO/all original graphs/seven signatures/reliable RPC flags,6 functions per Profile,no business graph edits. Python keeps8 reflected inputs,native CompareTeams(Other,Instigator);DifferentTeams clear/invalidate native opaque fuse/write out handle then request unchanged reliable Detonate then native impact sound;same/invalid onlysound. Cache same native World/POD before possible headless synchronous Actor destruction. Final current02Final/unchanged03 each prove4 actual engine blocking sweep-generated ReceiveHit events,invalid-team wall and same-team real bot x original/Python,exact Other/components/finite hit location/native comparison,unchanged active fuse/Health,Actor/bot pose/current6-method classes/20 quiet ticks cleanup,independent gate/strict closed logs/actual exit0. Native01 also passed.No ReceiveHit replay/raw fixture velocity/Health writes. Current-family BeginRegression01(6 actual BeginPlay/native cleanup/Actor timers),ActionsRegression01(8 ordinary entries),VFXRegression01(6+12 actual reflected native color reads),HeadlessRegression01(6 true dedicated no-render cases) all pass strict current six-method revision hashes/full current class preservation/gates/closed logs/exits.2851 host models,safety23. Audio library request intent/assets/options match audited BP and models;NoSound lane is NOT sound playback proof. Native DifferentTeams/fuse invalidation/RPC enemy explosion/damage branch is IMPLEMENTED AND MODEL-COVERED BUT NOT native accepted. No RPC body migration,natural particle completion,pixels,projectile replication/quantitative flight,physical input,loss/travel/rejoin/full Actor/version/publication claim. No Engine/official edits,Cpp compile or package.70b original startup binding race stays OPEN.",
+  "recorded_utc": "2026-10-18T11:21:45.1273284Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "7f82a76f23709e1e472d7364199d95913e430dd0",
+  "examples_parent_commit": "de550e47f4d5f0bbf3d1780a9ec24782097140d5",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-grenade-hit/Assets01",
+      "summary_sha256": "77FBE019CDCBE31C775C6B24C50776E0534F54E789807C5744CC0963E76884B9",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1731,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-grenade-hit/Differential02Final",
+      "summary_sha256": "0BD79202B1293DC7994891FFB529D4555C4612C4BBE0900A4B187D29C8D4DFB4",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2005,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "B22AB02398BBAF1AB7050D8955A7C818ABD04DEF97DCA4763D01C36150DFE748"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-grenade-hit/Differential03",
+      "summary_sha256": "FD9AA6378B73B2F5A722C45F65FF390EED7CDAD95478550B6D8FB4F72574A1C5",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2005,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "B22AB02398BBAF1AB7050D8955A7C818ABD04DEF97DCA4763D01C36150DFE748"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-grenade-hit/BeginRegression01",
+      "summary_sha256": "F241F0D2348BDEFA5406E66C0439C6823DA3EBB35FA34031951CBCC20D6E0B45",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2011,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "57FF861C9BEADD00D69A77808C3300CC3867B9841610446759647A282D872FF5"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-grenade-hit/ActionsRegression01",
+      "summary_sha256": "1E520ACB29E3DB48AF6C409EBC9D94672F3566DEFF3D29808ACFC229C19799AF",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2008,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "4ADB26D0DFD17C9B902B9A6EA90A33B8C7A4644AD327889633B355ABD830A4DA"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-grenade-hit/VFXRegression01",
+      "summary_sha256": "FE2DEFFD75A63279C2B5B2FDB2597E314A3B4706BEED00E236D74277E91B0C6A",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2017,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "768B7D543EB568EE149645F1A768DC45D12A707BE592EF2B1F0E313A0EDE77C3"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-grenade-hit/HeadlessRegression01",
+      "summary_sha256": "9AC605065C73DC63A0228D4177327DD4B4D7D5AF84B85DCAE454F746CB49129A",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2011,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "1855AC6BCF4A5681F83DDF981CED0408C0B2232F3668C30998C4B2941309F138"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_hit_mixin.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_hit_mixin.py",
+      "sha256": "BFAE2D4AF8422EE6CB537FDF70B97F7699CB77ABC9EA1DBD500F3CC9BE1F5C83",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_hit_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_hit_validation.py",
+      "sha256": "7B144EBE457FE387F1C30A4FD395C4FA78C41418CEAC4FAC779FDFDFC15E0B01",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_hit_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_hit_contract.py",
+      "sha256": "63DD8623224E1DCADAA96EEF880D40FEF066B030CACE8B0563C990C695CF89D9",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_grenade_hit_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_grenade_hit_assets.py",
+      "sha256": "CBF02D3067504C5CC1AF99EEBDE751914CC517A2D955EE4CB0D7195CAAA4FD8C",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "EB4B633B5C6C22854D12EEA60AEA3D96C7B6090360445ED09962C54B69804E94",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Validation/Run-UEP58DashRPCInputAssetAuthoring.ps1",
+      "native_input_path": "Validation/Run-UEP58DashRPCInputAssetAuthoring.ps1",
+      "sha256": "01F071D4A9C00D41EE468773559F2545B193202736B059B91E31B6F12D21B561",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "1059D684BCF384CB067ECF314425D260A3FB4F69E08771BE911B1569E931A215",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261018-grenade-hit/Host03.json",
+    "sha256": "15F2C59C4511492284E5A93FB8CF284AD981AF0FA8BA59B0AFE0170374658FC3",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 2851,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    }
+  }
+}

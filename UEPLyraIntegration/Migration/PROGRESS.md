@@ -13,7 +13,39 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active bounded batch81 (2026-10-18):** native dedicated-server/no-render
+**Active bounded batch82 (2026-10-18):** retained Actor ReceiveHit business.
+81 locally committed Examplesde550e4/core7f82a76 after isolated2,825 models/
+852-file closure. Hit Python preserves all8 reflected inputs,compares native
+Other(A) vs Instigator(B),DifferentTeams clears/invalidates original fuse and
+writes native out handle before requesting unchanged reliable Detonate RPC;
+same/invalid teams skip detonation. Native impact sound/attenuation/unit
+volume/pitch/start0/auto-destroy retained. Cache same native World and local
+POD counters before RPC since headless original Detonate may destroy Actor
+synchronously. No RPC override introduced. Host01 passes2,837;Assets01
+terminal PASSes6 functions per Profile,same Actor/full CDO/all original
+graphs/seven signatures/reliable RPC flags/native register+restore,no new
+business graph nodes. Both shared canonical assets revised but NOT runtime
+accepted yet. Native swept blocking-contact fixture/gate drafted and
+Differential01 starting:invalid-team wall/same-team real friendly bot,
+engine-generated ReceiveHit (no replay),Other/components/location/native
+team result,unchanged active fuse,production branch counts/Actor/Health/
+bot pose/class/quiet cleanup. Native enemy-hit cancellation/RPC/explosion,
+audio playback,quantitative flight/network/full Actor/version remain OPEN.
+No Engine/official edits,Cpp compile,cook/package/push/tag/release.
+82 Host02/03 pass2,851. Native01,final02Final and unchanged03 all terminal
+PASS4 actual native blocking sweep -> ReceiveHit trials(invalid-team wall/
+same-team live bot x original/Python),exact Other/components/finite location/
+native compare result,unchanged active fuse and Health/bot pose/Actor/current
+class/quiet teardown,independent gate/strict closed logs/exit0. No callbacks
+replayed. Current six-method family BeginRegression01(6 BeginPlay+cleanup),
+ActionsRegression01(8),VFXRegression01(6+12 actual color-store reads),and
+HeadlessRegression01(6 actual no-render cases) all PASS strict current-revision
+hashes/full-class preservation/gates/closed logs/real exits. Enemy clear-handle/
+RPC/explosion branch and actual audio playback are still unverified native
+gates,not certified by wall/friendly controls or model counters. Record bounded
+82 ledger and isolate exact2,851 models/858-file closure before local commit.
+
+**Completed bounded batch81 (2026-10-18):** native dedicated-server/no-render
 branch of current5-method Actor family;test infrastructure only.80 locally
 committed Examples9b44b6e/core098ef5d after isolated2,809 models/850-file
 closure. Native launch safety first rejected a second common argument
