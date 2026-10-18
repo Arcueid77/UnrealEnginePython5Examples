@@ -13,7 +13,59 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active bounded batch79 (2026-10-18):** retained Actor Teleport Grenade/
+**Active bounded batch80 (2026-10-18):** retained Actor ReceiveBeginPlay.
+79 locally committed Examplesfd20384/coreced03af after isolated2,779 models/
+844-file closure;no push/tag/release. Python now owns original material mip
+request3s/fast flags,Character-only reverse ignores,existing VFX call,then
+Actor-owned native fuse timer/opaque Timer handle storage and0.16s cleanup
+timer. Use existing KismetSystemLibrary.K2_SetTimer(Object=Actor,FunctionName)
+for zero-input Detonate/PostLaunchCleanup;local native source binds that same
+Actor UFunction and forwards to original K2_SetTimerDelegate,zero jitter as
+authored. No Python lambda/alternate timer owner/ticker/new BP or Cpp adapters.
+Host01 passes2,791. Assets01 terminal PASSes same Actor/full CDO/all graphs/
+seven signatures/reliable RPC flags/native register+restore,now5 methods per
+Profile,no new business nodes. Shared canonical assets revised but NOT runtime
+accepted yet. Native BeginPlay/timer fixture is drafted and Differential01
+starting:actual Spawn/Begin before/after ignores,by-handle/by-named-function
+timer parity,original2s/.16s,real cleanup callback,source/Actor/class cleanup
+and timer-handle removal on Actor destruction. Fuse detonation itself not
+replayed or accepted. Shared VFX/cleanup/actions regressions,headless/network/
+flight/Hit/reliable Detonate/damage/full Actor/version remain open;70b race
+still open. No Engine/official edits,Cpp build or package.
+80 Host02 passes2,806. Differential01 completes all6 BeginPlay/cleanup cases
+but final FAILS the fixture assumption that Actor destruction removes the
+fuse handle immediately. Native original/Python both retain handle entries
+until original expiry. Preserve this native weak Actor-delegate behavior,
+observe natural handle expiry at remaining fuse time;do not add script clear.
+Attempted direct Detonate RPC test observer is rejected by the existing0.7
+Mixin contract in02NaturalExpiry before any cases;keep failed02 and remove
+unsupported observer,not RPC restrictions. Detonate callback observation is
+explicitly False/no detonation claim. Current03HandleExpiry terminal PASSes
+6 actual BeginPlay/cleanup cases,opaque native handle/named-Actor parity,
+2s/.16s timers,one-shot cleanup/deferred handle state and natural expiry
+within observed-frame bounds,Health/Actor/class cleanup,independent gate/
+strict closed logs/exit0. Host05 and04Final are running;source supports current
+five-method family regressions with strict prior-action hash chain. Actions
+regression now records actual current bound classes,not historical4-method
+class identity. Current04Final now terminal PASSes all6 BeginPlay/native
+timer cases again,with natural handle expiry and no direct RPC observation
+claim. Current ActionsRegression01(8 cases),CleanupRegression01(6 real timer
+callbacks) and VFXRegression01(6 cases/12 native parameter-store reads) all
+terminal PASS with exact current5-method classes/provenance,independent
+gates/strict closed logs/exit0. Host05 passes2,809;launcher safety19.
+Unchanged05 BeginPlay repeat is running before bounded commit. No production
+script timer clearing;original immediate post-destroy handle persistence is
+kept and naturally expires at remaining native fuse time. No detonation/
+reliable RPC callback or full Actor/version claim.
+80 unchanged05 now terminal PASSes all6 BeginPlay/native timer cases and
+natural post-destroy handle expiry again,independent gate/strict closed logs/
+actual exit0. Final04/05 plus current actions8/cleanup6/VFX6+12 color reads
+are bounded80 evidence. Record ledger and isolate exact2,809 models/850-file
+closure before local commit. No missing RPC observer claim,no script clear,
+Cpp build/package/push/tag/release. ReceiveHit/reliable Detonate/damage,
+headless/pixels/natural completion/replication/flight/full Actor remain open.
+
+**Completed bounded batch79 (2026-10-18):** retained Actor Teleport Grenade/
 Destroy Grenade ordinary entries.78 locally committed Examplese49edd5/
 core2b8b63b after isolated2,742 models/838-file closure. Current79 Host01
 passes2,755 but Assets01 fails native registration because unused Niagara

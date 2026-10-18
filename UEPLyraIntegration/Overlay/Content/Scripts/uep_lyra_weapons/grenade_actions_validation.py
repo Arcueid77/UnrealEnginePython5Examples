@@ -33,7 +33,10 @@ class Validation(Ready):
     def begin(self):
         bridge=ue.find_class("UEPLyraBridgeLibrary").get_cdo().call_function("GetBridgeForWorld",self.world)
         self.report["native_mode"]=str(bridge.call_function("CaptureSnapshot").NetMode);require(self.report["native_mode"]=="Standalone","native actions standalone world required")
-        self.cls=ue.load_class(CLASS);ue.register_declared_mixin(self.cls);self.health_before=self.healths();self.warmup()
+        self.cls=ue.load_class(CLASS);ue.register_declared_mixin(self.cls)
+        binding,=[value for value in ue.get_registered_mixins() if value["target_class"]==self.cls]
+        self.original_profile_classes={name:value["python_class"] for name,value in binding["profiles"].items()}
+        self.health_before=self.healths();self.warmup()
     def state(self,actor):
         movement=actor.get_property("ProjectileMovement");trail=actor.get_property("NS_Trail")
         components=actor.call_function("K2_GetComponentsByClass",ue.find_class("NiagaraComponent"))
@@ -72,7 +75,7 @@ class Validation(Ready):
             if valid(actor) and not actor.call_function("IsActorBeingDestroyed"): actor.call_function("K2_DestroyActor")
         if hasattr(self,"cls"):
             binding,=[value for value in ue.get_registered_mixins() if value["target_class"]==self.cls]
-            self.report["production_classes_unchanged"]=all(binding["profiles"][name]["python_class"] is base for name,base in (("Python",policy.LyraGrenadeActionsPythonProfile),("BlueprintFallback",policy.LyraGrenadeActionsBlueprintFallbackProfile)))
+            self.report["production_classes_unchanged"]=all(binding["profiles"][name]["python_class"] is base for name,base in self.original_profile_classes.items())
         self.report.update(remaining_test_actors=len([actor for actor in self.actors if valid(actor) and not actor.call_function("IsActorBeingDestroyed")]),all_pawn_health_unchanged=self.healths()==self.health_before if hasattr(self,"health_before") else False);self.cleaned=True
     def tick(self,seconds):
         if self.finished: return False
