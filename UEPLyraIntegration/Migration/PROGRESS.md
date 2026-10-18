@@ -13,7 +13,46 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active bounded batch76 (2026-10-18):** real dedicated server/two owning
+**Active bounded batch77 (2026-10-18):** B_Grenade retained Actor Setup VFX
+helper only.76 is locally committed Examples091607e/corea32226f after
+isolated2,674 models/826-file closure. No pushes/tags/releases.77 Host04
+passes2,707 models;Host06 now passes2,709 and native launcher safety13.
+Assets01 terminal PASSes native Blueprint compilation,
+same Actor class/full CDO/all original graphs/helper signature,one handler
+per Profile and native register/restore; no new business graph nodes. New
+canonical B_Grenade/DA_GrenadeVFXMixin assets are NOT runtime accepted yet.
+Policy preserves native attached Niagara spawn/options,invalid-spawn old-field
+no-op,TeamId==1 red/all others blue,native parameter setter/validated trail
+get and original duplicate-component behavior on ordinary helper repeats.
+Differential01 fails fixture source selection:actual native teams are1/2,
+not assumed0/1.02 records actual1/2 and spawns original BP trail but fails
+fixture component enumeration:actual reflected API is K2_GetComponentsByClass,
+not display/script alias GetComponentsByClass. Both failures retained,no
+runtime acceptance.03NativeComponentAPI completes all6 actors/12 ordinary
+helper invocations/12 native color-store reads but final FAILS because the
+fixture confuses the request bAutoActivate=True with the component's native
+bAutoActivate=False storage;the first native BP component is also inactive
+while NS_Grenade_Trail asynchronously compiles. Native Niagara source sets
+the stored flag False then explicitly Activates,and waits for system/PSO
+readiness. Preserve the business,not the fixture's wrong assumption. Warm
+the same Niagara system on one harmless plain Actor(no Grenade fuse),wait
+3 actually active ticks,then destroy it before paired trials.04 passes all6
+cases on that native-ready context.05ScopedWarmup passes current precise
+schema:only the6 test Grenades are destroyed before their first world tick;
+the plain prewarm Actor intentionally ticks.1,983 frozen inputs,independent
+gate/strict closed logs/actual exit0. Unchanged06 now terminal PASSes all6
+cases/12 native parameter-store reads,independent gate/strict closed logs/
+actual exit0 again. Record77 ledger and isolate exact2,709 models/832-file
+closure before local commit.
+The fixture uses actual native
+deferred Spawn/Finish triggering original BP BeginPlay->helper,no lifecycle
+callback replay;ordinary helper repeat,actual attached components and reflected
+Niagara SortedParameterOffsets/ParameterData color bytes,team IDs,full State/
+Health/quiet/Actor and Profile-class cleanup. No new Cpp getter/build or
+Engine/official-source change;actual particle pixels/playback,dedicated invalid-spawn,projectile replication/
+physics/collision/fuse/explosion/damage and full asset/version remain open.
+
+**Completed bounded batch76 (2026-10-18):** real dedicated server/two owning
 clients, original/Python predicted GA_Grenade activation via the native GAS
 RPC. Host05 passes2,674 models and launcher safety11. Network04OnceCommands
 terminal PASSes the full four-owner/Profile matrix; unchanged05 is in progress.
