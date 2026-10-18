@@ -13,7 +13,66 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active bounded batch75 (2026-10-18):** actual GA_Grenade activation/aim,
+**Active bounded batch76 (2026-10-18):** real dedicated server/two owning
+clients, original/Python predicted GA_Grenade activation via the native GAS
+RPC. Host05 passes2,674 models and launcher safety11. Network04OnceCommands
+terminal PASSes the full four-owner/Profile matrix; unchanged05 is in progress.
+Four owner/Profile trials use native
+Reset restock and fresh wire-matched healthy canonical Pawns, exact selected
+production handlers, owner prediction/nonowner negative controls, actual
+authority-only projectile spawn, typed local duration/montage/End timing,
+unchanged own/foreign UI/specs/Health and live-before-release cleanup with
+actual client exits before server. Files schedule/ack only; the authority
+fixture never calls TryActivateAbilityByClass or delivers gameplay state.
+Observed authority projectiles are destroyed before a world tick; projectile
+replication, explosion/damage and full Grenade/version remain open. No far-field
+network teleports, raw state repair, build/cook/package, push/tag or release.
+76 failed01/02 are retained: first original-BP prediction has native cooldown0
+before the authority effect returns; the fixture's immediate repeat actually
+caused a second activation. Native RepNotify observer proves no OnRep messages
+(original OnRep graph is an empty entry). Delay the rejection check until an
+actual positive replicated cooldown is observed; require native Predicting2/
+Authority0 modes and retain the client's original cooldown field, not a local
+property write.03 completes one actual original-BP prediction/RPC/spawn/control
+trial, then fails: after done the clients re-consume the previous activate
+command. The foreign client writes nine copies while authority advances to
+the next native Reset, thus its old current Pawn disappears; the owner also
+reissues a cooldown-blocked request and exits, invalidating the authority's
+owner objects on disconnect. This is evidenced fixture protocol failure,not
+the70b race repair or a license to remove Health checks. A pure monotonic
+completed-position guard now rejects stale prepare/activate commands and
+preserves exact four-case/Health/UI/spec/callback/exit gates. No production
+grenade business change in76; current proposed changes are test infrastructure.
+76 Network04OnceCommands proves4 actual native predicted requests(Predicting2),
+4 native authority callbacks(Authority0),4 actual authority-only B_Grenade
+spawns with matching numeric transform/Instigator/Owner/unit scale and no
+local client spawns,4 real Reset/Pawn replacements with fresh wire ids,
+8 healthy canonical owner/foreign views,actual local typed messages before
+End/native montage task and client natural montage completion,positive native
+replicated cooldown before repeat rejection,unchanged all Pawn Health/UI/
+persistent handles/specs/config,quiet intervals and live-before-release native
+ASC cleanup. Exactly4 rows per peer,no stale-command replay,production classes/
+Profiles/listeners restored,strict closed logs/independent gate/real0/0/0
+client-before-server exits,1,981 frozen inputs. Run05 is an unchanged repeat,
+then standalone six-case regression before a bounded local commit. Original
+70b startup binding race and projectile replication/explosion/full asset stay
+open; this fixture correction is not a production race repair.
+76 unchanged Network05 now terminal PASSes the same full four-trial matrix,
+wire identity/own/foreign controls/cleanup/independent gates/strict closed
+logs/actual0/0/0 server-last exits again. StandaloneRegression01 also passes
+all6 actual original/Python miss/near/far/native montage/message/spawn/End
+and cleanup cases on the current launcher/startup revision. Record76 ledger
+and isolate the exact2,674-model/826-file index before bounded local commit.
+No Cpp build/cook/package/push/tag/release. Next77 begins B_Grenade's retained
+Actor-class Setup VFX helper: native Niagara spawn/attachment and team-color
+selection only, keeping animation/physics/replication native and not claiming
+fuse/collision/detonation/damage until their own native differentials pass.
+
+Completed bounded75 is locally committed Examples50915de/coreca28d3c after
+isolated2,633 models/823-file closure. Six original user-dirty file hashes
+remain unchanged. The following records75's implementation/failure/acceptance:
+
+**Bounded batch75 (2026-10-18):** actual GA_Grenade activation/aim,
 following locally committed74 (Examples90a78a4/corecd5d9cf). Host02 passes2,630
 models, launcher safety7 and atomic-exit safety4. Assets01 passes retained
 class/full CDO/all graphs/signatures and native register/restore3 events per

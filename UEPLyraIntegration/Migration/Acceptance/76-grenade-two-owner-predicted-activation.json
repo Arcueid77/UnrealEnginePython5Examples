@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "batch": "76-grenade-two-owner-predicted-activation",
+  "scope": "Bounded native prediction/RPC/authority-only-spawn test infrastructure,not a production business change or full Grenade/version. Network04OnceCommands and unchanged05 each prove4 real owner/Profile ASC predictions(native activation mode2),4 native authority callbacks(mode0),4 native Reset/restock/fresh mapped Pawn ids,8 healthy canonical own/foreign wire-matched views,one actual authority B_Grenade spawn per trial/no local client spawn,numeric aim/transform/Instigator/Owner/unit scale,typed local duration with native montage task active before immediate End,client continuing/naturally completed montage,positive actual replicated cooldown before native repeat rejection,all Pawn Health/UI/persistent handles/specs/config unchanged,quiet and restored production classes/Profiles/listeners/live-before-release authority ASCs,strict closed logs/independent gate/real0/0/0 client-before-server exits;1981 inputs. Current StandaloneRegression01 also passes6 actual miss/near/far original/Python activation cases.2674 host models. Failed01/02 immediate repeat actually invokes original BP twice while native predicted cooldown still0;empty native OnRep produces no messages. Failed03 completes1 trial then stale activate command is re-consumed after done,causing repeat requests/nine foreign rows/next-Reset health-snapshot mismatch and disconnect-invalid authority objects. Native cooldown-confirmed guard and monotonic completed-position scheduling fix those TEST failures;full Health/callback/matrix/exit gates retained,no production race repair. Test-only OnRep witness forwards original empty function once and restores production three-event Profiles. Observed authority projectiles are destroyed before first world tick;no projectile replication/physics/Actor/explosion/damage,denied native body,physical input,loss/travel/rejoin/general startup stability/full asset/version/publication acceptance. No RPC/callback replay or gameplay-state file delivery,raw Health/inventory/spec/cooldown repair,network teleport,Engine/official edits,Cpp build or package.70b race remains OPEN.",
+  "recorded_utc": "2026-10-18T08:14:53.6113040Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "ca28d3c9b2ed16d0d9f69d1b9d736c7f297a3349",
+  "examples_parent_commit": "50915deab63fe07feed81456678f7b73d204bf55",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-grenade-activation-network/Network04OnceCommands",
+      "summary_sha256": "FD59D2777AC50DF8647167DB5B8B7B193168C026AC2BCDCBF606F3BDC611B049",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1981,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "B0": 0,
+        "A": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "CC705ABD988E60D1AA74365670F8D2CE153B0F432C268F211D61C3639ECD8396",
+          "file": "server.json"
+        },
+        {
+          "sha256": "4009AD9FB0BF66F5833625B7326118BE104E3D7BDA5DEA2705061DBFB7B1A209",
+          "file": "A.json"
+        },
+        {
+          "sha256": "ED406AED24051947283251694A6B181E5FBA0D9A60611CFC8B6C61A085CD17DF",
+          "file": "B0.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-grenade-activation-network/Network05",
+      "summary_sha256": "2897DD0A0282061A3B08D68F6E1A79DB272BD812A471E07B049110413C8CF360",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1981,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "A": 0,
+        "B0": 0,
+        "server": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "7394F5F80A9ABAC1AAF9E5136DF6A85E0ED566D9A736DB7691B8743B2C0E61E5",
+          "file": "server.json"
+        },
+        {
+          "sha256": "A91466F1E129AC2E21DA0A17A30C98CBE428A2362382E411CC2A74B8C7DD8CB8",
+          "file": "A.json"
+        },
+        {
+          "sha256": "EAA33A296D5962DD9D5A9AE8EDFE67A019AD3F56094BAC99D1E71820BA8B60F9",
+          "file": "B0.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-grenade-activation-network/StandaloneRegression01",
+      "summary_sha256": "1EDB17490D51F7A063E7B049F2F6939E14758F96124378E42DB99DCE69B205B4",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1969,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "4CD0B9090E2BA5ACBF1C8A7DD15B877BF01A2D0DB796C8064CCBC50C0E0E11B5",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "E97674533F8B721B9E8AC4F5E61143412392C10CF79D31D4FD6076C5DFE9771F",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/grenade_activation_network_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/grenade_activation_network_validation.py"
+    },
+    {
+      "sha256": "249287820282DC0641EBCA03211A5DD0699EA23FFF952D1A9643FAC5200280D5",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/grenade_activation_network_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/grenade_activation_network_contract.py"
+    },
+    {
+      "sha256": "DC6F0A4CBF151AF26206839307881482AD9A9A260C144F5E67531497E2223224",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/grenade_activation_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/grenade_activation_mixin.py"
+    },
+    {
+      "sha256": "81A922475E3B7AC4398A501FAF546355C6374AD3EB35ADFAA4B38A91856846E8",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "sha256": "36F268ED132DEEA3FFAA1EBBB98DA7A985E78E8DE455B040FAC9B62A0BFACF9A",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58JumpValidation.ps1"
+    }
+  ],
+  "host_report": {
+    "sha256": "2F470B7B6119B1BF8A7F481D47181F8E72BFE9FFAF4B56270839589A17CCF79F",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 2674,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261018-grenade-activation-network/Host05.json"
+  }
+}
