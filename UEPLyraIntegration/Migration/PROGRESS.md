@@ -13,8 +13,43 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active bounded batch73 (2026-10-18):** read-only cross-peer network object
-identity/lifetime for the startup binding race. The70b intermittent remote Bot Health0/canonical Pawn/HealthSet/ASC
+**Active bounded batch75 (2026-10-18):** actual GA_Grenade activation/aim,
+following locally committed74 (Examples90a78a4/corecd5d9cf). Host02 passes2,630
+models, launcher safety7 and atomic-exit safety4. Assets01 passes retained
+class/full CDO/all graphs/signatures and native register/restore3 events per
+Profile; this is NOT runtime acceptance. Differential01 initially launched with
+one existing Editor binary and no build/cook. Six real ASC trials compare
+original/Python miss/near/far native traces, actual spawned B_Grenade,
+typed duration message, immediate End with continuing/naturally completed
+montage, native Reset restock, persistent handles/config/specs, Health and
+quiet cleanup. Observed projectiles are fixture-destroyed before their first
+world tick: projectile actor/explosion/damage migration is explicitly open.
+No activation/task callbacks or inventory/Health/cooldown state are replayed
+or written by the fixture. Dedicated two-owner activation remains a later gate.
+75 Differential01 completes all six cases but terminal FAILS at cleanup:
+the fixture called nonexistent K2_IsActorBeingDestroyed instead of the actual
+IsActorBeingDestroyed. Python-only generic MakeTransform also logs a malformed
+Editor default Scale import despite all observed native scales1/1/1. Local
+UEP source imports CPP defaults before explicit arguments; switch to its
+existing typed native FTransform constructor, no Cpp/Engine edit. Fix actual
+cleanup function and require a fresh native run; retained failure is not a
+pass. Host03 passes2,633 models, including message-before-End/task-start and
+typed-transform counterexamples. Differential02 will additionally require
+native active montage task at the actual typed-message callback and reject
+the default-import log diagnostic. Differential02 and unchanged03 now both
+terminal PASS: six real native ASC trials each, actual spawn/Instigator/Owner/
+unit scale/aim, typed message while active with exactly one montage task,
+immediate End/tasks0 while montage continues then naturally completes,
+native Reset restock and persistent actual primary instance/handle/specs/
+config, all Pawn Health unchanged,56-60 quiet ticks in02, original production
+classes/Profile/listener/pose/control and test Actor cleanup, independent
+semantic gate/strict closed logs/actual exit0 each,1,965 frozen inputs.
+Malformed Scale import no longer occurs. Record a bounded standalone-only75
+ledger and isolate the exact index before local commit; no Cpp build/package,
+push/tag/release, networking/denied-body/projectile-actor/explosion/damage or
+full asset/version acceptance. Next76 is actual two-owner predicted activation
+and authority-only spawn, retaining native RPC/GAS/animation and current UI.
+The70b intermittent remote Bot Health0/canonical Pawn/HealthSet/ASC
 discrepancy remains open; keep native RPC, GAS, navigation, animation and movement.
 The accepted helper and RPC-input-store slices do not close the full Dash asset.
 
