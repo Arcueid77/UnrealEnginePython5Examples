@@ -13,7 +13,33 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active bounded batch82 (2026-10-18):** retained Actor ReceiveHit business.
+**Completed bounded batch83 (2026-10-19, continued in a fresh chat):**
+Grenade explosion body now uses Python behind the original reliable multicast
+and original BP DoOnce. 82 parent commits: Examples `811c041` / core `11a78f6`.
+Assets01 passed in the real Editor: seven methods per Profile, original class/
+full CDO/seven signatures/RPC flags, three transport nodes, original BP body
+and native weak Niagara binding retained. Final Differential05BVisibleFinish
+passes 12 isolated standalone cases: original/Python empty RPC, enemy damage,
+wall occlusion, friendly control, real 2s Actor fuse, and actual swept enemy
+Hit cancelling the fuse before explosion. Duplicate RPCs never re-enter the
+body. Actual native overlap membership, GAS hit context/Health, unchanged
+other Pawns, hidden mesh/inactive movement, Actor destruction and restored
+classes/view target are recorded. Both empty-RPC cases first observe active
+Niagara in a nearby native camera, then use reflected Deactivate and await
+the exact native OnSystemFinished -> Destroy Grenade event once. This is
+controlled native completion, NOT unprompted authored particle expiry.
+Independent semantic gate, strict closed log and real process exit0 pass.
+Host05 passes 2,877 models; four invalid driver configurations are rejected
+before filesystem/process work. Production explosion policy stayed unchanged
+through all native attempts. Preserve failed02 duplicate fixture pose restore,
+03 unreflected DeactivateImmediate,04 completion before active visible-system
+precondition, and05 invalid invocation path; no failed run is accepted.
+Next: real network/server explosion and current no-render body validation,
+authored particle expiry/audio/pixels/flight and remaining migration scope.
+70b original binding race remains OPEN. No C++ build, Engine/official content
+edits, cook/package, push/tag/release, or full Actor/version acceptance.
+
+**Completed bounded batch82 (2026-10-18):** retained Actor ReceiveHit business.
 81 locally committed Examplesde550e4/core7f82a76 after isolated2,825 models/
 852-file closure. Hit Python preserves all8 reflected inputs,compares native
 Other(A) vs Instigator(B),DifferentTeams clears/invalidates original fuse and
