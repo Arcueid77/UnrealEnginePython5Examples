@@ -13,6 +13,32 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Completed bounded batch84 (2026-10-19):** current Grenade explosion body
+verified on one real dedicated NullRHI server and two rendered native clients.
+83 parent commits: Examples `527da0b` / core `e1199d2`. Network02Preselected
+passes 12 authority explosions and 24 client multicast bodies, covering both
+real owners and original/Python Profiles: empty direct RPC, isolated nonlethal
+enemy GAS damage, and original 2s native fuse. All three peers observe the
+same distinct native projectile wire ID per case, correct owner/foreign Pawn
+IDs and roles, native replicated Instigator, exact authority/client Health,
+unchanged other Pawns and replicated Actor destruction. Enemy cases agree at
+100 -> 27.986038208007812 Health across Profiles/owners/clients. Each server
+body sees no Niagara component and immediately destroys the Actor; each client
+executes the remote visual branch without damage, then receives destruction.
+The independent gate and all three strict closed logs/actual exits pass;
+server explicitly waited for both client exits. Actor selector, observer
+classes and original replication configuration restored; no projectiles left.
+Host02 passes2,897; four invalid network driver combinations rejected early.
+Preserve Network01: fixture profile mutation inside BeginPlay was correctly
+rejected. Final fixture preselects/restores only the declared Actor CDO profile
+before spawn. Character CDOs, saved assets and production code are untouched.
+Native component deactivation holds only test-owned projectiles stationary;
+files schedule observations only. No Pawn teleport, raw Health/ASC repair,
+RPC/body replay, new C++ build, cook/package/push/tag/release or full acceptance.
+Next: normal predicted Grenade ability spawn -> flight -> explosion chain;
+authored particle expiry/audio/pixels/quantitative flight and remaining scope.
+The separate70b original Pawn binding race remains OPEN, not repaired here.
+
 **Completed bounded batch83 (2026-10-19, continued in a fresh chat):**
 Grenade explosion body now uses Python behind the original reliable multicast
 and original BP DoOnce. 82 parent commits: Examples `811c041` / core `11a78f6`.

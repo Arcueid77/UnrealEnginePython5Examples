@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "batch": "84-grenade-native-replicated-explosion",
+  "scope": "Bounded Actor-layer network acceptance,not full ability throw/flight/version. One actual dedicated NullRHI server plus two rendered clients. Current seven-method Actor and original replicated/movement settings,2s fuse and reliable multicast unchanged. Final Network02Preselected proves12 authority explosions/24 remote client bodies across both distinct real owners and original/Python Profiles: empty native RPC,actual nonlethal enemy GAS damage,original native fuse. Each actual Actor has one distinct native Legacy wire ID matching on three peers;native Instigator and canonical source/victim Pawn identities/roles verified. Native Health100->27.986038208007812 agrees on all four enemy cases and both clients;other Pawns unchanged. All12 server bodies see null trail and destroy Actor immediately;client remote branches hide/stop without damage then native replicated destruction arrives. Strict closed logs,independent gate,actual three exits0;server waited for actual client exit tokens;no projectiles left;observer classes,temporary declared Actor CDO Profile selector and original replication fields restored. Network01 preserved: fixture attempted forbidden in-callback profile switch;guard not weakened. Final selector chosen outside native callbacks,before spawn;original handlers execute once. Test-owned projectile movement is deactivated through native APIs on all peers to isolate RPC/fuse. Files schedule/ack only,no gameplay replication or Health/ASC repair/Pawn teleport/RPC override/body replay/damage-effect fixture call. 2897 host models. No production gameplay/asset/Engine/official edits,new Cpp build,cook/package,push/tag/release. Normal predicted ability spawn-to-flight-to-explosion,quantitative physics,authored particle expiry/audio/pixels and full migration remain open;70b original binding race remains open.",
+  "recorded_utc": "2026-10-18T16:41:52.6822006Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "e1199d2b02937bbddb947d660916a2c5c6b55464",
+  "examples_parent_commit": "527da0b493b72775a6ddfe5497d77981df5c3ccd",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-grenade-detonate-network/Network02Preselected",
+      "summary_sha256": "272B6161E30126880C667AB86958211D019E01F09AD1616C5B69DD65FB931BE8",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2027,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "server": 0,
+        "A": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "8D01782285BA03A86CDE1280C4C9BEEF629D569A59EFA225BD50C3B27293243B"
+        },
+        {
+          "file": "A.json",
+          "sha256": "CF12126E87D34B59F2829D5FCDDFC59715AB5617F6572DBB2BAF565E98E0B42E"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "E70DA0DA0E52ACD44F43D9543E750567F91FBE3E06A5BEA54928BA2170F0A380"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_detonate_network_validation.py",
+      "sha256": "F9C1F5753B48C3D5C3DDB8EFD66959B9D75994ADF3339E24AB3A060845CD1F7D",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_detonate_network_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_detonate_network_contract.py",
+      "sha256": "52C7B543102912F325F678A74C5C44373D42A262A17E4196722E0695E107E238",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_detonate_network_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_detonate_mixin.py",
+      "sha256": "4AAE51486A5D29281DF3335532958EEB02160E82A3109C29BA9F82011844BD64",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_detonate_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "EAD38184AAB1DB37BEC12D8C5799EE36997237AAB782981BC81A95EE7AC60533",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "DC17060383EB9E21E62FB94A35DD1B4E52805E0327B01909EAFD32386A49199C",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 2897,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261019-grenade-detonate-network/Host02.json",
+    "sha256": "7115AFC5A4FDB58967268581338F16C0662C853E327F4B28165F316836CF93D0"
+  }
+}
