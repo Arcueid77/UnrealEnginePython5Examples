@@ -13,7 +13,48 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active bounded batch77 (2026-10-18):** B_Grenade retained Actor Setup VFX
+**Active bounded batch78 (2026-10-18):** retained Actor PostLaunchCleanup
+callback.77 is locally committed Examples2379248/core61a3d98 after isolated
+2,709 models/832-file closure. Preserve the six original user-dirty files.
+78 Host01 failed only the new isolated test module's relative-import package
+name,before any UE process or asset-output directory. Corrected Host02 passes
+2,720 models. Assets01 terminal PASSes the original Actor class/full CDO/all
+graphs and five helper/BeginPlay/Hit/Detonate signatures including reliable
+RPC flags,now2 methods per Profile and native register/restore;both canonical
+Actor/Profile assets revised but NOT runtime accepted. Original one-shot
+0.16s K2_SetTimerDelegate and bound PostLaunchCleanup remain in BP. Python
+clears Character capsule->Grenade ignore when cast succeeds,always clears
+Grenade mesh->Instigator ignore even on cast-failed/null path,then assigns
+native ProjectileMovement.bRotationFollowsVelocity=True;VFX aliases retained.
+Native timer fixture/model gate are drafted;Differential01 is starting.
+It uses real Spawn/BeginPlay/native timer,read-only native ignore-list snapshots,
+Character/non-Character Pawn/null sources,actual rotation transition,one
+callback/20 quiet ticks/source-list and class restoration. Host05 now passes
+2,742 models;launcher safety15. Differential01 really receives all6 callbacks
+but final FAILS the fixture's incorrect assumption that non-Character sources
+also receive initial mesh ignores. Original BeginPlay installs both ignores
+only on Character cast success;native non-Character/null lists start empty,
+while cleanup cast failure still rejoins mesh-unignore/rotation restoration.
+Keep failed01. Corrected02InitialCast and current03Final terminal PASS all6
+actual original one-shot callbacks,Character/non-Character/null branch counts,
+exact native ignore-list deltas/False->True rotation,observed-frame timer
+boundaries,20 quiet ticks/source-list/Actor/class cleanup,independent gate/
+strict closed logs/real exit0. VFXRegression01 is running against the current
+two-method Actor family;observer now preserves/restores actual bound classes
+instead of replacing the family with historical one-method VFX classes.
+VFXRegression01 now terminal PASSes all6 cases/12 actual parameter-store
+reads with the full current two-method family preserved/restored. Unchanged
+Differential04 also terminal PASSes all6 real native timer cases again,
+independent gates/strict closed logs/actual exit0. Record78 ledger and isolate
+exact2,742 models/838-file closure before local commit.
+Only test Grenade
+collision is disabled to isolate the callback;no callback/timer replay/raw
+velocity or Health writes. Quantitative physics,headless/no-render,VFX current
+family regression,projectile replication,fuse/Detonate/damage and full Actor/
+version remain open. No Engine/official edits,Cpp compile,cook/package,push,
+tag or release.70b startup binding race remains open.
+
+**Completed bounded batch77 (2026-10-18):** B_Grenade retained Actor Setup VFX
 helper only.76 is locally committed Examples091607e/corea32226f after
 isolated2,674 models/826-file closure. No pushes/tags/releases.77 Host04
 passes2,707 models;Host06 now passes2,709 and native launcher safety13.

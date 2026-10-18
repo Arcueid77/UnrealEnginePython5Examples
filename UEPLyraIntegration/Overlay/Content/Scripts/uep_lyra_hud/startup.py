@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPGrenadeCleanupResult=") for argument in arguments):
+        return "uep_lyra_weapons.grenade_cleanup_validation"
     if any(argument.startswith("-UEPGrenadeVFXResult=") for argument in arguments):
         return "uep_lyra_weapons.grenade_vfx_validation"
     if any(argument.startswith("-UEPGrenadeActivationNetworkResult=") for argument in arguments):

@@ -45,14 +45,18 @@ class Validation(Ready):
         require(self.report["native_mode"]=="Standalone","native VFX standalone fixture required")
         self.cls=ue.load_class(policy.CLASS);ue.register_declared_mixin(self.cls)
         self.teams=ue.find_class("SubsystemBlueprintLibrary").get_cdo().call_function("GetWorldSubsystem",self.world,ue.find_class("LyraTeamSubsystem"))
+        binding,=[value for value in ue.get_registered_mixins() if value["target_class"]==self.cls]
+        self.original_profile_classes={name:value["python_class"] for name,value in binding["profiles"].items()}
         owner=self
-        for name,base in (("Python",policy.LyraGrenadeVFXPythonProfile),("BlueprintFallback",policy.LyraGrenadeVFXBlueprintFallbackProfile)):
+        for name,base in self.original_profile_classes.items():
             def around(handler):
                 def invoke(actor):
                     handler(actor)
                     if actor==owner.target: owner.events.append(path(actor))
                 invoke.override=policy.METHOD;return invoke
-            ue.register_mixin_profile(self.cls,name,type("ObservedGrenadeVFX"+name,(),dict(SetupVFX=around(base.SetupVFX))))
+            methods={key:value for key,value in vars(base).items() if not key.startswith("__") and callable(value)}
+            methods["SetupVFX"]=around(base.SetupVFX)
+            ue.register_mixin_profile(self.cls,name,type("ObservedGrenadeVFX"+name,(),methods))
         self.installed=True;self.health_before=self.healths();self.enter("sources")
     def sources(self):
         require(time.monotonic()-self.phase_started<30.,"actual native team1/other-team Pawn sources missing")
@@ -126,9 +130,9 @@ class Validation(Ready):
         for actor in self.actors:
             if valid(actor) and not actor.call_function("IsActorBeingDestroyed"): actor.call_function("K2_DestroyActor")
         if self.installed:
-            for name,base in (("Python",policy.LyraGrenadeVFXPythonProfile),("BlueprintFallback",policy.LyraGrenadeVFXBlueprintFallbackProfile)): ue.register_mixin_profile(self.cls,name,base)
+            for name,base in self.original_profile_classes.items(): ue.register_mixin_profile(self.cls,name,base)
             binding,=[value for value in ue.get_registered_mixins() if value["target_class"]==self.cls]
-            self.report["profile_classes_restored"]=all(binding["profiles"][name]["python_class"] is base for name,base in (("Python",policy.LyraGrenadeVFXPythonProfile),("BlueprintFallback",policy.LyraGrenadeVFXBlueprintFallbackProfile)))
+            self.report["profile_classes_restored"]=all(binding["profiles"][name]["python_class"] is base for name,base in self.original_profile_classes.items())
         self.report.update(remaining_test_actors=len([actor for actor in self.actors if valid(actor) and not actor.call_function("IsActorBeingDestroyed")]),
             all_pawn_health_unchanged=self.healths()==self.health_before if hasattr(self,"health_before") else False)
         self.cleaned=True
