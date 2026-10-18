@@ -13,7 +13,44 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active bounded batch80 (2026-10-18):** retained Actor ReceiveBeginPlay.
+**Active bounded batch81 (2026-10-18):** native dedicated-server/no-render
+branch of current5-method Actor family;test infrastructure only.80 locally
+committed Examples9b44b6e/core098ef5d after isolated2,809 models/850-file
+closure. Native launch safety first rejected a second common argument
+initialization before host/UE;fixed by adding explicit server/NullRHI variant
+to the single existing argument list. Host01 passes2,821;launcher safety21.
+Headless01 is in progress:one existing Editor server,NullRHI/local127.0.0.1
+bind,zero clients. Native mode DedicatedServer and Experience loaded are
+actually observed;waiting original Playing phase/native healthy bot source.
+No local-player/fake-client readiness or raw Health repair. Same six actual
+Character/non-Character/null BeginPlay/native cleanup/timer-handle cases,
+plus no-render VFX native invalid-spawn no-op/old color preservation,will
+require independent --headless mode gate/closed logs/actual exit. Parent
+fixture is not imported into a duplicate ticker;current classes restored.
+Headless01/02Diagnostics fail full Pawn Health snapshot change at first
+original-BP trial.02 real before/after proves no changed Health/death values
+or removals;three more healthy native Hero Pawns are asynchronously spawned
+by original Playing initialization. Preserve failures;do not waive Health.
+Wait for the entire native healthy Pawn-set fingerprint to remain stable
+at least0.5s,and require selected PlayerState.GetPawn/ASC.Avatar equality;
+no binding repair. Host03 passes2,822;03StableNative terminal PASSes all6
+real no-render cases/native invalid-spawn field-preservation/Actor timers/
+cleanup/natural handle expiry,gates/closed logs/exit0. Add explicit native
+zero PlayerControllers and canonical authority source records;Host04/
+04Final now terminal PASSes the full6-case native no-render matrix,zero
+native PlayerControllers,selected role3 bot==PlayerState pawn==ASC Avatar,
+stable health-set/readiness record,native invalid Niagara spawn/no field
+mutation,Actor timers/cleanup/natural expiry,independent --headless gate/
+strict closed logs/actual exit0. Host04 passes2,825. Unchanged05 also terminal
+PASSes again. Current StandaloneRegression01 is running on the same sources;
+native production policy/assets were not changed in81. StandaloneRegression01
+now terminal PASSes all6 actual current-source BeginPlay/timer/cleanup cases,
+independent gate/strict closed log/actual exit0 too. Record bounded81 ledger
+and isolate exact2,825 models/852-file closure before local commit. No
+networking/client/replication/full Actor/
+version claim,Cpp build/package/Engine/official edits/push/tag/release.
+
+**Completed bounded batch80 (2026-10-18):** retained Actor ReceiveBeginPlay.
 79 locally committed Examplesfd20384/coreced03af after isolated2,779 models/
 844-file closure;no push/tag/release. Python now owns original material mip
 request3s/fast flags,Character-only reverse ignores,existing VFX call,then

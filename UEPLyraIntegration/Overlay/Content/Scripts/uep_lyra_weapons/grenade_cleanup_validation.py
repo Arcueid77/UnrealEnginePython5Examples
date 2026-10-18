@@ -31,7 +31,7 @@ class Validation(Ready):
             rotation_follows_velocity=bool(actor.get_property("ProjectileMovement").get_property("bRotationFollowsVelocity")))
     def begin(self):
         bridge=ue.find_class("UEPLyraBridgeLibrary").get_cdo().call_function("GetBridgeForWorld",self.world)
-        self.report["native_mode"]=str(bridge.call_function("CaptureSnapshot").NetMode);require(self.report["native_mode"]=="Standalone","native cleanup standalone world required")
+        self.report["native_mode"]=str(bridge.call_function("CaptureSnapshot").NetMode);require(self.report["native_mode"] in getattr(self,"allowed_native_modes",("Standalone",)),"native cleanup world mode differs from explicit lane")
         self.cls=ue.load_class(CLASS);ue.register_declared_mixin(self.cls);self.original_capsule_ignores=ignored(self.pawn.get_property("CapsuleComponent"));self.health_before=self.healths()
         self.other=self.world.actor_spawn(ue.find_class("SpectatorPawn"),ue.FVector(200000.,200000.,2000.));self.actors.append(self.other)
         require(valid(self.other) and not self.other.is_a(ue.find_class("Character")),"actual non-Character Pawn source missing")

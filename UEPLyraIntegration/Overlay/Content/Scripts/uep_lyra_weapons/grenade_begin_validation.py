@@ -23,7 +23,8 @@ class Validation(Cleanup):
             fuse_named_exists=bool(system.call_function("K2_TimerExists",actor,"Detonate")),cleanup_named_exists=bool(system.call_function("K2_TimerExists",actor,"PostLaunchCleanup")),
             fuse_handle_remaining=float(system.call_function("K2_GetTimerRemainingTimeHandle",self.world,handle)),fuse_named_remaining=float(system.call_function("K2_GetTimerRemainingTime",actor,"Detonate")),
             cleanup_named_remaining=float(system.call_function("K2_GetTimerRemainingTime",actor,"PostLaunchCleanup")),fuse_property=float(actor.get_property("TimeBeforeExplode")),
-            vfx_helper_calls=values["python_calls"]+values["fallback_calls"],trail_valid=valid(actor.get_property("NS_Trail")))
+            vfx_helper_calls=values["python_calls"]+values["fallback_calls"],vfx_stats=copy.deepcopy(values),trail_valid=valid(actor.get_property("NS_Trail")),
+            actor_team_color=[float(getattr(actor.get_property("Team Color"),key)) for key in ("r","g","b","a")])
         result.update(self.state(actor));return result
     def begin(self):
         super().begin();owner=self
@@ -93,11 +94,12 @@ class Validation(Cleanup):
         (ue.log_error if error else ue.log)("UEP_GRENADE_BEGIN_DIFFERENTIAL_"+("FAILED "+error if error else "PASSED"));ue.request_exit()
     def finalize(self):
         if self.report["status"]=="awaiting_shutdown":
-            try: self.report["status"]="passed";validate(self.report)
+            try: self.report["status"]="passed";self.validate_report()
             except Exception: self.report.update(status="failed",error=traceback.format_exc())
         self.write();(ue.log if self.report["status"]=="passed" else ue.log_error)("UEP_GRENADE_BEGIN_SHUTDOWN_"+self.report["status"].upper())
+    def validate_report(self): return validate(self.report)
 
 
 result=next((value.split("=",1)[1] for value in sys.argv if value.startswith("-UEPGrenadeBeginResult=")),None)
-if result:
+if result and "-UEPGrenadeHeadless" not in sys.argv:
     validation=Validation(result);atexit.register(validation.finalize);ticker=ue.add_ticker(validation.tick)

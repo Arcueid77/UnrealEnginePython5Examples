@@ -12,8 +12,8 @@ def require(value,message):
     if not value: raise RuntimeError(message)
 
 
-def validate(report):
-    require(report["status"]=="passed" and report["error"] is None and report["native_mode"]=="Standalone","native Grenade cleanup report failed")
+def validate(report,expected_mode="Standalone"):
+    require(report["status"]=="passed" and report["error"] is None and report["native_mode"]==expected_mode,"native Grenade cleanup report failed")
     for key in ("full_acceptance","network_acceptance","packaged_runtime","physical_input_tested","cleanup_callback_replayed","timer_state_written","health_properties_written","raw_velocity_written","quantitative_movement_parity_tested","fuse_detonate_damage_business_migrated"):
         require(report[key] is False,"native cleanup scope overclaim: "+key)
     for key in ("original_native_timer_used","test_grenade_collision_disabled","production_classes_restored","all_pawn_health_unchanged","source_capsule_ignores_restored"):

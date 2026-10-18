@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "batch": "81-grenade-native-headless-no-render",
+  "scope": "Bounded test infrastructure/current5-method Actor no-render branch,NOT new production gameplay/full Actor/version. Final currentHeadless04Final/unchanged05 each run one existing native dedicated server/NullRHI/local127.0.0.1 bind with zero actual native PlayerControllers,no clients,no local-player/fake readiness. Actual Experience/Playing/stable full native healthy Pawn population>=0.5s and selected role3 existing bot==PlayerState.GetPawn==ASC.Avatar;no ASC/Health/team repair. Each proves6 real Character/non-Character/null Spawn/BeginPlay/native0.16s cleanup callbacks,Niagara actual invalid spawn/NS_Trail none/old TeamColor unchanged/no parameter writes,exact native collision-ignore/rotation,opaque2s fuse handle/by-name parity,original immediate post-destroy handle persistence/natural expiry,Health/source-list/Actor/current class cleanup,independent --headless gate/strict closed logs/actual exit0. Current StandaloneRegression01 passes6 same-source real BeginPlay/timer cases too.2825 host models,safety21. Launch safety initially rejects second common argument initialization before UE,add-only explicit variant fixes it. FailedHeadless01/02Diagnostics Health snapshot gate remains strict:02 native diff proves original3 bot health/death unchanged,no removed/changed entries,3 additional healthy native Heroes added by original Playing startup. Wait native population stability and canonical source rather than waive Health;03 initial pass retained but final04/05 carry explicit actual no-player/source records. Production policy/assets unchanged. Parent fixture guard prevents duplicate ticker on headless import. No networking/client/replication,particle pixels/natural completion,physical flight/collision,ReceiveHit/reliable RPC Detonate/damage,physical input,loss/travel/rejoin/full Actor/version/publication claim. No Engine/official edits,Cpp build or package;70b race remains OPEN.",
+  "recorded_utc": "2026-10-18T10:47:10.9952561Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "098ef5d7858a6fb4ba12d2b493bee35a4e1f8abb",
+  "examples_parent_commit": "9b44b6e1c63314cd7f172845e0d4e525ba2e76e1",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-grenade-headless/Headless04Final",
+      "summary_sha256": "0B0D8DD4C48B8F8546F456B00180C4313491A4023FE5F0FD4E4419FE91FA212D",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2003,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "A705548409520F9AA6DA3CC7B8BA4B96A1E4ABB91E55C0664347D56D469297E0"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-grenade-headless/Headless05",
+      "summary_sha256": "F5FC76B75885FC232B4ED40302548C58CB5DB9FA6E3AA34363AD3A389D0DAA55",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2003,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "B4892EEFA2B9B3AC0F421041FE13F90DE6BB7D91C04A0ABC709A2AF81C975980"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-grenade-headless/StandaloneRegression01",
+      "summary_sha256": "5952A2E9513FAA77AF21A38F9F1CB515E59582A13D055D80CDFA6FDEB8E55699",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2003,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "E1496DE9F046854AB6681A9FF502A7B33884093F171415C9670F94A5779770AA"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_begin_headless_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_begin_headless_validation.py",
+      "sha256": "8A76D3F52548A99AA3D3B2B12452A30E23925D29B37A82EEA2151B84273404CF"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_begin_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_begin_validation.py",
+      "sha256": "D9FF4E8BB8D36528546E6A6EB720B9519C58D475259BE46D23357AFB50B73F22"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_begin_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_begin_contract.py",
+      "sha256": "DFAB1C5233054847D9E2C96A7D0552A38467421D21A2FDC10EFEC52131E73810"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_cleanup_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_cleanup_validation.py",
+      "sha256": "82C5374E9CD769F943EB538C6B0ECAE97702E5CD5380CE90500EF59CBC98E69B"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_cleanup_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/grenade_cleanup_contract.py",
+      "sha256": "4885B3142AAFA414A306332C16B20B318F0AB5C271595FD10F908A728A2EF208"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "AC34C791613E4266988627379FA522959B4D15DFEA89D062C39DDA3081636542"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "A88C4C273D8DEDA243223687C5C744198C65D6FA0186C07D507B033D7C3C33D0"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261018-grenade-headless/Host04.json",
+    "sha256": "0ED167AA0EE9CBC5A7F48D18E7638AF4ED7BD7BF4F5DAAE7346AF7DD03271393",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 2825,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    }
+  }
+}

@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if "-UEPGrenadeHeadless" in arguments and any(argument.startswith("-UEPGrenadeBeginResult=") for argument in arguments):
+        return "uep_lyra_weapons.grenade_begin_headless_validation"
     if any(argument.startswith("-UEPGrenadeBeginResult=") for argument in arguments):
         return "uep_lyra_weapons.grenade_begin_validation"
     if any(argument.startswith("-UEPGrenadeActionsResult=") for argument in arguments):

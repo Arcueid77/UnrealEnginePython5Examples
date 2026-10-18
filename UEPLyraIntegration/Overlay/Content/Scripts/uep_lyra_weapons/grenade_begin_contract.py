@@ -6,8 +6,13 @@ from pathlib import Path
 from .grenade_cleanup_contract import validate as cleanup_validate,PLAN,require
 
 
-def validate(report):
-    cleanup_validate(report)
+def validate(report,expected_mode="Standalone",expect_trail=True):
+    cleanup_validate(report,expected_mode=expected_mode)
+    if expected_mode=="DedicatedServer":
+        require(report["headless_runtime_requested"] is True and expect_trail is False and report["native_local_or_remote_player_controllers"]==0,"explicit actual no-player native headless lane required")
+        ready=report["headless_readiness"];source=report["headless_selected_source"]
+        require(ready["native_mode"]=="DedicatedServer" and ready["experience"] is True and ready["playing"] is True and ready["stable_seconds"]>=.5 and
+            source["actor"]==source["player_state_pawn"]==source["asc_avatar"] and source["role"]==3 and source["health"]==100.,"actual stable canonical authority bot source missing")
     require(report["python_timer_entry"]=="KismetSystemLibrary.K2_SetTimer" and report["native_named_actor_timer_binding"] is True and report["native_destroyed_actor_timers_naturally_expired"] is True,"actual native Actor timer binding/natural expiry missing")
     require(report["native_detonate_callback_observed"] is False and math.isfinite(report["timer_drain_elapsed"]) and
         abs(report["timer_drain_elapsed"]-report["timer_drain_expected_remaining"])<=max(.05,2.*report["timer_drain_max_frame"]),"native timer expiry timing or unverified RPC callback claim differs")
@@ -26,7 +31,12 @@ def validate(report):
             character_capsule_ignores=int(py and character),character_mesh_ignores=int(py and character),non_character_skips=int(py and not character),
             invalid_capsule_noops=0,invalid_mesh_noops=0,vfx_calls=int(py),detonate_timers=int(py),timer_handle_writes=int(py),cleanup_timers=int(py))
         require(row["event"]["stats"]==wanted,"actual selected BeginPlay production sequence counts differ")
-        require(after["vfx_helper_calls"]==1 and after["trail_valid"] is True,"native BeginPlay did not call actual retained VFX helper once")
+        require(after["vfx_helper_calls"]==1 and after["trail_valid"] is expect_trail,"native BeginPlay VFX helper/native render branch differs")
+        if not expect_trail:
+            require(after["actor_team_color"]==before["actor_team_color"],"native no-render helper must preserve old color")
+            stats=after["vfx_stats"]
+            require(stats["python_calls"]==int(py) and stats["fallback_calls"]==int(not py) and stats["native_spawns"]==int(py) and
+                stats["invalid_spawn_noops"]==int(py) and all(stats[key]==0 for key in ("trail_writes","team_queries","red_choices","blue_choices","color_writes","parameter_writes")),"native headless invalid-spawn branch differs")
         if character:
             require(row["actor"] not in before["capsule_ignores"] and row["actor"] in after["capsule_ignores"] and row["instigator"] in after["mesh_ignores"],"native initial reverse ignores missing")
         else: require(after["mesh_ignores"]==before["mesh_ignores"] and after["capsule_ignores"] is None,"native non-Character BeginPlay must skip both ignores")
@@ -34,5 +44,5 @@ def validate(report):
 
 
 if __name__=="__main__":
-    parser=argparse.ArgumentParser();parser.add_argument("--report",required=True);args=parser.parse_args()
-    print(json.dumps(validate(json.loads(Path(args.report).read_text(encoding="utf-8-sig")))))
+    parser=argparse.ArgumentParser();parser.add_argument("--report",required=True);parser.add_argument("--headless",action="store_true");args=parser.parse_args()
+    print(json.dumps(validate(json.loads(Path(args.report).read_text(encoding="utf-8-sig")),expected_mode="DedicatedServer" if args.headless else "Standalone",expect_trail=not args.headless)))
