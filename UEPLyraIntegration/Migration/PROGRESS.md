@@ -13,8 +13,8 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
-**Active bounded batch71 (2026-10-18):** Grenade UI native grant/avatar/removal
-policy. The70b intermittent remote Bot Health0/canonical Pawn/HealthSet/ASC
+**Active bounded batch72 (2026-10-18):** Grenade UI real dedicated-server/two-owner
+grant/avatar/removal replication/nonlocal branches. The70b intermittent remote Bot Health0/canonical Pawn/HealthSet/ASC
 discrepancy remains open; keep native RPC, GAS, navigation, animation and movement.
 The accepted helper and RPC-input-store slices do not close the full Dash asset.
 
@@ -68,6 +68,62 @@ ledger; run isolated exact-index2,501 models/806-file closure before committing
 the two shared canonical assets with their implementation. No network/full
 Grenade or full-version acceptance. Next72 adds real dedicated-server/two-owner
 UI lifecycle/nonlocal branches before expanding activation/aim/projectile work.
+71 is locally committed as Examplese1e8c7c/core8ae9edc after isolated2,501
+models/806-file closure; six original user-dirty hashes unchanged. No push/tag.
+72 native network draft schedules four owner/Profile trials. Authority alone
+Gives/Resets twice/Clears; owning clients await actual replicated specs and
+native Avatar/removal callbacks; the other viewer verifies healthy canonical
+simulated-proxy Pawn turnover without own UI/spec interference. Dedicated
+remote-owner UI stays absent, active client pool1/2/1,20 quiet ticks and real
+server-last process exits required. No callback or replication replay/raw
+state repair. This draft/models are not native network acceptance yet.
+72 Host01 passes2,524 models and native launcher safety7. Network01 reaches
+two healthy/ASC-bound clients and authority Playing, but performs zero UI
+trials: inherited readiness incorrectly requires the server-only AutoRespawn
+instance to be active on clients. Its one spec exists but client activation
+is not a valid gate. Stop only that owned three-process lane and retain it as
+failed, set require_auto_active=False on clients (same established Melee
+network gate), then repeat. Do not weaken actual Grenade spec replication,
+UI membership, healthy canonical Pawn, event counts or process-exit gates.
+72 Host02 passes2,525 models. Network02 completes A's original/Python trials,
+then FAILS before B0's first reset: viewerA's canonical B0 Pawn is role1,
+GameplayReady in Hero/PawnExtension,Health0,HealthSet/ASC null,PS attributes100,
+PS ASC Avatar null,not hidden/destroying,death0. This reproduces70b on a real
+human simulated proxy without any far-field teleport, not a Grenade UI pass.
+B0's temporary JSON is diagnostic only; no final B0 passed report exists.
+Next diagnostic adds Construction-time EndPlay/Destroyed listeners plus bounded
+Python call stacks, preserving the selected original construction/BeginPlay
+handlers once. Catch destruction between component initialization and Actor
+ReceiveBeginPlay; do not manually reinitialize ASC or filter out the failure.
+72 Host03 passes2,526 models. Network03Lifecycle completes four native owner/
+Profile trials, both viewers and all real exits; all three process reports say
+passed, but the independent final gate correctly FAILS authority cleanup.
+Server reads original handles only after client disconnect destroys the whole
+PlayerState/ASC. Capture/require both live ASC handle/class snapshots before
+release, then preserve that POD proof across real client exits; do not weaken
+the cleanup condition or promote Network03Lifecycle to an accepted final run.
+Construction/birth/EndPlay capture works in this run, but it does not reproduce
+the original binding race and therefore does not prove any race repair.
+72 Host04 passes2,529. Network04Lifecycle terminal PASSes the independent
+four owner/Profile matrix plus live before-release spec proof/strict closed
+logs/actual0/0/0 exits. Native calls are4 authority Give/Clear trials,8 Reset
+requests,8 authority Avatar callbacks,8 owner Avatar callbacks,8 native removal
+callbacks and16 actual owner/foreign healthy canonical Pawn viewer waves.
+Dedicated remote owners never register UI; each local active native pool stays
+1/2/1 without duplicate on the second Avatar, foreign own UI/specs unchanged.
+Network05 repeats the same whole matrix without startup CDO/class/Construction
+diagnostic hooks and terminal PASSes all gates/exits;1,945 frozen inputs each.
+This accepts only bounded Grenade UI network lifecycle, not70b stability or
+throw/aim/projectile/damage/full asset/version. Keep failed01/02/03 records.
+Add construction-before-destruction model checks, snapshot final source/run
+evidence and verify the exact index before local batch72 commit. Next73 keeps
+the original startup binding race open and investigates actual late Pawn
+identity/initialization ordering before continuing deeper Grenade business.
+72 adds four constructor/listener model counterexamples; Host05 runs2,533 and
+fails only because the new ledger-count metadata was advanced before ledger72
+was generated. Retain it; generate the final ledger and repeat the complete
+host/index checks, not suppress the consistency test. Six current scoped
+runtime sources match the frozen final04/05 input records.
 
 Batch69 is locally committed as Examplesa72cd16/corebcf8d50. Exact index passes
 2,375 models/788-file closure; five final native runs and nine scoped sources

@@ -86,6 +86,31 @@ class TestCharacterDefaultControl(unittest.TestCase):
             value.observe_births(types.SimpleNamespace(birth=lambda pawn:None))
             registered[-1].ReceiveBeginPlay("pawn");self.assertEqual(calls,["pawn"])
             value.restore();self.assertIs(registered[-1],Selected)
+    def test_construction_observer_calls_original_native_event_once(self):
+        calls=[]
+        class Production:
+            def ReceiveBeginPlay(pawn): pass
+        cls=types.SimpleNamespace(get_cdo=lambda:self.cdo);actual=[Production]
+        native=types.SimpleNamespace(load_class=lambda path:cls,get_registered_mixins=lambda:[dict(target_class=cls,profiles=dict(Python=dict(python_class=actual[0])))],
+            register_mixin_profile=lambda target,name,value:actual.__setitem__(0,value))
+        pawn=types.SimpleNamespace(call_mixin_original=lambda name:calls.append(name))
+        with patch.object(control,"ue",native):
+            value=control.CharacterDefaultControl("Python")
+            value.observe_births(types.SimpleNamespace(birth=lambda pawn:None,constructed=lambda pawn:calls.append("construction")),construction=True)
+            actual[0].UserConstructionScript(pawn)
+            self.assertEqual(calls,["construction","UserConstructionScript"]);value.restore()
+    def test_construction_observer_preserves_selected_python_construction(self):
+        calls=[]
+        class Production:
+            def ReceiveBeginPlay(pawn): pass
+            def UserConstructionScript(pawn): calls.append("selected")
+        cls=types.SimpleNamespace(get_cdo=lambda:self.cdo);actual=[Production]
+        native=types.SimpleNamespace(load_class=lambda path:cls,get_registered_mixins=lambda:[dict(target_class=cls,profiles=dict(Python=dict(python_class=actual[0])))],
+            register_mixin_profile=lambda target,name,value:actual.__setitem__(0,value))
+        with patch.object(control,"ue",native):
+            value=control.CharacterDefaultControl("Python")
+            value.observe_births(types.SimpleNamespace(constructed=lambda pawn:calls.append("construction")),construction=True)
+            actual[0].UserConstructionScript(object());self.assertEqual(calls,["construction","selected"]);value.restore()
 
 
 if __name__ == "__main__": unittest.main()

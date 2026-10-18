@@ -1,0 +1,79 @@
+"""Network report counterexamples only; model rows do not prove replication."""
+import copy
+from pathlib import Path
+import unittest
+from test_grenade_widget_contract import model as single
+from uep_lyra_abilities.grenade_widget_network_contract import PEERS,PLAN,client,validate
+
+
+def model():
+    ids=dict(A=256,B0=257);viewers={};templates={row["profile"]:row for row in single()["cases"]}
+    for peer in PEERS:
+        report=dict(status="passed",error=None,native_mode="Client",native_role=2,peer=peer,player_id=ids[peer],
+            owning_player_state=peer+"-state",observation_errors=[],observers_restored=True,test_owned_specs_removed=True,cases=[])
+        report.update({field:False for field in ("client_native_give_clear_called","native_give_clear_called_by_fixture","callback_replay","health_properties_written","ability_spec_properties_written","inventory_properties_written","native_ui_pool_written","full_acceptance","network_acceptance","packaged_runtime","physical_input_tested","grenade_throw_projectile_damage_migrated","packet_loss_tested","travel_rejoin_tested")})
+        for position,(owner,profile) in enumerate(PLAN):
+            own=peer==owner;events=copy.deepcopy(templates[profile]["native_callbacks"]) if own else []
+            for event in events: event["owner"]=peer+"-state"
+            widgets=[peer+"-original"]+([peer+"-clone"] if own else [])
+            waves=[dict(number=number,pawn=peer+owner+str(number),old_pawn=peer+owner+str(number-1),source_role=2 if own else 1,
+                health=100.,canonical_bound_asc=True,widgets=widgets,own=own) for number in (1,2)]
+            report["cases"].append(dict(position=position,owner=owner,profile=profile,own=own,waves=waves,native_callbacks=events,
+                quiet_ticks=20,original_widgets_restored=True,original_specs_restored=True))
+        viewers[peer]=report
+    server=dict(status="passed",error=None,native_mode="DedicatedServer",player_ids=ids,server_waited_for_client_process_exit=True,
+        observers_restored=True,test_owned_specs_removed=True,observation_errors=[],cases=[])
+    server.update({field:False for field in ("health_properties_written","callback_replay","native_ui_pool_written","full_acceptance","packaged_runtime","physical_input_tested","packet_loss_tested","travel_rejoin_tested")})
+    server["native_pre_release_specs"]={peer:dict(native_asc_alive=True,original_handles=[20+index],current_handles=[20+index],original_specs_restored=True) for index,peer in enumerate(PEERS)}
+    for position,(owner,profile) in enumerate(PLAN):
+        events=copy.deepcopy(templates[profile]["native_callbacks"])
+        for event in events:
+            event["owner"]="server-"+owner;event["before"]["valid"]=False;event["after"]["valid"]=False
+            if profile=="Python": event["counts"].update(existing_noops=0,nonlocal_noops=2,registrations=0)
+        waves=[dict(number=number,pawn=owner+str(number),old_pawn=owner+str(number-1),health=100.,
+            viewers={peer:copy.deepcopy(value["cases"][position]["waves"][number-1]) for peer,value in viewers.items()}) for number in (1,2)]
+        server["cases"].append(dict(position=position,owner=owner,profile=profile,reset_requests=2,native_locally_controlled=False,
+            owning_player_state="server-"+owner,native_callbacks=events,original_specs_restored=True,waves=waves,
+            viewers={peer:copy.deepcopy(value["cases"][position]) for peer,value in viewers.items()}))
+    return server,viewers
+
+
+class TestGrenadeWidgetNetworkContract(unittest.TestCase):
+    def setUp(self): self.server,self.clients=model()
+    def reject(self):
+        with self.assertRaises(RuntimeError): validate(self.server,self.clients)
+    def test_complete_model(self): self.assertEqual(validate(self.server,self.clients)["native_reset_requests"],8)
+    def test_one_client_missing(self): self.clients.pop("B0");self.reject()
+    def test_not_dedicated(self): self.server["native_mode"]="Standalone";self.reject()
+    def test_same_actual_owner(self): self.server["player_ids"]["B0"]=256;self.reject()
+    def test_wrong_native_client_role(self): self.clients["A"]["native_role"]=3;self.reject()
+    def test_client_never_grants_native_spec(self): self.clients["A"]["client_native_give_clear_called"]=True;self.reject()
+    def test_native_authority_not_local_player(self): self.server["cases"][1]["native_locally_controlled"]=True;self.reject()
+    def test_server_does_not_register_client_ui(self): self.server["cases"][1]["native_callbacks"][-1]["counts"]["registrations"]=1;self.reject()
+    def test_native_nonlocal_callback_state(self): self.server["cases"][1]["native_callbacks"][0]["after"]["valid"]=True;self.reject()
+    def test_foreign_ui_never_duplicated(self): self.clients["B0"]["cases"][0]["waves"][0]["widgets"].append("foreign");self.reject()
+    def test_foreign_pawn_is_real_simulated_proxy(self): self.clients["B0"]["cases"][0]["waves"][0]["source_role"]=2;self.reject()
+    def test_canonical_bound_foreign_asc_required(self): self.clients["B0"]["cases"][0]["waves"][0]["canonical_bound_asc"]=False;self.reject()
+    def test_health_zero_not_accepted_as_ready(self): self.clients["A"]["cases"][0]["waves"][0]["health"]=0.;self.reject()
+    def test_native_pawn_must_change(self):
+        wave=self.clients["A"]["cases"][0]["waves"][0];wave["pawn"]=wave["old_pawn"];self.reject()
+    def test_server_waits_actual_process_exits(self): self.server["server_waited_for_client_process_exit"]=False;self.reject()
+    def test_client_quiet_interval(self): self.clients["A"]["cases"][0]["quiet_ticks"]=19;self.reject()
+    def test_native_removal_callback_not_optional(self): self.clients["A"]["cases"][1]["native_callbacks"].pop();self.reject()
+    def test_correct_event_owner_context(self): self.clients["B0"]["cases"][3]["native_callbacks"][0]["owner"]="pawn";self.reject()
+    def test_no_pool_state_write(self): self.clients["A"]["native_ui_pool_written"]=True;self.reject()
+    def test_observer_restore_required(self): self.server["observers_restored"]=False;self.reject()
+    def test_native_ack_matches_actual_client(self): self.server["cases"][0]["viewers"]["A"]["quiet_ticks"]=21;self.reject()
+    def test_both_original_and_python_required(self): self.server["cases"].pop();self.reject()
+    def test_live_pre_release_spec_snapshot_required(self): self.server["native_pre_release_specs"]["A"]["native_asc_alive"]=False;self.reject()
+    def test_pre_release_clone_handle_absent(self): self.server["native_pre_release_specs"]["B0"]["current_handles"].append(99);self.reject()
+    def test_pre_release_original_classes_restored(self): self.server["native_pre_release_specs"]["A"]["original_specs_restored"]=False;self.reject()
+    def test_client_has_no_native_authority_writes(self):
+        text=(Path(__file__).resolve().parents[1]/"Overlay/Content/Scripts/uep_lyra_abilities/grenade_widget_network_validation.py").read_text(encoding="utf-8")
+        client_text=text.split("class Client",1)[1].split("class Server",1)[0]
+        for value in ('call_function("K2_GiveAbility"','call_function("ClearAbility"','call_function("SendGameplayEventToActor"'):
+            self.assertNotIn(value,client_text)
+        self.assertIn('value["exit_code"]==0',text);self.assertIn('readiness.snapshot(pawn,health)',text)
+    def test_client_does_not_wait_for_server_only_auto_respawn_activation(self):
+        text=(Path(__file__).resolve().parents[1]/"Overlay/Content/Scripts/uep_lyra_abilities/grenade_widget_network_validation.py").read_text(encoding="utf-8")
+        self.assertIn('self.require_auto_active=False',text.split("class Server",1)[0])

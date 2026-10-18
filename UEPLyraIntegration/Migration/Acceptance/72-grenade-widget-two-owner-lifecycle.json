@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "batch": "72-grenade-widget-two-owner-lifecycle",
+  "scope": "Bounded real dedicated-server/two-owner Grenade UI lifecycle only. Two final runs:Network04Lifecycle with explicit original-preserving Actor Construction/Begin/End/Destroyed read-only diagnostic hooks;Network05 normal startup without those hooks. Each proves4 native authority Give/Clear trials(A/B0 x original/Python),8 real native Reset/Pawn replacements,8 authority and8 owner Avatar callbacks,8 actual removal callbacks,16 replicated owner/foreign healthy canonical ASC-bound Pawn viewer waves. Dedicated remote owners register no UI;owning native active pool1->2->1;repeat Avatar no duplicate;other owner UI/specs unchanged;original Grenade handles/spec classes and observer classes restored. Live authority cleanup snapshots required before releasing clients;actual client exits0 then server exits0;independent gates/strict closed logs;1945 frozen inputs. Opaque IsValid post-Unregister state follows original BP,not registry membership.2529 host models at final native runs;additional construction-listener models are a separate exact-index check. FailedNetwork01 readiness gate,02 real human simulated-proxy Health0/empty-ASC reproduction without teleport,and03 incorrect post-disconnect cleanup timing remain failures;temporary B0 JSON is diagnostic only. No callback/replication replay,manual ASC/Health repair,raw spec/inventory/pool writes,Engine/official-source edits,Cpp build,cook/package,physical input,loss/travel/rejoin,throw/aim/projectile/damage/full Grenade/version/general stability/publication claim. Original70b startup binding race remains OPEN and is not fixed by passed runs.",
+  "recorded_utc": "2026-10-18T05:38:48.6851118Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "8ae9edc683057475df8299ef4f4e366fdc85bfba",
+  "examples_parent_commit": "e1e8c7c6edb7313f25cea21b606cdd325ce712f1",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-grenade-widget-network/Network04Lifecycle",
+      "summary_sha256": "278257A4237F184A195AB028A7C353468675E6B8833BE407BD6BAEA00A91396C",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1945,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "A": 0,
+        "B0": 0,
+        "server": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "CA2FB799FA158B0BF1BFBAB6A3909EF78765978963B608BF655C73B1A82EE74B"
+        },
+        {
+          "file": "A.json",
+          "sha256": "89701C1AA20DDD3CD9E0B3F38A66726C31739CD48FB3322BE1107CA27191A11A"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "9DFD93F1D3ABFCF6BB247CB9D6387B173D5F7AED6523DC365D4CF7686EED8B53"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261018-grenade-widget-network/Network05",
+      "summary_sha256": "0E016B55FC6581DA126560CAF8F30A6AF1A1A7F99C6822D471E9EA3879A4696A",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1945,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "A": 0,
+        "server": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "F40C188AC50E047AC3BC5FD249F7CFE895D3D399E4EC7EBE0BEE84B2EA118BF4"
+        },
+        {
+          "file": "A.json",
+          "sha256": "B215F387D2515B3232B761959FDFBD48084ECD93DC2C9F45584CDE7343A900FB"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "B992D8A2C9E13F1ADC13E1B577B442611E66D80D2914E0DA93D4D07211A2B924"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "F91AC33334E3CD4A489CE36C4F4CAE7D1BB270416580801CD18E682A1AE2CFE9",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58JumpValidation.ps1"
+    },
+    {
+      "sha256": "1D31BC8510977A851737128457CADDBAFE4862DA692CBDEC0CD8C05486E04B75",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/grenade_widget_network_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/grenade_widget_network_validation.py"
+    },
+    {
+      "sha256": "13EE0A10B9C654696574F33C6119BD1A8816C78B40205B940AB856B0FF7DBA61",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/grenade_widget_network_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/grenade_widget_network_contract.py"
+    },
+    {
+      "sha256": "0018F8F8457328C5C9A46161C53D435AC6916E98F4F996CCBB57B3C6502C11B0",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "sha256": "7B8DC326B6B3A53B231D8FF50EACEFFDE549FC2920D0527CDF06F86208D11595",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_replica_readiness.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_replica_readiness.py"
+    },
+    {
+      "sha256": "C645AF71BE8007C51A8B0A809AD5BFE4D3C067E844032DD68EE88728DD89A776",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_character_default_control.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_character_default_control.py"
+    }
+  ],
+  "host_report": {
+    "sha256": "8711457E7039C03E1A3496583E39F2F0731D0D38E4E87CA2346E43D611F4EA7E",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 2529,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261018-grenade-widget-network/Host04.json"
+  }
+}

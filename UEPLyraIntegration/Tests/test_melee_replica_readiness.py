@@ -1,5 +1,6 @@
 """Read-only snapshot models, not native initialization/replication evidence."""
 import importlib
+import json
 from pathlib import Path
 import tempfile
 import types
@@ -79,14 +80,22 @@ class TestMeleeReplicaReadiness(unittest.TestCase):
 
 
 class EndPlayActor:
-    def __init__(self): self.callbacks=[];self.delegate_exists=True;self.unbound=0
+    def __init__(self): self.callbacks=[];self.events={};self.delegate_exists=True;self.unbound=0
     def is_valid(self): return True
-    def bind_event(self,event,callback): self.callbacks.append(callback)
+    def get_path_name(self): return "pawn"
+    def get_class(self): return self
+    def call_function(self,name):
+        if name!="GetLocalRole": raise AssertionError(name)
+        return 1
+    def bind_event(self,event,callback): self.callbacks.append(callback);self.events.setdefault(event,[]).append(callback)
     def unbind_event(self,event,callback):
         if not self.delegate_exists: raise RuntimeError("unable to find event property OnEndPlay")
-        self.callbacks.remove(callback);self.unbound+=1
+        self.callbacks.remove(callback);self.events[event].remove(callback);self.unbound+=1
     def end_play(self):
-        for callback in list(self.callbacks): callback(self,0)
+        for callback in list(self.events.get("OnEndPlay",[])): callback(self,0)
+        self.delegate_exists=False
+    def destroyed(self):
+        for callback in list(self.events.get("OnDestroyed",[])): callback(self)
         self.delegate_exists=False
 
 
@@ -121,6 +130,19 @@ class TestEarlyWatchLifetime(unittest.TestCase):
         broken.delegate_exists=False
         with self.assertRaisesRegex(RuntimeError,"listener cleanup failed"): self.watch.close()
         self.assertEqual(live.unbound,1);self.assertTrue(self.watch.closed)
+    def test_construction_captures_destroy_without_actor_begin_or_end(self):
+        pawn=EndPlayActor();self.watch.constructed(pawn);pawn.destroyed();self.watch.close()
+        rows=[json.loads((self.watch.root/name).read_text(encoding="utf-8")) for name in self.watch.files]
+        self.assertEqual([row["kind"] for row in rows],["native-construction","native-destroyed-before-end-play"])
+        self.assertEqual(pawn.unbound,2);self.assertTrue(rows[-1]["data"]["python_stack"])
+    def test_constructed_actor_end_detaches_destroy_listener_before_native_teardown(self):
+        pawn=EndPlayActor();self.watch.constructed(pawn);pawn.end_play();pawn.destroyed()
+        rows=[json.loads((self.watch.root/name).read_text(encoding="utf-8")) for name in self.watch.files]
+        self.assertEqual([row["kind"] for row in rows],["native-construction","native-end-play"])
+        self.assertEqual(pawn.unbound,2)
+    def test_repeated_construction_does_not_duplicate_native_listeners(self):
+        pawn=EndPlayActor();self.watch.constructed(pawn);self.watch.constructed(pawn);self.watch.close()
+        self.assertEqual(pawn.unbound,2)
 
 
 if __name__ == "__main__": unittest.main()

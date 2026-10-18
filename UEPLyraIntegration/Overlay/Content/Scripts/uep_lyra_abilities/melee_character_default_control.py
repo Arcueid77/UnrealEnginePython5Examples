@@ -47,7 +47,7 @@ class CharacterDefaultControl:
         actual=binding["profiles"]["Python"]["python_class"]
         self.report["active_handler_class"]=actual.__module__+"."+actual.__name__
         if self.expected_class is not None and actual is not self.expected_class: raise RuntimeError("diagnostic Character method treatment was overwritten")
-    def observe_births(self, watcher):
+    def observe_births(self, watcher, construction=False):
         if self.profile != "Python": return
         cls=ue.load_class(CHARACTER)
         bindings=[value for value in ue.get_registered_mixins() if value["target_class"]==cls]
@@ -68,9 +68,17 @@ class CharacterDefaultControl:
             return begin(pawn)
         values={name:value for name,value in parent.__dict__.items() if callable(value)}
         values["ReceiveBeginPlay"]=ReceiveBeginPlay
+        if construction:
+            original_construction=parent.__dict__.get("UserConstructionScript")
+            def UserConstructionScript(pawn):
+                watcher.constructed(pawn)
+                if original_construction is not None: return original_construction(pawn)
+                return pawn.call_mixin_original("UserConstructionScript")
+            values["UserConstructionScript"]=UserConstructionScript
         self.expected_class=type("DiagnosticCharacterBirthObservation",(),values)
         ue.register_mixin_profile(cls,"Python",self.expected_class)
         self.report["native_begin_play_observer"]=True
+        self.report["native_construction_observer"]=construction
     def restore(self):
         if not self.closed:
             if self.expected_class is not None: ue.register_mixin_profile(ue.load_class(CHARACTER),"Python",self.original_python_class)
