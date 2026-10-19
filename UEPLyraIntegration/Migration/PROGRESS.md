@@ -23,6 +23,39 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch118 (2026-10-20):** GCNL_Spawning business uses Python
+with the original118 full nodes/CDO/signatures, native parent application/removal
+FX/lifetime, Timeline templates/curves/GUIDs and async team/parts machinery intact.
+Parent commits: Examples `2250075` / core `e84aac7`. Assets01 adds7 transport and5
+interface nodes,zero business nodes,and8 methods/Profile. Preserve the original
+ObserveTeamColors factory/proxy assignment/initial and subsequent callback flow,
+two Sequence entries into one latent parts retry UUID,unique AddDelegate and exact
+RemoveDelegate callback identity. Python preserves native RNG/template choice,
+child-inclusive skeletal meshes with case-insensitive ignore tag,map membership
+including invalid values,append-only FX until removal,SpawnTImeLength/BodyColor,
+raw native Timeline SpawnLinearTime to SpawnAge/SpawnTimeline,and team KillEdgeColor.
+Removal deactivates valid FX,clears array/map,cancels the current watcher and
+unbinds parts without clearing source handles or stopping the native clock.
+Differential04NativeSlotsCleanup passes native exit0/independent gate0/strict logs/
+ordered shutdown:4 genuine pairs/8 Timelines/209 natural parameter samples cover
+.35/.8/.55 durations,unassigned and both real teams,native SetTeam callbacks,
+Add/RemoveCharacterPart callbacks,child/ignored and added meshes,repeat discovery,
+one live bidirectional Profile switch,delayed component registration and native
+post-removal retry/rebind. Early and final removal are verified separately.
+Native parts replacement can leave the primary mesh with zero material slots:
+its retained MID state matches the original while active slots follow the track.
+One real manager Add/Remove tag reaches default Python and cancels/clears correctly.
+Owned characters/controllers/player states/FX/watchers clean up,Profile families
+remain and original Health is unchanged. Source default has2 Niagara templates;
+actual team IDs are queried (1/2),not assumed0/1. Preserve failed runs01/02/03 and
+exact Stage source snapshots:non-reflected team entry,wrong fixture team ID,and
+zero-slot/Controller-K2-destroy fixture assumptions. Use existing SDK actor_destroy
+for owned controller cleanup;no SDK/Engine/general Cpp/official edits are needed.
+Focused30 host checks and5 invalid lanes pass;default exact-index regression is
+incremental. Empty-template/failed-spawn native diagnostics,zero/negative/long
+duration,network/pixels/audio/package/full version and all remaining scope stay
+open. No push/tag/release publication.
+
 **Completed bounded batch117 (2026-10-20):** launcher/teleporter Cue business is
 Python while original native parent FX/lifetime and launcher Timeline remain.
 Parent commits:Examples `4b86063` / core `8f20a5f`. Reuse116 Audit03Templates's

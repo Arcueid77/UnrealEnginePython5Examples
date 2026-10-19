@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 119,
+    "bounded_evidence_ledgers": 120,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1235,6 +1235,51 @@
     "full_library_acceptance": false,
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
+  },
+  "spawning_cue_pilot": {
+    "version": "0.12.0",
+    "status": "bounded_spawning_python_cue_native_timeline_team_parts_delegate_lifetime_and_manager_verified_broader_acceptance_open",
+    "evidence_ledger": "118-spawning-cue-native-timeline-team-parts-lifetime.json",
+    "owner": "uep_lyra_weapons.spawning_cue_mixin",
+    "reused_native_read_only_audit": "20261020-looping-cues/Audit03Templates",
+    "native_asset_authoring": "20261020-spawning-cue/Assets01",
+    "native_runtime": "20261020-spawning-cue/Differential04NativeSlotsCleanup",
+    "original_graph_nodes": 118,
+    "methods_per_profile": 8,
+    "new_transport_nodes": 7,
+    "generated_interface_nodes": 5,
+    "new_business_nodes": 0,
+    "python_timeline_clock_added": false,
+    "original_full_cdos_signatures_graphs_timeline_async_proxy_latent_and_delegate_identity_preserved": true,
+    "genuine_native_pairs": 4,
+    "native_timelines": 8,
+    "natural_parameter_samples": 209,
+    "real_default_python_manager_tags": 1,
+    "native_team_ids_queried_from_actual_world": [
+      1,
+      2
+    ],
+    "source_default_template_count": 2,
+    "native_team_change_and_initial_observer_callbacks_verified": true,
+    "native_add_remove_parts_unique_binding_mesh_cache_and_child_ignore_rules_verified": true,
+    "source_post_removal_latent_retry_rebind_and_continuing_timeline_verified": true,
+    "native_zero_material_slot_mesh_replacement_and_shader_setter_scope_preserved": true,
+    "owned_targets_controllers_playerstates_effects_watchers_profiles_and_health_cleanup_verified": true,
+    "focused_incremental_host_checks": 30,
+    "full_regression_executed_this_batch": false,
+    "preserved_failed_native_runs": [
+      "Differential01",
+      "Differential02OwnedTeam",
+      "Differential03NativeTeams"
+    ],
+    "native_zero_negative_or_long_duration_tested": false,
+    "native_missing_template_or_failed_spawn_diagnostics_tested": false,
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "audio_playback_tested": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Remaining GameplayCue0.12 and later business plus broad runtime/network/pixel/audio/package/version acceptance;preserve full original scope."
   },
   "traversal_cue_pilot": {
     "version": "0.12.0",
@@ -5495,8 +5540,9 @@
       "group": "特效、GameplayCue 与音频调度",
       "method_candidates": 8,
       "business_nodes": 86,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch118:118 original nodes/full CDO/signatures/native parent/Timeline/async/latent/delegate identity preserved;8 methods/Profile,7 transport/5 interface/zero business nodes.4 paired native cases/8 Timelines/209 natural parameter samples and1 real manager tag verify team/parts/material/Niagara state,source late retry after removal and cleanup. Broader actor/version acceptance stays open.",
+      "status": "bounded_spawning_python_cue_native_timeline_team_parts_delegate_lifetime_and_manager_verified_broader_acceptance_open",
+      "evidence_ledger": "118-spawning-cue-native-timeline-team-parts-lifetime.json"
     },
     {
       "path": "/ShooterCore/GameplayCues/GCNL_Teleporter_Activate.GCNL_Teleporter_Activate",

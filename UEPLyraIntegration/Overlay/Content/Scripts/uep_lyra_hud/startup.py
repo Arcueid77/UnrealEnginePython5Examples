@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPSpawningCueResult=") for argument in arguments):
+        return "uep_lyra_weapons.spawning_cue_validation"
     if any(argument.startswith("-UEPTraversalCueResult=") for argument in arguments):
         return "uep_lyra_weapons.traversal_cue_validation"
     if any(argument.startswith("-UEPHeroBurstCueResult=") for argument in arguments):

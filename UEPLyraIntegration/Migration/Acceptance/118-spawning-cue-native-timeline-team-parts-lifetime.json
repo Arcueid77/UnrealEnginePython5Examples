@@ -1,0 +1,391 @@
+{
+  "schema_version": 1,
+  "batch": "118-spawning-cue-native-timeline-team-parts-lifetime",
+  "scope": "Bounded spawning Cue Python policy with118 original nodes/full CDO/signatures/native parent FX/lifetime,Timeline templates/curves/GUIDs,original async factory/proxy/callbacks and latent UUID/AddUnique/RemoveDelegate identity retained.8 methods/Profile,7 transport/5 interface,zero business nodes.4 native pairs/8 Timelines/209 natural samples verify actual MID/Niagara/clock/team/parts/child-ignore/cache parameters,live Profile switch,late component and source post-removal latent retry/rebind. Each early/final removal checked;source handles and native clock retained. Native zero-slot mesh replacement follows original parameter-setter scope.1 real default-Python manager Add/Remove tag passes. Owned actors/controllers/playerstates/FX/watchers cleanup and original Health/Profile preservation pass. Actual2 source templates and world teams1/2 queried. Preserve failed runs01/02/03 with exact Stage source. Focused30 host tests and5 invalid lane guards;incremental exact-index verification follows. Empty-template/failed-spawn native diagnostics,zero/negative/long duration,network/pixels/audio/package/full versions and all original scope remain open. No SDK/Engine/general Cpp/official edits,build,cook,push,tag or publication.",
+  "recorded_utc": "2026-10-19T21:06:59.8382754Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "e84aac7dc26bd664f50a9b0121b85ee1059bba10",
+  "examples_parent_commit": "2250075c60f793e930a15664783753a32308a1ee",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates",
+      "summary_sha256": "3D3CE7EAABC9C9F80E2CBFA4827A2F2B699DD4101442B5F882A7E9076E6BB765",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 857,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "2C3A3ED6B10664C2DEB70B54E999088B874AF38A3A50E8EAC32C8675E4A612E7",
+          "file": "audit.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Assets01",
+      "summary_sha256": "51D94B08A71F0E847D1167983580BA7469B77DD466344B6CA04B0F2B21283BB3",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1934,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential04NativeSlotsCleanup",
+      "summary_sha256": "27FB7A83878982AEF85D13D0B9C09A30AD4B61D80099420BE5FDE33D20420A41",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2323,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "60E44945DE831592F62C134AAC6B34A3E498EF901F4F3F856972BCEEBB4F41C5",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/spawning_cue_mixin.py",
+      "sha256": "045DF8EA8D8B12F9AF55B74A4F50E6E1A560B457C7D4FFCFC822414A23C15898",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/spawning_cue_mixin.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/spawning_cue_validation.py",
+      "sha256": "1543F39D6174754A1468CCAD127BDFCC0BA465C690C980787D1C1DE9D2B1BA78",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/spawning_cue_validation.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/spawning_cue_contract.py",
+      "sha256": "33D280349A5CCC4C0986F5528AD9B1C4DE2EB346633441634F2CF770E1DB4D83",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/spawning_cue_contract.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_spawning_cue_assets.py",
+      "sha256": "813C44794343431F34429E4C4672C9D3B8F7B45FB382A79D74405EE32F5A1612",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_spawning_cue_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "31713FC2BA01B201215EBFD7ECC72E7AEF853CACCCED6E0C9154055D7878F9A2",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "663AD2FA032307AA47BE4BFAD3BA474CBCAC55BDCBAF0CAC498F3C701234DF1A",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "541002489F91538B63934654D5CC8650676E649E7E1AA157F7FA2D0AFCE5E4FB",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "CEF01DC1B084C11548093411E067554A856E9D97B320741E6D15146CCD0207F1",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/HostSpawning01.json",
+    "result": {
+      "status": "passed",
+      "tests_run": 30,
+      "failures": 0,
+      "errors": 0,
+      "duration_seconds": 0.01600000000325963,
+      "scope": "test_spawning_cue_*.py",
+      "full_regression": false
+    },
+    "sha256": "152F3CF814D270D115990C3E73A7ADA8762019980A60F1E92A259FD90C8514FD"
+  },
+  "raw_native_artifacts": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Assets01/assets-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Assets01/assets-stdout.log",
+      "sha256": "9471c6a512be637d193f4f5ecf2d1e6c9ddb9489035dcf35ee77d4b8f6183a18"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Assets01/assets.json",
+      "sha256": "14ae791dceb68255fdeec88d82f37191bf634a906f868069ea727eef21c6bac7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Assets01/assets.log",
+      "sha256": "d9318440d00f3d7d196fb6abee0f8458ad69bd6a9bb7eb150f276646a2f0039c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Assets01/dash-spawning-after-cdo.t3d",
+      "sha256": "58aa76fdc9666bf5ba5e0cbd51c68dfde5cc8570a140d8bfb19d5e44cd002091"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Assets01/dash-spawning-before-cdo.t3d",
+      "sha256": "6405fca355ec79cb6a2952433054160a717f444999305b8ba86a834e24c29a09"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Assets01/spawning-after-SpawnTimeline_Template-curve0.t3d",
+      "sha256": "20b13ad2aaaba5f6b3a45da3ecbe24782a037f2ee0cbf026a8905af56ed0425b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Assets01/spawning-after-SpawnTimeline_Template-curve1.t3d",
+      "sha256": "85ebd07c4c96d71bac363747ce0c317a74eb923450c4855f6fc65bc2e9003921"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Assets01/spawning-after-SpawnTimeline_Template.t3d",
+      "sha256": "10bfdbab239ef8e58ab527a3df0d8d6d061b5a48fa4a039a1b02399dbace8ee3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Assets01/spawning-before-SpawnTimeline_Template-curve0.t3d",
+      "sha256": "20b13ad2aaaba5f6b3a45da3ecbe24782a037f2ee0cbf026a8905af56ed0425b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Assets01/spawning-before-SpawnTimeline_Template-curve1.t3d",
+      "sha256": "85ebd07c4c96d71bac363747ce0c317a74eb923450c4855f6fc65bc2e9003921"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Assets01/spawning-before-SpawnTimeline_Template.t3d",
+      "sha256": "10bfdbab239ef8e58ab527a3df0d8d6d061b5a48fa4a039a1b02399dbace8ee3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Assets01/summary.json",
+      "sha256": "51d94b08a71f0e847d1167983580ba7469b77dd466344b6ca04b0f2b21283bb3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential04NativeSlotsCleanup/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential04NativeSlotsCleanup/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential04NativeSlotsCleanup/jump.json",
+      "sha256": "60e44945de831592f62c134aac6b34a3e498ef901f4f3f856972bceebb4f41c5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential04NativeSlotsCleanup/jump.log",
+      "sha256": "bdbe3dabe8a30988ff5ca387f2217be7c40f5e0bfc11cda706773ec67976f25b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential04NativeSlotsCleanup/report-gate-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential04NativeSlotsCleanup/report-gate-stdout.log",
+      "sha256": "e0d69b7850edeb7c5d2a04ce2a5e92566539d8e42c35c5d2f60877a0ca850beb"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential04NativeSlotsCleanup/summary.json",
+      "sha256": "27fb7a83878982aef85d13d0b9c09a30ad4b61d80099420be5fde33d20420a41"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/spawning-graphs.json",
+      "sha256": "58847de6a825b49dd25436a0d89bc1cda18e0038a35d5ec883f785804ad95b89"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/spawning-cdo.t3d",
+      "sha256": "6405fca355ec79cb6a2952433054160a717f444999305b8ba86a834e24c29a09"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/spawning-SpawnTimeline_Template-timeline.t3d",
+      "sha256": "10bfdbab239ef8e58ab527a3df0d8d6d061b5a48fa4a039a1b02399dbace8ee3"
+    }
+  ],
+  "preserved_failed_native_artifacts": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential01/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential01/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential01/jump.json",
+      "sha256": "2efcb18b76ea71e5c8d0b6983bae7b1a07d5d6be24c6869eafe342101b6c7abb"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential01/jump.log",
+      "sha256": "b6bfc4a2c95dea4039b01e349a295bd2949539c46ad64320329857202a60f800"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential01/Source/hashes.json",
+      "sha256": "9deec104ef3d3122fcdbea8fe1755061cfd70d91b142100e31db86d69529a37e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential01/Source/spawning_cue_contract.py",
+      "sha256": "996bbdd07fc1ffaa9d1f51a7ca67c0bc06a62245b9ff48aaee32cc533571ed47"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential01/Source/spawning_cue_mixin.py",
+      "sha256": "045df8ea8d8b12f9af55b74a4f50e6e1a560b457c7d4ffcfc822414a23c15898"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential01/Source/spawning_cue_validation.py",
+      "sha256": "58a162443856a25bfb0b81d2148f7e16ea2ce561096ecb731ab158ddc87df1fa"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential01/summary.json",
+      "sha256": "3e20cce351c71b0c82e972a33b646f98cfd46aedb5d65c930c03d94a27a6210f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential02OwnedTeam/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential02OwnedTeam/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential02OwnedTeam/jump.json",
+      "sha256": "0c0666725fac01982ece60fe65567908d6128f12e412cec8374ce73a5b10beb2"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential02OwnedTeam/jump.log",
+      "sha256": "a530a8d916c9f0c3f8f3c1daaf148d4230fc07e9d56fd4e0eadeb57e74e7383d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential02OwnedTeam/Source/hashes.json",
+      "sha256": "c9e88af204a616eff27b263649ec34d0d594389417b3e2864c397b4247396698"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential02OwnedTeam/Source/spawning_cue_contract.py",
+      "sha256": "e5c5ea0b4e14a381151af0a6a127f7e6249bbc1e7fb3ed724f42e3f410476b6d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential02OwnedTeam/Source/spawning_cue_mixin.py",
+      "sha256": "045df8ea8d8b12f9af55b74a4f50e6e1a560b457c7d4ffcfc822414a23c15898"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential02OwnedTeam/Source/spawning_cue_validation.py",
+      "sha256": "480500570377ebda2a6ab8729ad687e2f7166b5015bec28ba3b11269ab865575"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential02OwnedTeam/summary.json",
+      "sha256": "7217cc22017284fd5f6c9d7861ea4f3c85bf1ad4e86248be046e01bb79d0eb6a"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential03NativeTeams/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential03NativeTeams/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential03NativeTeams/jump.json",
+      "sha256": "f6edb480c4799a47399b3a1e4ff3010a73b6c7cbbd51107ff57aa3d690bc0785"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential03NativeTeams/jump.log",
+      "sha256": "04f1750c0bcccbeec3c90ffb0ff31bf867b6c7ef987b4f6f1cf14ef81be89a79"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential03NativeTeams/Source/hashes.json",
+      "sha256": "30b62a26cf874e5ac3a0137520363079ed26e78974550ad9d0c05be64b72abde"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential03NativeTeams/Source/spawning_cue_contract.py",
+      "sha256": "e5c5ea0b4e14a381151af0a6a127f7e6249bbc1e7fb3ed724f42e3f410476b6d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential03NativeTeams/Source/spawning_cue_mixin.py",
+      "sha256": "045df8ea8d8b12f9af55b74a4f50e6e1a560b457c7d4ffcfc822414a23c15898"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential03NativeTeams/Source/spawning_cue_validation.py",
+      "sha256": "9e24d316097286cf401e52aa3162b1f001567118060a8fd25a171d93614e658b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/Differential03NativeTeams/summary.json",
+      "sha256": "b9a36d3429c0f90d2a98af7d94626ffdbe5fe95245f748b27bc934d987a23b2d"
+    }
+  ],
+  "invalid_lane_guards": {
+    "path": ".build/LyraValidation/BlueprintPython/20261020-spawning-cue/spawning-lane-guards.json",
+    "sha256": "6d924c3c2f5abbb97558681d5813d11c9b2c808a80c728b906feb382c8ebd0ef",
+    "result": {
+      "status": "passed",
+      "cases": [
+        {
+          "reason": "Spawning Cue requires its standalone native Timeline/team/parts lane and current proof",
+          "case": "missing-proof",
+          "output_created": false,
+          "rejected": true
+        },
+        {
+          "reason": "Spawning Cue proof requires its explicit native fixture",
+          "case": "proof-alone",
+          "output_created": false,
+          "rejected": true
+        },
+        {
+          "reason": "Spawning Cue requires its standalone native Timeline/team/parts lane and current proof",
+          "case": "network-combination",
+          "output_created": false,
+          "rejected": true
+        },
+        {
+          "reason": "Spawning Cue requires its standalone native Timeline/team/parts lane and current proof",
+          "case": "other-cue-combination",
+          "output_created": false,
+          "rejected": true
+        },
+        {
+          "reason": "Spawning Cue requires its standalone native Timeline/team/parts lane and current proof",
+          "case": "audio-combination",
+          "output_created": false,
+          "rejected": true
+        }
+      ]
+    }
+  },
+  "authored_assets": [
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\GameplayCues\\GCNL_Spawning.uasset",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\GameplayCues\\GCNL_Spawning.uasset",
+      "sha256": "FC6446A0921DD60BA8ED6D409662BB774D29BD2D2E31847745FF7784B7DF2E93"
+    },
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_SpawningCueMixin.uasset",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UEPMixins\\DA_SpawningCueMixin.uasset",
+      "sha256": "5E353257C1F5C6AE984AA55828DA4650631646D769490C80360F1361340F143E"
+    }
+  ],
+  "incremental_verification_policy": {
+    "mode": "incremental",
+    "focused_host_tests": 30,
+    "full_regression": false,
+    "exact_staged_index_report": ".build/CommitVerification/20261020-spawning-cue/Index01/summary.json",
+    "note": "Exact staged report is produced after this ledger is staged and remains outside the source tree."
+  }
+}
