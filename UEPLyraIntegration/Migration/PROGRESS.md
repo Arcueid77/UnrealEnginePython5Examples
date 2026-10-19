@@ -13,6 +13,35 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Completed bounded batch109 (2026-10-20):** FE/Elimination/ControlPoint child
+continuation/menu/Stinger business now uses Python through base-owned gates.
+108 parent commits:Examples `83dc4ca` / core `431b7c1`. Assets01 extends exact108
+base/Set and three fresh original children:full CDOs/original signatures,parent
+calls,three original Delay0.2 node identities and CP exact async node/GetPayload
+remain.24 new transport nodes/zero business nodes;only base owns the eleven-method
+Mixin/selector family,no child Mixin/selector redeclaration or parent override.
+Base original graphs remain unchanged;child original graphs change only declared
+transport endpoints. Native parent always runs once before the gate starts the
+same original latent node. FE menuTrue/otherFalse remain audio parameters only.
+ControlPoint creates its third native exact listener after Delay and compares
+FindTeamFromActor(GetPlayerPawn0).TeamId to OwnerTeamID,ignoring bIsPartOfTeam as
+authored;both positive/negative Stinger paths still execute.
+Differential01 passes native exit0/independent gate0/strict log/shutdown/offline
+renderer:18 native child startups across three classes/two Profiles/normal,
+mid-delay-switch and pre-delay-destroy modes. Parent BeginPlay count is one and
+two base proxies are immediate in every case.12 native Delay completions occur
+after .2;all six destroyed targets suppress continuation. Switches route the
+current Profile without restart/duplicate subscription. Four live CP cases
+receive12 real typed native messages and yield[True,False,False] Stinger inputs.
+Forty owned native proxies release GI references/become inactive after target
+destruction,GC and matching message. Diagnostic probes are rooted only across GC
+and unrooted;current full base Profile providers,natural manager fields,GI music,
+Health and owned actors restore. Host01 passes3,455;five invalid lanes reject
+before side effects. All four music-family assets now have scoped implementations;
+broader natural mode/network/audio/hardware/pixel/package/full-family/version and
+all original later scope stay open. No Engine/general Cpp/official edits,build/
+cook/package,push/tag/release.
+
 **Completed bounded batch108 (2026-10-20):** base music BeginPlay startup and
 typed message transforms now use Python.107 parent commits:Examples `397a14a` /
 core `3d3a74e`. Assets01 incrementally extends exact accepted107 base/Set,retaining

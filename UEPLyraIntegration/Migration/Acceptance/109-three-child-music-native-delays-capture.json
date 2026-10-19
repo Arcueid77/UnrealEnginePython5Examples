@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "batch": "109-three-child-music-native-delays-capture",
+  "scope": "Bounded FE/Elimination/ControlPoint music continuation/menu/team-Stinger ports via base-owned gates. Assets01 preserves all original CDOs/signatures,base graphs,native parent calls,3 Delay0.2 identities and CP exact async/GetPayload node.24 new transport/0 business nodes;only base owns complete11-method family/selector. No child Mixin/parent override. Differential01 passes native exit0/independent gate0/strict log/shutdown/offline renderer:18 native child starts across3 classes/2 Profiles/normal-mid-delay-switch-pre-delay-destroy modes. Parent once and2 base proxies immediate in every case;12 timed continuations and6 destroyed targets suppressed;switch routes current Profile without restart. FE menuTrue,othersFalse remain audio params only. Four live CP cases receive12 actual typed messages and produce True-False-False Stinger from native team equality,ignoring bIsPartOfTeam as authored.40 native owned proxies release GI references/inactive after target destruction/GC/matching messages. Diagnostic BP roots removed,current full provider family/natural manager fields/GI music/Health/owned actors restore. Host3455/5 invalid lanes pass. All4 family assets have scoped implementations;broader natural mode/network/audio/hardware/pixel/package/full-family/version and full original later scope remain open. No Engine/general Cpp/official edits,build/cook/package,push/tag/release.",
+  "recorded_utc": "2026-10-19T16:31:02.3083471Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "431b7c12d78893bd69c92edc02bb2bf949778121",
+  "examples_parent_commit": "83dc4ca0bf7f7cd27cac238750cb45e0d932b850",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-music-family/Assets01",
+      "summary_sha256": "5EF015B2BC79AD526B9A798B59DE53A2DF8A038FA5F2BF85614D812F14980E33",
+      "status": "passed",
+      "uep_dll_sha256": [],
+      "frozen_input_records": 1882,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-music-family/Differential01",
+      "summary_sha256": "671E9FC50DE690171968EAA43D845C1D410C3EB0FE12032C5DAABBD87FC748E0",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2226,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "60F40E760EFA04F65F1BA0052007F65F19945A4BF413DFF2FF8DF74AC79AF87E",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_audio/music_family_mixin.py",
+      "sha256": "08FBF44DD14DA95B3FD2EA87395EFFDC345BF89451870B8558AF8B25CF774BE7",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_audio/music_family_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_audio/music_family_contract.py",
+      "sha256": "5D4BB83594D265F092E73525141670F665B800BA574DC05CFC7ED7C3CC5C1DCD",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_audio/music_family_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_audio/music_family_validation.py",
+      "sha256": "C98471AEB756A884D7AAB8256E0EC01C5A37822911E7F1E4B2E3B90E21E443F5",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_audio/music_family_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_audio/music_manager_lifecycle_mixin.py",
+      "sha256": "6747F9E144A71FF69EFE68E81C63732E157889726EAEAC7D9125785EE7B03009",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_audio/music_manager_lifecycle_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "989E06F7F85DDB6F41CFFA9957B56C3AAB5FE909DBF23DD23AC531A15A7586C4",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_music_family_assets.py",
+      "sha256": "1B92BEF3F960F389192AE91D89D644870B9271EBFC5DA33039537098F26A70D3",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_music_family_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58MusicFamilyAssetAuthoring.ps1",
+      "sha256": "EB526591737D8707E0FA27EB45FBA453256398AAD262945627B2DB00F5DDFCF5",
+      "path": "Validation/Run-UEP58MusicFamilyAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "13621A217BC2ED5B47EB107A0CE7EE9332C2A3B07C48208AE9F0BD3A6A4C3598",
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "sha256": "A6251507C9E56959CA638EDA2A3D3DFF57260510A246A8C4E04EB1EABD9F859F",
+    "path": ".build/LyraValidation/BlueprintPython/20261020-music-family/Host01.json",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 3455,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    }
+  },
+  "raw_evidence": [
+    {
+      "sha256": "8048F769B7F452F1CA000AF0BF1AED6F7215C55922B5E10CD31799505B3B6E65",
+      "path": ".build/LyraValidation/BlueprintPython/20261020-music-family/Assets01/assets.json"
+    },
+    {
+      "sha256": "D7BBD7847E15CAC4D74BFBA7A181641C1959B6A5AA46CE0824599AC992824E52",
+      "path": ".build/LyraValidation/BlueprintPython/20261020-music-family/Assets01/assets.log"
+    },
+    {
+      "sha256": "60F40E760EFA04F65F1BA0052007F65F19945A4BF413DFF2FF8DF74AC79AF87E",
+      "path": ".build/LyraValidation/BlueprintPython/20261020-music-family/Differential01/jump.json"
+    },
+    {
+      "sha256": "6ADE3963DFD61884363A1178840A8742063FE5E3AA85F34A56F54CAC3505A7B7",
+      "path": ".build/LyraValidation/BlueprintPython/20261020-music-family/Differential01/jump.log"
+    },
+    {
+      "sha256": "11930F0BF3B7757471BAD9883902260B1C6C004DAFD39298271C37ED491DC06D",
+      "path": ".build/LyraValidation/BlueprintPython/20261020-music-family/Differential01/report-gate-stdout.log"
+    },
+    {
+      "sha256": "4731FEB075B5FF02161707A13F12E571437260EE65A19ED1653D7A6EB8BC9BC1",
+      "path": ".build/LyraValidation/BlueprintPython/20261020-music-family/Assets01/dash-music-family-base-after-cdo.t3d"
+    },
+    {
+      "sha256": "4731FEB075B5FF02161707A13F12E571437260EE65A19ED1653D7A6EB8BC9BC1",
+      "path": ".build/LyraValidation/BlueprintPython/20261020-music-family/Assets01/dash-music-family-base-before-cdo.t3d"
+    },
+    {
+      "sha256": "E79D923E795B84735C015A743C2FA7AD6CD762AE27F5FC2F599504FFBEB8776E",
+      "path": ".build/LyraValidation/BlueprintPython/20261020-music-family/Assets01/dash-music-family-control_point-after-cdo.t3d"
+    },
+    {
+      "sha256": "E79D923E795B84735C015A743C2FA7AD6CD762AE27F5FC2F599504FFBEB8776E",
+      "path": ".build/LyraValidation/BlueprintPython/20261020-music-family/Assets01/dash-music-family-control_point-before-cdo.t3d"
+    },
+    {
+      "sha256": "83BAD2C31150989553F896E4C4A43D60303C3CE5849E341DC72150CF6A8D4DBC",
+      "path": ".build/LyraValidation/BlueprintPython/20261020-music-family/Assets01/dash-music-family-elimination-after-cdo.t3d"
+    },
+    {
+      "sha256": "83BAD2C31150989553F896E4C4A43D60303C3CE5849E341DC72150CF6A8D4DBC",
+      "path": ".build/LyraValidation/BlueprintPython/20261020-music-family/Assets01/dash-music-family-elimination-before-cdo.t3d"
+    },
+    {
+      "sha256": "FDFD93F3BF4BBFC5EF581D010CE9CDA888F81D7ECCC4A7694BCDBEE3DA6F4F1C",
+      "path": ".build/LyraValidation/BlueprintPython/20261020-music-family/Assets01/dash-music-family-front_end-after-cdo.t3d"
+    },
+    {
+      "sha256": "FDFD93F3BF4BBFC5EF581D010CE9CDA888F81D7ECCC4A7694BCDBEE3DA6F4F1C",
+      "path": ".build/LyraValidation/BlueprintPython/20261020-music-family/Assets01/dash-music-family-front_end-before-cdo.t3d"
+    }
+  ],
+  "authored_asset_outputs": [
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\Audio\\Blueprints\\B_MusicManagerComponent_Base.uasset",
+      "sha256": "B1998BA347C8F86E4B90C8FC1114F23B6D1B21617E16C2564D7E5D7AFE601B6D",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\Audio\\Blueprints\\B_MusicManagerComponent_Base.uasset"
+    },
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_MusicManagerMixin.uasset",
+      "sha256": "5DB9D3AAE392AFB34DDA93658CC3CE051520FFB6BA7774801CACA7F4804A869F",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UEPMixins\\DA_MusicManagerMixin.uasset"
+    },
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\Audio\\Blueprints\\B_MusicManagerComponent_FE.uasset",
+      "sha256": "011C99A446CF510F3BE0CF25C187804C905FAF53AF7193A4442963DDD0A1084E",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\Audio\\Blueprints\\B_MusicManagerComponent_FE.uasset"
+    },
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Elimination\\B_MusicManagerComponent_Elimination.uasset",
+      "sha256": "54A8EB5B77928E798AC7226703EFC952F95308F77ABA8D756E7F0ECE0B679DC1",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\Elimination\\B_MusicManagerComponent_Elimination.uasset"
+    },
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\ControlPoint\\B_MusicManagerComponent_ControlPoint.uasset",
+      "sha256": "5082FC975E89295A80D437AF8EA50A735BF1B01201250F02D7AAE65EFEAE6D2E",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\ControlPoint\\B_MusicManagerComponent_ControlPoint.uasset"
+    }
+  ],
+  "launcher_guards": {
+    "sha256": "FCEF0C870653A910A60C7DD06AC821BEA001A010F4F9D3D25B34EB9C8C0E29FC",
+    "path": ".build/LyraValidation/BlueprintPython/20261020-music-family/launcher-guard-checks.json",
+    "invalid_lanes_rejected_before_side_effects": 5
+  },
+  "actual_native_owned_proxy_records": 40.0
+}

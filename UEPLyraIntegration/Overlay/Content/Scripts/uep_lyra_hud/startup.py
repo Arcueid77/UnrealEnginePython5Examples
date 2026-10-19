@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPMusicFamilyResult=") for argument in arguments):
+        return "uep_lyra_audio.music_family_validation"
     if any(argument.startswith("-UEPMusicLifecycleResult=") for argument in arguments):
         return "uep_lyra_audio.music_lifecycle_validation"
     if any(argument.startswith("-UEPMusicControlsResult=") for argument in arguments):
