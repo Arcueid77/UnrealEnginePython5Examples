@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPNetShooterNetworkResult=") for argument in arguments):
+        return "uep_lyra_weapons.netshooter_network_validation"
     if any(argument.startswith("-UEPNetShooterAbilityResult=") for argument in arguments):
         return "uep_lyra_weapons.netshooter_ability_validation"
     if any(argument.startswith("-UEPNetShooterActorResult=") for argument in arguments):

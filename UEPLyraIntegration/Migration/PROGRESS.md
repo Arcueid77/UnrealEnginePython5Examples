@@ -13,6 +13,37 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Completed bounded batch96 (2026-10-19):** actual NetShooter predicted two-owner
+input/target-data/native cost/Cue/authority-only spawn and moving projectile
+replicas pass on a dedicated server/two actual clients.95 parent commits:
+Examples `0166154` / core `d2859be`. Network03ExactProfiles passes all three
+native exits0/independent gate0/strict raw-log gates. Four real Enhanced Input
+gestures cover both owners and actual executed Profiles. Native mode2 owner/
+mode0 authority share positive prediction keys and target-data counts;the empty
+child callback never runs shared parent damage business. Sixteen actual native
+ObjectExporterT3D prediction snapshots/hashes are independently checked. Native
+authority cost1 converges on owning inventory replicas;foreign client has no
+activation/target callback/ammo cost. Eight predicted/remote Cue-to-weapon
+entries occur once each. Four distinct native authority projectile wire IDs
+match all eight role1 client replicas;authority/replicas all move naturally with
+at least3 distinct positions and100cm displacement. This proves moving native
+replicas,not quantitative trajectory equivalence. Public native authority
+Flying/Teleport fixtures isolate open-air sources;no projectile physics/pose/
+velocity/timer writes,fixture projectile spawn,callback replay,RPC override,
+ASC repair or client gameplay-state import. Server native DestroyActor cleanup
+ends each pre-impact window;both clients observe replicated destruction before
+the next input. Human Health remains unchanged;original inventory/pose/movement
+mode/control and production observers restore. Host02 passes3,287;five invalid
+driver combinations reject before side effects. Keep Network01 strict-log
+failure:fixture profile selection inside routed activation attempted registry
+mutation. Selection now runs on ordinary ticks;Network02TickProfile is an
+earlier passed snapshot. Native assets/production policies/Engine/Cpp stay
+unchanged,no build/cook/package/push/tag/release. Next:natural NetShooter impact/
+multicast/strand/component replication and the full declared later-version
+migration plus lifecycle/version gates. Original dynamic component archetype
+ensure,physical input,packet loss/travel/rejoin,audio/pixels/package/full version
+remain OPEN.
+
 **Completed bounded batch95 (2026-10-19):** GA_WeaponNetShooter own activation,
 empty target-data override and three original native montage callbacks now use
 Python.94 parent commits:Examples `05d984d` / core `6b12879`. AbilityAssets01
