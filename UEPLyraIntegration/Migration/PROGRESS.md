@@ -13,6 +13,35 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Completed bounded batch106 (2026-10-19):** actual offline audio/effect
+initialization after revised-library cold/network routing.105 parent commits:
+Examples `0a55b6b` / core `36131ee`. Read-only Audit01 finds eight authored Taps
+and zero dynamic IDs under NoSound commandlet. Pistol02ReuseObserver/Rifle02Reuse/
+Shotgun01ReuseObserver each pass native exit0,independent gate0,strict logs and
+actual NonRealtimeAudioRenderer/shutdown checks. Eight dynamic IDs match the
+current authored instances before gameplay setup and after all six real first/
+repeat Enhanced Input shots. The resident EarlyReflectionsSubmix effect chain
+references the original preset. Native unique Tap IDs are runtime-generated;
+compare against the same process's authored settings,not commandlet IDs0..7.
+No AddTap/SetSettings/Init,asset replacement or probe-created audio components.
+Six actual playing weapon-component observations cover five new native components
+and Rifle's reused component. Original-forwarded TriggerFireAudio observation
+requires one native Fire trigger and the exact cached component per Rifle shot;
+second shot reuses it. Pistol/Shotgun capture actual PawnSeed/MagazineAmmo
+parameters. Rifle's initialized preset executes seven Python traces/eight Taps
+per shot without the NoSound empty-preset fallback. Static settings/assets remain
+unchanged. Natural cold input/default route,cost,target data,damage,montage/task
+and complete cleanup gates remain required. Host02Reuse passes3,414;five invalid
+lanes reject before side effects;extra raw effect-chain/ID/query checks pass.
+Preserve Rifle01 failed new-only component observation and source,plus the
+superseded passed Pistol01/source. The observer was corrected to witness real
+reuse,without modifying production policy. Audio device initializes the preset
+naturally;the probe only finds resident objects and reads GetTapIds/GetTap.
+This accepts bounded offline effect initialization/component behavior,not
+physical speakers,audible quality,waveform export,pixels,broader network/travel/
+loss/stress,package/full-library/version or all original later scope. No Engine/
+general Cpp/official/runtime-policy/asset edits,build/cook/package,push/tag/release.
+
 **Completed bounded batch105 (2026-10-19):** revised audio library passes actual
 two-owner predicted/remote firing-Cue network paths.104 parent commits:Examples
 `c4674dc` / core `adc4a0d`. Current103 audio/Cue98/native identity Build05 proofs

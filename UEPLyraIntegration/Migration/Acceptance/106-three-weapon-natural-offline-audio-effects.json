@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "batch": "106-three-weapon-natural-offline-audio-effects",
+  "scope": "Bounded actual native offline audio/effect initialization. Audit01:8 authored Taps/0 dynamic IDs in NoSound commandlet. Three fresh game runs pass native exit0/independent gate0/strict logs/shutdown and actual NonRealtimeAudioRenderer selection.8 dynamic Taps naturally match current authored instances before gameplay setup/after6 actual first-repeat input shots;resident original submix chain confirmed. No AddTap/SetSettings/Init,asset replacement or probe audio creation.6 playing weapon component observations:5 new native components plus Rifle cache reuse;original-forwarded TriggerFireAudio requires one native Fire trigger/exact component per Rifle shot. Initialized Rifle executes14 Python traces/16 Tap calls. Pistol/Shotgun native PawnSeed/MagazineAmmo captured. Settings/assets/default Profiles and all native input,cost,target data,positive damage,montage/task/cleanup gates preserved. Host3414/5 invalid lanes and raw chain/ID/query checks pass. Preserve failed Rifle01/source and superseded passed Pistol01/source;only observer corrected for real reuse. Bounded offline effect/components accepted;physical hardware,audible quality,waveform/pixel/package/full library/version,broader network/travel/loss/stress and original later scope remain open. No Engine/general Cpp/official/runtime-policy/asset edits,build/cook/package,push/tag/release.",
+  "recorded_utc": "2026-10-19T15:27:17.4995923Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "36131ee0913efdf244c492c8d95561c9da2a5528",
+  "examples_parent_commit": "0a55b6bc1a89314d36b371d8c67e3165ccee3c7d",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-audio-effect-init/Audit01",
+      "summary_sha256": "C8C758240911B24788B9823D32FA2438BD89AECD08550472E50B2AAE61C0C7BD",
+      "status": "passed",
+      "uep_dll_sha256": [],
+      "frozen_input_records": 1,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "E24FCF740A88379960BF3D8A3B86B89B4CD6A2C555634166D96144D353402D55",
+          "file": "audit.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-audio-effect-init/Pistol02ReuseObserver",
+      "summary_sha256": "E74D65C9C6C2B68F4078F01C4A8F2BDA0B7AB6B6F4E6E0850CACC41E4FE723A7",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2216,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "3DBBA34310EFB61F23D6A917B9270A481F823C0720E24C53C84563A5356C2909",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-audio-effect-init/Rifle02Reuse",
+      "summary_sha256": "E60F4B50518BDDB558FAEA60F7E1075984939535FF19ECD782BF4770B69B7773",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2216,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "259603AB1ABAB9B3B74F889363798FA6D909E9E694A61CBCFE477BBF90C5CEA2",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-audio-effect-init/Shotgun01ReuseObserver",
+      "summary_sha256": "B096CB8A6F7203FED605D464C55EA768AE88F768F1285A5EB398D7C3A54810B0",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2216,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "F215F81C4BE784EB0AEBCBF12B24980C1ECF65D54713D3899A37CC5F6A341F74",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "BAA238AB9C33FD9ECEED0FB54D7778ED4C5524F15A582210E7D40D9339D756AC",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_effect_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_effect_validation.py"
+    },
+    {
+      "sha256": "814FCA3CA272A9C452444BF595814D8029D993C75FBFBFFA6A5F45FAC5F3E98F",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_effect_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_effect_contract.py"
+    },
+    {
+      "sha256": "B57664BAC7E8402BBBAFA6447437FF3B81CD89BF41AA8CBA8D6D2D004E70262C",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "sha256": "92BBFEC54B06F82379999D4929F520E6F8F0FEB42DC86A84F9C9D174945BA4A7",
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1"
+    }
+  ],
+  "host_report": {
+    "sha256": "A1B6605FFB2F1CD0878CAE7F4BB43DBB07A9AD7278851CEC1950F0FC0475E8C5",
+    "path": ".build/LyraValidation/BlueprintPython/20261019-audio-effect-init/Host02Reuse.json",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 3414,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    }
+  },
+  "raw_evidence": [
+    {
+      "sha256": "AEE35583FCA7F91D469F3CE241888316EB32B4A5C2BE8004C2D6938802716ECD",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-audio-effect-init/audit-preset.py"
+    },
+    {
+      "sha256": "E24FCF740A88379960BF3D8A3B86B89B4CD6A2C555634166D96144D353402D55",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-audio-effect-init/Audit01/audit.json"
+    },
+    {
+      "sha256": "A7BEE27C2D69131DEC8A4C9566BDF51250B94076CB6D545B124314A62B1F5016",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-audio-effect-init/Audit01/audit.log"
+    },
+    {
+      "sha256": "23C6D61791C8753FD9F8A7221FC44BE9FB97A471A82BA803A731233D6781D6FB",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-audio-effect-init/natural-effect-chain-checks.json"
+    },
+    {
+      "sha256": "D5007D9593665A1EBDECC11A2F5E84EDF2A310609AD97334351655EFE48B6714",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-audio-effect-init/check-natural-effects.py"
+    },
+    {
+      "sha256": "991954FAC0C4B2DD784BEE1AB54675ABDC3BB41970FE01AD0577925BB7E0C5A8",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-audio-effect-init/Rifle01/summary.json"
+    },
+    {
+      "sha256": "6CBF1DC0686C78E481C06C691B8584B65777CEFB6FEFED673B94A8A5F9BA9E3E",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-audio-effect-init/Rifle01/jump.json"
+    },
+    {
+      "sha256": "1DC0525F3EC5EDAAF6E286A485DD854985014546E88403605EB7E0E1C3120783",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-audio-effect-init/Rifle01/validation-source.py"
+    },
+    {
+      "sha256": "BD5F44644F15F0B3252F85F8E790F9889E5D50E59C5A53459CBCEA681D8F704A",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-audio-effect-init/Rifle01/contract-source.py"
+    },
+    {
+      "sha256": "4CAE193A68F6357ABC9BA5B0E235D5CD87B73446A49E52531164B9EC6FF17740",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-audio-effect-init/Pistol01/summary.json"
+    },
+    {
+      "sha256": "1DC0525F3EC5EDAAF6E286A485DD854985014546E88403605EB7E0E1C3120783",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-audio-effect-init/Pistol01/validation-source.py"
+    },
+    {
+      "sha256": "3DBBA34310EFB61F23D6A917B9270A481F823C0720E24C53C84563A5356C2909",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-audio-effect-init/Pistol02ReuseObserver/jump.json"
+    },
+    {
+      "sha256": "6ACBAA5DCFF7DE2EECD41A066F5476188CC703E632F99B22D3AB5D2819A51EF3",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-audio-effect-init/Pistol02ReuseObserver/jump.log"
+    },
+    {
+      "sha256": "5675241050E367AAB5C4339B18939031723B5464F570291250EC05CD77FFC153",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-audio-effect-init/Pistol02ReuseObserver/report-gate-stdout.log"
+    },
+    {
+      "sha256": "259603AB1ABAB9B3B74F889363798FA6D909E9E694A61CBCFE477BBF90C5CEA2",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-audio-effect-init/Rifle02Reuse/jump.json"
+    },
+    {
+      "sha256": "0711C9E96DB72B92D289E9BCE4B6F1D05554C50E614D22D63651D174CED59B54",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-audio-effect-init/Rifle02Reuse/jump.log"
+    },
+    {
+      "sha256": "9FFC60C3A4576870E3F3A9B8181EB312BDFA6B4591C539C0CEC5F20EF5DC84A4",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-audio-effect-init/Rifle02Reuse/report-gate-stdout.log"
+    },
+    {
+      "sha256": "F215F81C4BE784EB0AEBCBF12B24980C1ECF65D54713D3899A37CC5F6A341F74",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-audio-effect-init/Shotgun01ReuseObserver/jump.json"
+    },
+    {
+      "sha256": "4BAF8972D6CE794784AE07C9530A9EEF85FBF9DA2B8012FE746FDD465F7B550F",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-audio-effect-init/Shotgun01ReuseObserver/jump.log"
+    },
+    {
+      "sha256": "B274DA40799C494A7E0E354DB5F6CC66915B4E980400C36CADE75CB041686422",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-audio-effect-init/Shotgun01ReuseObserver/report-gate-stdout.log"
+    }
+  ],
+  "launcher_guards": {
+    "sha256": "8393FE47C447A8DE3B2AB946D9415FDDFB6640BBDFD2CCCD1D7F0FB461C16357",
+    "path": ".build/LyraValidation/BlueprintPython/20261019-audio-effect-init/launcher-guard-checks.json",
+    "invalid_lanes_rejected_before_side_effects": 5
+  }
+}
