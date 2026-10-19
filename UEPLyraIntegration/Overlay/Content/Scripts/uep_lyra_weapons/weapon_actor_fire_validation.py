@@ -24,6 +24,7 @@ class Validation(Ready):
     def __init__(self,result):
         super().__init__(result);self.require_auto_active=False
         self.actors,self.events,self.fx_classes,self.fx_signatures=[],[],[],{}
+        self.saved_fx_profiles={}
         self.target_mesh=None;self.recording=False
         self.report=dict(schema_version=1,status="running",error=None,cases=[],observation_errors=[],full_acceptance=False,network_acceptance=False,
             packaged_runtime=False,audio_playback_tested=False,pixels_tested=False,real_gas_firing_tested=False,health_properties_written=False,begin_play_migrated=False)
@@ -36,9 +37,10 @@ class Validation(Ready):
         self.health_before=self.healths();owner=self
         for index,cls_path in enumerate(FX):
             cls=ue.load_class(cls_path);entry="fire" if index==2 else "Fire"
-            require(not any(row["target_class"]==cls for row in ue.get_registered_mixins()),"FX class already has a production binding;preserve it")
+            existing=[row for row in ue.get_registered_mixins() if row["target_class"]==cls]
+            if existing:self.saved_fx_profiles[cls]={name:row["python_class"] for name,row in existing[0]["profiles"].items()}
             self.fx_classes.append(cls);self.fx_signatures[cls_path]=ue.describe_function(cls,entry)
-            def observe(slot,method):
+            def observe(slot,method,handler=None):
                 def invoke(actor):
                     if owner.recording:
                         try:
@@ -52,9 +54,14 @@ class Validation(Ready):
                             if slot==1:row.update(muzzle=vec(actor.get_property("MuzzlePosition")),distance_threshold=float(actor.get_property("Distance Threshold")))
                             owner.events.append(row)
                         except Exception:owner.report["observation_errors"].append(traceback.format_exc())
-                    return actor.call_mixin_original(method)
+                    return handler(actor) if handler is not None else actor.call_mixin_original(method)
                 invoke.override=method;return invoke
-            ue.register_mixin_profile(cls,"Observer",type("ObservedOriginalWeaponFX"+str(index),(),dict(ObservedFire=observe(index,entry))),make_default=True)
+            if cls in self.saved_fx_profiles:
+                for profile,base in self.saved_fx_profiles[cls].items():
+                    methods={key:value for key,value in vars(base).items() if not key.startswith("__") and callable(value)}
+                    methods["Fire"]=observe(index,entry,base.Fire)
+                    ue.register_mixin_profile(cls,profile,type("ObservedCurrentWeaponFX"+str(index)+profile,(),methods))
+            else:ue.register_mixin_profile(cls,"Observer",type("ObservedOriginalWeaponFX"+str(index),(),dict(ObservedFire=observe(index,entry))),make_default=True)
         self.wall=self.world.actor_spawn(ue.find_class("Actor"));self.actors.append(self.wall)
         self.box=self.wall.add_actor_root_component(ue.find_class("BoxComponent"),"UEPFireWall")
         self.box.call_function("SetBoxExtent",ue.FVector(10.,400.,400.),False);self.box.call_function("SetCollisionObjectType",0)
@@ -100,8 +107,14 @@ class Validation(Ready):
         for actor in reversed(self.actors):
             if not dead(actor):actor.call_function("K2_DestroyActor")
         self.report["test_actors_destroyed"]=all(dead(actor) for actor in self.actors)
-        for cls in self.fx_classes:ue.unregister_mixin(cls)
-        self.report["fx_observers_removed"]=not any(row["target_class"] in self.fx_classes for row in ue.get_registered_mixins())
+        restored=True
+        for cls in self.fx_classes:
+            if cls in self.saved_fx_profiles:
+                for profile,base in self.saved_fx_profiles[cls].items():ue.register_mixin_profile(cls,profile,base)
+                rows=[row for row in ue.get_registered_mixins() if row["target_class"]==cls]
+                restored &= len(rows)==1 and all(rows[0]["profiles"][profile]["python_class"] is base for profile,base in self.saved_fx_profiles[cls].items())
+            else:ue.unregister_mixin(cls)
+        self.report["fx_observers_removed"]=restored and not any(row["target_class"] in [cls for cls in self.fx_classes if cls not in self.saved_fx_profiles] for row in ue.get_registered_mixins())
         self.report["original_fx_signatures_restored"]=all(ue.describe_function(cls,"fire" if index==2 else "Fire")==self.fx_signatures[FX[index]] for index,cls in enumerate(self.fx_classes))
         self.report["original_pawn_health_unchanged"]=self.healths()==self.health_before if hasattr(self,"health_before") else False
         rows=[row for row in ue.get_registered_mixins() if row["target_class"]==self.parent] if hasattr(self,"parent") else []

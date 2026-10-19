@@ -13,6 +13,29 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Completed bounded batch89 (2026-10-19):** B_WeaponFire shell/muzzle/tracer
+cache/trigger/parameter decisions and latent cleanup now use Python. 88 parent
+commits: Examples `4503214` / core `8ddb656`. Assets01 preserves original class/
+full CDO/Fire signature and111 original graph nodes except two declared dispatch
+endpoints,with three transport nodes/two methods per Profile. Original native
+RetriggerableDelay3s node/UUID reused;cleanup tests validity,not IsActive.
+Final Differential02NativeHold passes8 actual Niagara cold/reuse/disabled/
+inactive-replacement trials on both Profiles,reading native Trigger bool,
+Direction byte storage and native ImpactPositions vector array. Original
+relative yaw90/attachment/cache reset/toggle/spawn options retained. Two native
+timing profiles prove retrigger resets the original deadline (destruction after
+4.0166/4.0037s),valid inactive components keep Actor alive and repeat cleanup,
+then removal permits native later destruction. ParentIntegration01 passes24
+actual Pistol/Rifle/Shotgun Fire calls/72 FX entries with migrated FX Profiles
+wrapped/restored,not overwritten. Both gates/closed logs/actual exits0 pass,
+no binding/context warnings,all test Actors destroyed and Pawn Health unchanged.
+Host03 passes3,037;four invalid driver combinations rejected early. Preserve
+Differential01 fixture component/method name shadowing failure. Native Niagara
+simulation/native latent scheduling remain native;no active/timer/Health repair
+or continuation replay. Next:remaining B_WeaponImpacts/B_WeaponDecals business,
+then natural firing/network/lifecycle/version gates. Pixels/audio/packaged/full
+version remain OPEN. No Engine/official/Cpp edits,build/cook/package/push/tag.
+
 **Completed bounded batch88 (2026-10-19):** B_Weapon ReceiveBeginPlay and
 ObserveTeamColors callback decisions now use Python. 87 parent commits:
 Examples `4d876d9` / core `81ddf68`. Assets02NativeSelf rebuilds from official

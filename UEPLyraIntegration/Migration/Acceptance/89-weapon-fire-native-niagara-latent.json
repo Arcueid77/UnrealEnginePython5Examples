@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "batch": "89-weapon-fire-native-niagara-latent",
+  "scope": "Bounded B_WeaponFire original shell/muzzle/tracer decisions and latent cleanup,not full natural firing/network/version. Python preserves original enable/active-cache/recreate/reset-toggle logic,native SpawnSystemAttached options/Actor socket space/yaw90/auto-destroy/activate/pre-cull,static mesh/Trigger bool/normalized world-muzzle Direction/ImpactPositions vector-array writes. Original111 graph nodes/class/full CDO/Fire signature and RetriggerableDelay3s node/UUID retained except two declared dispatch endpoints;three transport nodes/two methods per Profile. Differential02NativeHold proves8 actual Niagara cache/parameter trials with reflected native bool/direction bytes and native vector-array readbacks;two real native timing profiles demonstrate retriggered deadline4.0166/4.0037s,valid inactive component repeat (validity,not active),and later destruction after component removal. ParentIntegration01 proves24 Pistol/Rifle/Shotgun parent Fire calls/72 FX entries with current migrated FX Profiles observed and restored,other FX classes original. Independent gates,strict closed logs,real exits0,no binding/invalid-context warnings,Actor/profile/signature/Health cleanup pass.3037 host tests,four bad driver combinations rejected. Failed Differential01 fixture variable shadowing kept. No actual active/timer/Health repair,latent continuation replay,new Cpp/Engine/official changes,build/cook/package,push/tag/release. Pixels/audio/network/general stress/whole version remain open.",
+  "recorded_utc": "2026-10-19T04:15:11.7754785Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "8ddb6567ccb1ebc36be7c9e481e156d9b0b1236c",
+  "examples_parent_commit": "45032141eb466a29dd3571459a270b9dab38ab32",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-fire-fx/Assets01",
+      "summary_sha256": "172491B45B388EF6F6264DBCE245E931F98EF78B4AF2C857B8D107EA9568E099",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1767,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-fire-fx/Differential02NativeHold",
+      "summary_sha256": "099FB282655814DCA1DADC22AC74F07DB8554D5BFCD1E79A6F6A7E05A1318AF9",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2053,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "05C7D8920375F8C14BF346C9E2A9FEDADED13754E719F480D145ACADDF7B99BF",
+          "file": "jump.json"
+        },
+        {
+          "sha256": "1A978B01D4C5F0A7773C614BE1DE198C6AD7E98A47F94B6B15371B42822A5752",
+          "file": "jump.log"
+        },
+        {
+          "sha256": "E5DD59BA160CB4468009FC1BF3BB318A4C41FDA15A2642C0282015E913006CBD",
+          "file": "context-and-binding-audit.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-fire-fx/ParentIntegration01",
+      "summary_sha256": "24BA60142C322136F6CD8EFE1C84305B3298B45153A0A98273ED67182D5F1043",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2065,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "BF30EAE4774CE1C06060BD57F38D1124030FCD7A11EB798278DE61C6DBDEC5CC",
+          "file": "jump.json"
+        },
+        {
+          "sha256": "86A318ED26758AFCC686D3F5B4928FDD8C50AFC8DEB4FD981BC74DE6A4ACBA9A",
+          "file": "jump.log"
+        },
+        {
+          "sha256": "E5DD59BA160CB4468009FC1BF3BB318A4C41FDA15A2642C0282015E913006CBD",
+          "file": "context-and-binding-audit.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_fire_fx_mixin.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_fire_fx_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "D0C5667BACB92D41ED90F3CA1E7A7D881BA192022B137C0A36B586D69E0F209F"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_fire_fx_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_fire_fx_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "DB57981EF30983DE34E5E74A6107EC8670FC752309EB702DBEEB9CA461D8DFF4"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_fire_fx_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_fire_fx_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "F6B29B6B09B8F9A9D841B54182949AB365616095BFCB210D850157FD921986D9"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_actor_fire_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_actor_fire_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "111F6A697EBA85839D0F0BFACCBE6A37879EBBB20B9595E6E64D797D983FB68A"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "314D18D8EEE9CF6A45B32C147C1A485A7D6CA19F499C870AB66B0FEBCF393457"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_weapon_fire_fx_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_weapon_fire_fx_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "2C79FE5F13E51BE8ACFB1C7B1C006E759E3808FFD18EB3011E520A589CDDA8C1"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "A5B1EF93694E7DC1C8518C579775FBBC58A85786D52AC9396F18B66B590E0C22"
+    },
+    {
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "8C171020AD55CBB711D6F31BB8A609DBE2BA9430C76F5CE16D0560A016849131"
+    },
+    {
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "E50BB187B6341416A60530E0F097BEE4BB6F8B3E30DEC9EE7C72C7EB8F7D50B8"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-fire-fx/Host03.json",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 3037,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "sha256": "FF78460C0B4C5414EF3BAA004DE5EF1AA621E95E99820CDD928AC50D1C0882A1"
+  }
+}
