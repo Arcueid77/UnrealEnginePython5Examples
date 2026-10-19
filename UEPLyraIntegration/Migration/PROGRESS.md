@@ -13,6 +13,40 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Completed bounded batch103 (2026-10-19):** EarlyReflections scheduling now uses
+a typed ordinary Object router.102 parent commits:Examples `31e69ff` / core
+`2a5e1d1`. Reuse102 Audit01's154 original nodes;OriginalProbe02OwnedTaps confirms
+actual simple collision,eligibility,Tap order and all restored state. Assets01
+extends only accepted102 library:all348 original nodes,eight static signatures/
+flags,full CDO,locals and100/101/102 transport remain. Five new transport nodes/
+one helper method per Profile,no business nodes/static Mixin registration.
+Differential01Walls/02Open each pass native exit0,independent gate0,strict logs
+and shutdown:30 cases/120 direct/static Blueprint calls per scene,with three
+normal variants,local/foreign/null Targets,material absence/default/flesh/other,
+and below/equal/above4000 camera-distance boundaries. Across both:840 actual
+native business traces,960 Tap calls and104 previous-helper regression calls.
+Positive Python query/Tap counters prove the new business executed;complete Tap
+callback inputs/order and entire preset state match all four caller/Profile
+combinations exactly. Owned collision preflights prove enabled/disabled walls;
+both scenes include actual hits and misses. Seven TraceTypeQuery1/simple traces,
+ignore Target only for the final two rays,and Tap ID-index order0,1,4,5,2,3,6,7
+remain. DirectHitDistance/secondary travel preserve float narrowing;nearby foreign
+Targets qualify,local Targets bypass the strict4000 limit,SurfaceType1 skips.
+Direct.Primary's DidHit uses material validity;Side.First.L/R retain zero
+ListenerLocation. All current dispatch Profiles are observed by original-handler
+forwarding and restored with their complete four-method family;no callback replay
+or trace injection. All owned actors/Taps are removed,prior preset state/Profiles/
+Health restore. Host01 passes3,391;five invalid lanes reject before side effects.
+Keep OriginalProbe01's empty dynamic-preset preflight failure/source. NoSound
+initially exposes zero dynamic Taps:tests add eight temporary Taps through the
+actual hardcoded preset's native AddTap API and remove them afterward. Production
+does not bootstrap them:short arrays retain the original diagnostic path;native
+effect OnInit copies Settings into DynamicSettings. All eight library methods now
+have scoped Python implementations;normal firing-Cue/default-registration/network
+integration,real effect initialization/audibility/hardware/pixel/package/full
+library/version acceptance and all original later scope remain open. No Engine/
+general Cpp/official edits,build/cook/package,push/tag/release.
+
 **Completed bounded batch102 (2026-10-19):** static WhizBy scheduling now uses
 a separate typed ordinary Object router.101 parent commits:Examples `7b0ce0a` /
 core `7999e7b`. Audit01 captures all43 WhizBy and154 EarlyReflections nodes,
