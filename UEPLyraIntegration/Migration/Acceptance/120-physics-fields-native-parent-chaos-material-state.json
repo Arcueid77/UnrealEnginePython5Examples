@@ -1,0 +1,493 @@
+{
+  "schema_version": 1,
+  "batch": "120-physics-fields-native-parent-chaos-material-state",
+  "scope": "Bounded project physics-field parent forwarding and shatter material/Chaos-break policy. Audit01 preserves original7/20 nodes/CDOs/components and DefaultGame_Label registry references;no EditorResources-based exclusion. Engine FS_MasterField remains intact. Assets01:3 methods/Profile/class,6 example/5 sphere transport,5 interface each,zero business nodes;full defaults/signatures/graphs/native Chaos delegate identity and disconnected shatter Tick preserved.2 native pairs/4 fields/4 collections produce actual parent field and controlled native external-strain solver breaks,167 notifications/sphere in this run. Real payload component/mass/location and handler delivery verified.18 native samples verify MID slots0/1,target1->0,current0 and unchanged shader scalars. Natural constructor/BeginPlay once and actual Tick/Chaos receiver dispatch across live Profile switches pass. Controlled field activation/lifespan/tick inputs are explicit;no callback/Tick replay,Python physics clock or random fragment determinism claim. Owned actors/Profile/Health cleanup and strict exits/log/shutdown pass. Focused27 host and5 invalid lanes;incremental exact-index follows. Native missing-component errors,network/pixels/package/full versions and all original scope remain open. No SDK/Engine/general Cpp/official edits,build,cook,push,tag or publication.",
+  "recorded_utc": "2026-10-19T21:54:49.9659624Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "ae3182dc2629ce2b50d193ed1901e61e0c28dd2c",
+  "examples_parent_commit": "444f361727eb09ee3c1ccd548ca6941b0f745017",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01",
+      "summary_sha256": "12095B5F2F5F28AAC219A000350F2440AB8B051F43680879736D0C5896BC75CA",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 845,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "3F5B6C044A03C9CA3BE4266B56B826EBA909347517A3BFA12EF1C75E15E34598",
+          "file": "audit.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Assets01",
+      "summary_sha256": "1F435BE05C314C3E9D2C532B7F7A562700F89230C9DA986956F79CEBE5896E24",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1951,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Differential01",
+      "summary_sha256": "CD5DF89A4616A3CFCD63FAFA82925E706195AB37DD41D28A9C092AA9A3692739",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2366,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "FEC675C2648208A6C664DE7AA04A65578716BCE5B35CE247D5F40F6708047094",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_physics_fields.py",
+      "path": "Demos/UEPLyraIntegration/Tools/audit_physics_fields.py",
+      "sha256": "978A6A5A0C1B7A7B5BB5559A61F6771130AF271544B7F23A7319E107854116C0"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_physics_field_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_physics_field_assets.py",
+      "sha256": "1FA6B36E1ABF74511A9A8299BD520517A3E8ABDCCF4D7B132CC3EC2BCE42A069"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "3951990A319B2E3C8FBDA80507EA33BBEF963AF9AB415E1D9229C6961FEBB6C8"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/physics_field_mixin.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/physics_field_mixin.py",
+      "sha256": "43AC445AA643882378A21EE12A920F2933B0B68B2D6284E3D508CEACD25288C1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/physics_field_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/physics_field_validation.py",
+      "sha256": "0D1AEFE190D541C59CDE55594EA05C8DA2D3520D85F5DAB5B7322761B2D02382"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/physics_field_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/physics_field_contract.py",
+      "sha256": "F3764E18AB21BCB645C9D3978F0D79B538569D6122CF21C3787E723DD6BFCE76"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "A70CD4DE24994288D48ED1954FAFB3F5DE2263BC8611F3A7714175CE383645D0"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "736C2AA3752EDAC5E3828D59C999397B70D476ADA580518BB5D3A0943A01763C"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "EFDFD4A9999F767BED9ED88007E102BB83B578034FBD125D4DB1BCC48F5664AE"
+    }
+  ],
+  "host_report": {
+    "result": {
+      "status": "passed",
+      "tests_run": 27,
+      "failures": 0,
+      "errors": 0,
+      "duration_seconds": 0.0,
+      "scope": "test_physics_field_*.py",
+      "full_regression": false
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/HostPhysics01.json",
+    "sha256": "4DDF677969C2FD96A928CC77E469112B0ECF6E225BD4B7C4F9CA41571D53B2CF"
+  },
+  "raw_native_artifacts": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/audit-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/audit-stdout.log",
+      "sha256": "b0e113b190364ad573666d94f61bbccb1496ddfb92201b42a1964fc9b8a3ad81"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/audit.json",
+      "sha256": "3f5b6c044a03c9ca3be4266b56b826eba909347517a3bfa12ef1c75e15e34598"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/audit.log",
+      "sha256": "52187eede584e573457aade4b44802b7a4a4253b4d2fc3b21c313e3da356cbcc"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-cdo.t3d",
+      "sha256": "12cabb9b1e28f0af059a7ec435e7cb62cc6dd1b21d46f4930568585b213cfef5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-scs.t3d",
+      "sha256": "142fa7e7c4545e9448266e23d10ee924d2919b2116ba79157a187246f68fcc88"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_2-component.t3d",
+      "sha256": "a45f1260a449b7736b52cfbaaf186c39a2df2bd1926844071f20db5aa7d8d5a3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_3-component.t3d",
+      "sha256": "f45c51f8667e4353266d0f655d0d6378a86999df299a68ef51ac65ea75c3a9a7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_36-component.t3d",
+      "sha256": "6f6d7be088f2d1b27a04cba1496c353ebc0238eb9acc4d6c326ee911880d76c1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_38-component.t3d",
+      "sha256": "7425115eff7bb36fe65f14c9a2d1b7fb704ac2ab8b850be9ec53837f0aa6ad29"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_4-component.t3d",
+      "sha256": "5b4a495f90ae2ada730e4ca0e1f17abb7ad501032979e3e9c3176d064777e68a"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_44-component.t3d",
+      "sha256": "138d263ecc5ad52157e06df21df2b89040c1dc309d7bc23e4bb7569129b6d4da"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_46-component.t3d",
+      "sha256": "e865f28c509665c169b900882caaf04e5264ad2e7e0fc270a89cf6baa3b064d6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_47-component.t3d",
+      "sha256": "0cae5f4bdf23194f789471080f19d81aedda5c8cc7acf6c1d8208faf400242a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_48-component.t3d",
+      "sha256": "e5a03daf46f5920504883df3e690cfa305079ca22c9a3c47ff167106f793a4aa"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_49-component.t3d",
+      "sha256": "c983360c80e84a2346cc7d23138f27004f2ae12ad3f00b87816996d8475a7c6a"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_50-component.t3d",
+      "sha256": "c320e31531141ebc0300be07ca10b7bcf0a00e70d52d67bba925ac99ce827c72"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_51-component.t3d",
+      "sha256": "4977a00c01a134d02f2d802685dfb928459ec8c4c5bbe34c12422a6be9047c1c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_52-component.t3d",
+      "sha256": "3bd26423da75f85a101603727e06b783afb41963917b699c961e6d884fdb0609"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_65-component.t3d",
+      "sha256": "4dca4731796d66cb134cdb33659ea366b2221c319c2c406f628ee69f8f513054"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_66-component.t3d",
+      "sha256": "c38226148d8ba5afc6c7c4e297909130b8108fd3746257196b8c1a79232d4a03"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_67-component.t3d",
+      "sha256": "58a748bec771109b4034c179a0817c5b649862f7c84393cc3b9bbb4ed397de7e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_68-component.t3d",
+      "sha256": "1b30ec684133970fa5c020b57d4424ed47d28ce6b1159f8131bd1482816edd0b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_69-component.t3d",
+      "sha256": "b8ff66560cbb46750629ba527ac900a0c0473c958b6120856a4a2a80a61bfcb0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_70-component.t3d",
+      "sha256": "96c156983847ec1274161a4a673c02c96d7cf03e4265da80d379d2aa4bad3659"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_71-component.t3d",
+      "sha256": "604732ac5b0d1200c47619d70ed37654eeed5f6ed44cac56c1f3e2afd007d0eb"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_72-component.t3d",
+      "sha256": "3556f5ba0bf02a28ac59eed83f75ec97ee52d877d0fd9ec73355be9dcf45daaf"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_73-component.t3d",
+      "sha256": "5684a53628d831ee1e054a7b7c676cf981f516bdfd907f40cf63a3d5607a7d96"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_74-component.t3d",
+      "sha256": "90bf03a9bc9372321e070dff87998d005ba561127d700541b099ce0ea9c9632b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_75-component.t3d",
+      "sha256": "e0564c0e5ee113bb5b70aa4a686b213e080a77cfbd7ac760226ba5e64e3522f1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_76-component.t3d",
+      "sha256": "7f42bef00a17d26c5e95a4b0d09bff919c0731c076b0cecc436f4923ebf3172a"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_77-component.t3d",
+      "sha256": "f283fbe3324a272377db5d4661023f6306918a549507f2898c0786a0f1e8b400"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_78-component.t3d",
+      "sha256": "46241312baf084d2c8d9ef0c40402d98e12372fc5d853ddaf40b156e56d27b2e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_79-component.t3d",
+      "sha256": "e6a02297154a01722f5ea3abc9cd2fb22312d6d389d9e3cb420db5e7edfcbd0b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_80-component.t3d",
+      "sha256": "155fd330d0db2325346914fe8a650d35bae66d3961596d1267bc06001cfc734b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_82-component.t3d",
+      "sha256": "9acb4f8d87486166c0d7dd1aef2bd6c626c374db28df55c7130a9baf6a3a6e45"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_83-component.t3d",
+      "sha256": "5f1becbd1ebbd09dc7cbd2d5bde6c0df69ff6320a273c067f8c4996d2e7cac70"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_86-component.t3d",
+      "sha256": "0514143df23ef760b6fe04d765bb82ee7bea001cf5d6f01c8cf05234f217622d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_88-component.t3d",
+      "sha256": "950f3d1bd10953947a78a38a017b868c1cd849f72dacd857ea9bcc01944df06d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_89-component.t3d",
+      "sha256": "ae16647249b2d8c38b0f4843bdfa913c3353a095811f7dae829b3536ad3d6699"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_90-component.t3d",
+      "sha256": "266a6e4933a5b0037594b2defa463ab3cd98828ac35f590a7d459360e8579ddd"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_91-component.t3d",
+      "sha256": "6163ea9a5cdf6a72934a3ab4b713ab83eb606f096dd7415148ecc01024b9e80b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_92-component.t3d",
+      "sha256": "48796e0eadbd887626b3b8814068eb6e93e7a25195919331026ac9978ba4a859"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/engine-field-parent-SCS_Node_93-component.t3d",
+      "sha256": "94f93bbfe5adfd65f2ef3bff5b3191c66f82ea06b181c8efe416ab64cb1fb311"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/example-cdo.t3d",
+      "sha256": "066033f54e5e2b1ac12fb81b38f7c00dfb31eec55e97d94af5200c50eb5c5347"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/example-graphs.json",
+      "sha256": "b0dccdb5d56e7689a18c1ee6d52dedde3482b745ef6e546dcba726076999cc6a"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/example-scs.t3d",
+      "sha256": "877df43b34804f64fb422c99206be7cf6f6a1281c2adab6553e50d3f31914cbc"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/sphere-cdo.t3d",
+      "sha256": "3930a43a3144918b57d5f65a4ce7a6ad1e63c4bbeb1053e14750446109522817"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/sphere-graphs.json",
+      "sha256": "66feb4a71025475a4e918a20c8f07e4fba39ea20b64309241b273c486e2f5bbc"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/sphere-scs.t3d",
+      "sha256": "a8f8effe0d8be62b0c97b53f67e984ade0896ad4e7347e8eeb06604a41471469"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Audit01/summary.json",
+      "sha256": "12095b5f2f5f28aac219a000350f2440ab8b051f43680879736d0c5896bc75ca"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Assets01/assets-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Assets01/assets-stdout.log",
+      "sha256": "d5bd5421e9954612d8a53544eb6f8a9d6d3369b0056a1d781a31a0446d8d745f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Assets01/assets.json",
+      "sha256": "757f1c3a97d2e309cffdd3ae3a21afa6a1fff8f79bdd1d60748302351aa5c90d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Assets01/assets.log",
+      "sha256": "2a0327c3266d3072471f49e5b57defbb40cd94e495f44c39297fae94b92f977e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Assets01/dash-example-physics-after-cdo.t3d",
+      "sha256": "f1a1ece9005d61f85ef88d1af9df1a92772c856b4276f61bf38dfe3a14a7ecb5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Assets01/dash-example-physics-before-cdo.t3d",
+      "sha256": "9f0e95538f845cdd0afba6399497ed2424ccd4128c5684fae458fe6bfd765b3f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Assets01/dash-sphere-physics-after-cdo.t3d",
+      "sha256": "cfb4375ec4179cbe2278b44e7cfed49d5728af432574ed495218d2634f6c6b95"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Assets01/dash-sphere-physics-before-cdo.t3d",
+      "sha256": "5871036cae9be295372269d31f6ae04333d6fd37b3bdc76b38e4040e5bfaaef7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Assets01/example-after-construction.t3d",
+      "sha256": "877df43b34804f64fb422c99206be7cf6f6a1281c2adab6553e50d3f31914cbc"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Assets01/example-before-construction.t3d",
+      "sha256": "877df43b34804f64fb422c99206be7cf6f6a1281c2adab6553e50d3f31914cbc"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Assets01/sphere-after-construction.t3d",
+      "sha256": "a8f8effe0d8be62b0c97b53f67e984ade0896ad4e7347e8eeb06604a41471469"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Assets01/sphere-before-construction.t3d",
+      "sha256": "a8f8effe0d8be62b0c97b53f67e984ade0896ad4e7347e8eeb06604a41471469"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Assets01/summary.json",
+      "sha256": "1f435be05c314c3e9d2c532b7f7a562700f89230c9da986956f79cebe5896e24"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Differential01/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Differential01/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Differential01/jump.json",
+      "sha256": "fec675c2648208a6c664de7aa04a65578716bce5b35ce247d5f40f6708047094"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Differential01/jump.log",
+      "sha256": "0a683b624af6a0340d2de8518681f1814d4f6242ef81edf269a793279cc5200b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Differential01/report-gate-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Differential01/report-gate-stdout.log",
+      "sha256": "178e723a0b334cd8a91ae127d1990f554b22b05fdc8706a01fcfb02d2c1333a2"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Differential01/summary.json",
+      "sha256": "cd5df89a4616a3cfcd63fafa82925e706195ab37dd41d28a9c092aa9a3692739"
+    }
+  ],
+  "invalid_lane_guards": {
+    "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/physics-lane-guards.json",
+    "sha256": "c50270ee7d9bc0f914d97837dc1065b8255017dc19c680410da92f1c670ee5b8",
+    "result": {
+      "cases": [
+        {
+          "rejected": true,
+          "output_created": false,
+          "case": "missing-proof",
+          "reason": "Physics fields require their standalone native parent/Chaos/material lane and current proof"
+        },
+        {
+          "rejected": true,
+          "output_created": false,
+          "case": "proof-alone",
+          "reason": "Physics field proof requires its explicit native fixture"
+        },
+        {
+          "rejected": true,
+          "output_created": false,
+          "case": "network-combination",
+          "reason": "Physics fields require their standalone native parent/Chaos/material lane and current proof"
+        },
+        {
+          "rejected": true,
+          "output_created": false,
+          "case": "other-cue-combination",
+          "reason": "Physics fields require their standalone native parent/Chaos/material lane and current proof"
+        },
+        {
+          "rejected": true,
+          "output_created": false,
+          "case": "audio-combination",
+          "reason": "Physics fields require their standalone native parent/Chaos/material lane and current proof"
+        }
+      ],
+      "status": "passed"
+    }
+  },
+  "read_only_audit_driver": {
+    "path": ".build/LyraValidation/BlueprintPython/20261020-physics-fields/Run-Audit.ps1",
+    "sha256": "8873cda2a160f7a2000cee485dc685623c3c188c3f6e976e5c5145e01185c328"
+  },
+  "authored_assets": [
+    {
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\Effects\\Physics\\B_ExamplePhysicsField.uasset",
+      "sha256": "5674D1A8CA2A1483A74BA6C293F8199F4BF8E086182F056B02E313227A2F392A",
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\Effects\\Physics\\B_ExamplePhysicsField.uasset"
+    },
+    {
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UEPMixins\\DA_ExamplePhysicsFieldMixin.uasset",
+      "sha256": "35FDF034A67B7DF7E33C9D150A418D27373574AB82F6B3F376EF02AFB35B1ABA",
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ExamplePhysicsFieldMixin.uasset"
+    },
+    {
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\Effects\\Physics\\B_ShatterSphere.uasset",
+      "sha256": "5934277557901DB4E819BF9171A0D6C0D7139B2F0DB01DA420FA33A79890E10C",
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\Effects\\Physics\\B_ShatterSphere.uasset"
+    },
+    {
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UEPMixins\\DA_ShatterSphereMixin.uasset",
+      "sha256": "57831AD289857234350ECB46DC5472C753836874C295D08F6720A10047926C0C",
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShatterSphereMixin.uasset"
+    }
+  ],
+  "incremental_verification_policy": {
+    "mode": "incremental",
+    "focused_host_tests": 27,
+    "full_regression": false,
+    "exact_staged_index_report": ".build/CommitVerification/20261020-physics-fields/Index01/summary.json",
+    "note": "Produced after staging this ledger;kept outside source tree."
+  }
+}

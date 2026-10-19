@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "physicsfields":
+        from generate_physics_field_assets import generate as generate_physics_fields
+        return generate_physics_fields(stage)
     if kind == "smallburstcues":
         from generate_small_burst_cue_assets import generate as generate_small_burst_cues
         return generate_small_burst_cues(stage)

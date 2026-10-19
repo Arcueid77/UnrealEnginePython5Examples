@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 121,
+    "bounded_evidence_ledgers": 122,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1235,6 +1235,59 @@
     "full_library_acceptance": false,
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
+  },
+  "physics_field_pilot": {
+    "version": "0.12.0",
+    "status": "bounded_project_physics_field_parent_forwarding_and_shatter_material_native_chaos_break_policy_verified_broader_acceptance_open",
+    "evidence_ledger": "120-physics-fields-native-parent-chaos-material-state.json",
+    "owner": "uep_lyra_weapons.physics_field_mixin",
+    "read_only_audit": "20261020-physics-fields/Audit01",
+    "native_asset_authoring": "20261020-physics-fields/Assets01",
+    "native_runtime": "20261020-physics-fields/Differential01",
+    "original_graph_nodes": {
+      "example": 7,
+      "sphere": 20
+    },
+    "methods_per_profile": {
+      "example": 3,
+      "sphere": 3
+    },
+    "new_transport_nodes": {
+      "example": 6,
+      "sphere": 5
+    },
+    "generated_interface_nodes_per_class": 5,
+    "new_business_nodes": 0,
+    "project_registry_referencers": [
+      "/Game/DefaultGame_Label"
+    ],
+    "original_engine_parent_asset_untouched": true,
+    "original_full_cdos_signatures_graphs_components_and_chaos_delegate_identity_preserved": true,
+    "source_shatter_tick_interpolation_remains_disconnected": true,
+    "genuine_native_paired_cases": 2,
+    "native_field_actors": 4,
+    "native_geometry_collection_actors": 4,
+    "natural_parameter_samples": 18,
+    "actual_native_break_event_counts": [
+      167,
+      167,
+      167,
+      167
+    ],
+    "native_break_payload_component_mass_and_location_verified": true,
+    "native_field_and_external_strain_producers_verified": true,
+    "natural_constructor_begin_tick_parent_forwarding_and_profile_switch_verified": true,
+    "source_target_zero_current_and_shader_scalar_unchanged_verified": true,
+    "owned_actors_profiles_and_health_cleanup_verified": true,
+    "focused_incremental_host_checks": 27,
+    "full_regression_executed_this_batch": false,
+    "missing_geometry_component_native_error_path_tested": false,
+    "identical_random_physics_fragments_claimed": false,
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Remaining macros/scoring/control-point/notifications/scoreboards/bots and later original business plus broad runtime/network/pixel/audio/package/version acceptance;preserve full original scope."
   },
   "small_burst_cue_pilot": {
     "version": "0.12.0",
@@ -5472,8 +5525,9 @@
       "group": "特效、GameplayCue 与音频调度",
       "method_candidates": 4,
       "business_nodes": 3,
-      "scope_review": "示例物理场；先核对实际关卡引用，不因父类位于 EditorResources 自动排除。",
-      "status": "not_accepted"
+      "scope_review": "Batch120:original7/20 nodes/full CDO/signatures/components/Engine parent/native Chaos delegate and disconnected shatter Tick retained. Project registry reference DefaultGame_Label verified;not excluded due to EditorResources ancestry. Python3 methods/Profile;example6 transport/sphere5,5 interface each/0 business nodes.2 native field/strain pairs verify real breaks/MIDs/target-only glow and natural parent lifecycle/Profile switching. Broader actor/version acceptance stays open.",
+      "status": "bounded_project_physics_field_parent_forwarding_and_shatter_material_native_chaos_break_policy_verified_broader_acceptance_open",
+      "evidence_ledger": "120-physics-fields-native-parent-chaos-material-state.json"
     },
     {
       "path": "/Game/Effects/Physics/B_ShatterSphere.B_ShatterSphere",
@@ -5481,8 +5535,9 @@
       "group": "特效、GameplayCue 与音频调度",
       "method_candidates": 5,
       "business_nodes": 15,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch120:original7/20 nodes/full CDO/signatures/components/Engine parent/native Chaos delegate and disconnected shatter Tick retained. Project registry reference DefaultGame_Label verified;not excluded due to EditorResources ancestry. Python3 methods/Profile;example6 transport/sphere5,5 interface each/0 business nodes.2 native field/strain pairs verify real breaks/MIDs/target-only glow and natural parent lifecycle/Profile switching. Broader actor/version acceptance stays open.",
+      "status": "bounded_project_physics_field_parent_forwarding_and_shatter_material_native_chaos_break_policy_verified_broader_acceptance_open",
+      "evidence_ledger": "120-physics-fields-native-parent-chaos-material-state.json"
     },
     {
       "path": "/Game/GameplayCueNotifies/GCNL_Character_DamageTaken.GCNL_Character_DamageTaken",

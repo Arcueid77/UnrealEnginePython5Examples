@@ -23,6 +23,35 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch120 (2026-10-20):** B_ExamplePhysicsField project
+construction/BeginPlay/Tick forwarding and B_ShatterSphere material/Chaos-break
+policy use Python. Parent commits:Examples `444f361` / core `ae3182d`. Audit01
+captures original7/20 nodes/CDOs/component defaults and registry referencers:
+both appear under DefaultGame_Label;EditorResources ancestry is not grounds for
+exclusion. The Engine FS_MasterField asset remains unchanged. Assets01 preserves
+full CDO/signatures/components and original business graphs;example adds6 exact
+parent-call transport nodes/sphere5 native-bind/gate nodes,5 interface each,
+3 methods/Profile each,zero business nodes. Original Chaos assignment node and
+SphereIsBroken delegate identity remain;Python initializes actual MID slots0/1
+in source order and sets only TargetGlowAmt=0 on the typed break event. Source
+Tick interpolation execution remains disconnected;no glow fix is introduced.
+Differential01 passes native exit0/independent gate0/strict logs/ordered shutdown:
+2 paired cases use4 actual project fields/4 geometry collections. Original native
+parent CE_Trigger fields and controlled native external strain generate real
+solver breaks (167 notifications per sphere in this run). Component identities,
+positive masses/finite locations and dispatched receiver counts match. Two
+actual MIDs and shader scalars are observed across18 natural samples:target goes
+1->0,current remains0 and shader scalars remain unchanged. Natural project
+construction/BeginPlay each run once;actual Tick follows both live Profiles after
+switching. Controlled case explicitly disables/moves the field,sets fixture
+lifespan/enables Actor Tick,and then uses native strain;no callback/Tick replay or
+Python physics clock is used. Random fragment trajectories/count determinism is
+not claimed. Owned actors are destroyed,original Profile families and Health
+remain. Focused27 host checks and5 invalid lanes pass;exact staged check uses the
+incremental default. Missing-component native diagnostics,network/pixels/package/
+other field presets/full versions and all other original candidates remain
+open. No SDK/Engine/general Cpp/official asset edits,build,cook,push,tag or release.
+
 **Completed bounded batch119 (2026-10-20):** pickup/melee/heal/grenade Burst
 Cue business uses Python;original static UObject/CDO and latent heal Actor
 parents still own effect spawning and lifetime. Parent commits:Examples `04d5d70`
