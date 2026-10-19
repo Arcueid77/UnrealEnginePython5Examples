@@ -13,6 +13,36 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Completed bounded batch104 (2026-10-19):** revised all-eight-method library
+passes natural standalone first/repeat firing-Cue/default-registration paths.
+103 parent commits:Examples `16fbf3b` / core `98af00e`;library remains372 nodes,
+with current authoring proof`20261019-weapon-audio-early/Assets01`. Pistol02Minimal,
+Rifle01Minimal and Shotgun01Minimal each use a fresh native process/two actual
+Enhanced Input shots with naturally equipped GAS abilities,one cost,positive
+enemy damage,target data,montage/task completion and exact state cleanup. All
+three pass native exit0,independent gate0,strict logs/shutdown. Six default Cue
+Python entries and24 required audio dispatch entries are observed by resident
+counter differences. All four audio routers and each current Cue are already
+automatically registered with zero business counters before gameplay setup;
+first and repeat firing use their authored Python Profiles without manual audio/
+Cue registration,Profile switching,class preloading or callback replay. The probe
+does not import audio production modules;it reads only existing registry rows and
+their already-created CDOs. Fire ability/weapon Actor observers forward original
+handlers and restore complete current Profiles. Preserve earlier passed Pistol01
+and its source as superseded proof:its inherited setup loaded a diagnostic BP;
+the accepted minimal harness removes that and cross-weapon montage preloads.
+Host01 passes3,399;five invalid lanes reject before side effects. No runtime
+binding fix was necessary;native package-load deferral inside an active Mixin
+remains a code-path observation,not a reproduced startup defect. The NoSound
+Rifle path retains the original empty-dynamic-preset diagnostic behavior;its
+first shot reaches six math and eight Tap helper Python calls through retained
+fallback business. No production preset bootstrap or audio asset changes.
+Player Health/inventory/ammo/control/default Field property,observers and owned
+actors restore. Revised-library two-owner/network integration,real effect
+initialization/audibility/hardware/pixel/package/full-library/version and all
+original later scope remain open. No Engine/general Cpp/official edits,build/
+cook/package,push/tag/release.
+
 **Completed bounded batch103 (2026-10-19):** EarlyReflections scheduling now uses
 a typed ordinary Object router.102 parent commits:Examples `31e69ff` / core
 `2a5e1d1`. Reuse102 Audit01's154 original nodes;OriginalProbe02OwnedTaps confirms

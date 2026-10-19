@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "batch": "104-three-weapon-cold-default-audio-routing",
+  "scope": "Bounded revised all8-method audio library natural standalone first/repeat firing/default auto-registration proof. Pistol02Minimal/Rifle01Minimal/Shotgun01Minimal each use a fresh native process and2 actual Enhanced Input shots from naturally equipped GAS abilities;all pass native exit0/independent gate0/strict logs/shutdown. Six default Cue Python and24 required audio dispatch entries are observed by resident counter deltas with native cost,target data,positive enemy damage,montage/tasks/end and restored state. All4 audio routers/current Cue already automatically registered with zero business counters before setup;first/repeat firing uses authored Python Profiles without probe audio/Cue loading,registration,Profile switch or replay. Observer reads only existing registry rows/already-created CDOs. Accepted harness omits diagnostic BP and cross-weapon montage preload;earlier passed Pistol01/source is preserved as superseded. Fire ability/weapon Actor observers forward original handlers and restore complete current Profiles. Host3399/5 invalid lanes pass. No binding/runtime fix was needed;package-load deferral inside callbacks is not a reproduced startup defect. NoSound Rifle retains original empty-dynamic-preset fallback diagnostic path,first shot reaches6 math/8 Tap Python helper calls. No production preset bootstrap or asset changes. Original player Health/inventory/ammo/control/default Field property,observers/owned actors restore. Revised-library two-owner/network integration,real effect initialization,audible/hardware/pixel/package/full library/version and full later scope remain open. No Engine/general Cpp/official edits,build/cook/package,push/tag/release.",
+  "recorded_utc": "2026-10-19T14:58:36.5981071Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "98af00eebbd9d3a63ffb3f9e8525aa2e7e66c39e",
+  "examples_parent_commit": "16fbf3b9c120540d900ce9388eec7e773165e5e3",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-cold/Pistol02Minimal",
+      "summary_sha256": "9AAFFD6A7FE34D5409E1E7824E53C712C7BBE36DE58C8FFAFF27921A4F5E36A2",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2208,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "BA26887508512DFF2BEEB8B63C40D45A2B15A5AC1030E04F247B758BEBD65452",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-cold/Rifle01Minimal",
+      "summary_sha256": "F28871B318AB284B3EE361F8769532B8A88BE0D52D835614C25A34623959DA49",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2208,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "6B35AAF935C90916A9DFF5DA08BCDC111C93DD771AF39EB5FD3639CAE669A9BA",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-cold/Shotgun01Minimal",
+      "summary_sha256": "81C46D50359010B6D92BE9AE96C0F372D73CD9E3439419D06B5B2D39DC230876",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2208,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "1B3EED015778C4F734B17960821C9E89CACC0642978DEB734716AB8E31191894",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_cold_validation.py",
+      "sha256": "E84503D2537278F158DC36A5FC8DF0124086EE9E7271F39AA4811E420991DBA4",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_cold_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_cold_contract.py",
+      "sha256": "9D2CB21A4544F2D03FD7463BC2F17AA6992E534E2B8BEFA57761BC4F1CD8BA14",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_cold_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "96AD5F267839242A74ADDA2119C9CA577AFE20E39879544371423E6C6DBF0A79",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "F1A3C9B8BBF0D4865F57DD2A8E3CB91AD7A32FAC47490D842D05CEE022299528",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-cold/Host01.json",
+    "sha256": "AA9647C98A1FD3F5AA5D6BDB346CAA7D530FBDB87AC95B6E45401269C23702B1",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 3399,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    }
+  },
+  "raw_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-cold/Pistol01/summary.json",
+      "sha256": "20A50DBDDAD3D94727FF9BB59B11286D0D22B04A4BF2D9336D755D43DB1B38BB"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-cold/Pistol01/jump.json",
+      "sha256": "21993F857C2F4D7D57C111BD11442366742D9B138762E1C941A98E0F0C8EE81B"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-cold/Pistol01/validation-source.py",
+      "sha256": "FACD01A31957250D557FC971E15311B7D2669E12D1B1C6E2A99A5A9000B2BE7B"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-cold/Pistol02Minimal/jump.json",
+      "sha256": "BA26887508512DFF2BEEB8B63C40D45A2B15A5AC1030E04F247B758BEBD65452"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-cold/Pistol02Minimal/jump.log",
+      "sha256": "BA14E5EAA5AA1FEDC57CCC57DBD121BD33A2A82AD1A773DE4CFA1914F2BCA8D4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-cold/Pistol02Minimal/report-gate-stdout.log",
+      "sha256": "E0D0F66ACC6B822BAA125F9AA14913EC5796C6E9D11B7E5CD9AF72469BDF481C"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-cold/Rifle01Minimal/jump.json",
+      "sha256": "6B35AAF935C90916A9DFF5DA08BCDC111C93DD771AF39EB5FD3639CAE669A9BA"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-cold/Rifle01Minimal/jump.log",
+      "sha256": "12D8913615531CD95F1CB8A13F5184B3DB2FD768B430D3EE646D0D4F2D952A56"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-cold/Rifle01Minimal/report-gate-stdout.log",
+      "sha256": "93C287B73A8CBF967B97446CBAEDA1EA24F6ED977C6DED02A1B2741FA0DFE1E5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-cold/Shotgun01Minimal/jump.json",
+      "sha256": "1B3EED015778C4F734B17960821C9E89CACC0642978DEB734716AB8E31191894"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-cold/Shotgun01Minimal/jump.log",
+      "sha256": "56623C7500E82DEFDAF9FD628A1F1E9FBC8EE2937EF88DF3FDDD39F9E930219B"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-cold/Shotgun01Minimal/report-gate-stdout.log",
+      "sha256": "4FCE30D32F47BE9AFAC78F8C09D0993C5B1E658B251D77D96EB0743DBD19545D"
+    }
+  ],
+  "launcher_guards": {
+    "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-cold/launcher-guard-checks.json",
+    "sha256": "E0737D2DA012E94F624ED24EB3490085821E8F7307E7A8B54F762DF94C220D3A",
+    "invalid_lanes_rejected_before_side_effects": 5
+  }
+}
