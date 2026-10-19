@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "weaponactorhelpers":
+        from generate_weapon_actor_helpers_assets import generate as generate_weapon_helpers
+        return generate_weapon_helpers(stage)
     if kind == "grenadevfx":
         from generate_grenade_vfx_assets import generate as generate_grenade_vfx
         return generate_grenade_vfx(stage)

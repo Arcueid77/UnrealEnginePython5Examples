@@ -13,6 +13,28 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Completed bounded batch86 (2026-10-19):** B_Weapon original four helpers
+now use Python: Add Fake Projectile Data,TriggerFireAudio,UpdateCustomStencil,
+UpdateTeamColors. 85 parents: Examples `9d1ee92` / core `434dc7d`. Assets02Parent
+passes original parent/full CDO/all graphs/six signatures, four methods per
+Profile and unchanged Pistol/Rifle/Shotgun child CDOs/inherited declaration/
+helper owners. Saved child Blueprint hashes still equal official originals.
+Native Differential01 passes132 actual child-instance cases:30 real native
+trace/array cases (negative/zero/hit/miss/5-degree native spread),72 native
+stencil cases (player/local bot/unpossessed/null owners,clamping and actual
+child primitives),18 actual recursive material color readbacks and12 audio
+component reuse/null-spawn/API cases. Every call proves selected parent
+dispatch. All test Actors destroyed,original Pawn Health unchanged,independent
+gate/strict closed log/actual exit0 pass. Deliberately null OwnerAsPawn calls
+produce exactly9 original-BP VM access warnings;read-only negative-context
+audit confirms no other access/bounds warnings. No script errors waived.
+Host02 passes2,960;four incomplete driver requests rejected before launch.
+Preserve failed Assets01: child independent registration correctly rejected;
+parent binding is inherited and verified with real child instances,not a guard
+change. Native trace/audio/material backends retained. Actual audio playback,
+Fire and BeginPlay/event-lifetime business,network/full Actor/version remain
+OPEN. No Engine/official asset/C++ edits,build/cook/package/push/tag/release.
+
 **Completed bounded batch85 (2026-10-19):** actual owning-client predicted
 Grenade ability -> authority spawn -> unmodified native flight/bounce ->
 original fuse -> replicated explosion/destruction. 84 parent commits:

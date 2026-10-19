@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "batch": "86-weapon-parent-native-helpers",
+  "scope": "Bounded four parent helpers on actual Pistol/Rifle/Shotgun child instances,not whole Weapon Actor/firing/network/version. Python owns original impact-array/spread/trace,audio component reuse/trigger,local-only stencil rule and team-color opt-in decisions;native trace/RNG/audio/material/stencil backends retained. Assets02Parent proves same original parent/full CDO/all graphs/six public signatures,four methods per Profile,three unchanged child CDOs/inherited declarations/helper owners. Saved child bytes match official inputs. Assets01 preserved: independent child registration correctly rejected;parent binding inherited without changing guard. Native Differential01 passes132 cases:30 actual zero/negative/hit/miss/cone traces and array writes,72 native stencil cases with player/local bot/unpossessed/null owners and child primitives/clamping/depth flags,18 native recursive Color material readbacks,12 actual audio component reuse/null-spawn/API cases. Every helper call proves selected parent dispatch. Exactly9 expected original-BP null OwnerAsPawn VM warnings in deliberate negative inputs;read-only audit confirms no other access/bounds warnings,no script errors waived. Original Pawn Health unchanged,test actors destroyed,independent gate/strict closed log/actual exit0.2960 host tests. No Engine/official/child asset/Cpp edits,build/cook/package/push/tag/release. Real Fire/BeginPlay/team-event/presentation migration,actual audio playback,natural firing/network/lifecycle/full Actor/version remain open.",
+  "recorded_utc": "2026-10-19T03:07:21.2469684Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "434dc7d23dea1aaa0176269f2cd937616353f526",
+  "examples_parent_commit": "9d1ee92bccb40f5c34b4b6c6efa43741bf127c1d",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-actor-helpers/Assets02Parent",
+      "summary_sha256": "D27993BCFA89BF7AE22E894D837859F9F92AB045CBA85D8C6D519FA0ECE4D510",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1749,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-actor-helpers/Differential01",
+      "summary_sha256": "6D02700456DF913D6E4236CBC0792D002916160A0120E9E8E2CEB8683449450F",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2031,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "7E371D63A26CCEDF48498B4C6DC14AA2BAF9D68F89C95A2F22483358D2E3B436"
+        },
+        {
+          "file": "jump.log",
+          "sha256": "22A55FB1094D378A96CD65370C38D829F79BA379A1E855BEE234508891E656E7"
+        },
+        {
+          "file": "negative-context-warning-audit.json",
+          "sha256": "88F50CD2D58ECFA5424D45A7682CF41A2EA62085D7785AE057132C135ECDA372"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_actor_helpers_mixin.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_actor_helpers_mixin.py",
+      "sha256": "9E42FCB6E8B723C613AA053E544EFCC8423DADDEC6C33A877AA94DFD306F40C6",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_actor_helpers_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_actor_helpers_validation.py",
+      "sha256": "38BDD2426D804A42F5AEC371D0EE21331182692AD90E553A44F4C0F07E7C9813",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_actor_helpers_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_actor_helpers_contract.py",
+      "sha256": "76FAE106F6C8F6E5CC7CD6EA00BC978A0D1E21486A74D1D084FCE3EAFB0D6228",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "CA0AC74DE0D45333AC9C41AC1400D3782A3FEB3839D31B02B73BB78522A0A41D",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_weapon_actor_helpers_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_weapon_actor_helpers_assets.py",
+      "sha256": "2DC94461CDED215FC74633AC2021AF4FC51FC03D124CE3235D2E02F0BB7C8ED0",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "FE0B75EB0857375D6FEB53086B5B605B65229A03291DBA4F3EBCA1F6D2BDBA18",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "9A08A119C98F8A0AFBC133FD95928DD1FFD361B19C6EED5A7EEEDBA7F766F970",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "1AE043486DCB300AB08E94F98B94F58824D56FAA48E8A532B3A793A6E210D1B3",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 2960,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-actor-helpers/Host02.json",
+    "sha256": "36077E3A01007F6F4FBCA7FAC6E3356111BE08CAC6791907376862A8BEC722B5"
+  }
+}

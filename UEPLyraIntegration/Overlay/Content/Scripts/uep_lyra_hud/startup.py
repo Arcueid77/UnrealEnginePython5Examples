@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPWeaponActorHelpersResult=") for argument in arguments):
+        return "uep_lyra_weapons.weapon_actor_helpers_validation"
     if any(argument.startswith("-UEPGrenadeFlightNetworkResult=") for argument in arguments):
         return "uep_lyra_weapons.grenade_flight_network_validation"
     if any(argument.startswith("-UEPGrenadeDetonateNetworkResult=") for argument in arguments):
