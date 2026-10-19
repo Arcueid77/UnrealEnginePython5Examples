@@ -1,0 +1,327 @@
+{
+  "schema_version": 1,
+  "batch": "122-tdm-scoring-native-timer-notify-gas-postgame",
+  "scope": "Bounded TDM Python decision migration with123 original nodes/full CDO/public signatures/native RepNotify/experience/Warmup/phase/timer identities retained.16 methods/Profile includes5 base gate aliases;57 transport/5 interface/0 business nodes;shared base and CP bytes unchanged.6 native score/notify queries,6 original1Hz timer expiry cases with real RepNotify/clear/invalidate/winner cache,4 actual GMS exact-score wins,2 GAS effect pairs,2 manager Cue add/remove pairs,2 existing-controller RestartPlayer routes and1 actual restored Python PostGame/MatchDecided transition pass. Natural Begin/GameStarted small-team4-character branch verified;>=6 branch host-only. Intermediate victory receiver controlled and explicit. Exact equality,teams1/2/draw0,native numeric/ordering and source mode-immunity TODO-tag mismatch preserved;fixture-only added effects and score deltas cleaned. All owned actors/components/bindings/roots/Profile families restored. Preserve failed Assets01/source and Differential01/source. Focused32 host/5 invalid lanes;incremental exact-index follows. Large-team native/ForceGameOver draw/restart replacement/remote replication/network/pixels/package/full versions/CP/all original candidates remain open. No SDK/Engine/general Cpp/official edits,build,cook,push,tag or publication.",
+  "recorded_utc": "2026-10-19T22:41:16.4226134Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "fd8738072948adc1fefca05c17a6a5e437fe3016",
+  "examples_parent_commit": "d0239807ed3bfe8d5f9764ecba6c6c10d6593f55",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-scoring-base/Audit02",
+      "summary_sha256": "2988BC5F142ABBE9770A251456B63F0D3A27CBF045621285542382EDDE1E462A",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 845,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "F72ED575F1AF3848D5BCC5718CE1E586CA0329D75E7320ECD0A1FED00314C0E0",
+          "file": "audit.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Assets02TypedSubsystem",
+      "summary_sha256": "C51E9657761E38E69C03E96DB0D41A1D9F825E55205FDB67866DE29BD9E8E41F",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1958,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Differential02SourceSemantics",
+      "summary_sha256": "1DBA318CD3AA8D04C8017C028C81616FD8C5FCCBC1F062B169F2000E9B910CEE",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2387,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "554084105F742932A67572CFFF478EB045ACB8F4643D8A68BA4A28287736718C",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_tdm_scoring_assets.py",
+      "sha256": "BF19F4FC0567B21961EFA61EB136429184FD9AC88DAC828C210BCD9B15C2F613",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_tdm_scoring_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "72625FA238A67F9EBE81501C396EE6D230BC50E1CFDCE88F3DDC1207360EA6B7",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/tdm_scoring_mixin.py",
+      "sha256": "60C622FA79B73DBAC27361AF244D2A1012EC616ECBD4042193F2DDA598C6E20B",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/tdm_scoring_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/tdm_scoring_validation.py",
+      "sha256": "2E78FA0D89553C8FD7BBBC5BBD6AD82BA1D355270D9A1E09E725D1EC2A439313",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/tdm_scoring_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/tdm_scoring_contract.py",
+      "sha256": "7B229E8AA555DAC26BB049BD4D227A78FB1A6AAC45E0BD014D371234F1723925",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/tdm_scoring_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "D3812ABF7FE45E1803C0E9219DD3BBEE0DC331F5BB755787EB6144BB738A4C1E",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "9CF853AE84247FB1EF3C2A3C52814752D0A31541D8ED858581D3CD88209F89BA",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "961A67699E866AF5E164E4B1B5ED8D9645163026EF56D48525464AC4D89CFBF9",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "result": {
+      "status": "passed",
+      "tests_run": 32,
+      "failures": 0,
+      "errors": 0,
+      "duration_seconds": 0.0,
+      "scope": "test_tdm_scoring_*.py",
+      "full_regression": false
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/HostTDM02.json",
+    "sha256": "C0233A80F2DA3089929BC58FCA1840D17045AC8E66C1E843B9CBB752BFCF82E6"
+  },
+  "raw_native_artifacts": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Assets02TypedSubsystem/assets-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Assets02TypedSubsystem/assets-stdout.log",
+      "sha256": "bf591bbfa6bbc2a9bab47806afbad6df28eb33d2c50530b9271a1c0166007414"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Assets02TypedSubsystem/assets.json",
+      "sha256": "ca77873128f2a6d2b4384ad28d315d3a6c4a0410c1a9dae1db55150a7863edc1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Assets02TypedSubsystem/assets.log",
+      "sha256": "3cbf61bf2bba47a59ae7eed5eb619cd3ee254e6ec0bce27d6aad38fc0a45679f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Assets02TypedSubsystem/dash-tdm-after-cdo.t3d",
+      "sha256": "5b96ebc4702e1fa2872c9a46f96ce7389a5ff26713a69833b69df2b019068fad"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Assets02TypedSubsystem/dash-tdm-before-cdo.t3d",
+      "sha256": "5b96ebc4702e1fa2872c9a46f96ce7389a5ff26713a69833b69df2b019068fad"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Assets02TypedSubsystem/summary.json",
+      "sha256": "c51e9657761e38e69c03e96db0d41a1d9f825e55205fdb67866de29bd9e8e41f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Differential02SourceSemantics/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Differential02SourceSemantics/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Differential02SourceSemantics/jump.json",
+      "sha256": "554084105f742932a67572cfff478eb045acb8f4643d8a68ba4a28287736718c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Differential02SourceSemantics/jump.log",
+      "sha256": "725dfbf8470666f3df5b645070da713932c2ede8b7080eff591cc1da67292424"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Differential02SourceSemantics/mode-immunity-effect.t3d",
+      "sha256": "50f925a12b5b506be9f468c173675d3415cc8e3a8410fc257b8c0bd52d7274c1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Differential02SourceSemantics/report-gate-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Differential02SourceSemantics/report-gate-stdout.log",
+      "sha256": "0266c78bb55736739860901068da7bd62851d74553448337ab818fc9b2e77523"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Differential02SourceSemantics/summary.json",
+      "sha256": "1dba318cd3aa8d04c8017c028c81616fd8c5fccbc1f062b169f2000e9b910cee"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoring-base/Audit02/tdm-cdo.t3d",
+      "sha256": "d41358f08971d9bddad1b95f315fb4b2464b1a607f5a03e1f3cbdc8a870561dd"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoring-base/Audit02/tdm-graphs.json",
+      "sha256": "f92ae561f35f71fd5d2f7e070b7ecfaa2fcc0fe3f0a0ed09688f752286e923ce"
+    }
+  ],
+  "preserved_failed_native_artifacts": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Assets01/assets-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Assets01/assets-stdout.log",
+      "sha256": "51b3cce3e679a3335a7c5b07d3658831785825813b3a468cad7619804698024e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Assets01/assets.json",
+      "sha256": "f0b3bc2d442be6911f781644d22d893ae22169ac87689758f9d924a1584d0cc5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Assets01/assets.log",
+      "sha256": "427461fb69420a847c1c322beb749f783066864e07728dc9d21ff17aaf89c8c9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Assets01/dash-tdm-before-cdo.t3d",
+      "sha256": "5b96ebc4702e1fa2872c9a46f96ce7389a5ff26713a69833b69df2b019068fad"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Assets01/Source/generate_tdm_scoring_assets.py",
+      "sha256": "8b7bae61d12bfcd8748c50c0069169f42da6ebdc32033bac1dd2a3f9d365c1a7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Assets01/summary.json",
+      "sha256": "314450ab17d40362d04300d57fbaaca6d486d155bf7e8b3d962ebfe605f36ab4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Differential01/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Differential01/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Differential01/jump.json",
+      "sha256": "50f943a12c522e37bbffb858d82ecf7dc17476e5a6c1af2be261e636b1e07be1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Differential01/jump.log",
+      "sha256": "5e9fdb61723401286986900de993714dac3936282062206311f2aefad0126474"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Differential01/Source/hashes.json",
+      "sha256": "65493b318ebf202d5c0279b8af1630b41c45bee234aa09f03dcfde6fffd42e46"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Differential01/Source/tdm_scoring_contract.py",
+      "sha256": "60d646b36980645d4d124045f099a2db45c35d176a05bdf1b9ca51acbb4d4fa0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Differential01/Source/tdm_scoring_mixin.py",
+      "sha256": "60c622fa79b73dbac27361af244d2a1012ec616ecbd4042193f2dda598c6e20b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Differential01/Source/tdm_scoring_validation.py",
+      "sha256": "d5864e6395cbdfc3808a46b0577c5d0c7aa297b8b7158415b002945baca5fa17"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Differential01/summary.json",
+      "sha256": "674e9958c0363f4f075735fd3a620d966159e9cc8b0e6753085deddd48b8ce40"
+    }
+  ],
+  "invalid_lane_guards": {
+    "path": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/tdm-lane-guards.json",
+    "sha256": "8b86fb1791ecc39fec46f26dcce035f56723c4d9f83cef301361a83198e4f37e",
+    "result": {
+      "status": "passed",
+      "cases": [
+        {
+          "case": "missing-proof",
+          "reason": "TDM scoring requires its standalone native timer/notify/phase lane and current proof",
+          "output_created": false,
+          "rejected": true
+        },
+        {
+          "case": "proof-alone",
+          "reason": "TDM scoring proof requires its explicit native fixture",
+          "output_created": false,
+          "rejected": true
+        },
+        {
+          "case": "network-combination",
+          "reason": "TDM scoring requires its standalone native timer/notify/phase lane and current proof",
+          "output_created": false,
+          "rejected": true
+        },
+        {
+          "case": "other-scoring-combination",
+          "reason": "TDM scoring requires its standalone native timer/notify/phase lane and current proof",
+          "output_created": false,
+          "rejected": true
+        },
+        {
+          "case": "audio-combination",
+          "reason": "TDM scoring requires its standalone native timer/notify/phase lane and current proof",
+          "output_created": false,
+          "rejected": true
+        }
+      ]
+    }
+  },
+  "authored_assets": [
+    {
+      "sha256": "AA4DE4B78AAC851A80FAEFF75C08CFB2B1D16B81A72B846897FE44DDFC96CC59",
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Elimination\\B_TeamDeathMatchScoring.uasset",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\Elimination\\B_TeamDeathMatchScoring.uasset"
+    },
+    {
+      "sha256": "6D264B85870660A5F642276CA467412B3DC7FCB6297E9D207DBC3FDBBD00F322",
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_TDMScoringMixin.uasset",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UEPMixins\\DA_TDMScoringMixin.uasset"
+    }
+  ],
+  "unchanged_dependencies": {
+    "Plugins/GameFeatures/ShooterCore/Content/Game/B_ShooterGameScoring_Base.uasset": "73df938e154a6e8202d66c3ffa30caeeaa86ed4504ded054a13eb81a35c9d284",
+    "Plugins/GameFeatures/ShooterCore/Content/ControlPoint/B_ControlPointScoring.uasset": "ad48ba28ca4af52d9b3b68848023b1a9085773482ea71dc292d672abfb466fba"
+  },
+  "incremental_verification_policy": {
+    "mode": "incremental",
+    "focused_host_tests": 32,
+    "full_regression": false,
+    "exact_staged_index_report": ".build/CommitVerification/20261020-tdm-scoring/Index01/summary.json",
+    "note": "Produced after staging this ledger;kept outside source tree."
+  }
+}

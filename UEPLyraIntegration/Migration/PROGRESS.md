@@ -23,6 +23,42 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch122 (2026-10-20):** TDM specialized decision policy is
+Python while native experience/Warmup GameStarted delegate,one-second looping
+CountDown timer,phase callbacks,replicated setters and OnRep multicast broadcasts
+remain. Parent commits:Examples `d023980` / core `fd87380`. Reuse121 Audit02.
+Assets02TypedSubsystem preserves123 original nodes/full CDO/public signatures/
+original graphs/native timer and delegate identities;57 transport/5 interface,
+zero business nodes.16 methods/Profile include5 inherited shared-base gate aliases;
+base and CP asset bytes remain unchanged. Typed gates cover existing public/static
+callers,including three-output GetTeamScore. Native setters retain local RepNotify.
+Exact score equality (not>=),fixed teams1/2,draw0 and first-team loop precedence
+are preserved. GameStarted uses native character count>=6 for30/1200,else15/720;
+BigTeam member remains unconnected. CountDown decrements native double1,notifies,
+then at<=0 clears/invalidates the original handle,caches team scores and selects
+winner. HandleVictory retains source timer behavior,stores team,passes it through
+Cue AbilityLevel,and starts native PostGame. Damage uses source level0/empty context
+and TODO.GameModeDamageImmunity removal tag;restart enumerates native controllers.
+Differential02SourceSemantics passes native exit0/independent gate0/strict logs/
+ordered shutdown:actual startup Begin/GameStarted and small-team branch (4 actors)
+reach Python;6 real multi-output score/equality/PlayerCounted cases,6 genuine
+native timer expiries verify [1,0] CountDownUpdate notifications/one callback/
+cleared invalid handle/team cache/draw-or-winner,4 real GMS enemy messages reach
+victory decisions,2 actual GAS effect pairs,2 manager-backed looping Cue add/remove
+pairs,and2 native RestartPlayer calls with existing valid Pawn pass. Intermediate
+victory receiver is explicitly controlled;final restored Python HandleVictory
+performs a real native PostGame transition with WinningTeamId2 and MatchDecided
+manager Cue. Source damage-enable removal leaves the effect in BOTH Profiles:
+CDO grants Gameplay.DamageImmunity and lacks TODO asset tag. Preserve this behavior;
+fixture alone removes only its added effects by source class and restores scores.
+Owned actors/components/delegates/roots/Profile families clean up. Preserve failed
+Assets01/source typed-subsystem connection and Differential01/source fixture
+assumptions (effect removal and None-tag string). Focused32 host and5 invalid lanes
+pass;exact staged check remains incremental. Large-team native branch,ForceGameOver
+actual draw phase,Restart replacing existing Pawn,remote authority/replication,
+network/pixels/package/full versions,CP and all remaining original scope stay open.
+No SDK/Engine/general Cpp/official asset edits,build,cook,push,tag or publication.
+
 **Completed bounded batch121 (2026-10-20):** shared scoring-base policy uses
 Python for enemy team/kill/death scoring,assist scoring,eligible-player reset
 and PostWarmup spawner/grenade cleanup. Parent commits:Examples `504fc44` / core
