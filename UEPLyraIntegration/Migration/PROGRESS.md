@@ -13,6 +13,38 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Completed bounded batch108 (2026-10-20):** base music BeginPlay startup and
+typed message transforms now use Python.107 parent commits:Examples `397a14a` /
+core `3d3a74e`. Assets01 incrementally extends exact accepted107 base/Set,retaining
+full CDO/six signatures/current graphs apart from five declared entry/callback
+endpoints. Nine transport nodes reuse both original exact-match AsyncAction
+nodes and native GetPayload/delegates;zero business nodes/Python subscription
+roots/proxy properties or altered native listener ownership. Full eight-method
+Profile family retains the previous five controls. GI cast/reuse/create behavior
+preserves persistent mx_System,volume/pitch1,start0,autoDestroyFalse and no Play
+until native Tick. Callback transforms preserve Elimination.Target PlayerState
+GetPawn and locally viewed Damage.Target Pawn with Strength1.
+Differential03ProbeRoot passes native exit0/independent gate0/strict logs/shutdown
+and actual offline renderer:one natural descendant Python BeginPlay,plus four
+native component-registration BeginPlays across both Profiles/reuse-create modes,
+eight GI-held native proxies,40 actual typed message broadcasts and16 teardown
+broadcasts. Target-type/null/foreign/local filtering and exact parent-channel
+negative control match. Profile switches reuse the exact same two subscriptions
+and route one current handler. Destroyed component's proxies remain GI-held
+before GC;after a real GC boundary and another native broadcast,both release GI
+references and become inactive. No callback/BeginPlay replay or Cancel. Diagnostic
+BP probe alone is temporarily rooted across GC and unrooted afterward;production
+listeners never gain Python roots. Original GI music pointer/natural manager
+fields/Health restore,owned components/actors/music sounds clean up. Host02ProbeRoot
+passes3,441;five invalid lanes reject before side effects. Preserve Differential01
+same-frame cleanup assumption and Differential02GC diagnostic-CDO collection plus
+wrong-payload GameplayEvent.Reset negative-control failures/source. The accepted
+negative uses legal parent Lyra.Elimination;no tag/type replacement. Native code
+documents deferred cleanup after unbound delegate broadcast;the test observes GC
+before requiring release. Three descendant asset bytes remain unchanged;their
+parent/Delay/menu/Stinger business stays pending109. No Engine/general Cpp/
+official edits,build/cook/package,push/tag/release;not full family/version acceptance.
+
 **Completed bounded batch107 (2026-10-19):** five base music-manager control/
 receiver/update methods now use Python: SetIsMenu,Receive Player Death,Receive
 Weapon Fire,Fire Stinger and ReceiveTick.106 parent commits:Examples `1a684c9` /
