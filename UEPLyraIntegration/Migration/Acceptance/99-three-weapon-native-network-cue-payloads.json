@@ -1,0 +1,405 @@
+{
+  "schema_version": 1,
+  "batch": "99-three-weapon-native-network-cue-payloads",
+  "scope": "Bounded current98 Pistol/Rifle/Shotgun firing Cue actual dedicated-server/two-client integration. Final PistolNetwork02ResidentReadiness,RifleNetwork03ResidentReadiness,ShotgunNetwork01 pass9 actual native exits0/3 independent and strict-log gates.12 actual two-owner Enhanced Input shots cover actual BlueprintFallback/Python Cue Profiles. Existing native mode2/mode0 prediction keys/target-data RPC identity and ImpactPoint/cost1/owning ammo/positive enemy Health replication remain enforced;48 actual native ObjectExporterT3D prediction snapshots independently hash/value checked.24 predicted/remote OnBurst entries match native source wire IDs,singleton typed position/normal/surface arrays,Python audio order and8 Rifle-only exact sound/target entries. Native predicted/remote position tolerance.51cm and normal.002 retained. Dedicated authority cosmetic OnBurst0;foreign clients do not activate owning abilities. Native original inventory/control/Health/Cue Profiles/production observers restored. Readiness diagnostics execute after original prepare and inspect only resident objects without diagnostic class preload. No production policy/assets/raw projectile/Health/ammo/timer property writes,ASC repair,callback replay,client gameplay-state import,Engine/Cpp edits,build/cook/package,push/tag/release.3325 host checks/4 invalid lanes pass. Preserve RifleNetwork01 pre-input prepare timeout:condition/cause unproven and not claimed fixed;earlier PistolNetwork01/RifleNetwork02Readiness remain historical snapshots. Audible playback,physical input,packet loss/travel/rejoin,pixels/package/full version,original NetShooter component defect and full remaining0.12/later migration remain open.",
+  "recorded_utc": "2026-10-19T12:46:30.3390515Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "9841ea7a7f79cefb1a1fca485eaea08207b64215",
+  "examples_parent_commit": "22a8259b4a304146056b68dcc2f2e1b7e8dc3837",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-fire-cues/PistolNetwork02ResidentReadiness",
+      "summary_sha256": "8FF0371B45E5B892A4D1A86722C6E234E6D061517C84A095B6675D1CEE5D9E82",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2195,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "A": 0,
+        "B0": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "D084FDEF9C25C6BDC5FB4863C3585D2528A6475E2C2D63911D01521D12E0B0F8",
+          "file": "server.json"
+        },
+        {
+          "sha256": "373C79998B04711ABC280D061EB0CD429B7B2E1C999D605EF70937EEB7E87B75",
+          "file": "A.json"
+        },
+        {
+          "sha256": "EDFD54629C1883545981AF65B614BA536D322D127EE843F02159728A5616F553",
+          "file": "B0.json"
+        },
+        {
+          "sha256": "FE847699E698581D4370BB7CE010CC0F99CC1BE4A4060555EAA5E3FAD43BFE38",
+          "file": "server.log"
+        },
+        {
+          "sha256": "5F6705C2492F150F6D07D8AA5DC81CB3FE9668F042322C9B1730AA65057E239F",
+          "file": "A.log"
+        },
+        {
+          "sha256": "A5EBF55C9242E3638E06D8043A35533976E83C78E783CA314152EE99D789005E",
+          "file": "B0.log"
+        },
+        {
+          "sha256": "3B7C9D9FF6285CE6840E90ACC5330200C4FF8337CA5C8BF959ECBB0BA3C6D8BD",
+          "file": "native-evidence-audit.json"
+        },
+        {
+          "sha256": "69F83182E533A16EE78AC52778EA7C917B1BCDFE4B8FCF70D1A547814640A462",
+          "file": "server-prediction-native-0.t3d"
+        },
+        {
+          "sha256": "E53B9ED66EC84AE9DB54098DF6F979140925AEE1AE80F27AA5944881B7BE7F12",
+          "file": "server-prediction-native-1.t3d"
+        },
+        {
+          "sha256": "00A4441407A18E4BC332A6A952A85D6FDB04D844A94E73D9FCC5584C016AE4EA",
+          "file": "server-prediction-native-2.t3d"
+        },
+        {
+          "sha256": "CCFB3C7EC86BC79E1651C74D6E5BD381DBA04CD12E688F5EEBE6CD6FD014EEAE",
+          "file": "server-prediction-native-3.t3d"
+        },
+        {
+          "sha256": "9E1C0BCA5DAA1CFFA866C5CD8E681B32EBF5AA7DFBC2D098DB832FBBEA307CB8",
+          "file": "server-prediction-native-4.t3d"
+        },
+        {
+          "sha256": "2CEC75B73B0321FF379CF3F21D0D764EC35D01BF61D6B7EE80D0E33E0EF801DB",
+          "file": "server-prediction-native-5.t3d"
+        },
+        {
+          "sha256": "B3554ECF0C77221F41026BAA16B5149E10A2BD46BE3C1518F61E051BF6A325A0",
+          "file": "server-prediction-native-6.t3d"
+        },
+        {
+          "sha256": "602E8978DE65B932D9550BB37DBBD8CE4A5956D5E03E1A705F02F644CE0AE34F",
+          "file": "server-prediction-native-7.t3d"
+        },
+        {
+          "sha256": "9359550D4A019463A4A834249B46626AE0E6816F580FD1E5B7A233D33111BD42",
+          "file": "A-prediction-native-0.t3d"
+        },
+        {
+          "sha256": "9359550D4A019463A4A834249B46626AE0E6816F580FD1E5B7A233D33111BD42",
+          "file": "A-prediction-native-1.t3d"
+        },
+        {
+          "sha256": "F5BC59E53CA8BB6EFDED8D27E403752ED061EFA2D8C27E537E8D53E58FDC6496",
+          "file": "A-prediction-native-2.t3d"
+        },
+        {
+          "sha256": "F5BC59E53CA8BB6EFDED8D27E403752ED061EFA2D8C27E537E8D53E58FDC6496",
+          "file": "A-prediction-native-3.t3d"
+        },
+        {
+          "sha256": "99B4AE71786238B40E669A018F5A7E22AC1DA048252F522A91251BDA7B9CEBEA",
+          "file": "B0-prediction-native-0.t3d"
+        },
+        {
+          "sha256": "99B4AE71786238B40E669A018F5A7E22AC1DA048252F522A91251BDA7B9CEBEA",
+          "file": "B0-prediction-native-1.t3d"
+        },
+        {
+          "sha256": "1390A4A399483D99C72472C4A435E381C7D224A1B4837CC0C9F3EAD6DDA7F331",
+          "file": "B0-prediction-native-2.t3d"
+        },
+        {
+          "sha256": "1390A4A399483D99C72472C4A435E381C7D224A1B4837CC0C9F3EAD6DDA7F331",
+          "file": "B0-prediction-native-3.t3d"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-fire-cues/RifleNetwork03ResidentReadiness",
+      "summary_sha256": "A3A80354A904A1BDA94DCDCA98C6C1BA78B5A67A5F864F8637143ED8D6ECE368",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2195,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "A": 0,
+        "B0": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "B229489F969DC85065AC25279DFE496DF1ED09421442E1F4A7B24B1D8ED5695A",
+          "file": "server.json"
+        },
+        {
+          "sha256": "D2F0C38D49F20B237994E94F459EAC15EF175078C065D81B9724ABD06EC30527",
+          "file": "A.json"
+        },
+        {
+          "sha256": "5498C0AC2885A9EF38CF747B8A94FC78270F40125F4D86DF08B9BFDB0EB7C974",
+          "file": "B0.json"
+        },
+        {
+          "sha256": "5D74F3020601CE40701676467DCD62438975E29B6F60186CEB6CF4C18245AD51",
+          "file": "server.log"
+        },
+        {
+          "sha256": "6F659287ECC89E6D2771FC3F754394933645D6137713E7BEE3E2A5A43DB915DC",
+          "file": "A.log"
+        },
+        {
+          "sha256": "14D83414210923E43BDF379D0C8F39BF4B16D973D6694271AFC563C3916F50C8",
+          "file": "B0.log"
+        },
+        {
+          "sha256": "D5AA93B6FFA12C61A2D55B2400CDF5EAD697D19B2FBE6707A770DF5267A27A9A",
+          "file": "native-evidence-audit.json"
+        },
+        {
+          "sha256": "31E537CA78B36F0F16252C232DB1365A300C71316A4F1D94B99B983266E3D9BF",
+          "file": "server-prediction-native-0.t3d"
+        },
+        {
+          "sha256": "1F115CDB1132301B6CE7DBE5B23788B985FBDB4F68E52804D8CDE764D1A26D8E",
+          "file": "server-prediction-native-1.t3d"
+        },
+        {
+          "sha256": "5E4E5F9929275DF4F7684B1314001B9452C3F0E80579A5D24CC654C77029505C",
+          "file": "server-prediction-native-2.t3d"
+        },
+        {
+          "sha256": "B0AB7DBED4353040EEC5EA5176C950766C0623E1CEF18EA30C4DB967845CAD89",
+          "file": "server-prediction-native-3.t3d"
+        },
+        {
+          "sha256": "911E172AA2218AE318801D885FD44734420C1B4AB1B3CB7ED8DB91A759710F4F",
+          "file": "server-prediction-native-4.t3d"
+        },
+        {
+          "sha256": "094A956CA1EB20AB7BCE07B549A20A48791C12AAC08EB580B8FC29B2D9CB4D19",
+          "file": "server-prediction-native-5.t3d"
+        },
+        {
+          "sha256": "3BF505CB4DE5E2E155F733CECC32D219BBCBB325BFDFCC798670F15DEC9CFD3C",
+          "file": "server-prediction-native-6.t3d"
+        },
+        {
+          "sha256": "92C78F792B2CD44E03BD70ED0FF13A8575C522A8054464096CDC92194C7986BC",
+          "file": "server-prediction-native-7.t3d"
+        },
+        {
+          "sha256": "01A23E4A16AF221E094C1CBDC88A2D38A6B007395DC73780820A0F48CBA554F4",
+          "file": "A-prediction-native-0.t3d"
+        },
+        {
+          "sha256": "01A23E4A16AF221E094C1CBDC88A2D38A6B007395DC73780820A0F48CBA554F4",
+          "file": "A-prediction-native-1.t3d"
+        },
+        {
+          "sha256": "EEE66A14AB23096F6EBCD72A0C5970FA19C2D3FF5AC91B01864A2BFCA5AACE62",
+          "file": "A-prediction-native-2.t3d"
+        },
+        {
+          "sha256": "EEE66A14AB23096F6EBCD72A0C5970FA19C2D3FF5AC91B01864A2BFCA5AACE62",
+          "file": "A-prediction-native-3.t3d"
+        },
+        {
+          "sha256": "0DB42D9C059FDE2EC2C666F7A2B172461D5CF91E6C16728441E8FC19275E3A60",
+          "file": "B0-prediction-native-0.t3d"
+        },
+        {
+          "sha256": "0DB42D9C059FDE2EC2C666F7A2B172461D5CF91E6C16728441E8FC19275E3A60",
+          "file": "B0-prediction-native-1.t3d"
+        },
+        {
+          "sha256": "BED5D98E707391BF6A1953BB78F8568EEB883D8C12E4C362F2F97EE5CA420636",
+          "file": "B0-prediction-native-2.t3d"
+        },
+        {
+          "sha256": "BED5D98E707391BF6A1953BB78F8568EEB883D8C12E4C362F2F97EE5CA420636",
+          "file": "B0-prediction-native-3.t3d"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-fire-cues/ShotgunNetwork01",
+      "summary_sha256": "FF247DDBF04BD74C0FA548B06F88B17B30106C49DBA461F9B81483F796FED452",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2195,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "A": 0,
+        "B0": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "187A381225E3A7138A841E54CF580A9FDED6FB1CC4D3776C1F5CF0B975304EE9",
+          "file": "server.json"
+        },
+        {
+          "sha256": "6CD57E3AE047BC2399D07F4C079F1F4C508C5C94AB3B2988425B2DAC716EACBA",
+          "file": "A.json"
+        },
+        {
+          "sha256": "F0D85DD515FEEE23C43C6A3D9962132A4224B69173748869A2B63E5AB5C80B86",
+          "file": "B0.json"
+        },
+        {
+          "sha256": "545F8762CEA5A8CD56AAD768CE9868125AAEDD2D8CEA4DEC6DFEBB08A3321DD5",
+          "file": "server.log"
+        },
+        {
+          "sha256": "6CCDF884DDD2D4CC464C47589B766846E730A32EA845233FB8C419708C1905B9",
+          "file": "A.log"
+        },
+        {
+          "sha256": "553AD6F506918B1ACA50B579FEDE3E6635EF4A93375AFB7C3CEEE0A8D0B316B8",
+          "file": "B0.log"
+        },
+        {
+          "sha256": "83EE107DF40C0DD31CE2B91726957ECDC4EC8F1AEB008DC5C841F2408EBF8E65",
+          "file": "native-evidence-audit.json"
+        },
+        {
+          "sha256": "3FB8D7DFEC0C863A4DF7DE9774274AA5502694FD912CCDCEBA59D0C421E31E94",
+          "file": "server-prediction-native-0.t3d"
+        },
+        {
+          "sha256": "966BC2465E310BB5E1F61913786DEA67B3F64C05139A23E9D2984EE72624D47F",
+          "file": "server-prediction-native-1.t3d"
+        },
+        {
+          "sha256": "7D433000BC20F67B53C63AFF57337987C45C1F0411DD6ECDB68563BE0B5CE144",
+          "file": "server-prediction-native-2.t3d"
+        },
+        {
+          "sha256": "59187F4FA6AAA3DB22CED7EFAEA9B34E155A76C7B6ADB6140DDC99410C4A1441",
+          "file": "server-prediction-native-3.t3d"
+        },
+        {
+          "sha256": "E8C8F31E914F36079C6F57ACC618879D505D59E6328923DA74721B9D4C1F6F03",
+          "file": "server-prediction-native-4.t3d"
+        },
+        {
+          "sha256": "EA23BFE804EE6ACDD36250CE77F7FD7B6715E418E0C4DB5F295665CD87BD388D",
+          "file": "server-prediction-native-5.t3d"
+        },
+        {
+          "sha256": "83004355A93CA3C55AF8F2A3C6AD4E7489426B81EA3AC73D7456B021EDB56F7A",
+          "file": "server-prediction-native-6.t3d"
+        },
+        {
+          "sha256": "7952A076175E2F28D22748C6783A63F64631ACAB21CA6CE2272F36C295800FFF",
+          "file": "server-prediction-native-7.t3d"
+        },
+        {
+          "sha256": "72FD6D981B3AB8D6A2B75F30A50D56A86D1FE286AD371BAAF89E51F9D03C13D3",
+          "file": "A-prediction-native-0.t3d"
+        },
+        {
+          "sha256": "72FD6D981B3AB8D6A2B75F30A50D56A86D1FE286AD371BAAF89E51F9D03C13D3",
+          "file": "A-prediction-native-1.t3d"
+        },
+        {
+          "sha256": "B2A37886530E5378E5E48DC109B215D546854E6F25CEF4CA0055915B58F947A3",
+          "file": "A-prediction-native-2.t3d"
+        },
+        {
+          "sha256": "B2A37886530E5378E5E48DC109B215D546854E6F25CEF4CA0055915B58F947A3",
+          "file": "A-prediction-native-3.t3d"
+        },
+        {
+          "sha256": "7FE19562E79F75AA8783EE58E932AF8CA99757FF48832CDE194D4AC72B273D20",
+          "file": "B0-prediction-native-0.t3d"
+        },
+        {
+          "sha256": "7FE19562E79F75AA8783EE58E932AF8CA99757FF48832CDE194D4AC72B273D20",
+          "file": "B0-prediction-native-1.t3d"
+        },
+        {
+          "sha256": "44571487A44B9F7CE197523B5AA00047D7F4ABFD707D3821EA6E3FF77C76827F",
+          "file": "B0-prediction-native-2.t3d"
+        },
+        {
+          "sha256": "44571487A44B9F7CE197523B5AA00047D7F4ABFD707D3821EA6E3FF77C76827F",
+          "file": "B0-prediction-native-3.t3d"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_fire_cue_network_validation.py",
+      "sha256": "F70B597BD7B8C726800A69C267F9A34084DA24DF199BA9A95ED6FA158C9831F5",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_fire_cue_network_validation.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_fire_cue_network_contract.py",
+      "sha256": "065A348676A904C6D6445913DC8F088B9FA4291A72F59626482F075545505EB6",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_fire_cue_network_contract.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_ability_fire_network_validation.py",
+      "sha256": "6CCA9C657AD36C0318E739BE45D03B81949DF664C6CB6737035F8BFD73005F52",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_ability_fire_network_validation.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_fire_cue_mixin.py",
+      "sha256": "6192EA829BF8085874B8761C24EF0A0A89FEA1008795FE163A21B5C8C39E3C67",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_fire_cue_mixin.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "AE2BDA324A63FCFA3E67A70E9FE1016A529ABC98EB346C910CC466BCA54EC90B",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "B77A9E40CDC3FB6EE39FFB0AE9F4945F938C97AD3D4A14AB144AC0B0518681CB",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58JumpValidation.ps1"
+    }
+  ],
+  "host_report": {
+    "sha256": "856D3A0FD5C3C81E9D56A70C4E5965D968ABB18CB768B9B2DCA4AC8877B5EAB4",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 3325,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-fire-cues/NetworkHost03.json"
+  },
+  "launcher_guards": {
+    "sha256": "62217525D486B47E4A972CBC99B2BBDD2771478686B5B229D52C9C4C92735F45",
+    "invalid_lanes_rejected_before_side_effects": 4,
+    "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-fire-cues/network-launcher-guard-checks.json"
+  }
+}

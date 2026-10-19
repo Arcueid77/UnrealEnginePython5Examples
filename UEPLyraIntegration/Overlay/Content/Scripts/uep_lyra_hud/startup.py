@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPWeaponFireCueNetworkResult=") for argument in arguments):
+        return "uep_lyra_weapons.weapon_fire_cue_network_validation"
     if any(argument.startswith("-UEPWeaponFireCuesResult=") for argument in arguments):
         return "uep_lyra_weapons.weapon_fire_cue_validation"
     if any(argument.startswith("-UEPNetShooterImpactNetworkResult=") for argument in arguments):

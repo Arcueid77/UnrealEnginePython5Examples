@@ -13,6 +13,34 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Completed bounded batch99 (2026-10-19):** actual two-owner predicted/remote
+Pistol/Rifle/Shotgun firing Cue integration with current98 assets/policy passes.
+98 parent commits:Examples `22a8259` / core `9841ea7`. Final PistolNetwork02
+ResidentReadiness,RifleNetwork03ResidentReadiness and ShotgunNetwork01 pass all
+nine actual native process exits0/three independent and strict-log gates.
+Twelve real Enhanced Input shots cover both owners/actual Cue Profiles on three
+weapons. Existing native mode2/mode0 prediction keys,target-data RPC identity/
+ImpactPoint,authority cost1/owning ammo and positive enemy Health replication
+gates all remain enforced. Forty-eight native ObjectExporterT3D prediction
+snapshots are independently hash/value checked. Twenty-four actual predicted/
+remote OnBurst entries carry matching source wire IDs,typed singleton position/
+normal/surface arrays,Python audio call order and eight exact Rifle-only sound/
+target entries. Native predicted/remote payload comparisons retain engine0.51cm
+position and0.002 normal quantization tolerances. Dedicated authority has no
+cosmetic OnBurst execution;foreign clients do not activate owning abilities.
+Original inventory/control/Health/Cue profiles/production observers restore;
+no production asset/policy,projectile/Health/ammo/timer property writes,ASC
+repair,callback replay,client gameplay-state import,Engine/Cpp edits or build/
+cook/package/push/tag/release. Host03 passes3,325;four bad driver combinations
+reject before side effects. Preserve RifleNetwork01 prepare timeout before
+input;its unmet condition/cause remains unproven,not fixed by this batch.
+Readiness diagnostics run after the original prepare and only inspect resident
+objects,without diagnostic class preload. Earlier passed PistolNetwork01 and
+RifleNetwork02Readiness stay historical snapshots. Next:remaining0.12 static
+audio-library/FX/match/AI business and full later scope. Audible playback,
+physical input,packet loss/travel/rejoin,pixels/package/full version and original
+NetShooter component replication defect remain OPEN.
+
 **Completed bounded batch98 (2026-10-19):**0.12 Pistol/Rifle/Shotgun firing Cue
 OnBurst orchestration now uses Python.97 parent commits:Examples `9a7e2d8` /
 core `182424e`. Assets02EmptyGraphs preserves original26/30/20 nodes,empty
