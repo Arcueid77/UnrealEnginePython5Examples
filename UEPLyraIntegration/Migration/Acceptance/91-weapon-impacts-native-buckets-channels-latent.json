@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "batch": "91-weapon-impacts-native-buckets-channels-latent",
+  "scope": "Bounded full B_WeaponImpacts five original runtime business methods plus latent cleanup policy,not natural GAS firing/network/version. Original194 nodes/six graphs,class/full CDO/signatures and RetriggerableDelay3s node/UUID preserved except two dispatch endpoints;three transport nodes/six methods per Profile. Final native8 struct bucket reset/grow/duplicate append trials,22 actual Niagara cache/typed-array/count/muzzle/pose trials,4 nested Fire/selector/input-clear trials,and8 actually published native Data Channel Position/Vector/Enum/muzzle rows on both Profiles pass. Original greater-distance reuse/equal recreation,no IsActive/template-equality check,Position array type and native Character Position-setter Vector fallback preserved. Function locals remain local;borrowed struct views cloned before writeback;named world-location inputs skip out SweepHitResult. Two native timing profiles retrigger to4.0310/4.0323s,valid inactive component sets Has Valid Systems and repeats3/6s,then destruction after removal. Parent24 child Fire calls/72 FX entries observes/restores all three current Python FX handlers and destroys9 world-owned test components. Actual exits0/independent gates0/closed logs pass;binding/context/Python errors0. Existing native Scale CPP-default CSV import warnings18/9 explicitly audited,actual world scale1 verified.3117 host checks,four bad driver combinations rejected before side effects. Failed Differential01(local scopes) and Differential02Locals(borrowed views/out parameter/muzzle getter mismatch) retained. Actor/component/view/signature/Profile/Health cleanup passes. No raw active/timer/Health repair,latent replay,fixture channel buffer writes,Cpp/Engine/official changes,build/cook/package,push/tag/release. Native CPU-GPU simulation/consumption,pixels/audio,natural firing/network/stress/package/full version remain open.",
+  "recorded_utc": "2026-10-19T05:01:42.7000526Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "b0ec461bfebd4e6b4a17e08626383348245beadb",
+  "examples_parent_commit": "b048331bf051702090af3b839219511a0b7211e3",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-impacts/Assets01",
+      "summary_sha256": "2D4ECC04A26E7F810D213576C7979D447B9E1D0CDD479169A29241C29E655507",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1783,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "assets.json",
+          "sha256": "E0C9A973D9EEF9523158059D498BA81CA70AA6BB12C44789EBCE5548C370A289"
+        },
+        {
+          "file": "assets.log",
+          "sha256": "6B5BE4C33A59D04E9FF2F0DB645B0E8A27E11E3C387CCB3DA1D35DE0E3064140"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-impacts/Differential03OwnedStructs",
+      "summary_sha256": "45AD4D77B33000CA8ADCF2130C0CC8D86278DAD2276EDF77993131D2C689D4A4",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2073,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "DC02360A4D707334965E1DB00985321A9149F35681168A87DCD8B6D00B17A476"
+        },
+        {
+          "file": "jump.log",
+          "sha256": "A0BE4C9F676153B0176C612431242807073CE358DAA5654676AA699CC977B2F3"
+        },
+        {
+          "file": "context-and-binding-audit.json",
+          "sha256": "0356100398250CA7138633F4E2E0647EAE5F3A06F6924545485C73C53A19B309"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-impacts/ParentIntegration01",
+      "summary_sha256": "A6A284CB0E02767F182D72C7E36397E5A67441056963C9215D2F60D672C627BA",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2097,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "6DDC27905735BB30442C4234F57EBA618BB3C0E054DDA2D59EE06B1B7E591F70"
+        },
+        {
+          "file": "jump.log",
+          "sha256": "062A206E0BC63AE1DE114D1360CE29C3E93226B4C9D4B7C7F4993CDA1B42E77F"
+        },
+        {
+          "file": "context-and-binding-audit.json",
+          "sha256": "56EE4C3E3F12968E8F59D14617F1673A7FFDC0D29B250F1E8234238A5977BE90"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_impacts_mixin.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_impacts_mixin.py",
+      "sha256": "D7E72D5FD840659EE9137B02AB8A4A94DA18FDD90E601299A9BC9C339D857F41"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_impacts_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_impacts_validation.py",
+      "sha256": "44D64A6051E4FB78BD030A2272ECB927C78AABCF98FE9EEAE390A02F031B9C11"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_impacts_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_impacts_contract.py",
+      "sha256": "FA9F494E115FE658B533DE27C045B1799ECD27A0978170DF0C12D018EA34C32E"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_actor_fire_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_actor_fire_validation.py",
+      "sha256": "9324147E62550833CFA06EE77190D405B73BD58D04718AFB7149539ADCADE973"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "DD6D7927D4AA2515D8E582EABFA0740106A205FB54838FFA8BDD86AB784AF51D"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_weapon_impacts_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_weapon_impacts_assets.py",
+      "sha256": "3AFE9034AADBCD44E8C385382A34653CF401E052AABD6D59A4498A52F86F7535"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "EB0AB794BDF9EA054CBB6B85D9C6F94FACDCFE86AC00BFFA0B035ECDC7B9257B"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "3F6B7C0ACF60FF9A49C4DB06E7574EBCD5DB59C9658C746FFE3E4B4CCDCC7305"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "5206F259E6497095958F1FAE1FB48E8A6702EE22FD6988E28A760233FD23441C"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-impacts/Host04.json",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 3117,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "sha256": "7D066A15D7B53734BC7CFBCB4DFD87247D3790D4BA65E9F882CB3B633F9B592E"
+  }
+}

@@ -13,6 +13,36 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Completed bounded batch91 (2026-10-19):** B_WeaponImpacts all five original
+runtime business methods and native latent cleanup now use Python.90 parent
+commits:Examples `b048331` / core `b0ec461`. Assets01 retains all194 original
+nodes across six graphs,class/full CDO/signatures and original RetriggerableDelay
+3s node/UUID except two dispatch endpoints;three transport nodes/six methods per
+Profile. Function locals stay local;borrowed native struct array elements are
+cloned before writeback. Final Differential03OwnedStructs passes8 native bucket
+reset/grow/append trials,22 Niagara cache/typed-parameter trials and4 complete
+Fire/selector/input-clear trials. Actual published Data Channel game readbacks
+verify8 rows of Position/Vector/Enum/muzzle data across both Profiles. Original
+greater-distance reuse/equality recreation,no IsActive/template-equality check,
+typed arrays/count/native Character Position-setter Vector fallback and world
+pose/activation are preserved. Original cleanup sets Has Valid Systems for a
+valid inactive component,repeats at3/6s and destroys after removal;native
+retrigger destruction4.0310/4.0323s. ParentIntegration01 passes24 parent Fire
+calls/72 entries,observing/restoring all three current Python FX handlers and
+cleaning9 world-owned test components. All test Actors/components,original view,
+signatures/Profiles/Health restored. Both independent gates/real exits0/strict
+closed logs pass with binding/context/Python errors0. Existing native Scale
+CSV default-import warnings18/9 are explicitly audited;actual scale1 readbacks
+pass. Host04 passes3,117;four invalid driver combinations rejected early.
+Preserve failed Differential01(function locals treated as Actor fields) and
+Differential02Locals(borrowed-struct writeback/out SweepHitResult positional
+argument;Character getter needed native Vector fallback). No active/timer/
+Health repair,latent replay or fixture channel-buffer write. Native simulation/
+CPU-GPU scheduling remain native and unclaimed. Next:shared GA_Weapon_Fire and
+its inherited weapon ability business,then natural firing/network/lifecycle/
+version gates. Pixels/audio/package/full version remain OPEN. No Engine/
+official/general Cpp edits,build/cook/package,push/tag/release.
+
 **Completed bounded batch90 (2026-10-19):** B_WeaponDecals lowercase fire
 cache/trigger/surface-array/parameter and latent-cleanup decisions now use
 Python.89 parent commits: Examples `582d627` / core `67c8ff5`. Assets01 retains

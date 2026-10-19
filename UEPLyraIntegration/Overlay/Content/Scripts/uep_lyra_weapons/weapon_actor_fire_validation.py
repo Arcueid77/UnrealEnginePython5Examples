@@ -61,9 +61,10 @@ class Validation(Ready):
                     if captured is not None:
                         captured["production_handler_used"]=handler is not None
                         captured["production_profile"]=str(ue.get_mixin_profile(actor)) if handler is not None else None
-                    if slot==2:
-                        component=actor.get_property("Decal")
-                        if valid(component) and not any(component==value for value in owner.world_fx_components):owner.world_fx_components.append(component)
+                    if slot in (1,2):
+                        components=list(actor.get_property("Impact Systems")) if slot==1 else [actor.get_property("Decal")]
+                        for component in components:
+                            if valid(component) and not any(component==value for value in owner.world_fx_components):owner.world_fx_components.append(component)
                     return result
                 invoke.override=method;return invoke
             if cls in self.saved_fx_profiles:
