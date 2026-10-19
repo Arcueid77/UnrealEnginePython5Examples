@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPWeaponActorBeginResult=") for argument in arguments):
+        return "uep_lyra_weapons.weapon_actor_begin_validation"
     if any(argument.startswith("-UEPWeaponActorFireResult=") for argument in arguments):
         return "uep_lyra_weapons.weapon_actor_fire_validation"
     if any(argument.startswith("-UEPWeaponActorHelpersResult=") for argument in arguments):

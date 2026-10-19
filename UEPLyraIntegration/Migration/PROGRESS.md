@@ -13,6 +13,29 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Completed bounded batch88 (2026-10-19):** B_Weapon ReceiveBeginPlay and
+ObserveTeamColors callback decisions now use Python. 87 parent commits:
+Examples `4d876d9` / core `81ddf68`. Assets02NativeSelf rebuilds from official
+original with a four-node named native binding function;all original graphs/
+full CDO/seven signatures preserved,seven methods/Profile register/restore.
+Final Differential02NativeTeams passes24 real native child starts on Pistol/
+Rifle/Shotgun and both Profiles with Pawn/unassigned-Pawn/null/non-Pawn owners.
+Thirty real native notifications prove initial broadcast,actual team changes,
+no-team no-op,profile switching without new proxy,and six destroyed weak targets
+receiving no more callbacks. Test uses existing LyraTeamCheats.SetTeam native
+authority entry (no raw team writes);unassigned native Pawn naturally broadcasts
+no-team and auto-cancels. Original per-call factory/activation/native weak
+Actor/UFunction lifetime preserved;production adds no Python callback/proxy
+rooting/cancellation/deduplication. Team/profiles/original active game proxies/
+original Pawn Health restored,test Actors destroyed,only fixture proxies
+cancelled. Current FireRegression01(24 calls/72 FX entries) and helper132-case
+regression also pass seven-method family/independent gates/closed logs/exits0.
+No native binding warnings. Host04 passes3,012;four invalid launch combinations
+rejected early. Preserve Assets01 external skeleton bind failure and runtime01
+unreflected team setter failure. No Engine/core/official content/Cpp edits,
+build/cook/package/push/tag/release. Next:native FX Actor business and natural
+weapon firing/network/lifecycle/version gates. Full acceptance remains OPEN.
+
 **Completed bounded batch87 (2026-10-19):** B_Weapon ordinary Fire now uses
 Python for original input/muzzle/fake-helper and WeaponFire/Impacts/Decals
 sequence, cached Actor validity/recreation, exposed spawn values, attachments,

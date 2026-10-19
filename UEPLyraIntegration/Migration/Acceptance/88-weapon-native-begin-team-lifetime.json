@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "batch": "88-weapon-native-begin-team-lifetime",
+  "scope": "Bounded B_Weapon BeginPlay/team observation decisions,not whole natural firing/network/version. Python preserves actual owner Pawn cast,original per-call native ObserveTeamColors factory,exact weak Actor/UFunction multicast and immediate Activate,assigned stencil-then-color/no-team no-op. Assets02NativeSelf rebuilds official original parent adding only four native binding nodes;all original graphs/full CDO/seven signatures retained,seven methods/Profile. Final Differential02NativeTeams proves24 real Pistol/Rifle/Shotgun original/Python native starts and30 real native notifications,Pawn/unassigned Pawn/null/non-Pawn cases,existing development LyraTeamCheats.SetTeam entry changing actual native team,unassigned Pawn natural false broadcast/auto-cancel,profile switch same proxy,six destroyed weak Actor targets with no late callbacks. No callback/BeginPlay replay,raw team/Health/ASC writes,retained production Python callback/proxy root/cancel/deduplication. Only fixture-created native proxies cancelled;original active game proxies/team/profiles/Health preserved,test Actors destroyed. Current FireRegression01 proves24 child Fire/72 native FX entries;current HelperRegression01 proves132 helper cases. All independent gates/strict closed logs/actual exits0,no binding warnings. Helper negative null-owner9 original-BP access warnings separately accounted,no error waiver.3012 host models,four bad driver combinations rejected. Failed Assets01 external skeleton callback lookup and runtime01 unreflected team setter retained. No Engine/core/official content/Cpp edits,build/cook/package,push/tag/release. FX Actor internals,natural firing/network/lifecycle/audio/pixels/full acceptance remain open.",
+  "recorded_utc": "2026-10-19T03:51:18.7073531Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "81ddf68efc925fba25530f1af0cb3b4dc0346745",
+  "examples_parent_commit": "4d876d9df467ed912ec645ff67c2ecad67086e41",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-actor-begin/Assets02NativeSelf",
+      "summary_sha256": "E3C8ADF6C7E8F605C1E4CD6608B993F2BE89E6DF616C9591A4CB5270E68FC408",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1766,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-actor-begin/Differential02NativeTeams",
+      "summary_sha256": "F0C8190A120E014E3EA1A49FDEBB04FC7764930A773F5F68787A139151DC9A94",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2043,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "A8186A400480E04CE01F950E61FC7995D2F01A3E7AF02FD766E5E457AF80BB69"
+        },
+        {
+          "file": "jump.log",
+          "sha256": "8EC4D806ED13BF95385C8FDC2DD8FD142699FF22E77B27DFBCE0019A83D61417"
+        },
+        {
+          "file": "context-and-binding-audit.json",
+          "sha256": "934B3C4B4FF0A038676FFA485292FF6E7C0BEC3A0FDD368ECE8829C31D56B737"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-actor-begin/FireRegression01",
+      "summary_sha256": "86AC73EE0411BC88D763CDCBC66005C7FF610E07CA784F2B01D9720B88AA92FB",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2049,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "440DFABE236A81C503F8EC8069AC29B76CE033E151509BD794CA6235F789F9D8"
+        },
+        {
+          "file": "jump.log",
+          "sha256": "AE5D5258ADEBA5A366F2D50D74E392E00D9B1C7D5F676D66BC601D52E237EFB9"
+        },
+        {
+          "file": "context-and-binding-audit.json",
+          "sha256": "934B3C4B4FF0A038676FFA485292FF6E7C0BEC3A0FDD368ECE8829C31D56B737"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-actor-begin/HelpersRegression01",
+      "summary_sha256": "36A7B1F498901A9EAB485D8760451DA2F872708B76D893FA314FEB3F1CDE477A",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2055,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "105E53819238E65FECCFC1C678CCB4CD8703591648D8B672D10100678C63CFB7"
+        },
+        {
+          "file": "jump.log",
+          "sha256": "4CC177E04775B5BAEA6D7CCC43C675AC6EDA797497EADC0BAC53EE1C36E06217"
+        },
+        {
+          "file": "context-and-binding-audit.json",
+          "sha256": "78E7CE929C1CDF08BBA4DF699E017A3B3B3C2D929B9FE4A631B43EF8FCA6C0E9"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "C92C2D6BB899609590955C8990697F0B303E05FA2FCACCA6E491090FD1330EC0",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_actor_begin_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_actor_begin_mixin.py"
+    },
+    {
+      "sha256": "E8447C9A32803B7176C0EFB1EBC6B77584D66B7AAEA24FCABCA7DDAD1EB412FF",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_actor_begin_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_actor_begin_validation.py"
+    },
+    {
+      "sha256": "E0CB80217C0D18B00776E1E23E3580E3AE6C3D3BDCF96AE1E403292F55247916",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_actor_begin_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_actor_begin_contract.py"
+    },
+    {
+      "sha256": "999069395BA5FA8D879EE795F338661E094482841427FAA6B730188CF13DBE8B",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "sha256": "631C1E8629F8CAD28B6D5C9421BB06EEC341332B3578D9A2D3CDF40A8495E2A3",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_weapon_actor_begin_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_weapon_actor_begin_assets.py"
+    },
+    {
+      "sha256": "958666BAAC71AEA989A71E933A5E6E54F62E3A21303581D61AA599D2DC302940",
+      "native_input_path": "Validation/Run-UEP58DashRPCInputAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58DashRPCInputAssetAuthoring.ps1"
+    },
+    {
+      "sha256": "2802D311E7B30B1F2AA3ED4E33FF51FFDCE2B035EC2CCDE306D5A112AB1A50DD",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58JumpValidation.ps1"
+    }
+  ],
+  "host_report": {
+    "sha256": "0D87266BDA17B5A5F6E5C7E04F5EC026FCCAEE46D671D886D22DD6BD68C26619",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 3012,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-actor-begin/Host04.json"
+  }
+}
