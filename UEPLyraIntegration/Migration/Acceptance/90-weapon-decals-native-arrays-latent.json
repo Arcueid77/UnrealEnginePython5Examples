@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "batch": "90-weapon-decals-native-arrays-latent",
+  "scope": "Bounded B_WeaponDecals lowercase fire cache/trigger/surface-array/native parameter and latent-cleanup policy,not whole natural firing/network/version. Original52 graph nodes,class/full CDO/fire signature/native RetriggerableDelay3s node and UUID retained except two dispatch endpoints;three transport nodes/two methods per Profile. Native10 Niagara trials on both Profiles prove active reuse/inactive replacement,reset-toggle,non-truncating byte-to-int surface tail under shorter/empty/growing data,Position DI type and world position readback,normal vector/int surfaces/hit count/bool trigger stores,world-origin unattached spawn/auto-destroy. Actual native retrigger destruction4.0154/4.0133s and valid-inactive cleanup repeats3/6s then destruction after native component removal. Current parent24 Fire calls/72 entries observes current Python FireFX/Decal handlers,restores Profiles and destroys9 world-owned test components. Actor/component/view/signature/Health cleanup,strict closed logs/real exits0/independent gates0,no binding/invalid-context warnings.3069 host tests,four actual driver-guard invalid combinations rejected. First positional-hashtable guard exercise retained as invalid fixture evidence. No active/timer/Health repair,latent callback replay,new Cpp/Engine/official changes,build/cook/package,push/tag/release. Native simulation/latency scheduling remain native;pixels/audio/network/package/general stress/full version remain open.",
+  "recorded_utc": "2026-10-19T04:29:42.9428513Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "67c8ff56af80468ac87cffbaa06fbaf258b794e1",
+  "examples_parent_commit": "582d6272315629a8ed565dffdd4392e012f098df",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-decals/Assets01",
+      "summary_sha256": "CF1DF77DCBB3D6AA13B01FEB4B91CE40BD6EB89AC79FA6D7F82A6D82935DA1F4",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1777,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "8845ECB1423202D7CBA949E6F987EBDA458E062A0B34DD0D288B1FB3B1BD7D47",
+          "file": "assets.json"
+        },
+        {
+          "sha256": "B69DC5C9188606C6DC35A28C40EF676168567E605FF1ADF2147D240D8791EFB3",
+          "file": "assets.log"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-decals/Differential01",
+      "summary_sha256": "55418276B0A816F23FB7913985BA534E85EA893D0D28F7D6FF93E82CA2B57848",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2063,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "7A40F3C181D5B44D0BE182496D9A2AD4A75D25604FC3511BE344E685771100FB",
+          "file": "jump.json"
+        },
+        {
+          "sha256": "56F270D9A2534DF2A484BF3F1495E1CDBE1DDE350D8167B9BCA8BEDA16D4C4EB",
+          "file": "jump.log"
+        },
+        {
+          "sha256": "6952FEAD039E93DBDBA4D98918457CEF65B1A57D3522BEDE11B1D2FE596AEEE8",
+          "file": "context-and-binding-audit.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-decals/ParentIntegration01",
+      "summary_sha256": "A4D1131503C872F86A14408A5401B5A908DC08731B83513948B7DA427F1C684D",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2081,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "4BFF2F9C2FE7A396DC2D268BE2AC6B6967BD97590EFC7B3335A69AA6A1FD7F36",
+          "file": "jump.json"
+        },
+        {
+          "sha256": "05713DC3950970CB6B7ADCA89BF31654E6952E4ED90BEE9A1921C0C89FE39209",
+          "file": "jump.log"
+        },
+        {
+          "sha256": "692936191260204AD458FEC8EAD8BF817F859963E03FEB52B3F5DDA260A37511",
+          "file": "context-and-binding-audit.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "8255EC5834207B84F3A186FA16A20B9C05F39CF075E6B0B8FA3CA6874078A95A",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_decals_mixin.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_decals_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "4A695A48FF4B189DD137B282D369F55C84AB73B30607F67934D0100104C5972F",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_decals_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_decals_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "CE83F7A18013BFE9014A75D729A5127D543C57CBB58EE74FDA76AD24DB9C9992",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_decals_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_decals_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "12B07CC987609309E07857B2C33E3B047AF145E8A2644CAE170676D3342F510E",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_actor_fire_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_actor_fire_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "1EB2667A7D801B66404AEEBA3656E33CC8292FEA1CA64E950A3E273B401D766F",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "915A08CF4DF82D1ABE954DC7AC21CAD43FE7F44E2D1A64C042E1D39982CAEB0F",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_weapon_decals_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_weapon_decals_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "135684EED678FF972B0CA36609A6BD6B4954B715E5F7E3A1C756A021D99648D9",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "34167BF0E777280C28187902A292AC2B14C9067A1D39129A367F480A6D8502F9",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "85A367F1B864DE9543D6E7B8451D1341A06811239A211589706F90EF0C462999",
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 3069,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "sha256": "E133A34AC9E52CDD74662D8EA482EEE9FE42DC089F2FF700C4BFB21F2715BE38",
+    "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-decals/Host02.json"
+  }
+}

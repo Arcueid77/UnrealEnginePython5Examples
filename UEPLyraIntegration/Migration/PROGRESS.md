@@ -13,6 +13,31 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Completed bounded batch90 (2026-10-19):** B_WeaponDecals lowercase fire
+cache/trigger/surface-array/parameter and latent-cleanup decisions now use
+Python.89 parent commits: Examples `582d627` / core `67c8ff5`. Assets01 retains
+original52 nodes,class/full CDO/fire signature and native RetriggerableDelay3s
+node/UUID except two dispatch endpoints,with three transport nodes/two methods
+per Profile. Differential01 passes10 native cache/typed-parameter trials on
+both Profiles:cold/reuse-shorter/empty/inactive-replace/grow. Actual native
+bool/int parameter bytes,Position DI type/world readback,vector normals and
+int surface arrays prove original tail retention/reset-toggle/count behavior,
+world-origin unattached spawn and auto-destroy. Real native timing profiles
+retrigger to4.0154/4.0133s;valid inactive component repeats cleanup at3/6s,
+then removal permits later destruction. No active/timer/Health repair or latent
+continuation replay. ParentIntegration01 passes24 Pistol/Rifle/Shotgun parent
+Fire calls/72 entries,explicitly observing current Python FireFX/Decal handlers
+and restoring their production Profiles. Nine world-owned test components
+cleaned up;all test Actors/components,original view/signatures/Health restored.
+Both independent gates/actual exits0/strict closed logs pass without binding or
+invalid-context warnings. Host02 passes3,069;four driver-specific invalid
+combinations rejected before side effects. Preserve first guard exercise as
+invalid fixture evidence (positional hashtable);accepted check is02. Native
+Niagara simulation/latent scheduling remain native. Next:B_WeaponImpacts
+bucket/spawn/orchestration business,then natural firing/network/lifecycle and
+full-version gates. Pixels/audio/package/version remain OPEN. No Engine/
+official/Cpp edits,build/cook/package,push/tag/release.
+
 **Completed bounded batch89 (2026-10-19):** B_WeaponFire shell/muzzle/tracer
 cache/trigger/parameter decisions and latent cleanup now use Python. 88 parent
 commits: Examples `4503214` / core `8ddb656`. Assets01 preserves original class/

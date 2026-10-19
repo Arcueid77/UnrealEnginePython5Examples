@@ -24,7 +24,7 @@ class Validation(Ready):
     def __init__(self,result):
         super().__init__(result);self.require_auto_active=False
         self.actors,self.events,self.fx_classes,self.fx_signatures=[],[],[],{}
-        self.saved_fx_profiles={}
+        self.saved_fx_profiles={};self.world_fx_components=[]
         self.target_mesh=None;self.recording=False
         self.report=dict(schema_version=1,status="running",error=None,cases=[],observation_errors=[],full_acceptance=False,network_acceptance=False,
             packaged_runtime=False,audio_playback_tested=False,pixels_tested=False,real_gas_firing_tested=False,health_properties_written=False,begin_play_migrated=False)
@@ -37,11 +37,14 @@ class Validation(Ready):
         self.health_before=self.healths();owner=self
         for index,cls_path in enumerate(FX):
             cls=ue.load_class(cls_path);entry="fire" if index==2 else "Fire"
+            cdo=cls.get_cdo()
+            if "PythonMixinSet" in cdo.properties() and valid(cdo.get_property("PythonMixinSet")):ue.register_declared_mixin(cls)
             existing=[row for row in ue.get_registered_mixins() if row["target_class"]==cls]
             if existing:self.saved_fx_profiles[cls]={name:row["python_class"] for name,row in existing[0]["profiles"].items()}
             self.fx_classes.append(cls);self.fx_signatures[cls_path]=ue.describe_function(cls,entry)
             def observe(slot,method,handler=None):
                 def invoke(actor):
+                    captured=None
                     if owner.recording:
                         try:
                             root=actor.get_property("RootComponent")
@@ -52,9 +55,16 @@ class Validation(Ready):
                             if slot==0:row.update(mesh_is_weapon_mesh=actor.get_property("Skeletal Mesh Component")==owner.target_mesh,
                                 enable_flags=[bool(actor.get_property(name)) for name in ("Enable Shell Eject","Enable Muzzle Flash","Enable Tracer")])
                             if slot==1:row.update(muzzle=vec(actor.get_property("MuzzlePosition")),distance_threshold=float(actor.get_property("Distance Threshold")))
-                            owner.events.append(row)
+                            owner.events.append(row);captured=row
                         except Exception:owner.report["observation_errors"].append(traceback.format_exc())
-                    return handler(actor) if handler is not None else actor.call_mixin_original(method)
+                    result=handler(actor) if handler is not None else actor.call_mixin_original(method)
+                    if captured is not None:
+                        captured["production_handler_used"]=handler is not None
+                        captured["production_profile"]=str(ue.get_mixin_profile(actor)) if handler is not None else None
+                    if slot==2:
+                        component=actor.get_property("Decal")
+                        if valid(component) and not any(component==value for value in owner.world_fx_components):owner.world_fx_components.append(component)
+                    return result
                 invoke.override=method;return invoke
             if cls in self.saved_fx_profiles:
                 for profile,base in self.saved_fx_profiles[cls].items():
@@ -62,6 +72,7 @@ class Validation(Ready):
                     methods["Fire"]=observe(index,entry,base.Fire)
                     ue.register_mixin_profile(cls,profile,type("ObservedCurrentWeaponFX"+str(index)+profile,(),methods))
             else:ue.register_mixin_profile(cls,"Observer",type("ObservedOriginalWeaponFX"+str(index),(),dict(ObservedFire=observe(index,entry))),make_default=True)
+        self.report["declared_fx_observed"]=[path(cls) for cls in self.saved_fx_profiles]
         self.wall=self.world.actor_spawn(ue.find_class("Actor"));self.actors.append(self.wall)
         self.box=self.wall.add_actor_root_component(ue.find_class("BoxComponent"),"UEPFireWall")
         self.box.call_function("SetBoxExtent",ue.FVector(10.,400.,400.),False);self.box.call_function("SetCollisionObjectType",0)
@@ -104,6 +115,10 @@ class Validation(Ready):
         ue.log("UEP_WEAPON_ACTOR_FIRE_CHILD_CAPTURED "+cls_path+" "+profile)
         if self.index==len(CLASSES)*2:self.finish()
     def cleanup(self):
+        for component in self.world_fx_components:
+            if valid(component):component.call_function("K2_DestroyComponent",component)
+        self.report["world_owned_test_components_destroyed"]=all(not valid(component) for component in self.world_fx_components)
+        self.report["world_owned_test_component_count"]=len(self.world_fx_components)
         for actor in reversed(self.actors):
             if not dead(actor):actor.call_function("K2_DestroyActor")
         self.report["test_actors_destroyed"]=all(dead(actor) for actor in self.actors)
