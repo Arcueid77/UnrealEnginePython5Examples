@@ -98,7 +98,7 @@ class Validation(NativeLifetime):
                         [vec(v) for v in actor.get_property("ImpactNormals")]==[vec(v) for v in normals] and list(actor.get_property("ImpactSurfaceTypes"))==list(BUCKET_SURFACES[index])))
             actor.call_function("K2_DestroyActor")
     def array_trials(self):
-        xs=(0.,2.,12.,25.,50.,60.,80.,100.,20.,30.,40.)
+        xs=(0.,2.,12.,25.,50.,60.,80.,100.,20.,30.,40.,50.)
         for profile in PROFILES:
             actor=self.spawn(profile);self.target=actor
             for index,name in enumerate(ARRAY_CASES):
@@ -110,6 +110,9 @@ class Validation(NativeLifetime):
                 elif name=="null-cache":actor.set_property("Impact Systems",[None])
                 elif name=="changed-template-far":actor.set_property("Default",self.systems[2])
                 elif name=="invalid-template":actor.set_property("Default",None)
+                elif name=="expired-other-cache":
+                    actor.set_property("Default",self.systems[0]);expired=self.native_spawn(self.systems[0],ue.FVector(),False,True)
+                    actor.set_property("Impact Systems",[None,expired]);self.remove(expired)
                 systems=list(actor.get_property("Impact Systems"));old=systems[surface] if surface<len(systems) else None
                 before_data=read_parameters(old) if name=="invalid-template" else None;before_location=vec(old.call_function("K2_GetComponentLocation")) if valid(old) else None
                 points=[ue.FVector(xs[index],0.,50.),ue.FVector(xs[index]+1.,1.,50.)];normals=[ue.FVector(-1.,0.,0.)]*2

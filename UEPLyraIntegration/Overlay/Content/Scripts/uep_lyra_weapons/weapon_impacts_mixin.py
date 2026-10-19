@@ -83,7 +83,12 @@ def spawn_arrays(actor,surface):
             PoolingMethod=getattr(ENCPoolMethod,"None"),bPreCullCheck=True)
         counts["spawns"]+=1
         while len(systems)<=surface:systems.append(None)
-        systems[surface]=component;actor.set_property("Impact Systems",systems)
+        systems[surface]=component
+        # Reflected array assignment rejects wrappers for already-destroyed
+        # components in other slots. They are invalid in the original graph
+        # too; pass null while preserving every still-valid cached component.
+        systems=[value if valid(value) else None for value in systems]
+        actor.set_property("Impact Systems",systems)
     if not valid(component):counts["invalid_components"]+=1;return
     component.call_function("K2_SetWorldLocation",NewLocation=position,bSweep=False,bTeleport=False)
     arrays=lib("NiagaraDataInterfaceArrayFunctionLibrary")

@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "weaponabilityfire":
+        from generate_weapon_ability_fire_assets import generate as generate_weapon_ability_fire
+        return generate_weapon_ability_fire(stage)
     if kind == "weaponimpacts":
         from generate_weapon_impacts_assets import generate as generate_weapon_impacts
         return generate_weapon_impacts(stage)

@@ -7,7 +7,7 @@ from .weapon_actor_helpers_contract import require
 
 PROFILES=("BlueprintFallback","Python")
 BUCKET_CASES=("mixed","sparse-grow","empty","shorter")
-ARRAY_CASES=("cold","near","equal","far","inactive-far","null-cache","changed-template-far","invalid-template","character","concrete","glass")
+ARRAY_CASES=("cold","near","equal","far","inactive-far","null-cache","changed-template-far","invalid-template","character","concrete","glass","expired-other-cache")
 REUSED={"far","inactive-far","changed-template-far","invalid-template"}
 BUCKET_SURFACES=((3,0,3,1),(6,6,2),(),(1,))
 BUCKET_LENGTHS=(5,7,7,7)
@@ -60,7 +60,7 @@ def validate(report):
         callbacks=row["hold_callback_elapsed"]
         require(row["valid_inactive_kept_actor_alive"] and row["native_repeat_cleanup_observed"] and row["destroyed_after_component_removal"] and
                 row["native_has_valid_systems"] and len(callbacks)==2 and callbacks[0]>=3. and callbacks[1]-callbacks[0]>=3.,"native impact validity flag/repeat/removal cleanup differs")
-    return dict(status="passed",native_bucket_trials=8,native_niagara_cache_trials=22,native_fire_selector_trials=4,native_published_channel_rows=8,native_delay_profiles=2,full_acceptance=False)
+    return dict(status="passed",native_bucket_trials=8,native_niagara_cache_trials=24,native_fire_selector_trials=4,native_published_channel_rows=8,native_delay_profiles=2,full_acceptance=False)
 
 
 if __name__=="__main__":

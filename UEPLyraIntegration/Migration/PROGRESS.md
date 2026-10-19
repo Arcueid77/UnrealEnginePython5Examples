@@ -13,6 +13,44 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Completed bounded batch92 (2026-10-19):** shared GA_Weapon_Fire six original
+business methods,three original compiler montage callbacks and typed native
+failure-message continuation now use Python.91 parent commits:Examples
+`ad732ce` / core `f9aa9c0`. Assets01 preserves106 original nodes,class/full CDO,
+nine original signatures and three child asset bytes/inheritance,with eleven
+native transport nodes/ten methods per Profile. Original native weak callback
+function names,per-grant exact listener factory and named timer semantics
+retained;no Python callback rooting/scopes. Final Differential07NativeGASEnds
+passes432 real seeded montage/next-native-RNG pairs (straight Select evaluates
+Front then Back;side branch one draw),8 actual equipped Enhanced Input shots
+across Pistol/Rifle/Shotgun and both Profiles,plus8 montage lifecycle inputs.
+Every main shot proves native targeting/commit,one ammo consumed,blocking enemy
+hit/positive native Health damage,real firing Cue-to-Actor/native montage/end.
+Two optional authority field Actor spawns match actual ImpactPoint. Six native
+failure-message profiles verify foreign Avatar/no-op,real failure montage,
+repeat throttle,profile switch without new listener and1s named timer reset.
+Original complete/cancel/interrupt/null-montage callbacks match both Profiles:
+UE5.8 cancellation emits Interrupted,GAS Cvar1 clears timers on ordinary end,
+null montage emits Cancelled then registers a later FireComplete timer. Native
+Engine ownership/scheduling left intact. Firing exposed expired other-slot
+Niagara wrappers:marshal only invalid entries as null before reflected array
+writeback,keep valid caches;current ImpactsRegression01Expired passes24 actual
+cache trials plus bucket/channel/Fire/timing regression. Player Health,
+inventory/ammo/control rotation and observer Profiles restored;test owned
+Actors cleaned up. Host05 passes3,178;four invalid driver lanes rejected early.
+Keep Audit01 CRC-name preflight failure and failed Differential01(syntax/forced
+exit),02(inherited class registration),03(RNG/input/aim),04(polling missed short
+montage),06(incorrect native GAS cancellation/timer expectation),and earlier
+passed05 snapshot. Final logs have no binding/context/Python errors;known Scale
+metadata imports and two intentional native null-montage warnings audited.
+Dead/no-health/NoFiring controls remain model checks;no raw Health/ammo/timer
+repair or handler/target-data/task/timer callback replay. Native targeting,
+commit/cost/spread,task lifecycle/GAS/replication retained. Next:predicted
+network/two-owner firing and broader lifecycle/version gates,then remaining
+full declared migration scope. Physical input,quantitative spread/per-pellet
+equivalence,audio/pixels/package/full version remain OPEN. No Engine/general
+Cpp/official content edits,build/cook/package,push/tag/release.
+
 **Completed bounded batch91 (2026-10-19):** B_WeaponImpacts all five original
 runtime business methods and native latent cleanup now use Python.90 parent
 commits:Examples `b048331` / core `b0ec461`. Assets01 retains all194 original

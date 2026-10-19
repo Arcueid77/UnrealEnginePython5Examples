@@ -8,7 +8,7 @@ from unittest.mock import patch
 
 native=types.ModuleType("unreal_engine");enums=types.ModuleType("unreal_engine.enums");structs=types.ModuleType("unreal_engine.structs")
 enums.ENCPoolMethod=types.SimpleNamespace(**{"None":0});structs.NiagaraDataChannelSearchParameters=lambda **kw:kw
-helpers=types.ModuleType("uep_lyra_world.effect_pad_mixin");helpers.valid=lambda value:value is not None
+helpers=types.ModuleType("uep_lyra_world.effect_pad_mixin");helpers.valid=lambda value:value is not None and getattr(value,"valid",True)
 spec=importlib.util.spec_from_file_location("_weapon_impacts_model",Path(__file__).resolve().parents[1]/"Overlay/Content/Scripts/uep_lyra_weapons/weapon_impacts_mixin.py")
 policy=importlib.util.module_from_spec(spec)
 with patch.dict(sys.modules,{"unreal_engine":native,"unreal_engine.enums":enums,"unreal_engine.structs":structs,"uep_lyra_world.effect_pad_mixin":helpers}):spec.loader.exec_module(policy)
@@ -103,6 +103,10 @@ class TestWeaponImpactsMixin(unittest.TestCase):
         self.assertIn(("component","K2_SetWorldLocation",dict(NewLocation=(0.,0.,0.),bSweep=False,bTeleport=False)),self.calls)
     def test_failed_native_spawn_still_writes_null_cache_slot(self):
         self.prepare(surface=3);self.new=None;policy.spawn_arrays(self.actor,3);self.assertIsNone(self.data["Impact Systems"][3]);self.assertEqual(policy.evidence(self.actor)["invalid_components"],1)
+    def test_expired_other_cache_slot_is_null_for_reflected_array_writeback(self):
+        self.prepare();expired=Component(self);expired.valid=False;live=Component(self)
+        self.data["Impact Systems"]=[None,expired,live];policy.spawn_arrays(self.actor,0)
+        self.assertEqual(self.data["Impact Systems"],[self.new,None,live])
     def test_channel_writer_uses_original_search_count_and_visibility(self):
         self.prepare((7.,8.,9.),surface=2);policy.spawn_channel(self.actor,2);kw=next(r[2] for r in self.calls if r[0]=="WriteToNiagaraDataChannel")
         self.assertEqual(kw["SearchParams"],dict(OwningComponent="root",Location=(7.,8.,9.),bOverrideLocation=True));self.assertEqual(kw["Count"],1)
