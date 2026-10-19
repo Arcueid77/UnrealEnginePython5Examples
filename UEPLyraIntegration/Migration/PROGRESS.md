@@ -23,6 +23,57 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch115 (2026-10-20):** GCNL_Character_DamageTaken uses a
+seven-method Python policy family behind preserved native parent/RPC/data paths.
+Parent commits:Examples `942832e` / core `f4fb402`. Audit01 verifies160 original
+nodes versus inventory99 business nodes:OnExecute54,event60,selector32,message6,
+weak-spot7,construction1. Assets03ConfiguredArray preserves full CDO/signatures,
+all original nodes/native parent burst effects/minimum5-second timer and the
+original unreliable multicast MontageHit shell. Adds25 transport/5 interface/
+zero business nodes. Python ports exact tagged-material weak-spot checks,
+geometric montage decisions,message conversion/target override,Target/Montage
+state,post-RPC play,decal/lens updates and context-instigator popup/audio policy.
+Native parent effects and timer execute before the OnExecute body gate. Original
+RNG ranges/select topology/assets remain in typed native data helpers;Python
+chooses the geometric group/sign,not random values. The original argument-less
+Damage Animation event's retained hit context is mirrored per actor across
+Profiles. CameraLensEffects is an FScriptInterface array unsupported by the
+Python property reader;two VM accessors only count/index/convert to UObject.
+Python still performs lens-class selection and parameter updates. No SDK/Engine
+implementation change or Python interface-array replacement is introduced.
+Differential04NativeFloat passes native exit0/independent gate0/strict logs/
+ordered shutdown:24 exact weak-spot cases and64 direct/real Blueprint helper
+calls across both Profiles. Selector checks include inclusive float32-narrowed
+right-dot boundaries,strict double signs,unnormalized inputs,actual native RNG
+helper selection and authored montage-family membership;identical RNG sequences
+are not claimed. Eight full parent OnExecute cases verify actual typed damage
+messages,source target overwrite,context PlayerState versus decoy Cue Instigator,
+native Niagara number-pop count/signed rounded value/position,actual character
+montage/RPC body,non-default-surface decal creation with original bone-relative
+transform/material/size/fade,and native camera Niagara direction/world position.
+Number positions compare exact native FVector4f storage conversion,not a widened
+epsilon against double hit coordinates. Both Profiles retain the native minimum
+five-second lifetime and return to the manager pool. A real default-Python Cue
+manager execution independently reaches parent/burst/body/message paths. Health
+is unchanged;native popup array/component state,owned decals/material roots,
+production7-method family,music dependency11-method family/fields and probe root
+restore. Native local-popup/given cases are bounded;nonlocal taken/kill audio
+branches are host-policy checks,not native/aural/network acceptance.
+Preserve failed Differential01/interface-array property read,Assets02Interface's
+array-node allocation ensure and original/superseded source/output bytes. The
+array node is now configured before pin allocation;strict logs stay required.
+Differential02Interface already passed the original native gates. Added property
+checks exposed the verifier's double-versus-FVector4f mismatch in
+Differential03Properties;its source/report remain intact and04 verifies the
+actual native conversion. No original gameplay or engine defect is declared
+fixed. HostFocused05 passes36 affected checks;index verification is incremental
+and lists its actual dependencies. Five invalid lane/proof combinations reject
+before output/native launch. Ledger:
+`115-character-damage-native-parent-rpc-rng-effects.json`. Missing-receiver/error,
+remote/dedicated/network,pixel/audible/package/full actor/version and all remaining
+planned migration scope stay open. No Engine/general C++/official edits,build,
+cook,push,tag or release publication.
+
 **Completed bounded batch114 (2026-10-20):** both match/waiting message widgets
 now use Python business with original localized FText data/native UMG primitives.
 Parent commits:Examples `42354bb` / core `a1d76a5`. Audit01 adds exact native text

@@ -1,0 +1,516 @@
+{
+  "schema_version": 1,
+  "batch": "115-character-damage-native-parent-rpc-rng-effects",
+  "scope": "Bounded GCNL_Character_DamageTaken seven-method Python policy. Audit01 verifies160 actual original nodes. Assets03ConfiguredArray preserves full CDO/signatures/native parent burst effects/minimum5-second timer/unreliable multicast MontageHit shell/original RNG ranges and select data topology,with25 transport/5 interface/0 business nodes. Python ports weak-tag/geometric decisions,typed damage message target overwrite,per-actor retained event hit context,popup/audio,decal/lens and post-RPC playback.9-node VM interface-array accessors only count/index/convert;no SDK/Engine edits. Differential04NativeFloat passes native exit0/independent gate0/strict logs/shutdown:24 weak cases/64 direct and compiled BP selectors/8 parent context-decoy and surface cases;actual typed messages,signed rounded native popup count and exact FVector4f hit position,bone-relative decal transform/material/size/fade,native lens Niagara parameters,character montage/RPC body. BothProfiles retain native5-second recycle lifetime;real default-Python Cue manager reaches parent/burst/execute/message. Original RNG values not injected or claimed identical. Health unchanged;popup native array/component state,owned decals/material roots,7-method production and11-method music providers/fields/probe root restore. Focused36 host tests and incremental index scope,5 invalid lanes rejected. Preserve interface-read failure,unconfigured array-node allocation ensure,superseded assets/sources,prior passed Differential02Interface and double-versus-FVector4f verifier failure. Nonlocal taken/kill sound branches host-policy only;remote/dedicated/network,pixel/aural/package/full actor/version and full original remaining scope open. No Engine/general Cpp/official edits,build,cook,push,tag or release.",
+  "recorded_utc": "2026-10-19T19:21:43.9928564Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "f4fb402a0ff697831508d96de32fc7874c29c37c",
+  "examples_parent_commit": "942832e34f0040180244d8a25f00e81c38ef3aad",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Audit01",
+      "summary_sha256": "6F9E8B37DF9D72D268E24AA1D4B9E736F96BE76CFE4DA4199CD42FE88B7BF1CF",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 841,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "024C3104E9244D1D8DA2C984EE9120414F327D227AAD81DDC838B0026E87A059",
+          "file": "audit.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets03ConfiguredArray",
+      "summary_sha256": "3D82466FE715686410764806DF7A7AB22C9E328F4315BE21A7A50166A934E89E",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1918,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential04NativeFloat",
+      "summary_sha256": "9B1918F44FEDBA085061B5AEAA72B5AD86A5375226FA4A8B073971EA117016CA",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2286,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "1E5C639AA6956060D90E68C30780EF093039D6FB5D1E4AC30681379D45D21DD9",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "8E5CADAE01757DC13C2ABB969C429C0591B827CFF944B723ADC48B227769985C",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_character_damage.py",
+      "path": "Demos/UEPLyraIntegration/Tools/audit_character_damage.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "5199DCEF8DF948D09D17A70471E5B40AB7D534F8FE82592998C7296F7C655387",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_character_damage_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_character_damage_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "6CA261BD79747911AE9446B1BF72F90047C278BBD2BCE88B3098977E8C92A44C",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "B88E9229A6F0D7E77D0D450DA121D6E4C1FE09E70DEE14A70D3BB47375FB64A6",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "4E571A4AF49EC56FA62A6F01389B56FC49CEAB6A4575DE3FCBB50A3B35E71A7B",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/character_damage_mixin.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/character_damage_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "1C8B86881F7AB481F613AEE6A5D9488CC5FF3A197AD4F5B48EB67278BDBF8402",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/character_damage_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/character_damage_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "242F1D466F62BDFC3B07DA4A24051A30EB54CD74E9E27E1FB0D7654F947773F7",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/character_damage_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/character_damage_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "81D9767399713D9597EDF2C4BEC5D36DD23B50DA11F66234452D7DF6777FC822",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "ABB96EC1286CCB7C203B3CABC00581B337C5FB9E1798395144478FE2E8620684",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "sha256": "7CB97A966B67D26B11F9C727BE443BD45A836BB9ECBEB998CD8F097CFF2A4E31",
+    "result": {
+      "schema_version": 2,
+      "status": "passed",
+      "tests_run": 36,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "selection": {
+        "mode": "incremental",
+        "selected_test_files": [
+          "Demos/UEPLyraIntegration/Tests/test_character_damage_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_damage_contract.py"
+        ]
+      }
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/HostFocused05.json"
+  },
+  "raw_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/assets.json",
+      "sha256": "DB6E184537AD08DE772BC6BC27D226AAE80584805F1E980EDAA611EB2BC36351"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets01/assets-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets01/assets-stdout.log",
+      "sha256": "DE7CB3156771C2DEBDBD0F859858C8DF1034AB049B38AC2F577608FAAE1F7040"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets01/assets.json",
+      "sha256": "A6473C91D84345D364E7E54A53712C7FE863FB5F891382E3E7B256F9894FB803"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets01/assets.log",
+      "sha256": "B8E1CC3D1C5B68309918AE8D500D6F3C22DD769D70581AAE6FC6B499AC0C6A64"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets01/dash-character-damage-after-cdo.t3d",
+      "sha256": "E9D133377DA8ECCE50E0017E7279B6C7CE596A2E1AD65674DA661DF128D930D0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets01/dash-character-damage-before-cdo.t3d",
+      "sha256": "9A9E8C069B81AA4B50DE25990FEB73917E5CB25882E784452E76AC601437C42C"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets01/PreviousAssets/before.uasset",
+      "sha256": "3AD2AA3E999101D2665B6E537EF79907D4F16DD253B43637BCCCE3E5E33909DE"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets01/summary.json",
+      "sha256": "640FE41334E06AB717B54CDE8677D7E95FB8686D84775EE6C3CA30ECA310700E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets01/Superseded-overlay/Content/GameplayCueNotifies/GCNL_Character_DamageTaken.uasset",
+      "sha256": "C6E43457C85F49E337645B41ED77FCFCC66EC3F3B4C53F10B1ABA5C03BB754AA"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets01/Superseded-overlay/Content/UEPMixins/DA_CharacterDamageMixin.uasset",
+      "sha256": "C25CCC83A9FB5D6EFE4C5FCF419DA674A11662118F7A972E6DBA288EFC1CEC90"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets01/Superseded-stage/Content/GameplayCueNotifies/GCNL_Character_DamageTaken.uasset",
+      "sha256": "C6E43457C85F49E337645B41ED77FCFCC66EC3F3B4C53F10B1ABA5C03BB754AA"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets01/Superseded-stage/Content/UEPMixins/DA_CharacterDamageMixin.uasset",
+      "sha256": "C25CCC83A9FB5D6EFE4C5FCF419DA674A11662118F7A972E6DBA288EFC1CEC90"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets01/Superseded-stage/Content/UEPValidation/BP_CharacterDamageProbe.uasset",
+      "sha256": "2B3235A5D277DDF655C8E5FC93A8306DD2355DA604A686C0B861DA88ACCD9E7C"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets02Interface/assets-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets02Interface/assets-stdout.log",
+      "sha256": "AC543FEEBE19F6E620DAF45868C44FD70C42A6E2419609865D2171573B81D3E2"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets02Interface/assets.json",
+      "sha256": "A775BD0A0EF3F2463070E6BA8A9F70CC4E67410C1B311666B45390951EA5154D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets02Interface/assets.log",
+      "sha256": "B44A1F09CAE3175BFBBF4E351B7CB69585DF477153E9B39D9C3229B8003873AF"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets02Interface/dash-character-damage-after-cdo.t3d",
+      "sha256": "E9D133377DA8ECCE50E0017E7279B6C7CE596A2E1AD65674DA661DF128D930D0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets02Interface/dash-character-damage-before-cdo.t3d",
+      "sha256": "9A9E8C069B81AA4B50DE25990FEB73917E5CB25882E784452E76AC601437C42C"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets02Interface/FailedSources/generate_character_damage_assets.py",
+      "sha256": "D44240E803F506E11E2CAC9C01A4821177D159C2F3A0FED5DE17C15D9269BD34"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets02Interface/PreviousAssets/before.uasset",
+      "sha256": "3AD2AA3E999101D2665B6E537EF79907D4F16DD253B43637BCCCE3E5E33909DE"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets02Interface/summary.json",
+      "sha256": "BF4B88CBF41DAB4983317A46D783A1C171326CE626F64178309836E9ED7DE61A"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets02Interface/Superseded-stage/Content/GameplayCueNotifies/GCNL_Character_DamageTaken.uasset",
+      "sha256": "E16C613227BD171467EC446C339B70C7802254EF891D499410B98FF03D820B1B"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets02Interface/Superseded-stage/Content/UEPMixins/DA_CharacterDamageMixin.uasset",
+      "sha256": "6E4F7CE599E2CD99599F5763881E30831234C45C3359B35E01E81E028F2E8B4E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets02Interface/Superseded-stage/Content/UEPValidation/BP_CharacterDamageProbe.uasset",
+      "sha256": "D41B7FCBE4E44104BC4D22D179CC016D51A4E4BC11E5425E2E85F420EE8D106E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets03ConfiguredArray/assets-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets03ConfiguredArray/assets-stdout.log",
+      "sha256": "73C2C8805953FB86158E88CEA5A4DE4A9C6CD550AD26430087A9E63F910184E7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets03ConfiguredArray/assets.json",
+      "sha256": "7A6BF8030F229EC107558A95D00A81FDC06C6850C2A7BC72B455DF6397869227"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets03ConfiguredArray/assets.log",
+      "sha256": "FE7178C6F7AC85C246839E56576FAEBD54C4E27886A8DC69061FDFD476B6D88B"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets03ConfiguredArray/dash-character-damage-after-cdo.t3d",
+      "sha256": "E9D133377DA8ECCE50E0017E7279B6C7CE596A2E1AD65674DA661DF128D930D0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets03ConfiguredArray/dash-character-damage-before-cdo.t3d",
+      "sha256": "9A9E8C069B81AA4B50DE25990FEB73917E5CB25882E784452E76AC601437C42C"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets03ConfiguredArray/PreviousAssets/before.uasset",
+      "sha256": "3AD2AA3E999101D2665B6E537EF79907D4F16DD253B43637BCCCE3E5E33909DE"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Assets03ConfiguredArray/summary.json",
+      "sha256": "3D82466FE715686410764806DF7A7AB22C9E328F4315BE21A7A50166A934E89E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Audit01/audit-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Audit01/audit-stdout.log",
+      "sha256": "B8C99372B0D322639F42894BFDEF258884E58731B9ADB2A82415BAEDDF441E8D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Audit01/audit.json",
+      "sha256": "024C3104E9244D1D8DA2C984EE9120414F327D227AAD81DDC838B0026E87A059"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Audit01/audit.log",
+      "sha256": "7D7EFEC4926ABE06C26854F80F5140C267CDEA03828290D18AD8340EC07EF693"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Audit01/damage-cdo.t3d",
+      "sha256": "9A9E8C069B81AA4B50DE25990FEB73917E5CB25882E784452E76AC601437C42C"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Audit01/damage-graphs.json",
+      "sha256": "1FBD07F676B27128DE3900947776EE2C53F4C7D4CEB73D69256C0F34CC351602"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Audit01/summary.json",
+      "sha256": "6F9E8B37DF9D72D268E24AA1D4B9E736F96BE76CFE4DA4199CD42FE88B7BF1CF"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential01/FailedSources/character_damage_contract.py",
+      "sha256": "47E701AED1430B65D252AD9B90EF66F54D623320990B0F621C18693E9750006E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential01/FailedSources/character_damage_mixin.py",
+      "sha256": "A05E660F147897DF210350AF25FBEBD4FD61B21594342EE120494C2C08795DC4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential01/FailedSources/character_damage_validation.py",
+      "sha256": "5415E2D3AD663B75034BB6DD15427A67B4762B6D4D9766D323F2525E92FE5FE7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential01/FailedSources/generate_character_damage_assets.py",
+      "sha256": "F0C3E783F5434CFB249E4E635D9BE8A734E14B863D248D4B8FDCC7492A1ABB59"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential01/jump-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential01/jump-stdout.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential01/jump.json",
+      "sha256": "2CCCC05925D0655272D391229FEEF5A1B046E7A65E3EB7E79DCB84D6A8E017B9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential01/jump.log",
+      "sha256": "E150E23C7CFA81D5C622A6E0E3B32945989839B3ADAD68E984025F92325E3403"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential01/summary.json",
+      "sha256": "6B87D81E22EA6938C773FE8F3AA1D2769916B1403632E8284B986D80C8521527"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential02Interface/jump-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential02Interface/jump-stdout.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential02Interface/jump.json",
+      "sha256": "6B41A3F34A73FFB1CEFC022215015B1A0B73CA326414707E7D975EB6D019C031"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential02Interface/jump.log",
+      "sha256": "4FF8AA7CFD11AC5C41832B49ED50CF1F09D62BCCCAFA9B836C719562B656F6A1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential02Interface/report-gate-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential02Interface/report-gate-stdout.log",
+      "sha256": "E2BCDD19809B391776ED10C8FCB4F197CDDB324993802F928CB27F5D2CCA7348"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential02Interface/summary.json",
+      "sha256": "7229124794B66E9BCE2AF023742014167F2C4B181EA89517F5AF8826326342C1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential03Properties/FailedSources/character_damage_contract.py",
+      "sha256": "0CA1CB0FC0E56E3F76B3A3DB07C9C02D6109A18A56E25B437D289385D7536B5F"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential03Properties/FailedSources/character_damage_validation.py",
+      "sha256": "242F1D466F62BDFC3B07DA4A24051A30EB54CD74E9E27E1FB0D7654F947773F7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential03Properties/jump-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential03Properties/jump-stdout.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential03Properties/jump.json",
+      "sha256": "E92CD4AC3E7053042D84D8F6F0F4E77CCAE7502EF04FEF5A4D6F85A71DF4F66B"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential03Properties/jump.log",
+      "sha256": "FE313153EAD2A4FB98D01AB639D4FA325FD92CE606700EAFF6D291DA19AB616D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential03Properties/summary.json",
+      "sha256": "C1B5B7FE9D5386E4B29FB8D743FFB308C7CB9B0F2D599A99A412ED50550E26F7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential04NativeFloat/jump-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential04NativeFloat/jump-stdout.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential04NativeFloat/jump.json",
+      "sha256": "1E5C639AA6956060D90E68C30780EF093039D6FB5D1E4AC30681379D45D21DD9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential04NativeFloat/jump.log",
+      "sha256": "B3CBB228A979C032E49D6942D3630F939BBFEFB15660AA8A7C36622273361FB7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential04NativeFloat/report-gate-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential04NativeFloat/report-gate-stdout.log",
+      "sha256": "E2BCDD19809B391776ED10C8FCB4F197CDDB324993802F928CB27F5D2CCA7348"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Differential04NativeFloat/summary.json",
+      "sha256": "9B1918F44FEDBA085061B5AEAA72B5AD86A5375226FA4A8B073971EA117016CA"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/focused-policy-01.log",
+      "sha256": "7A128F0ACF3AB378EFE6D184FFAE3D02B3B96F7C35AD625C538E61C79B03C44C"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/HostFocused01.json",
+      "sha256": "7A9989F0385ECB4F11C389D5DA65733A7F90E2C8423A3DE5113735EB78F99AD0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/HostFocused01.log",
+      "sha256": "48EC6EE1F6966A5A08F9712E1FE2290A348D69AF34B18B1D99A98F0468461009"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/HostFocused02.json",
+      "sha256": "923EFFDF7F3916E2271BC19E233F4BA46362193EBFC91E81E807EBF75C6C2661"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/HostFocused02.log",
+      "sha256": "9761F785E9BE95A7C6AC525C2770CD155A56E0C86882ED85383A8EC97956A999"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/HostFocused03.json",
+      "sha256": "D1CC8CF5DC7F26B24F50BDB7D009574FA3563ACF6DE02A4A4281C96975584B0B"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/HostFocused03.log",
+      "sha256": "EF54A1C278A2F564788956D6C7DA28F9362FE4831F92C3B9835C091D807128C3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/HostFocused04.json",
+      "sha256": "E29F2443BAA7CA5A0EA0E73324ABB21418B6FF050B64AA1BAAE9D389F1530603"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/HostFocused04.log",
+      "sha256": "DA967224F46076F9F10FD89DDDBA1FF40ACF2D33ADA76CF655D01F5F93CF7A80"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/HostFocused05.json",
+      "sha256": "7CB97A966B67D26B11F9C727BE443BD45A836BB9ECBEB998CD8F097CFF2A4E31"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/HostFocused05.log",
+      "sha256": "A70DE457492453538C700F264594794C612566F0D26437D4DA7FECCC01578657"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/lane-guards.json",
+      "sha256": "E8944FC2389049148E1DC4907D9A4521402250539145B381ECF76A458BF120FC"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/reset-for-Assets02.json",
+      "sha256": "F9AA2710C4BED67BDCF0F83D3778CC37DD36F13E0FE52604190BB24B1908C885"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/reset-for-Assets03.json",
+      "sha256": "010200217A0A79EC86168634222075765D26F9712DA33663CCE1EAB01DC3C1C1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/Run-Audit.ps1",
+      "sha256": "A70488D415E7E66DBB4F322F5E174A43417E768552AF4CC52C701A167F4A8ECB"
+    }
+  ],
+  "authored_asset_outputs": [
+    {
+      "sha256": "E6EB4A23AADADC355C2CF3B15774C4068A0FDFC65CAD6331788634E58749CF8F",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\GameplayCueNotifies\\GCNL_Character_DamageTaken.uasset",
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\GameplayCueNotifies\\GCNL_Character_DamageTaken.uasset"
+    },
+    {
+      "sha256": "DD4BC653D7FF752484FAD720B2E7C92020563E54C59A990A2213959D95996D68",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UEPMixins\\DA_CharacterDamageMixin.uasset",
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_CharacterDamageMixin.uasset"
+    }
+  ],
+  "launcher_guards": {
+    "path": ".build/LyraValidation/BlueprintPython/20261020-character-damage/lane-guards.json",
+    "sha256": "E8944FC2389049148E1DC4907D9A4521402250539145B381ECF76A458BF120FC",
+    "invalid_lanes_rejected_before_side_effects": 5
+  },
+  "preserved_failed_runs": [
+    "Differential01",
+    "Assets02Interface",
+    "Differential03Properties"
+  ],
+  "historical_passed_native_run": "Differential02Interface",
+  "incremental_regression": {
+    "focused_host_tests": 36,
+    "full_regression_executed": false,
+    "scope": "Affected policy/evidence contracts; exact staged dependency selection is recorded in commit verification."
+  }
+}
