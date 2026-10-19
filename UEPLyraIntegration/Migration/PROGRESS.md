@@ -13,6 +13,16 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+User workflow update (2026-10-20): default to incremental regression of changed
+features plus affected callers/inheritance/contracts. The isolated staged driver
+selects related host tests and checks changed Python syntax/imports;explicit test
+patterns cover unresolved dynamic dependencies. Report the actual selected tests
+and uncovered paths. Full host/index regression is an explicit broader gate for
+shared SDK/interface changes or version acceptance,not a repeated per-batch
+requirement. Keep feature-specific native authoring/runtime/lifetime checks.
+Batch112's already completed3510-test/1027-file full evidence stays historical;
+later incremental checks do not refresh unrelated native or full-suite evidence.
+
 **Completed bounded batch112 (2026-10-20):** B_FootStep motion-effect footprint
 business now uses Python with native Niagara and the original3-second
 RetriggerableDelay.111 parent commits:Examples `8a97399` / core `3f77b6e`.

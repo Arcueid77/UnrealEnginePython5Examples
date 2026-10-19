@@ -16,7 +16,19 @@
   "migration_complete": false,
   "accepted_batch_commit_workflow": {
     "review_date": "2026-10-16",
-    "cadence": "modify, verify the isolated index, commit one coherent bounded batch",
+    "cadence": "modify, verify affected tests in isolated indexes, commit one coherent bounded batch",
+    "regression_policy": {
+      "default": "incremental",
+      "scope": "changed features and affected callers,inheritance and contracts",
+      "isolated_staged_indexes": true,
+      "full_regression": "explicit for shared SDK/interface changes or version acceptance",
+      "unresolved_dynamic_dependencies": "add explicit test patterns and keep affected native scenarios",
+      "reports_enumerate_selected_tests_and_unmapped_changes": true,
+      "last_full_regression_batch": 112,
+      "historical_full_host_checks": 3510,
+      "historical_full_examples_python_files": 1027,
+      "incremental_checks_do_not_refresh_unrelated_evidence": true
+    },
     "evidence_directory": "Migration/Acceptance",
     "bounded_evidence_ledgers": 114,
     "shared_binary_profile_families_committed_together": true,
