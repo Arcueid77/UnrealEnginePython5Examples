@@ -13,6 +13,35 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Completed bounded batch94 (2026-10-19):** NetShooter Actor ray/strand/overlap/
+life-cleanup business now uses Python.93 parent commits:Examples `409404c` /
+core `6889482`. Read-only Audit03EquipmentChain proves the actual asset chain
+ID_NetShooter->WID_NetShooter->AbilitySet_ShooterNetShooter->GA_WeaponNetShooter
+->B_NetShooter;this is asset reachability,not proof of normal match usage.
+ActorAssets01 preserves47 original nodes/full CDO/three signatures,reliable
+multicast entry/flags,native authority/DoOnce and12s Delay node/UUID. Eleven
+transport nodes/four methods per Profile add no business nodes. Runtime04
+NativePrecision passes actual exit0/independent gate0:four controlled native
+Hit-entry pairs NumberOfWeb -1/0/2/12 produce0/1/3/13 strands with equal native
+geometry/next RNG and native DoOnce blocking. Two separate real moving
+projectiles hit naturally,each with28 distinct active position samples and13
+strands;native initial speed2500/gravity0.5 and12s latent destruction pass.
+Two real strand BeginOverlap events,without replay,apply original native GAS
+damage Health100->88->76,Level0/empty context API and Instigator ASC retained.
+Native weak named delegates/component template/world transforms preserved.
+FVector constructor narrowing found by the differential is fixed by native
+MakeVector for random jitter/strand scale. Original BP's replicated dynamic
+component template triggers its known ActorReplication.cpp archetype ensure;
+exact one original-profile warm-up window is separately audited,raw log kept,
+all other errors rejected. Component network replication remains OPEN;template
+replication was not changed. Player Health/Profiles restored,test Actors gone.
+Host03 passes3,250;four invalid launcher combinations rejected. Keep failed
+Audit01 and Runtime01/02/03 evidence plus earlier read-only audit snapshots.
+No Engine/Cpp/official edits,build/cook/package,push/tag/release. Next:the
+GA_WeaponNetShooter ability,then the full declared later-version migration and
+broader lifecycle/network/version gates. Physical input,pixels/audio,component
+replication,packaged and full-version acceptance remain OPEN.
+
 **Completed bounded batch93 (2026-10-19):** actual dedicated server and two
 clients validate predicted Pistol/Rifle/Shotgun equipped firing.92 parent
 commits:Examples `07a5aaf` / core `607aad1`. PistolNetwork05WeaponTrace,
