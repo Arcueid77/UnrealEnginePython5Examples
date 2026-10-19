@@ -13,6 +13,38 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Completed bounded batch102 (2026-10-19):** static WhizBy scheduling now uses
+a separate typed ordinary Object router.101 parent commits:Examples `7b0ce0a` /
+core `7999e7b`. Audit01 captures all43 WhizBy and154 EarlyReflections nodes,
+signatures,locals and macros. OfflineProbe02NativeCue establishes original
+native behavior with the actual NonRealtimeAudioRenderer,creating two real
+MetaSound AudioComponents while local/null actors and SurfaceType1 skip.
+Assets01 extends only the accepted101 library,retaining all348 original nodes,
+eight static signatures/flags,full CDO,locals and100/101 transport. Five native
+transport nodes/one named-output helper method per Profile,no business nodes or
+static Mixin registration. WhizBy preserves Windows/Linux/Mac string eligibility,
+first-local-Pawn exclusion,material default/flesh filtering,existing static math,
+hardcoded MetaSound/default spawn values,attenuation getter behavior(changes only
+StereoSpread even if the getter fails),OnsetDelay=FiringDistance*.000010,SwapLR
+selection and the final Play(0) after parameter writes. Host tests verify call
+order and missing-camera diagnostic fallback. Differential01Offline and
+Differential02NoSound pass actual native exit0,independent geometry/component
+gates0,strict logs and shutdown. Each uses60 cases/240 actual direct/static
+Blueprint caller invocations across both Profiles:five trajectories,three actor
+contexts and four physical-material contexts. Offline creates60 actual sound
+components and compares complete native attenuation structs,parameters,location,
+sound/defaults/playing state exactly;NoSound creates none while retaining original
+math execution. Each also performs32 previous math and16 previous dispatch
+invocations,including an owned Tap whose prior preset state restores. Selected
+Profiles/Health restore,owned components/actors are destroyed. Host01 passes3,376;
+five invalid lanes reject before side effects. Preserve OfflineProbe01's typed
+GameplayCueParameters Location-construction failure/source;use the native
+MakeGameplayCueParameters API rather than assigning FVector to FVector_NetQuantize.
+Remaining EarlyReflections scheduling,revised-library firing-Cue/network
+integration,audible hardware/waveform/pixel/package/full-version acceptance and
+all original later scope remain open. No Engine/general Cpp/official edits,
+build/cook/package,push/tag/release;not whole-library or audible acceptance.
+
 **Completed bounded batch101 (2026-10-19):** static audio SendWeaponFire/
 SetWeaponSoundParams/DebugPrintTap/Calculate Tap Properties now dispatch through
 a separate typed ordinary Object router.100 parent commits:Examples `163b271` /

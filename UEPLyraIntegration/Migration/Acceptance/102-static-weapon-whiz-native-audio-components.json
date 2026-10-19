@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "batch": "102-static-weapon-whiz-native-audio-components",
+  "scope": "Bounded static WhizBy scheduling migration through typed ordinary Object router. Audit01 preserves43 WhizBy/154 EarlyReflections original graph evidence. Original OfflineProbe02NativeCue establishes actual native NonRealtimeAudioRenderer AudioComponents. Assets01 retains all348 original nodes,8 static signatures/flags/full CDO/locals and100/101 transports;5 new transport nodes,one helper method per Profile,no business nodes/static Mixin. Differential01Offline and Differential02NoSound each pass actual native exit0/independent gate0/strict log and shutdown:60 cases/240 direct-static and real Blueprint caller invocations per backend,covering5 trajectories,foreign/local/null actors and absent/default/flesh/nonflesh materials. Offline creates60 actual original/Python AudioComponents with exact complete native attenuation structs,parameters,location,sound/defaults/playing state. NoSound creates none and retains original math execution. Each runs32 previous math and16 previous dispatch invocations,restoring owned Tap preset state. Native signatures,Profiles,Health and owned component/actor cleanup pass. Host3376/5 invalid lanes pass. Host proves original platform string gates,attenuation getter failure behavior and native spawn/attenuation/OnsetDelay/SwapLR/final Play call order;actual platform runtime is Windows only. Preserve OfflineProbe01 typed NetQuantize constructor failure/source;native MakeGameplayCueParameters fixes fixture construction. Remaining EarlyReflections scheduling,revised-library firing-Cue/network,audible/waveform/hardware/pixel/package/full version and full later scope remain open. No Engine/general Cpp/official edits,build/cook/package,push/tag/release;not whole-library or audible acceptance.",
+  "recorded_utc": "2026-10-19T14:05:21.9561716Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "7999e7b3e57648916da585f7061d64cc1098682b",
+  "examples_parent_commit": "7b0ce0a3c9bbdb847cf4cc4096c02726bd46789b",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-scheduling/Audit01",
+      "summary_sha256": "0BA0FCB01319A4C8BAEB1D68D1978673823CA22CB5547FF2BB24ADB131C8BDD6",
+      "status": "passed",
+      "uep_dll_sha256": [],
+      "frozen_input_records": 1,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "23BC2D2C14B0C406A119C2A6053C1777A7E9A46CA36589C06307CD45EAF7F299",
+          "file": "audit.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-scheduling/OfflineProbe02NativeCue",
+      "summary_sha256": "67C5C8116EBFF5E46545AE392F9F1CC7D204346A81C98500A3E0660FB2B9A8E1",
+      "status": "passed",
+      "uep_dll_sha256": [],
+      "frozen_input_records": 1001,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-scheduling/Assets01",
+      "summary_sha256": "DADAED32ED9F49ACBC20DE4BBB622D858C284E26EE02FF8C3D3536D12F5E527E",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1853,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-scheduling/Differential01Offline",
+      "summary_sha256": "90CBCB2F26BBCE6CB49D0DC23A9C8BD602BBDE304E6F5908FEE6933C9B53D1A0",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2178,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "EB76AE3D18706CF6289DFF68EC54B5FDC03DD117E0148FCB582E5016DD5F5F4F",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-scheduling/Differential02NoSound",
+      "summary_sha256": "2FEF3DC67C224E8CA611EF945649B08B6DAF15DA0A610241F57EE3C63622212F",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2178,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "31CB2C26BD2D369ACFDE1C3B7DA26368BF8ACDBE706424D7E12662313E8781B7",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "92C332EA1B904E51864938E5A8B09169DD3161BFE0FE8E71DFAAAE6FE577436D",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_whiz_mixin.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_whiz_mixin.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "492CF7725E385C37C1B96681507D9218B422AC42F77A598C37CDE03D24425330",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_whiz_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_whiz_validation.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "DFA423CD684396E61D4B909E47C053DF472246F0258907E7AD6B5A4D78680775",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_whiz_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_whiz_contract.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "69490A6A9BDECDE2886FDE5B54FC5CC241C1E493D3ABDDFD5714732A0F5D64E7",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "2C0BFC802C58A36BA25F7F9360C19849FD66D324E625FC22557BEAEBF6B9CD02",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_weapon_audio_whiz_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_weapon_audio_whiz_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "6573B9AD84C798FF1D27843B910463C9701969191F6DF1E58C242A3C0480980D",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_weapon_audio_scheduling.py",
+      "path": "Demos/UEPLyraIntegration/Tools/audit_weapon_audio_scheduling.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "24D622A42F990F936CE03172DAD9E48A041AD329BB18120DE31A2273EB8E5F2F",
+      "native_input_path": "Validation/Run-UEP58WeaponAudioWhizAssetAuthoring.ps1",
+      "path": "Validation/Run-UEP58WeaponAudioWhizAssetAuthoring.ps1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "9A48C516A4E3E6BCCF9659B7E2C0506413FDF2DFC790AE06C304C9476DA6F25D",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "path": "Validation/Run-UEP58JumpValidation.ps1"
+    }
+  ],
+  "host_report": {
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 3376,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "sha256": "3FDC4086901379696F7B54ED7DF5438EF7DEED58751FD7948DFD05BD3F1D2326",
+    "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-scheduling/Host01.json"
+  },
+  "raw_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-scheduling/Audit01/audit.json",
+      "sha256": "23BC2D2C14B0C406A119C2A6053C1777A7E9A46CA36589C06307CD45EAF7F299"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-scheduling/Audit01/audit.log",
+      "sha256": "4DF657F67AE6AE53EF39FAE793548290C5BC220748727CF6531FB09C0DC4CBAF"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-scheduling/OfflineProbe02NativeCue/probe.json",
+      "sha256": "35C53B5DE91E99BADE93075E0743DB31FF2B7EAD87C9E4655F0CE7A496F97AEE"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-scheduling/OfflineProbe02NativeCue/probe.log",
+      "sha256": "A282AB565A912A1D4AF2BD5511CD5FDF70A60C944F52083778559EB004479EBE"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-scheduling/OfflineProbe02NativeCue/validation-source.py",
+      "sha256": "3F83F56C8D2853D9EDA957CC92AFE974CFF5AD64D2374BC2B54E436E9FEA47BC"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-scheduling/Assets01/assets.json",
+      "sha256": "CDF277C13007F12C7399827E039CE61810F90CE5466E81076C97A834E19820DE"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-scheduling/Assets01/assets.log",
+      "sha256": "CDAF78C68D843C5F8EE5E9B9C2FCE14A07C53D3E55D578050181E728C3F8A6E8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-scheduling/Assets01/dash-audio-whiz-before-cdo.t3d",
+      "sha256": "79CBB3FF4EBC5C50357DADE2BDC5E405C33A56FC46E9C7ADB48C59EE88D0A19B"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-scheduling/Assets01/dash-audio-whiz-after-cdo.t3d",
+      "sha256": "79CBB3FF4EBC5C50357DADE2BDC5E405C33A56FC46E9C7ADB48C59EE88D0A19B"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-scheduling/Differential01Offline/jump.json",
+      "sha256": "EB76AE3D18706CF6289DFF68EC54B5FDC03DD117E0148FCB582E5016DD5F5F4F"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-scheduling/Differential01Offline/jump.log",
+      "sha256": "206944D4E27C21F97197571828DE8DFA55ADE5DFB6AC9F88F862F1A62EA8D067"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-scheduling/Differential01Offline/report-gate-stdout.log",
+      "sha256": "B5F968FDB0E8B6CB6619D01C06B6C2715F37DB2186DCD7A8D284E7A52285A660"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-scheduling/Differential02NoSound/jump.json",
+      "sha256": "31CB2C26BD2D369ACFDE1C3B7DA26368BF8ACDBE706424D7E12662313E8781B7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-scheduling/Differential02NoSound/jump.log",
+      "sha256": "192712911DA39A862165777BDCA072AA44B70676FEBA443F0DAB9BD8518CB50F"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-scheduling/Differential02NoSound/report-gate-stdout.log",
+      "sha256": "2C58C9B32EBDF51CE589200C60690C7FC502A64BD29711AC2800747DDA881C2A"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-scheduling/OfflineProbe01/summary.json",
+      "sha256": "9D82B9D83B9891AACE165A524EA3B51669F19F48B7A1B5184BE5C81369B6601C"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-scheduling/OfflineProbe01/validation-source.py",
+      "sha256": "4B3EEA768EACBBD7ABD2078A8E4AB91A21214F1517D119BE241A6D7E9BEFDEE0"
+    }
+  ],
+  "authored_asset_outputs": [
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\System\\Audio\\WeaponAudioFunctions.uasset",
+      "sha256": "08C21DB32415749083D1A596E48212E8890FDF16211B1E7989D3A17733A94ACF",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\System\\Audio\\WeaponAudioFunctions.uasset"
+    },
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\BP_WeaponAudioWhizRouter.uasset",
+      "sha256": "44291F582736184EF5CAF94FCF72E47A6692EC68BB591A4F4206D01D1C860747",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UEPMixins\\BP_WeaponAudioWhizRouter.uasset"
+    },
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_WeaponAudioWhizMixin.uasset",
+      "sha256": "FE02B9F9F76753DAE3F4561F651912FC7F24E8307FBBFF97FF5A1B232E900F6D",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UEPMixins\\DA_WeaponAudioWhizMixin.uasset"
+    }
+  ],
+  "launcher_guards": {
+    "invalid_lanes_rejected_before_side_effects": 5,
+    "sha256": "C06D880480ED729492A4904BC836AC3D3ABCDC34CB6D193F5540DDD33381E8A9",
+    "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-scheduling/launcher-guard-checks.json"
+  }
+}
