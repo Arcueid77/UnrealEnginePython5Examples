@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "controlpointhelpers":
+        from generate_control_point_helpers_assets import generate as generate_control_point_helpers
+        return generate_control_point_helpers(stage)
     if kind == "cpscoring":
         from generate_cp_scoring_assets import generate as generate_cp_scoring
         return generate_cp_scoring(stage)

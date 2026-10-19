@@ -23,6 +23,39 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch124 (2026-10-20),partial volume phase:** construction,
+CheckTimerNS,MarkThisPointContested and MarkThisPointRecaptured use Python.
+Parent commits:Examples `b39886e` / core `99bfdcf`. Audit02 captures271 original
+nodes/full defaults/components/Timeline and original multicast signatures:
+Capture Audio/Activate VFX/Clean Up VFX retain flags201343040. Assets01Helpers
+preserves CDO/public ABI/components/Timeline templates/curves/GUIDs and all other
+original graphs.4 methods/Profile,16 transport/5 interface/zero business nodes;
+CP scoring bytes remain unchanged. Constructor uses AreaScale/10 relative Cube
+scale,then reads that relative Z for*50+1 height,SidesOffset=(AreaXY*5,-AreaXY*5),
+RibbonProgression0 and LifeTime=TimeRequiredForCapture. Native arithmetic is used;
+actual numerical state is compared within1e-4,not claimed bit-identical. Check
+calls Activate(reset=true) only while inactive;contest/recapture pass the same
+actor and current OwnerTeamID into actual CP scoring without reinterpretation.
+Differential05NativeActivationState passes native exit0/independent gate0/strict
+logs/ordered shutdown in actual CP map:3 map volumes naturally select Python
+constructors,3 source/Python pairs cover default/nonuniform/negative dimensions
+and durations5/2.25/.75;actual Cube/Niagara state matches.6 real scorer delegation
+calls produce owner2 then contested-1. Counter checks compare both Profiles with
+a direct native Activate reference. First pair remains inactive across all three
+paths;later pairs activate across all paths. Python requests activation twice if
+both checks remain inactive and only once when the first succeeds. Fixture-only
+Niagara scalability disabling/forced solo is explicit;no production setting or
+particle-readiness guarantee is introduced. Owned actors/Profile families,
+source scoring arrays and Health are restored. Preserve failed Audit01/source
+(delegate-signature lookup) and native01/02/03/04 exact Stage source/logs:
+fixture state-name shadowing,idealized active-state expectation,and added native
+reference diagnostics. Focused24 host and5 invalid lanes pass;exact staged check
+is incremental. Full volume arbitration/BeginPlay/overlap/Timeline-update-finish/
+RPC/VFX/audio migration remains scheduled for follow-up;do not mark the complete
+volume accepted. Missing-component native errors,physical capture/network/pixels/
+package/full versions and all other original scope remain open. No SDK/Engine/
+general Cpp/official asset edits,build,cook,push,tag or publication.
+
 **Completed bounded batch123 (2026-10-20):** CP registration/capture/contest/
 recapture/palette/status/periodic-score/Cue/victory decisions use Python. Parent
 commits:Examples `5a609e1` / core `90bc008`. Reuse121 Audit02. Assets01 preserves
