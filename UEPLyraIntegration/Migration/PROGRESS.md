@@ -13,6 +13,29 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Completed bounded batch87 (2026-10-19):** B_Weapon ordinary Fire now uses
+Python for original input/muzzle/fake-helper and WeaponFire/Impacts/Decals
+sequence, cached Actor validity/recreation, exposed spawn values, attachments,
+data copy and original FX Fire calls. 86 parent commits: Examples `cb1b7aa` /
+core `c2a4035`. Final Assets02SetOnly changes only the shared Mixin Set to five
+methods/Profile;the saved parent Blueprint remains byte-identical to86.
+Original class/full CDO/all graphs/six signatures and child declarations pass.
+Final Differential02SetOnly passes24 real Pistol/Rifle/Shotgun original/Python
+Fire calls and72 actual original FX entries: cold creation,reuse,recreate only
+invalid impact Actor,and optional fake-data append. Native observer snapshots
+verify exact FX order/arrays/muzzle/mesh/config/attachment and restored original
+FX signatures;all test Actors destroyed and original Pawn Health unchanged.
+Current HelpersRegression02SetOnly passes all132 earlier helper cases with
+the five-method family. Both independent gates/strict closed logs/actual exits0
+pass,with no native binding warnings. Preserve Assets01/Differential01 and
+HelpersRegression01 as historical compiled revision: unnecessary parent
+recompile produced REINST native-bind warnings. Restored accepted86 assets,
+saved only Mixin configuration,and revalidated;no Engine/core binding change.
+Host04 passes2,986;four invalid Fire driver combinations rejected early.
+BeginPlay/team-listener lifetime,native FX Actor internals,actual firing/GAS/
+network/pixels/audio/full Actor/version remain OPEN. No C++ build,official
+content edits,cook/package/push/tag/release. Host01 test import error retained.
+
 **Completed bounded batch86 (2026-10-19):** B_Weapon original four helpers
 now use Python: Add Fake Projectile Data,TriggerFireAudio,UpdateCustomStencil,
 UpdateTeamColors. 85 parents: Examples `9d1ee92` / core `434dc7d`. Assets02Parent
