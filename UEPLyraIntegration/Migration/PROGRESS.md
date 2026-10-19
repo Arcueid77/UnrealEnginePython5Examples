@@ -23,6 +23,51 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch114 (2026-10-20):** both match/waiting message widgets
+now use Python business with original localized FText data/native UMG primitives.
+Parent commits:Examples `42354bb` / core `a1d76a5`. Audit01 adds exact native text
+data to113's source audit. Assets01 preserves original70/18 nodes,full CDO/widget
+trees/function signatures and native localized pin exports. Match adds11 typed
+transport/5 interface/zero business nodes and3 methods/Profile. Three native
+literal setters reuse original text pins;Python selects the result and handles
+team/font/five-brush/native animation/Stinger/UI-sound policy. Source AbilityLevel
+drives draw/victory/defeat,not RawMagnitude. Original MakeSlateFontInfo resets
+SkewAmount/mono/stencil/mono-width defaults while preserving its wired fields;
+five MakeSlateBrush equivalents preserve exactly the original eight wired fields.
+Waiting adds8 transport/5 interface/zero business nodes and2 methods/Profile.
+Its four original localized table/formatter/setter/getter nodes move together
+into a typed native data adapter;Node GUIDs and FText pin exports remain intact.
+Python chooses team ID only when FindTeamFromActor membership succeeds,starts
+the original exact native countdown listener and implements its one-shot latch.
+No FText passes through the SDK's string-only pin setter/Python text conversion;
+no Python subscription/root or replacement listener is introduced.
+Differential02SelectedProfiles passes native exit0/independent gate0/strict log/
+ordered shutdown. Six genuine original/Python style pairs cover team0/1/2 and
+adversarial font/brush seeds;four genuine AbilityLevel result pairs compare full
+reflected font/brush/text/animation state and actual positive Stinger receiver
+entries,including conflicting RawMagnitude values. Six naturally initialized
+waiting widgets each create one native proxy,cover initial latch true/false and
+two live Profile switches,ignore parent-channel messages,receive18 matching
+callbacks across first/repeat/removed-screen broadcasts and retain the latch.
+After stopping owned test animations,one native GC boundary and matching message
+release all6 owned GI proxy references and deactivate their actions. All three
+native localized text table entries match. Both real manager child tags/default
+Python Cue gates create/remove migrated widgets through the unchanged113 parent.
+Providers/CDO selection fields/music dependency/diagnostic root restore;Health
+stays unchanged. Original native pool-owned widget references are not a global
+zero-reference claim. Preserve Differential01 and its source snapshots:the
+fixture initially used an explicit CDO runtime override rather than the actual
+default selection field. The corrected fixture sets that field before natural
+initialization and requires exact original/Python dispatch witnesses,preventing
+two Python runs from masquerading as a Blueprint comparison. Production policy
+needed no correction. HostFocused02 passes30 affected tests;staged checks remain
+incremental,with actual shared-startup dependents enumerated. Six mixed/missing
+proof lanes reject before output/process creation. Evidence ledger:
+`114-message-widgets-native-style-localization-listeners.json`. Native invalid
+material indices/no-team initialization,rendered pixels,audible output,network,
+package/full family/version and all remaining planned migration stay open.
+No Engine/general C++/official edits,build,cook,push,tag or release publication.
+
 **Completed bounded batch113 (2026-10-20):** GCNL_Widget_Base now owns two typed
 Python gates for looping-widget start/removal;MatchDecided and WaitingForPlayers
 inherit them through their unchanged native/Blueprint parent calls. Parent

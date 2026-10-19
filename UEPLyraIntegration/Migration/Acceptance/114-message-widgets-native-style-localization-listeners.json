@@ -1,0 +1,370 @@
+{
+  "schema_version": 1,
+  "batch": "114-message-widgets-native-style-localization-listeners",
+  "scope": "Bounded Python migration of W_MatchDecided_Message and W_WaitingForPlayers_Message business. Assets01 preserves70/18 original nodes/full CDO/widget trees/event signatures/native localized FText pin exports,with11/8 transport,5 interface each,0 business nodes and3/2 methods per Profile. Match chooses results from AbilityLevel rather than RawMagnitude,ports exact wired-field font/five-brush behavior and native animation/positive Stinger/UI-sound dispatch. Original localized literal setters and waiting localized table/formatter/setter stay typed native data adapters;no text roundtrip through Python. Waiting selects team only on membership success and keeps exact original native countdown listener/lifetime,Python one-shot latch. Differential02SelectedProfiles passes native exit0/independent gate0/strict logs/shutdown:genuine original/Python6 full seeded style pairs and4 AbilityLevel result/actual Stinger pairs;6 naturally initialized waiting widgets/proxies,18 exact matching callbacks,parent-channel rejection,2 live Profile switches,removed-screen latch and6 owned GI refs released after native GC plus message.2 real default-Python Cue manager children use migrated widgets through unchanged113 parent. CDO selectors/music providers/fields/root/Health restore. Preserve failed Differential01/source:fixture explicit CDO override did not select new instances;corrected default field before natural initialization and exact original/Python witnesses,production policy unchanged. Focused30 host tests plus incremental staged selection;6 invalid lanes reject before side effects. Native invalid material index/no-team init,pixels,audible output,network,package/full family/version and full remaining original scope stay open. No Python subscription roots/proxy Cancel/Engine/general Cpp/official edits,build,cook,push,tag or release.",
+  "recorded_utc": "2026-10-19T18:43:59.8093655Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "a1d76a548accdf43a178d8b02abeaa02fda8dc7a",
+  "examples_parent_commit": "42354bbf8fd7cf2721524f06d2d288859d54d4df",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Audit01",
+      "summary_sha256": "6567EA5F546AC761C26D0DC432C9B25E975C9BFA40A6B54D7FB2E67BF8B17C99",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 843,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "A00B1D99FA7625D468DE9C4F03A52638681F5A550DA26E0018A00520EB97866E",
+          "file": "audit.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Assets01",
+      "summary_sha256": "825335F539C88966B060345E5C309A8C7952DB1B856E61A5C606F37EF240CD5B",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1909,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Differential02SelectedProfiles",
+      "summary_sha256": "783255BDE5FD57723040AFC32A16372043A3D3559D7848A6EF9C9DED7810B21A",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2290,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "EE7AA794C342E69589249CAEDB0DDB0AFE74FC4B4BA3D777E8565DD5CF426CB6",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_message_widgets.py",
+      "sha256": "F51C82615F1EF7CA035E99AFC9733FE392FDE2D971DD4DFAA9EC0FDDAC220530",
+      "path": "Demos/UEPLyraIntegration/Tools/audit_message_widgets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_message_widget_assets.py",
+      "sha256": "E6BC6D17D038AEA2BC67C2B9F0DF11492E1FDA7D095DFA6DBFFC1D7D1BB8138D",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_message_widget_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "D38F874A3B6ADEE31A24B16B37DE59F40638E1F61FBF8CDF52B7D85CC84CDBF2",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "5BEE51CA90623C8E28E353BB1A033542156EEF5BF2BCD45FD08F3FA5D4A8F2E7",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/match_message_mixin.py",
+      "sha256": "9249E7B034F2AD2923F2306E8A7BEBB953FAB9D3A062379D5BBF948112A4D069",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/match_message_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/waiting_message_mixin.py",
+      "sha256": "0DBF302A3BB62D8EEA72AB8A981918CF7E93A99CC8868E40E8EE20D2CD5DB761",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/waiting_message_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/message_widget_contract.py",
+      "sha256": "A86A425E530F656D3752EAF52F25FDEB14D2D611EFCA97DC8D3C68A066736FE9",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/message_widget_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/message_widget_validation.py",
+      "sha256": "74F0D98DEBEA157AB84612C48F5013C708097A90AA555B3446BA530946692047",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/message_widget_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "700CE693CA745D60162034B8CDD8999F8F1E8F9AF6F7FAD7C97B8435014DDBA6",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "032C2F722946FC444483EABD70D2BF07ED5B13825956CCBC12903EDC65F8683B",
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "result": {
+      "schema_version": 2,
+      "status": "passed",
+      "tests_run": 30,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "selection": {
+        "mode": "incremental",
+        "selected_test_files": [
+          "Demos/UEPLyraIntegration/Tests/test_message_widget_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_message_widget_contract.py"
+        ],
+        "scope": "Affected result/style/countdown policy and native-evidence contracts; no full regression."
+      }
+    },
+    "sha256": "8EB621273372147CAEE09023C58FA90B3B5E41901F37DC62EBD6DD59700244B2",
+    "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/HostFocused02.json"
+  },
+  "raw_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/assets.json",
+      "sha256": "4F13905231BC412F8F6AB1D9840023CFF7AC8275E68AC0A3411A4EEFFD43452D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Assets01/assets-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Assets01/assets-stdout.log",
+      "sha256": "CAF2E0A332206A129B855AEEC0010003459AE71042B11CFD0F5069166C921D34"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Assets01/assets.json",
+      "sha256": "10D5ECBE322A5E277697252D70AACADE4CC678BF009DC664E53849BAADDAEDC4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Assets01/assets.log",
+      "sha256": "848F39AD4801323FC6B705F2391A7D99EED98C098BE9655799A70D5B9F37E178"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Assets01/dash-match-message-after-cdo.t3d",
+      "sha256": "4B03BD2FA7644F811168D2FA2E9235B16C79B412C1A7F3E7D61A15791A64126B"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Assets01/dash-match-message-before-cdo.t3d",
+      "sha256": "B4DAB46CDF653738639EBA572867CB98107E6A3231DC066BAE7D6CAEA628F500"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Assets01/dash-waiting-message-after-cdo.t3d",
+      "sha256": "6B650CF2525FA4176FFD4A1A76F516299D39684D1A72115C740F69ED2373A6EB"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Assets01/dash-waiting-message-before-cdo.t3d",
+      "sha256": "79D538D2990B5F832B5BCB9C59D1957556AFCD6BFC3D425A3415700908D6223E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Assets01/match-literal-0-after.t3d",
+      "sha256": "46F28F92DDB262B033708EA389E476229D5D977AEF709D4E64C664ACC9A8B22A"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Assets01/match-literal-0-before.t3d",
+      "sha256": "4E11228E91A41189C38BD068C1A84C5919518EB7E188246F2957987031E05AC8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Assets01/match-literal-1-after.t3d",
+      "sha256": "4F9CE4AB7BAB41EF799C93E571417DDCD1B551BEFD2869B3A14AE2E41427AD5E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Assets01/match-literal-1-before.t3d",
+      "sha256": "668DDF4FFBB692581153624E032F6BE58C0E0D9D8BAF1BB7BB4EA17836103175"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Assets01/match-literal-2-after.t3d",
+      "sha256": "0EC75DB66040D41BB82D0CE18AAF7909E4EB89D149DDFB675764533E4DF16A35"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Assets01/match-literal-2-before.t3d",
+      "sha256": "C379E4A4EE21433077863F1E88FBEB1B00FC8037BED685F24754839CC4FAAEF4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Assets01/summary.json",
+      "sha256": "825335F539C88966B060345E5C309A8C7952DB1B856E61A5C606F37EF240CD5B"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Assets01/waiting-literals-after.t3d",
+      "sha256": "21C14EB96324A47658F0B3E7EEE077AA4CDA8F3F306DCA098F2AF854FC1414A0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Assets01/waiting-literals-before.t3d",
+      "sha256": "689E22D5D29D0EE5055817818F0C1E67F9F5A39EDBF62A17AC24170D7CE7C02B"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Audit01/audit-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Audit01/audit-stdout.log",
+      "sha256": "0E5DE7A6557D75CFB298B38D0A885228D2F883CC88E579BC6ED9896AE3A66394"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Audit01/audit.json",
+      "sha256": "A00B1D99FA7625D468DE9C4F03A52638681F5A550DA26E0018A00520EB97866E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Audit01/audit.log",
+      "sha256": "5E849E3544016D271E0905B0E738923834D2718D1F412AE8D2101905B72506C7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Audit01/match_widget-cdo.t3d",
+      "sha256": "B4DAB46CDF653738639EBA572867CB98107E6A3231DC066BAE7D6CAEA628F500"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Audit01/match_widget-graphs.json",
+      "sha256": "3DAFF5D354755D5BA6F1D66E1D96D71591153846B0033626C23929C1B57F814D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Audit01/summary.json",
+      "sha256": "6567EA5F546AC761C26D0DC432C9B25E975C9BFA40A6B54D7FB2E67BF8B17C99"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Audit01/waiting_widget-cdo.t3d",
+      "sha256": "79D538D2990B5F832B5BCB9C59D1957556AFCD6BFC3D425A3415700908D6223E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Audit01/waiting_widget-graphs.json",
+      "sha256": "2A131952EEF21EA3A2F59A10DBBA0CFA3FF1ABBF2C781260191D8FF9B2F1902D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Differential01/FailedSources/message_widget_contract.py",
+      "sha256": "577488D5330940EEE4C39D28309087B884AE64AFD7DF6C31F5F1AE2596DBCAB2"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Differential01/FailedSources/message_widget_validation.py",
+      "sha256": "DB5826FCE28308E41395FC9B61D3C83DFA8C7D27110663177E3CC39D809D4300"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Differential01/jump-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Differential01/jump-stdout.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Differential01/jump.json",
+      "sha256": "4F1C05AFA0240BFD44054FBF77E780B0D0621D7FECD609AD14A33B8BC4D01944"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Differential01/jump.log",
+      "sha256": "89869C202E40911875BC30FA76D700A89C72BD4202A93CBFB9E148257553CD20"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Differential01/summary.json",
+      "sha256": "542DE68691B95DFDA793D07007EA0829ACA748B7E08B44CC32F12C2B69662AE0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Differential02SelectedProfiles/jump-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Differential02SelectedProfiles/jump-stdout.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Differential02SelectedProfiles/jump.json",
+      "sha256": "EE7AA794C342E69589249CAEDB0DDB0AFE74FC4B4BA3D777E8565DD5CF426CB6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Differential02SelectedProfiles/jump.log",
+      "sha256": "D645D74155629676CB457338053B1A66744F19CF7F7BACCACE9C4AA504652724"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Differential02SelectedProfiles/report-gate-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Differential02SelectedProfiles/report-gate-stdout.log",
+      "sha256": "96BBF00C82DBEDAAF5B009F9C9B8AAAC065B40328681B3242170D3087E91834B"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Differential02SelectedProfiles/summary.json",
+      "sha256": "783255BDE5FD57723040AFC32A16372043A3D3559D7848A6EF9C9DED7810B21A"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/focused-host-01.log",
+      "sha256": "2748251AA7C7726E5DD80C670C3A8888EC165FE9E66503FF77493ED60DCA083E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/HostFocused02.json",
+      "sha256": "8EB621273372147CAEE09023C58FA90B3B5E41901F37DC62EBD6DD59700244B2"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/HostFocused02.log",
+      "sha256": "5CCFD6042E5CCD9D89B1CFFA30F515194033CE073A5C4AE798BD701F1581EE2F"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/lane-guards.json",
+      "sha256": "4014D50C3D1EE68B87BEC47CE25F60E1E9385871742BA3D246F556374AE82172"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/Run-Audit.ps1",
+      "sha256": "D07374C643BF5284591014C4D6E7663CD177595F4BEAF2EF8684FEF6C003689B"
+    }
+  ],
+  "authored_asset_outputs": [
+    {
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\GameplayCues\\W_MatchDecided_Message.uasset",
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\GameplayCues\\W_MatchDecided_Message.uasset",
+      "sha256": "558D123443F8318D697E9C280AD5FC897BCDA376F0132CE66C6BB6E6B9EF9016"
+    },
+    {
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\GameplayCues\\W_WaitingForPlayers_Message.uasset",
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\GameplayCues\\W_WaitingForPlayers_Message.uasset",
+      "sha256": "6327556641C5DD96D2EB316C9C730360E08C9C72040AF4EE9553C4CAEC4A373C"
+    },
+    {
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UEPMixins\\DA_MatchMessageMixin.uasset",
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_MatchMessageMixin.uasset",
+      "sha256": "A775BFA742B482AA56E4CECE1F3E381E48C2B59D50675793A926453CA34B3CF5"
+    },
+    {
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UEPMixins\\DA_WaitingMessageMixin.uasset",
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_WaitingMessageMixin.uasset",
+      "sha256": "04B48D456483AE03F991187AB6FA77BB5EEB96F2E52DAC40381F50BC5840C4C6"
+    }
+  ],
+  "launcher_guards": {
+    "path": ".build/LyraValidation/BlueprintPython/20261020-message-widgets/lane-guards.json",
+    "sha256": "4014D50C3D1EE68B87BEC47CE25F60E1E9385871742BA3D246F556374AE82172",
+    "invalid_lanes_rejected_before_side_effects": 6
+  },
+  "preserved_failed_runs": [
+    "Differential01"
+  ],
+  "incremental_regression": {
+    "focused_host_tests": 30,
+    "full_regression_executed": false,
+    "scope": "Result/style/countdown policies and evidence contracts; actual affected startup/index scope is in the separate commit verification report."
+  }
+}

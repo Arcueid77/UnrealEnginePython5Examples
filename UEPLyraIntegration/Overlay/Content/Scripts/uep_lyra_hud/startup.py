@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPMessageWidgetResult=") for argument in arguments):
+        return "uep_lyra_hud.message_widget_validation"
     if any(argument.startswith("-UEPCueWidgetResult=") for argument in arguments):
         return "uep_lyra_hud.cue_widget_validation"
     if any(argument.startswith("-UEPFootstepResult=") for argument in arguments):

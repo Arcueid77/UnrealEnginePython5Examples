@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 115,
+    "bounded_evidence_ledgers": 116,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1236,6 +1236,59 @@
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
   },
+  "message_widget_pilot": {
+    "version": "0.12.0",
+    "status": "bounded_message_widgets_python_result_style_countdown_native_localization_listener_gc_and_cue_integration_verified_broader_acceptance_open",
+    "evidence_ledger": "114-message-widgets-native-style-localization-listeners.json",
+    "owners": [
+      "uep_lyra_hud.match_message_mixin.LyraMatchMessagePythonProfile",
+      "uep_lyra_hud.waiting_message_mixin.LyraWaitingMessagePythonProfile"
+    ],
+    "native_read_only_audit": "20261020-message-widgets/Audit01",
+    "native_asset_authoring": "20261020-message-widgets/Assets01",
+    "native_runtime": "20261020-message-widgets/Differential02SelectedProfiles",
+    "original_graph_nodes": {
+      "match": 70,
+      "waiting": 18
+    },
+    "original_full_cdos_widget_trees_signatures_and_native_localized_text_identity_preserved": true,
+    "methods_per_profile": {
+      "match": 3,
+      "waiting": 2
+    },
+    "new_transport_nodes": {
+      "match": 11,
+      "waiting": 8
+    },
+    "generated_interface_nodes_per_widget": 5,
+    "new_business_nodes": 0,
+    "original_native_localized_data_setter_formatter_adapters_retained": true,
+    "localized_text_roundtripped_through_python": false,
+    "genuine_native_font_brush_style_pairs": 6,
+    "genuine_native_ability_level_result_pairs": 4,
+    "actual_stinger_receiver_arguments_verified": true,
+    "ability_level_not_raw_magnitude_result_policy_verified": true,
+    "exact_source_font_reset_and_brush_copy_fields_verified": true,
+    "natural_waiting_widgets_and_owned_native_proxies": 6,
+    "actual_owned_matching_message_callbacks": 18,
+    "live_profile_switch_cases": 2,
+    "native_exact_channel_and_one_shot_countdown_latch_verified": true,
+    "owned_native_proxy_gi_references_released_after_gc_and_message": 6,
+    "native_proxies_cancelled_or_python_subscription_roots_added": false,
+    "actual_default_python_cue_manager_children": 2,
+    "providers_cdo_selectors_music_dependency_root_health_restoration_verified": true,
+    "focused_incremental_host_checks": 30,
+    "full_regression_executed_this_batch": false,
+    "preserved_failed_run": "Differential01",
+    "native_invalid_material_index_tested": false,
+    "native_no_team_initialization_tested": false,
+    "pixels_tested": false,
+    "audio_playback_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Remaining0.12/later business and broad render/audio/network/package/version acceptance; retain all original planned scope."
+  },
   "cue_widget_pilot": {
     "version": "0.12.0",
     "status": "bounded_cue_widget_base_and_inherited_children_native_umg_manager_recycling_verified_message_widget_and_broader_acceptance_open",
@@ -1274,6 +1327,8 @@
     ],
     "superseded_authoring": "Assets01",
     "message_widget_business_migrated": false,
+    "message_widget_followup_batch": 114,
+    "message_widget_followup_ledger": "114-message-widgets-native-style-localization-listeners.json",
     "native_remote_controller_branch_tested": false,
     "pixels_tested": false,
     "audio_playback_tested": false,
@@ -5336,8 +5391,9 @@
       "group": "特效、GameplayCue 与音频调度",
       "method_candidates": 5,
       "business_nodes": 64,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch114: native localized data/defaults/tree/signatures preserved;Python match style/AbilityLevel results and waiting membership/countdown policy,original exact native listener. Genuine native profile/style/payload/GC/Cue integration checks pass;broader acceptance remains open.",
+      "status": "bounded_message_widgets_python_result_style_countdown_native_localization_listener_gc_and_cue_integration_verified_broader_acceptance_open",
+      "evidence_ledger": "114-message-widgets-native-style-localization-listeners.json"
     },
     {
       "path": "/ShooterCore/GameplayCues/W_WaitingForPlayers_Message.W_WaitingForPlayers_Message",
@@ -5345,8 +5401,9 @@
       "group": "特效、GameplayCue 与音频调度",
       "method_candidates": 3,
       "business_nodes": 15,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch114: native localized data/defaults/tree/signatures preserved;Python match style/AbilityLevel results and waiting membership/countdown policy,original exact native listener. Genuine native profile/style/payload/GC/Cue integration checks pass;broader acceptance remains open.",
+      "status": "bounded_message_widgets_python_result_style_countdown_native_localization_listener_gc_and_cue_integration_verified_broader_acceptance_open",
+      "evidence_ledger": "114-message-widgets-native-style-localization-listeners.json"
     },
     {
       "path": "/ShooterCore/System/Audio/WeaponAudioFunctions.WeaponAudioFunctions",
