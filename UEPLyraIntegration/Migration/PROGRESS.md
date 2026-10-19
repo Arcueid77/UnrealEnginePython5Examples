@@ -23,6 +23,42 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch121 (2026-10-20):** shared scoring-base policy uses
+Python for enemy team/kill/death scoring,assist scoring,eligible-player reset
+and PostWarmup spawner/grenade cleanup. Parent commits:Examples `504fc44` / core
+`cc9a177`. Audit02 preserves61 full base nodes and original TDM123/CP145-node
+children;empty PlayerCounted/CountDownUpdate child graphs are recorded as
+unemitted instead of inventing reflected functions. Assets01 preserves base
+CDO/public signatures/original business,authority switch,two exact native async
+message factories and lifecycle,polymorphic OnEliminationScored hook and both
+child asset bytes/CDOs/signatures. Five base-owned gates cover static parent and
+inherited public calls;21 transport/5 interface nodes,zero new business nodes.
+Native listeners retain Lyra.Elimination.Message and Lyra.Assist.Message exact
+matching. Python preserves team-before-casts ordering,then instigator kill,
+then target death and virtual hook;failed casts retain partial writes. Friendly/
+invalid teams remain no-ops. Assist only needs a valid LyraPlayerState instigator.
+Reset enumerates native LyraCharacters,checks ASC then Controller then nonexact
+Status.SpawningIn,then sends original empty-payload GameplayEvent.RequestReset.
+PostWarmup resets valid weapon spawners before destroying valid grenade actors.
+Differential04ResetEligibility passes native exit0/independent gate0/strict logs/
+ordered shutdown:16 real GMS cases compare both Profiles and actual TDM inherited
+receiver against score deltas;each controlled delta is restored. Two components
+naturally create2 proxies each;after destruction/native GC/matching broadcasts,
+owned GI references release. Two genuine cleanup cases restore spawner availability
+and destroy grenades. Both Profiles produce actual new Pawns with100 health,
+DeathState0 and bound ASC. Python's immediate reset during native spawning is
+verified as a same-Pawn skip;reset proceeds after that tag naturally clears.
+Real TDM startup Begin and static PostWarmup dispatch reach base Python gates.
+Owned actors/components/proxies clean up;diagnostic roots and TDM target threshold
+are restored. Preserve Audit01 and native01/02/03 sources/logs:unemitted empty
+reflection graph,incorrect inherited-fixture registration,fixture class GC crash,
+and second reset attempted before spawning eligibility. Only diagnostic fixture
+class is rooted across explicit GC. Focused27 host and5 invalid lanes pass;the
+exact staged check uses incremental selection. CP gameplay mode,remote authority,
+mode-specific TDM/CP countdown/victory logic,network/pixels/package/full versions
+and all original remaining scope stay open. No SDK/Engine/general Cpp/official
+asset edits,build,cook,push,tag or release publication.
+
 **Completed bounded batch120 (2026-10-20):** B_ExamplePhysicsField project
 construction/BeginPlay/Tick forwarding and B_ShatterSphere material/Chaos-break
 policy use Python. Parent commits:Examples `444f361` / core `ae3182d`. Audit01

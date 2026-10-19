@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPScoringBaseResult=") for argument in arguments):
+        return "uep_lyra_weapons.scoring_base_validation"
     if any(argument.startswith("-UEPPhysicsFieldResult=") for argument in arguments):
         return "uep_lyra_weapons.physics_field_validation"
     if any(argument.startswith("-UEPSmallBurstCueResult=") for argument in arguments):
