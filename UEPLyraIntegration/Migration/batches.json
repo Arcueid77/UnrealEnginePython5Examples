@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 126,
+    "bounded_evidence_ledgers": 127,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1235,6 +1235,46 @@
     "full_library_acceptance": false,
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
+  },
+  "control_point_volume_state_pilot": {
+    "version": "0.12.0",
+    "status": "partial_control_point_volume_python_ready_server_overlap_arbitration_verified_timeline_rpc_vfx_audio_pending",
+    "evidence_ledger": "125-control-point-volume-physical-overlap-arbitration.json",
+    "owner": "uep_lyra_world.control_point_state_mixin",
+    "accepted_parent_revision": "20261020-control-point-volume/Assets01Helpers",
+    "native_asset_authoring": "20261020-control-point-volume/Assets03StateOverlayGuard",
+    "native_runtime": "20261020-control-point-volume/Differential07NativeReady",
+    "source_original_graph_nodes": 271,
+    "parent_revision_graph_nodes": 292,
+    "methods_per_profile": 8,
+    "new_transport_nodes_this_revision": 16,
+    "cumulative_transport_nodes": 32,
+    "generated_interface_nodes": 5,
+    "new_business_nodes": 0,
+    "accepted_helper_cdo_components_timeline_rpc_and_remaining_graphs_preserved": true,
+    "native_experience_factory_overlap_bindings_authority_switches_and_rpc_retained": true,
+    "physical_profile_scenarios": 2,
+    "actual_physical_overlap_stages": 12,
+    "natural_map_python_ready_callbacks": 3,
+    "source_owner_register_native_rate_once_verified": true,
+    "unique_pawn_and_first_seen_unique_team_arrays_verified": true,
+    "mixed_team_contest_reverse_single_team_resume_empty_owner_retention_verified": true,
+    "native_forward_finish_team_one_then_team_two_capture_verified": true,
+    "source_scoring_arrays_owned_actors_health_profiles_restored": true,
+    "focused_incremental_host_checks": 25,
+    "full_regression_executed_this_batch": false,
+    "preserved_failed_authoring": "Assets02State",
+    "preserved_failed_native_runs": [
+      "Differential06PhysicalState"
+    ],
+    "timeline_update_finish_rpc_vfx_audio_business_migrated": false,
+    "begin_static_mesh_material_loop_migrated": false,
+    "remote_authority_network_tested": false,
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Finish original volume Timeline update/finish,RPC/VFX/audio and Begin mesh-material loop;remote replication/pixels/package/full original migration scope remains open."
   },
   "control_point_volume_helpers_pilot": {
     "version": "0.12.0",
@@ -5964,9 +6004,9 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 15,
       "business_nodes": 208,
-      "scope_review": "Batch124 partial:four construction/CheckTimerNS/contest/recapture helper gates only.271 original nodes/CDO/components/Timeline/curves/GUIDs/multicast RPC and remaining graphs retained;4 methods/Profile,16 transport/5 interface/0 business nodes.3 native constructor pairs/6 scoring-helper calls verified. Full arbitration/overlap/Timeline/RPC/audio business remains scheduled and unaccepted.",
-      "status": "partial_control_point_volume_python_construction_atomic_helpers_verified_arbitration_overlap_timeline_rpc_audio_pending",
-      "evidence_ledger": "124-control-point-volume-construction-atomic-helpers.json"
+      "scope_review": "Batch125 partial:extends accepted124 helpers with native-ready init,server overlap array updates and full contest arbitration. Original271 nodes/accepted292-node parent/CDO/components/Timeline/RPC/remaining graphs preserved;8 methods/Profile,cumulative32 transport/5 interface/0 business nodes.2 genuine Pawn collision scenarios/12 stages verify contest/reverse/capture/recapture/empty ownership. Remaining Begin mesh loop/Timeline update-finish/RPC/VFX/audio and broader acceptance remain pending.",
+      "status": "partial_control_point_volume_python_ready_server_overlap_arbitration_verified_timeline_rpc_vfx_audio_pending",
+      "evidence_ledger": "125-control-point-volume-physical-overlap-arbitration.json"
     },
     {
       "path": "/ShooterCore/ControlPoint/B_ControlPointScoring.B_ControlPointScoring",

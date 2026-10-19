@@ -23,6 +23,42 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch125 (2026-10-20),partial volume state phase:** accepted
+124 helper asset is extended with native experience-ready initialization,server
+begin/end-overlap updates and full RecomputeContest decisions. Parent commits:
+Examples `4c46735` / core `2ba7521`. Assets03StateOverlayGuard preserves original
+271-node business and292-node accepted parent state/CDO/components/Timeline/
+curves/GUIDs/RPC/public signatures/remaining graphs. Four new typed gates add16
+transport nodes (cumulative32),5 interfaces total;composite8-method Profiles.
+Native async factory,component delegate binding,authority switches and remote
+original audio paths remain. Ready discovers CP scoring,remote only stores it;
+authority destroys volume if missing,otherwise assigns/registers then sets native
+Timeline rate1/TimeRequired. Server enter adds unique (including null pure-cast
+result);exit removes all matches;both update arrays before Playing-phase-only
+recompute then original enter/exit audio. Recompute clears/rebuilds first-seen
+unique valid team IDs. One enemy team contests,sets source/target colors,requests
+original VFX RPC then native Play;one owner team only recaptures. Mixed teams
+contest,zero teams retain owner through recapture;both reverse only while clock
+is playing. No new Python clock or automatic ownership reset is introduced.
+Differential07NativeReady passes native exit0/independent gate0/strict logs/
+ordered shutdown in actual CP map:3 original volumes naturally use Python Ready.
+Both Profiles perform12 actual capsule-overlap stages by native Pawn movement:
+team1 enters,mixed teams contest/reverse,team2 leaves/team1 captures,nobody remains
+and ownership stays1,team2 enters/recaptures,final exit retains2. Native overlap
+gates deliver3 enters/3 exits per scenario,ready/register/rate once,and actual
+original Timeline finish updates both actor and CP scoring owner. No arrays or
+callbacks are replayed/written by fixture. Owned actors/initial scoring arrays/
+Profile families/Health clean up. Preserve Assets02State/source/superseded-stage:
+native generation passed but old Overlay overwrite guard rejected;guard now
+allows only exact declared accepted-parent targets and hashes. Preserve native06
+source/report:all physical stages completed but ready-count sample was taken
+before original async callback. Fixture now waits actual Ready before moving.
+Focused25 host and5 invalid lanes pass;exact staged check remains incremental.
+Begin static-mesh material loop,Timeline update/finish policy,RPC/VFX/audio and
+remote/network/pixels/package/full original scope remain pending;complete volume
+migration is unproven. No SDK/Engine/general Cpp/official edits,build,cook,push,
+tag or release publication.
+
 **Completed bounded batch124 (2026-10-20),partial volume phase:** construction,
 CheckTimerNS,MarkThisPointContested and MarkThisPointRecaptured use Python.
 Parent commits:Examples `b39886e` / core `99bfdcf`. Audit02 captures271 original
