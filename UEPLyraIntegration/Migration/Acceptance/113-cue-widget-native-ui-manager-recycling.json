@@ -1,0 +1,529 @@
+{
+  "schema_version": 1,
+  "batch": "113-cue-widget-native-ui-manager-recycling",
+  "scope": "Bounded GCNL_Widget_Base Python start/removal gates inherited by unchanged MatchDecided/WaitingForPlayers Cue children. Read-only6-asset audit;Assets02Concrete preserves40 original base nodes/full CDO/event ABI/native parent/abstract production base and child bytes/CDOs/signatures,adding8 transport/5 interface/0 business nodes and2 methods/Profile. Stage-only concrete child covers abstract base. Preserve instigator,bots/local controller/native Create/player-screen/interface payload decisions,source repeated/null creation old-widget behavior and retained removal fields. Differential04NativeGuard passes native exit0/independent gate0/strict logs/shutdown:42 class/Profile/case rows,21 state/payload pairs,42 native WhileActive calls,30 explicit typed second BP-business events with actual SpawnResults,and84 native OnRemove calls. Original looping sound definition/native audio slot remain1 per actor. Real compiled BP Add/RemoveGameplayCueOnActor drives2 child tags/default Python gates,proves duplicate-WhileActive guard and reuses matrix actors returned to native pool. Native K2_EndGameplayCue returns42 hidden/ownerless/tick-disabled Cue actors;ordinary actors destroy. Screen widgets leave,providers/observer/root/music dependency/PlayerArray/Health restore. No recycling setting changes or zero-remaining-reference claim. Focused27 host tests plus separate startup compatibility run;incremental staged checks retain actual scope. Preserve3 failed native lanes and original sources/supersededAssets01. Message-widget business,remote/network/pixels/audio/package/full family/version and full original remaining scope stay open. No Engine/general Cpp/official edits,build,cook,push,tag or release.",
+  "recorded_utc": "2026-10-19T18:10:51.9631750Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "b23dc6336575e5be9792dbd5e0245703d002f369",
+  "examples_parent_commit": "5a78c17765f3309bbc14b959b79742fb200df698",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Audit01",
+      "summary_sha256": "670CBA14D789ED0F93A1505A8782371FC5B3C81B92112D2D54B2B944C4BE7D64",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 851,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "audit.json",
+          "sha256": "D639F1810CC49FE73D07AE551A6F64D0CCD79A1FE5E73B6AECD4A2100ADE9BB1"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets02Concrete",
+      "summary_sha256": "20343C12EB1AC6C164431F84C8B71171619A5586334C717B2BB792FEB9C77427",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1913,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential04NativeGuard",
+      "summary_sha256": "B50AC32935E254D9A43C4C50695B33261ACA08D7E08838F0F7DE29120B9280A3",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2263,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "7D9CC3F5386897C4161395254CA21B77900215B6E1B24705FC877533F535012C"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_cue_widgets.py",
+      "sha256": "624B153892017B66361381984CAEC4110EF7C3A260F493B14AD74C3772EEB0FF",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/audit_cue_widgets.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_cue_widget_assets.py",
+      "sha256": "ED0BD098B27CEF1F855BE6AE723A224A7427F0AA553B307A75C20D397815424D",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_cue_widget_assets.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "AD86F2B5F371B93970664393037B4DCCE2ADD0938F4AD153EBEDB5B1B36278F0",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "D1278EEE326394112825BC627331487BF6B46CDCBBEEE8C2BCF3280CDF386A0A",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/cue_widget_mixin.py",
+      "sha256": "A6A954FE13F5D972BE9BBB8C72B4A24BD051A31477AC464A2695B8AF410AD7F6",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/cue_widget_mixin.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/cue_widget_contract.py",
+      "sha256": "F4620C772819D5DC5D5DA9D2652453D249C0995C3D022174E13A41E5CD2CBED8",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/cue_widget_contract.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/cue_widget_validation.py",
+      "sha256": "9D76ABF43548948DA8BC72941C7D560636A43175232BCFF64808EA6CFA3A4541",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/cue_widget_validation.py"
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "DB1A4ED07D64FBFF600D2126370A3D73A29B231E91D40A0E0115F349BCA003FE",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1"
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "B9EE6C3249B2CBE84AB4DBA3D8E08E6146A6BEDCFD46508A8AC0BBA856BDA11C",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58JumpValidation.ps1"
+    }
+  ],
+  "host_report": {
+    "sha256": "B1AF1832D6AA030D035679938123AAEF2CED53E6E82DC66D712E59B849024865",
+    "result": {
+      "schema_version": 2,
+      "status": "passed",
+      "tests_run": 27,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "selection": {
+        "mode": "incremental",
+        "selected_test_files": [
+          "Demos/UEPLyraIntegration/Tests/test_cue_widget_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_cue_widget_contract.py"
+        ],
+        "scope": "Focused policy/contract rerun after native fixture corrections. Startup routing was separately checked by Host01; neither run is full regression."
+      },
+      "evidence_log": {
+        "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/focused-host-04.log",
+        "sha256": "926B94F401F62E164086110509CDEDE87A5872535C53FFD38D907A2470ED9DFD"
+      }
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/HostFocused04.json"
+  },
+  "raw_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/assets.json",
+      "sha256": "3125D22C236C638E3CDD7FB4F8EEF4B8EFD7AF519F804AA6F51B2B9186CB2B78"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets01/assets-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets01/assets-stdout.log",
+      "sha256": "F840F83E65AF8FDC45680F6785FF587E04B2FB2C16798A3E3AFA4E9A48B59433"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets01/assets.json",
+      "sha256": "097242D27A5D2A7322D9896A53D7F0DA01487F0845DF5482062C37B8B656DAA1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets01/assets.log",
+      "sha256": "EA57A6AA29C5652DEB14308E3F9130D59E318E64624F7B985E6BA80C7BB689F6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets01/dash-cue-widget-base-after-cdo.t3d",
+      "sha256": "B3E660328408B669B8B6AD8676007C230126B753CEA942F2161E32C04AE1FA45"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets01/dash-cue-widget-base-before-cdo.t3d",
+      "sha256": "7E41B4CDB4B78390AA45BBF337A1A14C6D308A583DDDA50DA3B3104403D5547D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets01/dash-cue-widget-match-after-cdo.t3d",
+      "sha256": "A241C64555B2CF5B463A56E0D2064BBA80DCA221BD02DB0042336C60CDB48A10"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets01/dash-cue-widget-match-before-cdo.t3d",
+      "sha256": "E8B6D4439638F0FF236C1023B04F09E24D2DB4909FE1A81F6D21B52992EA5991"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets01/dash-cue-widget-waiting-after-cdo.t3d",
+      "sha256": "E9BF6A9C3211572CAF1903D2FDFF3A5251E762E84F02165CAA8D2240B36CB8EA"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets01/dash-cue-widget-waiting-before-cdo.t3d",
+      "sha256": "66E9ED28B7A4EA74DE686973E97A0C40A9566FC11F4EAC608C16EFEE8DF60CE1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets01/PreviousAssets/before.uasset",
+      "sha256": "E7F9F09A3DEC6C4DECDCFDD1E4D7B9E8072889F5DF2B33B33CC208EABCE97765"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets01/summary.json",
+      "sha256": "DC0768939BC6CC32C0F1764B259C23BDA9D5BB960715EDC16CC71569D60A0692"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets01/Superseded-overlay/Content/GameplayCueNotifies/GCNL_Widget_Base.uasset",
+      "sha256": "44690B63A5CDFA9ACBEACE991807555720BDA96EAE9A98C04BD8DCCAA5500F56"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets01/Superseded-overlay/Content/UEPMixins/DA_CueWidgetMixin.uasset",
+      "sha256": "4E6AEBB0BF59A88125B10D57EA6C950D9734F2A3034BEF2082AEBE0C407BF44A"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets01/Superseded-stage/Content/GameplayCueNotifies/GCNL_Widget_Base.uasset",
+      "sha256": "44690B63A5CDFA9ACBEACE991807555720BDA96EAE9A98C04BD8DCCAA5500F56"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets01/Superseded-stage/Content/UEPMixins/DA_CueWidgetMixin.uasset",
+      "sha256": "4E6AEBB0BF59A88125B10D57EA6C950D9734F2A3034BEF2082AEBE0C407BF44A"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets01/Superseded-stage/Content/UEPValidation/BP_CueWidgetCaller.uasset",
+      "sha256": "7643D48CD38E3B99D20FF841EDD0412562110782E951B928578874690F9C1D1D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets02Concrete/assets-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets02Concrete/assets-stdout.log",
+      "sha256": "FCB7F0B648BFE280AAF5467F62FEB49C2C90E76BA8342AAAA7B9D5BEA458F90A"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets02Concrete/assets.json",
+      "sha256": "F78B5B6FE5A1F3A1308DBFB7C21F12D786015B5681803AD11C6121183D23B0DB"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets02Concrete/assets.log",
+      "sha256": "1C43CA9D5D9BA7F3085DD17982A25809756095012633F27E68DD0B0484938BE4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets02Concrete/dash-cue-widget-base-after-cdo.t3d",
+      "sha256": "B3E660328408B669B8B6AD8676007C230126B753CEA942F2161E32C04AE1FA45"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets02Concrete/dash-cue-widget-base-before-cdo.t3d",
+      "sha256": "7E41B4CDB4B78390AA45BBF337A1A14C6D308A583DDDA50DA3B3104403D5547D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets02Concrete/dash-cue-widget-match-after-cdo.t3d",
+      "sha256": "A241C64555B2CF5B463A56E0D2064BBA80DCA221BD02DB0042336C60CDB48A10"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets02Concrete/dash-cue-widget-match-before-cdo.t3d",
+      "sha256": "E8B6D4439638F0FF236C1023B04F09E24D2DB4909FE1A81F6D21B52992EA5991"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets02Concrete/dash-cue-widget-waiting-after-cdo.t3d",
+      "sha256": "E9BF6A9C3211572CAF1903D2FDFF3A5251E762E84F02165CAA8D2240B36CB8EA"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets02Concrete/dash-cue-widget-waiting-before-cdo.t3d",
+      "sha256": "66E9ED28B7A4EA74DE686973E97A0C40A9566FC11F4EAC608C16EFEE8DF60CE1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets02Concrete/PreviousAssets/before.uasset",
+      "sha256": "E7F9F09A3DEC6C4DECDCFDD1E4D7B9E8072889F5DF2B33B33CC208EABCE97765"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Assets02Concrete/summary.json",
+      "sha256": "20343C12EB1AC6C164431F84C8B71171619A5586334C717B2BB792FEB9C77427"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Audit01/audit-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Audit01/audit-stdout.log",
+      "sha256": "85AA88C048C3F45EA0EA2BE12A0319190511E9406327518084BE21CFF01A6564"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Audit01/audit.json",
+      "sha256": "D639F1810CC49FE73D07AE551A6F64D0CCD79A1FE5E73B6AECD4A2100ADE9BB1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Audit01/audit.log",
+      "sha256": "0323A0B5FD2AC9DCBBDB78DCECEB6ABCF1ACC3F5392CD9B4E93F04C2875631F5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Audit01/base-cdo.t3d",
+      "sha256": "7E41B4CDB4B78390AA45BBF337A1A14C6D308A583DDDA50DA3B3104403D5547D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Audit01/base-graphs.json",
+      "sha256": "EFF6AFBCDDF4CABD383B6E5A2A172B2376102B2BA34F12112C1D54220A62AF8F"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Audit01/damage-cdo.t3d",
+      "sha256": "9A9E8C069B81AA4B50DE25990FEB73917E5CB25882E784452E76AC601437C42C"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Audit01/damage-graphs.json",
+      "sha256": "352E0FDE3FA236AB474D268294A6D260FDE2A054C8509BB3583DE5D854E5A6EB"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Audit01/match-cdo.t3d",
+      "sha256": "E8B6D4439638F0FF236C1023B04F09E24D2DB4909FE1A81F6D21B52992EA5991"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Audit01/match-graphs.json",
+      "sha256": "507E98471B254BF4CEA15B6DB519DA112D7DF72E861754D83686C515C23674FE"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Audit01/match_widget-cdo.t3d",
+      "sha256": "B4DAB46CDF653738639EBA572867CB98107E6A3231DC066BAE7D6CAEA628F500"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Audit01/match_widget-graphs.json",
+      "sha256": "FBC0BCB2A3AD716D69FF4CC573F82C955B4F13C7CF2DC5CBE27841DA189D497C"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Audit01/summary.json",
+      "sha256": "670CBA14D789ED0F93A1505A8782371FC5B3C81B92112D2D54B2B944C4BE7D64"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Audit01/waiting-cdo.t3d",
+      "sha256": "66E9ED28B7A4EA74DE686973E97A0C40A9566FC11F4EAC608C16EFEE8DF60CE1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Audit01/waiting-graphs.json",
+      "sha256": "507E98471B254BF4CEA15B6DB519DA112D7DF72E861754D83686C515C23674FE"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Audit01/waiting_widget-cdo.t3d",
+      "sha256": "79D538D2990B5F832B5BCB9C59D1957556AFCD6BFC3D425A3415700908D6223E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Audit01/waiting_widget-graphs.json",
+      "sha256": "4004CA8DCCD0849A498D65088CBF4516AFF28F01695B5CAEEEB95992C9644D62"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential01/FailedSources/Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/cue_widget_contract.py",
+      "sha256": "ECD55037AB43E5BCC5953796ADDE2DCF04B98DAE2763F105C5F8A2FFD73DB5F9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential01/FailedSources/Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/cue_widget_validation.py",
+      "sha256": "D6B64D2C88DDAE77B03609B728DE5255D0AF1C3DCDBC07921BAA9D0349670CA8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential01/FailedSources/Demos/UEPLyraIntegration/Tools/generate_cue_widget_assets.py",
+      "sha256": "E9FF0654D9DE54A86CE09693A414ECB2FFBCD35C7D345D6373EB3CBE34A7C81A"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential01/jump-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential01/jump-stdout.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential01/jump.json",
+      "sha256": "9D361A7E2E928101AE0B72329E72501E1ACCE537AD7C6453A19D5C628FF2C4D2"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential01/jump.log",
+      "sha256": "7A5A0F827760A14874525735A3124D3D868C445BD2B7EB6D7B3EE6A67B721513"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential01/summary.json",
+      "sha256": "A2D62133156E74E1E2C1E60A52211A2C1C6093FC0C97B9982963B5E41A4DB255"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential02Concrete/FailedSources/cue_widget_contract.py",
+      "sha256": "3FAF9DD20B6110F305ED5A973C4523EADEF2620418B96ADBEDEDC692C4001116"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential02Concrete/FailedSources/cue_widget_validation.py",
+      "sha256": "170DAF82653DDB1EA49A5AD894308D1CB7C452747F9F8EC9B46B6F417C8FE319"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential02Concrete/jump-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential02Concrete/jump-stdout.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential02Concrete/jump.json",
+      "sha256": "C0EAD21FACE880D561A95088A5ABAA06D9F3CB6B328781830820CC1D92701C68"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential02Concrete/jump.log",
+      "sha256": "2EECBB137B8F5E9393FAAF5A1EE150AD80757E134D97CF63FEC3C5F49A9B1242"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential02Concrete/summary.json",
+      "sha256": "4EA07FCAC59D6BC2AF338512B942C6756A49A377CB8812B30B4E04D84072834B"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential03NativeRecycle/FailedSources/cue_widget_contract.py",
+      "sha256": "2657E4135AC9F0EAD363602D65E8BD789FDF74D4E1EDEB58C65D8234C87AD7F6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential03NativeRecycle/FailedSources/cue_widget_validation.py",
+      "sha256": "F659D638D49860440259091D7B20AD159E3A664861FEAF0BF7846663E0DE3CA1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential03NativeRecycle/jump-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential03NativeRecycle/jump-stdout.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential03NativeRecycle/jump.json",
+      "sha256": "364F60C1C10513321CBA8784C380C11E341C2F09A6FA02A83728D5B16954246C"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential03NativeRecycle/jump.log",
+      "sha256": "8CCB4B08E34FC7C8D94B2ECF8E0693A043452EC0D0C007D852F3C59939137A58"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential03NativeRecycle/summary.json",
+      "sha256": "5BD5BDB2AB1178656BC00E43421C02F6B92C18007D7D7AB4CFCD05DFD5EF4F63"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential04NativeGuard/jump-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential04NativeGuard/jump-stdout.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential04NativeGuard/jump.json",
+      "sha256": "7D9CC3F5386897C4161395254CA21B77900215B6E1B24705FC877533F535012C"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential04NativeGuard/jump.log",
+      "sha256": "17CCD3FAA76E3A51CFF1FF8CBCEDA0A0E865451B13E1DF38730C1F9F84BF9D5C"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential04NativeGuard/report-gate-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential04NativeGuard/report-gate-stdout.log",
+      "sha256": "CA29A31D1026FA22606F74E7B4683CC61B17EE89C012BE014CCCB182610CB544"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Differential04NativeGuard/summary.json",
+      "sha256": "B50AC32935E254D9A43C4C50695B33261ACA08D7E08838F0F7DE29120B9280A3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/focused-host-02.log",
+      "sha256": "A2F28CC280E089233540198C0D7ADA5F9B08F731672113B5FCF91220E1FA52AD"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/focused-host-04.log",
+      "sha256": "926B94F401F62E164086110509CDEDE87A5872535C53FFD38D907A2470ED9DFD"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Host01.json",
+      "sha256": "E1ED8D2601A780797465481FDB5AD9FAD587DA48FFB1340833C23D11DACA9AFF"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Host01.log",
+      "sha256": "17EEB67F1758AA105320CC518E667E911CDB15C857F9947C5DEFF710F9DC2243"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/HostFocused03.json",
+      "sha256": "6707D6D4EC05DFE801FF3682AF827B0F5F40262F69490304CBB90A4C9C03EC0A"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/HostFocused03.log",
+      "sha256": "69D1967D054E2E6ECE95573F6441196FAFB9D08E1724A0F7D0AB0C7CBF254E18"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/HostFocused04.json",
+      "sha256": "B1AF1832D6AA030D035679938123AAEF2CED53E6E82DC66D712E59B849024865"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/lane-guards.json",
+      "sha256": "5004B71F65A56160AD96EEFE7AC1E51E1F5823F46072C5848C69836C9AC9C5A7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/reset-for-Assets02.json",
+      "sha256": "DB97B9CF202C84D0C09815A57859CE87DF51941E1D2A5E3C7428058CDC5D4A4D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Run-Audit.ps1",
+      "sha256": "C696FF1404780864CE023AAC24AFF1EBE87E31577A8CA0C6C78E03AFAE3E7ACC"
+    }
+  ],
+  "authored_asset_outputs": [
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\GameplayCueNotifies\\GCNL_Widget_Base.uasset",
+      "sha256": "3341D997E677826AFCA4A3F73FAEF414B10693D1DF124436B294AE93FE1CBBE5",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\GameplayCueNotifies\\GCNL_Widget_Base.uasset"
+    },
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_CueWidgetMixin.uasset",
+      "sha256": "828C26F535BFE5CC9A478DDBF3D30F404B1BE46007FDE1D9DD74CB27AC467345",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UEPMixins\\DA_CueWidgetMixin.uasset"
+    }
+  ],
+  "launcher_guards": {
+    "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/lane-guards.json",
+    "sha256": "5004B71F65A56160AD96EEFE7AC1E51E1F5823F46072C5848C69836C9AC9C5A7",
+    "invalid_lanes_rejected_before_side_effects": 5
+  },
+  "preserved_failed_runs": [
+    "Differential01",
+    "Differential02Concrete",
+    "Differential03NativeRecycle"
+  ],
+  "superseded_authoring_preserved": "Assets01 with original stage/overlay outputs under Superseded-stage and Superseded-overlay",
+  "incremental_regression": {
+    "focused_host_tests": 27,
+    "focused_report": {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/HostFocused04.json",
+      "sha256": "B1AF1832D6AA030D035679938123AAEF2CED53E6E82DC66D712E59B849024865"
+    },
+    "startup_caller_report": {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cue-widgets/Host01.json",
+      "sha256": "E1ED8D2601A780797465481FDB5AD9FAD587DA48FFB1340833C23D11DACA9AFF"
+    },
+    "full_regression_executed": false,
+    "note": "Historical full3510/1027 gate was not rerun. Exact staged selection is recorded by the separate commit verification report."
+  }
+}

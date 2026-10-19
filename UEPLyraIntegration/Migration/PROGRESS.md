@@ -23,6 +23,52 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch113 (2026-10-20):** GCNL_Widget_Base now owns two typed
+Python gates for looping-widget start/removal;MatchDecided and WaitingForPlayers
+inherit them through their unchanged native/Blueprint parent calls. Parent
+commits:Examples `5a78c17` / core `b23dc63`. Audit01 reads six original Cue/widget
+assets without saving. Assets02Concrete preserves all40 original base nodes,
+full CDO/event signatures/native parent start,production abstract-class setting,
+and both child asset bytes/CDOs/event signatures. Adds8 transport/5 generated
+interface/zero business nodes,2 methods per Profile. Only validation uses a
+concrete child of the abstract base;production remains abstract. Python uses
+native GetInstigatorActor,PlayerState/bot/local-controller decisions,native
+Create/AddToPlayerScreen and the actual I_GameplayCueWidget event. No-instigator
+leaves OptionalLocalController=None and native world creation selects the local
+owner;invalid/bot branches retain previous fields. Source repeated start and
+failed creation do not remove the previous widget;OnRemoval retains cache and
+controller fields. Exact original diagnostics and branch behavior are retained.
+Differential04NativeGuard passes native exit0/independent gate0/strict logs/
+ordered shutdown:3 classes x2 Profiles x7 cases=42 rows/21 state and interface
+payload pairs.42 native WhileActive calls start the original looping effects;
+30 explicit typed OnLoopingStart calls with actual native SpawnResults cover
+repeated/skip business without bypassing the manager's WhileActive FX guard;
+84 native OnRemove calls prove retained fields and idempotent screen removal.
+All42 keep the original1 looping-sound definition/1 native spawned audio slot.
+Both real child tags use a compiled Blueprint Add/RemoveGameplayCueOnActor
+caller:default Python gates add/remove original widgets,the second Add obeys
+the native duplicate-WhileActive guard,and the manager borrows actors just
+returned by the matrix to its own pool. Native K2_EndGameplayCue returns42 test
+Cue actors hidden/ownerless/tick-disabled to that pool;ordinary test actors
+destroy. No engine recycling setting is changed. Source cached widget references
+remain under native ownership;zero remaining UI/native-proxy references is not
+claimed. Widgets leave the screen,observers/providers/diagnostic root/music
+dependency fields/PlayerArray restore and player Health is unchanged.
+Preserve Differential01's abstract-spawn failure,Differential02Concrete's
+incorrect DestroyActor cleanup assumption,and Differential03NativeRecycle's
+native sound-array ensure caused by the fixture's repeated raw WhileActive.
+Their source snapshots and Assets01/superseded asset bytes remain in evidence.
+The corrected fixture retains native effects and tests the real manager guard;
+no original engine/gameplay defect is declared fixed. HostFocused04 verifies27
+affected policy/contract tests;Host01 separately checked startup callers. Index
+checks are incremental and enumerate their actual scope;the historical batch112
+full3510/1027 counts remain unchanged. Five mixed/missing-proof lanes reject
+before output/process creation. Evidence ledger:
+`113-cue-widget-native-ui-manager-recycling.json`. The two message widgets'
+business remains original Blueprint;remote-controller/network,visual pixels,
+audible output,package/full family/version and remaining planned scope stay open.
+No Engine/general C++/official edits,build,cook,push,tag or release publication.
+
 **Completed bounded batch112 (2026-10-20):** B_FootStep motion-effect footprint
 business now uses Python with native Niagara and the original3-second
 RetriggerableDelay.111 parent commits:Examples `8a97399` / core `3f77b6e`.

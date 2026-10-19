@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 114,
+    "bounded_evidence_ledgers": 115,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1235,6 +1235,53 @@
     "full_library_acceptance": false,
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
+  },
+  "cue_widget_pilot": {
+    "version": "0.12.0",
+    "status": "bounded_cue_widget_base_and_inherited_children_native_umg_manager_recycling_verified_message_widget_and_broader_acceptance_open",
+    "evidence_ledger": "113-cue-widget-native-ui-manager-recycling.json",
+    "owner": "uep_lyra_hud.cue_widget_mixin.LyraCueWidgetPythonProfile",
+    "native_read_only_audit": "20261020-cue-widgets/Audit01",
+    "native_asset_authoring": "20261020-cue-widgets/Assets02Concrete",
+    "native_runtime": "20261020-cue-widgets/Differential04NativeGuard",
+    "original_base_graph_nodes": 40,
+    "original_full_cdo_event_signatures_parent_and_abstract_class_preserved": true,
+    "child_cdos_event_signatures_and_asset_bytes_preserved": true,
+    "base_owned_methods_per_profile": 2,
+    "new_transport_nodes": 8,
+    "generated_interface_nodes": 5,
+    "new_business_nodes": 0,
+    "stage_only_concrete_abstract_base_fixture": true,
+    "native_matrix_cases": 42,
+    "paired_state_and_actual_interface_payload_cases": 21,
+    "native_while_active_calls": 42,
+    "explicit_typed_second_looping_business_events": 30,
+    "native_matrix_remove_calls": 84,
+    "original_looping_sound_definition_and_native_audio_slots_per_actor": 1,
+    "original_repeated_start_null_creation_cache_and_remove_semantics_preserved": true,
+    "actual_blueprint_cue_manager_children": 2,
+    "native_duplicate_while_active_guard_verified": true,
+    "actual_manager_reuse_of_returned_matrix_actors_verified": true,
+    "native_end_recycled_cue_actors": 42,
+    "native_recycled_hidden_ownerless_tick_disabled_states_verified": true,
+    "ordinary_actors_widgets_profiles_observer_root_player_array_health_and_music_dependency_restoration_verified": true,
+    "focused_incremental_host_checks": 27,
+    "full_regression_executed_this_batch": false,
+    "preserved_failed_runs": [
+      "Differential01",
+      "Differential02Concrete",
+      "Differential03NativeRecycle"
+    ],
+    "superseded_authoring": "Assets01",
+    "message_widget_business_migrated": false,
+    "native_remote_controller_branch_tested": false,
+    "pixels_tested": false,
+    "audio_playback_tested": false,
+    "zero_remaining_native_ui_proxy_or_widget_references_claimed": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Migrate the two message widgets and remaining0.12/later business; retain broader native/network/visual/audio/package/version gates."
   },
   "footstep_pilot": {
     "version": "0.12.0",
@@ -5158,8 +5205,9 @@
       "group": "特效、GameplayCue 与音频调度",
       "method_candidates": 3,
       "business_nodes": 28,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch113: Python base-owned widget gates,unchanged child bytes and native parent/effects/abstract class;42 native cases and2 real manager children verify screen state,payloads,duplicate guard and pool reuse. Message widget business and broader acceptance remain open.",
+      "status": "bounded_cue_widget_base_and_inherited_children_native_umg_manager_recycling_verified_message_widget_and_broader_acceptance_open",
+      "evidence_ledger": "113-cue-widget-native-ui-manager-recycling.json"
     },
     {
       "path": "/Game/GameplayCueNotifies/GCN_Character_Heal.GCN_Character_Heal",
@@ -5232,8 +5280,9 @@
       "group": "特效、GameplayCue 与音频调度",
       "method_candidates": 5,
       "business_nodes": 5,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch113: Python base-owned widget gates,unchanged child bytes and native parent/effects/abstract class;42 native cases and2 real manager children verify screen state,payloads,duplicate guard and pool reuse. Message widget business and broader acceptance remain open.",
+      "status": "bounded_cue_widget_base_and_inherited_children_native_umg_manager_recycling_verified_message_widget_and_broader_acceptance_open",
+      "evidence_ledger": "113-cue-widget-native-ui-manager-recycling.json"
     },
     {
       "path": "/ShooterCore/GameplayCues/GCNL_Spawning.GCNL_Spawning",
@@ -5259,8 +5308,9 @@
       "group": "特效、GameplayCue 与音频调度",
       "method_candidates": 5,
       "business_nodes": 5,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch113: Python base-owned widget gates,unchanged child bytes and native parent/effects/abstract class;42 native cases and2 real manager children verify screen state,payloads,duplicate guard and pool reuse. Message widget business and broader acceptance remain open.",
+      "status": "bounded_cue_widget_base_and_inherited_children_native_umg_manager_recycling_verified_message_widget_and_broader_acceptance_open",
+      "evidence_ledger": "113-cue-widget-native-ui-manager-recycling.json"
     },
     {
       "path": "/ShooterCore/GameplayCues/GCN_InteractPickUp.GCN_InteractPickUp",

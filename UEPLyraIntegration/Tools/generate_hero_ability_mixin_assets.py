@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "cuewidgets":
+        from generate_cue_widget_assets import generate as generate_cue_widgets
+        return generate_cue_widgets(stage)
     if kind == "footstep":
         from generate_footstep_assets import generate as generate_footstep
         return generate_footstep(stage)
