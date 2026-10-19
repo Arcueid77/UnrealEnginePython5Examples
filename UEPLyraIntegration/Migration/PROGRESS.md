@@ -23,6 +23,39 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch119 (2026-10-20):** pickup/melee/heal/grenade Burst
+Cue business uses Python;original static UObject/CDO and latent heal Actor
+parents still own effect spawning and lifetime. Parent commits:Examples `04d5d70`
+/core `d11b992`. Assets02FullTemplates preserves10/3/4/9 full original nodes,
+CDOs/signatures/business graphs,SCS and actual audio/component template exports.
+Each class has1 method/Profile,0 transport/5 interface/zero new business nodes.
+Pickup uses only first Niagara result and typed Parameters.Instigator spawner
+LightColor -> GunPad_Color;failed FX cast retains exact NOT VALID PrintString.
+Grenade casts Target first,then only first Niagara -> Team_Color from Team Color;
+failed casts remain silent. Empty arrays/wrong pickup instigator/missing heal
+audio retain original diagnostic paths. Melee calls the retained native static
+SendWeaponFire(Player,.2,Cue world context). Heal plays source Audio_OnHeal at0,
+without replacing the component/sound or changing native parent cleanup.
+Differential04DeferredSpawner passes native exit0/independent gate0/strict logs/
+ordered shutdown with actual Non-realtime Renderer:8 real parent-spawned Niagara
+color calls,4 local/remote melee calls verify real music receiver and.2/clamp,
+6 explicitly controlled first-FX/wrong-target arrays verify guards and unchanged
+second component,4 real heal Play/retrigger calls verify source MetaSound/playing
+state on later native tick. Native repeated heal retains appended parent FX
+counts1/1/2/2 and resets the original minimum5-second lifecycle before pool return.
+Four real default-Python manager tags pass. Both original/Python pickup invalid
+FX log markers are checked. Owned actors/FX are removed,original Health and
+registered Profile families preserved. The owned weapon spawner is deferred and
+gets an explicit valid rifle instance definition before construction/BeginPlay;
+CDO data is preserved. Freeze both actor dependencies and that pickup data asset.
+Preserve superseded Assets01 assets/source,and failed runs01/02/03 exact Stage
+source/logs:heal parent append-count assumption and missing/default-only fixture
+weapon data. Report-passed/log-failed runs remain failures. Focused33 host and5
+invalid lanes pass;exact staged verification is incremental. Empty-array/wrong
+instigator native error diagnostics,network/pixels/hardware audio/package/full
+versions and all remaining original candidates stay open. No SDK/Engine/general
+Cpp/official asset edits,build,cook,push,tag or release publication.
+
 **Completed bounded batch118 (2026-10-20):** GCNL_Spawning business uses Python
 with the original118 full nodes/CDO/signatures, native parent application/removal
 FX/lifetime, Timeline templates/curves/GUIDs and async team/parts machinery intact.

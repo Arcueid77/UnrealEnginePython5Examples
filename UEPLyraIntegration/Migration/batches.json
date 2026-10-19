@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 120,
+    "bounded_evidence_ledgers": 121,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1235,6 +1235,54 @@
     "full_library_acceptance": false,
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
+  },
+  "small_burst_cue_pilot": {
+    "version": "0.12.0",
+    "status": "bounded_small_burst_python_cues_native_parent_niagara_music_offline_heal_audio_and_lifetime_verified_broader_acceptance_open",
+    "evidence_ledger": "119-small-burst-cues-native-parent-niagara-offline-audio.json",
+    "owner": "uep_lyra_weapons.small_burst_cue_mixin",
+    "reused_native_read_only_audit": "20261020-looping-cues/Audit03Templates",
+    "native_asset_authoring": "20261020-small-burst-cues/Assets02FullTemplates",
+    "native_runtime": "20261020-small-burst-cues/Differential04DeferredSpawner",
+    "original_graph_nodes": {
+      "pickup": 10,
+      "melee": 3,
+      "heal": 4,
+      "grenade": 9
+    },
+    "methods_per_profile_per_class": 1,
+    "new_transport_nodes": 0,
+    "generated_interface_nodes_per_class": 5,
+    "new_business_nodes": 0,
+    "original_full_cdos_signatures_business_graphs_scs_and_actual_component_templates_preserved": true,
+    "original_static_cdo_parent_fx_and_latent_heal_parent_lifetime_preserved": true,
+    "native_parent_spawned_color_calls": 8,
+    "native_melee_music_calls": 4,
+    "controlled_edge_spawn_result_calls": 6,
+    "native_heal_play_retrigger_calls": 4,
+    "real_default_python_manager_tags": 4,
+    "actual_offline_audio_renderer_verified": true,
+    "heal_source_sound_component_play_and_native_tick_state_verified": true,
+    "heal_native_retrigger_appends_parent_fx_results_and_minimum_five_second_lifetime_verified": true,
+    "pickup_invalid_fx_prints_verified_in_both_profiles": true,
+    "melee_local_point_two_strength_and_remote_no_receiver_verified": true,
+    "owned_targets_effects_profiles_and_health_cleanup_verified": true,
+    "fixture_spawner_uses_explicit_deferred_instance_rifle_definition": true,
+    "focused_incremental_host_checks": 33,
+    "full_regression_executed_this_batch": false,
+    "superseded_asset_authoring_preserved": "Assets01",
+    "preserved_failed_native_runs": [
+      "Differential01Offline",
+      "Differential02ConfiguredSpawner",
+      "Differential03WeaponDefinition"
+    ],
+    "empty_array_or_wrong_pickup_instigator_native_diagnostics_tested": false,
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "hardware_audio_playback_tested": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Remaining physics/field/macros/scoring/control-point/notifications/scoreboards/bots and later original business plus broad runtime/network/pixel/audio/package/version acceptance;preserve full original scope."
   },
   "spawning_cue_pilot": {
     "version": "0.12.0",
@@ -5462,8 +5510,9 @@
       "group": "特效、GameplayCue 与音频调度",
       "method_candidates": 2,
       "business_nodes": 2,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch119:10/3/4/9 original nodes/full CDO/signatures/business/SCS and actual component templates/native static and heal actor parents preserved;1 method/Profile/class,0 transport/5 interface/0 business nodes. Native parent FX color/music/offline heal Play/retrigger/5-second pool lifetime and4 real manager tags verified. Controlled edge arrays are explicit;broader actor/version acceptance stays open.",
+      "status": "bounded_small_burst_python_cues_native_parent_niagara_music_offline_heal_audio_and_lifetime_verified_broader_acceptance_open",
+      "evidence_ledger": "119-small-burst-cues-native-parent-niagara-offline-audio.json"
     },
     {
       "path": "/ShooterCore/Blueprint/Macros/BPML_VFXMacros.BPML_VFXMacros",
@@ -5570,8 +5619,9 @@
       "group": "特效、GameplayCue 与音频调度",
       "method_candidates": 1,
       "business_nodes": 8,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch119:10/3/4/9 original nodes/full CDO/signatures/business/SCS and actual component templates/native static and heal actor parents preserved;1 method/Profile/class,0 transport/5 interface/0 business nodes. Native parent FX color/music/offline heal Play/retrigger/5-second pool lifetime and4 real manager tags verified. Controlled edge arrays are explicit;broader actor/version acceptance stays open.",
+      "status": "bounded_small_burst_python_cues_native_parent_niagara_music_offline_heal_audio_and_lifetime_verified_broader_acceptance_open",
+      "evidence_ledger": "119-small-burst-cues-native-parent-niagara-offline-audio.json"
     },
     {
       "path": "/ShooterCore/GameplayCues/GCN_Weapon_Melee.GCN_Weapon_Melee",
@@ -5579,8 +5629,9 @@
       "group": "特效、GameplayCue 与音频调度",
       "method_candidates": 1,
       "business_nodes": 1,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch119:10/3/4/9 original nodes/full CDO/signatures/business/SCS and actual component templates/native static and heal actor parents preserved;1 method/Profile/class,0 transport/5 interface/0 business nodes. Native parent FX color/music/offline heal Play/retrigger/5-second pool lifetime and4 real manager tags verified. Controlled edge arrays are explicit;broader actor/version acceptance stays open.",
+      "status": "bounded_small_burst_python_cues_native_parent_niagara_music_offline_heal_audio_and_lifetime_verified_broader_acceptance_open",
+      "evidence_ledger": "119-small-burst-cues-native-parent-niagara-offline-audio.json"
     },
     {
       "path": "/ShooterCore/GameplayCues/W_MatchDecided_Message.W_MatchDecided_Message",
@@ -5624,8 +5675,9 @@
       "group": "特效、GameplayCue 与音频调度",
       "method_candidates": 1,
       "business_nodes": 6,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch119:10/3/4/9 original nodes/full CDO/signatures/business/SCS and actual component templates/native static and heal actor parents preserved;1 method/Profile/class,0 transport/5 interface/0 business nodes. Native parent FX color/music/offline heal Play/retrigger/5-second pool lifetime and4 real manager tags verified. Controlled edge arrays are explicit;broader actor/version acceptance stays open.",
+      "status": "bounded_small_burst_python_cues_native_parent_niagara_music_offline_heal_audio_and_lifetime_verified_broader_acceptance_open",
+      "evidence_ledger": "119-small-burst-cues-native-parent-niagara-offline-audio.json"
     },
     {
       "path": "/ShooterCore/Weapons/Pistol/GCN_Weapon_Pistol_Fire.GCN_Weapon_Pistol_Fire",

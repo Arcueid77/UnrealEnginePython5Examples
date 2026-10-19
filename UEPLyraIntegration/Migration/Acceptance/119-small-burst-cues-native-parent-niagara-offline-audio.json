@@ -1,0 +1,607 @@
+{
+  "schema_version": 1,
+  "batch": "119-small-burst-cues-native-parent-niagara-offline-audio",
+  "scope": "Bounded pickup/melee/heal/grenade Python OnBurst policies;original10/3/4/9 nodes/full CDO/signatures/business graphs/SCS/actual component templates and native static/CDO versus latent Actor parent FX/lifetime retained.1 method/Profile/class,0 transport/5 interface,zero business nodes.8 native parent-spawned Niagara color calls,4 actual local/remote music calls with.2 strength/clamp,6 explicit controlled edge arrays,4 native heal Play/retrigger calls with source MetaSound and later IsPlaying,retained append-only parent results1/1/2/2 and original minimum5-second lifecycle/pool return.4 real manager default-Python tags and2 source/Python invalid-FX markers pass. Actual offline renderer;no hardware audio claim. Strict logs/exit/gate/shutdown and owned actors/FX/Profile/Health cleanup pass. Owned spawner deferred with explicit rifle instance data;source CDO preserved;fixture actor/data dependencies frozen. Superseded Assets01 preserved;failed native01/02/03 Stage sources/logs retained. Focused33 host tests and5 invalid lane guards;exact staged incremental check follows. Native empty-array/wrong-instigator diagnostic errors,network/pixels/hardware audio/package/full versions and all original candidates remain open. No SDK/Engine/general Cpp/official edits,build,cook,push,tag or publication.",
+  "recorded_utc": "2026-10-19T21:33:49.2842384Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "d11b99258ca59bc0cde745932a07b8e2dc004925",
+  "examples_parent_commit": "04d5d70d3fc9491ad6ea79dc2151d2f26cc7dca4",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates",
+      "summary_sha256": "3D3CE7EAABC9C9F80E2CBFA4827A2F2B699DD4101442B5F882A7E9076E6BB765",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 857,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "audit.json",
+          "sha256": "2C3A3ED6B10664C2DEB70B54E999088B874AF38A3A50E8EAC32C8675E4A612E7"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets02FullTemplates",
+      "summary_sha256": "D28F4AA826C8F4215E68B070366B4B9E86C6DCD36FBE059D031A3B719146B30D",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1943,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential04DeferredSpawner",
+      "summary_sha256": "1287D0EA57BAE5711273536A57F2A87DBF3143B90FB12220A0E62741D2860F4C",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2361,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "CC9AD475B2EF5F197673E39CF4581DADD9B839A391F4307E4BF54C7F88EDA16F"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "4AA61C0A15B53CDCB6A30780480718BCFC0A918D8E18179B9C5C9CD440E77939",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/small_burst_cue_mixin.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/small_burst_cue_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "AA8F4B52D64223753C667A52B2BD2FE8573122B2FF297C503A4CA2DF7F5D24E8",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/small_burst_cue_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/small_burst_cue_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "76CAE017B2083AA920331648765F2FD7006FCD69E12B8DD9CBDCECE044928194",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/small_burst_cue_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/small_burst_cue_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "947A49DE01499BBE5DF26DA08E3E04DC631FA6DBA1113552E3C8C272965BCB03",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_small_burst_cue_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_small_burst_cue_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "B3E8F16493DBBB447ABDD8EE561A2973F611E248880721F0B52B7D0E02A5B078",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "85A26AFED9EA84870E4EEC43BE01F50B4355DE2CF7380EAD29EA9CB773F67346",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "B16ACA9CC4CFFE87EEC451260A0CF7C6789D2C478BFB4A377A9AF476E7E0B489",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "303E475CCB7E64C2BA44F8E1680866B2BDB1A8C83B36D061DC297B06F8631392",
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "sha256": "1E5F666178A74A1D0C0BCACB31C48A617052F0E8FF7E0722DC4C7BD45E54F22A",
+    "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/HostSmallBurst01.json",
+    "result": {
+      "status": "passed",
+      "tests_run": 33,
+      "failures": 0,
+      "errors": 0,
+      "duration_seconds": 0.0,
+      "scope": "test_small_burst_cue_*.py",
+      "full_regression": false
+    }
+  },
+  "raw_native_artifacts": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets02FullTemplates/assets-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets02FullTemplates/assets-stdout.log",
+      "sha256": "d6b95e8081b648816d6db9b4a16b0bb23612fd3fe0e4b1f1d3ccb9f25d18935b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets02FullTemplates/assets.json",
+      "sha256": "74b381ac224f28a835123fbbd43234d3364febe3e7753d2267c24dd45c785c63"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets02FullTemplates/assets.log",
+      "sha256": "307d92a79b79f80e174d0ac488d00adc996a71d0811c55f5aa5aa6ad2667a68f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets02FullTemplates/dash-grenade-burst-after-cdo.t3d",
+      "sha256": "f0eb309650de4f7e216dae62b56d048aefa713cad01bac9b7d72c22dff5b15f1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets02FullTemplates/dash-grenade-burst-before-cdo.t3d",
+      "sha256": "399dfa696cf99a889034eeb8735373b734962f2508aa1c19521654a44583376e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets02FullTemplates/dash-heal-burst-after-cdo.t3d",
+      "sha256": "230de3312acd14eaac00206e2cf1ebc5ea8383e064a84f5e92c70fb158066117"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets02FullTemplates/dash-heal-burst-before-cdo.t3d",
+      "sha256": "51e374a48fe11f05a121e484c6a745f9556157fdd426d4418c3ddc6e7a054866"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets02FullTemplates/dash-melee-burst-after-cdo.t3d",
+      "sha256": "8f6a58e03bb44d473fe34ac394a541b6c4f0bbbff41a5e5f1c42d33b6b627e66"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets02FullTemplates/dash-melee-burst-before-cdo.t3d",
+      "sha256": "0eee29992b9243908e6acca5711f7ee53552d84209d499def37ad132ee9e49ad"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets02FullTemplates/dash-pickup-burst-after-cdo.t3d",
+      "sha256": "b4ed9d30cdecbb3d04f5ef3c0e647b23de70390be460080a05f52e7263e67f5f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets02FullTemplates/dash-pickup-burst-before-cdo.t3d",
+      "sha256": "63e58aebfd2707e2c1ea047991d843b504b2eef41f8acb0707d4557cce7c0b5d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets02FullTemplates/heal-after-construction.t3d",
+      "sha256": "be3ab83cb49074ee21294aa9c7b5252d74aeb270073344ea4f4ce68029708efe"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets02FullTemplates/heal-after-SCS_Node_1-component.t3d",
+      "sha256": "9a7ac9237f7c11af39ec224f476b8569364b2b09829068fd39e995d1aa4281c9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets02FullTemplates/heal-before-construction.t3d",
+      "sha256": "be3ab83cb49074ee21294aa9c7b5252d74aeb270073344ea4f4ce68029708efe"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets02FullTemplates/heal-before-SCS_Node_1-component.t3d",
+      "sha256": "9a7ac9237f7c11af39ec224f476b8569364b2b09829068fd39e995d1aa4281c9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets02FullTemplates/summary.json",
+      "sha256": "d28f4aa826c8f4215e68b070366b4b9e86c6dcd36fbe059d031a3b719146b30d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential04DeferredSpawner/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential04DeferredSpawner/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential04DeferredSpawner/jump.json",
+      "sha256": "cc9ad475b2ef5f197673e39cf4581dadd9b839a391f4307e4bf54c7f88eda16f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential04DeferredSpawner/jump.log",
+      "sha256": "a363c35d3e96497ded9f8de877694f37fe7cecdd2a54cb3313f87940ef8d3718"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential04DeferredSpawner/report-gate-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential04DeferredSpawner/report-gate-stdout.log",
+      "sha256": "1c9f5fb6513cfcbbe51c3b2dedf86414b2bc91e8edff2bb6d0ed0d19e5e9ac2e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential04DeferredSpawner/summary.json",
+      "sha256": "1287d0ea57bae5711273536a57f2a87dbf3143b90fb12220a0e62741d2860f4c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/pickup-graphs.json",
+      "sha256": "9f9dcd44f07a88827f6fc804d4299945cfc06091ac830e8f6153c42e4b9c66f4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/pickup-cdo.t3d",
+      "sha256": "63e58aebfd2707e2c1ea047991d843b504b2eef41f8acb0707d4557cce7c0b5d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/melee-graphs.json",
+      "sha256": "cde461fd0b4f9423d8587e40fc03b86af3c3038bdd07ebd94e5497cd5c905965"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/melee-cdo.t3d",
+      "sha256": "0eee29992b9243908e6acca5711f7ee53552d84209d499def37ad132ee9e49ad"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/heal-graphs.json",
+      "sha256": "e2f2643c2f449aee836a0f9ae390a7a23698412b681863b55fc8d0366d16d6b2"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/heal-cdo.t3d",
+      "sha256": "51e374a48fe11f05a121e484c6a745f9556157fdd426d4418c3ddc6e7a054866"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/grenade-graphs.json",
+      "sha256": "9b3c802516e5272422bae5456cf687b6998b4636f6f84ab56af58680ee5e17be"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/grenade-cdo.t3d",
+      "sha256": "399dfa696cf99a889034eeb8735373b734962f2508aa1c19521654a44583376e"
+    }
+  ],
+  "preserved_failed_native_artifacts": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential01Offline/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential01Offline/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential01Offline/jump.json",
+      "sha256": "8cedb04fe045c5e9f8c022c26a4267dc9be485e7c4b08e1f35ce8d7837ecdd63"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential01Offline/jump.log",
+      "sha256": "c8f3b2052f9d1b72e61f4c386dc0fe82bb6eaecec5570193033d173f094e6864"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential01Offline/Source/hashes.json",
+      "sha256": "b899fb7ca0a14da3f76961820121a5f4d13f40e4b4ec8405c7302943240411d7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential01Offline/Source/small_burst_cue_contract.py",
+      "sha256": "85666592dd6b58e6555fa151757b355208c9c858b12459a5ef760e170901f31d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential01Offline/Source/small_burst_cue_mixin.py",
+      "sha256": "4aa61c0a15b53cdcb6a30780480718bcfc0a918d8e18179b9c5c9cd440e77939"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential01Offline/Source/small_burst_cue_validation.py",
+      "sha256": "140c608ac9981cad401c6bd4c3b5b5401e27b8fe65f51d37bc98dfb49648afb4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential01Offline/summary.json",
+      "sha256": "5a5bb3f859425ad0c152e088d0be512a49d9bc6e0cc2cdf7f393c5d159c41e3b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential02ConfiguredSpawner/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential02ConfiguredSpawner/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential02ConfiguredSpawner/jump.json",
+      "sha256": "4b57b2d61e372dc4f1c7e9f8b9759ac43b0ffb958660f3a8261d32afe16277c6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential02ConfiguredSpawner/jump.log",
+      "sha256": "0d8fe4709a021fbcd16370afdd8184165059290f736ef77b5608248e08dde061"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential02ConfiguredSpawner/Source/hashes.json",
+      "sha256": "dbdbbffd37cd75a52792798934d9e5444c3472aa4678d195c786c1534090e76f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential02ConfiguredSpawner/Source/small_burst_cue_contract.py",
+      "sha256": "76cae017b2083aa920331648765f2fd7006fcd69e12b8dd9cbdcece044928194"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential02ConfiguredSpawner/Source/small_burst_cue_mixin.py",
+      "sha256": "4aa61c0a15b53cdcb6a30780480718bcfc0a918d8e18179b9c5c9cd440e77939"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential02ConfiguredSpawner/Source/small_burst_cue_validation.py",
+      "sha256": "14b7b971086b8f2438590a3b76474d73e8018b69a4256c8a10d30bf2af97a4a4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential02ConfiguredSpawner/summary.json",
+      "sha256": "adab4b78cdb9a84d0bd6bd38690c492331c4d948e19a8f20725c05017b3809f8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential03WeaponDefinition/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential03WeaponDefinition/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential03WeaponDefinition/jump.json",
+      "sha256": "ebe367bbe5373fe3efbb24c2cdf69a9ca8648c2c3294441dee470d011c0ceb31"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential03WeaponDefinition/jump.log",
+      "sha256": "01983638015184848a6db81d2796c9d43e2c826a9e92cd33efbbdf0da2d504af"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential03WeaponDefinition/Source/hashes.json",
+      "sha256": "5cacd68679648ee2b92ec39a8d9c7c0f726df466ad9f66d71210881fb4889102"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential03WeaponDefinition/Source/Run-UEP58JumpValidation.ps1",
+      "sha256": "dcfc9400bacc8c62d5ee36a67dd0da8acc2aee4a4c821cdae9890cce93e169db"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential03WeaponDefinition/Source/small_burst_cue_contract.py",
+      "sha256": "76cae017b2083aa920331648765f2fd7006fcd69e12b8dd9cbdcece044928194"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential03WeaponDefinition/Source/small_burst_cue_mixin.py",
+      "sha256": "4aa61c0a15b53cdcb6a30780480718bcfc0a918d8e18179b9c5c9cd440e77939"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential03WeaponDefinition/Source/small_burst_cue_validation.py",
+      "sha256": "8923d6cfdd1bc8fbf2ad2901c22f93f37448ad60543aa8c63e24d2226e230760"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Differential03WeaponDefinition/summary.json",
+      "sha256": "716da15fa71d6d077caf520726203afb6c662b0c43243b0d708693cfbdb06dc2"
+    }
+  ],
+  "superseded_partial_template_authoring_artifacts": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/assets-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/assets-stdout.log",
+      "sha256": "0e51bb6ed8574913774b9fa8fd97e9049a0d2027e0c0f589ba80fb84f9a9fc4e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/assets.json",
+      "sha256": "74b381ac224f28a835123fbbd43234d3364febe3e7753d2267c24dd45c785c63"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/assets.log",
+      "sha256": "44e1572390faefa85547f6506f113628088cad937c6e52d877657bdd864f432b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/dash-grenade-burst-after-cdo.t3d",
+      "sha256": "f0eb309650de4f7e216dae62b56d048aefa713cad01bac9b7d72c22dff5b15f1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/dash-grenade-burst-before-cdo.t3d",
+      "sha256": "399dfa696cf99a889034eeb8735373b734962f2508aa1c19521654a44583376e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/dash-heal-burst-after-cdo.t3d",
+      "sha256": "230de3312acd14eaac00206e2cf1ebc5ea8383e064a84f5e92c70fb158066117"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/dash-heal-burst-before-cdo.t3d",
+      "sha256": "51e374a48fe11f05a121e484c6a745f9556157fdd426d4418c3ddc6e7a054866"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/dash-melee-burst-after-cdo.t3d",
+      "sha256": "8f6a58e03bb44d473fe34ac394a541b6c4f0bbbff41a5e5f1c42d33b6b627e66"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/dash-melee-burst-before-cdo.t3d",
+      "sha256": "0eee29992b9243908e6acca5711f7ee53552d84209d499def37ad132ee9e49ad"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/dash-pickup-burst-after-cdo.t3d",
+      "sha256": "b4ed9d30cdecbb3d04f5ef3c0e647b23de70390be460080a05f52e7263e67f5f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/dash-pickup-burst-before-cdo.t3d",
+      "sha256": "63e58aebfd2707e2c1ea047991d843b504b2eef41f8acb0707d4557cce7c0b5d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/heal-after-construction.t3d",
+      "sha256": "be3ab83cb49074ee21294aa9c7b5252d74aeb270073344ea4f4ce68029708efe"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/heal-before-construction.t3d",
+      "sha256": "be3ab83cb49074ee21294aa9c7b5252d74aeb270073344ea4f4ce68029708efe"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/PreviousAssets/before.uasset",
+      "sha256": "e7e8d8c9010556254218a0eae0e4a14e87793c02398db30979bbd518b45b2d3b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/PreviousAssets/GCN_Character_Heal-before.uasset",
+      "sha256": "48fba6a8679057777864fd102f8dbb72e9d020467fd1e352d422670847129422"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/PreviousAssets/GCN_Grenade_Detonate-before.uasset",
+      "sha256": "d1bcb7ef14257ac8c8d9d82f0d78cef97ca1ffb674a72430b78f635d2a04d8cb"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/PreviousAssets/GCN_Weapon_Melee-before.uasset",
+      "sha256": "ad1c8e841c58bb4beb4e0414b6ebedf76afd2a1c3aeb32adf9738acbd581e629"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/Source/generate_small_burst_cue_assets.py",
+      "sha256": "b0e78e067bdf874412ed5122f9b18ddef01a57b2fe8bfa6c2d945aeceacb9aa6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/summary.json",
+      "sha256": "0401110092f218de937e831d69aef336c89ddac025b9285bb225ece93b53e13f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/Superseded-overlay/Content/GameplayCueNotifies/GCN_Character_Heal.uasset",
+      "sha256": "47bdd33e19a6e7184eb9e970e52c1d535312cb8d2124416f2e0a766d14f58057"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/Superseded-overlay/Content/UEPMixins/DA_SmallBurstGrenadeCueMixin.uasset",
+      "sha256": "7da18e1c9a757ab08d1fe104364972f70067a0effcc63acf0dbbd09593be6bde"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/Superseded-overlay/Content/UEPMixins/DA_SmallBurstHealCueMixin.uasset",
+      "sha256": "994c0ef54dfb7baefaf3d7526ebd41ea3995bab68a96ed7ae51dc30e4b1328a5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/Superseded-overlay/Content/UEPMixins/DA_SmallBurstMeleeCueMixin.uasset",
+      "sha256": "6cf03daf9c02a9f9daeb1ea10ddfa2191b48c4fff2aff99f310ac7cd88444ced"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/Superseded-overlay/Content/UEPMixins/DA_SmallBurstPickupCueMixin.uasset",
+      "sha256": "3725ba4a0cf5173e2957b80dcc6326bfb35e07eabd823139afa211ff301095ba"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/Superseded-overlay/Plugins/GameFeatures/ShooterCore/Content/GameplayCues/GCN_InteractPickUp.uasset",
+      "sha256": "e5d98cf306ed6dc1fcab736c9e5826d78d9aa09848500edca8ff0bff069d28d6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/Superseded-overlay/Plugins/GameFeatures/ShooterCore/Content/GameplayCues/GCN_Weapon_Melee.uasset",
+      "sha256": "b631678822489efbf14823ef552cb509dad04490ed9ff704dedb53dace6d6095"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/Superseded-overlay/Plugins/GameFeatures/ShooterCore/Content/Weapons/Grenade/GCN_Grenade_Detonate.uasset",
+      "sha256": "f22bc30ce2d0c9f355af629ea122b9b90d01436cc360d8b6e468ac0217ece617"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/Superseded-stage/Content/GameplayCueNotifies/GCN_Character_Heal.uasset",
+      "sha256": "47bdd33e19a6e7184eb9e970e52c1d535312cb8d2124416f2e0a766d14f58057"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/Superseded-stage/Content/UEPMixins/DA_SmallBurstGrenadeCueMixin.uasset",
+      "sha256": "7da18e1c9a757ab08d1fe104364972f70067a0effcc63acf0dbbd09593be6bde"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/Superseded-stage/Content/UEPMixins/DA_SmallBurstHealCueMixin.uasset",
+      "sha256": "994c0ef54dfb7baefaf3d7526ebd41ea3995bab68a96ed7ae51dc30e4b1328a5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/Superseded-stage/Content/UEPMixins/DA_SmallBurstMeleeCueMixin.uasset",
+      "sha256": "6cf03daf9c02a9f9daeb1ea10ddfa2191b48c4fff2aff99f310ac7cd88444ced"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/Superseded-stage/Content/UEPMixins/DA_SmallBurstPickupCueMixin.uasset",
+      "sha256": "3725ba4a0cf5173e2957b80dcc6326bfb35e07eabd823139afa211ff301095ba"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/Superseded-stage/Plugins/GameFeatures/ShooterCore/Content/GameplayCues/GCN_InteractPickUp.uasset",
+      "sha256": "e5d98cf306ed6dc1fcab736c9e5826d78d9aa09848500edca8ff0bff069d28d6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/Superseded-stage/Plugins/GameFeatures/ShooterCore/Content/GameplayCues/GCN_Weapon_Melee.uasset",
+      "sha256": "b631678822489efbf14823ef552cb509dad04490ed9ff704dedb53dace6d6095"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/Assets01/Superseded-stage/Plugins/GameFeatures/ShooterCore/Content/Weapons/Grenade/GCN_Grenade_Detonate.uasset",
+      "sha256": "f22bc30ce2d0c9f355af629ea122b9b90d01436cc360d8b6e468ac0217ece617"
+    }
+  ],
+  "invalid_lane_guards": {
+    "path": ".build/LyraValidation/BlueprintPython/20261020-small-burst-cues/small-burst-lane-guards.json",
+    "sha256": "395e70a6ada1940af3c82a2c39e2a564cd7a18589b14a3832c5498ca39bb8e2f",
+    "result": {
+      "status": "passed",
+      "cases": [
+        {
+          "rejected": true,
+          "case": "missing-proof",
+          "reason": "Small Burst Cues require their standalone native parent/Niagara/offline-audio lane and current proof",
+          "output_created": false
+        },
+        {
+          "rejected": true,
+          "case": "proof-alone",
+          "reason": "Small Burst Cue proof requires its explicit native fixture",
+          "output_created": false
+        },
+        {
+          "rejected": true,
+          "case": "network-combination",
+          "reason": "Small Burst Cues require their standalone native parent/Niagara/offline-audio lane and current proof",
+          "output_created": false
+        },
+        {
+          "rejected": true,
+          "case": "other-cue-combination",
+          "reason": "Small Burst Cues require their standalone native parent/Niagara/offline-audio lane and current proof",
+          "output_created": false
+        },
+        {
+          "rejected": true,
+          "case": "audio-combination",
+          "reason": "Small Burst Cues require their standalone native parent/Niagara/offline-audio lane and current proof",
+          "output_created": false
+        }
+      ]
+    }
+  },
+  "authored_assets": [
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\GameplayCues\\GCN_InteractPickUp.uasset",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\GameplayCues\\GCN_InteractPickUp.uasset",
+      "sha256": "B14BEAAD2877F4C638880D886915FCFCDDB4C525327FE9D546A98108C0B6B604"
+    },
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_SmallBurstPickupCueMixin.uasset",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UEPMixins\\DA_SmallBurstPickupCueMixin.uasset",
+      "sha256": "CE23E0461A0DFEF1ED33E5F7D344936D21F887F5E8F9C180898F27D363EA639D"
+    },
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\GameplayCues\\GCN_Weapon_Melee.uasset",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\GameplayCues\\GCN_Weapon_Melee.uasset",
+      "sha256": "2E7304C412304C84EED518BE8F7AE569D9C85FDE81EB60ED631622722D68A872"
+    },
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_SmallBurstMeleeCueMixin.uasset",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UEPMixins\\DA_SmallBurstMeleeCueMixin.uasset",
+      "sha256": "5268CFD26B5B0D00AC2000981E567C1D80A36F850F3DC1A3B10BD7EACE250714"
+    },
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\GameplayCueNotifies\\GCN_Character_Heal.uasset",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\GameplayCueNotifies\\GCN_Character_Heal.uasset",
+      "sha256": "591A64C03C6708A0D2DE5FEE5F479D447D478015CA7D8BE13D16BD1BF20F4543"
+    },
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_SmallBurstHealCueMixin.uasset",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UEPMixins\\DA_SmallBurstHealCueMixin.uasset",
+      "sha256": "4C8EF177BDE283B73831C47EF1BC94B6A985B081FE45FC6713151A175FA8D945"
+    },
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Weapons\\Grenade\\GCN_Grenade_Detonate.uasset",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\Weapons\\Grenade\\GCN_Grenade_Detonate.uasset",
+      "sha256": "FC003BB0527EB1FB8BC938B62B6998F9E99C47F723F4E8EB19FC5A014CF62D32"
+    },
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_SmallBurstGrenadeCueMixin.uasset",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UEPMixins\\DA_SmallBurstGrenadeCueMixin.uasset",
+      "sha256": "D024087D8E4B4B28E8B8B502B8B80038BAF2D03F328E51C54ECEED4DA1A82BF2"
+    }
+  ],
+  "incremental_verification_policy": {
+    "mode": "incremental",
+    "focused_host_tests": 33,
+    "full_regression": false,
+    "exact_staged_index_report": ".build/CommitVerification/20261020-small-burst-cues/Index01/summary.json",
+    "note": "Produced after staging this ledger;kept outside the source tree."
+  }
+}
