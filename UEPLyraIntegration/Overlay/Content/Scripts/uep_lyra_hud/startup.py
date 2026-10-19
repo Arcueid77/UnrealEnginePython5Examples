@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPWeaponAudioDispatchResult=") for argument in arguments):
+        return "uep_lyra_weapons.weapon_audio_dispatch_validation"
     if any(argument.startswith("-UEPWeaponAudioMathResult=") for argument in arguments):
         return "uep_lyra_weapons.weapon_audio_math_validation"
     if any(argument.startswith("-UEPWeaponFireCueNetworkResult=") for argument in arguments):

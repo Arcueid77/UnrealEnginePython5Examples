@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "batch": "101-static-weapon-audio-dispatch-native-state",
+  "scope": "Bounded four static WeaponAudioFunctions dispatch methods via typed ordinary Object router. Audit02Struct/Assets01 preserve static ABI,all348 original nodes/full CDO/local defaults and prior100 math routing;20 new transport nodes/no business nodes/four helper methods per Profile/no static Mixin. Differential02Precision passes native exit0,independent raw-state/formula gate0,strict logs/shutdown:120 actual hardcoded-preset Tap cases,7 real AudioComponent parameter cases,12 forwarded native music receiver cases and3 native DebugPrintTap void-call cases exercise568 direct/static Blueprint caller invocations with exact original/Python state plus32 prior math invocations. Tap hit/miss,float locals,large distances,opposite/zero camera directions,unclamped delay/clamped gain,prior delay/pan retention and reset mode/channel verified;all original Tap states restore and owned Tap removed. Local PawnSeed/ammo order and nonlocal MagazineAmmo preservation;Instigator-controller macro aborts/null components verified. First local Pawn-only unclamped music messages observed through original forwarding. Debug formatting/native conversion/CRLF/color/key checked by host;no pixel/audibility claim. Empty active-slot/invalid hit-camera diagnostics retain original VM. Profile/Instigator/Health restored,owned actors destroyed,music observer removed. Host3359/4 invalid launcher lanes pass. Preserve failed Audit01 and smaller passed Differential01. Remaining EarlyReflections/WhizBy,revised-library Cue/network,audibility/hardware/package/full version and all later scope open. No Engine/general Cpp/official edits,build/cook/package,push/tag/release;not whole-library acceptance.",
+  "recorded_utc": "2026-10-19T13:39:17.2360724Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "b495d923beb4f897978027cef8c72f740007210e",
+  "examples_parent_commit": "163b2711996eb18d92e8eae4d2eb4e870357d852",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-dispatch/Audit02Struct",
+      "summary_sha256": "D88490B2B9CB7CE4436F19CFD1F902CC9DF469C28C5081864AF7A8CDA2913EBB",
+      "status": "passed",
+      "uep_dll_sha256": [],
+      "frozen_input_records": 1,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "audit.json",
+          "sha256": "5DBD02954747F0DF9C837AB8D99E9CF27A17CF00925CE986AA2E4F6424741A02"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-dispatch/Assets01",
+      "summary_sha256": "E699960A5ACF1660D4309D8AF10C9BAECD9D409E0F88411E02306EF58F40B2B4",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1841,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-dispatch/Differential02Precision",
+      "summary_sha256": "851B16AC73B675554BCD61D3B97F45D9D33591F69E8AF82106ECD7644F892D1D",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2164,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "E4A5A9FFCC51E11660D91F4E0EA581D994F25E0C7AE127EF8E212EF40613DBFC"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "BB6EC825FCE059DECEE6EF220E9D5BBED00D8361641057EF0A89DB711EDA4878",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_dispatch_mixin.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_dispatch_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "779C94FF758771569398685EC11D2D8C227E41A479243E4491357073B487750E",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_dispatch_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_dispatch_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "AF548D37483714BED41FAF6FEBD702C8880DB0A4A70B8ADC938AE8B3E907EC5F",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_dispatch_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_dispatch_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "9AE70B00342CAC4DEFF7991C41B467AAB2DD03D298DA02B60A17F58217BF3931",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "85381CBB1F23DC571D9F06C75CEE35D6EEF088CBAFEE188229F190D27D1F3AC1",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_weapon_audio_dispatch_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_weapon_audio_dispatch_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "00C117B30E3ADC5B6599C152AB392CDD5E6673EE94F880AEC5AC19A3EA41750C",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_weapon_audio_dispatch.py",
+      "path": "Demos/UEPLyraIntegration/Tools/audit_weapon_audio_dispatch.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "3FDD1C495B6898DBA0846225B3A05BD9B7B389705DBFA53AA1AD9E547370A65D",
+      "native_input_path": "Validation/Run-UEP58WeaponAudioDispatchAssetAuthoring.ps1",
+      "path": "Validation/Run-UEP58WeaponAudioDispatchAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "0F7E0A5C2FA67BC28504D1DB2A65FE49FB81DCC167C2AFE60AA8A431578F7F66",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "sha256": "ADAF5B21512883A31D5AA2F5A4F0B0919089D79B42679C9B4FD24174E0D0EC6E",
+    "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-dispatch/Host02.json",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 3359,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    }
+  },
+  "raw_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-dispatch/Audit02Struct/audit.json",
+      "sha256": "5DBD02954747F0DF9C837AB8D99E9CF27A17CF00925CE986AA2E4F6424741A02"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-dispatch/Audit02Struct/audit.log",
+      "sha256": "B3498B2AF827FDFA3453A132AD365954B81D12302CEF18F6C06CE2C631AAB5FB"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-dispatch/Assets01/assets.json",
+      "sha256": "1E56ACCD22A9A3DBBF09EB8D44F0942B623CDF4D5F289BF48D399A64A7A8B0D8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-dispatch/Assets01/assets.log",
+      "sha256": "CE4E51C80BB37FA341F628EFBF4C71832B076B19E7FF451D9C7E4E2DE21E3DEF"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-dispatch/Assets01/dash-audio-dispatch-before-cdo.t3d",
+      "sha256": "79CBB3FF4EBC5C50357DADE2BDC5E405C33A56FC46E9C7ADB48C59EE88D0A19B"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-dispatch/Assets01/dash-audio-dispatch-after-cdo.t3d",
+      "sha256": "79CBB3FF4EBC5C50357DADE2BDC5E405C33A56FC46E9C7ADB48C59EE88D0A19B"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-dispatch/Differential02Precision/jump.json",
+      "sha256": "E4A5A9FFCC51E11660D91F4E0EA581D994F25E0C7AE127EF8E212EF40613DBFC"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-dispatch/Differential02Precision/jump.log",
+      "sha256": "3E26C36B3FDB4172FB848B1967F2FCC87221EE21E6C660ECCC047CFD0C58CEB2"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-dispatch/Differential02Precision/report-gate-stdout.log",
+      "sha256": "A9F536DFE797D51CECAD0637342E5D7FBD3BD0429403709FCD38385AAF815EC7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-dispatch/Audit01/audit-source.py",
+      "sha256": "84DE1C52D0F9D224461EBCE743CED3185E32E5B1BEC74DE3D8DC32F3E0F98622"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-dispatch/Audit01/summary.json",
+      "sha256": "E7695196BDC0FEA0C0CF5F89279CDA0BCA792EEA8AA11D4C2B84F725E3239B20"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-dispatch/Differential01/summary.json",
+      "sha256": "E06C33058E4DA5BDFA57331C97639B0C3F010B0F4095FE83BDD81470B9D7568C"
+    }
+  ],
+  "authored_asset_outputs": [
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\System\\Audio\\WeaponAudioFunctions.uasset",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\System\\Audio\\WeaponAudioFunctions.uasset",
+      "sha256": "474D1668DB9630B3A43518BE69D63B1995656ED478AF998431B69683E3F9165D"
+    },
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\BP_WeaponAudioDispatchRouter.uasset",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UEPMixins\\BP_WeaponAudioDispatchRouter.uasset",
+      "sha256": "35DBD020CC1D32EEF4B469826D59C728F1E3A61CD151E858671D26296F8D25C0"
+    },
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_WeaponAudioDispatchMixin.uasset",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UEPMixins\\DA_WeaponAudioDispatchMixin.uasset",
+      "sha256": "806BAC9D3C4A9D1D07C14ED053DAB75A803A24799250C5F8F8559546AF65987B"
+    }
+  ],
+  "launcher_guards": {
+    "sha256": "5BADA71F93117DD40971D9E43FD5C397422B8037D6503ECD7E0668186C78A5F0",
+    "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-dispatch/launcher-guard-checks.json",
+    "invalid_lanes_rejected_before_side_effects": 4
+  },
+  "preserved_index_failure": {
+    "sha256": "8ADDE4D365DAA87F0E2B3B5B7B59E013E70B3075CB257673623B932A91BD3B28",
+    "path": ".build/CommitVerification/20261019-101-weapon-audio-dispatch/Index01/summary.json",
+    "reason": "Manifest evidence count was stale102 after adding ledger103;corrected before isolated rerun"
+  }
+}

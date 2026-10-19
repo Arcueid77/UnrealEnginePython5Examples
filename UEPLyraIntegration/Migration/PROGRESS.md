@@ -13,6 +13,40 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Completed bounded batch101 (2026-10-19):** static audio SendWeaponFire/
+SetWeaponSoundParams/DebugPrintTap/Calculate Tap Properties now dispatch through
+a separate typed ordinary Object router.100 parent commits:Examples `163b271` /
+core `b495d92`. Audit02Struct proves native ammo-macro/preset/typed signatures;
+Assets01 extends only the exact accepted100 library,retaining all348 original
+nodes,eight static signatures/flags,full CDO,local defaults and100 math routing.
+Twenty new transport nodes/four named-output methods per Profile,no business
+nodes/static Mixin registration. Separate stage/Overlay backups and frozen math
+helper assets protect incremental authoring;failed outputs remain recoverable.
+Differential02Precision passes native exit0,independent raw-state/formula gate0,
+strict log and shutdown gates:120 Tap,seven AudioComponent parameter,12 music
+message and three debug-call cases use568 actual direct/static Blueprint caller
+invocations with exact original/Python states,plus32 prior math invocations.
+Tap tests use the actual hardcoded TAP_EarlyReflections preset and native
+GetTap,including hit/miss,negative/fractional travel,large float-narrowed hit
+distances,opposite/zero directions,unclamped delay/clamped gain. Misses preserve
+delay/pan;mode/channel reset as authored. Nonlocal sound parameters preserve old
+MagazineAmmo,while local PawnSeed=-1 precedes ammo;the macro reads Instigator's
+controller. Invalid entries and abort branches are covered. Native music observer
+forwards the original receiver and verifies only the first local Pawn receives
+unclamped Strength. Debug calls execute both native paths;host checks cover exact
+CRLF/native numeric conversion/color/key arguments,without a pixel claim. The
+disconnected Tap debug nodes remain disconnected. Empty active inventory slots
+and invalid hit cameras retain the original VM diagnostic path. All pre-existing
+Tap states,router Profile,player Instigator/Health restore;owned Tap/actors and
+music observer are removed. Host02 passes3,359;four invalid lanes reject before
+side effects. Preserve Index01's isolated manifest count failure(103 ledgers vs
+stale102) and its correction to103,plus963 fully indexed scripts. Keep failed
+Audit01 struct-wrapper call/source and the smaller
+passed Differential01 as historical proof. Remaining EarlyReflections/WhizBy,
+revised-library Cue/network integration,audibility/hardware/package/full version
+and all original later scope remain open. No Engine/general Cpp/official edits,
+build/cook/package,push/tag/release;not whole-library acceptance.
+
 **Completed bounded batch100 (2026-10-19):** static WeaponAudioFunctions
 GetSideReflectionAngles/Calculate Whiz By calculations now use Python through a
 typed ordinary Object helper.99 parent commits:Examples `ad630de` / core
