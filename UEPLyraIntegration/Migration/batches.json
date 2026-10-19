@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 118,
+    "bounded_evidence_ledgers": 119,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1235,6 +1235,51 @@
     "full_library_acceptance": false,
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
+  },
+  "traversal_cue_pilot": {
+    "version": "0.12.0",
+    "status": "bounded_launcher_teleporter_python_cue_policy_native_device_timeline_niagara_coordinates_int32_state_and_manager_verified_broader_acceptance_open",
+    "evidence_ledger": "117-traversal-cues-native-device-timeline-portal-state.json",
+    "owner": "uep_lyra_weapons.traversal_cue_mixin",
+    "reused_native_read_only_audit": "20261020-looping-cues/Audit03Templates",
+    "native_asset_authoring": "20261020-looping-cues/Assets02Traversal",
+    "native_runtime": "20261020-looping-cues/Differential11TraversalColor",
+    "original_graph_nodes": {
+      "launcher": 98,
+      "teleporter": 92
+    },
+    "original_full_cdos_signatures_business_parent_launcher_timeline_and_teleporter_macro_preserved": true,
+    "methods_per_profile": {
+      "launcher": 3,
+      "teleporter": 1
+    },
+    "new_transport_nodes": {
+      "launcher": 4,
+      "teleporter": 0
+    },
+    "generated_interface_nodes_per_class": 5,
+    "new_business_nodes": 0,
+    "python_timeline_clock_added": false,
+    "genuine_launcher_pairs": 4,
+    "genuine_teleporter_pairs": 6,
+    "launcher_external_curve_material_vs_raw_track_niagara_and_native_clock_verified": true,
+    "launcher_real_pad_color_mean_scale_world_position_movement_team_and_target_destroy_clear_verified": true,
+    "native_int32_signed_remainder_counter_and_niagara_state_verified": true,
+    "portal_source_local_destination_world_center_forward_dimensions_and_mask_z_offset_verified": true,
+    "portal_missing_destination_repeat_append_and_wrong_causer_partial_state_verified": true,
+    "real_default_python_manager_tags": 2,
+    "owned_devices_targets_effects_profiles_and_health_cleanup_verified": true,
+    "focused_incremental_host_checks": 25,
+    "full_regression_executed_this_batch": false,
+    "preserved_failed_native_run": "Differential10Traversal",
+    "native_zero_negative_or_long_duration_tested": false,
+    "missing_movement_and_error_receiver_native_tested": false,
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "audio_playback_tested": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Remaining spawning/other GameplayCue0.12 and later business plus broad runtime/network/pixel/audio/package/version acceptance;preserve full original scope."
   },
   "hero_burst_cue_pilot": {
     "version": "0.12.0",
@@ -5430,8 +5475,9 @@
       "group": "特效、GameplayCue 与音频调度",
       "method_candidates": 3,
       "business_nodes": 70,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch117:98/92 original nodes/defaults/signatures/native parent preserved;launcher Timeline/clear and teleporter macro retained.4 launcher/6 portal native paired cases plus2 real manager tags verify actual device/FX/clock/counter/coordinate behavior. Broader actor/version acceptance stays open.",
+      "status": "bounded_launcher_teleporter_python_cue_policy_native_device_timeline_niagara_coordinates_int32_state_and_manager_verified_broader_acceptance_open",
+      "evidence_ledger": "117-traversal-cues-native-device-timeline-portal-state.json"
     },
     {
       "path": "/ShooterCore/GameplayCues/GCNL_MatchDecided.GCNL_MatchDecided",
@@ -5458,8 +5504,9 @@
       "group": "特效、GameplayCue 与音频调度",
       "method_candidates": 2,
       "business_nodes": 62,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch117:98/92 original nodes/defaults/signatures/native parent preserved;launcher Timeline/clear and teleporter macro retained.4 launcher/6 portal native paired cases plus2 real manager tags verify actual device/FX/clock/counter/coordinate behavior. Broader actor/version acceptance stays open.",
+      "status": "bounded_launcher_teleporter_python_cue_policy_native_device_timeline_niagara_coordinates_int32_state_and_manager_verified_broader_acceptance_open",
+      "evidence_ledger": "117-traversal-cues-native-device-timeline-portal-state.json"
     },
     {
       "path": "/ShooterCore/GameplayCues/GCNL_WaitingForPlayers.GCNL_WaitingForPlayers",

@@ -1,0 +1,403 @@
+{
+  "schema_version": 1,
+  "batch": "117-traversal-cues-native-device-timeline-portal-state",
+  "scope": "Bounded launcher/teleporter Cue Python policy. Reuse116 Audit03Templates. Assets02Traversal preserves98/92 original nodes/full CDO/signatures/native parent FX/lifetime,launcher Timeline/curve/finish-Clear Trails binding and teleporter increment macro. Launcher3 methods/Profile/4 transport/5 interface,teleporter1/0/5,0 business nodes. Preserve typed causer/partial target guard,movement/light/mean-root-scale/team/duration/activation,external material curve versus raw Niagara track,invalid-target stop/clear. Teleporter preserves native int32 add/signed remainder modulo1e6,enter1/exit-.8,child/ignore meshes,entry Niagara world/local-center/mask-Z skeletal offset/forward/dimensions,destination world center,append-only auto-destroy particles. Differential11TraversalColor passes native exit0/independent gate0/strict logs/shutdown:4 genuine launcher pairs/97 natural samples actual project MID/Niagara config/clock/external-versus-raw values,target destruction,clear/drain.6 portal pairs verify destination present/missing,0/999999/-2/INT32_MAX counter/native Niagara states,source/destination coordinates/direction/dimensions/offset and repeated bursts. Wrong-causer partial assignment and2 real default-Python manager tags pass. Owned devices/targets/FX clean up,Profile families remain,Health unchanged. Preserve Differential10Traversal/source getter-name error;GetVariableColor corrected only fixture. Focused25 host/incremental index scope,no full regression.5 invalid lanes reject before side effects. Missing/error movement,zero/negative/long duration,remote/network/pixel/audio/package/full actor/version and all original remaining scope open. No Python clock/Engine/general Cpp/official edits,build,cook,push,tag or release.",
+  "recorded_utc": "2026-10-19T20:32:36.9612706Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "8f20a5f46888c0e57a890c4fdd22736341a2f913",
+  "examples_parent_commit": "4b860639e69812fb686a3b21621f32a733aa4039",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates",
+      "summary_sha256": "3D3CE7EAABC9C9F80E2CBFA4827A2F2B699DD4101442B5F882A7E9076E6BB765",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 857,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "2C3A3ED6B10664C2DEB70B54E999088B874AF38A3A50E8EAC32C8675E4A612E7",
+          "file": "audit.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Assets02Traversal",
+      "summary_sha256": "0096C18D9F4BD06B13561EBCEF7EED5FEC77162B9FCBD29077C9A6B15645CADC",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1928,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Differential11TraversalColor",
+      "summary_sha256": "55BFBB237A0EAB32AC26A8E348E75DFEBBF085AE3AF1096C72230EC811C2C120",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2317,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "2611EDCE125A850E9D4B1113E378D4C3D45862136199BD6BF338FBE2D1C5047E",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/audit_remaining_cues.py",
+      "sha256": "129B52C521173146624B259B25D9DAB9D620DA614155C875D3C21D170B5D2376",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_remaining_cues.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_traversal_cue_assets.py",
+      "sha256": "3874573C7C413FB2F080E7CADDDE422EBFD082C93B181B699916E388ECA78C2F",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_traversal_cue_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "095D786C46E657F9305E62D2B3AE447B1F7BDCBDE96896B45FE17870F8F61ED9",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "5E4666241754783B44090EBC40F24CF4A2B5DFF43F7CFBA539CFED85D969617C",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/traversal_cue_mixin.py",
+      "sha256": "9455CD9FCB3D41C7A6B7AB7F61A148CF65B1AA7D47045B509457CB88824CC763",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/traversal_cue_mixin.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/traversal_cue_contract.py",
+      "sha256": "AEC5F5B00F4A0C6F41D93804E29C9D5B051C4E6498CA30B52BA35C811E09E8CC",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/traversal_cue_contract.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/traversal_cue_validation.py",
+      "sha256": "96248BFF15D100DFC2C9FED76DC3104AB452950980EA66BBF1B2F16CE86954AE",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/traversal_cue_validation.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "3A1231A1F4DDF4DF9A4F8A88207500B04F189F734FCD5093454716854F458175",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "0C639316060EE0C3A632084FD4A91114DA65C90200474F4885D7DFB021DFBC75",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/HostTraversal01.json",
+    "sha256": "A6257A466220A609A1BD0472212D01219D8C110830370AC693F479F616DC7AA2",
+    "result": {
+      "schema_version": 2,
+      "status": "passed",
+      "tests_run": 25,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "selection": {
+        "mode": "incremental",
+        "selected_test_files": [
+          "Demos/UEPLyraIntegration/Tests/test_traversal_cue_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_traversal_cue_contract.py"
+        ]
+      }
+    }
+  },
+  "raw_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Assets02Traversal/assets-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Assets02Traversal/assets-stdout.log",
+      "sha256": "C1DEF072928C805F590CAF64FB7FA9C580C8947AFAB5F6B34FBD3F0602C9729D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Assets02Traversal/assets.json",
+      "sha256": "42725A8697935301E5B45B726D10383DC3052C9572AA54724B176BD559D0171B"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Assets02Traversal/assets.log",
+      "sha256": "E948252A2D4F734E7D05CE611FB43C1C1E56BF658A1F76642E8D3D1363F60F98"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Assets02Traversal/dash-launcher-cue-after-cdo.t3d",
+      "sha256": "5F1C0A481C44FDBFC83645764C843C2438F96B064B43143B1B0D3BA769F24D29"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Assets02Traversal/dash-launcher-cue-before-cdo.t3d",
+      "sha256": "27E6DD9EB409BC8BD161B1413F4982A7592DC661703A508FD066206A88F7CEC1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Assets02Traversal/dash-teleporter-cue-after-cdo.t3d",
+      "sha256": "E47FCEDE3481036790A054199AA8667664EB13DD48B33D187617158C3DBCFF22"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Assets02Traversal/dash-teleporter-cue-before-cdo.t3d",
+      "sha256": "CEF8E080208571D557137225157EC644328FB678C983F1DC42747EEA00A6AD1E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Assets02Traversal/launcher-after-LauncherMaterialEffect_Timeline_Template-curve0.t3d",
+      "sha256": "0026970B438020225C6DB65EEA0BC1316D2CDADA98EAF909552D0AF48C6441F8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Assets02Traversal/launcher-after-LauncherMaterialEffect_Timeline_Template.t3d",
+      "sha256": "2EC24A0B1DD34EEDA049B7CBD7E3B4A888D1759BC3F4490BDB234126D8534F81"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Assets02Traversal/launcher-before-LauncherMaterialEffect_Timeline_Template-curve0.t3d",
+      "sha256": "0026970B438020225C6DB65EEA0BC1316D2CDADA98EAF909552D0AF48C6441F8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Assets02Traversal/launcher-before-LauncherMaterialEffect_Timeline_Template.t3d",
+      "sha256": "2EC24A0B1DD34EEDA049B7CBD7E3B4A888D1759BC3F4490BDB234126D8534F81"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Assets02Traversal/summary.json",
+      "sha256": "0096C18D9F4BD06B13561EBCEF7EED5FEC77162B9FCBD29077C9A6B15645CADC"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/audit-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/audit-stdout.log",
+      "sha256": "0878F565AAF1F1CC77A444B57A5107FEEE8E6F66DC46397A577A9AF29F82D9AB"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/audit.json",
+      "sha256": "2C3A3ED6B10664C2DEB70B54E999088B874AF38A3A50E8EAC32C8675E4A612E7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/audit.log",
+      "sha256": "C5BC8C7A2B8900751F58ABC3B9311B690DC2A3EE0B60E56B2F4CAF766C084D65"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/dash-cdo.t3d",
+      "sha256": "6085826F6DFF927CE9B162FFAE0EFD2F36B1BEE9654BEE4F4509FDFC814223F7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/dash-DashDeformTimeline_Template-timeline.t3d",
+      "sha256": "1967A562A99CB690EA2DB92112F5D20241A53577378A3504472D41AFE644D3BB"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/dash-graphs.json",
+      "sha256": "A126B0B2E356A1A9DC54A067A1F4FE3559AE41318CEAEFFFCA5409991ECE3AC4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/death-cdo.t3d",
+      "sha256": "E9ED2AEBBBB9665F0EEECAC416DD02ED7EB6E5D5F07AACF4E2150E76477C00B7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/death-DeathCubesTimeline_Template-timeline.t3d",
+      "sha256": "0D29DA533A6EE4F3724C6116C334838C0E91AD8629DFEC23C194D8DB813FD480"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/death-graphs.json",
+      "sha256": "B96BC0D5433B7AFA9803180D3C24F5D9A42BAB17872E30D554485E558BD0BF8C"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/grenade-cdo.t3d",
+      "sha256": "399DFA696CF99A889034EEB8735373B734962F2508AA1C19521654A44583376E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/grenade-graphs.json",
+      "sha256": "9B3C802516E5272422BAE5456CF687B6998B4636F6F84AB56AF58680EE5E17BE"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/heal-cdo.t3d",
+      "sha256": "51E374A48FE11F05A121E484C6A745F9556157FDD426D4418C3DDC6E7A054866"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/heal-graphs.json",
+      "sha256": "E2F2643C2F449AEE836A0F9AE390A7A23698412B681863B55FC8D0366D16D6B2"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/launcher-cdo.t3d",
+      "sha256": "27E6DD9EB409BC8BD161B1413F4982A7592DC661703A508FD066206A88F7CEC1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/launcher-graphs.json",
+      "sha256": "B31C7E92AB60B05F709A0C05CD11F2344661C6BBFF765CB1260EE4FF617D8095"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/launcher-LauncherMaterialEffect_Timeline_Template-timeline.t3d",
+      "sha256": "2EC24A0B1DD34EEDA049B7CBD7E3B4A888D1759BC3F4490BDB234126D8534F81"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/melee-cdo.t3d",
+      "sha256": "0EEE29992B9243908E6ACCA5711F7EE53552D84209D499DEF37AD132EE9E49AD"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/melee-graphs.json",
+      "sha256": "CDE461FD0B4F9423D8587E40FC03B86AF3C3038BDD07EBD94E5497CD5C905965"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/pickup-cdo.t3d",
+      "sha256": "63E58AEBFD2707E2C1EA047991D843B504B2EEF41F8ACB0707D4557CCE7C0B5D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/pickup-graphs.json",
+      "sha256": "9F9DCD44F07A88827F6FC804D4299945CFC06091AC830E8F6153C42E4B9C66F4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/spawning-cdo.t3d",
+      "sha256": "6405FCA355EC79CB6A2952433054160A717F444999305B8BA86A834E24C29A09"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/spawning-graphs.json",
+      "sha256": "58847DE6A825B49DD25436A0D89BC1CDA18E0038A35D5EC883F785804AD95B89"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/spawning-SpawnTimeline_Template-timeline.t3d",
+      "sha256": "10BFDBAB239EF8E58AB527A3DF0D8D6D061B5A48FA4A039A1B02399DBACE8EE3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/summary.json",
+      "sha256": "3D3CE7EAABC9C9F80E2CBFA4827A2F2B699DD4101442B5F882A7E9076E6BB765"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/teleporter-cdo.t3d",
+      "sha256": "CEF8E080208571D557137225157EC644328FB678C983F1DC42747EEA00A6AD1E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Audit03Templates/teleporter-graphs.json",
+      "sha256": "1FECB3617C5DF90EF3EFF8174A09624AA31A9E1A1BAFB841D9166D4EDDEEC2CD"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Differential10Traversal/FailedSources/traversal_cue_validation.py",
+      "sha256": "35B76F0563929B42698E29F27F24ED4D21EFD626C5C3D2D11C1513B984B727CD"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Differential10Traversal/jump-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Differential10Traversal/jump-stdout.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Differential10Traversal/jump.json",
+      "sha256": "3286A10A65B3F614EECED2F7A819EEA4FBA829C0A19DD5BA799B7B3577158499"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Differential10Traversal/jump.log",
+      "sha256": "D81514521FCD71D082363C64EB98E1AC6FA939CDC76393B5E636436431A50F90"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Differential10Traversal/summary.json",
+      "sha256": "F1E9EF2C19C13FAB05E592C4F330E06D34A6A8D3602113E97C196316F9AE8E48"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Differential11TraversalColor/jump-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Differential11TraversalColor/jump-stdout.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Differential11TraversalColor/jump.json",
+      "sha256": "2611EDCE125A850E9D4B1113E378D4C3D45862136199BD6BF338FBE2D1C5047E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Differential11TraversalColor/jump.log",
+      "sha256": "5150F665417BF267C75D0C1914C24A7C5B69BEE4C21FA2F15663694BA90E8599"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Differential11TraversalColor/report-gate-stderr.log",
+      "sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Differential11TraversalColor/report-gate-stdout.log",
+      "sha256": "7D359D7FD618DC5750019E5B05E52559B404B1ED511FC67F97B9F430588EC893"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/Differential11TraversalColor/summary.json",
+      "sha256": "55BFBB237A0EAB32AC26A8E348E75DFEBBF085AE3AF1096C72230EC811C2C120"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/HostTraversal01.json",
+      "sha256": "A6257A466220A609A1BD0472212D01219D8C110830370AC693F479F616DC7AA2"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/HostTraversal01.log",
+      "sha256": "E6127AE208F39639675B9C9E48A931E26EA1C94D37CEDB85DAA5378F0BCE8067"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/traversal-lane-guards.json",
+      "sha256": "D20718CA2BB34FABC400816AF51963344A248F1F3A8C6F3BAD4BABE8A4CA5BC8"
+    }
+  ],
+  "authored_asset_outputs": [
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\GameplayCues\\GCNL_Launcher_Activate.uasset",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\GameplayCues\\GCNL_Launcher_Activate.uasset",
+      "sha256": "022B168EC979CD695C86E13D0A7D0B5F6031EB31451A21C93BC006CEC7D9B04E"
+    },
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_LauncherCueMixin.uasset",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UEPMixins\\DA_LauncherCueMixin.uasset",
+      "sha256": "5975D8F9EE79B0A63A7D5629AD56EF599AA02285F7F8329CAFB88ED19FE4355E"
+    },
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\GameplayCues\\GCNL_Teleporter_Activate.uasset",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\GameplayCues\\GCNL_Teleporter_Activate.uasset",
+      "sha256": "80789B35D195CAC6F09740D0A28C6DD351A2A057F0A0180E54ECBA9917FB4453"
+    },
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_TeleporterCueMixin.uasset",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UEPMixins\\DA_TeleporterCueMixin.uasset",
+      "sha256": "1674A5D11A6A900E57C82C67EAA2B62ECDF1B9168E252704A74F803E0608EE69"
+    }
+  ],
+  "preserved_failed_native_runs": [
+    "Differential10Traversal"
+  ],
+  "incremental_regression": {
+    "focused_host_tests": 25,
+    "full_regression_executed": false,
+    "scope": "Affected traversal policy/evidence contracts; staged dependency checks are recorded in commit verification."
+  },
+  "launcher_guards": {
+    "path": ".build/LyraValidation/BlueprintPython/20261020-looping-cues/traversal-lane-guards.json",
+    "sha256": "D20718CA2BB34FABC400816AF51963344A248F1F3A8C6F3BAD4BABE8A4CA5BC8",
+    "invalid_lanes_rejected_before_side_effects": 5
+  }
+}

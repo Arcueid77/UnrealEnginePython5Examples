@@ -23,6 +23,44 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch117 (2026-10-20):** launcher/teleporter Cue business is
+Python while original native parent FX/lifetime and launcher Timeline remain.
+Parent commits:Examples `4b86063` / core `8f20a5f`. Reuse116 Audit03Templates's
+original98/92 nodes. Assets02Traversal preserves full CDO/signatures/original
+graphs,launcher timeline/curves/GUIDs/finish-to-Clear Trails binding and original
+teleporter increment macro. Launcher adds4 transport/5 interface nodes and3
+methods/Profile;teleporter adds0 transport/5 interface and1 method/Profile;zero
+new business nodes. Python retains valid-target/typed EffectCauser guards and
+partial target assignment,source movement velocity,team/color,pad world position,
+light color/mean world-root scale,duration and activation options. Launcher
+material uses external MaterialEffectCurve.GetFloatValue(Timeline track),while
+Niagara LaunchPadGCNLValue uses raw track value. Invalid target clears trails and
+stops the same native Timeline;clear deactivates valid FX,empties array,then
+resets EdgeGlow only when target valid. Teleporter retains native int32 add and
+signed remainder modulo1000000,entry1/exit-.8,child-inclusive/ignore mesh rule,
+entry flash at Niagara world location,mask-Z skeletal offset,local source-center
+and forward vector/portal dimensions,destination world-center assignment and
+append-only auto-destroy exit-particle references. No Python clock is introduced.
+Differential11TraversalColor passes native exit0/independent gate0/strict logs/
+shutdown:4 genuine launcher pairs cover durations,actual native project material
+MIDs/Niagara initialization,world position/color/mean scale/velocity/team values,
+natural raw track versus evaluated curve distinction,clock parity,source clear/
+particle drain and mid-flight target destruction.6 genuine portal pairs cover
+destination present/missing,0/999999/-2/INT32_MAX counts and repeated bursts.
+Actual actor and Niagara integer values,directions,local/world portal positions,
+forward vectors,dimensions and skeleton offset match. Wrong-causer probes retain
+only source partial TargetActor assignment. Both real manager tags reach default
+Python on native pooled Cues. Owned devices/targets/FX clean up,original Profile
+families remain and player Health is unchanged. Native getter fixture failure in
+Differential10Traversal/source is preserved:GetVariableColor is the actual getter
+name despite SetVariableLinearColor. Production policy required no correction.
+HostTraversal01 passes25 affected policy/contracts;index tests remain incremental.
+Five invalid lane/proof mixes reject before output/native launch. Ledger:
+`117-traversal-cues-native-device-timeline-portal-state.json`. Missing-movement/
+error receiver,zero/negative/long durations,remote/network,pixel/audio/package/
+full actor/version and all original remaining migration scope stay open. No
+Engine/general C++/official edits,build,cook,push,tag or release publication.
+
 **Completed bounded batch116 (2026-10-20):** Dash/Death burst initialization,
 material/Niagara updates and finish cleanup now use Python while native Timeline
 time/curves/update/finish bindings remain intact. Parent commits:Examples
