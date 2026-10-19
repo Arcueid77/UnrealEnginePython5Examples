@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPHeroBurstCueResult=") for argument in arguments):
+        return "uep_lyra_weapons.hero_burst_cue_validation"
     if any(argument.startswith("-UEPCharacterDamageResult=") for argument in arguments):
         return "uep_lyra_weapons.character_damage_validation"
     if any(argument.startswith("-UEPMessageWidgetResult=") for argument in arguments):

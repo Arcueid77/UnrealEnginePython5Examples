@@ -23,6 +23,48 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch116 (2026-10-20):** Dash/Death burst initialization,
+material/Niagara updates and finish cleanup now use Python while native Timeline
+time/curves/update/finish bindings remain intact. Parent commits:Examples
+`292aaad` / core `e58d845`. Audit03Templates reads9 remaining Cue assets and
+records original timeline/curve templates and ComponentHasTag('ignore') macro.
+Assets01HeroBurst preserves original63/91 nodes/full CDO/OnBurst signatures,
+native parent/lifetime behavior and exact native timeline/curve/GUID exports;
+adds8 transport/5 interface/zero business nodes and3 methods per Profile each.
+Python retains source unused Strenght,Dash duration/direction parameter mapping,
+case-insensitive ignore tag,child-inclusive skeletal/material search,team-style
+lookup/pink fallback,Death's non-exact kill-plane tag/electric effect,own-actor
+decal deletion,Kill/Edge color and curve writes. Death finish resets EdgeGlow,
+not KillAge;both finish by native Deactivate then clear arrays,without changing
+auto-destroy settings. Quantized Cue Normal uses native BreakGameplayCueParameters
+to produce the exact ordinary vector type before assigning Direction.
+Differential09DefaultPoolProfile passes native exit0/independent gate0/strict
+logs/ordered shutdown:10 genuine original/Python pairs/20 actual native timelines
+and407 natural parameter samples across durations.3/.8/.6,team/no-team fallback,
+root/ignored/native-child meshes and2 bidirectional mid-timeline Profile switches.
+Actual project materials(MI_Manny_01_SMEAR/MI_Manny_01) receive exact matching
+native MID scalar/vector values;Niagara initialization/update values match the
+real curve callback inputs,system configuration and two-effect mesh filter.
+Playback positions/rates and finish dispatch/array cleanup match. Root Death
+decals destroy while child decals remain. Both sides naturally drain particles
+after source Deactivate before the final inactive check;random particle lifetimes
+and pixels are not compared or claimed identical. Two real manager tags borrow
+test-returned native pool actors and execute default Python burst/timelines/FX
+after fixture explicit Profile overrides are cleared. Owned target actors/FX
+clean up,production3-method families remain and player Health is unchanged.
+Retain Audit02Templates/source(variable shadowing in audit),and failed native
+lanes01..08/source snapshots. They exposed fixture child-class cycle,material and
+diagnostic assumptions,the real quantized-Normal assignment mismatch,instant
+versus draining Niagara state,random particle lifetime equality and unreleased
+fixture pool Profile overrides. Only the payload conversion changed production
+policy;verification gates still require exact deterministic parameters and actual
+native eventual deactivation. HostFocused03 passes26 affected checks;index tests
+are incremental. Five invalid lane/proof mixes reject before output/process.
+Ledger:`116-hero-burst-native-timelines-material-niagara.json`. Zero/negative or
+longer-than-parent-lifetime duration,missing/error receivers,remote/network,
+pixel/audio/package/full actor/version and all remaining original scope stay
+open. No Engine/general C++/official edits,build,cook,push,tag or release.
+
 **Completed bounded batch115 (2026-10-20):** GCNL_Character_DamageTaken uses a
 seven-method Python policy family behind preserved native parent/RPC/data paths.
 Parent commits:Examples `942832e` / core `f4fb402`. Audit01 verifies160 original
