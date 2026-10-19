@@ -23,6 +23,38 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch123 (2026-10-20):** CP registration/capture/contest/
+recapture/palette/status/periodic-score/Cue/victory decisions use Python. Parent
+commits:Examples `5a609e1` / core `90bc008`. Reuse121 Audit02. Assets01 preserves
+145 original nodes/full CDO/public signatures/business/native authority/experience/
+phase/scoring timer/replication paths;67 transport/5 interface/zero business nodes.
+18 methods/Profile include5 base gate aliases;shared base/TDM bytes unchanged.
+Typed Pawn arrays and multi-output query ABI are retained. Registration appends
+including duplicates,sets new owner slot-1 and extends gaps with0. Capture uses
+only first Pawn's team,sets first matching point index,then awards each matching
+LyraPlayerState (duplicates included). Contest sets-1;recapture stores supplied ID.
+Unknown points/empty Pawn arrays/palette overflow retain original diagnostics.
+Status compares requested team before-1/unowned;all other IDs count as enemy.
+Palette cache assigns RawTeamColors[index],then native int32 increment;cached
+lookups do not increment. Score victory uses>=;Scoring adds exactly1 to majority
+team1/2,while tie preserves previous LeadingTeam. GameStarted uses strict>6 for
+150,else125. Native timer starts at Warmup start,not delayed to GameStarted.
+HandleVictory starts native PostGame before clearing/invalidating ScoringTimer.
+Differential01 passes native exit0/independent gate0/strict logs/ordered shutdown
+in actual L_Convolution_Blockout ControlPoints Experience:3 original volumes
+naturally register,Begin/GameStarted/small-team4-character branch reach Python.
+Two paired registration/duplicate/recapture/contest cases,two typed capture API
+cases ([team2,team1,team2] awards [0,2]),12 status/score queries,2 palette/cache
+pairs,6 original1-second native timer majority/tie cases,2 manager Cue add/remove
+pairs,and actual Python PostGame/MatchDecided/stop-invalid-timer integration pass.
+Intermediate victory receiver is controlled;capture calls are public API tests,
+not physical overlap replay. Owned actors/components/roots/Profile families and
+team score deltas clean up. Focused32 host/5 invalid lane checks pass;exact staged
+verification is incremental. Seven-character native branch,palette exhaustion/
+negative-index native warnings,physical overlap/volume logic/remote replication,
+network/pixels/package/full versions and all original remaining scope stay open.
+No SDK/Engine/general Cpp/official asset edits,build,cook,push,tag or publication.
+
 **Completed bounded batch122 (2026-10-20):** TDM specialized decision policy is
 Python while native experience/Warmup GameStarted delegate,one-second looping
 CountDown timer,phase callbacks,replicated setters and OnRep multicast broadcasts

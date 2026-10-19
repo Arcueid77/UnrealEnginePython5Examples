@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "cpscoring":
+        from generate_cp_scoring_assets import generate as generate_cp_scoring
+        return generate_cp_scoring(stage)
     if kind == "tdmscoring":
         from generate_tdm_scoring_assets import generate as generate_tdm_scoring
         return generate_tdm_scoring(stage)

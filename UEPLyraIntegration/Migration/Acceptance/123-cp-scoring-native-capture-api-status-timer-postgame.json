@@ -1,0 +1,257 @@
+{
+  "schema_version": 1,
+  "batch": "123-cp-scoring-native-capture-api-status-timer-postgame",
+  "scope": "Bounded CP Python decision migration with145 original nodes/full CDO/public signatures/native authority/experience/Warmup/scoring timer/phase/RepNotify retained.18 methods/Profile includes5 base aliases;67 transport/5 interface/0 business nodes;shared base/TDM bytes unchanged. Actual CP map naturally registers3 original volumes and runs Python Begin/GameStarted small-team4-character branch.2 paired registration/duplicate/recapture/contest cases,2 typed Pawn-array capture APIs with matching duplicate awards,12 status/score multi-output queries,2 palette/cache pairs,6 original1Hz timer majority/tie/leading/exact-one-point cases,2 manager Cue add/removes and1 actual restored Python PostGame/MatchDecided/clear-invalid-original-timer pass. Source strictly>6 player threshold,>=score,first-Pawn team,minus1 sentinel,first-index/duplicate/gap-zero/cache/native-int semantics preserved. Controlled victory receiver explicit;no physical capture overlap claim. Owned actors/components/roots/Profile/team score cleanup and strict logs/gate/shutdown pass. Focused32 host/5 invalid lanes;incremental exact-index follows. Seven-player native/error/palette exhaustion/negative index/physical volume/remote/network/pixels/package/full versions/all original scope remain open. No SDK/Engine/general Cpp/official edits,build,cook,push,tag or publication.",
+  "recorded_utc": "2026-10-19T22:53:26.1416426Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "90bc008d3dcc822fcc012f816827c34e5acec0e2",
+  "examples_parent_commit": "5a609e1a5128e146aaf7c85944aab164755ebf3f",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-scoring-base/Audit02",
+      "summary_sha256": "2988BC5F142ABBE9770A251456B63F0D3A27CBF045621285542382EDDE1E462A",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 845,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "F72ED575F1AF3848D5BCC5718CE1E586CA0329D75E7320ECD0A1FED00314C0E0",
+          "file": "audit.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-cp-scoring/Assets01",
+      "summary_sha256": "96492BA4DBC448C6BF1A72AC7ACDFE2B9E47E27ADE9AF52776B3A21A13EDCB7F",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1963,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-cp-scoring/Differential01",
+      "summary_sha256": "56CDC3B6BFD3877C6E86AEC89C1B01CC03D4BF8E4C6705EF8D62A57337016CA2",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2395,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "4C8C380939DBD8B33722EB4C23E5E9312B661F3870262C863D8E20F42E67202C",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_cp_scoring_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_cp_scoring_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "3B1A222207275DAA8337C308E67C06E59DB0B7C6D98C87F0E3C729A96C9F0AE6"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "7AB669698D770FFFB8B63C327D8467E1FA2ED9F9AF1222FBFD6DD7079C96E66D"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/cp_scoring_mixin.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/cp_scoring_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "394513A715176FB86E4FBAABC0CCE10A01D979C0268FF47D3D256A5F065845BA"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/cp_scoring_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/cp_scoring_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "2EF72ACEA9E085E048BA922285370A43E189184D9648295BA4CBBD8687DEF62B"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/cp_scoring_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/cp_scoring_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "98695BE85F9C4B108E9A4B01BB94D8AE2E24EDCFECC9BBF8462B98F48D31E8C6"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "7916D74E641DD43A24102FFA01F3CD4F5236713D35EE198ECD7D88871D4BFAB7"
+    },
+    {
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "F4195096D11AD28DECA811C1895E8C155CB7665D6CF3D15F6D6C362190163BE8"
+    },
+    {
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "56AF43CD421A2648E8E65F8B6B2E147EB61EFF72F7A2711AC69B9BFD689466F3"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261020-cp-scoring/HostCP01.json",
+    "result": {
+      "status": "passed",
+      "tests_run": 32,
+      "failures": 0,
+      "errors": 0,
+      "duration_seconds": 0.0,
+      "scope": "test_cp_scoring_*.py",
+      "full_regression": false
+    },
+    "sha256": "7EB650CC750947859BBF6C1E782B8E9FF6EF8422601079942BDCDE482E10C105"
+  },
+  "raw_native_artifacts": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cp-scoring/Assets01/assets-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cp-scoring/Assets01/assets-stdout.log",
+      "sha256": "d01a8d952150ee1667eb19efe1631871eafcda751ddb156c87a4291597a53721"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cp-scoring/Assets01/assets.json",
+      "sha256": "c2055c39f7ca21b71322ba7bcc46ba52e0e8a334aac218a8a26506932b067d0f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cp-scoring/Assets01/assets.log",
+      "sha256": "24dcc4f39f56b9dd1b9b77bae32c206f18283cea40d5431c8b39223be7c5f4fc"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cp-scoring/Assets01/dash-cp-after-cdo.t3d",
+      "sha256": "fa7410075b49b5b8306286174f97f68959648219fce39082acbcd290cb002c8f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cp-scoring/Assets01/dash-cp-before-cdo.t3d",
+      "sha256": "fa7410075b49b5b8306286174f97f68959648219fce39082acbcd290cb002c8f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cp-scoring/Assets01/summary.json",
+      "sha256": "96492ba4dbc448c6bf1a72ac7acdfe2b9e47e27ade9af52776b3a21a13edcb7f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cp-scoring/Differential01/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cp-scoring/Differential01/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cp-scoring/Differential01/jump.json",
+      "sha256": "4c8c380939dbd8b33722eb4c23e5e9312b661f3870262c863d8e20f42e67202c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cp-scoring/Differential01/jump.log",
+      "sha256": "3326dbfe747f28eaa0f7e4381fa8a7ceaafe0ed0c22ba9d980e0b53ad2070349"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cp-scoring/Differential01/report-gate-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cp-scoring/Differential01/report-gate-stdout.log",
+      "sha256": "0c8dbc82e5e2d7cddffce5fcab7876f1647484c59dd6f9e6be3ac45dc1c7f2fb"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-cp-scoring/Differential01/summary.json",
+      "sha256": "56cdc3b6bfd3877c6e86aec89c1b01cc03d4bf8e4c6705ef8d62a57337016ca2"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoring-base/Audit02/cp-cdo.t3d",
+      "sha256": "b572ce93677406fc6df1e1fd5830ac99a49a944d9eb5d0d256f03f80aa8a9e53"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoring-base/Audit02/cp-graphs.json",
+      "sha256": "faf901ede0d135535f8f7921d7b77a2409225d751337afa4c9ba91aaa6eb5ddb"
+    }
+  ],
+  "invalid_lane_guards": {
+    "path": ".build/LyraValidation/BlueprintPython/20261020-cp-scoring/cp-lane-guards.json",
+    "sha256": "dda4543df2057eafc26485dedb20d13c22db501b64061fdedf778a4272fc7a4e",
+    "result": {
+      "status": "passed",
+      "cases": [
+        {
+          "case": "missing-proof",
+          "rejected": true,
+          "reason": "CP scoring requires its standalone native control-point/map/timer lane and current proof",
+          "output_created": false
+        },
+        {
+          "case": "proof-alone",
+          "rejected": true,
+          "reason": "CP scoring proof requires its explicit native fixture",
+          "output_created": false
+        },
+        {
+          "case": "network-combination",
+          "rejected": true,
+          "reason": "CP scoring requires its standalone native control-point/map/timer lane and current proof",
+          "output_created": false
+        },
+        {
+          "case": "other-scoring-combination",
+          "rejected": true,
+          "reason": "CP scoring requires its standalone native control-point/map/timer lane and current proof",
+          "output_created": false
+        },
+        {
+          "case": "held-widget-combination",
+          "rejected": true,
+          "reason": "CP scoring requires its standalone native control-point/map/timer lane and current proof",
+          "output_created": false
+        }
+      ]
+    }
+  },
+  "authored_assets": [
+    {
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\ControlPoint\\B_ControlPointScoring.uasset",
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\ControlPoint\\B_ControlPointScoring.uasset",
+      "sha256": "79B526A00954D9546621FC01AB3E229FF4107E45351AE5F2B0BD2D184923EAB1"
+    },
+    {
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UEPMixins\\DA_CPScoringMixin.uasset",
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_CPScoringMixin.uasset",
+      "sha256": "6EB557757EB083C902A3B57761924B925ADCC4E7A5A6494AB24C65CE37A2D1F5"
+    }
+  ],
+  "unchanged_dependencies": {
+    "Plugins/GameFeatures/ShooterCore/Content/Game/B_ShooterGameScoring_Base.uasset": "73df938e154a6e8202d66c3ffa30caeeaa86ed4504ded054a13eb81a35c9d284",
+    "Plugins/GameFeatures/ShooterCore/Content/Elimination/B_TeamDeathMatchScoring.uasset": "aa4de4b78aac851a80faeff75c08cfb2b1d16b81a72b846897fe44ddfc96cc59"
+  },
+  "incremental_verification_policy": {
+    "mode": "incremental",
+    "focused_host_tests": 32,
+    "full_regression": false,
+    "exact_staged_index_report": ".build/CommitVerification/20261020-cp-scoring/Index01/summary.json",
+    "note": "Produced after staging this ledger;kept outside source tree."
+  }
+}
