@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "generalaudio":
+        from generate_general_audio_assets import generate as generate_general_audio
+        return generate_general_audio(stage)
     if kind == "windsystem":
         from generate_wind_assets import generate as generate_wind
         return generate_wind(stage)

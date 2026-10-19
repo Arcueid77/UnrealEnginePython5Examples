@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "batch": "111-static-general-audio-native-music-forwarding",
+  "scope": "Bounded GeneralAudioFunctions static FireStinger migration via one typed ordinary Object helper/Profile. Assets01 preserves full CDO/static-void Positive/world signature,all8 original nodes/business and both warning branches with5 transport/0 business nodes;no static Mixin/Engine change. Reuse110 read-only source audit. Python performs native GameState cast,base-music lookup/validity and Fire Stinger forwarding. Distinct missing-state/manager screen-only warnings preserve exact text/color/duration/key;host-tested arguments only,native error branches unexercised. Differential01 passes native exit0/independent gate0/strict logs/shutdown/offline renderer:18 cases/72 direct-static and real typed BP calls,72 actual music receiver entries with exact positive/negative args,intensity reset/audio parameter parity across invalid/stopped/playing music and alpha extremes. Original forwarding observes complete current11-method music providers;router Profile/manager fields/providers/Health restore and owned actor/audio destroy. Host3482/5 invalid lanes pass. Broader natural caller/network/audio/hardware/pixel/package/full library/version and full original remaining scope remain open. No Engine/general Cpp/official edits,build/cook/package,push/tag/release.",
+  "recorded_utc": "2026-10-19T17:01:00.2170635Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "db4e5cc6036c11004c3b9003dbfce8748cd5061a",
+  "examples_parent_commit": "4791c65f86e342be3183fb7b28b05ad111c7a94c",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-general-audio/Assets01",
+      "summary_sha256": "32C2B4FC42517B33FF020EC00D861EF48734556AEC101ADAFC065C50CBF373E6",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1888,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-general-audio/Differential01",
+      "summary_sha256": "7B7AA7503650AAB61D9699D8939EF745566934802A4C500688F2ED9F6AD1DEA3",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2245,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "58F3908E9D038C1B965A813A6910D85685949D45E0837FA55369DCE4610F675E",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_audio/general_audio_mixin.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_audio/general_audio_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "181266C679049D11A28FCA5AE8F1B5978D340D42E5A6DE8E5471A3D9D2B576E8"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_audio/general_audio_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_audio/general_audio_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "81A6B220ED6144695D928CFFD8D45B16DF7F781EEA74DABFB06E09AE55519D91"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_audio/general_audio_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_audio/general_audio_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "8F13A348347E88658789EA017052BEE6A674C505C4E351D7327138075A07F32E"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "C1CC9BE17FFA657520AF66A54262AE55F584FE834699E7F8443319121EF9CF91"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_general_audio_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_general_audio_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "B558E8076E1980409A79BC43EE6D24C941A022CC0234EE5C658736ED39FCBFCB"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "83A1D44B2C17119BAF1F8D02D779D1AD8796158179A41B59985F2D1777E5B0A8"
+    },
+    {
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "678807AAE919B5FEAE7201FC38973A59235896F6963354E8474E5040E7FF4181"
+    },
+    {
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "7D2748FE9B882C94001D4F07203608DF36E514C8D7EF3DFFE5D41E5795F98401"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261020-general-audio/Host01.json",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 3482,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "sha256": "FABFC7C4D4493BF49AF20538A26C060AC4F0D6548F66B7FDE0D0172DD7ABF80F"
+  },
+  "raw_evidence": [
+    {
+      "sha256": "EBF3A1215CBAA99BE73DBE7D93550A333DFDF9F698F96602E7B67B53FD2716C0",
+      "path": ".build/LyraValidation/BlueprintPython/20261020-general-audio/Assets01/assets.json"
+    },
+    {
+      "sha256": "21129A241B376FF5A5076C2130138B87C1925F2224582BDD92633D848DFF42F8",
+      "path": ".build/LyraValidation/BlueprintPython/20261020-general-audio/Assets01/assets.log"
+    },
+    {
+      "sha256": "58F3908E9D038C1B965A813A6910D85685949D45E0837FA55369DCE4610F675E",
+      "path": ".build/LyraValidation/BlueprintPython/20261020-general-audio/Differential01/jump.json"
+    },
+    {
+      "sha256": "635D9CA7D06163B9B5EF5EA833B9EE6273C8F512FB7DC31619239A3BCEBE8F71",
+      "path": ".build/LyraValidation/BlueprintPython/20261020-general-audio/Differential01/jump.log"
+    },
+    {
+      "sha256": "0CEE65FC8B5FE0AC409D7B244A1C250769ED252C2C4FE932116374303C07BD67",
+      "path": ".build/LyraValidation/BlueprintPython/20261020-general-audio/Differential01/report-gate-stdout.log"
+    },
+    {
+      "sha256": "FB5FD1393FA240F6F7425BDEE47F3791FF7EF0AF45C36DDC8B7666C2B690CCC3",
+      "path": ".build/LyraValidation/BlueprintPython/20261020-general-audio/Assets01/dash-general-audio-after-cdo.t3d"
+    },
+    {
+      "sha256": "FB5FD1393FA240F6F7425BDEE47F3791FF7EF0AF45C36DDC8B7666C2B690CCC3",
+      "path": ".build/LyraValidation/BlueprintPython/20261020-general-audio/Assets01/dash-general-audio-before-cdo.t3d"
+    }
+  ],
+  "authored_asset_outputs": [
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\Audio\\Blueprints\\GeneralAudioFunctions.uasset",
+      "sha256": "FBF2CB6FB705AB28DD396FF426D8E2F0E9CD2F2C09DEBC9B2413227F3F5EB2D5",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\Audio\\Blueprints\\GeneralAudioFunctions.uasset"
+    },
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\BP_GeneralAudioRouter.uasset",
+      "sha256": "8BED78E31A1D6788AD791464416CDA2592DB20DED58F8B1CF5F6031ABFE939A3",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UEPMixins\\BP_GeneralAudioRouter.uasset"
+    },
+    {
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_GeneralAudioMixin.uasset",
+      "sha256": "8F0F0F39F0A89BF2822C91D71B68A635FC2A0DB696E625BC4EB605FCEDCB4CD6",
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UEPMixins\\DA_GeneralAudioMixin.uasset"
+    }
+  ],
+  "launcher_guards": {
+    "path": ".build/LyraValidation/BlueprintPython/20261020-general-audio/launcher-guard-checks.json",
+    "invalid_lanes_rejected_before_side_effects": 5,
+    "sha256": "764AEEF5AA433C069252CB05B850FD25CB00682AEB5FE27CFF99FEE9E0C2D0DC"
+  }
+}
