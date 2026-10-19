@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPControlPointFeedbackResult=") for argument in arguments):
+        return "uep_lyra_world.control_point_feedback_validation"
     if any(argument.startswith("-UEPControlPointStateResult=") for argument in arguments):
         return "uep_lyra_world.control_point_state_validation"
     if any(argument.startswith("-UEPControlPointHelpersResult=") for argument in arguments):

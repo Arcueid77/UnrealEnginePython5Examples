@@ -23,6 +23,44 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch126 (2026-10-20),standalone volume feedback:**
+the accepted125 revision is extended with Begin mesh collection,Timeline update/
+finish and original RPC/VFX/audio/music bodies. Parent commits:Examples `4b6f111`
+/ core `ecf25ee`. Assets04Feedback preserves the271-node original and308-node
+accepted parent defaults/components/curves/GUIDs/public and multicast signatures
+and remaining graphs. Nine typed gates plus one entry to the existing typed
+capture-message Blueprint VM add37 transport nodes,cumulative69 plus5 interfaces;
+all17 methods/Profile are explicit. No new Blueprint gameplay business or Python
+clock. Original unreliable multicast flags and native Timeline remain.
+Timeline updates retain raw curve,owner-target blend,material RGB,Niagara
+GunPad_Color/RibbonProgression/BlendingColor/TeamColor/OwnerColor/ColorBlend,
+native sRGB light setters,and progress-audio parameter. Forward finish retains
+authority,owner update,CapturePoint,owner color,counter reset/deactivation,native
+time reset,capture RPC then original typed status broadcast. Reverse finish
+retains clean RPC then native time reset. Mesh collection keeps existing entries
+and adds unique components. Local enter sets LocalPlayerInside before Play;
+active local exit clears it before StopDelayed(.5). Capture audio visits every
+locally viewed teamed Pawn without a break;music fires once for local overlap.
+Differential12LocalTransform passes native exit0/independent gate0/strict logs/ordered
+shutdown. Both Profiles complete12 physical stages and237 observed native
+feedback samples,including natural forward and reverse completion. Each has
+two extra meshes/duplicate source list/existing component and two extra lights.
+Light colors compare with an actual native sRGB setter/getter reference;other
+parameters compare with original curve inputs within2e-4. Offline native audio
+proves local/remote/null behavior,parameter state,delayed stop and friendly/enemy
+sound selection/activity. Physical local-player entry reaches music;position,
+rotation and movement tick are restored numerically. Actors,scorer arrays,
+Profile families and original Health clean up. No audio-energy/pixels/network/
+package/full-version claim. Preserve native08/09/10/11 source/logs:static fixture
+mesh setup,unmodeled native light quantization,post-reverse sample expectation,
+and Rotator object comparison. Production feedback policy did not change for
+these fixture corrections.22 feature-only checks pass;5 scoped invalid lanes
+plus1 unknown-parameter rejection stay outside native launch. Exact staged
+verification uses default incremental selection. Complete246-candidate scope and
+static counts remain;remote authority/RPC network,pixels,package and full
+acceptance are pending. No SDK/Engine/general Cpp/official edits,build,cook,push,
+tag or release publication.
+
 **Completed bounded batch125 (2026-10-20),partial volume state phase:** accepted
 124 helper asset is extended with native experience-ready initialization,server
 begin/end-overlap updates and full RecomputeContest decisions. Parent commits:

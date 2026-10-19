@@ -1,0 +1,476 @@
+{
+  "schema_version": 1,
+  "batch": "126-control-point-volume-timeline-feedback-offline-audio",
+  "scope": "All authored volume feedback bodies ported; standalone native physical timeline, material, Niagara, native sRGB light reference, local audio and music gates. Native clock, multicast flags and typed message VM retained. Two Profiles,12 physical stages,237 feedback samples.22 focused checks and default incremental exact-index verification. Full246 candidates and remote/network/pixels/energy/package/version acceptance remain open. No push/tag/release.",
+  "recorded_utc": "2026-10-19T23:57:15.4953683Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "ecf25eede56802991e92989b9c82f12f3f960336",
+  "examples_parent_commit": "4b6f111691c8fe9eb2d7d892acbde7a3c6c44bca",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Audit02",
+      "summary_sha256": "A7821EC84ED546694AB8F63297E209CD6471DBAFFBE5D0E9D4F3F0A32FE66163",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 843,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "9C6570050C308CF2BB4EB21CF52A7F6314C4FB0027E95B26D1DB03BE06FF7606",
+          "file": "audit.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback",
+      "summary_sha256": "F76160324BF96B43AAD254F3A741C015349746E64874A110BEC8196DC938022F",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1992,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential12LocalTransform",
+      "summary_sha256": "1B1CE3BB63C81F95CB98E0CD751B3F2D6072301AF8135CBC559D2155EDD6F429",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2414,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "9BE7E7C517ABE9ED89D3DED99CC241D1D48AE4FB449039EAC709086A66AC24BE",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/control_point_feedback_mixin.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/control_point_feedback_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "ABFB7CDAEEAB211AF661882545A868BC9304622DD13455282E1CBD0B9A92E725"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/control_point_feedback_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/control_point_feedback_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "5BEDC28B078EB1FE6B866843084014ECC2BE2A0006BD7997328F378E745D60F3"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/control_point_feedback_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/control_point_feedback_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "D86D0262DD2931E0DC979A2616441BAFFDCFC81028A4C9E791015652A4FA5DB3"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_control_point_feedback_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_control_point_feedback_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "3770FE0AB5490FA5B6866C5C45FDA07BFA3C44BD89A2A4D690450E2BFF917348"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "C1ABE90A7AC1E9CA2D129A27C7FC95CF0011CB58DA29D3CAEFEB0B019BDEAFF0"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "47D51A4A21698FDAC2856AA2B397F04F6459808FE758D0752AE4FC351B26956D"
+    },
+    {
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "3C087A39B16F240B8B037C84DA493B405A3445233B6859418B7322E569B6F570"
+    },
+    {
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "E08BE92A7003DBB8DE3A795C6E5DCA37B5DC51CE0A08AA42A16E83A0F99D8D56"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/HostFeedback03FeatureOnly.json",
+    "result": {
+      "status": "passed",
+      "tests_run": 22,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "selection": {
+        "mode": "explicit-feature-only",
+        "selected_test_files": [
+          "test_control_point_feedback_contract.py",
+          "test_control_point_feedback_mixin.py"
+        ]
+      },
+      "runtime_acceptance": false
+    },
+    "sha256": "B95FEFE57DFDEE3397951FAA9BE531B6CB12D3B05BF536FA5BEC9D76424E81B1"
+  },
+  "raw_artifacts": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback/assets-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback/assets-stdout.log",
+      "sha256": "258e1278c5daf2a1aba74ce2f23d184a8c738f8c418f1ab2f59eeeb678aee4db"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback/assets.json",
+      "sha256": "ff944c4a8aca452d662d6e327170c0d119e0b9a2fde42cc9698035337df5d859"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback/assets.log",
+      "sha256": "3a5ecd6df2c8d2deef39a06add639d0ab07f4cc598eed1c7400cef45969efd58"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback/dash-point-feedback-after-cdo.t3d",
+      "sha256": "e79064ee90cdaac1d16a727b24d66ccbd4d3f621f180f8c4bfa5b4ab198e7efa"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback/dash-point-feedback-before-cdo.t3d",
+      "sha256": "e79064ee90cdaac1d16a727b24d66ccbd4d3f621f180f8c4bfa5b4ab198e7efa"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback/point-feedback-after-construction.t3d",
+      "sha256": "1d277df7a61400cde9d225e098d5b77cb129894a0bf446d8a3d064dffd2fa398"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback/point-feedback-after-SCS_Node_0-component.t3d",
+      "sha256": "6ba9e7a49563d724fd8f0954796b4bad509952aed13cc7168e348e154c7cd7d9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback/point-feedback-after-SCS_Node_1-component.t3d",
+      "sha256": "bd1567eb71ec5cf4b6e16c5e8cf3135852b86790fea13f20172468ba8ba05eff"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback/point-feedback-after-SCS_Node_2-component.t3d",
+      "sha256": "fc3c232bcfc62e3c05cff245ac57839c4f97100fcd64f003fbe5552052e438e0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback/point-feedback-after-SCS_Node_3-component.t3d",
+      "sha256": "d0a72e11cde68f837e1a52ce2bb4035ba5f8a2e8d7affbcfb7d30e5d9df93bcd"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback/point-feedback-after-SCS_Node_4-component.t3d",
+      "sha256": "14daa630dea7c430bfc748ad2f769fb545411e02f18f28aae79b0b29a74b606e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback/point-feedback-after-SCS_Node_5-component.t3d",
+      "sha256": "9b2ce8643e6558d3d16471f9cf7c4ac52dbaa448dab0f559ab78565482e2565e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback/point-feedback-after-SCS_Node_6-component.t3d",
+      "sha256": "346d658a0bb778a24e896832541d9ffdfe09a2c1f1d9c68d3eb234d3543cbfc2"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback/point-feedback-after-TL_ConvertPoint_Template-curve0.t3d",
+      "sha256": "9f3ce5edfcf18264d1303c340c19d25ba1560ed3cb365e0252a9931620c2e327"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback/point-feedback-after-TL_ConvertPoint_Template.t3d",
+      "sha256": "12285f1adb83bfd75947672495df9104df538edbeacdfed31f8cdc23763125c0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback/point-feedback-before-construction.t3d",
+      "sha256": "1d277df7a61400cde9d225e098d5b77cb129894a0bf446d8a3d064dffd2fa398"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback/point-feedback-before-SCS_Node_0-component.t3d",
+      "sha256": "6ba9e7a49563d724fd8f0954796b4bad509952aed13cc7168e348e154c7cd7d9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback/point-feedback-before-SCS_Node_1-component.t3d",
+      "sha256": "bd1567eb71ec5cf4b6e16c5e8cf3135852b86790fea13f20172468ba8ba05eff"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback/point-feedback-before-SCS_Node_2-component.t3d",
+      "sha256": "fc3c232bcfc62e3c05cff245ac57839c4f97100fcd64f003fbe5552052e438e0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback/point-feedback-before-SCS_Node_3-component.t3d",
+      "sha256": "d0a72e11cde68f837e1a52ce2bb4035ba5f8a2e8d7affbcfb7d30e5d9df93bcd"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback/point-feedback-before-SCS_Node_4-component.t3d",
+      "sha256": "14daa630dea7c430bfc748ad2f769fb545411e02f18f28aae79b0b29a74b606e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback/point-feedback-before-SCS_Node_5-component.t3d",
+      "sha256": "9b2ce8643e6558d3d16471f9cf7c4ac52dbaa448dab0f559ab78565482e2565e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback/point-feedback-before-SCS_Node_6-component.t3d",
+      "sha256": "346d658a0bb778a24e896832541d9ffdfe09a2c1f1d9c68d3eb234d3543cbfc2"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback/point-feedback-before-TL_ConvertPoint_Template-curve0.t3d",
+      "sha256": "9f3ce5edfcf18264d1303c340c19d25ba1560ed3cb365e0252a9931620c2e327"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback/point-feedback-before-TL_ConvertPoint_Template.t3d",
+      "sha256": "12285f1adb83bfd75947672495df9104df538edbeacdfed31f8cdc23763125c0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Assets04Feedback/summary.json",
+      "sha256": "f76160324bf96b43aad254f3a741c015349746e64874a110bec8196dc938022f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Audit02/audit-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Audit02/audit-stdout.log",
+      "sha256": "7d218b38b5db99cb6bd90ec4ab079fe774d21ee1ca8592bbb89e367cffa1955c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Audit02/audit.json",
+      "sha256": "9c6570050c308cf2bb4eb21cf52a7f6314c4fb0027e95b26d1db03be06ff7606"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Audit02/audit.log",
+      "sha256": "2e04bc29b54d092847a3a20dd0d0250aa015ec18a43840f97a6f63ff3200aded"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Audit02/summary.json",
+      "sha256": "a7821ec84ed546694ab8f63297e209cd6471dbaffbe5d0e9d4f3f0a32fe66163"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Audit02/volume-cdo.t3d",
+      "sha256": "19bb73bec7039255ea623d8f89111f3134c3db0221184641045d3524eca5dbcc"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Audit02/volume-graphs.json",
+      "sha256": "fd800713a2a9b101b1339572b8ad906fe7ec8dda20cef176c3ca37b57c43fc3e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Audit02/volume-original-TL_ConvertPoint_Template-curve0.t3d",
+      "sha256": "9f3ce5edfcf18264d1303c340c19d25ba1560ed3cb365e0252a9931620c2e327"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Audit02/volume-original-TL_ConvertPoint_Template.t3d",
+      "sha256": "12285f1adb83bfd75947672495df9104df538edbeacdfed31f8cdc23763125c0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Audit02/volume-scs.t3d",
+      "sha256": "1d277df7a61400cde9d225e098d5b77cb129894a0bf446d8a3d064dffd2fa398"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Audit02/volume-SCS_Node_0-component.t3d",
+      "sha256": "6ba9e7a49563d724fd8f0954796b4bad509952aed13cc7168e348e154c7cd7d9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Audit02/volume-SCS_Node_1-component.t3d",
+      "sha256": "bd1567eb71ec5cf4b6e16c5e8cf3135852b86790fea13f20172468ba8ba05eff"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Audit02/volume-SCS_Node_2-component.t3d",
+      "sha256": "fc3c232bcfc62e3c05cff245ac57839c4f97100fcd64f003fbe5552052e438e0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Audit02/volume-SCS_Node_3-component.t3d",
+      "sha256": "d0a72e11cde68f837e1a52ce2bb4035ba5f8a2e8d7affbcfb7d30e5d9df93bcd"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Audit02/volume-SCS_Node_4-component.t3d",
+      "sha256": "14daa630dea7c430bfc748ad2f769fb545411e02f18f28aae79b0b29a74b606e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Audit02/volume-SCS_Node_5-component.t3d",
+      "sha256": "9b2ce8643e6558d3d16471f9cf7c4ac52dbaa448dab0f559ab78565482e2565e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Audit02/volume-SCS_Node_6-component.t3d",
+      "sha256": "346d658a0bb778a24e896832541d9ffdfe09a2c1f1d9c68d3eb234d3543cbfc2"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential08Feedback/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential08Feedback/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential08Feedback/jump.json",
+      "sha256": "77fb11706b3f10415490e0b5df9dfdafb2dacb3c7fe47abb36a46bc91d37cce3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential08Feedback/jump.log",
+      "sha256": "18fa1551ca5d99caee4245316a3724c42ab979b0ef76a909c73b0d2391193656"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential08Feedback/Source/Content/Scripts/uep_lyra_world/control_point_feedback_validation.py",
+      "sha256": "7c36640fd728591329dc94861f7aa612ced5527c36fa0a0862325eade958b41c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential08Feedback/summary.json",
+      "sha256": "7446165e5b5feb89aa6494ff09d944b616943cb818c0b503f82e2c390b60ea50"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential09MovableMeshes/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential09MovableMeshes/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential09MovableMeshes/jump.json",
+      "sha256": "dbeaecd9d66ea5c90ca133e6903d5a75a7e5c2e5fd47033c2554aa42ccdc1fad"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential09MovableMeshes/jump.log",
+      "sha256": "782b01e4dfc3cb62e6b47cfb381a6013b9eb5f781f3c8060513e84a482991f95"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential09MovableMeshes/Source/Content/Scripts/uep_lyra_world/control_point_feedback_validation.py",
+      "sha256": "e0f718059df0b38a30d0eb159636c60a255e72ebff5c7d9bd007558bad280c8f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential09MovableMeshes/summary.json",
+      "sha256": "4c8e0b61210fc35a65d79b1749276d7a4690ed3eaf6725692a3f5a38b8257d2f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential10NativeLight/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential10NativeLight/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential10NativeLight/jump.json",
+      "sha256": "f520fe908fb2c3bf930afc567622b008dcb84084f857a2dc2d525e284c43055c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential10NativeLight/jump.log",
+      "sha256": "a6406c2bc7a36da92bcee2487f72b4cb73c0f1a675a89f7789337f15f3ce8de7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential10NativeLight/Source/Content/Scripts/uep_lyra_world/control_point_feedback_contract.py",
+      "sha256": "8244ced16b68cb47502f99549439bcdae7a8bf837a53c6731dcead3f0421a47a"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential10NativeLight/Source/Content/Scripts/uep_lyra_world/control_point_feedback_validation.py",
+      "sha256": "eba2e6897baae2c37d5e393a3523724d85c5bf60dd8c7c3e5849717d34cb94b0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential10NativeLight/summary.json",
+      "sha256": "5cd8c2224a076c579fff6f1321eb687f0a787424b69340162b22f955b1de36c9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential11ReverseCompletion/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential11ReverseCompletion/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential11ReverseCompletion/jump.json",
+      "sha256": "69380cba4ab814cd6fe0e3edddb018f0679bc956a55191d211e6f30bbc7f8557"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential11ReverseCompletion/jump.log",
+      "sha256": "a5889ace04f83d922fd475e494af9e108c9861dbe25d06591568b029b2f75dec"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential11ReverseCompletion/Source/Content/Scripts/uep_lyra_world/control_point_feedback_contract.py",
+      "sha256": "d86d0262dd2931e0dc979a2616441baffdcfc81028a4c9e791015652a4fa5db3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential11ReverseCompletion/Source/Content/Scripts/uep_lyra_world/control_point_feedback_validation.py",
+      "sha256": "d2878645c3d8b10793e053d28e98f1c6789edd025fb32019597f829630f164c8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential11ReverseCompletion/summary.json",
+      "sha256": "7fabee364d9d89f55d3b087a5bf38db4ab886a87e4e5e23c16c2b932a114738a"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential12LocalTransform/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential12LocalTransform/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential12LocalTransform/jump.json",
+      "sha256": "9be7e7c517abe9ed89d3ded99cc241d1d48ae4fb449039eac709086a66ac24be"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential12LocalTransform/jump.log",
+      "sha256": "9ee5ea845b0c81aa22f276cab67d5306fb9f6f69218ca621f61cd280b090f32f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential12LocalTransform/report-gate-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential12LocalTransform/report-gate-stdout.log",
+      "sha256": "06f57da932478713044cf73ba3d8d2d5875d0691c60536769324799aab932ff5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/Differential12LocalTransform/summary.json",
+      "sha256": "1b1ce3bb63c81f95cb98e0cd751b3f2d6072301af8135cbc559d2155edd6f429"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/feedback-lane-guards.json",
+      "sha256": "889fd5304cf9d8bc66ca7a111c164c5546e2c22f068077fb7b2bc9279b22b51c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-control-point-volume/HostFeedback03FeatureOnly.json",
+      "sha256": "b95fefe57dfdee3397951faa9be531b6cb12d3b05bf536fa5bec9d76424e81b1"
+    }
+  ],
+  "preserved_failed_native_runs": [
+    "Differential08Feedback",
+    "Differential09MovableMeshes",
+    "Differential10NativeLight",
+    "Differential11ReverseCompletion"
+  ],
+  "regression_policy": {
+    "mode": "incremental",
+    "feature_only_tests": 22,
+    "full_regression_executed": false,
+    "unrelated_native_scenarios_repeated": false,
+    "isolated_index_result": ".build/CommitVerification/20261020-control-point-feedback/Index01/summary.json",
+    "index_result_is_external_to_avoid_changing_the_verified_tree": true
+  },
+  "scope_limits": {
+    "full_original_candidates": 246,
+    "all_original_asset_paths_preserved": true,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "pixels_tested": false,
+    "audio_energy_measured": false,
+    "migration_complete": false
+  }
+}
