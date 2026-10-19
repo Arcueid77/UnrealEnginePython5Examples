@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "netshooterability":
+        from generate_netshooter_ability_assets import generate as generate_netshooter_ability
+        return generate_netshooter_ability(stage)
     if kind == "netshooteractor":
         from generate_netshooter_actor_assets import generate as generate_netshooter_actor
         return generate_netshooter_actor(stage)

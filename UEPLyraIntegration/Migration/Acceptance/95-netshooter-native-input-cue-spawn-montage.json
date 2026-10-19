@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "batch": "95-netshooter-native-input-cue-spawn-montage",
+  "scope": "Bounded GA_WeaponNetShooter own activation/empty target-data override/three original compiler montage callbacks migrated to Python. Original48 nodes/full CDO/class/five signatures/shared parent bytes and namespace retained;8 weak named task-binding nodes,5 own methods/Profile,no new business nodes or inherited selector redeclaration. AbilityAssets01 and Runtime03NativeViewTarget pass actual native exit0/independent and focused-log gates. Ten actual equipped Enhanced Input cases across both Profiles/default and nonzero Cue offsets/complete,cancel,interrupt,null-montage prove native cost1,child empty target-data entry1,Cue1,authority projectile1 and correct montage callback/end each. Parent target body/fire timer never runs;inherited Added/listener once across Profile switches. Native independent CameraActor view target separates controller-forward spawn offset350 from camera rotation in all10 cases. Native character mesh muzzle socket Forward*X+Up*Z+Right*Y Cue geometry/selected default fields and deferred spawn Undefined collision,OwnerNone,source Instigator,exposed empty HitResult,OverrideRootScale(.1) match. Original null montage ends by Cancelled yet continues Cue/spawn;native GAS cancel emits Interrupted. Fixture destroys all10 projectiles before first movement tick;this batch accepts no projectile physics or component network replication. Original inventory/pose/control/movement/view target/Health and observers restored,all owned Actors destroyed.3276 host checks/4 invalid lanes pass. Keep Runtime01 comparator failure,Runtime02 insufficient camera separation despite functional matches,Host01 wrong expected exception and earlier Host02 passing snapshot. No native callback replay,fixture projectile spawn,raw ammo/Health writes,Engine/general Cpp/official edits,build/cook/package,push/tag/release. NetShooter predicted transport/component replication,physical input,audio/pixels,package/full version and full later declared migration remain open.",
+  "recorded_utc": "2026-10-19T07:56:25.3080472Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "6b12879c93e81b9a9d959d3a4a29021e8ee1c1d5",
+  "examples_parent_commit": "05d984d5b67b43249fc8f7c4b931b8ac1858a92e",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-netshooter/AbilityAssets01",
+      "summary_sha256": "2AC4E2654308D8A6BCAF1C541CF6079893C12C09A2ED95CB268337784646139A",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1804,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "DB34265282249A9ECE34889FC0C5DE34EE8229574C82CDBA7017FF9518C4190F",
+          "file": "assets.json"
+        },
+        {
+          "sha256": "F2CFD0B4E070859C1D2BF2A5245C6AC5117C05CC3F44B5A102C914D20DB7C9C6",
+          "file": "assets.log"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-netshooter/AbilityRuntime03NativeViewTarget",
+      "summary_sha256": "939E851DD1A73EC0DB399A132AD1FBF1C585C4F4BEEDEEB969103BD64DE5FF24",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2110,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "7E5475087B52935AA649CC34BEF39C550F67AF42ED12BBD41D6F31AB7D0C9ED4",
+          "file": "jump.json"
+        },
+        {
+          "sha256": "7D7BE56639C9809FB1709C42491C917D78AD7A936DE4E4C0382177A9059F3354",
+          "file": "jump.log"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_netshooter_ability_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_netshooter_ability_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "A5FB12FE74A07A8130D0352919CD36074A395915AFF72A8B288C95D90A279F57"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "1CE0890C13CFDCF1F02D68364652F5EA593140976BCFE80F88230EE29D9975B6"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/netshooter_ability_mixin.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/netshooter_ability_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "F4214F3A275C8A63C10D13FB8517970DA95F2DF3BB80756CB8918EA1D2D2C5BF"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/netshooter_ability_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/netshooter_ability_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "881FB307232FB050647ADF3F5A4B7A2B07A9BD43C5F32A85BF5F647C765B420C"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/netshooter_ability_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/netshooter_ability_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "6DB737FCB7EB0B73F123A4C84CA0A81F4942C06FDE7A0D6B37A7F33101F3298A"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "BE7A5CF7B10F4AAA2255553680965247071D32F8111473BE841A3A275431349A"
+    },
+    {
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "41F8957C0ECE3F3C1068AD047D4D874DFB8F8859218F29BE776FB614DE3622D6"
+    },
+    {
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "D6380334434C986CAB0376A3767E311B69C3246C084B14E17155FD4F32207A5A"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261019-netshooter/AbilityHost03.json",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 3276,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "sha256": "EC8F6052D4E092D25148F1BB1BF339954143B95973A4031EA8936AF29636F6AC"
+  },
+  "launcher_guards": {
+    "path": ".build/LyraValidation/BlueprintPython/20261019-netshooter/ability-launcher-guard-checks.json",
+    "sha256": "90BA60A06D60C1ED5983253EFFED3EDA9419CD1E30BD0AD151F9156699C6C80C",
+    "invalid_lanes_rejected_before_side_effects": 4
+  }
+}

@@ -13,6 +13,37 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Completed bounded batch95 (2026-10-19):** GA_WeaponNetShooter own activation,
+empty target-data override and three original native montage callbacks now use
+Python.94 parent commits:Examples `05d984d` / core `6b12879`. AbilityAssets01
+preserves48 original nodes/full CDO/class/five original signatures and shared
+fire parent bytes/namespace. Eight native transport nodes bind original weak
+named montage callbacks;five own methods/Profile,zero new business nodes,
+inherited selector not redeclared. AbilityRuntime03NativeViewTarget passes
+actual native exit0/independent gate0/strict focused log gate. Ten real equipped
+Enhanced Input activations cover both Profiles/default and nonzero Cue offsets/
+montage complete/cancel/interrupt/null cases. Every input commits native cost1,
+enters the empty child target-data callback once,emits one actual native Cue and
+spawns one authority projectile. Parent target-data body/fire timer never runs;
+parent OnAbilityAdded/listener stays exactly once across all Profile switches.
+Independent native CameraActor view target separates camera/control directions:
+spawn Location uses controller Actor-forward*350+camera location,Direction uses
+camera rotation. Character mesh weapon_r_muzzle socket and Forward*X+Up*Z+
+Right*Y Cue offsets/default fields match native observations. Original deferred
+spawn collision Undefined/OwnerNone/Instigator character/empty exposed HitResult/
+OverrideRootScale(.1) match. Native callbacks Completed/Interrupted/Cancelled
+end as authored;native GAS cancel produces Interrupted,including original
+null-montage continuation after cancellation. Fixture destroys each projectile
+before its first movement tick;95 does not reaccept projectile physics or
+network replication. Native inventory/pose/control/movement/view target/Health
+and production/Cue observers restore;all owned Actors destroyed. Host03 passes
+3,276;four invalid lanes rejected before side effects. Keep Runtime01 comparator
+API failure,Runtime02 insufficient camera separation despite functional matches,
+and Host01 wrong expected exception evidence. Host02 was an earlier passing
+snapshot. Full original scope/NetShooter predicted network/component replication/
+physical input/pixels/audio/package/version gates remain OPEN. No Engine/Cpp/
+official edits,build/cook/package,push/tag/release.
+
 **Completed bounded batch94 (2026-10-19):** NetShooter Actor ray/strand/overlap/
 life-cleanup business now uses Python.93 parent commits:Examples `409404c` /
 core `6889482`. Read-only Audit03EquipmentChain proves the actual asset chain
