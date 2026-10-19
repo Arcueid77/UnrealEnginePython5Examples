@@ -13,6 +13,43 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Completed bounded batch93 (2026-10-19):** actual dedicated server and two
+clients validate predicted Pistol/Rifle/Shotgun equipped firing.92 parent
+commits:Examples `07a5aaf` / core `607aad1`. PistolNetwork05WeaponTrace,
+RifleNetwork05WeaponTrace and ShotgunNetwork03WeaponTrace pass all9 actual native process
+exits0/three independent gates;current gate rechecks also pass all three.
+Twelve real owner Enhanced Input shots cover both owners/Profiles per weapon:
+owner native mode2/server mode0 share positive prediction keys,server never
+requests activation or locally targets. Native target-data count/actor identity/
+ImpactPoint payloads agree within engine0.51cm quantization tolerance. Native
+read-only wire IDs identify source/replicated victims;three unreplicated static
+Shotgun environment hits use native map ActorGuid when owner has no existing
+wire ID. No actor path/name matching. Existing UEP Int16Property read limitation
+is handled by actual local ObjectExporterT3D activation snapshots:48 exported
+native prediction keys/hashes verified,no pointer layout or Cpp changes.
+All12 authority shots consume exactly1 ammo,owning replicas converge,and real
+positive enemy Health damage agrees on both clients(24 replica observations).
+Twenty-four predicted/remote Cue-to-weapon entries appear once each;foreign
+client ability never activates,all owner/server abilities end. Human players
+stay Health100;authority-only native pose/inventory-stat fixtures,original
+inventory/control restoration and observer restoration pass. No production
+ability/Actor/FX policy or asset edits in93,no build/cook/package. Host03 passes
+3,211;four bad driver combinations rejected early. Preserve PistolNetwork01
+(client local phase expectation/owned stop),PistolNetwork02ServerPhase
+(unsupported16-bit prediction read/stage timeout),and ShotgunNetwork01
+(static no-wire identity gate failure despite native peer exits0). Final network modes come from actual bridge snapshots. Native Weapon query4
+line-of-sight and versioned target-pose retries ensure clear geometry before
+input;keep RifleNetwork02SnapshotMode(environment obstruction),03ClearLine
+(output-parameter helper),04LOSBarrier(wrong preflight channel),and earlier
+successful snapshots/draft acceptance in workspace evidence. Files only
+schedule/acknowledge,never copy gameplay state into replicas;no raw Health/
+ammo/timer writes,ASC repair,authority activation request,callback replay or
+RPC overrides. Logs have no binding/context/Python errors. Next:remaining0.11
+NetShooter prototype Actor/ability scope and business,then the full declared
+later-version migration and broad lifecycle/version gates. Physical input,
+packet loss/travel/rejoin,quantitative spread/per-pellet equivalence,audio/
+pixels/packaged/full version remain OPEN. No push/tag/release.
+
 **Completed bounded batch92 (2026-10-19):** shared GA_Weapon_Fire six original
 business methods,three original compiler montage callbacks and typed native
 failure-message continuation now use Python.91 parent commits:Examples

@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "batch": "93-weapon-native-two-owner-prediction-damage",
+  "scope": "Final-code bounded actual dedicated server/two-client predicted Pistol/Rifle/Shotgun firing,not full version. Twelve real owner Enhanced Input shots on both owners/Profiles;actual bridge snapshots verify server/client modes. Native mode2 owner/mode0 authority activations share positive prediction keys;target-data RPC counts/hit identity/ImpactPoint agree within0.51cm engine quantization. Native authority cost1/owning ammo replicas and positive enemy damage converge on both clients(24 Health replica observations). Predicted/remote Cue entries24 once each,foreign ability activations0,all abilities end. Native wire IDs/roles identify source/replicated targets;three static environment no-wire pairs use actual native map ActorGuid. Forty-eight native local ObjectExporterT3D prediction snapshots/hashes verified,no pointer assumptions or Cpp changes. Actual9 process exits0/three independent original gates/current rechecks pass. Native Weapon query4 line-of-sight and versioned bounded pose retries establish clear geometry before input;no actual shot replay/retry. Native-only authority pose/inventory stat fixtures explicit;human Health100/inventory/control/Profile cleanup pass. Files schedule only;no gameplay state import,raw Health/ammo/timer write,ASC repair,authority activation request,handler/target-data replay,RPC override,production asset/policy/Engine/Cpp edits,build/cook/package/push/tag/release.3211 host checks/four invalid lanes pass. Failed Pistol01/02,Shotgun01,Rifle02/03/04 and all earlier successful snapshots/previous draft retained. Physical input,packet loss/travel/rejoin,quantitative spread/per-pellet equivalence,audio/pixels/package/full version remain open.",
+  "recorded_utc": "2026-10-19T06:51:06.1844139Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "607aad101bb63c44312aa21e67847c1557292cae",
+  "examples_parent_commit": "07a5aaf181d70ab733cb9529cb9f81685e79b31b",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-fire-network/PistolNetwork05WeaponTrace",
+      "summary_sha256": "D06EE38305CE01616ECF1E5FA243C96D76B901E55D65C1DBB96CDF3EFC7C3286",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2136,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "B0": 0,
+        "A": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "FE78F2512A50FE21E6B28656E04FD418457DBE8107C79965FA3333D7F33528B5"
+        },
+        {
+          "file": "A.json",
+          "sha256": "46BAD48B1DC0B4A4D7DD0DA12BA4551C660D983FD48B7E295805A6F9FE72C6C6"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "C37E401E3D2D513C08A0412052CD20D38B3734C8EC6EFB6BA6A973F10AA8759B"
+        },
+        {
+          "file": "server.log",
+          "sha256": "35E5A02C17E56F5796603A93A097CD2B8BCB686C2C487A74A561311664530D8F"
+        },
+        {
+          "file": "A.log",
+          "sha256": "E2CCB45C663A6A223ED1F32A35B4933219406026C5303C893E6DA644CD24BB4A"
+        },
+        {
+          "file": "B0.log",
+          "sha256": "B47EE6A817FB29CB06880B5472F6B41D7E289054F822D9EA1DE39FB75C5282BC"
+        },
+        {
+          "file": "current-gate.json",
+          "sha256": "5B85E6153ACE8D1E5B8824E3043AB33CC19F1FE4577E5D084211032BCA153362"
+        },
+        {
+          "file": "native-evidence-audit.json",
+          "sha256": "0837EC716AF2FA1602C45EBB1ABA2BBA10838B72A0CAD973DAE6038A5A072F78"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-fire-network/RifleNetwork05WeaponTrace",
+      "summary_sha256": "D1DB07A2A8A47734FF3647F33A7B14F2487AF3AFC6CCA315F072CECD0A8525AD",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2136,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "A": 0,
+        "B0": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "2BAA6448810C11F511BD3604DC15B48E430B852A4774B77A040950C34038134F"
+        },
+        {
+          "file": "A.json",
+          "sha256": "0D330A9CD3BFD699A7573B8E9BA2E3A81C71037757F6BF8325E36635243B13CC"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "FAB95AA68F9DCFD230CF5D604E93994753F472FBB4A5D84DC8B5A85386823F82"
+        },
+        {
+          "file": "server.log",
+          "sha256": "15137BC4E84A54053A29E05B385013DA67A0E2A1B05280F87B2FBDE79882DACF"
+        },
+        {
+          "file": "A.log",
+          "sha256": "31AE1A6E5D6D94E1AE87733F60482CFAE3D43336FA04981F6EF91AA8EB429345"
+        },
+        {
+          "file": "B0.log",
+          "sha256": "24EE744D692EFE4CCF718AD785F9A86FA215FD18B4FFD43F24B851AB42FDC566"
+        },
+        {
+          "file": "current-gate.json",
+          "sha256": "F0A353FD4DAFFDA898BE5905FE658CFB045B7DCDEA7C21CE6C3D2E29617A6B3B"
+        },
+        {
+          "file": "native-evidence-audit.json",
+          "sha256": "50B47B19571D1C0EFA8D84B022135521169847AE7E70A6E1756825C1FEB20E28"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-fire-network/ShotgunNetwork03WeaponTrace",
+      "summary_sha256": "08A1A1CB2CAAEAAB42AB7FEF60FA8FDFDA970856BCAEABE7AAD8AB32974BCAD4",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2136,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "B0": 0,
+        "A": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "9E3B59E20565DE9AD10065300F48C03CF3B3E51551B2001A57166AD616F913A9"
+        },
+        {
+          "file": "A.json",
+          "sha256": "AA8FF8E0CC9A327D2FACC4F8D57BEE33287CA3EEF3E8CC8845504281E1B3AEBC"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "97AD117347B59A86701F477B86F6A972606F8A1CBFA1FC653C3BC10E748639A3"
+        },
+        {
+          "file": "server.log",
+          "sha256": "ADF0BE47091BCE680B26D489392C1237F1049D4A115EFB47176C9D739552FA0B"
+        },
+        {
+          "file": "A.log",
+          "sha256": "8DC37CE653CE20FEADC531EFE3D7D3B40720CC2DCBAD9F4812BE8B2D79C280C9"
+        },
+        {
+          "file": "B0.log",
+          "sha256": "36D0BB6B2719F9ED2213AA214020593F690E2DA24CC800E1BCB877C3B70AFDCA"
+        },
+        {
+          "file": "current-gate.json",
+          "sha256": "0DC14F959BB5F65B3D7A868794C86D416234FD4EEF7469EBA9D292E3D912374F"
+        },
+        {
+          "file": "native-evidence-audit.json",
+          "sha256": "730435190E748B64F7B72528C48F3365A8E33D3F2091650E8CBE370AEE98EEF4"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_ability_fire_network_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_ability_fire_network_validation.py",
+      "sha256": "6CCA9C657AD36C0318E739BE45D03B81949DF664C6CB6737035F8BFD73005F52"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_ability_fire_network_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_ability_fire_network_contract.py",
+      "sha256": "4BC05879B7475A3920088DFBD2F6E1E68E14E343F47B261B1D3CAD5B6101FEBE"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "EF055F930D0F096C029A23907C2974E617463FC9A5DD9216D732EF1EF03EAAE8"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "FA2A0EE2947BB806C14C3FA32418DF328A92B72919196AE5AD779E644ECB3EAA"
+    }
+  ],
+  "host_report": {
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 3211,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-fire-network/Host03.json",
+    "sha256": "A12DFBA4B9212060768E74C869D9349D809C6AAA50EA534383E32B8E526AA86B"
+  }
+}

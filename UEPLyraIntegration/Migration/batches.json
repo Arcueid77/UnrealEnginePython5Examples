@@ -18,10 +18,10 @@
     "review_date": "2026-10-16",
     "cadence": "modify, verify the isolated index, commit one coherent bounded batch",
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 94,
+    "bounded_evidence_ledgers": 95,
     "shared_binary_profile_families_committed_together": true,
-    "host_checks_passed": 3178,
-    "full_index_python_files_checked": 915,
+    "host_checks_passed": 3211,
+    "full_index_python_files_checked": 918,
     "native_provenance_note": "Per-pilot current means that pilot revision; actual binary hashes in its ledger decide whether a run is historical. A later file freeze is not re-execution.",
     "current_dll_equipment_rifle_run": "20261016-batch-backfill/rifle-Network01",
     "current_dll_equipment_shotgun_run": "20261016-batch-backfill/shotgun-Network02",
@@ -827,7 +827,82 @@
     ],
     "preserved_preflight_failure": "20261019-weapon-ability-fire/Audit01",
     "earlier_passed_snapshot": "20261019-weapon-ability-fire/Differential05ActivationWitness",
+    "current_native_network_ledger": "93-weapon-native-two-owner-prediction-damage.json",
+    "current_three_weapon_two_owner_predicted_shots": 12,
     "next": "Real predicted two-owner firing/replication and broader lifecycle/version gates;remaining declared migration scope stays open."
+  },
+  "weapon_fire_network_pilot": {
+    "version": "0.11.0",
+    "status": "bounded_native_pistol_rifle_shotgun_two_owner_prediction_rpc_damage_ammo_cue_replication_verified_version_open",
+    "evidence_ledger": "93-weapon-native-two-owner-prediction-damage.json",
+    "native_runs": [
+      "20261019-weapon-fire-network/PistolNetwork05WeaponTrace",
+      "20261019-weapon-fire-network/RifleNetwork05WeaponTrace",
+      "20261019-weapon-fire-network/ShotgunNetwork03WeaponTrace"
+    ],
+    "native_weapons": [
+      "pistol",
+      "rifle",
+      "shotgun"
+    ],
+    "dedicated_server_and_two_actual_clients_per_run": true,
+    "native_processes_with_actual_exit_zero": 9,
+    "native_original_report_gates_passed": 3,
+    "current_contract_rechecks_passed": 3,
+    "actual_owner_input_shots": 12,
+    "native_authority_activation_and_target_data_pairs": 12,
+    "native_predicting_client_activation_mode": 2,
+    "native_server_activation_mode": 0,
+    "actual_prediction_key_export_snapshots": 48,
+    "native_prediction_keys_read_by_local_object_exporter_t3d": true,
+    "int16_property_binding_bypassed_without_cpp_or_pointer_layout_change": true,
+    "same_native_prediction_key_and_target_data_actor_impactpoint_payload_verified": true,
+    "native_hit_point_quantization_tolerance_cm": 0.51,
+    "native_source_and_target_roles_verified": [
+      3,
+      2,
+      1
+    ],
+    "replicated_actor_identity_uses_native_wire_ids": true,
+    "native_unreplicated_static_environment_actor_guid_pairs_verified": 3,
+    "actor_path_or_name_peer_matching": false,
+    "authority_ammo_cost_one_and_owning_inventory_replica_convergence_verified": true,
+    "native_positive_authority_damage_shots": 12,
+    "two_client_health_replica_observations": 24,
+    "native_predicted_and_remote_weapon_actor_cue_entries": 24,
+    "foreign_owner_ability_activations": 0,
+    "native_ability_end_after_each_shot_verified": true,
+    "native_human_player_health_unchanged": true,
+    "original_inventory_and_owner_control_rotation_restored": true,
+    "observer_profiles_restored": true,
+    "authority_native_pose_and_inventory_stat_fixtures_used": true,
+    "client_gameplay_state_from_files": false,
+    "files_schedule_only": true,
+    "source_ability_actor_fx_assets_and_production_policy_unchanged": true,
+    "new_cpp_or_native_build_executed": false,
+    "health_ammo_timer_properties_written": false,
+    "asc_binding_repaired": false,
+    "authority_activation_requested_by_fixture": false,
+    "target_data_callback_replayed": false,
+    "rpc_functions_overridden": false,
+    "physical_input_tested": false,
+    "packet_loss_tested": false,
+    "travel_rejoin_tested": false,
+    "quantitative_spread_per_pellet_equivalence_accepted": false,
+    "audio_playback_tested": false,
+    "pixels_tested": false,
+    "full_acceptance": false,
+    "preserved_failed_runs": [
+      "20261019-weapon-fire-network/PistolNetwork01",
+      "20261019-weapon-fire-network/PistolNetwork02ServerPhase",
+      "20261019-weapon-fire-network/ShotgunNetwork01"
+    ],
+    "native_mode_read_from_actual_bridge_snapshot": true,
+    "actual_native_weapon_trace_query4_clear_line_before_input": true,
+    "pose_attempt_barriers_versioned": true,
+    "preserved_geometry_fixture_failures": ["RifleNetwork02SnapshotMode", "RifleNetwork03ClearLine", "RifleNetwork04LOSBarrier"],
+    "preserved_earlier_successful_snapshots": ["PistolNetwork03NativeExport", "PistolNetwork04SnapshotMode", "RifleNetwork01", "ShotgunNetwork02StaticGuid"],
+    "next": "Remaining0.11 NetShooter prototype Actor/ability scope and business,then full declared later-version migration and broader acceptance gates."
   },
   "dash_selector_pilot": {
     "version": "0.11.0",
@@ -2635,7 +2710,7 @@
     "warning_free_acceptance": false,
     "remote_viewer_equipment_tested": false,
     "current_native_death_run": "20261016-weapon-instance/DeathDifferential01",
-    "failed_native_runs": ["20261016-weapon-instance/GCLifetime01", "20261016-weapon-instance/RifleNetwork01", "20261016-weapon-instance/NetShooterNetwork01"],
+    "failed_native_runs": ["20261016-weapon-instance/GCLifetime01", "20261016-weapon-instance/RifleNetwork05WeaponTrace", "20261016-weapon-instance/NetShooterNetwork01"],
     "models_passed": 840,
     "native_death_branch_tested": true,
     "native_dead_equipment_pairs": 5,
@@ -4123,8 +4198,9 @@
       "method_candidates": 6,
       "business_nodes": 78,
       "scope_review": "Ledger92 migrates shared six business methods,three original compiler-generated montage callbacks and one typed native failure continuation. Retains original106 nodes/class/full CDO/nine original signatures,original weak callback function identities,per-grant exact native listener factory and named native timer identity. Eleven transport nodes;ten methods/Profile. Three child asset bytes/default inheritance retained. Native432 seeded montage/next-RNG pairs prove eager Front-then-Back draws on straight branch and one side draw. Sixteen actual Enhanced Input gestures cover8 real equipped Pistol/Rifle/Shotgun shots with native targeting/commit/ammo cost1/Cue-to-Actor/montage/end and positive enemy Health damage,plus8 complete/cancel/interrupt/null-montage lifecycle inputs. Two optional authority CameraActor spawns match ImpactPoint. Native6 failure-message profiles prove foreign-avatar no-op,real montage/throttle/repeat/profile switch and1s reset. Native GAS Cvar1 clears timers on ordinary ends,cancel emits Interrupted,and null montage emits Cancelled before later timer registration;both Profiles match. Real firing exposed expired other-slot component wrappers;only invalid entries now marshal null for array writeback,current24-case native Niagara regression passes. Player Health/inventory/ammo/aim and observer Profiles restored,test owned Actors destroyed. No raw Health/ammo/timer write,callback replay,new Python task/listener rooting,Engine/general Cpp/official edits,build/cook/package,push/tag/release. Failed rounds retained. Dead/no-health/NoFiring branch controls are models;physical input,audio/pixels,quantitative spread/per-pellet equivalence,predicted network and full version remain open.",
-      "status": "bounded_native_shared_and_inherited_fire_policy_input_damage_rng_callbacks_verified_network_version_open",
-      "native_firing_policy_ledger": "92-weapon-ability-native-input-damage-lifecycle.json"
+      "status": "bounded_native_standalone_and_real_two_owner_predicted_firing_rpc_damage_ammo_cue_replication_verified_version_open",
+      "native_firing_policy_ledger": "92-weapon-ability-native-input-damage-lifecycle.json",
+      "native_predicted_firing_network_ledger": "93-weapon-native-two-owner-prediction-damage.json"
     },
     {
       "path": "/Game/Weapons/GA_Weapon_ReloadMagazine.GA_Weapon_ReloadMagazine",
@@ -4192,8 +4268,9 @@
       "method_candidates": 2,
       "business_nodes": 1,
       "scope_review": "Ledger92 migrates shared six business methods,three original compiler-generated montage callbacks and one typed native failure continuation. Retains original106 nodes/class/full CDO/nine original signatures,original weak callback function identities,per-grant exact native listener factory and named native timer identity. Eleven transport nodes;ten methods/Profile. Three child asset bytes/default inheritance retained. Native432 seeded montage/next-RNG pairs prove eager Front-then-Back draws on straight branch and one side draw. Sixteen actual Enhanced Input gestures cover8 real equipped Pistol/Rifle/Shotgun shots with native targeting/commit/ammo cost1/Cue-to-Actor/montage/end and positive enemy Health damage,plus8 complete/cancel/interrupt/null-montage lifecycle inputs. Two optional authority CameraActor spawns match ImpactPoint. Native6 failure-message profiles prove foreign-avatar no-op,real montage/throttle/repeat/profile switch and1s reset. Native GAS Cvar1 clears timers on ordinary ends,cancel emits Interrupted,and null montage emits Cancelled before later timer registration;both Profiles match. Real firing exposed expired other-slot component wrappers;only invalid entries now marshal null for array writeback,current24-case native Niagara regression passes. Player Health/inventory/ammo/aim and observer Profiles restored,test owned Actors destroyed. No raw Health/ammo/timer write,callback replay,new Python task/listener rooting,Engine/general Cpp/official edits,build/cook/package,push/tag/release. Failed rounds retained. Dead/no-health/NoFiring branch controls are models;physical input,audio/pixels,quantitative spread/per-pellet equivalence,predicted network and full version remain open.",
-      "status": "bounded_native_shared_and_inherited_fire_policy_input_damage_rng_callbacks_verified_network_version_open",
-      "native_firing_policy_ledger": "92-weapon-ability-native-input-damage-lifecycle.json"
+      "status": "bounded_native_standalone_and_real_two_owner_predicted_firing_rpc_damage_ammo_cue_replication_verified_version_open",
+      "native_firing_policy_ledger": "92-weapon-ability-native-input-damage-lifecycle.json",
+      "native_predicted_firing_network_ledger": "93-weapon-native-two-owner-prediction-damage.json"
     },
     {
       "path": "/ShooterCore/Weapons/Rifle/GA_Weapon_Fire_Rifle_Auto.GA_Weapon_Fire_Rifle_Auto",
@@ -4202,8 +4279,9 @@
       "method_candidates": 2,
       "business_nodes": 1,
       "scope_review": "Ledger92 migrates shared six business methods,three original compiler-generated montage callbacks and one typed native failure continuation. Retains original106 nodes/class/full CDO/nine original signatures,original weak callback function identities,per-grant exact native listener factory and named native timer identity. Eleven transport nodes;ten methods/Profile. Three child asset bytes/default inheritance retained. Native432 seeded montage/next-RNG pairs prove eager Front-then-Back draws on straight branch and one side draw. Sixteen actual Enhanced Input gestures cover8 real equipped Pistol/Rifle/Shotgun shots with native targeting/commit/ammo cost1/Cue-to-Actor/montage/end and positive enemy Health damage,plus8 complete/cancel/interrupt/null-montage lifecycle inputs. Two optional authority CameraActor spawns match ImpactPoint. Native6 failure-message profiles prove foreign-avatar no-op,real montage/throttle/repeat/profile switch and1s reset. Native GAS Cvar1 clears timers on ordinary ends,cancel emits Interrupted,and null montage emits Cancelled before later timer registration;both Profiles match. Real firing exposed expired other-slot component wrappers;only invalid entries now marshal null for array writeback,current24-case native Niagara regression passes. Player Health/inventory/ammo/aim and observer Profiles restored,test owned Actors destroyed. No raw Health/ammo/timer write,callback replay,new Python task/listener rooting,Engine/general Cpp/official edits,build/cook/package,push/tag/release. Failed rounds retained. Dead/no-health/NoFiring branch controls are models;physical input,audio/pixels,quantitative spread/per-pellet equivalence,predicted network and full version remain open.",
-      "status": "bounded_native_shared_and_inherited_fire_policy_input_damage_rng_callbacks_verified_network_version_open",
-      "native_firing_policy_ledger": "92-weapon-ability-native-input-damage-lifecycle.json"
+      "status": "bounded_native_standalone_and_real_two_owner_predicted_firing_rpc_damage_ammo_cue_replication_verified_version_open",
+      "native_firing_policy_ledger": "92-weapon-ability-native-input-damage-lifecycle.json",
+      "native_predicted_firing_network_ledger": "93-weapon-native-two-owner-prediction-damage.json"
     },
     {
       "path": "/ShooterCore/Weapons/Rifle/GA_Weapon_Reload_Rifle.GA_Weapon_Reload_Rifle",
@@ -4221,8 +4299,9 @@
       "method_candidates": 2,
       "business_nodes": 1,
       "scope_review": "Ledger92 migrates shared six business methods,three original compiler-generated montage callbacks and one typed native failure continuation. Retains original106 nodes/class/full CDO/nine original signatures,original weak callback function identities,per-grant exact native listener factory and named native timer identity. Eleven transport nodes;ten methods/Profile. Three child asset bytes/default inheritance retained. Native432 seeded montage/next-RNG pairs prove eager Front-then-Back draws on straight branch and one side draw. Sixteen actual Enhanced Input gestures cover8 real equipped Pistol/Rifle/Shotgun shots with native targeting/commit/ammo cost1/Cue-to-Actor/montage/end and positive enemy Health damage,plus8 complete/cancel/interrupt/null-montage lifecycle inputs. Two optional authority CameraActor spawns match ImpactPoint. Native6 failure-message profiles prove foreign-avatar no-op,real montage/throttle/repeat/profile switch and1s reset. Native GAS Cvar1 clears timers on ordinary ends,cancel emits Interrupted,and null montage emits Cancelled before later timer registration;both Profiles match. Real firing exposed expired other-slot component wrappers;only invalid entries now marshal null for array writeback,current24-case native Niagara regression passes. Player Health/inventory/ammo/aim and observer Profiles restored,test owned Actors destroyed. No raw Health/ammo/timer write,callback replay,new Python task/listener rooting,Engine/general Cpp/official edits,build/cook/package,push/tag/release. Failed rounds retained. Dead/no-health/NoFiring branch controls are models;physical input,audio/pixels,quantitative spread/per-pellet equivalence,predicted network and full version remain open.",
-      "status": "bounded_native_shared_and_inherited_fire_policy_input_damage_rng_callbacks_verified_network_version_open",
-      "native_firing_policy_ledger": "92-weapon-ability-native-input-damage-lifecycle.json"
+      "status": "bounded_native_standalone_and_real_two_owner_predicted_firing_rpc_damage_ammo_cue_replication_verified_version_open",
+      "native_firing_policy_ledger": "92-weapon-ability-native-input-damage-lifecycle.json",
+      "native_predicted_firing_network_ledger": "93-weapon-native-two-owner-prediction-damage.json"
     },
     {
       "path": "/ShooterCore/Weapons/Shotgun/GA_Weapon_Reload_NetShooter.GA_Weapon_Reload_NetShooter",
