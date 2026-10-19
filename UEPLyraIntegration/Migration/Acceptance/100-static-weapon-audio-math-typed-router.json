@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "batch": "100-static-weapon-audio-math-typed-router",
+  "scope": "Bounded static WeaponAudioFunctions GetSideReflectionAngles/Calculate Whiz By calculation migration via typed ordinary Object router. Audit01 confirms original static ABI/full graph/defaults. Assets03NativeReturns preserves all348 original nodes/eight static signatures/flags/full library CDO/local defaults with10 native transport nodes/no new business nodes;only ordinary helper methods are Mixins(two/Profile),static APIs remain static. Stage-only real Blueprint caller uses same public static API. Differential01 passes actual native exit0/independent gate0/strict log/shutdown gates.216 angle/210 whiz inputs exercise1704 direct/static Blueprint caller invocations with exact original/Python/caller outputs and next RNG equality. Inputs cover large doubles,zero/nonunit normals/axes,zero/negative/fractional distances,degenerate segments,side signs and negative/fractional spread. Three original float locals narrow via native Conv_DoubleToFloat despite double outputs;native plus/minus45 rotations and unnormalized axis behavior retained. Original router Profile/static ABI/player Health restored.3340 host checks/4 invalid lanes pass. Preserve Assets01 wrong node-count preflight and Assets02 duplicated synchronized return-pin compile failures. Remaining six library methods/tap-preset/audio scheduling,revised-library Cue integration,audible playback/full network/hardware/package/version and full later scope remain open;not whole-library acceptance. No physics/audio state writes,Engine/general Cpp/official edits,build/cook/package,push/tag/release.",
+  "recorded_utc": "2026-10-19T13:07:44.532832Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "33f1176120875bc0d8fafb52489aa86296e6d54a",
+  "examples_parent_commit": "ad630ded9dc1bfcba69ca00f831b62b6f29ba0e9",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-math/Audit01",
+      "summary_sha256": "FCC240CA79C6654CB7D9CADE90A8B837BA1C074F13FB2C4EC357C93C6C65008F",
+      "status": "passed",
+      "uep_dll_sha256": [],
+      "frozen_input_records": 1,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "0F09F55C71A51FAE4AD1A14DC05DE23E7250C41102BE0A2F75DB22A47F2EF00C",
+          "file": "audit.json"
+        },
+        {
+          "sha256": "516D2EA02413CE3D695E1ACAE28FF9E7C9A6CB53BA42F267D34F55AA0C61A123",
+          "file": "audit.log"
+        },
+        {
+          "sha256": "79CBB3FF4EBC5C50357DADE2BDC5E405C33A56FC46E9C7ADB48C59EE88D0A19B",
+          "file": "audio-library-cdo.t3d"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-math/Assets03NativeReturns",
+      "summary_sha256": "AFABD632E7CBE5EB20275BEFD8E753FD8E3CD97575AAEBE0D21E6FC9CEF2A003",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1831,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "A0BD0A279254FE2E91EBA367E30F7A04FF71C63B84BA22E7415B4B21BE5EC55D",
+          "file": "assets.json"
+        },
+        {
+          "sha256": "163C7443FDF2D5928313218422BA0368EEF05D6D1DF55B3D89562038C2F05E0E",
+          "file": "assets.log"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-math/Differential01",
+      "summary_sha256": "9BF358125DC72A2C8D9070D9B1365C3DDB67A831E2DCF5ABF074B61E98563633",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2150,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "76099D59AF55D74DBF60A96CE2E1642E1E00EC67C9CCDF2875F89EC8DA12C7A3",
+          "file": "jump.json"
+        },
+        {
+          "sha256": "E98930931AE7BD25D0635FEC6CECDC611FE6B75310B3F28AAB52A1902B586508",
+          "file": "jump.log"
+        },
+        {
+          "sha256": "774B411BC221A93FD97284B99684C44473873B33D6D46398FDF512BF2ADB125A",
+          "file": "native-evidence-audit.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "54AD913FB317305AAD1B6E1B0F30B03C5A6605118B4E747E32ED56E9E9B37F74",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_math_mixin.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_math_mixin.py"
+    },
+    {
+      "sha256": "9AC6D1291C77B6AEDED773C129DCAA9CE7DEE670B0595F7C17920F80036EC1B6",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_math_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_math_validation.py"
+    },
+    {
+      "sha256": "03EA53A8B89FE860F46EBBF7313257AF1A790536EED841798A2F1E9688E0B9B0",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_math_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_math_contract.py"
+    },
+    {
+      "sha256": "3692175923CF994110EBA0447CBBCDDE0ADC94F4A875AEE7B410943740F4EA0B",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_weapon_audio_math_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_weapon_audio_math_assets.py"
+    },
+    {
+      "sha256": "E73D72388F3A6C8E6179C3FE758F71B1800833DFD715798ECB8D66CDA96B15CD",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py"
+    },
+    {
+      "sha256": "F8F49096489CF149AB6D748E791FA4E68940CB8126EBF49F59D8FBA600369EF8",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_weapon_audio_math.py",
+      "path": "Demos/UEPLyraIntegration/Tools/audit_weapon_audio_math.py"
+    },
+    {
+      "sha256": "8F963B75999C40DC5ABB9777CA34ACE617A2FB6E19CF9947E6EF5DCEC9B7B205",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "sha256": "EDD54C92A84CA07E57C9AF14BB74D82BC8D7487CC84048D594985DC3F5058901",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1"
+    },
+    {
+      "sha256": "ABD6F19F51B6571E4A00A83C561806B9C24D9E72C71D60E5AAEBEAB7AD7DDEFC",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "path": "Validation/Run-UEP58JumpValidation.ps1"
+    }
+  ],
+  "host_report": {
+    "sha256": "2CCFD49119FCF14B99D29B6495E91632A7C82A7A289E6C7862B7F2E1639AED44",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 3340,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-math/Host01.json"
+  },
+  "launcher_guards": {
+    "sha256": "7853300EDE1A83442972819366E6D4C5F7389E079DF0EAEAA36557784950AB96",
+    "invalid_lanes_rejected_before_side_effects": 4,
+    "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-math/launcher-guard-checks.json"
+  }
+}

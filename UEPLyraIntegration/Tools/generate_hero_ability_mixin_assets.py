@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "weaponaudiomath":
+        from generate_weapon_audio_math_assets import generate as generate_weapon_audio_math
+        return generate_weapon_audio_math(stage)
     if kind == "weaponfirecues":
         from generate_weapon_fire_cue_assets import generate as generate_weapon_fire_cues
         return generate_weapon_fire_cues(stage)

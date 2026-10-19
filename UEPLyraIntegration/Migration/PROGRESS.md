@@ -13,6 +13,32 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Completed bounded batch100 (2026-10-19):** static WeaponAudioFunctions
+GetSideReflectionAngles/Calculate Whiz By calculations now use Python through a
+typed ordinary Object helper.99 parent commits:Examples `ad630de` / core
+`33f1176`. Audit01 confirms static ABI/full graph/defaults;Assets03NativeReturns
+preserves all348 original nodes,eight static signatures/flags,full library CDO
+and local defaults,with10 native transport nodes/no new business nodes. Static
+functions are not registered as Mixins:two helper methods/Profile choose the
+retained original body or return typed Python outputs through the public static
+function. A stage-only real Blueprint caller exercises the same static API.
+Differential01 passes actual native exit0/independent gate0/strict error and
+shutdown-order gates.216 reflection-angle and210 whiz-by input cases cover
+large double coordinates,zero/nonunit vectors/axes,zero/negative/fractional
+distances,degenerate segments,side signs and negative/fractional spread. All
+1,704 direct/static Blueprint caller invocations have exact original/Python
+outputs and next-native-RNG equality. Whiz-by's three float locals narrow via
+native Conv_DoubleToFloat even though outputs are double;side rotations preserve
+native plus/minus45deg and unnormalized axis behavior. Original Profile/static
+signatures/player Health restored. Host01 passes3,340;four invalid driver lanes
+reject before side effects. Keep Assets01 incorrect node-count assertion and
+Assets02 duplicated native return-pin compile failures. Native node creation
+already synchronizes existing result pins;reuse them. No Engine/Cpp/official
+edits,build/cook/package,push/tag/release. Remaining six audio-library functions,
+tap-preset/audio scheduling,Cue integration after this library revision,audible
+playback and all remaining0.12/later lifecycle/network/hardware/package/version
+gates remain OPEN;this is not whole-library or whole-version acceptance.
+
 **Completed bounded batch99 (2026-10-19):** actual two-owner predicted/remote
 Pistol/Rifle/Shotgun firing Cue integration with current98 assets/policy passes.
 98 parent commits:Examples `22a8259` / core `9841ea7`. Final PistolNetwork02
