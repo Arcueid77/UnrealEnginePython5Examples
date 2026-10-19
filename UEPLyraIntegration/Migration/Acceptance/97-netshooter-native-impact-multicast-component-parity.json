@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "batch": "97-netshooter-native-impact-multicast-component-parity",
+  "scope": "Bounded natural predicted NetShooter impact/reliable multicast/component-state original-Python parity and native12s latent destruction. ImpactNetwork04BoundedLifeSamples passes3 actual native exits0/independent gate0/3 exact original-template baseline audits0;raw logs retained,all other errors rejected. Four actual Enhanced Input shots cover both owners/executed Profiles,native authority impact once,matching positive prediction keys/target-data/cost1/empty child callback/Cue.16 native local ObjectExporterT3D prediction snapshots independently hash/value checked. Authority native box colliders and RNG seed8191 set at the actual Hit-body observation are explicit fixtures;no gameplay projectile fixture spawn,callback replay or projectile physics/timer writes. Each case emits5 native multicast bodies in each world;geometry/template/hide/actual Instigator source and next RNG match.20 actual authority component wire IDs map to40 client replica observations. Both Profiles preserve original defect:each client has5 correct local multicast components plus5 extra wire-matched replicated components with no mesh/material and BlockAllDynamic collision. This accepts source parity,not full component replication correctness. Four original12s native Delays destroy authority actors naturally(observed12.0027..12.0259s),clients observe native replicated destruction;no fixture DestroyActor ends gameplay. Three separate local unreplicated original-profile baseline Actors warm the exact source-template ensure then are destroyed. Runtime CDO selectors,production observers,Health,inventory,pose,movement mode,control and native fixture colliders restore.3297 host checks/5 invalid lanes pass. Keep ImpactNetwork01 invalid NetQuantize struct construction,02 observer source conversion,and03 history-bound failures. Current code uses native MakeHitResult,actual replicated Instigator reads,and bounded10Hz post-impact observation. No production asset/template/Engine/general Cpp edits,build/cook/package,push/tag/release. Known original component replication defect,full stress/network damage/hardware/physical input/audio/pixels/package/version and full later declared migration remain open;next declared0.12 audio/FX/match/AI business.",
+  "recorded_utc": "2026-10-19T12:02:32.9606433Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "7a12c388fdf09ee8d629a5f8d7d04c565d7b9208",
+  "examples_parent_commit": "9a78cd147b14e343ea9af2d8d361bfd68150a740",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-netshooter/ImpactNetwork04BoundedLifeSamples",
+      "summary_sha256": "93F2BF30E552F07753FFB4C28BC36DF6E76D552FE5C02C82E19700DD9A7FEDAF",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2136,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "A": 0,
+        "B0": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "1CD9BC8DD74537E3387B14E147831CC37D7EFCF277D1FB440BA41D019CE65786",
+          "file": "server.json"
+        },
+        {
+          "sha256": "9CF1A0DF03CF4967F3C6B948B67CA83A2100FE95256DA3C2F011F9C547832BD3",
+          "file": "A.json"
+        },
+        {
+          "sha256": "154BF0F0D76D97C0A5B69FFFCB361FF643FCD741D908B44B48A8A716DF5EA757",
+          "file": "B0.json"
+        },
+        {
+          "sha256": "C197284FEBF09D807EA62C1CE959FD9DDDF07DC82094ECDC08609A4D701E2B25",
+          "file": "native-evidence-audit.json"
+        },
+        {
+          "sha256": "980D9EA205A68F46BE5384A2BC792AB648ABCA610B66E700F19C287A69D68EA0",
+          "file": "server.log"
+        },
+        {
+          "sha256": "2FB519EC2487E7F50044915476DBDE6165B97B4753EE21ED2C2020FA978E23A0",
+          "file": "server-baseline-audited.log"
+        },
+        {
+          "sha256": "E3757C5BB3FB5D20A84C688C14EF4F6EC56C5EBE3F2F7C9E85E33EFBCEF6904A",
+          "file": "server-template-baseline.json"
+        },
+        {
+          "sha256": "AD1F7834A8EAC1925A500D15059B04D3329723F6E3C285C36FE75B44EF17EBF2",
+          "file": "server-prediction-native-0.t3d"
+        },
+        {
+          "sha256": "1D709D19E980E72AAF884B2027A747D9287EF3C67A11C098F88DB089C33D6B83",
+          "file": "server-prediction-native-1.t3d"
+        },
+        {
+          "sha256": "B912FD7B59E1A88637698515F93F895CCECDA7511681E5087568BC482D0108F1",
+          "file": "server-prediction-native-2.t3d"
+        },
+        {
+          "sha256": "E1CEC1231C2AE0E0979720C36AAC3FBEAD9173E94816DEDD1D0F921EBE78640D",
+          "file": "server-prediction-native-3.t3d"
+        },
+        {
+          "sha256": "2BF140D9D2289AF5106EF6749100D26D1EE9E0D80096F28FD541D2337A0DCA2F",
+          "file": "server-prediction-native-4.t3d"
+        },
+        {
+          "sha256": "112871C6258E72AAD6238314A9464801459148FF36A60C792AB28291B218C2CF",
+          "file": "server-prediction-native-5.t3d"
+        },
+        {
+          "sha256": "E3B74ABC8A6F3DE31CBEB1A756F6B40AE115354C02C13982D5E0374EEE55237B",
+          "file": "server-prediction-native-6.t3d"
+        },
+        {
+          "sha256": "0B2B1E03C279F01757F93FDD580F4B84885C8CA5753A6DE973586DCF19271CD3",
+          "file": "server-prediction-native-7.t3d"
+        },
+        {
+          "sha256": "297DD117A61A623685E842B35971275204F7FC7B9E634132E6B49610B63A6E98",
+          "file": "A.log"
+        },
+        {
+          "sha256": "CA4252E954DD9F13A7CAC040F2CCC8FF1BC9A3E6F6AC2C53ED9FBC0DBF037830",
+          "file": "A-baseline-audited.log"
+        },
+        {
+          "sha256": "12CF0C89C66DE6C5AA98DC12C5CF242BCF5FF6AF748D75EB7F8B25DFB330C163",
+          "file": "A-template-baseline.json"
+        },
+        {
+          "sha256": "85323545FCB275A14B925F573BBB051CC17C3913B2AD7A73D408F1CBD4AD7837",
+          "file": "A-prediction-native-0.t3d"
+        },
+        {
+          "sha256": "85323545FCB275A14B925F573BBB051CC17C3913B2AD7A73D408F1CBD4AD7837",
+          "file": "A-prediction-native-1.t3d"
+        },
+        {
+          "sha256": "A05F72AF5B331C32E21D19335E2E6ED04F5C71D69231A9AA6C7967BADDBBEAB4",
+          "file": "A-prediction-native-2.t3d"
+        },
+        {
+          "sha256": "A05F72AF5B331C32E21D19335E2E6ED04F5C71D69231A9AA6C7967BADDBBEAB4",
+          "file": "A-prediction-native-3.t3d"
+        },
+        {
+          "sha256": "6AE0D67EDA80BD97BE2680DC69E2856F7E2A3B607307CBAEA7020E998AED3FE6",
+          "file": "B0.log"
+        },
+        {
+          "sha256": "226F45F817FC693769CDF0EB2BA450F2855CE0E5A24FBD5BB6482F2CD2B58021",
+          "file": "B0-baseline-audited.log"
+        },
+        {
+          "sha256": "E59CF650E1518C3C2282CE05544A074F0C79EB5CAC375AD1A24FF70C18F8B9CD",
+          "file": "B0-template-baseline.json"
+        },
+        {
+          "sha256": "1A942BC6DE3EC3F80B11E56D395687201DB0B271DE3BB21D1DAD8EEBDB9E82BA",
+          "file": "B0-prediction-native-0.t3d"
+        },
+        {
+          "sha256": "1A942BC6DE3EC3F80B11E56D395687201DB0B271DE3BB21D1DAD8EEBDB9E82BA",
+          "file": "B0-prediction-native-1.t3d"
+        },
+        {
+          "sha256": "49ED6124C47561A3F7580AB7EAC266DA40095737ADE7F85E233F83AD88703EDD",
+          "file": "B0-prediction-native-2.t3d"
+        },
+        {
+          "sha256": "49ED6124C47561A3F7580AB7EAC266DA40095737ADE7F85E233F83AD88703EDD",
+          "file": "B0-prediction-native-3.t3d"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "88D07392B483AFB97140095A3B8037CF926EE92205E7BB05499A8C43CFF125B3",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/netshooter_impact_network_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/netshooter_impact_network_validation.py"
+    },
+    {
+      "sha256": "4EB0C753F1DEBA3718C4B3F22DA950DA7ED5FAD89D3864140BC0AF3C26EBC3DE",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/netshooter_impact_network_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/netshooter_impact_network_contract.py"
+    },
+    {
+      "sha256": "B2F2AD37D7FF9252D653D04EB1E5925578AA073305A647246063CB7A67F43601",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/netshooter_actor_log_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/netshooter_actor_log_contract.py"
+    },
+    {
+      "sha256": "670DCA0C4CE4D6568F36A9696E716792C3A4DBE1FAF882B9FA9C4CD4C269BFC3",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/netshooter_network_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/netshooter_network_validation.py"
+    },
+    {
+      "sha256": "BED9A8DFDAA70B3A25745F687A9A9D1D43CA9E25E7D27E1A15B037B7E0939D6F",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "sha256": "6E872F76CEAC7B53C44E811F0DBAE25D22B7A3B3955D28BF0EE243EFE71E7823",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58JumpValidation.ps1"
+    }
+  ],
+  "host_report": {
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 3297,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    },
+    "sha256": "FF4F96DEC72EAC14781D84DBA638C6997EED219E87DDD4F887DAC2ABE1349546",
+    "path": ".build/LyraValidation/BlueprintPython/20261019-netshooter/ImpactHost02.json"
+  },
+  "original_template_baselines": {
+    "server": {
+      "status": "passed",
+      "original_blueprint_dynamic_replication_template_ensure": 1,
+      "raw_log_sha256": "f39d6cd2be7b1d2191d15450d14f86a681d0c7b78a8b165b6834147eb98bb1e3",
+      "source_baseline_sha256": "bce878402a1da25568087b7d2e4ecf9fef869239e79a93d307af8363ca3fd684",
+      "native_component_network_replication_accepted": false
+    },
+    "A": {
+      "status": "passed",
+      "original_blueprint_dynamic_replication_template_ensure": 1,
+      "raw_log_sha256": "15f1598681713edb01da26da371e446a286a7888c89e15bbcd94dd2fbe82a33b",
+      "source_baseline_sha256": "de76df9c46fc039aaaa6314fd5df19d8285166a5bc005f5bda23a12b9f269823",
+      "native_component_network_replication_accepted": false
+    },
+    "B0": {
+      "status": "passed",
+      "original_blueprint_dynamic_replication_template_ensure": 1,
+      "raw_log_sha256": "f9c5374e599259f273c3f3555c3a655277f2180c2db057a35c84b3bf08d3f581",
+      "source_baseline_sha256": "bcb6c93d123c7d14186ee35f6cd0d060531ba5c218eb6520404ebfb231d75000",
+      "native_component_network_replication_accepted": false
+    }
+  },
+  "launcher_guards": {
+    "sha256": "790D3047218918E98C0FB500F4FDB93BC4198565A2043BD68A9A91F5A99ED315",
+    "invalid_lanes_rejected_before_side_effects": 5,
+    "path": ".build/LyraValidation/BlueprintPython/20261019-netshooter/impact-launcher-guard-checks.json"
+  }
+}

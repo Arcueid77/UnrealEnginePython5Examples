@@ -13,6 +13,39 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Completed bounded batch97 (2026-10-19):** natural NetShooter impact/native
+reliable multicast strands/component state parity and original12s latent
+destruction pass on a dedicated server/two actual clients.96 parent commits:
+Examples `9a78cd1` / core `7a12c38`. ImpactNetwork04BoundedLifeSamples passes
+three actual native exits0/independent gate0/three exact original-template
+baseline audits0;raw logs remain intact and every other error is rejected.
+Four actual owner Enhanced Input shots cover both owners/executed Profiles:
+one native authority impact each,matching native prediction keys/target data/
+cost1/empty child callback/Cue,with no live projectile fixture spawn or callback
+replay. A public native box room supplies authority collision;native RNG seed
+8191 is set at the real Hit-body observation point,not a replay. Each original/
+Python case emits5 native multicast strand bodies in every world;native geometry/
+template/hide/source identity and next RNG match. Twenty authority component
+wire IDs map to40 client replica observations. Both Profiles reproduce the
+original defect exactly:each client has5 proper local multicast components plus
+5 extra wire-matched replicated components with no mesh/material and default
+BlockAllDynamic collision. This is source parity,not complete replication
+correctness. Original12s Delay destroys all four authority projectiles naturally
+(observed12.0027..12.0259s);both clients observe native replicated destruction.
+Three separate local unreplicated original-profile Actors warm the exact source
+template ensure before gameplay,then are destroyed. Runtime CDO profile
+selectors/production observers/Health/inventory/pose/movement mode/control and
+all fixture colliders restore.16 actual native prediction exports/hash/value
+checks pass. Host02 passes3,297;five invalid driver combinations reject early.
+Keep ImpactNetwork01 native NetQuantize struct-construction failure,02 observer
+source conversion failure,and03 trajectory-history bound failure. Use native
+MakeHitResult factory,actual replicated Instigator reads and bounded10Hz
+post-impact trajectory recording;original gameplay/physics/timers stay native.
+No production asset/template/Engine/Cpp edits,build/cook/package,push/tag/release.
+Next:declared0.12 audio/FX/match/AI business migration while retaining the original component
+replication defect and all remaining lifecycle/network/hardware/package/version
+gates. Full original scope remains open.
+
 **Completed bounded batch96 (2026-10-19):** actual NetShooter predicted two-owner
 input/target-data/native cost/Cue/authority-only spawn and moving projectile
 replicas pass on a dedicated server/two actual clients.95 parent commits:
