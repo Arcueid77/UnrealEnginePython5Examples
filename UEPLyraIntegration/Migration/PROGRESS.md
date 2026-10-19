@@ -13,6 +13,37 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Completed bounded batch107 (2026-10-19):** five base music-manager control/
+receiver/update methods now use Python: SetIsMenu,Receive Player Death,Receive
+Weapon Fire,Fire Stinger and ReceiveTick.106 parent commits:Examples `1a684c9` /
+core `e721eb8`. Evidence folder`20261020-music-manager` is an identifier;native
+logs/ledger timestamps determine actual execution date. Audit03Events confirms
+base ActorComponent/three descendants,99 original base nodes,full CDOs,signatures
+and native listener/delay wiring. Keep Audit01 macro-as-function and Audit02
+CustomEvent EventReference=None failures/source. Assets01 changes only base Mixin
+metadata plus Set:all99 original nodes/graphs,full CDO and six signatures remain;
+all three child CDOs/signatures/asset bytes remain. Five methods/Profile,zero
+transport/business nodes. Native BeginPlay's two exact-match message listeners
+and child parent/Delay continuation behavior stay original and pending108.
+Differential01 passes native exit0/independent gate0/strict logs/shutdown and
+actual NonRealtimeAudioRenderer:134 cases/428 calls,with four callable methods
+also exercised by a real typed Blueprint caller. Tick is not BlueprintCallable;
+direct event pairs and2,308 natural inherited Python Ticks before the probe
+establish event dispatch. Exact state/native AudioComponent parameter equality
+across Profiles/callers covers invalid/stopped/playing sound,local/foreign/
+non-Pawn/null actors,strength/clamp extremes,menu flags and event-delta variants.
+Tick deliberately uses world delta,not its DeltaSeconds input;only native .05
+interpolation feeds Intensity,while movement300..600 updates Alpha_Mvmt separately.
+SetIsMenu only writes the playing sound parameter,not component bIsMenu;negative
+Stinger still resets intensity. Current Elimination descendant receives the base
+Python methods. Original Profile/fields/Health restore and owned audio actor is
+destroyed. RifleIntegration01 reruns actual default input/cost/damage/audio-effect/
+cached-component behavior after this port;it is a whole-chain regression,not a
+new per-receiver callback witness. Host01 passes3,428;five invalid lanes reject
+before side effects. No child/native listener migration claim,Engine/general
+Cpp/official edits,build/cook/package,push/tag/release. All remaining original
+scope and unrun hardware/waveform/pixel/network/package/full-version gates remain.
+
 **Completed bounded batch106 (2026-10-19):** actual offline audio/effect
 initialization after revised-library cold/network routing.105 parent commits:
 Examples `0a55b6b` / core `36131ee`. Read-only Audit01 finds eight authored Taps

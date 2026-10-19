@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPMusicControlsResult=") for argument in arguments):
+        return "uep_lyra_audio.music_manager_validation"
     if any(argument.startswith("-UEPWeaponAudioEffectResult=") for argument in arguments):
         return "uep_lyra_weapons.weapon_audio_effect_validation"
     if any(argument.startswith("-UEPWeaponAudioColdResult=") for argument in arguments):
