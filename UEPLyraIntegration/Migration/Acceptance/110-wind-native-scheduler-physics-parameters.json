@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "batch": "110-wind-native-scheduler-physics-parameters",
+  "scope": "Bounded B_WindSystem Tick/GetTrace business port. Audit01 captures full62 wind nodes and independent8-node GeneralAudioFunctions FireStinger(deferred111). Assets02Interface preserves full CDO/Tick signature/SCS/original graphs apart from14 declared endpoints:18 transport+5 generated interface/0 business nodes,3 methods/Profile. Original native five-stage MultiGate loop/index/state and no-resize Player[0] Array_Set remain. Python handles speed600-2500,float fields,actual simple TraceTypeQuery1 queries and audio params;stage0 uses prior-cycle1-Hits*.2 unclamped then resets before up trace,other stages-Y/+Y/+X/-X,pan uses native SafeDivide(float-selected distance,TraceDistance). Interior sets audio Wind=Speed without actor Wind write or scheduler advance;invalid audio retains original diagnostics. Differential01 passes native exit0/independent gate0/strict log/shutdown:16 paired actor cases/960 event calls,4 trace distances,empty/one-slot arrays and exterior/interior pause sequences. Twice-swapped Profiles preserve same native stage progress and exact actor/native audio parameter states;416 actual Python traces compare against original same-world queries.5 actual engine Python Ticks and owned actor/audio/Health cleanup pass. Host3470/5 invalid lanes pass. Preserve failed Assets01 incorrect interface count/source. Playback/hardware/pixel/network/package/full actor/version and all original remaining scope stay open. No Engine/general Cpp/official edits,build/cook/package,push/tag/release;not whole0.12 acceptance.",
+  "recorded_utc": "2026-10-19T16:49:11.5973171Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "fada53b19c1780dd4df8eb38969137fee1e85e0f",
+  "examples_parent_commit": "babff570252cdb1d3411d0bd61261b17674d9c28",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-wind-audio/Audit01",
+      "summary_sha256": "AF7BD748DFBAF8943350FD0485347D2133958C43B10C21D85EF4205C868A9AE8",
+      "status": "passed",
+      "uep_dll_sha256": [],
+      "frozen_input_records": 1,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "B5616208A8A486B1CF9CB2C765AB4E729E7A05A2013C99A566174448471A26EF",
+          "file": "audit.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-wind-audio/Assets02Interface",
+      "summary_sha256": "6D9EF2530CE9A51EF3FCDCBCE036C00C3C488F06E9736A5A5E6D46214CE6F5CC",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1881,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-wind-audio/Differential01",
+      "summary_sha256": "D6A76A3D0DDDCA072542435E4B8F3D571EC478783873CB6ED38EF4420449D68B",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2227,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "FEF7D4C157E826902C2C71AF7E42B6F90C1CE2291AF2ADAB317A64DE7CFC4F9D",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_audio/wind_system_mixin.py",
+      "sha256": "69A86119D0F122C3044B17DC42C79198AD8EAD24D41A06D1A3E3F00089944D4B",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_audio/wind_system_mixin.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_audio/wind_system_contract.py",
+      "sha256": "270A49833AB62F07E12CA206D7550E7B2D27DD137361B1F629C88AA533485724",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_audio/wind_system_contract.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_audio/wind_system_validation.py",
+      "sha256": "54DF6FE6079CCC43105131D286A5231528AAF1CC9047A5979B148EB4CEF17FCE",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_audio/wind_system_validation.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "AE5A7E6B0EE8F99529B42046E50E925ECE53684E203803FAF9616E40864F0A98",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/audit_wind_audio.py",
+      "sha256": "ACD6FBBBA945E713205C14F9AEF5F80E66CD569FB9FEAF93E29CC55E5CA97141",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_wind_audio.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_wind_assets.py",
+      "sha256": "9AA051339FCBC97683F1A347D8D83EF8C977C79DAA1031BE97017231836A0CD9",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_wind_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "119CCF23FA8BEEAC56ECD2E27EDB8FDA5CB01B8428D09D89836B2B21A97B7DC5",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "9E4575650014F580E416ECC8194B98FC92D4CC8E72D2A9D80AB8E3EEB541F8B8",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "5FFE02B8FFBB0044B9E44EDAE4A86325BC0D0FE189BB2EDB2E7B251D61180B6B",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261020-wind-audio/Host01.json",
+    "sha256": "FCC80A599A17ABB57768F5138EAE772C2BFFC62AE3E665DB16A78D3FCB682DA9",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 3470,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    }
+  },
+  "raw_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-wind-audio/Audit01/audit.json",
+      "sha256": "B5616208A8A486B1CF9CB2C765AB4E729E7A05A2013C99A566174448471A26EF"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-wind-audio/Audit01/audit.log",
+      "sha256": "BB3EB25D92AA83858423ADFDDB5C7F1C45940EC74F5C301FA73F134528C3D440"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-wind-audio/Audit01/wind-cdo.t3d",
+      "sha256": "CEB65B4A2156BDBE346A57FF7BE905B3FAD3CD56D3E15D114153F079D46CD3AC"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-wind-audio/Audit01/general-cdo.t3d",
+      "sha256": "FB5FD1393FA240F6F7425BDEE47F3791FF7EF0AF45C36DDC8B7666C2B690CCC3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-wind-audio/Assets02Interface/assets.json",
+      "sha256": "B8DC35E29B0CB5D5146E20018FE63873B4F7FC3AFE2A90D41BFFB35D2561E61D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-wind-audio/Assets02Interface/assets.log",
+      "sha256": "EC6F6ED7BD891B1C4A4932E2DF24ABD3F4460D2F9330D7811EB9EC679C7A57E0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-wind-audio/Differential01/jump.json",
+      "sha256": "FEF7D4C157E826902C2C71AF7E42B6F90C1CE2291AF2ADAB317A64DE7CFC4F9D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-wind-audio/Differential01/jump.log",
+      "sha256": "CE77964C4C4CA7D6F3F51DF26ED2809235410EA83751CB4282A87C5889613734"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-wind-audio/Differential01/report-gate-stdout.log",
+      "sha256": "B7D6D2D9AD241BD908316DFBBC26B3357DB4008DB791AA5B5B582ABBEF364076"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-wind-audio/Assets01/summary.json",
+      "sha256": "9671840D50B90843D6CF305438F280114B33A7D2111EA657CAA675DA5DCE2CC3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-wind-audio/Assets01/assets.json",
+      "sha256": "55CFCE3FD75FFD501A1EEE7F3498360EABA877B1182E959C9F8987FAB6E10C87"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-wind-audio/Assets01/generator-source.py",
+      "sha256": "17B2EB0A72F9266D5E4FBA7BB67851F9E3EF6F851BCA6550491C322C8BDD8C82"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-wind-audio/Assets02Interface/dash-wind-after-cdo.t3d",
+      "sha256": "12AE4733A24E7E9CAE010D2C20C3AB57DE97F9FA22F6854FDEEEA9E4DC5E1797"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-wind-audio/Assets02Interface/dash-wind-before-cdo.t3d",
+      "sha256": "CEB65B4A2156BDBE346A57FF7BE905B3FAD3CD56D3E15D114153F079D46CD3AC"
+    }
+  ],
+  "authored_asset_outputs": [
+    {
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\Audio\\Blueprints\\B_WindSystem.uasset",
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\Audio\\Blueprints\\B_WindSystem.uasset",
+      "sha256": "1BABFE2F9FCC88D014D875ECB6B4565B8F4012C1F34250AE7B8C8F8114C4BCFE"
+    },
+    {
+      "stage": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UEPMixins\\DA_WindSystemMixin.uasset",
+      "overlay": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_WindSystemMixin.uasset",
+      "sha256": "A3536D7265212270E8E9171A1C16303D2D33450959AE42AE44237166A98D81B5"
+    }
+  ],
+  "launcher_guards": {
+    "path": ".build/LyraValidation/BlueprintPython/20261020-wind-audio/launcher-guard-checks.json",
+    "sha256": "604CC0BF8940B8EE381210E3456EE71142963DA4328FE173D7FB71674942D0E3",
+    "invalid_lanes_rejected_before_side_effects": 5
+  }
+}

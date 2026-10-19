@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "windsystem":
+        from generate_wind_assets import generate as generate_wind
+        return generate_wind(stage)
     if kind == "musiccontrols":
         from generate_music_manager_assets import generate as generate_music_controls
         return generate_music_controls(stage)
