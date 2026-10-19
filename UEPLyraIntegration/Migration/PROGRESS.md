@@ -13,6 +13,38 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Completed bounded batch112 (2026-10-20):** B_FootStep motion-effect footprint
+business now uses Python with native Niagara and the original3-second
+RetriggerableDelay.111 parent commits:Examples `8a97399` / core `3f77b6e`.
+Audit01 is read-only:actual93 total original nodes versus inventory69 business
+nodes;Actor parent and12-input AnimMotionEffect interface. Assets01 preserves
+full CDO/interface signature/all original business,latent node identity/UUID and
+disconnected PrintString,adding3 transport/zero business nodes and2 methods per
+Profile. Python retains only surfaces0..3,case-insensitive FName side comparison,
+Bone+'_Socket',the actor's stored skeletal mesh instead of the interface input,
+HitResult.Location/Normal instead of ImpactPoint/ImpactNormal,and native
+cross/normal/axes/quaternion math. Unused offset/animation/contexts/VFX scale/
+audio arguments stay unused. Missing stored mesh/system retains original native
+diagnostics;these error paths are host-tested only,not native-exercised.
+Differential01 passes native exit0/independent gate0/strict logs/shutdown:
+16 cases x2 Profiles x2 direct/actual typed Blueprint caller paths=64 real motion
+entries/32 paired actor and Niagara parameter-store comparisons. Covers surfaces
+0..3/4/63,disabled/missed/cached-disabled events,empty/case-varied bone names,
+different incoming component/unused arguments,zero/parallel/tilted/nonunit
+normals,active reuse and inactive replacement/reset/toggle. Each Profile also
+survives the original deadline after a1-second retrigger,destroys after4.01s,
+retains a valid inactive Niagara cache at the next native3-second completion,
+then destroys after component removal and the following original completion.
+No timer writes or latent-callback replay. Production providers restore;owned
+actors destroy;diagnostic CDO/material roots release;player Health unchanged.
+Host3510 and5 rejected mixed/missing-proof lanes pass. Audit01/Assets01/
+Differential01 and source/log/CDO/asset hashes are indexed in
+`112-footstep-native-niagara-interface-latent.json`. The first guard-harness
+argument-splat error is retained separately;it created no native/output lane.
+Natural animation dispatch,visible pixels,audible output,network,cook/package,
+full actor/version and all remaining migration scope remain open. No Engine/
+general C++/official asset edits,build,push,tag or release publication.
+
 **Completed bounded batch111 (2026-10-20):** GeneralAudioFunctions.FireStinger
 now routes through an ordinary typed Object helper while public static ABI stays
 native.110 parent commits:Examples `4791c65` / core `db4e5cc`. Reuse110 Audit01's

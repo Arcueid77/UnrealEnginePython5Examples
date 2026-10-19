@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPFootstepResult=") for argument in arguments):
+        return "uep_lyra_weapons.footstep_validation"
     if any(argument.startswith("-UEPGeneralAudioResult=") for argument in arguments):
         return "uep_lyra_audio.general_audio_validation"
     if any(argument.startswith("-UEPWindSystemResult=") for argument in arguments):
