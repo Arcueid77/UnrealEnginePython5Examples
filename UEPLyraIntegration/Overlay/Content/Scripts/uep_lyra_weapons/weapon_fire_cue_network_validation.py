@@ -11,6 +11,18 @@ class Witness(base.Witness):
     def init_witness(self,result,peer,run):
         super().init_witness(result,peer,run);self.cue_events=[];self.current_cue=None
         self.report.update(cue_handler_replayed=False,cue_assets_or_policy_changed=False)
+        self.audio_network="-UEPWeaponAudioNetwork" in sys.argv
+        if self.audio_network:self.report.update(manual_audio_registration=False,audio_helpers_preloaded_by_probe=False,audio_profiles_changed_by_probe=False)
+    def read_audio(self):
+        from .weapon_audio_cold_contract import ROUTERS
+        resident={row["target_class"].get_path_name():row for row in ue.get_registered_mixins()};values={}
+        for key,(path,attribute) in ROUTERS.items():
+            row=resident.get(path)
+            if row is None:values[key]=dict(registered=False,counters={});continue
+            cdo=row["target_class"].get_cdo();raw=getattr(cdo,attribute,None)
+            values[key]=dict(registered=True,selected_profile=str(ue.get_mixin_profile(cdo)),
+                counters={name:int(value) for name,value in (raw or {}).items() if isinstance(value,int)})
+        return values
     def install(self):
         super().install();owner=self;self.cue_cls=ue.load_class(policy.CLASSES[self.weapon.title()]);ue.register_declared_mixin(self.cue_cls)
         row,=[r for r in ue.get_registered_mixins() if r["target_class"]==self.cue_cls];originals={name:value["python_class"] for name,value in row["profiles"].items()};self.observers[self.cue_cls]=originals
@@ -21,11 +33,13 @@ class Witness(base.Witness):
                     if watched:
                         surface=int(Parameters.PhysicalMaterial.get_property("SurfaceType")) if base.valid(Parameters.PhysicalMaterial) else 0
                         row=dict(profile=selected,target=base.wire.read(Target),location=base.vector(Parameters.Location),normal=base.vector(Parameters.Normal),surface=surface,payloads=[],rifle_sounds=[]);owner.current_cue=row
+                        if owner.audio_network:row["audio_before"]=owner.read_audio()
                     try:result=handler(cue,Target,Parameters,SpawnResults)
                     except Exception:
                         owner.report["observation_errors"].append(traceback.format_exc());raise
                     finally:
                         if row is not None:
+                            if owner.audio_network:row["audio_after"]=owner.read_audio()
                             orders=policy.evidence(cue)["last_orders"];row["python_order"]=copy.deepcopy(orders[-1]) if selected=="Python" and orders else None
                             owner.cue_events.append(row);owner.current_cue=None
                     return result
@@ -48,8 +62,11 @@ class Witness(base.Witness):
             ue.register_mixin_profile(weapon_cls,profile,type("ObservedNetworkCuePayload"+self.peer+profile,(),methods))
     def arm(self):
         super().arm();self.cue_events=[];self.current_cue=None;self.select_profile(self.cue_cls.get_cdo(),self.command["profile"])
+        if self.audio_network:self.audio_case_before=self.read_audio()
     def snapshot(self):
-        row=super().snapshot();row["native_firing_cues"]=copy.deepcopy(self.cue_events);return row
+        row=super().snapshot();row["native_firing_cues"]=copy.deepcopy(self.cue_events)
+        if self.audio_network:row.update(audio_case_before=copy.deepcopy(self.audio_case_before),audio_case_after=self.read_audio())
+        return row
 
 
 class Client(Witness,base.Client):

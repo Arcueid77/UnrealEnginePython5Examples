@@ -13,6 +13,28 @@ batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
 
+**Completed bounded batch105 (2026-10-19):** revised audio library passes actual
+two-owner predicted/remote firing-Cue network paths.104 parent commits:Examples
+`c4674dc` / core `adc4a0d`. Current103 audio/Cue98/native identity Build05 proofs
+remain unchanged. Pistol01/Rifle01/Shotgun01 each pass server/A/B0 native exit0,
+independent network gate0,strict logs/shutdown:9 native processes,12 actual owner
+input shots,24 predicted/remote Cue entries and96 required default Python audio
+dispatch entries.48 native prediction exports and all existing wire identity,
+prediction key/target data,ammo/cost,positive enemy damage,typed payload/Rifle
+sound and cleanup gates remain required. The old99 Cue observer now optionally
+reads resident audio counters immediately around original-handler forwarding;
+it never loads/registers audio routers or changes their authored Python Profiles.
+Required default routes execute for both Cue Profiles and both owners on both
+clients;dedicated-server audio counters stay unchanged and no cosmetic OnBurst
+executes. Readiness diagnostics still follow original prepare and inspect only
+resident instances;no ASC repair or diagnostic preload. Host01 passes3,406;five
+invalid lanes reject before side effects. Original control/inventory/ammo/Health,
+Profiles/observers and owned fixtures retain existing restore gates. No runtime
+policy/asset/Engine/general Cpp/official edits,build/cook/package,push/tag/release.
+This does not fix or reproduce the earlier99 Rifle first-prepare timeout. Real
+effect initialization/audibility/hardware/pixel/package/full-library/version,
+travel/loss/stress and all original later scope remain open.
+
 **Completed bounded batch104 (2026-10-19):** revised all-eight-method library
 passes natural standalone first/repeat firing-Cue/default-registration paths.
 103 parent commits:Examples `16fbf3b` / core `98af00e`;library remains372 nodes,

@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "batch": "105-three-weapon-network-default-audio-routing",
+  "scope": "Bounded revised all8-method audio library actual three-weapon/two-owner predicted-remote firing-Cue default Python routing. Pistol01/Rifle01/Shotgun01 pass9 native server/A/B0 exits0,3 independent gates0 and strict log/shutdown gates:12 actual owner inputs,24 predicted/remote Cue entries,96 required default audio Python dispatch entries and0 dedicated-server cosmetic audio entries.48 native prediction exports and all prior wire identity,prediction key/target data,ammo/cost,positive enemy damage,typed payload,Rifle sound-target and cleanup gates remain required. Existing99 Cue observer optionally reads resident audio counters immediately before/after original forwarding;no audio class load/registration/Profile switch. Both clients/owners/Cue Profiles use default audio Python while authority counters stay unchanged. Existing resident-only diagnostics run after original prepare;no ASC repair/diagnostic preload. Host3406/5 invalid lanes pass. No runtime policy/asset/binding/Engine/general Cpp/official edits,build/cook/package,push/tag/release;does not reproduce/fix earlier99 Rifle first-prepare timeout. Real effect initialization,audible/hardware/pixel/package/full library/version,broader network/travel/loss/stress and all original later scope remain open.",
+  "recorded_utc": "2026-10-19T15:09:09.163782Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "adc4a0dfee92394780d19888fc042973c607028e",
+  "examples_parent_commit": "c4674dc849b14dd7ecd034893dbb6c4c2d5a15dd",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-network/Pistol01",
+      "summary_sha256": "8F71F9F10B871DB72D71C120BD9AD8949F02A00BE47FFAB578360821F920910B",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2262,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "B0": 0,
+        "A": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "DFF714E86FF3A5A406D588E368D94B6DF29BA43BC004AF6EB348B47281E55F4B",
+          "file": "server.json"
+        },
+        {
+          "sha256": "BC339438888DF768E9F33D2AE9A4FB60F26E5E6201861649614128494EDB2C6F",
+          "file": "A.json"
+        },
+        {
+          "sha256": "42FED53A406CF5F6556E107FF49D7DBC21CA9106FFF43F3C0428F19288D3B8B1",
+          "file": "B0.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-network/Rifle01",
+      "summary_sha256": "DEBB066465BB22D8AF9F910238B0E39D395DF77D0DBEF9DAEE807730BBDBB288",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2262,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "B0": 0,
+        "A": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "E358E4A752DE4D99C55A7D85632F42DE5FFA99F66DFCA900E3600DE82564C392",
+          "file": "server.json"
+        },
+        {
+          "sha256": "B017EF9C1DD14F23BA603E6A169BD2DCC0BCF3588CD93E25E45D543BAE09629E",
+          "file": "A.json"
+        },
+        {
+          "sha256": "8F450EB00ABA705252211A35A6BAD747F83B7500FFBBC6315CE2DB5F929F65D5",
+          "file": "B0.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-network/Shotgun01",
+      "summary_sha256": "E8407398C021959753E70436CCEECA3738E35A66F6F77F1EB1B538BCD9ADC475",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2262,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "A": 0,
+        "B0": 0,
+        "server": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "A2D97C4D9B621558AC568C784E5E58085955895C4E8BBEA5D286804C58D03FE5",
+          "file": "server.json"
+        },
+        {
+          "sha256": "58FE43C1503A7F6F1C70556FD1FFE4EE1285056EDDC259D973A9B98C601ED505",
+          "file": "A.json"
+        },
+        {
+          "sha256": "0C9CACDC6904BA90EB591CC183B40DEAB28CA018EBE9D6ED14A563BD9769D2C5",
+          "file": "B0.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_fire_cue_network_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_fire_cue_network_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "2C2E7A932416E1FD516EFD9EA1C41509444F162EC0316DD3715FE7964F2E0D03"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_network_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_network_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "FF6E91DBD24CB43DB5C22EBC9C18857CF0E2EC98989580B1CE4B46AC8A3F0FB7"
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "04BAE4DCB24781C0E041F9656754D452BE9E56DAB3EE2EF949078A41B4DFA8E3"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-network/Host01.json",
+    "sha256": "70FDAD1D6B175FCAC43017E662B25D37A64694BDA0D8C7584E7EFFCD59C7F28E",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 3406,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    }
+  },
+  "raw_evidence": [
+    {
+      "sha256": "DFF714E86FF3A5A406D588E368D94B6DF29BA43BC004AF6EB348B47281E55F4B",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-network/Pistol01/server.json"
+    },
+    {
+      "sha256": "AD18CD2292A9EC7CA95569A49D90949537AB434AB977395A388C2B259BC1052A",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-network/Pistol01/server.log"
+    },
+    {
+      "sha256": "BC339438888DF768E9F33D2AE9A4FB60F26E5E6201861649614128494EDB2C6F",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-network/Pistol01/A.json"
+    },
+    {
+      "sha256": "BA05030029C32340D9C994685BDC1C4E8D1B45DDB789C4E51C03BC40F2F7C4B7",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-network/Pistol01/A.log"
+    },
+    {
+      "sha256": "42FED53A406CF5F6556E107FF49D7DBC21CA9106FFF43F3C0428F19288D3B8B1",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-network/Pistol01/B0.json"
+    },
+    {
+      "sha256": "37525839E89BFBA93F530236ED69FFA1DA94DAC817FF2DF23AB8A975F7885BFF",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-network/Pistol01/B0.log"
+    },
+    {
+      "sha256": "85F6A125C483A8D36CB6B059F00D2616A147FCEE53C006F2F36789F979E19CFF",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-network/Pistol01/report-gate-stdout.log"
+    },
+    {
+      "sha256": "E358E4A752DE4D99C55A7D85632F42DE5FFA99F66DFCA900E3600DE82564C392",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-network/Rifle01/server.json"
+    },
+    {
+      "sha256": "1988E853351D5D2C27C1D3DFF833BDD591B1E9298901757D360E7196DA0356AC",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-network/Rifle01/server.log"
+    },
+    {
+      "sha256": "B017EF9C1DD14F23BA603E6A169BD2DCC0BCF3588CD93E25E45D543BAE09629E",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-network/Rifle01/A.json"
+    },
+    {
+      "sha256": "C9487E0C9CD6466E6C499A989CE2A97890F61CF66F3AA80E6AB081068102C7D4",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-network/Rifle01/A.log"
+    },
+    {
+      "sha256": "8F450EB00ABA705252211A35A6BAD747F83B7500FFBBC6315CE2DB5F929F65D5",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-network/Rifle01/B0.json"
+    },
+    {
+      "sha256": "FEAC245D185803583B221D88993E6169346F4D9E32228B921461909C0B1EC747",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-network/Rifle01/B0.log"
+    },
+    {
+      "sha256": "827C1DDD08BF8AF6FB55D1A1892ADB6845726C137878645D925C8D4DCCFDCB0D",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-network/Rifle01/report-gate-stdout.log"
+    },
+    {
+      "sha256": "A2D97C4D9B621558AC568C784E5E58085955895C4E8BBEA5D286804C58D03FE5",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-network/Shotgun01/server.json"
+    },
+    {
+      "sha256": "367D97AD6A3B7645F091CE38DB9A39257369336166970AC1DF68E438BDED4BEE",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-network/Shotgun01/server.log"
+    },
+    {
+      "sha256": "58FE43C1503A7F6F1C70556FD1FFE4EE1285056EDDC259D973A9B98C601ED505",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-network/Shotgun01/A.json"
+    },
+    {
+      "sha256": "92AC06FBA5163C8CE2846FF34765C81158E266897233DCE2390CE22018B5BBC6",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-network/Shotgun01/A.log"
+    },
+    {
+      "sha256": "0C9CACDC6904BA90EB591CC183B40DEAB28CA018EBE9D6ED14A563BD9769D2C5",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-network/Shotgun01/B0.json"
+    },
+    {
+      "sha256": "D0E1CBA19FB0FD180EC07AA0799B92864EC85537BC8720FC57CC0C1C289ECE87",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-network/Shotgun01/B0.log"
+    },
+    {
+      "sha256": "5A48CD4DBEC188F472670B98143490794BAB4FBE9B7DEC417F2192AC866898C0",
+      "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-network/Shotgun01/report-gate-stdout.log"
+    }
+  ],
+  "native_prediction_export_records": 48,
+  "launcher_guards": {
+    "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-audio-network/launcher-guard-checks.json",
+    "invalid_lanes_rejected_before_side_effects": 5,
+    "sha256": "E7BFCDB6A37D0E7013AAF4C680A69B1E2DA74A14170EC3F6FC88F73A3816166D"
+  }
+}
