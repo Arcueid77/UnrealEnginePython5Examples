@@ -18,10 +18,10 @@
     "review_date": "2026-10-16",
     "cadence": "modify, verify the isolated index, commit one coherent bounded batch",
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 99,
+    "bounded_evidence_ledgers": 100,
     "shared_binary_profile_families_committed_together": true,
-    "host_checks_passed": 3297,
-    "full_index_python_files_checked": 939,
+    "host_checks_passed": 3317,
+    "full_index_python_files_checked": 946,
     "native_provenance_note": "Per-pilot current means that pilot revision; actual binary hashes in its ledger decide whether a run is historical. A later file freeze is not re-execution.",
     "current_dll_equipment_rifle_run": "20261016-batch-backfill/rifle-Network01",
     "current_dll_equipment_shotgun_run": "20261016-batch-backfill/shotgun-Network02",
@@ -903,6 +903,42 @@
     "preserved_geometry_fixture_failures": ["RifleNetwork02SnapshotMode", "RifleNetwork03ClearLine", "RifleNetwork04LOSBarrier"],
     "preserved_earlier_successful_snapshots": ["PistolNetwork03NativeExport", "PistolNetwork04SnapshotMode", "RifleNetwork01", "ShotgunNetwork02StaticGuid"],
     "next": "Declared0.12 audio/FX/match/AI business migration plus the full later-version scope and broader acceptance gates;known original NetShooter component replication defect remains open."
+  },
+  "weapon_fire_cue_pilot": {
+    "version": "0.12.0",
+    "status": "bounded_native_three_weapon_firing_cue_typed_material_input_orchestration_verified_audio_network_version_open",
+    "evidence_ledger": "98-three-weapon-native-firing-cue-orchestration.json",
+    "native_read_only_audit": "20261019-weapon-fire-cues/Audit02Macro",
+    "native_asset_authoring": "20261019-weapon-fire-cues/Assets02EmptyGraphs",
+    "native_runtime": "20261019-weapon-fire-cues/Differential03NativeExit",
+    "original_graph_nodes_per_weapon": [26, 30, 20],
+    "original_classes_signatures_graphs_empty_eventgraphs_and_full_burst_effects_cdos_preserved": true,
+    "registered_methods_per_profile_per_weapon": 1,
+    "new_business_or_dispatch_nodes": 0,
+    "original_send_weapon_fire_strengths": [0.1, 0.15, 0.2],
+    "original_macro_first_equipment_first_spawned_actor_semantics_preserved": true,
+    "rifle_only_exact_sound_trigger_and_empty_early_reflections_parameters_preserved": true,
+    "native_break_gameplay_cue_parameters_preserves_vector_array_abi": true,
+    "controlled_native_gas_cue_material_cases": 18,
+    "physical_material_surface_cases": [0, 1, 4],
+    "real_native_input_cue_cases": 16,
+    "native_equipped_shots": 8,
+    "native_montage_lifecycle_input_cases": 8,
+    "native_seeded_montage_pairs_regressed": 432,
+    "native_enemy_gas_damage_cost_one_field_actor_failure_message_task_timer_regressions_passed": true,
+    "native_typed_singleton_position_normal_surface_and_rifle_sound_target_payloads_verified": true,
+    "native_static_audio_world_context_abi_preserved": true,
+    "static_audio_library_business_migrated": false,
+    "static_audio_and_shared_macro_asset_bytes_unchanged": true,
+    "cue_observers_original_profiles_and_material_roots_cleaned_up": true,
+    "native_inventory_ammo_health_control_and_test_actors_restored": true,
+    "native_process_and_independent_gate_exit_zero": true,
+    "cue_handler_replayed": false,
+    "audible_playback_accepted": false,
+    "network_acceptance": false,
+    "full_acceptance": false,
+    "preserved_failed_runs": ["Assets01", "Differential01", "Differential02NativeVectors"],
+    "next": "Remaining0.12 static audio-library/FX/match/AI business and full declared later scope plus network/audio/hardware/package/version gates."
   },
   "netshooter_impact_network_pilot": {
     "version": "0.11.0",
@@ -4782,8 +4818,9 @@
       "group": "特效、GameplayCue 与音频调度",
       "method_candidates": 1,
       "business_nodes": 13,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Ledger98 migrates only OnBurst orchestration in the three firing Cues,retaining all original26/30/20 nodes,empty EventGraphs,classes/signatures/full BurstEffects defaults. One method/Profile,no new business/dispatch nodes. Native first-equipment/first-spawned-Actor macro behavior,strengths.1/.15/.2,Rifle-only TriggerFireAudio/exact sound and empty Rifle EarlyReflections params retained. Native BreakGameplayCueParameters bridges NetQuantize fields into FVector arrays. Eighteen native GAS Cue/material cases and16 real input Cue cases prove typed position/normal/surface and Rifle sound/target payloads. Existing actual8 shots/8 lifecycle cases,432 montage RNG pairs,native damage/cost/field/failure/task/timer regressions pass. Native static audio/macro assets and ABI stay original;their own business is pending. Original profiles,observers,owned material roots and inventory/ammo/Health/control restore. Audible playback,network integration,pixels/package/full version remain open.",
+      "status": "bounded_native_three_weapon_cue_input_material_orchestration_verified_audio_network_version_open",
+      "native_firing_cue_ledger": "98-three-weapon-native-firing-cue-orchestration.json"
     },
     {
       "path": "/ShooterCore/Weapons/Rifle/GCN_Weapon_Rifle_Fire.GCN_Weapon_Rifle_Fire",
@@ -4791,8 +4828,9 @@
       "group": "特效、GameplayCue 与音频调度",
       "method_candidates": 1,
       "business_nodes": 14,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Ledger98 migrates only OnBurst orchestration in the three firing Cues,retaining all original26/30/20 nodes,empty EventGraphs,classes/signatures/full BurstEffects defaults. One method/Profile,no new business/dispatch nodes. Native first-equipment/first-spawned-Actor macro behavior,strengths.1/.15/.2,Rifle-only TriggerFireAudio/exact sound and empty Rifle EarlyReflections params retained. Native BreakGameplayCueParameters bridges NetQuantize fields into FVector arrays. Eighteen native GAS Cue/material cases and16 real input Cue cases prove typed position/normal/surface and Rifle sound/target payloads. Existing actual8 shots/8 lifecycle cases,432 montage RNG pairs,native damage/cost/field/failure/task/timer regressions pass. Native static audio/macro assets and ABI stay original;their own business is pending. Original profiles,observers,owned material roots and inventory/ammo/Health/control restore. Audible playback,network integration,pixels/package/full version remain open.",
+      "status": "bounded_native_three_weapon_cue_input_material_orchestration_verified_audio_network_version_open",
+      "native_firing_cue_ledger": "98-three-weapon-native-firing-cue-orchestration.json"
     },
     {
       "path": "/ShooterCore/Weapons/Shotgun/GCN_Weapon_Shotgun_Fire.GCN_Weapon_Shotgun_Fire",
@@ -4800,8 +4838,9 @@
       "group": "特效、GameplayCue 与音频调度",
       "method_candidates": 1,
       "business_nodes": 15,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Ledger98 migrates only OnBurst orchestration in the three firing Cues,retaining all original26/30/20 nodes,empty EventGraphs,classes/signatures/full BurstEffects defaults. One method/Profile,no new business/dispatch nodes. Native first-equipment/first-spawned-Actor macro behavior,strengths.1/.15/.2,Rifle-only TriggerFireAudio/exact sound and empty Rifle EarlyReflections params retained. Native BreakGameplayCueParameters bridges NetQuantize fields into FVector arrays. Eighteen native GAS Cue/material cases and16 real input Cue cases prove typed position/normal/surface and Rifle sound/target payloads. Existing actual8 shots/8 lifecycle cases,432 montage RNG pairs,native damage/cost/field/failure/task/timer regressions pass. Native static audio/macro assets and ABI stay original;their own business is pending. Original profiles,observers,owned material roots and inventory/ammo/Health/control restore. Audible playback,network integration,pixels/package/full version remain open.",
+      "status": "bounded_native_three_weapon_cue_input_material_orchestration_verified_audio_network_version_open",
+      "native_firing_cue_ledger": "98-three-weapon-native-firing-cue-orchestration.json"
     },
     {
       "path": "/ShooterCore/Accolades/B_AccoladeRelay.B_AccoladeRelay",

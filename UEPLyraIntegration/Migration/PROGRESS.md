@@ -1,7 +1,7 @@
 # Runtime BP migration work checkpoint
 
 Current branch in core and Examples: `dev/lyra-blueprint-python`. Version work
-includes **0.10.0 closeout and 0.11.0 hero-ability pilots**, neither a
+includes **0.10.0 closeout,0.11.0 hero-ability and0.12.0 FX/audio pilots**,not a
 completed/published release. Preserve
 the dirty changes. Do not modify official Lyra, read/copy `.nepy`, or
 commit/push/tag incomplete work. Engine implementation changes remain out of
@@ -12,6 +12,36 @@ batch separately, backfilling prior completed batches too. Completed accepted
 batches may now receive local commits; unfinished batches remain unstaged.
 No push, tag or release publication is implied. Shared binary assets that
 contain multiple related Profiles must stay together with their implementations.
+
+**Completed bounded batch98 (2026-10-19):**0.12 Pistol/Rifle/Shotgun firing Cue
+OnBurst orchestration now uses Python.97 parent commits:Examples `9a7e2d8` /
+core `182424e`. Assets02EmptyGraphs preserves original26/30/20 nodes,empty
+EventGraphs,classes/three signatures/full BurstEffects CDOs,with one method per
+Profile and no new business/dispatch nodes. Native read-only Audit02Macro proves
+the actual first-equipment/first-spawned-Actor lookup macro and static audio
+library hidden WorldContext ABI. Strengths .1/.15/.2,Rifle-only TriggerFireAudio
+and Rifle's empty EarlyReflections Parameters remain distinct. Direct Cue fields
+are NetQuantize vectors;use the original native BreakGameplayCueParameters
+function to produce valid FVector arrays for Weapon.Fire. Differential03NativeExit
+passes actual native exit0/independent gate0/strict error and shutdown-order
+gates. Eighteen actual native GAS Cue events cover three weapons/both Profiles/
+PhysicalMaterial surfaces0/1/4;typed singleton positions/normals/surfaces and
+Rifle-only exact sound/target payloads match. Sixteen real Enhanced Input cases
+cover8 equipped shots and8 montage lifecycle inputs,all with one actual Cue and
+Weapon.Fire entry. Existing432 native seeded montage pairs,positive enemy GAS
+damage/native cost1,optional field Actors,six failure messages and native task/
+timer end regressions also pass. Static audio functions and shared macro asset
+bytes stay original;they are called through their native ABI,not migrated here.
+Owned material roots are removed,inventory/ammo/Health/control/observers and
+original Cue profiles restored. Host02 passes3,317;four invalid lanes reject
+before side effects. Keep Assets01 empty-EventGraph preflight failure,
+Differential01 NetQuantize array-conversion failure and02 final-marker ordering
+failure despite functional pass. First read-only audit snapshot remains in the
+workspace. No Engine/Cpp/official edits,build/cook/package,push/tag/release.
+Next:remaining0.12 audio-library/FX/match/AI business and the complete later
+scope. Audible playback,network Cue integration,pixels/physical input/package/
+full version and the original NetShooter component replication defect remain
+OPEN.
 
 **Completed bounded batch97 (2026-10-19):** natural NetShooter impact/native
 reliable multicast strands/component state parity and original12s latent

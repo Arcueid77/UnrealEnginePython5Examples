@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "batch": "98-three-weapon-native-firing-cue-orchestration",
+  "scope": "Bounded0.12 Pistol/Rifle/Shotgun OnBurst orchestration migrated to Python. Native Assets02EmptyGraphs retains original26/30/20 nodes,empty EventGraphs,classes/three original signatures/full BurstEffects CDOs,one method/Profile,no new business/dispatch nodes. Read-only Audit02Macro confirms native first-equipment/first-spawned-Actor macro behavior and static audio hidden WorldContext ABI. Strengths.1/.15/.2,Rifle-only TriggerFireAudio/exact sound and empty Rifle EarlyReflections Parameters retained. Use original native BreakGameplayCueParameters for valid FVector arrays from NetQuantize fields. Differential03NativeExit passes native exit0/independent gate0/strict log/shutdown-order gates.18 actual native GAS Cue/material cases cover3 weapons/both Profiles/surfaces0,1,4;typed singleton position/normal/surface and Rifle sound/target payloads match.16 actual Enhanced Input cases cover8 equipped shots/8 lifecycle inputs with one Cue/Weapon.Fire each,plus inherited432 seeded montage pairs,positive native enemy GAS damage/cost1,optional field Actors,6 failure-message and native task/timer regressions. Static audio-library/shared macro bytes match official originals after run;their own business remains pending. Material roots removed,original Cue profiles/observers/inventory/ammo/Health/control/test Actors restored.3317 host checks/4 invalid lanes pass. Preserve Assets01 empty-EventGraph preflight failure,Differential01 NetQuantize array ABI failure,02 final-marker ordering failure despite functional pass and first read-only audit. No Engine/Cpp/official edits,build/cook/package,push/tag/release. Audible playback,network integration,pixels/physical input/package/full version,original NetShooter component defect and full remaining0.12/later scope remain open.",
+  "recorded_utc": "2026-10-19T12:27:29.3569886Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "182424ec882e1734ff64c8bce886e3cbff91d4ca",
+  "examples_parent_commit": "9a7e2d8893fa0cc015a9b6e4045de389fc0f3067",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-fire-cues/Assets02EmptyGraphs",
+      "summary_sha256": "E99FBDBBCEA28B48454C0CECB4DBE9B4472ED5AC39E25DFDA427F64409130DCC",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1820,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "assets.json",
+          "sha256": "394BE79FC5FD1F18950AEA5467F818752E5E742C90729951069BC6105DD4BBDC"
+        },
+        {
+          "file": "assets.log",
+          "sha256": "6BD1B7D4DFCEE741FE2E492E7D0F36AF06E20EA2A45AC472F4A58CD5C7C55E99"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-fire-cues/Differential03NativeExit",
+      "summary_sha256": "38CFF02643007F0A1E6C588DF0B0C2B8D3F3B44BB95772C8876270277F28E0FF",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2136,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "6D6E734AAA5789B6BB6F13D64FF44BA007C6C727EBDB969FF475DA4DE9EBE271"
+        },
+        {
+          "file": "jump.log",
+          "sha256": "565C6445F4CB1865B7EF45CF6266B85650E9B7FADB4A3ABE3693EEC6E9B829D8"
+        },
+        {
+          "file": "native-evidence-audit.json",
+          "sha256": "D9B916021E97090B3206100A29A5FA944B68EAB10E9E72F099DBB356A315E078"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261019-weapon-fire-cues/Audit02Macro",
+      "summary_sha256": "F10C3DBD6CFF5AFEE1B68A8BFE468CF571DEFAA039316D6B66FA6CE3ECC164E0",
+      "status": "passed",
+      "uep_dll_sha256": [],
+      "frozen_input_records": 1,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "audit.json",
+          "sha256": "D7A2B0E34DBD09F94FBDC1C2FA7161913B847CE9492293BC047B0BE12BD84955"
+        },
+        {
+          "file": "audit.log",
+          "sha256": "5B69447B06076E0EDC2788EB1A20D755A13DE57633226022E9927A65521DE171"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "6192EA829BF8085874B8761C24EF0A0A89FEA1008795FE163A21B5C8C39E3C67",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_fire_cue_mixin.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_fire_cue_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "D0FE4F12CD4E9F520AB7DAD95C86D41794ED33F91AA19CF6658C08A068E2F866",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_fire_cue_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_fire_cue_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "BA3E1141A4BA8FAE00D674E472C93D8DC24EC6DB2B46CD5098B2E66F839EED00",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_fire_cue_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_fire_cue_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "850CFC52508B6F4F7777EF27EE167FDC06C98CE40D82A406FF5619549E84A19D",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_weapon_fire_cue_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_weapon_fire_cue_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "2A393FAEF5B22DDC8266FBED93FBFA49B1915317F21A92EDB335FCB0D33F553E",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "32641C1703FBD0827D319391165552B869FC6423F65EA58E99EA4B280A77B4F8",
+      "path": "Demos/UEPLyraIntegration/Tools/audit_weapon_fire_cues.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_weapon_fire_cues.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path_match_note": "Normalized Windows absolute paths; read-only audit summary uses forward slashes. Native summary unchanged."
+    },
+    {
+      "sha256": "DEAEE9048452A7BB07323BABC7107504E6F361032B00F7847B132C7884095447",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "CBD8594A1F941AFBC7661724CD4D852A58CA2256F97A3729EFF7D298CC2FCC52",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "424878C9B6D6833E948E6BBBE345FD0AB5B00481D87050B24EFB89E013660CC8",
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "sha256": "A5D89180CC05A96E175079C10DF036C36A273F4174929CE92E4D8EBB0926FAAD",
+    "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-fire-cues/Host02.json",
+    "result": {
+      "schema_version": 1,
+      "status": "passed",
+      "tests_run": 3317,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "failed_cases": []
+    }
+  },
+  "launcher_guards": {
+    "sha256": "04CD7528F2170E59EC5AA301E96843DAD7FD34F5D3FFBBE1CB2D8177E91B33BA",
+    "path": ".build/LyraValidation/BlueprintPython/20261019-weapon-fire-cues/launcher-guard-checks.json",
+    "invalid_lanes_rejected_before_side_effects": 4
+  }
+}
