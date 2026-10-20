@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPEditorExperienceResult=") for argument in arguments):
+        return "uep_lyra_hud.editor_experience_validation"
     if any(argument.startswith("-UEPLobbyBackgroundResult=") for argument in arguments):
         return "uep_lyra_hud.lobby_background_validation"
     if any(argument.startswith("-UEPReplayRuntimeResult=") for argument in arguments):

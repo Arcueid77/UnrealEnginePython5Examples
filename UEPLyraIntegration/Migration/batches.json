@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 167,
+    "bounded_evidence_ledgers": 168,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -2270,6 +2270,68 @@
     "packaged_runtime": false,
     "full_acceptance": false,
     "next": "Remaining original0.13/0.14 candidates and prior FText audit/diagnostic/owner/network/culture/pixel/package/version gates stay open. Existing native parent input listener behavior is retained,not reimplemented or certified."
+  },
+  "editor_experiences_pilot": {
+    "version": "0.13.0",
+    "status": "bounded_default_editor_list_portal_python_policy_native_layout_local_overlap_and_offline_travel_verified",
+    "evidence_ledger": "166-default-editor-list-portal-native-layout-overlap-and-offline-travel.json",
+    "owner": [
+      "uep_lyra_hud.editor_experience_list_mixin",
+      "uep_lyra_hud.editor_experience_portal_mixin"
+    ],
+    "original_read_only_audit": "20261021-lobby-default-map/Audit01",
+    "native_asset_authoring": "20261021-lobby-default-map/EditorAssets03SpawnScale",
+    "native_runtime_runs": [
+      "20261021-lobby-default-map/EditorLife02FallbackTickEnum",
+      "20261021-lobby-default-map/EditorLife03Python"
+    ],
+    "original_nodes": {
+      "list": 42,
+      "portal": 38
+    },
+    "transport_nodes": {
+      "list": 12,
+      "portal": 26
+    },
+    "interface_nodes_per_asset": 5,
+    "method_counts": {
+      "portal": {
+        "Python": 5,
+        "BlueprintFallback": 5
+      },
+      "list": {
+        "Python": 2,
+        "BlueprintFallback": 2
+      }
+    },
+    "new_business_nodes": 0,
+    "original_cdos_scs_public_signatures_guids_graph_partitions_preserved": true,
+    "original_native_empty_bundle_primary_async_preserved": true,
+    "original_exposed_definition_before_portal_beginplay_spawn_preserved": true,
+    "original_spawn_collision_and_override_root_scale_payload_preserved": true,
+    "native_hidden_showall_visible_default_prepend_and_extra_duplicate_order_verified": true,
+    "native_accumulating_portal_cache_on_repeat_verified": true,
+    "native_nonidentity_actor_transform_centered_layout_verified": true,
+    "native_widget_current_definition_and_original_point_two_second_delay_tick_disable_verified": true,
+    "native_default_color_branch_preserved": true,
+    "native_nonpawn_and_uncontrolled_inputs_do_not_load": true,
+    "native_real_controlled_pawn_collision_overlap_triggers_load": true,
+    "native_original_spinner_afterpush_then_current_definition_offline_request": true,
+    "native_actual_requested_map_experience_and_player_ready": true,
+    "native_overlap_fixture_disables_other_owned_duplicate_colliders": true,
+    "native_async_callbacks_replayed": false,
+    "physical_player_movement_tested": false,
+    "cross_travel_actor_health_identity_claimed": false,
+    "owned_roots_profiles_fixture_actors_and_loading_class_restored": true,
+    "focused_host_checks": 24,
+    "invalid_lane_guards": 7,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261021-editor-experiences/Index01",
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Continue all original0.14 exploration/topdown candidates and prior owner/FText/culture/network/pixel/package/version requirements. No claim of complete version/migration acceptance."
   },
   "lobby_background_pilot": {
     "version": "0.13.0",
@@ -10662,7 +10724,9 @@
       "method_candidates": 2,
       "business_nodes": 35,
       "scope_review": "欢迎地图入口；核对是否属于这轮游戏运行时业务。",
-      "status": "not_accepted"
+      "status": "bounded_default_editor_list_portal_python_policy_native_layout_local_overlap_and_offline_travel_verified",
+      "evidence_run": "20261021-lobby-default-map/EditorLife03Python",
+      "evidence_ledger": "166-default-editor-list-portal-native-layout-overlap-and-offline-travel.json"
     },
     {
       "path": "/Game/System/DefaultEditorMap/B_TeleportToUserFacingExperience.B_TeleportToUserFacingExperience",
@@ -10671,7 +10735,9 @@
       "method_candidates": 4,
       "business_nodes": 29,
       "scope_review": "欢迎地图进入 Experience 的业务；路径含 Editor 不代表运行时不执行。",
-      "status": "not_accepted"
+      "status": "bounded_default_editor_list_portal_python_policy_native_layout_local_overlap_and_offline_travel_verified",
+      "evidence_run": "20261021-lobby-default-map/EditorLife03Python",
+      "evidence_ledger": "166-default-editor-list-portal-native-layout-overlap-and-offline-travel.json"
     },
     {
       "path": "/Game/UI/Credits/W_Credits.W_Credits",

@@ -23,6 +23,62 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch166 (2026-10-21),default-editor list and portal:**
+Original list42/portal38 nodes,full CDO/SCS component templates/public ABI/GUIDs/
+graph partitions remain.2/5 methods per Profile,12/26 transport plus5 interfaces
+each,zero new business nodes. Python preserves 3D-specific filtering:visible
+defaults insert0/reverse discovery,while ShowAll appends hidden and nondefault
+definitions. Additional entries are appended before catalog filtering,so default
+insertions precede them;duplicates remain. UserFacingExperienceList resets on
+BeginPlay,but ExperiencePortals and existing spawned actors accumulate.
+Native primary async empty bundles and original deferred SpawnActor node remain.
+Experience is exposed before native portal BeginPlay. Collision Undefined,scale1
+and OverrideRootScale are exact. Python computes centered offset
+(index-count/2+0.5)*spacing and native TransformLocation;actor rotation remains.
+Portal's widget data and default color decisions,local Pawn/controller validity
+and offline hosting decisions use Python. Original widget0.2 Delay/disabled tick,
+green Niagara color,spinner class/layer/input suspension,typed CreateHostingRequest
+and fixed Offline0 payload remain native. AfterPush rereads current definition.
+Both Profiles run actual catalog/list/portal creation with False/True ShowAll,
+additional real entries/duplicates,nonidentity transformed layout and expose-before-
+BeginPlay checks. Real widget definition/tick disable/default-color branches and
+repeat-BeginPlay cache accumulation pass. Nonpawn/uncontrolled direct event inputs
+do not load. After verifying the duplicated cache,the fixture disables other
+owned colliders;moving the real controlled Pawn into the selected capsule produces
+the real engine overlap,spinner AfterPush and offline request. Actual requested
+map/experience/player readiness passes. Health is checked before intentional
+world/controller replacement;no cross-travel actor-health identity claim.
+Native exit0/independent gate0/strict logs/ordered shutdown pass in both runs.
+Owned class roots/Profiles/fixture worlds/loading class restore.24 focused checks
+and7 invalid lanes pass;exact staged trees use incremental verification at
+.build/CommitVerification/20261021-editor-experiences/Index01,no full regression.
+EditorAssets01/02 partition failures preserve source/reports:PostPlacedNewNode
+reset original spawn scale OverrideRootScale to MultiplyWithRoot. Accepted
+EditorAssets03SpawnScale restores the exact original setting,and native payload
+records prove full equality. EditorLife01Fallback preserves a fixture enum
+assumption;actual ETickMode.Disabled is0,not1. Production policy/assets did not
+change for that fixture correction. Original construction-script empty entries
+remain. All original0.14 and prior owner/FText/culture/network/pixel/package/version
+requirements stay open. No Engine/general Cpp/official edits,build,cook,push,tag
+or publication;complete migration/version acceptance remains false.
+
+Batch166 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261021-lobby-default-map/Audit01/summary.json` 20aab2ec87ef6e252d02c90ef0e13b4e432131ccecd080acbde69d100ac68f31
+`20261021-lobby-default-map/EditorAssets03SpawnScale/summary.json` 2056889c56e8823f42a8596b692d7ebaadd3ced798cdb4e86cd75f0ea1ba7c80
+`20261021-lobby-default-map/EditorAssets03SpawnScale/assets.json` d1a666fc0ff33bd7474f62a8014495f92ee7f60f95b486ecba31eb07e7f6fe1b
+`20261021-lobby-default-map/EditorAssets03SpawnScale/list-editor-signatures.json` 0f1a438fea81dbc4fb47d916c4876328fbdbc4e61d3723d2e181e82638ee70d5
+`20261021-lobby-default-map/EditorAssets03SpawnScale/list-editor-partitions.json` 3126aa6a6b022b16ba1429e9982698f18b3b92e185659899b207805576fc1366
+`20261021-lobby-default-map/EditorAssets03SpawnScale/list-editor-native-payload.json` c06c2f6922cf60c2f2730f8d8a400c49e4c132392a3feea8f2ebe873db2b901e
+`20261021-lobby-default-map/EditorAssets03SpawnScale/portal-editor-signatures.json` 9382c1e1f946c577c775129012aa1d58053588aad1ba2bf661611c22daab8b68
+`20261021-lobby-default-map/EditorAssets03SpawnScale/portal-editor-partitions.json` 9a58b18e27c99547db54d6507d3888655d405f55b04d42f53339f91858cde6a7
+`20261021-lobby-default-map/EditorAssets03SpawnScale/portal-editor-native-payload.json` 2f6e514f48d1972c6332eced01830da18b6073b9560d0811c8567ba47060d67b
+`20261021-lobby-default-map/EditorLife02FallbackTickEnum/summary.json` 6ecb984091ab18a73f23ecd2c49b5bbb075fcc158c64365a7b4a1476e4561b71
+`20261021-lobby-default-map/EditorLife02FallbackTickEnum/jump.json` 5cd30585e592b96872c1e80314c97257e6a129195f535d84b0b3932e8da916b2
+`20261021-lobby-default-map/EditorLife03Python/summary.json` 33512b7506dd98e49f9f19e93fc6e50e6b8599cfe8c268d28fb9605c03c6916f
+`20261021-lobby-default-map/EditorLife03Python/jump.json` 6805da2f48a193368beffc1daed28c69e74bf8e7196983927856e9260a8f3e07
+`20261021-lobby-default-map/EditorHost03Contract.json` 52919a2aeb0e202e7dc588354c533de6cd5d033245daa41a976d166a74209ab8
+`20261021-lobby-default-map/editor-guard-results.json` f30aa8a65e2fc6589e736ae0d2b90c7cbba582ec71e8756e6ca83aa1b03222c0
+
 **Completed bounded batch165 (2026-10-21),lobby background streaming:**
 Only B_LoadRandomLobbyBackground is accepted here;default-editor list/portal
 remain pending. Original42 nodes,full CDO/SCS component templates/public ABI/

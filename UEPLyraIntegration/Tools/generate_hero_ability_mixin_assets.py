@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "editorexperiences":
+        from generate_editor_experience_assets import generate as generate_editor_experiences
+        return generate_editor_experiences(stage)
     if kind == "lobbybackground":
         from generate_lobby_background_assets import generate as generate_lobby_background
         return generate_lobby_background(stage)
