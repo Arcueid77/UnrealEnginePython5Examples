@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "batch": "143-menu-buttons-native-latent-and-inherited-family",
+  "scope": "Menu/tile Python policy with original130/75 nodes/CDOs/trees/animations/signatures/GUIDs retained;15 methods per Profile/class,62 transport+5 interfaces each,zero new business. Original native PlayAnimationTimeRange/current-time/immediate/Finished adapters reused;16 natural completions across8 menu/tile/modal/arrow Profile trials. Inherited child assets remain original native forwarders.48 layouts/40 raw progress cases/material reset and disable/native selection/hover frames/native FText key+source+tile texture verified. Completion guard fixture changes owned IsDisabled flag only;owned widgets explicitly selectable/toggleable for native selection;production defaults untouched. Native process0/gate0/strict logs/ordered shutdown.23 focused tests/5 invalid lanes;exact staged incremental follows. Preserve01 vector-field and02 default-selectability fixture failures plusHost01 wrong exception expectation. No physical input/audio-energy/pixel/network/culture/package/version/full246 acceptance;prior FText audit remains open. No Cpp/official edits/build/cook/push/tag/publication.",
+  "recorded_utc": "2026-10-20T06:51:02.9541165Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "250536b0b233fafdae1bad129e34e905828e68c0",
+  "examples_parent_commit": "addc3a9f11b7d01780fc068a44cd73063fcc68f6",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-foundation-buttons/Audit01",
+      "summary_sha256": "D93EB6FFBE6C306511A63E4655C08FDFE393625366235F41091BB989CBC8FD21",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 863,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "A78C2994E38E5DB3982C8E57CB401B0D16C60F27B7A0CFC33CEE306A9A93831C",
+          "file": "audit.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-menu-buttons/Assets01",
+      "summary_sha256": "6A5E5BE55F50F5A56E66943C37321710F358F0A5FE76CC98BB8F1355CF1977E2",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2086,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-menu-buttons/Differential03SelectableFixture",
+      "summary_sha256": "B5781C6A969250DA799E6CE0D2A2479FF89BBFFF0153910FFB0A4F636CDEF0D8",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2687,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "3A14D7722B77D82ADE696A8BDB00BDE83F0DD01C99C35A59F4C975F266CE58E2",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_menu_button_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_menu_button_assets.py",
+      "sha256": "8A07656E1C0847114F511C7DF837B593DE2BE6F685E1BB560C2233D1E5FE0763"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "1A3F1D48CD718E75A6F18B78931492BE22AB3B003AA93730BAE65CBD26560615"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "3B007CE5EEF8A77D7754909133E82727BFBFC54E0087CCDAC75A3F9992BC8A4E"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/menu_buttons_mixin.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/menu_buttons_mixin.py",
+      "sha256": "B0E3511ABFA377D436A0217D8DCD0DFC8BAA0CA729CD38E8A3A0F130D18CE87F"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/menu_buttons_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/menu_buttons_validation.py",
+      "sha256": "3FD58F6EADCC852F1748D059297C2609CD7BC73CAF70881622534F0285D9B1DF"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/menu_buttons_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/menu_buttons_contract.py",
+      "sha256": "676EE20786B07C6165B15CB2F63C6C39BEC450457E3B0EA4F661A24907C74392"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "CEDBC2A1732889190430D20B3998FD961C9948945BD367D981EFC1926E81D990"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "3BA21863A5F49C0CA2077A56B665F9B8A0D60ACBFEF17E59AE6077BADDEE7372"
+    }
+  ],
+  "host_report": {
+    "result": {
+      "schema_version": 2,
+      "status": "passed",
+      "tests_run": 23,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "selection": {
+        "mode": "incremental",
+        "status": "ready",
+        "changed_files": [],
+        "selected_test_files": [
+          "Demos/UEPLyraIntegration/Tests/test_menu_buttons_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_menu_buttons_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_menu_buttons_mixin.py"
+        ],
+        "affected_files": [],
+        "selection_reasons": {
+          "Demos/UEPLyraIntegration/Tests/test_menu_buttons_contract.py": [
+            "explicit pattern test_menu_buttons_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_menu_buttons_fixture.py": [
+            "explicit pattern test_menu_buttons_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_menu_buttons_mixin.py": [
+            "explicit pattern test_menu_buttons_*.py"
+          ]
+        },
+        "unmapped_changed_files": [],
+        "unparsed_unaffected_files": [],
+        "dependency_analysis": "local imports including inheritance, literal module names and file references; dynamic dependencies require explicit patterns/native lanes",
+        "full_regression_requested": false
+      },
+      "failed_cases": []
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261020-menu-buttons/Host04SelectableFixture.json",
+    "sha256": "36DEDAC2386E8FFAE0907747B4977F3DB94B7359D5E118036D2D216636D24B68"
+  }
+}

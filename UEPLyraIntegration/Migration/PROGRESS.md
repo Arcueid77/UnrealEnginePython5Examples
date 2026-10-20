@@ -23,6 +23,55 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch143 (2026-10-20),menu/tile button family:**
+W_LyraMenuButton and W_LyraTileButton use Python font/layout/material/animation
+guard/art/progress/click policies. Original130/75 nodes,full CDOs/widget trees/
+animations/signatures/node GUIDs/graph semantics retained.15 methods per Profile
+per class,62 transport plus5 interfaces each;zero new business nodes. Original
+empty menu Construct stays unconnected. Shared Python functions are copied into
+each Profile's own class dictionary because the native registry does not scan
+the Python MRO;no SDK change. Menu label and tile title/description FText setters
+stay in BlueprintVM and preserve original localization namespace/key/source.
+The original native PlayAnimationTimeRange node keeps its current-time input,
+immediate continuation and natural Finished callback. Python guards the click,
+chooses sound and handles the completion reverse guard through typed gates.
+No timer/ticker emulates completion and no finished callback is replayed.
+Assets01 and Differential03SelectableFixture pass native exit0/independent gate0/strict
+logs/ordered shutdown. Two Profiles cover menu/tile plus inherited modal/arrow:
+8 real mounted widget trials,48 menu layout combinations,40 unclamped progress
+values and16 natural click completions. Native enable/disable/selection callbacks,
+actual hover/pressed animation frames,disabled noops,material reset/disable values,
+padding/alignment/visibility/icon flipping and tile texture match. Font/transform
+setter argument identity and order are unit checked.
+The completion guard variant changes only the owned widget IsDisabled flag;
+actual disabling separately verifies native ResetMaterials and scalar callbacks.
+It is not a claim that SetIsEnabled(False) preserves a pending animation player.
+Modal/arrow original assets remain byte-identical and their native parent-only
+forwarders stay intact. Only their parent supplies the Python implementation.
+Owned widget roots/Profile selectors and original live player health restore.
+23 focused host checks and5 invalid lanes pass. Exact staged-index regression
+uses the default incremental selector,with results in the external workspace
+.build/CommitVerification/20261020-menu-buttons/Index01. Keep source snapshots
+for failed Differential01:the fixture read reflected FVector2D.X instead of.x;
+the asset revision already passed and was reused without reauthoring. Failed02
+assumed menu buttons were selectable by default;the owned fixture now enables
+selectable/toggleable before actual native selection. Production defaults stay
+unchanged,with no timeout widening. Host01
+expected AssertionError while the contract deliberately raises RuntimeError;
+fix the test expectation,keeping rejection behavior unchanged.
+Experience tile/bound-action buttons,earlier FText crossing audit,and all other
+original246 candidates/diagnostic/owner/network/culture/pixels/package/version
+gates remain open. Physical hover/click input and UI sound energy are untested.
+No Engine/general Cpp/official edits,build,cook,push,tag or release publication.
+
+Batch143 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261020-menu-buttons/Assets01/summary.json` 6a5e5be55f50f5a56e66943c37321710f358f0a5fe76cc98bb8f1355cf1977e2
+`20261020-menu-buttons/Assets01/assets.json` 54947794b1a84cef2ad9ca20db4dad2316db688cda2cc98986cb54ca955b8556
+`20261020-menu-buttons/Differential03SelectableFixture/summary.json` b5781c6a969250da799e6ce0d2a2479ff89bbfff0153910ffb0a4f636cdef0d8
+`20261020-menu-buttons/Differential03SelectableFixture/jump.json` 3a14d7722b77d82ade696a8bdb00bde83f0dd01c99c35a59f4c975f266ce58e2
+`20261020-menu-buttons/Host04SelectableFixture.json` 36dedac2386e8ffae0907747b4977f3db94b7359d5e118036d2d216636d24b68
+`20261020-menu-buttons/guards.json` 07942702570a23cb32171e14afd76305a515890bd9dd7e554f8697677a4df374
+
 **Completed bounded batch142 (2026-10-20),foundation buttons/tab list:**
 W_LyraButton/W_LyraButtonTab/W_HorizontalTabList policy now uses Python.
 Original65/30/70 nodes,full CDOs/widget trees/animations/signatures/node GUIDs
