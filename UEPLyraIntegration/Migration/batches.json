@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 157,
+    "bounded_evidence_ledgers": 158,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -2270,6 +2270,97 @@
     "packaged_runtime": false,
     "full_acceptance": false,
     "next": "Remaining original0.13/0.14 candidates and prior FText audit/diagnostic/owner/network/culture/pixel/package/version gates stay open. Existing native parent input listener behavior is retained,not reimplemented or certified."
+  },
+  "experience_catalog_pilot": {
+    "version": "0.13.0",
+    "status": "bounded_experience_list_entry_python_policy_native_catalog_filter_cache_text_focus_and_caller_delegates_verified",
+    "evidence_ledger": "156-experience-list-entry-native-catalog-cache-focus-and-delegates.json",
+    "owners": [
+      "uep_lyra_hud.experience_list_mixin",
+      "uep_lyra_hud.experience_entry_mixin"
+    ],
+    "original_read_only_audit": "20261020-experience-selection/Audit01",
+    "native_asset_authoring": "20261020-experience-selection/Assets02GroupTuple",
+    "native_runtime_runs": [
+      "20261020-experience-selection/Lifecycle07NativeButtonFocus"
+    ],
+    "widgets": {
+      "tile": {
+        "original_graph_nodes": 23,
+        "transport_nodes": 23,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 3,
+          "BlueprintFallback": 3
+        }
+      },
+      "list": {
+        "original_graph_nodes": 68,
+        "transport_nodes": 42,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 6,
+          "BlueprintFallback": 6
+        }
+      }
+    },
+    "new_business_nodes": 0,
+    "original_cdos_trees_public_signatures_guids_and_graph_partitions_preserved": true,
+    "original_native_text_event_reply_delegate_and_async_load_payloads_preserved": true,
+    "original_visible_default_prepend_reversal_and_show_all_filter_preserved": true,
+    "original_no_experience_widget_cache_clear_added": true,
+    "native_actual_remount_cache_size_factor": 2,
+    "native_removed_cached_widget_keeps_original_selection_and_click_binding": true,
+    "original_native_kismet_random_uses_full_cached_widget_count": true,
+    "original_unwired_entry_preconstruct_and_dispatcher_signature_graphs_retained": true,
+    "native_profile_show_all_trials": 4,
+    "native_primary_asset_actions_and_completion_events": 8,
+    "native_click_first_removed_click_random_selection_events": 16,
+    "native_real_selection_parent_assignment_verified": true,
+    "native_text_histories_and_nonnull_art_identity_verified": true,
+    "native_focus_reply_outcomes": {
+      "scroller_focusable": false,
+      "list": true,
+      "scroller": false,
+      "descendant": false,
+      "buttons": [
+        false,
+        false
+      ],
+      "selection_buttons": [
+        false,
+        false,
+        false
+      ]
+    },
+    "fixture_only_collapsed_caller_section_temporarily_visible_and_restored": true,
+    "catalog_observer": "Real OnExperiencesLoaded bound before Construct;readonly ordered primary ID/object snapshot handles synchronous cached completion without replay.",
+    "original_data_asset_flags_and_primary_catalog_unchanged": true,
+    "root_profiles_show_all_visibility_and_health_restored_or_unchanged": true,
+    "focused_host_checks": 19,
+    "invalid_lane_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261020-experience-selection/Index01",
+    "preserved_failed_authoring": [
+      "Assets01"
+    ],
+    "preserved_failed_runtime": [
+      "Lifecycle01",
+      "Lifecycle02SynchronousCatalog",
+      "Lifecycle04FocusAndCatalog",
+      "Lifecycle05VisibleFocusFixture",
+      "Lifecycle06OwnedWidgetTree"
+    ],
+    "preserved_failed_preflight": [
+      "Lifecycle03NativeFocusOutcome"
+    ],
+    "physical_button_input_tested": false,
+    "pixels_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "host_quickplay_or_session_travel_executed": false,
+    "full_acceptance": false,
+    "next": "Migrate original experience selection/host/session browser/replay and remaining0.13/0.14 candidates. UIExperienceMacros and selection-screen business remain separate;keep all prior FText/culture/owner/network/pixel/package/version gates."
   },
   "experience_tile_pilot": {
     "version": "0.13.0",
@@ -10178,7 +10269,8 @@
       "method_candidates": 7,
       "business_nodes": 50,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_experience_list_entry_python_policy_native_async_filter_cache_text_focus_and_caller_delegates_verified",
+      "evidence_run": "20261020-experience-selection/Lifecycle07NativeButtonFocus"
     },
     {
       "path": "/Game/UI/Menu/Experiences/W_ExperienceSelectionScreen.W_ExperienceSelectionScreen",
@@ -10196,7 +10288,8 @@
       "method_candidates": 5,
       "business_nodes": 17,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_experience_list_entry_python_policy_native_async_filter_cache_text_focus_and_caller_delegates_verified",
+      "evidence_run": "20261020-experience-selection/Lifecycle07NativeButtonFocus"
     },
     {
       "path": "/Game/UI/Menu/Experiences/W_HostSessionScreen.W_HostSessionScreen",

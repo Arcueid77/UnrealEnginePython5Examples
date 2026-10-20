@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "experiencelist":
+        from generate_experience_list_assets import generate as generate_experience_list
+        return generate_experience_list(stage)
     if kind == "startuplogin":
         from generate_startup_login_assets import generate as generate_startup_login
         return generate_startup_login(stage)

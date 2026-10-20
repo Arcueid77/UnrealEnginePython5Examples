@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "batch": "156-experience-list-entry",
+  "scope": "Bounded experience list/entry native async catalog ordering and filter, localized text/art, accumulated stale widget cache, actual click/first/random delegates to unchanged selection-screen caller and opaque native focus replies in both Profiles and ShowAll modes. Only owned caller visibility is expanded for focus then restored. Physical input, host/quickplay/session travel, pixels, network and full version remain open. Default incremental staged host regression only.",
+  "recorded_utc": "2026-10-20T13:29:02.5589958Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "5974774c65c3b307ac1eedfea0086d265cde8e9d",
+  "examples_parent_commit": "839ce750a7d2e4588d2a4f5669ba5cf2114d87fe",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-experience-selection/Audit01",
+      "summary_sha256": "8D99A60CD49E4AE701A7D3E8AA1D40429CF501BEF4FC02D02A0A28A9F63F23ED",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 851,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "B32700CDB21D48DFEB2D55E48F7FBE54E1AFA93D70560CF3ED89A0D05B284E8F",
+          "file": "audit.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-experience-selection/Assets02GroupTuple",
+      "summary_sha256": "9D4DC9CCF606C18D6AEF6407E221DFAD916C77F6B4CD4EA096E7CCD5A81402D4",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2156,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-experience-selection/Lifecycle07NativeButtonFocus",
+      "summary_sha256": "2FC482C43F3D7CE48F06A37C1AEE8281F78A1D8B52C588E1E2408EFBEACECB9E",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2901,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "A9BFAF8706A70A5D4B16CCAE50E50B0ED24FD1992267E6B93E15A393DFA56B24",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/experience_list_mixin.py",
+      "sha256": "24F639E4762C44FE1F08BF3F5B0ED2DB6826A36D771F7CDC474AFB26207E53E3",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/experience_list_mixin.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/experience_entry_mixin.py",
+      "sha256": "CFD7CB6EB2119E551F255AE98A39668FBCB2284CF2971E137A371E90CD613BB1",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/experience_entry_mixin.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/experience_list_validation.py",
+      "sha256": "19230CC64749E8FACC9651DE18D9A91515FD7D46A7FA0C99E8C13F736194643D",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/experience_list_validation.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/experience_list_contract.py",
+      "sha256": "B7E816F1E81C9F5D9F2BB83B96D48B1375A74BFF2E236E6BC6BDA064F0A41CD2",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/experience_list_contract.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "AA7F3474FC594B363CF26F03783F9C4223C9A74AC89E9F88E71F938E2C907A6C",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_experience_selection.py",
+      "sha256": "43FBADC95F96CCC2423AF255A9B674567EFC49733743EF42905A4CB785043DC8",
+      "path": "Demos/UEPLyraIntegration/Tools/audit_experience_selection.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_experience_list_assets.py",
+      "sha256": "119A839FD5A2A44054C21FEE7C370230C7D8BAB3468A710B00F9A49F8072950A",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_experience_list_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "1C9881BD24B1524289DA3E46E63BB83009D7C06FF67E377AF64A67BDEA75C7D9",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "DB720DFBCF7061F20B3E9FBD67EE778906D4D0A096C194A6988F2A011A1A8A67",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "2FB38A39FE20981DC49151D78797F9C2D62F46076E4806BEB2DE711CC1914006",
+      "path": "Validation/Run-UEP58JumpValidation.ps1"
+    }
+  ],
+  "host_report": {
+    "sha256": "DAF1422F5C53E203B6951F951AFCF1ECCA54B874965F2228844F282CE81A7538",
+    "path": ".build/LyraValidation/BlueprintPython/20261020-experience-selection/Host07NativeButtonFocus.json",
+    "result": {
+      "schema_version": 2,
+      "status": "passed",
+      "tests_run": 19,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "selection": {
+        "mode": "incremental",
+        "status": "ready",
+        "changed_files": [],
+        "selected_test_files": [
+          "Demos/UEPLyraIntegration/Tests/test_experience_list_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_experience_list_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_experience_list_mixin.py"
+        ],
+        "affected_files": [],
+        "selection_reasons": {
+          "Demos/UEPLyraIntegration/Tests/test_experience_list_contract.py": [
+            "explicit pattern test_experience_list_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_experience_list_fixture.py": [
+            "explicit pattern test_experience_list_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_experience_list_mixin.py": [
+            "explicit pattern test_experience_list_*.py"
+          ]
+        },
+        "unmapped_changed_files": [],
+        "unparsed_unaffected_files": [],
+        "dependency_analysis": "local imports including inheritance, literal module names and file references; dynamic dependencies require explicit patterns/native lanes",
+        "full_regression_requested": false
+      },
+      "failed_cases": []
+    }
+  }
+}

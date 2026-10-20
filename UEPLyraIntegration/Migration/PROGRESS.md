@@ -23,6 +23,64 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch156 (2026-10-20),experience list and entries:**
+W_ExperienceList and W_ExperienceTile use Python construct/filter/build/click/
+first/random/focus and definition-assignment policy. Original68/23 nodes,full
+CDOs/trees/public signatures/GUIDs/native partitions remain.6/3 methods per
+Profile,42/23 transport plus5 interfaces each;zero new business nodes. Original
+native async primary-asset payloads,weak dynamic binding,dispatcher calls,opaque
+FEventReply and localized FText/art writers remain native. Unwired entry
+PreConstruct/dead text nodes and empty dispatcher signature graphs stay intact.
+Visible defaults are inserted at0 (reversing default discovery order);nondefaults
+append only with ShowAll. Hidden items stay excluded. Construct clears rows and
+UserFacingExperienceList but intentionally retains ExperienceWidgets. Remount
+therefore doubles the cache. The old removed first entry is retargeted only in
+the owned fixture;native first selection and its retained click binding deliver
+that old entry to the real selection-screen SelectedExperience property. Native
+Kismet RNG selects from the full accumulated cache;no Python RNG or reseed.
+Both Profiles x ShowAll false/true verify actual native async creation/completion,
+source ordering,rows/cache sizes,all native text histories/nonnull art identities,
+entry click/list dispatcher/real parent assignment,removed entry binding and focus.
+The original caller nests the list under CollapsedContent. Only the owned test
+instance is temporarily expanded for focus,then restored. Native list focus
+callback/request and actual outcome are compared across Profiles,including the
+source scroller's focusability;entry reply reaches its original CommonButton and native internal Slate button
+focus (CommonButtonBase::NativeOnFocusReceived forwards to that child).
+Cached loads can finish synchronously inside Activate. The real list completion
+dispatcher is bound before Construct;read-only ordered primary ID/object snapshots
+observe completion without replay or registry/data-asset flag writes.
+Assets02GroupTuple and Lifecycle07NativeButtonFocus pass native exit0,
+independent gate0,strict raw logs and ordered shutdown.4 trials/8 native asset
+actions/completions/16 selection events. Roots/Profiles/ShowAll/temporary visibility
+restore;original gameplay health stays unchanged. Selection screen is the real
+unchanged caller;its business and UIExperienceMacros remain pending.
+19 focused checks and5 invalid lanes pass;exact staged indexes use default
+incremental selection at
+.build/CommitVerification/20261020-experience-selection/Index01;no full regression.
+Preserve Assets01/source (helper tuple arity),Lifecycle01/source (late proxy
+observer missed cached synchronous completion),Lifecycle02SynchronousCatalog/
+source and Lifecycle04FocusAndCatalog/source (focus test did not account for the
+caller's collapsed list). Preserve Lifecycle05VisibleFocusFixture/source too:
+the designer-only CollapsedContent widget is found by its actual native tree,
+not a nonexistent reflected member. Preserve Lifecycle06OwnedWidgetTree/source:
+native CommonButton focus is on its internal Slate button,not necessarily the
+outer UWidget;the fixture now checks that exact native descendant path. Preserve Lifecycle03NativeFocusOutcome failed preflight
+too (wrong fixture baseline path,no native launch). Failed proof is not reused.
+Physical input,pixels,host/quickplay/session travel,network,package/version,prior
+FText/culture/owner and remaining original246-candidate requirements stay open.
+No Engine/general Cpp/official edits,build,cook,push,tag or release publication.
+
+Batch156 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261020-experience-selection/Audit01/summary.json` 8d99a60cd49e4ae701a7d3e8aa1d40429cf501bef4fc02d02a0a28a9f63f23ed
+`20261020-experience-selection/Assets02GroupTuple/summary.json` 9d4dc9ccf606c18d6aef6407e221dfad916c77f6b4cd4ea096e7ccd5a81402d4
+`20261020-experience-selection/Assets02GroupTuple/assets.json` 2ee2e3983bddc6db94e312cc26c29c4f8b3d146eb40dbe19b639e27900110116
+`20261020-experience-selection/Assets02GroupTuple/list-public-signatures.json` 46f74f8911216012dbe209bd25593e5ce2fc1ed04a949b4e4de7c3c618b2d619
+`20261020-experience-selection/Assets02GroupTuple/tile-public-signatures.json` 093a08d1c5f951bd1416b1d3485e5e84ae1f7ea300a60200122c9115fcbc94d1
+`20261020-experience-selection/Lifecycle07NativeButtonFocus/summary.json` 2fc482c43f3d7ce48f06a37c1aee8281f78a1d8b52c588e1e2408efbeacecb9e
+`20261020-experience-selection/Lifecycle07NativeButtonFocus/jump.json` a9bfaf8706a70a5d4b16ccae50e50b0ed24fd1992267e6b93e15a393dfa56b24
+`20261020-experience-selection/Host07NativeButtonFocus.json` daf1422f5c53e203b6951f951afcf1ecca54b874965f2228844f282ce81a7538
+`20261020-experience-selection/guards.json` 928cbcbe4cafe99680a075832b2aaad57db0403c576360b805d59a7c562e5b8e
+
 **Completed bounded batch155 (2026-10-20),confirmed frontend MAP travel:**
 The previously open151 confirmed map travel gate now passes in separate native
 BlueprintFallback and Python processes. Production policy and all14 current
