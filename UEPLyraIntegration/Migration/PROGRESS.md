@@ -23,6 +23,65 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch157 (2026-10-20),experience selection screen:**
+Selection/focus/activation/spinner/host/browse/quickplay and async continuation
+policy uses Python. Original42 nodes,full CDO/tree/animation/public signatures/
+GUIDs/graph partitions remain.10 methods per Profile,49 transport plus5 interfaces;
+zero new business nodes. Native LoginForOnlinePlay and CommonUI push factories,
+classes/layers/input suspension payloads remain. Browse success OR failure still
+pushes browser;quickplay proceeds only on success. Spinner false means Hidden2.
+UIExperienceMacros.PrepareToEnterUserFacingExperience contains actual latent
+class loading. Its native Completed/SetLoadingScreenContentWidget edge precedes
+the Python prepared continuation. The original typed native CreateHostingRequest
+and fixed Online2 setter form the named native online-request payload adapter.
+No new latency clock or synchronous replacement of the loading macro is added.
+Assets05NativeOnlinePayload passes exact original public signatures and every
+original partition/GUID. Shared macro bytes remain unchanged. Other original
+macro consumers (host/browser entry) still need their own migration closure.
+Lifecycle02CachedNativePush passes both Profiles:actual activation/const focus,
+real list selected-definition assignment,Visible0/Hidden2 spinner matrix,online
+request payload comparison,host AfterPush,real NULL online initialization followed
+by browser push,and native browser search completion. Cached pushes are observed
+through the actual root Menu_Stack if their native AfterPush preceded subscription.
+Quick03FallbackMapName and Quick04PythonMapName independently execute actual
+QuickplayButton callbacks,NULL online initialization,native random selection,
+asynchronous loading preparation,Online2 request,empty search,owned session host,
+and real selected-map/experience/player readiness. Each result is checked against
+its own actual request rather than assuming equal random draws. The fixture then
+destroys that owned native session through the engine proxy. No remote peer,
+physical input or real online-provider authentication is claimed.
+All3 runs pass native exit0,independent gate0,strict raw logs and ordered shutdown.
+19 focused checks and6 invalid lanes pass;exact staged indexes use default
+incremental selection at .build/CommitVerification/20261020-experience-screen/Index01.
+Life02 remains authoritative from its exact frozen validator snapshot. Only the
+quick-only arrival map-package/short-level-name comparison changed afterward;
+hash recovery and normalized AST audit prove every other code path identical.
+No unrelated passed lifecycle run is repeated for that quick-only comparison.
+Preserve Assets01..04/source:strict partition checks exposed the explicit enum
+input rewriting unused defaults. Final native online payload keeps original
+constant and both original nodes exactly. Preserve Lifecycle01/source (cached
+push observer and cleanup scope) and Quick01Fallback/source (map path versus
+short level name). Failures are not accepted or overwritten.
+Physical input,pixels,real online auth,remote-peer network,package/version,prior
+FText/culture/owner and remaining original246-candidate requirements remain open.
+No Engine/general Cpp/official edits,build,cook,push,tag or release publication.
+
+Batch157 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261020-experience-screen/Audit01/summary.json` 39193ce3a3df08b4d6e55426cde58f04d54861a637ae5ce6cd09ac2573335231
+`20261020-experience-screen/PeerAudit01/summary.json` ec89eaea25b69753aa7b0124dff4e42288c6ec7e8d85986bfed912f1e4a6baa6
+`20261020-experience-screen/Assets05NativeOnlinePayload/summary.json` 5df566ba469d25e379826b53d5b275931545ea28284d1469edd61c063b0732c7
+`20261020-experience-screen/Assets05NativeOnlinePayload/assets.json` 7b6d9f7f6b82fcd68f3d7c96afd0162742be3f8e6d0684d9604fb7175e865f05
+`20261020-experience-screen/Assets05NativeOnlinePayload/selection-public-signatures.json` 3ad00c71c75febdb9ba6d4f5259588266408b6a117b758349cfceecc6ae18b68
+`20261020-experience-screen/Lifecycle02CachedNativePush/summary.json` eed4aa93f8c80a3de4944ff502239cd96dbcf5b66cf18af1d5fde74681dfb386
+`20261020-experience-screen/Lifecycle02CachedNativePush/jump.json` aab5e828730ca61150310476516d90103e38e2f68df1d01fea868cc1eb222169
+`20261020-experience-screen/Quick03FallbackMapName/summary.json` 1e53ceed5fdade185c6776acbce4c40d33e48fd7ead19b2010f8d514faaf70f6
+`20261020-experience-screen/Quick03FallbackMapName/jump.json` af542dd17bf8e515bd9bf5bf343cb6b87e08de106f8507a1b32d725e4baf7cd7
+`20261020-experience-screen/Quick04PythonMapName/summary.json` e4df5a26f50c483871b62b514020fdba1369445c54ffb44a6ca050297453f6f6
+`20261020-experience-screen/Quick04PythonMapName/jump.json` 3a02fa65ddc1931f851e3353812af05fb38a3613095b0099e16c0cb8436b0e70
+`20261020-experience-screen/Host05MapNameComparison.json` 700483e82217f5a3dec80c344b4ed570d65992b95bc01f6133ede529deae37d7
+`20261020-experience-screen/guards.json` fc4ee9bbd1be8828fa026b9fac995620741a16d0746a9d67bed6e015fb2bfe75
+`20261020-experience-screen/lifecycle-source-incremental-audit.json` b68edfab2a8c6c7034467a5ce00df030ca92bda8ccacab2cadd6a90c5b60937a
+
 **Completed bounded batch156 (2026-10-20),experience list and entries:**
 W_ExperienceList and W_ExperienceTile use Python construct/filter/build/click/
 first/random/focus and definition-assignment policy. Original68/23 nodes,full

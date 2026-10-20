@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 158,
+    "bounded_evidence_ledgers": 159,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -2270,6 +2270,69 @@
     "packaged_runtime": false,
     "full_acceptance": false,
     "next": "Remaining original0.13/0.14 candidates and prior FText audit/diagnostic/owner/network/culture/pixel/package/version gates stay open. Existing native parent input listener behavior is retained,not reimplemented or certified."
+  },
+  "experience_selection_pilot": {
+    "version": "0.13.0",
+    "status": "bounded_experience_selection_python_policy_native_host_browse_and_null_quickplay_travel_verified",
+    "evidence_ledger": "157-experience-selection-native-routes-async-prepare-and-null-quickplay.json",
+    "owner": "uep_lyra_hud.experience_screen_mixin",
+    "original_read_only_audit": "20261020-experience-screen/Audit01",
+    "unchanged_host_browser_dependency_audit": "20261020-experience-screen/PeerAudit01",
+    "native_asset_authoring": "20261020-experience-screen/Assets05NativeOnlinePayload",
+    "native_runtime_runs": [
+      "20261020-experience-screen/Lifecycle02CachedNativePush",
+      "20261020-experience-screen/Quick03FallbackMapName",
+      "20261020-experience-screen/Quick04PythonMapName"
+    ],
+    "original_graph_nodes": 42,
+    "transport_nodes": 49,
+    "interface_nodes": 5,
+    "method_counts": {
+      "Python": 10,
+      "BlueprintFallback": 10
+    },
+    "new_business_nodes": 0,
+    "original_cdo_tree_animations_public_signatures_guids_and_graphs_preserved": true,
+    "original_native_login_push_factories_payloads_and_shared_macro_unchanged": true,
+    "original_async_loading_macro_completed_before_python_request_continuation": true,
+    "original_native_online_request_payload_builder_retains_online_mode_two": true,
+    "original_browse_both_results_push_browser_and_quick_success_only_preserved": true,
+    "native_lifecycle_profiles": 2,
+    "native_activation_focus_selection_spinner_host_and_browse_verified": true,
+    "native_null_online_initialize_empty_search_host_travel_profiles": [
+      "BlueprintFallback",
+      "Python"
+    ],
+    "native_quickplay_request_modes": [
+      2,
+      2
+    ],
+    "native_map_experience_and_player_ready_match_each_actual_random_request": true,
+    "native_fixture_owned_quickplay_sessions_destroyed": true,
+    "loading_class_profiles_input_and_owned_roots_restored": true,
+    "lifecycle_incremental_source_audit": ".build/LyraValidation/BlueprintPython/20261020-experience-screen/lifecycle-source-incremental-audit.json",
+    "lifecycle_not_repeated_for_quick_only_map_name_comparison": true,
+    "focused_host_checks": 19,
+    "invalid_lane_guards": 6,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261020-experience-screen/Index01",
+    "preserved_failed_authoring": [
+      "Assets01",
+      "Assets02PartitionDiagnostic",
+      "Assets03RequestPins",
+      "Assets04ExplicitModeInput"
+    ],
+    "preserved_failed_runtime": [
+      "Lifecycle01",
+      "Quick01Fallback"
+    ],
+    "physical_button_input_tested": false,
+    "online_authentication_tested": false,
+    "pixels_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Migrate remaining original host/session browser/replay/default-map and0.14 candidates. Shared UIExperienceMacros closure still requires its other original host/browser-entry consumers. Keep prior FText/culture/owner/network/pixel/package/version gates."
   },
   "experience_catalog_pilot": {
     "version": "0.13.0",
@@ -10279,7 +10342,8 @@
       "method_candidates": 7,
       "business_nodes": 31,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_experience_selection_python_policy_native_host_browse_and_null_quickplay_travel_verified",
+      "evidence_run": "20261020-experience-screen/Quick04PythonMapName"
     },
     {
       "path": "/Game/UI/Menu/Experiences/W_ExperienceTile.W_ExperienceTile",

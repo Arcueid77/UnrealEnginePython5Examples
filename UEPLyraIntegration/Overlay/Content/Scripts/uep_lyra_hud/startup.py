@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPExperienceScreenResult=") for argument in arguments):
+        return "uep_lyra_hud.experience_screen_validation"
     if any(argument.startswith("-UEPExperienceListResult=") for argument in arguments):
         return "uep_lyra_hud.experience_list_validation"
     if any(argument.startswith("-UEPMenuTravelResult=") for argument in arguments):
