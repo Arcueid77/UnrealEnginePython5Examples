@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 132,
+    "bounded_evidence_ledgers": 133,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1235,6 +1235,64 @@
     "full_library_acceptance": false,
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
+  },
+  "elimination_widgets_pilot": {
+    "version": "0.12.0",
+    "status": "partial_elimination_feed_widgets_python_native_list_material_icon_timer_lifetime_verified_pixels_network_package_pending",
+    "evidence_ledger": "131-elimination-list-entry-native-materials-icons-expiry.json",
+    "owner": "uep_lyra_hud.elimination_widgets_mixin",
+    "read_only_audit": "20261020-elimination-widgets/Audit01",
+    "native_asset_authoring": "20261020-elimination-widgets/Assets01",
+    "native_runtime": "20261020-elimination-widgets/Differential02NativeRefresh",
+    "original_graph_nodes": {
+      "feed": 23,
+      "entry": 85
+    },
+    "methods_per_profile": {
+      "feed": 3,
+      "entry": 4
+    },
+    "new_transport_nodes": {
+      "feed": 12,
+      "entry": 19
+    },
+    "generated_interface_nodes": {
+      "feed": 5,
+      "entry": 5
+    },
+    "new_business_nodes": 0,
+    "original_full_cdos_widget_trees_animations_signatures_graphs_preserved": true,
+    "native_exact_on_initialized_listener_list_entry_delegate_and_six_second_timer_preserved": true,
+    "item_outer_is_feed_and_message_kept_typed": true,
+    "current_item_read_at_native_expiry": true,
+    "native_list_refresh_reassigns_and_resets_original_timer": true,
+    "native_style_cases": 6,
+    "native_material_scalar_values_compared": 66,
+    "native_icon_name_cases": 18,
+    "native_list_scenarios": 4,
+    "source_icon_priority": [
+      "Pistol",
+      "Rifle",
+      "Shotgun",
+      "Grenade",
+      "Melee",
+      "SelfElimination"
+    ],
+    "fixed_team_one_highlight_unchanged": true,
+    "rooted_removed_widget_keeps_original_listener_until_object_lifetime_end": true,
+    "native_remount_no_duplicate_listener_verified": true,
+    "split_screen_todo_and_unconnected_construct_color_call_unchanged": true,
+    "localized_text_roundtripped": false,
+    "fixture_cdo_profile_selection_used_and_restored": true,
+    "owned_roots_profile_families_and_health_restored": true,
+    "feature_only_host_checks": 17,
+    "full_regression_executed_this_batch": false,
+    "preserved_failed_native": "Differential01",
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Native diagnostic/out-of-range edgecases,pool reassignment/travel/network/pixels/culture variants/packaging and full original scope remain open."
   },
   "accolade_widgets_pilot": {
     "version": "0.12.0",
@@ -6393,8 +6451,9 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 4,
       "business_nodes": 18,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch131:Python feed/item presentation policy;original23/85 nodes/full CDO/trees/animations/signatures retained.3/4 methods per Profile,12/19 transport plus5 interface each,0 new business nodes. Native exact OnInitialized listener/list-entry delegate/6s expiry remain;current item read at expiry.6 native style cases/66 scalar values,18 opaque text/icon cases,4 real list lifetime scenarios verify feed outer/typed messages/fixed team1 highlight/icon priority/visibility/animation/removal/rooted offscreen receipt/remount. Native refresh reassigns remaining item and resets source timer;measure from latest assignment. Split-screen TODO/unconnected Construct color call preserved. Runtime CDO selectors restore. Diagnostics/pool/network/pixels/package/full acceptance pending.",
+      "status": "partial_elimination_feed_widgets_python_native_list_material_icon_timer_lifetime_verified_pixels_network_package_pending",
+      "evidence_ledger": "131-elimination-list-entry-native-materials-icons-expiry.json"
     },
     {
       "path": "/ShooterCore/UserInterface/Notifications/EliminationFeed/W_EliminationFeedEntryWidget.W_EliminationFeedEntryWidget",
@@ -6402,8 +6461,9 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 7,
       "business_nodes": 75,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch131:Python feed/item presentation policy;original23/85 nodes/full CDO/trees/animations/signatures retained.3/4 methods per Profile,12/19 transport plus5 interface each,0 new business nodes. Native exact OnInitialized listener/list-entry delegate/6s expiry remain;current item read at expiry.6 native style cases/66 scalar values,18 opaque text/icon cases,4 real list lifetime scenarios verify feed outer/typed messages/fixed team1 highlight/icon priority/visibility/animation/removal/rooted offscreen receipt/remount. Native refresh reassigns remaining item and resets source timer;measure from latest assignment. Split-screen TODO/unconnected Construct color call preserved. Runtime CDO selectors restore. Diagnostics/pool/network/pixels/package/full acceptance pending.",
+      "status": "partial_elimination_feed_widgets_python_native_list_material_icon_timer_lifetime_verified_pixels_network_package_pending",
+      "evidence_ledger": "131-elimination-list-entry-native-materials-icons-expiry.json"
     },
     {
       "path": "/ShooterCore/UserInterface/ScoreBoard/PlayerRow/W_BasePlayerRow.W_BasePlayerRow",

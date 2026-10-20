@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "eliminationwidgets":
+        from generate_elimination_widget_assets import generate as generate_elimination_widgets
+        return generate_elimination_widgets(stage)
     if kind == "accoladewidgets":
         from generate_accolade_widget_assets import generate as generate_accolade_widgets
         return generate_accolade_widgets(stage)

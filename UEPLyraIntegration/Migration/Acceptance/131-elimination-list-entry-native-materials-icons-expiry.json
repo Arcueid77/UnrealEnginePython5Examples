@@ -1,0 +1,345 @@
+{
+  "schema_version": 1,
+  "batch": "131-elimination-list-entry-native-materials-icons-expiry",
+  "scope": "Python feed/item presentation preserves original23/85 nodes/full CDO/trees/animations/signatures/exact startup subscription/list delegate/native6s timer.3/4 methods per Profile,12/19 transport plus5 interface each,0 new business.6 native styles/66 material scalars/18 opaque FText-icon cases and4 real list lifetime scenarios prove outer/typed payload/fixed palette/precedence/current-item expiry/rooted offscreen receipt/remount. Original refresh resets timer;measure latest assignment. Preserve failed Differential01/source and Host01 import evidence.17 focused checks/5 invalid lanes;exact staged incremental follows. CDO selectors/roots/Profiles/Health restore. Item shell/UDS unchanged. Full246 candidates/diagnostics/pool/network/pixels/package/full acceptance open. No CPP/official edits/build/cook/push/tag/release.",
+  "recorded_utc": "2026-10-20T01:17:42.7525500Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "b5b0396de5c9be691bbeb36cfd5bf0bbfff3c7c1",
+  "examples_parent_commit": "646989bbc14b28402cfaac60ad1d347f79d7b5fa",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Audit01",
+      "summary_sha256": "EB94E54788EA2C77A4E267F6210CB643607212F9D56DAD3E7FAB7E5D4276CC23",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 849,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "E4D395C5C96100F93E7F9C07E53A3594BBB9550447135BAD1A3B8659280F760B",
+          "file": "audit.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Assets01",
+      "summary_sha256": "9A671A3E74A22F003DC13EF6F02224882C66C0FA13EBB16E5FBC0C0774E1C81B",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2012,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Differential02NativeRefresh",
+      "summary_sha256": "2C8D2AA6277AFA4CAB5346442D8F10BE6B14F5506620DF2B6100C279101F87A0",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2476,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "60416AB629B1366A1A61D2B43E36536845C94BD3E22493781F4C04FCE36E8E22",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/elimination_widgets_mixin.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/elimination_widgets_mixin.py",
+      "sha256": "EA696377756FD6E135C9BAA2D649948BB793DF426D8ED3BB5C9740F56AB8907B"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/elimination_widgets_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/elimination_widgets_validation.py",
+      "sha256": "DD722EC8A499A358CAF8FEC3C06A636C6CDC5CA44FCA7CEEB7D5AA722B8822B1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/elimination_widgets_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/elimination_widgets_contract.py",
+      "sha256": "7E4E7E57E7D1B9D8F869742B94B18577EA4464EE7EF0DB929B2CC06DF7B11355"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/audit_elimination_widgets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_elimination_widgets.py",
+      "sha256": "63341B3FE660069F85F12840D248F0461443DB25940C44CF86CE6D2BB073085B"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_elimination_widget_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_elimination_widget_assets.py",
+      "sha256": "F0884544E10C331FD47DE5F37352928D61BA7B3D785AAE14A09455665E725C4A"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "21D436D8CF31FEB6D146814213FBB382A52FCDD7B9A8F0509AFEDEDFF74F5197"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "DD83CFD2C5359A7F399175F804DEA81496F3E29D7AD8D9DA492A96B652BBABC1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "9C91A43BBB1593219020DD516CA5E0B3CB1D02C92AC0F35A682717BF0016037C"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "926D7984F2FF1C5949A1E9BAC5FFD0912FF8C3E8393B89370A4A3D9AA2E1720D"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Host03NativeRefresh.json",
+    "result": {
+      "status": "passed",
+      "tests_run": 17,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false
+    },
+    "sha256": "F701C84DB05A795819146AD763A593B3A3B2796A6383D51DBD93BA1F2E67C0FE"
+  },
+  "raw_artifacts": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Assets01/assets-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Assets01/assets-stdout.log",
+      "sha256": "8670fc46fcb607ae4c8df5e065df0f07710381d471eb541be1a8bb05a514be56"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Assets01/assets.json",
+      "sha256": "f43159dcd2174388056e83c4bf54308468a7e64b5d35c599934a7c6faf6643a4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Assets01/assets.log",
+      "sha256": "fbfb4042d4eaa25fbb031876c38decf9080a79e3507e8bd896682152b4f05263"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Assets01/dash-entry-elim-after-cdo.t3d",
+      "sha256": "cf3c2bd46a734e9cf317088e5f21c543bb9ec6a1c5abe4717e5e0ce8f1e6732b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Assets01/dash-entry-elim-before-cdo.t3d",
+      "sha256": "1b4b872cef3ac86e5fddec638b0522a9beaed6e5ec2cdad6c38075f165a5686f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Assets01/dash-feed-elim-after-cdo.t3d",
+      "sha256": "a40464862a53ec6c7cb2f10bbf7743daab494989332dcc9bc64a2873abd73552"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Assets01/dash-feed-elim-before-cdo.t3d",
+      "sha256": "a6eeeba59d08101c7f91c1587a8cc0e57c01afc43625f0ceb65288366fbcfe17"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Assets01/entry-after-0-animation.t3d",
+      "sha256": "54c189b2cf01fb23b4ca770a69300a7b8e3d87d78023c56f05d9165b5a42dd40"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Assets01/entry-after-tree.t3d",
+      "sha256": "b33cfe8f1a140f1512ae12a6bdb834c1345e773b37b7d6fe1ccbd8734b700905"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Assets01/entry-before-0-animation.t3d",
+      "sha256": "54c189b2cf01fb23b4ca770a69300a7b8e3d87d78023c56f05d9165b5a42dd40"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Assets01/entry-before-tree.t3d",
+      "sha256": "b33cfe8f1a140f1512ae12a6bdb834c1345e773b37b7d6fe1ccbd8734b700905"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Assets01/feed-after-tree.t3d",
+      "sha256": "f0abf357a4f3748425f6f01db43fcfb140a4f509147a4331d82d232f98d50695"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Assets01/feed-before-tree.t3d",
+      "sha256": "f0abf357a4f3748425f6f01db43fcfb140a4f509147a4331d82d232f98d50695"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Assets01/summary.json",
+      "sha256": "9a671a3e74a22f003dc13ef6f02224882c66c0fa13ebb16e5fbc0c0774e1c81b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Audit01/audit-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Audit01/audit-stdout.log",
+      "sha256": "313e55432b0c8a3d9ede119b8a5a9a55fca7ccb0234d120935d3a48ae9910999"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Audit01/audit.json",
+      "sha256": "e4d395c5c96100f93e7f9c07e53a3594bbb9550447135bad1a3b8659280f760b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Audit01/audit.log",
+      "sha256": "1aee96e748787f3a54758461e50447cfbf72c907f315a1b551bd95101d53ad85"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Audit01/entry-animation-0.t3d",
+      "sha256": "54c189b2cf01fb23b4ca770a69300a7b8e3d87d78023c56f05d9165b5a42dd40"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Audit01/entry-blueprint.t3d",
+      "sha256": "e1d998f088fe5f29ce88c2c2753dc44e7dba191ad5835e5aad47a14149bad254"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Audit01/entry-cdo.t3d",
+      "sha256": "1b4b872cef3ac86e5fddec638b0522a9beaed6e5ec2cdad6c38075f165a5686f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Audit01/entry-graphs.json",
+      "sha256": "71e8eaf3ac3b5e344774db39403d727b6ae4f7ebf66d45e8682ac2619c7e00aa"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Audit01/entry-widget-tree.t3d",
+      "sha256": "b33cfe8f1a140f1512ae12a6bdb834c1345e773b37b7d6fe1ccbd8734b700905"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Audit01/feed-blueprint.t3d",
+      "sha256": "6287b7b1b8ff5279539d1191914016b81c94f9c0844cf730725c0d8abb32679b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Audit01/feed-cdo.t3d",
+      "sha256": "a6eeeba59d08101c7f91c1587a8cc0e57c01afc43625f0ceb65288366fbcfe17"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Audit01/feed-graphs.json",
+      "sha256": "3f593ef0bc5229b57ef0c574e8c194c2d8ad83ef2b93a1e62ad175c021af5cfc"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Audit01/feed-widget-tree.t3d",
+      "sha256": "59ea6d69de02780c9278d8a58f9071be7f6446d021e9976f9af25ee568f5c192"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Audit01/native-cosmetic-macro.json",
+      "sha256": "7fa0389c7be84072f11660bf8b6365e4f19411c1744b5e7f90bef17eaf9719b8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Audit01/summary.json",
+      "sha256": "eb94e54788ea2c77a4e267f6210cb643607212f9d56dad3e7fab7e5d4276cc23"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Differential01/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Differential01/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Differential01/jump.json",
+      "sha256": "e287a623555b4cc1591b85f9737a608d77e0e2b0c08ac15da9167bb17d3e227a"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Differential01/jump.log",
+      "sha256": "d0a17ed80c53bd84e9e329ab7d4cdd510d1f8ba1ee31195f24ce6f39c73c1b5b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Differential01/Source/Content/Scripts/uep_lyra_hud/elimination_widgets_contract.py",
+      "sha256": "7e4e7e57e7d1b9d8f869742b94b18577ea4464ee7ef0db929b2cc06df7b11355"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Differential01/Source/Content/Scripts/uep_lyra_hud/elimination_widgets_validation.py",
+      "sha256": "c51808d9c0c9052043638c3a644f69217d585e954d09ea9ac6708219fe71165c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Differential01/summary.json",
+      "sha256": "a9079015eb779df84a986f4ad6f7b581af8fd199af6288e8acf490d2d88ff97f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Differential02NativeRefresh/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Differential02NativeRefresh/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Differential02NativeRefresh/jump.json",
+      "sha256": "60416ab629b1366a1a61d2b43e36536845c94bd3e22493781f4c04fce36e8e22"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Differential02NativeRefresh/jump.log",
+      "sha256": "af292f7fd76a614627f7fafd198800164dd4cf19e5c7fef268822d842c9810bc"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Differential02NativeRefresh/report-gate-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Differential02NativeRefresh/report-gate-stdout.log",
+      "sha256": "b917ff923742d0a7c73d46359a83890dd17184bf00ee3c9ac079b948024a0872"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Differential02NativeRefresh/summary.json",
+      "sha256": "2c8d2aa6277afa4cab5346442d8f10be6b14f5506620df2b6100c279101f87a0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Host01.json",
+      "sha256": "d5c7ff4271b7ebeef81aad099eb49497b243f1fc510984c52a89ff12cebf7046"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Host02.json",
+      "sha256": "473fd2f1e29b49f7f90ad86acc18783f137799a483343804e953f2281cf871be"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Host03NativeRefresh.json",
+      "sha256": "f701c84db05a795819146ad763a593b3a3b2796a6383d51dbd93ba1f2e67c0fe"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/lane-guards.json",
+      "sha256": "7d3e75aafaba3d5d87190aa0ed5afad9b254d2533fea6e2c7f25c0dffd87ec49"
+    }
+  ],
+  "preserved_failed_native": "Differential01",
+  "regression_policy": {
+    "mode": "incremental",
+    "feature_only_tests": 17,
+    "full_regression_executed": false,
+    "isolated_index_result": ".build/CommitVerification/20261020-elimination-widgets/Index01/summary.json",
+    "index_result_is_external_to_avoid_changing_verified_tree": true
+  },
+  "scope_limits": {
+    "full_original_candidates": 246,
+    "all_original_asset_paths_preserved": true,
+    "native_timer_and_list_binding_preserved": true,
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "migration_complete": false
+  }
+}

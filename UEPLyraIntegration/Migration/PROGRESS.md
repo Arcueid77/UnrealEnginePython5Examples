@@ -23,6 +23,42 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch131 (2026-10-20),elimination list/entry widgets:**
+feed message handling allocates original ElimFeedEntry with feed Outer,copies the
+native typed Message,adds to original ListView then updates overlay visibility;
+RemoveToast removes then updates. Overlay is Visible iff list count>0,otherwise
+Collapsed. Original OnInitialized startup/exact native KillFeed subscription,
+list-entry cast/native OnToastExpired delegate binding and TODO split-screen
+filter remain. Entry assignment sets source team IDs,colors/opaque names/icon,
+plays original UMG animation then enters original6s native timer node. Expiry
+reads current GetListItemObject and uses a native typed delegate bridge;no cached
+item,Python clock,callback replay or new subscription. Fixed palette highlights
+only team1;0/2 inactive. Native icon precedence is Pistol>Rifle>Shotgun>Grenade>
+Melee>SelfElimination,including source same default for either SelfDestruct test.
+Original unconnected Construct SetTeamColors call remains unreachable.
+Parent commits:Examples `646989b` / core `b5b0396`. Audit01/Assets01 preserve
+original23/85 nodes/full CDOs/trees/animations/signatures and all other graphs.
+3/4 methods per Profile,12/19 transport nodes plus5 interfaces each,zero new
+business nodes. Original item shell/UDS data bytes stay unchanged.
+Differential02NativeRefresh passes native exit0/independent gate0/strict logs/
+ordered shutdown.6 native style cases compare66 actual font/glow/icon material
+scalars;18 native icon/name cases prove tag precedence and direct FText equality.
+4 real native list lifetime scenarios verify item Outer,typed team/name fields,
+initial collapse,populated visibility,animation,natural timer/delegate removal,
+rooted removed-widget message receipt,one listener after remount,and final expiry.
+Preserve Differential01/source:all behaviors ran,but initial timing referenced
+first assignment. Native ListView reinitializes remaining entry when first is
+removed,resetting the source timer;fixture now measures from latest matching
+widget/item assignment. Both Profiles show about6.0s after that assignment,
+without changing production policy. Runtime-only CDO Profile selectors ensure
+cold native pooled entries use the selected reference Profile and are restored.
+Widget roots/profile classes/overrides/Health restore.17 focused checks include
+latest-assignment timing;5 invalid lanes pass;exact staged check is incremental.
+Preserve Host01 import failure (test module lacked package context);Host02/03
+pass. Native out-of-range diagnostics,pool/travel/owner-network/pixels/localized
+history variants/packaging and full246-candidate scope remain open. No SDK/
+Engine/general Cpp/official edits,build,cook,push,tag or release publication.
+
 **Completed bounded batch130 (2026-10-20),accolade host/toast presentation:**
 host Construct/Destroy collapse existing MyToast;Create shows it HitTestInvisible,
 plays valid supplied Sound through original PlaySound2D UI parameters,sets opaque
