@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "diagnosticwidgets":
+        from generate_diagnostic_widget_assets import generate as generate_diagnostic_widgets
+        return generate_diagnostic_widgets(stage)
     if kind == "settingsscreens":
         from generate_settings_screen_assets import generate as generate_settings_screens
         return generate_settings_screens(stage)

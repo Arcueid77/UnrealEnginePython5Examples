@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 150,
+    "bounded_evidence_ledgers": 151,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1235,6 +1235,87 @@
     "full_library_acceptance": false,
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
+  },
+  "diagnostic_widgets_pilot": {
+    "version": "0.13.0",
+    "status": "bounded_performance_build_watermark_python_policy_native_sampling_format_and_available_user_cases_verified",
+    "evidence_ledger": "149-diagnostic-widgets-native-sampling-format-and-user.json",
+    "owner": "uep_lyra_hud.diagnostic_widgets_mixin",
+    "original_read_only_audit": "20261020-diagnostic-widgets/Audit01",
+    "native_asset_authoring": "20261020-diagnostic-widgets/Assets03OutputNames",
+    "native_runtime_runs": [
+      "20261020-diagnostic-widgets/Differential01"
+    ],
+    "widgets": {
+      "graph": {
+        "original_graph_nodes": 22,
+        "transport_nodes": 14,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 2,
+          "BlueprintFallback": 2
+        }
+      },
+      "text": {
+        "original_graph_nodes": 23,
+        "transport_nodes": 14,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 2,
+          "BlueprintFallback": 2
+        }
+      },
+      "build": {
+        "original_graph_nodes": 6,
+        "transport_nodes": 7,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 1,
+          "BlueprintFallback": 1
+        }
+      },
+      "watermark": {
+        "original_graph_nodes": 24,
+        "transport_nodes": 14,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 1,
+          "BlueprintFallback": 1
+        }
+      }
+    },
+    "new_business_nodes": 0,
+    "original_cdos_widget_trees_signatures_node_guids_and_native_format_partitions_preserved": true,
+    "original_grouping_rounding_fractional_digits_and_ftext_properties_preserved": true,
+    "original_build_and_missing_user_localized_literals_preserved": true,
+    "native_graph_update_before_fetch_then_python_numeric_scale": true,
+    "watermark_native_controller_user_validation_game_context_and_int32_add_wrap_preserved": true,
+    "same_frame_native_performance_pair_cases": 8,
+    "native_numeric_format_cases": 24,
+    "native_fractional_digit_variants": 3,
+    "native_watermark_player_cases": 4,
+    "native_valid_user_branch_exercised": true,
+    "native_missing_controller_localized_name_and_empty_id_verified": true,
+    "native_unavailable_user_branch_unit_covered": true,
+    "stat_cache_and_user_subsystem_state_written": false,
+    "login_requested": false,
+    "diagnostic_identity_report_values_hashed_local_native_text_exports_retained": true,
+    "original_roots_profile_selectors_and_player_health_restored_or_unchanged": true,
+    "focused_host_checks": 18,
+    "invalid_lane_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261020-diagnostic-widgets/Index01",
+    "preserved_failed_authoring": [
+      "Assets01",
+      "Assets02NativeExecMerge"
+    ],
+    "graph_pixels_tested": false,
+    "pixels_tested": false,
+    "culture_switch_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Remaining original0.13/0.14 replacements and prior FText audit/diagnostic unavailable-user/owner/network/culture/pixel/package/version gates remain open."
   },
   "settings_screens_pilot": {
     "version": "0.13.0",
@@ -8103,7 +8184,8 @@
       "method_candidates": 1,
       "business_nodes": 5,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_diagnostic_widget_python_policy_native_sampling_format_and_available_user_cases_verified",
+      "evidence_run": "20261020-diagnostic-widgets/Differential01"
     },
     {
       "path": "/Game/UI/Menu/W_LyraArrowButton.W_LyraArrowButton",
@@ -8198,7 +8280,8 @@
       "method_candidates": 1,
       "business_nodes": 22,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_diagnostic_widget_python_policy_native_sampling_format_and_available_user_cases_verified",
+      "evidence_run": "20261020-diagnostic-widgets/Differential01"
     },
     {
       "path": "/Game/UI/PerfStats/W_SingleGraphStat.W_SingleGraphStat",
@@ -8207,7 +8290,8 @@
       "method_candidates": 2,
       "business_nodes": 20,
       "scope_review": "运行时性能统计显示；不是仅凭 Perf 名称就认定是测试工具。",
-      "status": "not_accepted"
+      "status": "bounded_diagnostic_widget_python_policy_native_sampling_format_and_available_user_cases_verified",
+      "evidence_run": "20261020-diagnostic-widgets/Differential01"
     },
     {
       "path": "/Game/UI/PerfStats/W_SingleTextStat.W_SingleTextStat",
@@ -8216,7 +8300,8 @@
       "method_candidates": 2,
       "business_nodes": 21,
       "scope_review": "运行时性能统计显示；保留还是迁移在该批核对。",
-      "status": "not_accepted"
+      "status": "bounded_diagnostic_widget_python_policy_native_sampling_format_and_available_user_cases_verified",
+      "evidence_run": "20261020-diagnostic-widgets/Differential01"
     },
     {
       "path": "/Game/UI/Settings/Editors/W_SettingEntryBackground.W_SettingEntryBackground",

@@ -23,6 +23,50 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch149 (2026-10-20),diagnostic display widgets:**
+Performance graph/text,build configuration and user watermark use Python refresh
+policies. Original22/23/6/24 nodes/full CDOs/widget trees/signatures/node GUIDs/
+native node partition semantics remain.2/2/1/1 methods per Profile,14/14/7/14
+transport plus5 interfaces each;zero new business nodes. Original numeric
+grouping,HalfToEven/fractional-digit options,FText formats,label setters and
+missing-user localized status move intact into native renderers. Python does
+graph-update before fetch/scale,applies text width after native preconstruct,
+retrieves build strings,and follows controller/user validity with Game context.
+Player number+1 keeps source int32 wrap. FText never roundtrips through Python.
+Assets03OutputNames and Differential01 pass native exit0/independent gate0/
+strict logs/ordered shutdown. Same-frame source/Python performance pairs avoid
+false differences from changing live FPS.8 scale/widget cases observe real UMG
+ticks/native cached subsystem;24 deterministic native format cases cover3
+fractional-digit settings and grouping/negative/zero values. Original build
+strings/localization history match.4 player-number watermark cases include
+actual available CommonUser state and absent controllers/int32 boundary;name
+and ID displays match,with native missing-status/name localization retained.
+Native valid-user coverage is reported explicitly by availability in jump.json;
+unavailable-user/controller guards and Game nickname context are unit checked.
+Identity display values in the report are hashed;native text exports stay local.
+No stat-cache/user-subsystem writes or login request. Roots/Profile selectors and
+original live player health restore. No native Tick replay.18 focused host
+checks/5 invalid lanes pass;exact staged-index checks are incremental:
+.build/CommitVerification/20261020-diagnostic-widgets/Index01.
+Preserve Assets01/source+owned partial outputs:an orphan exec knot changed pin
+type during compilation;the original knot now moves into the native name
+renderer with its actual exec path connected. Preserve Assets02NativeExecMerge/
+source+Stage/partial Overlay outputs:localized-literal loop shadowed the output
+asset name. Correct file bookkeeping retains all original numeric/text nodes.
+Graph pixels,other locale/culture,unavailable-user extra native variants,network,
+package/version,prior FText audit and all other original246-candidate work remain
+open. Native performance cache,rendering and CommonUser code remain native.
+No Engine/general Cpp/official edits,build,cook,push,tag or release publication.
+
+Batch149 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261020-diagnostic-widgets/Audit01/summary.json` 5cd728ec6d9e210358702e100f6e53ddd973ec39289fa1866f99b1a8c1a93ed9
+`20261020-diagnostic-widgets/Assets03OutputNames/summary.json` 7910069389594c5b494edae769c840543a48a434963e802d33a9579e25e2815b
+`20261020-diagnostic-widgets/Assets03OutputNames/assets.json` 04d3a8020ebd209b2d89384b79aa4a2ca0f7bc6493b2cdbe840e0eef7c1a32c2
+`20261020-diagnostic-widgets/Differential01/summary.json` 9571d3dcd6d317808a403b63a497befc4e725339090dc7c47cf37a723861cf3f
+`20261020-diagnostic-widgets/Differential01/jump.json` 24c0ab920d88647521c8ef1a389214a71321ccf4e1df680ca11e21b0dab47a72
+`20261020-diagnostic-widgets/Host01.json` 50de2305254318bce2dd8046d00f63d672f363ca7a22ca7a1bf422c099d1a5fc
+`20261020-diagnostic-widgets/guards.json` f353eb023e2178b1ba734e2f6a83946d21bf0ebb027615bd58bffadeb79220fa
+
 **Completed bounded batch148 (2026-10-20),settings screens:**
 Gamma/HDR/settings screen/settings panel use Python presentation/routing policy.
 Original3/7/37/3 nodes/full CDOs/widget trees/animations/public signatures/node
