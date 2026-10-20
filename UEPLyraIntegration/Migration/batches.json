@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 133,
+    "bounded_evidence_ledgers": 134,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1235,6 +1235,47 @@
     "full_library_acceptance": false,
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
+  },
+  "weapon_hud_existing_acceptance_closure": {
+    "version": "0.9.0",
+    "status": "partial_existing_python_weapon_hud_current_native_presenter_lifetime_graphs_verified_gameplay_network_package_pending",
+    "evidence_ledger": "132-existing-weapon-hud-current-native-acceptance-closure.json",
+    "existing_implementation_backfilled_not_replaced": true,
+    "production_scripts_and_assets_changed": false,
+    "read_only_audit": "20261020-ammo-widgets/Audit02Current",
+    "original_graph_comparison": "20261020-ammo-widgets/original-graph-members-comparison.json",
+    "native_runtime": "20261020-ammo-widgets/Differential01Current",
+    "original_graph_nodes": {
+      "hud": 44,
+      "pistol": 28,
+      "rifle": 28,
+      "shotgun": 28
+    },
+    "only_interface_nodes_added_per_widget": 5,
+    "native_presenter_cases": 42,
+    "low_ammo_thresholds": {
+      "pistol": 2,
+      "rifle": 4,
+      "shotgun": 1
+    },
+    "persisted_default_python_declarations_verified": true,
+    "opaque_native_integer_text_formatting_and_disconnected_weapon_name_preserved": true,
+    "native_empty_slot_and_style_resource_argument_behavior_preserved": true,
+    "profile_switches_without_reconstruct": 4,
+    "controlled_reload_gc_cycles": 3,
+    "native_subscription_signal_cancel_verified": true,
+    "shared_per_frame_observer_read_cache_preserved": true,
+    "visual_screenshot_manually_inspected": true,
+    "automated_pixel_diff_executed": false,
+    "feature_graph_gate_host_checks": 5,
+    "full_regression_executed_this_batch": false,
+    "initial_original_bytes_guard_failure_preserved": "Audit01",
+    "current_persisted_overlay_audit_used": true,
+    "fire_gas_reload_acceptance": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Presenter fixtures set item/slot inputs and call methods;actual weapon/input/GAS/replication/visual fidelity/packaging/full-version gates remain separate and original scope stays intact."
   },
   "elimination_widgets_pilot": {
     "version": "0.12.0",
@@ -5356,8 +5397,9 @@
       "group": "战斗 HUD 与玩家指示器",
       "method_candidates": 2,
       "business_nodes": 41,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch132 closes stale not_accepted tracking for four already-persisted Python ammo widgets;does not redo/replace production implementations/assets. Fresh native audit plus original audited node/member/pin/default/link comparison verifies44/28/28/28 original nodes and only5 interface nodes each. Current42 real UMG presenter cases,4 live Profile switches,3 controlled-reload/native-GC cycles and native signal cancellation pass. Thresholds2/4/1,integer culture/grouping,empty-slot Hidden,disconnected weapon name and source unusual brush ResourceObject behavior preserved. Screenshot manually inspected,not automated pixel diff. Synthetic presenter input/method calls do not prove actual fire/GAS/reload/network/package/full acceptance.",
+      "status": "partial_existing_python_weapon_hud_current_native_presenter_lifetime_graphs_verified_gameplay_network_package_pending",
+      "evidence_ledger": "132-existing-weapon-hud-current-native-acceptance-closure.json"
     },
     {
       "path": "/ShooterCore/UserInterface/HUD/W_WeaponReticleHost.W_WeaponReticleHost",
@@ -5383,8 +5425,9 @@
       "group": "战斗 HUD 与玩家指示器",
       "method_candidates": 3,
       "business_nodes": 23,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch132 closes stale not_accepted tracking for four already-persisted Python ammo widgets;does not redo/replace production implementations/assets. Fresh native audit plus original audited node/member/pin/default/link comparison verifies44/28/28/28 original nodes and only5 interface nodes each. Current42 real UMG presenter cases,4 live Profile switches,3 controlled-reload/native-GC cycles and native signal cancellation pass. Thresholds2/4/1,integer culture/grouping,empty-slot Hidden,disconnected weapon name and source unusual brush ResourceObject behavior preserved. Screenshot manually inspected,not automated pixel diff. Synthetic presenter input/method calls do not prove actual fire/GAS/reload/network/package/full acceptance.",
+      "status": "partial_existing_python_weapon_hud_current_native_presenter_lifetime_graphs_verified_gameplay_network_package_pending",
+      "evidence_ledger": "132-existing-weapon-hud-current-native-acceptance-closure.json"
     },
     {
       "path": "/ShooterCore/Weapons/Pistol/W_Reticle_Pistol.W_Reticle_Pistol",
@@ -5401,8 +5444,9 @@
       "group": "战斗 HUD 与玩家指示器",
       "method_candidates": 3,
       "business_nodes": 23,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch132 closes stale not_accepted tracking for four already-persisted Python ammo widgets;does not redo/replace production implementations/assets. Fresh native audit plus original audited node/member/pin/default/link comparison verifies44/28/28/28 original nodes and only5 interface nodes each. Current42 real UMG presenter cases,4 live Profile switches,3 controlled-reload/native-GC cycles and native signal cancellation pass. Thresholds2/4/1,integer culture/grouping,empty-slot Hidden,disconnected weapon name and source unusual brush ResourceObject behavior preserved. Screenshot manually inspected,not automated pixel diff. Synthetic presenter input/method calls do not prove actual fire/GAS/reload/network/package/full acceptance.",
+      "status": "partial_existing_python_weapon_hud_current_native_presenter_lifetime_graphs_verified_gameplay_network_package_pending",
+      "evidence_ledger": "132-existing-weapon-hud-current-native-acceptance-closure.json"
     },
     {
       "path": "/ShooterCore/Weapons/Rifle/W_Reticle_Rifle.W_Reticle_Rifle",
@@ -5419,8 +5463,9 @@
       "group": "战斗 HUD 与玩家指示器",
       "method_candidates": 3,
       "business_nodes": 23,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch132 closes stale not_accepted tracking for four already-persisted Python ammo widgets;does not redo/replace production implementations/assets. Fresh native audit plus original audited node/member/pin/default/link comparison verifies44/28/28/28 original nodes and only5 interface nodes each. Current42 real UMG presenter cases,4 live Profile switches,3 controlled-reload/native-GC cycles and native signal cancellation pass. Thresholds2/4/1,integer culture/grouping,empty-slot Hidden,disconnected weapon name and source unusual brush ResourceObject behavior preserved. Screenshot manually inspected,not automated pixel diff. Synthetic presenter input/method calls do not prove actual fire/GAS/reload/network/package/full acceptance.",
+      "status": "partial_existing_python_weapon_hud_current_native_presenter_lifetime_graphs_verified_gameplay_network_package_pending",
+      "evidence_ledger": "132-existing-weapon-hud-current-native-acceptance-closure.json"
     },
     {
       "path": "/ShooterCore/Weapons/Shotgun/W_Reticle_Shotgun.W_Reticle_Shotgun",

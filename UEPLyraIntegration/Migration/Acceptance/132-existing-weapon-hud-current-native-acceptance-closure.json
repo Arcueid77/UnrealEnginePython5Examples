@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "batch": "132-existing-weapon-hud-current-native-acceptance-closure",
+  "scope": "Backfill four existing persisted Python weapon/ammo widgets;no production script/asset changes. Fresh native current-overlay audit and independent offline original node/member/pin/default/link comparison:44/28/28/28 original nodes match,only5 interface nodes each. Current focused native42 real UMG cases/4 live Profile switches/3 controlled reload native-GC cycles/signal cancel pass,thresholds2/4/1/culture integer text/empty-slot Hidden/unchanged disconnected name/brush argument semantics. Screenshot manually inspected,no automated pixel diff.5 graph-gate tests;exact staged incremental follows. Initial original-byte guard failure preserved;current overlay provenance explicit. Full246 original candidates remain;presenter input/method-call fixture is not fire/GAS/reload/network/playable/package/full acceptance. No production/CPP/official edits/build/cook/push/tag/release.",
+  "recorded_utc": "2026-10-20T01:28:19.6640097Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "89778b13df85c04e9540d7316c22d43ab2642438",
+  "examples_parent_commit": "c76db923399b19b7ba79b6a7e6dd159d7c71ea3b",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Audit02Current",
+      "summary_sha256": "F38EF228D07222DB17DE5B538A7945217C94CA8AC3C7502C5EF807B5B328CE41",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 857,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "80A69789CA3FFA0FFA79090A5FB0A953B8CBA202E4EBC87F8E660E51796911AE",
+          "file": "audit.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Differential01Current",
+      "summary_sha256": "CFBD3ADAFD9B99EF2077FE19848FBA6CCE5921F10D5559E406E38240B0EFD591",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2027,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "272B51017DAD8B46DD1CA40991E8D52DFC3FF7D9A3BA86371D89A293C9C9F94E",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_ammo_widgets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/audit_ammo_widgets.py"
+    },
+    {
+      "sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/ammo_mixin.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/ammo_mixin.py"
+    },
+    {
+      "sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/weapon_observer.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/weapon_observer.py"
+    },
+    {
+      "sha256": "714788A67F03136E1AC5FF5713675C063800D3A1EA97B8548A47FD96E332A0FF",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/weapon_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/weapon_validation.py"
+    }
+  ],
+  "host_report": {
+    "sha256": "9CDEA5AAB5C97B4CDDE21059AF914CDE95AC0E5186DA30D64D3B577E3FDFBBE1",
+    "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Host01.json",
+    "result": {
+      "status": "passed",
+      "tests_run": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false
+    }
+  },
+  "raw_artifacts": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Audit01/summary.json",
+      "sha256": "1832aa8cf5b3611538d4323cb35e858d89470cc55fe73edc7a3c04ba378f7802"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Audit02Current/audit-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Audit02Current/audit-stdout.log",
+      "sha256": "c5f5d9987859a3e22f48e4a2ddbcf94b568593d3cfac7a20eff5d53e0460d22c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Audit02Current/audit.json",
+      "sha256": "80a69789ca3ffa0ffa79090a5fb0a953b8cba202e4ebc87f8e660e51796911ae"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Audit02Current/audit.log",
+      "sha256": "322e76bbae5d7f25f95e0d673243b7a5f9468a5fd11fcb91a7a3b0438294a000"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Audit02Current/hud-blueprint.t3d",
+      "sha256": "50ab4586b59473d70d6ee849f01d38e26f6a6d174a2560d55ddb94c18d6bcb21"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Audit02Current/hud-cdo.t3d",
+      "sha256": "6502bde0423b6dccbea0d84c53a87afdff05769e59f59940c63f6fc715e1821d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Audit02Current/hud-graphs.json",
+      "sha256": "ee85d782f8fd0dc491bed1105625aad31b5b204e17feba21e160b5407f8124c9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Audit02Current/hud-widget-tree.t3d",
+      "sha256": "041f76f76e5075b903ac028cb283b2d78ba1bc66f0b36beec490e2be13980532"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Audit02Current/native-cosmetic-macro.json",
+      "sha256": "7fa0389c7be84072f11660bf8b6365e4f19411c1744b5e7f90bef17eaf9719b8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Audit02Current/pistol-blueprint.t3d",
+      "sha256": "0b9bd1fa4c7b6bb830196ab8a64b9a6d2fc5000d6febc7e5747346fae1b97f75"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Audit02Current/pistol-cdo.t3d",
+      "sha256": "aad9c77c43ca10b471e1d0643a4b36cbd8c68d4b1a4fcd212200cb2c555a9232"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Audit02Current/pistol-graphs.json",
+      "sha256": "1ff2ffc8415eecacff8914f6661e9ebdc852db0feb808abed49434e78f8239d0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Audit02Current/pistol-widget-tree.t3d",
+      "sha256": "a1b8181d0ad8e923f7d5fc62b7827d9320758f23d9e67502f80ae474a54bda5f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Audit02Current/rifle-blueprint.t3d",
+      "sha256": "d8b9b703b3f35da7eedb1cccfd31dcaae7feb9e787748f52e8c02622b40f6203"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Audit02Current/rifle-cdo.t3d",
+      "sha256": "196df78a0c78b5106e1e77b22e0d392e1e4159127b43c63af44c7346da7eaebb"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Audit02Current/rifle-graphs.json",
+      "sha256": "67eb38f3d50508fd49a01b277e7083e1beb840aa28a7fa967b75b4c3471f749c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Audit02Current/rifle-widget-tree.t3d",
+      "sha256": "2c7da05892116d803598deab4075b93f09f2d6f42a9004dc6d5a6f9c2039913f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Audit02Current/shotgun-blueprint.t3d",
+      "sha256": "858000455b1d9503d1e90a95324a03c1f68ab818f5538fb2c9bd7ca0962ab901"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Audit02Current/shotgun-cdo.t3d",
+      "sha256": "39db5f0c6896c93a9b21fc8c1724fe4918e102086d8c03f2ac028fa1fd79763f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Audit02Current/shotgun-graphs.json",
+      "sha256": "abe56b3f12c41d18a4e736b6a05f8f2ea812f96d31b1b9461960d626a6ec6ab5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Audit02Current/shotgun-widget-tree.t3d",
+      "sha256": "ca3ce2cef62e6ee684b8813f0aa65440ba4ca3dda726f80c9019371c4cdecc61"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Audit02Current/summary.json",
+      "sha256": "f38ef228d07222db17de5b538a7945217c94ca8ac3c7502c5ef807b5b328ce41"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Differential01Current/summary.json",
+      "sha256": "cfbd3adafd9b99ef2077fe19848fba6cce5921f10d5559e406e38240b0efd591"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Differential01Current/weapon-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Differential01Current/weapon-stdout.log",
+      "sha256": "ebe7d2e793555dfb3d36833ee70f9acf0975f9751870c6a137bc5e296ace1ecd"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Differential01Current/weapon.json",
+      "sha256": "2acfec5f95500db3da9223d011c2e5b433ad005589ce4a1bc2038c977e89cc3c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Differential01Current/weapon.log",
+      "sha256": "7ed7e9812ae16ac9a9e1a86573c3884441b032989c166212679794477b6da75e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Differential01Current/weapon.png",
+      "sha256": "18a3b44150982b4050f34290c958adfe81afab0378dff3d38f54e1a97ad6bd07"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Host01.json",
+      "sha256": "9cdea5aab5c97b4cdde21059af914cde95ac0e5186da30d64d3b577e3fdfbbe1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/original-graph-comparison.json",
+      "sha256": "e272f09366d6bc35220517d51d3f9a587c572ab5ff7b7bd65be460719aad3353"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/original-graph-members-comparison.json",
+      "sha256": "05f4f33167ca93822e6b409a66d6fd565e181851e9786e520b104c6e6d65b561"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Run-Audit.ps1",
+      "sha256": "c466244dd18c8e2d50198924447ec661888cb0f3f70fc9be11b49cce1838b57c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/Run-AuditCurrent.ps1",
+      "sha256": "35efcc80df73032150baf72498110f64008b1952d2c60f164a09e28d77a5148d"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/weapon_hud_graph_contract.py",
+      "sha256": "1d0aaa4b40c49af4b1e36d458b0189984f00c8db70fde836a1ee6330aef16c42"
+    }
+  ],
+  "offline_graph_gate": {
+    "script": "Demos/UEPLyraIntegration/Tools/weapon_hud_graph_contract.py",
+    "result": ".build/LyraValidation/BlueprintPython/20261020-ammo-widgets/original-graph-members-comparison.json",
+    "status": "passed",
+    "native_original_full_cdo_diff_executed": false
+  },
+  "regression_policy": {
+    "mode": "incremental",
+    "feature_graph_gate_host_tests": 5,
+    "full_regression_executed": false,
+    "isolated_index_result": ".build/CommitVerification/20261020-ammo-widget-closure/Index01/summary.json",
+    "index_result_is_external_to_avoid_changing_verified_tree": true
+  },
+  "scope_limits": {
+    "full_original_candidates": 246,
+    "all_original_asset_paths_preserved": true,
+    "production_code_and_assets_changed": false,
+    "network_acceptance": false,
+    "actual_fire_gas_reload_acceptance": false,
+    "automated_pixel_diff_executed": false,
+    "manual_screenshot_inspection": true,
+    "packaged_runtime": false,
+    "migration_complete": false
+  }
+}

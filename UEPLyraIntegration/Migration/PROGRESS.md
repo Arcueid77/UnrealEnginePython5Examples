@@ -23,6 +23,38 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch132 (2026-10-20),existing four-ammo-widget closure:**
+remaining-candidate review found W_WeaponAmmoAndName and three W_AmmoCounter
+variants already have persisted ammo_mixin implementations/eight BP+Mixin assets,
+but asset rows still said not_accepted. Do not overwrite or redo those. Parent
+commits:Examples `c76db92` / core `89778b1`. Audit01 fresh-original guard fails
+before UE because Stage equals existing Overlay,not official originals;preserve
+it. Audit02Current explicitly verifies current Stage/Overlay hashes,records the
+official-original hashes,and exports native signatures/CDOs/trees/graphs. Pure
+weapon_hud_graph_contract compares current native graph nodes/classes/function,
+variable,event/delegate member references,pin names/directions/categories/object
+types/defaults and resolved links with the original20261012 source audit. All
+44/28/28/28 business nodes match;only two interface graphs/5 nodes each are added.
+This is an independent offline graph gate,not an original-current full CDO diff.
+Differential01Current uses the existing focused native presenter driver,passes
+native exit0/strict log/ordered shutdown and42 real UMG BP/Python cases. Values
+cover ammo30,5,4,3,2,1,0,weapon switch,empty/restored slot,native reload input-intent
+dispatch,and source brush-helper ResourceObject argument/style. Pistol/rifle/
+shotgun thresholds2/4/1,integer FText culture/grouping,Hidden empty slot and
+unconnected weapon-name text remain. Four live Profile switches do not replay
+Construct;three controlled reloads pass native GC and observer/ticker/scope
+release. Native signal callback/cancel check passes. The existing shared observer
+samples once per engine frame,caches native item/controller reads and updates
+changed views;this is not claimed as a FastArray replication callback.
+Screenshot weapon.png was manually inspected:both columns show matching ammo
+text and counter graphics. No automated pixel diff or full visual-fidelity claim.
+5 new graph-gate tests pass;exact staged check remains incremental. Existing
+production scripts/assets/SDK/Cpp stay unchanged. Presenter fixture sets item/
+slot input and explicitly calls methods;actual fire/GAS/reload/network/playable
+startup/package/full-version acceptance is not refreshed. This batch backfills
+four existing migrations in the complete246-candidate plan,not a scope reduction.
+No build,cook,official edits,push,tag or release publication.
+
 **Completed bounded batch131 (2026-10-20),elimination list/entry widgets:**
 feed message handling allocates original ElimFeedEntry with feed Outer,copies the
 native typed Message,adds to original ListView then updates overlay visibility;
