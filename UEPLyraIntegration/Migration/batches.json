@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 180,
+    "bounded_evidence_ledgers": 181,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -11461,7 +11461,18 @@
       "method_candidates": 4,
       "business_nodes": 17,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_explorer_interact_six_methods_native_scan_input_target_event_lifecycle_verified_network_package_pending",
+      "implemented_methods": [
+        "K2_ActivateAbility",
+        "K2_OnEndAbility",
+        "LookForInteractables",
+        "InteractPressScan",
+        "typed original native InteractableObjectsChanged callback",
+        "typed original native OnPress callback"
+      ],
+      "evidence_run": "20261021-explorer-interact/Interact01",
+      "evidence_ledger": "179-explorer-interact-native-scan-input-target-event.json",
+      "original_cdo_public_abi_node_guids_graphs_query_tasks_and_print_payloads_preserved": true
     },
     {
       "path": "/ShooterExplorer/Input/Abilities/GA_ToggleMarkerInWorld.GA_ToggleMarkerInWorld",
@@ -12498,5 +12509,63 @@
     "packaged_runtime": false,
     "full_acceptance": false,
     "next": "Continue remaining original Explorer interaction/collection and follow-parent review plus all prior bounded parent/full version/network/pixel/package work. Full migration remains open."
+  },
+  "explorer_interact_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_explorer_interact_six_methods_native_scan_input_target_event_lifecycle_verified_network_package_pending",
+    "evidence_ledger": "179-explorer-interact-native-scan-input-target-event.json",
+    "owner": "uep_lyra_abilities.explorer_interact_mixin",
+    "original_source_audit": "20261021-explorer-characters/Audit03ShooterReference",
+    "native_asset_authoring": "20261021-explorer-interact/Assets01",
+    "native_runtime_runs": [
+      "20261021-explorer-interact/Interact01"
+    ],
+    "method_counts": {
+      "Python": 6,
+      "BlueprintFallback": 6
+    },
+    "original_nodes": 25,
+    "transport_nodes": 19,
+    "interface_nodes": 5,
+    "new_business_nodes": 0,
+    "original_cdo_public_abis_node_guids_graphs_query_task_factories_and_print_payloads_preserved": true,
+    "native_scan": {
+      "range": 200,
+      "rate": 0.1,
+      "profile": "Interactable_BlockDynamic",
+      "debug": true
+    },
+    "native_parent_nearby_grant": {
+      "range": 500,
+      "rate": 0.1,
+      "cpp_unchanged": true
+    },
+    "native_press_wait_initial_test": false,
+    "unused_native_wait_release_node_retained_unconnected": true,
+    "activation_order": "available print -> LookForInteractables -> InteractPressScan",
+    "press_order": "pressed print -> native TriggerInteraction -> InteractPressScan",
+    "end_behavior": "unavailable print; native parent ends tasks",
+    "native_scan_query_requesting_avatar_and_null_original_owning_actor_controller_cast_preserved": true,
+    "native_onspawn_gas_activation_in_both_profiles": true,
+    "native_parent_task_granted_real_target_ability": true,
+    "native_single_line_trace_discovered_real_collectable": true,
+    "native_gas_input_rpc_drives_real_wait_task_callbacks": true,
+    "native_target_event_tag_instigator_target_and_two_triggers_per_profile_verified": true,
+    "native_out_of_range_empty_options_and_no_trigger": true,
+    "pending_profile_switch_native_input_callbacks_use_current_profile": true,
+    "native_cancel_reactivation_and_normal_end_stop_all_tasks_without_late_callbacks": true,
+    "owned_extra_local_player_pawn_state_and_target_destroyed": true,
+    "focused_host_checks": 16,
+    "invalid_lane_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261021-explorer-interact/Index01",
+    "validation_ability_granted_only_to_owned_context": true,
+    "production_ability_sets_modified": false,
+    "task_callbacks_replayed": false,
+    "physical_keyboard_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Continue original Explorer marker/interaction collect/sit and remaining candidates plus inherited parents and all prior bounded full version/network/pixel/package acceptance. Full migration remains open."
   }
 }

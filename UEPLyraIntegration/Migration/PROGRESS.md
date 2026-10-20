@@ -23,6 +23,50 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch179 (2026-10-21),Explorer Interact ability:**
+All4 original emitted methods plus the original native options/press callbacks
+are routed together in6-method Profiles. Activation keeps available print ->
+native scan -> native input wait order. Options arrays pass intact to original
+UpdateInteractions. Press keeps print -> native TriggerInteraction -> rearm wait
+order. End only keeps the original unavailable print;native GAS still ends all
+tasks. Native factory/query/defaults remain intact:line scan range200/rate0.1,
+Interactable_BlockDynamic/debug true,press bTestAlreadyPressed=false. The unused
+release node stays unconnected. Native parent C++ still starts its separate
+range500/rate0.1 nearby-interaction grant task. The original pure cast from ASC
+owning PlayerState to Controller stays null in the scan query;it is not replaced
+with a different controller lookup. Native avatar/start-location fields match.
+All25 original nodes/GUIDs,full CDO/public signatures,remaining graphs and moved
+print-node payloads remain checked.19 transport and5 interface nodes;0 new
+business nodes. Both Profiles activate naturally OnSpawn through native GAS on
+an owned extra local player,using a validation-only grant. Production ability
+sets remain unchanged. A real native LyraWorldCollectable subclass is detected
+by the actual line trace;the parent nearby task grants its witness ability.
+Native ServerSetInputPressed drives real WaitInputPress delegates and actual
+TriggerInteraction -> GAS target ability events. Target count2/tag/Instigator/
+Target match per Profile. Moving out of range clears native options;press while
+empty does not trigger. Rearming leaves1 scan/1 wait/1 parent nearby/0 release
+tasks. Pending Profile switch affects the next actual press. Cancellation then
+reactivation and normal end deliver cancelled=[true,false],leave0 tasks and no
+late callbacks. Owned local player/pawn/state/target,roots and class selectors
+restore;primary inventory/Health remain unchanged. No task callbacks are replayed
+and no task-private fields or timers are written. Input is a native GAS RPC path,
+not a physical-keyboard or multiplayer acceptance claim.
+Native exit0,independent gate0,strict logs and ordered shutdown pass on first
+author/runtime runs.16 focused checks and5 invalid lanes pass. Staged checks
+remain incremental at .build/CommitVerification/20261021-explorer-interact/Index01.
+No Engine/general Cpp/official edits,build,cook,push,tag or publication. Static
+246/182/63/11 and exact candidate paths/order remain;full migration and remaining
+network/pixel/package/version acceptance stay open.
+
+Batch179 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261021-explorer-interact/Assets01/summary.json` cebc93418aee51724c89490c6f06b285ef87b3d00d12b5c8dacc65cc43af2436
+`20261021-explorer-interact/Assets01/assets.json` 7cc3461e88d5ff41ddc0a4b5e4d373ce8d18cf0ab8516c09da2ddc6364111ab1
+`20261021-explorer-interact/Assets01/interact-preservation.json` 4f2bf631bf08ebe5b30848633abd578f01acfb61de92c4a4e1e69df0c8001bac
+`20261021-explorer-interact/Interact01/summary.json` 5fa15f2f976c2b257a7b0a1a095e444e695b0a84b94a37313a3ce512ba14c0e9
+`20261021-explorer-interact/Interact01/jump.json` 1d8e2e93fe2bc7c18e733dc7cad04fb1180bb8bdabcdb40cf2b36825c4753da8
+`20261021-explorer-interact/host-focused01.json` 009bed858a6c35b129ca6f72e30170ab68fb6c2e42410c125c025db56ac6b575
+`20261021-explorer-interact/guards01.json` b3fb114cd344a53300614ad9acbd60231db0fc4bef113ac4d1b716eadc69fb8d
+
 **Completed bounded batch178 (2026-10-21),Explorer item-acquired list:**
 All4 original emitted methods plus the typed native inventory callback are
 routed together in5-method Profiles. Construct updates empty/nonempty visibility

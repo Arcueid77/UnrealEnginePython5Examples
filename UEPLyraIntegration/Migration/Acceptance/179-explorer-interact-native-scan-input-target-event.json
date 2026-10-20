@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "batch": "179-explorer-interact-native-scan-input-target-event",
+  "scope": "Original Explorer Interact six methods; real native scan/nearby grant/input RPC/target event/cancel/reactivation/end; physical keyboard/network/package remains open",
+  "recorded_utc": "2026-10-20T23:04:34.7935897Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "399bd6dc012824eb9b854ed2231a63ccca308cbc",
+  "examples_parent_commit": "d30143f713d7cd31c8c26fb6560c8392dc54e075",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-interact/Assets01",
+      "summary_sha256": "CEBC93418AEE51724C89490C6F06B285EF87B3D00D12B5C8DACC65CC43AF2436",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2304,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-interact/Interact01",
+      "summary_sha256": "5FA15F2F976C2B257A7B0A1A095E444E695B0A84B94A37313A3CE512BA14C0E9",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3152,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "1D8E2E93FE2BC7C18E733DC7CAD04FB1180BB8BDABCDB40CF2B36825C4753DA8"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_explorer_interact_assets.py",
+      "sha256": "E1EFD06286384F7D7C827222E53486C4A4F09E462E2384CF2E27600084EA37BD",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_explorer_interact_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/explorer_interact_mixin.py",
+      "sha256": "1D2CC9B4A49047EEC5D2AAFB863E40F23A9AB91B0C6FA8177E72CBBC6B9AD753",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/explorer_interact_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/explorer_interact_contract.py",
+      "sha256": "5A7312EBFEF20CD5BB073B6968220AD1E9E9AF735FA40426FB856B29C09A82C0",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/explorer_interact_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/explorer_interact_validation.py",
+      "sha256": "CA0521093DA62CE26919DF75A9F6C32ADF33FFBFBC32E47E5C463B882704E6E7",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/explorer_interact_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "51D2CA97223449A0E8CD3FFC3719489E7B1EF6ACC478DE25D284D12582BE1CD0",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261021-explorer-interact/host-focused01.json",
+    "sha256": "009BED858A6C35B129CA6F72E30170AB68FB6C2E42410C125C025DB56AC6B575",
+    "result": {
+      "status": "passed",
+      "tests_run": 16,
+      "runtime_acceptance": false,
+      "full_regression": false
+    }
+  }
+}
