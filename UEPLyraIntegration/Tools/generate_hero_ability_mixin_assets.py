@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "eliminationfeedrelay":
+        from generate_elimination_feed_relay_assets import generate as generate_elimination_feed_relay
+        return generate_elimination_feed_relay(stage)
     if kind == "controlpointfeedback":
         from generate_control_point_feedback_assets import generate as generate_control_point_feedback
         return generate_control_point_feedback(stage)

@@ -23,6 +23,43 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch127 (2026-10-20),standalone elimination feed relay:**
+original native exact Lyra.Elimination.Message subscription remains. One typed
+callback gate moves authority/GameState cast/reliable multicast/cosmetic branch,
+PlayerState name-to-FText conversion,GetPawn-based team lookup and notification
+fields into Python. Parent commits:Examples `a34cdf8` / core `9b9e446`.
+Audit02MacroName records both remaining gameplay relay originals and verifies
+Can Execute Cosmetic Events is the inverse of native IsDedicatedServer. Preserve
+Audit01/source:macro lookup omitted spaces. Assets01Elimination preserves the
+original30-node graph/full CDO/BeginPlay/native factory/authority and cosmetic
+macros and reliable RPC signature. One method/Profile,8 transport nodes plus5
+interfaces,zero new gameplay nodes. Four bridge nodes only pack the original
+user-defined feed struct and call the real Blueprint VM broadcast CustomThunk;
+Attacker/Attackee FText,team IDs and original InstigatorTags are typed inputs.
+Original notification channel and HUD slot stay exact. Python preflights invalid
+cosmetic receivers before side effects,then falls back to original diagnostics;
+no duplicate RPC on that path. Dedicated authority only forwards;remote bypasses
+GameState cast and cosmetic macro,as in the original. Native coverage below is
+standalone;those remote/dedicated branches are host checks only.
+Differential01Elimination passes native exit0/independent gate0/strict logs/
+ordered shutdown. Both Profiles run12 actual GMS cases with16 compared native
+notification payloads:enemy,swapped identities,self,pawnless valid PlayerState,
+wrong channel and nonmatching child channel. Natural map relay receives through
+Python;every typed name/team/tag/slot/channel matches source-derived values.
+Each owned component naturally creates one original native proxy. Destroying it,
+three native GC frames and the next matching message release its GI reference;
+fixture never cancels a production relay proxy or replays BeginPlay/callbacks.
+Only the test observer uses a managed subscription scope;that scope closes.
+Actors/components,owned score deltas,real TDM target,original Health,probe root
+and Profile family clean up.19 feature-only host checks and5 invalid lanes pass;
+exact staged verification is incremental. An ad hoc AST check initially used
+Windows GBK on UTF-8 text;explicit UTF-8 check passes. The combined outer command
+retained exit1 from that check while native authoring itself passed exit0;keep
+preflight-encoding-note.json and actual child summary,without regenerating assets.
+Remote/DS reliable delivery,invalid native diagnostics,pixels,packaging and full
+246-candidate scope remain pending. No SDK/Engine/general Cpp/official edits,
+build,cook,push,tag or release publication.
+
 **Completed bounded batch126 (2026-10-20),standalone volume feedback:**
 the accepted125 revision is extended with Begin mesh collection,Timeline update/
 finish and original RPC/VFX/audio/music bodies. Parent commits:Examples `4b6f111`
