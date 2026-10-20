@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "batch": "147-settings-editors-native-model-localization-and-presentation",
+  "scope": "Ten settings presentation widgets;original174 total nodes/full CDOs/widgettrees/animations/signatures/GUIDs/graphs retained,perProfile2/3/4/3/2/5/3/3/1/1 methods;native count/index/localized entry factory adapters and action/navigation/detail FText paths retained. Python touch guards/typed focus/scalar raw values+clamped pitch/strict3-5-7 pip thresholds/local Count/enum iteration+pool retention. Real registry action/navigation models assigned by native GameSettingListView,localized text intact;real discrete native options read-only/selection/order/pool reuse verified. BothProfiles:10 focus/14 manual pointer trials with real UMG frames,background actual multicast order,10 scalar values/6 defaults,18 pip style/10 raw indices,native rotator population/selection and both discrete callback SFX paths. Settings index/config/roots/selectors/input/health unchanged/restored;no values written/applied/saved. Native0/gate0/strictlogs/shutdown;25 focus/5 invalid lanes;exact staged incremental follows. Preserve author01 collision,02 pinreadonly+18outputs,03 native-only eventprobe+20outputs,and native01 reflected listsetter/cleanup ownership sources. No physical pointer/touch/audioenergy/culture/pixels/network/package/version/full246 acceptance;prior FText audit open. No Cpp/official edits/build/cook/push/tag/publication.",
+  "recorded_utc": "2026-10-20T08:44:52.1907569Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "77c6089d94fcea3e3faafb10b55c448a4a20cd88",
+  "examples_parent_commit": "0921f0b79d7ac34d0056dfe93dc73e5107dba646",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-settings-editors/Audit01",
+      "summary_sha256": "6424567DECDBB2825F8FEE18F852BDBD9DEEF246906E4EA1739953920FDB2C93",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 865,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "audit.json",
+          "sha256": "D0D8961BC0A8E60815D59F0D1E5521E8F0AF3338A1E040F8DC549A8EBF44B65E"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-settings-editors/Assets04NativeAssignment",
+      "summary_sha256": "ACEDCF4CDF1E09D4E350DBE75FB2506B044B1BD08D3FB64BDA65B40D5EB99D38",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2117,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-settings-editors/Differential02NativeListSetter",
+      "summary_sha256": "E9423778A314F62FC0F96DA2DBFC0681DAFBB8C4F8E9708703AAC7F9F44399E8",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2914,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "4CF597EADCA9D465061160F2871BCE4D799D4BB3EB830B2758004E5025534A41"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/audit_settings_editors.py",
+      "sha256": "7A07DC0BF9B28F5D2CF29D77277438312AA971BFC83504503AF2222B8B4C619C",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_settings_editors.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_settings_editor_assets.py",
+      "sha256": "12ABADDAEECD9821A2C2C9B20872452582CD08C8480D98FFCDF678275967805F",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_settings_editor_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "8272E43A2A81522FF29982279D18FA43E9201F26A36C09E35EDF1F3900C04E2A",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "AD36F10124683158408939C1557535699A5547A7F4085E0FBFB2DD993EA850FE",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/settings_editors_mixin.py",
+      "sha256": "228BDC368C60213164F6B505EC10EFD4869DDF6ACDCEAB4E11772056FFA1163B",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/settings_editors_mixin.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/settings_editors_validation.py",
+      "sha256": "D36D4E834CE726BE68FF91F00800C698C965FD5269F0FA0B3C57348459A9B2C1",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/settings_editors_validation.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/settings_editors_contract.py",
+      "sha256": "FF99FBF7343F3C7491C45A72586B57A57008311F838053D47A042B470C2E9611",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/settings_editors_contract.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "A61B04B2D2DE590476C1E00E1A121FBA4A17503B02B952C3F77E98AF30FD2934",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "79F7C34BDCD37E3EAC215E5D9F2029CC89CEE58F554C515119EEE6D05ABBCE16",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261020-settings-editors/Host03NativeListSetter.json",
+    "sha256": "CDADC061E8703E50E17AE260AE8FCE72CF98BB1A5277D2D8B33727AE52031BFA",
+    "result": {
+      "schema_version": 2,
+      "status": "passed",
+      "tests_run": 25,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "selection": {
+        "mode": "incremental",
+        "status": "ready",
+        "changed_files": [],
+        "selected_test_files": [
+          "Demos/UEPLyraIntegration/Tests/test_settings_editors_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_settings_editors_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_settings_editors_mixin.py"
+        ],
+        "affected_files": [],
+        "selection_reasons": {
+          "Demos/UEPLyraIntegration/Tests/test_settings_editors_contract.py": [
+            "explicit pattern test_settings_editors_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_settings_editors_fixture.py": [
+            "explicit pattern test_settings_editors_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_settings_editors_mixin.py": [
+            "explicit pattern test_settings_editors_*.py"
+          ]
+        },
+        "unmapped_changed_files": [],
+        "unparsed_unaffected_files": [],
+        "dependency_analysis": "local imports including inheritance, literal module names and file references; dynamic dependencies require explicit patterns/native lanes",
+        "full_regression_requested": false
+      },
+      "failed_cases": []
+    }
+  }
+}

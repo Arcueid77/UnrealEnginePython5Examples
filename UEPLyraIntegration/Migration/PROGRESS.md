@@ -23,6 +23,55 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch147 (2026-10-20),settings editor family:**
+Background/action/discrete/keyboard/missing/scalar/navigation/rotator/enum detail/
+enum extension presentation policies use Python. Original12/20/14/14/8/24/17/
+37/13/15 nodes/full CDOs/trees/animations/signatures/scoped Count/node GUIDs/
+graph semantics retained.2/3/4/3/2/5/3/3/1/1 methods per Profile,10/13/19/13/8/
+21/13/12/4/15 transport plus5 interfaces each;zero new business nodes.
+Native action/navigation FText assignment paths stay intact. Enum detail sets
+native text before its boolean material policy. Native count/index/factory/text
+adapters keep option FText outside Python;Python resets the pool without deleting,
+iterates indices and compares each current native selected index. Background
+multicast enter/leave order and original empty delegate body remain native.
+Scalar progress/default values stay raw;only sound pitch maps/clamps0..1 to.9..1.1.
+Rotator thresholds are strictly>3/>5/>7 with192/256/320/384 widths/materials.
+Count is the source function-local argument,not a persistent widget property.
+Assets04NativeAssignment and Differential02NativeListSetter pass native exit0/
+independent gate0/strict logs/ordered shutdown. Real read-only registry models
+are assigned through native GameSettingListView.SetSetting,retaining localized
+action/navigation text. Ten primary focus cases,14 manual pointer callback trials
+with real UMG frames,10 raw scalar values/6 defaults,18 pip styles/10 raw index
+cases,native rotator population/selection and enum localized order/selected state/
+pool reuse/invalid-reset cases match both Profiles. Background actual multicast
+enter/leave order is observed. Pointer/component callbacks are explicit fixture
+calls;physical input and native touch are not claimed. Touch guards/pitch bounds
+are unit checked. Settings values are not written,applied or saved. Selected native
+setting index,config files,Profile selectors,input type,roots and health restore.
+25 focused host checks and5 invalid lanes pass;exact index checks incremental:
+.build/CommitVerification/20261020-settings-editors/Index01.
+Preserve Assets01/source:name collision between native broadcast aliases and
+gates;no assets saved. Preserve Assets02DistinctAliases/source+18 owned Stage
+outputs:pin subcategory is read-only;native PinDefaultValueChanged infers the
+factory return type. Preserve Assets03NativePinInference/source+20 validated
+Stage outputs:OnSettingAssigned is native-only and cannot be Blueprint-called
+by the probe. Final fixture uses the real native list assignment instead.
+Preserve Differential01/source:the list setter is reflected as BP_SetListItems,
+and cleanup must clear only explicitly owned mixin overrides,not the unbound
+settings screen. No failed/superseded evidence overwritten.
+Physical pointer/button/touch,audio energy,pixels,culture,network,package/version,
+prior FText audit and every other original246-candidate requirement remain open.
+No Engine/general Cpp/official edits,build,cook,push,tag or release publication.
+
+Batch147 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261020-settings-editors/Audit01/summary.json` 6424567decdbb2825f8fee18f852bdbd9deef246906e4ea1739953920fdb2c93
+`20261020-settings-editors/Assets04NativeAssignment/summary.json` acedcf4cdf1e09d4e350dbe75fb2506b044b1bd08d3fb64bda65b40d5eb99d38
+`20261020-settings-editors/Assets04NativeAssignment/assets.json` a99fa999017e31ff292fbd294e549102d2da92eb20ba3c8347711effa70f7d99
+`20261020-settings-editors/Differential02NativeListSetter/summary.json` e9423778a314f62fc0f96da2dbfc0681dafbb8c4f8e9708703aac7f9f44399e8
+`20261020-settings-editors/Differential02NativeListSetter/jump.json` 4cf597eadca9d465061160f2871bce4d799d4bb3eb830b2758004e5025534a41
+`20261020-settings-editors/Host03NativeListSetter.json` cdadc061e8703e50e17ae260ae8fce72cf98bb1a5277d2d8b33727ae52031bfa
+`20261020-settings-editors/guards.json` 8fb13f7ec11144101b22505bc530d5d1ae3fd5dad9987cfb5c7c871210aef282
+
 **Completed bounded batch146 (2026-10-20),foundation utility widgets:**
 Confirmation dialog/loading reason/loading host/aspect image/progress spinner
 use Python policies. Original3/8/15/8/4 nodes/full CDOs/widget trees/animations/
