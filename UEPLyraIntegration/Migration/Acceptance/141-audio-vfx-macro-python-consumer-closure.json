@@ -1,0 +1,747 @@
+{
+  "schema_version": 1,
+  "batch": "141-audio-vfx-macro-python-consumer-closure",
+  "scope": "Original audio/VFX macro definitions32/9 nodes remain byte/graph-identical fallback/reference assets. Shared Python weapon lookup/ammo completion/native tag/specific-mesh helpers integrated across all9 original callsites and9 current runtime consumer assets. Original471-BP index/current macro graph census and AST entry-to-helper mapping verified. Unused original specific-mesh macro hasno live consumer but its Python equivalent is native-tested. Exact original macro expansion stage-only probe matches19 native weapon/ammo/tag/specific cases,including first equipment/spawn only,unwired completion,native FName case and invisible asset identity. Five affected current native families pass:three fire Cues/current real-input offline audio effect/dash-death/launcher-teleporter/spawning. Six runtimes exit0/gate0/strict logs/shutdown;production uasset consumers unchanged. Probe spawn array/magazine/actors and consumer-owned resources restore.147 focused+affected host/5 invalid lanes;exact staged incremental follows. Probe01/02 and host import failures preserved;ConsumerAudio01 rejects superseded proof and current effect acceptance replaces it;no stale-proof bypass/native rerun for shell LASTEXITCODE observation failure. Full246 migration/extra diagnostic/owner/network/culture/pixels/package/version remain open. No Cpp/official edits/build/cook/push/tag/publication.",
+  "recorded_utc": "2026-10-20T05:44:02.6638779Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "8cd9f5f1f8988494e358080632a1066a197ea8a8",
+  "examples_parent_commit": "f4d93bece9a119d228fa1673e16d0c40a67519e8",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Audit01",
+      "summary_sha256": "E6705970395810987B8B74C6EA41CEB4378D7860C07B2E789957729CB86EF0C2",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 849,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "audit.json",
+          "sha256": "8E3E47C1AD08199B2FDF8FE8348BCD8980A9035C72BB2B21F19A0CEEE8EBCB53"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe03SingleReturn",
+      "summary_sha256": "36DAEEED08A1A236846124F422E4BFC9DAFD9FFC9B494F9872C439E2EFBA0142",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2065,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Differential01OriginalMacro",
+      "summary_sha256": "AE64EEE6EB5AF6B529F7241F1F3D75376BD08418B09287D0A2DD726F9570A0DA",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2654,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "FE15E8540BC5D679CEC4AA1BCEC6A80EF1D967E9C8D24F28E06CBED3DD36F6D1"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerFire01",
+      "summary_sha256": "020282BC452E7EDC446405CBF1D61D0429096D1BF93F993B8DA4BAE0292E4B68",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2642,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "AE1E19279F8C289CB6CA7D8AFA4E0C47F13AD25ABE3E570F2EA3CD991E4A1BC9"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerAudioEffect01",
+      "summary_sha256": "EC0BFF44BC95FB09E8C33EFE1B320B400C784C186A355B2008000A97D3E06800",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2666,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "E184FE34B8081C298B1D49E0314D694A86D2C2914ED3C2BC7FC1F10442BC31ED"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerHeroBurst01",
+      "summary_sha256": "6C20DB60765C79F1BA7C7D975993070408E331E885FA43F22739A46B59129874",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2641,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "B8579F21EC3AE8745B4312829B5B6501A34D56AFD10C9A26A60ABD5B1FCF17AB"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerTraversal01",
+      "summary_sha256": "57876344F1691EDA1D315A07E2F1B3DBE5C57EC114A03FB24785ACFBE13C9028",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2641,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "8C83A6EDA5034B09A1C7D2783BDBACE22C517986ADB131B49469CA1FBDBC089B"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerSpawning01",
+      "summary_sha256": "F4CD306BF608E718C77FE67E29E1A930CD6A2E4931A6EDF96B598A83BC2FC82A",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2637,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "1D48BE975750AD716E198AF8D5906DBB2CE410EBC516B964D3F5E9BC17FD96BC"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/macro_policies.py",
+      "sha256": "73123BC8E8777E0D0F538C3F52A87DCE6D6D680C0BF85BE5416D248D8FCEF13D",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/macro_policies.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/macro_closure_validation.py",
+      "sha256": "0017B96B8119EDDC209ABC74A4A7A5BD7870775103BD985D4693D402BA3AE5FF",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/macro_closure_validation.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/macro_closure_contract.py",
+      "sha256": "BC770F7C744D59B3B6C3C8748C75E6264D2F93886CE9C245CA5BDB67DE0576DF",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/macro_closure_contract.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_fire_cue_mixin.py",
+      "sha256": "101FD4605817355E1483BEABDAE53C30F028EC84D843F4A527DB72B45347B177",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_fire_cue_mixin.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_dispatch_mixin.py",
+      "sha256": "3E856D2A7C87D51213220B373EE194E5F327B1FA1F125D047D9777AD1B6E50AE",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_dispatch_mixin.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/hero_burst_cue_mixin.py",
+      "sha256": "B22D06B588558BBBF7F5ADEEBF10989A2425D8B28CCE2600493B80A39EF24BFC",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/hero_burst_cue_mixin.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/traversal_cue_mixin.py",
+      "sha256": "7FEC9D83D9A77203AC781477DC33EBB1BCAC9726830B2A73AA9B163A9824DABB",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/traversal_cue_mixin.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/spawning_cue_mixin.py",
+      "sha256": "EBE9CAF62858761EE2BC80E8ADCC551592546EAC2A81A3F50B2824E5677F9BD0",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/spawning_cue_mixin.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "808FD2DA6E402847B6D0D08C5C46BC1C055026BBFA6AE7094AF890C58B87A051",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_macro_closure_probe.py",
+      "sha256": "61A5D005083B21A90749BD7D5343A6C2747AEA265F36EA6CCCA11764D18D8591",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_macro_closure_probe.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_macro_libraries.py",
+      "sha256": "C4D1A9AB42A129767616661BE10F030E6988316F597B1DBC1C921E1C45D640DD",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/audit_macro_libraries.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "3EFC6BCC4CBB769C248611B1E1C0549346418C18E1D4FE28AECD2637C4C725F1",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py"
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "7436825FA44320C69F57C93A7BEF62B4DBEE4DE0938C16C93ADF0B5DC208AF84",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1"
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "F5EB59285082E042B6C976DF9C940382B177B2B71484D02BC3C9E1E8531D82AA",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58JumpValidation.ps1"
+    }
+  ],
+  "host_report": {
+    "sha256": "63A2C33F3317760E4969021F7205CF88B53E3FC601064128DADC71735B8A1BE4",
+    "result": {
+      "schema_version": 2,
+      "status": "passed",
+      "tests_run": 147,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "selection": {
+        "mode": "incremental",
+        "status": "ready",
+        "changed_files": [],
+        "selected_test_files": [
+          "Demos/UEPLyraIntegration/Tests/test_hero_burst_cue_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_hero_burst_cue_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_macro_closure_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_macro_closure_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_macro_policies.py",
+          "Demos/UEPLyraIntegration/Tests/test_spawning_cue_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_spawning_cue_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_traversal_cue_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_traversal_cue_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_dispatch_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_dispatch_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_fire_cue_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_fire_cue_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_fire_cue_network_contract.py"
+        ],
+        "affected_files": [],
+        "selection_reasons": {
+          "Demos/UEPLyraIntegration/Tests/test_hero_burst_cue_contract.py": [
+            "explicit pattern test_hero_burst_cue_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hero_burst_cue_mixin.py": [
+            "explicit pattern test_hero_burst_cue_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_macro_closure_contract.py": [
+            "explicit pattern test_macro_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_macro_closure_fixture.py": [
+            "explicit pattern test_macro_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_macro_policies.py": [
+            "explicit pattern test_macro_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_spawning_cue_contract.py": [
+            "explicit pattern test_spawning_cue_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_spawning_cue_mixin.py": [
+            "explicit pattern test_spawning_cue_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_traversal_cue_contract.py": [
+            "explicit pattern test_traversal_cue_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_traversal_cue_mixin.py": [
+            "explicit pattern test_traversal_cue_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_dispatch_contract.py": [
+            "explicit pattern test_weapon_audio_dispatch_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_dispatch_mixin.py": [
+            "explicit pattern test_weapon_audio_dispatch_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_fire_cue_contract.py": [
+            "explicit pattern test_weapon_fire_cue_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_fire_cue_mixin.py": [
+            "explicit pattern test_weapon_fire_cue_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_fire_cue_network_contract.py": [
+            "explicit pattern test_weapon_fire_cue_*.py"
+          ]
+        },
+        "unmapped_changed_files": [],
+        "unparsed_unaffected_files": [],
+        "dependency_analysis": "local imports including inheritance, literal module names and file references; dynamic dependencies require explicit patterns/native lanes",
+        "full_regression_requested": false
+      },
+      "failed_cases": []
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Host03ClosureAndConsumers.json"
+  },
+  "raw_artifacts": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/assets.json",
+      "sha256": "f129e28853001f8fcc8fa7cb2964d1bc95a3001ea1ebdbeec8894b0ace5c1b62"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Audit01/audio-blueprint.t3d",
+      "sha256": "f8171f69f0c85455bcee1ab77734f9ca4177307a899c56a88871cd023c4f4e76"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Audit01/audio-cdo.t3d",
+      "sha256": "09c1b5a9154dc06bc6d82987e3f6e43d2e1995886bfe52e89d49350af53054cd"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Audit01/audio-graphs.json",
+      "sha256": "9c78f24dbe2a968df2709f6c0aa2c0862dcf3b784229cccca4137338e623d12f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Audit01/audit-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Audit01/audit-stdout.log",
+      "sha256": "6d92bd1e66b73951520a2c4a0640eb13afeee590b91ba0a4585d466350444b66"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Audit01/audit.json",
+      "sha256": "8e3e47c1ad08199b2fdf8fe8348bcd8980a9035c72bb2b21f19a0ceee8ebcb53"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Audit01/audit.log",
+      "sha256": "3fe666cf6995aa668068dcd1a0267d5a32d0461c392c0c43896db8a7e496cda8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Audit01/native-cosmetic-macro.json",
+      "sha256": "6686431a183d6c7535f57d59187d16195ad2c83645cb4b5ab83518a903621dda"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Audit01/summary.json",
+      "sha256": "e6705970395810987b8b74c6ea41ceb4378d7860c07b2e789957729cb86ef0c2"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Audit01/vfx-blueprint.t3d",
+      "sha256": "e4961ba6e69c2c2a1bc6bd9a3c434f962f0ff57762fe31bc8a3780b6985f87f8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Audit01/vfx-cdo.t3d",
+      "sha256": "8d6a649f67b4d709c97bc555839f59357316e3d979cf3e593277a5f41684c110"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Audit01/vfx-graphs.json",
+      "sha256": "31d812a3ff14131f0c37093594cce958ba6fdff372985f85e4f795676cb92ef7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/consumer-policy-map.json",
+      "sha256": "5015fcb1f83744e7276f8c4af244fe8fe6349ed160ae8f1a2e03ee7bc67367d4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerAudio01/summary.json",
+      "sha256": "9db0b3e6c83b6d25ffb89090d83cf25217c4d681cc6ab402942fdf149aeb598d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerAudioEffect01/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerAudioEffect01/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerAudioEffect01/jump.json",
+      "sha256": "e184fe34b8081c298b1d49e0314d694a86d2c2914ed3c2bc7fc1f10442bc31ed"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerAudioEffect01/jump.log",
+      "sha256": "c2165937bd5bf2ca8ec414ae7e1dae3798e29362062eba30508e576601e3f346"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerAudioEffect01/report-gate-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerAudioEffect01/report-gate-stdout.log",
+      "sha256": "5675241050e367aab5c4339b18939031723b5464f570291250ec05cd77ffc153"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerAudioEffect01/summary.json",
+      "sha256": "ec0bff44bc95fb09e8c33efe1b320b400c784c186a355b2008000a97d3e06800"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerFire01/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerFire01/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerFire01/jump.json",
+      "sha256": "ae1e19279f8c289cb6ca7d8afa4e0c47f13ad25abe3e570f2ea3cd991e4a1bc9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerFire01/jump.log",
+      "sha256": "77938c4a6c60a0c2b79a657434281d40e0cd6c48c72fcad730d9c184a6dec9cc"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerFire01/report-gate-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerFire01/report-gate-stdout.log",
+      "sha256": "caf79ca890bfd7ceb04aed2e07b27303b9c45cdabf8edf38212dc6e668430c5a"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerFire01/summary.json",
+      "sha256": "020282bc452e7edc446405cbf1d61d0429096d1bf93f993b8da4bae0292e4b68"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerHeroBurst01/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerHeroBurst01/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerHeroBurst01/jump.json",
+      "sha256": "b8579f21ec3ae8745b4312829b5b6501a34d56afd10c9a26a60abd5b1fcf17ab"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerHeroBurst01/jump.log",
+      "sha256": "290123a237b3c616877a6322c68bcd56ea56730a57ff0ded0cba6cdf722d0dc6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerHeroBurst01/report-gate-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerHeroBurst01/report-gate-stdout.log",
+      "sha256": "17507e2444426eff0856d0bb12069e2f5b0b3129c1545fd7048e53ca77817d1d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerHeroBurst01/summary.json",
+      "sha256": "6c20db60765c79f1ba7c7d975993070408e331e885fa43f22739a46b59129874"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerSpawning01/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerSpawning01/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerSpawning01/jump.json",
+      "sha256": "1d48be975750ad716e198af8d5906dbb2ce410ebc516b964d3f5e9bc17fd96bc"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerSpawning01/jump.log",
+      "sha256": "5d94f17d2ecc4098379c415af3838817c6b7ec2ffc5e8effa1cd7421086d11ab"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerSpawning01/report-gate-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerSpawning01/report-gate-stdout.log",
+      "sha256": "e0d69b7850edeb7c5d2a04ce2a5e92566539d8e42c35c5d2f60877a0ca850beb"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerSpawning01/summary.json",
+      "sha256": "f4cd306bf608e718c77fe67e29e1a930cd6a2e4931a6edf96b598a83bc2fc82a"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerTraversal01/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerTraversal01/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerTraversal01/jump.json",
+      "sha256": "8c83a6eda5034b09a1c7d2783bdbace22c517986adb131b49469ca1fbdbc089b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerTraversal01/jump.log",
+      "sha256": "4b6f2923102af815afcb3226aa30a3e67d6852b0ca086aee71b75f4d66154cfa"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerTraversal01/report-gate-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerTraversal01/report-gate-stdout.log",
+      "sha256": "7d359d7fd618dc5750019e5b05e52559b404b1ed511fc67f97b9f430588ec893"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/ConsumerTraversal01/summary.json",
+      "sha256": "57876344f1691eda1d315a07e2f1b3dbe5c57ec114a03fb24785acfbe13c9028"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Differential01OriginalMacro/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Differential01OriginalMacro/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Differential01OriginalMacro/jump.json",
+      "sha256": "fe15e8540bc5d679cec4aa1bcec6a80ef1d967e9c8d24f28e06cbed3dd36f6d1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Differential01OriginalMacro/jump.log",
+      "sha256": "52c7ef40e62a06c42f420cafdbc45e8daed6c64ca793a8935bf29b5f5910be84"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Differential01OriginalMacro/report-gate-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Differential01OriginalMacro/report-gate-stdout.log",
+      "sha256": "3b3919d8a234b86420ebde59da4fbdaba9d10bd7d26f4fe2f5880991555c272e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Differential01OriginalMacro/summary.json",
+      "sha256": "ae64eee6eb5af6b529f7241f1f3d75376bd08418b09287d0a2dd726f9570a0da"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/focused-changes.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/guards.json",
+      "sha256": "2578320eada9a536bdc93cbc6716408aa450ec61666fb180c12be69bae4c210d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Host01AffectedConsumers.json",
+      "sha256": "741c415f93c7d787de9ae8091e00a2b52474b4cc95ad4aba01657131082fd394"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Host02ConsumerImports.json",
+      "sha256": "91f2e544f282679d23b265d6dd86f7be0821983aa508914db17455f937bb7d82"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Host03ClosureAndConsumers.json",
+      "sha256": "63a2c33f3317760e4969021f7205cf88b53e3fc601064128dadc71735b8a1be4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe01/assets-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe01/assets-stdout.log",
+      "sha256": "ab9ace8b1408887797486449532f6b0c1880abd427e9500f026303640d821b9a"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe01/assets.json",
+      "sha256": "e8a3fdc75102cd6ca32e7b73faf93cadc1995d890f7340ded23905231482154e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe01/assets.log",
+      "sha256": "6a7a20a49925a66997713a0bbdaa7a56ec9ffa613509a4daf7a8f37d76bfa22f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe01/PreviousAssets/before.uasset",
+      "sha256": "36eb2e02421c212bc2a0ef9903ddf956b25504dc4438af11dee63bb3eeea498c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe01/source/Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/macro_policies.py",
+      "sha256": "73123bc8e8777e0d0f538c3f52a87dce6d6d680c0bf85be5416d248d8fcef13d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe01/source/Demos/UEPLyraIntegration/Tools/generate_macro_closure_probe.py",
+      "sha256": "9d78e56d4628eafc855317b743032049cc26fcdd41b86e1c4178ecae8db608e3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe01/source/hashes.json",
+      "sha256": "1e60ace64912414fe8e870faf5941333afd47c0839e03e9ca85e9660331efef9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe01/source/Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "7436825fa44320c69f57c93a7bef62b4dbee4de0938c16c93adf0b5dc208af84"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe01/summary.json",
+      "sha256": "82a976a11d602be407a9b069293621de61378e713c4584371db060080d7f8ab1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe02GraphReference/assets-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe02GraphReference/assets-stdout.log",
+      "sha256": "989c9f4fee83cc4adc71e10ef4918bab6cd437e75a8e82d716fedc15fa5f75b1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe02GraphReference/assets.json",
+      "sha256": "90d1ade6ddce69054c106be3b4f3b37d9c0d5d03ff521db4964eae824c2a636b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe02GraphReference/assets.log",
+      "sha256": "135f5701913fef6848e19c1a9034f6cbd517618271b1c999b62ede704a6705e3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe02GraphReference/PreviousAssets/before.uasset",
+      "sha256": "36eb2e02421c212bc2a0ef9903ddf956b25504dc4438af11dee63bb3eeea498c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe02GraphReference/probe-Ammo-pins.json",
+      "sha256": "801383bff1bc8cf3e566cd8afd04a4e30374339aad01a440837d28360f9bf250"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe02GraphReference/probe-Specific-pins.json",
+      "sha256": "a541e5b2d78be847583bc9e5eb7b95328c738274f64b887d2b2d10f16a11ee46"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe02GraphReference/probe-Tag-pins.json",
+      "sha256": "22546145cd5eed71483cd78b050d82eb17e8f2590b9b3b039bc37b33cf99eb8f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe02GraphReference/probe-Weapon-pins.json",
+      "sha256": "1c02da14b28192bcf5d58e72346c9464aa4f2b8ba7a3a1a1512c3c2062ca248b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe02GraphReference/source/Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/macro_policies.py",
+      "sha256": "73123bc8e8777e0d0f538c3f52a87dce6d6d680c0bf85be5416d248d8fcef13d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe02GraphReference/source/Demos/UEPLyraIntegration/Tools/generate_macro_closure_probe.py",
+      "sha256": "8f3d916b85eafb94d67d079c3346797210462dbaf1484b63b0a294ef20a57162"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe02GraphReference/source/hashes.json",
+      "sha256": "2f895cfcf475f25b935d91350c2933bf897e586a3389f633ae90f6b3a998bbf5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe02GraphReference/summary.json",
+      "sha256": "1a4c739d0ec839bb8178b1c1433d63e42f8eba3273e56190285b765ecc5727f9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe03SingleReturn/assets-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe03SingleReturn/assets-stdout.log",
+      "sha256": "ef8b6a16a4ca33042006df64bc878d4d1cdd0f5486b6db52b82ac5c6f6bb2291"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe03SingleReturn/assets.json",
+      "sha256": "92fb1480cf71ed34c667ca05851dd349d44ca063439b99ee02e61fe2b1c47077"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe03SingleReturn/assets.log",
+      "sha256": "38cc7cec8118fdd5f9d630b80240d0d629f2292a9cda8bcadb70f9eae9a8348c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe03SingleReturn/PreviousAssets/before.uasset",
+      "sha256": "36eb2e02421c212bc2a0ef9903ddf956b25504dc4438af11dee63bb3eeea498c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe03SingleReturn/probe-Ammo-pins.json",
+      "sha256": "801383bff1bc8cf3e566cd8afd04a4e30374339aad01a440837d28360f9bf250"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe03SingleReturn/probe-Specific-pins.json",
+      "sha256": "a541e5b2d78be847583bc9e5eb7b95328c738274f64b887d2b2d10f16a11ee46"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe03SingleReturn/probe-Tag-pins.json",
+      "sha256": "22546145cd5eed71483cd78b050d82eb17e8f2590b9b3b039bc37b33cf99eb8f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe03SingleReturn/probe-Weapon-pins.json",
+      "sha256": "1c02da14b28192bcf5d58e72346c9464aa4f2b8ba7a3a1a1512c3c2062ca248b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Probe03SingleReturn/summary.json",
+      "sha256": "36daeeed08a1a236846124f422e4bfc9dafd9ffc9b494f9872c439e2efba0142"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-macro-libraries/Run-Audit.ps1",
+      "sha256": "ee1a1f84c0b21b771635c811cb7a4f0aa1d10327bba3cdb9d69a5ac2b04da96d"
+    }
+  ],
+  "preserved_failed_probe_runs": [
+    "Probe01",
+    "Probe02GraphReference"
+  ],
+  "preserved_failed_host_reports": [
+    "Host01AffectedConsumers.json"
+  ],
+  "preserved_rejected_historical_revision": "ConsumerAudio01",
+  "regression_policy": {
+    "mode": "incremental",
+    "feature_and_affected_tests": 147,
+    "full_regression_executed": false,
+    "isolated_index_result": ".build/CommitVerification/20261020-macro-closure/Index01/summary.json",
+    "index_result_is_external_to_avoid_changing_verified_tree": true
+  },
+  "scope_limits": {
+    "full_original_candidates": 246,
+    "all_original_asset_paths_preserved": true,
+    "original_macro_definition_and_consumer_uassets_unchanged": true,
+    "original_fallback_paths_retained": true,
+    "exact_original_macro_cases": 19,
+    "current_runtime_consumer_assets": 9,
+    "affected_native_families_rerun": 5,
+    "network_acceptance": false,
+    "empty_slot_diagnostic_native_variant_tested": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "migration_complete": false
+  }
+}

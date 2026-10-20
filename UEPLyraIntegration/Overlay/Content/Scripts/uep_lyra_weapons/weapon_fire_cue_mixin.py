@@ -3,6 +3,7 @@ import unreal_engine as ue
 from unreal_engine.structs import GameplayCueParameters
 from uep_lyra_world.effect_pad_mixin import valid
 from uep_lyra_abilities.melee_trace_mixin import native_outputs
+from . import macro_policies
 
 WEAPONS=("Pistol","Rifle","Shotgun")
 CLASSES={name:"/ShooterCore/Weapons/"+name+"/GCN_Weapon_"+name+"_Fire.GCN_Weapon_"+name+"_Fire_C" for name in WEAPONS}
@@ -20,13 +21,7 @@ def evidence(cue):
 
 
 def weapon_for(target):
-    equipment=target.call_function("GetComponentByClass",ue.find_class("LyraEquipmentManagerComponent"))
-    if not valid(equipment):return None
-    instances=equipment.call_function("GetEquipmentInstancesOfType",ue.find_class("LyraWeaponInstance"))
-    if not instances or not valid(instances[0]):return None
-    actors=instances[0].call_function("GetSpawnedActors")
-    if not actors or not valid(actors[0]) or not actors[0].is_a(ue.load_class("/Game/Weapons/B_Weapon.B_Weapon_C")):return None
-    return actors[0]
+    return macro_policies.weapon_for(target)
 
 
 def burst(cue,target,params,spawns):

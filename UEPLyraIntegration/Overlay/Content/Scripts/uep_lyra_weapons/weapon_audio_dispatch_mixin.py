@@ -2,6 +2,7 @@
 import unreal_engine as ue
 from unreal_engine.structs import GameplayTag, TapDelayInfo
 from uep_lyra_world.effect_pad_mixin import valid
+from . import macro_policies
 
 CLASS="/Game/UEPMixins/BP_WeaponAudioDispatchRouter.BP_WeaponAudioDispatchRouter_C"
 METHODS={"SendWeaponFire":"UEPAudioSendFire","SetWeaponSoundParams":"UEPAudioSoundParams",
@@ -34,16 +35,9 @@ def send_fire(player,strength,world):
 
 def sound_params(actor,spawn):
     if not valid(actor) or not actor.is_a(ue.find_class("Pawn")):return
-    local=bool(actor.call_function("IsLocallyViewed"));instigator=actor.get_property("Instigator")
-    if not valid(instigator):return
-    controller=instigator.call_function("GetController")
-    if not valid(controller):return
-    quickbar=controller.get_component_by_type(ue.find_class("LyraQuickBarComponent"))
-    if not valid(quickbar):return
-    item=quickbar.call_function("GetActiveSlotItem");tag=GameplayTag(TagName="Lyra.ShooterGame.Weapon.MagazineAmmo")
-    # Preserve the original VM's null-target diagnostics for an empty active slot.
-    if not valid(item):return True
-    ammo=int(item.call_function("GetStatTagStackCount",tag)) if item.call_function("HasStatTag",tag) else 0
+    local=bool(actor.call_function("IsLocallyViewed"));completed,ammo,diagnostic=macro_policies.weapon_ammo(actor)
+    if diagnostic:return True
+    if not completed:return
     string=lib("KismetStringLibrary")
     seed=-1 if local else int(string.call_function("GetCharacterAsNumber",lib("KismetSystemLibrary").call_function("GetDisplayName",actor),
         int(string.call_function("Len",lib("KismetSystemLibrary").call_function("GetDisplayName",actor)))-1))

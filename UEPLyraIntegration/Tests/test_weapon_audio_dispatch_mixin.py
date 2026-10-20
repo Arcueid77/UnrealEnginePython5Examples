@@ -11,7 +11,7 @@ from unittest.mock import patch
 native=types.ModuleType("unreal_engine");structs=types.ModuleType("unreal_engine.structs")
 structs.GameplayTag=lambda **kw:types.SimpleNamespace(**kw);structs.TapDelayInfo=lambda **kw:types.SimpleNamespace(**kw)
 world_policy=types.ModuleType("uep_lyra_world.effect_pad_mixin");world_policy.valid=lambda value:value is not None
-spec=importlib.util.spec_from_file_location("_weapon_audio_dispatch_model",Path(__file__).resolve().parents[1]/"Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_dispatch_mixin.py")
+spec=importlib.util.spec_from_file_location("uep_lyra_weapons._weapon_audio_dispatch_model",Path(__file__).resolve().parents[1]/"Overlay/Content/Scripts/uep_lyra_weapons/weapon_audio_dispatch_mixin.py")
 policy=importlib.util.module_from_spec(spec)
 with patch.dict(sys.modules,{"unreal_engine":native,"unreal_engine.structs":structs,"uep_lyra_world.effect_pad_mixin":world_policy}):spec.loader.exec_module(policy)
 
@@ -30,6 +30,7 @@ class Object:
 
 class TestWeaponAudioDispatchMixin(unittest.TestCase):
     def setUp(self):
+        policy.macro_policies.ue=native
         self.calls=[];self.pawn=Object("Pawn");self.manager=Object();self.state=Object("LyraGameState",**{"music":self.manager});self.preset=Object()
         native.find_class=lambda name:types.SimpleNamespace(get_cdo=lambda:types.SimpleNamespace(call_function=self.backend)) if name.endswith("Library") or name=="GameplayStatics" else name
         native.load_class=lambda path:"music";native.FLinearColor=lambda *args:args;native.load_object=lambda *args:self.preset

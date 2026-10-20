@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "macroclosure":
+        from generate_macro_closure_probe import generate as generate_macro_closure
+        return generate_macro_closure(stage)
     if kind == "shootereqs":
         from generate_shooter_eqs_assets import generate as generate_shooter_eqs
         return generate_shooter_eqs(stage)

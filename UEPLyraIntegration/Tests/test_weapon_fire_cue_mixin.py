@@ -9,7 +9,7 @@ from unittest.mock import patch
 native=types.ModuleType("unreal_engine");structs=types.ModuleType("unreal_engine.structs");structs.GameplayCueParameters=lambda:"empty-native-cue-params"
 helpers=types.ModuleType("uep_lyra_world.effect_pad_mixin");helpers.valid=lambda value:value is not None
 trace=types.ModuleType("uep_lyra_abilities.melee_trace_mixin");trace.native_outputs=lambda cls,name,result:result
-spec=importlib.util.spec_from_file_location("_weapon_fire_cue_model",Path(__file__).resolve().parents[1]/"Overlay/Content/Scripts/uep_lyra_weapons/weapon_fire_cue_mixin.py")
+spec=importlib.util.spec_from_file_location("uep_lyra_weapons._weapon_fire_cue_model",Path(__file__).resolve().parents[1]/"Overlay/Content/Scripts/uep_lyra_weapons/weapon_fire_cue_mixin.py")
 policy=importlib.util.module_from_spec(spec)
 with patch.dict(sys.modules,{"unreal_engine":native,"unreal_engine.structs":structs,"uep_lyra_world.effect_pad_mixin":helpers,"uep_lyra_abilities.melee_trace_mixin":trace}):spec.loader.exec_module(policy)
 
@@ -22,6 +22,7 @@ class Object:
 
 class TestWeaponFireCueMixin(unittest.TestCase):
     def setUp(self):
+        policy.macro_policies.ue=native
         self.calls=[];self.weapon=Object(self,"weapon");self.instance=Object(self,"instance");self.equipment=Object(self,"equipment");self.audio=Object(self,"audio")
         self.target=Object(self,"target");self.instances=[self.instance];self.actors=[self.weapon];self.actor_type_ok=True;self.name="Pistol"
         self.cue=types.SimpleNamespace(get_class=lambda:types.SimpleNamespace(get_path_name=lambda:policy.CLASSES[self.name]),call_mixin_original=self.original)

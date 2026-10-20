@@ -23,6 +23,40 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch141 (2026-10-20),audio/VFX macro consumer closure:**
+Original WeaponAudioMacros(32 nodes) and BPML_VFXMacros(9 nodes) remain byte/graph
+identical fallback/reference definitions. Shared Python macro_policies now owns
+weapon lookup/ammo completion/ignore-tag/specific invisible-mesh semantics. Native
+original471-Blueprint index plus current macro graph resolution proves9 original
+callsites in9 consumer assets:3 weapon firing Cues,static SetWeaponSoundParams,
+Dash/Death/Launcher/Teleporter/Spawning. Each current Python entry reaches shared
+helper;no original consumer uasset changed. IgnoreSpecificSkeletalMesh hasno live
+runtime consumer,with its Python equivalent still covered by exact native probe.
+Probe03SingleReturn compiles the original4 macros directly in a stage-only actor.
+Differential01OriginalMacro matches7 weapon/5 ammo/4 tag/3 specific-mesh cases,
+including first equipment/first spawned actor only,missing equipment/controller/
+instigator,unwired macro completion,magazine values,native FName case handling
+and invisible skeletal asset identity. Empty slot retains original diagnostic
+fallback;that erroneous-input native branch is not newly accepted here.
+ConsumerFire01/ConsumerAudioEffect01/ConsumerHeroBurst01/ConsumerTraversal01/
+ConsumerSpawning01 all pass native exit0/independent gate0/strict logs/ordered
+shutdown. Only affected native families rerun. Current audio effect acceptance
+includes real input/default registration/offline renderer after old dispatch-only
+proof preflight rejected its superseded asset hash. No stale proof bypass.
+Native probe spawn array/magazine/actors and consumer-owned material/audio/
+Timeline/delegate state restore under their individual contracts.147 focused+
+affected host checks and5 invalid lanes pass;exact index regression incremental.
+Preserve Probe01/02 sources:GraphReference required proper constructor fields,
+then separately authored return signatures differed;single typed return probe
+compiled exact macros. Preserve Host01 import-context failures/fixed test package
+scaffolding. Preserve ConsumerAudio01 stale-revision preflight and the outer shell
+LASTEXITCODE observation failure after ConsumerFire01 had already passed;no native
+rerun for that shell status. Native summaries/process+gate exits are authoritative.
+Definitions remain for fallback,not falsely counted as removed package content.
+Full246-candidate migration and remaining diagnostic/owner/network/culture/pixels/
+package/version gates stay open. No SDK/Engine/general Cpp/official edits,build,
+cook,push,tag or release publication.
+
 **Completed bounded batch140 (2026-10-20),shooter EQS family:**
 Points/TargetEnemy/WeaponCheck contexts and GetAllEnemy generator callbacks use
 Python. Original16/8/35/17 nodes/full CDOs/const flags/typed actor arrays+vector/

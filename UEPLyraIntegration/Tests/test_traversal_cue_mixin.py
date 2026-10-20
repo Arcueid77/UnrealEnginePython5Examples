@@ -7,11 +7,12 @@ import unittest
 from unittest.mock import patch
 
 native=types.ModuleType('unreal_engine');enums=types.ModuleType('unreal_engine.enums');enums.EAttachLocation=types.SimpleNamespace(KeepRelativeOffset=0);enums.ENCPoolMethod=types.SimpleNamespace(**{'None':0})
+macros=types.ModuleType('uep_lyra_weapons.macro_policies');macros.ignore_tag=lambda mesh:bool(mesh.call_function('ComponentHasTag','ignore'))
 validity=types.ModuleType('uep_lyra_world.effect_pad_mixin');validity.valid=lambda x:x is not None
 outputs=types.ModuleType('uep_lyra_abilities.melee_trace_mixin');outputs.native_outputs=lambda cls,fn,value:value
 helpers=types.ModuleType('uep_lyra_weapons.hero_burst_cue_mixin')
 spec=importlib.util.spec_from_file_location('uep_lyra_weapons._traversal_policy_test',Path(__file__).resolve().parents[1]/'Overlay/Content/Scripts/uep_lyra_weapons/traversal_cue_mixin.py');policy=importlib.util.module_from_spec(spec)
-with patch.dict(sys.modules,{'unreal_engine':native,'unreal_engine.enums':enums,'uep_lyra_world.effect_pad_mixin':validity,'uep_lyra_abilities.melee_trace_mixin':outputs,'uep_lyra_weapons.hero_burst_cue_mixin':helpers}):
+with patch.dict(sys.modules,{'unreal_engine':native,'uep_lyra_weapons.macro_policies':macros,'unreal_engine.enums':enums,'uep_lyra_world.effect_pad_mixin':validity,'uep_lyra_abilities.melee_trace_mixin':outputs,'uep_lyra_weapons.hero_burst_cue_mixin':helpers}):
     helpers.lib=lambda name:None;helpers.components=lambda *a:[];helpers.team=lambda *a:None;spec.loader.exec_module(policy)
 
 

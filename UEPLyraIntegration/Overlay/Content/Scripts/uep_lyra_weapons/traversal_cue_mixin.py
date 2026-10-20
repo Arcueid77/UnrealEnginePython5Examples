@@ -1,5 +1,6 @@
 """Launcher/teleporter Cue policy; original Timeline and native component APIs."""
 import unreal_engine as ue
+from .macro_policies import ignore_tag
 from unreal_engine.enums import EAttachLocation,ENCPoolMethod
 from uep_lyra_world.effect_pad_mixin import valid
 from uep_lyra_abilities.melee_trace_mixin import native_outputs
@@ -45,7 +46,7 @@ def launcher(actor,target,params):
     scale=pad.get_property('DefaultSceneRoot').call_function('K2_GetComponentScale')
     average=math.call_function('Divide_DoubleDouble',math.call_function('Add_DoubleDouble',math.call_function('Add_DoubleDouble',float(scale.x),float(scale.y)),float(scale.z)),3.)
     for mesh in components(target,'SkeletalMeshComponent',True):
-        if mesh.call_function('ComponentHasTag','ignore'):counts['ignored']+=1;continue
+        if ignore_tag(mesh):counts['ignored']+=1;continue
         effect=spawn_attached(mesh,JUMP,False,False,True);append(actor,'SpawnedEffects',effect);counts['spawns']+=1
         if valid(effect):
             effect.call_function('SetVariablePosition','LaunchPadWorldPosition',pad.get_actor_location());effect.call_function('SetVariableLinearColor','LaunchPadColor',pad_color)
@@ -91,7 +92,7 @@ def teleport(actor,target,params):
     if entry is None or not entry.is_a(ue.load_class(TELEPORTER)):return
     actor.set_property('As B Teleport',entry);math=lib('KismetMathLibrary');niagara=lib('NiagaraFunctionLibrary');source_component=entry.get_property('Niagara');source_position=source_component.call_function('K2_GetComponentLocation')
     for mesh in components(target,'SkeletalMeshComponent',True):
-        if mesh.call_function('ComponentHasTag','ignore'):counts['ignored']+=1;continue
+        if ignore_tag(mesh):counts['ignored']+=1;continue
         flash=niagara.call_function('SpawnSystemAtLocation',WorldContextObject=actor,SystemTemplate=ue.load_object(ue.find_class('NiagaraSystem'),ENTER),Location=source_position,Rotation=ue.FRotator(),Scale=ue.FVector(1.,1.,1.),bAutoDestroy=True,bAutoActivate=True,PoolingMethod=getattr(ENCPoolMethod,'None'),bPreCullCheck=True)
         if valid(flash):
             niagara.call_function('OverrideSystemUserVariableSkeletalMeshComponent',flash,'SkeletalMesh',mesh)

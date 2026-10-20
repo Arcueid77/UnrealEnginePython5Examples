@@ -1,5 +1,6 @@
 """Spawn Cue business with original native async/delegate/latent/Timeline flows."""
 import unreal_engine as ue
+from .macro_policies import ignore_tag
 from unreal_engine.enums import EAttachLocation,ENCPoolMethod
 from uep_lyra_world.effect_pad_mixin import valid
 from .hero_burst_cue_mixin import lib,components
@@ -42,7 +43,7 @@ def spawn(actor):
         evidence(actor)['diagnostic_fallbacks']+=1;return actor.call_mixin_original('SpawnEffectForEachMeshComponent')
     mapping=dict(actor.get_property('SpawnedEffectMap'));effects=list(actor.get_property('SpawnedEffects'))
     for mesh in components(actor.get_property('TargetActor'),'SkeletalMeshComponent',True):
-        if mesh.call_function('ComponentHasTag','ignore'):evidence(actor)['ignored_meshes']+=1;continue
+        if ignore_tag(mesh):evidence(actor)['ignored_meshes']+=1;continue
         if mesh in mapping:evidence(actor)['existing_meshes']+=1;continue
         effect=lib('NiagaraFunctionLibrary').call_function('SpawnSystemAttached',SystemTemplate=template,AttachToComponent=mesh,AttachPointName='None',Location=ue.FVector(),Rotation=ue.FRotator(),LocationType=EAttachLocation.KeepRelativeOffset,bAutoDestroy=False,bAutoActivate=True,PoolingMethod=getattr(ENCPoolMethod,'None'),bPreCullCheck=True)
         effects.append(effect);actor.set_property('SpawnedEffects',effects);mapping[mesh]=effect;actor.set_property('SpawnedEffectMap',mapping);evidence(actor)['spawns']+=1

@@ -10,7 +10,7 @@ native=types.ModuleType('unreal_engine');structs=types.ModuleType('unreal_engine
 structs.GameplayTag=lambda **kw:types.SimpleNamespace(**kw);enums.EAttachLocation=types.SimpleNamespace(KeepRelativeOffset=0);enums.ENCPoolMethod=types.SimpleNamespace(**{'None':0})
 validity=types.ModuleType('uep_lyra_world.effect_pad_mixin');validity.valid=lambda x:x is not None
 outputs=types.ModuleType('uep_lyra_abilities.melee_trace_mixin');outputs.native_outputs=lambda cls,fn,value:value
-spec=importlib.util.spec_from_file_location('_hero_burst_policy',Path(__file__).resolve().parents[1]/'Overlay/Content/Scripts/uep_lyra_weapons/hero_burst_cue_mixin.py');policy=importlib.util.module_from_spec(spec)
+spec=importlib.util.spec_from_file_location('uep_lyra_weapons._hero_burst_policy',Path(__file__).resolve().parents[1]/'Overlay/Content/Scripts/uep_lyra_weapons/hero_burst_cue_mixin.py');policy=importlib.util.module_from_spec(spec)
 with patch.dict(sys.modules,{'unreal_engine':native,'unreal_engine.structs':structs,'unreal_engine.enums':enums,'uep_lyra_world.effect_pad_mixin':validity,'uep_lyra_abilities.melee_trace_mixin':outputs}):spec.loader.exec_module(policy)
 
 

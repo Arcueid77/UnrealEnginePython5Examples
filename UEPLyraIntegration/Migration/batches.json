@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 142,
+    "bounded_evidence_ledgers": 143,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1235,6 +1235,77 @@
     "full_library_acceptance": false,
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
+  },
+  "macro_consumer_closure_pilot": {
+    "version": "0.12.0",
+    "status": "partial_macro_semantics_python_helpers_all_original_runtime_consumers_native_verified_original_definitions_retained",
+    "evidence_ledger": "141-audio-vfx-macro-python-consumer-closure.json",
+    "owner": "uep_lyra_weapons.macro_policies",
+    "read_only_audit": "20261020-macro-libraries/Audit01",
+    "native_probe_authoring": "20261020-macro-libraries/Probe03SingleReturn",
+    "native_runtime_runs": [
+      "20261020-macro-libraries/Differential01OriginalMacro",
+      "20261020-macro-libraries/ConsumerFire01",
+      "20261020-macro-libraries/ConsumerAudioEffect01",
+      "20261020-macro-libraries/ConsumerHeroBurst01",
+      "20261020-macro-libraries/ConsumerTraversal01",
+      "20261020-macro-libraries/ConsumerSpawning01"
+    ],
+    "original_macro_library_graph_nodes": {
+      "audio": 32,
+      "vfx": 9
+    },
+    "original_macro_definition_asset_bytes_and_graphs_unchanged": true,
+    "production_assets_saved": false,
+    "stage_only_exact_original_macro_probe": true,
+    "original_macro_callsites": 9,
+    "original_runtime_consumer_assets": 9,
+    "all_original_callsite_python_entries_reach_shared_helpers": true,
+    "helpers": [
+      "weapon_for",
+      "weapon_ammo",
+      "ignore_tag",
+      "ignore_specific"
+    ],
+    "original_specific_mesh_macro_has_no_live_runtime_consumer": true,
+    "native_exact_macro_cases": {
+      "weapon": 7,
+      "ammo": 5,
+      "tag": 4,
+      "specific": 3
+    },
+    "native_original_macro_total_cases": 19,
+    "native_first_equipment_and_first_spawned_actor_only_semantics_verified": true,
+    "native_ammo_unwired_exit_completion_and_magazine_semantics_verified": true,
+    "native_fname_case_insensitive_tag_and_invisible_mesh_identity_verified": true,
+    "empty_active_slot_diagnostic_original_fallback_preserved": true,
+    "affected_native_families": [
+      "three firing cues",
+      "current real-input/offline audio effect initialization",
+      "dash/death",
+      "launcher/teleporter",
+      "spawning"
+    ],
+    "native_process_and_independent_gates_all_zero": true,
+    "original_equipment_spawn_array_magazine_and_probe_lifetime_restored": true,
+    "feature_and_affected_host_checks": 147,
+    "invalid_lane_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "preserved_failed_probe_runs": [
+      "Probe01",
+      "Probe02GraphReference"
+    ],
+    "preserved_failed_host_reports": [
+      "Host01AffectedConsumers.json"
+    ],
+    "preserved_rejected_historical_revision": "ConsumerAudio01",
+    "native_old_dispatch_rejection_replaced_by_current_audio_effect_acceptance": true,
+    "network_acceptance": false,
+    "diagnostic_empty_slot_native_variant_tested": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Remaining diagnostic/native-owner/network/culture/pixel/package/version gates and all original0.13/0.14 Python replacement scope remain open."
   },
   "shooter_eqs_pilot": {
     "version": "0.12.0",
@@ -6502,8 +6573,9 @@
       "group": "特效、GameplayCue 与音频调度",
       "method_candidates": 0,
       "business_nodes": 23,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch141:original macro definitions remain byte/graph-identical fallback/reference assets;their runtime semantics now use shared Python weapon lookup/ammo completion/tag/specific-mesh helpers. Native original index+current graph census identifies all9 callsites across9 runtime consumer assets;AST maps each current Python entry to shared helper. Exact original macro expansion probe matches19 native cases(first equipment/spawn only,missing controller/unwired completion,magazine values,native name case/invisible asset identity). Five affected current native families pass including3 fire cues/current real-input audio/dash-death/launcher-teleporter/spawning;all process+gate exits0/strict logs/shutdown. Original consumer uassets unchanged. Original IgnoreSpecificSkeletalMesh hasno live consumer but Python equivalent is native-tested.147 focused/affected host checks/5 invalid lanes,exact staged incremental follows. Probe01/02 setup/signature and host import failures preserved;historical static-audio revision preflight rejection preserved and replaced by current effect acceptance. Empty-slot diagnostics/network/culture/pixels/package/version/full migration remain open.",
+      "status": "partial_macro_semantics_python_helpers_all_original_runtime_consumers_native_verified_original_definitions_retained",
+      "evidence_ledger": "141-audio-vfx-macro-python-consumer-closure.json"
     },
     {
       "path": "/Game/Effects/Blueprints/B_FootStep.B_FootStep",
@@ -6601,8 +6673,9 @@
       "group": "特效、GameplayCue 与音频调度",
       "method_candidates": 0,
       "business_nodes": 5,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch141:original macro definitions remain byte/graph-identical fallback/reference assets;their runtime semantics now use shared Python weapon lookup/ammo completion/tag/specific-mesh helpers. Native original index+current graph census identifies all9 callsites across9 runtime consumer assets;AST maps each current Python entry to shared helper. Exact original macro expansion probe matches19 native cases(first equipment/spawn only,missing controller/unwired completion,magazine values,native name case/invisible asset identity). Five affected current native families pass including3 fire cues/current real-input audio/dash-death/launcher-teleporter/spawning;all process+gate exits0/strict logs/shutdown. Original consumer uassets unchanged. Original IgnoreSpecificSkeletalMesh hasno live consumer but Python equivalent is native-tested.147 focused/affected host checks/5 invalid lanes,exact staged incremental follows. Probe01/02 setup/signature and host import failures preserved;historical static-audio revision preflight rejection preserved and replaced by current effect acceptance. Empty-slot diagnostics/network/culture/pixels/package/version/full migration remain open.",
+      "status": "partial_macro_semantics_python_helpers_all_original_runtime_consumers_native_verified_original_definitions_retained",
+      "evidence_ledger": "141-audio-vfx-macro-python-consumer-closure.json"
     },
     {
       "path": "/ShooterCore/ControlPoint/B_MusicManagerComponent_ControlPoint.B_MusicManagerComponent_ControlPoint",

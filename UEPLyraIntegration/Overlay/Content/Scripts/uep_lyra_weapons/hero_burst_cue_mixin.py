@@ -1,5 +1,6 @@
 """Dash/death business with original native Timeline clocks/curves and parent FX."""
 import unreal_engine as ue
+from .macro_policies import ignore_tag
 from unreal_engine.structs import GameplayTag
 from unreal_engine.enums import EAttachLocation,ENCPoolMethod
 from uep_lyra_world.effect_pad_mixin import valid
@@ -52,7 +53,7 @@ def dash(actor,target,params):
     actor.set_property('TargetActor',target);actor.set_property('Duration',fields['NormalizedMagnitude']);actor.set_property('Strenght',fields['RawMagnitude']);actor.set_property('Direction',fields['Normal'])
     color=team(actor,target);duration=float(actor.get_property('Duration'));direction=actor.get_property('Direction')
     for mesh in components(target,'SkeletalMeshComponent',True):
-        if mesh.call_function('ComponentHasTag','ignore'):counts['ignored_meshes']+=1;continue
+        if ignore_tag(mesh):counts['ignored_meshes']+=1;continue
         effect=attached(actor,mesh,DASH,True);append(actor,effect);counts['spawns']+=1
         if valid(effect):
             lib('NiagaraFunctionLibrary').call_function('OverrideSystemUserVariableSkeletalMeshComponent',effect,'SkeletalMesh',mesh)
@@ -73,7 +74,7 @@ def death(actor,target,params):
             if valid(effect):effect.call_function('SetColorParameter','BodyColor',color)
             counts['electric']+=1
     for mesh in components(target,'SkeletalMeshComponent',True):
-        if mesh.call_function('ComponentHasTag','ignore'):counts['ignored_meshes']+=1;continue
+        if ignore_tag(mesh):counts['ignored_meshes']+=1;continue
         effect=attached(actor,mesh,DEATH,False);append(actor,effect);counts['spawns']+=1
         if valid(effect):
             effect.call_function('SetVariableFloat','KillTimeLength',duration)

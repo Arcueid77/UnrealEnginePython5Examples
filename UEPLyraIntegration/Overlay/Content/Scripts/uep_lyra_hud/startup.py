@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPMacroClosureResult=") for argument in arguments):
+        return "uep_lyra_weapons.macro_closure_validation"
     if any(argument.startswith("-UEPShooterEQSResult=") for argument in arguments):
         return "uep_lyra_world.shooter_eqs_validation"
     if any(argument.startswith("-UEPShooterAIResult=") for argument in arguments):
