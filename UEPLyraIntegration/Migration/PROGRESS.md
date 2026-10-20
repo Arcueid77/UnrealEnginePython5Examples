@@ -23,6 +23,53 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch150 (2026-10-20),credits and tap action bar:**
+Credits scroll/reset/capture/construct/activation/timer selection/null focus and
+bar query/reset/toggle policies use Python. Original54/13 nodes/full CDOs/trees/
+animations/public signatures/node GUIDs/native partition semantics remain.7/3
+methods per Profile,39/13 transport plus5 interfaces each;zero new business.
+Original native one-second Delay,.01 looping TimerManager delegate/handle storage/
+clear-and-invalidate nodes remain;MaxOncePerFrame stays false. Timer start/stop
+and rich-text writer nodes move intact into native helpers. Native delegate
+ScrollCredits name/GUID is restored after reparenting. Only compiler-derived
+FUNC_HasDefaults for relocated timer frame locals may differ;public parameters,
+const/access/net flags and other functions remain exact,with signature records.
+Construct appends original rich text/CRLF rows1..100 without clearing prior text.
+Reset scrolls to0 and collapses the bar. End stops and resets without rearming.
+Only Collapsed is false for bar visibility;Hidden still counts visible.
+Assets03AssetCountGuard and Differential01 pass native exit0/independent gate0/
+strict logs/ordered shutdown. Both Profiles verify native100-line Construct,
+actual remount200-line accumulation,null const focus,10 visibility cases and3
+explicit scroll edge cases. Actual native Delay waits one second before desired-
+size capture/timer start. Natural native looping callbacks advance scroll,clear
+the real handle/reset/collapse at the endpoint and remain quiet without rearm.
+The rooted deactivated/removed widget retains its original running timer;no
+production cleanup is invented. Only fixture-owned timers are stopped at final
+cleanup. Owned ScrollSpeed and endpoint after capture bound the test;native
+Delay duration/timer rate/loop flags stay unchanged. Roots/Profile selectors and
+original live player health restore. No native callback replay or Python timer.
+20 focused host checks and5 invalid lanes pass;exact staged-index checks use
+the default incremental selector at
+.build/CommitVerification/20261020-credits/Index01.
+Preserve Assets01/source:CreateDelegate lost selected function when reparented;
+explicit original name/GUID restoration fixes it. Preserve Assets02NativeDelegateBinding/
+source+4 Stage outputs:wrapper count guard accidentally included credits in an
+8-output family;final guard requires4. No failed proof or output overwritten.
+Physical tap input,pixels,network,package/version,prior FText audit and all other
+original246-candidate requirements remain open. Existing timer lifetime behavior
+is retained rather than silently changing production cleanup semantics.
+No Engine/general Cpp/official edits,build,cook,push,tag or release publication.
+
+Batch150 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261020-credits/Audit01/summary.json` 238f6b581266a6fba827fa23f6180507ad3ba50802a51d8fbf12e7a9835db727
+`20261020-credits/Assets03AssetCountGuard/summary.json` afafb74347eb898384414c5c5da35a80536c956626410dd75949c2f9da8f2145
+`20261020-credits/Assets03AssetCountGuard/assets.json` 39a26bc531d7f893e6877ca38da4b2301bd2641dc2452145e13d7f2b6dc3e033
+`20261020-credits/Assets03AssetCountGuard/credits-signatures.json` ffc873efad6b3441bad70c345e5e86a39c03290209f3ab466575dc53d2fa520d
+`20261020-credits/Differential01/summary.json` e6199728a941cdd9186c8cbc88b251026a20a2a86db4785eb6dc955f177a7e0f
+`20261020-credits/Differential01/jump.json` d58a4fbb0aadda066bee4174033968a7d4294367bab1d2ab1c4e97fd808a1b3a
+`20261020-credits/Host01.json` d907b3c2b46984820b6b9147668b1c9598fa9a82df584cd44ce9f92af8ee8d27
+`20261020-credits/guards.json` c4c3e28d425b834963a58249db87a54614ce4c228599c01c41e1f9030fc8e437
+
 **Completed bounded batch149 (2026-10-20),diagnostic display widgets:**
 Performance graph/text,build configuration and user watermark use Python refresh
 policies. Original22/23/6/24 nodes/full CDOs/widget trees/signatures/node GUIDs/

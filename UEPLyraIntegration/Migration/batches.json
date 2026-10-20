@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 151,
+    "bounded_evidence_ledgers": 152,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1235,6 +1235,69 @@
     "full_library_acceptance": false,
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
+  },
+  "credits_widgets_pilot": {
+    "version": "0.13.0",
+    "status": "bounded_credits_scroll_rich_text_and_tap_bar_python_policy_native_delay_timer_lifetime_verified",
+    "evidence_ledger": "150-credits-native-delay-timer-scroll-and-visibility.json",
+    "owner": "uep_lyra_hud.credits_widgets_mixin",
+    "original_read_only_audit": "20261020-credits/Audit01",
+    "native_asset_authoring": "20261020-credits/Assets03AssetCountGuard",
+    "native_runtime_runs": [
+      "20261020-credits/Differential01"
+    ],
+    "widgets": {
+      "credits": {
+        "original_graph_nodes": 54,
+        "transport_nodes": 39,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 7,
+          "BlueprintFallback": 7
+        }
+      },
+      "bar": {
+        "original_graph_nodes": 13,
+        "transport_nodes": 13,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 3,
+          "BlueprintFallback": 3
+        }
+      }
+    },
+    "new_business_nodes": 0,
+    "original_cdos_widget_trees_animations_public_parameters_const_access_net_flags_guids_and_partitions_preserved": true,
+    "native_timer_delegate_function_name_guid_and_opaque_handle_preserved": true,
+    "original_one_second_delay_point01_loop_max_once_per_frame_false_and_clear_handle_retained": true,
+    "only_compiler_derived_timer_frame_hasdefaults_flag_may_relocate": true,
+    "original_rich_prefix_suffix_crlf_one_to_hundred_append_and_native_text_writer_preserved": true,
+    "native_actual_remount_appends_another_hundred_lines": true,
+    "original_no_deactivation_or_removed_widget_timer_cleanup_added": true,
+    "source_visibility_only_compares_collapsed_and_null_const_focus_retained": true,
+    "native_profile_trials": 2,
+    "native_visibility_cases": 10,
+    "manual_scroll_edge_cases": 3,
+    "natural_timer_min_callbacks_per_profile": 3,
+    "actual_native_delay_capture_scroll_endpoint_handle_clear_reset_and_no_rearm_verified": true,
+    "rooted_deactivated_removed_widget_keeps_original_timer": true,
+    "only_owned_fixture_timers_explicitly_stopped_at_cleanup": true,
+    "owned_fixture_scroll_speed_and_post_capture_endpoint_overridden": true,
+    "original_root_profile_selectors_and_health_restored_or_unchanged": true,
+    "focused_host_checks": 20,
+    "invalid_lane_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261020-credits/Index01",
+    "preserved_failed_authoring": [
+      "Assets01",
+      "Assets02NativeDelegateBinding"
+    ],
+    "physical_tap_input_tested": false,
+    "pixels_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Remaining original0.13/0.14 replacements and prior FText audit/diagnostic/owner/network/culture/pixel/package/version gates stay open;original credits timer cleanup behavior remains unchanged."
   },
   "diagnostic_widgets_pilot": {
     "version": "0.13.0",
@@ -7968,7 +8031,8 @@
       "method_candidates": 7,
       "business_nodes": 41,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_credits_python_policy_native_delay_timer_scroll_rich_text_and_visibility_verified",
+      "evidence_run": "20261020-credits/Differential01"
     },
     {
       "path": "/Game/UI/Credits/W_TapToggleActionBar.W_TapToggleActionBar",
@@ -7977,7 +8041,8 @@
       "method_candidates": 3,
       "business_nodes": 9,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_credits_python_policy_native_delay_timer_scroll_rich_text_and_visibility_verified",
+      "evidence_run": "20261020-credits/Differential01"
     },
     {
       "path": "/Game/UI/Foundation/Buttons/W_LyraButton.W_LyraButton",
