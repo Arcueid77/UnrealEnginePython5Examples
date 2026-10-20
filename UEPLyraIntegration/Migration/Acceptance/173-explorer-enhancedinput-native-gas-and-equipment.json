@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "batch": "173-explorer-input",
+  "scope": "Five original native EnhancedInput action receivers per Explorer character. Python25 methods;BlueprintFallback20 retains full FInputActionValue Native Original frames. Exact action assets,Triggered bindings,public signatures/CDOs/all graphs/GUIDs/character bytes retained;only two Mixin DataAssets change. Both Profiles run32 engine local-player input trials through selected virtual slot helper,actual GAS tags/default zero magnitudes,native active-slot/equipment class/instigator/item identities and original three wait tasks. Release/empty/noop behavior and owned scopes restore. Primary inventory/Health/PawnClass/Profiles protected. Native pooled Cue handle replacement requires before/after identity,old release/inactivity,new inactive/unrooted and hidden/no-owner state without field writes. Remaining character/parent/original/version scope open. Incremental only.",
+  "recorded_utc": "2026-10-20T21:26:02.1764800Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "d1813c6006dcff91d1bedf521f6cb7addfcbc280",
+  "examples_parent_commit": "e2d1d73906dc215639bb71f0126686bab58ba8a0",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-input/Assets01",
+      "summary_sha256": "D1357C5A24DFB5BE6826C5EEC3ED6775AE2AD5698BCCA401AA0AB7AD5372B83A",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2277,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-input/Input02Fallback",
+      "summary_sha256": "B8477A02951E854D3BA44973B9FB0E18EB26CB6027B1982B4969914C9800616F",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3096,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "F788E6331C26BB28D2E57D818419E1FC9F56525C929776E0525FAC9341F67ECF"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-input/Input04Python",
+      "summary_sha256": "6B564F4689D32210E549D4031A210CE34262517D6666C7682C1AACE846B8CA29",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3096,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "3D08D696C6B2DE29EE55E16E92A76B3815896ED2A2E808C4F5C40E0F84A9AD56"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "CD315C40FB0B7CC2DA6CABB6236E3EF8314B67AFEB8349C9B0E0386E5B9E4D4D",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_input_mixin.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_input_mixin.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "E6E8FB9C2DAE595A383A892AEFF5620580B21FB09536E4AB5E4EC8ED09007271",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_input_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_input_validation.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "F74F9107C879BD52265B4B33F283A3E8867D617D82E4B00CCCEB6A1D481CF828",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_input_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_input_contract.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "F73E5722A275E99679A8C6E0862688EDE31E93E8687F75E6CB95D98622CA3440",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "47C38AEC18DFBF6164C21596F29BE4AEBFC4CE1BCD9E20A18B6644222C30AC13",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_explorer_input_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_explorer_input_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "D693083BE6530698D412805CBE4F6250D85B11156C90FA468B91C62A741D3A62",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "5070A595340821D7F922491BFA8031BEB3314C4915337A53D73E268C503D9690",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "7A9BDA2AC5566AE3EC2C8B1568255470D71EC83A6C2E77B5223259A227C7596D",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "path": "Validation/Run-UEP58JumpValidation.ps1"
+    }
+  ],
+  "host_report": {
+    "sha256": "009BED858A6C35B129CA6F72E30170AB68FB6C2E42410C125C025DB56AC6B575",
+    "result": {
+      "status": "passed",
+      "tests_run": 16,
+      "runtime_acceptance": false,
+      "full_regression": false
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261021-explorer-input/host-focused03.json"
+  }
+}

@@ -23,6 +23,49 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch173 (2026-10-21),Explorer EnhancedInput:**
+Each original Explorer character now has25 Python routes. BlueprintFallback
+keeps20 methods and intentionally omits the5 input overrides,using UEP native
+Original dispatch for exact FInputActionValue frames. The prior20 startup/helper/
+callback/readiness functions remain together in each Profile's own dictionary.
+Per-class descriptors resolve the5 actual native compiled action binding names
+at registration. All5 original ShooterCore action assets and Triggered bindings,
+full input function signatures/frames,all character bytes/CDOs/graphs/NodeGuid/
+public ABI remain unchanged. Only the two Mixin DataAssets change.
+Both Profiles inject actual EnhancedInput local-player vectors on both exact
+Explorer classes;no receiver or Profile method is manually called.32 native
+trials cover slot0/1/2,backward/forward cycle,repeated selected slot,empty select
+and empty-default-index cycle. Native default cycle index/magnitude is0. The
+selected virtual ChangeQuickbarSlot helper produces the actual GAS tag/payload;
+the original Quickslot ability retains3 native wait tasks and drives native
+active-slot/equipment-class/instigator results. Owned item identities stay fixed.
+Release/zero injection adds no repeated handler/event. Original primary player
+inventory/Health,scoped PawnClass/Profiles,actors/proxies/task scopes restore.
+Native Cue pooling can replace an original cached observer handle. Read-only
+before/after witnesses require the same Cue identity,old observer released or
+inactive/unrooted,replacement inactive/unrooted,hidden/no-owner Cue and no native
+field writes. Other original observers remain protected. This accounts for
+native pooling rather than cancelling or rewriting its fields.
+Native exit0,independent gate0,strict logs and ordered shutdown pass.16 focused
+checks and7 invalid lanes pass;exact staged checks are incremental at
+.build/CommitVerification/20261021-explorer-input/Index01. Input01 retains the
+overstrict old pooled-handle oracle;the final evidence also keeps the standalone
+contract independent of UE runtime imports. Input03 preserves a wrong authoring-
+directory preflight invocation;no native process ran there. No Engine/general
+Cpp/official edits,build,cook,push,tag or publication. Remaining behavior/
+construction/empty-motion override and parent business stay explicit. Static
+246/182/63/11 and exact candidate path/order remain;full migration is false.
+
+Batch173 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261021-explorer-input/Assets01/summary.json` d1357c5a24dfb5be6826c5eec3ed6775ae2ad5698bcca401aa0ab7ad5372b83a
+`20261021-explorer-input/Assets01/assets.json` 901143045100f4d82701043da34134a3df78eb1ae8071b92bfac1c99e0e19a9c
+`20261021-explorer-input/Input02Fallback/summary.json` b8477a02951e854d3ba44973b9fb0e18eb26cb6027b1982b4969914c9800616f
+`20261021-explorer-input/Input02Fallback/jump.json` f788e6331c26bb28d2e57d818419e1fc9f56525c929776e0525fac9341f67ecf
+`20261021-explorer-input/Input04Python/summary.json` 6b564f4689d32210e549d4031a210ce34262517d6666c7682c1aace846b8ca29
+`20261021-explorer-input/Input04Python/jump.json` 3d08d696c6b2de29ee55e16e92a76b3815896ed2a2e808c4f5c40e0f84a9ad56
+`20261021-explorer-input/host-focused03.json` 009bed858a6c35b129ca6f72e30170ab68fb6c2e42410c125c025db56ac6b575
+`20261021-explorer-input/guards01.json` 6b1baf761ad01b4fdc134d6b44a2d75431033eb5038cdd7ce3a7263211f8f496
+
 **Completed bounded batch172 (2026-10-21),Explorer BeginPlay/visibility:**
 Both original characters now declare20 routes per Profile. Three new targets
 are ReceiveBeginPlay,ShowPawnAgainNextFrame and the native int-linkage visibility

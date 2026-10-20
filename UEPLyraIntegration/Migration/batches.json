@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 174,
+    "bounded_evidence_ledgers": 175,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -11352,9 +11352,9 @@
       "method_candidates": 18,
       "business_nodes": 137,
       "scope_review": null,
-      "status": "bounded_explorer_twenty_routes_and_native_spawned_visibility_verified_remaining_character_business_open",
-      "evidence_run": "20261021-explorer-beginplay/Begin02Python",
-      "evidence_ledger": "172-explorer-spawned-beginplay-and-native-next-tick-visibility.json",
+      "status": "bounded_explorer_twentyfive_python_routes_native_input_verified_remaining_character_business_open",
+      "evidence_run": "20261021-explorer-input/Input04Python",
+      "evidence_ledger": "173-explorer-enhancedinput-native-gas-and-equipment.json",
       "implemented_helpers": [
         "ClearInventory",
         "GetEmoteAudioComponent",
@@ -11375,13 +11375,17 @@
         "UEPInventoryWaitResume",
         "ReceiveBeginPlay",
         "ShowPawnAgainNextFrame",
-        "UEPCharacterVisibilityResume"
+        "UEPCharacterVisibilityResume",
+        "InpActEvt_IA_QuickSlot1_K2Node_EnhancedInputActionEvent_4",
+        "InpActEvt_IA_QuickSlot_CycleForward_K2Node_EnhancedInputActionEvent_0",
+        "InpActEvt_IA_QuickSlot_CycleBackward_K2Node_EnhancedInputActionEvent_1",
+        "InpActEvt_IA_QuickSlot3_K2Node_EnhancedInputActionEvent_2",
+        "InpActEvt_IA_QuickSlot2_K2Node_EnhancedInputActionEvent_3"
       ],
       "whole_character_migrated": false,
       "remaining_business": [
         "AnimMotionEffect",
         "UserConstructionScript",
-        "five original EnhancedInput receivers",
         "remaining inherited parent business"
       ]
     },
@@ -11392,9 +11396,9 @@
       "method_candidates": 18,
       "business_nodes": 153,
       "scope_review": null,
-      "status": "bounded_explorer_twenty_routes_and_native_spawned_visibility_verified_remaining_character_business_open",
-      "evidence_run": "20261021-explorer-beginplay/Begin02Python",
-      "evidence_ledger": "172-explorer-spawned-beginplay-and-native-next-tick-visibility.json",
+      "status": "bounded_explorer_twentyfive_python_routes_native_input_verified_remaining_character_business_open",
+      "evidence_run": "20261021-explorer-input/Input04Python",
+      "evidence_ledger": "173-explorer-enhancedinput-native-gas-and-equipment.json",
       "implemented_helpers": [
         "ClearInventory",
         "GetEmoteAudioComponent",
@@ -11415,13 +11419,17 @@
         "UEPInventoryWaitResume",
         "ReceiveBeginPlay",
         "ShowPawnAgainNextFrame",
-        "UEPCharacterVisibilityResume"
+        "UEPCharacterVisibilityResume",
+        "InpActEvt_IA_QuickSlot1_K2Node_EnhancedInputActionEvent_4",
+        "InpActEvt_IA_QuickSlot_CycleForward_K2Node_EnhancedInputActionEvent_0",
+        "InpActEvt_IA_QuickSlot_CycleBackward_K2Node_EnhancedInputActionEvent_1",
+        "InpActEvt_IA_QuickSlot3_K2Node_EnhancedInputActionEvent_2",
+        "InpActEvt_IA_QuickSlot2_K2Node_EnhancedInputActionEvent_3"
       ],
       "whole_character_migrated": false,
       "remaining_business": [
         "UseBehaviorTree",
         "UserConstructionScript",
-        "five original EnhancedInput receivers",
         "remaining inherited parent business"
       ]
     },
@@ -12153,5 +12161,77 @@
     "whole_characters_migrated": false,
     "full_acceptance": false,
     "next": "Continue original Explorer EnhancedInput/behavior selection/construction/empty motion override review and inherited parent business,all remaining original candidates and version boundaries. No whole-character/full migration completion claim."
+  },
+  "explorer_input_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_explorer_twentyfive_python_routes_native_input_verified_remaining_character_business_open",
+    "evidence_ledger": "173-explorer-enhancedinput-native-gas-and-equipment.json",
+    "owner": "uep_lyra_characters.explorer_input_mixin",
+    "baseline_startup_revision": "20261021-explorer-beginplay/Assets01",
+    "native_asset_authoring": "20261021-explorer-input/Assets01",
+    "native_runtime_runs": [
+      "20261021-explorer-input/Input02Fallback",
+      "20261021-explorer-input/Input04Python"
+    ],
+    "characters": {
+      "hero": {
+        "method_counts": {
+          "Python": 25,
+          "BlueprintFallback": 20
+        },
+        "native_receiver_names": {
+          "slot-0": "InpActEvt_IA_QuickSlot1_K2Node_EnhancedInputActionEvent_4",
+          "forward": "InpActEvt_IA_QuickSlot_CycleForward_K2Node_EnhancedInputActionEvent_0",
+          "back": "InpActEvt_IA_QuickSlot_CycleBackward_K2Node_EnhancedInputActionEvent_1",
+          "slot-2": "InpActEvt_IA_QuickSlot3_K2Node_EnhancedInputActionEvent_2",
+          "slot-1": "InpActEvt_IA_QuickSlot2_K2Node_EnhancedInputActionEvent_3"
+        },
+        "original_action_assets_triggered_bindings_function_frames_and_all_graphs_preserved": true,
+        "blueprint_profile_uses_native_original_input_frame": true
+      },
+      "pawn": {
+        "method_counts": {
+          "Python": 25,
+          "BlueprintFallback": 20
+        },
+        "native_receiver_names": {
+          "slot-0": "InpActEvt_IA_QuickSlot1_K2Node_EnhancedInputActionEvent_4",
+          "forward": "InpActEvt_IA_QuickSlot_CycleForward_K2Node_EnhancedInputActionEvent_0",
+          "back": "InpActEvt_IA_QuickSlot_CycleBackward_K2Node_EnhancedInputActionEvent_1",
+          "slot-2": "InpActEvt_IA_QuickSlot3_K2Node_EnhancedInputActionEvent_2",
+          "slot-1": "InpActEvt_IA_QuickSlot2_K2Node_EnhancedInputActionEvent_3"
+        },
+        "original_action_assets_triggered_bindings_function_frames_and_all_graphs_preserved": true,
+        "blueprint_profile_uses_native_original_input_frame": true
+      }
+    },
+    "method_counts_per_character": {
+      "Python": 25,
+      "BlueprintFallback": 20
+    },
+    "original_all_character_bytes_cdos_graphs_guids_public_abis_and_action_triggered_bindings_preserved": true,
+    "only_two_mixin_data_assets_changed": true,
+    "compiler_receiver_names_resolved_from_each_native_binding_table": true,
+    "native_original_finputactionvalue_frames_retained_on_blueprint_fallback": true,
+    "native_local_player_enhancedinput_vector_injection": true,
+    "native_input_gas_tags_raw_cycle_zero_and_default_payload": true,
+    "native_active_slot_equipment_class_instigator_and_owned_item_identity": true,
+    "native_quickslot_ability_three_wait_tasks_preserved": true,
+    "native_repeated_selection_empty_slot_and_empty_default_cycle": true,
+    "original_native_pooled_cue_observer_reuse_validated_without_field_writes": true,
+    "primary_player_inventory_health_and_scoped_pawnclass_profiles_restored": true,
+    "focused_host_checks": 16,
+    "invalid_lane_guards": 7,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261021-explorer-input/Index01",
+    "physical_keyboard_tested": false,
+    "python_handler_replayed": false,
+    "bp_receiver_called_by_fixture": false,
+    "native_rpc_bypassed": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "whole_characters_migrated": false,
+    "full_acceptance": false,
+    "next": "Continue remaining original Explorer behavior/construction/empty-motion-override review and inherited parent business,all remaining original candidates and version/network/pixel/package boundaries. No whole-character/full migration completion claim."
   }
 }
