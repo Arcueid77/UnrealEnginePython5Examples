@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 156,
+    "bounded_evidence_ledgers": 157,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1476,7 +1476,8 @@
     "network_acceptance": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Execute prior game-menu confirmed frontend MAP travel and remaining original0.13/0.14 replacements;all prior FText/culture/owner/network/pixel/package/version gates stay open. Session destruction was a mistaken label,not this original frontend flow."
+    "next": "Continue remaining original0.13/0.14 Python replacements and prior FText/culture/owner/network/pixel/package/version gates. This closes only the previously open151 confirmed frontend-map travel gate.",
+    "related_game_menu_frontend_travel_evidence_ledger": "155-menu-confirmed-native-frontend-map-travel.json"
   },
   "startup_login_pilot": {
     "version": "0.13.0",
@@ -1561,13 +1562,14 @@
     "network_acceptance": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Execute prior game-menu confirmed frontend MAP travel and remaining original0.13/0.14 replacements;all prior FText/culture/owner/network/pixel/package/version gates stay open. Session destruction was a mistaken label,not this original frontend flow.",
+    "next": "Continue remaining original0.13/0.14 Python replacements and prior FText/culture/owner/network/pixel/package/version gates. This closes only the previously open151 confirmed frontend-map travel gate.",
     "confirmed_frontend_identity_logout_reset_executed": true,
     "identity_logout_evidence_ledger": "154-frontend-confirmed-identity-logout-reset-startup.json",
     "identity_logout_runtime_runs": [
       "20261020-frontend-logout/Lifecycle05ExpectedPrivilegeLogs"
     ],
-    "legacy_session_reset_label_is_not_original_flow": true
+    "legacy_session_reset_label_is_not_original_flow": true,
+    "related_game_menu_frontend_travel_evidence_ledger": "155-menu-confirmed-native-frontend-map-travel.json"
   },
   "frontend_menu_pilot": {
     "version": "0.13.0",
@@ -1622,7 +1624,7 @@
     "network_acceptance": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Execute prior game-menu confirmed frontend MAP travel and remaining original0.13/0.14 replacements;all prior FText/culture/owner/network/pixel/package/version gates stay open. Session destruction was a mistaken label,not this original frontend flow.",
+    "next": "Continue remaining original0.13/0.14 Python replacements and prior FText/culture/owner/network/pixel/package/version gates. This closes only the previously open151 confirmed frontend-map travel gate.",
     "native_confirmed_identity_logout_reset_executed": true,
     "identity_logout_evidence_ledger": "154-frontend-confirmed-identity-logout-reset-startup.json",
     "native_confirmed_identity_logout_runs": [
@@ -1631,11 +1633,55 @@
     "legacy_destroy_session_label_was_inaccurate": true,
     "original_native_async_node_and_behavior_preserved": true,
     "actual_native_async_logout_proxy": "/Script/OnlineSubsystemUtils.LogoutCallbackProxy",
-    "current_identity_alias_authoring": "20261020-frontend-logout/Assets01IdentityAlias"
+    "current_identity_alias_authoring": "20261020-frontend-logout/Assets01IdentityAlias",
+    "related_game_menu_frontend_travel_evidence_ledger": "155-menu-confirmed-native-frontend-map-travel.json"
+  },
+  "menu_travel_pilot": {
+    "version": "0.13.0",
+    "status": "bounded_native_game_menu_confirmed_soft_map_frontend_experience_and_active_menu_layer_verified",
+    "evidence_ledger": "155-menu-confirmed-native-frontend-map-travel.json",
+    "native_runtime_runs": [
+      "20261020-menu-travel/Travel01Fallback",
+      "20261020-menu-travel/Travel02Python"
+    ],
+    "source_asset_families": [
+      "20261020-menu-layers/Assets01",
+      "20261020-frontend-logout/Assets01IdentityAlias",
+      "20261020-startup-login/Assets03IndependentMemberReferences"
+    ],
+    "production_policy_and_asset_bytes_unchanged": true,
+    "native_profiles": [
+      "BlueprintFallback",
+      "Python"
+    ],
+    "actual_native_open_menu_button_afterpush_and_yes_confirmation": true,
+    "travel_adapter_replayed_by_fixture": false,
+    "original_soft_map_reference": "/Game/System/FrontEnd/Maps/L_LyraFrontEnd.L_LyraFrontEnd",
+    "original_experience_name": "B_LyraFrontEnd_Experience",
+    "actual_frontend_experience_class": "/Game/System/FrontEnd/B_LyraFrontEnd_Experience.B_LyraFrontEnd_Experience_C",
+    "original_absolute_url_drops_initial_sentinel_and_num_bots": true,
+    "native_frontend_state_component_and_active_main_menu_layer_verified": true,
+    "native_frontend_profile_matches_each_trial": true,
+    "native_primary_local_user_state": 5,
+    "native_frontend_press_start_interaction": false,
+    "gameplay_health_unchanged_until_native_travel_request": true,
+    "old_world_and_controller_replacement_is_expected_native_travel": true,
+    "owned_roots_cdo_profiles_and_input_restored": true,
+    "focused_host_checks": 7,
+    "invalid_lane_guards": 7,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261020-menu-travel/Index01",
+    "physical_touch_or_button_input_tested": false,
+    "pixels_tested": false,
+    "online_authentication_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Continue remaining original0.13/0.14 Python replacements and prior FText/culture/owner/network/pixel/package/version gates. This closes only the previously open151 confirmed frontend-map travel gate."
   },
   "menu_layers_pilot": {
     "version": "0.13.0",
-    "status": "bounded_menu_root_layer_python_policy_native_async_modal_decline_and_terminal_quit_verified_frontend_travel_open",
+    "status": "bounded_menu_root_layer_python_policy_native_async_modal_quit_and_confirmed_frontend_map_travel_verified",
     "evidence_ledger": "151-menu-layer-native-registration-modal-decline-and-quit.json",
     "owner": "uep_lyra_hud.menu_layers_mixin",
     "original_read_only_audit": "20261020-menu-layers/Audit01",
@@ -1697,7 +1743,7 @@
     ],
     "native_request_exit_fallback_used": false,
     "original_confirmed_map_experience_absolute_travel_payload_preserved": true,
-    "confirmed_frontend_travel_executed": false,
+    "confirmed_frontend_travel_executed": true,
     "native_profile_lifecycle_trials": 2,
     "root_profile_input_selectors_restored_and_health_unchanged": true,
     "focused_host_checks": 18,
@@ -1714,7 +1760,12 @@
     "network_acceptance": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Execute original confirmed frontend travel; remaining original0.13/0.14 replacements and prior FText/owner/network/culture/pixel/package/version gates remain open."
+    "next": "Continue remaining original0.13/0.14 Python replacements and prior FText/culture/owner/network/pixel/package/version gates. This closes only the previously open151 confirmed frontend-map travel gate.",
+    "confirmed_frontend_travel_evidence_ledger": "155-menu-confirmed-native-frontend-map-travel.json",
+    "confirmed_frontend_travel_runs": [
+      "20261020-menu-travel/Travel01Fallback",
+      "20261020-menu-travel/Travel02Python"
+    ]
   },
   "credits_widgets_pilot": {
     "version": "0.13.0",
@@ -10107,8 +10158,9 @@
       "method_candidates": 5,
       "business_nodes": 17,
       "scope_review": null,
-      "status": "bounded_menu_layer_python_policy_native_registration_async_modal_decline_and_quit_verified_frontend_travel_open",
-      "evidence_run": "20261020-menu-layers/Lifecycle04ActorWorldObserver"
+      "status": "bounded_menu_layer_python_policy_native_registration_async_modal_decline_and_quit_verified",
+      "evidence_run": "20261020-menu-layers/Lifecycle04ActorWorldObserver",
+      "confirmed_frontend_travel_evidence_run": "20261020-menu-travel/Travel02Python"
     },
     {
       "path": "/Game/UI/Menu/Experiences/UIExperienceMacros.UIExperienceMacros",
@@ -10171,7 +10223,7 @@
       "method_candidates": 1,
       "business_nodes": 1,
       "scope_review": null,
-      "status": "bounded_menu_layer_python_policy_native_registration_async_modal_decline_and_quit_verified_frontend_travel_open",
+      "status": "bounded_menu_layer_python_policy_native_registration_async_modal_decline_and_quit_verified",
       "evidence_run": "20261020-menu-layers/Lifecycle04ActorWorldObserver"
     },
     {
@@ -10299,7 +10351,7 @@
       "method_candidates": 1,
       "business_nodes": 4,
       "scope_review": null,
-      "status": "bounded_menu_layer_python_policy_native_registration_async_modal_decline_and_quit_verified_frontend_travel_open",
+      "status": "bounded_menu_layer_python_policy_native_registration_async_modal_decline_and_quit_verified",
       "evidence_run": "20261020-menu-layers/Lifecycle04ActorWorldObserver"
     },
     {
@@ -10489,7 +10541,7 @@
       "method_candidates": 1,
       "business_nodes": 8,
       "scope_review": null,
-      "status": "bounded_menu_layer_python_policy_native_registration_async_modal_decline_and_quit_verified_frontend_travel_open",
+      "status": "bounded_menu_layer_python_policy_native_registration_async_modal_decline_and_quit_verified",
       "evidence_run": "20261020-menu-layers/Lifecycle04ActorWorldObserver"
     },
     {

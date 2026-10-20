@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "batch": "155-menu-confirmed-frontend-map-travel",
+  "scope": "Bounded original native open-menu component click/AfterPush, actual Yes confirmation and original soft-map adapter travel to L_LyraFrontEnd with B_LyraFrontEnd_Experience. Both Profiles independently verify absolute URL option isolation, actual experience object, frontend state component and active native root menu layer. Production policy/assets unchanged;physical input,pixels,online auth,network and full version remain open. Default incremental staged host verification only.",
+  "recorded_utc": "2026-10-20T12:41:54.3625048Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "65de33d46fe258695cb1753b15e87e6492f745f6",
+  "examples_parent_commit": "db85a4db084b7f5a22248930475bef8a1058169c",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-menu-travel/Travel01Fallback",
+      "summary_sha256": "7ED6D4279D9967F22C79000A889C95B0DDD9D5FA68DB8E7E502191AE1AEE4924",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2978,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "3E9BAFF3D052AE1E760A9C99FDD3B3A2120E68A78E6B6DBCA8354687755B596C"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-menu-travel/Travel02Python",
+      "summary_sha256": "6A0F03F5DFD643C3D4AF56648A0ED56BA1E8DF65FE215DD68DFDB14D2117B42C",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2978,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "77A1906A9D59796392B15FBFEC25E588C33091FCDEF97FF6498EB5E45215D485"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/menu_travel_validation.py",
+      "sha256": "F7B7C359E5601C9F9290899C5940D875C86971BA746D71A76DEB3D55F7B6F915",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/menu_travel_validation.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/menu_travel_contract.py",
+      "sha256": "DEEAAC12BF35CE1EFF1A908420C7B116EF7A85E67A8619F96B3A2D399F5B1BE0",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/menu_travel_contract.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/menu_layers_mixin.py",
+      "sha256": "33990E9C7D33376FF94C7D3DBFA67BEFE41DCD0B155D2A254812164527E4213E",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/menu_layers_mixin.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/frontend_menu_mixin.py",
+      "sha256": "50DCE24F0352E47B601A93629E1CE647842EFEBC111B33719ED761D379167194",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/frontend_menu_mixin.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup_login_mixin.py",
+      "sha256": "432B34D9B10D34E95BDB5E9B6A9B7EE87AF1EC5FE92DE04981A4E5AE483F8EB6",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup_login_mixin.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/open_menu_mixin.py",
+      "sha256": "C5DB44FC48F51A8A4667CF9188B1263F066851B799BE395986A049A9F192821C",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/open_menu_mixin.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "8D5F58E5A69996C6EDA71008361D9BBC920D310D63F3B1DC8FCD96EBF2F8E2C7",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "C64D36C5A75410184512774740616EA4BEDBF807FFAE2363A948649A4BEAC5EF",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261020-menu-travel/Host01.json",
+    "sha256": "2D33202BC4193C4E7FECD652995E17A8086516A3E2EF5E73ED736B8485D8DC86",
+    "result": {
+      "schema_version": 2,
+      "status": "passed",
+      "tests_run": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "selection": {
+        "mode": "incremental",
+        "status": "ready",
+        "changed_files": [],
+        "selected_test_files": [
+          "Demos/UEPLyraIntegration/Tests/test_menu_travel_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_menu_travel_fixture.py"
+        ],
+        "affected_files": [],
+        "selection_reasons": {
+          "Demos/UEPLyraIntegration/Tests/test_menu_travel_contract.py": [
+            "explicit pattern test_menu_travel_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_menu_travel_fixture.py": [
+            "explicit pattern test_menu_travel_*.py"
+          ]
+        },
+        "unmapped_changed_files": [],
+        "unparsed_unaffected_files": [],
+        "dependency_analysis": "local imports including inheritance, literal module names and file references; dynamic dependencies require explicit patterns/native lanes",
+        "full_regression_requested": false
+      },
+      "failed_cases": []
+    }
+  }
+}

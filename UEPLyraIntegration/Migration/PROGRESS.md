@@ -23,6 +23,47 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch155 (2026-10-20),confirmed frontend MAP travel:**
+The previously open151 confirmed map travel gate now passes in separate native
+BlueprintFallback and Python processes. Production policy and all14 current
+menu-layer/frontend/startup/login asset bytes remain unchanged.
+The native OpenButton component handler creates the original CommonUI async
+menu push and actual AfterPush. Native ReturnButton creates the original Yes/No
+confirmation;the actual Yes-button result0 enters the menu result handler once
+and follows the original native soft-map adapter. No travel adapter/callback is
+called or replayed directly by the fixture. CDO map/experience references match.
+The old gameplay world/controller are naturally replaced. Both cases reach
+/Game/System/FrontEnd/Maps/L_LyraFrontEnd.L_LyraFrontEnd with
+Experience=B_LyraFrontEnd_Experience and the actual corresponding experience CDO.
+The initial NumBots and dedicated travel-sentinel options do not carry into the
+new GameMode OptionsString,verifying original absolute URL behavior.
+The actual LyraFrontendStateComponent is present;native user initialization
+finishes in LoggedInLocalOnly. The new W_LyraFrontEnd has the requested Profile
+and is the current widget in the actual viewport root Menu_Stack. A platform-
+required startup screen,if present,is advanced only by its native button handler.
+Gameplay health is unchanged until travel is requested;there is no health or old
+actor-identity preservation claim across intentional level replacement. Owned
+widget/class roots,CDO Profiles and input restore;native frontend world UI remains
+owned by the game until normal test-process shutdown.
+Travel01Fallback and Travel02Python pass native exit0,independent gate0,strict raw
+logs and ordered Goodbye Python/log close. Normalized destination/experience/UI/
+user/result states match across processes.7 focused checks and7 invalid lanes
+pass;exact staged indexes use default incremental selection at
+.build/CommitVerification/20261020-menu-travel/Index01;no full regression.
+This closes map travel,not physical touch input,pixels,online authentication,
+network or package/version acceptance. Prior FText/culture/owner and remaining
+original246-candidate requirements stay open. No Engine/general Cpp/official
+edits,build,cook,push,tag or release publication.
+
+Batch155 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261020-menu-travel/Travel01Fallback/summary.json` 7ed6d4279d9967f22c79000a889c95b0ddd9d5fa68db8e7e502191ae1aee4924
+`20261020-menu-travel/Travel01Fallback/jump.json` 3e9baff3d052ae1e760a9c99fdd3b3a2120e68a78e6b6dbca8354687755b596c
+`20261020-menu-travel/Travel02Python/summary.json` 6a0f03f5dfd643c3d4af56648a0ed56ba1e8df65fe215dd68dfdb14d2117b42c
+`20261020-menu-travel/Travel02Python/jump.json` 77a1906a9d59796392b15fbfec25e588c33091fcdef97ff6498eb5e45215d485
+`20261020-menu-travel/Host01.json` 2d33202bc4193c4e7fecd652995e17a8086516a3e2ef5e73ed736b8485d8dc86
+`20261020-menu-travel/guards.json` 7fa75fed60f2d97b44648e23d383bf2fa42d363b1afd0765176865e03ac6f104
+`20261020-menu-travel/profile-comparison.json` f0f622f75e9d4549b607cefbc3bc49bd5940821683b9843cbb58dce6d73d3a79
+
 **Completed bounded batch154 (2026-10-20),confirmed frontend identity logout:**
 Correction:the original asynchronous node is LogoutCallbackProxy.Logout,not
 DestroySession. Earlier152/153 session-destruction field/alias labels were
