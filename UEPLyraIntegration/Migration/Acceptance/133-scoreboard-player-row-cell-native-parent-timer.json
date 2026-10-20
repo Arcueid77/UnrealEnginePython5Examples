@@ -1,0 +1,425 @@
+{
+  "schema_version": 1,
+  "batch": "133-scoreboard-player-row-cell-native-parent-timer",
+  "scope": "Six base/name/icon/stat/CP/TDM row policies migrated;original9/15/3/31/30/30 nodes/full CDO/trees/signatures/parent/interface/empty hooks preserved.1/2/1/4/5/5 methods per Profile,4/8/4/17/17/17 transport plus5 interface each,0 new gameplay. Original1Hz timer and first immediate update/width rules remain;typed array gate preserves child fanout.2 native UMG Profile matrices/4 mode-row matrices verify player propagation/fixed team tint/local white/odd-even/grouped score/width/native timer/rebind/null/rooted offscreen updates. CDO selectors/roots/actors/Health restore.18 focused checks/5 invalid lanes;exact staged incremental follows. Full246 candidates and diagnostics/team0/culture/full scoreboard/network/pixels/package acceptance open. No CPP/official edits/build/cook/push/tag/release.",
+  "recorded_utc": "2026-10-20T01:42:34.6569555Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "06b851cfa7398099e9c0b53bc3f00ac251b76682",
+  "examples_parent_commit": "13eb655227f899858989cfad614d4aa8bd68777f",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01",
+      "summary_sha256": "F3A813871019A2DD853A062884B68A04520FEA136872F421623EA64475BE55ED",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 857,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "audit.json",
+          "sha256": "8C787A07C52F78646CC2773950E3020CA1672DB0DDD7BB2E9759577625B8BB91"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01",
+      "summary_sha256": "FBF1E957E185E14481385CD8377296C01AB0FD757460B03F8358BDDAEF52153E",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2024,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Differential01",
+      "summary_sha256": "702CCF8F4A518C7EE3A78688ABB18101897608855F9EF7039FD7622CBD1D40B2",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2513,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "C4E3607BCA17EA11BE6335E22DDDB6FE740647203EB37F2D245D2528B3D5BA7A"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/scoreboard_rows_mixin.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/scoreboard_rows_mixin.py",
+      "sha256": "A41EACD6132E91DC238B48469302C34D1DA86A513A3C30732AA6C63196C0D8C7"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/scoreboard_rows_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/scoreboard_rows_validation.py",
+      "sha256": "9A28EE26D711C9E3DCEE6FFF38DEBAC97A0C1035B4BE709C5CBE5965E9382D64"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/scoreboard_rows_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/scoreboard_rows_contract.py",
+      "sha256": "7E075F5A43F0B3804D46124B7D6CDFF8DB79119EB3A11275CAC986B6558E4309"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/audit_scoreboard_rows.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_scoreboard_rows.py",
+      "sha256": "EF006DAE9E0420A41907E15337ACF89C5E982540C09EE2248C67CB77E1304989"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_scoreboard_row_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_scoreboard_row_assets.py",
+      "sha256": "0BA4DDF18C0A4B4F47007CC82736D668B0844C41A458A5F78326F81CB6B4AC1B"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "1E419A26DB77D6F0B57028A029E1D98E30F253D54453DD42ABB98F22781DA7DA"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "DD5397991993ECCD890A037378CE7D5AAE4C08EB4FFAF3DE065B8E59B74873A9"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "8C9CE83677586624825B5EB4FCF80ECACF6AF14DAD171335DEA3E67FE98E1018"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "327029FFCCA34A472826613971AEAEFB3A2B6D21AA7C6811A99B5183827D74B4"
+    }
+  ],
+  "host_report": {
+    "result": {
+      "status": "passed",
+      "tests_run": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Host01.json",
+    "sha256": "8B126F7455A00DB3B79A31E6A2AC17AD926B5FC0FC1921E3EA3895768D67B55F"
+  },
+  "raw_artifacts": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/assets-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/assets-stdout.log",
+      "sha256": "02a38c06efba1c76ad8b6335f66ed8c67b8ef98fc4452728861c97d46419f50e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/assets.json",
+      "sha256": "61e168906e5b23d4bb1b32574a1bc6d3f71e7acf38c25abb86d574e3e31f397b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/assets.log",
+      "sha256": "9d25ddae05088423867dfda16eb05b6aa2e82a6dad5ac78850e8eb533dfad3a7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/base-after-tree.t3d",
+      "sha256": "ff6b7f590cee43c6657f56b9146ef798ec9c8d58f4319cdebdf61fb0a96d102d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/base-before-tree.t3d",
+      "sha256": "ff6b7f590cee43c6657f56b9146ef798ec9c8d58f4319cdebdf61fb0a96d102d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/cp-after-tree.t3d",
+      "sha256": "eec8144e09f16e223e6e0a31aa4aa8672bf4e5fe72581edcfdc1710944d11167"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/cp-before-tree.t3d",
+      "sha256": "eec8144e09f16e223e6e0a31aa4aa8672bf4e5fe72581edcfdc1710944d11167"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/dash-base-sb-after-cdo.t3d",
+      "sha256": "00de5d1d61f8c8b62c7e6db42e2c6d17884bf4cb7491095d7d98e55408308e19"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/dash-base-sb-before-cdo.t3d",
+      "sha256": "c2b56efdf7e65ebe8eb93c9d5807c85351bd3404d1e3f06f005bce20a271a0b7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/dash-cp-sb-after-cdo.t3d",
+      "sha256": "ed5ea1f6e5bcd207ecdd3345f3c140e595351d36398c3e9aaa962d2494bdb0e7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/dash-cp-sb-before-cdo.t3d",
+      "sha256": "ed5ea1f6e5bcd207ecdd3345f3c140e595351d36398c3e9aaa962d2494bdb0e7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/dash-icon-sb-after-cdo.t3d",
+      "sha256": "3a381f54621e092bc4d8dda9bd28e449c96d97ff7e2b4177c0e8087665d31ccf"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/dash-icon-sb-before-cdo.t3d",
+      "sha256": "8e4af28e43f95d325d828aff66dc287bdb81eda0e3150f0f0d4a867cd7467d83"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/dash-name-sb-after-cdo.t3d",
+      "sha256": "4895fd4f8b2ab8c6bbb793c00a0a51f3d561eef4440c36e7d44f0de7f3d5eb58"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/dash-name-sb-before-cdo.t3d",
+      "sha256": "07474934f9db9080ca2c4072f1dc3124b4d38e8c866a42f4900f88da96363e6d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/dash-stat-sb-after-cdo.t3d",
+      "sha256": "b909c4a4330ffcb42a7535772bec5011282ff612bbc3ca8b7928e044c20ac1ec"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/dash-stat-sb-before-cdo.t3d",
+      "sha256": "558de4acc65d4f540733074825a84701e31e268636da61294ece1bf9863c5957"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/dash-tdm-sb-after-cdo.t3d",
+      "sha256": "b6b8259ad85eaf93a6b959726d61162ce7a7740f30bd6feff38bd22e3ba4d935"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/dash-tdm-sb-before-cdo.t3d",
+      "sha256": "b6b8259ad85eaf93a6b959726d61162ce7a7740f30bd6feff38bd22e3ba4d935"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/icon-after-tree.t3d",
+      "sha256": "871023e492dd13f5d40e2a54388d2887bc9f2ae219bb62d46e5ed28f919bdf06"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/icon-before-tree.t3d",
+      "sha256": "871023e492dd13f5d40e2a54388d2887bc9f2ae219bb62d46e5ed28f919bdf06"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/name-after-tree.t3d",
+      "sha256": "b925cbf0fa349c732efcfa38df6ab7f5ebc8d520bc3b8bf1f9f8329ae0535a49"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/name-before-tree.t3d",
+      "sha256": "b925cbf0fa349c732efcfa38df6ab7f5ebc8d520bc3b8bf1f9f8329ae0535a49"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/stat-after-tree.t3d",
+      "sha256": "3c64f9bc1fcabf7a640f5cd68d06f0b09b763bad0d259ef416d80ae267f15f18"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/stat-before-tree.t3d",
+      "sha256": "3c64f9bc1fcabf7a640f5cd68d06f0b09b763bad0d259ef416d80ae267f15f18"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/summary.json",
+      "sha256": "fbf1e957e185e14481385cd8377296c01ab0fd757460b03f8358bddaef52153e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/tdm-after-tree.t3d",
+      "sha256": "587b613a94d90906264f1fc74ef830d3efcdcc0de8789cfe722618ffa5c4ec10"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Assets01/tdm-before-tree.t3d",
+      "sha256": "587b613a94d90906264f1fc74ef830d3efcdcc0de8789cfe722618ffa5c4ec10"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/audit-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/audit-stdout.log",
+      "sha256": "9272a8b77f0eb833779d1e2755ef3c3378f74d0c205f52142016aba55bb7746f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/audit.json",
+      "sha256": "8c787a07c52f78646cc2773950e3020ca1672db0ddd7bb2e9759577625b8bb91"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/audit.log",
+      "sha256": "cf8ea30b92c77bd577ab1c75831dc3493fee934bd29edd31dd886c33272eaa42"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/base-blueprint.t3d",
+      "sha256": "8b8ff1b459ec891d6722302285a7a1ad56a971808480e77cd326adfbb342b450"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/base-cdo.t3d",
+      "sha256": "c2b56efdf7e65ebe8eb93c9d5807c85351bd3404d1e3f06f005bce20a271a0b7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/base-graphs.json",
+      "sha256": "290b1d2dcae7fd95703acd4ead082f30f0a3b4ca85e66ed8d0428b9a6bc9d300"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/base-widget-tree.t3d",
+      "sha256": "ff6b7f590cee43c6657f56b9146ef798ec9c8d58f4319cdebdf61fb0a96d102d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/cp-blueprint.t3d",
+      "sha256": "9b5392abe35668cbe17818699fd2a8c9ed75dbf2a878bf477994bef9ff4014f0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/cp-cdo.t3d",
+      "sha256": "0349e1907d9b6fdcc341c81111a326f937abfc713b7634dea53ba730ef117c13"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/cp-graphs.json",
+      "sha256": "437b033348adf2818802fdc2b01cad3af5545b9bcc360a5e50058db9957ea8f0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/cp-widget-tree.t3d",
+      "sha256": "49368b5e1805f3b1cfe9a0e7912df73fd993f4980b6247a6319a5e8ebb98fddb"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/icon-blueprint.t3d",
+      "sha256": "93487690c5f3a249c81639b9b2c773e4f2a495fe99ad72780cbca874c5f342b8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/icon-cdo.t3d",
+      "sha256": "8e4af28e43f95d325d828aff66dc287bdb81eda0e3150f0f0d4a867cd7467d83"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/icon-graphs.json",
+      "sha256": "e2886c47dc72d6c88942a3d0442ca78afffe73f0b9127c8f321fd3fd7f41258f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/icon-widget-tree.t3d",
+      "sha256": "1ffd5ced917614979aee8de9fdfdfce92c70a045bc72e0446fee6d751179bb44"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/name-blueprint.t3d",
+      "sha256": "d573f32b2a60d215eccff9b070acc2380df4b2f8d85dc430ca9c56065c120725"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/name-cdo.t3d",
+      "sha256": "07474934f9db9080ca2c4072f1dc3124b4d38e8c866a42f4900f88da96363e6d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/name-graphs.json",
+      "sha256": "8203e89066016cb5d340c82fd0b63b30ed67e1bd220c2949be7d3f0eaeee1f6d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/name-widget-tree.t3d",
+      "sha256": "b925cbf0fa349c732efcfa38df6ab7f5ebc8d520bc3b8bf1f9f8329ae0535a49"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/native-cosmetic-macro.json",
+      "sha256": "7fa0389c7be84072f11660bf8b6365e4f19411c1744b5e7f90bef17eaf9719b8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/stat-blueprint.t3d",
+      "sha256": "d0065b1b6785a918dc6e4572de8f2ee17bec3d8eea91414c4989ae143ea71345"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/stat-cdo.t3d",
+      "sha256": "558de4acc65d4f540733074825a84701e31e268636da61294ece1bf9863c5957"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/stat-graphs.json",
+      "sha256": "72b7ae742c680b4ad4d4462d9a401b7b47602b8feec2cb2a1221b3ee30671ec4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/stat-widget-tree.t3d",
+      "sha256": "aad0e0b89a2c0732029de2de9e5d60bc536f93274141174323b28ff8dd4585f9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/summary.json",
+      "sha256": "f3a813871019a2dd853a062884b68a04520fea136872f421623ea64475be55ed"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/tdm-blueprint.t3d",
+      "sha256": "7e9e50552bf174e80c4e650998a65feb7b34289c2db4dec1a61b9d80b737643b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/tdm-cdo.t3d",
+      "sha256": "a1f8004cf1a97374cba5cce4869dd52a6d9dc60c7627a0617cb2c1952795ed6d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/tdm-graphs.json",
+      "sha256": "317ba77df5abce20b6a2e3f8952817a49a91e8525f45ee944077f18eb4240d9d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Audit01/tdm-widget-tree.t3d",
+      "sha256": "d5bb9e7f92ea468d4e6f6765cee772fa5ecb50d03ca862e9846b161be42a1a1e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Differential01/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Differential01/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Differential01/jump.json",
+      "sha256": "c4e3607bca17ea11be6335e22dddb6fe740647203eb37f2d245d2528b3d5ba7a"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Differential01/jump.log",
+      "sha256": "23bef4209781801a01e29ff2fe8bae4c54d424dcfc0227ac117a3e686d7e5ea5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Differential01/report-gate-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Differential01/report-gate-stdout.log",
+      "sha256": "d0aed93ff531ce89d476ed08838ffddd4c0b9d8af068f6a0d014ba7e9d4d48b0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Differential01/summary.json",
+      "sha256": "702ccf8f4a518c7ee3a78688abb18101897608855f9ef7039fd7622cbd1d40b2"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/Host01.json",
+      "sha256": "8b126f7455a00db3b79a31e6a2ac17ad926b5fc0fc1921e3ea3895768d67b55f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-scoreboard-rows/lane-guards.json",
+      "sha256": "a3f853244191ff8b78223e4572c177288fc274588271473454e9f7570b3f97ee"
+    }
+  ],
+  "regression_policy": {
+    "mode": "incremental",
+    "feature_only_tests": 18,
+    "full_regression_executed": false,
+    "isolated_index_result": ".build/CommitVerification/20261020-scoreboard-rows/Index01/summary.json",
+    "index_result_is_external_to_avoid_changing_verified_tree": true
+  },
+  "scope_limits": {
+    "full_original_candidates": 246,
+    "all_original_asset_paths_preserved": true,
+    "native_one_second_timer_preserved": true,
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "team_zero_and_diagnostic_edges_tested_natively": false,
+    "migration_complete": false
+  }
+}

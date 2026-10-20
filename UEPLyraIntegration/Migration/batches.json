@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 134,
+    "bounded_evidence_ledgers": 135,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1235,6 +1235,61 @@
     "full_library_acceptance": false,
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
+  },
+  "scoreboard_rows_pilot": {
+    "version": "0.12.0",
+    "status": "partial_scoreboard_rows_cells_python_native_parent_interface_timer_verified_network_pixels_package_pending",
+    "evidence_ledger": "133-scoreboard-player-row-cell-native-parent-timer.json",
+    "owner": "uep_lyra_hud.scoreboard_rows_mixin",
+    "read_only_audit": "20261020-scoreboard-rows/Audit01",
+    "native_asset_authoring": "20261020-scoreboard-rows/Assets01",
+    "native_runtime": "20261020-scoreboard-rows/Differential01",
+    "original_graph_nodes": {
+      "base": 9,
+      "name": 15,
+      "icon": 3,
+      "stat": 31,
+      "cp": 30,
+      "tdm": 30
+    },
+    "methods_per_profile": {
+      "base": 1,
+      "name": 2,
+      "icon": 1,
+      "stat": 4,
+      "cp": 5,
+      "tdm": 5
+    },
+    "new_transport_nodes": {
+      "base": 4,
+      "name": 8,
+      "icon": 4,
+      "stat": 17,
+      "cp": 17,
+      "tdm": 17
+    },
+    "generated_interface_nodes_each": 5,
+    "new_business_nodes": 0,
+    "original_full_cdos_widget_trees_signatures_base_parent_calls_and_graphs_preserved": true,
+    "empty_base_color_children_hooks_preserved": true,
+    "native_stat_timer_seconds": 1.0,
+    "native_stat_timer_looping": true,
+    "native_stat_timer_or_cleanup_replaced": false,
+    "native_profile_matrices": 2,
+    "native_mode_row_matrices": 4,
+    "base_interface_child_fanout_and_typed_array_return_verified": true,
+    "fixed_team_name_zero_stat_row_colors_and_local_white_verified": true,
+    "native_grouped_stat_text_and_individual_score_helper_verified": true,
+    "native_width_construct_and_positive_only_preconstruct_verified": true,
+    "native_loop_rebinding_null_and_rooted_removed_updates_verified": true,
+    "temporary_cdo_profiles_widget_roots_owned_actors_and_health_restored": true,
+    "feature_only_host_checks": 18,
+    "full_regression_executed_this_batch": false,
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Invalid native diagnostics/team0/native culture variants/full scoreboard list and header/native owner-network/pixels/packaging and full original scope remain open."
   },
   "weapon_hud_existing_acceptance_closure": {
     "version": "0.9.0",
@@ -6375,8 +6430,9 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 4,
       "business_nodes": 25,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch133:six scoreboard base/name/icon/stat/CP/TDM row policies in Python. Original9/15/3/31/30/30 nodes/full CDO/trees/signatures/parent calls/empty hooks preserved;1/2/1/4/5/5 methods per Profile,4/8/4/17/17/17 transport plus5 interface each,0 new business nodes. Typed Children array gate preserves native base/interface fanout. Original native1Hz loop/first immediate update/width conditions remain,no new native cleanup.2 real UMG Profile matrices/4 mode-row matrices verify player propagation,fixed team colors/local white/grouped1,234/stat zero tint/odd-even borders/width/native timed update/rebinding/null preservation/rooted removed updates. CDO selectors/roots/actors/Health restore. Native diagnostics/team0/culture/full scoreboard/network/pixels/package/full acceptance pending.",
+      "status": "partial_scoreboard_rows_cells_python_native_parent_interface_timer_verified_network_pixels_package_pending",
+      "evidence_ledger": "133-scoreboard-player-row-cell-native-parent-timer.json"
     },
     {
       "path": "/ShooterCore/ControlPoint/UI/W_ScoreBoard_HeaderRow_CP.W_ScoreBoard_HeaderRow_CP",
@@ -6412,8 +6468,9 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 4,
       "business_nodes": 25,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch133:six scoreboard base/name/icon/stat/CP/TDM row policies in Python. Original9/15/3/31/30/30 nodes/full CDO/trees/signatures/parent calls/empty hooks preserved;1/2/1/4/5/5 methods per Profile,4/8/4/17/17/17 transport plus5 interface each,0 new business nodes. Typed Children array gate preserves native base/interface fanout. Original native1Hz loop/first immediate update/width conditions remain,no new native cleanup.2 real UMG Profile matrices/4 mode-row matrices verify player propagation,fixed team colors/local white/grouped1,234/stat zero tint/odd-even borders/width/native timed update/rebinding/null preservation/rooted removed updates. CDO selectors/roots/actors/Health restore. Native diagnostics/team0/culture/full scoreboard/network/pixels/package/full acceptance pending.",
+      "status": "partial_scoreboard_rows_cells_python_native_parent_interface_timer_verified_network_pixels_package_pending",
+      "evidence_ledger": "133-scoreboard-player-row-cell-native-parent-timer.json"
     },
     {
       "path": "/ShooterCore/Elimination/UI/W_ScoreBoard_HeaderRow_EliminationMode.W_ScoreBoard_HeaderRow_EliminationMode",
@@ -6516,8 +6573,9 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 3,
       "business_nodes": 5,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch133:six scoreboard base/name/icon/stat/CP/TDM row policies in Python. Original9/15/3/31/30/30 nodes/full CDO/trees/signatures/parent calls/empty hooks preserved;1/2/1/4/5/5 methods per Profile,4/8/4/17/17/17 transport plus5 interface each,0 new business nodes. Typed Children array gate preserves native base/interface fanout. Original native1Hz loop/first immediate update/width conditions remain,no new native cleanup.2 real UMG Profile matrices/4 mode-row matrices verify player propagation,fixed team colors/local white/grouped1,234/stat zero tint/odd-even borders/width/native timed update/rebinding/null preservation/rooted removed updates. CDO selectors/roots/actors/Health restore. Native diagnostics/team0/culture/full scoreboard/network/pixels/package/full acceptance pending.",
+      "status": "partial_scoreboard_rows_cells_python_native_parent_interface_timer_verified_network_pixels_package_pending",
+      "evidence_ledger": "133-scoreboard-player-row-cell-native-parent-timer.json"
     },
     {
       "path": "/ShooterCore/UserInterface/ScoreBoard/PlayerRow/W_SB_PlayerIcon.W_SB_PlayerIcon",
@@ -6525,8 +6583,9 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 1,
       "business_nodes": 1,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch133:six scoreboard base/name/icon/stat/CP/TDM row policies in Python. Original9/15/3/31/30/30 nodes/full CDO/trees/signatures/parent calls/empty hooks preserved;1/2/1/4/5/5 methods per Profile,4/8/4/17/17/17 transport plus5 interface each,0 new business nodes. Typed Children array gate preserves native base/interface fanout. Original native1Hz loop/first immediate update/width conditions remain,no new native cleanup.2 real UMG Profile matrices/4 mode-row matrices verify player propagation,fixed team colors/local white/grouped1,234/stat zero tint/odd-even borders/width/native timed update/rebinding/null preservation/rooted removed updates. CDO selectors/roots/actors/Health restore. Native diagnostics/team0/culture/full scoreboard/network/pixels/package/full acceptance pending.",
+      "status": "partial_scoreboard_rows_cells_python_native_parent_interface_timer_verified_network_pixels_package_pending",
+      "evidence_ledger": "133-scoreboard-player-row-cell-native-parent-timer.json"
     },
     {
       "path": "/ShooterCore/UserInterface/ScoreBoard/PlayerRow/W_SB_PlayerName.W_SB_PlayerName",
@@ -6534,8 +6593,9 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 2,
       "business_nodes": 13,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch133:six scoreboard base/name/icon/stat/CP/TDM row policies in Python. Original9/15/3/31/30/30 nodes/full CDO/trees/signatures/parent calls/empty hooks preserved;1/2/1/4/5/5 methods per Profile,4/8/4/17/17/17 transport plus5 interface each,0 new business nodes. Typed Children array gate preserves native base/interface fanout. Original native1Hz loop/first immediate update/width conditions remain,no new native cleanup.2 real UMG Profile matrices/4 mode-row matrices verify player propagation,fixed team colors/local white/grouped1,234/stat zero tint/odd-even borders/width/native timed update/rebinding/null preservation/rooted removed updates. CDO selectors/roots/actors/Health restore. Native diagnostics/team0/culture/full scoreboard/network/pixels/package/full acceptance pending.",
+      "status": "partial_scoreboard_rows_cells_python_native_parent_interface_timer_verified_network_pixels_package_pending",
+      "evidence_ledger": "133-scoreboard-player-row-cell-native-parent-timer.json"
     },
     {
       "path": "/ShooterCore/UserInterface/ScoreBoard/PlayerRow/W_SB_PlayerStat.W_SB_PlayerStat",
@@ -6543,8 +6603,9 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 4,
       "business_nodes": 26,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch133:six scoreboard base/name/icon/stat/CP/TDM row policies in Python. Original9/15/3/31/30/30 nodes/full CDO/trees/signatures/parent calls/empty hooks preserved;1/2/1/4/5/5 methods per Profile,4/8/4/17/17/17 transport plus5 interface each,0 new business nodes. Typed Children array gate preserves native base/interface fanout. Original native1Hz loop/first immediate update/width conditions remain,no new native cleanup.2 real UMG Profile matrices/4 mode-row matrices verify player propagation,fixed team colors/local white/grouped1,234/stat zero tint/odd-even borders/width/native timed update/rebinding/null preservation/rooted removed updates. CDO selectors/roots/actors/Health restore. Native diagnostics/team0/culture/full scoreboard/network/pixels/package/full acceptance pending.",
+      "status": "partial_scoreboard_rows_cells_python_native_parent_interface_timer_verified_network_pixels_package_pending",
+      "evidence_ledger": "133-scoreboard-player-row-cell-native-parent-timer.json"
     },
     {
       "path": "/ShooterCore/UserInterface/ScoreBoard/W_SB_PlayerList.W_SB_PlayerList",
