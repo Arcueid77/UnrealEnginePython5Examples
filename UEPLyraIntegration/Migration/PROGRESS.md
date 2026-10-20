@@ -23,6 +23,40 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch129 (2026-10-20),native two-client relay RPCs:**
+accepted127/128 production relay assets and bodies remain unchanged. Parent
+commits:Examples `25bd870` / core `72216ca`. Network02CleanupBarrier uses the
+existing reviewed read-only wire-identity DLL and current native Editor binaries;
+no build/cook/asset regeneration. One dedicated server and two real clients run
+10 server cases/20 client observations across BlueprintFallback and Python.
+Only the server fixture sends LyraVerbMessage through real typed GMS;clients
+only observe original RPC delivery and native typed notification messages. Two
+kill cases use GameState reliable multicast and reach both clients. Six award
+cases use original UNRELIABLE PlayerState client RPC,alternating owners and
+PlayerState/Pawn/Controller instigators. Only the owning client receives each;
+original Verb,tags,ContextTags,Magnitude,Instigator/Target native wire identity,
+notification player/name/team/tag/slot/default text/object all match. Client
+arbitrary paths/ordering are not actor keys;lossless existing Legacy wire IDs
+are compared. Null accolade source and nonmatching parent channel produce no
+client delivery during at least one-second observation windows. Dedicated server
+produces no cosmetic notification;remote clients send no server relay RPC.
+Natural original proxies stay bound while per-instance Profiles switch;only a
+test wrapper records actual incoming native callbacks and delegates once. No
+callback/BeginPlay replay,RPC implementation replacement,client-local input
+broadcast or new production subscription. All cases preserve human Health;
+owned score deltas and TDM target restore,observer scopes close,probe roots and
+Profile overrides/classes restore before clients disconnect. Server then waits
+for both process exit tokens. All3 native exits0,independent gate0,strict logs
+and ordered shutdown pass. Preserve Network01Relays/source/logs:all10/20 cases
+passed,but cleanup accessed departed PlayerStates after client exit. Cleanup is
+now idempotent and happens before release;the process-exit barrier remains.
+13 focused checks include that ordering and5 rejected lanes pass;exact staged
+verification is incremental. Coverage is bounded Legacy loopback,not a packet-
+loss guarantee for unreliable RPC. No real lethal-damage producer,packet-loss
+emulation,travel/rejoin,pixels,packaged runtime or full version acceptance. Full
+246-candidate scope/static counts remain. No SDK/Engine/general Cpp/official
+edits,build,cook,push,tag or release publication.
+
 **Completed bounded batch128 (2026-10-20),standalone accolade relay:**
 original partial Lyra.ShooterGame.Accolade listener remains. One typed callback
 gate moves both Sequence outputs to Python:authority resolves Instigator through

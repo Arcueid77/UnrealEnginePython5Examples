@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPNotificationRelaysNetworkResult=") for argument in arguments):
+        return "uep_lyra_hud.notification_relays_network_validation"
     if any(argument.startswith("-UEPAccoladeRelayResult=") for argument in arguments):
         return "uep_lyra_hud.accolade_relay_validation"
     if any(argument.startswith("-UEPEliminationFeedRelayResult=") for argument in arguments):
