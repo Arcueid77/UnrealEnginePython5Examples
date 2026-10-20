@@ -23,6 +23,47 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch169 (2026-10-21),Explorer appearance helpers:**
+Both original Explorer characters now route8 methods per Profile. Three new
+functions are CreateOrUpdateOutlineIfNeeded,OnTeamOrCosmeticsChanged and legacy
+OnRep_PlayerInfo. Explicit source comparison proves the original team/legacy
+graphs match Shooter;outline differs only in its MPP_outlineMaterial_0 cache
+field. The dedicated outline policy uses that exact field. Team/legacy methods
+reuse the proven implementations. The prior Explorer-specific empty-loadout grant
+and four inventory/audio/slot helpers remain in both complete Profile families.
+Only the two Mixin DataAssets change;both character uasset bytes,all original
+graphs/CDOs/public ABI/GUIDs/input bindings and unarmed payload remain unchanged.
+Both Profiles verify real fresh/reused MIDs,camera blend registration,signed TeamID and
+color parameters,nonlocal noops,null/actual display assets and legacy literal
+team0/null forwarding. Native stencil observations match the reference path.
+Native device activations are bracketed by owned disabled markers;platform-user
+validity matches activation counts and actual scheduler evaluations/retirement
+are observed. Marker handles/roots release. Hardware output and pixels are not
+tested. The full prior10-case five-helper matrix runs again on both original
+characters using real extra local players and typed Blueprint callers. Primary
+player inventory/Health,scoped PawnClass/Profiles/actors/tasks restore.
+Native exit0,independent gate0,strict logs and ordered shutdown pass.15 focused
+checks and7 invalid lanes pass;staged checks are incremental at
+.build/CommitVerification/20261021-explorer-style/Index01. Assets01 preserves the
+driver's initial refusal to update existing Overlay outputs;Assets02 requires
+the exact accepted four-asset parent before allowing this two-DataAsset revision.
+Style01 preserves a preflight source-path lookup failure;no native process ran.
+The remaining character methods stay enumerated in both manifest rows. Earlier
+helper evidence remains historical at its own revision. No Engine/general Cpp,
+official edits,build,cook,push,tag or publication. Static246/182/63/11 and exact
+candidate path/order remain;whole-character/full migration acceptance is false.
+
+Batch169 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261021-explorer-style/source-proof.json` 5f55179692cc83c9433b991a9fe382130257b41606dd6b36401b4c66dce1413b
+`20261021-explorer-style/Assets02Revision/summary.json` 6ac714afc0bf3076b3e905e96fad353edee1d8d94639300fcbc95cd7246f21b6
+`20261021-explorer-style/Assets02Revision/assets.json` 63b168032fe8aa3446416df630fe766934ae7e9204f0c7f42ac9ea8f86e60623
+`20261021-explorer-style/Style02Fallback/summary.json` 2ada0809dbaa946d8908df2f22db6b196ef6b89a03cfc3ec1660cae5187988da
+`20261021-explorer-style/Style02Fallback/jump.json` 879980d47c3e7a3d0d45f43e6547bb00d1a2908a564326bf40eff1f65c1f7726
+`20261021-explorer-style/Style03Python/summary.json` 0fb0590307e52f52190e19ad6698453447dafd2f59da158e2b3e0fb1637f72a5
+`20261021-explorer-style/Style03Python/jump.json` 3c94aa9391d2ebd91ffd00557d5990f231b8fac8be93492d7546f1515a79ebec
+`20261021-explorer-style/host-focused01.json` 1fc62d031b5805d2a78f833744020cdd2200d926a8c7187fd23544d0e510f86e
+`20261021-explorer-style/guards01.json` d21e3468180bdafa637296d59081eff43320d2b17ff40c0ff2e74d5e4b91e475
+
 **Completed bounded batch168 (2026-10-21),five Explorer character helpers:**
 B_Hero_Explorer/B_Pawn_Explorer retain193/212 original nodes,complete canonical
 CDO configuration,logical public ABI,input bindings,graph partitions and GUIDs.

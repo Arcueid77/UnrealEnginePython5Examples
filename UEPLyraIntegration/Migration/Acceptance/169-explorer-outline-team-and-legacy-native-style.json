@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "batch": "169-explorer-style",
+  "scope": "Three Explorer appearance methods extend each complete helper family to8. Exact original graph parity with explicit _0 outline field mapping;team sequence,display and legacy literal zero/null retained. Both Profiles verify real fresh/reused MID values and blend registration,nonlocal guard,typed BP team/display/legacy calls and native platform/device activation/evaluation/retirement with owned-marker/root cleanup. Prior five-helper native matrix runs again. Only two Mixin DataAssets change;both original character bytes/all graphs/CDOs/signatures/GUIDs/unarmed payload remain. Hardware/pixels/network/whole characters/full migration remain open. Incremental only.",
+  "recorded_utc": "2026-10-20T19:48:59.7252005Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "de330cd80101ee5ab02940add23deca482959d5e",
+  "examples_parent_commit": "f936b72f2dbae9cf25e1632d10cd1e084fd40cb5",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-style/Assets02Revision",
+      "summary_sha256": "6AC714AFC0BF3076B3E905E96FAD353EDEE1D8D94639300FCBC95CD7246F21B6",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2244,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-style/Style02Fallback",
+      "summary_sha256": "2ADA0809DBAA946D8908DF2F22DB6B196EF6B89A03CFC3EC1660CAE5187988DA",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3070,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "879980D47C3E7A3D0D45F43E6547BB00D1A2908A564326BF40EFF1F65C1F7726"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-style/Style03Python",
+      "summary_sha256": "0FB0590307E52F52190E19AD6698453447DAFD2F59DA158E2B3E0FB1637F72A5",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3070,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "3C94AA9391D2EBD91FFD00557D5990F231B8FAC8BE93492D7546F1515A79EBEC"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "A218413686765D19AE749772B3DC2FA538DA070C467520CB2C83BC4ECF05B276",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_style_mixin.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_style_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "6D5EA16C2535B774BB0F2F82ADB37120FE17385329AB520182ECEEFAC2911C3A",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_style_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_style_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "1C3F70A2E131F0C1BAD1A11011DE1881978F88DE64F5ED32A91BE93A1C362B2A",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_style_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_style_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "733B88AA99ADC6430F7197BB54715AD10B6D669AF42166F709299909E7F95BA6",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "78E67E81D0E1BA57A119A698BF3EE40270125F4C6E178E6C57076C7908C7CCE5",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_explorer_style_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_explorer_style_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "DCEDBCBE21B5BEA8436D2A5A6689A1F1C88615D82A7763A215C39B56B6DDF27C",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "C36F76C913FF17F3F517D0D8329E51679E02BA29AC0252F05722558517135DFF",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "3C74579BF7F0D0380523F6F67256B2678E6AF5D597EE302EF2935445ABD4E850",
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "sha256": "1FC62D031B5805D2A78F833744020CDD2200D926A8C7187FD23544D0E510F86E",
+    "path": ".build/LyraValidation/BlueprintPython/20261021-explorer-style/host-focused01.json",
+    "result": {
+      "status": "passed",
+      "tests_run": 15,
+      "runtime_acceptance": false,
+      "full_regression": false
+    }
+  }
+}
