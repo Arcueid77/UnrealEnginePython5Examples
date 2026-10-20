@@ -23,6 +23,53 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch151 (2026-10-20),root UI layers and game menu:**
+Four widgets use Python layer registration/focus/menu/close/result policies.
+Original10/26/5/3 graph nodes,full CDOs/trees/animations/public signatures/const
+focus/node GUIDs and graph partitions remain.1/6/1/1 methods per Profile,
+4/28/4/5 transport plus5 interfaces each;zero new business nodes.
+The four native tag/stack pairs retain source registration order. A read-only
+native OBJ DUMP with PPF_IncludeTransient verifies each owned layout's actual
+private transient Layers map;object identity and exact four tag/value pairs
+are checked. Ordinary T3D skips transient properties;Python dict conversion
+cannot marshal the native GameplayTag keys. No native SDK changes are added.
+Lifecycle04ActorWorldObserver passes both Profiles:actual OnInitialized,
+const focus targets,menu activation animation,unparented close no-op and actual
+parent deactivation,original async settings BeforePush deactivation/AfterPush,
+and original localized confirmation with native No-button result1/no travel.
+Native component HandleButtonClicked is invoked;physical input is not tested.
+Quit01Fallback and Quit02Python independently exercise the actual owned menu
+quit handler,mouse input reset and native QuitGame shutdown;no ue.request_exit
+fallback certifies quit. Each run has native exit0,independent gate0,strict logs
+and ordered Goodbye Python/log close. Roots/Profile/input selectors restore;
+original live player health is unchanged. Native async callbacks are not replayed.
+The confirmed-result0 branch preserves the original native soft map,absolute
+travel and Experience=PrimaryAssetName payload,with host branch checks;actual
+confirmed frontend travel remains OPEN. No claim of full menu/travel acceptance.
+18 focused host checks and6 invalid-lane guards pass. Exact staged indexes use
+the default incremental selector at
+.build/CommitVerification/20261020-menu-layers/Index01;no full-suite rerun.
+Preserve failed Lifecycle01/source (unhashable map keys),Lifecycle02NativeMapExport/
+source (T3D excludes transient Layers),and Lifecycle03TransientDebugDump/source
+(SDK widget get_world is unsupported;world identity now uses the owning native
+Controller). The successful map/prompt/native async evidence is not weakened.
+Physical input,pixels,network,package/version,confirmed frontend travel,prior
+FText audit and remaining original246-candidate requirements stay open.
+No Engine/general Cpp/official edits,build,cook,push,tag or release publication.
+
+Batch151 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261020-menu-layers/Audit01/summary.json` 87f66f6ca4e45793ff283768bf64fa3575171296026a331513f7e0bb8f8629a0
+`20261020-menu-layers/Assets01/summary.json` 079ad78ddb8e4ee6e952bab92dcae27cb8da469a07160ee9e175f2cc4cc8cd02
+`20261020-menu-layers/Assets01/assets.json` 2465fbb1b5aa7196c8b359e8e29469df71449f1a368935403efdf80e77fbbc30
+`20261020-menu-layers/Lifecycle04ActorWorldObserver/summary.json` c4602bb6e4db7024a30e301fa0aa41ba7611f90626d70fc1db43c6b3aa73b30e
+`20261020-menu-layers/Lifecycle04ActorWorldObserver/jump.json` 53827ded5367bc6cd2da9c3c5d9f49b69c18a146e25f07f1f991244a5d83713d
+`20261020-menu-layers/Quit01Fallback/summary.json` 2bbf5f74d9c1e1892b0b9d1b9812d1b49d3741975c2d9151e01d14f657991027
+`20261020-menu-layers/Quit01Fallback/jump.json` 78541c1f7252d798774e0f274f7765c0d0eff8bace7f379b1966b52d197290a8
+`20261020-menu-layers/Quit02Python/summary.json` 4ffb42965cfca100e9be8c58a79e1b5ed472038b5fef3ba5ab8965dbe7a19ebc
+`20261020-menu-layers/Quit02Python/jump.json` fc199553407625f4ad1dee95180c13181a055e8fd3029ad9eea1ae61199f9b9e
+`20261020-menu-layers/Host04ActorWorldObserver.json` 10d1f5e115b9f7a49b10f028ae909d5aecc2fd18cc9e6cab0b5e0ee8b91196f5
+`20261020-menu-layers/guards.json` ce847dfaca98a46ef7fcfc6aba184ed3a79a8f203c0f636653991abc14126486
+
 **Completed bounded batch150 (2026-10-20),credits and tap action bar:**
 Credits scroll/reset/capture/construct/activation/timer selection/null focus and
 bar query/reset/toggle policies use Python. Original54/13 nodes/full CDOs/trees/

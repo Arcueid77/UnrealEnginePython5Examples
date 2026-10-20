@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPMenuLayersResult=") for argument in arguments):
+        return "uep_lyra_hud.menu_layers_validation"
     if any(argument.startswith("-UEPCreditsWidgetsResult=") for argument in arguments):
         return "uep_lyra_hud.credits_widgets_validation"
     if any(argument.startswith("-UEPDiagnosticWidgetsResult=") for argument in arguments):

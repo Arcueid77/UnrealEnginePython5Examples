@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "batch": "151-menu-layers",
+  "scope": "Bounded root four-tag native layer map, const focus and activation, native settings/confirmation declined result and parent close lifecycle in both Profiles; actual native quit in separate owned processes; confirmed frontend travel, physical input, pixels, network and full version remain open. Default incremental staged host regression only.",
+  "recorded_utc": "2026-10-20T10:48:14.9679000Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "83c7e9a138928dca183efae15af471134dd5aad0",
+  "examples_parent_commit": "7a34243207b62737f6837afad1ba6444b01995e0",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-menu-layers/Audit01",
+      "summary_sha256": "87F66F6CA4E45793FF283768BF64FA3575171296026A331513F7E0BB8F8629A0",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 853,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "audit.json",
+          "sha256": "698BF657D9CFBF1AD8455CBA70933DE62382764C8DFBFF0315A036DB71C8D4DC"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-menu-layers/Assets01",
+      "summary_sha256": "079AD78DDB8E4EE6E952BAB92DCAE27CB8DA469A07160EE9E175F2CC4CC8CD02",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2128,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-menu-layers/Lifecycle04ActorWorldObserver",
+      "summary_sha256": "C4602BB6E4DB7024A30E301FA0AA41BA7611F90626D70FC1DB43C6B3AA73B30E",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2889,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "53827DED5367BC6CD2DA9C3C5D9F49B69C18A146E25F07F1F991244A5D83713D"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-menu-layers/Quit01Fallback",
+      "summary_sha256": "2BBF5F74D9C1E1892B0B9D1B9812D1B49D3741975C2D9151E01D14F657991027",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2889,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "78541C1F7252D798774E0F274F7765C0D0EFF8BACE7F379B1966B52D197290A8"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-menu-layers/Quit02Python",
+      "summary_sha256": "4FFB42965CFCA100E9BE8C58A79E1B5ED472038B5FEF3BA5AB8965DBE7A19EBC",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2889,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "FC199553407625F4AD1DEE95180C13181A055E8FD3029AD9EEA1AE61199F9B9E"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/menu_layers_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/menu_layers_mixin.py",
+      "sha256": "33990E9C7D33376FF94C7D3DBFA67BEFE41DCD0B155D2A254812164527E4213E"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/menu_layers_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/menu_layers_contract.py",
+      "sha256": "89E1D6813556D491DCDF39FE456FD153E609B1FC1B35E4A0036786406358F3F4"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/menu_layers_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/menu_layers_validation.py",
+      "sha256": "EDF6CB66E5705D8217F30268601F53EDEA092FCC8C0D4FFCB780F6D86C036350"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "7458E2E454B7DDD5715D5EB260CDE942FEF2835B18078D96A02D1A0C8D6EA5FC"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/audit_menu_layers.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_menu_layers.py",
+      "sha256": "081655A364C5F3B41061E738412833A69004554D721D80355009D9A919D422E2"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_menu_layer_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_menu_layer_assets.py",
+      "sha256": "EB87DD4F6907F294A34D347D4535080DBF2EDA28B9F40BF56EBC236EE29C376E"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "91AF8142FD7CED705C989395CB2B10569148896F6683502769A2DA5272B6F3B9"
+    },
+    {
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "207022D1AD55BFD8BAA2689999C0C96C15BD4E50E5CD08B1CCBDBD3D5E4F92CB"
+    },
+    {
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "629529D8DAFDF1951E8AA9F20E4AD113227E7594023106BD103C3D8D91CFC627"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261020-menu-layers/Host04ActorWorldObserver.json",
+    "sha256": "10D1F5E115B9F7A49B10F028AE909D5AECC2FD18CC9E6CAB0B5E0EE8B91196F5",
+    "result": {
+      "schema_version": 2,
+      "status": "passed",
+      "tests_run": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "selection": {
+        "mode": "incremental",
+        "status": "ready",
+        "changed_files": [],
+        "selected_test_files": [
+          "Demos/UEPLyraIntegration/Tests/test_menu_layers_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_menu_layers_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_menu_layers_mixin.py"
+        ],
+        "affected_files": [],
+        "selection_reasons": {
+          "Demos/UEPLyraIntegration/Tests/test_menu_layers_contract.py": [
+            "explicit pattern test_menu_layers_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_menu_layers_fixture.py": [
+            "explicit pattern test_menu_layers_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_menu_layers_mixin.py": [
+            "explicit pattern test_menu_layers_*.py"
+          ]
+        },
+        "unmapped_changed_files": [],
+        "unparsed_unaffected_files": [],
+        "dependency_analysis": "local imports including inheritance, literal module names and file references; dynamic dependencies require explicit patterns/native lanes",
+        "full_regression_requested": false
+      },
+      "failed_cases": []
+    }
+  }
+}
