@@ -23,6 +23,58 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch161 (2026-10-20),session-browser entry and join:**
+Original62 nodes (including the one-node unemitted OnButtonClicked signature),
+full CDO/tree/animations/public signatures/GUIDs/graphs remain exact.8 methods per
+Profile,38 transport plus5 interfaces,zero new business nodes. Python handles
+valid-item storage,display/image continuation,click/join/spinner and prepared/
+completion decisions. Original localized five-FText and integer conversion
+payloads remain native;MapName uses definition TileSubTitle,while original
+MAPNAME-string conversion remains unwired. Native primary asset loaders,spinner
+AfterPush and actual latent loading-class macro remain. Python stores spinner
+before preparation;only macro completion binds/submits the join. Original weak
+join delegate unbind and spinner pop both execute before the Python bool gate.
+Original failure FText system-message path remains unit/static covered.
+Join02ConcreteInvalidItem runs one owned native LAN listen host and two serial
+independent UI clients. Actual host UI cycles to LAN1,bots false gives NumBots0,
+then native hosting reaches the requested map/experience. Each client uses the
+actual selection BrowseButton/online initialization/browser AfterPush. Original
+NULL FindSessions discovers that host without changing the browser's original
+online search request. Native ListView generates a real row from the real result.
+All five text values/native localized format histories and exact definition
+texture identity match. Null and a wrong-type existing search request preserve
+the current row;these direct interface test inputs are disclosed.
+Actual SessionButton click pushes spinner,loads the experience/loading class,
+binds/submits native JoinSession,and completes/unbinds/pops once. Both Profiles
+reach a new native Client world/controller on the host map/experience. The host
+observes remote players. Both client sessions and the host session are destroyed
+through native proxies. Original gameplay health is checked before join;travel
+replaces the world,so no cross-travel actor-health identity claim. Owned roots,
+Profiles,input type and loading class restore. All3 process exits0,independent
+gate0,strict raw logs and ordered Goodbye Python/log closure pass.
+21 focused checks and6 invalid lane guards pass;exact staged trees use default
+incremental verification at .build/CommitVerification/20261020-session-entry/Index01.
+Join01 failed fixture setup (abstract UObject and treating a tab-list row as an
+activatable screen) and all raw/source evidence remain preserved. Production
+policy/assets did not change for that fixture correction.
+Shared UIExperienceMacros definition is byte-identical;its Python semantic
+consumer closure remains pending. Failed-join UI,real provider auth,remote-host
+network,physical input,audio,pixels,package,prior gates and full version remain
+open. No Engine/general Cpp/official edits,build,cook,push,tag or publication.
+
+Batch161 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261020-session-browser/Audit01/summary.json` 6b3b8a5f8629bfc5aa3c8953ffc7f32e88addf6fb59e0d1b4e984625c133aa50
+`20261020-session-entry/Assets01/summary.json` 789a275f6b3c9b246b6df2f8fc2cdf5ee05a0ceebb070aa5c9aaa667e7ed9a37
+`20261020-session-entry/Assets01/assets.json` 9ae5d17cb1bddaf333c6a8c96cf1cc50bcd9ba6005f7b5b400161549e57cc220
+`20261020-session-entry/Assets01/session-entry-public-signatures.json` f75ff58895d06773021640af3e49b670f0416654d838ff0adfbf423d53e6e8f1
+`20261020-session-entry/Join02ConcreteInvalidItem/summary.json` 4bc307ea8c9a0543cbc60c89d711ae8afe12a30724996d36c1fc327939e50b49
+`20261020-session-entry/Join02ConcreteInvalidItem/host.json` e4e20e77101dee095bb5c1922019636fe21090e5f04c6e6353d061499fd31322
+`20261020-session-entry/Join02ConcreteInvalidItem/BlueprintFallback.json` d99d6e75a9c462043c80b1b8e589a91f69bc3aeaca45972849f4fc69709e421c
+`20261020-session-entry/Join02ConcreteInvalidItem/Python.json` e859f8cd5a036f7975ac640f0936ff4a44f78e202f80593d8ab00015e86741e6
+`20261020-session-entry/Join02ConcreteInvalidItem/owned-processes.json` 6c9a45321c2ee4cb97cd17059f8fd13691dfa8f467c6966497f26d93949aa172
+`20261020-session-entry/Host03ConcreteInvalidItem.json` ecbc763af7a973ef49bb05c66acb594539d12c77dbd9c2399cc8409db0951813
+`20261020-session-entry/guard-results.json` 38005623d0b8a65457c4caa3d16aafdabf0dc769529a385b0d37a7cd8b379eb1
+
 **Completed bounded batch160 (2026-10-20),session-browser screen:**
 Only W_SessionBrowserScreen is accepted here;browser entry/join remains pending.
 Original62 nodes,full CDO/tree/animations/public signatures/GUIDs/graphs remain

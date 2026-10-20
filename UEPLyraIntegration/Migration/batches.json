@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 162,
+    "bounded_evidence_ledgers": 163,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -2270,6 +2270,61 @@
     "packaged_runtime": false,
     "full_acceptance": false,
     "next": "Remaining original0.13/0.14 candidates and prior FText audit/diagnostic/owner/network/culture/pixel/package/version gates stay open. Existing native parent input listener behavior is retained,not reimplemented or certified."
+  },
+  "session_entry_pilot": {
+    "version": "0.13.0",
+    "status": "bounded_session_entry_python_policy_native_nonempty_browser_text_and_owned_lan_joins_verified",
+    "evidence_ledger": "161-session-entry-native-nonempty-browser-text-and-lan-joins.json",
+    "owner": "uep_lyra_hud.session_entry_mixin",
+    "original_read_only_audit": "20261020-session-browser/Audit01",
+    "native_asset_authoring": "20261020-session-entry/Assets01",
+    "native_runtime_runs": [
+      "20261020-session-entry/Join02ConcreteInvalidItem"
+    ],
+    "original_graph_nodes": 62,
+    "transport_nodes": 38,
+    "interface_nodes": 5,
+    "method_counts": {
+      "Python": 8,
+      "BlueprintFallback": 8
+    },
+    "new_business_nodes": 0,
+    "original_cdo_tree_animations_public_signatures_guids_and_graphs_preserved": true,
+    "original_five_ftext_payload_and_unwired_mapname_string_preserved": true,
+    "original_primary_asset_load_and_spinner_loading_macro_order_preserved": true,
+    "original_join_bind_submit_and_unbind_then_pop_before_bool_gate_preserved": true,
+    "original_failure_ftext_system_message_preserved": true,
+    "native_real_lan_host_mode": 1,
+    "native_host_bots": "0",
+    "native_actual_nonempty_search_and_native_list_row": true,
+    "native_five_text_values_histories_and_definition_icon_verified": true,
+    "native_invalid_items_preserve_current_row": true,
+    "native_actual_join_profiles": [
+      "BlueprintFallback",
+      "Python"
+    ],
+    "native_prepared_and_join_completed_per_client": 1,
+    "native_remote_client_observed_on_owned_host": true,
+    "native_all_three_owned_sessions_destroyed": true,
+    "native_world_controller_replacement_expected": true,
+    "initial_gameplay_health_unchanged_before_join": true,
+    "cross_travel_actor_health_identity_claimed": false,
+    "owned_roots_profiles_input_loading_class_restored": true,
+    "shared_macro_definition_unchanged": true,
+    "shared_macro_sha256": "34ad57bb0d5970b86378bb18fd6d714ae936a4bc137219504f3c0160201ecb33",
+    "focused_host_checks": 21,
+    "invalid_lane_guards": 6,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261020-session-entry/Index01",
+    "physical_button_input_tested": false,
+    "audio_playback_tested": false,
+    "pixels_tested": false,
+    "remote_host_network_acceptance": false,
+    "online_provider_authentication_tested": false,
+    "failed_join_error_ui_natively_tested": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Close shared UI preparation-macro Python consumer semantics,then replay/default-map and0.14 candidates. Failure/real-provider/remote-host/FText/culture/owner/pixel/package/version gates remain open."
   },
   "session_browser_pilot": {
     "version": "0.13.0",
@@ -10548,7 +10603,8 @@
       "method_candidates": 5,
       "business_nodes": 46,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_session_entry_python_policy_native_nonempty_browser_text_and_owned_lan_joins_verified",
+      "evidence_run": "20261020-session-entry/Join02ConcreteInvalidItem"
     },
     {
       "path": "/Game/UI/Menu/Experiences/W_SessionBrowserScreen.W_SessionBrowserScreen",
