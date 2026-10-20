@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 160,
+    "bounded_evidence_ledgers": 161,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -2270,6 +2270,56 @@
     "packaged_runtime": false,
     "full_acceptance": false,
     "next": "Remaining original0.13/0.14 candidates and prior FText audit/diagnostic/owner/network/culture/pixel/package/version gates stay open. Existing native parent input listener behavior is retained,not reimplemented or certified."
+  },
+  "session_button_pilot": {
+    "version": "0.13.0",
+    "status": "bounded_session_button_python_visual_policy_native_text_materials_and_latent_click_verified",
+    "evidence_ledger": "159-session-button-native-text-materials-and-latent-click.json",
+    "owner": "uep_lyra_hud.session_button_mixin",
+    "original_read_only_audit": "20261020-session-browser/Audit01",
+    "native_asset_authoring": "20261020-session-browser/Assets01Button",
+    "native_runtime_runs": [
+      "20261020-session-browser/Lifecycle01Button"
+    ],
+    "original_graph_nodes": 89,
+    "transport_nodes": 53,
+    "interface_nodes": 5,
+    "method_counts": {
+      "Python": 13,
+      "BlueprintFallback": 13
+    },
+    "new_business_nodes": 0,
+    "original_cdo_tree_animations_public_signatures_guids_and_graphs_preserved": true,
+    "original_five_ftext_setter_graph_entirely_native_and_unmixed": true,
+    "native_localized_five_text_histories_match": true,
+    "original_six_target_reset_and_two_unused_label_getters_preserved": true,
+    "native_texture_identity_and_null_retention": true,
+    "native_only_border_disabled_and_blocked_handlers": true,
+    "native_mid_animation_click_and_actual_finished_reverse_quiet": true,
+    "native_finished_callbacks_per_profile": 1,
+    "native_latent_or_finished_callbacks_replayed": false,
+    "direct_blueprint_event_inputs": [
+      "BP_OnHovered",
+      "BP_OnUnhovered"
+    ],
+    "owned_roots_profiles_and_gameplay_health_restored": true,
+    "native_text_probe": {
+      "stage_only": true,
+      "asset": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UEPValidation\\BP_SessionButtonTextProbe.uasset",
+      "sha256": "4c1a56d448ffddc68572150e04030ad8869e3b99e985db6283028d86e40d8857"
+    },
+    "focused_host_checks": 20,
+    "invalid_lane_guards": 6,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261020-session-browser/Index01",
+    "physical_mouse_touch_or_button_input_tested": false,
+    "audio_playback_tested": false,
+    "pixels_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "browser_entry_or_join_migrated": false,
+    "full_acceptance": false,
+    "next": "Migrate original browser entry/screen and its latent join/macro consumer,then replay/default-map and0.14 candidates. Prior FText/culture/owner/network/pixel/package/version requirements remain open."
   },
   "host_session_pilot": {
     "version": "0.13.0",
@@ -10429,7 +10479,8 @@
       "method_candidates": 13,
       "business_nodes": 72,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_session_button_python_visual_policy_native_text_materials_and_latent_click_verified",
+      "evidence_run": "20261020-session-browser/Lifecycle01Button"
     },
     {
       "path": "/Game/UI/Menu/Experiences/W_NonInteractiveSpinner.W_NonInteractiveSpinner",

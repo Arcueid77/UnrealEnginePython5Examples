@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "sessionbutton":
+        from generate_session_button_assets import generate as generate_session_button
+        return generate_session_button(stage)
     if kind == "hostsession":
         from generate_host_session_assets import generate as generate_host_session
         return generate_host_session(stage)

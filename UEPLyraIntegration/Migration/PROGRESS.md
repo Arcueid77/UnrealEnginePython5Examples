@@ -23,6 +23,43 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch159 (2026-10-20),session-button visual dependency:**
+Only W_LyraSessionButton is accepted here. Browser entry/screen and joining remain
+pending. Original89 nodes,full CDO/tree/animations/public signatures/GUIDs/graphs
+remain exact;13 methods per Profile,53 transport plus5 interfaces,zero new
+business nodes. The five-FText Set Texts18-node graph remains entirely native,
+including original localized format templates. A stage-only native probe supplies
+localized Red/Blue FText directly,with all five native output histories matching.
+ResetMaterials retains original getter order,including two unused label material
+results,and six actual reset targets. Native state proves those unused labels
+retain sentinel scalars,while explicit ResetFontMaterials changes its own label.
+Native image texture identity and null-input retention match. Only the border's
+bIsDisabled scalar changes;disabled handlers cannot start animation. Enabled
+selection/hover directions,mid-animation click continuity,one actual native
+latent Finished per Profile,reverse-to-start and subsequent quiet all pass.
+Original current-time getter/PlayAnimationTimeRange/then sound/Finished payloads
+remain native. No replay of latent or Finished callbacks. Hover/unhover coverage
+uses explicitly disclosed direct BP_OnHovered/BP_OnUnhovered inputs;it does not
+claim physical mouse/touch/button input. NoSound excludes audio playback proof.
+Lifecycle01Button passes both Profiles,independent gate0,native exit0,strict raw
+logs and Goodbye Python before log closed. Owned roots/Profiles and original
+gameplay health restore.20 focused checks and6 invalid lane guards pass. Exact
+staged trees use default incremental verification at
+.build/CommitVerification/20261020-session-browser/Index01;no full regression.
+Pixels,remote network,packaged runtime,all prior unresolved gates and full version
+acceptance remain open. No Engine/general Cpp/official edits,build,cook,push,tag
+or release publication.
+
+Batch159 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261020-session-browser/Audit01/summary.json` 6b3b8a5f8629bfc5aa3c8953ffc7f32e88addf6fb59e0d1b4e984625c133aa50
+`20261020-session-browser/Assets01Button/summary.json` 8e90c6082c9b57882a442a9587f15b034de2ee5d518a26d63dd2473321bb7f3c
+`20261020-session-browser/Assets01Button/assets.json` ec6d1e71d800a0cecca87a89c1be63ddd131426d6c1e7d7daa9d715a5f8d1b18
+`20261020-session-browser/Assets01Button/session-button-public-signatures.json` 67db8d3e4771af353637cf05111cb14659e9b5436c8336c01ba8ac7504381835
+`20261020-session-browser/Lifecycle01Button/summary.json` 30ba59c388ccd44a1378ae3b545d70eb7368d41536925fd66d28cac9df52f9a4
+`20261020-session-browser/Lifecycle01Button/jump.json` ef91d8785a1e3ba030237b78cffa3dd31ecc94e7d53f16afa9d3ffe13465df0a
+`20261020-session-browser/Host02Button.json` 8001806c282443d8b3115817bcaa1eeda57b0b347d9d17b239dc311a5d41b658
+`20261020-session-browser/guard-results.json` f2133ffdfac5daf05636fcf2a5b530accf105f0a2b480188b59126eccdd4cf71
+
 **Completed bounded batch158 (2026-10-20),host-session screen:**
 Host focus/activation/mode/bot choices/request/selection and async continuation
 policy uses Python. Original75 nodes,full CDO/tree/animation/public parameters/
