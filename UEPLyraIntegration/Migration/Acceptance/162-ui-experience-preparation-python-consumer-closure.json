@@ -1,0 +1,311 @@
+{
+  "schema_version": 1,
+  "batch": "162-ui-preparation-closure",
+  "scope": "All3 original UIExperienceMacros consumers now use shared Python pure class cast/loading setter/completed continuation;both Profiles share one native latent LoadAssetClass per consumer. Original macro/reference nodes and all existing caller signatures/CDOs/visuals/GUIDs retained. Exact native original macro versus direct helper matrix4,actual quickplay both Profiles,hosting fallback and real LAN host/entry joins both Profiles. Current native load GUIDs recorded;historical latent UUID identity not claimed. Failed authoring/source/generated assets and exact parent restoration preserved. Original remaining migration and all remote-provider/owner/culture/pixel/package/version gates remain open. Default incremental staged verification.",
+  "recorded_utc": "2026-10-20T16:16:15.1566183Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "0d13c0ecfe4d9556cd054957ccddaca9bfda6006",
+  "examples_parent_commit": "88301f3aacb481a1839cbaa0c3ba7b2efa1f3dd0",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-ui-preparation/Assets02ScopedRegistration",
+      "summary_sha256": "8470AA3A96BD0D91CC311ACFBA5C937946E7A9F4349D06BD51E712D6DA342D68",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2203,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-ui-preparation/Probe01",
+      "summary_sha256": "522B843F03D331E1E9DC5257622CF3BE5A551C3F0BEFB59E373EF7171B5351A1",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2199,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-ui-preparation/Differential01",
+      "summary_sha256": "19C88801B1F310BE7E3ACC9420CA0084CD3E4909B1B8D4E10D0B50C8886C7047",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2961,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "45BF00D15FEB71941883439A8413F438B5D385C8FDB8F5631FFE1EF1CB255139"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-ui-preparation/Quick01Fallback",
+      "summary_sha256": "090AC5A0F1748A64FCAB8E26B1AA3E0A46CE66A2CAE5439442FDF8D39C8D9D0A",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3039,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "AF542DD17BF8E515BD9BF5BF343CB6B87E08DE106F8507A1B32D725E4BAF7CD7"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-ui-preparation/Quick02Python",
+      "summary_sha256": "0F5578906BF41A1B06ED101687C399348B7D433A750AF6218EA2A18D21E6E3B8",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3039,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "FD1DF0EDD31EBF2998F3EF2A0816955D7FEE8174ADBCFAE30D49509BCB3D9457"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-ui-preparation/Host01Fallback",
+      "summary_sha256": "A1873E8E87A08D8B3E69F943B3655CD2A472D6F73E5EC8126B9DA5C0D0949533",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3038,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "A77910F3FB9A9F6472ACAF140175CBD6DCA96BBEF52FEBEBBC1BE4585033C2CC"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-ui-preparation/Join01",
+      "summary_sha256": "4A62595F5A9685C713491C2110C7F21205D3BB79D6445F5159E376F0E04DB621",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3127,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "BlueprintFallback": 0,
+        "host": 0,
+        "Python": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": []
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "519B555B46252D6539DE046E5EC915F199C3C25C9CF114A0154FC895364A2F3E",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/experience_preparation_policy.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/experience_preparation_policy.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "ADEAE74373E2A02682D779A353348E8DEEC0C1C947D778C97541FF9D459958D6",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/experience_screen_mixin.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/experience_screen_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "698770381333E07F7A733EC24A9470440D11F817CA87B921A2A05CEC87A93320",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/host_session_mixin.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/host_session_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "DABB875703BAD80A29B754CC5F835393CC1464542D57C34FCB9D9B45D338AD2A",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/session_entry_mixin.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/session_entry_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "00F9CAF4756B0E954A9C7A77ED36E1D2EFA83CF2DD275A7B0994E5543A8A1306",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/ui_preparation_probe_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/ui_preparation_probe_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "85180328DDE96E513A77DD6803DF578170C6A37B7FA53E9B955B2C23238B1037",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/ui_preparation_probe_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/ui_preparation_probe_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "8A6C94FCE791E15BDFE0EE29060020B70FE00737EBF6C907CCF877BD2D9645A6",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "64A26656C9ECFDBC9ADF681B7A8A8AEA1FC5913665994643536B5C2FCD277104",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/experience_screen_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/experience_screen_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "142876F78076BDCFED3D813828FF8F27F52B3F095DEAEC7D10555E3BBD82F98F",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/host_session_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/host_session_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "9F5933776F381D9AC86ADAA50CC4C8979A72E368BB3D38FF97578AE2A214B02C",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/session_entry_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/session_entry_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "5264278B2DAEF004D107618545AE821E1A115044969A9E127E8E08659DA2D0F1",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_ui_experience_preparation_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_ui_experience_preparation_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "83437A506EB5A7108F5792F83F7A56C5F03BE8E3B5B454045C9EE9633A8DE6FD",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_ui_preparation_probe.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_ui_preparation_probe.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "BC2751D248B1CBCE4ADE4ABDFD6AD081F00EEF408586E9887A5BA382E0BF522B",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "36828E46530ED467645416D6E7B2D15B2AAB60BE87A460B3FAD31E394BFE27C9",
+      "native_input_path": "Validation/UIExperiencePreparationRevision.ps1",
+      "path": "Validation/UIExperiencePreparationRevision.ps1",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "AAF049305ACCAFE3BEB370A82834F3385C097C5EAD1B07A2BB72792461AF1D6E",
+      "native_input_path": "Validation/Run-UEP58UIExperienceMacroAuthoring.ps1",
+      "path": "Validation/Run-UEP58UIExperienceMacroAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "8117B0FCE3E8E57DD155A9582153F85280AAFB6142952D2CCF5BB698B56A93CB",
+      "native_input_path": "Validation/Run-UEP58UIExperienceMacroProbeAuthoring.ps1",
+      "path": "Validation/Run-UEP58UIExperienceMacroProbeAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "sha256": "DC1AF7157A59745D1683D6022936486EE5B8A27D3323F6FEB535C76204C00E2D",
+    "result": {
+      "schema_version": 2,
+      "status": "passed",
+      "tests_run": 75,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "selection": {
+        "mode": "incremental",
+        "status": "ready",
+        "changed_files": [],
+        "selected_test_files": [
+          "Demos/UEPLyraIntegration/Tests/test_experience_screen_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_experience_screen_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_experience_screen_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_host_session_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_host_session_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_host_session_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_session_entry_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_session_entry_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_session_entry_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_ui_experience_preparation_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_ui_experience_preparation_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_ui_experience_preparation_policy.py"
+        ],
+        "affected_files": [],
+        "selection_reasons": {
+          "Demos/UEPLyraIntegration/Tests/test_experience_screen_contract.py": [
+            "explicit pattern test_experience_screen_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_experience_screen_fixture.py": [
+            "explicit pattern test_experience_screen_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_experience_screen_mixin.py": [
+            "explicit pattern test_experience_screen_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_host_session_contract.py": [
+            "explicit pattern test_host_session_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_host_session_fixture.py": [
+            "explicit pattern test_host_session_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_host_session_mixin.py": [
+            "explicit pattern test_host_session_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_session_entry_contract.py": [
+            "explicit pattern test_session_entry_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_session_entry_fixture.py": [
+            "explicit pattern test_session_entry_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_session_entry_mixin.py": [
+            "explicit pattern test_session_entry_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_ui_experience_preparation_contract.py": [
+            "explicit pattern test_ui_experience_preparation_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_ui_experience_preparation_fixture.py": [
+            "explicit pattern test_ui_experience_preparation_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_ui_experience_preparation_policy.py": [
+            "explicit pattern test_ui_experience_preparation_*.py"
+          ]
+        },
+        "unmapped_changed_files": [],
+        "unparsed_unaffected_files": [],
+        "dependency_analysis": "local imports including inheritance, literal module names and file references; dynamic dependencies require explicit patterns/native lanes",
+        "full_regression_requested": false
+      },
+      "failed_cases": []
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261020-ui-preparation/Host02NativeProbe.json"
+  }
+}

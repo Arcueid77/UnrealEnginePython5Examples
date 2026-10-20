@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 163,
+    "bounded_evidence_ledgers": 164,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -2270,6 +2270,93 @@
     "packaged_runtime": false,
     "full_acceptance": false,
     "next": "Remaining original0.13/0.14 candidates and prior FText audit/diagnostic/owner/network/culture/pixel/package/version gates stay open. Existing native parent input listener behavior is retained,not reimplemented or certified."
+  },
+  "ui_preparation_closure_pilot": {
+    "version": "0.13.0",
+    "status": "partial_shared_macro_semantics_python_all_three_consumers_native_verified_original_definition_retained",
+    "evidence_ledger": "162-ui-experience-preparation-python-consumer-closure.json",
+    "owner": "uep_lyra_hud.experience_preparation_policy",
+    "native_asset_revision": "20261020-ui-preparation/Assets02ScopedRegistration",
+    "native_original_probe_authoring": "20261020-ui-preparation/Probe01",
+    "native_runtime_runs": [
+      "20261020-ui-preparation/Differential01",
+      "20261020-ui-preparation/Quick01Fallback",
+      "20261020-ui-preparation/Quick02Python",
+      "20261020-ui-preparation/Host01Fallback",
+      "20261020-ui-preparation/Join01"
+    ],
+    "original_macro_graph_nodes": 7,
+    "original_static_business_nodes": 5,
+    "original_macro_definition_bytes_and_graph_unchanged": true,
+    "original_macro_sha256": "34ad57bb0d5970b86378bb18fd6d714ae936a4bc137219504f3c0160201ecb33",
+    "original_index": {
+      "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261012-audit\\blueprints.json",
+      "sha256": "beb852d231d6f0e9f2db04c1d2b1d60af4d1a0e2bcbcd52d71d0d76aa0822f88"
+    },
+    "original_runtime_callsites": 3,
+    "all_original_runtime_consumers_use_shared_python_class_cast_and_setter": true,
+    "all_profiles_share_one_native_latent_load_per_consumer": true,
+    "python_synchronous_class_loading_or_clock_added": false,
+    "current_native_load_guids": {
+      "selection": {
+        "A": -592884154,
+        "B": 1245817503,
+        "C": -1668086346,
+        "D": -721177521
+      },
+      "host": {
+        "A": -1830607394,
+        "B": 1163747480,
+        "C": 279933064,
+        "D": -212268814
+      },
+      "entry": {
+        "A": -53469294,
+        "B": 1334226148,
+        "C": -1960950108,
+        "D": 538063555
+      }
+    },
+    "historical_compiled_latent_uuid_equality_claimed": false,
+    "original_caller_signatures_cdos_visuals_nodes_and_guids_preserved": true,
+    "added_native_io_and_gate_transport_nodes_per_consumer": 10,
+    "new_business_nodes": 0,
+    "method_counts": {
+      "selection": {
+        "Python": 11,
+        "BlueprintFallback": 11
+      },
+      "host": {
+        "Python": 13,
+        "BlueprintFallback": 13
+      },
+      "entry": {
+        "Python": 9,
+        "BlueprintFallback": 9
+      }
+    },
+    "native_original_macro_cases": 4,
+    "direct_python_helper_cases": 4,
+    "native_original_class_and_setter_continuation_equality": true,
+    "native_invalid_class_clears_and_continues": true,
+    "native_all_three_consumer_paths_both_profiles_verified": true,
+    "native_actual_quickplay_host_and_lan_joins": true,
+    "native_original_unbind_loading_text_and_widget_lifetime_boundaries_preserved": true,
+    "owned_sessions_roots_profiles_input_and_loading_class_restored": true,
+    "source_original_macro_instances_retained_as_unwired_references": true,
+    "failed_assets01_registration_error_and_generated_assets_preserved": true,
+    "failed_assets01_exact_parent_stage_restoration_verified": true,
+    "focused_host_checks": 75,
+    "invalid_lane_guards": 7,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261020-ui-preparation/Index01",
+    "remote_host_network_acceptance": false,
+    "online_provider_authentication_tested": false,
+    "pixels_tested": false,
+    "physical_input_tested": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Continue remaining original replay/default-map/lobby and0.14 candidates,plus all unresolved owner/FText/culture/network/pixel/package/version requirements."
   },
   "session_entry_pilot": {
     "version": "0.13.0",
@@ -10533,8 +10620,9 @@
       "group": "通用 UI、前端、设置与回放",
       "method_candidates": 0,
       "business_nodes": 5,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch162:original7-node macro definition remains byte/graph-identical reference. All3 original runtime consumers use shared Python pure UserWidget-class cast,loading-subsystem setter and completed continuation. One native LoadAssetClass node per consumer is shared across both Profiles;no synchronous loader/new clock. Original caller graph nodes/GUIDs/CDOs/visuals/public ABI retained;old macro instances remain unwired reference nodes. Exact original macro/native setter/helper probe covers null,two valid widget classes and wrong Actor class (clear-and-continue),and both Profiles execute actual affected quickplay/hosting/real LAN row joining. Native exits/independent gates/strict logs/shutdown and owned cleanup pass. New compiled native load GUIDs are recorded;historical latent UUID identity is not claimed. Full version/remote-provider/owner/culture/pixel/package scope remains open.",
+      "status": "partial_shared_macro_semantics_python_all_three_consumers_native_verified_original_definition_retained",
+      "evidence_ledger": "162-ui-experience-preparation-python-consumer-closure.json"
     },
     {
       "path": "/Game/UI/Menu/Experiences/W_ExperienceList.W_ExperienceList",
@@ -10554,7 +10642,8 @@
       "business_nodes": 31,
       "scope_review": null,
       "status": "bounded_experience_selection_python_policy_native_host_browse_and_null_quickplay_travel_verified",
-      "evidence_run": "20261020-experience-screen/Quick04PythonMapName"
+      "evidence_run": "20261020-experience-screen/Quick04PythonMapName",
+      "preparation_revision_ledger": "162-ui-experience-preparation-python-consumer-closure.json"
     },
     {
       "path": "/Game/UI/Menu/Experiences/W_ExperienceTile.W_ExperienceTile",
@@ -10574,7 +10663,8 @@
       "business_nodes": 56,
       "scope_review": null,
       "status": "bounded_host_screen_python_policy_native_choices_payloads_and_null_online_host_travel_verified",
-      "evidence_run": "20261020-host-session/Host02Python"
+      "evidence_run": "20261020-host-session/Host02Python",
+      "preparation_revision_ledger": "162-ui-experience-preparation-python-consumer-closure.json"
     },
     {
       "path": "/Game/UI/Menu/Experiences/W_LyraSessionButton.W_LyraSessionButton",
@@ -10604,7 +10694,8 @@
       "business_nodes": 46,
       "scope_review": null,
       "status": "bounded_session_entry_python_policy_native_nonempty_browser_text_and_owned_lan_joins_verified",
-      "evidence_run": "20261020-session-entry/Join02ConcreteInvalidItem"
+      "evidence_run": "20261020-session-entry/Join02ConcreteInvalidItem",
+      "preparation_revision_ledger": "162-ui-experience-preparation-python-consumer-closure.json"
     },
     {
       "path": "/Game/UI/Menu/Experiences/W_SessionBrowserScreen.W_SessionBrowserScreen",

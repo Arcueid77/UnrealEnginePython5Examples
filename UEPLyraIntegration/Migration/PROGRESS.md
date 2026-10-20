@@ -23,6 +23,69 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch162 (2026-10-21),shared UI preparation macro closure:**
+The original UIExperienceMacros7-node/5-business-node definition remains byte and
+graph identical. Original index/current graph census identifies all3 consumers:
+experience selection,host screen and session entry. Their shared Python policy
+now performs the original pure UserWidget-class cast,loading-subsystem setter
+and completed continuation. Failed/null class still clears the loading widget
+and continues,matching the original unwired pure-cast success pin.
+Each consumer retains all original public signatures/CDO/tree/animations/nodes/
+GUIDs. All original execution inputs use one native LoadAssetClass node shared
+by both Profiles;only its real Completed invokes the new typed policy gate.
+Fallback uses the corresponding native class cast/setter and same continuation.
+No synchronous loader or new clock. Original macro instances remain unwired
+reference nodes.10 native IO/gate transport nodes added per consumer;method
+counts selection11/host13/entry9 per Profile. Current native load GUIDs are
+recorded;historical compiled latent UUID identity is not claimed.
+Differential01 uses an exact original macro in a stage-only native widget probe,
+covering null,concrete spinner,loading-host widget and wrong Actor class. All4
+original latent completions/setter notifications match direct Python helper
+calls and native continuations. Probe/helper input boundaries are explicit;
+no native async callbacks are replayed. Loading class/roots/gameplay health restore.
+Quick01Fallback/Quick02Python execute real NULL quickplay through requested map/
+experience readiness. Host01Fallback executes actual native hosting. Join01 uses
+an owned LAN host (Python) and both independent entry clients with real nonempty
+browser rows and native button joins. All sessions and owned UI/Profile/input/
+loading state restore;travel replaces world/controller with no cross-travel
+actor-health identity claim. All7 runtime processes exit0,all5 independent gates0,
+strict logs and ordered Goodbye Python/log closure pass.75 focused/affected host
+checks and7 invalid lanes pass;exact staged trees use incremental verification at
+.build/CommitVerification/20261020-ui-preparation/Index01,no full regression.
+Assets01 native auto-registration saw the newly declared Python method before
+old parent classes acquired its native gate;strict process exit1 rejected it.
+Failed reports,source and generated assets are preserved;exact3 parent Stage
+assets were restored from verified backups. Assets02ScopedRegistration scopes
+only that method out during old-class loading and restores it immediately after
+native gate declaration,then validates all complete Profile tables. Its process0/
+strict logs prove successful authoring. Probe01 is stage-only,not a production
+asset. Macro original bytes and all unrelated data remain unchanged.
+Replay/default-map/lobby/0.14 scope and all prior owner/FText/culture/remote-host/
+real-provider/pixel/package/version requirements remain open. No Engine/general
+Cpp/official edits,build,cook,push,tag or publication.
+
+Batch162 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261020-ui-preparation/Assets02ScopedRegistration/summary.json` 8470aa3a96bd0d91cc311acfba5c937946e7a9f4349d06bd51e712d6da342d68
+`20261020-ui-preparation/Assets02ScopedRegistration/assets.json` 1418dd7a9321788056b6e2a6c2bfec3b768aabe012aacb3c1218b19450b7e8cc
+`20261020-ui-preparation/Assets02ScopedRegistration/baselines.json` 867dda76cb45805001496ab4a709d6e7e27d365612e799f738ce43c93a515e93
+`20261020-ui-preparation/Probe01/summary.json` 522b843f03d331e1e9dc5257622cf3be5a551c3f0befb59e373ef7171b5351a1
+`20261020-ui-preparation/Probe01/assets.json` 799a42adc0376bfb05c20245c9c35d0dcea6ce48690a4f5f3956c03165b9880b
+`20261020-ui-preparation/Differential01/summary.json` 19c88801b1f310be7e3acc9420ca0084cd3e4909b1b8d4e10d0b50c8886c7047
+`20261020-ui-preparation/Differential01/jump.json` 45bf00d15feb71941883439a8413f438b5d385c8fdb8f5631ffe1ef1cb255139
+`20261020-ui-preparation/Quick01Fallback/summary.json` 090ac5a0f1748a64fcab8e26b1aa3e0a46ce66a2cae5439442fdf8d39c8d9d0a
+`20261020-ui-preparation/Quick01Fallback/jump.json` af542dd17bf8e515bd9bf5bf343cb6b87e08de106f8507a1b32d725e4baf7cd7
+`20261020-ui-preparation/Quick02Python/summary.json` 0f5578906bf41a1b06ed101687c399348b7d433a750af6218ea2a18d21e6e3b8
+`20261020-ui-preparation/Quick02Python/jump.json` fd1df0edd31ebf2998f3ef2a0816955d7fee8174adbcfae30d49509bcb3d9457
+`20261020-ui-preparation/Host01Fallback/summary.json` a1873e8e87a08d8b3e69f943b3655cd2a472d6f73e5ec8126b9da5c0d0949533
+`20261020-ui-preparation/Host01Fallback/jump.json` a77910f3fb9a9f6472acaf140175cbd6dca96bbef52febebbc1be4585033c2cc
+`20261020-ui-preparation/Join01/summary.json` 4a62595f5a9685c713491c2110c7f21205d3bb79d6445f5159e376f0e04db621
+`20261020-ui-preparation/Join01/host.json` e4e20e77101dee095bb5c1922019636fe21090e5f04c6e6353d061499fd31322
+`20261020-ui-preparation/Join01/BlueprintFallback.json` 4c0fee4bb1cfe1cad791727dcfefeab6390b7cbaf90abf7bcc6abbaa8b2eddbd
+`20261020-ui-preparation/Join01/Python.json` d74432ca937139439353b4cc6e408f6828019c8541081d2863187253effb854a
+`20261020-ui-preparation/Host02NativeProbe.json` dc1af7157a59745d1683d6022936486ee5b8a27d3323f6feb535c76204c00e2d
+`20261020-ui-preparation/guard-results.json` 16bc4ab9b26bf4c7a2a492573fb2be178d1c791e42a10d6d76d718d05223aaf3
+`20261020-ui-preparation/Assets01/rejected-assets-and-restoration.json` 48ad40f2435421e015ddc92df704d6564336f0b1086254f1e0f67668479a60f4
+
 **Completed bounded batch161 (2026-10-20),session-browser entry and join:**
 Original62 nodes (including the one-node unemitted OnButtonClicked signature),
 full CDO/tree/animations/public signatures/GUIDs/graphs remain exact.8 methods per

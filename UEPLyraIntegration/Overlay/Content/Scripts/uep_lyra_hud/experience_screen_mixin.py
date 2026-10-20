@@ -2,9 +2,10 @@
 import unreal_engine as ue
 from uep_lyra_weapons.hero_burst_cue_mixin import lib
 from uep_lyra_world.effect_pad_mixin import valid
+from uep_lyra_hud import experience_preparation_policy as preparation
 
 CLASS='/Game/UI/Menu/Experiences/W_ExperienceSelectionScreen.W_ExperienceSelectionScreen_C'
-METHODS=('focus','activate','selected','spinner','host','browse','quick','browse_result','quick_result','prepared')
+METHODS=('focus','activate','selected','spinner','host','browse','quick','browse_result','quick_result','prepared','preparation_loaded')
 GATES={m:'UEPExperienceScreen'+''.join(v.title() for v in m.split('_')) for m in METHODS}
 NATIVE={m:'UEPExperienceScreenNative'+m.title() for m in ('host','browse','quick','browser','prepare','request')}
 NATIVE['request']='UEPExperienceScreenNativeOnlineRequest'
@@ -27,6 +28,7 @@ def invoke(w,m,*args):
             if valid(w.get_property('SelectedExperience')):w.call_function(NATIVE['prepare'])
     elif m=='prepared':
         request=w.call_function(NATIVE['request'],w.get_property('SelectedExperience'));sub=lib('SubsystemBlueprintLibrary').call_function('GetGameInstanceSubsystem',w,ue.find_class('CommonSessionSubsystem'));sub.call_function('QuickPlaySession',w.call_function('GetOwningPlayer'),request);w.call_function('ShowProgressSpinner',True)
+    elif m=='preparation_loaded':preparation.finish(w,args[0])
     return False
 
 def method(m,fallback):

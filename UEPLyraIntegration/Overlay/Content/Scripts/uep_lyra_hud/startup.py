@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPUIPreparationProbeResult=") for argument in arguments):
+        return "uep_lyra_hud.ui_preparation_probe_validation"
     if any(argument.startswith("-UEPSessionEntryResult=") for argument in arguments):
         return "uep_lyra_hud.session_entry_validation"
     if any(argument.startswith("-UEPSessionBrowserResult=") for argument in arguments):

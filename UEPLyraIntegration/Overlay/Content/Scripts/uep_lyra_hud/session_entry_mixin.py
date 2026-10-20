@@ -2,8 +2,9 @@
 import unreal_engine as ue
 from uep_lyra_weapons.hero_burst_cue_mixin import lib
 from uep_lyra_world.effect_pad_mixin import valid
+from uep_lyra_hud import experience_preparation_policy as preparation
 CLASS='/Game/UI/Menu/Experiences/W_SessionBrowserEntry.W_SessionBrowserEntry_C'
-METHODS=('item','display_ready','image','click','join','spinner','prepared','completed')
+METHODS=('item','display_ready','image','click','join','spinner','prepared','completed','preparation_loaded')
 GATES={m:'UEPSessionEntry'+''.join(v.title() for v in m.split('_')) for m in METHODS}
 NATIVE={m:'UEPSessionEntryNative'+''.join(v.title() for v in m.split('_')) for m in ('display_load','texts','spinner','prepare_load','submit','failure')}
 def evidence(w):
@@ -22,6 +23,7 @@ def invoke(w,m,*args):
     elif m=='prepared':w.call_function(NATIVE['submit'])
     elif m=='completed':
         if not bool(args[0]):w.call_function(NATIVE['failure'])
+    elif m=='preparation_loaded':preparation.finish(w,args[0])
     return False
 def method(m,fallback):
     def apply(self,*args):

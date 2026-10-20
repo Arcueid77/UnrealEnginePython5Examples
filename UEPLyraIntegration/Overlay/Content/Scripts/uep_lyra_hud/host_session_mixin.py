@@ -2,9 +2,10 @@
 import unreal_engine as ue
 from uep_lyra_weapons.hero_burst_cue_mixin import lib
 from uep_lyra_world.effect_pad_mixin import valid
+from uep_lyra_hud import experience_preparation_policy as preparation
 
 CLASS='/Game/UI/Menu/Experiences/W_HostSessionScreen.W_HostSessionScreen_C'
-METHODS=('focus','activate','mode_text','bots_text','request','mode_cycle','bots_toggle','selected','online_result','spinner_pushed','prepared','completed')
+METHODS=('focus','activate','mode_text','bots_text','request','mode_cycle','bots_toggle','selected','online_result','spinner_pushed','prepared','completed','preparation_loaded')
 GATES={m:'UEPHostSession'+''.join(v.title() for v in m.split('_')) for m in METHODS}
 NATIVE={m:'UEPHostSessionNative'+''.join(v.title() for v in m.split('_')) for m in ('mode_text','bots_on','bots_off','login','spinner','prepare','submit','failure')}
 
@@ -37,6 +38,7 @@ def invoke(w,m,*args):
     elif m=='prepared':w.call_function(NATIVE['submit'],one(w.call_function('CreateHostingRequest')))
     elif m=='completed':
         if not bool(args[0]):w.call_function(NATIVE['failure'])
+    elif m=='preparation_loaded':preparation.finish(w,args[0])
     return False
 
 def method(m,fallback):
