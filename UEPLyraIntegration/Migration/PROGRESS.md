@@ -23,6 +23,55 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch171 (2026-10-21),Explorer async initialization:**
+Both characters now declare17 routes per Profile:the prior12 plus ListenForTeam,
+real ReceivePossessed,each actor's original generated team/Experience callback
+and an int-linkage native wait resume. Compiler-owned callback names differ by
+actor;callable descriptors resolve the unique owned native function at each
+registration. No Shooter GUID is reused. Each class adds10 transport nodes:
+two exact4-node Actor/UFunction multicast binders and one2-node empty resume.
+All original CDOs/public ABI/graph partitions/NodeGuid/factory callback symbols
+remain;source checks prove the original three-checkpoint wait macro parity.
+Python factories create one native proxy per call,bind exact named native
+delegates,then Activate. There are no production Python delegate callbacks,
+retained proxy roots or listener deduplication. Actual possession and native
+Experience factories drive startup and grants. Native DelayUntilNextTick owns
+three independent per-Actor readiness keys;every checkpoint rereads controller.
+Both Profiles verify two real listeners,two proxies,initial team payloads,
+native UnPossess/Possess no-team/restored-team delivery and cancel-one isolation.
+Ten actual deferred cases cover missing controller/inventory/quickbar,repeated
+requests,Profile switch while pending and pending Actor destruction. Grants wait
+for actual availability and match native coalescing;destroyed actors do no late
+script work. Only owned controllers/components/producers are changed. Native
+cleanup preserves unrelated original proxies. A naturally retired original
+pooled spawning-Cue observer is allowed only when the same native Cue still
+holds the same inactive/unrooted handle and is hidden with no owner;no Cue field
+is written. Original item identities/slots/Health,scoped PawnClass/Profiles/actors/
+observers restore. Native exit0,independent gate0,strict logs and ordered shutdown
+pass.18 focused checks and7 invalid lanes pass;exact staged checks are incremental
+at .build/CommitVerification/20261021-explorer-init/Index01.
+Init01 preserves an unreflected team-subsystem API lookup;the accepted fixture
+uses real character possession instead. Init02/03 preserve an overstrict active-
+proxy-set oracle;diagnostics identify the naturally retired native pooled Cue
+handle and the final gate requires the complete ownership/identity witness.
+Init04/05 preserve a single-notification assumption:real re-possession emits
+multiple native team/display notifications,so cancellation uses the independent
+live-proxy delivery count and exact generated-dispatch multiplicity.
+Remaining BeginPlay/visibility/input/behavior/construction/parent work stays
+explicit. No Engine/general Cpp/official edits,build,cook,push,tag or publication.
+Static246/182/63/11 and exact candidate path/order remain;full migration is false.
+
+Batch171 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261021-explorer-init/source-proof.json` 88cafe726686cd96f0ed54a9465ce22b1a3af2cb3796f63bb0927e14c916a6fb
+`20261021-explorer-init/Assets01/summary.json` 64d6f16ba2450884e1d90e2cd46cc7719aa4d1ea2b099b6a462736f376f2053a
+`20261021-explorer-init/Assets01/assets.json` f0a0738aa6f0416ec28a61982a46f9a6720ab66719d3c42ab0659af9bc17312b
+`20261021-explorer-init/Init06Fallback/summary.json` 27042abb224d9681ca977a6f2c6313df9cd4c0aeb8ba8d787830e7ec64212996
+`20261021-explorer-init/Init06Fallback/jump.json` 3a70ac10296e814dbfda2ff508a612abe346ff14c2f9c55d49f55e6340d6efb0
+`20261021-explorer-init/Init07Python/summary.json` b2f652a3e6baee4ed27ae752c9dd92a9d4db2c005a17c203a728615b1ad30de5
+`20261021-explorer-init/Init07Python/jump.json` 7597dcd8329b7d10244748ed4c1db31a160d96b2a31ae6fe4323a03faef1ae17
+`20261021-explorer-init/host-focused02.json` 1d07c78984fad83865e51460878ea7ac027bd20fa627e9478845df69d71a127d
+`20261021-explorer-init/guards01.json` c4a2740f8c3a1ecae56d89728cc5be63fc0cc5a7b888604faa8d4531ff2a3b26
+
 **Completed bounded batch170 (2026-10-21),Explorer native callbacks:**
 Both original characters now declare12 methods per Profile. The four new targets
 are K2_OnReset,K2_OnDeathFinished and the original Health/CharacterParts component
