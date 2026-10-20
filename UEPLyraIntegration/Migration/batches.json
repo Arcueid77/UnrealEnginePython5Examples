@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 171,
+    "bounded_evidence_ledgers": 172,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -11352,9 +11352,9 @@
       "method_candidates": 18,
       "business_nodes": 137,
       "scope_review": null,
-      "status": "bounded_explorer_eight_helpers_and_native_style_verified_remaining_character_business_open",
-      "evidence_run": "20261021-explorer-style/Style03Python",
-      "evidence_ledger": "169-explorer-outline-team-and-legacy-native-style.json",
+      "status": "bounded_explorer_twelve_helpers_and_native_callbacks_verified_remaining_character_business_open",
+      "evidence_run": "20261021-explorer-callbacks/Callbacks06Python",
+      "evidence_ledger": "170-explorer-native-parts-health-reset-and-death-callbacks.json",
       "implemented_helpers": [
         "ClearInventory",
         "GetEmoteAudioComponent",
@@ -11363,15 +11363,15 @@
         "AddInitialInventory",
         "CreateOrUpdateOutlineIfNeeded",
         "OnTeamOrCosmeticsChanged",
-        "OnRep_PlayerInfo"
+        "OnRep_PlayerInfo",
+        "K2_OnReset",
+        "K2_OnDeathFinished",
+        "BndEvt__Hero_ShooterMannequin_HealthComponent_K2Node_ComponentBoundEvent_0_LyraHealth_AttributeChanged__DelegateSignature",
+        "BndEvt__B_Hero_ShooterMannequin_PawnCosmeticsComponent_K2Node_ComponentBoundEvent_2_LyraSpawnedCharacterPartsChanged__DelegateSignature"
       ],
       "whole_character_migrated": false,
       "remaining_business": [
         "AnimMotionEffect",
-        "BndEvt__B_Hero_ShooterMannequin_PawnCosmeticsComponent_K2Node_ComponentBoundEvent_2_LyraSpawnedCharacterPartsChanged__DelegateSignature",
-        "BndEvt__Hero_ShooterMannequin_HealthComponent_K2Node_ComponentBoundEvent_0_LyraHealth_AttributeChanged__DelegateSignature",
-        "K2_OnDeathFinished",
-        "K2_OnReset",
         "ListenForTeam",
         "ReceiveBeginPlay",
         "ReceivePossessed",
@@ -11389,9 +11389,9 @@
       "method_candidates": 18,
       "business_nodes": 153,
       "scope_review": null,
-      "status": "bounded_explorer_eight_helpers_and_native_style_verified_remaining_character_business_open",
-      "evidence_run": "20261021-explorer-style/Style03Python",
-      "evidence_ledger": "169-explorer-outline-team-and-legacy-native-style.json",
+      "status": "bounded_explorer_twelve_helpers_and_native_callbacks_verified_remaining_character_business_open",
+      "evidence_run": "20261021-explorer-callbacks/Callbacks06Python",
+      "evidence_ledger": "170-explorer-native-parts-health-reset-and-death-callbacks.json",
       "implemented_helpers": [
         "ClearInventory",
         "GetEmoteAudioComponent",
@@ -11400,14 +11400,14 @@
         "AddInitialInventory",
         "CreateOrUpdateOutlineIfNeeded",
         "OnTeamOrCosmeticsChanged",
-        "OnRep_PlayerInfo"
+        "OnRep_PlayerInfo",
+        "K2_OnReset",
+        "K2_OnDeathFinished",
+        "BndEvt__Hero_ShooterMannequin_HealthComponent_K2Node_ComponentBoundEvent_0_LyraHealth_AttributeChanged__DelegateSignature",
+        "BndEvt__B_Hero_ShooterMannequin_PawnCosmeticsComponent_K2Node_ComponentBoundEvent_2_LyraSpawnedCharacterPartsChanged__DelegateSignature"
       ],
       "whole_character_migrated": false,
       "remaining_business": [
-        "BndEvt__B_Hero_ShooterMannequin_PawnCosmeticsComponent_K2Node_ComponentBoundEvent_2_LyraSpawnedCharacterPartsChanged__DelegateSignature",
-        "BndEvt__Hero_ShooterMannequin_HealthComponent_K2Node_ComponentBoundEvent_0_LyraHealth_AttributeChanged__DelegateSignature",
-        "K2_OnDeathFinished",
-        "K2_OnReset",
         "ListenForTeam",
         "ReceiveBeginPlay",
         "ReceivePossessed",
@@ -11962,5 +11962,55 @@
     "whole_characters_migrated": false,
     "full_acceptance": false,
     "next": "Continue remaining Explorer lifecycle/team observation/input/initialization and inherited parent business,all remaining original candidates and version boundaries. No whole-character or full migration completion claim."
+  },
+  "explorer_callbacks_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_explorer_twelve_helpers_and_native_callbacks_verified_remaining_character_business_open",
+    "evidence_ledger": "170-explorer-native-parts-health-reset-and-death-callbacks.json",
+    "owner": "uep_lyra_characters.explorer_callbacks_mixin",
+    "baseline_style_revision": "20261021-explorer-style/Assets02Revision",
+    "native_asset_authoring": "20261021-explorer-callbacks/Assets01",
+    "native_runtime_runs": [
+      "20261021-explorer-callbacks/Callbacks05Fallback",
+      "20261021-explorer-callbacks/Callbacks06Python"
+    ],
+    "method_counts_per_character": {
+      "Python": 12,
+      "BlueprintFallback": 12
+    },
+    "new_methods": [
+      "K2_OnReset",
+      "K2_OnDeathFinished",
+      "BndEvt__Hero_ShooterMannequin_HealthComponent_K2Node_ComponentBoundEvent_0_LyraHealth_AttributeChanged__DelegateSignature",
+      "BndEvt__B_Hero_ShooterMannequin_PawnCosmeticsComponent_K2Node_ComponentBoundEvent_2_LyraSpawnedCharacterPartsChanged__DelegateSignature"
+    ],
+    "original_four_callback_dataflows_match_shooter_after_only_target_class_mapping": true,
+    "original_component_event_public_abis_cdos_graphs_guids_and_all_character_bytes_unchanged": true,
+    "only_two_mixin_data_assets_changed": true,
+    "native_parts_add_remove_repeated_remove_and_independent_multicast": true,
+    "native_part_entries_and_actor_identities_restored": true,
+    "native_gas_health_player_self_foreign_ai_self_foreign_and_healing": true,
+    "native_independent_health_delegate_ai_stimulus_and_perception_memory": true,
+    "native_health_restored_with_gas_and_owned_observers_closed": true,
+    "native_already_granted_reset_ability_activated_by_gameplay_event": true,
+    "native_lethal_gas_to_character_death_finished": true,
+    "native_lifecycle_callbacks_forward_clear_exactly_once": true,
+    "lifecycle_evidence_pod_only_after_old_actor_destruction": true,
+    "fixture_waits_for_playing_phase_and_stable_asc_avatar": true,
+    "owned_ai_brain_stopped_throughout_fixture": true,
+    "primary_player_inventory_health_and_scoped_pawnclass_profiles_restored": true,
+    "focused_host_checks": 13,
+    "invalid_lane_guards": 7,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261021-explorer-callbacks/Index01",
+    "callback_replayed": false,
+    "health_properties_written": false,
+    "component_delegate_broadcast_by_fixture": false,
+    "sense_report_called_by_fixture": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "whole_characters_migrated": false,
+    "full_acceptance": false,
+    "next": "Continue remaining Explorer lifecycle initialization/team observation/input/behavior selection and inherited parent business,all remaining original candidates and version boundaries. No whole-character/full migration acceptance."
   }
 }

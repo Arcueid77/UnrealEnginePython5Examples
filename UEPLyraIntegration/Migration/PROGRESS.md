@@ -23,6 +23,52 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch170 (2026-10-21),Explorer native callbacks:**
+Both original characters now declare12 methods per Profile. The four new targets
+are K2_OnReset,K2_OnDeathFinished and the original Health/CharacterParts component
+receivers. Original dataflow matches Shooter after only target-class mapping;
+the exact audited implementations are composed with all8 Explorer helper/style
+methods. Only two Mixin DataAssets change;both character uasset bytes,all original
+graphs/CDOs/public event ABI/GUIDs/input bindings/unarmed payload stay unchanged.
+Both Profiles run actual C++ AddCharacterPart/RemoveCharacterPart/remove-again,
+independent native multicast observers and selected receiver dispatch. Original
+part entries/actor identities restore;device properties naturally evaluate/retire.
+Actual GameMode-produced Explorer bots have native teams,PlayerStates,ASCs and
+configured perception. Ten nonlethal GAS cases cover player-self/foreign and
+AI-self/foreign/healing. Independent Health delegates,raw signed damage-report
+amounts,AI damage stimulus/defaults and actual perception memory agree. Health
+restores through GAS and owned observers/bot producers close;the original bot
+producer list is unchanged. Native existing Reset abilities receive
+GameplayEvent.RequestReset;actual lethal GAS drives native death completion.
+All4 lifecycle events enter the selected original Explorer event and forward
+ClearInventory exactly once. Evidence survives old-Actor destruction as POD only.
+Fixture setup waits until Playing with a stable current ASC Avatar before taking
+the primary-player baseline or creating temporary players. Owned AI brains stay
+stopped on every observation tick. Primary item identities/slots/Health,scoped
+PawnClass/Profiles/actors/tasks restore. Native exit0,independent gate0,strict logs
+and ordered shutdown pass.13 focused checks and7 invalid lanes pass;exact staged
+checks are incremental at .build/CommitVerification/20261021-explorer-callbacks/Index01.
+Callbacks01 preserves a preflight source-path failure. Callbacks02/03/04 retain
+premature warmup fixture evidence:the old Explorer still had a Health component
+around the native phase transition while its cached ASC Avatar was empty,so
+damage was rejected.
+Callbacks05 waits for the actual stable Playing boundary;no health writes or
+manual callback/delegate replay were introduced. Remaining methods are explicit
+in both manifest rows. No Engine/general Cpp/official edits,build,cook,push,tag or
+publication. Static246/182/63/11 and exact candidate path/order remain;whole
+characters/full migration acceptance remain false.
+
+Batch170 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261021-explorer-callbacks/source-proof.json` 9c6c3f802b5e82feded8f72cc3256ec97a1092db4f5c6b392f3e97e44d3594b1
+`20261021-explorer-callbacks/Assets01/summary.json` 252c91920ab99bda4bd46f14618a70c525dd6630700dfda990ece3a897bffe75
+`20261021-explorer-callbacks/Assets01/assets.json` 547696cd3fb305f4c926882bfa0999d3767aefd93039815761a311ad48b82a3e
+`20261021-explorer-callbacks/Callbacks05Fallback/summary.json` 793329dc368181c93c2a77a557f37cd936ae2275bbb3feea8eaf5c222ab28c70
+`20261021-explorer-callbacks/Callbacks05Fallback/jump.json` 44249e1724820474845574c42392443f03c931de48586c4e9301ce8ef8218d89
+`20261021-explorer-callbacks/Callbacks06Python/summary.json` bd47e4e9f764c49f18ed3347d221d2c3a8448101228729631d95956282cd48ae
+`20261021-explorer-callbacks/Callbacks06Python/jump.json` 219e617b01eca6f65b3bf41fe3404f2d9d50058b6a7acc4e0f340285dbff1101
+`20261021-explorer-callbacks/host-focused02.json` 6ca55a70bf39066a71541e505d616fd06f4e7e77af81aca36f8ad5628f4f0766
+`20261021-explorer-callbacks/guards01.json` 617b6345f0af177eb7e147bce7d89793c8ba9979a5e288da144e1734379bd789
+
 **Completed bounded batch169 (2026-10-21),Explorer appearance helpers:**
 Both original Explorer characters now route8 methods per Profile. Three new
 functions are CreateOrUpdateOutlineIfNeeded,OnTeamOrCosmeticsChanged and legacy

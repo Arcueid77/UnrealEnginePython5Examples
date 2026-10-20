@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "batch": "170-explorer-callbacks",
+  "scope": "Four original Explorer lifecycle/component callbacks extend each family to12. Exact original dataflow/ABI/graphs/CDOs/GUIDs retained;only two Mixin DataAssets change. Both Profiles verify native parts add/remove/repeated-remove with independent multicast and restored entries,ten real GAS health/AI sense cases with native restoration,and already-granted native Reset ability plus lethal GAS death completion forwarding ClearInventory exactly once. Lifecycle evidence after old actor destruction is POD only. Fixture starts at stable Playing/current ASC Avatar and continuously stops owned AI brains. Native observers/bot producers,primary player inventory/Health and scoped Profiles/PawnClass restore. No callback replay,delegate broadcast,health writes,Engine/general Cpp edits,push or full migration claim. Incremental only.",
+  "recorded_utc": "2026-10-20T20:18:28.5499844Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "cb17ada22a7951acc806f092058d7a24ce721a4c",
+  "examples_parent_commit": "4d050a27bc810167ae34096665136d3acc9d5936",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-callbacks/Assets01",
+      "summary_sha256": "252C91920AB99BDA4BD46F14618A70C525DD6630700DFDA990ECE3A897BFFE75",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2251,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-callbacks/Callbacks05Fallback",
+      "summary_sha256": "793329DC368181C93C2A77A557F37CD936AE2275BBB3FEEA8EAF5C222AB28C70",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3076,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "44249E1724820474845574C42392443F03C931DE48586C4E9301CE8EF8218D89",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-callbacks/Callbacks06Python",
+      "summary_sha256": "BD47E4E9F764C49F18ED3347D221D2C3A8448101228729631D95956282CD48AE",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3076,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "219E617B01ECA6F65B3BF41FE3404F2D9D50058B6A7ACC4E0F340285DBFF1101",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "0A4F1092DAE5159E72CC867D043A92CD6849EE692252EEFF9BD066469D917D11",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_callbacks_mixin.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_callbacks_mixin.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "28E5F4A6EA7266D57B5B69C2C36FECBB4BB9524D4B48E911C5B9B7AD906000A7",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_callbacks_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_callbacks_validation.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "5726C2A6A47ED29DD1F845578A8F42D09693FB3369473480DEAD0753974D9F97",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_callbacks_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_callbacks_contract.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "027E22B0EC98410B31805221ED1ABD06BFE628B139EAE0F42D919EED272BB850",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "04B1A36229EE4EEFFF6E56007433EEC56DD0391585D518934235EE5012A50C97",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_explorer_callback_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_explorer_callback_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "C5223CE50A19F70E0A1DA2271496DF0DA9C613BD073BB05E097B1E39C1D3570F",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "50D19D641D12B35EDCA224586361EF5988A6E54CFE8235E8D99A75A70FE61259",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "A1029D6BA249DC548F87D4B938AAFCE458CC01241ED3E75AF8334E6A8985E48A",
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1"
+    }
+  ],
+  "host_report": {
+    "sha256": "6CA55A70BF39066A71541E505D616FD06F4E7E77AF81ACA36F8AD5628F4F0766",
+    "path": ".build/LyraValidation/BlueprintPython/20261021-explorer-callbacks/host-focused02.json",
+    "result": {
+      "status": "passed",
+      "tests_run": 13,
+      "runtime_acceptance": false,
+      "full_regression": false
+    }
+  }
+}
