@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPSessionBrowserResult=") for argument in arguments):
+        return "uep_lyra_hud.session_browser_validation"
     if any(argument.startswith("-UEPSessionButtonResult=") for argument in arguments):
         return "uep_lyra_hud.session_button_validation"
     if any(argument.startswith("-UEPHostSessionResult=") for argument in arguments):

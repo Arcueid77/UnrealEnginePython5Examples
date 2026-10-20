@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 161,
+    "bounded_evidence_ledgers": 162,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -2270,6 +2270,55 @@
     "packaged_runtime": false,
     "full_acceptance": false,
     "next": "Remaining original0.13/0.14 candidates and prior FText audit/diagnostic/owner/network/culture/pixel/package/version gates stay open. Existing native parent input listener behavior is retained,not reimplemented or certified."
+  },
+  "session_browser_pilot": {
+    "version": "0.13.0",
+    "status": "bounded_session_browser_python_ui_policy_native_caller_login_search_lock_and_completion_verified",
+    "evidence_ledger": "160-session-browser-native-caller-search-lock-and-completion.json",
+    "owner": "uep_lyra_hud.session_browser_mixin",
+    "original_read_only_audit": "20261020-session-browser/Audit01",
+    "native_asset_authoring": "20261020-session-browser/Assets02Screen",
+    "native_runtime_runs": [
+      "20261020-session-browser/Lifecycle06ScreenPoolDelta"
+    ],
+    "original_graph_nodes": 62,
+    "transport_nodes": 27,
+    "interface_nodes": 5,
+    "method_counts": {
+      "Python": 6,
+      "BlueprintFallback": 6
+    },
+    "new_business_nodes": 0,
+    "original_cdo_tree_animations_public_signatures_guids_and_graphs_preserved": true,
+    "original_native_do_once_lock_shared_across_profiles_and_reset_preserved": true,
+    "original_create_store_bind_find_order_and_weak_completion_delegate_preserved": true,
+    "original_failed_search_ftext_system_message_before_results_gate_preserved": true,
+    "native_caller_selection_login_and_browser_afterpush": true,
+    "native_empty_results_list_visibility_const_focus_and_unlock": true,
+    "native_refresh_button_new_requests": true,
+    "native_duplicate_search_blocked_across_live_profile_switch": true,
+    "native_actual_search_completions": 6,
+    "native_pooled_browser_reused": [
+      false,
+      true
+    ],
+    "owned_pooled_widget_profile_preselected_before_reactivation": true,
+    "native_callbacks_replayed": false,
+    "owned_roots_profiles_input_loading_class_and_gameplay_health_restored": true,
+    "focused_host_checks": 20,
+    "invalid_lane_guards": 6,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261020-session-browser/Index02Screen",
+    "physical_button_input_tested": false,
+    "audio_playback_tested": false,
+    "pixels_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "browser_entry_or_join_migrated": false,
+    "nonempty_provider_results_natively_tested": false,
+    "failed_search_system_message_natively_tested": false,
+    "full_acceptance": false,
+    "next": "Migrate original browser entry/join and shared preparation-macro consumer,then replay/default-map and0.14 candidates. Real-provider/nonempty/error UI,FText/culture/owner/network/pixel/package/version gates remain open."
   },
   "session_button_pilot": {
     "version": "0.13.0",
@@ -10508,7 +10557,8 @@
       "method_candidates": 6,
       "business_nodes": 48,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_session_browser_python_ui_policy_native_caller_login_search_lock_and_completion_verified",
+      "evidence_run": "20261020-session-browser/Lifecycle06ScreenPoolDelta"
     },
     {
       "path": "/Game/UI/Menu/Replays/W_ReplayBrowserScreen.W_ReplayBrowserScreen",

@@ -23,6 +23,51 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch160 (2026-10-20),session-browser screen:**
+Only W_SessionBrowserScreen is accepted here;browser entry/join remains pending.
+Original62 nodes,full CDO/tree/animations/public signatures/GUIDs/graphs remain
+exact;6 methods per Profile,27 transport plus5 interfaces,zero new business
+nodes. Focus/activation/refresh/search UI/results and unlock policy uses Python.
+Original native DoOnce retains its execution state across live Profile changes;
+the Python search body starts only after original Completed,and unlock resets
+that same native lock. Original create/store/bind/find order and weak completion
+delegate remain native. Original success/error branch and opaque FText system
+message execute before the results policy gate;FText never enters Python.
+Empty/nonempty result visibility remains HitTestInvisible3/Collapsed1. Results
+replace list items,focus self then list,and unlock before spinner outro.
+Lifecycle06ScreenPoolDelta uses the actual selection page,BrowseButton,online user
+initialization and native browser AfterPush. Both Profiles complete three native
+NULL searches each:activation,RefreshButton,and refresh after a completion that
+arrives during a live Profile switch. Duplicate StartSearch calls retain request
+identity and do not enter a second search body,including after switching Profile.
+All six actual completions yield empty results,matching native list/empty-state
+visibility and quiet. No native callbacks are replayed. Failed Lifecycle02Screen/03ScreenDiagnostics
+prove asynchronous log-flush latency;both failed reports and fixture sources are
+preserved. The accepted fixture waits for the independent log to arrive before
+matching exact callback counts. Lifecycle04ScreenLogFlush proves native pooled
+reuse;the owned pooled browser is preselected before reactivation,and counters
+are compared as deltas without resetting policy evidence. Lifecycle05ScreenPool
+was cancelled after a static check found one remaining cumulative comparison;
+its failed process proof,cancellation note and frozen fixture source remain. Owned roots/Profiles,
+input type,loading class and gameplay health restore. Native exit0,independent
+gate0,strict logs and ordered Goodbye Python/log closure pass.20 focused checks
+and6 invalid lane guards pass;exact staged trees use incremental verification at
+.build/CommitVerification/20261020-session-browser/Index02Screen,no full suite.
+Nonempty provider results and failed-search system-message UI are unit/static
+covered only. Browser entry/join,real authentication,physical input,audio,pixels,
+remote network,package,prior unresolved gates and full version remain open.
+No Engine/general Cpp/official edits,build,cook,push,tag or publication.
+
+Batch160 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261020-session-browser/Audit01/summary.json` 6b3b8a5f8629bfc5aa3c8953ffc7f32e88addf6fb59e0d1b4e984625c133aa50
+`20261020-session-browser/Assets02Screen/summary.json` 72a7ddea2128e3d6af567184fd2bd5d2c4bfd55169421eb251c08fed392cc488
+`20261020-session-browser/Assets02Screen/assets.json` e5caabebe7095f8057f6bb6cad390531f4880a96c61c5a033de78a113fa76458
+`20261020-session-browser/Assets02Screen/session-browser-public-signatures.json` 5855290b1e884d810e2f652821ad00a2acca8fb2bd0d08ed33aedfd36264d774
+`20261020-session-browser/Lifecycle06ScreenPoolDelta/summary.json` a9dc8749eb2eb01a9a991636288b1cee76823d624684892cf234a328e879471d
+`20261020-session-browser/Lifecycle06ScreenPoolDelta/jump.json` 66052a34b6c0f87c2478678111c5c4f7b4ee7453116f1a6368d69f8e65443228
+`20261020-session-browser/Host06ScreenPoolDelta.json` f5dd312df650138911169436a63110e4f4c91a80ab752303af09dffb712a63ce
+`20261020-session-browser/screen-guard-results.json` c14c628c8018a9eed0a2c3232de65d4d82733ea69bb2462ccde4913fe5bea2f3
+
 **Completed bounded batch159 (2026-10-20),session-button visual dependency:**
 Only W_LyraSessionButton is accepted here. Browser entry/screen and joining remain
 pending. Original89 nodes,full CDO/tree/animations/public signatures/GUIDs/graphs

@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "batch": "160-session-browser",
+  "scope": "Bounded browser Python UI policy after original native DoOnce lock and opaque FText error branch. Actual selection/login/browser AfterPush,activation and two refresh searches per Profile,six actual native NULL completions,duplicate blocking across live Profile switch,empty result list/visibility/focus/unlock and quiet. Browser entry/join,nonempty provider/error UI,physical input,audio,pixels,network,package and full version remain open. Default incremental verification.",
+  "recorded_utc": "2026-10-20T15:13:49.5527989Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "55a9988e34a4ac6e4b9b7605bed699241669c217",
+  "examples_parent_commit": "65024f98f36e7879269366754ea1d71188aef098",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-session-browser/Audit01",
+      "summary_sha256": "6B3B8A5F8629BFC5AA3C8953FFC7F32E88ADDF6FB59E0D1B4E984625C133AA50",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 851,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "5899EE60FFDA576D842C7E286B23D7133BAB9798787DE990322D469D14FF5299",
+          "file": "audit.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-session-browser/Assets02Screen",
+      "summary_sha256": "72A7DDEA2128E3D6AF567184FD2BD5D2C4BFD55169421EB251C08FED392CC488",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2178,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-session-browser/Lifecycle06ScreenPoolDelta",
+      "summary_sha256": "A9DC8749EB2EB01A9A991636288B1CEE76823D624684892CF234A328E879471D",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2999,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "66052A34B6C0F87C2478678111C5C4F7B4EE7453116F1A6368D69F8E65443228",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "35BA515C1AD2CF4C968F08883EEC6A9E04244139B1453C27C913AD9B9EA4D92C",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/session_browser_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/session_browser_mixin.py"
+    },
+    {
+      "sha256": "74F1DA2790DA69D67A51BB74C7D56BFAEA9F3B47B5DDE31EB7B2A57E113C294E",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/session_browser_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/session_browser_validation.py"
+    },
+    {
+      "sha256": "1455C44BEDFC7AD66350A9F93516E8BB52AB986221A981CB549437B86C5B39CA",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/session_browser_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/session_browser_contract.py"
+    },
+    {
+      "sha256": "64A26656C9ECFDBC9ADF681B7A8A8AEA1FC5913665994643536B5C2FCD277104",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/experience_screen_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/experience_screen_validation.py"
+    },
+    {
+      "sha256": "C1A8D85DC59D83DAAC0F49F4A3BA67FE1499BD2FD209751310A5135F19312EB9",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "sha256": "447291BCC12931EC8CDC133EABB7077DA2683BE8D6B1E47859D209FC6AC9DA9E",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_session_browser.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/audit_session_browser.py"
+    },
+    {
+      "sha256": "BCA9C948F17E6B3958416FD43A7BCC7B4B348BE3E2988B6544AACBCFF2179A91",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_session_browser_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_session_browser_assets.py"
+    },
+    {
+      "sha256": "228BF2F59CBA6E4B679701CBD18342C1F22B17DF7FD67E18A66A9D9F9263F180",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py"
+    },
+    {
+      "sha256": "028FC58E2624C7D817B288E80048831308FCD8216C90FFB32AE2482BFEDF3BEB",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1"
+    },
+    {
+      "sha256": "741789E5995E39AF022D9EA32E8EF6349C5557A1B57791345BEACBC1A756CAC7",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58JumpValidation.ps1"
+    }
+  ],
+  "host_report": {
+    "sha256": "F5DD312DF650138911169436A63110E4F4C91A80AB752303AF09DFFB712A63CE",
+    "result": {
+      "schema_version": 2,
+      "status": "passed",
+      "tests_run": 20,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "selection": {
+        "mode": "incremental",
+        "status": "ready",
+        "changed_files": [],
+        "selected_test_files": [
+          "Demos/UEPLyraIntegration/Tests/test_session_browser_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_session_browser_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_session_browser_mixin.py"
+        ],
+        "affected_files": [],
+        "selection_reasons": {
+          "Demos/UEPLyraIntegration/Tests/test_session_browser_contract.py": [
+            "explicit pattern test_session_browser_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_session_browser_fixture.py": [
+            "explicit pattern test_session_browser_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_session_browser_mixin.py": [
+            "explicit pattern test_session_browser_*.py"
+          ]
+        },
+        "unmapped_changed_files": [],
+        "unparsed_unaffected_files": [],
+        "dependency_analysis": "local imports including inheritance, literal module names and file references; dynamic dependencies require explicit patterns/native lanes",
+        "full_regression_requested": false
+      },
+      "failed_cases": []
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261020-session-browser/Host06ScreenPoolDelta.json"
+  }
+}
