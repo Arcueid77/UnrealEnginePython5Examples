@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "batch": "145-bound-action-native-input-lifetime-and-brush",
+  "scope": "Bound-action Python policy;original82 nodes/CDOs/widgettree/animations/signatures/GUIDs retained,11 methods per Profile,45 transport+5 interfaces,zero new business. Native Construct/Destruct parent calls/CommonInput factories/BP dynamic add-remove delegates/receiver retained;native action binding/text/Cpp parent listener behavior remains unchanged. TwoProfiles:8 typed brush cases (onlyGamepadNoDraw,othersBox1;copied fields preserved/omitted ImageType reset),6 actual native input changes,rooted removed widget BP callback unbound/same instance native remount exactlyonce,material disable/enable/reset/native selection/deselection/UMG frames/4 natural click completions. Original native latent current-time/immediate/Finished retained. Cpp parent listener lifetime correctness not claimed. Native process0/gate0/strict logs/ordered shutdown;19 focused/5 invalid lanes;exact staged incremental follows. Original selectors/input/roots/health restore. Preserve01 wrong Box numeric constant/source;corrected from SlateBrush.h without asset reauthoring or timeout widening. Physical action/input/audioenergy/network/pixels/culture/package/version/full246 acceptance and prior FText audit open. No Cpp/official edits/build/cook/push/tag/publication.",
+  "recorded_utc": "2026-10-20T07:39:12.1518115Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "0216b056e64a35bad1e2a98fe57f43e087fb1a02",
+  "examples_parent_commit": "4fdef9e048185712acb8177f3cdae51c3316b057",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-foundation-buttons/Audit01",
+      "summary_sha256": "D93EB6FFBE6C306511A63E4655C08FDFE393625366235F41091BB989CBC8FD21",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 863,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "audit.json",
+          "sha256": "A78C2994E38E5DB3982C8E57CB401B0D16C60F27B7A0CFC33CEE306A9A93831C"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-bound-action/Assets01",
+      "summary_sha256": "192239396C54F0A33FCDE77553DC041ED3CE62BFAB389ACF096D2C2F7BCDA90F",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2091,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-bound-action/Differential02NativeBrushEnum",
+      "summary_sha256": "E2E7E6FE294DECA6BF57D99780F8B184AAC07A3604D0875FB8D830EC8383A2EF",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2693,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "4F4340EC16743B68CD3C7A40EEC445332490500513BF884C18E2A9DDCAE8352D"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_bound_action_assets.py",
+      "sha256": "60C154ACEDE7B058E041E3118BA118B50C8F7B7430C870F875E7BE585A1CF02E",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_bound_action_assets.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "96C0EE92021B201B3BA6878F6F7BD8AF10D2FA2D2E731560AAE53FF101B2B56E",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "B7A07309DD5102DDF0DED13D89BBF424CE8620C43D568BACF88A9ACFD757A9F5",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/bound_action_mixin.py",
+      "sha256": "70A0AA65988C8F46B0533C7243164705BF1EAFA8953FF74FC472B3BB5C554A0B",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/bound_action_mixin.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/bound_action_validation.py",
+      "sha256": "1A109631BB169FA48ED4EC72763E934713AED975AB992FA370379F78F9977CC5",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/bound_action_validation.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/bound_action_contract.py",
+      "sha256": "3759230D4310CBA93396DFF0F3573BEE1E286D2E6E8765D2A61FAE5778C7CE99",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/bound_action_contract.py"
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "72B2EF6984D98225EC27D6C32DC2339EBBB1F39F05606AB8F135D30673A82F5E",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1"
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "4FB1B9C47B5FF1F28C9967A5B67AFE0E54A6571CFFB63389DAD4B4EDDC0B3F3E",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58JumpValidation.ps1"
+    }
+  ],
+  "host_report": {
+    "sha256": "63F8D9EB32323CA95E1AD66173753D239D790F4CEBFC826C681528E004260AE8",
+    "result": {
+      "schema_version": 2,
+      "status": "passed",
+      "tests_run": 19,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "selection": {
+        "mode": "incremental",
+        "status": "ready",
+        "changed_files": [],
+        "selected_test_files": [
+          "Demos/UEPLyraIntegration/Tests/test_bound_action_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_bound_action_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_bound_action_mixin.py"
+        ],
+        "affected_files": [],
+        "selection_reasons": {
+          "Demos/UEPLyraIntegration/Tests/test_bound_action_contract.py": [
+            "explicit pattern test_bound_action_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_bound_action_fixture.py": [
+            "explicit pattern test_bound_action_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_bound_action_mixin.py": [
+            "explicit pattern test_bound_action_*.py"
+          ]
+        },
+        "unmapped_changed_files": [],
+        "unparsed_unaffected_files": [],
+        "dependency_analysis": "local imports including inheritance, literal module names and file references; dynamic dependencies require explicit patterns/native lanes",
+        "full_regression_requested": false
+      },
+      "failed_cases": []
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261020-bound-action/Host02NativeBrushEnum.json"
+  }
+}

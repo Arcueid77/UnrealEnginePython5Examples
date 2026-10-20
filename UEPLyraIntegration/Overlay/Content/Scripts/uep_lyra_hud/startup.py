@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPBoundActionResult=") for argument in arguments):
+        return "uep_lyra_hud.bound_action_validation"
     if any(argument.startswith("-UEPExperienceTileResult=") for argument in arguments):
         return "uep_lyra_hud.experience_tile_validation"
     if any(argument.startswith("-UEPMenuButtonsResult=") for argument in arguments):

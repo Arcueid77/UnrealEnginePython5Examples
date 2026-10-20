@@ -23,6 +23,55 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch145 (2026-10-20),bound-action button:**
+W_BoundActionButton uses Python policy with original82 nodes/full CDO/widget
+tree/animations/signatures/node GUIDs/graph semantics retained.11 methods per
+Profile,45 transport plus5 interfaces;zero new business nodes. Original native
+parent Construct/Destruct calls,CommonInput factories and Blueprint dynamic
+delegate add/remove nodes remain. PreConstruct/Construct/native input receiver
+still forward to the gated style/reset helpers. Native action binding/text
+label and parent Cpp input-style behavior remain;no FText ingress or Cpp edits.
+Only Gamepad chooses NoDrawType;MouseAndKeyboard/Touch/Count choose Box. The
+original Break/MakeSlateBrush copies7 connected fields and resets omitted
+fields. Python constructs a fresh native brush instead of retaining the whole
+old brush;native ImageType resets while margin/tiling/mirroring/resource remain.
+Original native PlayAnimationTimeRange/current-time/immediate/Finished adapters
+retain click timing. Python handles guards,sound choices and completion reverse.
+Assets01 and Differential02NativeBrushEnum pass native exit0/independent gate0/strict logs/
+ordered shutdown. Two Profiles verify8 typed input cases,6 actual native input
+changes,both material reset/disable/enable values,actual selection/deselection
+callbacks,hover/pressed UMG frames and4 natural click completions. The rooted
+widget stops receiving its Blueprint input callback after RemoveFromParent;
+the same instance's native remount rebinds that callback exactly once. No manual
+Construct/Destruct/delegate/animation-finished replay. Stable brush/material
+matrices match across Profiles,with each callback checked against actual input.
+This lifetime claim covers the original Blueprint dynamic delegate only. The
+native Lyra parent separately adds a native input listener in its Construct;
+its Cpp behavior remains unchanged and is not certified or fixed by this batch.
+Owned widget roots/Profile selector/native input type and original live player
+health restore. Selection fixtures explicitly enable selectable/toggleable;
+the completion guard changes only an owned widget flag,not production defaults.
+19 focused host checks and5 invalid lanes pass. Exact staged-index regression
+uses the default incremental selector,with external evidence at
+.build/CommitVerification/20261020-bound-action/Index01.
+Preserve Differential01/source:the initial implementation and fixture used
+the wrong numeric Box enum. Native SlateBrush.h defines Box=1;both policy and
+independent expected values now match that source,without changing native
+brush graphs or widening runtime limits.
+Physical hover/click/action execution,audio energy,pixels,network,culture/
+package/version acceptance,prior FText audit and all other original246-candidate
+scope remain open. The original nine-widget audit now has bounded per-family
+policy evidence;this is not complete0.13 UI or whole migration acceptance.
+No Engine/general Cpp/official edits,build,cook,push,tag or release publication.
+
+Batch145 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261020-bound-action/Assets01/summary.json` 192239396c54f0a33fcde77553dc041ed3ce62bfab389acf096d2c2f7bcda90f
+`20261020-bound-action/Assets01/assets.json` 99a7ffba9eecbf9f1387465b4c2936e5e0dc6366f6edf7b8376a21aeb3800de0
+`20261020-bound-action/Differential02NativeBrushEnum/summary.json` e2e7e6fe294deca6bf57d99780f8b184aac07a3604d0875fb8d830ec8383a2ef
+`20261020-bound-action/Differential02NativeBrushEnum/jump.json` 4f4340ec16743b68cd3c7a40eec445332490500513bf884c18e2a9ddcae8352d
+`20261020-bound-action/Host02NativeBrushEnum.json` 63f8d9eb32323ca95e1ad66173753d239d790f4cebfc826c681528e004260ae8
+`20261020-bound-action/guards.json` 1de4f47e2e330f6009cb6385602e7f2fbfd1b30ebfd7cbf671cf3a5aba18bdfd
+
 **Completed bounded batch144 (2026-10-20),experience tile button:**
 W_LyraExperienceTileButton uses Python policy with original78 nodes/full CDOs/
 widget tree/animations/signatures/node GUIDs/graph semantics retained.14 methods
