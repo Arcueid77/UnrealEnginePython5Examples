@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 145,
+    "bounded_evidence_ledgers": 146,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1235,6 +1235,59 @@
     "full_library_acceptance": false,
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
+  },
+  "experience_tile_pilot": {
+    "version": "0.13.0",
+    "status": "bounded_experience_tile_python_policy_native_ftext_material_audio_and_latent_verified",
+    "evidence_ledger": "144-experience-tile-native-material-audio-and-text.json",
+    "owner": "uep_lyra_hud.experience_tile_mixin",
+    "original_read_only_audit": "20261020-foundation-buttons/Audit01",
+    "native_asset_authoring": "20261020-experience-tile/Assets02NativeTextGraph",
+    "native_runtime_runs": [
+      "20261020-experience-tile/Differential04GlobalPersistentAudio"
+    ],
+    "original_graph_nodes": 78,
+    "transport_nodes": 58,
+    "interface_nodes": 5,
+    "methods_per_profile": 14,
+    "new_business_nodes": 0,
+    "original_cdos_widget_trees_animations_signatures_node_guids_and_graph_semantics_preserved": true,
+    "native_three_ftext_setters_and_latent_animation_adapters_retained": true,
+    "three_ftext_setter_graph_remains_entirely_native_without_python_gate": true,
+    "superseded_authoring": "Assets01",
+    "preserved_failed_native_runs": [
+      "Differential01",
+      "Differential02NativeTextGraph",
+      "Differential03NativeNullTexture"
+    ],
+    "localized_namespace_key_and_source_preserved_on_both_profiles": true,
+    "disabled_parameter_only_changes_border": true,
+    "hover_and_pressed_reset_all_four_materials": true,
+    "native_click_sound_return_unwired_game_instance_reference_cleared": true,
+    "native_profile_trials": 2,
+    "native_raw_progress_cases": 10,
+    "native_texture_cases": 6,
+    "natural_native_click_completions": 4,
+    "native_spawned_click_sound_components": 4,
+    "actual_native_enable_disable_selection_and_deselection_callbacks_verified": true,
+    "actual_umg_hover_pressed_and_click_frames_verified": true,
+    "completion_guard_fixture_sets_only_owned_widget_flag": true,
+    "owned_selection_fixture_enables_selectable_and_toggleable": true,
+    "original_widget_roots_profile_selector_game_instance_sound_reference_and_player_health_restored": true,
+    "cleanup_only_observed_new_click_audio_components": true,
+    "focused_host_checks": 19,
+    "invalid_lane_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261020-experience-tile/Index01",
+    "physical_hover_input_tested": false,
+    "physical_click_input_tested": false,
+    "ui_sound_energy_tested": false,
+    "audio_cross_travel_tested": false,
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Bound-action button plus all remaining original0.13/0.14 candidates and prior FText audit/diagnostic/owner/network/culture/pixel/package/version gates remain open."
   },
   "menu_buttons_pilot": {
     "version": "0.13.0",
@@ -7703,7 +7756,8 @@
       "method_candidates": 13,
       "business_nodes": 59,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_experience_tile_python_policy_native_material_audio_text_and_click_verified",
+      "evidence_run": "20261020-experience-tile/Differential04GlobalPersistentAudio"
     },
     {
       "path": "/Game/UI/Menu/W_LyraFrontEnd.W_LyraFrontEnd",

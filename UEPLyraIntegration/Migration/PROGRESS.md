@@ -23,6 +23,59 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch144 (2026-10-20),experience tile button:**
+W_LyraExperienceTileButton uses Python policy with original78 nodes/full CDOs/
+widget tree/animations/signatures/node GUIDs/graph semantics retained.14 methods
+per Profile,58 transport plus5 interfaces;zero new business nodes. Three opaque
+FText setters stay in BlueprintVM. A stage-only native localized producer drives
+all three labels without Python string conversion. Original native click
+PlayAnimationTimeRange/current-time/immediate/Finished adapters stay intact.
+Source asymmetries are intentional:disabled state writes only the border's
+bIsDisabled,while ResetMaterials stops OnPressed and resets Hover_Animate and
+Pressed_Animate on the border and all three font materials. Click SpawnSound2D
+uses persist-across-transition/auto-destroy flags;its ReturnValue is unwired.
+The following native GameInstance setter clears Audio_LobbySelect instead of
+storing that component. Python preserves this exact behavior and cast guard.
+Assets02NativeTextGraph and Differential04GlobalPersistentAudio pass native exit0/independent gate0/strict logs/
+ordered shutdown. Both Profiles verify3 localized label histories,5 unclamped
+progress values,3 texture inputs,native hover/selection/deselection/enable/
+disable callbacks,all4 material values and untouched font disabled parameters.
+4 native click completions and4 observed new AudioComponents preserve actual
+playing/auto-destroy states. A nonnull test-owned audio sentinel proves each
+click clears the GameInstance field. Only newly observed click sounds are
+stopped/destroyed at cleanup;original sound reference,widget roots/Profile
+selector and original live player health restore. Completion guard testing
+changes only the owned widget disabled flag;selection uses explicitly enabled
+selectable/toggleable fixtures without altering production defaults.
+19 focused host checks and5 invalid lanes pass. Exact staged-index regression
+uses the default incremental selector,with external evidence at
+.build/CommitVerification/20261020-experience-tile/Index01.
+Preserve Differential01 crash/source and superseded Assets01 Stage/Overlay/probe
+outputs. Its FText-only setter had a redundant no-argument Python gate;the final
+revision leaves that entire transport graph native and preserves the remaining
+14 Python policy entries. This does not claim a generic SDK FText-frame fix.
+Preserve Differential02NativeTextGraph/source:the fixture assumed null texture
+assignment cleared the parameter. Native MaterialInstance.cpp ignores null
+assignments;the final fixture requires the previous texture identity to remain
+for both Profiles. Production code already delegates that behavior to native.
+Preserve Differential03NativeNullTexture/source:the world-only object census
+missed persistent2D sounds created with an AudioDevice rather than a World.
+The final observer uses the existing native global TObjectIterator,filters the
+exact sound and captures only newly created components. UI/nonspatial/owner-stop
+flags are also checked;no native spawn or return wiring changed for observation.
+Physical hover/click input,audio energy/persistence across actual travel,pixels,
+network,culture/package/version acceptance and remaining original246-candidate
+scope stay open. Bound-action button and earlier FText crossing audit remain.
+No Engine/general Cpp/official edits,build,cook,push,tag or release publication.
+
+Batch144 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261020-experience-tile/Assets02NativeTextGraph/summary.json` 9455b879186d35c7768488c0047ffb7ba1bf6ad02c94020dded55059024f9a0c
+`20261020-experience-tile/Assets02NativeTextGraph/assets.json` 28c5d2e86d41d89c9610f8ecd17f5e1d61743ec0d0c48384325031a69c0c7f69
+`20261020-experience-tile/Differential04GlobalPersistentAudio/summary.json` 44f7f8e1136ac66adddc000dbd839c3d645ea739e7bf7e22dc5098eee207eb5d
+`20261020-experience-tile/Differential04GlobalPersistentAudio/jump.json` e6132fb0f2b7ae3b8056ae4a47d5f6538e34bff676b2a94bec5c438b25dc7d19
+`20261020-experience-tile/Host04GlobalPersistentAudio.json` 645d8091859e6954c6f8179aa0e5c23b1a8c33997382c7254e81b5257990e72a
+`20261020-experience-tile/guards.json` b4cf723cc83b03e7905df3004d579ec55bd06e2a5fffe0ff7edd7ddb068c27fe
+
 **Completed bounded batch143 (2026-10-20),menu/tile button family:**
 W_LyraMenuButton and W_LyraTileButton use Python font/layout/material/animation
 guard/art/progress/click policies. Original130/75 nodes,full CDOs/widget trees/

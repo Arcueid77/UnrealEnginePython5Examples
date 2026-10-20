@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "batch": "144-experience-tile-native-material-audio-and-text",
+  "scope": "Experience tile Python policies;original78 nodes/CDOs/trees/animations/signatures/GUIDs preserved,14 methods per Profile,58 transport+5 interfaces,zero new business. Entire three-FText setter graph stays native after preserving01 reentrant text-frame crash and superseded assets. Native latent original animation/current-time/immediate/Finished retained. BothProfiles:3 localized text histories/5 raw progress/3 texture inputs (null retains previous native parameter);only border disabled scalar changes/all4 materials reset. Actual native selection/deselection/enable/disable/UMG frames;4 natural click completions and4 actual new global persistent2D audio components playing/autodestroy/UI/nonspatial/not-owner-stopped. Spawn return remains unwired;GameInstance sound field clears from an owned sentinel,then original reference restores. Only observed new click audio cleaned. Source02 null-parameter assumption/03 world-only census failures preserved. Native process0/gate0/strict log/ordered shutdown;19 focused host/5 invalid lanes;exact staged incremental follows. No physical input/audio energy/actual audio travel/network/pixels/culture/package/version/full246 acceptance;prior FText audit open. No Cpp/official edits/build/cook/push/tag/publication.",
+  "recorded_utc": "2026-10-20T07:20:15.5907100Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "8ddcf01cca91abd1bc7a9e05318dc2945d613d7f",
+  "examples_parent_commit": "f90e874d5c4e78323f43eca884f47e2567a9b846",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-foundation-buttons/Audit01",
+      "summary_sha256": "D93EB6FFBE6C306511A63E4655C08FDFE393625366235F41091BB989CBC8FD21",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 863,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "audit.json",
+          "sha256": "A78C2994E38E5DB3982C8E57CB401B0D16C60F27B7A0CFC33CEE306A9A93831C"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-experience-tile/Assets02NativeTextGraph",
+      "summary_sha256": "9455B879186D35C7768488C0047FFB7BA1BF6AD02C94020DDED55059024F9A0C",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2085,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-experience-tile/Differential04GlobalPersistentAudio",
+      "summary_sha256": "44F7F8E1136AC66ADDDC000DBD839C3D645EA739E7BF7E22DC5098EEE207EB5D",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2687,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "E6132FB0F2B7AE3B8056AE4A47D5F6538E34BFF676B2A94BEC5C438B25DC7D19"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "C8D6F5F274DBD6025B0E2260ABA71DCDFDA864A6D791BEEBE4C9384806CE8E96",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_experience_tile_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_experience_tile_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "7AE43E92913A4A5FA4A6D5FB29C13E8DF83FE31452873DEFF380000E8F84ED21",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "A7E751DFCCC69080641CC8AEFCD6DE5DC2ED8D93A9B90B64F80487EC738D42D6",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "4CA73F3E87CC726169AB9D2E46FF615F8430FD3EBFF923D90C8EA800934F84D6",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/experience_tile_mixin.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/experience_tile_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "F540504B5CD8DFA78CF6B7833A5A19489E7A59AF96692252E1B99160508A94DB",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/experience_tile_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/experience_tile_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "B80C996DF5C2B2F88DA5BD207590B7775DBEA25DDF4B6886CE55EF98E9D3F528",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/experience_tile_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/experience_tile_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "DF7CFC7FD1951E2A66D0D72E90C7C050CF8565AAD4D738821BC8B461222A2AE1",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "sha256": "311F5F7FCD5F82E0A64445E45CD9B885287CFBDF16409330FDF76497785D0883",
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "sha256": "645D8091859E6954C6F8179AA0E5C23B1A8C33997382C7254E81B5257990E72A",
+    "path": ".build/LyraValidation/BlueprintPython/20261020-experience-tile/Host04GlobalPersistentAudio.json",
+    "result": {
+      "schema_version": 2,
+      "status": "passed",
+      "tests_run": 19,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "selection": {
+        "mode": "incremental",
+        "status": "ready",
+        "changed_files": [],
+        "selected_test_files": [
+          "Demos/UEPLyraIntegration/Tests/test_experience_tile_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_experience_tile_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_experience_tile_mixin.py"
+        ],
+        "affected_files": [],
+        "selection_reasons": {
+          "Demos/UEPLyraIntegration/Tests/test_experience_tile_contract.py": [
+            "explicit pattern test_experience_tile_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_experience_tile_fixture.py": [
+            "explicit pattern test_experience_tile_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_experience_tile_mixin.py": [
+            "explicit pattern test_experience_tile_*.py"
+          ]
+        },
+        "unmapped_changed_files": [],
+        "unparsed_unaffected_files": [],
+        "dependency_analysis": "local imports including inheritance, literal module names and file references; dynamic dependencies require explicit patterns/native lanes",
+        "full_regression_requested": false
+      },
+      "failed_cases": []
+    }
+  }
+}

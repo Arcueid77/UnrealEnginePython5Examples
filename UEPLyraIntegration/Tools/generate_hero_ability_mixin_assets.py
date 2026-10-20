@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "experiencetile":
+        from generate_experience_tile_assets import generate as generate_experience_tile
+        return generate_experience_tile(stage)
     if kind == "menubuttons":
         from generate_menu_button_assets import generate as generate_menu_buttons
         return generate_menu_buttons(stage)
