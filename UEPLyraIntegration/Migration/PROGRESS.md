@@ -23,6 +23,55 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch152 (2026-10-20),frontend main menu:**
+W_LyraFrontEnd uses Python focus/activation/menu/prompt result/logout-success
+policies. Original34 nodes,full CDO/tree/animation/public signatures/const focus/
+node GUIDs and original graph semantics remain.11 methods per Profile,53
+transport plus5 interfaces;zero new business nodes. The four native async menu
+actions preserve original classes,UI.Layer.Menu and input-suspension payloads.
+Original localized quit/logout confirmation nodes and native session destruction
+remain. Only Confirmed0 quits or starts session destruction. Logout success keeps
+the native player (TryToLogOutUser0,false),then ResetUserState,then native startup
+push. The original unused destroy-player-true node remains disconnected.
+Assets02EasingRoots passes native compile/registration/byte guards and exact
+visuals/signatures.34 native default easing subobjects are temporarily rooted
+during authoring,then all owned roots release. Preserve failed Assets01/source:
+compile GC collected empty unreferenced default easing inners from sections
+whose actual Easing was already None;temporary lifetime retention keeps exact
+exports without normalizing away or changing original visual objects/properties.
+Lifecycle01 passes both Profiles:actual animation/const focus,4 native button-
+to-AfterPush routes (experience selection/settings/credits/replays),both native
+localized prompts and actual No-button result1 without world/user-state change.
+Quit01Fallback and Quit02Python use the real Yes-button result0 through the
+original native confirmation to actual QuitGame shutdown;no ue.request_exit
+fallback. Each run has native exit0,independent gate0,strict logs and ordered
+Goodbye Python/log close. Roots/Profile/input restore and native user initialization
+and live player health stay unchanged. Only fixture-owned pushed credits timers
+are stopped at cleanup;no production timer policy is changed.
+16 focused host checks and6 invalid-lane guards pass. Exact staged indexes use
+the default incremental selector at
+.build/CommitVerification/20261020-frontend-widgets/Index01;no full-suite rerun.
+Startup and user-login dependencies were read-only audited and remain unchanged.
+Actual confirmed logout/session destruction/user reset/startup push,prior game
+menu confirmed frontend travel,physical input,pixels,network,package/version,
+prior FText audit and remaining original246-candidate requirements remain OPEN.
+No online authentication,Engine/general Cpp/official edits,build,cook,push,tag or
+release publication. Host branch fidelity does not certify unrun native logout.
+
+Batch152 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261020-frontend-widgets/Audit01/summary.json` a2674a0b9fd597b9a34541263956379abd34e91be712f9a1018dcee829502072
+`20261020-frontend-widgets/Assets02EasingRoots/summary.json` 3cc54996a4be6c6e8eb48743e757b299c0988620524d7967a89a666ad4264ebb
+`20261020-frontend-widgets/Assets02EasingRoots/assets.json` 909a49a29ad294b052c296c6e03492a9f9f02e808ed0b9df674471ece6411df5
+`20261020-frontend-widgets/Assets02EasingRoots/frontend-public-signatures.json` 80b46ea2674d4a571bb696e55cbb354f8612da93eb7c2ebde5d868c08e8277fb
+`20261020-frontend-widgets/Lifecycle01/summary.json` 922c57d2bfbc2296d3e939361607bd1e11c96bc3764c124ecad628b7088a3e12
+`20261020-frontend-widgets/Lifecycle01/jump.json` 15e7b64fedf73ff4d66fca00ffbafafa5ae636b2dd0ee188123c58f37c650a86
+`20261020-frontend-widgets/Quit01Fallback/summary.json` 0f6b6a49bb9d43e13f44207bb035e1b16b099843b33692c07c616c66a3f30d2f
+`20261020-frontend-widgets/Quit01Fallback/jump.json` f91a31a9acdf9a99be75332a79360cbab858790d8441217525dad181e8acdcf3
+`20261020-frontend-widgets/Quit02Python/summary.json` 012a6cfc18589fbc212de5215c05edef9d9936f752ba0311c892ebd202de2354
+`20261020-frontend-widgets/Quit02Python/jump.json` ab75d51008d24a4f633622b55fa1a24bec0cd3fb881bde2e9a9093ab8678d4e4
+`20261020-frontend-widgets/Host02EasingRoots.json` 5e85b6177ef11096f4c9c412cd5f15929891ad0bb6917c1c9b484e8b5035b484
+`20261020-frontend-widgets/guards.json` 2867ed5fb14a130777969096124d8cfd4612eae5088df5addd05d956cb96d958
+
 **Completed bounded batch151 (2026-10-20),root UI layers and game menu:**
 Four widgets use Python layer registration/focus/menu/close/result policies.
 Original10/26/5/3 graph nodes,full CDOs/trees/animations/public signatures/const

@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 153,
+    "bounded_evidence_ledgers": 154,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1424,6 +1424,63 @@
     "full_library_acceptance": false,
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
+  },
+  "frontend_menu_pilot": {
+    "version": "0.13.0",
+    "status": "bounded_frontend_python_policy_native_four_async_menu_routes_declined_prompts_and_confirmed_quit_verified_logout_session_reset_open",
+    "evidence_ledger": "152-frontend-native-menu-routes-prompts-and-confirmed-quit.json",
+    "owner": "uep_lyra_hud.frontend_menu_mixin",
+    "original_read_only_audit": "20261020-frontend-widgets/Audit01",
+    "audit_dependency_widgets_retained_unmodified": [
+      "W_LyraStartup",
+      "W_UserLoginButton"
+    ],
+    "native_asset_authoring": "20261020-frontend-widgets/Assets02EasingRoots",
+    "native_runtime_runs": [
+      "20261020-frontend-widgets/Lifecycle01",
+      "20261020-frontend-widgets/Quit01Fallback",
+      "20261020-frontend-widgets/Quit02Python"
+    ],
+    "original_graph_nodes": 34,
+    "transport_nodes": 53,
+    "interface_nodes": 5,
+    "method_counts": {
+      "Python": 11,
+      "BlueprintFallback": 11
+    },
+    "new_business_nodes": 0,
+    "original_cdo_tree_animations_public_signatures_const_focus_guids_and_graph_partitions_preserved": true,
+    "temporary_authoring_native_easing_roots": 34,
+    "temporary_authoring_roots_released": true,
+    "original_native_async_class_tags_input_suspension_and_localized_prompts_retained": true,
+    "original_confirmed_logout_destroy_session_success_order_and_destroy_player_false_preserved": true,
+    "original_unused_destroy_player_true_logout_node_retained_unconnected": true,
+    "native_four_menu_afterpush_routes_per_profile": 4,
+    "native_declined_prompts_per_profile": [
+      "quit",
+      "logout"
+    ],
+    "native_actual_confirmed_quit_profiles": [
+      "BlueprintFallback",
+      "Python"
+    ],
+    "native_request_exit_fallback_used": false,
+    "native_player_health_user_initialization_and_owned_roots_profiles_restored_or_unchanged": true,
+    "native_confirmed_logout_session_reset_executed": false,
+    "online_authentication_executed": false,
+    "focused_host_checks": 16,
+    "invalid_lane_guards": 6,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261020-frontend-widgets/Index01",
+    "preserved_failed_authoring": [
+      "Assets01"
+    ],
+    "physical_button_input_tested": false,
+    "pixels_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Execute actual confirmed logout session destruction/user reset/startup flow and prior confirmed menu frontend travel; migrate remaining original0.13/0.14 candidates and retain all network/culture/FText/pixel/package/version gates."
   },
   "menu_layers_pilot": {
     "version": "0.13.0",
@@ -10039,7 +10096,8 @@
       "method_candidates": 8,
       "business_nodes": 25,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_frontend_python_policy_native_async_menu_routes_declined_prompts_and_confirmed_quit_verified_logout_reset_open",
+      "evidence_run": "20261020-frontend-widgets/Lifecycle01"
     },
     {
       "path": "/Game/UI/Menu/W_LyraMenuButton.W_LyraMenuButton",

@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "frontendmenu":
+        from generate_frontend_menu_assets import generate as generate_frontend_menu
+        return generate_frontend_menu(stage)
     if kind == "menulayers":
         from generate_menu_layer_assets import generate as generate_menu_layers
         return generate_menu_layers(stage)
