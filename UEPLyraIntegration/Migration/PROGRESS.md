@@ -23,6 +23,49 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch174 (2026-10-21),Explorer construction/behavior:**
+Pawn now has27 Python/22 BlueprintFallback methods;Hero retains25/20. Original
+Pawn construction chooses the native localized BhvTree/StateTree label then
+calls the original statically bound B_Hero_Default constructor. Native label
+nodes retain their FText namespace/keys and native setter. Their private native
+FText return frame also preserves the original public constructor flags. True
+UseBehaviorTree destroys the original StateTree component before AI lookup on
+the supplied Controller and native RunBehaviorTree;false remains a no-op.
+The original Pawn possession tail calls UseBehaviorTree after inventory grants.
+A transient AController property now preserves the latest original event
+argument before authority/latency in both Profiles. Both native and Python
+late continuations use this saved payload. This closes the Pawn-specific tail
+left open by the shared readiness batch;it does not substitute GetController.
+13 Pawn transport nodes and0 new business nodes. Original CDOs/public ABI,
+original-node GUIDs,graph partitions and EnhancedInput frames remain checked.
+Hero's empty AnimMotionEffect suppresses parent effects and stays native;its
+parent-only constructor is reviewed and retained. Parent business remains open.
+Both native Profiles pass6 direct/natural checks and2 real delayed-controller
+cases,including2 grants per pending case and a Profile switch before release.
+Actual StateTree destruction and a running native BehaviorTree are observed.
+Original player inventory/Health,owned actors/proxies,profiles/roots/tasks and
+scoped PawnClass restore. Native exit0,independent gate0,strict logs and ordered
+shutdown pass.18 focused checks and7 invalid lanes pass. Staged checks remain
+incremental at .build/CommitVerification/20261021-explorer-behavior/Index01.
+Assets01-04 retain authoring failures:wrong pin API and native FText frame flag
+differences. Assets05NativeTextFrame preserves the exact original signature.
+Behavior01Fallback retains the observation error from reading an already
+destroyed component;final checks retain the original component handle instead.
+Host-focused02 retains a missing module-path invocation;03 passes. No Engine,
+general Cpp,official project edits,build,cook,push,tag or publication. Static
+246/182/63/11 and exact candidate paths/order remain;full migration is false.
+
+Batch174 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261021-explorer-behavior/Assets05NativeTextFrame/summary.json` 30cefbbac5edbd20f5a732a64b6ed6a5a6ed50d4eb635b4b93c97b0ceee722a3
+`20261021-explorer-behavior/Assets05NativeTextFrame/assets.json` 179e05205405f1e3d8a6b2be1cfc2b2fed98f9d27a4e7e5f49962d5dfc8fe24c
+`20261021-explorer-behavior/Assets05NativeTextFrame/localized-text-identity.json` f43124998866a7d4c90bc104ae28d49b12623545ed131a9198a4d71c5564b3a7
+`20261021-explorer-behavior/Behavior02Fallback/summary.json` cc85a75e0e9ee2a95418802bc19b4fdcbb46b56c2ca699784ec1e60507f1e035
+`20261021-explorer-behavior/Behavior02Fallback/jump.json` 1ea94f6eddadedd1ae69206e499e76aa041ceaa60afc26ed12a8968eca98541c
+`20261021-explorer-behavior/Behavior03Python/summary.json` 9099e61c5842261a965633d31723828995f4b183b56d53c84cd8b6a0af6fe8eb
+`20261021-explorer-behavior/Behavior03Python/jump.json` f6c0343e4f4b727fec762e8733e2687ab94cf4afeac874968d54c601fa814bc7
+`20261021-explorer-behavior/host-focused03.json` 1d07c78984fad83865e51460878ea7ac027bd20fa627e9478845df69d71a127d
+`20261021-explorer-behavior/guards01.json` acc431b96071a00b2335d4454bf18787b0e570ff50e56d9766d5bc14e22dcf63
+
 **Completed bounded batch173 (2026-10-21),Explorer EnhancedInput:**
 Each original Explorer character now has25 Python routes. BlueprintFallback
 keeps20 methods and intentionally omits the5 input overrides,using UEP native

@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 175,
+    "bounded_evidence_ledgers": 176,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -11352,9 +11352,9 @@
       "method_candidates": 18,
       "business_nodes": 137,
       "scope_review": null,
-      "status": "bounded_explorer_twentyfive_python_routes_native_input_verified_remaining_character_business_open",
-      "evidence_run": "20261021-explorer-input/Input04Python",
-      "evidence_ledger": "173-explorer-enhancedinput-native-gas-and-equipment.json",
+      "status": "bounded_explorer_construction_behavior_and_possession_tail_verified_inherited_parent_business_open",
+      "evidence_run": "20261021-explorer-behavior/Behavior03Python",
+      "evidence_ledger": "174-explorer-construction-behavior-and-captured-controller.json",
       "implemented_helpers": [
         "ClearInventory",
         "GetEmoteAudioComponent",
@@ -11384,10 +11384,12 @@
       ],
       "whole_character_migrated": false,
       "remaining_business": [
-        "AnimMotionEffect",
-        "UserConstructionScript",
         "remaining inherited parent business"
-      ]
+      ],
+      "reviewed_native_no_business_overrides": {
+        "UserConstructionScript": "original static B_Hero_Default constructor forwarder retained",
+        "AnimMotionEffect": "original empty override retained; suppresses parent motion effect"
+      }
     },
     {
       "path": "/ShooterExplorer/Blueprint/B_Pawn_Explorer.B_Pawn_Explorer",
@@ -11396,9 +11398,9 @@
       "method_candidates": 18,
       "business_nodes": 153,
       "scope_review": null,
-      "status": "bounded_explorer_twentyfive_python_routes_native_input_verified_remaining_character_business_open",
-      "evidence_run": "20261021-explorer-input/Input04Python",
-      "evidence_ledger": "173-explorer-enhancedinput-native-gas-and-equipment.json",
+      "status": "bounded_explorer_construction_behavior_and_possession_tail_verified_inherited_parent_business_open",
+      "evidence_run": "20261021-explorer-behavior/Behavior03Python",
+      "evidence_ledger": "174-explorer-construction-behavior-and-captured-controller.json",
       "implemented_helpers": [
         "ClearInventory",
         "GetEmoteAudioComponent",
@@ -11424,14 +11426,15 @@
         "InpActEvt_IA_QuickSlot_CycleForward_K2Node_EnhancedInputActionEvent_0",
         "InpActEvt_IA_QuickSlot_CycleBackward_K2Node_EnhancedInputActionEvent_1",
         "InpActEvt_IA_QuickSlot3_K2Node_EnhancedInputActionEvent_2",
-        "InpActEvt_IA_QuickSlot2_K2Node_EnhancedInputActionEvent_3"
+        "InpActEvt_IA_QuickSlot2_K2Node_EnhancedInputActionEvent_3",
+        "UserConstructionScript",
+        "UseBehaviorTree"
       ],
       "whole_character_migrated": false,
       "remaining_business": [
-        "UseBehaviorTree",
-        "UserConstructionScript",
         "remaining inherited parent business"
-      ]
+      ],
+      "captured_controller_after_inventory_grant": "latest ReceivePossessed NewController stored before authority in transient native property"
     },
     {
       "path": "/ShooterExplorer/Blueprint/B_SimpleFollowPawn.B_SimpleFollowPawn",
@@ -12233,5 +12236,62 @@
     "whole_characters_migrated": false,
     "full_acceptance": false,
     "next": "Continue remaining original Explorer behavior/construction/empty-motion-override review and inherited parent business,all remaining original candidates and version/network/pixel/package boundaries. No whole-character/full migration completion claim."
+  },
+  "explorer_behavior_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_explorer_construction_behavior_and_possession_tail_verified_inherited_parent_business_open",
+    "evidence_ledger": "174-explorer-construction-behavior-and-captured-controller.json",
+    "owner": "uep_lyra_characters.explorer_behavior_mixin",
+    "baseline_input_revision": "20261021-explorer-input/Assets01",
+    "original_source_audit": "20261021-explorer-characters/Audit03ShooterReference",
+    "native_asset_authoring": "20261021-explorer-behavior/Assets05NativeTextFrame",
+    "native_runtime_runs": [
+      "20261021-explorer-behavior/Behavior02Fallback",
+      "20261021-explorer-behavior/Behavior03Python"
+    ],
+    "characters": {
+      "hero": {
+        "method_counts": {
+          "Python": 25,
+          "BlueprintFallback": 20
+        },
+        "transport_nodes_added": 0,
+        "original_cdo_public_abis_graph_partitions_guids_and_input_frames_preserved": true,
+        "latest_controller_transport_transient": true,
+        "original_text_namespace_keys_native_payload_preserved": true,
+        "whole_character_migrated": false
+      },
+      "pawn": {
+        "method_counts": {
+          "Python": 27,
+          "BlueprintFallback": 22
+        },
+        "transport_nodes_added": 13,
+        "original_cdo_public_abis_graph_partitions_guids_and_input_frames_preserved": true,
+        "latest_controller_transport_transient": true,
+        "original_text_namespace_keys_native_payload_preserved": true,
+        "whole_character_migrated": false
+      }
+    },
+    "original_cdos_public_abis_node_guids_and_graph_partitions_preserved": true,
+    "original_ftext_namespace_keys_and_native_setter_payloads_preserved": true,
+    "native_ftext_return_frame_preserves_original_public_function_flags": true,
+    "original_state_tree_destroy_then_input_ai_lookup_then_behavior_tree_run_order": true,
+    "latest_possession_event_controller_stored_in_transient_native_property": true,
+    "native_and_python_late_inventory_continuations_share_original_controller_payload": true,
+    "natural_constructor_false_and_true_branches_tested": true,
+    "native_real_behavior_tree_and_state_tree_component_destruction": true,
+    "native_delayed_controller_and_pending_profile_switch": true,
+    "hero_empty_motion_and_parent_constructor_native_overrides_retained": true,
+    "focused_host_checks": 18,
+    "invalid_lane_guards": 7,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261021-explorer-behavior/Index01",
+    "cpp_compile_executed": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "whole_characters_migrated": false,
+    "full_acceptance": false,
+    "next": "Continue inherited parent business and remaining original candidates plus all prior bounded work and version/network/pixel/package acceptance. Full migration remains false."
   }
 }
