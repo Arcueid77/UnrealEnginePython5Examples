@@ -23,6 +23,55 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch158 (2026-10-20),host-session screen:**
+Host focus/activation/mode/bot choices/request/selection and async continuation
+policy uses Python. Original75 nodes,full CDO/tree/animation/public parameters/
+const/access/net flags/GUIDs/graph partitions remain.12 methods per Profile,
+66 transport plus5 interfaces;zero new business nodes. Only compiler internal
+FUNC_HasDefaults for relocated UpdateOnlineModeText frame locals changes;all
+public ABI remains exact,with original/current signature records.
+Original localized mode/bot selectors and writers stay opaque native IO. Mode
+cycle remains Online2->LAN1->Offline0->Online2. Bots false adds NumBots=0 to the
+native request map;Bots true leaves definition arguments intact. Null selection
+returns null. Original weak create-session binding and callback unbinding remain
+native;the bool success gate executes AFTER that original unbind. Original FText
+error payload/pop-spinner/message chain remains native and unit/static verified.
+Native online initialization,spinner AfterPush,actual latent loading macro,and
+submit ordering remain. Python stores the spinner before starting preparation;
+only native macro completion builds/submits the request. Shared macro bytes stay
+unchanged;other browser-entry consumer closure remains pending.
+Lifecycle01 passes both Profiles:actual native button cycles,localized histories,
+activation/const focus,null request and6 mode/bot request payloads each (12 total).
+Host01Fallback and Host02Python use the real entry click/native selected delegate,
+online initialization,spinner push,loading-class completion,original session bind/
+HostSession/success callback/unbind,and actual requested-map/experience/player
+readiness with NumBots=0. Each owned native NULL session is then destroyed by the
+fixture. Gameplay health stays unchanged until the travel request;intentional
+travel replaces world/controller/Pawns. No cross-travel actor-health identity claim.
+All3 runs pass native exit0,independent gate0,strict raw logs and ordered shutdown.
+Owned roots/Profiles/input/loading class restore.23 focused checks and6 invalid
+lanes pass;exact staged indexes use default incremental selection at
+.build/CommitVerification/20261020-host-session/Index01;no full regression.
+Actual failed-create error UI,physical input,pixels,real online authentication,
+remote-peer network,package/version,prior FText/culture/owner and remaining
+original246-candidate requirements stay open. No Engine/general Cpp/official
+edits,build,cook,push,tag or release publication.
+
+Batch158 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261020-host-session/Audit01/summary.json` 0f32eaedcfd21d5480b62b015e40da65758876c7d81eb897432acc18e5bfbe36
+`20261020-host-session/Assets01/summary.json` 1e90b779f9e8818a9637345f69efd2194b17e19890fcb24f12285cfc50cf0da4
+`20261020-host-session/Assets01/assets.json` 0263d3984e382a1ee0c5173fb4f996f37a94d15bc50e1a56f2c003da57b0478a
+`20261020-host-session/Assets01/host-public-signatures.json` bf14fdd6ed61616e4456e9768c33cc38fcce8b0558f2ade116ed11ae5ea2f99a
+`20261020-host-session/Assets01/host-partitions.json` ca08828098518dddd72c525f6c1b8f99eab83dca5711ada1ea973830ab3a01ca
+`20261020-host-session/Lifecycle01/summary.json` df9b21c5ef999e61197eeb0c880c721074c4d0eefbd736d09110a9f5243a2974
+`20261020-host-session/Lifecycle01/jump.json` b5c72e3454fbc3fd4cf02f3481e19633f90f6195f99932740b5c163552a5d1e2
+`20261020-host-session/Host01Fallback/summary.json` bd05c054eb420f9ecfb3fe67d41f724a81b1ff28d394ae7f5a67f97c4bfbbcb7
+`20261020-host-session/Host01Fallback/jump.json` a77910f3fb9a9f6472acaf140175cbd6dca96bbef52febebbc1be4585033c2cc
+`20261020-host-session/Host02Python/summary.json` c08cda17ffc46a6c1816ed4752151050235a59a67d6f4ede7ab876936d1c64c3
+`20261020-host-session/Host02Python/jump.json` 89f31f234c251597f39722b2d3126fd238aa13761c498f5570082902f1ad15b1
+`20261020-host-session/Host02NativeFixtures.json` a50261e5cb5f0cd9fe332e1da89e43d954ca8b180c94800d42e5dec2117f6edd
+`20261020-host-session/guards.json` 8f027d54b6cbe78e284cc2f9c39acf133ecc10335ec1f24be64e3bb554ca0e14
+
 **Completed bounded batch157 (2026-10-20),experience selection screen:**
 Selection/focus/activation/spinner/host/browse/quickplay and async continuation
 policy uses Python. Original42 nodes,full CDO/tree/animation/public signatures/

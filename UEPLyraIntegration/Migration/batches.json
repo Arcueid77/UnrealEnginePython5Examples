@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 159,
+    "bounded_evidence_ledgers": 160,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -2270,6 +2270,63 @@
     "packaged_runtime": false,
     "full_acceptance": false,
     "next": "Remaining original0.13/0.14 candidates and prior FText audit/diagnostic/owner/network/culture/pixel/package/version gates stay open. Existing native parent input listener behavior is retained,not reimplemented or certified."
+  },
+  "host_session_pilot": {
+    "version": "0.13.0",
+    "status": "bounded_host_screen_python_policy_native_mode_bot_payloads_and_null_online_host_travel_verified",
+    "evidence_ledger": "158-host-screen-native-choices-payloads-and-null-hosting.json",
+    "owner": "uep_lyra_hud.host_session_mixin",
+    "original_read_only_audit": "20261020-host-session/Audit01",
+    "native_asset_authoring": "20261020-host-session/Assets01",
+    "native_runtime_runs": [
+      "20261020-host-session/Lifecycle01",
+      "20261020-host-session/Host01Fallback",
+      "20261020-host-session/Host02Python"
+    ],
+    "original_graph_nodes": 75,
+    "transport_nodes": 66,
+    "interface_nodes": 5,
+    "method_counts": {
+      "Python": 12,
+      "BlueprintFallback": 12
+    },
+    "new_business_nodes": 0,
+    "original_cdo_tree_animations_public_parameters_const_access_net_flags_guids_and_graph_partitions_preserved": true,
+    "only_compiler_internal_mode_text_frame_hasdefaults_may_relocate": true,
+    "original_native_localized_mode_and_bot_texts_preserved": true,
+    "original_online_lan_offline_cycle": [
+      1,
+      0,
+      2
+    ],
+    "original_bot_disabled_adds_num_bots_zero_enabled_preserves_definition_args": true,
+    "original_null_selection_returns_null_request": true,
+    "native_mode_bot_request_payload_cases": 12,
+    "native_actual_button_choices_and_label_histories_verified": true,
+    "original_online_initialize_spinner_afterpush_latent_loading_macro_then_submit_order_preserved": true,
+    "original_create_session_completed_unbind_before_python_bool_gate_preserved": true,
+    "original_opaque_failure_error_text_pop_and_native_message_chain_retained": true,
+    "native_null_online_host_profiles": [
+      "BlueprintFallback",
+      "Python"
+    ],
+    "native_requested_map_experience_and_num_bots_zero_ready": true,
+    "native_fixture_owned_host_sessions_destroyed": true,
+    "root_profiles_input_and_loading_class_restored": true,
+    "shared_macro_definition_unchanged": true,
+    "shared_macro_sha256": "34ad57bb0d5970b86378bb18fd6d714ae936a4bc137219504f3c0160201ecb33",
+    "focused_host_checks": 23,
+    "invalid_lane_guards": 6,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261020-host-session/Index01",
+    "physical_button_input_tested": false,
+    "online_authentication_tested": false,
+    "pixels_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "failed_create_session_error_ui_natively_executed": false,
+    "full_acceptance": false,
+    "next": "Migrate original session browser/entry/button,replay/default-map and0.14 candidates. UIExperienceMacros closure still needs the original browser-entry consumer. Retain failed-session UI/real-provider/remote-peer/FText/culture/owner/pixel/package/version gates."
   },
   "experience_selection_pilot": {
     "version": "0.13.0",
@@ -10362,7 +10419,8 @@
       "method_candidates": 9,
       "business_nodes": 56,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_host_screen_python_policy_native_choices_payloads_and_null_online_host_travel_verified",
+      "evidence_run": "20261020-host-session/Host02Python"
     },
     {
       "path": "/Game/UI/Menu/Experiences/W_LyraSessionButton.W_LyraSessionButton",

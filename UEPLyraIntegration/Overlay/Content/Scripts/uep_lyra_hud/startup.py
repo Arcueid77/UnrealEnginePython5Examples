@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPHostSessionResult=") for argument in arguments):
+        return "uep_lyra_hud.host_session_validation"
     if any(argument.startswith("-UEPExperienceScreenResult=") for argument in arguments):
         return "uep_lyra_hud.experience_screen_validation"
     if any(argument.startswith("-UEPExperienceListResult=") for argument in arguments):
