@@ -1,7 +1,7 @@
 # Runtime BP migration work checkpoint
 
 Current branch in core and Examples: `dev/lyra-blueprint-python`. Version work
-includes **0.10.0 closeout,0.11.0 hero-ability and0.12.0 FX/audio pilots**,not a
+includes **0.10.0 closeout,0.11.0 hero-ability,0.12.0 FX/audio and0.13.0 UI pilots**,not a
 completed/published release. Preserve
 the dirty changes. Do not modify official Lyra, read/copy `.nepy`, or
 commit/push/tag incomplete work. Engine implementation changes remain out of
@@ -22,6 +22,54 @@ shared SDK/interface changes or version acceptance,not a repeated per-batch
 requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
+
+**Completed bounded batch142 (2026-10-20),foundation buttons/tab list:**
+W_LyraButton/W_LyraButtonTab/W_HorizontalTabList policy now uses Python.
+Original65/30/70 nodes,full CDOs/widget trees/animations/signatures/node GUIDs
+and old graph semantics remain.11/5/4 methods per Profile,45/20/17 transport
+plus5 interfaces each;zero new business nodes. Empty OnActionComplete remains
+unconnected. Native parent callbacks,CommonUI input routing and tab delegates
+remain. Other six widgets in the nine-widget read-only audit are not accepted.
+Assets03NativeDescriptor and Differential02NativeTextToggle pass native exit0,
+independent semantic gate0,strict logs and ordered Python/log shutdown. Both
+Profiles match4 actual input/style cases,4 alignments,5 unclamped progress
+values,3 dynamic tab registrations and native select/visibility/remove callbacks.
+Real UMG frames verify hover/selected animations and selected guards;actual
+native selection/deselection callbacks fire. The fixture makes the standalone
+tab toggleable before deselecting,as required by CommonButtonBase. Explicit
+designer preview creates children without registering tabs. Input type,widget
+roots,Profile selectors and original live player health restore.
+Native UpdateButtonText forwarding stays in BlueprintVM:the generic SDK converts
+FText to Python Unicode and back via FText::FromString,which loses namespace/key.
+Production nonempty text therefore never crosses Python. A stage-only native
+localized-text/descriptor producer proves the original NSLOCTEXT key/source is
+preserved for base and tab in both Profiles. Descriptor identity/class fields
+are changed without converting its internal FText. This is a native transport
+adapter,not a claim that the generic SDK roundtrip preserves localization.
+Earlier migrated FText crossings need a separate localization-history audit
+before whole migration acceptance;historical display-string evidence alone does
+not prove namespace/key preservation. No generic SDK/C++ change in this batch.
+24 focused host checks and5 invalid lanes pass. Exact staged-index regression
+uses the default incremental selector,including affected callers/contracts;
+external result:.build/CommitVerification/20261020-foundation-buttons/Index01.
+Preserve Assets01 with its superseded Stage/Overlay outputs and Differential01
+with its frozen source:the first fixture wrongly assumed default non-toggleable
+buttons deselect,and exposed lossy Python FText conversion. Preserve failed
+Assets02NativeText and its owned Stage outputs:BlueprintReadOnly TabId/class
+have no native MakeStruct input pins. Assets03 returns the native struct before
+the fixture updates only those nontext fields. No failure evidence overwritten.
+Physical hover input,UI sound energy,pixels,culture switching,network,package/
+version acceptance and all remaining246-candidate scope stay open. No Engine/
+general Cpp/official edits,build,cook,push,tag or release publication.
+
+Batch142 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261020-foundation-buttons/Audit01/summary.json` d93eb6ffbe6c306511a63e4655c08fdfe393625366235f41091bb989cbc8fd21
+`20261020-foundation-buttons/Assets03NativeDescriptor/summary.json` 3fe4ca3831dca48ee340ac4f44d4d055b9c3b8901c90068c3f87cf4818946226
+`20261020-foundation-buttons/Assets03NativeDescriptor/assets.json` 391d46071b3668fb55b62e5b3fc281748cdc33d27012129e2afa7980fcafe2ff
+`20261020-foundation-buttons/Differential02NativeTextToggle/summary.json` ebc18d49f2bea42ab696d8aba32f43550aba5f44d5a992de98a8d93a18fd7c56
+`20261020-foundation-buttons/Differential02NativeTextToggle/jump.json` 15634307b0d1da1681936613ac5fef7cf4bab217c996dea776a186935ba7adf4
+`20261020-foundation-buttons/Host02NativeTextForwarding.json` d97c449f268425ecf7d8a24d986c0e709e8e498d383d0d1a17a77ee8ad5d9c28
+`20261020-foundation-buttons/guards.json` 8dc17e588f86d895bd79e2daacd5e03c633666ab49c7d407ec70cce973fd1233
 
 **Completed bounded batch141 (2026-10-20),audio/VFX macro consumer closure:**
 Original WeaponAudioMacros(32 nodes) and BPML_VFXMacros(9 nodes) remain byte/graph

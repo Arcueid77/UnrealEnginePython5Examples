@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 143,
+    "bounded_evidence_ledgers": 144,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1235,6 +1235,86 @@
     "full_library_acceptance": false,
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
+  },
+  "foundation_buttons_pilot": {
+    "version": "0.13.0",
+    "status": "bounded_foundation_button_tab_and_tab_list_python_policies_native_verified",
+    "evidence_ledger": "142-foundation-buttons-native-text-and-tab-lifecycle.json",
+    "owner": "uep_lyra_hud.foundation_buttons_mixin",
+    "read_only_audit": "20261020-foundation-buttons/Audit01",
+    "native_asset_authoring": "20261020-foundation-buttons/Assets03NativeDescriptor",
+    "native_runtime_runs": [
+      "20261020-foundation-buttons/Differential02NativeTextToggle"
+    ],
+    "widgets": {
+      "base": {
+        "original_graph_nodes": 65,
+        "transport_nodes": 45,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 11,
+          "BlueprintFallback": 11
+        }
+      },
+      "tab": {
+        "original_graph_nodes": 30,
+        "transport_nodes": 20,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 5,
+          "BlueprintFallback": 5
+        }
+      },
+      "tabs": {
+        "original_graph_nodes": 70,
+        "transport_nodes": 17,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 4,
+          "BlueprintFallback": 4
+        }
+      }
+    },
+    "original_cdos_widget_trees_animations_signatures_node_guids_and_graph_semantics_preserved": true,
+    "original_empty_action_complete_stays_unconnected": true,
+    "new_business_nodes": 0,
+    "methods_per_profile": {
+      "base": 11,
+      "tab": 5,
+      "tabs": 4
+    },
+    "native_text_forwarders_retained_to_preserve_opaque_ftext": true,
+    "nonempty_localized_ftext_never_marshalled_through_python": true,
+    "localized_namespace_key_and_source_preserved_on_both_profiles": true,
+    "actual_native_input_style_cases_per_profile": 4,
+    "alignment_cases_per_profile": 4,
+    "raw_press_progress_cases_per_profile": 5,
+    "dynamic_tabs_created_per_profile": 3,
+    "actual_native_tab_registration_selection_visibility_and_removal_verified": true,
+    "actual_native_selection_and_deselection_callbacks_verified": true,
+    "native_hover_selected_animation_frames_and_guards_verified": true,
+    "explicit_designer_preview_does_not_register_tabs": true,
+    "native_parent_callbacks_and_dynamic_delegates_retained": true,
+    "source_python_state_pairs_match": true,
+    "original_input_type_widget_roots_profile_selectors_and_player_health_restored": true,
+    "focused_host_checks": 24,
+    "invalid_lane_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261020-foundation-buttons/Index01",
+    "preserved_failed_or_superseded_runs": [
+      "Assets01",
+      "Differential01",
+      "Assets02NativeText"
+    ],
+    "native_toggleable_fixture_matches_commonbutton_deselection_contract": true,
+    "prior_ftext_migrations_require_localization_history_audit": true,
+    "physical_hover_input_tested": false,
+    "ui_sound_energy_tested": false,
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Other six audited menu/button widgets remain unaccepted; retain all original0.13/0.14 candidates and remaining diagnostic/owner/network/culture/pixel/package/version gates. Audit earlier Python FText crossings before whole migration acceptance."
   },
   "macro_consumer_closure_pilot": {
     "version": "0.12.0",
@@ -7340,7 +7420,8 @@
       "method_candidates": 14,
       "business_nodes": 44,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_commonui_python_policy_native_text_and_tab_lifecycle_verified",
+      "evidence_run": "20261020-foundation-buttons/Differential02NativeTextToggle"
     },
     {
       "path": "/Game/UI/Foundation/Buttons/W_LyraButtonTab.W_LyraButtonTab",
@@ -7349,7 +7430,8 @@
       "method_candidates": 5,
       "business_nodes": 20,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_commonui_python_policy_native_text_and_tab_lifecycle_verified",
+      "evidence_run": "20261020-foundation-buttons/Differential02NativeTextToggle"
     },
     {
       "path": "/Game/UI/Foundation/Dialogs/W_ConfirmationDialog.W_ConfirmationDialog",
@@ -7385,7 +7467,8 @@
       "method_candidates": 9,
       "business_nodes": 53,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_commonui_python_policy_native_text_and_tab_lifecycle_verified",
+      "evidence_run": "20261020-foundation-buttons/Differential02NativeTextToggle"
     },
     {
       "path": "/Game/UI/Foundation/Widgets/BottomBar/W_BoundActionButton.W_BoundActionButton",
