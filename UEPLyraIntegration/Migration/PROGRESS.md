@@ -23,6 +23,34 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch136 (2026-10-20),control-point HUD family:**
+CP score,marker and status Python policies preserve original118/113/32 nodes,
+full CDOs/widget trees/animations/native async experience/component/team bindings,
+original retry Delay and unconnected marker Tick.5/6/2 methods per Profile,
+20/26/8 typed transport plus5 interfaces each;zero new business nodes.
+Assets01 and Differential02NativeAnimationFrames verify two real UMG Profile
+matrices on the actual CP map:6 complete styles including team0,26 marker scalar
+states,16 native score-left audio cases and6 direct status index/guard cases.
+Score reads native three-output CP queries,clamps display only,keeps grouped
+native FText,raw remaining-score sound guards and actual ScoreLeft int parameter.
+Empty/contested points retain source scalar values;owner change alone starts
+original.7200166583s animation. Source array indexes>=2 reuse marker C.
+Actual native Construct/async bindings/score and status Tick plus unmount Tick
+stop pass. Direct status Tick calls also exercise the policy matrix explicitly.
+Native process0/independent gate0/strict logs/ordered shutdown pass with actual
+Non-realtime Renderer. Owner/overlap fields/ControlPoints array/team score tags/
+TargetScore/Profile selectors/widget roots/Health restore.17 focused checks and
+5 invalid mixed/missing-proof lanes pass;exact index regression is incremental.
+Preserve Index01:only ledger count was stale137 versus138 files;counter corrected
+for fresh Index02. Native frozen inputs and accepted runtime did not change.
+Preserve Differential01/source and logs:all state/style/audio/source pairs
+matched,but immediate animation queries preceded actual native playback in both
+Profiles. Differential02 samples real native frames/playback position and verifies
+unchanged owner does not restart. No production-policy workaround was needed.
+Network/split-screen/culture/pixels/audio energy/packaging/version acceptance and
+the complete246-candidate scope remain open. No SDK/Engine/general Cpp/official
+edits,build,cook,push,tag or release publication.
+
 **Completed bounded batch135 (2026-10-20),team/header/activation containers:**
 team styling keeps source localized Red/Blue FText through intact native literal
 node/typed adapter;Python applies original four alpha levels,resource choices,

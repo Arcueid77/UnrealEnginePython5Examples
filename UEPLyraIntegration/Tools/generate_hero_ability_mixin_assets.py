@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "controlpointwidgets":
+        from generate_control_point_widget_assets import generate as generate_control_point_widgets
+        return generate_control_point_widgets(stage)
     if kind == "scoreboardstyle":
         from generate_scoreboard_style_assets import generate as generate_scoreboard_style
         return generate_scoreboard_style(stage)

@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 137,
+    "bounded_evidence_ledgers": 138,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1235,6 +1235,63 @@
     "full_library_acceptance": false,
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
+  },
+  "control_point_widgets_pilot": {
+    "version": "0.12.0",
+    "status": "partial_control_point_widgets_python_native_umg_async_material_audio_verified_network_pixels_package_pending",
+    "evidence_ledger": "136-control-point-widgets-native-umg-async-material-audio.json",
+    "owner": "uep_lyra_hud.control_point_widgets_mixin",
+    "read_only_audit": "20261020-control-point-widgets/Audit01",
+    "native_asset_authoring": "20261020-control-point-widgets/Assets01",
+    "native_runtime_runs": [
+      "20261020-control-point-widgets/Differential02NativeAnimationFrames"
+    ],
+    "original_graph_nodes": {
+      "score": 118,
+      "marker": 113,
+      "status": 32
+    },
+    "methods_per_profile": {
+      "score": 5,
+      "marker": 6,
+      "status": 2
+    },
+    "new_transport_nodes": {
+      "score": 20,
+      "marker": 26,
+      "status": 8
+    },
+    "generated_interface_nodes_each": 5,
+    "new_business_nodes": 0,
+    "original_cdos_trees_animations_async_factories_delay_and_graphs_preserved": true,
+    "original_empty_marker_tick_not_connected": true,
+    "score_color_team_zero_one_two_and_full_brush_fields_verified": true,
+    "raw_native_scores_clamped_only_for_display": true,
+    "native_text_grouping_preserved": true,
+    "source_score_left_audio_threshold_change_guard_and_native_int_parameter_verified": true,
+    "native_async_component_binding_and_team_callbacks_observed": true,
+    "native_score_and_status_ticks_and_unmount_stop_verified": true,
+    "source_array_indexes_two_and_later_reuse_marker_c": true,
+    "source_empty_and_contested_material_parameter_retention_preserved": true,
+    "native_profile_matrices": 2,
+    "native_style_cases": 6,
+    "native_marker_cases": 26,
+    "native_sound_cases": 16,
+    "native_status_cases": 6,
+    "native_owner_animation_end_time_seconds": 0.7200166583061218,
+    "fixture_direct_status_ticks_also_used": true,
+    "fixture_point_fields_roster_tags_target_selectors_roots_health_restored": true,
+    "feature_only_host_checks": 17,
+    "full_regression_executed_this_batch": false,
+    "preserved_failed_native_runs": [
+      "Differential01"
+    ],
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "audio_energy_tested": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Actual network/multiple local-player/visual/audio-energy/culture/packaging/version acceptance and all original migration candidates remain open."
   },
   "scoreboard_style_pilot": {
     "version": "0.12.0",
@@ -6499,8 +6556,9 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 6,
       "business_nodes": 96,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch136:three CP widgets use Python score/style/team/marker/status policies;original118/113/32 nodes,CDOs,trees,animations,native async component/team bindings,Delay and empty marker Tick retained.5/6/2 methods per Profile,20/26/8 transport plus5 interface each,zero new business. Source/Python native CP map matrices match6 styles incl team0,26 marker states,16 score-left native audio cases,6 direct status cases;actual native Construct/async/score+status Tick/unmount-stop and.720s owner animation verified. Empty/contested scalar retention,raw-score sound guards,grouped clamped text,index>=2 marker C preserved. Native01 immediate animation query failed both profiles,source/logs preserved;02 uses native-frame playback position. Fixture point fields/roster/score tags/target/selectors/roots/Health restored. Actual network/split-screen/pixels/audio-energy/culture/package/full acceptance pending.",
+      "status": "partial_control_point_widgets_python_native_umg_async_material_audio_verified_network_pixels_package_pending",
+      "evidence_ledger": "136-control-point-widgets-native-umg-async-material-audio.json"
     },
     {
       "path": "/ShooterCore/ControlPoint/UI/W_ControlPointMarker.W_ControlPointMarker",
@@ -6508,8 +6566,9 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 8,
       "business_nodes": 102,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch136:three CP widgets use Python score/style/team/marker/status policies;original118/113/32 nodes,CDOs,trees,animations,native async component/team bindings,Delay and empty marker Tick retained.5/6/2 methods per Profile,20/26/8 transport plus5 interface each,zero new business. Source/Python native CP map matrices match6 styles incl team0,26 marker states,16 score-left native audio cases,6 direct status cases;actual native Construct/async/score+status Tick/unmount-stop and.720s owner animation verified. Empty/contested scalar retention,raw-score sound guards,grouped clamped text,index>=2 marker C preserved. Native01 immediate animation query failed both profiles,source/logs preserved;02 uses native-frame playback position. Fixture point fields/roster/score tags/target/selectors/roots/Health restored. Actual network/split-screen/pixels/audio-energy/culture/package/full acceptance pending.",
+      "status": "partial_control_point_widgets_python_native_umg_async_material_audio_verified_network_pixels_package_pending",
+      "evidence_ledger": "136-control-point-widgets-native-umg-async-material-audio.json"
     },
     {
       "path": "/ShooterCore/ControlPoint/UI/W_ControlPointStatusWidget.W_ControlPointStatusWidget",
@@ -6517,8 +6576,9 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 2,
       "business_nodes": 27,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch136:three CP widgets use Python score/style/team/marker/status policies;original118/113/32 nodes,CDOs,trees,animations,native async component/team bindings,Delay and empty marker Tick retained.5/6/2 methods per Profile,20/26/8 transport plus5 interface each,zero new business. Source/Python native CP map matrices match6 styles incl team0,26 marker states,16 score-left native audio cases,6 direct status cases;actual native Construct/async/score+status Tick/unmount-stop and.720s owner animation verified. Empty/contested scalar retention,raw-score sound guards,grouped clamped text,index>=2 marker C preserved. Native01 immediate animation query failed both profiles,source/logs preserved;02 uses native-frame playback position. Fixture point fields/roster/score tags/target/selectors/roots/Health restored. Actual network/split-screen/pixels/audio-energy/culture/package/full acceptance pending.",
+      "status": "partial_control_point_widgets_python_native_umg_async_material_audio_verified_network_pixels_package_pending",
+      "evidence_ledger": "136-control-point-widgets-native-umg-async-material-audio.json"
     },
     {
       "path": "/ShooterCore/ControlPoint/UI/W_MatchScoreBoard_CP.W_MatchScoreBoard_CP",
