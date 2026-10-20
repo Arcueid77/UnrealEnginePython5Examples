@@ -23,6 +23,60 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch180 (2026-10-21),Explorer collect/sit actions and required Cue pool compatibility:**
+Both original event entry points and completed/interrupted/cancelled montage
+routes are routed in2-method Profiles. Collect keeps print -> target collision
+off -> target lifespan3 -> native Cue -> authority/Pawn cast -> original native
+IPickupable inventory path -> native montage. Sit keeps print/Cue,authority/cast
+and montage,with its unused pure inventory lookup retained natively. Failed
+authority-side Pawn cast ends after prep. The client branch keeps its original
+0.5-second duration message then montage. Standalone checks the typed duration
+transport;actual authority-false execution remains a network acceptance gap.
+All24 collect/20 sit original nodes/GUIDs,full CDO/public ABI,remaining graphs,
+native event/Cue/pickup-interface/message groups and exact montage defaults stay
+checked.19/16 transport plus5 interface nodes each;0 new BP business nodes.
+16 real Interact -> nearby grant -> native input -> GAS event cases cover both
+Profiles/actions and normal/interrupted/pending-switch/cancelled montages.
+Collect adds1 native item instance with stack2 and its target naturally expires
+after3 seconds;Sit leaves inventory,target collision and lifespan unchanged.
+Original montages play and all native tasks/montages close. The callback uses
+the current Profile;no ability or montage callback is manually replayed.
+Actions01 passes all functional cases but strict logs correctly reject the
+original GC_Collect_Effect self-destruction under enabled native Cue recycling.
+A scoped compatibility adapter now preserves all60 original Cue nodes/GUIDs,
+CDO/public ABI and original self lifespan values3/0. Before the original lifespan
+is set,a native named one-shot deadline is scheduled1ms earlier so native
+K2_EndGameplayCue returns the actor to the manager and its native timer cleanup
+cancels Actor::LifeSpanExpired before direct destruction. This is a deliberate
+pool-lifecycle compatibility change;source animation/effect business is still
+forwarded natively and explicitly NOT fully migrated. Owned dynamic splines are
+released before a new execute and before pool return,with stale actor references
+cleared. Both Profiles share this adapter.8 transport/5 interface nodes and3
+lifecycle methods per Profile. Native recycling and timer cleanup remain enabled;
+no CVar or log gate is relaxed. Actions02 proves actors remain alive,hidden,
+ownerless with0 splines/0 lifespan and a new release callback in each Profile.
+The full PlayPickup/Timeline setup/update/finish policy remains open in its
+original candidate row;this adapter does not close that migration scope.
+Primary inventory/Health,owned actor/player/task contexts,roots and selectors
+restore. Final native exit0,independent gate0,strict logs and ordered shutdown
+pass.22 focused checks and8 invalid lanes pass;staged checks are incremental at
+.build/CommitVerification/20261021-explorer-actions/Index01. Actions01 and its
+failed log/validator are preserved. No Engine/general Cpp/official edits,build,
+cook,push,tag or publication. Static246/182/63/11 and exact candidate paths/order
+remain;full migration and remaining network/pixel/package/version acceptance
+stay open.
+
+Batch180 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261021-explorer-actions/Assets01/summary.json` b3b2b35ce4fe4b1142027556cf3da27ba9ea6b85a5fc8c67f334e7bb02eebe73
+`20261021-explorer-actions/Assets01/assets.json` 715acf622d563aea7bbdebc14e331ed3e3b69126c6516cccfd8a44cec720175c
+`20261021-explorer-actions/CueLifecycle01/summary.json` de68ea66971bd2094715b259199eae7c7c1a45ca8de968916679f5f6b5bffcd0
+`20261021-explorer-actions/CueLifecycle01/assets.json` d0dbc7a903667a51a5763ea79eb9dacb5e1777e7a7e7a2db6c48ec1ecfdc4e7b
+`20261021-explorer-actions/CueLifecycle01/collect-cue-lifecycle-preservation.json` eb2e5d6aaa488a6bd9f90a19af1024631be942ff8d9b890728814c15a255d50a
+`20261021-explorer-actions/Actions02/summary.json` 8f3d8ee0861e6cb1248317befc010faa6007d3d134e9c088bfb5e97bc5656a0a
+`20261021-explorer-actions/Actions02/jump.json` b4c8c5e12b0f4eb77894befa6093d677ccb2fb3bb623bd95a592f1d1917800e5
+`20261021-explorer-actions/host-focused02.json` 839dae4cb77c706da9a74738efc93b3dca6a04ee11d889f859adbd3e9c4801b1
+`20261021-explorer-actions/guards02.json` 9ddb8fd60a6ea7891c0ad01f6907763b228a739e857ab2b7b8695db9cca5f90f
+
 **Completed bounded batch179 (2026-10-21),Explorer Interact ability:**
 All4 original emitted methods plus the original native options/press callbacks
 are routed together in6-method Profiles. Activation keeps available print ->

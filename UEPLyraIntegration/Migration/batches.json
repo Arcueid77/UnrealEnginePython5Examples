@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 181,
+    "bounded_evidence_ledgers": 182,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -11490,7 +11490,14 @@
       "method_candidates": 1,
       "business_nodes": 19,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_explorer_collect_sit_event_native_pickup_montage_lifecycle_verified_authority_false_network_pending",
+      "implemented_methods": [
+        "K2_ActivateAbilityFromEvent",
+        "typed original montage completed/interrupted/cancelled callback"
+      ],
+      "evidence_run": "20261021-explorer-actions/Actions02",
+      "evidence_ledger": "180-explorer-collect-sit-montage-and-cue-pool-lifecycle.json",
+      "original_cdos_public_abis_node_guids_native_payload_groups_and_montage_routes_preserved": true
     },
     {
       "path": "/ShooterExplorer/Interact/GA_Interaction_Sit.GA_Interaction_Sit",
@@ -11499,7 +11506,14 @@
       "method_candidates": 1,
       "business_nodes": 15,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_explorer_collect_sit_event_native_pickup_montage_lifecycle_verified_authority_false_network_pending",
+      "implemented_methods": [
+        "K2_ActivateAbilityFromEvent",
+        "typed original montage completed/interrupted/cancelled callback"
+      ],
+      "evidence_run": "20261021-explorer-actions/Actions02",
+      "evidence_ledger": "180-explorer-collect-sit-montage-and-cue-pool-lifecycle.json",
+      "original_cdos_public_abis_node_guids_native_payload_groups_and_montage_routes_preserved": true
     },
     {
       "path": "/ShooterExplorer/UserInterface/W_InteractionPrompt.W_InteractionPrompt",
@@ -11605,7 +11619,18 @@
       "method_candidates": 3,
       "business_nodes": 50,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_collect_cue_pool_lifespan_compatibility_only_remaining_effect_business_open",
+      "evidence_run": "20261021-explorer-actions/Actions02",
+      "evidence_ledger": "180-explorer-collect-sit-montage-and-cue-pool-lifecycle.json",
+      "implemented_lifecycle_adapters": [
+        "OnExecute native business forwarding plus prior spline cleanup",
+        "pre-lifespan native recycle deadline",
+        "native pool return and owned spline/reference release"
+      ],
+      "whole_collect_cue_business_migrated": false,
+      "remaining_business": [
+        "PlayPickup and original native Timeline setup/update/finish animation and effect policy"
+      ]
     },
     {
       "path": "/TopDownArena/Game/B_Hero_Arena.B_Hero_Arena",
@@ -12567,5 +12592,71 @@
     "packaged_runtime": false,
     "full_acceptance": false,
     "next": "Continue original Explorer marker/interaction collect/sit and remaining candidates plus inherited parents and all prior bounded full version/network/pixel/package acceptance. Full migration remains open."
+  },
+  "explorer_actions_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_explorer_collect_sit_event_native_pickup_montage_lifecycle_verified_authority_false_network_pending",
+    "evidence_ledger": "180-explorer-collect-sit-montage-and-cue-pool-lifecycle.json",
+    "owner": "uep_lyra_abilities.explorer_actions_mixin",
+    "original_source_audit": "20261021-explorer-characters/Audit03ShooterReference",
+    "native_asset_authoring": "20261021-explorer-actions/Assets01",
+    "native_cue_lifecycle_authoring": "20261021-explorer-actions/CueLifecycle01",
+    "accepted_interact_baseline": "20261021-explorer-interact/Assets01",
+    "native_runtime_runs": [
+      "20261021-explorer-actions/Actions02"
+    ],
+    "method_counts_per_action": {
+      "Python": 2,
+      "BlueprintFallback": 2
+    },
+    "original_nodes": {
+      "collect": 24,
+      "sit": 20
+    },
+    "transport_nodes": {
+      "collect": 19,
+      "sit": 16
+    },
+    "interface_nodes_per_action": 5,
+    "new_business_nodes": 0,
+    "original_cdos_public_abis_node_guids_graph_partitions_native_cue_pickup_duration_and_montage_payloads_preserved": true,
+    "collect_order": "print -> target collision off -> target lifespan3 -> native cue -> authority/cast -> native IPickupable inventory -> native montage",
+    "sit_order": "print -> native cue -> authority/cast -> native montage",
+    "authority_false_order": "native duration message0.5 -> native montage",
+    "authority_false_runtime_executed": false,
+    "typed_duration_transport_verified": true,
+    "native_interact_nearby_grant_input_and_event_activation": true,
+    "native_action_cases": 16,
+    "native_normal_interrupt_profile_switch_cancel_cases": true,
+    "native_pickup_template_adds_one_instance_with_stack2": true,
+    "native_collect_target_three_second_expiry_observed": true,
+    "native_sit_target_and_inventory_unchanged": true,
+    "cue_lifecycle_owner": "uep_lyra_weapons.collect_cue_lifecycle_mixin",
+    "cue_lifecycle_methods_per_profile": 3,
+    "cue_original_nodes": 60,
+    "cue_transport_nodes": 8,
+    "cue_interface_nodes": 5,
+    "cue_original_self_lifespan_values_retained": [
+      3,
+      0
+    ],
+    "cue_native_recycle_deadline_lead_seconds": 0.001,
+    "cue_resource_cleanup_before_execute_and_pool_return": true,
+    "native_cue_recycling_and_timer_cleanup_remain_enabled": true,
+    "whole_collect_cue_business_migrated": false,
+    "cue_remaining_business": [
+      "PlayPickup and original native Timeline setup/update/finish animation and effect policy"
+    ],
+    "focused_host_checks": 22,
+    "invalid_lane_guards": 8,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261021-explorer-actions/Index01",
+    "production_ability_sets_modified": false,
+    "montage_callbacks_replayed": false,
+    "physical_keyboard_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Continue full original collect Cue business plus remaining Explorer marker/follow-parent/prompt and Arena candidates,all prior bounded inherited-parent/full version/network/pixel/package acceptance. Full migration remains open."
   }
 }

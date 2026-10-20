@@ -1,0 +1,14 @@
+"""Resolve globals in action authoring, policy and native fixture."""
+import builtins,symtable,unittest
+from pathlib import Path
+class ExplorerActionsFixtureTests(unittest.TestCase):
+    def test_action_scripts_resolve_globals(self):
+        root=Path(__file__).resolve().parents[1]
+        for file in [root/'Tools/generate_explorer_action_assets.py',root/'Tools/generate_collect_cue_lifecycle_assets.py',root/'Overlay/Content/Scripts/uep_lyra_weapons/collect_cue_lifecycle_mixin.py']+[root/'Overlay/Content/Scripts/uep_lyra_abilities'/('explorer_actions_'+n+'.py') for n in ('mixin','validation','contract')]:
+            table=symtable.symtable(file.read_text(encoding='utf-8'),str(file),'exec');known=set(dir(builtins))|{'__file__','__name__','__package__'}|{s.get_name() for s in table.get_symbols() if s.is_assigned() or s.is_imported()};missing=set()
+            def check(scope):
+                for symbol in scope.get_symbols():
+                    if symbol.is_global() and symbol.is_referenced() and symbol.get_name() not in known:missing.add(symbol.get_name())
+                for child in scope.get_children():check(child)
+            check(table)
+            with self.subTest(file=file.name):self.assertFalse(missing,sorted(missing))

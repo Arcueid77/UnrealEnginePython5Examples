@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "batch": "180-explorer-collect-sit-montage-and-cue-pool-lifecycle",
+  "scope": "Original collect/sit event/montage native interaction flows plus required collect Cue pool lifecycle compatibility; Cue animation/effect business and authority-false/network/pixel/package remain open",
+  "recorded_utc": "2026-10-20T23:27:39.4221391Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "e0a9c06ee2bbedcbd6059e0917be918d76da703a",
+  "examples_parent_commit": "d5eced4b95737a341cd47a2119a84260d2afe364",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-actions/Assets01",
+      "summary_sha256": "B3B2B35CE4FE4B1142027556CF3DA27BA9EA6B85A5FC8C67F334E7BB02EEBE73",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2311,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-actions/CueLifecycle01",
+      "summary_sha256": "DE68EA66971BD2094715B259199EAE7C7C1A45CA8DE968916679F5F6B5BFFCD0",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2310,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-actions/Actions02",
+      "summary_sha256": "8F3D8EE0861E6CB1248317BEFC010FAA6007D3D134E9C088BFB5E97BC5656A0A",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3189,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "B4C8C5E12B0F4EB77894BEFA6093D677CCB2FB3BB623BD95A592F1D1917800E5"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_explorer_action_assets.py",
+      "sha256": "D0EE448BFD63116674D810A56523C68A5C7BB6075B6ECB1CC81542A7431D5275",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_explorer_action_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_collect_cue_lifecycle_assets.py",
+      "sha256": "227A67BAE71AE126C2C3833241F35D42903C951C2EAB78192C8BB2708BF90945",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_collect_cue_lifecycle_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/explorer_actions_mixin.py",
+      "sha256": "DABDB977F3ACA3E695A07DF95DEEAD0D430F2A8DEA186E3BE4167E7601222326",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/explorer_actions_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/explorer_actions_contract.py",
+      "sha256": "B8F438903774B4CBF00FA6BBD00B41574DE6FFD53A6E8860AEFA6B3881BC8987",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/explorer_actions_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/explorer_actions_validation.py",
+      "sha256": "1899CE19C557B2E40986D7775521CEEC6FD4639733D55CABFB8A53044571C312",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/explorer_actions_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/collect_cue_lifecycle_mixin.py",
+      "sha256": "AC59FA71E7A788BB16EEA03293E9E3A94F605E187387C3DBD03EC43F19D41B9E",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/collect_cue_lifecycle_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "58EF888A542DD66AC83A0AA1F1A68D444745F0D35B7D93D41C684341C30106AB",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261021-explorer-actions/host-focused02.json",
+    "sha256": "839DAE4CB77C706DA9A74738EFC93B3DCA6A04EE11D889F859ADBD3E9C4801B1",
+    "result": {
+      "status": "passed",
+      "tests_run": 22,
+      "runtime_acceptance": false,
+      "full_regression": false
+    }
+  }
+}

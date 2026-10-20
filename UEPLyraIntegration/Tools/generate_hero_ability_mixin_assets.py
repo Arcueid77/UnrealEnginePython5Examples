@@ -44,6 +44,12 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "collectcuelifecycle":
+        from generate_collect_cue_lifecycle_assets import generate as collect_cue_lifecycle
+        return collect_cue_lifecycle(stage)
+    if kind == "exploreractions":
+        from generate_explorer_action_assets import generate as explorer_actions
+        return explorer_actions(stage)
     if kind == "explorerinteract":
         from generate_explorer_interact_assets import generate as explorer_interact
         return explorer_interact(stage)
