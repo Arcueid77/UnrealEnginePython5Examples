@@ -23,6 +23,40 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch139 (2026-10-20),shooter controller/BT services:**
+Base controller,AllowedToFire decorator and Ammo/Reload/Focus/Shoot services move
+policy to Python. Original33/3/14/2/11/62 nodes/full CDO/subobject values/component
+templates/scoped locals/node GUIDs/signatures/.5s interval+.1s random deviation/
+native experience and team factories/death binding/parent Possess call preserved.
+4/1/1/1/1/2 methods per Profile,18/5/4/4/4/9 transport plus5 interfaces each;
+zero new business. Native CDO sibling subobject declaration order is canonical,
+with every header/property/value/array order retained and separately unit-checked.
+Passive child empty Begin/UnPossess and CP child parent forward/config remain
+native;both original child uasset hashes/CDOs/templates unchanged.
+Assets04NativeWait and4 native source/Python matrices on actual TDM/CP maps
+(04ItemDefinitionTDM,05PythonTDM,06FallbackCP,07PythonCP) pass native exit0/
+independent gate0/strict logs/ordered shutdown.16 ammo/20 weapon/8 focus cases
+match,including spare-only current weapon true guard,stale OutOfAmmo,first other
+inventory index selection and same-tick slot/fire sequence. Original query locals
+stay invocation-local. Native GameplayEvent listeners record real reload/slot/fire
+tag/magnitude/null-actor payload sequence;cross-Profile sequences match exactly.
+Native tree runs its real service scheduler with observed randomized intervals.
+Actual controller UnPossess clears TargetEnemy/stops brain;Possess restarts and
+uses original team observer. Explicit class/node roots and GAS actions close;
+owned inventory item/slot changes,stat stacks/CDOs/selectors/wrappers restore,
+position/control/movement restoration uses native setters. Live player Health
+stays unchanged;no direct Health writes. Native fixtures are stage-only BB/tree.
+28 focused checks(including unresolved-global and strict CDO canonical tests)/
+7 invalid lanes pass;exact staged regression is incremental.
+Preserve author01/02/03 exact sources/outputs:CDO subobject order changed only,
+then unsupported load_module probe,then UE5.8 WaitTime value-or-BB-key structure.
+Failed partially saved owned Stage outputs are retained before restoring originals.
+Preserve native01/02/03:inherited classes reuse ancestor registration,probe valid
+import/class GC roots fixed,and Cpp-only GetItemDef replaced by reflected ItemDef.
+The4 EQS contexts/generator remain audited/unmigrated in the full plan. Actual
+network/physical aim/pixels/package/version and full246-candidate acceptance stay
+open. No SDK/Engine/general Cpp/official edits,build,cook,push,tag or publication.
+
 **Completed bounded batch138 (2026-10-20),game-phase family:**
 Warmup/Playing/PostGame decisions use Python with original66/4/10 nodes/full
 CDOs/GameplayAbility signatures/native phase parent/tags/instancing/server-only

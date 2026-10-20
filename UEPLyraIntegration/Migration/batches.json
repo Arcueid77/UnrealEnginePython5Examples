@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 140,
+    "bounded_evidence_ledgers": 141,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1235,6 +1235,87 @@
     "full_library_acceptance": false,
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
+  },
+  "shooter_ai_controller_services_pilot": {
+    "version": "0.12.0",
+    "status": "partial_shooter_ai_python_native_controller_bt_service_blackboard_and_gas_verified_eqs_network_pending",
+    "evidence_ledger": "139-shooter-ai-controller-bt-services-native-two-mode-gas.json",
+    "owner": "uep_lyra_world.shooter_ai_mixin",
+    "read_only_audit": "20261020-shooter-ai/Audit01",
+    "native_asset_authoring": "20261020-shooter-ai/Assets04NativeWait",
+    "native_runtime_runs": [
+      "20261020-shooter-ai/Differential04ItemDefinitionTDM",
+      "20261020-shooter-ai/Differential05PythonTDM",
+      "20261020-shooter-ai/Differential06FallbackCP",
+      "20261020-shooter-ai/Differential07PythonCP"
+    ],
+    "original_graph_nodes": {
+      "controller": 33,
+      "allowed": 3,
+      "ammo": 14,
+      "reload": 2,
+      "focus": 11,
+      "shoot": 62
+    },
+    "methods_per_profile": {
+      "controller": 4,
+      "allowed": 1,
+      "ammo": 1,
+      "reload": 1,
+      "focus": 1,
+      "shoot": 2
+    },
+    "new_transport_nodes": {
+      "controller": 18,
+      "allowed": 5,
+      "ammo": 4,
+      "reload": 4,
+      "focus": 4,
+      "shoot": 9
+    },
+    "generated_interface_nodes_each": 5,
+    "new_business_nodes": 0,
+    "original_cdos_subobject_properties_templates_scoped_variables_node_guids_signatures_and_bt_intervals_preserved": true,
+    "cdo_sibling_object_declaration_order_canonicalized_without_ignoring_properties_or_array_order": true,
+    "original_native_experience_team_factories_death_binding_and_parent_possess_call_preserved": true,
+    "passive_child_empty_begin_and_unpossess_retained": true,
+    "cp_child_parent_begin_and_config_retained": true,
+    "child_uasset_bytes_unchanged": true,
+    "original_service_interval": 0.5,
+    "original_service_random_deviation": 0.1,
+    "native_profile_mode_matrices": 4,
+    "native_ammo_cases": 16,
+    "native_weapon_cases": 20,
+    "native_focus_cases": 8,
+    "actual_bt_service_ticks_and_randomized_native_intervals_verified": true,
+    "actual_gas_reload_slot_fire_event_payloads_match_source": true,
+    "native_unpossess_enemy_clear_brain_stop_repossess_team_observation_verified": true,
+    "source_spare_only_current_weapon_true_guard_and_stale_blackboard_retained": true,
+    "source_inventory_index_switch_and_same_tick_fire_order_retained": true,
+    "source_weapon_query_locals_not_promoted_to_node_state": true,
+    "inventory_slots_stats_cdo_selectors_wrappers_and_owned_roots_restored": true,
+    "health_properties_written": false,
+    "feature_only_host_checks": 28,
+    "invalid_lane_guards": 7,
+    "full_regression_executed_this_batch": false,
+    "preserved_failed_authoring_runs": [
+      "Assets01",
+      "Assets02CDOObjects",
+      "Assets03NativeFactory"
+    ],
+    "preserved_failed_native_runs": [
+      "Differential01FallbackTDM",
+      "Differential02InheritedTDM",
+      "Differential03ClassRootsTDM"
+    ],
+    "stage_only_native_bb_and_bt_fixtures": true,
+    "eqs_contexts_and_generator_migrated": false,
+    "network_acceptance": false,
+    "physical_aim_accuracy_tested": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Migrate all four remaining EQS contexts/generator;actual network/aim/pixel/package/version and full original migration scope remain open."
   },
   "game_phases_pilot": {
     "version": "0.12.0",
@@ -6944,8 +7025,9 @@
       "group": "Shooter AI 的 BP 业务",
       "method_candidates": 1,
       "business_nodes": 1,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch139:base controller/decorator/four BT services use Python;original33/3/14/2/11/62 nodes/full CDO/templates/node GUIDs/signatures/native.5s+-.1s schedule and async/death/parent bindings retained.4/1/1/1/1/2 methods per Profile,18/5/4/4/4/9 transport plus5 interface each,zero new business. Passive empty Begin/UnPossess and CP parent forward/config remain native and byte-identical. Four actual TDM/CP source/Python matrices match16 ammo,20 weapon,8 focus cases and real GAS reload/slot/fire payload order. Native BT ticks,unpossess clear/stop,repossess/team observation verified. Source spare-only true guard,stale OutOfAmmo,inventory-index switch and same-tick fire preserved;query locals remain local. Explicit class/node roots/listeners and inventory slots/stats/CDO/selectors/wrappers restore;no Health writes. Failed author01 CDO sibling order/02 unavailable load_module/03 UE5.8 wait struct;failed native01 inherited registration/02 missing valid and GC/03 unreflected GetItemDef probe sources preserved. EQS4/network/physical aim/pixels/package/full acceptance remain open.",
+      "status": "partial_shooter_ai_python_native_controller_bt_service_blackboard_and_gas_verified_eqs_network_pending",
+      "evidence_ledger": "139-shooter-ai-controller-bt-services-native-two-mode-gas.json"
     },
     {
       "path": "/ShooterCore/Bot/B_AI_Controller_LyraShooter.B_AI_Controller_LyraShooter",
@@ -6953,8 +7035,9 @@
       "group": "Shooter AI 的 BP 业务",
       "method_candidates": 5,
       "business_nodes": 20,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch139:base controller/decorator/four BT services use Python;original33/3/14/2/11/62 nodes/full CDO/templates/node GUIDs/signatures/native.5s+-.1s schedule and async/death/parent bindings retained.4/1/1/1/1/2 methods per Profile,18/5/4/4/4/9 transport plus5 interface each,zero new business. Passive empty Begin/UnPossess and CP parent forward/config remain native and byte-identical. Four actual TDM/CP source/Python matrices match16 ammo,20 weapon,8 focus cases and real GAS reload/slot/fire payload order. Native BT ticks,unpossess clear/stop,repossess/team observation verified. Source spare-only true guard,stale OutOfAmmo,inventory-index switch and same-tick fire preserved;query locals remain local. Explicit class/node roots/listeners and inventory slots/stats/CDO/selectors/wrappers restore;no Health writes. Failed author01 CDO sibling order/02 unavailable load_module/03 UE5.8 wait struct;failed native01 inherited registration/02 missing valid and GC/03 unreflected GetItemDef probe sources preserved. EQS4/network/physical aim/pixels/package/full acceptance remain open.",
+      "status": "partial_shooter_ai_python_native_controller_bt_service_blackboard_and_gas_verified_eqs_network_pending",
+      "evidence_ledger": "139-shooter-ai-controller-bt-services-native-two-mode-gas.json"
     },
     {
       "path": "/ShooterCore/Bot/B_AI_Controller_LyraShooter_Passive.B_AI_Controller_LyraShooter_Passive",
@@ -6962,8 +7045,9 @@
       "group": "Shooter AI 的 BP 业务",
       "method_candidates": 3,
       "business_nodes": 2,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch139:base controller/decorator/four BT services use Python;original33/3/14/2/11/62 nodes/full CDO/templates/node GUIDs/signatures/native.5s+-.1s schedule and async/death/parent bindings retained.4/1/1/1/1/2 methods per Profile,18/5/4/4/4/9 transport plus5 interface each,zero new business. Passive empty Begin/UnPossess and CP parent forward/config remain native and byte-identical. Four actual TDM/CP source/Python matrices match16 ammo,20 weapon,8 focus cases and real GAS reload/slot/fire payload order. Native BT ticks,unpossess clear/stop,repossess/team observation verified. Source spare-only true guard,stale OutOfAmmo,inventory-index switch and same-tick fire preserved;query locals remain local. Explicit class/node roots/listeners and inventory slots/stats/CDO/selectors/wrappers restore;no Health writes. Failed author01 CDO sibling order/02 unavailable load_module/03 UE5.8 wait struct;failed native01 inherited registration/02 missing valid and GC/03 unreflected GetItemDef probe sources preserved. EQS4/network/physical aim/pixels/package/full acceptance remain open.",
+      "status": "retained_ai_child_configuration_and_empty_or_parent_forwarding_hooks_native_inheritance_verified",
+      "evidence_ledger": "139-shooter-ai-controller-bt-services-native-two-mode-gas.json"
     },
     {
       "path": "/ShooterCore/Bot/EQS/Context/EQS_Context_ControlPoints.EQS_Context_ControlPoints",
@@ -7007,8 +7091,9 @@
       "group": "Shooter AI 的 BP 业务",
       "method_candidates": 1,
       "business_nodes": 13,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch139:base controller/decorator/four BT services use Python;original33/3/14/2/11/62 nodes/full CDO/templates/node GUIDs/signatures/native.5s+-.1s schedule and async/death/parent bindings retained.4/1/1/1/1/2 methods per Profile,18/5/4/4/4/9 transport plus5 interface each,zero new business. Passive empty Begin/UnPossess and CP parent forward/config remain native and byte-identical. Four actual TDM/CP source/Python matrices match16 ammo,20 weapon,8 focus cases and real GAS reload/slot/fire payload order. Native BT ticks,unpossess clear/stop,repossess/team observation verified. Source spare-only true guard,stale OutOfAmmo,inventory-index switch and same-tick fire preserved;query locals remain local. Explicit class/node roots/listeners and inventory slots/stats/CDO/selectors/wrappers restore;no Health writes. Failed author01 CDO sibling order/02 unavailable load_module/03 UE5.8 wait struct;failed native01 inherited registration/02 missing valid and GC/03 unreflected GetItemDef probe sources preserved. EQS4/network/physical aim/pixels/package/full acceptance remain open.",
+      "status": "partial_shooter_ai_python_native_controller_bt_service_blackboard_and_gas_verified_eqs_network_pending",
+      "evidence_ledger": "139-shooter-ai-controller-bt-services-native-two-mode-gas.json"
     },
     {
       "path": "/ShooterCore/Bot/Services/BTS_ReloadWeapon.BTS_ReloadWeapon",
@@ -7016,8 +7101,9 @@
       "group": "Shooter AI 的 BP 业务",
       "method_candidates": 1,
       "business_nodes": 1,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch139:base controller/decorator/four BT services use Python;original33/3/14/2/11/62 nodes/full CDO/templates/node GUIDs/signatures/native.5s+-.1s schedule and async/death/parent bindings retained.4/1/1/1/1/2 methods per Profile,18/5/4/4/4/9 transport plus5 interface each,zero new business. Passive empty Begin/UnPossess and CP parent forward/config remain native and byte-identical. Four actual TDM/CP source/Python matrices match16 ammo,20 weapon,8 focus cases and real GAS reload/slot/fire payload order. Native BT ticks,unpossess clear/stop,repossess/team observation verified. Source spare-only true guard,stale OutOfAmmo,inventory-index switch and same-tick fire preserved;query locals remain local. Explicit class/node roots/listeners and inventory slots/stats/CDO/selectors/wrappers restore;no Health writes. Failed author01 CDO sibling order/02 unavailable load_module/03 UE5.8 wait struct;failed native01 inherited registration/02 missing valid and GC/03 unreflected GetItemDef probe sources preserved. EQS4/network/physical aim/pixels/package/full acceptance remain open.",
+      "status": "partial_shooter_ai_python_native_controller_bt_service_blackboard_and_gas_verified_eqs_network_pending",
+      "evidence_ledger": "139-shooter-ai-controller-bt-services-native-two-mode-gas.json"
     },
     {
       "path": "/ShooterCore/Bot/Services/BTS_SetFocus.BTS_SetFocus",
@@ -7025,8 +7111,9 @@
       "group": "Shooter AI 的 BP 业务",
       "method_candidates": 1,
       "business_nodes": 7,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch139:base controller/decorator/four BT services use Python;original33/3/14/2/11/62 nodes/full CDO/templates/node GUIDs/signatures/native.5s+-.1s schedule and async/death/parent bindings retained.4/1/1/1/1/2 methods per Profile,18/5/4/4/4/9 transport plus5 interface each,zero new business. Passive empty Begin/UnPossess and CP parent forward/config remain native and byte-identical. Four actual TDM/CP source/Python matrices match16 ammo,20 weapon,8 focus cases and real GAS reload/slot/fire payload order. Native BT ticks,unpossess clear/stop,repossess/team observation verified. Source spare-only true guard,stale OutOfAmmo,inventory-index switch and same-tick fire preserved;query locals remain local. Explicit class/node roots/listeners and inventory slots/stats/CDO/selectors/wrappers restore;no Health writes. Failed author01 CDO sibling order/02 unavailable load_module/03 UE5.8 wait struct;failed native01 inherited registration/02 missing valid and GC/03 unreflected GetItemDef probe sources preserved. EQS4/network/physical aim/pixels/package/full acceptance remain open.",
+      "status": "partial_shooter_ai_python_native_controller_bt_service_blackboard_and_gas_verified_eqs_network_pending",
+      "evidence_ledger": "139-shooter-ai-controller-bt-services-native-two-mode-gas.json"
     },
     {
       "path": "/ShooterCore/Bot/Services/BTS_Shoot.BTS_Shoot",
@@ -7034,8 +7121,9 @@
       "group": "Shooter AI 的 BP 业务",
       "method_candidates": 2,
       "business_nodes": 41,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch139:base controller/decorator/four BT services use Python;original33/3/14/2/11/62 nodes/full CDO/templates/node GUIDs/signatures/native.5s+-.1s schedule and async/death/parent bindings retained.4/1/1/1/1/2 methods per Profile,18/5/4/4/4/9 transport plus5 interface each,zero new business. Passive empty Begin/UnPossess and CP parent forward/config remain native and byte-identical. Four actual TDM/CP source/Python matrices match16 ammo,20 weapon,8 focus cases and real GAS reload/slot/fire payload order. Native BT ticks,unpossess clear/stop,repossess/team observation verified. Source spare-only true guard,stale OutOfAmmo,inventory-index switch and same-tick fire preserved;query locals remain local. Explicit class/node roots/listeners and inventory slots/stats/CDO/selectors/wrappers restore;no Health writes. Failed author01 CDO sibling order/02 unavailable load_module/03 UE5.8 wait struct;failed native01 inherited registration/02 missing valid and GC/03 unreflected GetItemDef probe sources preserved. EQS4/network/physical aim/pixels/package/full acceptance remain open.",
+      "status": "partial_shooter_ai_python_native_controller_bt_service_blackboard_and_gas_verified_eqs_network_pending",
+      "evidence_ledger": "139-shooter-ai-controller-bt-services-native-two-mode-gas.json"
     },
     {
       "path": "/ShooterCore/ControlPoint/AI/B_AI_Controller_LyraShooter_ControlPoint.B_AI_Controller_LyraShooter_ControlPoint",
@@ -7043,8 +7131,9 @@
       "group": "Shooter AI 的 BP 业务",
       "method_candidates": 3,
       "business_nodes": 2,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch139:base controller/decorator/four BT services use Python;original33/3/14/2/11/62 nodes/full CDO/templates/node GUIDs/signatures/native.5s+-.1s schedule and async/death/parent bindings retained.4/1/1/1/1/2 methods per Profile,18/5/4/4/4/9 transport plus5 interface each,zero new business. Passive empty Begin/UnPossess and CP parent forward/config remain native and byte-identical. Four actual TDM/CP source/Python matrices match16 ammo,20 weapon,8 focus cases and real GAS reload/slot/fire payload order. Native BT ticks,unpossess clear/stop,repossess/team observation verified. Source spare-only true guard,stale OutOfAmmo,inventory-index switch and same-tick fire preserved;query locals remain local. Explicit class/node roots/listeners and inventory slots/stats/CDO/selectors/wrappers restore;no Health writes. Failed author01 CDO sibling order/02 unavailable load_module/03 UE5.8 wait struct;failed native01 inherited registration/02 missing valid and GC/03 unreflected GetItemDef probe sources preserved. EQS4/network/physical aim/pixels/package/full acceptance remain open.",
+      "status": "retained_ai_child_configuration_and_empty_or_parent_forwarding_hooks_native_inheritance_verified",
+      "evidence_ledger": "139-shooter-ai-controller-bt-services-native-two-mode-gas.json"
     },
     {
       "path": "/Game/Environments/B_LoadRandomLobbyBackground.B_LoadRandomLobbyBackground",

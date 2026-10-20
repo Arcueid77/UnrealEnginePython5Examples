@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "shooterai":
+        from generate_shooter_ai_assets import generate as generate_shooter_ai
+        return generate_shooter_ai(stage)
     if kind == "gamephases":
         from generate_game_phase_assets import generate as generate_game_phases
         return generate_game_phases(stage)
