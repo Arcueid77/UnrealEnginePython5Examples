@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 166,
+    "bounded_evidence_ledgers": 167,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -2270,6 +2270,48 @@
     "packaged_runtime": false,
     "full_acceptance": false,
     "next": "Remaining original0.13/0.14 candidates and prior FText audit/diagnostic/owner/network/culture/pixel/package/version gates stay open. Existing native parent input listener behavior is retained,not reimplemented or certified."
+  },
+  "lobby_background_pilot": {
+    "version": "0.13.0",
+    "status": "bounded_lobby_background_python_catalog_task_policy_native_streaming_and_delayed_release_verified",
+    "evidence_ledger": "165-lobby-background-native-primary-streaming-and-delayed-loading-release.json",
+    "owner": "uep_lyra_hud.lobby_background_mixin",
+    "original_read_only_audit": "20261021-lobby-default-map/Audit01",
+    "native_asset_authoring": "20261021-lobby-default-map/LobbyAssets03InputValue",
+    "native_runtime_runs": [
+      "20261021-lobby-default-map/LobbyLife03ActorRotation"
+    ],
+    "original_graph_nodes": 42,
+    "transport_nodes": 46,
+    "interface_nodes": 5,
+    "method_counts": {
+      "Python": 10,
+      "BlueprintFallback": 10
+    },
+    "new_business_nodes": 0,
+    "original_cdo_scs_templates_public_signatures_guids_graphs_preserved": true,
+    "readonly_primary_id_array_input_contract_verified": true,
+    "native_random_uses_original_inclusive_fmath_range": true,
+    "original_native_primary_async_soft_level_actor_transform_and_weak_delegates_preserved": true,
+    "native_actual_level_loaded_shown_callbacks_once_per_profile": true,
+    "original_loading_process_task_identity_reason_and_delayed_current_task_unregister_preserved": true,
+    "native_half_second_game_time_delay_verified": true,
+    "native_loading_manager_reason_observed_and_released": true,
+    "native_owned_stream_unloaded_removed_and_actor_destroyed": true,
+    "python_latency_clock_added": false,
+    "native_async_callbacks_replayed": false,
+    "owned_cdo_roots_and_original_health_restored": true,
+    "focused_host_checks": 20,
+    "invalid_lane_guards": 6,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261021-lobby-background/Index01",
+    "native_skip_empty_or_failed_level_variants_tested": false,
+    "default_editor_list_and_portal_migrated": false,
+    "pixels_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Migrate the original coupled default-editor 3D list/experience portal,then0.14 candidates. Prior native diagnostic/owner/FText/culture/network/pixel/package/version requirements remain open."
   },
   "replay_runtime_pilot": {
     "version": "0.13.0",
@@ -10609,7 +10651,9 @@
       "method_candidates": 6,
       "business_nodes": 32,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_lobby_background_python_catalog_task_policy_native_streaming_and_delayed_release_verified",
+      "evidence_run": "20261021-lobby-default-map/LobbyLife03ActorRotation",
+      "evidence_ledger": "165-lobby-background-native-primary-streaming-and-delayed-loading-release.json"
     },
     {
       "path": "/Game/System/DefaultEditorMap/B_ExperienceList3D.B_ExperienceList3D",

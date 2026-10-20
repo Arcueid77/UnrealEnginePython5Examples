@@ -23,6 +23,50 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch165 (2026-10-21),lobby background streaming:**
+Only B_LoadRandomLobbyBackground is accepted here;default-editor list/portal
+remain pending. Original42 nodes,full CDO/SCS component templates/public ABI/
+GUIDs/graphs remain.10 methods per Profile,46 transport plus5 interfaces,zero new
+business nodes. Python handles construction extents,cosmetic permission,catalog
+selection/loading-task state and success/event continuation decisions. Native
+inclusive RandomIntegerInRange uses the same FMath::RandRange as original array
+random selection. Original primary async action,soft UWorld pointer,actor
+location/rotation payload and weak loaded/shown delegates remain. Original native
+0.5-second Delay then current LoadingScreenTask.Unregister remains. No Python
+latency clock or replay of async callbacks. Loading reason/messages stay exact.
+LobbyLife03ActorRotation passes both Profiles using actual registered background
+data and dynamic level instances at distinct actor transforms. Each construction
+sets the original editor box extent;primary asset/catalog identity match. Actual
+Loaded/Shown callbacks fire once,loading task/reason is observed,and unregister
+follows the native hide request by at least0.5 game seconds. The task reason
+releases;each owned level unloads/removes and its actor is destroyed. CDO/root/
+original gameplay health restore. Native exit0,independent gate0,strict logs and
+ordered Goodbye Python/log closure pass.20 focused checks and6 invalid lanes
+pass;exact staged trees use default incremental verification at
+.build/CommitVerification/20261021-lobby-background/Index01,no full regression.
+LobbyAssets01/02 retained native getter out-reference flags on the new catalog
+input and were rejected by the0.7 mixin contract. Source/report evidence remains;
+LobbyAssets03InputValue uses the proper readonly input-array convention and
+records its real reflected signature. LobbyLife01 exposed the generic fixture's
+NoLoadingScreen override;this lane now enables the actual loading manager.
+LobbyLife02LoadingManager verifies task/release but catches a fixture assumption
+about positional FRotator arguments. Accepted transform checks compare every
+actual actor/stream rotation component,with raw numeric samples retained.
+Native skip/empty/failed-level variants remain unit/static covered only;actual
+shipping pixels/package/network and prior diagnostic/owner/culture/version gates
+stay open. No Engine/general Cpp/official edits,build,cook,push,tag or publication.
+
+Batch165 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261021-lobby-default-map/Audit01/summary.json` 20aab2ec87ef6e252d02c90ef0e13b4e432131ccecd080acbde69d100ac68f31
+`20261021-lobby-default-map/LobbyAssets03InputValue/summary.json` d2c9ac0ace3fc9fe7d9c9086db0bd7e9873ef809d977643a694d0d3037c5b2d2
+`20261021-lobby-default-map/LobbyAssets03InputValue/assets.json` 479b8e6c2531e7186db7974f67288581f894a048c7dbf0af1cf2f32dadd2e605
+`20261021-lobby-default-map/LobbyAssets03InputValue/lobby-public-signatures.json` 4ee1cb5ddec2ac05eb88cb928051e953ab817527b5f54ab08454d05c7ead3ecb
+`20261021-lobby-default-map/LobbyAssets03InputValue/lobby-catalog-gate-signature.json` cb8f7fceca3ea61a8b899d279e9e7d7a2fb72e1831afc5cfbfa1c33945887eb3
+`20261021-lobby-default-map/LobbyLife03ActorRotation/summary.json` b8d0f92e873aef086419801a449083e56f338b039a595bbf7ff20eefb14a5196
+`20261021-lobby-default-map/LobbyLife03ActorRotation/jump.json` 8b50a44fba94ca661175bd262a5403f596d28add9473c5374386862d90dcd41a
+`20261021-lobby-default-map/Host02LobbyContract.json` aa156347d2ebafeaf1f3064d22f6e68dd202bebcc44d0502a7f5a752a7baa4d1
+`20261021-lobby-default-map/guard-results.json` c0d251880bb74ebd05ba6a42d2ac738c6f7e56ce7415c8a618110dbbe0a9543d
+
 **Completed bounded batch164 (2026-10-21),replay component/HUD/scrub:**
 Controller component14/HUD2/scrub19 original nodes,full CDO/visuals/public ABI/
 GUIDs/graphs remain.1/1/2 methods per Profile,5/4/8 transport plus5 interfaces
