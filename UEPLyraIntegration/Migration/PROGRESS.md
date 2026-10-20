@@ -23,6 +23,38 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch134 (2026-10-20),scoreboard list/connection:**
+Audit01 captures all7 remaining scoreboard containers. This implementation batch
+owns PlayerList and UserConnectionStatus;team-stat/two headers/two activation
+containers remain audited/unmodified/in the full plan. Parent commits:Examples
+`e4df76d` / core `d8acee6`. PlayerList Construct polls/sorts then starts original
+looping1Hz delegate only when TeamIdFilter!=-1. Filter -1 accepts even null;
+otherwise native team membership AND exact ID. Poll prunes entries in reverse,
+keeps array/index/remove ordering,then reads real GameState.PlayerArray after
+owning-player/state validity and appends unseen matching LyraPlayerStates. Sort
+uses a fresh local array,strict-greater insertion with stable ties,Reset(false)
+pooling,original row class/interface propagation and odd/even color calls.
+Connection association sets player and team tint then starts original timer and
+immediate update. Periodic update checks valid state,reads native Ping ms and
+Round/IntToText,then invokes original localized rich-text FormatText adapter;
+periodic update does NOT recolor. Native format node/GUID/default FText is moved
+without string reconstruction;original BP fallback uses the same native helper.
+Assets01List preserves original102/20 nodes/full CDO/trees/signatures/focus hook/
+native timers/other graphs;4/2 methods per Profile,18/12 transport plus5 interfaces
+each,zero new gameplay nodes. Differential02SafeValidity passes native exit0/
+independent gate0/strict logs/ordered shutdown. Two actual UMG Profile matrices
+and6 roster scenarios verify natural GS addition/removal (no fixture roster
+replacement),team switching,stable ties,pooled row state,about1.0s updates,
+unfiltered no extra polling,original Ping markup and cached association color.
+Rooted removed connection still updates,as source. Selectors/roots/owned actors/
+Health restore. Preserve Differential01List/source:most checks passed;probe
+called a method on a destroyed wrapper during removal. Safe validity now guards
+probe access;production policy unchanged.13 focused checks include that edge;
+5 invalid lanes pass;exact staged check is incremental. Remaining team/header/
+activation business,diagnostics/culture/network/pixels/packaging and complete
+246-candidate scope remain open. No SDK/Engine/general Cpp/official edits,build,
+cook,push,tag or release publication.
+
 **Completed bounded batch133 (2026-10-20),scoreboard row/cell family:**
 base SetPlayerState stores AssociatedPlayerState,gets virtual aware children and
 sends the original interface only to implementing children. Empty base provider/

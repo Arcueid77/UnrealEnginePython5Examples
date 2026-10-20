@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 135,
+    "bounded_evidence_ledgers": 136,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1235,6 +1235,50 @@
     "full_library_acceptance": false,
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
+  },
+  "scoreboard_list_pilot": {
+    "version": "0.12.0",
+    "status": "partial_scoreboard_list_connection_python_native_roster_pool_timer_localized_format_verified_network_pixels_package_pending",
+    "evidence_ledger": "134-scoreboard-player-list-connection-native-roster-format.json",
+    "owner": "uep_lyra_hud.scoreboard_list_mixin",
+    "read_only_audit": "20261020-scoreboard-containers/Audit01",
+    "native_asset_authoring": "20261020-scoreboard-containers/Assets01List",
+    "native_runtime": "20261020-scoreboard-containers/Differential02SafeValidity",
+    "original_graph_nodes": {
+      "list": 102,
+      "connection": 20
+    },
+    "methods_per_profile": {
+      "list": 4,
+      "connection": 2
+    },
+    "new_transport_nodes": {
+      "list": 18,
+      "connection": 12
+    },
+    "generated_interface_nodes_each": 5,
+    "new_business_nodes": 0,
+    "original_full_cdos_visuals_native_timers_and_remaining_graphs_preserved": true,
+    "native_localized_ping_format_node_preserved_without_string_reconstruction": true,
+    "stable_descending_elimination_rank_strict_greater_preserves_ties": true,
+    "real_native_game_state_roster_not_fixture_replaced": true,
+    "reverse_index_pruning_and_dynamic_entry_pool_reset_false_preserved": true,
+    "native_list_timer_only_for_filtered_list": true,
+    "connection_color_only_set_at_association": true,
+    "native_profile_matrices": 2,
+    "native_roster_timer_scenarios": 6,
+    "native_ping_timers": 2,
+    "native_membership_filter_add_remove_and_pooled_row_association_verified": true,
+    "rooted_removed_timer_behavior_and_unfiltered_no_timer_verified": true,
+    "selectors_roots_owned_actors_and_health_restored": true,
+    "feature_only_host_checks": 13,
+    "full_regression_executed_this_batch": false,
+    "preserved_failed_native": "Differential01List",
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Team-stat/header/activation containers remain audited but unmigrated;native diagnostics/culture variants/network/pixels/packaging and full original scope remain open."
   },
   "scoreboard_rows_pilot": {
     "version": "0.12.0",
@@ -6613,8 +6657,9 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 6,
       "business_nodes": 76,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch134:Python membership/filter/stable rank/pool construct and connection association/ping update. Original102/20 nodes/full CDO/visuals/focus hook/native timer/localized rich-text format preserved;4/2 methods per Profile,18/12 transport plus5 interface each,0 new business. Two native UMG matrices/six roster scenarios verify real GS add/remove/filter,strict-score stable ties,Reset(false) rows/native parent association,filtered1Hz vs no timer for -1,localized rounded Ping and association-only color/rooted removed updates. Runtime CDO selectors/roots/actors/Health restore. Failed probe validity attempt preserved. Team/header/activation assets remain in scope and unchanged. Diagnostics/culture/network/pixels/package/full acceptance pending.",
+      "status": "partial_scoreboard_list_connection_python_native_roster_pool_timer_localized_format_verified_network_pixels_package_pending",
+      "evidence_ledger": "134-scoreboard-player-list-connection-native-roster-format.json"
     },
     {
       "path": "/ShooterCore/UserInterface/ScoreBoard/W_SB_TeamStat.W_SB_TeamStat",
@@ -6631,8 +6676,9 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 2,
       "business_nodes": 18,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch134:Python membership/filter/stable rank/pool construct and connection association/ping update. Original102/20 nodes/full CDO/visuals/focus hook/native timer/localized rich-text format preserved;4/2 methods per Profile,18/12 transport plus5 interface each,0 new business. Two native UMG matrices/six roster scenarios verify real GS add/remove/filter,strict-score stable ties,Reset(false) rows/native parent association,filtered1Hz vs no timer for -1,localized rounded Ping and association-only color/rooted removed updates. Runtime CDO selectors/roots/actors/Health restore. Failed probe validity attempt preserved. Team/header/activation assets remain in scope and unchanged. Diagnostics/culture/network/pixels/package/full acceptance pending.",
+      "status": "partial_scoreboard_list_connection_python_native_roster_pool_timer_localized_format_verified_network_pixels_package_pending",
+      "evidence_ledger": "134-scoreboard-player-list-connection-native-roster-format.json"
     },
     {
       "path": "/ShooterCore/Bot/BT/BTDecorator_AllowedToFire.BTDecorator_AllowedToFire",
