@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPScoreboardStyleResult=") for argument in arguments):
+        return "uep_lyra_hud.scoreboard_style_validation"
     if any(argument.startswith("-UEPScoreboardListResult=") for argument in arguments):
         return "uep_lyra_hud.scoreboard_list_validation"
     if any(argument.startswith("-UEPScoreboardRowsResult=") for argument in arguments):

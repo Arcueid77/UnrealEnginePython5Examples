@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 136,
+    "bounded_evidence_ledgers": 137,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1235,6 +1235,67 @@
     "full_library_acceptance": false,
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
+  },
+  "scoreboard_style_pilot": {
+    "version": "0.12.0",
+    "status": "partial_scoreboard_team_headers_activation_python_native_two_mode_style_timer_verified_network_pixels_package_pending",
+    "evidence_ledger": "135-scoreboard-team-header-board-native-two-mode-style.json",
+    "owner": "uep_lyra_hud.scoreboard_style_mixin",
+    "read_only_audit": "20261020-scoreboard-containers/Audit01",
+    "native_asset_authoring": "20261020-scoreboard-containers/Assets02Style",
+    "native_runtime_runs": [
+      "20261020-scoreboard-containers/Differential06StyleGameFrames",
+      "20261020-scoreboard-containers/Differential07StyleCP"
+    ],
+    "original_graph_nodes": {
+      "team": 84,
+      "headercp": 19,
+      "headertdm": 19,
+      "boardcp": 10,
+      "boardtdm": 10
+    },
+    "methods_per_profile": {
+      "team": 3,
+      "headercp": 1,
+      "headertdm": 1,
+      "boardcp": 1,
+      "boardtdm": 1
+    },
+    "new_transport_nodes": {
+      "team": 15,
+      "headercp": 4,
+      "headertdm": 4,
+      "boardcp": 4,
+      "boardtdm": 4
+    },
+    "generated_interface_nodes_each": 5,
+    "new_business_nodes": 0,
+    "original_full_cdos_trees_animations_literal_team_names_and_remaining_graphs_preserved": true,
+    "localized_team_names_not_reconstructed_from_python_strings": true,
+    "source_brush_reconstruction_fields_preserved": true,
+    "rotation_speed_minus_two_targets_team_icon_not_stat_glow": true,
+    "native_stat_timer_seconds": 1.0,
+    "target_score_read_only_during_construct": true,
+    "native_profile_matrices": 4,
+    "native_team_style_cases": 8,
+    "native_header_style_cases": 16,
+    "native_activation_cases": 8,
+    "actual_tdm_cp_target_sources_and_native_stat_tag_timer_verified": true,
+    "short_animation_end_time_seconds": 0.24001666903495789,
+    "reactivation_while_forward_stops_then_plays": true,
+    "team_tag_deltas_real_target_profiles_roots_health_restored": true,
+    "feature_only_host_checks": 16,
+    "full_regression_executed_this_batch": false,
+    "preserved_failed_native_runs": [
+      "Differential03StyleTDM",
+      "Differential04StyleNativeSize",
+      "Differential05StyleIcon"
+    ],
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Native team0/diagnostic/culture variants,owner/network/visual fidelity/packaging and full original migration scope remain open."
   },
   "scoreboard_list_pilot": {
     "version": "0.12.0",
@@ -6465,8 +6526,9 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 1,
       "business_nodes": 7,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch135:five team/header/activation policies use Python;original84/19/19/10/10 nodes/full CDO/trees/animations/native timer/localized team literal remain.3/1/1/1/1 methods per Profile,15/4/4/4/4 transport plus5 interface each,0 new business. Four actual UMG Profile matrices across TDM/CP verify native mode target once at construct,StatTag1Hz updates,target non-refresh,8 team styles/16 headers/8 actual activation/retrigger cases. Full reflected brush fields and source TeamIcon RotationSpeed=-2 preserved;StatGlow unchanged. Original Red/Blue localized text node moved intact. Short.24s animation uses settled/native-position checks. Failed native03/04/05 sources preserved. Team tags/targets/selectors/roots/Health restore. Team0/diagnostics/culture/network/pixels/package/full acceptance pending.",
+      "status": "partial_scoreboard_team_headers_activation_python_native_two_mode_style_timer_verified_network_pixels_package_pending",
+      "evidence_ledger": "135-scoreboard-team-header-board-native-two-mode-style.json"
     },
     {
       "path": "/ShooterCore/ControlPoint/UI/W_SB_PlayerRow_CP.W_SB_PlayerRow_CP",
@@ -6484,8 +6546,9 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 2,
       "business_nodes": 17,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch135:five team/header/activation policies use Python;original84/19/19/10/10 nodes/full CDO/trees/animations/native timer/localized team literal remain.3/1/1/1/1 methods per Profile,15/4/4/4/4 transport plus5 interface each,0 new business. Four actual UMG Profile matrices across TDM/CP verify native mode target once at construct,StatTag1Hz updates,target non-refresh,8 team styles/16 headers/8 actual activation/retrigger cases. Full reflected brush fields and source TeamIcon RotationSpeed=-2 preserved;StatGlow unchanged. Original Red/Blue localized text node moved intact. Short.24s animation uses settled/native-position checks. Failed native03/04/05 sources preserved. Team tags/targets/selectors/roots/Health restore. Team0/diagnostics/culture/network/pixels/package/full acceptance pending.",
+      "status": "partial_scoreboard_team_headers_activation_python_native_two_mode_style_timer_verified_network_pixels_package_pending",
+      "evidence_ledger": "135-scoreboard-team-header-board-native-two-mode-style.json"
     },
     {
       "path": "/ShooterCore/Elimination/B_TeamDeathMatchScoring.B_TeamDeathMatchScoring",
@@ -6503,8 +6566,9 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 1,
       "business_nodes": 7,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch135:five team/header/activation policies use Python;original84/19/19/10/10 nodes/full CDO/trees/animations/native timer/localized team literal remain.3/1/1/1/1 methods per Profile,15/4/4/4/4 transport plus5 interface each,0 new business. Four actual UMG Profile matrices across TDM/CP verify native mode target once at construct,StatTag1Hz updates,target non-refresh,8 team styles/16 headers/8 actual activation/retrigger cases. Full reflected brush fields and source TeamIcon RotationSpeed=-2 preserved;StatGlow unchanged. Original Red/Blue localized text node moved intact. Short.24s animation uses settled/native-position checks. Failed native03/04/05 sources preserved. Team tags/targets/selectors/roots/Health restore. Team0/diagnostics/culture/network/pixels/package/full acceptance pending.",
+      "status": "partial_scoreboard_team_headers_activation_python_native_two_mode_style_timer_verified_network_pixels_package_pending",
+      "evidence_ledger": "135-scoreboard-team-header-board-native-two-mode-style.json"
     },
     {
       "path": "/ShooterCore/Elimination/UI/W_SB_PlayerRow_TDM.W_SB_PlayerRow_TDM",
@@ -6522,8 +6586,9 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 2,
       "business_nodes": 17,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch135:five team/header/activation policies use Python;original84/19/19/10/10 nodes/full CDO/trees/animations/native timer/localized team literal remain.3/1/1/1/1 methods per Profile,15/4/4/4/4 transport plus5 interface each,0 new business. Four actual UMG Profile matrices across TDM/CP verify native mode target once at construct,StatTag1Hz updates,target non-refresh,8 team styles/16 headers/8 actual activation/retrigger cases. Full reflected brush fields and source TeamIcon RotationSpeed=-2 preserved;StatGlow unchanged. Original Red/Blue localized text node moved intact. Short.24s animation uses settled/native-position checks. Failed native03/04/05 sources preserved. Team tags/targets/selectors/roots/Health restore. Team0/diagnostics/culture/network/pixels/package/full acceptance pending.",
+      "status": "partial_scoreboard_team_headers_activation_python_native_two_mode_style_timer_verified_network_pixels_package_pending",
+      "evidence_ledger": "135-scoreboard-team-header-board-native-two-mode-style.json"
     },
     {
       "path": "/ShooterCore/Elimination/UI/W_ScoreWidget_Elimination.W_ScoreWidget_Elimination",
@@ -6667,8 +6732,9 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 3,
       "business_nodes": 78,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch135:five team/header/activation policies use Python;original84/19/19/10/10 nodes/full CDO/trees/animations/native timer/localized team literal remain.3/1/1/1/1 methods per Profile,15/4/4/4/4 transport plus5 interface each,0 new business. Four actual UMG Profile matrices across TDM/CP verify native mode target once at construct,StatTag1Hz updates,target non-refresh,8 team styles/16 headers/8 actual activation/retrigger cases. Full reflected brush fields and source TeamIcon RotationSpeed=-2 preserved;StatGlow unchanged. Original Red/Blue localized text node moved intact. Short.24s animation uses settled/native-position checks. Failed native03/04/05 sources preserved. Team tags/targets/selectors/roots/Health restore. Team0/diagnostics/culture/network/pixels/package/full acceptance pending.",
+      "status": "partial_scoreboard_team_headers_activation_python_native_two_mode_style_timer_verified_network_pixels_package_pending",
+      "evidence_ledger": "135-scoreboard-team-header-board-native-two-mode-style.json"
     },
     {
       "path": "/ShooterCore/UserInterface/ScoreBoard/W_UserConnectionStatus.W_UserConnectionStatus",

@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "scoreboardstyle":
+        from generate_scoreboard_style_assets import generate as generate_scoreboard_style
+        return generate_scoreboard_style(stage)
     if kind == "scoreboardlist":
         from generate_scoreboard_list_assets import generate as generate_scoreboard_list
         return generate_scoreboard_list(stage)

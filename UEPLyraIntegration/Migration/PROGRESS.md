@@ -23,6 +23,39 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch135 (2026-10-20),team/header/activation containers:**
+team styling keeps source localized Red/Blue FText through intact native literal
+node/typed adapter;Python applies original four alpha levels,resource choices,
+source seven-field SlateBrush reconstruction and TeamIcon MID RotationSpeed=-2.
+StatGlow receives its resource only;the scalar getter target is TeamIcon. Header
+applies five source text tints and HeaderBorder brush. Native Construct starts
+original1Hz timer,updates tag text,styles then reads the actual TDM/CP target
+once. Timer only updates StatId count,not the target. Activatable board uses
+original BP_OnActivated event;already-forward animation stops then plays,
+otherwise plays. No manual BP activation callback or Python clock.
+Parent commits:Examples `832a410` / core `fd76fb7`. Audit01/Assets02Style preserve
+original84/19/19/10/10 nodes/full CDOs/trees/animations/signatures/literal team-name
+identity and remaining graphs. Methods3/1/1/1/1 per Profile;transport15/4/4/4/4
+plus5 interfaces each,zero new gameplay nodes. Original localized selector is
+moved with exact native FText rather than rebuilt from display strings.
+Differential06StyleGameFrames (actual TDM) and07StyleCP (actual control points)
+pass native exit0/independent gate0/strict logs/ordered shutdown. Four native UMG
+Profile matrices cover8 team styles/16 headers/8 actual activation/retrigger
+cases. Full brush fields and normalized MID parent/parameter state match source;
+TDM/CP mode target fields match,tag updates retain about1.0s native intervals,
+and changing the real target after construction does not refresh displayed goal.
+Runtime tag deltas/real target/selectors/probe Profile wrappers/roots/Health
+restore. Preserve native03/source (test Vector2D assignment did not match native
+brush dimension type),04/source (real initial port error wrote rotation to wrong
+image,corrected to source TeamIcon),05/source (short.240016669s animation ended
+across a large initial load frame before wall-time sample). Fixture now keeps
+native dimension structure,normalizes MID parent in comparisons,and waits three
+native frames before activation/checking native playback position while forward.
+16 focused checks/5 invalid lanes pass;exact staged regression is incremental.
+Native team0/diagnostic/culture/network/pixels/packaging/full-version gates and
+complete246-candidate scope remain open. No SDK/Engine/general Cpp/official
+edits,build,cook,push,tag or release publication.
+
 **Completed bounded batch134 (2026-10-20),scoreboard list/connection:**
 Audit01 captures all7 remaining scoreboard containers. This implementation batch
 owns PlayerList and UserConnectionStatus;team-stat/two headers/two activation
