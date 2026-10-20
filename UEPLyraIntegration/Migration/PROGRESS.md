@@ -23,6 +23,39 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch140 (2026-10-20),shooter EQS family:**
+Points/TargetEnemy/WeaponCheck contexts and GetAllEnemy generator callbacks use
+Python. Original16/8/35/17 nodes/full CDOs/const flags/typed actor arrays+vector/
+scoped local arrays/node GUIDs/remaining graphs preserved.1 method per Profile
+per class,5/6/5/4 transport plus5 interfaces each;zero new business. Native EQS
+query ownership,cached generator context,AddGeneratedActor and scheduler remain.
+EQSAssets03OptionalLocation and four actual TDM/CP Profile matrices
+(02OptionalFallbackTDM,03PythonTDM,04FallbackCP,05PythonCP) pass native exit0/
+independent gate0/strict logs/ordered shutdown.64 real asynchronous queries cover
+3 points/4 target/5 weapon/4 enemy-generator cases per matrix. CP uses3 real map
+points. Result members/counts/valid-origin versus absent-location semantics match
+source/Python. Native world enumeration may vary across processes;policy does
+not sort actor lists. Direct context-array order is unit-checked,not claimed as
+an independent native ordering gate. EQS final ordering remains engine-owned.
+Source strict CoolDownPercentage<.1,ability-spawner exclusion,missing inventory
+item or spare below native definition default,and different-team/not-dead filters
+retained. Normal/native no-team comparison and explicit-dead filtering are unit
+covered;actual query matrix uses real team1/team2 and noncharacter queriers.
+Missing target leaves location out-param unwritten,retaining the native EQS
+InvalidLocation sentinel;an actual actor at origin writes valid zero. New native
+transport HasResult branch handles that ABI distinction without new gameplay.
+Blackboard/owned spare stacks/point owner/cooldown/tick state,CDO selectors/Proxy
+wrappers/class/query roots and runtime phase fixture restore;teams never mutate,
+no Health writes.19 focused checks/7 invalid lanes pass;exact index is incremental.
+Preserve EQSAssets01/source:compiler rejected nonconst gate inside const context,
+fixed by preserving original const contract. Preserve superseded02 Stage/Overlay
+assets before restoring originals. Preserve native01/source:source absent target
+produced no context,not origin,and Cpp-only team setter was not reflected.03
+transport now leaves out-param untouched and fixture selects existing teams.
+Native direct array ordering/dead-actor/ability-spawner extra variants,network/
+pixels/package/version and full246-candidate migration remain open. No SDK/
+Engine/general Cpp/official edits,build,cook,push,tag or release publication.
+
 **Completed bounded batch139 (2026-10-20),shooter controller/BT services:**
 Base controller,AllowedToFire decorator and Ammo/Reload/Focus/Shoot services move
 policy to Python. Original33/3/14/2/11/62 nodes/full CDO/subobject values/component

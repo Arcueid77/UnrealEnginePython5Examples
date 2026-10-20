@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 141,
+    "bounded_evidence_ledgers": 142,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1235,6 +1235,82 @@
     "full_library_acceptance": false,
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
+  },
+  "shooter_eqs_pilot": {
+    "version": "0.12.0",
+    "status": "partial_shooter_eqs_python_typed_context_generator_native_queries_verified_network_extra_variants_pending",
+    "evidence_ledger": "140-shooter-eqs-native-context-generator-queries.json",
+    "owner": "uep_lyra_world.shooter_eqs_mixin",
+    "read_only_audit": "20261020-shooter-ai/Audit01",
+    "native_asset_authoring": "20261020-shooter-ai/EQSAssets03OptionalLocation",
+    "native_runtime_runs": [
+      "20261020-shooter-ai/EQSDifferential02OptionalFallbackTDM",
+      "20261020-shooter-ai/EQSDifferential03PythonTDM",
+      "20261020-shooter-ai/EQSDifferential04FallbackCP",
+      "20261020-shooter-ai/EQSDifferential05PythonCP"
+    ],
+    "original_graph_nodes": {
+      "points": 16,
+      "enemy": 8,
+      "weapon": 35,
+      "enemies": 17
+    },
+    "methods_per_profile": {
+      "points": 1,
+      "enemy": 1,
+      "weapon": 1,
+      "enemies": 1
+    },
+    "new_transport_nodes": {
+      "points": 5,
+      "enemy": 6,
+      "weapon": 5,
+      "enemies": 4
+    },
+    "generated_interface_nodes_each": 5,
+    "new_business_nodes": 0,
+    "original_full_cdos_const_signatures_return_types_scoped_locals_node_guids_and_graphs_preserved": true,
+    "all_new_gates_preserve_original_const_contract": true,
+    "absent_target_returns_without_writing_location_out_param": true,
+    "real_target_at_zero_origin_still_produces_valid_location": true,
+    "typed_actor_array_and_vector_outputs_preserved": true,
+    "source_native_world_enumeration_order_not_sorted_in_policy": true,
+    "original_fresh_local_actor_arrays_preserved": true,
+    "source_cooldown_strict_less_than_point_one_and_ability_spawner_exclusion_preserved": true,
+    "source_missing_item_or_spare_below_default_filter_preserved": true,
+    "native_compare_teams_different_only_and_is_dead_filter_preserved": true,
+    "native_query_mode_profile_matrices": 4,
+    "native_async_queries": 64,
+    "queries_per_matrix": {
+      "points": 3,
+      "enemy": 4,
+      "weapon": 5,
+      "enemies": 4
+    },
+    "actual_cp_map_control_points": 3,
+    "native_eqlocation_results_membership_and_generated_actor_members_verified": true,
+    "result_members_counts_and_optional_location_semantics_match_profiles": true,
+    "native_eqs_scheduler_replaced": false,
+    "original_blackboard_spare_stacks_point_ownership_cooldown_ticks_and_team_unchanged_or_restored": true,
+    "original_profile_cdo_wrappers_class_roots_query_roots_and_phase_fixture_fields_restored": true,
+    "health_properties_written": false,
+    "feature_only_host_checks": 19,
+    "invalid_lane_guards": 7,
+    "full_regression_executed_this_batch": false,
+    "preserved_failed_authoring_runs": [
+      "EQSAssets01"
+    ],
+    "preserved_superseded_authoring_revision": "EQSAssets02Const",
+    "preserved_failed_native_runs": [
+      "EQSDifferential01FallbackTDM"
+    ],
+    "network_acceptance": false,
+    "explicit_native_dead_actor_variant_tested": false,
+    "context_array_order_native_direct_tested": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Native context array-order/dead-actor/ability-spawner extra variants,actual network/pixels/package/version acceptance and full original migration remain open."
   },
   "shooter_ai_controller_services_pilot": {
     "version": "0.12.0",
@@ -7055,8 +7131,9 @@
       "group": "Shooter AI 的 BP 业务",
       "method_candidates": 1,
       "business_nodes": 10,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch140:four EQS callbacks use Python;original16/8/35/17 nodes/full CDO/const signatures/typed arrays+vector/scoped locals/node GUIDs/graphs preserved.1 method each Profile,5/6/5/4 transport plus5 interface each,zero new business. Optional location write transport preserves original unwritten out-param for absent target;real origin target remains valid. Source actor enumeration/fresh locals/strict cooldown<.1/ability spawner exclusion/missing item or spare<default/different-team alive filters retained. Four actual TDM/CP Profile matrices complete64 native asynchronous queries and match members/counts/target location semantics;CP uses3 real map points. Native EQS scheduling remains. Blackboard/stacks/owner/cooldown/tick fields/CDO/selectors/wrappers/roots/phase fixture restore;teams not mutated,no Health writes. Failed author01 const-contract guard and native01 wrong zero-location/team-setter assumptions preserved;superseded02 Stage+Overlay outputs preserved.19 focused/7 invalid lanes;exact staged incremental follows. Native direct array order/dead actor/ability spawner extra variants/network/pixels/package/full acceptance pending.",
+      "status": "partial_shooter_eqs_python_typed_context_generator_native_queries_verified_network_extra_variants_pending",
+      "evidence_ledger": "140-shooter-eqs-native-context-generator-queries.json"
     },
     {
       "path": "/ShooterCore/Bot/EQS/Context/EQS_Context_TargetEnemy.EQS_Context_TargetEnemy",
@@ -7064,8 +7141,9 @@
       "group": "Shooter AI 的 BP 业务",
       "method_candidates": 1,
       "business_nodes": 6,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch140:four EQS callbacks use Python;original16/8/35/17 nodes/full CDO/const signatures/typed arrays+vector/scoped locals/node GUIDs/graphs preserved.1 method each Profile,5/6/5/4 transport plus5 interface each,zero new business. Optional location write transport preserves original unwritten out-param for absent target;real origin target remains valid. Source actor enumeration/fresh locals/strict cooldown<.1/ability spawner exclusion/missing item or spare<default/different-team alive filters retained. Four actual TDM/CP Profile matrices complete64 native asynchronous queries and match members/counts/target location semantics;CP uses3 real map points. Native EQS scheduling remains. Blackboard/stacks/owner/cooldown/tick fields/CDO/selectors/wrappers/roots/phase fixture restore;teams not mutated,no Health writes. Failed author01 const-contract guard and native01 wrong zero-location/team-setter assumptions preserved;superseded02 Stage+Overlay outputs preserved.19 focused/7 invalid lanes;exact staged incremental follows. Native direct array order/dead actor/ability spawner extra variants/network/pixels/package/full acceptance pending.",
+      "status": "partial_shooter_eqs_python_typed_context_generator_native_queries_verified_network_extra_variants_pending",
+      "evidence_ledger": "140-shooter-eqs-native-context-generator-queries.json"
     },
     {
       "path": "/ShooterCore/Bot/EQS/Context/EQS_Context_WeaponCheck.EQS_Context_WeaponCheck",
@@ -7073,8 +7151,9 @@
       "group": "Shooter AI 的 BP 业务",
       "method_candidates": 1,
       "business_nodes": 24,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch140:four EQS callbacks use Python;original16/8/35/17 nodes/full CDO/const signatures/typed arrays+vector/scoped locals/node GUIDs/graphs preserved.1 method each Profile,5/6/5/4 transport plus5 interface each,zero new business. Optional location write transport preserves original unwritten out-param for absent target;real origin target remains valid. Source actor enumeration/fresh locals/strict cooldown<.1/ability spawner exclusion/missing item or spare<default/different-team alive filters retained. Four actual TDM/CP Profile matrices complete64 native asynchronous queries and match members/counts/target location semantics;CP uses3 real map points. Native EQS scheduling remains. Blackboard/stacks/owner/cooldown/tick fields/CDO/selectors/wrappers/roots/phase fixture restore;teams not mutated,no Health writes. Failed author01 const-contract guard and native01 wrong zero-location/team-setter assumptions preserved;superseded02 Stage+Overlay outputs preserved.19 focused/7 invalid lanes;exact staged incremental follows. Native direct array order/dead actor/ability spawner extra variants/network/pixels/package/full acceptance pending.",
+      "status": "partial_shooter_eqs_python_typed_context_generator_native_queries_verified_network_extra_variants_pending",
+      "evidence_ledger": "140-shooter-eqs-native-context-generator-queries.json"
     },
     {
       "path": "/ShooterCore/Bot/EQS/Generator/EQS_GetAllEnemy.EQS_GetAllEnemy",
@@ -7082,8 +7161,9 @@
       "group": "Shooter AI 的 BP 业务",
       "method_candidates": 1,
       "business_nodes": 9,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch140:four EQS callbacks use Python;original16/8/35/17 nodes/full CDO/const signatures/typed arrays+vector/scoped locals/node GUIDs/graphs preserved.1 method each Profile,5/6/5/4 transport plus5 interface each,zero new business. Optional location write transport preserves original unwritten out-param for absent target;real origin target remains valid. Source actor enumeration/fresh locals/strict cooldown<.1/ability spawner exclusion/missing item or spare<default/different-team alive filters retained. Four actual TDM/CP Profile matrices complete64 native asynchronous queries and match members/counts/target location semantics;CP uses3 real map points. Native EQS scheduling remains. Blackboard/stacks/owner/cooldown/tick fields/CDO/selectors/wrappers/roots/phase fixture restore;teams not mutated,no Health writes. Failed author01 const-contract guard and native01 wrong zero-location/team-setter assumptions preserved;superseded02 Stage+Overlay outputs preserved.19 focused/7 invalid lanes;exact staged incremental follows. Native direct array order/dead actor/ability spawner extra variants/network/pixels/package/full acceptance pending.",
+      "status": "partial_shooter_eqs_python_typed_context_generator_native_queries_verified_network_extra_variants_pending",
+      "evidence_ledger": "140-shooter-eqs-native-context-generator-queries.json"
     },
     {
       "path": "/ShooterCore/Bot/Services/BTS_CheckAmmo.BTS_CheckAmmo",

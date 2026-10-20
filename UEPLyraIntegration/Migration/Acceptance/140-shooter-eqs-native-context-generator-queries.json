@@ -1,0 +1,879 @@
+{
+  "schema_version": 1,
+  "batch": "140-shooter-eqs-native-context-generator-queries",
+  "scope": "Four Python EQS context/generator callbacks preserve original16/8/35/17 nodes/full CDO/const signature/typed arrays+vector/local scopes/node GUIDs/graphs.1 method per Profile,5/6/5/4 transport plus5 interface each,0 new business. Optional-location ABI leaves out-param unwritten for absent target while valid origin target writes zero. Source native enumeration/fresh arrays/strict cooldown<.1/ability exclusion/missing-item or spare<default/different-team alive filters retained. Four actual TDM/CP source/Python native matrices finish64 asynchronous queries;members/counts/optional location semantics match. Real CP map supplies3 points. Interprocess enumeration may differ,policy does not sort;direct context order is unit-checked,not separately native-gated. Native EQS scheduler and live AddGeneratedActor context remain. Blackboard/stacks/ownership/cooldown/tick/CDO/selectors/wrappers/roots/runtime phase fixture restore;teams not mutated/no Health writes. Exit0/gate0/strict logs/ordered shutdown each.19 focused/7 invalid lanes;exact staged incremental follows. Failed author01 const contract/native01 absent out-param and Cpp-only setter assumptions preserved;superseded02 Stage+Overlay revision preserved. Native explicit-dead/ability-spawner/direct-array-order variants/full246 migration/network/pixels/package/version remain open. No Cpp/official edits/build/cook/push/tag/publication.",
+  "recorded_utc": "2026-10-20T05:08:04.5077393Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "1484ae7a6a94674b29890194b52ae15f90b8b490",
+  "examples_parent_commit": "56783aeaa23cf73d07ef1014b93f631ff18f6b45",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01",
+      "summary_sha256": "6B158230933329CE34351420CC3338ABACA8035D6AA5D91DA9845ACC4BC3AA29",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 869,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "audit.json",
+          "sha256": "68FA771B1978055F6B799A5635FBC1E344E101629E47AAB5F98BDFCB1C12E0F8"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets03OptionalLocation",
+      "summary_sha256": "1F0EAA8F7B758E9A880C6E5EFF9FDBEDE14D717786E87846E98A5CDEB19DBA2B",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2066,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential02OptionalFallbackTDM",
+      "summary_sha256": "C87D24218534D7EA9F2A50B29A0762AB965223B6EECD8F89EE8896ADCE041ED9",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2655,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "DE20D3884D90CBE2835843B26142A1428202B99B6D7AAFFA6E056B70536B6A27"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential03PythonTDM",
+      "summary_sha256": "356C8ECC670A8CC971B3BF05681BD084D92231B0FA570DEE0A9703867BAC735D",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2655,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "35C54E94A87DDAE878FF12C360EA9C247CEDBE72A9BA06AF485D376D85EC158E"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential04FallbackCP",
+      "summary_sha256": "6DA4DA9B61F896B31F5E777F00127A3D2CE6F1E2291D55ACA0007D8DC8E54C17",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2655,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "FFEAE426A522205134E144F47E9B7DB0D9CB2CE1213451EDBBCF44FBCE0C97E4"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential05PythonCP",
+      "summary_sha256": "AA730114946EFC105DC0B1EBE74574F5C57E88AE6158A97915D2CE12BF608503",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2655,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "CEBE774194A8000199E8FA6316F2C27DD8B3C61CD0C58D07EE7020208B94A3B6"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/shooter_eqs_mixin.py",
+      "sha256": "6FE06CA080E1043BCE87A3BA0B73D31E7A52DE3D204393F5624F2C347C168AA1",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/shooter_eqs_mixin.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/shooter_eqs_validation.py",
+      "sha256": "F895906F4D0C7E0EC18C12FD07144767AF0F609AAE1BE1F3F60327AE63F60095",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/shooter_eqs_validation.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/shooter_eqs_contract.py",
+      "sha256": "A4C5BB150B0A62A1440EEB8D66C96909B1E9145F0AD76A7D6FABC6DDDD68BA24",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/shooter_eqs_contract.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "7683B76B8A5D945D85EA674E61698DA07BCAD936EC2CF5A5F25C48E6F75D8CA1",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_shooter_eqs_assets.py",
+      "sha256": "64459D449E4693CFA4A7D66892621211AA474CAA6D713C225D01F77A2C4F7D71",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_shooter_eqs_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "F3F318AD35BD9855DF95ACC43B46C241713BD21377C8741A0BABA366356F37BA",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "AB2E731B1378A7AD668C96EFC75406A5795598DABD98BF0BEAC3B56D68DE46FB",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "E1A8AE825CDE6FD1157F922204C40EA1B5B1880EBDF1216C3E31127B1D0170A1",
+      "path": "Validation/Run-UEP58JumpValidation.ps1"
+    }
+  ],
+  "host_report": {
+    "result": {
+      "schema_version": 2,
+      "status": "passed",
+      "tests_run": 19,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "selection": {
+        "mode": "incremental",
+        "status": "ready",
+        "changed_files": [],
+        "selected_test_files": [
+          "Demos/UEPLyraIntegration/Tests/test_shooter_eqs_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_shooter_eqs_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_shooter_eqs_mixin.py"
+        ],
+        "affected_files": [],
+        "selection_reasons": {
+          "Demos/UEPLyraIntegration/Tests/test_shooter_eqs_contract.py": [
+            "explicit pattern test_shooter_eqs_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_shooter_eqs_fixture.py": [
+            "explicit pattern test_shooter_eqs_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_shooter_eqs_mixin.py": [
+            "explicit pattern test_shooter_eqs_*.py"
+          ]
+        },
+        "unmapped_changed_files": [],
+        "unparsed_unaffected_files": [],
+        "dependency_analysis": "local imports including inheritance, literal module names and file references; dynamic dependencies require explicit patterns/native lanes",
+        "full_regression_requested": false
+      },
+      "failed_cases": []
+    },
+    "sha256": "743E77ADB177D0BF78E4329677E2DF8B406C3528C078E49040DFFF332E49CD46",
+    "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSHost02OptionalLocation.json"
+  },
+  "raw_artifacts": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/allowed-blueprint.t3d",
+      "sha256": "0e654ee1f4b0071cceffb418d4ed73e476b0aebf343bcf6f09e62eed025596cb"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/allowed-cdo.t3d",
+      "sha256": "3214c061807df60afd3803f7a21a0cc958565bdc3dc2e1f31f88bbfbc1f44f30"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/allowed-graphs.json",
+      "sha256": "f9bb47993f79f42915719ce2e923648b308d1872b5633347003209d786472e3c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/ammo-blueprint.t3d",
+      "sha256": "76c0a345a72bf9f214e17bcb6265ef9f0e6a4bfad95ba8125f645a1d87e33294"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/ammo-cdo.t3d",
+      "sha256": "6d6ba818e1db4feacdffa4079aeb5af1d7f662319650e9c55c7b0b6c0e56bdf0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/ammo-graphs.json",
+      "sha256": "64631e5e01b2b0e6da4d260ad2f69a45aab7e900185c70caf9b129a7b17b1b88"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/audit-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/audit-stdout.log",
+      "sha256": "7cf2bc75864c30d6a5ac203b45e5f84e771aec82dc5f955d221762a6e27ebc19"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/audit.json",
+      "sha256": "68fa771b1978055f6b799a5635fbc1e344e101629e47aab5f98bdfcb1c12e0f8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/audit.log",
+      "sha256": "7f4797e82afd319cc09dd88d5eb46af1bc6eb9019ece7f0322ec27f5cc0fc419"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/controller-blueprint.t3d",
+      "sha256": "fb0acad3016c32a91affd552a989018b775125007850607140546c96d9ce3aae"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/controller-cdo.t3d",
+      "sha256": "fd2090cb03e7460ca1c9a4d54e9c336850aaa4632914dd682391dcfdb5ae0663"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/controller-graphs.json",
+      "sha256": "87e2037db011175fc367c2e3d5a4253c04faf26f668c14c334a9111c05f3879e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/controller-scs.t3d",
+      "sha256": "87713285ffbe886df3e2efa767bd60ad31f8608737334613d858fa534645725d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/controller-SCS_Node_1-component.t3d",
+      "sha256": "ab3821cde8e39f8ab487e6c550581244137220bf952171df13a94f885dee793a"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/cp-blueprint.t3d",
+      "sha256": "63e66912e968fa0d831eda66262781fc5afa376e33067c78099144acad274371"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/cp-cdo.t3d",
+      "sha256": "2865b00b075fb3504ccdef393f3a9c87f334c6a8560425fb5b8e7ac724c85f7d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/cp-graphs.json",
+      "sha256": "b61f4a0279e804206f5bbc78d74bafb614c87690d1bac3a9e2935a4addcdb63f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/cp-scs.t3d",
+      "sha256": "efd222db2dc2876a2a8b0508e6229ae924d3368a87d275d269b19c39f290d219"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/enemies-blueprint.t3d",
+      "sha256": "867ce6283b216b0175021da737a2178e261c7afe887b1f4c5fd79f980cccb348"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/enemies-cdo.t3d",
+      "sha256": "ec37e6c8cff9bf098a2a9a6f308332a6be6826bfac8e21901c715e06999a6cbc"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/enemies-graphs.json",
+      "sha256": "6e318f544f6bc7be46a5be26928a7bdfa1d6496f2b69f34b388adf2018cf3aa7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/enemy-blueprint.t3d",
+      "sha256": "df70e645c79c48c05759bb499f638fecdd873d04d14fea76b6357718d4cf9148"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/enemy-cdo.t3d",
+      "sha256": "de2736ee546acfd10d3688524a7f3d5f140e57e167a5c82fc966688383aabaac"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/enemy-graphs.json",
+      "sha256": "f3ac6496f2fc0c2cf334fab3a8816f5f89c88f0b5664ea3e721b08dbc0d79e18"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/focus-blueprint.t3d",
+      "sha256": "a9af206b2d6fabc13c42183a99dae252a43cdc005a22fde18a6ebe0b714e5de2"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/focus-cdo.t3d",
+      "sha256": "b39b734f6822d5921f18f73a74eebd2caa5532e17ade9c35ea61226d1cd10807"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/focus-graphs.json",
+      "sha256": "3bdcd2a67728691319c18e77168fcde6391804cf6ec48b6450aa96ce58fcbcd1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/native-cosmetic-macro.json",
+      "sha256": "6686431a183d6c7535f57d59187d16195ad2c83645cb4b5ab83518a903621dda"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/passive-blueprint.t3d",
+      "sha256": "d7dde232d72f517edbd8f0abfba64dedfd6243c23fc9357f42cbf14d39848cd0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/passive-cdo.t3d",
+      "sha256": "b536b3a999725f8030cbcdc4a3fb73846cff6604ee8a1d95efd4dabd22204013"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/passive-graphs.json",
+      "sha256": "5be600aa5b91d5aac3955bd49a8d1f3d7ffd6d5ae3aa70a072204165ebf0bee6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/passive-scs.t3d",
+      "sha256": "c01f1c498de11b214c1ce39ccf057ab43eb138866ed8c40fbf1e39add4a1aa6a"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/points-blueprint.t3d",
+      "sha256": "303a03b4ef768a477cd9de00222d014b9e5b4357dcd86a2c061bbb89d292b3f8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/points-cdo.t3d",
+      "sha256": "aaa1abd2ed31f89c17f9f5e343c538a3a166b74f4d39d149956757a1063a8174"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/points-graphs.json",
+      "sha256": "8885abfc8a19a9e156126e529b5339c1ee2c6c074a05b3003ac40497a9f22178"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/reload-blueprint.t3d",
+      "sha256": "3fea69ec35c3ff109269e901626a9d8fd64b9e9dcc608dbcb3eb9cd64c11a3f3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/reload-cdo.t3d",
+      "sha256": "5a2166a874c85ea6f30aa40f184bf2818ed630837b34f51152a63f3db263d298"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/reload-graphs.json",
+      "sha256": "49db1dbad832c718dbe0ac0cadaf6417aab80ff51db7eb6a814c7605b090afc9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/shoot-blueprint.t3d",
+      "sha256": "4434ed27e3b2a29f11aa7738f26ea1ab4a2aaf30ad015ab4d97cd28caf053ed7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/shoot-cdo.t3d",
+      "sha256": "9d53c6cd8b03b64aa32bfbc3f00345ac0a7535fe26f2157154a3f14ccc8041b3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/shoot-graphs.json",
+      "sha256": "4491aa2627ebe3856ab0835c6e4e5cd68973cb55506009202fa11963f55273a4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/summary.json",
+      "sha256": "6b158230933329ce34351420cc3338abaca8035d6aa5d91da9845acc4bc3aa29"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/weapon-blueprint.t3d",
+      "sha256": "1313b3ccc85ebb6a6f8c2f0e682941e1a73f54e594329963e017aefd6ecd3ea5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/weapon-cdo.t3d",
+      "sha256": "a2527010e66241b0e9ab9e8a4b65fd715d7a3f04160cefa6b10a0cf3c659b96d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Audit01/weapon-graphs.json",
+      "sha256": "6fd301d7c92ef1092cd0d209eeebe30fb6c6872b3ca2779f5b8115a3b7a06e38"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/eqs-comparison.json",
+      "sha256": "39368800eaf14b8c7a197b17d76c2d03c8e06de647550487920cf56af757c61e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/eqs-guards.json",
+      "sha256": "737726b811b4014af16571a1af81404c5bb55fe1b47e38195972525a4d2892c0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets01/assets-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets01/assets-stdout.log",
+      "sha256": "c236b0ed06bcf43000249165bb3429699e0dfbc80084edf5902118526f421345"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets01/assets.json",
+      "sha256": "c18d838f1b27da551c399b4a35cb6b7250851c0ffebb5f1eaef9ae5332da72c5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets01/assets.log",
+      "sha256": "8d4c6deeca94497d22656f30c7f2da3c8ffc03f24403ab6ca3a88e10cdb08d95"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets01/dash-points-eqs-before-cdo.t3d",
+      "sha256": "aaa1abd2ed31f89c17f9f5e343c538a3a166b74f4d39d149956757a1063a8174"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets01/PreviousAssets/before.uasset",
+      "sha256": "82ae51b62a9fb095b8943c2e0a3d36553b024a12341251a9880b99d327b66300"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets01/PreviousAssets/EQS_Context_TargetEnemy.uasset",
+      "sha256": "422a9b4463623db0f492013c7a56c64c184366dd4e188a22c2d842c3e90ffd1f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets01/PreviousAssets/EQS_Context_WeaponCheck.uasset",
+      "sha256": "c860402fd1ba823d9974e005defe0e5e8e7e9556f7146764b6009844cfd9c5c6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets01/PreviousAssets/EQS_GetAllEnemy.uasset",
+      "sha256": "24f294830e1717dfc3cd800215bfcf96c84401354a4788e025057d98a44e88e3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets01/source/Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/shooter_eqs_mixin.py",
+      "sha256": "1f41fb34f686f24db3861cc44622624f0b198a0c69d1be4739919393ab69aff5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets01/source/Demos/UEPLyraIntegration/Tools/generate_shooter_eqs_assets.py",
+      "sha256": "70dfd0c655798f763c4113a2748a81dc58be5f69fa5617e1d3e78f991fff30be"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets01/source/hashes.json",
+      "sha256": "2ede5ce9505216cf94918dc2414bbe7b7a276479cb1972ce05b378208090b03c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets01/summary.json",
+      "sha256": "a5f83e56f3e35b285f4b22365f0fb3c7a7f8e7b22a58a9045119dbf425e34d07"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/assets-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/assets-stdout.log",
+      "sha256": "1c75677789288ede3cbd1ef1962aa35560e8543174df5bf9611b6605c8e8c194"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/assets.json",
+      "sha256": "97c3d33ce8a9a4a34c15482799c65d6fb9710291f8a4bd0934055b7fee945ed5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/assets.log",
+      "sha256": "2ad26ad78d25ce9942ca83d177f71feb0d7e3cc1cb2390182133c118ff8caa15"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/dash-enemies-eqs-after-cdo.t3d",
+      "sha256": "eefde747e85535dec45239b0e14dec4d2d6aa212030f40e6d3754640bd6ed306"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/dash-enemies-eqs-before-cdo.t3d",
+      "sha256": "ec37e6c8cff9bf098a2a9a6f308332a6be6826bfac8e21901c715e06999a6cbc"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/dash-enemy-eqs-after-cdo.t3d",
+      "sha256": "1b81a2c8f93651a8ae9499c488a5f5497cb72a18382d4c4e1726905517f36dde"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/dash-enemy-eqs-before-cdo.t3d",
+      "sha256": "de2736ee546acfd10d3688524a7f3d5f140e57e167a5c82fc966688383aabaac"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/dash-points-eqs-after-cdo.t3d",
+      "sha256": "358ccef082c04bb0c393b7af0afde8ae616982931e80dae3f561578ef9e2a4f4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/dash-points-eqs-before-cdo.t3d",
+      "sha256": "aaa1abd2ed31f89c17f9f5e343c538a3a166b74f4d39d149956757a1063a8174"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/dash-weapon-eqs-after-cdo.t3d",
+      "sha256": "13a062586ee7577280673e64dd6ebcadd845f2d39d37e85674af607a79b35ebf"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/dash-weapon-eqs-before-cdo.t3d",
+      "sha256": "a2527010e66241b0e9ab9e8a4b65fd715d7a3f04160cefa6b10a0cf3c659b96d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/PreviousAssets/before.uasset",
+      "sha256": "82ae51b62a9fb095b8943c2e0a3d36553b024a12341251a9880b99d327b66300"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/PreviousAssets/EQS_Context_TargetEnemy.uasset",
+      "sha256": "422a9b4463623db0f492013c7a56c64c184366dd4e188a22c2d842c3e90ffd1f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/PreviousAssets/EQS_Context_WeaponCheck.uasset",
+      "sha256": "c860402fd1ba823d9974e005defe0e5e8e7e9556f7146764b6009844cfd9c5c6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/PreviousAssets/EQS_GetAllEnemy.uasset",
+      "sha256": "24f294830e1717dfc3cd800215bfcf96c84401354a4788e025057d98a44e88e3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/summary.json",
+      "sha256": "c0a1ec12de54e8f78ffce4f3ed82a02b37bb9aba6df37aefc9d29c7856f0348c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/Superseded-overlay/Content/UEPMixins/DA_ShooterEQSEnemiesMixin.uasset",
+      "sha256": "18a54a9d4280fd562e7bcad8bccaa9bf5cbbed50fa917ee229bec75d5e1058a7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/Superseded-overlay/Content/UEPMixins/DA_ShooterEQSEnemyMixin.uasset",
+      "sha256": "7db1790dadc49f8e0cea88df0ad6917311da378a99f91cafc892103c0a6f5b6f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/Superseded-overlay/Content/UEPMixins/DA_ShooterEQSPointsMixin.uasset",
+      "sha256": "42eb37a78058b1b86452a73f8f922b2a33e87ba8561717b553df1adc33dbe75a"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/Superseded-overlay/Content/UEPMixins/DA_ShooterEQSWeaponMixin.uasset",
+      "sha256": "1e18f12514ce5f64a6c0283c2962c81ff5582809fa8954ddd14285fddc1d4970"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/Superseded-overlay/Plugins/GameFeatures/ShooterCore/Content/Bot/EQS/Context/EQS_Context_ControlPoints.uasset",
+      "sha256": "1fc52fb411a994c2b6946323eae7947babb0ed2028f95a6193dfe26ba64ca0b4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/Superseded-overlay/Plugins/GameFeatures/ShooterCore/Content/Bot/EQS/Context/EQS_Context_TargetEnemy.uasset",
+      "sha256": "73230c1fde74927c5f67c9f63d9f9926a47fca4b95fdd5ab8fc7c31c8c906a09"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/Superseded-overlay/Plugins/GameFeatures/ShooterCore/Content/Bot/EQS/Context/EQS_Context_WeaponCheck.uasset",
+      "sha256": "baf2bc6ef7314f03f62bff299f0817e92bc21c48cbbeb6573e00f89f3b601e1e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/Superseded-overlay/Plugins/GameFeatures/ShooterCore/Content/Bot/EQS/Generator/EQS_GetAllEnemy.uasset",
+      "sha256": "4f69006d3a600a0a4ccf28a5db740c0eac7338dde2458c494e95fd816e444d8d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/superseded-owned-revision.json",
+      "sha256": "35c4a5ec23b4bb805a1ea63cfa864e83a9580b9fd1c8b44d97b89187f3a8bc14"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/Superseded-stage/Content/UEPMixins/DA_ShooterEQSEnemiesMixin.uasset",
+      "sha256": "18a54a9d4280fd562e7bcad8bccaa9bf5cbbed50fa917ee229bec75d5e1058a7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/Superseded-stage/Content/UEPMixins/DA_ShooterEQSEnemyMixin.uasset",
+      "sha256": "7db1790dadc49f8e0cea88df0ad6917311da378a99f91cafc892103c0a6f5b6f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/Superseded-stage/Content/UEPMixins/DA_ShooterEQSPointsMixin.uasset",
+      "sha256": "42eb37a78058b1b86452a73f8f922b2a33e87ba8561717b553df1adc33dbe75a"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/Superseded-stage/Content/UEPMixins/DA_ShooterEQSWeaponMixin.uasset",
+      "sha256": "1e18f12514ce5f64a6c0283c2962c81ff5582809fa8954ddd14285fddc1d4970"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/Superseded-stage/Content/UEPValidation/EQS_ShooterEnemiesProbe.uasset",
+      "sha256": "1fef0ddc7c3c10068667fb3db22565e31599ea29383dc6c7288492558862c560"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/Superseded-stage/Content/UEPValidation/EQS_ShooterEnemyProbe.uasset",
+      "sha256": "ebaec666ead0ee2ffa8b1ccbd814c8ecd512d96b8e883e9f4ea24eaee2860611"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/Superseded-stage/Content/UEPValidation/EQS_ShooterPointsProbe.uasset",
+      "sha256": "0f3a2f654e1bc240217fd051e87f8a5f578d7c0c58ea3e82f0376f9e8304fd4e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/Superseded-stage/Content/UEPValidation/EQS_ShooterWeaponProbe.uasset",
+      "sha256": "39e36965e48f154b8d4f6249b8d88848c22532b270269ae3b6036b94e1933649"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/Superseded-stage/Plugins/GameFeatures/ShooterCore/Content/Bot/EQS/Context/EQS_Context_ControlPoints.uasset",
+      "sha256": "1fc52fb411a994c2b6946323eae7947babb0ed2028f95a6193dfe26ba64ca0b4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/Superseded-stage/Plugins/GameFeatures/ShooterCore/Content/Bot/EQS/Context/EQS_Context_TargetEnemy.uasset",
+      "sha256": "73230c1fde74927c5f67c9f63d9f9926a47fca4b95fdd5ab8fc7c31c8c906a09"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/Superseded-stage/Plugins/GameFeatures/ShooterCore/Content/Bot/EQS/Context/EQS_Context_WeaponCheck.uasset",
+      "sha256": "baf2bc6ef7314f03f62bff299f0817e92bc21c48cbbeb6573e00f89f3b601e1e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets02Const/Superseded-stage/Plugins/GameFeatures/ShooterCore/Content/Bot/EQS/Generator/EQS_GetAllEnemy.uasset",
+      "sha256": "4f69006d3a600a0a4ccf28a5db740c0eac7338dde2458c494e95fd816e444d8d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets03OptionalLocation/assets-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets03OptionalLocation/assets-stdout.log",
+      "sha256": "f040c6034574dccadab72dbaa91e485096b93e1f14aa5ff456f38489087fd146"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets03OptionalLocation/assets.json",
+      "sha256": "f7755c13ca86bd7eccc3759e0749da7ad807b218a958083d350ad65c967637f2"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets03OptionalLocation/assets.log",
+      "sha256": "19eab52bce37df4554bc2871bf20aa805146695301407e2b43091203bc937362"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets03OptionalLocation/dash-enemies-eqs-after-cdo.t3d",
+      "sha256": "eefde747e85535dec45239b0e14dec4d2d6aa212030f40e6d3754640bd6ed306"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets03OptionalLocation/dash-enemies-eqs-before-cdo.t3d",
+      "sha256": "ec37e6c8cff9bf098a2a9a6f308332a6be6826bfac8e21901c715e06999a6cbc"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets03OptionalLocation/dash-enemy-eqs-after-cdo.t3d",
+      "sha256": "1b81a2c8f93651a8ae9499c488a5f5497cb72a18382d4c4e1726905517f36dde"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets03OptionalLocation/dash-enemy-eqs-before-cdo.t3d",
+      "sha256": "de2736ee546acfd10d3688524a7f3d5f140e57e167a5c82fc966688383aabaac"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets03OptionalLocation/dash-points-eqs-after-cdo.t3d",
+      "sha256": "358ccef082c04bb0c393b7af0afde8ae616982931e80dae3f561578ef9e2a4f4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets03OptionalLocation/dash-points-eqs-before-cdo.t3d",
+      "sha256": "aaa1abd2ed31f89c17f9f5e343c538a3a166b74f4d39d149956757a1063a8174"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets03OptionalLocation/dash-weapon-eqs-after-cdo.t3d",
+      "sha256": "13a062586ee7577280673e64dd6ebcadd845f2d39d37e85674af607a79b35ebf"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets03OptionalLocation/dash-weapon-eqs-before-cdo.t3d",
+      "sha256": "a2527010e66241b0e9ab9e8a4b65fd715d7a3f04160cefa6b10a0cf3c659b96d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets03OptionalLocation/PreviousAssets/before.uasset",
+      "sha256": "82ae51b62a9fb095b8943c2e0a3d36553b024a12341251a9880b99d327b66300"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets03OptionalLocation/PreviousAssets/EQS_Context_TargetEnemy.uasset",
+      "sha256": "422a9b4463623db0f492013c7a56c64c184366dd4e188a22c2d842c3e90ffd1f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets03OptionalLocation/PreviousAssets/EQS_Context_WeaponCheck.uasset",
+      "sha256": "c860402fd1ba823d9974e005defe0e5e8e7e9556f7146764b6009844cfd9c5c6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets03OptionalLocation/PreviousAssets/EQS_GetAllEnemy.uasset",
+      "sha256": "24f294830e1717dfc3cd800215bfcf96c84401354a4788e025057d98a44e88e3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSAssets03OptionalLocation/summary.json",
+      "sha256": "1f0eaa8f7b758e9a880c6e5eff9fdbede14d717786e87846e98a5cdeb19dba2b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential01FallbackTDM/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential01FallbackTDM/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential01FallbackTDM/jump.json",
+      "sha256": "99a6886e636a05b55eeb762ee2ac4217660f98f80fd906363f615058088af90c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential01FallbackTDM/jump.log",
+      "sha256": "b1e6b47e10980eb7af55d340ee9c2f3cbbcc9718a209dcb5d15f118166db50e0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential01FallbackTDM/source/Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/shooter_eqs_contract.py",
+      "sha256": "bb4abe751a449ba4714010edd341c9ac1598a337c49c2731f601b7fa3fe0e12b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential01FallbackTDM/source/Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/shooter_eqs_mixin.py",
+      "sha256": "1f41fb34f686f24db3861cc44622624f0b198a0c69d1be4739919393ab69aff5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential01FallbackTDM/source/Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/shooter_eqs_validation.py",
+      "sha256": "462c2f2f81c59f3e8747e93bcdfa775da9be25410294eb5212b465140b409ba4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential01FallbackTDM/source/Demos/UEPLyraIntegration/Tools/generate_shooter_eqs_assets.py",
+      "sha256": "2fe1d95bd8127dd7a5ac7c2a7fde07352fbf1df3ad815db4e0607b8b07e46da6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential01FallbackTDM/source/hashes.json",
+      "sha256": "4ac68365681657a84eda2ddc70f8c94388f3ebe247f0bc69dfe45f8cc1a9c8b0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential01FallbackTDM/source/Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "f195a9b03a672e21707f6adc1e72157571d779b858e503dee2cff3e13b512e71"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential01FallbackTDM/source/Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "3e1f3ccaeab20bef7c8da4bcfd95139433f273b82b8bd4172bff4745e8e8feb4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential01FallbackTDM/summary.json",
+      "sha256": "e884f26ccdc604dbba7f565882c3bd7f80033fe760d5282df1c4aba8f3e4ef7c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential02OptionalFallbackTDM/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential02OptionalFallbackTDM/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential02OptionalFallbackTDM/jump.json",
+      "sha256": "de20d3884d90cbe2835843b26142a1428202b99b6d7aaffa6e056b70536b6a27"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential02OptionalFallbackTDM/jump.log",
+      "sha256": "41fa61132ed23cc1933babac7a1f69b9abe1301f44e3544888bab206add83c36"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential02OptionalFallbackTDM/report-gate-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential02OptionalFallbackTDM/report-gate-stdout.log",
+      "sha256": "8daee42a210fa497309a04aff078049af4cfc13622b99d86185da2675df01fc3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential02OptionalFallbackTDM/summary.json",
+      "sha256": "c87d24218534d7ea9f2a50b29a0762ab965223b6eecd8f89ee8896adce041ed9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential03PythonTDM/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential03PythonTDM/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential03PythonTDM/jump.json",
+      "sha256": "35c54e94a87ddae878ff12c360ea9c247cedbe72a9ba06af485d376d85ec158e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential03PythonTDM/jump.log",
+      "sha256": "54f928b663539c236b1f86956594a4dca68d40ab48c9cae32f239e620cd71855"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential03PythonTDM/report-gate-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential03PythonTDM/report-gate-stdout.log",
+      "sha256": "a7e42c28308e3e1200366eb511c07c5ddf6eb3ab075a0f440c7eaa8845be2954"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential03PythonTDM/summary.json",
+      "sha256": "356c8ecc670a8cc971b3bf05681bd084d92231b0fa570dee0a9703867bac735d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential04FallbackCP/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential04FallbackCP/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential04FallbackCP/jump.json",
+      "sha256": "ffeae426a522205134e144f47e9b7db0d9cb2ce1213451edbbcf44fbce0c97e4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential04FallbackCP/jump.log",
+      "sha256": "7e8ec61a31afb29bd3d91236610c623d74fd1ade2445a3b68bc39476c6160d3f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential04FallbackCP/report-gate-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential04FallbackCP/report-gate-stdout.log",
+      "sha256": "5f54ac077237938255c9d2cf4ccbc53e9877b1edb3d5657612d4ffd64e6ccecc"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential04FallbackCP/summary.json",
+      "sha256": "6da4da9b61f896b31f5e777f00127a3d2ce6f1e2291d55aca0007d8dc8e54c17"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential05PythonCP/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential05PythonCP/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential05PythonCP/jump.json",
+      "sha256": "cebe774194a8000199e8fa6316f2c27dd8b3c61cd0c58d07ee7020208b94a3b6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential05PythonCP/jump.log",
+      "sha256": "98f0cbdd5318f9f052f97a7cbeba7c9b5506562c77a0b9725d1e4a8efe056e06"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential05PythonCP/report-gate-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential05PythonCP/report-gate-stdout.log",
+      "sha256": "f43f4dde78b8c421f90d83aedebf3921517c6aa15c81c3a0b3c9d41abacd0113"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential05PythonCP/summary.json",
+      "sha256": "aa730114946efc105dc0b1ebe74574f5c57e88ae6158a97915d2ce12bf608503"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSHost01.json",
+      "sha256": "743e77adb177d0bf78e4329677e2df8b406c3528c078e49040dfff332e49cd46"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSHost02OptionalLocation.json",
+      "sha256": "743e77adb177d0bf78e4329677e2df8b406c3528c078e49040dfff332e49cd46"
+    }
+  ],
+  "preserved_failed_authoring_runs": [
+    "EQSAssets01"
+  ],
+  "preserved_superseded_authoring_revisions": [
+    "EQSAssets02Const"
+  ],
+  "preserved_failed_native_runs": [
+    "EQSDifferential01FallbackTDM"
+  ],
+  "regression_policy": {
+    "mode": "incremental",
+    "feature_only_tests": 19,
+    "full_regression_executed": false,
+    "isolated_index_result": ".build/CommitVerification/20261020-shooter-eqs/Index01/summary.json",
+    "index_result_is_external_to_avoid_changing_verified_tree": true
+  },
+  "scope_limits": {
+    "full_original_candidates": 246,
+    "all_original_asset_paths_preserved": true,
+    "native_query_scheduler_preserved": true,
+    "actual_native_asynchronous_queries": 64,
+    "optional_location_out_param_semantics_tested": true,
+    "context_array_order_unit_tested": true,
+    "context_array_order_native_direct_tested": false,
+    "explicit_native_dead_actor_variant_tested": false,
+    "explicit_native_ability_spawner_variant_tested": false,
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "migration_complete": false
+  }
+}
