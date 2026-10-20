@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "batch": "153-startup-login",
+  "scope": "Bounded startup/login native NULL-backend local-controller validity, secondary join/leave, primary initialization, native callback retention and unique remount binding in both Profiles. Only fixture-owned secondary Pawns are cleaned. Online authentication, physical input, frontend confirmed logout/session reset/map travel, pixels, network and full version remain open. Default incremental staged host regression only.",
+  "recorded_utc": "2026-10-20T11:44:44.3777844Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "316cf90df62ea3b6f41b26be6aff949898c862f9",
+  "examples_parent_commit": "f636d61b165a29cc0c3a29e8acc204b3155fb1c3",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-startup-login/Audit01",
+      "summary_sha256": "975BAA09DE807C59E64E3D825B782F8258D07B18BDAB821F7C0A7A19A327E990",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 849,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "audit.json",
+          "sha256": "DA4B28DDAD6321A27F89510E9D0B0397F1E0263F205E15CE4017208591E3A870"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-startup-login/Assets03IndependentMemberReferences",
+      "summary_sha256": "9228BE2A43BDA0D402547E80E98211F73F9DC67F858089FE4948AFC7F8D2B7FE",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2138,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-startup-login/Lifecycle05SecondarySlateUser",
+      "summary_sha256": "703C3C08FD81F324F21B76FAF61941A82E24F8AFD074303619BAE3F778B3B25C",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2916,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "2905397A1F4FBF4A542F590A9A93ACAB372B66445B1C26EA7958A174E5BAA318"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup_login_mixin.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup_login_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "432B34D9B10D34E95BDB5E9B6A9B7EE87AF1EC5FE92DE04981A4E5AE483F8EB6"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup_login_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup_login_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "04CD5729CB148FD85C21A9A2F243AD1EB43A2417D10BCBF853F1CF10F95D2091"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup_login_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup_login_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "E8F173D8321EE74658F521E4A7DCE49962EF6855C3E1E36B190CB9047351F3F8"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "D82EE782863A294C4417AF13FB4F479391234CE5643247B5AC5C23191D731A46"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/audit_startup_login.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_startup_login.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "67792C5733359AE57632EC51014A370A110C34BB7969B6B56BAAB7D887EBE090"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_startup_login_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_startup_login_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "31F953B811F3D5B4425355AC2E19AE524CC5DE4EE6A7FC7CB009201FCD5BC7E2"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "1FCDE8608C2914F994F143E79498E5F92A2D044A9B0B99043412BDCBC19FAC16"
+    },
+    {
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "EB3717AD44F69E1B228BF8241C76CE765EA39733889F4E8D66447A081A988270"
+    },
+    {
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "90412114A4FDC8D6B01F86208DF00DA6A989EEE98230043A15847AA1BEC6F99C"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261020-startup-login/Host06SecondarySlateUser.json",
+    "result": {
+      "schema_version": 2,
+      "status": "passed",
+      "tests_run": 22,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "selection": {
+        "mode": "incremental",
+        "status": "ready",
+        "changed_files": [],
+        "selected_test_files": [
+          "Demos/UEPLyraIntegration/Tests/test_startup_login_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_startup_login_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_startup_login_mixin.py"
+        ],
+        "affected_files": [],
+        "selection_reasons": {
+          "Demos/UEPLyraIntegration/Tests/test_startup_login_contract.py": [
+            "explicit pattern test_startup_login_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_startup_login_fixture.py": [
+            "explicit pattern test_startup_login_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_startup_login_mixin.py": [
+            "explicit pattern test_startup_login_*.py"
+          ]
+        },
+        "unmapped_changed_files": [],
+        "unparsed_unaffected_files": [],
+        "dependency_analysis": "local imports including inheritance, literal module names and file references; dynamic dependencies require explicit patterns/native lanes",
+        "full_regression_requested": false
+      },
+      "failed_cases": []
+    },
+    "sha256": "D836E6DF0ED78C411569BE7BD9CA88832F0B1FFD1A8E9C2D747E5868711BE79E"
+  }
+}

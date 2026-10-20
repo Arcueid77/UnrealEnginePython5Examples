@@ -23,6 +23,71 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch153 (2026-10-20),startup and local user login:**
+Startup/login state,focus,listening selection,join/leave/refresh/initialization
+policy uses Python. Original35/58 nodes,full CDOs/trees/public parameters/const/
+access/net flags,node GUIDs and graph partitions remain.7 methods per Profile,
+39/45 transport plus5 interfaces each;zero new business nodes.
+Native FKey arrays/local defaults/CommonUserInitializeParams/delegate payloads
+and original localized Join/Leave text nodes remain opaque native IO. Helper
+local variable scopes change explicitly;independent MemberReference copies keep
+original variable names/GUIDs. Only compiler internal FUNC_HasDefaults may move
+for listener/refresh frame locals;all public ABI fields remain exact,with records.
+Login state still means local-controller validity,not account privilege status.
+Startup success still ignores UserInfo index;secondary success closes a waiting
+startup too. Original lack of Destruct delegate unbinding remains;no silent fix.
+Assets03IndependentMemberReferences and Lifecycle05SecondarySlateUser pass native
+exit0/independent gate0/strict logs/ordered Goodbye Python/log close. Both Profiles
+verify actual Construct/focus/listening flags,controller indices-1/0/1/7 and native
+localized owner/text/listen state. Actual secondary login-button clicks initialize
+and create player1,then log out/destroy only that owned secondary controller.
+Native CommonUser broadcasts complete without replay. Rooted removed startup
+and login widgets retain original callbacks;removed login can rearm its original
+listener on refresh. Actual remount adds no duplicate binding;two primary local-
+play completions deliver once to each owned widget.6 native completions total.
+Only the NULL backend is requested and confirmed in native logs;privilege stays
+CanPlay. No online-authentication claim. Fixture cleanup stops its own listeners,
+removes the secondary player and fixture-owned retained secondary Pawns,then restores roots/Profile selectors/CDO PlayerNumber/
+input;original controller and player health remain unchanged. Login widgets are
+mounted beneath fixture-owned activatable holders with matching local owners;
+all holder roots and screen mounts are released. An inert synthetic character
+event on the secondary empty focus path initializes its native Slate user via
+the existing SDK. This process-owned Slate user lasts until normal shutdown;
+no physical key/button action is claimed.
+22 focused host checks and6 invalid lanes pass. Exact staged-index verification
+uses the default incremental selector at
+.build/CommitVerification/20261020-startup-login/Index01;no full regression.
+Preserve Assets01/source (new helper lacks inferred array pin),Assets02TypedLocalArray/
+source+2 partial Stage outputs (live MemberReference views aliased helper scopes;
+refresh frame HasDefaults relocated),and Lifecycle01/source (NULL provider name
+case differed),and Lifecycle02NullNameCase/source (local-player removal retained
+fixture-owned secondary Pawns;the exact health-inventory cleanup check rejected
+the run). Only those owned secondary Pawns receive explicit fixture cleanup;
+production logout and all original health/actor checks remain intact. Also preserve
+Lifecycle03OwnedSecondaryPawn/source:the log rejected standalone user widgets
+without activatable parents. Fixture-owned holders restore valid native action
+routing without muting that ensure. Preserve Lifecycle04ActivatableHolder/source
+too:the secondary native shooter HUD required an actual Slate user. The inert
+character-event setup supplies that existing input-context path without Cpp edits
+or ignored log errors. Fresh native struct copies and a case-insensitive exact provider
+identity check resolve those failures;failed proof/output is retained.
+Confirmed frontend logout/session destruction/reset/startup return and prior
+game-menu confirmed frontend map travel remain OPEN,as do physical input,pixels,
+online authentication,network,package/version,prior FText audit and remaining
+original246-candidate requirements. No Engine/general Cpp/official edits,build,
+cook,push,tag or release publication.
+
+Batch153 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261020-startup-login/Audit01/summary.json` 975baa09de807c59e64e3d825b782f8258d07b18bdab821f7c0a7a19a327e990
+`20261020-startup-login/Assets03IndependentMemberReferences/summary.json` 9228be2a43bda0d402547e80e98211f73f9dc67f858089fe4948afc7f8d2b7fe
+`20261020-startup-login/Assets03IndependentMemberReferences/assets.json` 72d39b0a4070008975edd3d482133b8032689e9203de5e4377cf825cae9eeb5d
+`20261020-startup-login/Assets03IndependentMemberReferences/startup-public-signatures.json` d9eb0fd91d68028bb757a4f21f7f5b386c1f98d0633e926eb3a6971ff668da7b
+`20261020-startup-login/Assets03IndependentMemberReferences/login-public-signatures.json` a3e0f771d9948139df0324351968d6ca00f00bde5e98996f60552a5d13eb067a
+`20261020-startup-login/Lifecycle05SecondarySlateUser/summary.json` 703c3c08fd81f324f21b76faf61941a82e24f8afd074303619bae3f778b3b25c
+`20261020-startup-login/Lifecycle05SecondarySlateUser/jump.json` 2905397a1f4fbf4a542f590a9a93acab372b66445b1c26ea7958a174e5baa318
+`20261020-startup-login/Host06SecondarySlateUser.json` d836e6df0ed78c411569be7bd9ca88832f0b1ffd1a8e9c2d747e5868711be79e
+`20261020-startup-login/guards.json` f91744c7c9e3cbec6b59a46e962ca03efe5b46f4460c5ebf8dc45836f6b39d30
+
 **Completed bounded batch152 (2026-10-20),frontend main menu:**
 W_LyraFrontEnd uses Python focus/activation/menu/prompt result/logout-success
 policies. Original34 nodes,full CDO/tree/animation/public signatures/const focus/

@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 154,
+    "bounded_evidence_ledgers": 155,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1424,6 +1424,92 @@
     "full_library_acceptance": false,
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
+  },
+  "startup_login_pilot": {
+    "version": "0.13.0",
+    "status": "bounded_startup_login_python_policy_native_local_secondary_join_leave_primary_initialize_and_removed_remount_lifetime_verified_online_auth_and_frontend_logout_reset_open",
+    "evidence_ledger": "153-startup-login-native-local-player-and-callback-lifetime.json",
+    "owner": "uep_lyra_hud.startup_login_mixin",
+    "original_read_only_audit": "20261020-startup-login/Audit01",
+    "native_asset_authoring": "20261020-startup-login/Assets03IndependentMemberReferences",
+    "native_runtime_runs": [
+      "20261020-startup-login/Lifecycle05SecondarySlateUser"
+    ],
+    "widgets": {
+      "startup": {
+        "original_graph_nodes": 35,
+        "transport_nodes": 39,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 7,
+          "BlueprintFallback": 7
+        },
+        "native_key_local_specs": [
+          "LocalVariables(0)=(VarName=\"PrimaryLoginKeys\",VarGuid=AED0E1EE45162419E7C6A89E434A17C3,VarType=(PinCategory=\"struct\",PinSubCategoryObject=\"/Script/CoreUObject.ScriptStruct'/Script/InputCore.Key'\",ContainerType=Array),FriendlyName=\"Primary Login Keys\",Category=NSLOCTEXT(\"KismetSchema\", \"Default\", \"Default\"),PropertyFlags=5,DefaultValue=\"(SpaceBar,Enter,Gamepad_Special_Right,Gamepad_FaceButton_Bottom)\")",
+          "LocalVariables(1)=(VarName=\"EmptyKeys\",VarGuid=E36ADD13433363E59BC765BD0D005DB8,VarType=(PinCategory=\"struct\",PinSubCategoryObject=\"/Script/CoreUObject.ScriptStruct'/Script/InputCore.Key'\",ContainerType=Array),FriendlyName=\"Empty Keys\",Category=NSLOCTEXT(\"KismetSchema\", \"Default\", \"Default\"),PropertyFlags=5)"
+        ]
+      },
+      "login": {
+        "original_graph_nodes": 58,
+        "transport_nodes": 45,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 7,
+          "BlueprintFallback": 7
+        },
+        "native_key_local_specs": [
+          "LocalVariables(0)=(VarName=\"SecondaryLoginKeys\",VarGuid=41205EB1465E016DDCB0328FF754321E,VarType=(PinCategory=\"struct\",PinSubCategoryObject=\"/Script/CoreUObject.ScriptStruct'/Script/InputCore.Key'\",ContainerType=Array),FriendlyName=\"Secondary Login Keys\",Category=NSLOCTEXT(\"KismetSchema\", \"Default\", \"Default\"),PropertyFlags=5,DefaultValue=\"(Gamepad_Special_Right)\")",
+          "LocalVariables(1)=(VarName=\"EmptyKeys\",VarGuid=17284CDA449BB608028A7B98FCE5DFD2,VarType=(PinCategory=\"struct\",PinSubCategoryObject=\"/Script/CoreUObject.ScriptStruct'/Script/InputCore.Key'\",ContainerType=Array),FriendlyName=\"Empty Keys\",Category=NSLOCTEXT(\"KismetSchema\", \"Default\", \"Default\"),PropertyFlags=5)"
+        ]
+      }
+    },
+    "new_business_nodes": 0,
+    "original_cdos_trees_public_parameters_const_access_net_flags_guids_and_graph_partitions_preserved": true,
+    "original_key_arrays_local_defaults_and_callback_delegate_name_guid_preserved": true,
+    "native_key_local_variable_scopes_retargeted_to_helpers_with_independent_struct_copies": true,
+    "original_native_localized_join_leave_text_setter_nodes_retained": true,
+    "only_compiler_internal_listener_and_refresh_frame_hasdefaults_may_relocate": true,
+    "original_login_state_checks_controller_validity_not_account_privileges": true,
+    "original_startup_success_callback_ignores_user_index_and_is_preserved": true,
+    "original_no_destruct_initialization_delegate_unbind_added": true,
+    "native_profiles": 2,
+    "native_controller_indices": [
+      -1,
+      0,
+      1,
+      7
+    ],
+    "native_secondary_join_leave_cycles": 2,
+    "natural_user_initialize_callbacks": 6,
+    "native_rooted_removed_callbacks_and_unique_remount_binding_verified": true,
+    "actual_native_default_online_subsystem": "NULL",
+    "requested_native_privilege": "CanPlay",
+    "fixture_secondary_slate_user_created_by_inert_character_event": true,
+    "fixture_slate_user_lifetime": "owned standalone process until normal shutdown",
+    "fixture_owned_secondary_player_removed_and_original_health_preserved": true,
+    "original_profiles_cdo_player_number_and_owned_roots_input_restored": true,
+    "focused_host_checks": 22,
+    "invalid_lane_guards": 6,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261020-startup-login/Index01",
+    "preserved_failed_authoring": [
+      "Assets01",
+      "Assets02TypedLocalArray"
+    ],
+    "preserved_failed_runtime": [
+      "Lifecycle01",
+      "Lifecycle02NullNameCase",
+      "Lifecycle03OwnedSecondaryPawn",
+      "Lifecycle04ActivatableHolder"
+    ],
+    "online_authentication_tested": false,
+    "confirmed_frontend_logout_session_reset_executed": false,
+    "physical_key_or_button_input_tested": false,
+    "pixels_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Exercise actual confirmed frontend logout with an owned native NULL session and prior confirmed frontend map travel; remaining original candidates and network/culture/FText/pixel/package/version gates stay open."
   },
   "frontend_menu_pilot": {
     "version": "0.13.0",
@@ -10126,7 +10212,8 @@
       "method_candidates": 7,
       "business_nodes": 24,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_startup_login_python_policy_native_local_player_initialize_join_leave_and_callback_lifetime_verified_online_auth_open",
+      "evidence_run": "20261020-startup-login/Lifecycle05SecondarySlateUser"
     },
     {
       "path": "/Game/UI/Menu/W_LyraTileButton.W_LyraTileButton",
@@ -10155,7 +10242,8 @@
       "method_candidates": 7,
       "business_nodes": 48,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_startup_login_python_policy_native_local_player_initialize_join_leave_and_callback_lifetime_verified_online_auth_open",
+      "evidence_run": "20261020-startup-login/Lifecycle05SecondarySlateUser"
     },
     {
       "path": "/Game/UI/Menu/W_UserWatermark.W_UserWatermark",

@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPStartupLoginResult=") for argument in arguments):
+        return "uep_lyra_hud.startup_login_validation"
     if any(argument.startswith("-UEPFrontendMenuResult=") for argument in arguments):
         return "uep_lyra_hud.frontend_menu_validation"
     if any(argument.startswith("-UEPMenuLayersResult=") for argument in arguments):
