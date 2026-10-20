@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPSettingsScreensResult=") for argument in arguments):
+        return "uep_lyra_hud.settings_screens_validation"
     if any(argument.startswith("-UEPSettingsEditorsResult=") for argument in arguments):
         return "uep_lyra_hud.settings_editors_validation"
     if any(argument.startswith("-UEPFoundationWidgetsResult=") for argument in arguments):

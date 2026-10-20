@@ -23,6 +23,54 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch148 (2026-10-20),settings screens:**
+Gamma/HDR/settings screen/settings panel use Python presentation/routing policy.
+Original3/7/37/3 nodes/full CDOs/widget trees/animations/public signatures/node
+GUIDs remain.1/2/5/1 methods per Profile,5/8/26/4 transport plus5 interfaces each;
+zero new business nodes. Gamma focus preserves its const contract and self
+return. HDR caches the actual image MID and forwards raw luminance. The screen
+registers five original top-level names in order,chooses hidden state,navigates
+selected tabs and animates its panel. Four original native tab/display-name/
+descriptor/register nodes move intact into an opaque writer;localized FText,
+icon brush/button class and descriptor values do not roundtrip through Python.
+Python selects exact FName-compatible action tags. Original native async nodes,
+soft class/layer/input suspension/AfterPush/interface-message and persistent
+event Setting/Action pins remain. No payload is reconstructed in Python.
+Moving nontrivial descriptor/FText locals changes only RegisterTopLevelTab's
+compiler-derived FUNC_HasDefaults bit0x00800000:209846272->201457664. Exact
+before/after signatures are saved;all parameters,const/access/call/net flags
+and all other functions remain exact. This is explicit native frame storage
+relocation,not a hidden public signature relaxation or dummy local workaround.
+Assets03NativeFrameFlag and Differential01 pass native exit0/independent gate0/
+strict logs/ordered shutdown. Both Profiles verify actual five-tab construction/
+visible order/hidden policy/localized titles,native selection->navigation,const
+Gamma focus,10 raw HDR material values and actual screen/panel animation frames.
+Six original asynchronous modal AfterPush callbacks create SafeZone/Gamma/HDR
+widgets on the native layer. Unknown parent action does not push. Native HDR
+activation's temporary UI-level/nits/separate overrides are actually exercised
+and restored by native deactivation. Done/Apply/Save/Reset are never invoked;
+maximum display-nits setting and settings files stay unchanged. Owned modals,
+widget roots/Profile selectors,settings/CVar state and health restore.
+22 focused host checks and5 invalid lanes pass;exact index checks incremental:
+.build/CommitVerification/20261020-settings-screens/Index01.
+Preserve Assets01/02 source+owned partial Gamma/HDR Stage outputs. Exact signature
+diagnostics identified only the HasDefaults frame bit;layouts/animations/CDOs
+were unchanged beyond expected mixin fields. No evidence overwritten.
+Physical settings input,pixels,culture,network,package/version,prior FText audit
+and every other original246-candidate requirement remain open. Native settings
+application,reset/calibration input implementation and interface code remain Cpp.
+No Engine/general Cpp/official edits,build,cook,push,tag or release publication.
+
+Batch148 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261020-settings-screens/Audit01/summary.json` fb77b118b60cb003f52fec41b15eeb1c51fff10b074fcd4d7100b4462155f45b
+`20261020-settings-screens/Assets03NativeFrameFlag/summary.json` b2dd869fb925ccec2c18ebafceb0d91a77a8f4268f793b5b7f72f9f8e21e08ee
+`20261020-settings-screens/Assets03NativeFrameFlag/assets.json` f56e99785629534322aa8d6fb0c5652b92e757460df8a7567cb43f8e1da88830
+`20261020-settings-screens/Assets03NativeFrameFlag/screen-signatures.json` 8709851fe6f54d50febc9fdab37ab0ac48146dbbb36798a1fd36bd731c5a83d4
+`20261020-settings-screens/Differential01/summary.json` 6b016c52c4da413250506119b5d634c5d9c1f76a90eee9675374149f4e324d07
+`20261020-settings-screens/Differential01/jump.json` 5cb247be3cdd962c11935565f0b735f561e823fec5dff0477fdde08557fb844f
+`20261020-settings-screens/Host01.json` f6582f51e82fae510d7e1deea79cd1a2e68727b4a128e8f8382d6dab307a1935
+`20261020-settings-screens/guards.json` b97bef41cfaabf74ddfb837a86f6d8251041f306681e8d312af033beb8e21d5e
+
 **Completed bounded batch147 (2026-10-20),settings editor family:**
 Background/action/discrete/keyboard/missing/scalar/navigation/rotator/enum detail/
 enum extension presentation policies use Python. Original12/20/14/14/8/24/17/

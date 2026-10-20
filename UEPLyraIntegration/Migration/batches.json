@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 149,
+    "bounded_evidence_ledgers": 150,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1235,6 +1235,89 @@
     "full_library_acceptance": false,
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
+  },
+  "settings_screens_pilot": {
+    "version": "0.13.0",
+    "status": "bounded_settings_screens_python_tabs_navigation_activation_native_async_modals_and_hdr_restore_verified",
+    "evidence_ledger": "148-settings-screens-native-tabs-modal-and-calibration.json",
+    "owner": "uep_lyra_hud.settings_screens_mixin",
+    "original_read_only_audit": "20261020-settings-screens/Audit01",
+    "native_asset_authoring": "20261020-settings-screens/Assets03NativeFrameFlag",
+    "native_runtime_runs": [
+      "20261020-settings-screens/Differential01"
+    ],
+    "widgets": {
+      "gamma": {
+        "original_graph_nodes": 3,
+        "transport_nodes": 5,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 1,
+          "BlueprintFallback": 1
+        }
+      },
+      "hdr": {
+        "original_graph_nodes": 7,
+        "transport_nodes": 8,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 2,
+          "BlueprintFallback": 2
+        }
+      },
+      "screen": {
+        "original_graph_nodes": 37,
+        "transport_nodes": 26,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 5,
+          "BlueprintFallback": 5
+        }
+      },
+      "panel": {
+        "original_graph_nodes": 3,
+        "transport_nodes": 4,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 1,
+          "BlueprintFallback": 1
+        }
+      }
+    },
+    "new_business_nodes": 0,
+    "original_cdos_widget_trees_animations_public_signatures_and_node_guids_preserved": true,
+    "register_tab_only_internal_func_hasdefaults_flag_changes_with_moved_local_frame": true,
+    "internal_frame_flag_before": 209846272,
+    "internal_frame_flag_after": 201457664,
+    "all_public_parameters_const_access_call_net_and_other_function_flags_unchanged": true,
+    "four_original_native_tab_descriptor_display_name_brush_and_register_nodes_moved_intact": true,
+    "original_async_soft_classes_suspend_input_afterpush_and_interface_payload_pins_retained": true,
+    "python_exact_case_insensitive_tag_route_selects_original_native_alias": true,
+    "original_five_tab_order_hidden_policy_and_localized_titles_verified": true,
+    "native_profile_trials": 2,
+    "raw_hdr_material_cases": 10,
+    "native_async_modal_afterpush_callbacks": 6,
+    "actual_gamma_const_focus_and_screen_panel_activation_animations_verified": true,
+    "actual_native_tab_selection_routes_navigation": true,
+    "temporary_original_native_hdr_activation_overrides_exercised_then_restored": true,
+    "done_apply_save_or_reset_invoked": false,
+    "max_display_nits_setting_written": false,
+    "original_profile_selectors_roots_settings_hdr_cvar_config_and_health_restored_or_unchanged": true,
+    "focused_host_checks": 22,
+    "invalid_lane_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261020-settings-screens/Index01",
+    "preserved_failed_authoring": [
+      "Assets01",
+      "Assets02SignatureDiagnostics"
+    ],
+    "physical_settings_input_tested": false,
+    "culture_switch_tested": false,
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Remaining original0.13/0.14 replacements and prior FText audit/diagnostic/owner/network/culture/pixel/package/version gates remain open;native settings application/calibration code remains native."
   },
   "settings_editors_pilot": {
     "version": "0.13.0",
@@ -8242,7 +8325,8 @@
       "method_candidates": 1,
       "business_nodes": 1,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_settings_screen_python_policy_native_tabs_focus_async_modal_and_calibration_restore_verified",
+      "evidence_run": "20261020-settings-screens/Differential01"
     },
     {
       "path": "/Game/UI/Settings/Screens/HDRCalibration/W_HDRCalibrationEditor.W_HDRCalibrationEditor",
@@ -8251,7 +8335,8 @@
       "method_candidates": 2,
       "business_nodes": 5,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_settings_screen_python_policy_native_tabs_focus_async_modal_and_calibration_restore_verified",
+      "evidence_run": "20261020-settings-screens/Differential01"
     },
     {
       "path": "/Game/UI/Settings/W_LyraSettingScreen.W_LyraSettingScreen",
@@ -8260,7 +8345,8 @@
       "method_candidates": 5,
       "business_nodes": 28,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_settings_screen_python_policy_native_tabs_focus_async_modal_and_calibration_restore_verified",
+      "evidence_run": "20261020-settings-screens/Differential01"
     },
     {
       "path": "/Game/UI/Settings/W_SettingsPanel.W_SettingsPanel",
@@ -8269,7 +8355,8 @@
       "method_candidates": 1,
       "business_nodes": 2,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_settings_screen_python_policy_native_tabs_focus_async_modal_and_calibration_restore_verified",
+      "evidence_run": "20261020-settings-screens/Differential01"
     },
     {
       "path": "/Game/UI/W_OverallUILayout.W_OverallUILayout",

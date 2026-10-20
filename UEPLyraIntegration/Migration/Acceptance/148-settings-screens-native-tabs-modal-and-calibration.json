@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "batch": "148-settings-screens-native-tabs-modal-and-calibration",
+  "scope": "Four settings screens Gamma/HDR/main/panel Python policies;original3/7/37/3 nodes/CDOs/widgettrees/animations/public parameters/const/access/call/net/GUIDs preserved.1/2/5/1 methods perProfile,5/8/26/4 transport+5 interfaces;zero new business. Four original opaque tab/display-name/brush/register nodes moved intact. Only compiler-derived RegisterTopLevelTab FUNC_HasDefaults frame bit changes209846272->201457664,exact before/after signatures saved;all other flags/parameters/functions exact. Original native async soft class/layer/input suspension/AfterPush/interface payload paths retained;Python selects exact FName case-insensitive tag aliases. BothProfiles actualfive-tab order/hidden/localizedtitles/native selection navigation/Gamma constself focus/10 rawHDR material cases/screenpanel animationframes/6 actual async SafeZone-Gamma-HDR AfterPush widgets. Original nativeHDR activation temporary UIlevel/nits/separate overrides exercised and restored,maximumdisplaynits/config/roots/selectors/health unchanged;noDone/Apply/Save/Reset/no completion/interface replay. Native0/gate0/strictlogs/shutdown;22 focused/5invalidlanes;exact staged incremental follows. Preserve01/02signature diagnostics+owned partial outputs. Physical settings/culture/pixels/network/package/version/full246/priorFText audit remain open. No Cpp/official edits/build/cook/push/tag/publication.",
+  "recorded_utc": "2026-10-20T09:14:20.4642893Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "f2b17c0ba5b6414aaf2f70cdf1c1d45341a28829",
+  "examples_parent_commit": "166636e54e005fa794c11fd68582cdd1dfd3b924",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-settings-screens/Audit01",
+      "summary_sha256": "FB77B118B60CB003F52FEC41B15EEB1C51FFF10B074FCD4D7100B4462155F45B",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 853,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "94707DC39CE43CB14537E8E4673D1FF5E6697A4D7101C28767AC5B5C7CB96133",
+          "file": "audit.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-settings-screens/Assets03NativeFrameFlag",
+      "summary_sha256": "B2DD869FB925CCEC2C18EBAFCEB0D91A77A8F4268F793B5B7F72F9F8E21E08EE",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2111,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-settings-screens/Differential01",
+      "summary_sha256": "6B016C52C4DA413250506119B5D634C5D9C1F76A90EEE9675374149F4E324D07",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2933,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "5CB247BE3CDD962C11935565F0B735F561E823FEC5DFF0477FDDE08557FB844F",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_settings_screens.py",
+      "path": "Demos/UEPLyraIntegration/Tools/audit_settings_screens.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "E9341BEBB0CAFD7E29D693D0EB303497483C6BB8655E57DB1791F9C54237B4D0"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_settings_screen_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_settings_screen_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "A9762B8B12DE1F88259CE21A7DF0D0139A68FCDC44ACF0C6477FB37B6B1AB905"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "136351ED3B3B96B4810E871071F786422BB65E99EEB1251C92C36D86DB8C1AEF"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "41700C38414127FBB66C9FA3165D84FF924F654577C8980E9EFC141CE1205336"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/settings_screens_mixin.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/settings_screens_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "362CBCAA03BA44D9801A9AAC00E5C17905AD58230B0016645FD865C44B2EEAD4"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/settings_screens_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/settings_screens_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "FA1A048400E7087A8CB64CBBD437E6862B02B5FD0C74709964D34C07A5F931B2"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/settings_screens_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/settings_screens_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "83F0704F10AB8CAE5A3289928D58D782C1D8A3C3C8B81B422B77F60D0CB2CD57"
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "416D8FB47A97EF7EC14C09080777CC0863CD94255EA69AD9955E0A554D0908B0"
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "8D65950F38779D05329B2D2FA60D8EDB4F89B6D430DC04B96534153C7F270465"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261020-settings-screens/Host01.json",
+    "result": {
+      "schema_version": 2,
+      "status": "passed",
+      "tests_run": 22,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "selection": {
+        "mode": "incremental",
+        "status": "ready",
+        "changed_files": [],
+        "selected_test_files": [
+          "Demos/UEPLyraIntegration/Tests/test_settings_screens_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_settings_screens_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_settings_screens_mixin.py"
+        ],
+        "affected_files": [],
+        "selection_reasons": {
+          "Demos/UEPLyraIntegration/Tests/test_settings_screens_contract.py": [
+            "explicit pattern test_settings_screens_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_settings_screens_fixture.py": [
+            "explicit pattern test_settings_screens_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_settings_screens_mixin.py": [
+            "explicit pattern test_settings_screens_*.py"
+          ]
+        },
+        "unmapped_changed_files": [],
+        "unparsed_unaffected_files": [],
+        "dependency_analysis": "local imports including inheritance, literal module names and file references; dynamic dependencies require explicit patterns/native lanes",
+        "full_regression_requested": false
+      },
+      "failed_cases": []
+    },
+    "sha256": "F6582F51E82FAE510D7E1DEEA79CD1A2E68727B4A128E8F8382D6DAB307A1935"
+  }
+}
