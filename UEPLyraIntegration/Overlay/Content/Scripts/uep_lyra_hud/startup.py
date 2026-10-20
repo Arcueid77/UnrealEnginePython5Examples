@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(a.startswith("-UEPCollectCueResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):
+        return "uep_lyra_weapons.collect_cue_validation"
     if any(a.startswith("-UEPExplorerActionsResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):
         return "uep_lyra_abilities.explorer_actions_validation"
     if any(a.startswith("-UEPExplorerInteractResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):

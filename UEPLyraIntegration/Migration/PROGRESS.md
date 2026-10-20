@@ -23,6 +23,60 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch181 (2026-10-21),collect Cue spline/Timeline business:**
+PlayPickup and native Timeline Update/Finished now join the3 accepted lifecycle
+methods in complete6-method Profiles. Original OnExecute forwarding and empty
+construction remain native. Python assigns Pawn from Parameters.Instigator and
+pickup from EffectCauser,then uses original target collision/lifespan nodes.
+Valid Pawn setup retains the original native AddSplineComponent template and
+all defaults. World points are pickup actor location;colliding Pawn bounds
+origin plus Pawn extent Z plus0.6*noncolliding pickup extent Z;and Pawn actor
+location when socket=None or the first skeletal mesh socket location otherwise.
+KeepWorld attachment still uses socket=None independently of endpoint selection.
+The original native Divide_DoubleDouble sets Timeline rate1/SuckUpAnimTime;the
+native clock/curves remain untouched. Original Timeline length is5 seconds,
+so effective playback duration is5*SuckUpAnimTime. Update uses native spline
+length and curve distance,moves root without sweep/teleport,then writes absolute
+uniform scale from ItemScale rather than multiplying initial scale. Finish
+hides Cue,uses the accepted pool deadline and keeps original self lifespan3.
+The invalid Pawn branch clears self lifespan and prints the original diagnostic.
+Original diagnostic fallback is retained for invalid/expired target wrappers.
+All73 accepted lifecycle-baseline nodes/GUIDs,full CDO/public ABI,original native
+spline component node/template,graph partitions,Timeline template/curves/event
+bindings remain checked.18 added transports,0 new BP business nodes. All60
+original source nodes remain. Both Profiles pass14 actual manager executions,
+including short/long play rates,None/pelvis/missing sockets,pending Profile
+switch,zero-rate stall and invalid Pawn. Thousands of natural samples match
+native spline distance/uniform scale and original native curve evaluations.
+Pool actors stay alive,hidden/ownerless and free of owned splines/lifespan.
+Primary player inventory/Health/transform and owned actors/selectors/roots
+restore. The previous16 native collect/sit interaction cases also pass against
+the new Cue as affected-call-chain regression. Whole Cue business migration is
+now implemented/verified within this bounded standalone scope;pixel/network/
+package/full-version acceptance remain open.
+Cue01 preserves a preflight source-path error. Cue02 preserves an observation
+of the long Timeline after the source target's3-second lifespan expired. The
+original clock is retained;after checking that3-second assignment,the final
+fixture explicitly extends only owned targets needed to observe longer native
+timelines. No production target lifespan is changed. Zero-rate and invalid
+Pawn test objects are explicitly cleaned by the fixture. Final native exit0,
+independent gates0,strict logs and ordered shutdown pass.14 focused checks and5
+invalid lanes pass;staged checks are incremental at
+.build/CommitVerification/20261021-collect-cue/Index01. No Engine/general Cpp/
+official edits,build,cook,push,tag or publication. Static246/182/63/11 and exact
+candidate paths/order remain;full migration is false.
+
+Batch181 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261021-collect-cue/Assets01/summary.json` 87eefc62a0f869e7dfe2e58d9e6cf3903c7320535314c5e344a307e15fb21676
+`20261021-collect-cue/Assets01/assets.json` 69a57fc700dde0f66a4bf78d3ebc7f0fddae95ccf29fca7e6cb93bb3c363c746
+`20261021-collect-cue/Assets01/collect-full-preservation.json` 1e71c4e9a013ed94e41e19d59e0540721fca46532cf701261daefe61825df528
+`20261021-collect-cue/Cue03/summary.json` f8003a0dcd4c27520d0d9b7dec620884f873eccc5fe8a1270ec9c062f115a48e
+`20261021-collect-cue/Cue03/jump.json` 2b5e1470b2bfde4cb5cffc1e8977e7a4f079953bce2a840d47ff56147b6712ec
+`20261021-collect-cue/Actions01Affected/summary.json` 0aef4d91cc12503ca84f1f263688699ac91700a2f7af60204c99b2ca721c3a3f
+`20261021-collect-cue/Actions01Affected/jump.json` b4c8c5e12b0f4eb77894befa6093d677ccb2fb3bb623bd95a592f1d1917800e5
+`20261021-collect-cue/host-focused02.json` 7e019e38e2a9345db2cbdf4fdfa72af7ea950c400a921b53733805f74295ccaa
+`20261021-collect-cue/guards01.json` 8ee0aa0b67d14d7f7656cce586763cd27bf7ea89c3b7bb342252002a56783146
+
 **Completed bounded batch180 (2026-10-21),Explorer collect/sit actions and required Cue pool compatibility:**
 Both original event entry points and completed/interrupted/cancelled montage
 routes are routed in2-method Profiles. Collect keeps print -> target collision

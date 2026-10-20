@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 182,
+    "bounded_evidence_ledgers": 183,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -11619,18 +11619,26 @@
       "method_candidates": 3,
       "business_nodes": 50,
       "scope_review": null,
-      "status": "bounded_collect_cue_pool_lifespan_compatibility_only_remaining_effect_business_open",
-      "evidence_run": "20261021-explorer-actions/Actions02",
-      "evidence_ledger": "180-explorer-collect-sit-montage-and-cue-pool-lifecycle.json",
+      "status": "bounded_collect_cue_business_native_spline_timeline_and_pool_verified_pixels_network_package_pending",
+      "evidence_run": "20261021-collect-cue/Cue03",
+      "evidence_ledger": "181-collect-cue-native-spline-timeline-business.json",
       "implemented_lifecycle_adapters": [
         "OnExecute native business forwarding plus prior spline cleanup",
         "pre-lifespan native recycle deadline",
         "native pool return and owned spline/reference release"
       ],
-      "whole_collect_cue_business_migrated": false,
-      "remaining_business": [
-        "PlayPickup and original native Timeline setup/update/finish animation and effect policy"
-      ]
+      "whole_collect_cue_business_migrated": true,
+      "remaining_business": [],
+      "implemented_methods": [
+        "PlayPickup",
+        "typed native Timeline Update",
+        "typed native Timeline Finished"
+      ],
+      "reviewed_native_no_business_overrides": {
+        "OnExecute": "original PlayPickup forwarder retained behind pool cleanup",
+        "UserConstructionScript": "original empty construction entry retained"
+      },
+      "original_cdo_public_abis_node_guids_graph_partitions_spline_component_template_and_timeline_curves_preserved": true
     },
     {
       "path": "/TopDownArena/Game/B_Hero_Arena.B_Hero_Arena",
@@ -12658,5 +12666,56 @@
     "packaged_runtime": false,
     "full_acceptance": false,
     "next": "Continue full original collect Cue business plus remaining Explorer marker/follow-parent/prompt and Arena candidates,all prior bounded inherited-parent/full version/network/pixel/package acceptance. Full migration remains open."
+  },
+  "collect_cue_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_collect_cue_business_native_spline_timeline_and_pool_verified_pixels_network_package_pending",
+    "evidence_ledger": "181-collect-cue-native-spline-timeline-business.json",
+    "owner": "uep_lyra_weapons.collect_cue_mixin",
+    "original_source_audit": "20261021-explorer-characters/Audit03ShooterReference",
+    "accepted_lifecycle_parent": "20261021-explorer-actions/CueLifecycle01",
+    "native_asset_authoring": "20261021-collect-cue/Assets01",
+    "native_runtime_runs": [
+      "20261021-collect-cue/Cue03",
+      "20261021-collect-cue/Actions01Affected"
+    ],
+    "method_counts": {
+      "Python": 6,
+      "BlueprintFallback": 6
+    },
+    "original_source_nodes": 60,
+    "accepted_lifecycle_nodes": 73,
+    "additional_business_transport_nodes": 18,
+    "new_business_nodes": 0,
+    "original_cdo_public_abis_node_guids_graph_partitions_spline_template_and_native_timeline_curves_preserved": true,
+    "original_forwarder_and_empty_constructor_retained": true,
+    "pickup_setup_order": "assign Pawn and EffectCauser -> original target collision/lifespan -> valid Pawn -> original spline component template -> world points -> KeepWorld attach -> native play rate -> original Timeline PlayFromStart",
+    "world_spline_midpoint": "colliding Pawn bounds origin + Pawn extent Z +0.6*noncolliding pickup extent Z",
+    "endpoint": "Pawn actor location when In Socket Name is None; otherwise first skeletal mesh socket world location",
+    "attachment_socket_always_none": true,
+    "native_timeline_length": 5.0,
+    "native_play_rate": "1 / SuckUpAnimTime via original native Divide_DoubleDouble",
+    "actual_animation_duration": "5 * SuckUpAnimTime; production clock unchanged",
+    "timeline_update_order": "native spline length/curve distance -> world root location without sweep/teleport -> absolute uniform scale from native ItemScale curve",
+    "finish_order": "hide Cue -> accepted native pool deadline -> original self lifespan3",
+    "accepted_pool_compatibility_adapter_unchanged": true,
+    "native_case_count": 14,
+    "original_native_curve_samples": 2804,
+    "scoped_owned_target_lifespan_extension_for_longer_than_three_second_observation": true,
+    "zero_rate_and_invalid_pawn_source_branches_verified": true,
+    "pending_profile_switch_updates_and_finish_verified": true,
+    "affected_collect_sit_real_interaction_cases": 16,
+    "whole_collect_cue_business_migrated": true,
+    "focused_host_checks": 14,
+    "invalid_lane_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261021-collect-cue/Index01",
+    "timeline_callbacks_replayed": false,
+    "python_timeline_clock_added": false,
+    "pixels_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Continue remaining Explorer marker/follow/prompt reviews and Arena candidates,all inherited parent and prior bounded full version/network/pixel/package acceptance. Full migration remains open."
   }
 }

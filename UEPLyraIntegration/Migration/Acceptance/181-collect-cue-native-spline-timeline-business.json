@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "batch": "181-collect-cue-native-spline-timeline-business",
+  "scope": "Original collect Cue spline/Timeline setup update finish business and accepted pool lifecycle; affected collect/sit native interaction regression; pixel/network/package/version remains open",
+  "recorded_utc": "2026-10-20T23:46:49.8307682Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "45421ed44e120a6137988dad8242ddd655a92a2e",
+  "examples_parent_commit": "e2dcdf707e07ee1ddf25bf325589042649b2bd24",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-collect-cue/Assets01",
+      "summary_sha256": "87EEFC62A0F869E7DFE2E58D9E6CF3903C7320535314C5E344A307E15FB21676",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2323,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-collect-cue/Cue03",
+      "summary_sha256": "F8003A0DCD4C27520D0D9B7DEC620884F873ECCC5FE8A1270EC9C062F115A48E",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3169,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "2B5E1470B2BFDE4CB5CFFC1E8977E7A4F079953BCE2A840D47FF56147B6712EC"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-collect-cue/Actions01Affected",
+      "summary_sha256": "0AEF4D91CC12503CA84F1F263688699AC91700A2F7AF60204C99B2CA721C3A3F",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3195,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "B4C8C5E12B0F4EB77894BEFA6093D677CCB2FB3BB623BD95A592F1D1917800E5"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "E41EB55C520050039AB84B83E0F1AEA56DA2472BCE4CB41D0DD56F424F60E37C",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_collect_cue_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_collect_cue_assets.py"
+    },
+    {
+      "sha256": "834BA2243F3D606C26CCA145E964253B1F2F04B668B78215A2AB9A8343C3D2A2",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/collect_cue_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/collect_cue_mixin.py"
+    },
+    {
+      "sha256": "1086C8BE6BC708CE413C23FD9E0E2D748DBB5C74580C53DE9D0827285F338E5E",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/collect_cue_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/collect_cue_contract.py"
+    },
+    {
+      "sha256": "6B719621D0CF5BF1F93358141BFD0006F971D6CF3C6F990625D9002259AF915A",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/collect_cue_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/collect_cue_validation.py"
+    },
+    {
+      "sha256": "3D3D680E4FD99BC78E6A57897DA77E84AB3D83F66231DA84D590F74EC63FE6E1",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    }
+  ],
+  "host_report": {
+    "sha256": "7E019E38E2A9345DB2CBDF4FDFA72AF7EA950C400A921B53733805F74295CCAA",
+    "result": {
+      "status": "passed",
+      "tests_run": 14,
+      "runtime_acceptance": false,
+      "full_regression": false
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261021-collect-cue/host-focused02.json"
+  }
+}
