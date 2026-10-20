@@ -23,6 +23,61 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch168 (2026-10-21),five Explorer character helpers:**
+B_Hero_Explorer/B_Pawn_Explorer retain193/212 original nodes,complete canonical
+CDO configuration,logical public ABI,input bindings,graph partitions and GUIDs.
+Only five helpers per Profile are routed:ClearInventory,Get/SetEmoteAudioComponent,
+ChangeQuickbarSlot and AddInitialInventory. Each asset adds3 transport nodes and
+5 interface nodes. The other character and inherited parent business stays open,
+and both manifest rows explicitly enumerate the remaining work.
+The read-only16-asset audit includes the original Shooter reference. Three shared
+helper graphs match after target-class normalization;the audio setter assignment
+matches while its defining event owner differs and is recorded. Explorer's empty
+loadout additionally links the unarmed animation layer,so its grant policy is
+implemented separately. The two original native Mesh/LinkAnimClassLayers nodes
+move together with exact class payload/GUIDs;Blueprint fallback uses the same
+native helper. A null Quickbar delegates to the original function to retain its
+null-receiver behavior,including the empty-loadout animation branch.
+Both Profiles use the engine's real extra-local-player creation/removal and native
+GameMode spawn,with a temporary in-memory PawnData.PawnClass override restored
+immediately. Only fixture-owned spawning abilities are natively cancelled to
+isolate these helper checks. Secondary owned activatable UI is deactivated to
+avoid headless second-player focus;this is not UI acceptance. Natural startup
+grant,owned controller/components/
+ASC and typed Blueprint callers are observed on both original Explorer classes.
+Ten loadout cases cover empty,single,duplicates,over-capacity and occupied slots.
+Native animation unlink/relink,actual GAS slot payloads,audio object/null roundtrip,
+clear,missing components and unpossessed inputs pass. The unpossessed fixture pawn
+is explicitly destroyed after RemovePlayer,which only destroys its controlled pawn.
+Original player item identities/slots/active index/Health and scoped Profiles/
+roots/PawnClass restore. Native exit0,independent gate0,strict logs and ordered
+shutdown pass;23 focused checks and6 invalid lanes pass. Staged verification is
+incremental at .build/CommitVerification/20261021-explorer-characters/Index02.
+Index01 caught a UTF-8 BOM in the dispatcher. Removing only the BOM preserves
+exact Unicode source;Loader01 verifies native Python compilation. No gameplay
+rerun is claimed for that encoding-only normalization. The earlier evidence
+snapshot is preserved as pre-normalization-evidence.json in the raw evidence root.
+Failed/superseded authoring and runtime reports remain. Assets01 identified only
+reordered sibling CDO subobjects;the canonical comparison preserves all object
+identity/archetype/properties/nesting. Assets02's private audio probe missed an
+Exec edge;Assets03 corrects it. Earlier runtime fixtures expose premature readiness,
+manual-controller initialization/ASC cleanup and unpossessed-pawn teardown issues.
+No Engine/general Cpp/official edits,build,cook,push,tag or publication. Static
+scope246/182/63/11 and exact candidate path/order stay fixed;full migration is false.
+
+Batch168 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261021-explorer-characters/Audit03ShooterReference/summary.json` 04e36616276737b55944a4cd31e4b10d8c17f843effa8f176e6ffdb2b2e9dc02
+`20261021-explorer-characters/Assets03AudioExec/summary.json` 45cf346de8ab4073d60dcba86b549af1324faae47ac365d681c1fc0f28d2a8ad
+`20261021-explorer-characters/Assets03AudioExec/assets.json` 3b1cf79dd7bcab3b6b750f77d0ba709e757f6bf07c3e1d83c4f73f5ad34bc7b1
+`20261021-explorer-characters/Helpers07Fallback/summary.json` 8f2f2a5a3fdfa805ee6f7e4ba2fc8e61aeb01461e93c11302843708ca7fd582c
+`20261021-explorer-characters/Helpers07Fallback/jump.json` ba3937cc063578d7a36667c811dcb4e65e2bf27bf26514cbced639f0826f34ca
+`20261021-explorer-characters/Helpers08Python/summary.json` 3dfe252ef21703926cb9d5c530c8e4dd5aeeb1e0937c7123a4277e1a6ed25ba2
+`20261021-explorer-characters/Helpers08Python/jump.json` aabca63da818263f8f39259a20e0abfe6afabb33cbfeeb57f1ab9b9aa04b3fed
+`20261021-explorer-characters/host-focused03.json` 18f1c78fac95ac3d64501167c4f3ca8aa03ff0f8322c5aaf3c8bbe773a329166
+`20261021-explorer-characters/guards01.json` e72433def84f740b5833cfaa5c1f6e0b853f01c4dfd9d553c15f4647d3172350
+`20261021-explorer-characters/shared-helper-source-proof.json` 9e6da234e78a508fdb3cbc98b05ee8f086a992ff096122e4d066b5dfbf923f2d
+`20261021-explorer-characters/Loader01/summary.json` 1dcf3a5d6eccd3d3f4003eb8c44286c69f9f6f5076ba0c8650a01b498f9750b8
+
 **Completed bounded batch167 (2026-10-21),Explorer StateTree nodes:**
 Five original evaluator/tasks preserve45 original nodes,CDOs/public event ABI,
 transition structs,graph partitions and GUIDs.58 transport nodes plus5 interface

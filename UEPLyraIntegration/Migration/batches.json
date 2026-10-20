@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 169,
+    "bounded_evidence_ledgers": 170,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -11352,7 +11352,35 @@
       "method_candidates": 18,
       "business_nodes": 137,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_explorer_five_helpers_verified_remaining_character_business_open",
+      "evidence_run": "20261021-explorer-characters/Helpers08Python",
+      "evidence_ledger": "168-explorer-character-five-helpers-native-source-loader.json",
+      "implemented_helpers": [
+        "ClearInventory",
+        "GetEmoteAudioComponent",
+        "SetEmoteAudioComponent",
+        "ChangeQuickbarSlot",
+        "AddInitialInventory"
+      ],
+      "whole_character_migrated": false,
+      "remaining_business": [
+        "AnimMotionEffect",
+        "BndEvt__B_Hero_ShooterMannequin_PawnCosmeticsComponent_K2Node_ComponentBoundEvent_2_LyraSpawnedCharacterPartsChanged__DelegateSignature",
+        "BndEvt__Hero_ShooterMannequin_HealthComponent_K2Node_ComponentBoundEvent_0_LyraHealth_AttributeChanged__DelegateSignature",
+        "CreateOrUpdateOutlineIfNeeded",
+        "K2_OnDeathFinished",
+        "K2_OnReset",
+        "ListenForTeam",
+        "OnRep_PlayerInfo",
+        "OnTeamOrCosmeticsChanged",
+        "ReceiveBeginPlay",
+        "ReceivePossessed",
+        "ShowPawnAgainNextFrame",
+        "UserConstructionScript",
+        "WaitForInventoryReadiness macro",
+        "five original EnhancedInput receivers",
+        "remaining inherited parent business"
+      ]
     },
     {
       "path": "/ShooterExplorer/Blueprint/B_Pawn_Explorer.B_Pawn_Explorer",
@@ -11361,7 +11389,35 @@
       "method_candidates": 18,
       "business_nodes": 153,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_explorer_five_helpers_verified_remaining_character_business_open",
+      "evidence_run": "20261021-explorer-characters/Helpers08Python",
+      "evidence_ledger": "168-explorer-character-five-helpers-native-source-loader.json",
+      "implemented_helpers": [
+        "ClearInventory",
+        "GetEmoteAudioComponent",
+        "SetEmoteAudioComponent",
+        "ChangeQuickbarSlot",
+        "AddInitialInventory"
+      ],
+      "whole_character_migrated": false,
+      "remaining_business": [
+        "BndEvt__B_Hero_ShooterMannequin_PawnCosmeticsComponent_K2Node_ComponentBoundEvent_2_LyraSpawnedCharacterPartsChanged__DelegateSignature",
+        "BndEvt__Hero_ShooterMannequin_HealthComponent_K2Node_ComponentBoundEvent_0_LyraHealth_AttributeChanged__DelegateSignature",
+        "CreateOrUpdateOutlineIfNeeded",
+        "K2_OnDeathFinished",
+        "K2_OnReset",
+        "ListenForTeam",
+        "OnRep_PlayerInfo",
+        "OnTeamOrCosmeticsChanged",
+        "ReceiveBeginPlay",
+        "ReceivePossessed",
+        "ShowPawnAgainNextFrame",
+        "UseBehaviorTree",
+        "UserConstructionScript",
+        "WaitForInventoryReadiness macro",
+        "five original EnhancedInput receivers",
+        "remaining inherited parent business"
+      ]
     },
     {
       "path": "/ShooterExplorer/Blueprint/B_SimpleFollowPawn.B_SimpleFollowPawn",
@@ -11753,5 +11809,115 @@
     "packaged_runtime": false,
     "full_acceptance": false,
     "next": "Continue all remaining0.14 candidates and prior owner/FText/culture/network/pixel/package/version requirements. Successful projected-location navmesh traversal remains untested. No complete migration/version acceptance claim."
+  },
+  "explorer_character_helpers_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_explorer_five_helpers_verified_remaining_character_business_open",
+    "evidence_ledger": "168-explorer-character-five-helpers-native-source-loader.json",
+    "owner": "uep_lyra_characters.explorer_helpers_mixin",
+    "original_read_only_audit": "20261021-explorer-characters/Audit03ShooterReference",
+    "native_asset_authoring": "20261021-explorer-characters/Assets03AudioExec",
+    "native_runtime_runs": [
+      "20261021-explorer-characters/Helpers07Fallback",
+      "20261021-explorer-characters/Helpers08Python"
+    ],
+    "characters": {
+      "hero": {
+        "original_nodes": 193,
+        "transport_nodes": 3,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 5,
+          "BlueprintFallback": 5
+        },
+        "original_cdo_signatures_graph_partitions_guids_and_input_semantics_preserved": true,
+        "original_native_unarmed_class_and_mesh_payload_preserved": true,
+        "whole_character_migrated": false
+      },
+      "pawn": {
+        "original_nodes": 212,
+        "transport_nodes": 3,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 5,
+          "BlueprintFallback": 5
+        },
+        "original_cdo_signatures_graph_partitions_guids_and_input_semantics_preserved": true,
+        "original_native_unarmed_class_and_mesh_payload_preserved": true,
+        "whole_character_migrated": false
+      }
+    },
+    "implemented_helpers": [
+      "ClearInventory",
+      "GetEmoteAudioComponent",
+      "SetEmoteAudioComponent",
+      "ChangeQuickbarSlot",
+      "AddInitialInventory"
+    ],
+    "remaining_business": {
+      "hero": [
+        "AnimMotionEffect",
+        "BndEvt__B_Hero_ShooterMannequin_PawnCosmeticsComponent_K2Node_ComponentBoundEvent_2_LyraSpawnedCharacterPartsChanged__DelegateSignature",
+        "BndEvt__Hero_ShooterMannequin_HealthComponent_K2Node_ComponentBoundEvent_0_LyraHealth_AttributeChanged__DelegateSignature",
+        "CreateOrUpdateOutlineIfNeeded",
+        "K2_OnDeathFinished",
+        "K2_OnReset",
+        "ListenForTeam",
+        "OnRep_PlayerInfo",
+        "OnTeamOrCosmeticsChanged",
+        "ReceiveBeginPlay",
+        "ReceivePossessed",
+        "ShowPawnAgainNextFrame",
+        "UserConstructionScript",
+        "WaitForInventoryReadiness macro",
+        "five original EnhancedInput receivers",
+        "remaining inherited parent business"
+      ],
+      "pawn": [
+        "BndEvt__B_Hero_ShooterMannequin_PawnCosmeticsComponent_K2Node_ComponentBoundEvent_2_LyraSpawnedCharacterPartsChanged__DelegateSignature",
+        "BndEvt__Hero_ShooterMannequin_HealthComponent_K2Node_ComponentBoundEvent_0_LyraHealth_AttributeChanged__DelegateSignature",
+        "CreateOrUpdateOutlineIfNeeded",
+        "K2_OnDeathFinished",
+        "K2_OnReset",
+        "ListenForTeam",
+        "OnRep_PlayerInfo",
+        "OnTeamOrCosmeticsChanged",
+        "ReceiveBeginPlay",
+        "ReceivePossessed",
+        "ShowPawnAgainNextFrame",
+        "UseBehaviorTree",
+        "UserConstructionScript",
+        "WaitForInventoryReadiness macro",
+        "five original EnhancedInput receivers",
+        "remaining inherited parent business"
+      ]
+    },
+    "whole_characters_migrated": false,
+    "shared_source_graphs_audited_against_original_shooter": true,
+    "emote_setter_declaration_owner_difference_recorded": true,
+    "explorer_empty_inventory_unarmed_layer_branch_implemented_separately": true,
+    "original_native_unarmed_class_mesh_and_node_guids_preserved": true,
+    "cdo_component_order_only_normalized": true,
+    "native_real_extra_local_player_creation_and_removal": true,
+    "scoped_pawnclass_override_restored": true,
+    "native_owned_spawn_ability_cancelled_for_helper_fixture_isolation": true,
+    "secondary_owned_activatable_ui_deactivated_for_headless_fixture": true,
+    "native_original_startup_grant_and_owned_asc_ready": true,
+    "native_blueprint_callers_and_unarmed_animation_instance_verified": true,
+    "native_empty_single_duplicate_capacity_occupied_clear_audio_and_slot_gas_cases": true,
+    "native_missing_components_and_unpossessed_noops": true,
+    "original_player_inventory_health_preserved": true,
+    "physical_input_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "native_async_callbacks_replayed": false,
+    "focused_host_checks": 23,
+    "invalid_lane_guards": 6,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261021-explorer-characters/Index02",
+    "full_acceptance": false,
+    "next": "Finish remaining Explorer character and inherited parent business,all other original candidates and network/culture/pixel/package/version requirements. These two whole characters remain open.",
+    "encoding_only_dispatcher_normalization_native_compilation_and_exact_unicode_verified": true,
+    "encoding_loader_run": "20261021-explorer-characters/Loader01"
   }
 }
