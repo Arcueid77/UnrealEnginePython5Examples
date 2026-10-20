@@ -23,6 +23,39 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch130 (2026-10-20),accolade host/toast presentation:**
+host Construct/Destroy collapse existing MyToast;Create shows it HitTestInvisible,
+plays valid supplied Sound through original PlaySound2D UI parameters,sets opaque
+Entry.Row.DisplayName and Icon resource,requests toast playback,and returns the
+same widget. Destroy still ignores its Widget argument. Toast only invokes
+native PlayAnimationForward(1,false). The unconnected IsAnimationPlayingForward/
+StopAnimation exec chain stays unreachable;no new stop/rewind behavior is added.
+Parent commits:Examples `a3f4c54` / core `3b21e4f`.
+Audit01 and Assets01 preserve host25/toast11 original nodes/full CDOs/widget trees/
+visual templates/native animations/all function signatures. Host has3 methods per
+Profile and13 transport nodes;toast1 method/4 transport nodes,5 interfaces each,
+zero new Blueprint gameplay nodes. Host Create uses a typed boolean/object
+return gate with an early native result,so original C++ queue calls also receive
+the correct existing widget. Native ShooterCoreRuntime parent/data table/registry/
+DLL bytes stay unchanged. Parent owns GMS filter,registry acquisition,async asset
+loading,ordered display,tag cancellation and2.200000047683716s game timers.
+Differential01 passes native exit0/independent gate0/strict logs/ordered shutdown.
+Both Profiles cover4 native direct Create cases with/without Sound/Icon,typed
+return/FText equality/brush/visibility/animation,foreign Destroy argument and
+repeated native PlayIntroOutro. Fixture explicitly stops animation between these
+direct cases and queue scenarios;production has no such reset.6 actual native
+registry/queue scenarios verify Double Elimination then Spree FIFO/timer duration,
+Triple Elimination cancelling Double Elimination with create/destroy order,and
+one normal display after remount. Foreign player is ignored;removed widgets no
+longer receive;natural Construct runs exactly twice after remount without duplicate
+listeners. Actual allocated widget,text and icon match native queued entries.
+Widget/sender roots/Profile classes/overrides/foreign player/Health clean up.
+Original offline audio renderer is active;audio energy and pixels are unmeasured.
+16 focused checks/5 invalid lanes pass;exact staged verification is incremental.
+UI owner/network,culture/history variants,pixels/audio energy,packaging and full
+246-candidate scope remain pending. No SDK/Engine/general Cpp/official edits,
+build,cook,push,tag or release publication.
+
 **Completed bounded batch129 (2026-10-20),native two-client relay RPCs:**
 accepted127/128 production relay assets and bodies remain unchanged. Parent
 commits:Examples `25bd870` / core `72216ca`. Network02CleanupBarrier uses the

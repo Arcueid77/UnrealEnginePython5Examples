@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 131,
+    "bounded_evidence_ledgers": 132,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1235,6 +1235,57 @@
     "full_library_acceptance": false,
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
+  },
+  "accolade_widgets_pilot": {
+    "version": "0.12.0",
+    "status": "partial_accolade_presentation_python_native_registry_queue_timer_umg_verified_pixels_network_package_pending",
+    "evidence_ledger": "130-accolade-host-toast-native-registry-queue-animation.json",
+    "owners": [
+      "uep_lyra_hud.accolade_widgets_mixin.LyraAccoladeHostPythonProfile",
+      "uep_lyra_hud.accolade_widgets_mixin.LyraAccoladeToastPythonProfile"
+    ],
+    "read_only_audit": "20261020-accolade-widgets/Audit01",
+    "native_asset_authoring": "20261020-accolade-widgets/Assets01",
+    "native_runtime": "20261020-accolade-widgets/Differential01",
+    "original_graph_nodes": {
+      "host": 25,
+      "toast": 11
+    },
+    "methods_per_profile": {
+      "host": 3,
+      "toast": 1
+    },
+    "new_transport_nodes": {
+      "host": 13,
+      "toast": 4
+    },
+    "generated_interface_nodes": {
+      "host": 5,
+      "toast": 5
+    },
+    "new_business_nodes": 0,
+    "original_full_cdos_widget_trees_visual_templates_animations_and_signatures_preserved": true,
+    "native_parent_registry_queue_async_loading_timers_and_listener_unchanged": true,
+    "typed_create_gate_returns_existing_owned_toast": true,
+    "localized_display_text_passed_opaque": true,
+    "unconnected_toast_stop_branch_left_unreachable": true,
+    "native_direct_create_cases": 4,
+    "native_queue_scenarios": 6,
+    "original_display_duration_seconds": 2.200000047683716,
+    "native_fifo_cancel_foreign_filter_remount_and_listener_lifetime_verified": true,
+    "repeat_animation_uses_original_native_forward_call": true,
+    "fixture_only_stop_all_animations_between_direct_and_queue_scenarios": true,
+    "native_offline_audio_renderer_used": true,
+    "audio_energy_measured": false,
+    "original_data_table_registry_and_parent_dll_bytes_preserved": true,
+    "owned_widgets_roots_sender_profiles_foreign_player_health_restored": true,
+    "feature_only_host_checks": 16,
+    "full_regression_executed_this_batch": false,
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Native localized history/culture variants,UI owner/network/pixels/audio-energy/packaging and full original migration scope remain open."
   },
   "notification_relays_network_pilot": {
     "version": "0.12.0",
@@ -6322,8 +6373,9 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 3,
       "business_nodes": 19,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch130:Python presentation policy;original host25/toast11 nodes/full CDO/widget trees/animations/signatures retained.3 host/1 toast methods per Profile;13/4 transport nodes plus5 interfaces each,0 new business nodes. Native parent registry/async loading/ordered queue/cancellation/timer/listener remain native.4 direct calls and6 native queue scenarios verify existing toast return,opaque FText/icon/visibility/native forward animation,FIFO2.2s durations,chain2->chain3 replacement,foreign target and natural remount filtering. Disconnected toast stop branch remains unreachable. Offline renderer selected;no audio-energy,pixels,network/package/full acceptance claim.",
+      "status": "partial_accolade_presentation_python_native_registry_queue_timer_umg_verified_pixels_network_package_pending",
+      "evidence_ledger": "130-accolade-host-toast-native-registry-queue-animation.json"
     },
     {
       "path": "/ShooterCore/UserInterface/Notifications/Accolades/W_AccoladeToast.W_AccoladeToast",
@@ -6331,8 +6383,9 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 4,
       "business_nodes": 7,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch130:Python presentation policy;original host25/toast11 nodes/full CDO/widget trees/animations/signatures retained.3 host/1 toast methods per Profile;13/4 transport nodes plus5 interfaces each,0 new business nodes. Native parent registry/async loading/ordered queue/cancellation/timer/listener remain native.4 direct calls and6 native queue scenarios verify existing toast return,opaque FText/icon/visibility/native forward animation,FIFO2.2s durations,chain2->chain3 replacement,foreign target and natural remount filtering. Disconnected toast stop branch remains unreachable. Offline renderer selected;no audio-energy,pixels,network/package/full acceptance claim.",
+      "status": "partial_accolade_presentation_python_native_registry_queue_timer_umg_verified_pixels_network_package_pending",
+      "evidence_ledger": "130-accolade-host-toast-native-registry-queue-animation.json"
     },
     {
       "path": "/ShooterCore/UserInterface/Notifications/EliminationFeed/W_EliminationFeed.W_EliminationFeed",
