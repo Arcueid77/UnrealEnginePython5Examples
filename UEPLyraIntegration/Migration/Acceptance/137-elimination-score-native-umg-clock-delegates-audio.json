@@ -1,0 +1,527 @@
+{
+  "schema_version": 1,
+  "batch": "137-elimination-score-native-umg-clock-delegates-audio",
+  "scope": "TDM score/style/clock Python policies preserve original230 nodes/full CDO/tree/animations/native async component/team bindings,PlayerCounted/CountDownUpdate delegates,Delay and remaining graphs.8 methods per Profile,35 transport plus5 interface,0 new business. Original five pure clock numeric/FText nodes moved with exact links/GUID/literal identity. Source ratio(float ally,double enemy) and CurrentTime(int) remain function locals. Two real TDM UMG matrices match6 styles incl team0,8 numeric/arc cases(zero target/over-target/float precision),24 clock inputs/16 score-audio inputs. Actual native score Tick/player-counted/1Hz countdown timer/rooted-removed retained binding/remount once verified. All native samples retained including source catch-up.716s;settled source/Python.993/1.004s. Native exit0/gate0/strict logs/ordered shutdown with offline renderer. Target/time/tags/selectors/wrappers/roots/Health restore.17 focused/5 invalid lanes;exact staged incremental follows. Failed author01 and native01/02/03 exact sources preserved;fixed moved links/local-variable assumptions/timer sample phase. Full246 migration/network/split-screen/culture/pixels/audio-energy/package/version remain open. No Cpp/official edits/build/cook/push/tag/publication.",
+  "recorded_utc": "2026-10-20T03:15:19.1681213Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "cf92d6151781db2627a727d8a9a8e3f9c3df3e3a",
+  "examples_parent_commit": "a7da1fd1983ff0fa87b32e5ab4ec2b6ed4b8ffd2",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Audit01",
+      "summary_sha256": "034B19A514BB923D8C4FD6FF32DC8385BC58B17800748F0DE9FC6AB116F1760D",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 847,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "DAEE000F5102FD4AFC21FA236B90CB28DA1403C14A176000292F1EF96F490A6B",
+          "file": "audit.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets02ClockLinks",
+      "summary_sha256": "A46AAC21CA6D496133FB3DC0DB04F755AA5EBD149A5B640DB3B9A2D46051A65C",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2039,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential04SettledTimer",
+      "summary_sha256": "45CBB947F21FD4367E8B6E64D90F694810B47A4878D3D53A05C89AD828D6F26D",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2565,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "9AE81BBFE33E681FCEAB6F97F790C54EC9FF9277DD4F81CA7118A818FD6B20C8",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "E84625B311E05B86CBD94DAA951A799724A3C846642F7B0DC0AD42012AE58930",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/elimination_score_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/elimination_score_mixin.py"
+    },
+    {
+      "sha256": "058A0D0A1C97FE15A534BC47CC30A9C42D8C71CDF99E307EAA1F50C7879BB0D3",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/elimination_score_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/elimination_score_validation.py"
+    },
+    {
+      "sha256": "C179049CF3731A2A6095A3BB2D62C99A6771FF88F5FB11A069B1E40AEFB1D3F8",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/elimination_score_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/elimination_score_contract.py"
+    },
+    {
+      "sha256": "189222AD3810B3086F774CE9CFCA09802810ACAC007D0CBD2CC3E7130CC40737",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "sha256": "6E6BC152057F58B96EA2CBE465E6161CBF9892B2BCB91F98F3DACC34209F3569",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_elimination_score_widget.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/audit_elimination_score_widget.py"
+    },
+    {
+      "sha256": "1D83E6B241C8873D50464A0A20182349293B89CF717ADD13AC18F91A1683BEB5",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_elimination_score_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_elimination_score_assets.py"
+    },
+    {
+      "sha256": "28FBEC1E1DF258A88C12FE998BEABE76AF0F58AE60E50B56AA1B863CE43FC866",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py"
+    },
+    {
+      "sha256": "D629E1B619D991FBBB6B41A3929BD4CBE6447F788668CD140E0F9249C4A9BF2D",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1"
+    },
+    {
+      "sha256": "3DCAF12752A1C23F135A468CDFE239319735CE57CDE25E25BD605C6E9D1DC856",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58JumpValidation.ps1"
+    }
+  ],
+  "host_report": {
+    "sha256": "D15DCEE9E94147FE7D8DD934B3E04D83544AB9CE005B3F8765A73BA79DB7007A",
+    "result": {
+      "schema_version": 2,
+      "status": "passed",
+      "tests_run": 17,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "selection": {
+        "mode": "incremental",
+        "status": "ready",
+        "changed_files": [],
+        "selected_test_files": [
+          "Demos/UEPLyraIntegration/Tests/test_elimination_score_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_elimination_score_mixin.py"
+        ],
+        "affected_files": [],
+        "selection_reasons": {
+          "Demos/UEPLyraIntegration/Tests/test_elimination_score_contract.py": [
+            "explicit pattern test_elimination_score_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_elimination_score_mixin.py": [
+            "explicit pattern test_elimination_score_*.py"
+          ]
+        },
+        "unmapped_changed_files": [],
+        "unparsed_unaffected_files": [],
+        "dependency_analysis": "local imports including inheritance, literal module names and file references; dynamic dependencies require explicit patterns/native lanes",
+        "full_regression_requested": false
+      },
+      "failed_cases": []
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Host03LocalClock.json"
+  },
+  "raw_artifacts": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/assets.json",
+      "sha256": "24ecf7fd8971e519c48fb4d374ff42c05c0f102ad4060f126e2ef31d72de24ae"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets01/assets-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets01/assets-stdout.log",
+      "sha256": "04ff9afefc5a08d1c842660196cc8a4126d0c6cee52772981c142a8cbd4e0e4b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets01/assets.json",
+      "sha256": "8a62d960a729089da0ece6ea386dc606161cd6b80f65500e2ad5dd117f721911"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets01/assets.log",
+      "sha256": "809eefbf7fb18aa0d5c9636a61530f9b5da33cf8a1aa3cb7f6b9417d78e96025"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets01/clock-format-before.t3d",
+      "sha256": "616c7cec8106026dd3c784d3e8884c67e82afa3a2c8a0c8c60be318a58b56fcd"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets01/dash-tdm-hud-after-cdo.t3d",
+      "sha256": "83645caf9fb7f2019c10020cd080c1df636884c39391fe7586b212debeafefe0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets01/dash-tdm-hud-before-cdo.t3d",
+      "sha256": "ec793c6ad62398ccd23141936fff45e8e08ea4838b07c73458b201471699d227"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets01/PreviousAssets/before.uasset",
+      "sha256": "ccede35132cd97bd371ceb3df5236a543c8bba3c9bf703b3eab55d140720c557"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets01/source/Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/elimination_score_mixin.py",
+      "sha256": "0e192a2b2daea102e987b7e9e66f12b22c30faffa65660e04724f6941eef74b5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets01/source/Demos/UEPLyraIntegration/Tools/generate_elimination_score_assets.py",
+      "sha256": "99a88a77c6ccb93f586f73d66c800b12af68a0e2eed0b7150175be7d178d0761"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets01/source/Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "28fbec1e1df258a88c12fe998beabe76af0f58ae60e50b56aa1b863ce43fc866"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets01/source/hashes.json",
+      "sha256": "be0f1abac637f334bbe44079a706c9518f9724f6017be854293676ad90345060"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets01/source/Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "d629e1b619d991fbbb6b41a3929bd4cbe6447f788668cd140e0f9249c4a9bf2d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets01/summary.json",
+      "sha256": "51b47b581d485b437f52c2327c2085e3d33c7046a624ee9f48f2306c2a9a7c3e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets01/tdm-hud-after-tree.t3d",
+      "sha256": "3b749b20e6fe0d78ab9f8ee6c225dbf1efcfc667c43c243bfc00b3e64d6ba5a8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets01/tdm-hud-before-tree.t3d",
+      "sha256": "3b749b20e6fe0d78ab9f8ee6c225dbf1efcfc667c43c243bfc00b3e64d6ba5a8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets02ClockLinks/assets-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets02ClockLinks/assets-stdout.log",
+      "sha256": "ebb3df8092fdd951f5b5c3d0acf98e799b05d58213d2314daccd392df3b696ab"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets02ClockLinks/assets.json",
+      "sha256": "e2838c33874d2c6146fb81f350af4bc7c361a454f8860ee1b78197d4ebbf7ffb"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets02ClockLinks/assets.log",
+      "sha256": "ad50bbbb6f76506839f011ca0511959f26164541ab590e9c4f8f647499bee081"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets02ClockLinks/clock-format-after.t3d",
+      "sha256": "b6c962e3ad031104ef61e087b1eb26f337ded92d0b4fd6178c48ac94110925e4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets02ClockLinks/clock-format-before.t3d",
+      "sha256": "616c7cec8106026dd3c784d3e8884c67e82afa3a2c8a0c8c60be318a58b56fcd"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets02ClockLinks/dash-tdm-hud-after-cdo.t3d",
+      "sha256": "83645caf9fb7f2019c10020cd080c1df636884c39391fe7586b212debeafefe0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets02ClockLinks/dash-tdm-hud-before-cdo.t3d",
+      "sha256": "ec793c6ad62398ccd23141936fff45e8e08ea4838b07c73458b201471699d227"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets02ClockLinks/PreviousAssets/before.uasset",
+      "sha256": "ccede35132cd97bd371ceb3df5236a543c8bba3c9bf703b3eab55d140720c557"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets02ClockLinks/summary.json",
+      "sha256": "a46aac21ca6d496133fb3dc0db04f755aa5ebd149a5b640db3b9a2d46051a65c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets02ClockLinks/tdm-hud-after-tree.t3d",
+      "sha256": "3b749b20e6fe0d78ab9f8ee6c225dbf1efcfc667c43c243bfc00b3e64d6ba5a8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Assets02ClockLinks/tdm-hud-before-tree.t3d",
+      "sha256": "3b749b20e6fe0d78ab9f8ee6c225dbf1efcfc667c43c243bfc00b3e64d6ba5a8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Audit01/audit-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Audit01/audit-stdout.log",
+      "sha256": "ea23ad072503a9dc2dc8acec51be808752776888a5662fb82446620fb22a5460"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Audit01/audit.json",
+      "sha256": "daee000f5102fd4afc21fa236b90cb28da1403c14a176000292f1ef96f490a6b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Audit01/audit.log",
+      "sha256": "54eb22fd38caa3c9e7bc037ea736e1cccf10418f7b1a3671d4e655dce21fd247"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Audit01/native-cosmetic-macro.json",
+      "sha256": "7fa0389c7be84072f11660bf8b6365e4f19411c1744b5e7f90bef17eaf9719b8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Audit01/score-blueprint.t3d",
+      "sha256": "60bffa8a84842d387819c74fcb952bcfab58cb79769f1427023df392b6514d2e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Audit01/score-cdo.t3d",
+      "sha256": "ec793c6ad62398ccd23141936fff45e8e08ea4838b07c73458b201471699d227"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Audit01/score-graphs.json",
+      "sha256": "916484bd70f93cfabf476cd284c92f95d454011c4c6c9d18ce06250e4adf3e68"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Audit01/score-widget-tree.t3d",
+      "sha256": "3b749b20e6fe0d78ab9f8ee6c225dbf1efcfc667c43c243bfc00b3e64d6ba5a8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Audit01/summary.json",
+      "sha256": "034b19a514bb923d8c4fd6ff32dc8385bc58b17800748f0de9fc6ab116f1760d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential01/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential01/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential01/jump.json",
+      "sha256": "e976e7baefe312fb2d411d198606212a306b2c06ba455cf3e35aa8ccb14b831c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential01/jump.log",
+      "sha256": "1651db5d22329f893fdc74f3368e243b1f2d18ef0ea830c4b5c66312c44c039c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential01/source/Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/elimination_score_contract.py",
+      "sha256": "c179049cf3731a2a6095a3bb2d62c99a6771ff88f5fb11a069b1e40aefb1d3f8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential01/source/Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/elimination_score_mixin.py",
+      "sha256": "0e192a2b2daea102e987b7e9e66f12b22c30faffa65660e04724f6941eef74b5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential01/source/Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/elimination_score_validation.py",
+      "sha256": "ac60b55494c018463906a228ac70c3aea2b4f0f7436ab006aa790e282d777d88"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential01/source/Demos/UEPLyraIntegration/Tools/generate_elimination_score_assets.py",
+      "sha256": "1d83e6b241c8873d50464a0a20182349293b89cf717add13ac18f91a1683beb5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential01/source/hashes.json",
+      "sha256": "47cf75336d045a189a75e819108597dcb9cef3142304aac42218fa88b3691a07"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential01/source/Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "3dcaf12752a1c23f135a468cdfe239319735ce57cde25e25bd605c6e9d1dc856"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential01/summary.json",
+      "sha256": "dcc51ab20d68f157e6d36c174c196dacd4eb5c05765cd99396ad725507ed61e5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential02LocalRatio/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential02LocalRatio/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential02LocalRatio/jump.json",
+      "sha256": "b2a90cda96916f3d8830b74581808bee23b84d4517ce76bc64c1e04220c4f373"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential02LocalRatio/jump.log",
+      "sha256": "dbbe11413f5f187dc58c8dfb1566acf95ae2e8a711004a3b6981728a0ab720ab"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential02LocalRatio/source/Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/elimination_score_contract.py",
+      "sha256": "c179049cf3731a2a6095a3bb2d62c99a6771ff88f5fb11a069b1e40aefb1d3f8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential02LocalRatio/source/Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/elimination_score_mixin.py",
+      "sha256": "38b84d6c0eec5a9a6c04b9350e8fa2495b8473944e344d344342f8a82c4879b7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential02LocalRatio/source/Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/elimination_score_validation.py",
+      "sha256": "7d932cece5aec43e1cbab9f1c16d6b99a2c53ceda414e81af01775e02522fe37"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential02LocalRatio/source/Demos/UEPLyraIntegration/Tests/test_elimination_score_mixin.py",
+      "sha256": "4b51f1ec4c46d9b1b56d89dbf97f2cf819bf95481af835ff4d59b3e0237fda7a"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential02LocalRatio/source/hashes.json",
+      "sha256": "5afa557a0b33dc2424982e1f07436988fff014a39901fa32dcc6a5e7a99c73ae"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential02LocalRatio/summary.json",
+      "sha256": "125f4a5a756cada303e3673f4cd03b6b5960b8eeddc348a65399975cff95b7be"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential03LocalClock/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential03LocalClock/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential03LocalClock/jump.json",
+      "sha256": "cb664a0629941b830bcd65bc9c26837b5605c0dd506934e66f038ac634331420"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential03LocalClock/jump.log",
+      "sha256": "2c964fa8aff66aeb771b0a057d30e8f126025deff271d8bad2050a767d470af6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential03LocalClock/source/Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/elimination_score_contract.py",
+      "sha256": "c179049cf3731a2a6095a3bb2d62c99a6771ff88f5fb11a069b1e40aefb1d3f8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential03LocalClock/source/Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/elimination_score_mixin.py",
+      "sha256": "e84625b311e05b86cbd94daa951a799724a3c846642f7b0dc0ad42012ae58930"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential03LocalClock/source/Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/elimination_score_validation.py",
+      "sha256": "b35533fa11bcd1f5003a7f70f4d9743ab6bb582f44a820d74acd63451a89199a"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential03LocalClock/source/Demos/UEPLyraIntegration/Tools/generate_elimination_score_assets.py",
+      "sha256": "1d83e6b241c8873d50464a0a20182349293b89cf717add13ac18f91a1683beb5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential03LocalClock/source/hashes.json",
+      "sha256": "828b67ec08c28c49b069446ebb2d96914038c7427e351dfa9816649a7686debd"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential03LocalClock/summary.json",
+      "sha256": "208d7c2b4e8c89a46df0a11d853dc72bbb2ec438201cd706e53df7fadb865eed"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential04SettledTimer/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential04SettledTimer/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential04SettledTimer/jump.json",
+      "sha256": "9ae81bbfe33e681fceab6f97f790c54ec9ff9277dd4f81ca7118a818fd6b20c8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential04SettledTimer/jump.log",
+      "sha256": "232c379e2c824ab71378ade855f8294c590eecded5e2737f6e9438ca2dbaaa12"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential04SettledTimer/report-gate-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential04SettledTimer/report-gate-stdout.log",
+      "sha256": "e39f748b38eaedfc5988689b631de577dcfa71ddcdf3ab74b0310f131b286923"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Differential04SettledTimer/summary.json",
+      "sha256": "45cbb947f21fd4367e8b6e64d90f694810b47a4878d3d53a05c89ad828d6f26d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/focused-changes.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/guards.json",
+      "sha256": "1e45576a7699ba096c982b0f8b9390e6b67988f8763fb9f1fab79029a1ca9abd"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Host01.json",
+      "sha256": "d15dcee9e94147fe7d8dd934b3e04d83544ab9ce005b3f8765a73ba79db7007a"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Host02LocalRatio.json",
+      "sha256": "d15dcee9e94147fe7d8dd934b3e04d83544ab9ce005b3f8765a73ba79db7007a"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Host03LocalClock.json",
+      "sha256": "d15dcee9e94147fe7d8dd934b3e04d83544ab9ce005b3f8765a73ba79db7007a"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/Run-Audit.ps1",
+      "sha256": "7238362a7e7c215cfda339a49059c469035f8209dc388f1238107475c080acc1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-elimination-score-widget/source-variable-scopes.json",
+      "sha256": "b1d8654795a224d62951a2f84af5967babf624fb658693f286856353be57015a"
+    }
+  ],
+  "preserved_failed_authoring_runs": [
+    "Assets01"
+  ],
+  "preserved_failed_native_runs": [
+    "Differential01",
+    "Differential02LocalRatio",
+    "Differential03LocalClock"
+  ],
+  "regression_policy": {
+    "mode": "incremental",
+    "feature_only_tests": 17,
+    "full_regression_executed": false,
+    "isolated_index_result": ".build/CommitVerification/20261020-elimination-score-widget/Index01/summary.json",
+    "index_result_is_external_to_avoid_changing_verified_tree": true
+  },
+  "scope_limits": {
+    "full_original_candidates": 246,
+    "all_original_asset_paths_preserved": true,
+    "original_async_delegates_delay_native_timer_and_localized_clock_nodes_preserved": true,
+    "function_local_scopes_preserved": true,
+    "direct_policy_fixtures_also_used": true,
+    "native_gc_tested": false,
+    "network_acceptance": false,
+    "split_screen_tested": false,
+    "culture_matrix_tested": false,
+    "pixels_tested": false,
+    "audio_energy_tested": false,
+    "packaged_runtime": false,
+    "migration_complete": false
+  }
+}

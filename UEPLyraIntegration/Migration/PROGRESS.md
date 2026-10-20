@@ -23,6 +23,38 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch137 (2026-10-20),elimination score HUD:**
+TDM score/style/clock decisions use Python with original230 nodes/full CDO/tree/
+animations/native experience/component/team bindings,PlayerCounted/CountDownUpdate
+bindings,retry Delay and remaining graphs retained.8 methods per Profile,
+35 transport plus5 interfaces,zero new business. Original five pure clock numeric/
+localized formatting nodes retain links,GUIDs and exact native FText literal;
+Python receives opaque text and native floor/int conversion,then decides cues.
+Source PctToTargetScore is invocation-local(float ally,double enemy),as is integer
+CurrentTime. Only MyTeamID/EnemyTeamID/PreviousTime/PreviousScoreLeft are class
+state writes. Review original VariableReference.MemberScope before property use.
+Assets02ClockLinks/Differential04SettledTimer pass native exit0/independent gate0/
+strict logs/ordered shutdown on actual TDM map with Non-realtime Renderer.
+Two UMG Profile matrices match6 full brush/color styles incl team0,8 numeric/arc
+cases(zero target,over-target ratio,large integer float precision),24 clock inputs
+and16 score-sound inputs. Source ratio is not clamped. Native Clock FText keeps
+original min/sec formatting and floor behavior;native audio retains ScoreLeft/
+SecondsLeft parameters,thresholds,unchanged-value guard and failed-spawn retry.
+Actual Score Tick/PlayerCounted/native countdown callbacks verified. Rooted
+removed widget stops Tick but retains its countdown binding;remount gets one
+native callback in each Profile. Record all native timer samples:initial source
+catch-up interval.7166s,settled source/Python intervals.9931/1.0041s;timer handle
+stays active. Team tags/real target/countdown/selectors/wrappers/roots/Health
+restore.17 focused checks/5 invalid lanes pass;exact staged check is incremental.
+Preserve Assets01/source:original-graph guard caught missing internal links while
+moving clock nodes before asset save;02 reconnects all source edges. Preserve
+native01/02/source:probe and initial port mistook function locals for properties,
+corrected both implementation and fixture. Preserve03/source:all source/Python
+states/lifetimes matched,but first interval sampled timer catch-up;04 retains all
+samples and checks settled consecutive callbacks. Full246-candidate migration,
+network/split-screen/culture/pixels/audio-energy/package/version gates remain open.
+No SDK/Engine/general Cpp/official changes,build,cook,push,tag or publication.
+
 **Completed bounded batch136 (2026-10-20),control-point HUD family:**
 CP score,marker and status Python policies preserve original118/113/32 nodes,
 full CDOs/widget trees/animations/native async experience/component/team bindings,

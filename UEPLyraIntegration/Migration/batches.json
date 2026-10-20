@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 138,
+    "bounded_evidence_ledgers": 139,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1235,6 +1235,59 @@
     "full_library_acceptance": false,
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
+  },
+  "elimination_score_widget_pilot": {
+    "version": "0.12.0",
+    "status": "partial_elimination_score_python_native_umg_clock_delegate_audio_lifetime_verified_network_pixels_package_pending",
+    "evidence_ledger": "137-elimination-score-native-umg-clock-delegates-audio.json",
+    "owner": "uep_lyra_hud.elimination_score_mixin",
+    "read_only_audit": "20261020-elimination-score-widget/Audit01",
+    "native_asset_authoring": "20261020-elimination-score-widget/Assets02ClockLinks",
+    "native_runtime_runs": [
+      "20261020-elimination-score-widget/Differential04SettledTimer"
+    ],
+    "original_graph_nodes": 230,
+    "methods_per_profile": 8,
+    "new_transport_nodes": 35,
+    "generated_interface_nodes": 5,
+    "new_business_nodes": 0,
+    "original_cdos_trees_animations_async_component_team_bindings_player_counted_countdown_delegates_delay_and_graphs_preserved": true,
+    "original_pure_clock_numeric_and_localized_format_nodes_moved_intact": true,
+    "localized_text_roundtripped": false,
+    "source_function_locals_not_promoted_to_widget_properties": true,
+    "progress_ratio_unclamped_with_zero_target_guard": true,
+    "native_numeric_float_precision_and_full_brush_fields_preserved": true,
+    "native_profile_matrices": 2,
+    "native_style_cases": 6,
+    "native_numeric_and_arc_cases": 8,
+    "native_clock_cases": 24,
+    "native_score_sound_cases": 16,
+    "actual_native_score_ticks_and_player_counted_delegate_verified": true,
+    "native_countdown_timer_handle_and_callbacks_verified": true,
+    "first_timer_catchup_intervals_preserved_in_raw_samples": true,
+    "settled_native_timer_intervals": [
+      0.9930670969188213,
+      1.004117600619793
+    ],
+    "rooted_removed_widget_stops_tick_but_retains_countdown_binding": true,
+    "remount_native_callback_count_each_profile": 1,
+    "team_tags_target_countdown_profile_selectors_wrappers_roots_health_restored": true,
+    "feature_only_host_checks": 17,
+    "full_regression_executed_this_batch": false,
+    "preserved_failed_authoring_runs": [
+      "Assets01"
+    ],
+    "preserved_failed_native_runs": [
+      "Differential01",
+      "Differential02LocalRatio",
+      "Differential03LocalClock"
+    ],
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "audio_energy_tested": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Actual owner/network/split-screen/culture/visual/audio-energy/packaging/version acceptance and all original migration candidates remain open."
   },
   "control_point_widgets_pilot": {
     "version": "0.12.0",
@@ -6656,8 +6709,9 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 11,
       "business_nodes": 192,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch137:TDM score/style/clock decisions use Python;original230 nodes/full CDO/tree/animations/native async component/team binding,PlayerCounted/CountDownUpdate delegates,Delay and remaining graphs retained.8 methods per Profile,35 transport plus5 interfaces,zero new business. Original native clock numeric/FText nodes moved with exact links/literal identity. Source function locals PctToTargetScore(float ally,double enemy) and CurrentTime(int) remain invocation-local;no fake widget state. Two actual TDM UMG matrices match6 full styles incl team0,8 numeric/arc cases including zero target/over-target/float precision,24 clock and16 score-audio inputs. Actual score Tick/player-counted/native1Hz countdown/removed binding lifetime/remount once verified. Preserve first compressed.716s timer sample;settled intervals.993/1.004s. Target/time/tag/selectors/wrappers/roots/Health restore. Failed author01/missing moved links and native01/02 local-property assumptions/03 first-timer interval sources preserved. Network/split-screen/culture/pixels/audio-energy/package/full acceptance pending.",
+      "status": "partial_elimination_score_python_native_umg_clock_delegate_audio_lifetime_verified_network_pixels_package_pending",
+      "evidence_ledger": "137-elimination-score-native-umg-clock-delegates-audio.json"
     },
     {
       "path": "/ShooterCore/Experiences/Phases/Phase_Playing.Phase_Playing",
