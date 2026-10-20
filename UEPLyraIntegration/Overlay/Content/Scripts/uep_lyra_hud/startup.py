@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPExplorerStateResult=") for argument in arguments) and not any(argument.startswith('-run=') for argument in arguments):
+        return "uep_lyra_world.explorer_state_validation"
     if any(argument.startswith("-UEPEditorExperienceResult=") for argument in arguments):
         return "uep_lyra_hud.editor_experience_validation"
     if any(argument.startswith("-UEPLobbyBackgroundResult=") for argument in arguments):

@@ -9,6 +9,11 @@ from uep_lyra_hud.startup import validation_module
 
 
 class StartupSelectionTests(unittest.TestCase):
+    def test_explorer_state_requires_explicit_native_lane(self):
+        self.assertEqual(validation_module(['-UEPExplorerStateResult=report.json']),'uep_lyra_world.explorer_state_validation')
+        self.assertIsNone(validation_module(['-run=Py','-UEPExplorerStateResult=report.json']))
+        self.assertIsNone(validation_module(['LyraStarterGame.uproject','-game']))
+
     def test_autoreload_lane_is_explicit_and_skips_commandlets(self):
         self.assertEqual(validation_module(["-UEPWeaponInstanceResult=report.json"]), "uep_lyra_weapons.weapon_instance_validation")
         self.assertIsNone(validation_module(["-run=Py", "-UEPWeaponInstanceResult=report.json"]))

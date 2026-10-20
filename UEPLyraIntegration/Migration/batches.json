@@ -1,4 +1,4 @@
-{
+﻿{
   "schema_version": 1,
   "audit_date": "2026-10-12",
   "scope_review_date": "2026-10-13",
@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 168,
+    "bounded_evidence_ledgers": 169,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -11297,7 +11297,9 @@
       "method_candidates": 1,
       "business_nodes": 3,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_explorer_statetree_python_policy_original_compiled_tree_and_native_delay_verified",
+      "evidence_run": "20261021-explorer-state-tree/Runtime07Python",
+      "evidence_ledger": "167-explorer-state-tree-location-move-and-native-delays.json"
     },
     {
       "path": "/ShooterExplorer/AI/StateTrees/Tasks/STT_Follow.STT_Follow",
@@ -11306,7 +11308,9 @@
       "method_candidates": 1,
       "business_nodes": 7,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_explorer_statetree_python_policy_original_compiled_tree_and_native_delay_verified",
+      "evidence_run": "20261021-explorer-state-tree/Runtime07Python",
+      "evidence_ledger": "167-explorer-state-tree-location-move-and-native-delays.json"
     },
     {
       "path": "/ShooterExplorer/AI/StateTrees/Tasks/STT_GetPlayerLocation.STT_GetPlayerLocation",
@@ -11315,7 +11319,9 @@
       "method_candidates": 1,
       "business_nodes": 3,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_explorer_statetree_python_policy_original_compiled_tree_and_native_delay_verified",
+      "evidence_run": "20261021-explorer-state-tree/Runtime07Python",
+      "evidence_ledger": "167-explorer-state-tree-location-move-and-native-delays.json"
     },
     {
       "path": "/ShooterExplorer/AI/StateTrees/Tasks/STT_GoTo.STT_GoTo",
@@ -11324,7 +11330,9 @@
       "method_candidates": 2,
       "business_nodes": 7,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_explorer_statetree_python_policy_original_compiled_tree_and_native_delay_verified",
+      "evidence_run": "20261021-explorer-state-tree/Runtime07Python",
+      "evidence_ledger": "167-explorer-state-tree-location-move-and-native-delays.json"
     },
     {
       "path": "/ShooterExplorer/AI/StateTrees/Tasks/STT_SimpleDebugDelays.STT_SimpleDebugDelays",
@@ -11333,7 +11341,9 @@
       "method_candidates": 2,
       "business_nodes": 18,
       "scope_review": "含延时和打印的 StateTree 任务；核对是否参与玩法再决定范围。",
-      "status": "not_accepted"
+      "status": "bounded_explorer_statetree_python_policy_original_compiled_tree_and_native_delay_verified",
+      "evidence_run": "20261021-explorer-state-tree/Runtime07Python",
+      "evidence_ledger": "167-explorer-state-tree-location-move-and-native-delays.json"
     },
     {
       "path": "/ShooterExplorer/Blueprint/B_Hero_Explorer.B_Hero_Explorer",
@@ -11650,5 +11660,98 @@
       "scope_review": null,
       "status": "not_accepted"
     }
-  ]
+  ],
+  "explorer_state_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_explorer_statetree_python_policy_original_compiled_tree_and_native_delay_verified",
+    "evidence_ledger": "167-explorer-state-tree-location-move-and-native-delays.json",
+    "owner": "uep_lyra_world.explorer_state_mixin",
+    "original_read_only_audit": "20261021-explorer-state-tree/Audit02Tree",
+    "native_asset_authoring": "20261021-explorer-state-tree/Assets01",
+    "native_runtime_runs": [
+      "20261021-explorer-state-tree/Runtime06Fallback",
+      "20261021-explorer-state-tree/Runtime07Python"
+    ],
+    "nodes": {
+      "eval": {
+        "original_nodes": 4,
+        "transport_nodes": 7,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 1,
+          "BlueprintFallback": 1
+        },
+        "original_cdo_public_signatures_nodes_guids_and_native_payload_preserved": true
+      },
+      "location": {
+        "original_nodes": 4,
+        "transport_nodes": 7,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 1,
+          "BlueprintFallback": 1
+        },
+        "original_cdo_public_signatures_nodes_guids_and_native_payload_preserved": true
+      },
+      "follow": {
+        "original_nodes": 8,
+        "transport_nodes": 13,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 3,
+          "BlueprintFallback": 3
+        },
+        "original_cdo_public_signatures_nodes_guids_and_native_payload_preserved": true
+      },
+      "goto": {
+        "original_nodes": 9,
+        "transport_nodes": 13,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 3,
+          "BlueprintFallback": 3
+        },
+        "original_cdo_public_signatures_nodes_guids_and_native_payload_preserved": true
+      },
+      "delay": {
+        "original_nodes": 20,
+        "transport_nodes": 18,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 4,
+          "BlueprintFallback": 4
+        },
+        "original_cdo_public_signatures_nodes_guids_and_native_payload_preserved": true
+      }
+    },
+    "original_compiled_tree_unchanged": true,
+    "original_compiled_tree_nodes": [
+      "location",
+      "goto",
+      "follow"
+    ],
+    "additional_direct_native_event_nodes": [
+      "eval",
+      "delay",
+      "goto",
+      "follow"
+    ],
+    "original_native_ai_options_and_delay_uuids_preserved": true,
+    "native_location_index_zero_matches": true,
+    "native_projected_location_request_failure_and_actor_already_at_goal_success_observed": true,
+    "native_enter_delay_clears_flag_without_finish_and_tick_completion_retains_flag": true,
+    "native_async_callbacks_replayed": false,
+    "python_latent_clock_added": false,
+    "unused_nodes_claimed_as_compiled_tree_execution": false,
+    "successful_navmesh_location_path_tested": false,
+    "owned_objects_roots_profiles_and_templates_restored": true,
+    "focused_host_checks": 19,
+    "invalid_lane_guards": 6,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261021-explorer-state-tree/Index01",
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Continue all remaining0.14 candidates and prior owner/FText/culture/network/pixel/package/version requirements. Successful projected-location navmesh traversal remains untested. No complete migration/version acceptance claim."
+  }
 }

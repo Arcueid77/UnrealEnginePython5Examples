@@ -1,4 +1,4 @@
-# Runtime BP migration work checkpoint
+﻿# Runtime BP migration work checkpoint
 
 Current branch in core and Examples: `dev/lyra-blueprint-python`. Version work
 includes **0.10.0 closeout,0.11.0 hero-ability,0.12.0 FX/audio and0.13.0 UI pilots**,not a
@@ -22,6 +22,46 @@ shared SDK/interface changes or version acceptance,not a repeated per-batch
 requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
+
+**Completed bounded batch167 (2026-10-21),Explorer StateTree nodes:**
+Five original evaluator/tasks preserve45 original nodes,CDOs/public event ABI,
+transition structs,graph partitions and GUIDs.58 transport nodes plus5 interface
+nodes per asset;1/1/3/3/4 methods per Profile. Native player-zero location getters,
+AI MoveTo factories/options/delegates/FinishTask and the two original Delay UUIDs
+remain. Python handles state values and completion decisions. Enter delay clears
+DelayInProgress without finishing;tick completion finishes true and retains the
+flag,matching the original asymmetric behavior.
+Both Profiles run the unchanged compiled L_STT_FollowPlayer tree with a schema-
+matching owned character. Real global location ticks and GoTo/Follow entry and
+native request-failure callbacks execute. Additional owned native event fixtures
+prove evaluator location,two real delays,both location and actor
+already-at-goal success. The evaluator/debug-delay are not original-tree consumers;
+direct event/task completion does not claim a StateTree weak execution context.
+Successful navmesh path traversal is untested;the success fixtures are already
+at their goals.
+Native exit0,independent gate0,strict logs and ordered shutdown pass for both
+Profiles. Owned objects,component,class roots,Profiles and serialized templates
+restore;original gameplay Health is unchanged.19 focused checks and6 invalid lane
+guards pass. Exact staged incremental verification is recorded at
+.build/CommitVerification/20261021-explorer-state-tree/Index01;no full regression.
+Runtime01 preserves an early component initialization error;Runtime02/03/04/05 preserve
+synchronous-callback/disabled-collision movement and reach-test fixture assumptions. Reports/logs remain;
+Runtime03/04/05 also retain exact source snapshots. Production policy/assets did
+not change for those fixture corrections. The two forwarding simple-follow Pawn
+Blueprints and all other original pending candidates remain pending. Static
+scope246/182/63/11 and exact candidate path/order remain. No Engine/general Cpp,
+official Lyra,build,cook,push,tag or publication;complete migration is false.
+
+Batch167 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261021-explorer-state-tree/Audit02Tree/summary.json` a593b1844d9859d0455fa35db2987b1c7609f330c45ae8164c795a90e90ad6e5
+`20261021-explorer-state-tree/Assets01/summary.json` f960720f42f34f86d72f290d2217dd2c52d3be6494f716b40c69844c936554f3
+`20261021-explorer-state-tree/Assets01/assets.json` 86c35f4c39d89ba585f77b7fe6762d7f2653e7a25a4a42d8f86ecac24a3fcc9a
+`20261021-explorer-state-tree/Runtime06Fallback/summary.json` e34f6bd0d61d0caeb64d36bc4a73d0841019ded291a20ce1b1c097e0bc738a95
+`20261021-explorer-state-tree/Runtime06Fallback/jump.json` f58458e579d92c9146b2a6d7d6f75ed776087866e308c9fcc4835611a87e7e40
+`20261021-explorer-state-tree/Runtime07Python/summary.json` e17c984f3fadac52adbe077c5a91ead0928d1380bbeb75d95137751d5c1691b0
+`20261021-explorer-state-tree/Runtime07Python/jump.json` c333afe3038b7f8cb968a6dbbbd3c01f6e09c5a6acba6e692449922596a25f25
+`20261021-explorer-state-tree/host-explorer03.json` 848647fd966b6a82f9f11646b16fff79a19ce524a417424c003807d9492eac73
+`20261021-explorer-state-tree/guard-cases02.json` 053fdb051e077f8a86340f2d335a9d44c525f54319c83b9597cd1561e318e7d7
 
 **Completed bounded batch166 (2026-10-21),default-editor list and portal:**
 Original list42/portal38 nodes,full CDO/SCS component templates/public ABI/GUIDs/
