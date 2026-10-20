@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "batch": "176-explorer-inventory-grid-native-messages-and-gc",
+  "scope": "Original Explorer inventory grid construction and exact native messages, listener reconstruction/profile switching/native GC plus affected screen activation and deactivation; FastArray/network/pixel/package remains open",
+  "recorded_utc": "2026-10-20T22:17:24.0018185Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "75168c4ac6b740cddbbb2c04e99ee3af70c09d5c",
+  "examples_parent_commit": "018690f9f672485848b78e0995e2ad5e777a6d98",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-grid/Assets01",
+      "summary_sha256": "5108A9DE44EDD44154481F56865C871623D7611D5F4C5154E267802D644C3072",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2285,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-grid/Grid02",
+      "summary_sha256": "CAAEC89DFF8CB4D72A6A9DD64E3FC9C24E3FE82B1D70D9F1A83F86C6D78C0430",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3116,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "0501B8F075C757C7B9755EBE3DC35C8B6E69BAB2902D129DEE477C1B4C0EE0D7"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-grid/Screens01Affected",
+      "summary_sha256": "8112EE64B9C588C9D7ECDA3D24D81890D71B28AE5932B5A3E274D6866DA0FBF3",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3118,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "541193F10B91DA2A70EC3C989142B6D47D9897604A73EECAF13C625B89762EF4"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "4DDCC559BC03615EDE6CE77918E3EC648449F6E2D8EC3E35830EC0BFABA29F05",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_explorer_grid_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_explorer_grid_assets.py"
+    },
+    {
+      "sha256": "CBB8DAB98CEBB11ECA0DF553637992F778CB8C00A3CFC22881A7BC30630874D5",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/explorer_grid_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/explorer_grid_mixin.py"
+    },
+    {
+      "sha256": "6FAE4E7D07CECCCA3EDE53155F701FBEB77A8C7337C4E36B662AE22977CB810A",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/explorer_grid_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/explorer_grid_contract.py"
+    },
+    {
+      "sha256": "E78C4D0A06600A7C78F19F007C9DB5DDC7EF7EC862D5A9F5B056E7BE0E8FD61F",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/explorer_grid_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/explorer_grid_validation.py"
+    },
+    {
+      "sha256": "02E729901D007E4B3FD564F5FA538B5463529DD191E1006DACDF3FB49355E4FE",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    }
+  ],
+  "host_report": {
+    "result": {
+      "status": "passed",
+      "tests_run": 19,
+      "runtime_acceptance": false,
+      "full_regression": false
+    },
+    "sha256": "3F17BEAEAB51BBDDA8228B5149A4B15531D8247100E276DAC9ED2B0228B00BE0",
+    "path": ".build/LyraValidation/BlueprintPython/20261021-explorer-grid/host-focused02.json"
+  }
+}

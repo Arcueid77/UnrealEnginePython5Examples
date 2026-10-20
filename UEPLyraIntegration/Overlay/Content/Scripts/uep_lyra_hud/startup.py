@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(a.startswith("-UEPExplorerGridResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):
+        return "uep_lyra_hud.explorer_grid_validation"
     if any(a.startswith("-UEPExplorerScreensResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):
         return "uep_lyra_hud.explorer_screens_validation"
     if any(a.startswith("-UEPExplorerBehaviorResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):

@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "explorergrid":
+        from generate_explorer_grid_assets import generate as explorer_grid
+        return explorer_grid(stage)
     if kind == "explorerscreens":
         from generate_explorer_screen_assets import generate as explorer_screens
         return explorer_screens(stage)

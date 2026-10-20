@@ -23,6 +23,48 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch176 (2026-10-21),Explorer inventory grid:**
+Construct now stores the original owning-controller inventory component in
+NewVar_0,clears TileView,reads GetAllItems,adds each original instance in order,
+then starts the retained native message proxy. The exact original
+Lyra.Inventory.Message.StackChanged channel,ExactMatch,payload type and split
+payload remain native. A typed boolean gate moves only branch decisions to
+Python;BlueprintFallback keeps the original graph. NewCount==Delta adds before
+the zero-removal test;0/0 and negative equality therefore add. InventoryOwner
+is intentionally unfiltered,matching the source. Existing-stack changes do not
+rebuild the list. The original empty Tick remains native.
+All22 original nodes/GUIDs,graph payloads,full CDO/public signature,WidgetTree
+and animations remain checked.5 typed transport and5 interface nodes;0 new
+business nodes. Both Profiles use natural AddToPlayerScreen Construct and10
+typed native broadcast cases,including duplicate add,counts increasing/decreasing,
+remove,zero/negative equality,foreign inventory,RemoveFromParent,reconstruction
+and Profile switching with pending listeners. Reconstruction naturally clears
+and resnapshots and creates a second proxy per widget;all4 distinct proxy paths
+are recorded by widget. Native GC followed by a real message unbinds/releases
+all owned proxies from the GameInstance. Original listener references and the
+primary player's inventory/Health remain unchanged;owned actors/roots/selectors
+restore. The affected inventory screen and map control also pass their existing
+native activation/deactivation/layer-restoration matrix against the new grid.
+Native processes exit0,independent gates0,strict logs and ordered shutdown pass.
+19 focused checks and5 invalid lanes pass;staged checks remain incremental at
+.build/CommitVerification/20261021-explorer-grid/Index01. Grid01 preserves the
+first green functional matrix;Grid02 adds per-widget proxy identity records and
+an independent current-Profile check. The standalone native typed broadcast
+does not prove FastArray replication;that network boundary remains open.
+No Engine/general Cpp/official edits,build,cook,push,tag or publication. Static
+246/182/63/11 and exact candidate path/order remain;full migration is false.
+
+Batch176 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261021-explorer-grid/Assets01/summary.json` 5108a9de44edd44154481f56865c871623d7611d5f4c5154e267802d644c3072
+`20261021-explorer-grid/Assets01/assets.json` c369f6b24069acf349f9ed2153f883e399009e1e8aa419760c409088f7cf08cb
+`20261021-explorer-grid/Assets01/grid-preservation.json` acf716c3bdeb56c22056ec36ce4d277421c4c35e35f4cf4fb49465ef709a605e
+`20261021-explorer-grid/Grid02/summary.json` caaec89dff8cb4d72a6a9dd64e3fc9c24e3fe82b1d70d9f1a83f86c6d78c0430
+`20261021-explorer-grid/Grid02/jump.json` 0501b8f075c757c7b9755ebe3dc35c8b6e69bab2902d129dee477c1b4c0ee0d7
+`20261021-explorer-grid/Screens01Affected/summary.json` 8112ee64b9c588c9d7ecda3d24d81890d71b28ae5932b5a3e274d6866da0fbf3
+`20261021-explorer-grid/Screens01Affected/jump.json` 541193f10b91da2a70ec3c989142b6d47d9897604a73eecaf13c625b89762ef4
+`20261021-explorer-grid/host-focused02.json` 3f17beaeab51bbdda8228b5149a4b15531d8247100e276dac9ed2b0228b00be0
+`20261021-explorer-grid/guards01.json` 687b6800b41a3213342351592f10ac780763200e5fb37bb4d0a0ee5e46694dce
+
 **Completed bounded batch175 (2026-10-21),Explorer inventory/map deactivation:**
 Both original screens route their sole BP_OnDeactivated method to Python or
 BlueprintFallback. Python calls the exact original CommonUIExtensions native

@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 177,
+    "bounded_evidence_ledgers": 178,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -11506,7 +11506,17 @@
       "method_candidates": 2,
       "business_nodes": 19,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_explorer_grid_construct_exact_native_messages_and_gc_verified_network_pixels_package_pending",
+      "implemented_methods": [
+        "Construct",
+        "typed original native inventory message callback"
+      ],
+      "reviewed_native_empty_events": [
+        "Tick"
+      ],
+      "evidence_run": "20261021-explorer-grid/Grid02",
+      "evidence_ledger": "176-explorer-inventory-grid-native-messages-and-gc.json",
+      "original_widget_visuals_cdos_public_abi_graph_payloads_and_guids_preserved": true
     },
     {
       "path": "/ShooterExplorer/UserInterface/W_InventoryScreen.W_InventoryScreen",
@@ -12339,5 +12349,47 @@
     "packaged_runtime": false,
     "full_acceptance": false,
     "next": "Continue original Explorer interaction/collection/widget candidates,all prior bounded parent and full version/network/pixel/package boundaries."
+  },
+  "explorer_grid_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_explorer_grid_construct_exact_native_messages_and_gc_verified_network_pixels_package_pending",
+    "evidence_ledger": "176-explorer-inventory-grid-native-messages-and-gc.json",
+    "owner": "uep_lyra_hud.explorer_grid_mixin",
+    "original_source_audit": "20261021-explorer-characters/Audit03ShooterReference",
+    "native_asset_authoring": "20261021-explorer-grid/Assets01",
+    "native_runtime_runs": [
+      "20261021-explorer-grid/Grid02",
+      "20261021-explorer-grid/Screens01Affected"
+    ],
+    "method_counts": {
+      "Python": 2,
+      "BlueprintFallback": 2
+    },
+    "original_nodes": 22,
+    "transport_nodes": 5,
+    "interface_nodes": 5,
+    "new_business_nodes": 0,
+    "original_full_widget_tree_animations_cdos_signature_graph_payloads_and_node_guids_preserved": true,
+    "original_native_exact_inventory_message_proxy_and_split_payload_reused": true,
+    "construct_order": "owning controller inventory -> store NewVar_0 -> clear -> GetAllItems -> AddItem each -> native listen",
+    "message_order": "NewCount==Delta adds first; otherwise NewCount==0 removes; otherwise no-op; InventoryOwner remains unfiltered",
+    "natural_reconstruction_clears_resnapshots_and_adds_a_second_native_listener": true,
+    "native_per_widget_proxy_identities_recorded": true,
+    "native_pending_listeners_follow_current_profile": true,
+    "removed_widget_listeners_remain_until_native_gc": true,
+    "native_gc_and_message_release_all_owned_proxy_gi_references": true,
+    "primary_player_inventory_health_and_original_listeners_preserved": true,
+    "affected_inventory_screen_activation_deactivation_and_map_control_retested": true,
+    "focused_host_checks": 19,
+    "invalid_lane_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261021-explorer-grid/Index01",
+    "typed_native_broadcast_exercised": true,
+    "fastarray_replication_claimed": false,
+    "pixels_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Continue original Explorer interaction/collection/toast candidates and all prior bounded parent/full version/network/pixel/package work. Full migration remains open."
   }
 }
