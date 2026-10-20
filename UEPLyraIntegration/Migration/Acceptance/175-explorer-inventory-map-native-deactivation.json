@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "batch": "175-explorer-inventory-map-native-deactivation",
+  "scope": "Original Explorer inventory/map BP_OnDeactivated moves to Python; actual CommonUI layer matrix only; pixel/network/package acceptance remains open",
+  "recorded_utc": "2026-10-20T22:05:10.4575901Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "0c4743e10a3c0c6e4ca14579ea053f35a2a26277",
+  "examples_parent_commit": "37af4a927d7abb3570eab9c479fe53a568517cd0",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-screens/Assets02",
+      "summary_sha256": "2631B1924B3F1C5B3EC6D65CF9B20A3780FEED84842B2D6F34B0FB2C67762337",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2278,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-screens/Screens01",
+      "summary_sha256": "C2856B93AD74BC7D9693F23B15A041788A7EA51F57FA8307A165DF9F4A967052",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3108,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "541193F10B91DA2A70EC3C989142B6D47D9897604A73EECAF13C625B89762EF4",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "5C00EEDCCF3A1F1D330D7218D2855C3152AC9D9729EF72BA0103A64CEC1F9559",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_explorer_screen_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_explorer_screen_assets.py"
+    },
+    {
+      "sha256": "C81032AA7F2F228F99DDD013691B20E6BB9351F8191EAB5CF77F95D5ED1B4543",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/explorer_screens_mixin.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/explorer_screens_mixin.py"
+    },
+    {
+      "sha256": "412CE0D5183E4188F37E91AF412923ECB14856DF9E0970549004B4F165C3C279",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/explorer_screens_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/explorer_screens_contract.py"
+    },
+    {
+      "sha256": "C137C0A0F72C7751E34826C4990BB6A4FE7A14BEBEF8546F92A3F852C836E211",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/explorer_screens_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/explorer_screens_validation.py"
+    },
+    {
+      "sha256": "8AE03EEDD083DCC9CF93828D8D45804B8FB553132A4BB63D9A24F5352EC14542",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    }
+  ],
+  "host_report": {
+    "sha256": "71D3A5D32BFFA82B07B6EB39EFD755C22ED6FCA6612D81E0FAFF9F2EC7CF6A45",
+    "result": {
+      "status": "passed",
+      "tests_run": 10,
+      "runtime_acceptance": false,
+      "full_regression": false
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261021-explorer-screens/host-focused01.json"
+  }
+}

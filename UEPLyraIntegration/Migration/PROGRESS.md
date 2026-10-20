@@ -23,6 +23,35 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch175 (2026-10-21),Explorer inventory/map deactivation:**
+Both original screens route their sole BP_OnDeactivated method to Python or
+BlueprintFallback. Python calls the exact original CommonUIExtensions native
+PopContentFromLayer with self;fallback executes Original. No new gates/business
+nodes. All3 original nodes remain with exact graph payload/GUID/public signature,
+whole CDO,WidgetTree and animation exports preserved;only5 Mixin interface nodes
+per screen are added. No parent behavior or child InventoryGrid code is changed.
+One native process exercises both Profiles on each exact original screen via
+the real local-player CommonUI Menu stack. Native BP_AddWidget activates each
+screen;DeactivateWidget produces one actual callback and removes it. Repeated
+deactivation does not re-enter;an owned unstacked screen also closes safely.
+The original empty Menu stack/active widget/transition duration,primary player
+inventory/Health,widget roots/profiles and class selectors restore. Native exit0,
+independent gate0,strict logs and ordered shutdown pass.10 focused checks and5
+invalid lane guards pass. Staged checks are incremental at
+.build/CommitVerification/20261021-explorer-screens/Index01. Assets01 retains a
+preflight variable-order failure before native launch;Assets02 is final. No
+Engine/general Cpp/official edits,build,cook,push,tag or publication. Static
+246/182/63/11 and exact candidate path/order remain. Pixel/network/package and
+all remaining migration work stay open;this is bounded business acceptance.
+
+Batch175 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261021-explorer-screens/Assets02/summary.json` 2631b1924b3f1c5b3ec6d65cf9b20a3780feed84842b2d6f34b0fb2c67762337
+`20261021-explorer-screens/Assets02/assets.json` e8225e355504b60e18eb8f9f2e90bdc3c43284bef3004c00a1d413a919f90cf4
+`20261021-explorer-screens/Screens01/summary.json` c2856b93ad74bc7d9693f23b15a041788a7ea51f57fa8307a165df9f4a967052
+`20261021-explorer-screens/Screens01/jump.json` 541193f10b91da2a70ec3c989142b6d47d9897604a73eecaf13c625b89762ef4
+`20261021-explorer-screens/host-focused01.json` 71d3a5d32bffa82b07b6eb39efd755c22ed6fca6612d81e0faff9f2ec7cf6a45
+`20261021-explorer-screens/guards01.json` 8a4ca497efa061ff9858404c79c7a27820433e0211e2e57ada016ba4119604f4
+
 **Completed bounded batch174 (2026-10-21),Explorer construction/behavior:**
 Pawn now has27 Python/22 BlueprintFallback methods;Hero retains25/20. Original
 Pawn construction chooses the native localized BhvTree/StateTree label then

@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 176,
+    "bounded_evidence_ledgers": 177,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -11515,7 +11515,13 @@
       "method_candidates": 1,
       "business_nodes": 2,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_explorer_screen_native_deactivation_verified_pixels_network_package_pending",
+      "implemented_methods": [
+        "BP_OnDeactivated"
+      ],
+      "evidence_run": "20261021-explorer-screens/Screens01",
+      "evidence_ledger": "175-explorer-inventory-map-native-deactivation.json",
+      "original_widget_visuals_cdos_public_abi_graphs_and_guids_preserved": true
     },
     {
       "path": "/ShooterExplorer/UserInterface/W_ItemAcquiredList.W_ItemAcquiredList",
@@ -11542,7 +11548,13 @@
       "method_candidates": 1,
       "business_nodes": 2,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_explorer_screen_native_deactivation_verified_pixels_network_package_pending",
+      "implemented_methods": [
+        "BP_OnDeactivated"
+      ],
+      "evidence_run": "20261021-explorer-screens/Screens01",
+      "evidence_ledger": "175-explorer-inventory-map-native-deactivation.json",
+      "original_widget_visuals_cdos_public_abi_graphs_and_guids_preserved": true
     },
     {
       "path": "/ShooterMaps/GameplayCues/GC_Collect_Effect.GC_Collect_Effect",
@@ -12293,5 +12305,39 @@
     "whole_characters_migrated": false,
     "full_acceptance": false,
     "next": "Continue inherited parent business and remaining original candidates plus all prior bounded work and version/network/pixel/package acceptance. Full migration remains false."
+  },
+  "explorer_screen_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_explorer_screen_native_deactivation_verified_pixels_network_package_pending",
+    "evidence_ledger": "175-explorer-inventory-map-native-deactivation.json",
+    "owner": "uep_lyra_hud.explorer_screens_mixin",
+    "original_source_audit": "20261021-explorer-characters/Audit03ShooterReference",
+    "native_asset_authoring": "20261021-explorer-screens/Assets02",
+    "native_runtime_runs": [
+      "20261021-explorer-screens/Screens01"
+    ],
+    "methods_per_screen": [
+      "BP_OnDeactivated"
+    ],
+    "method_counts": {
+      "Python": 1,
+      "BlueprintFallback": 1
+    },
+    "original_full_widget_layouts_animations_cdos_signatures_graphs_and_guids_preserved": true,
+    "original_three_nodes_and_five_interface_only_nodes_per_widget": true,
+    "native_commonui_stack_activation_and_deactivation_observed": true,
+    "repeat_deactivation_no_extra_callback": true,
+    "unstacked_deactivation_safe": true,
+    "original_empty_menu_layer_and_transition_duration_restored": true,
+    "primary_player_inventory_and_health_unchanged": true,
+    "focused_host_checks": 10,
+    "invalid_lane_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261021-explorer-screens/Index01",
+    "pixels_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Continue original Explorer interaction/collection/widget candidates,all prior bounded parent and full version/network/pixel/package boundaries."
   }
 }
