@@ -23,6 +23,38 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch128 (2026-10-20),standalone accolade relay:**
+original partial Lyra.ShooterGame.Accolade listener remains. One typed callback
+gate moves both Sequence outputs to Python:authority resolves Instigator through
+native GetPlayerStateFromObject,casts to LyraPlayerState and invokes original
+ClientBroadcastMessage;the independent cosmetic output tests IsDedicatedServer,
+resolves Instigator again,and broadcasts LyraNotificationMessage. The second
+native helper call is intentionally retained,not cached across the RPC. Failed
+Lyra cast/plain PlayerState/foreign/null input does not block cosmetic output;
+null TargetPlayer remains valid and source Verb is PayloadTag,not input channel.
+TargetChannel stays root;PayloadMessage and PayloadObject keep native empty
+values. Source client RPC remains UNRELIABLE;standalone implementation has its
+original NM_Client guard. Parent commits:Examples `e16423a` / core `da0f87e`.
+Audit02MacroName captures original15 nodes. Assets02Accolade preserves full CDO/
+BeginPlay/partial factory/Sequence/authority/cosmetic macros/client RPC signature
+and original business graphs;1 method/Profile,7 transport/5 interface/zero new
+business nodes. Three VM bridge nodes only carry native typed notification and
+broadcast CustomThunk. Accepted elimination-relay bytes are unchanged.
+Differential02Accolade passes native exit0/independent gate0/strict logs/ordered
+shutdown. Both Profiles run16 genuine GMS cases and compare24 typed notifications
+with the natural map Python relay active. Cases cover root PlayerState,registered
+child Pawn,nested Controller,plain PlayerState,foreign Actor,null,wrong channel
+and nonmatching parent channel. Distinct payload Verb versus actual channel
+survives,including nullable player and empty text/object. Python requests3 client
+RPCs,6 cosmetic broadcasts and12 player resolutions per matrix. Each fixture
+naturally creates one source proxy;component destruction,three GC frames and
+next matching message release its GI reference without production cancellation.
+Owned actors/components,score deltas,actual TDM target,original Health,test
+observer scope,probe root and Profile family restore.18 feature-only host checks
+and5 invalid lanes pass;exact staged verification is incremental. Actual owner
+client delivery/remote/DS,pixels,packaging and the full246-candidate scope remain
+pending. No SDK/Engine/general Cpp/official edits,build,cook,push,tag or release.
+
 **Completed bounded batch127 (2026-10-20),standalone elimination feed relay:**
 original native exact Lyra.Elimination.Message subscription remains. One typed
 callback gate moves authority/GameState cast/reliable multicast/cosmetic branch,

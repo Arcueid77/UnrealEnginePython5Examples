@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "accoladerelay":
+        from generate_accolade_relay_assets import generate as generate_accolade_relay
+        return generate_accolade_relay(stage)
     if kind == "eliminationfeedrelay":
         from generate_elimination_feed_relay_assets import generate as generate_elimination_feed_relay
         return generate_elimination_feed_relay(stage)

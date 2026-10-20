@@ -1,0 +1,259 @@
+{
+  "schema_version": 1,
+  "batch": "128-accolade-relay-native-partial-messages-lifetime",
+  "scope": "Accolade relay authority/client forwarding and independent cosmetic policy ported. Original15 nodes/full CDO/partial native listener/sequence/unreliable client RPC preserved;1 method/Profile,7 transport/5 interface/0 new business.16 actual GMS cases/24 native notification payloads verify PS/Pawn/Controller/plain-PS/foreign/null,partial matching,original Verb vs channel,nullable target/defaults,real map Python delivery and proxy GC release.18 focused checks/5 rejected lanes;exact index remains incremental. Elimination-relay bytes unchanged. Full246 candidates/owner client/remote/DS/network/pixels/package acceptance open. No push/tag/release.",
+  "recorded_utc": "2026-10-20T00:23:09.4320461Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "da0f87e4208b6fe7b39cae7bc3b077a7b9d4696f",
+  "examples_parent_commit": "e16423aa0a98fc134687d0d811d2cc2c4e2fd66f",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Audit02MacroName",
+      "summary_sha256": "AC17C74161EE08F8C50579ABB27AB8AE9ACA797880204B7616EB18CC6301A304",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 845,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "audit.json",
+          "sha256": "787C595E973BF5396098205BFECFD23AFEAE7255D24C2BA8783CB01AB1FA7852"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Assets02Accolade",
+      "summary_sha256": "A509540EE7915BC75FA79E11D35F283774381DC04D5ED03C71EA5EDD7783899B",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 1997,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Differential02Accolade",
+      "summary_sha256": "27200923E569CFBEEC4936E7D9D783AE5FE2C58D9DE50B82241F65A4578CB3C1",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2433,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "51A259BDC324DD5319FE2CC1FA9977CAD94DF58ECB3A0473E6739CDE0255D348"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/accolade_relay_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "7A4083A511A9DB92221F49D8798FCD7A43CA3C2241FDCED032AD7077F5F7F8E0",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/accolade_relay_mixin.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/accolade_relay_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "FD88F8916D16D24DCFA6E413B188A6357F5D12116DD69C54E422C3D62C9BDD9C",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/accolade_relay_validation.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/accolade_relay_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "2A85F613447045AB242FB559CA8B8840E6C87674C44043AF7998EA89CC374B11",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/accolade_relay_contract.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_accolade_relay_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "23EF8D18203D5C426EA5697C63F9EAD5DC0A940E2AA668242C646AB9B41ECEB3",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_accolade_relay_assets.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "63DC5A9CD4F680FD4D3D0B05D2FE849165678E7B870259D68A4DE8D5CBE51046",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "BA5AE3FACF9900572E730DB4060BC70EAD369E7494F14C72CDCD9BA129357B77",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "3A6012F304CF80B3D8909F99F5677F4F2816712AD1B175EF0569F08B603DD5C8",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1"
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "685842BB329D2752D15B0B77EAD978C5A4C7E45FAFED1C6F86FEC09B097AA62C",
+      "path": "Validation/Run-UEP58JumpValidation.ps1"
+    }
+  ],
+  "host_report": {
+    "result": {
+      "status": "passed",
+      "tests_run": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false
+    },
+    "sha256": "8B126F7455A00DB3B79A31E6A2AC17AD926B5FC0FC1921E3EA3895768D67B55F",
+    "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/HostAccolade01.json"
+  },
+  "raw_artifacts": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/accolade-lane-guards.json",
+      "sha256": "970712dae2d3905ab98473eb953b9c09beff79f071790fb752f5ffebc470a6ff"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Assets02Accolade/assets-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Assets02Accolade/assets-stdout.log",
+      "sha256": "a46543d9cddfaa9d3e2d97c37f89bad505b62ebb648a855b4f3b08fd2f2a4788"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Assets02Accolade/assets.json",
+      "sha256": "81000158115e896ea976723f9642ecbfa3e5cc55a961ad48d20527c85526aa37"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Assets02Accolade/assets.log",
+      "sha256": "da8706577000c0ce19cba1fc255bae20dd33392a41d5ac716715ee522279dc98"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Assets02Accolade/dash-accolade-after-cdo.t3d",
+      "sha256": "0816a5fedd1ff736244551b2156a246d5dbd0e5c71f79ba6be95e17e98e9d908"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Assets02Accolade/dash-accolade-before-cdo.t3d",
+      "sha256": "e180e22598faca08a596457cffa3e13341182bad2d7db51f5973a27a153fa06f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Assets02Accolade/summary.json",
+      "sha256": "a509540ee7915bc75fa79e11d35f283774381dc04d5ed03c71ea5edd7783899b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Audit02MacroName/accolade-blueprint.t3d",
+      "sha256": "be85e872e5ea89fd9f1513cdc2a4249ef1983f657b77ece6a396389934c4dab8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Audit02MacroName/accolade-cdo.t3d",
+      "sha256": "e180e22598faca08a596457cffa3e13341182bad2d7db51f5973a27a153fa06f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Audit02MacroName/accolade-graphs.json",
+      "sha256": "a6ae0eb4605eb52e645ae9e94498059e14e37780b051b16ec4807d5d1109a776"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Audit02MacroName/audit-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Audit02MacroName/audit-stdout.log",
+      "sha256": "30510678f816ec4610d329c6b2116abf3904b98729ea781b38974d7483d21e4b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Audit02MacroName/audit.json",
+      "sha256": "787c595e973bf5396098205bfecfd23afeae7255d24c2ba8783cb01ab1fa7852"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Audit02MacroName/audit.log",
+      "sha256": "8d8345846a66c6d1abc9b2b688b03b4ca09a15235a71ef4afc8d7dfc57ed1014"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Audit02MacroName/elimination-blueprint.t3d",
+      "sha256": "a1e734387cfa26ad77a7746d63159ce026dfbeb07ee8340bf9e30517d63b462c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Audit02MacroName/elimination-cdo.t3d",
+      "sha256": "f086d3200103b38000c1ed58cde7fcc1d828c11d480fd83453201683314f8d48"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Audit02MacroName/elimination-graphs.json",
+      "sha256": "903e72d07ce3c24e6fc5cddf0dbe522ffeccb6aceb33205af0d0ed7e9df0420f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Audit02MacroName/native-cosmetic-macro.json",
+      "sha256": "7fa0389c7be84072f11660bf8b6365e4f19411c1744b5e7f90bef17eaf9719b8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Audit02MacroName/summary.json",
+      "sha256": "ac17c74161ee08f8c50579abb27ab8ae9aca797880204b7616eb18cc6301a304"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Differential02Accolade/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Differential02Accolade/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Differential02Accolade/jump.json",
+      "sha256": "51a259bdc324dd5319fe2cc1fa9977cad94df58ecb3a0473e6739cde0255d348"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Differential02Accolade/jump.log",
+      "sha256": "c3404a8d3f20d9da763fbab89f1b59b088bfe3329c052c8a50fb80a3a0099384"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Differential02Accolade/report-gate-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Differential02Accolade/report-gate-stdout.log",
+      "sha256": "996515697855ff27bd416c65030b2a81fe8bef916c6d0a509debceab7f43258d"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/Differential02Accolade/summary.json",
+      "sha256": "27200923e569cfbeec4936e7d9d783ae5fe2c58d9de50b82241f65a4578cb3c1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-gameplay-relays/HostAccolade01.json",
+      "sha256": "8b126f7455a00db3b79a31e6a2ac17ad926b5fc0fc1921e3ea3895768d67b55f"
+    }
+  ],
+  "regression_policy": {
+    "mode": "incremental",
+    "feature_only_tests": 18,
+    "full_regression_executed": false,
+    "isolated_index_result": ".build/CommitVerification/20261020-accolade-relay/Index01/summary.json",
+    "index_result_is_external_to_avoid_changing_the_verified_tree": true
+  },
+  "scope_limits": {
+    "full_original_candidates": 246,
+    "all_original_asset_paths_preserved": true,
+    "network_acceptance": false,
+    "remote_or_dedicated_server_tested_natively": false,
+    "owner_client_rpc_delivery_tested_natively": false,
+    "packaged_runtime": false,
+    "pixels_tested": false,
+    "migration_complete": false
+  }
+}
