@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "batch": "163-replay-browser-entry",
+  "scope": "Bounded replay browser/entry Python validity/query UI/confirmed-current-item playback policy,retaining native async query/DoOnce/localized duration format and confirmation IO. Both Profiles use actual isolated recording files,native list rows,decline and confirmed older-item retarget playback,new replay controller/HUD/clock/stop and owned state restoration. Failed fixture path/auto-name assumptions and source evidence preserved. Replay runtime component/HUD/scrub migration and original remaining owner/culture/network/pixel/package/version scope stay open. Default incremental verification.",
+  "recorded_utc": "2026-10-20T16:47:30.4278024Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "7e72fcb82230cca7f8d74e936f6cbabe82c80db1",
+  "examples_parent_commit": "db8e02ba5256fb47bd0a969ae5deca0ec50460a7",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-replays/Audit01",
+      "summary_sha256": "E2B183A311E01BA0D3D47B90DCE27D32A996320845230236879168F93F618FBD",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 857,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "82C3E0DEBCBD51D446F6AE65E956E8E5FFD059C343EA285BEB40605DA9E40EF1",
+          "file": "audit.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-replays/Assets01",
+      "summary_sha256": "E647CB5037D751DB5938F63BF0B5B151971029C02BFB4E0C30B321EF893BA721",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2200,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-replays/Playback03FallbackGeneratedID",
+      "summary_sha256": "13DE2EED82D7DA2BF355008AC92B727B64100CA0F6A37D41FA5879A6EDD99E60",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2984,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "A4FF6055077BBE37555C0BC46D14757EBEDD5134D7BB67B7996BFE243CC2F61A",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-replays/Playback04Python",
+      "summary_sha256": "2A851CF39375D07579591886D614DBCAF1602B175F981F6EE716EE1168D4409C",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2984,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "43B605D818991BFA0D6878C4B5F386AFE7198D7263490B11F26E889DA72C9C29",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/replay_browser_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "D87EEC0797F01C0322D78EF0D5A3F183E5856C57EAF84EEB0B4C97A459120726",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/replay_browser_mixin.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/replay_entry_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "27ABA7C9552D5DC4FC9D53509B48AE121C7ED9C720020B1AF19AFC3CEFBE523D",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/replay_entry_mixin.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/replay_browser_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "599239BD466AEF0F7A1F757AB21B765300D603E508B62B327118253ED4A27857",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/replay_browser_validation.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/replay_browser_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "A09800D5C2E3D4D0C2A1CEF1D3A0A222575AA1ADB1FDAB3DFAB48DAE7202A2E8",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/replay_browser_contract.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "536C4FD0D16BFF2F9AC9302741DFE602DF0741E84374403B68A4C18927269E83",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/audit_replay_ui.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "C4E0650DEF66E48D2B7E6B471B320FEDE98781FFB18449812679676EE0442DE4",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_replay_ui.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_replay_browser_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "C5FB5E0B34D18E6CA7400F6BA69C9F8AD6324BC1DD2A77E640601B4A17FE11B2",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_replay_browser_assets.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "35043CEFC99D1CDCA282DD417D6505FF1B983626229C4501E9FD6EDB60816B8B",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py"
+    },
+    {
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "38B08ADAA5D836977EC6DFE0E662DB8107FECE4321A235B5AC473DC689FF4F32",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1"
+    },
+    {
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "135252F408161EC574BE868B7668FC8506A4208A9424CA55AC92E53EDC74CEBB",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261021-replays/Host03PathAPI.json",
+    "result": {
+      "schema_version": 2,
+      "status": "passed",
+      "tests_run": 21,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "selection": {
+        "mode": "incremental",
+        "status": "ready",
+        "changed_files": [],
+        "selected_test_files": [
+          "Demos/UEPLyraIntegration/Tests/test_replay_browser_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_replay_browser_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_replay_browser_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_replay_entry_mixin.py"
+        ],
+        "affected_files": [],
+        "selection_reasons": {
+          "Demos/UEPLyraIntegration/Tests/test_replay_browser_contract.py": [
+            "explicit pattern test_replay_browser_contract.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_replay_browser_fixture.py": [
+            "explicit pattern test_replay_browser_fixture.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_replay_browser_mixin.py": [
+            "explicit pattern test_replay_*mixin.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_replay_entry_mixin.py": [
+            "explicit pattern test_replay_*mixin.py"
+          ]
+        },
+        "unmapped_changed_files": [],
+        "unparsed_unaffected_files": [],
+        "dependency_analysis": "local imports including inheritance, literal module names and file references; dynamic dependencies require explicit patterns/native lanes",
+        "full_regression_requested": false
+      },
+      "failed_cases": []
+    },
+    "sha256": "76A927AF6074EC76C717BC7FD2C51B6B67C6918D95FB4F40997252E122B7085C"
+  }
+}

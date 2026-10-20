@@ -23,6 +23,58 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch163 (2026-10-21),replay browser and entry:**
+Only the original replay browser/list entry are migrated here. Replay controller
+component/HUD/scrub policy remains pending;the empty player-selector events retain
+their original classification. Original browser21/entry16 nodes,full CDO/tree/
+public signatures/GUIDs/graph partitions remain. Browser6/entry3 methods per
+Profile,27/16 transport plus5 interfaces each,zero new business nodes.
+Browser Python policy preserves native query factory and DoOnce execution state,
+const RefreshButton focus,Visible0/Collapsed1 spinner,ResultList identity and
+native result order. Refresh keeps old rows until actual query completion.
+Entry validity and confirmed-only current-item playback policy uses Python.
+Original typed item storage/friendly-name/timespan/native localized format stays
+opaque native IO. Original confirmation title/body/Yes-No factory are unchanged.
+Both Profiles run real lifecycle/playback in fresh process-owned UserDir folders.
+The original Stage Saved/Demos data is untouched. Empty query/duplicate blocking
+across Profile switch pass. The actual controller records two real files,stops
+each through the native console command,and browser refresh returns both newest
+first. Native ListView creates the real row;localized text/duration/native format
+history and invalid-item preservation pass. Decline never plays. A second native
+dialog remains pending while the real current row is retargeted to the older
+real result;confirmation plays that older recording,matching the source's
+post-dialog getter. Direct interface test inputs are explicitly disclosed.
+New native replay world/controller,actual replay HUD,advancing clock and native
+stop are observed. No native callbacks are replayed. Owned roots/Profiles/replay
+settings/input restore. Health is checked before intentional playback travel;
+no cross-travel actor-health identity claim. All2 native exits0/independent gates0,
+strict logs and ordered Goodbye Python/log closure pass. Four owned real replay
+files remain as validation evidence.21 focused checks and7 invalid lanes pass;
+exact staged trees use default incremental verification at
+.build/CommitVerification/20261021-replays/Index01,no full regression.
+Playback01Fallback used an unavailable Python path shortcut;the native path API
+replaces it. Playback02FallbackNativePath proves auto-named recording requests
+can expose an empty active name;the native backend finalizes file IDs later.
+Accepted validation observes actual new file IDs,without inventing metadata.
+Both failed reports/logs/frozen fixture sources remain preserved. Production
+policy/assets are unchanged by these fixture corrections.
+Remaining original replay runtime/lobby/default-map/0.14 and owner/FText/culture/
+network/pixel/package/version requirements stay open. No Engine/general Cpp/
+official edits,build,cook,push,tag or publication.
+
+Batch163 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261021-replays/Audit01/summary.json` e2b183a311e01ba0d3d47b90dce27d32a996320845230236879168f93f618fbd
+`20261021-replays/Assets01/summary.json` e647cb5037d751db5938f63bf0b5b151971029c02bfb4e0c30b321ef893ba721
+`20261021-replays/Assets01/assets.json` a6d2b2a2e45e7f738c041a6d78f012412b030ef3689e48bd43219f953383365a
+`20261021-replays/Assets01/browser-replay-signatures.json` 7224f895cd47ac2c0f10ec7d8d49fb262adf54c8032399cf4a44fdd9a7458693
+`20261021-replays/Assets01/entry-replay-signatures.json` 6c2f01b386b94df0ce4f2bfa646396727974422384845cdb0fb147ef12cbbccd
+`20261021-replays/Playback03FallbackGeneratedID/summary.json` 13de2eed82d7da2bf355008ac92b727b64100ca0f6a37d41fa5879a6edd99e60
+`20261021-replays/Playback03FallbackGeneratedID/jump.json` a4ff6055077bbe37555c0bc46d14757ebedd5134d7bb67b7996bfe243cc2f61a
+`20261021-replays/Playback04Python/summary.json` 2a851cf39375d07579591886d614dbcaf1602b175f981f6ee716ee1168d4409c
+`20261021-replays/Playback04Python/jump.json` 43b605d818991bfa0d6878c4b5f386afe7198d7263490b11f26e889da72c9c29
+`20261021-replays/Host03PathAPI.json` 76a927af6074ec76c717bc7fd2c51b6b67c6918d95fb4f40997252e122b7085c
+`20261021-replays/guard-results.json` 28e30643cbc40df51ecf4327a887b729799281c72415b1e2b975baf0cd1c8aaa
+
 **Completed bounded batch162 (2026-10-21),shared UI preparation macro closure:**
 The original UIExperienceMacros7-node/5-business-node definition remains byte and
 graph identical. Original index/current graph census identifies all3 consumers:

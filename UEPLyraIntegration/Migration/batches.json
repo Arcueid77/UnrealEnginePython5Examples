@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 164,
+    "bounded_evidence_ledgers": 165,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -2270,6 +2270,73 @@
     "packaged_runtime": false,
     "full_acceptance": false,
     "next": "Remaining original0.13/0.14 candidates and prior FText audit/diagnostic/owner/network/culture/pixel/package/version gates stay open. Existing native parent input listener behavior is retained,not reimplemented or certified."
+  },
+  "replay_browser_pilot": {
+    "version": "0.13.0",
+    "status": "bounded_replay_browser_entry_python_policy_native_recordings_query_confirmation_and_current_item_playback_verified",
+    "evidence_ledger": "163-replay-browser-entry-native-recordings-and-current-item-playback.json",
+    "owner": [
+      "uep_lyra_hud.replay_browser_mixin",
+      "uep_lyra_hud.replay_entry_mixin"
+    ],
+    "original_read_only_audit": "20261021-replays/Audit01",
+    "native_asset_authoring": "20261021-replays/Assets01",
+    "native_runtime_runs": [
+      "20261021-replays/Playback03FallbackGeneratedID",
+      "20261021-replays/Playback04Python"
+    ],
+    "original_nodes": {
+      "browser": 21,
+      "entry": 16
+    },
+    "transport_nodes": {
+      "browser": 27,
+      "entry": 16
+    },
+    "interface_nodes_per_asset": 5,
+    "method_counts": {
+      "browser": {
+        "Python": 6,
+        "BlueprintFallback": 6
+      },
+      "entry": {
+        "Python": 3,
+        "BlueprintFallback": 3
+      }
+    },
+    "new_business_nodes": 0,
+    "original_cdos_trees_public_signatures_guids_and_graph_partitions_preserved": true,
+    "original_native_query_do_once_and_result_identity_order_preserved": true,
+    "original_native_localized_duration_format_and_confirmation_payloads_preserved": true,
+    "native_isolated_user_directory_per_process": true,
+    "existing_stage_replay_files_preserved": true,
+    "native_real_recordings_per_profile": 2,
+    "native_auto_record_ids_observed_from_actual_files": true,
+    "native_empty_query_and_refresh_per_profile": 2,
+    "native_newest_first_real_result_order_and_list_row_verified": true,
+    "native_invalid_items_preserve_existing_row": true,
+    "native_decline_and_confirmed_dialog_results": [
+      1,
+      0
+    ],
+    "native_current_item_retarget_during_dialog_plays_older_recording": true,
+    "native_replay_controller_hud_clock_and_stop_verified": true,
+    "owned_native_replay_evidence_retained": true,
+    "native_callbacks_replayed": false,
+    "owned_roots_profiles_settings_input_restored": true,
+    "cross_travel_actor_health_identity_claimed": false,
+    "replay_handler_hud_scrub_and_selector_policy_migrated": false,
+    "focused_host_checks": 21,
+    "invalid_lane_guards": 7,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261021-replays/Index01",
+    "physical_button_input_tested": false,
+    "pixels_tested": false,
+    "audio_playback_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Migrate original replay controller component/HUD/scrub policy,then remaining lobby/default-map and0.14 scope. Preserve all prior owner/FText/culture/network/pixel/package/version requirements."
   },
   "ui_preparation_closure_pilot": {
     "version": "0.13.0",
@@ -10714,7 +10781,9 @@
       "method_candidates": 5,
       "business_nodes": 15,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_replay_browser_entry_python_policy_native_recordings_query_confirmation_and_current_item_playback_verified",
+      "evidence_run": "20261021-replays/Playback04Python",
+      "evidence_ledger": "163-replay-browser-entry-native-recordings-and-current-item-playback.json"
     },
     {
       "path": "/Game/UI/Menu/Replays/W_ReplayListEntry.W_ReplayListEntry",
@@ -10723,7 +10792,9 @@
       "method_candidates": 2,
       "business_nodes": 14,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_replay_browser_entry_python_policy_native_recordings_query_confirmation_and_current_item_playback_verified",
+      "evidence_run": "20261021-replays/Playback04Python",
+      "evidence_ledger": "163-replay-browser-entry-native-recordings-and-current-item-playback.json"
     },
     {
       "path": "/Game/UI/Menu/W_BuildConfiguration.W_BuildConfiguration",
