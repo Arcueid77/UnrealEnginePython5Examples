@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPGamePhasesResult=") for argument in arguments):
+        return "uep_lyra_weapons.game_phases_validation"
     if any(argument.startswith("-UEPEliminationScoreResult=") for argument in arguments):
         return "uep_lyra_hud.elimination_score_validation"
     if any(argument.startswith("-UEPControlPointWidgetsResult=") for argument in arguments):

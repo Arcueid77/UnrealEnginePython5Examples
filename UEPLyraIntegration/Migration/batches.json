@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 139,
+    "bounded_evidence_ledgers": 140,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1235,6 +1235,81 @@
     "full_library_acceptance": false,
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
+  },
+  "game_phases_pilot": {
+    "version": "0.12.0",
+    "status": "partial_game_phases_python_native_gas_latent_countdown_and_actual_seamless_travel_verified_network_pie_version_pending",
+    "evidence_ledger": "138-game-phases-native-gas-latent-countdown-seamless-travel.json",
+    "owner": "uep_lyra_weapons.game_phases_mixin",
+    "read_only_audit": "20261020-game-phases/Audit01",
+    "native_asset_authoring": "20261020-game-phases/Assets01",
+    "native_runtime_runs": [
+      "20261020-game-phases/Differential02FallbackSeamless",
+      "20261020-game-phases/Differential03PythonSeamless"
+    ],
+    "original_graph_nodes": {
+      "warmup": 66,
+      "playing": 4,
+      "postgame": 10
+    },
+    "methods_per_profile": {
+      "warmup": 5,
+      "playing": 2,
+      "postgame": 3
+    },
+    "new_transport_nodes": {
+      "warmup": 23,
+      "playing": 8,
+      "postgame": 14
+    },
+    "generated_interface_nodes_each": 5,
+    "new_business_nodes": 0,
+    "original_full_cdos_gas_parent_tags_instancing_security_signatures_and_native_latent_uuids_preserved": true,
+    "original_default_durations_preserved": {
+      "wait": 30.0,
+      "countdown": 3,
+      "postgame": 10.0
+    },
+    "runtime_fixture_durations": {
+      "wait": 2.25,
+      "countdown": 2,
+      "postgame": 0.25
+    },
+    "original_native_multicast_cosmetic_custom_thunk_payload_backend_preserved": true,
+    "original_empty_postgame_end_stays_unconnected": true,
+    "original_sanitize_locals_not_promoted_to_ability_properties": true,
+    "native_profile_flow_runs": 2,
+    "natural_rounds_each_run": 2,
+    "native_duration_sanitize_cases": 8,
+    "countdown_payloads_each_run": [
+      2.0,
+      1.0,
+      0.0
+    ],
+    "actual_global_lobby_removal_immunity_then_input_block_verified": true,
+    "native_phase_sibling_cancellation_and_playing_tag_verified": true,
+    "native_next_tick_restart_frame_gaps": [
+      1,
+      1
+    ],
+    "actual_server_travel_and_loaded_second_round_each_run": true,
+    "probe_subscriptions_closed_and_old_world_references_released_before_travel": true,
+    "runtime_cdo_selectors_wrappers_owned_roots_restored": true,
+    "cross_profile_semantic_callbacks_and_complete_message_payloads_match": true,
+    "feature_only_host_checks": 17,
+    "invalid_lane_guards": 6,
+    "full_regression_executed_this_batch": false,
+    "preserved_failed_native_runs": [
+      "Differential01FallbackTravel"
+    ],
+    "seamless_travel_does_not_require_game_time_reset": true,
+    "network_acceptance": false,
+    "pie_skip_branch_tested": false,
+    "original_default_wall_timing_tested": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Actual network and PIE development skip/cancel variants,default-duration wall timing,pixels/packaging/version acceptance and full original migration candidates remain open."
   },
   "elimination_score_widget_pilot": {
     "version": "0.12.0",
@@ -6719,8 +6794,9 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 2,
       "business_nodes": 2,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch138:three phase decisions use Python;original66/4/10 nodes/full CDO/GAS parent/tags/server security/signatures/native Delay and next-tick UUIDs retained.5/2/3 methods per Profile,23/8/14 transport plus5 interfaces each,zero new business. Native typed multicast/cosmetic/GMS CustomThunk backend and empty postgame end retained. Source sanitizer locals remain local,including native int64-to-int32 wrap behavior. Two real standalone flows with explicit2.25s/2/.25s fixture settings match8 sanitizer cases and complete countdown2/1/0 payloads,effect order,parent sibling cancellation,Playing tag and actual native next-tick ServerTravel. Each loads second round and naturally reaches Playing;probe closes/releases world before travel,CDOs/selectors/wrappers/roots restore. Original asset defaults30s/3/10s unchanged. Failed01 sources/logs preserved:travel really succeeded but probe incorrectly required seamless game-time reset;02/03 verify native start/finish logs plus new-round callbacks. Network/PIE/default wall timing/pixels/package/version acceptance pending.",
+      "status": "partial_game_phases_python_native_gas_latent_countdown_and_actual_seamless_travel_verified_network_pie_version_pending",
+      "evidence_ledger": "138-game-phases-native-gas-latent-countdown-seamless-travel.json"
     },
     {
       "path": "/ShooterCore/Experiences/Phases/Phase_PostGame.Phase_PostGame",
@@ -6728,8 +6804,9 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 2,
       "business_nodes": 8,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch138:three phase decisions use Python;original66/4/10 nodes/full CDO/GAS parent/tags/server security/signatures/native Delay and next-tick UUIDs retained.5/2/3 methods per Profile,23/8/14 transport plus5 interfaces each,zero new business. Native typed multicast/cosmetic/GMS CustomThunk backend and empty postgame end retained. Source sanitizer locals remain local,including native int64-to-int32 wrap behavior. Two real standalone flows with explicit2.25s/2/.25s fixture settings match8 sanitizer cases and complete countdown2/1/0 payloads,effect order,parent sibling cancellation,Playing tag and actual native next-tick ServerTravel. Each loads second round and naturally reaches Playing;probe closes/releases world before travel,CDOs/selectors/wrappers/roots restore. Original asset defaults30s/3/10s unchanged. Failed01 sources/logs preserved:travel really succeeded but probe incorrectly required seamless game-time reset;02/03 verify native start/finish logs plus new-round callbacks. Network/PIE/default wall timing/pixels/package/version acceptance pending.",
+      "status": "partial_game_phases_python_native_gas_latent_countdown_and_actual_seamless_travel_verified_network_pie_version_pending",
+      "evidence_ledger": "138-game-phases-native-gas-latent-countdown-seamless-travel.json"
     },
     {
       "path": "/ShooterCore/Experiences/Phases/Phase_Warmup.Phase_Warmup",
@@ -6737,8 +6814,9 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 3,
       "business_nodes": 54,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Batch138:three phase decisions use Python;original66/4/10 nodes/full CDO/GAS parent/tags/server security/signatures/native Delay and next-tick UUIDs retained.5/2/3 methods per Profile,23/8/14 transport plus5 interfaces each,zero new business. Native typed multicast/cosmetic/GMS CustomThunk backend and empty postgame end retained. Source sanitizer locals remain local,including native int64-to-int32 wrap behavior. Two real standalone flows with explicit2.25s/2/.25s fixture settings match8 sanitizer cases and complete countdown2/1/0 payloads,effect order,parent sibling cancellation,Playing tag and actual native next-tick ServerTravel. Each loads second round and naturally reaches Playing;probe closes/releases world before travel,CDOs/selectors/wrappers/roots restore. Original asset defaults30s/3/10s unchanged. Failed01 sources/logs preserved:travel really succeeded but probe incorrectly required seamless game-time reset;02/03 verify native start/finish logs plus new-round callbacks. Network/PIE/default wall timing/pixels/package/version acceptance pending.",
+      "status": "partial_game_phases_python_native_gas_latent_countdown_and_actual_seamless_travel_verified_network_pie_version_pending",
+      "evidence_ledger": "138-game-phases-native-gas-latent-countdown-seamless-travel.json"
     },
     {
       "path": "/ShooterCore/Game/B_ShooterGameScoring_Base.B_ShooterGameScoring_Base",

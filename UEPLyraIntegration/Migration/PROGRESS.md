@@ -23,6 +23,36 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch138 (2026-10-20),game-phase family:**
+Warmup/Playing/PostGame decisions use Python with original66/4/10 nodes/full
+CDOs/GameplayAbility signatures/native phase parent/tags/instancing/server-only
+security and original latent Delay/next-tick UUIDs preserved.5/2/3 methods per
+Profile,23/8/14 transport plus5 interfaces each;zero new business. Original
+multicast/cosmetic/GMS wildcard VM countdown transport remains compiled native
+Blueprint. Empty PostGame end stays unconnected. Original SanitizeDurations
+locals remain invocation-local;native double-to-int64-to-int32 wrap retained.
+Assets01 and two actual standalone phase flows(02FallbackSeamless/03PythonSeamless)
+pass native exit0/independent gate0/strict logs/ordered shutdown. Each observes
+two natural Warmup->Playing rounds with actual PostGame/ServerTravel between.
+Cross-profile callback sequences,8 sanitizer cases and complete typed countdown
+payloads2/1/0 match. Global lobby effect removed before Playing;postgame immunity
+precedes wait,then global input block,then a real later frame invokes native
+ServerTravel. Engine logs prove request/start/seamless completion;second round
+loads and naturally reaches Playing with healthy native player readiness.
+Probe subscription/root/world references close before travel. Runtime CDO values/
+Profile selectors/wrappers/owned roots restore;no Health writes or ability-callback
+replay. Explicit fixture timings are Wait2.25s/Countdown2/PostGame.25s;original
+asset defaults30s/3/10s stay unchanged.17 focused checks/6 invalid lanes pass;
+exact staged regression is incremental. Native source copies for phase parent/
+subsystem/global ability system/development and travel APIs are frozen;no build.
+Preserve Differential01FallbackTravel/source:all phase/message/effect/cancellation/
+travel behavior worked,but final probe wrongly required seamless game-time reset.
+Native logs show real successful transition with continuous game time.02/03 use
+actual ordered engine travel markers plus second natural-round callbacks instead.
+The complete246-candidate scope remains open,including network/PIE development
+skip/interruption/default-duration wall timing/pixels/package/version acceptance.
+No SDK/Engine/general Cpp/official edits,build,cook,push,tag or publication.
+
 **Completed bounded batch137 (2026-10-20),elimination score HUD:**
 TDM score/style/clock decisions use Python with original230 nodes/full CDO/tree/
 animations/native experience/component/team bindings,PlayerCounted/CountDownUpdate

@@ -1,0 +1,457 @@
+{
+  "schema_version": 1,
+  "batch": "138-game-phases-native-gas-latent-countdown-seamless-travel",
+  "scope": "Warmup/Playing/PostGame Python decisions preserve original66/4/10 nodes/full CDO/GAS parent/tags/server security/signatures/latent Delay and next-tick UUIDs.5/2/3 methods per Profile,23/8/14 transport plus5 interface each,0 new business. Native typed multicast/cosmetic/GMS payload VM and empty postgame end retained. Original sanitize locals remain invocation-local with native int64-to-int32 wrap. Original assets default30s/3/10s unchanged;explicit runtime fixture2.25s/2/.25s. Two real standalone flows each observe two natural Warmup/Playing rounds with actual PostGame/ServerTravel between. Cross-profile semantic callbacks/8 sanitizer cases/complete countdown2/1/0 payloads/effect order/native sibling cancellation/Playing tag/next-frame restart match. Engine logs prove request/start/seamless completion;new round loads and reaches healthy native readiness. Probe subscription/root/world references close before travel;CDOs/selectors/wrappers/owned roots restore. Exit0/independent gate0/strict logs/ordered shutdown each.17 focused/6 invalid lanes;exact staged incremental follows. Failed01 sources preserved:travel succeeded but probe wrongly required seamless game-time reset;02/03 use actual ordered engine logs and new-round callbacks. Full246 migration/network/PIE/interruption/default wall timing/pixels/package/version remain open. No Cpp/official edits/build/cook/push/tag/publication.",
+  "recorded_utc": "2026-10-20T03:47:46.3994511Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "1ff4b72bec3f4a04fe9248b8c7f650bbfc147bda",
+  "examples_parent_commit": "0a58919a2a0380b2f336e3d06875e424eb20ae17",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Audit01",
+      "summary_sha256": "CA72206BEE7808E53D95952AD09F4030F5A925ED1EFB089A7AE4BF7A1240D5E4",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 851,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "809297FFEAA43E1A5B5AF83ECC3849FF30544202235F4F491838EF322058F247",
+          "file": "audit.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Assets01",
+      "summary_sha256": "EAFD5E611CC08869E9C9BE51FAAFED4766A1EC81CF9249459FEC641ADC2CC320",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2047,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Differential02FallbackSeamless",
+      "summary_sha256": "33CA6ECADB028ECC5B58162B1DBC28B235E84F641FC3E8A551ADFAEF71F866BC",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2598,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "D69AE14E10C56BD26D66A99CF5E19E8741634690FBFF94CF3A05ED41D9EEBBD8",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Differential03PythonSeamless",
+      "summary_sha256": "555AF90AE066FCDC466FF04339438FCB979C4828904111AA0E4B58944EB5329E",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2598,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "35BAA2BFB0CD4A1C3E56E93EE1E27088E930419AFF56D197858C4CF972939565",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/game_phases_mixin.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/game_phases_mixin.py",
+      "sha256": "DAA5460398E085A9A6FF8B2B36D1DCE0B783A508881A3409138B14871EE59B79",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/game_phases_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/game_phases_validation.py",
+      "sha256": "F41ACEE4877E83A84F7C2B70D61069E6276FE09E62431532CB40920049E35980",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/game_phases_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/game_phases_contract.py",
+      "sha256": "85990ED3CFF2C8C30494511360B068BCAD8A5662328A423BA97F81E7EE691290",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "C8314386CD29DB578732EF25B5167C90480F96B234AB2D3C0F20B8DDC344254F",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/audit_game_phases.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_game_phases.py",
+      "sha256": "FDD3EE59BA0A1B071BAEBF412B38E5707772F586291CCE812B3A591F5B1E6C57",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_game_phase_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_game_phase_assets.py",
+      "sha256": "1E9F96054D693B48433A88A3EEAB0F7B60826E8D9D0298F58464E3095E0AFEFE",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "389C5CDA0C95C968D1C4B63DD767DD497D2721D22173EA05A49FE45E81675115",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "13B0096BB109D9D6987494E3A5AA5B7609D6C3986E9D385EB2B7203B991006DF",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "94CA38211D5DD6E28CD8DF11EC3ECE51E026D55073D114CDFCEC929AF2B4C2C2",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Host02TravelProof.json",
+    "result": {
+      "schema_version": 2,
+      "status": "passed",
+      "tests_run": 17,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "selection": {
+        "mode": "incremental",
+        "status": "ready",
+        "changed_files": [],
+        "selected_test_files": [
+          "Demos/UEPLyraIntegration/Tests/test_game_phases_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_game_phases_mixin.py"
+        ],
+        "affected_files": [],
+        "selection_reasons": {
+          "Demos/UEPLyraIntegration/Tests/test_game_phases_contract.py": [
+            "explicit pattern test_game_phases_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_game_phases_mixin.py": [
+            "explicit pattern test_game_phases_*.py"
+          ]
+        },
+        "unmapped_changed_files": [],
+        "unparsed_unaffected_files": [],
+        "dependency_analysis": "local imports including inheritance, literal module names and file references; dynamic dependencies require explicit patterns/native lanes",
+        "full_regression_requested": false
+      },
+      "failed_cases": []
+    },
+    "sha256": "6C6BDC16C7C15DBB0DC124F5BDBB3F6DE63DF77EDF89E283F991775C57BAEA9C"
+  },
+  "raw_artifacts": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/assets.json",
+      "sha256": "2ef651f2df615bb8df005aa004f93cc491d9d056614639e7b70f15c091f141e3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Assets01/assets-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Assets01/assets-stdout.log",
+      "sha256": "0473e75427718ca97257fc7920a286fb6c6a365a52e864931c5d4a79b4729158"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Assets01/assets.json",
+      "sha256": "e7c13f359623b0d381a44c2a221f1c751fdfd7fa629055c66a17a39c2c4f98ac"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Assets01/assets.log",
+      "sha256": "d4ccdd4dead441091d6a5eec9e7b33c3652638f8faa26347648fb60d1cb11a08"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Assets01/dash-playing-phase-after-cdo.t3d",
+      "sha256": "3edf6e44aa11702796db34be08b671def2bfa63a35456262d561477e3cfed623"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Assets01/dash-playing-phase-before-cdo.t3d",
+      "sha256": "c489eddefaa3d1af4a13ac7144bb3c6d0c0a11b741d24c1147bab976bd1ae063"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Assets01/dash-postgame-phase-after-cdo.t3d",
+      "sha256": "1a2b69f4f1ab9ba4d141cf604e0fad8b0fed5aaf01e6d70281ae07d131650343"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Assets01/dash-postgame-phase-before-cdo.t3d",
+      "sha256": "295b83cee8721f6d5661ddbff52db8d2d8c839fec4ff9daf1f0f1147150ff390"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Assets01/dash-warmup-phase-after-cdo.t3d",
+      "sha256": "01425db25bb783eabc258b7179f49ecdd8a112159c0991c0f461dadfd5456d00"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Assets01/dash-warmup-phase-before-cdo.t3d",
+      "sha256": "f5c5587ffc96be003a1e9944dceed0e2e39f60da1945f501d8504299c3e7863b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Assets01/PreviousAssets/before.uasset",
+      "sha256": "d5173d2ffff4940750a44a54d4296196bb59cd4318e41e287919fdc008f0677e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Assets01/PreviousAssets/Phase_Playing.uasset",
+      "sha256": "55bc8607ba0de6a3f10e6631cff851c773dbdc41288d17834a123687dbfd8d08"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Assets01/PreviousAssets/Phase_PostGame.uasset",
+      "sha256": "a3cfa0a58207d63160e91cf47b747669f115eda71b9a8aa97e96775be5b4b560"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Assets01/summary.json",
+      "sha256": "eafd5e611cc08869e9c9be51faafed4766a1ec81cf9249459fec641adc2cc320"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Audit01/audit-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Audit01/audit-stdout.log",
+      "sha256": "344bc01ae979cca1bb332c51ab6498a704c7ef923a58dbc13866ddf73e25bae5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Audit01/audit.json",
+      "sha256": "809297ffeaa43e1a5b5af83ecc3849ff30544202235f4f491838ef322058f247"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Audit01/audit.log",
+      "sha256": "a5f5e933106e25da48b183bc0d4bbc38a12db408f34632b085becefe12d40419"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Audit01/native-cosmetic-macro.json",
+      "sha256": "6686431a183d6c7535f57d59187d16195ad2c83645cb4b5ab83518a903621dda"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Audit01/playing-blueprint.t3d",
+      "sha256": "9d8fbdd325846883d55ea9abdb1edcbeb52f46bcd3b8b63777139a5ae9bd32eb"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Audit01/playing-cdo.t3d",
+      "sha256": "c489eddefaa3d1af4a13ac7144bb3c6d0c0a11b741d24c1147bab976bd1ae063"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Audit01/playing-graphs.json",
+      "sha256": "1f98e3a47a81a0f060c0300263595478a641f415be9b0218d81be657594ddab0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Audit01/postgame-blueprint.t3d",
+      "sha256": "7bfa930d8f23353d1658f51887e5fca61546e35f5c4a236380c494fc41ff1ea7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Audit01/postgame-cdo.t3d",
+      "sha256": "295b83cee8721f6d5661ddbff52db8d2d8c839fec4ff9daf1f0f1147150ff390"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Audit01/postgame-graphs.json",
+      "sha256": "51130cb5fe5d20c948e1c7df4fd1dc38f7ce34bf3d275a7b18b326dfd3614b05"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Audit01/summary.json",
+      "sha256": "ca72206bee7808e53d95952ad09f4030f5a925ed1efb089a7ae4bf7a1240d5e4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Audit01/warmup-blueprint.t3d",
+      "sha256": "61f741c9d4d62b665ec26bb4866fec217e7bd97e3ea610b905e74c148e060477"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Audit01/warmup-cdo.t3d",
+      "sha256": "f5c5587ffc96be003a1e9944dceed0e2e39f60da1945f501d8504299c3e7863b"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Audit01/warmup-graphs.json",
+      "sha256": "cdb86a7ac72edc88c06cf07166e3c6360da07a98f28205181e6ea5273b86d7f8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/comparison.json",
+      "sha256": "83e6cc8c94adad5ad9513a66598ba9539106e4709bb7e6147c858f7c051fc3d4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Differential01FallbackTravel/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Differential01FallbackTravel/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Differential01FallbackTravel/jump.json",
+      "sha256": "22839eac9e95d63207541b8903b2d585700c9f1917061b09e0d2fa4ceb992068"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Differential01FallbackTravel/jump.log",
+      "sha256": "545e1f4eadf1891a2edaaa850edd3a3d817de5defac72648c45393f1625b5203"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Differential01FallbackTravel/source/Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/game_phases_contract.py",
+      "sha256": "4939d84a3f58e0a1f11cd0300146a22ee232ac7b47da4e05e386d6dc45b1a77f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Differential01FallbackTravel/source/Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/game_phases_mixin.py",
+      "sha256": "daa5460398e085a9a6ff8b2b36d1dce0b783a508881a3409138b14871ee59b79"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Differential01FallbackTravel/source/Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/game_phases_validation.py",
+      "sha256": "fa54765bfb36d03abb718697efde7ed89e2ec4c33c4466c468d700c0de0dcb20"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Differential01FallbackTravel/source/Demos/UEPLyraIntegration/Tools/generate_game_phase_assets.py",
+      "sha256": "1e9f96054d693b48433a88a3eeab0f7b60826e8d9d0298f58464e3095e0afefe"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Differential01FallbackTravel/source/hashes.json",
+      "sha256": "f35c6509d854386c1fa359296d04b3a2075f76ab414433da388f0602fb95d543"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Differential01FallbackTravel/source/Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "94ca38211d5dd6e28cd8df11ec3ece51e026d55073d114cdfcec929af2b4c2c2"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Differential01FallbackTravel/summary.json",
+      "sha256": "56d881b1fbc2b4f0ca6afedbf16feeca93bafa6a871896880f40fbbfe14307a9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Differential02FallbackSeamless/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Differential02FallbackSeamless/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Differential02FallbackSeamless/jump.json",
+      "sha256": "d69ae14e10c56bd26d66a99cf5e19e8741634690fbff94cf3a05ed41d9eebbd8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Differential02FallbackSeamless/jump.log",
+      "sha256": "0e148af7539cfa0478e6c6c5bcb45f47a23bee29513e270cf4eca9cfaa111246"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Differential02FallbackSeamless/report-gate-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Differential02FallbackSeamless/report-gate-stdout.log",
+      "sha256": "7d1924bcbd9a8c42fef44c4d92e85886f6cce98459277754cd6864a06bddd7f9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Differential02FallbackSeamless/summary.json",
+      "sha256": "33ca6ecadb028ecc5b58162b1dbc28b235e84f641fc3e8a551adfaef71f866bc"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Differential03PythonSeamless/jump-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Differential03PythonSeamless/jump-stdout.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Differential03PythonSeamless/jump.json",
+      "sha256": "35baa2bfb0cd4a1c3e56e93ee1e27088e930419aff56d197858c4cf972939565"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Differential03PythonSeamless/jump.log",
+      "sha256": "fe6a24fd13a012f165095f3d149119cb04276ce665b2c99884093eeb9b9430c1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Differential03PythonSeamless/report-gate-stderr.log",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Differential03PythonSeamless/report-gate-stdout.log",
+      "sha256": "61722c992f56a8f8866fd21f842a6b64cd1fc271dc3c67515bf88b256eaf74d8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Differential03PythonSeamless/summary.json",
+      "sha256": "555af90ae066fcdc466ff04339438fcb979c4828904111aa0e4b58944eb5329e"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/focused-changes.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/guards.json",
+      "sha256": "ee33e49891a67b06991e2740f1eeed417591c4b57485eeb3572f860ea823c26c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Host01.json",
+      "sha256": "6c6bdc16c7c15dbb0dc124f5bdbb3f6de63df77edf89e283f991775c57baea9c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Host02TravelProof.json",
+      "sha256": "6c6bdc16c7c15dbb0dc124f5bdbb3f6de63df77edf89e283f991775c57baea9c"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261020-game-phases/Run-Audit.ps1",
+      "sha256": "28aac34dbe13c9ef6a3258e823c6be1ee025a76d5beb1006718f0a5f8e66dc82"
+    }
+  ],
+  "preserved_failed_native_runs": [
+    "Differential01FallbackTravel"
+  ],
+  "regression_policy": {
+    "mode": "incremental",
+    "feature_only_tests": 17,
+    "full_regression_executed": false,
+    "isolated_index_result": ".build/CommitVerification/20261020-game-phases/Index01/summary.json",
+    "index_result_is_external_to_avoid_changing_verified_tree": true
+  },
+  "scope_limits": {
+    "full_original_candidates": 246,
+    "all_original_asset_paths_preserved": true,
+    "native_gas_parent_security_tags_latents_and_typed_messages_preserved": true,
+    "fixture_runtime_durations": {
+      "wait": 2.25,
+      "countdown": 2,
+      "postgame": 0.25
+    },
+    "original_asset_durations_unchanged": {
+      "wait": 30.0,
+      "countdown": 3,
+      "postgame": 10.0
+    },
+    "original_default_wall_timing_tested": false,
+    "actual_server_travel_and_two_natural_rounds_each_profile": true,
+    "network_acceptance": false,
+    "pie_skip_branch_tested": false,
+    "interrupted_warmup_cleanup_tested": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "migration_complete": false
+  }
+}
