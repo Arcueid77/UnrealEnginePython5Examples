@@ -23,6 +23,48 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch177 (2026-10-21),Explorer item-acquired toast row:**
+All3 original emitted methods are routed together:OnListItemObjectSet,SetIcon
+and OnTimerElapsed. The OnToastExpired delegate signature graph stays native.
+Valid assignment preserves cast/store/current ItemPtr -> virtual SetIcon ->
+native FText setter -> original native timer order. FText never roundtrips
+through Python strings. The original timer factory,one-shot/default pins,
+OnTimerElapsed binding/name/GUID and fallback expiry broadcast remain native.
+Python expiry broadcasts the actual native multicast with the current ItemPtr.
+SetIcon preserves SetBrushFromTexture(Texture,false) before Visible/Hidden.
+Invalid casts leave the old item and pending timer unchanged;nonpositive timer
+duration is passed through the original native timer factory.
+All25 original nodes/GUIDs,full CDO/public signatures,WidgetTree/animations and
+native text/timer graph partitions remain checked.5 transport and5 interface
+nodes;0 new business nodes. The original ItemAcquiredList really generates
+both Profile row classes through its native ListView,receives native expiry
+and removes the original items.16 paired timer cases cover positive,zero,
+negative,replacement,invalid casts,pending Profile switch,rooted removed row
+and native GC. The timer matrix uses explicit native interface assignments;
+timer callbacks are never replayed. Original Pistol FText namespace/key survives
+into the TextBlock. Valid/null/valid icon cycles preserve113x47 brush size and
+exact texture/Visible/Hidden results. Primary player inventory/Health and owned
+timers/widget roots/class selectors restore. Native exit0,independent gate0,
+strict logs and ordered shutdown pass.15 focused checks and5 invalid lanes pass;
+staged verification is incremental at
+.build/CommitVerification/20261021-explorer-toast/Index01.
+Toast01 preserves a preflight source-path typo;Toast02 preserves a collapsed
+original list fixture before UpdateDisplayVisibility;Toast03 reaches both real
+native list expiry/removal paths then rejects the fixture's double-precision
+Vector2D assignment to Slate's DeprecateSlateVector2D brush field. Toast04 uses
+the exact native field type. No Engine/general Cpp/official edits,build,cook,
+push,tag or publication. Static246/182/63/11 and exact candidate paths/order
+remain;pixel/network/package and all remaining migration acceptance stay open.
+
+Batch177 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261021-explorer-toast/Assets01/summary.json` 635daf8856fc14182ccfac75361513c7f7ac6c0ff280c1d6492f169d01e35354
+`20261021-explorer-toast/Assets01/assets.json` af026742133cbde82550b02328c1f8adab7473e7caa84821a17c77b51665303c
+`20261021-explorer-toast/Assets01/toast-preservation.json` 30f70edb9f6011b0a2c8b84f1c55b5fe25686e8ba6011a24d5eb28b083297f38
+`20261021-explorer-toast/Toast04/summary.json` 40c0e59f0bd5ec804291d0d1401c324eb9f32b759d188f65cd32f3fe1459ca06
+`20261021-explorer-toast/Toast04/jump.json` 1eb7488e74c23cf09c389d6fa998240375e094aa624c481032d24ba8264cd3bc
+`20261021-explorer-toast/host-focused02.json` 1fc62d031b5805d2a78f833744020cdd2200d926a8c7187fd23544d0e510f86e
+`20261021-explorer-toast/guards02.json` 9859a6fb6a2e360bd11f083cbf29363f9823e8a66ceea64695b36adaa5ba9c08
+
 **Completed bounded batch176 (2026-10-21),Explorer inventory grid:**
 Construct now stores the original owning-controller inventory component in
 NewVar_0,clears TileView,reads GetAllItems,adds each original instance in order,

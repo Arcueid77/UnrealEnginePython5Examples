@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 178,
+    "bounded_evidence_ledgers": 179,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -11549,7 +11549,18 @@
       "method_candidates": 4,
       "business_nodes": 17,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_explorer_toast_three_methods_native_list_text_icon_timer_verified_pixels_network_package_pending",
+      "implemented_methods": [
+        "OnListItemObjectSet",
+        "SetIcon",
+        "OnTimerElapsed"
+      ],
+      "reviewed_native_delegate_signature_graphs": [
+        "OnToastExpired"
+      ],
+      "evidence_run": "20261021-explorer-toast/Toast04",
+      "evidence_ledger": "177-explorer-item-toast-text-icons-native-timers.json",
+      "original_widget_visuals_cdos_public_abi_graph_partitions_and_guids_preserved": true
     },
     {
       "path": "/ShooterExplorer/UserInterface/W_MapScreen.W_MapScreen",
@@ -12391,5 +12402,48 @@
     "packaged_runtime": false,
     "full_acceptance": false,
     "next": "Continue original Explorer interaction/collection/toast candidates and all prior bounded parent/full version/network/pixel/package work. Full migration remains open."
+  },
+  "explorer_toast_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_explorer_toast_three_methods_native_list_text_icon_timer_verified_pixels_network_package_pending",
+    "evidence_ledger": "177-explorer-item-toast-text-icons-native-timers.json",
+    "owner": "uep_lyra_hud.explorer_toast_mixin",
+    "original_source_audit": "20261021-explorer-characters/Audit03ShooterReference",
+    "native_asset_authoring": "20261021-explorer-toast/Assets01",
+    "native_runtime_runs": [
+      "20261021-explorer-toast/Toast04"
+    ],
+    "method_counts": {
+      "Python": 3,
+      "BlueprintFallback": 3
+    },
+    "original_nodes": 25,
+    "transport_nodes": 5,
+    "interface_nodes": 5,
+    "new_business_nodes": 0,
+    "original_full_widget_tree_animations_cdos_signatures_node_guids_and_graph_partitions_preserved": true,
+    "original_native_ftext_property_to_textblock_path_preserved": true,
+    "entry_assignment_order": "cast -> store ItemPtr -> SetIcon -> native FText writer -> original native one-shot timer",
+    "icon_order": "SetBrushFromTexture(Texture,false) -> Visible if valid else Hidden",
+    "expiry": "broadcast OnToastExpired with current ItemPtr",
+    "original_timer_factory_delegate_name_guid_defaults_and_replacement_semantics_preserved": true,
+    "original_list_view_delivered_both_profile_rows_and_removed_items_after_native_expiry": true,
+    "native_pistol_display_name_namespace_keys_preserved": true,
+    "native_nonmatching_image_size_and_hidden_null_icon_pairs_verified": true,
+    "native_timer_cases": 16,
+    "native_zero_negative_replacement_invalid_cast_profile_switch_removed_widget_and_gc_cases": true,
+    "only_owned_timers_roots_profile_selectors_cleaned": true,
+    "focused_host_checks": 15,
+    "invalid_lane_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261021-explorer-toast/Index01",
+    "valid_rows_delivered_by_native_list_view": true,
+    "additional_timer_matrix_uses_direct_native_interface_calls": true,
+    "timer_callbacks_replayed": false,
+    "pixels_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Continue original Explorer item-acquired list and interaction/collection candidates,all prior bounded parent and full version/network/pixel/package acceptance. Full migration remains open."
   }
 }

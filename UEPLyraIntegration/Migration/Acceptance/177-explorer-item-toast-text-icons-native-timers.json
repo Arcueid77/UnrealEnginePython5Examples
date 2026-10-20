@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "batch": "177-explorer-item-toast-text-icons-native-timers",
+  "scope": "Original Explorer item toast row three methods; native list delivery/expiry removal, FText identity, icon size and native timer replacement/lifetime; pixel/network/package remains open",
+  "recorded_utc": "2026-10-20T22:32:55.8003581Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "79139f113836816fac8a4ec36776f1d06ab515d9",
+  "examples_parent_commit": "95db7669ea50f74b4e4cc403ca353d6243aa4c76",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-toast/Assets01",
+      "summary_sha256": "635DAF8856FC14182CCFAC75361513C7F7AC6C0FF280C1D6492F169D01E35354",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2292,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-toast/Toast04",
+      "summary_sha256": "40C0E59F0BD5EC804291D0D1401C324EB9F32B759D188F65CD32F3FE1459CA06",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3128,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "1EB7488E74C23CF09C389D6FA998240375E094AA624C481032D24BA8264CD3BC",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_explorer_toast_assets.py",
+      "sha256": "980F59C0A7A9649508FF89A2F161D050596FC0C995FB03EFC844FB1E68B40DFA",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_explorer_toast_assets.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/explorer_toast_mixin.py",
+      "sha256": "A4426128721943DBF61FDAB04AD4986464CCD68895D71364163D980ED46BEAA6",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/explorer_toast_mixin.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/explorer_toast_contract.py",
+      "sha256": "02CC5CFC9A140FD66E2FCDAB16F5B8489594AB36250FBF085661862EEFE5725D",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/explorer_toast_contract.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/explorer_toast_validation.py",
+      "sha256": "4260A89967132407E6F5BD4E7F88581ABBC155CF5DF249B2FACED81F3BC4EF64",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/explorer_toast_validation.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "041A096EA0F515D5F02A1401507CA5E859242E74A5082A037482A49F587DA2E3",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    }
+  ],
+  "host_report": {
+    "result": {
+      "status": "passed",
+      "tests_run": 15,
+      "runtime_acceptance": false,
+      "full_regression": false
+    },
+    "sha256": "1FC62D031B5805D2A78F833744020CDD2200D926A8C7187FD23544D0E510F86E",
+    "path": ".build/LyraValidation/BlueprintPython/20261021-explorer-toast/host-focused02.json"
+  }
+}
