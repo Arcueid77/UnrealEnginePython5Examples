@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "replayruntime":
+        from generate_replay_runtime_assets import generate as generate_replay_runtime
+        return generate_replay_runtime(stage)
     if kind == "replaybrowser":
         from generate_replay_browser_assets import generate as generate_replay_browser
         return generate_replay_browser(stage)

@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 165,
+    "bounded_evidence_ledgers": 166,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -2270,6 +2270,75 @@
     "packaged_runtime": false,
     "full_acceptance": false,
     "next": "Remaining original0.13/0.14 candidates and prior FText audit/diagnostic/owner/network/culture/pixel/package/version gates stay open. Existing native parent input listener behavior is retained,not reimplemented or certified."
+  },
+  "replay_runtime_pilot": {
+    "version": "0.13.0",
+    "status": "bounded_replay_component_hud_scrub_python_policy_native_lifecycle_ticks_and_pointer_seek_verified",
+    "evidence_ledger": "164-replay-runtime-native-component-hud-tick-pointer-and-seek.json",
+    "owner": "uep_lyra_hud.replay_runtime_mixin",
+    "original_read_only_audit": "20261021-replays/Audit01",
+    "native_asset_authoring": "20261021-replays/RuntimeAssets01",
+    "native_runtime_runs": [
+      "20261021-replays/Runtime07FallbackDestroyedWrapper",
+      "20261021-replays/Runtime08Python"
+    ],
+    "original_nodes": {
+      "handler": 14,
+      "hud": 2,
+      "scrub": 19
+    },
+    "transport_nodes": {
+      "handler": 5,
+      "hud": 4,
+      "scrub": 8
+    },
+    "interface_nodes_per_asset": 5,
+    "method_counts": {
+      "handler": {
+        "Python": 1,
+        "BlueprintFallback": 1
+      },
+      "hud": {
+        "Python": 1,
+        "BlueprintFallback": 1
+      },
+      "scrub": {
+        "Python": 2,
+        "BlueprintFallback": 2
+      }
+    },
+    "new_business_nodes": 0,
+    "original_cdos_visuals_public_signatures_guids_and_graphs_preserved": true,
+    "early_profile_selected_before_natural_component_beginplay": true,
+    "native_regular_controller_record_decision_and_replay_controller_branch_verified": true,
+    "native_generic_controller_owner_no_effect": true,
+    "native_hud_creation_payload_and_construct_activation_preserved": true,
+    "native_umg_clock_and_current_length_getter_order_preserved": true,
+    "native_percent_matches_actual_tick_samples": true,
+    "native_geometry_pointer_and_handled_reply_never_cross_python": true,
+    "python_receives_only_scalar_mouse_geometry_values": true,
+    "original_unclamped_ratio_preserved": true,
+    "native_zero_length_width_divide_warning_and_zero_return_verified": true,
+    "synthetic_slate_pointer_inputs": [
+      0.75,
+      0.2
+    ],
+    "native_pointer_handled_and_seek_forward_back_verified": true,
+    "native_isolated_real_recordings_query_and_playback": true,
+    "native_async_callbacks_replayed": false,
+    "physical_pointer_input_tested": false,
+    "owned_roots_profiles_settings_input_and_fixture_actors_restored": true,
+    "cross_travel_actor_health_identity_claimed": false,
+    "focused_host_checks": 17,
+    "invalid_lane_guards": 7,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261021-replay-runtime/Index01",
+    "pixels_tested": false,
+    "audio_playback_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Continue original lobby/default-map and0.14 candidates,plus prior owner/FText/culture/network/pixel/package/version requirements."
   },
   "replay_browser_pilot": {
     "version": "0.13.0",
@@ -11085,7 +11154,9 @@
       "method_candidates": 1,
       "business_nodes": 11,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_replay_component_hud_scrub_python_policy_native_lifecycle_ticks_and_pointer_seek_verified",
+      "evidence_run": "20261021-replays/Runtime08Python",
+      "evidence_ledger": "164-replay-runtime-native-component-hud-tick-pointer-and-seek.json"
     },
     {
       "path": "/ShooterCore/UserInterface/Replays/W_Replay_ScrubBar.W_Replay_ScrubBar",
@@ -11094,7 +11165,9 @@
       "method_candidates": 2,
       "business_nodes": 16,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_replay_component_hud_scrub_python_policy_native_lifecycle_ticks_and_pointer_seek_verified",
+      "evidence_run": "20261021-replays/Runtime08Python",
+      "evidence_ledger": "164-replay-runtime-native-component-hud-tick-pointer-and-seek.json"
     },
     {
       "path": "/ShooterCore/UserInterface/Replays/W_ShooterReplayHUD.W_ShooterReplayHUD",
@@ -11103,7 +11176,9 @@
       "method_candidates": 1,
       "business_nodes": 1,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_replay_component_hud_scrub_python_policy_native_lifecycle_ticks_and_pointer_seek_verified",
+      "evidence_run": "20261021-replays/Runtime08Python",
+      "evidence_ledger": "164-replay-runtime-native-component-hud-tick-pointer-and-seek.json"
     },
     {
       "path": "/ShooterExplorer/AI/StateTrees/Evaluators/EV_PlayerPosition.EV_PlayerPosition",

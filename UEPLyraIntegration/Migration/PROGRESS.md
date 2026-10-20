@@ -23,6 +23,66 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch164 (2026-10-21),replay component/HUD/scrub:**
+Controller component14/HUD2/scrub19 original nodes,full CDO/visuals/public ABI/
+GUIDs/graphs remain.1/1/2 methods per Profile,5/4/8 transport plus5 interfaces
+each,zero new business nodes. Python follows original owner casts:ordinary Lyra
+controller delegates recording choice to TryToRecordClientReplay;replay controller
+creates HUD only while actually playing. Typed controller storage precedes the
+original native CreateWidget/AddToPlayerScreen payload. HUD Construct activates.
+Scrub keeps native UMG Tick and current-time then length getter order. Python
+sets the sampled current/length ratio without clamping. Native mouse geometry,
+pointer extraction and original Handled reply stay entirely in Blueprint/Slate;
+only length/local-X/width scalars enter Python. Python seeks length*(X/width),
+then the original native function result returns Handled. Zero denominator uses
+original native Kismet warning and zero result,matching source diagnostics.
+Both Profiles are selected before natural controller-component BeginPlay. Real
+regular/replay owners and a generic wrong-type controller are verified. Native
+idle UMG ticks produce zero percent with original divide warning;an unmounted
+native zero-width SBorder pointer input is Handled. Actual isolated recordings,
+native query/rows/confirmation and replay controller/HUD lifecycle pass. Real
+UMG progress matches captured native getter samples. Synthetic native SBorder
+pointer events at75% then20% traverse the original bound geometry handler,return
+Handled and seek actual playback forward then back. These are explicit injected
+Slate inputs,not physical mouse validation. No native async callbacks are replayed.
+Owned UI/Profiles/replay settings/input/fixture actors restore;actual playback
+stops. Both native exits0,independent gates0,strict raw logs and ordered shutdown
+pass.17 focused checks and7 invalid lanes pass;exact staged trees use default
+incremental verification at .build/CommitVerification/20261021-replay-runtime/Index01.
+Runtime01Fallback exposed a fixture-only call to the unreflected C++ GetPercent;
+the reflected Percent property replaces it. Runtime02FallbackPercent verifies
+serialized HUD child-template Profiles require fixture preselection;the owned
+class templates are selected before natural creation and restored afterward.
+Runtime03FallbackChildProfile then verifies natural HUD/tick samples but catches
+a fixture FVector2D accessor case mismatch;the native wrapper uses lowercase
+x/y. Runtime04FallbackVector proves the first native seek publishes target time
+before checkpoint completion;the native driver rejects overlapping goto tasks.
+Accepted validation waits for actual playback to resume before the second input.
+Runtime05FallbackSeekResume verifies both actual seeks but finds a stale
+initial-world fixture-controller wrapper during final cleanup. The fixture now
+destroys and checks that controller before intentional replay travel. All failed
+reports/logs/frozen fixture sources remain. Runtime06FallbackEarlyActorCleanup
+confirms actor_destroy invalidates the wrapper immediately;the accepted cleanup
+checks wrapper validity instead of invoking another method on a destroyed actor.
+The player-selector's original empty events/classification are unchanged.
+Remaining original lobby/default-map/0.14 and owner/FText/culture/network/pixel/
+package/version scope stays open. No Engine/general Cpp/official edits,build,
+cook,push,tag or publication.
+
+Batch164 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261021-replays/Audit01/summary.json` e2b183a311e01ba0d3d47b90dce27d32a996320845230236879168f93f618fbd
+`20261021-replays/RuntimeAssets01/summary.json` b67eefc103a23da1a2a1d8a81b25ca8ad744eff6d7fbf8da64f91210a68b5320
+`20261021-replays/RuntimeAssets01/assets.json` 8516a99e8276691c1134dc2457fbec6919099dfab7b10ac20eda5913eb3be393
+`20261021-replays/RuntimeAssets01/handler-runtime-signatures.json` 3373cd68fd0e064ce29bb4d42ed470e6c4641ef033b22d3deeef30bf3dcf5ae0
+`20261021-replays/RuntimeAssets01/hud-runtime-signatures.json` eac13ba56169fef1fd4784425b983f180819e8bb09551868ef9cb45d03baabaa
+`20261021-replays/RuntimeAssets01/scrub-runtime-signatures.json` 132d237f861b9e42623bce15151de0b547f316d97a715067d67a789240274b17
+`20261021-replays/Runtime07FallbackDestroyedWrapper/summary.json` 964e0cb261a5c8ea4e0d58461dbc4230f663fe99f8b518379fd91a8cf1414d59
+`20261021-replays/Runtime07FallbackDestroyedWrapper/jump.json` dc400aa2891a8011006cabf9e36029908c616dd916cfd3ace51880de8c12d1a1
+`20261021-replays/Runtime08Python/summary.json` ef83231c3d94accc50b9c69e96d36bd854e66ff102d0fa7a0250e7b01ddcce8d
+`20261021-replays/Runtime08Python/jump.json` f05bb718e072a84857ac00e35d876f12f0b24389ec41d72a8564c3030246105f
+`20261021-replays/RuntimeHost03FinalFixture.json` 7b1c0835bfe1a6cccc3339cff503c23a35783ebb9932d78abf60c74e913370df
+`20261021-replays/runtime-guard-results.json` 6380f323794df5da3bb2b8ab1b5fd04ecde3c0afd6b1bfdbf0741a65fc915702
+
 **Completed bounded batch163 (2026-10-21),replay browser and entry:**
 Only the original replay browser/list entry are migrated here. Replay controller
 component/HUD/scrub policy remains pending;the empty player-selector events retain

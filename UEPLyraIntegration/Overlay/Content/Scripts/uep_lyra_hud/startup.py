@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(argument.startswith("-UEPReplayRuntimeResult=") for argument in arguments):
+        return "uep_lyra_hud.replay_runtime_validation"
     if any(argument.startswith("-UEPReplayBrowserResult=") for argument in arguments):
         return "uep_lyra_hud.replay_browser_validation"
     if any(argument.startswith("-UEPUIPreparationProbeResult=") for argument in arguments):
