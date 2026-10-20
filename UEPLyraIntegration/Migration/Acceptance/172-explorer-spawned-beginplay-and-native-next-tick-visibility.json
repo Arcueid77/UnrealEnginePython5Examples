@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "batch": "172-explorer-beginplay",
+  "scope": "Explorer BeginPlay/visibility/native resume extend both complete Profile families to20. Preserve exact Character_Default static parent -> listen -> hide -> InitState.Spawned/immediate named registration;do not substitute Shooter GameplayReady. Eight native transport nodes per class retain original CDO/ABI/graphs/GUIDs/async/unarmed payload. Both Profiles observe real natural BeginPlay and later-frame visibility,two repeated native registration callbacks,Profile switch pending and pending Actor destruction without late script work. Primary inventory/Health,scoped PawnClass/Profiles/actors/proxies restore. Remaining input/behavior/construction/parent and full original/version scope stay open. Incremental only.",
+  "recorded_utc": "2026-10-20T21:09:13.3158510Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "68511957bcb91d658947eaacc65133f5f6b00afd",
+  "examples_parent_commit": "5fa1ec139b74ad4e84a6419e951d45c896090d6f",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-beginplay/Assets01",
+      "summary_sha256": "69D3B32B17BEA4B6751B88853BECDE127223B702D5A75C6558B01D32B0EE5A93",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2270,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-beginplay/Begin01Fallback",
+      "summary_sha256": "7F0C1B4D714148AC84590C898DDF9A8909E875A8C4C54A156B6ECBC41B5FC610",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3087,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "07D52E263D36D62BECDB21CD91D916909A300DE234EED07F9F9A98D2EC38B55B"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-beginplay/Begin02Python",
+      "summary_sha256": "FFEEC01F73DAE5E109A3F698E4546408AF988F007933BC90527907619B175FF8",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3087,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "9867864F012AD4A1607E597A03F2911B1B9C4950D1D2C2A3523E20F2A8814D2D"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_beginplay_mixin.py",
+      "sha256": "AA768C51B2CE2DD213345339F36A61C7582C050EBD00700E6795F10BB6210905",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_beginplay_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_beginplay_validation.py",
+      "sha256": "431D87BE7D3271740793E27011093C61C2B1F50164A65A7B688F62DF0EF80141",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_beginplay_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_beginplay_contract.py",
+      "sha256": "CBFB34F4B34AE9B4EE260DBDCC2F42164E14C79B276F58B126DB5B617ED75DEA",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_beginplay_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "C5A49B3D47A8BE5A3749EDC56CD26B18B0163C498080D041D931880AE43DF4B7",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_explorer_beginplay_assets.py",
+      "sha256": "3EC73F365D9868AEF98C49356845E0D17C5A375D876F8966948EF62316E10EFA",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_explorer_beginplay_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "2132B1CF9ABFA0CDAAC652E8F2D4A06902B9751B04F0E6CA119D226FCB6E6E84",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "082C09F7A1FD5E069E7CD51F806C2294E4FCCEDE1D63FAADEBA941D1BF0CB2F1",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "2A1182D6CEF441745DEEACD22497D91C619A1A1D8D776479C75168E84871CBB1",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261021-explorer-beginplay/host-focused02.json",
+    "result": {
+      "status": "passed",
+      "tests_run": 12,
+      "runtime_acceptance": false,
+      "full_regression": false
+    },
+    "sha256": "A77BA84455957509BE9841C686D37B48111398CA7A95D72325069B12E6051254"
+  }
+}

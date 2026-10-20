@@ -23,6 +23,47 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch172 (2026-10-21),Explorer BeginPlay/visibility:**
+Both original characters now declare20 routes per Profile. Three new targets
+are ReceiveBeginPlay,ShowPawnAgainNextFrame and the native int-linkage visibility
+resume. Source comparison identifies the explicit Explorer difference:register
+InitState.Spawned,not Shooter's GameplayReady. The dedicated BeginPlay policy
+preserves static Character_Default parent call -> ListenForTeam -> hide(true) ->
+named InitState registration with bCallImmediately=true. All17 prior helper/
+callback/readiness methods remain in each own-class Profile dictionary.
+Each asset adds8 transport nodes:the exact statically selected2-node parent
+call,a4-node native named InitState delegate and a2-node empty resume declaration.
+All original CDOs/public signatures/graph partitions/NodeGuid/async symbols and
+unarmed payload remain. The original BP visibility delay remains for fallback;
+Python uses native DelayUntilNextTick with one stable Actor-scoped key and no
+Python business ticker. Its existing pending resume continues after Profile
+switch,matching the retained native visibility lifetime boundary.
+Both Profiles observe one real natural BeginPlay on each original Explorer
+class,hidden state when native CreatePlayer returns,and shown state only on a
+later native frame. Repeated immediate native registration calls produce two
+actual callbacks while the Actor stays synchronously hidden. Native next-tick
+show,Profile switch while pending,and pending Actor destruction all pass. The
+destroyed Actor evidence is POD;no late visibility script work occurs. Primary
+player inventory/Health,scoped PawnClass/Profiles/actors/observers restore;the
+existing pooled-Cue observer ownership/identity retirement checks also pass.
+Native exit0,independent gate0,strict logs and ordered shutdown pass.12 focused
+checks and7 invalid lanes pass;exact staged checks are incremental at
+.build/CommitVerification/20261021-explorer-beginplay/Index01. Remaining original
+input/behavior/construction/empty-motion-override review and parent business stay
+explicit. No Engine/general Cpp/official edits,build,cook,push,tag or publication.
+Static246/182/63/11 and exact candidate path/order remain;full migration is false.
+
+Batch172 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261021-explorer-beginplay/source-proof.json` 64a6228b3adce6919230ae8a26f7f54c691326572da6d6cffbb7011d0d44dbf2
+`20261021-explorer-beginplay/Assets01/summary.json` 69d3b32b17bea4b6751b88853becde127223b702d5a75c6558b01d32b0ee5a93
+`20261021-explorer-beginplay/Assets01/assets.json` 873405810773dc7befe8c77df32687240aa40f7885c7f9a09eb3f685b476409b
+`20261021-explorer-beginplay/Begin01Fallback/summary.json` 7f0c1b4d714148ac84590c898ddf9a8909e875a8c4c54a156b6ecbc41b5fc610
+`20261021-explorer-beginplay/Begin01Fallback/jump.json` 07d52e263d36d62becdb21cd91d916909a300de234eed07f9f9a98d2ec38b55b
+`20261021-explorer-beginplay/Begin02Python/summary.json` ffeec01f73dae5e109a3f698e4546408af988f007933bc90527907619b175ff8
+`20261021-explorer-beginplay/Begin02Python/jump.json` 9867864f012ad4a1607e597a03f2911b1b9c4950d1d2c2a3523e20f2a8814d2d
+`20261021-explorer-beginplay/host-focused02.json` a77ba84455957509be9841c686d37b48111398ca7a95d72325069b12e6051254
+`20261021-explorer-beginplay/guards01.json` b9b4b91ecd00029cf9af975197ea666a6ae947a4da83ddb1c214fa35be4dfb11
+
 **Completed bounded batch171 (2026-10-21),Explorer async initialization:**
 Both characters now declare17 routes per Profile:the prior12 plus ListenForTeam,
 real ReceivePossessed,each actor's original generated team/Experience callback
