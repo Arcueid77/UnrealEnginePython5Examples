@@ -5,7 +5,7 @@ from uep_lyra_weapons.hero_burst_cue_mixin import lib
 CLASS='/Game/UI/Menu/W_LyraFrontEnd.W_LyraFrontEnd_C'
 METHODS=('focus','activate','start','options','credits','replays','quit','logout','quit_result','logout_result','logout_success')
 GATES={m:'UEPFrontend'+''.join(v.title() for v in m.split('_')) for m in METHODS}
-ALIASES={m:'UEPFrontendNative'+''.join(v.title() for v in m.split('_')) for m in ('start','options','credits','replays','quit','logout','destroy_session','startup')}
+ALIASES={m:'UEPFrontendNative'+''.join(v.title() for v in m.split('_')) for m in ('start','options','credits','replays','quit','logout','logout_identity','startup')}
 
 def evidence(w):
     if not hasattr(w,'_uep_frontend'):w._uep_frontend={p+'_'+m:0 for p in ('python','fallback') for m in METHODS}
@@ -21,7 +21,7 @@ def invoke(w,m,*args):
     elif m=='quit_result':
         if int(args[0])==0:lib('KismetSystemLibrary').call_function('QuitGame',w,None,0,False)
     elif m=='logout_result':
-        if int(args[0])==0:w.call_function(ALIASES['destroy_session'])
+        if int(args[0])==0:w.call_function(ALIASES['logout_identity'])
     elif m=='logout_success':
         subsystem=lib('SubsystemBlueprintLibrary').call_function('GetGameInstanceSubsystem',w,ue.find_class('CommonUserSubsystem'))
         subsystem.call_function('TryToLogOutUser',0,False)

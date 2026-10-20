@@ -23,6 +23,57 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch154 (2026-10-20),confirmed frontend identity logout:**
+Correction:the original asynchronous node is LogoutCallbackProxy.Logout,not
+DestroySession. Earlier152/153 session-destruction field/alias labels were
+inaccurate;the original native node and behavior had remained intact. Historical
+raw reports stay unchanged and do not prove session destruction. Current names
+and manifest interpretation explicitly identify the original identity action.
+The alias is now UEPFrontendNativeLogoutIdentity;original34 nodes,full CDO/tree/
+animations/public signatures/GUIDs/graph semantics remain exact.11 methods per
+Profile,53 transport plus5 interfaces;zero new business. The generator asserts
+and records original factory function,class and proxy class directly.
+Both Profiles execute actual native Yes-button result0,one identity Logout success
+handler,local TryToLogOutUser0,false,ResetUserState/new UserInfo,actual startup
+AfterPush/waiting,and native press-start initialization/deactivation. The actual
+LogoutCallbackProxy is observed;new DestroySessionCallbackProxy count stays0.
+No callback replay or added session-destruction behavior. Original controller,
+Pawn health and initialized local-user state remain;owned roots/Profiles/input restore.
+CommonGameInstance::HandlePrivilegeChanged natively logs primary CanPlay loss
+during intentional logout. Exactly1 source-identical error per owned Profile
+window is audited (2 total). Raw logs are preserved;duplicates,wrong players,
+outside-window messages and all other native errors/ensures remain rejected.
+This is an explicit expected native outcome,not a zero-error-log claim.
+Assets01IdentityAlias and Lifecycle05ExpectedPrivilegeLogs pass native exit0,
+independent semantic gate0,exact native log audit0 and ordered shutdown. The
+fixture establishes local-play initialization through the native NULL action.
+30 focused checks (new identity/log audit plus existing frontend tests) and7
+invalid lanes pass. Exact staged indexes use default incremental selection at
+.build/CommitVerification/20261020-frontend-logout/Index01;no full regression.
+Preserve BeforeIdentityAliasCorrection with4 prior Stage/Overlay asset copies.
+Preserve failed Lifecycle01/source,Lifecycle02NativeSessionWorldReload/source and
+Lifecycle03InitializedLocalPlay/source. Their mistaken session-oriented fixtures
+created NULL sessions and triggered ordinary current-map reloads;they were not
+accepted. Failed same-name recreation exposed the false premise:original identity
+logout does not destroy that session. Final fixture creates no named session.
+Preserve Lifecycle04IdentityLogout/source too:behavior checks passed but the
+generic zero-error gate rejected the original native privilege-loss messages.
+The final exact audit records those messages without changing native code/logging.
+Game-menu return-to-frontend MAP travel (151) remains OPEN,as do physical input,
+pixels,online authentication,network,package/version,prior FText audit and remaining
+original246-candidate requirements. No Engine/general Cpp/official edits,build,
+cook,push,tag or release publication.
+
+Batch154 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261020-frontend-logout/Assets01IdentityAlias/summary.json` 9dd04144d200cd83ebde4417d3633524d5750c4d28a85a19a6c88a8ca030ee5b
+`20261020-frontend-logout/Assets01IdentityAlias/assets.json` 0ae22f5d869df6a1ab9c4cc7502c01bd13c6e1c83016fba88094e4adfe2ae96e
+`20261020-frontend-logout/Assets01IdentityAlias/frontend-public-signatures.json` 8b7aebcb35e9cb33ccaff9322bc946aabfa382d0372767c5ebd77aad1eddbf32
+`20261020-frontend-logout/Lifecycle05ExpectedPrivilegeLogs/summary.json` 3975ba966ad45d34abb8b4cba056e2ce7d2a3af98db6b600e1d3f3bb6b3d9034
+`20261020-frontend-logout/Lifecycle05ExpectedPrivilegeLogs/jump.json` 47cab245074176f82c49f79a7a2c7829570a310e45f9198f3533b131cfbc7a82
+`20261020-frontend-logout/Lifecycle05ExpectedPrivilegeLogs/identity-logout-log-audit.json` 68b24ffe5a54689bd149d103ae733e64f03fa3c5b88bc57cb6c1d008fd952b1c
+`20261020-frontend-logout/Host05ExpectedPrivilegeLogs.json` 971856d7592470bdb9f77c9db740e9246c71416181fb3cffb1f841f75a70f444
+`20261020-frontend-logout/guards.json` 4ce7df01b7a47363a9fa5b64cb697c05e6fab374047216447335e5f95396c20d
+
 **Completed bounded batch153 (2026-10-20),startup and local user login:**
 Startup/login state,focus,listening selection,join/leave/refresh/initialization
 policy uses Python. Original35/58 nodes,full CDOs/trees/public parameters/const/

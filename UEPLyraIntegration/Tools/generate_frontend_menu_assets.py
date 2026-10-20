@@ -15,7 +15,7 @@ from uep_lyra_hud.frontend_menu_mixin import CLASS,METHODS,GATES,ALIASES
 ASSET='Content/UI/Menu/W_LyraFrontEnd.uasset'
 TRANSPORT=53
 POINTS=(('K2Node_Event_1','then','activate'),('K2Node_ComponentBoundEvent_0','then','start'),('K2Node_ComponentBoundEvent_1','then','options'),('K2Node_ComponentBoundEvent_2','then','quit'),('K2Node_ComponentBoundEvent_3','then','credits'),('K2Node_ComponentBoundEvent_4','then','replays'),('K2Node_ComponentBoundEvent_5','then','logout'),('K2Node_AsyncAction_6','OnResult','quit_result'),('K2Node_AsyncAction_3','OnResult','logout_result'),('K2Node_AsyncAction_5','OnSuccess','logout_success'))
-NATIVE_TARGETS=dict(start='K2Node_AsyncAction_2',options='K2Node_AsyncAction_1',credits='K2Node_AsyncAction_4',replays='K2Node_AsyncAction_7',quit='K2Node_AsyncAction_6',logout='K2Node_AsyncAction_3',destroy_session='K2Node_AsyncAction_5',startup='K2Node_AsyncAction_0')
+NATIVE_TARGETS=dict(start='K2Node_AsyncAction_2',options='K2Node_AsyncAction_1',credits='K2Node_AsyncAction_4',replays='K2Node_AsyncAction_7',quit='K2Node_AsyncAction_6',logout='K2Node_AsyncAction_3',logout_identity='K2Node_AsyncAction_5',startup='K2Node_AsyncAction_0')
 
 def gate(bp,name,params,focus_output=None):
     graph=ue.blueprint_add_function(bp,GATES[name]);entry=graph.Nodes[0];result=graph.graph_add_node(K2Node_FunctionResult)
@@ -49,6 +49,8 @@ def _generate(stage):
     ue.unregister_all_mixins();bp=ue.load_object(Blueprint,CLASS.removesuffix('_C'));ue.unregister_all_mixins();before=snapshot(bp,'frontend-menu-before');tree=visuals(bp,output,'frontend-before');originals=[(g,{n.get_name() for n in g.Nodes}) for g in ue.blueprint_get_all_graphs(bp)];total=sum(len(ns) for _,ns in originals)
     if total!=34:raise RuntimeError('original frontend footprint differs')
     event=bp.UbergraphPages[0];nodes={n.get_name():n for n in event.Nodes};focus=next(g for g,_ in originals if g.get_name()=='BP_GetDesiredFocusTarget');focus_entry=focus.Nodes[0];focus_result=next(n for n in focus.Nodes if n.get_class().get_name()=='K2Node_FunctionResult')
+    identity_proxy=dict(factory=str(nodes['K2Node_AsyncAction_5'].ProxyFactoryFunctionName),factory_class=nodes['K2Node_AsyncAction_5'].ProxyFactoryClass.get_path_name(),proxy_class=nodes['K2Node_AsyncAction_5'].ProxyClass.get_path_name())
+    if identity_proxy!=dict(factory='Logout',factory_class='/Script/OnlineSubsystemUtils.LogoutCallbackProxy',proxy_class='/Script/OnlineSubsystemUtils.LogoutCallbackProxy'):raise RuntimeError('original frontend identity logout proxy differs')
     methods={g.get_name() for g,_ in originals if g.get_name()!='EventGraph'}
     for node in event.Nodes:
         if node.get_class().get_name()=='K2Node_Event':methods.add(str(node.EventReference.MemberName))
@@ -78,4 +80,4 @@ def _generate(stage):
         if counts!=dict.fromkeys(('Python','BlueprintFallback'),len(METHODS)):raise RuntimeError('frontend complete Profile family required')
     finally:ue.unregister_all_mixins()
     bp.save_package();asset.save_package()
-    return dict(status='passed',kind='frontendmenu',runtime_acceptance=False,full_acceptance=False,original_class_defaults_signature_graphs_preserved=True,original_cdo_tree_animations_public_signatures_const_focus_guids_and_graphs_preserved=True,original_four_async_menu_classes_layer_tags_input_suspension_and_native_prompts_preserved=True,original_confirmed_quit_and_logout_destroy_session_success_order_payloads_preserved=True,original_unused_destroy_player_true_logout_node_retained_unconnected=True,original_graph_nodes=total,transport_nodes=TRANSPORT,interface_nodes=interface,method_counts=counts,new_business_nodes=0,native_end_adapter_nodes=0,assets=[ASSET,'Content/UEPMixins/'+asset_name+'.uasset'])
+    return dict(status='passed',kind='frontendmenu',runtime_acceptance=False,full_acceptance=False,original_class_defaults_signature_graphs_preserved=True,original_cdo_tree_animations_public_signatures_const_focus_guids_and_graphs_preserved=True,original_four_async_menu_classes_layer_tags_input_suspension_and_native_prompts_preserved=True,original_confirmed_quit_and_identity_logout_success_order_payloads_preserved=True,original_unused_destroy_player_true_logout_node_retained_unconnected=True,original_graph_nodes=total,transport_nodes=TRANSPORT,interface_nodes=interface,method_counts=counts,original_identity_logout_proxy=identity_proxy,session_destruction_is_original_behavior=False,new_business_nodes=0,native_end_adapter_nodes=0,assets=[ASSET,'Content/UEPMixins/'+asset_name+'.uasset'])

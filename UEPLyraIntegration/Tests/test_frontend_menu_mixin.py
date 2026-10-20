@@ -33,9 +33,9 @@ class FrontendMenuPolicyTests(unittest.TestCase):
     def test_only_confirmed_quit_calls_native_quit_with_original_arguments(self):
         for result in (0,1,2,3,4):
             self.calls=[];policy.invoke(self.w,'quit_result',result);self.assertEqual(self.calls,[('KismetSystemLibrary','QuitGame',self.w,None,0,False)] if result==0 else [])
-    def test_only_confirmed_logout_begins_original_native_destroy_session(self):
+    def test_only_confirmed_logout_begins_original_native_identity_logout(self):
         for result in (0,1,2,3,4):
-            self.calls=[];policy.invoke(self.w,'logout_result',result);self.assertEqual(self.calls,[('widget',policy.ALIASES['destroy_session'])] if result==0 else [])
+            self.calls=[];policy.invoke(self.w,'logout_result',result);self.assertEqual(self.calls,[('widget',policy.ALIASES['logout_identity'])] if result==0 else [])
     def test_logout_success_preserves_player_before_reset_and_startup_push(self):
         policy.invoke(self.w,'logout_success');self.assertEqual(self.calls,[('user','TryToLogOutUser',0,False),('user','ResetUserState'),('widget',policy.ALIASES['startup'])])
     def test_declared_profiles_cover_exact_full_method_set(self):

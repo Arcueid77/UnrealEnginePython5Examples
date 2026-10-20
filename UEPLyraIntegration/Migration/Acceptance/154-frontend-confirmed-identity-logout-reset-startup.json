@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "batch": "154-frontend-identity-logout",
+  "scope": "Correct the earlier DestroySession label to the actual original LogoutCallbackProxy. Preserve original native graph/payload behavior with renamed alias. Bounded native Yes-result identity logout, local user reset, startup AfterPush and local reinitialization in both Profiles. Audit exactly one original CommonGameInstance CanPlay-loss error per owned window while preserving raw logs and rejecting all other errors. Map travel, physical input, real online auth, network and full version remain open. Default incremental staged host verification only.",
+  "recorded_utc": "2026-10-20T12:25:39.7457341Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "685a96588d50f63aefd5628966e1666013fd9702",
+  "examples_parent_commit": "4386d72147280d34f7f865cb95bef91720d8f212",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-frontend-logout/Assets01IdentityAlias",
+      "summary_sha256": "9DD04144D200CD83EBDE4417D3633524D5750C4D28A85A19A6C88A8CA030EE5B",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2142,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261020-frontend-logout/Lifecycle05ExpectedPrivilegeLogs",
+      "summary_sha256": "3975BA966AD45D34ABB8B4CBA056E2CE7D2A3AF98DB6B600E1D3F3BB6B3D9034",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2932,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "47CAB245074176F82C49F79A7A2C7829570A310E45F9198F3533B131CFBC7A82",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/frontend_menu_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "50DCE24F0352E47B601A93629E1CE647842EFEBC111B33719ED761D379167194",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/frontend_menu_mixin.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup_login_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "432B34D9B10D34E95BDB5E9B6A9B7EE87AF1EC5FE92DE04981A4E5AE483F8EB6",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup_login_mixin.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/frontend_logout_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "3423B3BDC4CA186B8ADCB9C205CB083D2EBF1646E9F6486BFEB2A7333EB42516",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/frontend_logout_validation.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/frontend_logout_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "DC6A9106A558AC48F257CA7E0D663DDC5BE8B8A2D83BD2B33A1E64213491F4F6",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/frontend_logout_contract.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/frontend_logout_log_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "6B906E573266F3D199E5E9A4D05BB707A202ECFCE5F6D2A7D28A87DD4F6AB8D0",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/frontend_logout_log_contract.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "EF629130C690F93303F303CE553815AC4CCD159CFF3E51903386D61AFB5CA669",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_frontend_menu_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "9D4664E4F237BB9156D4F89902301885D0494EDE02D9315C08EA65A1ED90E582",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_frontend_menu_assets.py"
+    },
+    {
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "5B1ED188D97A395D3887515A98D27DF4CC2B05CC0A176FBCEA26F10ADBEC69FF",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1"
+    },
+    {
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "5F997FD67324341936BE390C0A84D6253F6755D74F6122239AFC8C6CA19D13FB",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261020-frontend-logout/Host05ExpectedPrivilegeLogs.json",
+    "sha256": "971856D7592470BDB9F77C9DB740E9246C71416181FB3CFFB1F841F75A70F444",
+    "result": {
+      "schema_version": 2,
+      "status": "passed",
+      "tests_run": 30,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "selection": {
+        "mode": "incremental",
+        "status": "ready",
+        "changed_files": [],
+        "selected_test_files": [
+          "Demos/UEPLyraIntegration/Tests/test_frontend_logout_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_frontend_logout_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_frontend_logout_log_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_frontend_menu_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_frontend_menu_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_frontend_menu_mixin.py"
+        ],
+        "affected_files": [],
+        "selection_reasons": {
+          "Demos/UEPLyraIntegration/Tests/test_frontend_logout_contract.py": [
+            "explicit pattern test_frontend_logout_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_frontend_logout_fixture.py": [
+            "explicit pattern test_frontend_logout_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_frontend_logout_log_contract.py": [
+            "explicit pattern test_frontend_logout_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_frontend_menu_contract.py": [
+            "explicit pattern test_frontend_menu_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_frontend_menu_fixture.py": [
+            "explicit pattern test_frontend_menu_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_frontend_menu_mixin.py": [
+            "explicit pattern test_frontend_menu_*.py"
+          ]
+        },
+        "unmapped_changed_files": [],
+        "unparsed_unaffected_files": [],
+        "dependency_analysis": "local imports including inheritance, literal module names and file references; dynamic dependencies require explicit patterns/native lanes",
+        "full_regression_requested": false
+      },
+      "failed_cases": []
+    }
+  }
+}

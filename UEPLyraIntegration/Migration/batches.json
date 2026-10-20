@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 155,
+    "bounded_evidence_ledgers": 156,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1425,9 +1425,62 @@
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
   },
+  "frontend_logout_pilot": {
+    "version": "0.13.0",
+    "status": "bounded_native_confirmed_frontend_identity_logout_reset_startup_and_reinitialize_verified",
+    "evidence_ledger": "154-frontend-confirmed-identity-logout-reset-startup.json",
+    "native_asset_authoring": "20261020-frontend-logout/Assets01IdentityAlias",
+    "native_runtime_runs": [
+      "20261020-frontend-logout/Lifecycle05ExpectedPrivilegeLogs"
+    ],
+    "original_identity_logout_proxy": {
+      "factory": "Logout",
+      "factory_class": "/Script/OnlineSubsystemUtils.LogoutCallbackProxy",
+      "proxy_class": "/Script/OnlineSubsystemUtils.LogoutCallbackProxy"
+    },
+    "session_destruction_is_original_behavior": false,
+    "previous_destroy_session_label_was_inaccurate": true,
+    "original_native_proxy_node_and_payload_behavior_unchanged": true,
+    "native_alias_renamed_from_destroy_session_to_logout_identity": true,
+    "original_graph_nodes": 34,
+    "transport_nodes": 53,
+    "interface_nodes": 5,
+    "method_counts": {
+      "Python": 11,
+      "BlueprintFallback": 11
+    },
+    "new_business_nodes": 0,
+    "native_profile_trials": 2,
+    "native_confirmed_identity_logout_success_handlers": 2,
+    "actual_native_user_info_replaced_by_reset": true,
+    "native_startup_afterpush_waiting_reinitialize_deactivation_verified": true,
+    "native_destroy_session_proxies_created": 0,
+    "primary_player_controller_health_and_initialized_local_state_preserved": true,
+    "owned_roots_profiles_and_input_restored": true,
+    "expected_native_common_game_primary_privilege_loss_errors": 2,
+    "expected_error_scope": "Exactly one original CommonGameInstance primary-player CanPlay privilege-loss error inside each owned logout/reinitialize window. Raw logs retained;every other error remains rejected.",
+    "focused_host_checks": 30,
+    "invalid_lane_guards": 7,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261020-frontend-logout/Index01",
+    "preserved_failed_runtime": [
+      "Lifecycle01",
+      "Lifecycle02NativeSessionWorldReload",
+      "Lifecycle03InitializedLocalPlay",
+      "Lifecycle04IdentityLogout"
+    ],
+    "frontend_map_travel_executed": false,
+    "online_authentication_tested": false,
+    "physical_button_input_tested": false,
+    "pixels_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Execute prior game-menu confirmed frontend MAP travel and remaining original0.13/0.14 replacements;all prior FText/culture/owner/network/pixel/package/version gates stay open. Session destruction was a mistaken label,not this original frontend flow."
+  },
   "startup_login_pilot": {
     "version": "0.13.0",
-    "status": "bounded_startup_login_python_policy_native_local_secondary_join_leave_primary_initialize_and_removed_remount_lifetime_verified_online_auth_and_frontend_logout_reset_open",
+    "status": "bounded_startup_login_python_policy_native_local_player_lifetime_and_confirmed_frontend_identity_logout_reset_verified_online_auth_open",
     "evidence_ledger": "153-startup-login-native-local-player-and-callback-lifetime.json",
     "owner": "uep_lyra_hud.startup_login_mixin",
     "original_read_only_audit": "20261020-startup-login/Audit01",
@@ -1503,17 +1556,22 @@
       "Lifecycle04ActivatableHolder"
     ],
     "online_authentication_tested": false,
-    "confirmed_frontend_logout_session_reset_executed": false,
     "physical_key_or_button_input_tested": false,
     "pixels_tested": false,
     "network_acceptance": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Exercise actual confirmed frontend logout with an owned native NULL session and prior confirmed frontend map travel; remaining original candidates and network/culture/FText/pixel/package/version gates stay open."
+    "next": "Execute prior game-menu confirmed frontend MAP travel and remaining original0.13/0.14 replacements;all prior FText/culture/owner/network/pixel/package/version gates stay open. Session destruction was a mistaken label,not this original frontend flow.",
+    "confirmed_frontend_identity_logout_reset_executed": true,
+    "identity_logout_evidence_ledger": "154-frontend-confirmed-identity-logout-reset-startup.json",
+    "identity_logout_runtime_runs": [
+      "20261020-frontend-logout/Lifecycle05ExpectedPrivilegeLogs"
+    ],
+    "legacy_session_reset_label_is_not_original_flow": true
   },
   "frontend_menu_pilot": {
     "version": "0.13.0",
-    "status": "bounded_frontend_python_policy_native_four_async_menu_routes_declined_prompts_and_confirmed_quit_verified_logout_session_reset_open",
+    "status": "bounded_frontend_python_policy_native_async_routes_prompts_confirmed_quit_and_confirmed_identity_logout_reset_startup_verified",
     "evidence_ledger": "152-frontend-native-menu-routes-prompts-and-confirmed-quit.json",
     "owner": "uep_lyra_hud.frontend_menu_mixin",
     "original_read_only_audit": "20261020-frontend-widgets/Audit01",
@@ -1539,7 +1597,6 @@
     "temporary_authoring_native_easing_roots": 34,
     "temporary_authoring_roots_released": true,
     "original_native_async_class_tags_input_suspension_and_localized_prompts_retained": true,
-    "original_confirmed_logout_destroy_session_success_order_and_destroy_player_false_preserved": true,
     "original_unused_destroy_player_true_logout_node_retained_unconnected": true,
     "native_four_menu_afterpush_routes_per_profile": 4,
     "native_declined_prompts_per_profile": [
@@ -1552,7 +1609,6 @@
     ],
     "native_request_exit_fallback_used": false,
     "native_player_health_user_initialization_and_owned_roots_profiles_restored_or_unchanged": true,
-    "native_confirmed_logout_session_reset_executed": false,
     "online_authentication_executed": false,
     "focused_host_checks": 16,
     "invalid_lane_guards": 6,
@@ -1566,7 +1622,16 @@
     "network_acceptance": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Execute actual confirmed logout session destruction/user reset/startup flow and prior confirmed menu frontend travel; migrate remaining original0.13/0.14 candidates and retain all network/culture/FText/pixel/package/version gates."
+    "next": "Execute prior game-menu confirmed frontend MAP travel and remaining original0.13/0.14 replacements;all prior FText/culture/owner/network/pixel/package/version gates stay open. Session destruction was a mistaken label,not this original frontend flow.",
+    "native_confirmed_identity_logout_reset_executed": true,
+    "identity_logout_evidence_ledger": "154-frontend-confirmed-identity-logout-reset-startup.json",
+    "native_confirmed_identity_logout_runs": [
+      "20261020-frontend-logout/Lifecycle05ExpectedPrivilegeLogs"
+    ],
+    "legacy_destroy_session_label_was_inaccurate": true,
+    "original_native_async_node_and_behavior_preserved": true,
+    "actual_native_async_logout_proxy": "/Script/OnlineSubsystemUtils.LogoutCallbackProxy",
+    "current_identity_alias_authoring": "20261020-frontend-logout/Assets01IdentityAlias"
   },
   "menu_layers_pilot": {
     "version": "0.13.0",
@@ -10182,8 +10247,9 @@
       "method_candidates": 8,
       "business_nodes": 25,
       "scope_review": null,
-      "status": "bounded_frontend_python_policy_native_async_menu_routes_declined_prompts_and_confirmed_quit_verified_logout_reset_open",
-      "evidence_run": "20261020-frontend-widgets/Lifecycle01"
+      "status": "bounded_frontend_python_policy_native_async_routes_prompts_confirmed_quit_and_identity_logout_reset_startup_verified",
+      "evidence_run": "20261020-frontend-widgets/Lifecycle01",
+      "confirmed_identity_logout_evidence_run": "20261020-frontend-logout/Lifecycle05ExpectedPrivilegeLogs"
     },
     {
       "path": "/Game/UI/Menu/W_LyraMenuButton.W_LyraMenuButton",
@@ -10213,7 +10279,8 @@
       "business_nodes": 24,
       "scope_review": null,
       "status": "bounded_startup_login_python_policy_native_local_player_initialize_join_leave_and_callback_lifetime_verified_online_auth_open",
-      "evidence_run": "20261020-startup-login/Lifecycle05SecondarySlateUser"
+      "evidence_run": "20261020-startup-login/Lifecycle05SecondarySlateUser",
+      "frontend_identity_logout_evidence_run": "20261020-frontend-logout/Lifecycle05ExpectedPrivilegeLogs"
     },
     {
       "path": "/Game/UI/Menu/W_LyraTileButton.W_LyraTileButton",
