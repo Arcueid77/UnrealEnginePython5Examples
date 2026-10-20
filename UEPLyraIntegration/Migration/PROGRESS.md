@@ -23,6 +23,47 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch146 (2026-10-20),foundation utility widgets:**
+Confirmation dialog/loading reason/loading host/aspect image/progress spinner
+use Python policies. Original3/8/15/8/4 nodes/full CDOs/widget trees/animations/
+signatures/node GUIDs/graph semantics remain.1 method per Profile/class,
+4/9/4/6/4 transport plus5 interfaces each;zero new business nodes. The reason
+widget's original4 conversion/format/widget-get/set nodes move intact into a
+native string-input writer. Original localized FormatText namespace/key/source
+is checked before/after;Python polls LoadingScreenManager's FString and calls
+that writer without marshalling FText. Construct/Tick and native text remain.
+Loading host keeps original Construct/subsystem/delegate factory and callback.
+It stores the requested class,uses the original default for null,and creates
+new content even for the same class. There was no source Destruct unbind;
+that original behavior is preserved instead of adding lifetime changes.
+Aspect copies the whole brush to both images. Spinner passes raw Size to the
+native desired-size override. Dialog uses native activation animation timing.
+Assets01 and Differential01 pass native exit0/independent gate0/strict logs/
+ordered shutdown. Two Profiles cover10 real widget trials,6 brush cases,6
+actual native Image desired sizes,4 native loading backend changes,real dialog
+activation/animation and natural reason ticks. Localized reason history and
+current display match the native manager. Native loading delegates deliver once;
+a rooted removed host still receives its original callback and default content.
+Stable brush/size/content state matrices match across Profiles. Loading content
+class,widget roots/Profile selectors and original live player health restore.
+17 focused host checks and5 invalid lanes pass. Exact staged-index regression
+uses the default incremental selector,with external evidence at
+.build/CommitVerification/20261020-foundation-widgets/Index01.
+Physical dialog input,pixels,culture switching,network,package/version and all
+remaining original246-candidate scope stay open. This preserves the original
+loading-host delegate lifetime;it does not claim an unbind fix. Prior FText
+crossing audit and remaining0.13/0.14 replacements remain open.
+No Engine/general Cpp/official edits,build,cook,push,tag or release publication.
+
+Batch146 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261020-foundation-widgets/Audit01/summary.json` 8d18ed162646921c74369031d32c6fa74a4d5069636ebef887d3a12bfe86be61
+`20261020-foundation-widgets/Assets01/summary.json` acb16ce696d3359c55ebb55168c09204a10b4731586b1bfc32ed7f85f18f7757
+`20261020-foundation-widgets/Assets01/assets.json` d6cd6f889d59d1fd7b80608fe27799c0a240c96d2d691c4f51fd7129685419ce
+`20261020-foundation-widgets/Differential01/summary.json` 792660893251d6f19dcd4e3d8add0cf77de78df9310996a6e132fb84ac1ab5fb
+`20261020-foundation-widgets/Differential01/jump.json` d3d7f16aff81fb0a20c5aea236316d52e297930aa0f7fcddb114d135af234c3d
+`20261020-foundation-widgets/Host01.json` c8df8a2147b47ec8873991131f7b64c86bf4333abb1239b08e398ef578f425dd
+`20261020-foundation-widgets/guards.json` 1caa813e192bd5b29454fe64c55b022c8a45a67773dbbb3e23c29267d332d792
+
 **Completed bounded batch145 (2026-10-20),bound-action button:**
 W_BoundActionButton uses Python policy with original82 nodes/full CDO/widget
 tree/animations/signatures/node GUIDs/graph semantics retained.11 methods per

@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 147,
+    "bounded_evidence_ledgers": 148,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1235,6 +1235,92 @@
     "full_library_acceptance": false,
     "full_acceptance": false,
     "next": "Remaining0.12/later business and broader natural caller/network/audio/hardware/pixel/package/version acceptance."
+  },
+  "foundation_widgets_pilot": {
+    "version": "0.13.0",
+    "status": "bounded_foundation_dialog_loading_reason_image_and_spinner_python_native_verified",
+    "evidence_ledger": "146-foundation-widgets-native-lifecycle-loading-and-format.json",
+    "owner": "uep_lyra_hud.foundation_widgets_mixin",
+    "original_read_only_audit": "20261020-foundation-widgets/Audit01",
+    "native_asset_authoring": "20261020-foundation-widgets/Assets01",
+    "native_runtime_runs": [
+      "20261020-foundation-widgets/Differential01"
+    ],
+    "widgets": {
+      "dialog": {
+        "original_graph_nodes": 3,
+        "transport_nodes": 4,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 1,
+          "BlueprintFallback": 1
+        }
+      },
+      "reason": {
+        "original_graph_nodes": 8,
+        "transport_nodes": 9,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 1,
+          "BlueprintFallback": 1
+        }
+      },
+      "loading": {
+        "original_graph_nodes": 15,
+        "transport_nodes": 4,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 1,
+          "BlueprintFallback": 1
+        }
+      },
+      "aspect": {
+        "original_graph_nodes": 8,
+        "transport_nodes": 6,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 1,
+          "BlueprintFallback": 1
+        }
+      },
+      "spinner": {
+        "original_graph_nodes": 4,
+        "transport_nodes": 4,
+        "interface_nodes": 5,
+        "method_counts": {
+          "Python": 1,
+          "BlueprintFallback": 1
+        }
+      }
+    },
+    "methods_per_profile_per_class": 1,
+    "new_business_nodes": 0,
+    "original_cdos_widget_trees_animations_signatures_node_guids_and_graph_semantics_preserved": true,
+    "original_four_localized_reason_format_conversion_widget_and_setter_nodes_moved_intact_to_native_writer": true,
+    "original_reason_format_namespace_key_and_source_preserved": true,
+    "python_polls_native_loading_manager_string_then_calls_native_writer": true,
+    "original_loading_construct_factory_delegate_and_absence_of_destruct_unbind_preserved": true,
+    "valid_class_or_original_default_content_selection_preserved": true,
+    "same_class_direct_callback_still_creates_new_child": true,
+    "native_profile_trials": 2,
+    "native_widget_trials": 10,
+    "aspect_whole_brush_cases": 6,
+    "spinner_actual_desired_size_cases": 6,
+    "native_loading_backend_changes": 4,
+    "actual_native_dialog_activation_animation_and_reason_ticks_verified": true,
+    "rooted_removed_host_still_receives_original_native_delegate": true,
+    "original_widget_roots_profile_selectors_loading_content_class_and_player_health_restored": true,
+    "focused_host_checks": 17,
+    "invalid_lane_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261020-foundation-widgets/Index01",
+    "physical_dialog_input_tested": false,
+    "culture_switch_tested": false,
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Remaining original0.13/0.14 candidates and prior FText audit/diagnostic/owner/network/culture/pixel/package/version gates stay open. Original loading-host delegate behavior is retained,not repaired."
   },
   "bound_action_pilot": {
     "version": "0.13.0",
@@ -7611,7 +7697,8 @@
       "method_candidates": 1,
       "business_nodes": 2,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_foundation_widget_python_policy_native_lifecycle_loading_format_and_layout_verified",
+      "evidence_run": "20261020-foundation-widgets/Differential01"
     },
     {
       "path": "/Game/UI/Foundation/LoadingScreen/W_LoadingScreenReasonDebugText.W_LoadingScreenReasonDebugText",
@@ -7620,7 +7707,8 @@
       "method_candidates": 2,
       "business_nodes": 6,
       "scope_review": "运行时加载诊断；与编辑器／测试工具分开判断。",
-      "status": "not_accepted"
+      "status": "bounded_foundation_widget_python_policy_native_lifecycle_loading_format_and_layout_verified",
+      "evidence_run": "20261020-foundation-widgets/Differential01"
     },
     {
       "path": "/Game/UI/Foundation/LoadingScreen/W_LoadingScreen_Host.W_LoadingScreen_Host",
@@ -7629,7 +7717,8 @@
       "method_candidates": 2,
       "business_nodes": 13,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_foundation_widget_python_policy_native_lifecycle_loading_format_and_layout_verified",
+      "evidence_run": "20261020-foundation-widgets/Differential01"
     },
     {
       "path": "/Game/UI/Foundation/TabbedView/W_HorizontalTabList.W_HorizontalTabList",
@@ -7658,7 +7747,8 @@
       "method_candidates": 2,
       "business_nodes": 6,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_foundation_widget_python_policy_native_lifecycle_loading_format_and_layout_verified",
+      "evidence_run": "20261020-foundation-widgets/Differential01"
     },
     {
       "path": "/Game/UI/Foundation/Widgets/W_ProgressSpinner.W_ProgressSpinner",
@@ -7667,7 +7757,8 @@
       "method_candidates": 1,
       "business_nodes": 3,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_foundation_widget_python_policy_native_lifecycle_loading_format_and_layout_verified",
+      "evidence_run": "20261020-foundation-widgets/Differential01"
     },
     {
       "path": "/Game/UI/Hud/W_LyraGameMenu.W_LyraGameMenu",

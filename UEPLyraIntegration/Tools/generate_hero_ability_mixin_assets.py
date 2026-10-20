@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "foundationwidgets":
+        from generate_foundation_widget_assets import generate as generate_foundation_widgets
+        return generate_foundation_widgets(stage)
     if kind == "boundaction":
         from generate_bound_action_assets import generate as generate_bound_action
         return generate_bound_action(stage)
