@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(a.startswith("-UEPExplorerItemListResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):
+        return "uep_lyra_hud.explorer_item_list_validation"
     if any(a.startswith("-UEPExplorerToastResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):
         return "uep_lyra_hud.explorer_toast_validation"
     if any(a.startswith("-UEPExplorerGridResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):

@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "batch": "178-explorer-item-list-native-messages-factory-expiry",
+  "scope": "Original Explorer item-acquired list five methods; exact native inventory messages/native FText and object factory/native row binding and expiry/current Profile/GC; pixel/network/package remains open",
+  "recorded_utc": "2026-10-20T22:45:35.8919475Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "22aaa22e7fd94d4c6110b5bf43933fc27b5559a0",
+  "examples_parent_commit": "2b317cd836bed1b3ecbfcb8ba60eeaf41529adea",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-item-list/Assets01",
+      "summary_sha256": "E2C3DE4D378D6A676733FA14B88DC3386B186573A084F535130591113462F158",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2300,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-item-list/List01",
+      "summary_sha256": "395C69CDBA05F74F26C888D2AADA9C9DF1B2223DEA6CC5F534AC32B4877365AD",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3143,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "07F61DC47902C219B7B97D0C1B3557ECE3B5F205B2EFBB904B6027F03A983EF2",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_explorer_item_list_assets.py",
+      "sha256": "4202B3D6697B83E40939F194B0ABC6007AC853865A9C67AE93812BB5E7660604",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_explorer_item_list_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/explorer_item_list_mixin.py",
+      "sha256": "D83C5679A9C5B03EE6749FEB1D247539AC119E8F8ADC46D2595E0CA4C6FEB36D",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/explorer_item_list_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/explorer_item_list_contract.py",
+      "sha256": "591EFCDC804F8E88CB3ED8D27260015F22428FB5C01FEE38661D53DD530CCD5A",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/explorer_item_list_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/explorer_item_list_validation.py",
+      "sha256": "BF99EF6E4E4AF7FB2F1CD2C218A176576132A13031D401AA3A6B8CF0C4BB7CB7",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/explorer_item_list_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "381BCCAFB0EC065B2EC821B246D9FB2D6CC021547400FE896DBEB7BBA6BA05BF",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "result": {
+      "status": "passed",
+      "tests_run": 18,
+      "runtime_acceptance": false,
+      "full_regression": false
+    },
+    "sha256": "1D07C78984FAD83865E51460878EA7AC027BD20FA627E9478845DF69D71A127D",
+    "path": ".build/LyraValidation/BlueprintPython/20261021-explorer-item-list/host-focused02.json"
+  }
+}

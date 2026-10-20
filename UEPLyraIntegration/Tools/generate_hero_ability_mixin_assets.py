@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "exploreritemlist":
+        from generate_explorer_item_list_assets import generate as explorer_item_list
+        return explorer_item_list(stage)
     if kind == "explorertoast":
         from generate_explorer_toast_assets import generate as explorer_toast
         return explorer_toast(stage)

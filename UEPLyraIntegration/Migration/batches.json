@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 179,
+    "bounded_evidence_ledgers": 180,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -11540,7 +11540,17 @@
       "method_candidates": 4,
       "business_nodes": 26,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_explorer_item_list_five_methods_native_message_factory_row_expiry_gc_verified_network_pixels_package_pending",
+      "implemented_methods": [
+        "Construct",
+        "UpdateDisplayVisibility",
+        "RemoveToast",
+        "native bound OnListEntryInitialized callback",
+        "typed original native inventory message callback"
+      ],
+      "evidence_run": "20261021-explorer-item-list/List01",
+      "evidence_ledger": "178-explorer-item-list-native-messages-factory-expiry.json",
+      "original_widget_visuals_cdos_public_abi_node_guids_graph_partitions_and_native_payload_groups_preserved": true
     },
     {
       "path": "/ShooterExplorer/UserInterface/W_ItemAcquiredToastRow.W_ItemAcquiredToastRow",
@@ -12445,5 +12455,48 @@
     "packaged_runtime": false,
     "full_acceptance": false,
     "next": "Continue original Explorer item-acquired list and interaction/collection candidates,all prior bounded parent and full version/network/pixel/package acceptance. Full migration remains open."
+  },
+  "explorer_item_list_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_explorer_item_list_five_methods_native_message_factory_row_expiry_gc_verified_network_pixels_package_pending",
+    "evidence_ledger": "178-explorer-item-list-native-messages-factory-expiry.json",
+    "owner": "uep_lyra_hud.explorer_item_list_mixin",
+    "original_source_audit": "20261021-explorer-characters/Audit03ShooterReference",
+    "native_asset_authoring": "20261021-explorer-item-list/Assets01",
+    "native_runtime_runs": [
+      "20261021-explorer-item-list/List01"
+    ],
+    "accepted_row_baseline": "20261021-explorer-toast/Assets01",
+    "method_counts": {
+      "Python": 5,
+      "BlueprintFallback": 5
+    },
+    "original_nodes": 31,
+    "transport_nodes": 13,
+    "interface_nodes": 5,
+    "new_business_nodes": 0,
+    "original_full_widget_tree_animations_cdos_signatures_guids_graph_partitions_and_native_groups_preserved": true,
+    "original_native_exact_inventory_proxy_and_split_payload_reused": true,
+    "message_order": "native FindFragment first -> Delta>0 -> native formatted toast factory -> AddItem -> UpdateDisplayVisibility",
+    "original_inventory_owner_newcount_unfiltered_and_true_placeholder_branch_preserved": true,
+    "native_format_namespace_key_grouping_icon_brush_factory_outer_and_two_second_defaults_preserved": true,
+    "native_original_expiry_delegate_binding_reused_without_python_subscription_roots": true,
+    "native_message_cases": 20,
+    "list_row_profile_combinations": 4,
+    "native_zero_negative_parent_channel_missing_fragment_repeat_removed_reconstructed_and_profile_switch_cases": true,
+    "native_row_assignment_and_two_second_expiry_removed_eight_real_entries": true,
+    "owned_native_proxies_released_after_gc_and_message": true,
+    "focused_host_checks": 18,
+    "invalid_lane_guards": 7,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261021-explorer-item-list/Index01",
+    "payload_matrix_removals_use_public_remove_helper": true,
+    "timer_callbacks_replayed": false,
+    "fastarray_replication_claimed": false,
+    "pixels_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Continue remaining original Explorer interaction/collection and follow-parent review plus all prior bounded parent/full version/network/pixel/package work. Full migration remains open."
   }
 }

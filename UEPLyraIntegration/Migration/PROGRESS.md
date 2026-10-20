@@ -23,6 +23,48 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch178 (2026-10-21),Explorer item-acquired list:**
+All4 original emitted methods plus the typed native inventory callback are
+routed together in5-method Profiles. Construct updates empty/nonempty visibility
+then starts the original ExactMatch inventory proxy. Each message performs the
+original native FindFragment before testing Delta>0. InventoryOwner/NewCount
+remain unfiltered. The original true placeholder is not a fragment validity
+guard;positive missing-fragment messages still create a blank-name/null-icon
+toast,matching the source. Positive messages use the retained native FormatText,
+brush extraction and CreateObject group before AddItem and visibility update.
+Native namespace/key,integer grouping,own-list Outer and2-second duration stay
+intact. Empty lists collapse;RemoveToast always updates visibility. Original
+row cast/AddDelegate/RemoveToast binding stays native with no Python production
+subscription roots. Pending expiry dispatches current row/list Profiles.
+All31 original nodes/GUIDs,full CDO/public signatures,WidgetTree/animations,
+remaining graph partitions and moved native groups remain checked.13 transport
+and5 interface nodes;0 new business nodes. Two list Profiles are tested with
+each of the two accepted row Profiles:4 combinations,20 message cases. Cases
+include parent channel,zero/negative Delta,large grouped count,missing fragment,
+repeat,rooted removed widget,reconstruction with2 native proxies per widget
+and pending Profile switch. Payload-matrix cleanup calls the public RemoveToast
+helper;actual timer callbacks are never replayed.8 real ListView entries then
+expire after the original2-second timer and disappear through their native
+delegate bindings,with empty lists collapsed. Native GC plus a real message
+releases all owned proxy GI references without late callbacks;original listener
+references and primary player inventory/Health remain protected. Owned actors,
+widgets/roots and class selectors restore. Native exit0,independent gate0,
+strict logs and ordered shutdown pass on the first native author/runtime runs.
+18 focused checks and7 invalid lanes pass;staged checks are incremental at
+.build/CommitVerification/20261021-explorer-item-list/Index01. Standalone typed
+broadcast does not prove FastArray replication. No Engine/general Cpp/official
+edits,build,cook,push,tag or publication. Static246/182/63/11 and exact candidate
+paths/order remain;full migration and pixel/network/package acceptance are open.
+
+Batch178 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261021-explorer-item-list/Assets01/summary.json` e2c3de4d378d6a676733fa14b88dc3386b186573a084f535130591113462f158
+`20261021-explorer-item-list/Assets01/assets.json` 979f3b8131e8c377a376187f14cc1fdce330af863249cbb50dfade269744d038
+`20261021-explorer-item-list/Assets01/item-list-preservation.json` d681b530ccf0d8ce3f873dbec6d428a08224ff9178d1c18c8af8b14b9c1118f9
+`20261021-explorer-item-list/List01/summary.json` 395c69cdba05f74f26c888d2aada9c9df1b2223dea6cc5f534ac32b4877365ad
+`20261021-explorer-item-list/List01/jump.json` 07f61dc47902c219b7b97d0c1b3557ece3b5f205b2efbb904b6027f03a983ef2
+`20261021-explorer-item-list/host-focused02.json` 1d07c78984fad83865e51460878ea7ac027bd20fa627e9478845df69d71a127d
+`20261021-explorer-item-list/guards01.json` 4de0987a293a111286fc5652f622188b2be4cb7403b9c2e55df0f5111f0a597d
+
 **Completed bounded batch177 (2026-10-21),Explorer item-acquired toast row:**
 All3 original emitted methods are routed together:OnListItemObjectSet,SetIcon
 and OnTimerElapsed. The OnToastExpired delegate signature graph stays native.
