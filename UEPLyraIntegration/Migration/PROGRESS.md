@@ -31,6 +31,19 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded audit correction208 (2026-10-21),exact version ownership:**
+The acceptance audit now compares each candidate's version with the original
+inventory,after preserving all246 exact paths/order. Previously,two cross-version
+reassignments could cancel in the totals and evade the count-only check. A new
+regression first reproduces that false pass,then32 focused checks pass with the
+fix. The actual current manifest still has the original246/182/63/11,exact
+candidate versions and22 original checklist requirements;this remains a scope
+audit,not full semantic/runtime acceptance. The failed regression is preserved.
+No gameplay policy,Blueprint asset,native source or stage file is changed.
+Current Game build and native build/cook drivers remain a separate pending
+batch. Accepted work is committed and pushed Demos first,then core. Ledger208
+records only this bounded audit correction.
+
 **Completed bounded tooling batch207 (2026-10-21),current package inventory:**
 The read-only planner preserves the original246/182/63/11 and exact candidate
 paths/order/versions,hashes246 candidate assets and verifies460 Overlay/stage

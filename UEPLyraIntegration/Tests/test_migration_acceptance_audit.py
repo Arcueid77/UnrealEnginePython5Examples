@@ -52,6 +52,14 @@ class MigrationAcceptanceAuditTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.run_audit(data, original, roadmap)
 
+    def test_cross_version_swap_is_rejected_even_when_version_counts_match(self):
+        data, original, roadmap = fixture()
+        first = data['assets'][0]
+        second = next(row for row in data['assets'] if row['version'] != first['version'])
+        first['version'], second['version'] = second['version'], first['version']
+        with self.assertRaisesRegex(ValueError, 'original candidate version assignments changed'):
+            self.run_audit(data, original, roadmap)
+
     def test_prohibited_behavior_false_is_not_a_missing_capability(self):
         self.assertEqual(audit.unverified(dict(callbacks_replayed=False, health_properties_written=False,
             cpp_compile_executed=False, assets_modified=False)), [])

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "batch": "208",
+  "scope": "exact original per-candidate version ownership in scope audit",
+  "recorded_utc": "2026-10-21T10:47:21.573061+00:00",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "native_runtime_executed": false,
+  "full_acceptance": false,
+  "core_parent_commit": "346398b60add607f3145677c2f1626bb5835e2a4",
+  "examples_parent_commit": "f873ffebb1f3aed08606f18c2434184d691df458",
+  "original_static_scope": [
+    246,
+    182,
+    63,
+    11
+  ],
+  "original_candidates": 246,
+  "exact_original_version_assignments_preserved": true,
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/audit_migration_acceptance.py",
+      "sha256": "EE31EDCC930213CDEF7F8F65A43D756743A2DFCE0F282EE19EE625DF3B978E1B"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tests/test_migration_acceptance_audit.py",
+      "sha256": "21E427098677F9289053DFAC51A2891529BC6511BBF82637C5102EE4BDF5EB04"
+    }
+  ],
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/scope-audit-red01.json",
+      "sha256": "96617279D6E775936EDF05432674B0D79CFD2C77F2E5164A80B904090D69F9C3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/scope-audit-green01.json",
+      "sha256": "62D56DAD1F1CA07576AE955122106D7CA19C1A168D56D33D34779F86CC04184C"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/scope-audit-current01.json",
+      "sha256": "B28239EBCB1A6966632E21A86708E3BDAF994C0E6B7D3A4B36D3781ED725687F"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/original-inventory.json",
+      "sha256": "9FEC83F97043792DA37B40AF2CFBEE3DD82B1BB609FA5AF6FE9B7F53E30553BC"
+    }
+  ],
+  "red_then_green": {
+    "red_failures": 1,
+    "red_case": "test_cross_version_swap_is_rejected_even_when_version_counts_match",
+    "green_tests": 32
+  },
+  "notes": [
+    "A matched version histogram cannot prove per-candidate version ownership. The ordered version sequence is now checked against the original inventory.",
+    "The current inventory is verified,not rewritten. All246 candidate rows remain unchanged.",
+    "This scope audit does not rerun linked native evidence or prove semantic/runtime/version completion.",
+    "The current active Game build and uncommitted native build/cook drivers are separate pending work."
+  ]
+}

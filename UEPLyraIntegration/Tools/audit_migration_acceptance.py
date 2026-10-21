@@ -68,6 +68,8 @@ def inspect(current, original, roadmap, *, acceptance_directory):
     versions = {v: sum(row['version'] == v for row in current['assets']) for v in VERSIONS}
     if versions != VERSIONS:
         raise ValueError('original version assignment counts changed')
+    if [row['version'] for row in current['assets']] != [row['version'] for row in original['assets']]:
+        raise ValueError('original candidate version assignments changed')
     if current.get('migration_complete') is not False:
         raise ValueError('full migration completion is not proven by this index')
     checklists = requirements(roadmap)

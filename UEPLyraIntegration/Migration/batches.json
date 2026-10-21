@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 209,
+    "bounded_evidence_ledgers": 210,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -14377,6 +14377,14 @@
     "cooked_package_presence_verified": false,
     "current_game_build_accepted": false,
     "packaged_runtime_verified": false,
+    "full_acceptance": false
+  },
+  "exact_candidate_version_audit": {
+    "status": "original_per_candidate_version_assignments_verified_swap_false_positive_rejected",
+    "evidence_ledger": "208-exact-original-candidate-version-assignment-audit.json",
+    "original_candidates": 246,
+    "original_paths_order_and_version_assignments_unchanged": true,
+    "counts_only_comparison_is_insufficient": true,
     "full_acceptance": false
   }
 }
