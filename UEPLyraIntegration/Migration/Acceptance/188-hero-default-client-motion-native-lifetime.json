@@ -1,0 +1,190 @@
+﻿{
+  "schema_version": 1,
+  "batch": "188-hero-default-client-motion-native-lifetime",
+  "scope": "Parent6-method family: actual listen-server/client24 typed motion cases,40 downstream12-field forwards, native retriggerable3s cleanup and recreation; affected20 lethal GAS cases and84 stencil calls. Natural animation notify/particles/audio/pixels and full migration remain open.",
+  "recorded_utc": "2026-10-21T01:42:38.4814362Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "8c37b34687638d95309aced24f63f48c02d523e0",
+  "examples_parent_commit": "2694d8b1357ba74a5b2d99ea04092b81ed2fdaa9",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-hero-default-motion/Audit01",
+      "summary_sha256": "BEB6EA9A7BC3D7EC110F2981C83D0DB735AE0602B596E033363AF8E24789AE8B",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 831,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "E2555614F78F13CC410588E5971CB28B321EEC97AF0E59699E5510A0F003F63F",
+          "file": "audit.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-hero-default-motion/Assets01",
+      "summary_sha256": "E8AEF65A921C49E56430117F96248FF87889D3843342D57AE9B91091C943C9BF",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2365,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-hero-default-motion/Network02",
+      "summary_sha256": "0CF9F44520295FDF965D2E382D124498381021179CCDF4D2158C681A48EB5F38",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2373,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "client": 0,
+        "server": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "BB64EFF6F92A5F52D9384FBB9F3C14606ECC0B8655C1FC3C037EFD87710BAB07",
+          "file": "server.json"
+        },
+        {
+          "file": "client.json",
+          "sha256": "DA66C6696D53A16C0B66EB0DBEB0451E652CAB59C6A5FC7165E2581A6A3F42AF"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-hero-default-motion/Death01Affected",
+      "summary_sha256": "3EFB10DD71A6941C408B03469ADA3530A0C701C5C1C1F97BCD97CFA6D3D8DD7B",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3238,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "84315CAEA61105E994270B4ABDE6B67F25CEFDD24F63F27F48F7EB870CA0B6A1",
+          "file": "jump.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-hero-default-motion/Stencil01Affected",
+      "summary_sha256": "A46713016F8ACA419663FA89194DFF159FBA40994F3E8E7A808B487D84C8CA48",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3226,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "4BD864AFF2227FD46588E3FB576CF6A5164C88A7778F379BD95C06FD4132D71E",
+          "file": "jump.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Validation/Run-UEP58AbilityProducerAudit.ps1",
+      "sha256": "FC927C957814F4BC952867DAC8843AE04EEEED7B6B0B25491482BD2BAEFBBA77",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58AbilityProducerAudit.ps1"
+    },
+    {
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "AF01E1BBB384F0BD0DD5FDC9F282CE8FBDFD986448AB0BA2F5078299237A0A77",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1"
+    },
+    {
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "E2A3C270BE0B73013DD85680700D6162CD5F073362F26B96CC44F77522D7EDC6",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1"
+    },
+    {
+      "path": "Validation/Run-UEP58HeroMotionValidation.ps1",
+      "sha256": "21C3A2EF44704C98DE0E6CF5F15FE99B302148D272FA405E08EBA7F5F5BC0A48",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58HeroMotionValidation.ps1"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/audit_hero_default_motion.py",
+      "sha256": "E8140362CAF2189C5E3AA17AF00BD10442CC6EAC1ADE1B5DB1801D96401E8CE3",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_hero_default_motion.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_default_motion_assets.py",
+      "sha256": "434AC853C85BA18B3EB271BD28737FA140580EE283CC71B1BD4D4CEE4BFCEB9D",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_default_motion_assets.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "871D2595EA8D18E439EB59A1129A78696CA172C73A064F97876BF49DC345E215",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "AC6B6D9CAF10C34E26E2BC46ABD5263CE9CD8E80573A1700765EDC80A77797BB",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/hero_default_motion_mixin.py",
+      "sha256": "E6F573F405AE96F9D86E5C441771013CCD87E6EE8B3C212F3A833645ABCFD784",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/hero_default_motion_mixin.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/hero_default_motion_validation.py",
+      "sha256": "711F4F977DD645BF2CD6481A2F656D600AEB9DAB40F461EC3A7F5C8620710A94",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/hero_default_motion_validation.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/hero_default_motion_contract.py",
+      "sha256": "2601CFDCCC3546F2C1161DBAE2F06E7BA0BC962086A52F5C933520D73C72633B",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/hero_default_motion_contract.py"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261021-hero-default-motion/host-focused01.json",
+    "sha256": "D5A59F54061510A1902DFE650E792475B406BB632F864656727C97E0C55ABD23",
+    "result": {
+      "status": "passed",
+      "tests_run": 11,
+      "failures": 0,
+      "errors": 0,
+      "runtime_acceptance": false
+    }
+  }
+}

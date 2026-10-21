@@ -23,6 +23,53 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch188 (2026-10-21),Hero parent client motion dispatch:**
+All original parent business methods now have Python implementations. The
+existing five methods remain exact function references; AnimMotionEffect is
+the sixth Profile entry. Native IsServer skips all footstep work. Client calls
+reuse a valid FootStep or use native deferred spawn at identity,Undefined
+collision,OverrideRootScale; set stored Mesh and right bone foot_r before
+Finish; assign FootStep; attach all KeepRelative with weld=true; forward12
+original interface inputs. Existing Explorer Hero empty override stays native.
+Read-only audit matches the original full EventGraph hash. Parent Blueprint
+bytes,all CDO/public ABIs/graphs/GUIDs stay identical to187. Only the existing
+parent Mixin DataAsset changes; a stage-only second Blueprint is the typed
+caller. Actual native listen server and client pass24 Profile/family cases.
+10 client inheritance cases forward40 calls with exact12-field payloads;
+native3s retrigger cleanup,pre-deadline survival,expired actor replacement and
+replacement natural destruction pass. Stored mesh/right-bone properties and
+attachment match the original Blueprint. Source downstream handlers remain
+active under a read-only message witness,then are restored. Primary state,
+owned objects/roots/selectors and downstream/descendant bytes remain protected.
+Network01 failure remains: atomic state replacement raced the initial reader;
+Network02 uses a sharing-safe reader and passes both process exits0 and both
+independent gates0 with strict logs/ordered shutdown.11 focused checks pass.
+Affected death-chain20 native GAS cases and stencil14 families/84 team calls
+pass with the new6-method family. Unchanged Ragdoll numeric and equipment
+filter independent matrices are not repeated;187 remains their historical
+evidence,while this batch integrates both endpoints in the real death chain.
+Staged verification stays incremental; no full regression/build/cook/Engine/
+general Cpp/official edits,push,tag or publication. Static246/182/63/11 and exact
+candidate order remain. Natural animation notify ingress,footprint particles,
+audio/pixels and broader parent/network/package/version acceptance remain
+unproven. Whole-parent/full migration acceptance stays false.20 Arena candidates
+and previous bounded acceptance requirements remain in the original full scope.
+
+Batch188 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261021-hero-default-motion/Audit01/summary.json` beb6ea9a7bc3d7ec110f2981c83d0db735ae0602b596e033363af8e24789ae8b
+`20261021-hero-default-motion/Audit01/audit.json` e2555614f78f13cc410588e5971cb28b321eec97af0e59699e5510a0f003f63f
+`20261021-hero-default-motion/Assets01/summary.json` e8aef65a921c49e56430117f96248ff87889d3843342d57ae9b91091c943c9bf
+`20261021-hero-default-motion/Assets01/assets.json` 8018645e92d118a2c0aebc4647fa9536b0de93cbff214182ac5da085500cfc3b
+`20261021-hero-default-motion/Assets01/parent-motion-preservation.json` 1e30bfbc823973b70e0a7981164f4e4b3cd553efdbafb0147ed57f2a8cf68880
+`20261021-hero-default-motion/Network01/summary.json` e2cf9818561dabcc6d9460a8cb3c7451dda9e89f4523dfd6a6ff9892049064a7
+`20261021-hero-default-motion/Network02/summary.json` 0cf9f44520295fdf965d2e382d124498381021179ccdf4d2158c681a48eb5f38
+`20261021-hero-default-motion/Network02/server.json` bb64eff6f92a5f52d9384fbb9f3c14606ecc0b8655c1fc3c037efd87710bab07
+`20261021-hero-default-motion/Network02/client.json` da66c6696d53a16c0b66eb0dbeb0451e652cab59c6a5fc7165e2581a6a3f42af
+`20261021-hero-default-motion/Death01Affected/summary.json` 3efb10dd71a6941c408b03469ada3530a0c701c5c1c1f97bcd97cfa6d3d8dd7b
+`20261021-hero-default-motion/Stencil01Affected/summary.json` a46713016f8aca419663fa89194dff159fba40994f3e8e7a808b487d84c8ca48
+`20261021-hero-default-motion/host-focused01.json` d5a59f54061510a1902dfe650e792475b406bb632f864656727c97e0c55abd23
+`20261021-hero-default-motion/guards01.json` 25707ede967081b8f583de0d80c881fd7a46a6e5e0b3f4a5726061fa660a4c43
+
 **Completed bounded batch187 (2026-10-21),Hero parent Health death delay:**
 Parent Profiles retain exact stencil/hide/Ragdoll references and add Health
 death orchestration plus one empty int32 native continuation declaration.

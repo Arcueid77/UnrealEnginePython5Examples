@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 189,
+    "bounded_evidence_ledgers": 190,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -9654,20 +9654,25 @@
       "group": "角色、输入与英雄能力",
       "method_candidates": 7,
       "business_nodes": 54,
-      "scope_review": "Parent stencil/hide/Ragdoll retained and Health death-started orchestration uses native random montage/sight unregister/Delay then virtual Ragdoll/hide/empty Death. Real lethal GAS drives20 original/inherited/lifetime cases;one empty int32 native resume declaration added while all original CDO/ABIs/graphs/GUIDs remain. AnimMotionEffect remains open; no whole-parent acceptance.",
-      "status": "bounded_hero_parent_stencil_hide_ragdoll_health_death_delay_verified_motion_effect_open",
+      "scope_review": "All original parent business methods now have Python implementations; exact five-method family retained and client-only AnimMotionEffect added. Native listen-server/client typed calls verify exposed-on-spawn properties, attachment, all12 forwarded payloads, reuse, real3s retrigger destruction/replacement and Explorer Hero empty override. Parent Blueprint stays byte-identical to187. Natural animation notify ingress, particles/audio/pixels and broader version acceptance remain unproven; whole-parent acceptance remains false.",
+      "status": "bounded_hero_parent_all_original_business_methods_implemented_native_client_server_motion_verified_broader_acceptance_open",
       "implemented_helpers": [
         "UpdateCustomStencilFromTeamID",
         "HideEquippedWeapons",
         "Ragdoll",
-        "Health death-started native delay orchestration"
+        "Health death-started native delay orchestration",
+        "AnimMotionEffect footstep dispatch"
       ],
-      "remaining_business": [
-        "AnimMotionEffect footstep effects"
-      ],
+      "remaining_business": [],
       "whole_parent_business_migrated": false,
-      "evidence_run": "20261021-hero-default-death/Death04",
-      "evidence_ledger": "187-hero-default-parent-native-death-delay.json"
+      "evidence_run": "20261021-hero-default-motion/Network02",
+      "evidence_ledger": "188-hero-default-client-motion-native-lifetime.json",
+      "all_original_business_methods_implemented": true,
+      "remaining_acceptance": [
+        "Natural animation notify ingress",
+        "Particle/audio/pixel observations",
+        "Broader parent/network/package/version acceptance"
+      ]
     },
     {
       "path": "/Game/Characters/Heroes/B_SimpleHeroPawn.B_SimpleHeroPawn",
@@ -13117,5 +13122,61 @@
     "packaged_runtime": false,
     "full_acceptance": false,
     "next": "Continue original parent AnimMotionEffect plus remaining Arena and prior bounded network/pixel/package/version acceptance."
+  },
+  "hero_default_motion_pilot": {
+    "version": "0.11.0",
+    "status": "bounded_hero_parent_all_original_business_methods_implemented_native_client_server_motion_verified_broader_acceptance_open",
+    "evidence_ledger": "188-hero-default-client-motion-native-lifetime.json",
+    "owner": "uep_lyra_characters.hero_default_motion_mixin",
+    "accepted_parent_baseline": "20261021-hero-default-death/Assets01",
+    "native_read_only_audit": "20261021-hero-default-motion/Audit01",
+    "native_asset_authoring": "20261021-hero-default-motion/Assets01",
+    "native_runtime_runs": [
+      "20261021-hero-default-motion/Network02",
+      "20261021-hero-default-motion/Death01Affected",
+      "20261021-hero-default-motion/Stencil01Affected"
+    ],
+    "method_counts": {
+      "Python": 6,
+      "BlueprintFallback": 6
+    },
+    "selector": "UEPHeroDefaultMixinProfile",
+    "retains_exact_previous_five_methods": true,
+    "parent_blueprint_bytes_and_all_cdo_abis_graphs_guids_unchanged": true,
+    "only_existing_parent_mixin_data_asset_changed": true,
+    "source_server_gate": "Native IsServer(self) -> no-op",
+    "source_client_order": "valid FootStep reuse or deferred native spawn at identity; exposed stored Mesh/right bone before Finish; assign; KeepRelative attachment with weld; forward12 interface inputs",
+    "source_collision_override": "Undefined",
+    "source_scale_method": "OverrideRootScale",
+    "actual_native_listen_server_and_client_cases": 24,
+    "client_inherited_forwarding_cases": 10,
+    "client_forwarded_calls": 40,
+    "original_explorer_hero_empty_override_retained": true,
+    "actual_profile_branch_counts_required": true,
+    "original_footstep_native_retriggerable_delay_seconds": 3.0,
+    "native_deadline_retrigger_and_replacement_natural_destruction": true,
+    "downstream_asset_bytes_unchanged": true,
+    "downstream_message_witness_preserves_actual_native_handlers": true,
+    "owned_actors_profiles_roots_selectors_and_primary_state_restored": true,
+    "affected_lethal_gas_parent_death_cases": 20,
+    "affected_stencil_team_calls": 84,
+    "unchanged_ragdoll_numeric_and_equipment_filter_independent_matrices_not_repeated": true,
+    "prior_ragdoll_equipment_full_matrix_evidence": "187 ledger remains historical; current death chain integrates real native Ragdoll and equipped weapon hiding",
+    "all_original_business_methods_implemented": true,
+    "whole_parent_business_migrated": false,
+    "natural_animation_notify_ingress_tested": false,
+    "footprint_particles_tested": false,
+    "audio_playback_tested": false,
+    "pixels_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "focused_host_checks": 11,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261021-hero-default-motion/Index01",
+    "failed_evidence_retained": [
+      "Network01: state report atomically replaced during PowerShell read; sharing-safe reader added"
+    ],
+    "next": "Continue20 Arena candidates and all earlier bounded natural-ingress/network/pixel/package/version requirements; parent implementation alone does not finish the full goal."
   }
 }
