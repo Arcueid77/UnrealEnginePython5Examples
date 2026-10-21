@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 208,
+    "bounded_evidence_ledgers": 209,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -14360,5 +14360,23 @@
       "Fallback04 completed real lethal/scoring/notification flow but cached early weapon class defaults were collected before cleanup;held UClass roots now release after restoration."
     ],
     "next": "Continue physical keyboard,two-owner turnover,other weapons/accolade-chain ingress,large-team/error/late-join/travel/loss/UI/package/version and the remaining original migration requirements."
+  },
+  "migration_package_inventory": {
+    "status": "read_only_original_scope_and_stage_package_plan_verified_cook_runtime_open",
+    "evidence_ledger": "207-read-only-migration-package-plan-and-host-test-isolation.json",
+    "original_scope": [
+      246,
+      182,
+      63,
+      11
+    ],
+    "candidate_assets": 246,
+    "matching_overlay_assets": 460,
+    "runtime_maps_planned": 12,
+    "cook_directories_planned": 87,
+    "cooked_package_presence_verified": false,
+    "current_game_build_accepted": false,
+    "packaged_runtime_verified": false,
+    "full_acceptance": false
   }
 }

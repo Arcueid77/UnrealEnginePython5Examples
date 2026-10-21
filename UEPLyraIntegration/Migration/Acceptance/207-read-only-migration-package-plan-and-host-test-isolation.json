@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "batch": "207",
+  "scope": "read-only original migration package inventory and host-test isolation",
+  "recorded_utc": "2026-10-21T10:35:11.235557+00:00",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "runtime_acceptance": false,
+  "cook_package_executed": false,
+  "native_build_accepted": false,
+  "native_runtime_executed": false,
+  "full_migration_acceptance_proven": false,
+  "core_parent_commit": "a67884bf2d9b726943c71fd1fd3e10edf7fd3d2d",
+  "examples_parent_commit": "00d291fd5285b4810c553618795cec98ebc6fe03",
+  "original_static_scope": [
+    246,
+    182,
+    63,
+    11
+  ],
+  "original_paths_order_and_versions_unchanged": true,
+  "original_candidates": 246,
+  "stage_matching_overlay_assets": 460,
+  "runtime_maps_in_plan": 12,
+  "proposed_cook_directories": 87,
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/plan_migration_package.py",
+      "sha256": "08BE7584ABC170853BB0DD4287880F8FF791AC89D5E861FB24D7DDB7FA427FFA"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/inspect_migration_container.py",
+      "sha256": "BB8CCE8A46AA15C7A97A9F47699475DDE141B46322D38CCC83FEBB4526F47BD8"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tests/test_migration_package_plan.py",
+      "sha256": "229CDB79714AED107F579EA914F9A2622DBB6E0C7FCD1A8C250B4B7A6E9E344D"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tests/test_migration_container.py",
+      "sha256": "F42F37BF189AAFDF863CF71D1490019A39D7B9AEF3653B1762B8E948012D42E1"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tests/test_hud_ammo.py",
+      "sha256": "2C633114C5BAB2E5A021FFBDDFF9102C2CEB0A41AB7BE7CE0783894FE5E724C5"
+    }
+  ],
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/package-plan03.json",
+      "sha256": "6E3D8F310217A93FD4B07352768E8B905482F1221395225BC9C1793C722E1099"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/full-host01.json",
+      "sha256": "5E889DCC3E1EABFD23E49E6998128D634F5956A3481BC16E73B6BF312B40409A"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/full-host02.json",
+      "sha256": "074C6BDBE3FC91E7353D07CB773CFF258599D660A92F1FA2B833489DE0B86E13"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/package-tools-host01.json",
+      "sha256": "6F762A1AA62BF1090051F7DBB38515F2C159EC043F5A6FCB179915E1BD25C88A"
+    }
+  ],
+  "host_full_checkpoint": {
+    "tests": 5242,
+    "failures": 0,
+    "errors": 0
+  },
+  "subsequent_incremental_checkpoint": {
+    "tests": 37,
+    "failures": 0,
+    "errors": 0
+  },
+  "preserved_failed_host_checkpoint": {
+    "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/full-host01.json",
+    "reason": "test_hud_ammo left a fake uep_runtime root package that blocked core subscriptions imports"
+  },
+  "notes": [
+    "The full host checkpoint predates the six new container-inspection tests; the subsequent incremental checkpoint covers their final source.",
+    "The staged commit gate additionally selects core subscription tests to verify same-process import isolation.",
+    "The package plan is an inspection of staged source files, not a cooked-container or runtime acceptance report.",
+    "Current Game build and uncommitted native build/cook drivers remain a separate pending batch; no completed native run is claimed.",
+    "No Blueprint assets, runtime Python policy, Engine/general-purpose plugin C++ or official Lyra project is changed."
+  ]
+}

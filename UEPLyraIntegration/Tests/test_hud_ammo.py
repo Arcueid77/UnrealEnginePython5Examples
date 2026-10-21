@@ -36,9 +36,16 @@ class FakeScope:
         pass
 runtime_helpers = types.ModuleType("uep_runtime")
 runtime_helpers.SubscriptionScope = FakeScope
+runtime_was_present = "uep_runtime" in sys.modules
 sys.modules.setdefault("uep_runtime", runtime_helpers)
-from uep_lyra_hud import ammo_mixin as ammo
-from uep_lyra_hud import weapon_observer as observer
+try:
+    from uep_lyra_hud import ammo_mixin as ammo
+    from uep_lyra_hud import weapon_observer as observer
+finally:
+    # Keep the imported aliases for these tests, but never leave a fake root
+    # package blocking the core subscription suite in the same discovery run.
+    if not runtime_was_present and sys.modules.get("uep_runtime") is runtime_helpers:
+        del sys.modules["uep_runtime"]
 
 class Object:
     def __init__(self):

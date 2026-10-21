@@ -31,6 +31,23 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded tooling batch207 (2026-10-21),current package inventory:**
+The read-only planner preserves the original246/182/63/11 and exact candidate
+paths/order/versions,hashes246 candidate assets and verifies460 Overlay/stage
+asset pairs. It plans12 runtime maps plus Engine Entry and87 physical cook
+directories;source-only inspection does not prove cooked presence or runtime.
+A separate IoStore CSV inspector reports explicit missing packages and rejects
+BulkData-only,unrelated-plugin and Engine-content substitutes. Six container
+tests and five planner tests pass. The host test mock no longer leaves a fake
+uep_runtime root blocking the core subscriptions suite. The initial5230-test
+run's import error remains preserved;the corrected5242-test full checkpoint
+and subsequent37-test incremental checkpoint pass. The isolated commit gate
+also explicitly selects core subscription tests. Current Game build and native
+build/cook drivers remain pending in a separate batch;no cook,native runtime,
+package or full-version acceptance is claimed. No production runtime policy,
+Blueprint asset,Engine/general Cpp or official Lyra source is changed. Verified
+work is committed and pushed Demos first,then core. Ledger207 is bounded proof.
+
 **Completed bounded batch206 (2026-10-21),actual weapon lethal pipeline:**
 Real owner A injects native IA_Weapon_Fire/Auto input through its original
 equipped Pistol against opposing real owner B0. No damage spec or death/
