@@ -31,6 +31,29 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded batch195 (2026-10-21),Arena mode component family:**
+Base-owned Python gates cover native startup/ready,warmup-end/scoring/tick,
+named round-time output and child local-user decisions. Original authority
+switches,typed exact message factories and native phase delegate remain.
+Score order keeps team add before partial source/target PlayerState casts,
+then kill/death/hook;assist casts only its source. Server-clock/FMax clamp and
+120s end-time remain. Child static parent calls stay;active user index0 skips
+and later users retain native CreatePlayerFromPlatformUser(...,true). One base
+interface/selector covers both children. Lives has only static forwarding and
+empty Tick;its bytes remain original. Compiler's stale parent qualifier rebind
+is explicitly recorded/normalized for comparison,with no saved Lives changes.
+Original75 nodes/GUIDs,CDO/ABIs/graphs survive;only five interface plus35 native
+transport nodes are added. Original baseline and both Profiles pass untouched
+3/120/10s cycle and real seamless restart before owned fixture scenarios:
+native Begin,8 actual messages,6 typed time outputs,native GC/matching-message
+proxy release and score/actor/selector cleanup. Current native platform mapping
+is covered;physical multiple-user creation remains a broader input gate.
+Fourteen focused checks and five launch guards pass. Assets01 and the initial
+host test-loader failure remain;Assets02 and later tests pass. Ledger195 is
+bounded evidence. Remaining7 Arena and every earlier natural-ingress/network/
+input/pixel/audio/package/version gate remain open. Accepted work is committed
+and pushed Demos first,then core.
+
 **Completed bounded batch194 (2026-10-21),Arena native phase cycle:**
 Warmup,Playing and PostGame ability business now uses Python with original GAS
 phase parent,CDO/tags/policies/ABIs and49 nodes/GUIDs retained. Original3s and

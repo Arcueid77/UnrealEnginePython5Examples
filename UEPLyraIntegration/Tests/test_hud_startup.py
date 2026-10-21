@@ -9,6 +9,10 @@ from uep_lyra_hud.startup import validation_module
 
 
 class StartupSelectionTests(unittest.TestCase):
+    def test_arena_mode_requires_explicit_native_lane(self):
+        self.assertEqual(validation_module(['-UEPArenaModeResult=report.json']),'uep_lyra_world.arena_mode_validation')
+        self.assertIsNone(validation_module(['-run=Py','-UEPArenaModeResult=report.json']))
+
     def test_arena_phases_require_explicit_native_lane(self):
         self.assertEqual(validation_module(['-UEPArenaPhasesResult=report.json']),'uep_lyra_world.arena_phases_validation')
         self.assertIsNone(validation_module(['-run=Py','-UEPArenaPhasesResult=report.json']))

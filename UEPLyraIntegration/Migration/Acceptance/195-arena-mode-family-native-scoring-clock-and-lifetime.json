@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "batch": "195-arena-mode-family-native-scoring-clock-and-lifetime",
+  "scope": "Base-owned Arena mode policy and static parent/child calls; original baseline and both Profiles verify untouched3/120/10s cycle/restart before owned Begin,8 real score messages,6 named round-time outputs and native proxy lifetime/cleanup. Lives bytes remain original;known compiler parent qualifier normalization explicitly recorded. Physical multi-platform-user creation remains open. Remaining7 Arena plus broader original gates remain open.",
+  "recorded_utc": "2026-10-21T04:57:39.9519727Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "6177eb141f32f39b773f3e79515c0245f7273139",
+  "examples_parent_commit": "439be3b5f52e003a72d96238ed250a37b2a1acd5",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-mode/Baseline01",
+      "summary_sha256": "BFF05FF1BA64A950AC2628E6C1A76786D4970C1F55E14F8A3F0415ADFF961197",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2420,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "mode.json",
+          "sha256": "769CEBDD4003B3DADF8E0AF8CCD9DA0D9983B016F2AEDAED66CEA34CDBB00E89"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-mode/Assets02",
+      "summary_sha256": "32099DF735954A22C7A75EF71CFD2AAB076054AA497B37F4246232AE0D14E3B6",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2403,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "assets.json",
+          "sha256": "62F4A28FFC9B0FAE46694B30627E1CEB555A4ECF67468F0F8C716AD5CA848CCC"
+        },
+        {
+          "file": "base-arena-mode-preservation.json",
+          "sha256": "889FEAD8A0DC7A18541DAD997F81325ED2AEB8C37CAB3F644373B07552C51193"
+        },
+        {
+          "file": "lives-arena-mode-preservation.json",
+          "sha256": "823F4D3ABEFF72B8854D7E4DDE465E0B2E7E7E5927B02CA42509233FE81986E2"
+        },
+        {
+          "file": "local-arena-mode-preservation.json",
+          "sha256": "9D231FF6170865E3483655678037D8A650CE936AFEDC51383C9EB1CE70C1969B"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-mode/Python01",
+      "summary_sha256": "FBA537A9193BD51CFC9F2DB9F5309F9EDBF4FC43E6A0AA58F1705F54E83260A9",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2422,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "mode.json",
+          "sha256": "05977051DC4C9ED0BE913775383345D23F918FF914800CC66D752071897B47E3"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-mode/Fallback01",
+      "summary_sha256": "C2127DBBEBFDA155982EAD88C8EBAF5AA01970C1BD46575A72BDB50A9C09B767",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2422,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "mode.json",
+          "sha256": "1C72120618212E373FF881142CE362FAF13E85619C2724AC8C3F612AF0FDBCD6"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "BFE9EEC5BE0208ADD921D91F23BAD2EE85A4E9819D25249F0E02479E0C96103F",
+      "path": "Validation/Run-UEP58ArenaModeValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58ArenaModeValidation.ps1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "C927F0806AFCD51190720110BAB09D77BC222BACAB8B4981181027130428EAE0",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "57F1260ABB04E166267018F537B587D425D4CF75918202BC9C96AF28C9BF0DD8",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_arena_mode_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_arena_mode_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "F254D006CCD15C5DD211B0714ACDAA110E7B969149E3E15015FE95A7909E30C1",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_arena_mode_probe.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_arena_mode_probe.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "CB2B3E72436C9CA483E233DD5E7E0A0D35CF01E660BEE4BE7F558107B7AA658A",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "E126DE1F7377940B5BF0A309D76BCAA3AF354CE5FC19B4482673B224A189C69C",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "323634E17AAE40253484C806F3CB38946F9DCF2BB4DBAF572AC2FC4823D36C28",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_mode_mixin.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_mode_mixin.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "FAF03599C8D2759B25FBD0B8AEF225C637F175186B31262453A98A1180E2CBCA",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_mode_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_mode_validation.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "6E038912356BE878F79A74BCBCEAD21E0C886EDC880D9C68787E5F1D198F603E",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_mode_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_mode_contract.py"
+    }
+  ],
+  "host_report": {
+    "result": {
+      "status": "passed",
+      "tests_run": 14,
+      "failures": 0,
+      "errors": 0,
+      "runtime_acceptance": false
+    },
+    "sha256": "E17FB0A8364BAA7B6738D3E91F8CD678F635A01D625710F137623E73DC01E81E",
+    "path": ".build/LyraValidation/BlueprintPython/20261021-arena-mode/host-focused03.json"
+  },
+  "supplemental_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-mode/native-comparison01.json",
+      "sha256": "947FFED6B26C621F79CE649659711C54C69C53D12BD987EC7FE54B0A2F357875"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-mode/guards01.json",
+      "sha256": "F8CCFEB0A28E085BDEDD578A8C043B761C8341A2A1365258C4A5030A7022AD80"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-mode/Probe01/probe.json",
+      "sha256": "2E9CA4FF94DDB3E8A5670ED17B8FA3C1CACC1116DAD820FC3150FBC5EB5190E8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-mode/Probe01/process.json",
+      "sha256": "EAD36981AD7D3437418F63494FF994DAA5765E6C0C461F873323184BFD6800BC"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-mode/Assets01/summary.json",
+      "sha256": "B1C2FB5094BE3C5B980CAE33C24C2F882FE03CC14331D8FD1CBCB7D7E7A14E69"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-mode/Assets01/assets.json",
+      "sha256": "BF51B196E86EEBEF55072B1697711CC9179BA5F7D16D4F0B2E86B468F8278757"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-mode/Assets01/lives-arena-mode-preservation.json",
+      "sha256": "1737C83968C12EA19E3618FE3273571136D15E1EABCF03CB8D027DB7F73BF18F"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-mode/host-focused01.log",
+      "sha256": "A68FBEF1A3F955459C4BAD49234B6652BC9D14C6B525D26D4098DCBEAA20DED3"
+    }
+  ]
+}

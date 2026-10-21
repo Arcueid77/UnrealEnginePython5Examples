@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 196,
+    "bounded_evidence_ledgers": 197,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -11772,8 +11772,20 @@
       "group": "TopDownArena 玩法",
       "method_candidates": 5,
       "business_nodes": 41,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Python owns round startup/ready/scoring/warmup-end/tick/getter decisions through base-owned gates. Original native authority switches,exact typed elimination/assist factories and ExperienceReady phase delegate remain. Team score is added before partial PlayerState casts;kill/death/hook and assist order preserved. Named SecondsRemaining output uses original server-clock subtraction/FMax clamp. Native warmup end sets120s;authority Tick clears playing before native PostGame. Original59 nodes/GUIDs,CDO/ABIs/graphs and empty elimination hook retained. Original baseline and both Profiles pass default3/120/10s natural cycle/restart before owned native Begin/message/clock/lifetime fixtures. Broader network/input/pixel/audio/package/version acceptance remains open.",
+      "status": "bounded_arena_mode_family_python_native_default_cycle_scores_getter_and_lifetime_verified_broader_acceptance_open",
+      "implemented_helpers": [
+        "UEPArenaModeBegin",
+        "UEPArenaModeElimination",
+        "UEPArenaModeAssist",
+        "UEPArenaModeReady",
+        "UEPArenaModeWarmupEnded",
+        "UEPArenaModeTick",
+        "GetRoundTimeRemaining"
+      ],
+      "whole_component_business_migrated": true,
+      "evidence_run": "20261021-arena-mode/Python01",
+      "evidence_ledger": "195-arena-mode-family-native-scoring-clock-and-lifetime.json"
     },
     {
       "path": "/TopDownArena/Game/Modes/B_TopDownArena_GameComponent_Lives.B_TopDownArena_GameComponent_Lives",
@@ -11781,8 +11793,15 @@
       "group": "TopDownArena 玩法",
       "method_candidates": 2,
       "business_nodes": 1,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Own nodes contain only BeginPlay parent forwarding and an empty Tick event. Original bytes remain unchanged,no child Python no-op or separate mixin asset added. Parent compiler normalizes old serialized ActorComponent qualifier to actual Base;that one qualifier is explicitly recorded and normalized only for semantic comparison. Natural original and both Profiles prove inherited base startup,scoring and clock paths. Original baseline and both Profiles pass default3/120/10s natural cycle/restart before owned native Begin/message/clock/lifetime fixtures. Broader network/input/pixel/audio/package/version acceptance remains open.",
+      "status": "bounded_arena_mode_family_python_native_default_cycle_scores_getter_and_lifetime_verified_broader_acceptance_open",
+      "implemented_helpers": [],
+      "whole_component_business_migrated": true,
+      "evidence_run": "20261021-arena-mode/Python01",
+      "evidence_ledger": "195-arena-mode-family-native-scoring-clock-and-lifetime.json",
+      "own_python_mixin_required": false,
+      "original_bytes_unchanged": true,
+      "parent_python_business": "uep_lyra_world.arena_mode_mixin"
     },
     {
       "path": "/TopDownArena/Game/Modes/B_TopDownArena_GameComponent_SpawnLocalPlayers.B_TopDownArena_GameComponent_SpawnLocalPlayers",
@@ -11790,8 +11809,15 @@
       "group": "TopDownArena 玩法",
       "method_candidates": 2,
       "business_nodes": 11,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Original static BeginPlay parent call remains,then base-owned Python child gates print startup intent and apply authority. Active platform users are queried natively;index0 is skipped and each later user retains CreatePlayerFromPlatformUser(...,true). Shared base interface/selector avoids child mixin collision. Original13 nodes/GUIDs,CDO/ABIs/graphs and unconnected Tick remain. Native current device mapping plus host multi-user/authority checks are bounded evidence;physical multiple-user/device validation remains open. Original baseline and both Profiles pass default3/120/10s natural cycle/restart before owned native Begin/message/clock/lifetime fixtures. Broader network/input/pixel/audio/package/version acceptance remains open.",
+      "status": "bounded_arena_mode_family_python_native_default_cycle_scores_getter_and_lifetime_verified_broader_acceptance_open",
+      "implemented_helpers": [
+        "UEPArenaModeLocalAfterParent",
+        "UEPArenaModeSpawnLocalUsers"
+      ],
+      "whole_component_business_migrated": true,
+      "evidence_run": "20261021-arena-mode/Python01",
+      "evidence_ledger": "195-arena-mode-family-native-scoring-clock-and-lifetime.json"
     },
     {
       "path": "/TopDownArena/Game/Modes/Phase_Playing.Phase_Playing",
@@ -13593,5 +13619,57 @@
     "metadata_captured_before_native_ability_retirement": true,
     "whole_phase_ability_business_migrated": true,
     "selectors_and_owned_class_roots_restored": true
+  },
+  "arena_mode_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_original_arena_baseline_and_both_base_owned_mode_profiles_native_cycle_scores_clock_and_lifetime_verified_broader_acceptance_open",
+    "evidence_ledger": "195-arena-mode-family-native-scoring-clock-and-lifetime.json",
+    "owner": "uep_lyra_world.arena_mode_mixin",
+    "native_original_baseline": "20261021-arena-mode/Baseline01",
+    "native_asset_authoring": "20261021-arena-mode/Assets02",
+    "native_runtime_runs": [
+      "20261021-arena-mode/Python01",
+      "20261021-arena-mode/Fallback01"
+    ],
+    "actual_map": "/TopDownArena/Maps/L_TopDown_LocalMultiplayer",
+    "method_counts": {
+      "Python": 9,
+      "BlueprintFallback": 9
+    },
+    "new_interface_nodes": 5,
+    "native_transport_nodes": 35,
+    "new_business_nodes": 0,
+    "native_score_cases_per_mode": 8,
+    "native_clock_cases_per_mode": 6,
+    "natural_scoring_components": 2,
+    "owned_fixture_scoring_component": 1,
+    "current_native_local_users": 1,
+    "current_native_local_players": 1,
+    "physical_multiple_platform_user_creation_verified": false,
+    "whole_mode_component_business_migrated": true,
+    "whole_arena_business_migrated": false,
+    "remaining_unaccepted_arena_candidates": 7,
+    "focused_host_checks": 14,
+    "boundary_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "full_acceptance": false,
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "preserved_failed_attempts": [
+      "Assets01 detected compiler-normalized Lives parent qualifier;Assets02 requires exact known qualifier rebind and preserves original package bytes",
+      "host-focused01 package-less test import failed;test loader now sets package context"
+    ],
+    "next": "Continue remaining7 Arena candidates and all earlier bounded natural-ingress/network/input/pixel/audio/package/version requirements. Full migration remains open.",
+    "original_cdo_abis_seventy_five_nodes_guids_authority_and_message_graphs_preserved": true,
+    "lives_original_bytes_and_empty_events_preserved": true,
+    "compiler_parent_reference_rebind_explicitly_recorded": true,
+    "base_owned_policy_covers_static_parent_and_child_callbacks": true,
+    "native_default_cycle_before_owned_fixtures_verified": true,
+    "score_partial_cast_order_and_exact_channels_verified": true,
+    "named_seconds_remaining_output_and_clamp_verified": true,
+    "owned_native_begin_and_message_lifetime_verified": true,
+    "original_empty_hook_and_ticks_retained": true,
+    "selectors_and_owned_roots_restored": true
   }
 }

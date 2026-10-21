@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "arenamode":
+        from generate_arena_mode_assets import generate as arena_mode
+        return arena_mode(stage)
     if kind == "arenaphases":
         from generate_arena_phases_assets import generate as arena_phases
         return arena_phases(stage)
