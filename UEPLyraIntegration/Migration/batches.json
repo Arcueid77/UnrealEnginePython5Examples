@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 193,
+    "bounded_evidence_ledgers": 194,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -11884,7 +11884,7 @@
       "group": "TopDownArena 玩法",
       "method_candidates": 2,
       "business_nodes": 23,
-      "scope_review": "Configure now sets native player name text, replaces team observer, then configures Bomb/Range/Speed children in original order. Python cancels old observer, binds exact original generated UFunction, activates native ObserveTeam, and applies original team1-4 colors; unset team preserves tint. Native adapters carry unchanged FGameplayAttribute and lazy display-asset literals. Original30 nodes/GUIDs,CDO,ABI,WidgetTree retained; five interface plus13 branch-free transport nodes added. Actual Arena natural HUD and original baseline/both Profiles pass nine native scenarios, including independent observer replacement and stale-target rejection. W_Powerup_Stat remains a separate open candidate; pixels/network/package/version acceptance remains open.",
+      "scope_review": "Configure now sets native player name text, replaces team observer, then configures Bomb/Range/Speed children in original order. Python cancels old observer, binds exact original generated UFunction, activates native ObserveTeam, and applies original team1-4 colors; unset team preserves tint. Native adapters carry unchanged FGameplayAttribute and lazy display-asset literals. Original30 nodes/GUIDs,CDO,ABI,WidgetTree retained; five interface plus13 branch-free transport nodes added. Actual Arena natural HUD and original baseline/both Profiles pass nine native scenarios, including independent observer replacement and stale-target rejection. W_Powerup_Stat business is now migrated and verified through natural parent calls in ledger192; pixels/network/package/version acceptance remains open.",
       "status": "bounded_arena_player_tile_configure_monitor_and_native_team_callback_python_verified_broader_ui_acceptance_open",
       "implemented_helpers": [
         "Configure",
@@ -11892,10 +11892,12 @@
         "OnTeamChanged_651EFD6A4A656440ED3534BB77B849B5"
       ],
       "whole_widget_business_migrated": true,
-      "child_stat_business_migrated": false,
+      "child_stat_business_migrated": true,
       "pixels_tested": false,
       "evidence_run": "20261021-arena-player-tile/Python01",
-      "evidence_ledger": "191-arena-player-tile-native-team-observer.json"
+      "evidence_ledger": "191-arena-player-tile-native-team-observer.json",
+      "child_evidence_ledger": "192-arena-powerup-stat-native-gas-retry-animation.json",
+      "child_evidence_run": "20261021-arena-powerup-stat/Python01"
     },
     {
       "path": "/TopDownArena/UserInterface/Player/W_Powerup_Stat.W_Powerup_Stat",
@@ -11903,8 +11905,18 @@
       "group": "TopDownArena 玩法",
       "method_candidates": 3,
       "business_nodes": 25,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Python owns Configure cancellation/state through typed gate,UpdateText Round64 intent,ListenFor missing-attribute decisions and original generated Changed callback. Original lazy soft reference stays in native Configure frame;native int64 formatting/SetText keep FText together. Original0.1s Delay node/GUID and ListenFor continuation remain. Native UMG Slate clock retries while world time is paused. Pending retry after reconfiguration creates a second live subscription;subsequent Configure cancels only stored latest handle,matching source. Original28 nodes/GUIDs,CDO,ABI,WidgetTree/AnimationUp retained with exact typed transport. Actual Arena natural parent-driven stats,original baseline and both Profiles verify late native attribute initialization,real GAS changes,unloaded texture,seven numeric formats and complete0.2500167s native animation. No callback replay/Python clock/new production cleanup. Broader pixels/network/package/version acceptance remains open.",
+      "status": "bounded_arena_powerup_stat_python_native_gas_pause_retry_soft_reference_ftext_and_animation_verified_broader_ui_acceptance_open",
+      "implemented_helpers": [
+        "UEPArenaStatPrepareConfigure",
+        "UpdateText",
+        "ListenFor",
+        "Changed_6B06FAF740140AA3EA4F94AC562674B4"
+      ],
+      "whole_widget_business_migrated": true,
+      "pixels_tested": false,
+      "evidence_run": "20261021-arena-powerup-stat/Python01",
+      "evidence_ledger": "192-arena-powerup-stat-native-gas-retry-animation.json"
     },
     {
       "path": "/TopDownArena/UserInterface/W_RoundTimer.W_RoundTimer",
@@ -13369,5 +13381,57 @@
       "Baseline01 and Baseline02 used Actor/component-only UEP get_world on a widget; correct native owning-controller world used; no production logic change"
     ],
     "next": "Continue remaining16 Arena candidates including W_Powerup_Stat,plus every earlier bounded natural-ingress/network/pixel/audio/package/version requirement. Batch acceptance does not finish the full goal."
+  },
+  "arena_powerup_stat_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_original_arena_baseline_and_both_stat_profiles_native_gas_slate_retry_soft_text_and_animation_verified_broader_acceptance_open",
+    "evidence_ledger": "192-arena-powerup-stat-native-gas-retry-animation.json",
+    "owner": "uep_lyra_hud.arena_powerup_stat_mixin",
+    "native_original_baseline": "20261021-arena-powerup-stat/Baseline04",
+    "native_asset_authoring": "20261021-arena-powerup-stat/Assets01",
+    "native_runtime_runs": [
+      "20261021-arena-powerup-stat/Python01",
+      "20261021-arena-powerup-stat/Fallback01"
+    ],
+    "actual_map": "/TopDownArena/Maps/L_TopDown_LocalMultiplayer",
+    "method_counts": {
+      "Python": 4,
+      "BlueprintFallback": 4
+    },
+    "original_cdo_abis_twenty_eight_nodes_guids_widget_tree_animation_preserved": true,
+    "new_interface_nodes": 5,
+    "native_transport_nodes": 13,
+    "new_business_nodes": 0,
+    "original_retry_delay_guid_and_native_continuation_preserved": true,
+    "retry_seconds": 0.1,
+    "retry_uses_native_umg_slate_clock_while_game_paused": true,
+    "late_attribute_init_uses_native_K2_InitStats": true,
+    "owned_effect_changes_use_real_native_gas": true,
+    "pending_retry_duplicate_callbacks_preserved": 2,
+    "configure_cancels_only_stored_latest_proxy": true,
+    "soft_reference_never_crosses_python": true,
+    "unloaded_texture_lazy_load_verified": true,
+    "native_ftext_format_and_set_kept_together": true,
+    "numeric_format_cases_per_mode": 7,
+    "native_animation_duration": 0.2500166594982147,
+    "natural_parent_driven_bomb_range_speed_stats_verified": true,
+    "whole_widget_business_migrated": true,
+    "whole_arena_business_migrated": false,
+    "remaining_unaccepted_arena_candidates": 15,
+    "profile_owned_roots_and_pause_restored": true,
+    "focused_host_checks": 12,
+    "boundary_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "full_acceptance": false,
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "preserved_failed_attempts": [
+      "Probe01 registry-based texture duplicate unavailable before asset discovery; directly load and duplicate owned texture instead",
+      "Baseline01 new LyraPlayerState already has Arena attributes through game feature; use existing Engine AbilitySystemTestPawn fixture",
+      "Baseline02 assumed native UMG Delay stopped while paused; engine NativeTick and source baseline prove Slate-clock continuation",
+      "Baseline03 positive monotonic lower bound rejected0ms clock quantization; native later-frame delta now required"
+    ],
+    "next": "Continue remaining15 Arena candidates plus every earlier bounded natural-ingress/network/pixel/audio/package/version requirement. Batch acceptance does not finish the full goal."
   }
 }

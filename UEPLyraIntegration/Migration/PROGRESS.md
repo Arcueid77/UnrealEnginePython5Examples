@@ -31,6 +31,29 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded batch192 (2026-10-21),Arena powerup stat widget:**
+W_Powerup_Stat cancellation/state,Round64 intent,missing-attribute decisions,
+native subscription and original Changed callback now use Python policy.
+The original lazy-image soft input remains wholly in its native Configure
+frame;native int64 formatting and SetText preserve FText without a string
+roundtrip. Original28 nodes/GUIDs,CDO/ABIs,WidgetTree/AnimationUp remain;only
+five interface plus13 transport nodes are added. Original0.1s Delay/GUID and
+ListenFor continuation stay native. Actual source UMG uses Slate delta while
+world time is paused:late native K2_InitStats resumes subscription on a later
+native frame before unpause. Two pending Configure calls coalesce;reconfiguring
+to an available target before pending completion creates a second live proxy.
+A later Configure cancels only stored latest proxy;older duplicate remains.
+Python retains both source quirks,with no added production cleanup or clock.
+Original baseline and both Profiles verify actual parent-driven Bomb/Range/
+Speed HUD,three real GAS effect changes,unloaded soft texture,seven numerical
+format boundaries,and complete0.2500167s native animation. Owned test objects/proxies,
+selector and pause restore. Three process/gate pairs exit0 with
+ordered shutdown. Twelve focused checks and five launch guards pass. Probe01
+and Baseline01/02/03 failures remain with their corrected fixture/clock reasons.
+Ledger192 closes the child business follow-up to191. Remaining15 Arena and
+all earlier natural-ingress/network/pixel/audio/package/version gates remain
+open. Accepted work is committed and pushed Demos first,then core.
+
 **Completed bounded batch191 (2026-10-21),Arena player tile:**
 W_PlayerTile Configure,Monitor Team Change and the original generated team
 callback now run Python policy. Name text,monitor replacement and Bomb/Range/
