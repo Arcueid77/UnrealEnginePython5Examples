@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "batch": "206",
+  "scope": "Bounded actual owner equipped-Pistol input lethal damage, native score/PostGame and reliable two-client feed;no fixture damage spec,full version acceptance open",
+  "recorded_utc": "2026-10-21T09:59:00.0469528Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "da127c30039bff47af5d3dbbfee16da5c2619f91",
+  "examples_parent_commit": "5a53d17229dbf16d967c947b7914d58e285eb1a8",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-weapon-lethal-network/Fallback05",
+      "summary_sha256": "90039F4A833B9971EBF809118747056BEBFB2F15DF9726F0EAAEF35CF74FE378",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3372,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "B0": 0,
+        "A": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "A32D9368D418DA83ED871B9CC8829B8FCEC7AE57960F04D7B4F1D64115B3D1B9",
+          "file": "server.json"
+        },
+        {
+          "sha256": "77AF052B97FB9EFDAC8BF6157A207F32A2F50DF51FB875B8AA0E93B22D50E522",
+          "file": "A.json"
+        },
+        {
+          "sha256": "A2C0447E25D9FBE8D988FC62088988E69171BA0B90CA771F8CC2FC10D91CF7B8",
+          "file": "B0.json"
+        },
+        {
+          "file": "server.json",
+          "sha256": "A32D9368D418DA83ED871B9CC8829B8FCEC7AE57960F04D7B4F1D64115B3D1B9"
+        },
+        {
+          "file": "A.json",
+          "sha256": "77AF052B97FB9EFDAC8BF6157A207F32A2F50DF51FB875B8AA0E93B22D50E522"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "A2C0447E25D9FBE8D988FC62088988E69171BA0B90CA771F8CC2FC10D91CF7B8"
+        },
+        {
+          "file": "server-release.json",
+          "sha256": "14A7379035238B3774FA7BB3E579878503B6D785BBA8EB998AEB993FCB625F19"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-weapon-lethal-network/Python01",
+      "summary_sha256": "53A38B1F36D541DBA4898CA2A6E01C00C0B057731F4C408EBA8D3F5A24C2619F",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3372,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "A": 0,
+        "server": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "8F54810732E7E8DF31DC610C9903F967BFD3823E36B52E87AE39AAEAC5B980CD",
+          "file": "server.json"
+        },
+        {
+          "sha256": "7DDB659F2347FF1EE63C1A3981FD50DE540FC55E033DED3CE899B9B4ADBF4D52",
+          "file": "A.json"
+        },
+        {
+          "sha256": "DE6F42B184F9C44065F6CDFE33B430A5781919C290E2F03EED73CCBF2E690ACA",
+          "file": "B0.json"
+        },
+        {
+          "file": "server.json",
+          "sha256": "8F54810732E7E8DF31DC610C9903F967BFD3823E36B52E87AE39AAEAC5B980CD"
+        },
+        {
+          "file": "A.json",
+          "sha256": "7DDB659F2347FF1EE63C1A3981FD50DE540FC55E033DED3CE899B9B4ADBF4D52"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "DE6F42B184F9C44065F6CDFE33B430A5781919C290E2F03EED73CCBF2E690ACA"
+        },
+        {
+          "file": "server-release.json",
+          "sha256": "1CAF3F629120197BD42390C8CDF14AB807BEDACDDAB6510E0CEC79B11FB225C4"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Validation/Run-UEP58WeaponLethalNetworkValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58WeaponLethalNetworkValidation.ps1",
+      "sha256": "469CFD333EC59A630D1528DABE4FA551F3B23863FC20216E07EC0616A50EB709",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_lethal_network_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_lethal_network_validation.py",
+      "sha256": "9059DB66F4BE62D2DF01486A672E6671146456EC7309AEF15A49A145D964A3B0",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_lethal_network_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_lethal_network_contract.py",
+      "sha256": "F1BD2DACFDE6BC565115D21090EEB31D1DC79D72122E06B62863DE937EA35DF6",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/tdm_lethal_network_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/tdm_lethal_network_contract.py",
+      "sha256": "8ABEAF815C850114825FF862065A03FB580B95158DCF4D9E8F8CC0F5725E4F81",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "AEB813ABFB57674BE0CF18828126026C72F882C60B784748FB36BDA47E1EF97D",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "result": {
+      "status": "passed",
+      "tests_run": 11,
+      "runtime_acceptance": false,
+      "full_regression": false
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261021-weapon-lethal-network/host-focused01.json",
+    "sha256": "D22BD36A7775F2972F864CC5913B1BEE18FD03B93393632DCF2B85BE539BF2D5"
+  },
+  "supplemental_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-weapon-lethal-network/native-comparison01.json",
+      "sha256": "318DD303F8BEF064FF224B875C23EB69872E196ACBED0D50C6D662A03F03FDA2"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-weapon-lethal-network/guards01.json",
+      "sha256": "B9273200F7EE80972DAB743B2CAF30B6169C7F891CBEB3D4A34D5E38E43D8286"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-weapon-lethal-network/host-focused01.json",
+      "sha256": "D22BD36A7775F2972F864CC5913B1BEE18FD03B93393632DCF2B85BE539BF2D5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-weapon-lethal-network/inventory01.json",
+      "sha256": "A623FE3E62EC0BEC98493334536EE3E4BACBEF1A9A34C119B24AD40854D0D1C5"
+    }
+  ],
+  "evidence_kind": "actual_owner_equipped_weapon_native_lethal_score_and_reliable_feed_three_peer_pipeline",
+  "fixture_damage_specs_applied": false,
+  "full_network_acceptance": false,
+  "physical_keyboard_tested": false
+}

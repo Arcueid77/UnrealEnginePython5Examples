@@ -9,7 +9,7 @@ FALSE_FIELDS = ('full_acceptance', 'packaged_runtime', 'pixels_tested', 'physica
     'phase_start_or_victory_callbacks_called_by_fixture', 'native_rpc_replaced', 'travel_rejoin_tested')
 
 
-def validate(report):
+def validate(report, *, producer='gas'):
     require(report['status'] == 'passed' and report['error'] is None and report['peer'] in PEERS, 'native lethal network peer failed')
     require(report['requested_profile'] in ('BlueprintFallback', 'Python') and report['profiles_selected_before_component_creation'], 'early original/Python scoring/phase selection required')
     for key in FALSE_FIELDS:
@@ -22,7 +22,8 @@ def validate(report):
     require(row['target_score'] == 1 and row['postgame_damage_immunity'], 'configured victory/postgame native immunity missing')
     if report['peer'] == 'server':
         require(report['server_waited_for_client_process_exit'], 'authority exited before actual client processes')
-        require(row['native_postgame_phase_active'] and row['native_playing_phase_inactive'] and report['actual_native_damage_spec_applied'], 'natural authoritative phase transition missing')
+        produced = report['actual_native_damage_spec_applied'] if producer == 'gas' else report.get('native_weapon_damage_observed', False)
+        require(row['native_postgame_phase_active'] and row['native_playing_phase_inactive'] and produced, 'natural authoritative phase transition missing')
         require(row['relay_entries']['kill'] == 1 and not row['kill_notifications'], 'dedicated relay or zero cosmetic branch differs')
         require(row['selected_tdm_elimination_calls'] == row['selected_tdm_victory_calls'] == 1, 'requested scoring Profile never handled native victory')
     else:

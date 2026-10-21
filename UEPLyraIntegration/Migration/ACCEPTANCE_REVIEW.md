@@ -201,6 +201,7 @@ These are recorded flags requiring requirement and platform review, not automati
 - `footstep_locomotion_pilot`: network_acceptance, pixels_tested, audio_playback_tested, packaged_runtime.
 - `footstep_visual_pilot`: audio_playback_tested, network_acceptance, packaged_runtime.
 - `tdm_lethal_network_pilot`: network_acceptance, packaged_runtime, pixels_tested.
+- `weapon_lethal_network_pilot`: network_acceptance, packaged_runtime, pixels_tested.
 
 ## Next evidence work
 

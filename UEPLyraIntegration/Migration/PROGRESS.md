@@ -31,6 +31,25 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded batch206 (2026-10-21),actual weapon lethal pipeline:**
+Real owner A injects native IA_Weapon_Fire/Auto input through its original
+equipped Pistol against opposing real owner B0. No damage spec or death/
+elimination/victory/phase callback is manufactured. Both Profiles record six
+native activation/target-data entries on owner and authority,six target hits,
+replicated ammo12->6,targetHealth100->0 and foreign attackerHealth100. Native
+score deltas1/1/1/0 naturally enter PostGame and send identical reliable kill
+feed content to both clients,plus original winner cue/damage immunity. Target
+placement/LOS is an explicit native fixture;ammo is restored through native
+inventory tags only after observation. Input,control,profiles,selectors,
+class roots and notification observers restore;both client processes exit0
+before authority release. Six processes/two independent gates and strict logs
+pass;11 focused checks pass. Fallback01 mapping-key,Fallback02 pawn-reference,
+Fallback03 insufficient five-shot budget and Fallback04 class-root cleanup
+failures remain. The accepted budget derives from the original magazine;
+native damage/Health/timeouts and production C++/Blueprint assets are unchanged.
+Ledger206 proves one owner/target under both Profiles,not physical keyboard,
+both attack owners,other weapons,loss/travel/UI/package/version acceptance.
+
 **Completed bounded batch205 (2026-10-21),native lethal-GAS multiplayer chain:**
 Actual dedicated authority applies the original native SetByCaller damage GE
 from real owner A to opposing owner B0. Native HealthSet/OnOutOfHealth produces

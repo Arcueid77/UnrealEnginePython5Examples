@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 207,
+    "bounded_evidence_ledgers": 208,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -3947,9 +3947,11 @@
     "pixels_tested": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Native HealthSet lethal-GAS producer now drives the real two-client reliable kill feed. Physical weapon producer,accolade-chain lethal ingress,invalid diagnostics,pixels,travel/loss/package/version requirements remain open.",
+    "next": "Actual equipped Pistol input now drives the real two-client reliable kill feed. Physical keyboard,accolade-chain lethal ingress,other weapons,invalid diagnostics,pixels,travel/loss/package/version remain open.",
     "native_lethal_gas_producer_verified": true,
-    "native_lethal_evidence_ledger": "205-native-lethal-gas-two-client-score-phase-and-feed.json"
+    "native_lethal_evidence_ledger": "205-native-lethal-gas-two-client-score-phase-and-feed.json",
+    "actual_equipped_weapon_lethal_producer_verified": true,
+    "actual_weapon_lethal_evidence_ledger": "206-actual-owner-weapon-lethal-score-and-two-client-feed.json"
   },
   "accolade_relay_pilot": {
     "version": "0.12.0",
@@ -4237,10 +4239,12 @@
     "pixels_tested": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Large-team,draw/error variants,physical weapon producer,pixels,travel/loss/package/version requirements remain open;native lethal-GAS score/postgame replication to two clients is proven.",
+    "next": "Actual owner weapon input now drives bounded two-client lethal score/postgame. Physical keyboard,two-owner turnover,large-team/draw/error,other weapons,UI/travel/loss/package/version remain open.",
     "network_scope": "Bounded dedicated authority/two-client real native lethal GAS,score replication and natural winning PostGame transition under both Profiles;not full multiplayer/stress/version acceptance.",
     "native_lethal_network_evidence_ledger": "205-native-lethal-gas-two-client-score-phase-and-feed.json",
-    "bounded_native_lethal_two_client_pipeline_verified": true
+    "bounded_native_lethal_two_client_pipeline_verified": true,
+    "bounded_actual_weapon_lethal_two_client_pipeline_verified": true,
+    "actual_weapon_lethal_evidence_ledger": "206-actual-owner-weapon-lethal-score-and-two-client-feed.json"
   },
   "scoring_base_pilot": {
     "version": "0.12.0",
@@ -9858,10 +9862,13 @@
       "group": "武器业务",
       "method_candidates": 6,
       "business_nodes": 78,
-      "scope_review": "Ledger92 migrates shared six business methods,three original compiler-generated montage callbacks and one typed native failure continuation. Retains original106 nodes/class/full CDO/nine original signatures,original weak callback function identities,per-grant exact native listener factory and named native timer identity. Eleven transport nodes;ten methods/Profile. Three child asset bytes/default inheritance retained. Native432 seeded montage/next-RNG pairs prove eager Front-then-Back draws on straight branch and one side draw. Sixteen actual Enhanced Input gestures cover8 real equipped Pistol/Rifle/Shotgun shots with native targeting/commit/ammo cost1/Cue-to-Actor/montage/end and positive enemy Health damage,plus8 complete/cancel/interrupt/null-montage lifecycle inputs. Two optional authority CameraActor spawns match ImpactPoint. Native6 failure-message profiles prove foreign-avatar no-op,real montage/throttle/repeat/profile switch and1s reset. Native GAS Cvar1 clears timers on ordinary ends,cancel emits Interrupted,and null montage emits Cancelled before later timer registration;both Profiles match. Real firing exposed expired other-slot component wrappers;only invalid entries now marshal null for array writeback,current24-case native Niagara regression passes. Player Health/inventory/ammo/aim and observer Profiles restored,test owned Actors destroyed. No raw Health/ammo/timer write,callback replay,new Python task/listener rooting,Engine/general Cpp/official edits,build/cook/package,push/tag/release. Failed rounds retained. Dead/no-health/NoFiring branch controls are models;physical input,audio/pixels,quantitative spread/per-pellet equivalence,predicted network and full version remain open.",
-      "status": "bounded_native_standalone_and_real_two_owner_predicted_firing_rpc_damage_ammo_cue_replication_verified_version_open",
+      "scope_review": "Ledger92 migrates shared six business methods,three original compiler-generated montage callbacks and one typed native failure continuation. Retains original106 nodes/class/full CDO/nine original signatures,original weak callback function identities,per-grant exact native listener factory and named native timer identity. Eleven transport nodes;ten methods/Profile. Three child asset bytes/default inheritance retained. Native432 seeded montage/next-RNG pairs prove eager Front-then-Back draws on straight branch and one side draw. Sixteen actual Enhanced Input gestures cover8 real equipped Pistol/Rifle/Shotgun shots with native targeting/commit/ammo cost1/Cue-to-Actor/montage/end and positive enemy Health damage,plus8 complete/cancel/interrupt/null-montage lifecycle inputs. Two optional authority CameraActor spawns match ImpactPoint. Native6 failure-message profiles prove foreign-avatar no-op,real montage/throttle/repeat/profile switch and1s reset. Native GAS Cvar1 clears timers on ordinary ends,cancel emits Interrupted,and null montage emits Cancelled before later timer registration;both Profiles match. Real firing exposed expired other-slot component wrappers;only invalid entries now marshal null for array writeback,current24-case native Niagara regression passes. Player Health/inventory/ammo/aim and observer Profiles restored,test owned Actors destroyed. No raw Health/ammo/timer write,callback replay,new Python task/listener rooting,Engine/general Cpp/official edits,build/cook/package,push/tag/release. Failed rounds retained. Dead/no-health/NoFiring branch controls are models;physical input,audio/pixels,quantitative spread/per-pellet equivalence,predicted network and full version remain open. Batch206 uses actual owner IA_Weapon_Fire/Auto native input through original equipped Pistol,not a fixture damage spec. Both Profiles produce six native activations and target-data hits on owner/authority,ammo12->6,real enemy death and native kill/death/team score1/1/1 plus natural PostGame and matching reliable two-client kill feed. Fixture uses bounded native target placement/line-of-sight checks and restores ammo only after observation through native inventory tags. Early weapon class defaults are held until selector restoration;no gameplay C++/Blueprint/Mixin assets or damage amounts are changed. One real attacking owner A/target B0 is tested;physical keyboard,two-owner turnover,other weapons,loss/travel/UI/package/version remain open.",
+      "status": "bounded_actual_equipped_weapon_two_client_lethal_hit_score_postgame_and_reliable_feed_verified_broader_acceptance_open",
       "native_firing_policy_ledger": "92-weapon-ability-native-input-damage-lifecycle.json",
-      "native_predicted_firing_network_ledger": "93-weapon-native-two-owner-prediction-damage.json"
+      "native_predicted_firing_network_ledger": "93-weapon-native-two-owner-prediction-damage.json",
+      "previous_evidence_ledgers": [],
+      "evidence_ledger": "206-actual-owner-weapon-lethal-score-and-two-client-feed.json",
+      "evidence_run": "20261021-weapon-lethal-network/Python01"
     },
     {
       "path": "/Game/Weapons/GA_Weapon_ReloadMagazine.GA_Weapon_ReloadMagazine",
@@ -10368,14 +10375,14 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 1,
       "business_nodes": 21,
-      "scope_review": "Batch127:relay business uses Python;native exact Lyra.Elimination.Message subscription,authority/cosmetic graph,reliable GameState RPC and user-defined typed notification transport retained. Original30-node graph/full CDO preserved;1 method/Profile,8 transport/5 interface/0 new business nodes.12 real GMS cases/16 compared payloads cover swapped names/teams,self,pawnless,instigator tags,HUD slot,exact/wrong/child channels and native proxy GC release. Standalone only;remote/dedicated-server,invalid native diagnostics,pixels,package and broader acceptance pending. Batch129 additionally verifies dedicated-server/two-client Legacy RPC payloads and actor wire identity,BlueprintFallback/Python,kill multicast to both owners,accolade PS/Pawn/Controller owner-only delivery,null/parent negatives,zero dedicated cosmetics,Health stability and cleanup before disconnect. Real packet loss/lethal producer/pixels/package/full acceptance remain pending. Batch205 adds actual authority GAS damage from real owner A to opposing owner B0,not a fixture-broadcast elimination message. Native HealthSet/OnOutOfHealth produces score and relay input;both clients receive native health/kill/death/team score and identical reliable kill-feed payloads plus natural MatchDecided cue. TargetScore1 is a declared runtime configuration;native phase APIs/victory callbacks and Health fields are not written. Original/Python scoring and phase Profiles are selected before component/ability creation. Server records Playing->PostGame and clients receive native postgame damage immunity;the later input-block delay/travel are not claimed. Two clients physically exit before the authority release marker. Physical weapon firing,large-team/draw/error variants,pixels,loss/travel/package/version remain open.",
-      "status": "bounded_native_lethal_gas_two_client_score_postgame_and_elimination_feed_replication_verified_broader_acceptance_open",
-      "evidence_ledger": "205-native-lethal-gas-two-client-score-phase-and-feed.json",
+      "scope_review": "Batch127:relay business uses Python;native exact Lyra.Elimination.Message subscription,authority/cosmetic graph,reliable GameState RPC and user-defined typed notification transport retained. Original30-node graph/full CDO preserved;1 method/Profile,8 transport/5 interface/0 new business nodes.12 real GMS cases/16 compared payloads cover swapped names/teams,self,pawnless,instigator tags,HUD slot,exact/wrong/child channels and native proxy GC release. Standalone only;remote/dedicated-server,invalid native diagnostics,pixels,package and broader acceptance pending. Batch129 additionally verifies dedicated-server/two-client Legacy RPC payloads and actor wire identity,BlueprintFallback/Python,kill multicast to both owners,accolade PS/Pawn/Controller owner-only delivery,null/parent negatives,zero dedicated cosmetics,Health stability and cleanup before disconnect. Real packet loss/lethal producer/pixels/package/full acceptance remain pending. Batch205 adds actual authority GAS damage from real owner A to opposing owner B0,not a fixture-broadcast elimination message. Native HealthSet/OnOutOfHealth produces score and relay input;both clients receive native health/kill/death/team score and identical reliable kill-feed payloads plus natural MatchDecided cue. TargetScore1 is a declared runtime configuration;native phase APIs/victory callbacks and Health fields are not written. Original/Python scoring and phase Profiles are selected before component/ability creation. Server records Playing->PostGame and clients receive native postgame damage immunity;the later input-block delay/travel are not claimed. Two clients physically exit before the authority release marker. Physical weapon firing,large-team/draw/error variants,pixels,loss/travel/package/version remain open. Batch206 uses actual owner IA_Weapon_Fire/Auto native input through original equipped Pistol,not a fixture damage spec. Both Profiles produce six native activations and target-data hits on owner/authority,ammo12->6,real enemy death and native kill/death/team score1/1/1 plus natural PostGame and matching reliable two-client kill feed. Fixture uses bounded native target placement/line-of-sight checks and restores ammo only after observation through native inventory tags. Early weapon class defaults are held until selector restoration;no gameplay C++/Blueprint/Mixin assets or damage amounts are changed. One real attacking owner A/target B0 is tested;physical keyboard,two-owner turnover,other weapons,loss/travel/UI/package/version remain open.",
+      "status": "bounded_actual_equipped_weapon_two_client_lethal_hit_score_postgame_and_reliable_feed_verified_broader_acceptance_open",
+      "evidence_ledger": "206-actual-owner-weapon-lethal-score-and-two-client-feed.json",
       "network_evidence_ledger": "129-notification-relays-native-two-client-rpc-routing.json",
       "previous_evidence_ledgers": [
-        "127-elimination-feed-relay-native-typed-messages-lifetime.json"
+        "205-native-lethal-gas-two-client-score-phase-and-feed.json"
       ],
-      "evidence_run": "20261021-tdm-lethal-network/Python01"
+      "evidence_run": "20261021-weapon-lethal-network/Python01"
     },
     {
       "path": "/ShooterCore/Blueprint/B_ControlPointVolume.B_ControlPointVolume",
@@ -10463,13 +10470,13 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 15,
       "business_nodes": 87,
-      "scope_review": "Batch122:123 original nodes/CDO/signatures/native RepNotify/phase/experience/timer delegates retained;16 methods/Profile including5 shared base gates,57 transport/5 interface/0 business nodes.6 native query/6 actual countdown/4 GMS victory/2 GAS/2 Cue/2 existing-controller restart cases and1 actual PostGame transition pass. Source exact equality and immunity-tag mismatch preserved;large-team/force/network/UI/package/full acceptance stays open. Batch205 adds actual authority GAS damage from real owner A to opposing owner B0,not a fixture-broadcast elimination message. Native HealthSet/OnOutOfHealth produces score and relay input;both clients receive native health/kill/death/team score and identical reliable kill-feed payloads plus natural MatchDecided cue. TargetScore1 is a declared runtime configuration;native phase APIs/victory callbacks and Health fields are not written. Original/Python scoring and phase Profiles are selected before component/ability creation. Server records Playing->PostGame and clients receive native postgame damage immunity;the later input-block delay/travel are not claimed. Two clients physically exit before the authority release marker. Physical weapon firing,large-team/draw/error variants,pixels,loss/travel/package/version remain open.",
-      "status": "bounded_native_lethal_gas_two_client_score_postgame_and_elimination_feed_replication_verified_broader_acceptance_open",
-      "evidence_ledger": "205-native-lethal-gas-two-client-score-phase-and-feed.json",
+      "scope_review": "Batch122:123 original nodes/CDO/signatures/native RepNotify/phase/experience/timer delegates retained;16 methods/Profile including5 shared base gates,57 transport/5 interface/0 business nodes.6 native query/6 actual countdown/4 GMS victory/2 GAS/2 Cue/2 existing-controller restart cases and1 actual PostGame transition pass. Source exact equality and immunity-tag mismatch preserved;large-team/force/network/UI/package/full acceptance stays open. Batch205 adds actual authority GAS damage from real owner A to opposing owner B0,not a fixture-broadcast elimination message. Native HealthSet/OnOutOfHealth produces score and relay input;both clients receive native health/kill/death/team score and identical reliable kill-feed payloads plus natural MatchDecided cue. TargetScore1 is a declared runtime configuration;native phase APIs/victory callbacks and Health fields are not written. Original/Python scoring and phase Profiles are selected before component/ability creation. Server records Playing->PostGame and clients receive native postgame damage immunity;the later input-block delay/travel are not claimed. Two clients physically exit before the authority release marker. Physical weapon firing,large-team/draw/error variants,pixels,loss/travel/package/version remain open. Batch206 uses actual owner IA_Weapon_Fire/Auto native input through original equipped Pistol,not a fixture damage spec. Both Profiles produce six native activations and target-data hits on owner/authority,ammo12->6,real enemy death and native kill/death/team score1/1/1 plus natural PostGame and matching reliable two-client kill feed. Fixture uses bounded native target placement/line-of-sight checks and restores ammo only after observation through native inventory tags. Early weapon class defaults are held until selector restoration;no gameplay C++/Blueprint/Mixin assets or damage amounts are changed. One real attacking owner A/target B0 is tested;physical keyboard,two-owner turnover,other weapons,loss/travel/UI/package/version remain open.",
+      "status": "bounded_actual_equipped_weapon_two_client_lethal_hit_score_postgame_and_reliable_feed_verified_broader_acceptance_open",
+      "evidence_ledger": "206-actual-owner-weapon-lethal-score-and-two-client-feed.json",
       "previous_evidence_ledgers": [
-        "122-tdm-scoring-native-timer-notify-gas-postgame.json"
+        "205-native-lethal-gas-two-client-score-phase-and-feed.json"
       ],
-      "evidence_run": "20261021-tdm-lethal-network/Python01"
+      "evidence_run": "20261021-weapon-lethal-network/Python01"
     },
     {
       "path": "/ShooterCore/Elimination/UI/W_MatchScoreBoard_Elimination.W_MatchScoreBoard_Elimination",
@@ -14279,5 +14286,79 @@
     "next": "Continue physical weapon/accolade-chain ingress,large-team/draw/error/late-join/travel/loss/UI/package/version and all remaining original migration requirements.",
     "bounded_native_lethal_two_client_pipeline_verified": true,
     "full_network_acceptance": false
+  },
+  "weapon_lethal_network_pilot": {
+    "version": "0.12.0",
+    "evidence_ledger": "206-actual-owner-weapon-lethal-score-and-two-client-feed.json",
+    "status": "bounded_actual_owner_pistol_input_native_lethal_damage_score_phase_and_two_client_reliable_feed_verified_broader_acceptance_open",
+    "native_runtime_runs": [
+      "20261021-weapon-lethal-network/Fallback05",
+      "20261021-weapon-lethal-network/Python01"
+    ],
+    "actual_map": "/ShooterMaps/Maps/L_Expanse",
+    "network_transport": "Legacy",
+    "actual_clients_per_run": 2,
+    "native_processes": 6,
+    "independent_three_peer_gates": 2,
+    "profiles": [
+      "BlueprintFallback",
+      "Python"
+    ],
+    "weapon_owner": "A",
+    "real_target_owner": "B0",
+    "native_input_entry": "PlayerController.inject_enhanced_input_for_action",
+    "actions": [
+      "IA_Weapon_Fire",
+      "IA_Weapon_Fire_Auto"
+    ],
+    "actual_weapon": "original equipped Pistol",
+    "owner_and_authority_activations_per_run": 6,
+    "owner_and_authority_target_data_hits_per_run": 6,
+    "native_owner_and_authority_ammo": [
+      12,
+      6
+    ],
+    "native_attacker_and_victim_health": [
+      100,
+      0
+    ],
+    "native_kill_death_team_score_deltas": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "original_native_damage_unmodified": true,
+    "fixture_damage_specs_applied": false,
+    "death_phase_notification_callbacks_replayed": false,
+    "actual_weapon_lethal_two_client_pipeline_verified": true,
+    "original_reliable_rpc_payloads_and_client_feed_identical": true,
+    "native_victory_phase_cue_and_immunity_verified": true,
+    "source_profile_selected_before_creation": true,
+    "weapon_class_defaults_held_until_cleanup_and_unrooted": true,
+    "declared_magazine_input_budget": 12,
+    "actual_gestures_per_run": 6,
+    "bounded_native_target_placement_and_line_of_sight_used": true,
+    "ammo_restored_only_after_observation": true,
+    "authority_released_after_actual_client_exits": true,
+    "host_focused_checks": 11,
+    "physical_keyboard_tested": false,
+    "physical_weapon_input_tested": false,
+    "both_attack_owners_tested": false,
+    "other_weapons_tested": false,
+    "network_acceptance": false,
+    "full_network_acceptance": false,
+    "full_acceptance": false,
+    "packaged_runtime": false,
+    "pixels_tested": false,
+    "travel_rejoin_tested": false,
+    "packet_loss_emulated": false,
+    "preserved_failed_runs": [
+      "Fallback01 startup used an uppercase weapon mapping key;existing mapping uses pistol. No gameplay case installed.",
+      "Fallback02 aim helper referenced an absent generic pawn field;resolved source_pawn is now used.",
+      "Fallback03 five true hits/12->7 native ammo left targetHealth10;five-gesture fixture budget was invalid for unchanged native Pistol damage. Budget now derives from original remaining magazine,with unchanged native damage/Health/timeouts.",
+      "Fallback04 completed real lethal/scoring/notification flow but cached early weapon class defaults were collected before cleanup;held UClass roots now release after restoration."
+    ],
+    "next": "Continue physical keyboard,two-owner turnover,other weapons/accolade-chain ingress,large-team/error/late-join/travel/loss/UI/package/version and the remaining original migration requirements."
   }
 }
