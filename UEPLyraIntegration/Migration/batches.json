@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 194,
+    "bounded_evidence_ledgers": 195,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -11924,8 +11924,17 @@
       "group": "TopDownArena 玩法",
       "method_candidates": 2,
       "business_nodes": 15,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Python Construct uses native ExperienceReady factory,exact original generated delegate and activation;Ready caches actual GameState base-mode component. Native UMG Tick reads original GetRoundTimeRemaining and retains native divide/remainder math. Original localized FText format node,converters,TimeLabel getter/SetText are moved intact to native helper;namespace/key,ToZero rounding and1/2 integral digits remain. Original17 nodes/GUIDs,CDO,ABIs,tree preserved with partition hashes. Original baseline/both Profiles match nine paused native Tick boundaries,invalid mode no-op and natural remount readiness. Actual gameplay round properties are untouched. Broader pixels/network/package/version acceptance remains open.",
+      "status": "bounded_arena_hud_python_native_list_ingress_experience_tick_and_localized_clock_verified_broader_acceptance_open",
+      "implemented_helpers": [
+        "Construct",
+        "Tick",
+        "OnReady_A6E13A06464ABBA60E698BB56C799828"
+      ],
+      "whole_widget_business_migrated": true,
+      "pixels_tested": false,
+      "evidence_run": "20261021-arena-hud/Python01",
+      "evidence_ledger": "193-arena-hud-list-and-localized-round-timer.json"
     },
     {
       "path": "/TopDownArena/UserInterface/W_TopDownPlayers.W_TopDownPlayers",
@@ -11933,8 +11942,16 @@
       "group": "TopDownArena 玩法",
       "method_candidates": 5,
       "business_nodes": 3,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Python returns original W_PlayerTile class independently of DataItem and preserves exec Widget cast/pure PlayerState cast before Configure. Original9 nodes/GUIDs,CDO,ABI and WidgetTree retained;only five interface nodes added. Empty PreConstruct/Construct/Tick remain native. Actual original Arena baseline and both Profiles prove natural HUD calls plus native B_PlayerUIComponent registration/removal creates one entry and restores original entries. Typed selector and invalid Widget cases match source. Broader pixels/network/package/version acceptance remains open.",
+      "status": "bounded_arena_hud_python_native_list_ingress_experience_tick_and_localized_clock_verified_broader_acceptance_open",
+      "implemented_helpers": [
+        "OnGetWidgetClassForData_0",
+        "OnConfigureWidgetForData_0"
+      ],
+      "whole_widget_business_migrated": true,
+      "pixels_tested": false,
+      "evidence_run": "20261021-arena-hud/Python01",
+      "evidence_ledger": "193-arena-hud-list-and-localized-round-timer.json"
     }
   ],
   "explorer_state_pilot": {
@@ -13433,5 +13450,53 @@
       "Baseline03 positive monotonic lower bound rejected0ms clock quantization; native later-frame delta now required"
     ],
     "next": "Continue remaining15 Arena candidates plus every earlier bounded natural-ingress/network/pixel/audio/package/version requirement. Batch acceptance does not finish the full goal."
+  },
+  "arena_hud_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_original_arena_baseline_and_both_list_clock_profiles_native_ingress_experience_tick_and_localized_format_verified_broader_acceptance_open",
+    "evidence_ledger": "193-arena-hud-list-and-localized-round-timer.json",
+    "owner": "uep_lyra_hud.arena_hud_mixin",
+    "native_original_baseline": "20261021-arena-hud/Baseline01",
+    "native_asset_authoring": "20261021-arena-hud/Assets01",
+    "native_runtime_runs": [
+      "20261021-arena-hud/Python01",
+      "20261021-arena-hud/Fallback01"
+    ],
+    "actual_map": "/TopDownArena/Maps/L_TopDown_LocalMultiplayer",
+    "method_counts": {
+      "list": {
+        "Python": 2,
+        "BlueprintFallback": 2
+      },
+      "timer": {
+        "Python": 3,
+        "BlueprintFallback": 3
+      }
+    },
+    "new_interface_nodes": 10,
+    "native_transport_nodes": 6,
+    "new_business_nodes": 0,
+    "native_paused_umg_tick_boundary_cases_per_mode": 9,
+    "whole_arena_business_migrated": false,
+    "remaining_unaccepted_arena_candidates": 13,
+    "focused_host_checks": 12,
+    "boundary_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "full_acceptance": false,
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "next": "Continue remaining13 Arena candidates plus all earlier bounded natural-ingress/network/pixel/audio/package/version requirements. Batch acceptance does not finish the full goal.",
+    "original_cdo_abis_twenty_six_nodes_guids_trees_preserved": true,
+    "original_localized_ftext_nodes_moved_intact": true,
+    "original_namespace_key_format_rounding_and_integral_digits_preserved": true,
+    "empty_list_events_remain_native": true,
+    "native_component_entry_create_remove_verified": true,
+    "selector_and_invalid_widget_cast_cases_verified": true,
+    "native_experience_next_frame_and_remount_verified": true,
+    "invalid_mode_preserves_last_label": true,
+    "actual_production_round_properties_untouched": true,
+    "whole_widgets_business_migrated": true,
+    "profile_owned_roots_and_pause_restored": true
   }
 }

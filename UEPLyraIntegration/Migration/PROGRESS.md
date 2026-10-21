@@ -31,6 +31,25 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded batch193 (2026-10-21),Arena list and localized round timer:**
+W_TopDownPlayers class selection and typed tile configuration now use Python;
+all three empty widget events remain native. W_RoundTimer Construct uses native
+ExperienceReady,exact generated callback and activation;Ready caches actual
+GameState mode component. Native UMG Tick queries original round-time getter
+and native divide/remainder math. Original localized format/converters/setter
+nodes move intact into a native helper;FText namespace/key,ToZero rounding and
+one/two integral digits stay unchanged. Original26 nodes/GUIDs,full CDO/ABIs
+and trees survive partition checks;only ten interface and six native transport
+nodes are added. Original Arena baseline and both Profiles prove natural HUD,
+native component registration/removal creating/restoring one entry,constant
+selector and invalid Widget casts,nine paused real UMG Tick time boundaries,
+invalid-mode no-op,and natural remount/new next-frame experience readiness.
+No Tick/Ready replay or production round-property changes. All three process/
+independent-gate pairs exit0 with ordered shutdown;12 focused checks and five
+launch guards pass. Ledger193 records bounded proof. Remaining13 Arena and
+every earlier natural-ingress/network/pixel/audio/package/version gate remain
+open. Accepted commits are pushed Demos first,then core.
+
 **Completed bounded batch192 (2026-10-21),Arena powerup stat widget:**
 W_Powerup_Stat cancellation/state,Round64 intent,missing-attribute decisions,
 native subscription and original Changed callback now use Python policy.

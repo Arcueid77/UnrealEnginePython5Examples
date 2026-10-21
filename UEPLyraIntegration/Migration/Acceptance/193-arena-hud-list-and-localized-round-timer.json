@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "batch": "193-arena-hud-list-and-localized-round-timer",
+  "scope": "W_TopDownPlayers two callbacks and W_RoundTimer Construct/Ready/Tick; original Arena baseline/both Profiles prove native extension entry lifecycle,next-frame readiness,nine paused native countdown cases and remount. Original26 nodes,CDO,ABI,GUIDs,trees and localized FText literal retained through native graph partitions. Remaining13 Arena plus broader original gates remain open.",
+  "recorded_utc": "2026-10-21T03:52:51.1623731Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "1e2e639f2536cd06976cd1fd3dbd1c897358b287",
+  "examples_parent_commit": "9473021f2d98875e1b3ab0a7ea541c353960f836",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-hud/Baseline01",
+      "summary_sha256": "312F0119B14E86891E9A8BDA4F566045035C2F15134514C319E16508613E5784",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2398,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "hud.json",
+          "sha256": "4DCADDA59E8CC571051F4652839A4221A4C130556EE3523C372D7157710C1092"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-hud/Assets01",
+      "summary_sha256": "F07C4EFD9F4A4D9E86DFA4413DF187270BAA36E6B818F67C1204557A7C0324DE",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2391,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "assets.json",
+          "sha256": "0DE66BB446CFECAA589AC7771C6F04F0ACF1D5509140E6575A73F0FD38CC09D6"
+        },
+        {
+          "file": "list-arena-hud-preservation.json",
+          "sha256": "09E7588D765C236F0D9709DC733EB5EF1E3C94D9D868B193C7CEB5AEAA6CAF63"
+        },
+        {
+          "file": "timer-arena-hud-preservation.json",
+          "sha256": "F6CD2B6CBC6031DE3394228A3D439AA8A6B69F34EB7C9AD2A1C7379501F75ED3"
+        },
+        {
+          "file": "arena-round-format-before.t3d",
+          "sha256": "6575CD11CBA955FB64449A12591A59E1C01C56950EE1737C3871286D16112F07"
+        },
+        {
+          "file": "arena-round-format-after.t3d",
+          "sha256": "01E77F2659C20C7787A01748FB890B08B6A89FB35F20292107A8ADA34704B5E7"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-hud/Python01",
+      "summary_sha256": "A856494D4369C00B8D233978B0AEACA97AEEEB3A099D6F9B72C8A63FB06E31B0",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2404,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "hud.json",
+          "sha256": "43EC179FC5B9CD90EAF57345FFD75B4D29688E4F1C457B8485211D5B7A4FC89A"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-hud/Fallback01",
+      "summary_sha256": "F9384CEDA2DA14EF735FBF55FEEC46AB740CED4058A77545793C34804D117F0F",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2404,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "hud.json",
+          "sha256": "DF7C0C74C2F04D77FE7D1E93F3CB3F3BCCF4EFFAE76223FB6379CB1A233E29C0"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "7DE219D39D2991B4D14AC8B5C9B99B043D7362C81D2C843CE504DFBC30934452",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58ArenaHUDValidation.ps1",
+      "path": "Validation/Run-UEP58ArenaHUDValidation.ps1"
+    },
+    {
+      "sha256": "CB2D12277AD5EC04A7C28B729F4EE536859E6A8AC666837F6A3CA40C957004E0",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1"
+    },
+    {
+      "sha256": "1E3A34BC6E6C242E9998C76648DD8371776CB5986EFA1C7F81F33E4046115FE6",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_arena_hud_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_arena_hud_assets.py"
+    },
+    {
+      "sha256": "093A3D1012D5ABEEA03BFDDE37336631AC62503072DBA1295BAE3A7EDC162AFF",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_arena_hud_probe.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_arena_hud_probe.py"
+    },
+    {
+      "sha256": "19FBA4584BBDA1905D8D5D2349531D4ED16927013249913DFD9F7DBCBA406C6E",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py"
+    },
+    {
+      "sha256": "5730291B67C156338A5B793E1CE9A0EDD091CC3C311B144D631C7600C90F89C6",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "sha256": "15F79B0E446DB9790215FFD206ACEEBF3187A6859223EC24C45730DCA17AB61B",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/arena_hud_mixin.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/arena_hud_mixin.py"
+    },
+    {
+      "sha256": "B68D1AD6FD2454DB278BCA4AC95F61C7714E0DD4C5954AF6FA1D1CE1A7849FEC",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/arena_hud_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/arena_hud_validation.py"
+    },
+    {
+      "sha256": "288D9E3CF3A8D12772C54DE9698C34EE02CDCAF4E1D2D2C051FBE0873B142A29",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/arena_hud_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/arena_hud_contract.py"
+    }
+  ],
+  "host_report": {
+    "sha256": "B6F28D373A9F6DBCDC175DC442CD172C658A60D314A8854364301583E0DFD5EB",
+    "result": {
+      "status": "passed",
+      "tests_run": 12,
+      "failures": 0,
+      "errors": 0,
+      "runtime_acceptance": false
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261021-arena-hud/host-focused01.json"
+  },
+  "supplemental_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-hud/native-comparison01.json",
+      "sha256": "7A0E38A825FFFF86FE363DB277C162FFE79A1FCA08B6A39DD2AFB972D3A900FE"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-hud/guards01.json",
+      "sha256": "BCE889C3D3B9D1C79DCE082A1C9CF853CDD4C0ADFB01AC299C4BDE492C33CF33"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-hud/Probe01/probe.json",
+      "sha256": "5DFDA79828DEDB10A0E76DF46985B24B5574257502BD0088F98B54873735CC89"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-hud/Probe01/process.json",
+      "sha256": "73DEB8FCA564AC0EB1CEA4B3241E2243B18DF6A9A674B47508E6168FB5F21373"
+    }
+  ]
+}

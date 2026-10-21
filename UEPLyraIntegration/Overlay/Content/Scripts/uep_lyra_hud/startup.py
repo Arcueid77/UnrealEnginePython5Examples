@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(a.startswith("-UEPArenaHUDResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):
+        return "uep_lyra_hud.arena_hud_validation"
     if any(a.startswith("-UEPArenaPowerupStatResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):
         return "uep_lyra_hud.arena_powerup_stat_validation"
     if any(a.startswith("-UEPArenaPlayerTileResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):
