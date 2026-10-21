@@ -198,10 +198,11 @@ These are recorded flags requiring requirement and platform review, not automati
 - `arena_drop_bomb_pilot`: network_acceptance, physical_input_tested, pixels_tested, audio_playback_tested, packaged_runtime, spawn_failure_native_tested, commit_race_failure_native_tested.
 - `migration_acceptance_review`: natural_animation_dispatch_tested.
 - `footstep_animation_pilot`: normal_locomotion_input_state_machine_tested, network_acceptance, pixels_tested, audio_playback_tested, packaged_runtime.
+- `footstep_locomotion_pilot`: network_acceptance, pixels_tested, audio_playback_tested, packaged_runtime.
 
 ## Next evidence work
 
-Review normal movement-input/AnimBP locomotion, visible footprint pixels, audible output and the remaining original version checklists. Controlled native animation playback is already recorded separately.
+Review visible footprint pixels, audible output, physical keyboard and remaining supported multiplayer/package/version checklists. Controlled animation and actual-player Enhanced Input/AnimBP locomotion are already recorded separately.
 
 Recorded capabilities still need their linked semantic/source evidence reviewed; this index
 does not rerun them. Continue unresolved readiness observations and the original version scope.

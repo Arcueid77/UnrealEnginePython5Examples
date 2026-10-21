@@ -77,6 +77,13 @@ class MigrationAcceptanceAuditTests(unittest.TestCase):
         self.assertIn('already recorded', result['next_evidence_task'])
         self.assertFalse(result['full_migration_acceptance_proven'])
 
+    def test_recorded_actual_locomotion_does_not_remain_the_next_task(self):
+        data, original, roadmap = fixture()
+        data['footstep_pilot'] = dict(natural_animation_dispatch_tested=True, normal_locomotion_input_state_machine_tested=True)
+        result = self.run_audit(data, original, roadmap)
+        self.assertIn('actual-player Enhanced Input/AnimBP locomotion are already recorded', result['next_evidence_task'])
+        self.assertFalse(result['full_migration_acceptance_proven'])
+
     def test_requirement_continuations_and_source_lines_are_retained(self):
         rows = audit.requirements('## 0.12.0 Effects\n- [ ] Multi-client phase state\n  and native cleanup agree.\n\n## 1.0.0 Release\n- [ ] Publish tags.\n')
         self.assertEqual(len(rows), 1)

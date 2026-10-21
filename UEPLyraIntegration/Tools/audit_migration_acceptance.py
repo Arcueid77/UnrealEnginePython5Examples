@@ -82,7 +82,10 @@ def inspect(current, original, roadmap, *, acceptance_directory):
             declared_ledger_exists=(acceptance_directory/ledger).is_file() if ledger else None,
             evidence_semantics_verified_by_this_audit=False, completion_proven=False))
     recorded_animation = current.get('footstep_pilot', {}).get('natural_animation_dispatch_tested') is True
-    next_task = ('Review normal movement-input/AnimBP locomotion, visible footprint pixels, audible output and the remaining original version checklists. Controlled native animation playback is already recorded separately.'
+    recorded_locomotion = current.get('footstep_pilot', {}).get('normal_locomotion_input_state_machine_tested') is True
+    next_task = ('Review visible footprint pixels, audible output, physical keyboard and remaining supported multiplayer/package/version checklists. Controlled animation and actual-player Enhanced Input/AnimBP locomotion are already recorded separately.'
+                 if recorded_locomotion else
+                 'Review normal movement-input/AnimBP locomotion, visible footprint pixels, audible output and the remaining original version checklists. Controlled native animation playback is already recorded separately.'
                  if recorded_animation else
                  'Inspect unchanged locomotion sequences and prove actual native animation playback reaches the migrated footstep policy through the original Notify/interface chain.')
     return dict(schema_version=1, status='passed', scope_check_passed=True,

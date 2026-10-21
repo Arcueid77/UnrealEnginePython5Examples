@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 204,
+    "bounded_evidence_ledgers": 205,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -4703,9 +4703,12 @@
     "packaged_runtime": false,
     "full_actor_acceptance": false,
     "full_acceptance": false,
-    "next": "Normal movement-input/AnimBP locomotion,visible footprint pixels,audible output,broader network/package/version gates remain open; controlled native animation notification ingress is now proven.",
+    "next": "Visible footprint pixels,audible output,physical keyboard and broader supported multiplayer/package/version gates remain open; actual native input/AnimBP footstep ingress is proven.",
     "natural_animation_dispatch_scope": "Five unchanged native single-node sequences on owned original HeroDefault Actors in actual client/listen-server worlds; normal movement-input/AnimBP locomotion remains untested.",
-    "natural_animation_evidence_ledger": "202-native-animation-footstep-interface-niagara-and-delay.json"
+    "natural_animation_evidence_ledger": "202-native-animation-footstep-interface-niagara-and-delay.json",
+    "normal_locomotion_input_state_machine_tested": true,
+    "normal_locomotion_scope": "Actual playable client with unchanged AnimBP and native Enhanced Input action injection; one-owner listen-server authority observations. Physical keyboard and full multiplayer acceptance are not claimed.",
+    "normal_locomotion_evidence_ledger": "203-real-player-enhanced-input-footstep-locomotion.json"
   },
   "wind_system_pilot": {
     "version": "0.12.0",
@@ -10036,13 +10039,14 @@
       "group": "特效、GameplayCue 与音频调度",
       "method_candidates": 2,
       "business_nodes": 69,
-      "scope_review": "Batch112 retained original93 nodes/native interface and latent node; batch202 adds unchanged native animation playback on owned original HeroDefault Actors in an actual rendered client and listen server. Five original sequences with28 context-effect notifies per Profile produce56 native parent calls per world. Client forwards56 times into original/Python footstep profiles, with actual owned-floor trace hits, native HitResult fields, live Niagara parameter store parity and original3s retriggerable cleanup/validity branches. Server has56 parent calls and zero footstep spawn/forward calls, preserving original IsServer branch. No Notify/interface callback is replayed, no animation seek/notify/asset/timer is edited, and original primary players remain unchanged. Controlled single-node playback on owned Characters does not certify normal movement-input/AnimBP locomotion, visible pixels, audible output, dedicated/two-owner networking or packages.",
-      "status": "bounded_footstep_native_animation_notify_parent_interface_niagara_and_original_delay_verified_visual_audio_network_package_open",
-      "evidence_ledger": "202-native-animation-footstep-interface-niagara-and-delay.json",
+      "scope_review": "Batch112 retained original policy/interface/latency; batch202 proved controlled unchanged animation playback. Batch203 proves actual playable owner with original AnimBP and native IA_Move Enhanced Input injection: four slow/full-speed forward/back cases per Profile,45 native client footstep forwards and live original-map hit/position/normal/Niagara-location/trigger checks; authority observes real player movement and zero cosmetic footstep calls. Profiles are selected before player creation because per-registration selection is cached and generic live set_mixin_profile targets the nearest router. Native animation playback/Notify/motion/movement receiver callbacks,teleport/velocity/movement-mode writes are not used. Original native miss branch is a no-op,checked conditionally if encountered; accepted runs require positive actual-hit samples per case. Observed Pistol animation assets are compared to official originals after execution,not claimed pre-frozen. Hardware keyboard,visible pixels,audible output,two-owner gameplay/travel/loss/packages and version acceptance remain open.",
+      "status": "bounded_footstep_real_player_enhanced_input_animblueprint_native_hit_niagara_and_controlled_delay_verified_pixels_audio_package_open",
+      "evidence_ledger": "203-real-player-enhanced-input-footstep-locomotion.json",
       "previous_evidence_ledgers": [
-        "112-footstep-native-niagara-interface-latent.json"
+        "112-footstep-native-niagara-interface-latent.json",
+        "202-native-animation-footstep-interface-niagara-and-delay.json"
       ],
-      "evidence_run": "20261021-footstep-natural-animation/Runtime03"
+      "evidence_run": "20261021-footstep-locomotion/Python01"
     },
     {
       "path": "/Game/Effects/Blueprints/B_WeaponDecals.B_WeaponDecals",
@@ -14101,5 +14105,51 @@
       "Runtime02 NullRHI listen server exposed null spawning-Cue output errors;not accepted or repaired here. Client completed native notify observations but missed the floor because base mesh offset differed from the player,then accessed a retired actor wrapper during cleanup. Runtime03 uses rendered original FiringRange,player-relative owned mesh placement and live-world path lookup."
     ],
     "next": "Continue normal gameplay input/AnimBP locomotion,pixel/audio/multiplayer/package/version requirements and remaining original migration checklists. GPU and NullRHI-listen observations remain preserved,not claimed fixed."
+  },
+  "footstep_locomotion_pilot": {
+    "version": "0.12.0",
+    "evidence_ledger": "203-real-player-enhanced-input-footstep-locomotion.json",
+    "status": "bounded_actual_player_native_enhanced_input_animblueprint_footstep_and_authority_motion_verified_broader_acceptance_open",
+    "native_runtime_runs": [
+      "20261021-footstep-locomotion/Fallback02",
+      "20261021-footstep-locomotion/Python01"
+    ],
+    "actual_map": "/ShooterMaps/Maps/L_FiringRange_WP",
+    "actual_worlds": [
+      "ListenServer",
+      "Client"
+    ],
+    "actual_input_entry": "EnhancedInputLocalPlayerSubsystem.InjectInputVectorForAction",
+    "normal_locomotion_input_state_machine_tested": true,
+    "profiles_selected_before_player_creation": true,
+    "live_inherited_router_profile_switch_supported": false,
+    "actual_owner_cases": 8,
+    "authority_observation_cases": 8,
+    "native_client_footstep_calls": 45,
+    "native_client_actual_hit_samples": 45,
+    "native_server_cosmetic_footstep_calls": 0,
+    "original_animblueprint_class_and_mode_preserved": true,
+    "native_animation_playback_called": false,
+    "native_notify_or_motion_callbacks_replayed": false,
+    "native_movement_receiver_or_addmovementinput_called": false,
+    "teleport_velocity_or_movement_mode_written": false,
+    "native_geometry_not_modified": true,
+    "native_miss_noop_checked_when_encountered": true,
+    "accepted_runs_contain_no_forced_miss_callbacks": true,
+    "exact_native_stride_counts_or_cross_process_trajectory_parity_claimed": false,
+    "observed_animation_assets_compared_to_official_after_execution": true,
+    "inventory_health_profiles_input_and_observers_restored": true,
+    "host_focused_checks": 11,
+    "full_acceptance": false,
+    "network_acceptance": false,
+    "physical_keyboard_tested": false,
+    "pixels_tested": false,
+    "audio_playback_tested": false,
+    "packaged_runtime": false,
+    "preserved_failed_runs": [
+      "Runtime01 attempted live inherited profile changes; nearest-router API and existing parent cache retained Python while downstream fallback changed. No SDK behavior was modified.",
+      "Fallback01 preselects profiles before player creation and exposes a real initial trace miss. The corrected observer requires successful-hit samples plus unchanged original state on native misses,not an invented requirement that every original trace hits."
+    ],
+    "next": "Continue original footprint pixel/audio/hardware and broader supported multiplayer/package/version checklists. Native input injection is not physical keyboard proof."
   }
 }

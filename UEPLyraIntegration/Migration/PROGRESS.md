@@ -31,6 +31,30 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded batch203 (2026-10-21),actual-player locomotion:**
+The real playable owner retains its original AnimBP and moves through native
+IA_Move Enhanced Input injection,not playback/Notify/motion/movement-receiver
+calls. Four slow/full-speed forward/back cases pass per Profile on original
+FiringRange;authority observes the same real player's movement and zero
+cosmetic footstep calls. Client records45 naturally forwarded footsteps with
+actual original-map hits and matching hit location/normal plus Niagara
+location/trigger samples. Native walk/full-speed observations are200/600 on
+the client;cross-process velocity spikes or exact stride/trajectory timing
+are not accepted as a new quantitative networking guarantee. No teleport,
+velocity,animation-mode,animation-position or geometry writes occur.
+Runtime01 caught inherited selection caching:generic live profile changes
+target the nearest router,so the parent remained Python. Profiles are now
+selected before player creation in separate complete native runs. Fallback01
+caught a real initial trace miss;the observer preserves the source miss
+no-op and still requires successful actual-hit samples per case. No SDK or
+gameplay policy is changed. Original animation classes,inventory,Health,input,
+selectors and observers restore. Observed Pistol animation files match official
+sources in an explicitly post-execution inspection,not a pre-run freeze claim.
+Both native process/gate pairs pass strict ordered logs;11 focused checks pass.
+Ledger203 closes actual software-input/AnimBP ingress. Physical keyboard,
+visible footprint pixels,audible output,broader two-owner gameplay/travel/loss,
+package and version requirements remain open.
+
 **Completed bounded batch202 (2026-10-21),native animation footstep ingress:**
 Five unchanged original walk/jog sequences execute through native
 SkeletalMeshComponent.PlayAnimation on owned original HeroDefault Characters

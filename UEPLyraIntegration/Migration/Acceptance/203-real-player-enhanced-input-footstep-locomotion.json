@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "batch": "203",
+  "scope": "Actual playable owner Enhanced Input movement and original AnimBP footstep notifications under preselected original/Python Profiles; native authority motion and source hit semantics, broader acceptance open",
+  "recorded_utc": "2026-10-21T08:14:08.5274688Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "156ce3a4ecf8d68dee9033edd0cd99c7a4e63234",
+  "examples_parent_commit": "2913837a9078cf132df31f888ecb0f9b73732d9a",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-footstep-locomotion/Fallback02",
+      "summary_sha256": "0271628B46BE1EC4BACF866FC62E66ACA4D2762FE49E45268BAB7C4C7616E875",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2460,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "client": 0,
+        "server": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "AC00FDF63E3C26AB5BADAEF37599D0296C67F9C03D8DB906A2FB4FEB1552C0B3",
+          "file": "server.json"
+        },
+        {
+          "file": "server.json",
+          "sha256": "AC00FDF63E3C26AB5BADAEF37599D0296C67F9C03D8DB906A2FB4FEB1552C0B3"
+        },
+        {
+          "file": "client.json",
+          "sha256": "A961480C965D1D087570F8047DCD81F8FAD43F3FE30F529E06B39B5072EAC557"
+        },
+        {
+          "file": "motion-assets.json",
+          "sha256": "214D32BC84CFC1D5578A5A7A8D2FC1A1E71F50C3BCB12C63491242D85E358840"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-footstep-locomotion/Python01",
+      "summary_sha256": "DAFF7414A545F5420B6C2DA27DE6A2A344FD501269EAF0091D7540BFA6DAA6BF",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2460,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "client": 0,
+        "server": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "7E8222D5E4DBE15BD8071D870FADE58D07398ECEC5F95929DF209D7915222917",
+          "file": "server.json"
+        },
+        {
+          "file": "server.json",
+          "sha256": "7E8222D5E4DBE15BD8071D870FADE58D07398ECEC5F95929DF209D7915222917"
+        },
+        {
+          "file": "client.json",
+          "sha256": "4FF7F53A016DF1699D5A2BEFB23834E5D0E436E026342933267DA0FE037EF94C"
+        },
+        {
+          "file": "motion-assets.json",
+          "sha256": "214D32BC84CFC1D5578A5A7A8D2FC1A1E71F50C3BCB12C63491242D85E358840"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Validation/Run-UEP58FootstepLocomotionValidation.ps1",
+      "sha256": "B81C4CA710ADA81F46BEB3DA67050B59F30CAA74843351EB89EAF9872DD3D353",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58FootstepLocomotionValidation.ps1"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/footstep_locomotion_validation.py",
+      "sha256": "F6D3BF20339CCC0A6739A3E906DD923AFFFCB297E70B7591E16D40DF126547E4",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/footstep_locomotion_validation.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/footstep_locomotion_contract.py",
+      "sha256": "AF29512A074C8374535C0F8030A397DFC04CCB2017FF4916782B99CBFEC6DE47",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/footstep_locomotion_contract.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "0BA50B7C84665CE77F81DEC63B4B11B6C28D66225A6E48DC6E5769E3599AD196",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261021-footstep-locomotion/host-focused01.json",
+    "result": {
+      "status": "passed",
+      "tests_run": 11,
+      "runtime_acceptance": false,
+      "full_regression": false
+    },
+    "sha256": "D22BD36A7775F2972F864CC5913B1BEE18FD03B93393632DCF2B85BE539BF2D5"
+  },
+  "native_independent_gate_exit_codes": {
+    "Fallback02": {
+      "server": 0,
+      "client": 0
+    },
+    "Python01": {
+      "client": 0,
+      "server": 0
+    }
+  },
+  "supplemental_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-footstep-locomotion/native-comparison01.json",
+      "sha256": "7BB105F70575D01F2320AFFB1DE2EADBC7EDD7FD387CCC8337359856BF70F273"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-footstep-locomotion/guards01.json",
+      "sha256": "F7BDA0B5284947DF9FCA6B85472FF2AEBB29227296FD1238C0831FC5E79233FD"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-footstep-locomotion/host-focused01.json",
+      "sha256": "D22BD36A7775F2972F864CC5913B1BEE18FD03B93393632DCF2B85BE539BF2D5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-footstep-locomotion/inventory01.json",
+      "sha256": "A3AFAE7AEC77849E680315D0B577EBC68CFE0D032C9AFAEAF5FAD42C82A2E056"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-footstep-locomotion/observed-sequence-assets01.json",
+      "sha256": "7F67131F22115BDD0FB7D4A6C20265B8A152D38AED6CCAF3B141AD364BAD3BA1"
+    }
+  ],
+  "evidence_kind": "actual_player_native_enhanced_input_animblueprint_and_footstep_observation",
+  "physical_keyboard_tested": false,
+  "pixels_tested": false,
+  "audio_playback_tested": false
+}
