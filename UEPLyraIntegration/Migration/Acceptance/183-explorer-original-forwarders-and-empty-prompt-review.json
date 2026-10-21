@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "batch": "183-explorer-original-forwarders-and-empty-prompt-review",
+  "scope": "Original Explorer forwarders and prompt have no independent observable own-graph business; source/static paths retained and bounded native runtime checked; inherited parent/full version scope remains open",
+  "recorded_utc": "2026-10-21T00:09:08.9858431Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "2d75d3d3c06b90beb56343ab4dc1b49d610e5796",
+  "examples_parent_commit": "4027ccfa56a4f87bd29af5ec2aab6c196f6a4a5b",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-shell-review/Audit01",
+      "summary_sha256": "04D4CFD4145EF499CD53E5E6F7221D9AE66C493ED7522F7A05272C9D24C3AB7C",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 833,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "audit.json",
+          "sha256": "D3C3FD4EF3CD9F4B642CB6C6ACEFA55B95F2B100CA8C5BFF606D5541F7BD0A18"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-shell-review/Runtime01",
+      "summary_sha256": "2FFB09B653FF2AE98F4F6392AF50F877DB190BCDD450D1882431B761F06A834A",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3187,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "85B711F69B631998B260299501586F39BB9AE337D645237E16186CAD25A94192"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/explorer_shell_review.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/explorer_shell_review.py",
+      "sha256": "993E4C86E7DA51347E58D5AB589BA33E9E453617966B5317FA20C0DC2D5E551B",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/audit_explorer_shells.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_explorer_shells.py",
+      "sha256": "40A949DF2EB2BDAFEA02282C6FBB48B7F535AEAE569F9A4EB7157A880E2C5DA0",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_shells_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_shells_contract.py",
+      "sha256": "67E54B6852B604A6B11D38AE980C72ABE7B2B66654CF0579E6939B951D4FDE79",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_shells_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_shells_validation.py",
+      "sha256": "0F0243805077BFC3F92CA43CFED5A3C25753D9068E75F5AACBC389FB1A537212",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "9658DFF9A029D9C15B912E617C27C00AA7BBF607DD246385DDCC5FFE6D520C09",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261021-explorer-shell-review/host-focused01.json",
+    "result": {
+      "status": "passed",
+      "tests_run": 11,
+      "runtime_acceptance": false,
+      "full_regression": false
+    },
+    "sha256": "D22BD36A7775F2972F864CC5913B1BEE18FD03B93393632DCF2B85BE539BF2D5"
+  }
+}

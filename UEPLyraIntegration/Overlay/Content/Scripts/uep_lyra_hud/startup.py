@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(a.startswith("-UEPExplorerShellsResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):
+        return "uep_lyra_characters.explorer_shells_validation"
     if any(a.startswith("-UEPExplorerMarkerResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):
         return "uep_lyra_abilities.explorer_marker_validation"
     if any(a.startswith("-UEPCollectCueResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):

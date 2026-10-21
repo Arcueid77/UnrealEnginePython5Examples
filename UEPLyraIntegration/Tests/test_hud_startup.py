@@ -9,6 +9,10 @@ from uep_lyra_hud.startup import validation_module
 
 
 class StartupSelectionTests(unittest.TestCase):
+    def test_retained_explorer_shells_require_explicit_native_lane(self):
+        self.assertEqual(validation_module(['-UEPExplorerShellsResult=report.json']),'uep_lyra_characters.explorer_shells_validation')
+        self.assertIsNone(validation_module(['-run=Py','-UEPExplorerShellsResult=report.json']))
+
     def test_explorer_marker_requires_explicit_native_lane(self):
         self.assertEqual(validation_module(['-UEPExplorerMarkerResult=report.json']),'uep_lyra_abilities.explorer_marker_validation')
         self.assertIsNone(validation_module(['-run=Py','-UEPExplorerMarkerResult=report.json']))
