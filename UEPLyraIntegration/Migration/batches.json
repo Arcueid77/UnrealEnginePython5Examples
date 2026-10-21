@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 210,
+    "bounded_evidence_ledgers": 211,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -14362,7 +14362,7 @@
     "next": "Continue physical keyboard,two-owner turnover,other weapons/accolade-chain ingress,large-team/error/late-join/travel/loss/UI/package/version and the remaining original migration requirements."
   },
   "migration_package_inventory": {
-    "status": "read_only_original_scope_and_stage_package_plan_verified_cook_runtime_open",
+    "status": "current_original_scope_cook_presence_and_bounded_discovery_verified_full_runtime_open",
     "evidence_ledger": "207-read-only-migration-package-plan-and-host-test-isolation.json",
     "original_scope": [
       246,
@@ -14374,10 +14374,12 @@
     "matching_overlay_assets": 460,
     "runtime_maps_planned": 12,
     "cook_directories_planned": 87,
-    "cooked_package_presence_verified": false,
-    "current_game_build_accepted": false,
+    "cooked_package_presence_verified": true,
+    "current_game_build_accepted": true,
     "packaged_runtime_verified": false,
-    "full_acceptance": false
+    "full_acceptance": false,
+    "current_cook_evidence_ledger": "209-safe-cooked-game-discovery-and-current-migration-package.json",
+    "bounded_packaged_discovery_verified": true
   },
   "exact_candidate_version_audit": {
     "status": "original_per_candidate_version_assignments_verified_swap_false_positive_rejected",
@@ -14385,6 +14387,29 @@
     "original_candidates": 246,
     "original_paths_order_and_version_assignments_unchanged": true,
     "counts_only_comparison_is_insufficient": true,
+    "full_acceptance": false
+  },
+  "native_runtime_mixin_discovery_pilot": {
+    "version": "0.9.0",
+    "status": "bounded_current_cooked_game_actor_import_widget_and_precompiled_caller_discovery_verified",
+    "evidence_ledger": "209-safe-cooked-game-discovery-and-current-migration-package.json",
+    "source": "Source/UnrealEnginePython/Private/UEPyMixin.cpp",
+    "non_editor_backend": "OnHotfixableAssetLoaded and refcounted native UClass metatypes",
+    "editor_backend": "OnEndLoadPackage retained",
+    "engine_sources_modified": false,
+    "compiler_diagnostics": 0,
+    "current_game_build_actions": 3,
+    "current_cook_original_candidates": 246,
+    "current_cook_overlay_assets": 460,
+    "current_cook_runtime_maps": 12,
+    "host_full_tests": 5255,
+    "automatic_registration_without_explicit_api": true,
+    "same_uobject_class_identity": true,
+    "original_methods_restored": true,
+    "packaged_runtime_verified": true,
+    "broader_async_experience_loads_verified": false,
+    "controlled_reload_runtime_verified": false,
+    "full_version_acceptance": false,
     "full_acceptance": false
   }
 }

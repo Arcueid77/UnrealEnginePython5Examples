@@ -1,0 +1,2798 @@
+{
+  "schema_version": 1,
+  "batch": "209-safe-cooked-game-discovery-and-current-migration-package",
+  "scope": "Native non-Editor Mixin discovery uses completed hotfixable class callbacks and refcounted native metaclass registrations,with weak deferred generation checks,module-refresh and symmetric unsubscribe. Editor OnEndLoadPackage behavior retained. Engine and official Lyra sources unchanged. Current Win64 Development Game build and staged Editor SDK build have process0 and zero compiler/link diagnostics; preserved cold-build timeout and pre-fix two-C4996 failure. Actual new archive contains original246 candidates,460Overlay assets and12runtime maps,plus exact current806project/2core scripts. Fresh Actor/imported Actor/Widget and precompiled caller tests pass in Editor and actual cooked Game: no explicit registration,Python ownership,no BP fallthrough,same UObject class,original restoration and cleanup,process0/independentgate0/strict ordered shutdown. First Editor run failed default-culture smoke tests and is preserved;consistent -culture=en passes without ignoring errors. Shared SDK full host5255 passed;isolated staged full follows. No gameplay Blueprint assets changed,no tags/releases. Full migration/version,broader async experience/reload/network/presentation acceptance remain open.",
+  "recorded_utc": "2026-10-21T12:18:58.9350551Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "93126a189e113813f0b07dbf1530467191e0d0e1",
+  "examples_parent_commit": "4f9e255e37a263d68211ce881cde87fba0fdf35c",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/Build03SafeDiscovery",
+      "summary_sha256": "AE462C4DD319C0EC49666962B6521A3F5FBD878D1FA019600F50B17EB6DDC461",
+      "status": "passed",
+      "uep_dll_sha256": [],
+      "frozen_input_records": 1329,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/EditorBuild01",
+      "summary_sha256": "88E1909D1C0E2A0B7D23BAC5EA5882CA93161A5589C1E211C41B677F4E82F120",
+      "status": "passed",
+      "uep_dll_sha256": [],
+      "frozen_input_records": 1339,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/DiscoveryAuthor01",
+      "summary_sha256": "A063CDA5D7AB4393F9AC11BDD559FD2B96BD86E982679001C40104AF0D414E49",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "E87452CC8D645D7C1C9C26C39968CED38B200A482743CB611558E19B0AC63AEF"
+      ],
+      "frozen_input_records": 1615,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/Cook01",
+      "summary_sha256": "D6DD6B5A12528CBD0ADA0377582102630C7293AB43B45F0358AD0E42C42FB86D",
+      "status": "passed",
+      "uep_dll_sha256": [],
+      "frozen_input_records": 13,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/DiscoveryEditor03Reusable",
+      "summary_sha256": "F60FC04665224560BF3B2B1AAD4FBE241DDCF74FF4991A2A8C3ABC354D2313C4",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "E87452CC8D645D7C1C9C26C39968CED38B200A482743CB611558E19B0AC63AEF"
+      ],
+      "frozen_input_records": 10,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/DiscoveryPackaged02Reusable",
+      "summary_sha256": "13B0176BEF1523170BA27A831C6E4D5DAB809A5B87E0EC4B8EB0D35F3C5384C8",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "E87452CC8D645D7C1C9C26C39968CED38B200A482743CB611558E19B0AC63AEF"
+      ],
+      "frozen_input_records": 95,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": []
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "DAE7F3E02924E507866BC14156EC7D0FE5873F26F71401F3C821514888C7714C",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Source/UnrealEnginePython/Private/UEPyMixin.cpp",
+      "native_input_path": "Source/UnrealEnginePython/Private/UEPyMixin.cpp"
+    },
+    {
+      "sha256": "2EB2DCDAAD7F01A47FC17BB0DCF8B01079C171DCC6087C4267CF44509E6DD217",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58CurrentLyraGameBuild.ps1",
+      "native_input_path": "Validation/Run-UEP58CurrentLyraGameBuild.ps1"
+    },
+    {
+      "sha256": "C4C235C61443E03C57F54729E0C829E553ACE254610F83CA655A163B1F5A9D1E",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58MigrationCookPackage.ps1",
+      "native_input_path": "Validation/Run-UEP58MigrationCookPackage.ps1"
+    },
+    {
+      "sha256": "FAB8CBB378EE4DD05D16033EEBEE8C5BB648FACBB0C282E891C48401C6C0DB9B",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58PackagedDiscoveryValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58PackagedDiscoveryValidation.ps1"
+    },
+    {
+      "sha256": "4B81D2223A881A36F52878DED24C5EF2CA911DD55B0667D4C5F7CF63E733ECE4",
+      "matches_at_least_one_listed_native_input": false,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_packaged_discovery_fixture.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_packaged_discovery_fixture.py"
+    },
+    {
+      "sha256": "D2B23B4F4F700DB62EC78D510EAA88A1BD982FD566018C365DD22FC4BDCBCB3F",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "sha256": "CDECA34A4AF72A9BC95A06D7D4E764D6D9C16E11051F33640FB90129E854410B",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_packaged_discovery_profiles.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_packaged_discovery_profiles.py"
+    },
+    {
+      "sha256": "55B2151E29456F21F8AB98D02B98A3B5892A1DA781DCB2A73045B248611BA9B1",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_packaged_discovery_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_packaged_discovery_contract.py"
+    },
+    {
+      "sha256": "2B2A12069B076A21F7DF97AF8CE054CCEF3A42627E0C143056B394FCE4D95BE3",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_packaged_discovery_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_packaged_discovery_validation.py"
+    }
+  ],
+  "host_report": {
+    "sha256": "70C83913AF20566BAA486767E871DC5F58A3FE887C0794F0D3F35A229C49F560",
+    "result": {
+      "schema_version": 2,
+      "status": "passed",
+      "tests_run": 5255,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "selection": {
+        "mode": "full",
+        "status": "ready",
+        "changed_files": [
+          ".gitmodules",
+          "Demos/README.md",
+          "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+          "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_packaged_discovery_contract.py",
+          "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_packaged_discovery_profiles.py",
+          "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_packaged_discovery_validation.py",
+          "Demos/UEPLyraIntegration/README.md",
+          "Demos/UEPLyraIntegration/Tests/test_packaged_discovery_contract.py",
+          "Demos/UEPLyraIntegration/Tools/generate_packaged_discovery_fixture.py",
+          "README.md",
+          "Source/UnrealEnginePython/Private/UEPyMixin.cpp",
+          "UnrealEnginePython.uplugin",
+          "Validation/Run-UEP58CurrentLyraGameBuild.ps1",
+          "Validation/Run-UEP58MigrationCookPackage.ps1",
+          "Validation/Run-UEP58PackagedFootstepVisualValidation.ps1",
+          "docs/Third_Person_Demo_0.6.0.md"
+        ],
+        "selected_test_files": [
+          "Demos/UEPLyraIntegration/Tests/test_ability_failure_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_ability_failure_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_ability_failure_native.py",
+          "Demos/UEPLyraIntegration/Tests/test_ability_failure_protocol.py",
+          "Demos/UEPLyraIntegration/Tests/test_ability_progress_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_ability_progress_protocol.py",
+          "Demos/UEPLyraIntegration/Tests/test_ability_widget_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_accolade_relay_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_accolade_relay_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_accolade_widgets_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_accolade_widgets_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_action_touch_click_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_action_touch_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_action_touch_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_action_touch_network.py",
+          "Demos/UEPLyraIntegration/Tests/test_ads_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_ads_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_ads_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_ads_validation_input.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_actor_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_actor_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_actor_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_bomb_base_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_bomb_base_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_bomb_base_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_bomb_visual_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_bomb_visual_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_bomb_visual_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_drop_bomb_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_drop_bomb_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_drop_bomb_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_hud_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_hud_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_hud_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_level_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_level_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_level_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_mode_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_mode_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_mode_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_phases_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_phases_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_phases_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_player_tile_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_player_tile_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_player_tile_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_player_ui_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_player_ui_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_player_ui_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_powerup_stat_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_powerup_stat_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_powerup_stat_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_ready_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_ready_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_arena_ready_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_auto_respawn_activation_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_auto_respawn_activation_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_auto_respawn_events_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_auto_respawn_events_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_auto_respawn_helpers_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_auto_respawn_helpers_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_auto_respawn_lifecycle_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_auto_respawn_listeners_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_auto_respawn_listeners_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_auto_respawn_reset_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_auto_respawn_reset_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_autoreload_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_autoreload_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_autoreload_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_blueprint_scope.py",
+          "Demos/UEPLyraIntegration/Tests/test_bound_action_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_bound_action_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_bound_action_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_begin_play_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_begin_play_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_begin_play_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_damage_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_damage_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_death_replication_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_death_replication_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_death_started_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_death_started_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_death_started_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_emote_audio_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_emote_audio_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_emote_audio_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_enhanced_input_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_enhanced_input_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_enhanced_input_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_equipment_hide_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_equipment_hide_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_equipment_hide_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_health_changed_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_health_changed_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_health_changed_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_initial_inventory_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_initial_inventory_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_initial_inventory_natural_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_initial_inventory_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_clear_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_clear_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_clear_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_clear_reset_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_ready_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_ready_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_ready_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_wait_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_wait_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_wait_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_legacy_player_info_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_legacy_player_info_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_legacy_player_info_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_lifecycle_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_lifecycle_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_lifecycle_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_outline_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_outline_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_outline_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_owned_cue_witnesses.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_parts_changed_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_parts_changed_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_parts_changed_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_possessed_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_possessed_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_possessed_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_quickbar_input_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_quickbar_input_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_quickbar_input_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_ragdoll_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_ragdoll_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_ragdoll_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_stencil_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_stencil_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_stencil_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_team_cosmetics_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_team_cosmetics_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_team_cosmetics_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_team_listener_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_team_listener_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_team_listener_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_team_observer_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_team_observer_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_team_observer_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_visibility_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_visibility_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_visibility_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_collect_cue_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_collect_cue_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_collect_cue_lifecycle_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_collect_cue_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_combat_hud_probe.py",
+          "Demos/UEPLyraIntegration/Tests/test_combat_hud_protocol.py",
+          "Demos/UEPLyraIntegration/Tests/test_control_point_feedback_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_control_point_feedback_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_control_point_helpers_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_control_point_helpers_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_control_point_state_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_control_point_state_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_control_point_widgets_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_control_point_widgets_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_cosmetic_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_cosmetic_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_cosmetic_state.py",
+          "Demos/UEPLyraIntegration/Tests/test_cosmetics_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_cp_scoring_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_cp_scoring_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_credits_widgets_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_credits_widgets_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_credits_widgets_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_cue_widget_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_cue_widget_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_activation_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_activation_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_control_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_cooldown_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_cooldown_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_local_direction_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_local_direction_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_local_direction_standalone_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_native_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_protocol.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_rpc_input_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_rpc_input_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_selector_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_selector_inheritance_probe.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_selector_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_tasks_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_tasks_lifecycle_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_tasks_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_tasks_network_lifecycle_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_death_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_death_damage.py",
+          "Demos/UEPLyraIntegration/Tests/test_death_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_death_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_death_observation.py",
+          "Demos/UEPLyraIntegration/Tests/test_debug_spread_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_debug_spread_protocol.py",
+          "Demos/UEPLyraIntegration/Tests/test_diagnostic_widgets_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_diagnostic_widgets_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_diagnostic_widgets_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_drop_weapon_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_drop_weapon_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_drop_weapon_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_editor_experience_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_editor_experience_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_editor_experience_list_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_editor_experience_portal_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_effect_pad_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_effect_pad_network_protocol.py",
+          "Demos/UEPLyraIntegration/Tests/test_elimination_feed_relay_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_elimination_feed_relay_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_elimination_score_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_elimination_score_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_elimination_widgets_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_elimination_widgets_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_elimination_widgets_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_emote_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_emote_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_emote_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_experience_list_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_experience_list_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_experience_list_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_experience_screen_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_experience_screen_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_experience_screen_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_experience_tile_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_experience_tile_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_experience_tile_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_actions_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_actions_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_actions_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_beginplay_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_beginplay_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_beginplay_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_behavior_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_behavior_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_behavior_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_callbacks_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_callbacks_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_callbacks_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_character_cdo.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_grid_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_grid_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_grid_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_helpers_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_helpers_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_helpers_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_init_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_init_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_init_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_input_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_input_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_input_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_interact_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_interact_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_interact_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_item_list_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_item_list_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_item_list_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_marker_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_marker_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_marker_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_screens_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_screens_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_screens_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_shell_review.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_shells_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_shells_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_state_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_state_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_state_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_style_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_style_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_style_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_toast_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_toast_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_toast_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_footstep_animation_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_footstep_animation_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_footstep_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_footstep_locomotion_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_footstep_locomotion_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_footstep_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_footstep_visual_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_footstep_visual_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_foundation_buttons_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_foundation_buttons_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_foundation_buttons_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_foundation_widgets_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_foundation_widgets_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_foundation_widgets_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_frontend_logout_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_frontend_logout_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_frontend_logout_log_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_frontend_menu_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_frontend_menu_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_frontend_menu_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_game_phases_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_game_phases_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_general_audio_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_general_audio_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_grant_ge_pad_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_grant_ge_pad_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_grant_ge_pad_network.py",
+          "Demos/UEPLyraIntegration/Tests/test_grenade_actions_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_grenade_actions_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_grenade_activation_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_grenade_activation_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_grenade_activation_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_grenade_begin_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_grenade_begin_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_grenade_cleanup_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_grenade_cleanup_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_grenade_detonate_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_grenade_detonate_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_grenade_detonate_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_grenade_flight_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_grenade_headless_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_grenade_hit_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_grenade_hit_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_grenade_rpc_log_evidence.py",
+          "Demos/UEPLyraIntegration/Tests/test_grenade_vfx_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_grenade_vfx_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_grenade_widget_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_grenade_widget_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_grenade_widget_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_heal_ability_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_heal_ability_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_heal_ability_network.py",
+          "Demos/UEPLyraIntegration/Tests/test_hero_burst_cue_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_hero_burst_cue_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_death_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_death_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_death_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_equipment_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_equipment_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_equipment_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_motion_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_motion_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_motion_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_ragdoll_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_ragdoll_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_ragdoll_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_stencil_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_stencil_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_stencil_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_hero_heal_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_hero_heal_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_hero_heal_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_hero_parent_test_profiles.py",
+          "Demos/UEPLyraIntegration/Tests/test_host_session_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_host_session_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_host_session_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_hud_ammo.py",
+          "Demos/UEPLyraIntegration/Tests/test_hud_fire_button.py",
+          "Demos/UEPLyraIntegration/Tests/test_hud_presenter.py",
+          "Demos/UEPLyraIntegration/Tests/test_hud_shutdown.py",
+          "Demos/UEPLyraIntegration/Tests/test_hud_startup.py",
+          "Demos/UEPLyraIntegration/Tests/test_hud_visuals.py",
+          "Demos/UEPLyraIntegration/Tests/test_interaction_producer_reports.py",
+          "Demos/UEPLyraIntegration/Tests/test_inventory_pad_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_inventory_pad_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_inventory_pad_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_inventory_pad_network_protocol.py",
+          "Demos/UEPLyraIntegration/Tests/test_inventory_pad_player_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_join_reset_stress.py",
+          "Demos/UEPLyraIntegration/Tests/test_jump_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_jump_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_jump_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_launcher_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_launcher_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_launcher_network.py",
+          "Demos/UEPLyraIntegration/Tests/test_lazy_pawn_lifecycle_observation.py",
+          "Demos/UEPLyraIntegration/Tests/test_lobby_background_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_lobby_background_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_lobby_background_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_macro_closure_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_macro_closure_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_macro_policies.py",
+          "Demos/UEPLyraIntegration/Tests/test_melee_activation_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_melee_activation_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_melee_activation_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_melee_character_default_control.py",
+          "Demos/UEPLyraIntegration/Tests/test_melee_hit_montage_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_melee_hit_montage_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_melee_replica_readiness.py",
+          "Demos/UEPLyraIntegration/Tests/test_melee_trace_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_melee_trace_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_melee_trace_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_melee_warmup_join_control.py",
+          "Demos/UEPLyraIntegration/Tests/test_menu_buttons_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_menu_buttons_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_menu_buttons_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_menu_layers_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_menu_layers_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_menu_layers_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_menu_travel_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_menu_travel_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_message_widget_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_message_widget_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_migration_acceptance_audit.py",
+          "Demos/UEPLyraIntegration/Tests/test_migration_container.py",
+          "Demos/UEPLyraIntegration/Tests/test_migration_package_plan.py",
+          "Demos/UEPLyraIntegration/Tests/test_migration_status_consistency.py",
+          "Demos/UEPLyraIntegration/Tests/test_music_family_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_music_family_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_music_lifecycle_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_music_lifecycle_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_music_manager_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_music_manager_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_nameplate_components.py",
+          "Demos/UEPLyraIntegration/Tests/test_nameplate_components_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_nameplate_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_nameplate_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_nameplate_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_nameplate_native_bind_observer.py",
+          "Demos/UEPLyraIntegration/Tests/test_nameplate_network_protocol.py",
+          "Demos/UEPLyraIntegration/Tests/test_nameplate_refs.py",
+          "Demos/UEPLyraIntegration/Tests/test_netshooter_ability_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_netshooter_ability_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_netshooter_actor_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_netshooter_actor_log_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_netshooter_actor_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_netshooter_impact_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_netshooter_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_network_bots.py",
+          "Demos/UEPLyraIntegration/Tests/test_network_identity.py",
+          "Demos/UEPLyraIntegration/Tests/test_network_identity_native_source.py",
+          "Demos/UEPLyraIntegration/Tests/test_network_io.py",
+          "Demos/UEPLyraIntegration/Tests/test_network_protocol.py",
+          "Demos/UEPLyraIntegration/Tests/test_network_restart.py",
+          "Demos/UEPLyraIntegration/Tests/test_network_screenshots.py",
+          "Demos/UEPLyraIntegration/Tests/test_network_snapshot_cache.py",
+          "Demos/UEPLyraIntegration/Tests/test_notification_relays_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_notification_relays_network_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_open_menu_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_packaged_discovery_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_physics_field_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_physics_field_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_pooled_widget_lifetime.py",
+          "Demos/UEPLyraIntegration/Tests/test_production_reticle_protocol.py",
+          "Demos/UEPLyraIntegration/Tests/test_quickbar_baseline_epoch.py",
+          "Demos/UEPLyraIntegration/Tests/test_quickbar_protocol.py",
+          "Demos/UEPLyraIntegration/Tests/test_quickbar_slot_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_quickbar_slot_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_quickslot_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_quickslot_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_quickslot_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_reload_magazine_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_reload_magazine_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_reload_magazine_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_reload_replication_barrier.py",
+          "Demos/UEPLyraIntegration/Tests/test_reload_weapon_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_replay_browser_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_replay_browser_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_replay_browser_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_replay_entry_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_replay_runtime_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_replay_runtime_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_replay_runtime_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_respawn_native_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_respawn_protocol.py",
+          "Demos/UEPLyraIntegration/Tests/test_respawn_timer_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_respawn_timer_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_reticle_host_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_reticle_host_protocol.py",
+          "Demos/UEPLyraIntegration/Tests/test_return_before_out_frame.py",
+          "Demos/UEPLyraIntegration/Tests/test_runtime_source_syntax.py",
+          "Demos/UEPLyraIntegration/Tests/test_scoreboard_list_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_scoreboard_list_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_scoreboard_list_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_scoreboard_rows_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_scoreboard_rows_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_scoreboard_style_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_scoreboard_style_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_scoreboard_style_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_scoring_base_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_scoring_base_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_session_browser_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_session_browser_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_session_browser_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_session_button_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_session_button_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_session_button_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_session_entry_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_session_entry_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_session_entry_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_settings_editors_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_settings_editors_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_settings_editors_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_settings_screens_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_settings_screens_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_settings_screens_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_shooter_ai_authoring.py",
+          "Demos/UEPLyraIntegration/Tests/test_shooter_ai_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_shooter_ai_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_shooter_ai_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_shooter_eqs_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_shooter_eqs_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_shooter_eqs_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_small_burst_cue_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_small_burst_cue_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_sparse_map_conversion.py",
+          "Demos/UEPLyraIntegration/Tests/test_spawn_effect_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_spawn_effect_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_spawn_effect_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_spawner_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_spawner_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_spawner_network.py",
+          "Demos/UEPLyraIntegration/Tests/test_spawning_cue_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_spawning_cue_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_stage_safety.py",
+          "Demos/UEPLyraIntegration/Tests/test_startup_login_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_startup_login_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_startup_login_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_tdm_lethal_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_tdm_lethal_network_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_tdm_scoring_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_tdm_scoring_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_team_color_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_team_color_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_teleporter_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_teleporter_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_teleporter_network.py",
+          "Demos/UEPLyraIntegration/Tests/test_traversal_cue_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_traversal_cue_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_ui_experience_preparation_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_ui_experience_preparation_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_ui_experience_preparation_policy.py",
+          "Demos/UEPLyraIntegration/Tests/test_validation_census.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_ability_fire_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_ability_fire_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_ability_fire_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_actor_begin_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_actor_begin_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_actor_fire_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_actor_fire_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_actor_helpers_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_actor_helpers_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_cold_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_cold_probe.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_dispatch_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_dispatch_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_early_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_early_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_effect_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_effect_probe.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_math_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_math_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_network_probe.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_whiz_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_whiz_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_decals_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_decals_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_fire_cue_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_fire_cue_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_fire_cue_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_fire_fx_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_fire_fx_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_hud_graph_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_impacts_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_impacts_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_input.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_instance_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_instance_death_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_instance_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_instance_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_lethal_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_lethal_network_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_network_protocol.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_reticle_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_widget_held_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_widget_held_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_widget_held_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_widget_pressed_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_widget_pressed_mixin.py",
+          "Demos/UEPLyraIntegration/Tests/test_wind_system_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_wind_system_mixin.py",
+          "Validation/Tests/test_incremental_regression.py",
+          "Validation/Tests/test_staged_examples.py",
+          "Validation/Tests/test_subscriptions.py"
+        ],
+        "affected_files": [
+          "Demos/UEPLyraIntegration/Overlay/Content/Scripts/ue_site.py",
+          "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+          "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_packaged_discovery_contract.py",
+          "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_packaged_discovery_profiles.py",
+          "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_packaged_discovery_validation.py",
+          "Demos/UEPLyraIntegration/Tests/test_ability_failure_native.py",
+          "Demos/UEPLyraIntegration/Tests/test_action_touch_network.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_begin_play_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_begin_play_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_death_replication_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_death_replication_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_death_started_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_death_started_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_emote_audio_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_emote_audio_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_enhanced_input_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_enhanced_input_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_equipment_hide_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_equipment_hide_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_health_changed_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_health_changed_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_initial_inventory_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_initial_inventory_natural_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_initial_inventory_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_ready_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_ready_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_wait_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_wait_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_legacy_player_info_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_legacy_player_info_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_lifecycle_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_lifecycle_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_outline_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_outline_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_parts_changed_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_parts_changed_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_possessed_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_possessed_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_quickbar_input_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_quickbar_input_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_ragdoll_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_ragdoll_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_stencil_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_stencil_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_team_cosmetics_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_team_cosmetics_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_team_listener_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_team_listener_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_team_observer_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_team_observer_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_visibility_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_visibility_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_activation_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_local_direction_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_local_direction_standalone_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_rpc_input_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_selector_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_tasks_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_tasks_lifecycle_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_tasks_network_lifecycle_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_callbacks_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_grant_ge_pad_network.py",
+          "Demos/UEPLyraIntegration/Tests/test_heal_ability_network.py",
+          "Demos/UEPLyraIntegration/Tests/test_hud_startup.py",
+          "Demos/UEPLyraIntegration/Tests/test_inventory_pad_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_inventory_pad_network_protocol.py",
+          "Demos/UEPLyraIntegration/Tests/test_launcher_network.py",
+          "Demos/UEPLyraIntegration/Tests/test_melee_activation_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_melee_activation_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_melee_hit_montage_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_migration_package_plan.py",
+          "Demos/UEPLyraIntegration/Tests/test_packaged_discovery_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_spawn_effect_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_spawn_effect_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_spawner_network.py",
+          "Demos/UEPLyraIntegration/Tests/test_team_color_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_teleporter_network.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_instance_death_contract.py",
+          "Demos/UEPLyraIntegration/Tools/generate_packaged_discovery_fixture.py",
+          "Demos/UEPLyraIntegration/Tools/plan_migration_package.py",
+          "Validation/Tests/test_incremental_regression.py"
+        ],
+        "selection_reasons": {
+          "Demos/UEPLyraIntegration/Tests/test_ability_failure_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_ability_failure_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_ability_failure_native.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_ability_failure_protocol.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_ability_progress_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_ability_progress_protocol.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_ability_widget_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_accolade_relay_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_accolade_relay_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_accolade_widgets_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_accolade_widgets_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_action_touch_click_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_action_touch_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_action_touch_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_action_touch_network.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_ads_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_ads_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_ads_network_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_ads_validation_input.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_actor_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_actor_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_actor_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_bomb_base_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_bomb_base_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_bomb_base_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_bomb_visual_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_bomb_visual_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_bomb_visual_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_drop_bomb_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_drop_bomb_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_drop_bomb_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_hud_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_hud_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_hud_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_level_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_level_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_level_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_mode_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_mode_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_mode_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_phases_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_phases_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_phases_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_player_tile_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_player_tile_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_player_tile_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_player_ui_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_player_ui_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_player_ui_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_powerup_stat_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_powerup_stat_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_powerup_stat_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_ready_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_ready_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_arena_ready_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_auto_respawn_activation_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_auto_respawn_activation_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_auto_respawn_events_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_auto_respawn_events_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_auto_respawn_helpers_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_auto_respawn_helpers_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_auto_respawn_lifecycle_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_auto_respawn_listeners_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_auto_respawn_listeners_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_auto_respawn_reset_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_auto_respawn_reset_network_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_autoreload_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_autoreload_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_autoreload_network_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_blueprint_scope.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_bound_action_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_bound_action_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_bound_action_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_begin_play_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_begin_play_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_begin_play_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Tests/test_character_begin_play_contract.py",
+            "depends on Demos/UEPLyraIntegration/Tests/test_character_visibility_network_contract.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_damage_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_damage_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_death_replication_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Tests/test_character_equipment_hide_contract.py",
+            "depends on Demos/UEPLyraIntegration/Tests/test_character_lifecycle_network_contract.py",
+            "depends on Demos/UEPLyraIntegration/Tests/test_character_ragdoll_contract.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_death_replication_fixture.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_death_started_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Tests/test_character_equipment_hide_contract.py",
+            "depends on Demos/UEPLyraIntegration/Tests/test_character_ragdoll_contract.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_death_started_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_death_started_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_emote_audio_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_emote_audio_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_emote_audio_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_enhanced_input_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_enhanced_input_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_enhanced_input_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_equipment_hide_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_equipment_hide_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_equipment_hide_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Tests/test_character_equipment_hide_contract.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_health_changed_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_health_changed_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_health_changed_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_initial_inventory_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_initial_inventory_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_initial_inventory_natural_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Tests/test_character_initial_inventory_contract.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_initial_inventory_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_clear_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_clear_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_clear_network_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_clear_reset_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_ready_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_ready_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_ready_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_wait_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Tests/test_character_inventory_ready_contract.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_wait_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_wait_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_legacy_player_info_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_legacy_player_info_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_legacy_player_info_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_lifecycle_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_lifecycle_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_lifecycle_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_outline_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_outline_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_outline_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_owned_cue_witnesses.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_parts_changed_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_parts_changed_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_parts_changed_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_possessed_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_possessed_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_possessed_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_quickbar_input_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_quickbar_input_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_quickbar_input_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_ragdoll_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_ragdoll_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_ragdoll_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Tests/test_character_ragdoll_contract.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_stencil_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_stencil_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_stencil_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_team_cosmetics_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_team_cosmetics_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_team_cosmetics_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_team_listener_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_team_listener_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_team_listener_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_team_observer_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_team_observer_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_team_observer_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_visibility_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_visibility_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_visibility_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_collect_cue_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_collect_cue_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_collect_cue_lifecycle_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_collect_cue_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_combat_hud_probe.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_combat_hud_protocol.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_control_point_feedback_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_control_point_feedback_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_control_point_helpers_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_control_point_helpers_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_control_point_state_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_control_point_state_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_control_point_widgets_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_control_point_widgets_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_cosmetic_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_cosmetic_network_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_cosmetic_state.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_cosmetics_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_cp_scoring_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_cp_scoring_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_credits_widgets_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_credits_widgets_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_credits_widgets_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_cue_widget_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_cue_widget_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_dash_activation_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_dash_activation_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_dash_control_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_dash_cooldown_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_dash_cooldown_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_dash_local_direction_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_dash_local_direction_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_dash_local_direction_standalone_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_dash_native_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_dash_protocol.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_dash_rpc_input_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_dash_rpc_input_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_dash_selector_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_dash_selector_inheritance_probe.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_dash_selector_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_dash_tasks_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_dash_tasks_lifecycle_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_dash_tasks_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_dash_tasks_network_lifecycle_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_death_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_death_damage.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_death_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_death_network_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_death_observation.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_debug_spread_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_debug_spread_protocol.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_diagnostic_widgets_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_diagnostic_widgets_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_diagnostic_widgets_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_drop_weapon_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_drop_weapon_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_drop_weapon_network_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_editor_experience_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_editor_experience_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_editor_experience_list_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_editor_experience_portal_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_effect_pad_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_effect_pad_network_protocol.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_elimination_feed_relay_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_elimination_feed_relay_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_elimination_score_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_elimination_score_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_elimination_widgets_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_elimination_widgets_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_elimination_widgets_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_emote_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_emote_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_emote_network_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_experience_list_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_experience_list_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_experience_list_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_experience_screen_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_experience_screen_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_experience_screen_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_experience_tile_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_experience_tile_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_experience_tile_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_actions_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_actions_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_actions_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_beginplay_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_beginplay_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_beginplay_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_behavior_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_behavior_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_behavior_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_callbacks_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Tests/test_character_health_changed_contract.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_callbacks_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_callbacks_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_character_cdo.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_grid_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_grid_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_grid_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_helpers_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_helpers_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_helpers_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_init_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_init_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_init_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_input_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_input_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_input_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_interact_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_interact_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_interact_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_item_list_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_item_list_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_item_list_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_marker_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_marker_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_marker_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_screens_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_screens_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_screens_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_shell_review.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_shells_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_shells_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_state_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_state_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_state_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_style_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_style_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_style_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_toast_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_toast_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_toast_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_footstep_animation_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_footstep_animation_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_footstep_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_footstep_locomotion_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_footstep_locomotion_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_footstep_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_footstep_visual_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_footstep_visual_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_foundation_buttons_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_foundation_buttons_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_foundation_buttons_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_foundation_widgets_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_foundation_widgets_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_foundation_widgets_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_frontend_logout_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_frontend_logout_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_frontend_logout_log_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_frontend_menu_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_frontend_menu_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_frontend_menu_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_game_phases_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_game_phases_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_general_audio_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_general_audio_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_grant_ge_pad_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_grant_ge_pad_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_grant_ge_pad_network.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_grenade_actions_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_grenade_actions_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_grenade_activation_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_grenade_activation_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_grenade_activation_network_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_grenade_begin_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_grenade_begin_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_grenade_cleanup_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_grenade_cleanup_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_grenade_detonate_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_grenade_detonate_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_grenade_detonate_network_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_grenade_flight_network_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_grenade_headless_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_grenade_hit_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_grenade_hit_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_grenade_rpc_log_evidence.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_grenade_vfx_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_grenade_vfx_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_grenade_widget_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_grenade_widget_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_grenade_widget_network_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_heal_ability_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_heal_ability_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_heal_ability_network.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hero_burst_cue_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hero_burst_cue_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_death_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_death_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_death_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_equipment_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_equipment_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_equipment_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_motion_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_motion_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_motion_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_ragdoll_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_ragdoll_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_ragdoll_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_stencil_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_stencil_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hero_default_stencil_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hero_heal_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hero_heal_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hero_heal_network_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hero_parent_test_profiles.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_host_session_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_host_session_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_host_session_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hud_ammo.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hud_fire_button.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hud_presenter.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hud_shutdown.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hud_startup.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hud_visuals.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_interaction_producer_reports.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_inventory_pad_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_inventory_pad_fixture.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_inventory_pad_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_inventory_pad_network_protocol.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_inventory_pad_player_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_join_reset_stress.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_jump_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_jump_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_jump_network_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_launcher_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_launcher_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_launcher_network.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_lazy_pawn_lifecycle_observation.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_lobby_background_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_lobby_background_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_lobby_background_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_macro_closure_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_macro_closure_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_macro_policies.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_melee_activation_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_melee_activation_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_melee_activation_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_melee_character_default_control.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_melee_hit_montage_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_melee_hit_montage_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_melee_replica_readiness.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_melee_trace_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_melee_trace_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_melee_trace_network_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_melee_warmup_join_control.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_menu_buttons_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_menu_buttons_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_menu_buttons_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_menu_layers_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_menu_layers_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_menu_layers_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_menu_travel_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_menu_travel_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_message_widget_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_message_widget_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_migration_acceptance_audit.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_migration_container.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_migration_package_plan.py": [
+            "depends on Demos/UEPLyraIntegration/Tools/plan_migration_package.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_migration_status_consistency.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_music_family_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_music_family_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_music_lifecycle_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_music_lifecycle_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_music_manager_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_music_manager_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_nameplate_components.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_nameplate_components_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_nameplate_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_nameplate_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_nameplate_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_nameplate_native_bind_observer.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_nameplate_network_protocol.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_nameplate_refs.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_netshooter_ability_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_netshooter_ability_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_netshooter_actor_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_netshooter_actor_log_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_netshooter_actor_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_netshooter_impact_network_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_netshooter_network_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_network_bots.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_network_identity.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_network_identity_native_source.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_network_io.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_network_protocol.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_network_restart.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_network_screenshots.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_network_snapshot_cache.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_notification_relays_network_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_notification_relays_network_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_open_menu_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_packaged_discovery_contract.py": [
+            "changed file",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_physics_field_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_physics_field_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_pooled_widget_lifetime.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_production_reticle_protocol.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_quickbar_baseline_epoch.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_quickbar_protocol.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_quickbar_slot_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_quickbar_slot_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_quickslot_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_quickslot_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_quickslot_network_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_reload_magazine_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_reload_magazine_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_reload_magazine_network_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_reload_replication_barrier.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_reload_weapon_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_replay_browser_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_replay_browser_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_replay_browser_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_replay_entry_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_replay_runtime_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_replay_runtime_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_replay_runtime_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_respawn_native_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_respawn_protocol.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_respawn_timer_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_respawn_timer_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_reticle_host_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_reticle_host_protocol.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_return_before_out_frame.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_runtime_source_syntax.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_scoreboard_list_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_scoreboard_list_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_scoreboard_list_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_scoreboard_rows_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_scoreboard_rows_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_scoreboard_style_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_scoreboard_style_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_scoreboard_style_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_scoring_base_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_scoring_base_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_session_browser_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_session_browser_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_session_browser_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_session_button_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_session_button_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_session_button_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_session_entry_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_session_entry_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_session_entry_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_settings_editors_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_settings_editors_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_settings_editors_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_settings_screens_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_settings_screens_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_settings_screens_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_shooter_ai_authoring.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_shooter_ai_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_shooter_ai_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_shooter_ai_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_shooter_eqs_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_shooter_eqs_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_shooter_eqs_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_small_burst_cue_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_small_burst_cue_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_sparse_map_conversion.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_spawn_effect_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_spawn_effect_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_spawn_effect_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_spawner_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_spawner_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_spawner_network.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_spawning_cue_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_spawning_cue_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_stage_safety.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_startup_login_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_startup_login_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_startup_login_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_tdm_lethal_network_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_tdm_lethal_network_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_tdm_scoring_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_tdm_scoring_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_team_color_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_team_color_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_teleporter_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_teleporter_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_teleporter_network.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_traversal_cue_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_traversal_cue_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_ui_experience_preparation_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_ui_experience_preparation_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_ui_experience_preparation_policy.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_validation_census.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_ability_fire_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_ability_fire_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_ability_fire_network_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_actor_begin_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_actor_begin_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_actor_fire_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_actor_fire_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_actor_helpers_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_actor_helpers_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_cold_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_cold_probe.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_dispatch_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_dispatch_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_early_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_early_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_effect_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_effect_probe.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_math_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_math_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_network_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_network_probe.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_whiz_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_audio_whiz_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_decals_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_decals_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_fire_cue_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_fire_cue_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_fire_cue_network_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_fire_fx_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_fire_fx_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_hud_graph_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_impacts_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_impacts_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_input.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_instance_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_instance_death_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_instance_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_instance_network_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_lethal_network_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_lethal_network_fixture.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_network_protocol.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_reticle_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_widget_held_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_widget_held_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_widget_held_network_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_widget_pressed_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_widget_pressed_mixin.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_wind_system_contract.py": [
+            "explicit full regression"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_wind_system_mixin.py": [
+            "explicit full regression"
+          ],
+          "Validation/Tests/test_incremental_regression.py": [
+            "depends on Demos/README.md",
+            "depends on Demos/UEPLyraIntegration/README.md",
+            "depends on README.md",
+            "explicit full regression"
+          ],
+          "Validation/Tests/test_staged_examples.py": [
+            "explicit full regression"
+          ],
+          "Validation/Tests/test_subscriptions.py": [
+            "explicit full regression"
+          ]
+        },
+        "unmapped_changed_files": [
+          ".gitmodules",
+          "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_packaged_discovery_profiles.py",
+          "Demos/UEPLyraIntegration/Tools/generate_packaged_discovery_fixture.py",
+          "Source/UnrealEnginePython/Private/UEPyMixin.cpp",
+          "Validation/Run-UEP58CurrentLyraGameBuild.ps1",
+          "Validation/Run-UEP58MigrationCookPackage.ps1",
+          "Validation/Run-UEP58PackagedFootstepVisualValidation.ps1"
+        ],
+        "unparsed_unaffected_files": [],
+        "dependency_analysis": "local imports including inheritance, literal module names and file references; dynamic dependencies require explicit patterns/native lanes",
+        "full_regression_requested": true
+      },
+      "failed_cases": []
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/shared-sdk-host01.json"
+  },
+  "native_cpp_fix_only": true,
+  "engine_source_changes": false,
+  "official_project_changes": false,
+  "original_scope": [
+    246,
+    182,
+    63,
+    11
+  ],
+  "original_candidate_rows_unchanged": true,
+  "game_incremental_actions": 3,
+  "editor_plugin_module_actions": 179,
+  "original_candidates_in_actual_cooked_containers": 246,
+  "overlay_assets_in_actual_cooked_containers": 460,
+  "runtime_maps_in_actual_cooked_containers": 12,
+  "current_project_scripts_in_archive": 806,
+  "current_core_scripts_in_archive": 2,
+  "fresh_process_modes": [
+    "Editor",
+    "PackagedGame"
+  ],
+  "native_fixture_metaclasses": [
+    "BlueprintGeneratedClass",
+    "WidgetBlueprintGeneratedClass"
+  ],
+  "physical_input_tested": false,
+  "full_network_acceptance": false,
+  "all_migration_runtime_behaviors_tested": false,
+  "controlled_reload_epoch_runtime_tested": false,
+  "full_acceptance": false,
+  "supplemental_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/Build01/timeout-review.json",
+      "sha256": "81D647D3C26BF6A9664E4F04A2A057AB8E0CF5CBF5E3311B50F9696BF1E0339E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/Build01/driver-provenance.json",
+      "sha256": "88DE14A07FC6D5FA903164C67A741CBEC4EE2B4951BB5256F786B3A4782B7805"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/Build02/summary.json",
+      "sha256": "5AEE50749F80C50F706D0045114EB6D22CFDA4755A25B944D345C318F85BAD20"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/Build02/build.log",
+      "sha256": "53122EF6DCDD26A390C496BCC5932ACA301939ED92C2E9A451D26C0AEAE1AD25"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/BeforeDiscoveryFix/sha256.json",
+      "sha256": "559A3846662BDDD81210EE9F2F22F4CE40C51303FE3915E16D928918419AA3B8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/EditorPlan01/actions.json",
+      "sha256": "B5F171A494981B21F68E00AA32F46268EAB3E349E0EF1E953E9160C7018627EB"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/EditorPlan02FullGraph/summary.json",
+      "sha256": "2B7CA9ED2201E1379470E6861AD9561EC31BEE8D89C485020901878690EAE8A8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/DiscoveryEditor01/summary.json",
+      "sha256": "B1B82CC091F6BFFB46BD1F543C3D15540A5ECB64D1B29B2C77D3EF0B715EB5FB"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/DiscoveryEditor01/result.json",
+      "sha256": "48C2D628C31AC767AEC7D2F4CF9ADE29289437F80F621EE966154845BFA4EF61"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/DiscoveryEditor02Culture/summary.json",
+      "sha256": "BA27E07E99C84BCC01D9EAA17732295CC28F5B5D6B5C326776EC7836FB5158FD"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/Cook01/package-inventory.json",
+      "sha256": "5117D801C8254387BB85DF68A2CF3D46056F9CD9B157FB243CB5471C7D80E118"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/Cook01/containers.csv",
+      "sha256": "4E997220EC101451287EF7CC837820DAF16D66EC5F2DF4EBE72303699323643B"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/DiscoveryAuthor01/assets.json",
+      "sha256": "5BF04E63C6D63EE50F2C8875938A564FCF9B23747C08E5C17E1113EB87487A7E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/DiscoveryEditor03Reusable/result.json",
+      "sha256": "48C2D628C31AC767AEC7D2F4CF9ADE29289437F80F621EE966154845BFA4EF61"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/DiscoveryPackaged02Reusable/result.json",
+      "sha256": "48C2D628C31AC767AEC7D2F4CF9ADE29289437F80F621EE966154845BFA4EF61"
+    }
+  ],
+  "engine_runtime_callback_reference_sources": [
+    {
+      "path": "F:/UnrealEngine/Engine/Source/Runtime/CoreUObject/Public/UObject/UObjectGlobals.h",
+      "sha256": "73E319FB87014C16FF089CA2743ECFC251830C5EAD9DC7F70EFEEDE39C305AA1"
+    },
+    {
+      "path": "F:/UnrealEngine/Engine/Source/Runtime/CoreUObject/Private/Serialization/AsyncLoading2.cpp",
+      "sha256": "0D43E75FF465E36000A72AEAF8E147E71CB0592B2915A1A45C100876CEF5D37E"
+    },
+    {
+      "path": "F:/UnrealEngine/Engine/Source/Runtime/CoreUObject/Private/UObject/UObjectGlobals.cpp",
+      "sha256": "33B2998DD0FBD6BEDEA64DE67122AE818BD063233A3E3A4B819FEE6496E84DD0"
+    }
+  ]
+}

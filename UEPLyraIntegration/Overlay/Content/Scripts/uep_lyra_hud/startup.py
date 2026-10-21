@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(a.startswith('-UEPPackagedDiscoveryResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):
+        return 'uep_packaged_discovery_validation'
     if any(a.startswith("-UEPWeaponLethalNetworkResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):
         return "uep_lyra_weapons.weapon_lethal_network_validation"
     if any(a.startswith("-UEPTDMNetworkResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):

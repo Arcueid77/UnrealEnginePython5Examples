@@ -31,6 +31,33 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded prerequisite209 (2026-10-21),safe current cooked discovery:**
+The current Game build exposed the known unsafe/deprecated non-Editor package
+callback. The native UEP implementation now subscribes to completed hotfixable
+class notifications,registers native UClass metatypes with the Engine refcounted
+API,refreshes after module loads,and releases its own registrations on shutdown.
+Weak deferred callbacks reject old discovery generations. Editor retains its
+completed-package callback. Engine and official Lyra sources remain unchanged;
+native SDK capabilities remain C++,with no gameplay Blueprint business changed.
+The fixed Game target passes3 actual actions/process0/zero compiler diagnostics
+in56s. The Editor plugin's reviewed179-action refresh passes in413s,all writes
+inside the staged plugin. The first cold Game timeout and pre-fix C4996 build
+failure remain preserved;neither is relabeled as accepted.
+A fresh325s cook/archive passes UAT0 and independent container inspection:
+all246 original candidates,460 Overlay assets and12 runtime maps are present.
+All806 project and2 core Python scripts match current sources. The old package
+is preserved. Fresh persisted Actor,imported companion Actor and Widget classes
+are automatically discovered in both Editor and actual cooked Game processes,
+without explicit registration. Per-instance Python/fallback calls,precompiled
+Blueprint caller ownership,unchanged UObject types,original restoration and
+cleanup pass process0/independentgate0/strict ordered shutdown. The first Editor
+run's default-culture smoke errors are preserved;the consistent culture=en run
+passes without ignoring log errors. Shared-SDK5255 full host checks pass;the
+isolated staged full snapshot gate follows. This is bounded SDK/package proof,
+not every candidate's gameplay,async experience/reload/network/pixel/audio or
+full-version acceptance. The unexecuted packaged footstep visual driver stays
+outside this commit. Verified work is committed and pushed Demos first,then core.
+
 **Completed bounded audit correction208 (2026-10-21),exact version ownership:**
 The acceptance audit now compares each candidate's version with the original
 inventory,after preserving all246 exact paths/order. Previously,two cross-version
