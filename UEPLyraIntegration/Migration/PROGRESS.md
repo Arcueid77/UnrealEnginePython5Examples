@@ -1,4 +1,4 @@
-﻿# Runtime BP migration work checkpoint
+# Runtime BP migration work checkpoint
 
 Current branch in core and Examples: `dev/lyra-blueprint-python`. Version work
 includes **0.10.0 closeout,0.11.0 hero-ability,0.12.0 FX/audio and0.13.0 UI pilots**,not a
@@ -30,6 +30,25 @@ explicit user instruction supersedes the earlier local-only/no-push workflow.
 Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
+
+**Completed bounded batch190 (2026-10-21),Arena PlayerState UI component:**
+B_PlayerUIComponent BeginPlay now registers its pure-cast LyraPlayerState owner
+as global TopDownArena.ExtensionPoint.Players Data at priority-1;EndPlay
+unconditionally unregisters the stored handle. All nine original nodes/GUIDs,
+full CDO and event ABIs remain;only five interface nodes and a2-method Profile
+family are added. Native UIExtension retains the opaque handle pointer after
+unregistration;registry callbacks and re-enumeration prove actual membership.
+Original Arena baseline and both Profiles match one natural PlayerState
+registration plus two test-owned native component BeginPlay/EndPlay lifecycles.
+Removing one preserves the other;removing both restores original registry state.
+No lifecycle callback replay or registry replacement. Stage-only typed native
+delegate adapter has no gameplay decisions;its roots/points and selector restore.
+Three native processes and independent gates exit0 with ordered shutdown logs.
+Ten focused checks and five launch guards pass. Baseline01's failed observer
+output-tuple decode is retained;reflected output flags fix it,without changing
+production behavior. Ledger190 records bounded proof. Remaining17 Arena and
+all earlier natural-ingress/network/pixel/audio/package/version gates stay open.
+Each accepted batch is committed and pushed in Demos first,then core.
 
 **Completed bounded batch189 (2026-10-21),Arena GetReady animation and Cue:**
 Original20 Arena candidates now have a native read-only graph/CDO/ABI inventory.

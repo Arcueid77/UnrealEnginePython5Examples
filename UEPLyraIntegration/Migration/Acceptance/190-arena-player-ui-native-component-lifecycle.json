@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "batch": "190-arena-player-ui-native-component-lifecycle",
+  "scope": "B_PlayerUIComponent two-method lifecycle; actual Arena original baseline and both Profiles match native registration/removal callbacks and independent owned component destruction. Original nine nodes,CDO,ABI,GUIDs retained. Remaining17 Arena plus all broader original gates remain open.",
+  "recorded_utc": "2026-10-21T02:43:03.2066048Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "7e7016d5b7a7e063a95e8a8119bde3d4feaa9ad8",
+  "examples_parent_commit": "ce46c59c348c2213696180561a1561578c93d334",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-player-ui/Baseline02",
+      "summary_sha256": "A6B1E84A325080D9EE0F79340A2480FF916359ED4B1FD0DA1F9F9B60B6F4F54F",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2371,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "player-ui.json",
+          "sha256": "4E11EDCF5A00B311560814707F343DACA65145A8C1E2C3516137F4A2A0F6077F"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-player-ui/Assets01",
+      "summary_sha256": "F0695EA477760F42913C1B910D514BCB13172714C21B4891938FBAF952D0FAF1",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2368,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "assets.json",
+          "sha256": "C74F557C5512A7F770B23BBD6D8DA6CBE8F09E5AB4ECFE7B9CDFFCEC5F080026"
+        },
+        {
+          "file": "arena-player-ui-preservation.json",
+          "sha256": "542C4852C77E8A8BB2D1D9BB99D0D63A16665B4B86259E1610B3B9CD8E3C4DA6"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-player-ui/Python01",
+      "summary_sha256": "B3B95B0292B40370C26DA973FCBC57760C6E59B4037FF63E0321EA6905D46F7E",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2375,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "player-ui.json",
+          "sha256": "A527B2F3E30E2F48EC8AD48C806A1B833163F1BAFD8EFDB2787669F0A035C9BE"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-player-ui/Fallback01",
+      "summary_sha256": "AEA6BB056D5FF6C98764C6355AB3C992FE746B52D8F198AA50E080EC04413DC5",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2375,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "player-ui.json",
+          "sha256": "B1D0D6499EA18E6FCD3F20FD8A93BA194DFBC85B86FFA3A3FF79643498BDA9F8"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "native_input_path": "Validation/Run-UEP58ArenaPlayerUIValidation.ps1",
+      "sha256": "D8EFAF6C0769A15571A11863F88CCD9CF899754C80217F8F53F52FD8AC1E9F45",
+      "path": "Validation/Run-UEP58ArenaPlayerUIValidation.ps1",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "EA91383BE512B4C6373745D21250470148CD88055BE71E60C1434A6D57D70921",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_arena_player_ui_assets.py",
+      "sha256": "2A4FE9DE2B07B7DFB68230E6F488514CD3853183E931B58B37F9C330B37627A9",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_arena_player_ui_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_arena_player_ui_probe.py",
+      "sha256": "67E404BBC7E94F7D76F99C67CC5065B12A7CB675A0B3852E1BCE7098F6824710",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_arena_player_ui_probe.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "F7AE37E9974759CDE1C6297C3A909B850AB2E6B3EDF659B09C36F6E43DCA0769",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "1BF96074AC17AC64ECED1D21EB41B391C7D3AE8F297736D2E54B2912DA78BCDF",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/arena_player_ui_mixin.py",
+      "sha256": "612495C9D37EE716129C1A8CD783CAA9FB9AFE4FD5FE43AD4D975A92F50FCDEC",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/arena_player_ui_mixin.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/arena_player_ui_validation.py",
+      "sha256": "FB241E97840F0DC6D3119FB09679B650EE96379DDB75AC23C361C76508B27502",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/arena_player_ui_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/arena_player_ui_contract.py",
+      "sha256": "D5AAD52240468D64E2D455CE156834AF6182B9EF3ED472290E09F107607768C7",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/arena_player_ui_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "sha256": "53B1DE942FE517B4F4F2695DE9DF2E03B6FBF937CCCB26F43D02904DF9269733",
+    "path": ".build/LyraValidation/BlueprintPython/20261021-arena-player-ui/host-focused01.json",
+    "result": {
+      "status": "passed",
+      "tests_run": 10,
+      "failures": 0,
+      "errors": 0,
+      "runtime_acceptance": false
+    }
+  },
+  "supplemental_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-player-ui/native-comparison01.json",
+      "sha256": "1A8050D549386737BB50097D46DEDCB6BE31DB12F6EB442949CDE8C4831673F6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-player-ui/guards01.json",
+      "sha256": "BF6F5670EDC4BD2B82FCBA5073F6BFC6F06C5E5170ABB610E59E6D716E48A0CC"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-player-ui/Probe01/probe.json",
+      "sha256": "96F3C98F7917101D7BED6D35FCC041756DBA8DFB7BFFD134CE3E8E852384F863"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-player-ui/Probe01/process.json",
+      "sha256": "0C2C25B8249E7F28E7EC734C73B18B31D48EBB4B4E396180379988F93D756642"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-player-ui/Baseline01/summary.json",
+      "sha256": "8EED30519CA7C8F43C9CAC9C0442510844D25B10B1C65F89766441A9092EE6C3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-player-ui/Baseline01/player-ui.json",
+      "sha256": "94E3D211794EF3EEF8E7A135FC74B69118A29F4769DAD2662667C40AA5890569"
+    }
+  ]
+}

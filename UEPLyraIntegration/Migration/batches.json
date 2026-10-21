@@ -1,4 +1,4 @@
-﻿{
+{
   "schema_version": 1,
   "audit_date": "2026-10-12",
   "scope_review_date": "2026-10-13",
@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 191,
+    "bounded_evidence_ledgers": 192,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -11867,8 +11867,16 @@
       "group": "TopDownArena 玩法",
       "method_candidates": 2,
       "business_nodes": 7,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Original BeginPlay registers pure_cast<LyraPlayerState>(GetOwner()) as global TopDownArena.ExtensionPoint.Players Data at priority-1; EndPlay unconditionally unregisters and retains opaque handle. All original nine nodes/GUIDs,full CDO and both event ABIs retained; only five interface nodes added. Actual Arena original baseline and both Profiles match native callback payloads and registry membership. Two owned components naturally BeginPlay and EndPlay through native creation/destruction; independent removals preserve original registrations. No callback replay or registry replacement. Broader pixels/network/package/version acceptance remains open.",
+      "status": "bounded_arena_player_ui_component_python_native_begin_end_registry_callbacks_verified_broader_ui_acceptance_open",
+      "implemented_helpers": [
+        "ReceiveBeginPlay",
+        "ReceiveEndPlay"
+      ],
+      "whole_component_business_migrated": true,
+      "evidence_run": "20261021-arena-player-ui/Python01",
+      "evidence_ledger": "190-arena-player-ui-native-component-lifecycle.json",
+      "pixels_tested": false
     },
     {
       "path": "/TopDownArena/UserInterface/Player/W_PlayerTile.W_PlayerTile",
@@ -13262,5 +13270,48 @@
       "Assets01 unconnected delegate output is not parent event payload"
     ],
     "next": "Continue remaining18 Arena candidates and all previous bounded natural ingress/network/pixel/package/version requirements; no full goal completion implied."
+  },
+  "arena_player_ui_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_original_arena_baseline_and_both_component_lifecycle_profiles_native_registry_verified_broader_acceptance_open",
+    "evidence_ledger": "190-arena-player-ui-native-component-lifecycle.json",
+    "owner": "uep_lyra_hud.arena_player_ui_mixin",
+    "native_original_baseline": "20261021-arena-player-ui/Baseline02",
+    "native_asset_authoring": "20261021-arena-player-ui/Assets01",
+    "native_runtime_runs": [
+      "20261021-arena-player-ui/Python01",
+      "20261021-arena-player-ui/Fallback01"
+    ],
+    "actual_map": "/TopDownArena/Maps/L_TopDown_LocalMultiplayer",
+    "method_counts": {
+      "Python": 2,
+      "BlueprintFallback": 2
+    },
+    "original_cdo_abis_nine_nodes_guids_preserved": true,
+    "new_interface_nodes": 5,
+    "new_business_nodes": 0,
+    "native_extension_point_delegate_observer": true,
+    "natural_playerstate_registration_observed": true,
+    "test_owned_native_component_lifecycles_per_mode": 2,
+    "native_added_removed_callbacks_per_mode": 4,
+    "global_context": null,
+    "priority": -1,
+    "handle_pointer_retained_after_unregister": true,
+    "registry_membership_restored": true,
+    "whole_component_business_migrated": true,
+    "whole_arena_business_migrated": false,
+    "remaining_unaccepted_arena_candidates": 17,
+    "profile_and_owned_roots_restored": true,
+    "focused_host_checks": 10,
+    "boundary_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "full_acceptance": false,
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "preserved_failed_attempts": [
+      "Baseline01 observer Install tuple chose const-ref AllowedDataClasses instead of Handle; corrected using reflected parameter flags; no production lifecycle bug"
+    ],
+    "next": "Continue remaining17 Arena candidates and every earlier bounded natural-ingress/network/pixel/audio/package/version requirement; batch acceptance does not finish the full goal."
   }
 }
