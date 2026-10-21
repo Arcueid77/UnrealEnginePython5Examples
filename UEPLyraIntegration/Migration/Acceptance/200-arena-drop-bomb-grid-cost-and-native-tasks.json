@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "batch": "200",
+  "scope": "Arena drop ability original grid, occupancy tags, native cost and montage/spawn task lifecycle; all full migration acceptance gates remain open",
+  "recorded_utc": "2026-10-21T07:02:44.6691367Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "7c53969308646685d994c26d531cc2a8ddc5f4b4",
+  "examples_parent_commit": "6d48a9bf17088d320358b2da7f3c7bc2c106df2f",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-drop-bomb/Assets01",
+      "summary_sha256": "A4383A0F4B50DC6A4E37555F5877A215FDB8D71ACDCA4EDD6E9CDC583E53BE6C",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2431,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "assets.json",
+          "sha256": "36EED4E09E4583BB4445AD6FC0E2F1BE736EDCF55D6DFA31754794B59B99B12A"
+        },
+        {
+          "file": "arena-drop-bomb-preservation.json",
+          "sha256": "C772513CA1C40A134F1140C3B5FE4CE43A2EA45ED8B5EC244680FBA7D6C60344"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-drop-bomb/Baseline02",
+      "summary_sha256": "23F2E4196BFCDD6BBC5B91E873CE2EB6AEBB3B7E79D537E1AE0B8AD6012540AD",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2437,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "drop-bomb.json",
+          "sha256": "72426AB66B420B1ECC190455626EFD07EFBFF30BCD9D39D307EFBCBA094A0342"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-drop-bomb/Python01",
+      "summary_sha256": "018C8D6AAAB64844234ADE75392F4FC67B9C23FF2F21B062A42B1F5F76E2DF6C",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2441,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "drop-bomb.json",
+          "sha256": "04EF42F0E36A15D59E9FDA4E68D7564AA2A1FFE5B4FB3CD2B05F4AB01D959E3A"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-drop-bomb/Fallback01",
+      "summary_sha256": "3E2EB98D1758B2DCF561EF274D036827158D033950B47C97119F8AD42AF6A36D",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2441,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "drop-bomb.json",
+          "sha256": "2EB2C4B435E50660BDAE0699A67FDDDF108C1E1F50C47312F20C44B5080183A5"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "4731BF85BF6FA96D6360331F55FFE9CB6543807DE62AD5C930046C3FF2C60982",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58ArenaDropBombValidation.ps1",
+      "sha256": "D2A5CB49A0DA692FF0D58806F655EBA4BE3551F6058B4654CF1C81F658604700",
+      "path": "Validation/Run-UEP58ArenaDropBombValidation.ps1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "FE12C4D55534ACEFB067ED791A38B51AEA4168C85A9C5CC8FD6D67A291447708",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_arena_drop_bomb_assets.py",
+      "sha256": "929318A3BE54D134766D2D7B91EBBAB50B475E5CF23D854694C936559B0BCAD7",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_arena_drop_bomb_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_arena_drop_bomb_probe.py",
+      "sha256": "8DDEE7DC6B3DFF0F5CD6C2032ED51F062C38F6568497680C05B1F68533FFF476",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_arena_drop_bomb_probe.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/arena_drop_bomb_mixin.py",
+      "sha256": "07C6711E29D38AAE8E9C0A8B0FFC4846F95B71F00550E6092C423B8075A05369",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/arena_drop_bomb_mixin.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/arena_drop_bomb_validation.py",
+      "sha256": "298B81F09C10C489D5C5E6FC18787C8C111CF16691EAA46306F1C8A63FF4EF5B",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/arena_drop_bomb_validation.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/arena_drop_bomb_contract.py",
+      "sha256": "B1E4B12BF0B5068777467B39D60ECA7EE3E71140371563DE485123EBE6E48C35",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/arena_drop_bomb_contract.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "C608684D89C90D3D35FD64A0283CFF77B4AB1626EDDC4EA80986546BD5C59BBE",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    }
+  ],
+  "host_report": {
+    "result": {
+      "status": "passed",
+      "tests_run": 17,
+      "runtime_acceptance": false,
+      "full_regression": false
+    },
+    "sha256": "4F0E72A6C266BD5623C9C1492A284336D8ACAFD8281D74875F749626F0BD8E36",
+    "path": ".build/LyraValidation/BlueprintPython/20261021-arena-drop-bomb/host-focused01.json"
+  },
+  "supplemental_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-drop-bomb/native-comparison01.json",
+      "sha256": "91CB88FFCCFF8172BF6A3BF31E2A3D2B9940F90959976E4CC035AC1D6FE78D57"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-drop-bomb/guards01.json",
+      "sha256": "47959123F2934BA0E0F1902BCD5849933B09CD1F820F4096737E519E8D2F3903"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-drop-bomb/host-focused01.json",
+      "sha256": "4F0E72A6C266BD5623C9C1492A284336D8ACAFD8281D74875F749626F0BD8E36"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-drop-bomb/Probe02/probe.json",
+      "sha256": "542F65BEB0FEB6FA8CDA8EADD6787BDCF64F4C16019D2F54C38366D21DCEAD46"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-drop-bomb/Probe02/process.json",
+      "sha256": "DBA7AAA7CA3D1978E71D416DD8CD860F9A6E19935A5901C85B9545B09362355E"
+    }
+  ]
+}

@@ -31,6 +31,31 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded batch200 (2026-10-21),Arena drop-bomb ability:**
+Python owns Z0/native100-grid snapping,native32-radius dynamic-bomb occupancy,
+original failure tags,commit/authority decisions and spawn terminal ends.
+Original GAS entry creates the native montage task;Python continues from its
+then output. The original native spawn task/GUID/class/Instigator/defaults and
+both terminal delegates remain. Original25 nodes/GUIDs,full CDO/GAS ABI/graphs,
+cost GE,bStopWhenAbilityEnds=false,disconnected0.2 Delay and unconnected remote
+branch remain;five interface/twelve native transport nodes are added. Original
+baseline and both Profiles match six native positive/negative/half-tie grid
+cases,exact free/occupied tags,two real local-player ASC activations,cost1->0,
+native spawn/end,montage continuing after ability end,cost and occupancy
+denials,and natural bomb fuse/destruction/refund. A native increment GE supplies
+one controlled test token to separate occupancy denial from empty cost.
+Probe01 correctly caught the engine's non-BlueprintCallable CanActivate event
+boundary;Probe02 uses the callable location probe,native query reflection and
+actual ASC activation requests. Baseline01 caught an immovable test observer;
+Baseline02 changes only that fixture's mobility. Strict logs/process/gate exits,
+17 focused checks and five launch guards pass. Ledger200 records bounded proof.
+All246 original candidate rows now have bounded implementation evidence;this
+does not complete migration acceptance. Every earlier natural-ingress/network/
+input/pixel/audio/package/version requirement,plus unrun native spawn-failure
+and commit-race failure paths,still needs its own authoritative evidence.
+Keep migration_complete=false. Accepted work is committed and pushed Demos
+first,then core.
+
 **Completed bounded batch199 (2026-10-21),Arena base bomb:**
 Python owns collision classification,range snapshot,bonus decisions,propagation,
 repnotify and lifecycle decisions through thirteen methods per Profile. Original

@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 201,
+    "bounded_evidence_ledgers": 202,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -11784,8 +11784,18 @@
       "group": "TopDownArena 玩法",
       "method_candidates": 3,
       "business_nodes": 19,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Python owns native grid snapping with Z0, native radius32 Dynamic-object SphereOverlapActors filtered to B_Bomb_Base, original occupied-cell failure tag, commit success/failure and authority decision, and both native spawn terminal ends. K2_CanActivateAbility retains ActorInfo/Handle ABI and returns named ReturnValue/RelevantTags using supported native weak-object fields. Original GAS activation event creates the native montage task; Python runs after its then output, and original native SpawnActor task/GUID/class/Instigator/rotation/authority defaults and both delegates remain. bStopWhenAbilityEnds=false, original cost GE, native failure tag and original25 nodes/GUIDs/CDO/GAS ABI/graphs remain; five interface/twelve native transport nodes added. Disconnected0.2 Delay and unconnected remote path remain unconnected. Original baseline and both Profiles match six positive/negative/half-tie grid cases, exact failure tags, two real local-player ASC activations, native cost1->0, task spawn/end, montage continuing after ability end, cost denial, occupied-cell denial, natural bomb fuse/destruction/refund. A native increment GE supplies one controlled test token to isolate occupancy from cost. Actual keyboard/network/pixel/audio/package/version, native spawn-failure and commit-race failure remain unverified.",
+      "status": "bounded_arena_drop_bomb_python_native_grid_occupancy_cost_montage_and_spawn_task_verified_broader_acceptance_open",
+      "implemented_helpers": [
+        "GetBombSpawnLocation",
+        "K2_CanActivateAbility",
+        "UEPArenaDropBombAfterMontage",
+        "UEPArenaDropBombAfterSpawn"
+      ],
+      "whole_ability_business_migrated": true,
+      "evidence_run": "20261021-arena-drop-bomb/Python01",
+      "evidence_ledger": "200-arena-drop-bomb-grid-cost-and-native-tasks.json",
+      "pixels_tested": false
     },
     {
       "path": "/TopDownArena/Game/GA_ArenaHero_Death.GA_ArenaHero_Death",
@@ -13950,5 +13960,58 @@
       "Assets01 preserved all original fingerprints but failed native compile because editor automatically copied the first return signature before a duplicate output pin was added to the second cosmetic result. Assets02 reuses the copied signature; all original preservation gates pass."
     ],
     "next": "Continue GA_DropBomb and every earlier bounded natural-ingress/network/input/pixel/audio/package/version requirement. Full migration remains open."
+  },
+  "arena_drop_bomb_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_original_drop_ability_and_both_profiles_native_grid_occupancy_cost_and_task_spawn_verified_broader_acceptance_open",
+    "evidence_ledger": "200-arena-drop-bomb-grid-cost-and-native-tasks.json",
+    "owner": "uep_lyra_abilities.arena_drop_bomb_mixin",
+    "native_original_baseline": "20261021-arena-drop-bomb/Baseline02",
+    "native_asset_authoring": "20261021-arena-drop-bomb/Assets01",
+    "native_runtime_runs": [
+      "20261021-arena-drop-bomb/Python01",
+      "20261021-arena-drop-bomb/Fallback01"
+    ],
+    "actual_map": "/TopDownArena/Maps/L_TopDown_LocalMultiplayer",
+    "method_counts": {
+      "Python": 4,
+      "BlueprintFallback": 4
+    },
+    "original_nodes": 25,
+    "new_interface_nodes": 5,
+    "native_transport_nodes": 12,
+    "new_business_nodes": 0,
+    "original_cdo_gas_abis_guids_graph_partitions_montage_and_spawn_tasks_preserved": true,
+    "original_failure_tag_cost_and_montage_stop_false_preserved": true,
+    "original_gas_entry_and_two_spawn_terminal_delegates_preserved": true,
+    "original_disconnected_delay_and_unconnected_remote_branch_preserved": true,
+    "accepted_bomb_dependency_bytes_preserved": true,
+    "native_grid_cases_per_mode": 6,
+    "native_successful_drops_per_mode": 2,
+    "native_request_entry": "ASC.TryActivateAbilityByClass",
+    "native_cost_one_to_zero_occupancy_denial_and_reactivation_verified": true,
+    "native_montage_continues_after_ability_end_verified": true,
+    "natural_bomb_fuse_destruction_and_refund_verified": true,
+    "controlled_test_token_uses_original_increment_ge": true,
+    "whole_ability_business_migrated": true,
+    "remaining_unaccepted_arena_candidates": 0,
+    "all_runtime_candidate_rows_have_bounded_implementation_evidence": true,
+    "full_migration_acceptance": false,
+    "focused_host_checks": 17,
+    "boundary_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "full_acceptance": false,
+    "network_acceptance": false,
+    "physical_input_tested": false,
+    "pixels_tested": false,
+    "audio_playback_tested": false,
+    "packaged_runtime": false,
+    "spawn_failure_native_tested": false,
+    "commit_race_failure_native_tested": false,
+    "preserved_failed_attempts": [
+      "Probe01 native compiler rejected calling the non-BlueprintCallable K2_CanActivateAbility event from Blueprint. Probe02 keeps the callable typed location probe; actual CanActivate query uses native reflection and real activation uses ASC.TryActivateAbilityByClass.",
+      "Baseline01 grid observer attempted to move a default-static mesh actor. Baseline02 makes only the test observer movable; exact original native grid results and both Profiles match."
+    ],
+    "next": "All246 candidate rows now have bounded implementations, but full migration remains open. Audit every original natural-ingress/network/input/pixel/audio/package/version requirement, including unrun native spawn-failure and commit-race failure paths. Do not redefine completion as zero not_accepted rows."
   }
 }
