@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "batch": "197-arena-grid-generation-native-trace-and-spawn",
+  "scope": "Original grid actor four-method family;baseline and both Profiles verify7 native generation/8 distance cases,inclusive bounds,fixed100 spacing,local blocking reset,persistent block array,native RNG/visibility trace and original spawn defaults. Deterministic cells compare exactly;default random case compares valid subset only. Original66 nodes,CDO,ABI,GUIDs/local scope and graph partitions retained. Remaining3 Arena plus broader original gates open.",
+  "recorded_utc": "2026-10-21T06:04:08.2229581Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "2f6db9643502798a6ff076cecbf549ed6fc57e21",
+  "examples_parent_commit": "55436c1498eb55f54b1288e646d4b0052c838a46",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-level/Baseline01",
+      "summary_sha256": "2240B16E68255EF76F07D3A69E0D7FAFE705533EBB26EFBBE51D04B8377BDC0F",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2416,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "level.json",
+          "sha256": "56A7F891EB47DB84624AC144B73875CDA3C5D7278312F616C1FA2595A9D138D0"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-level/Assets03",
+      "summary_sha256": "FA962E13109F0BB8CEDA08F8394DDEC1C4BA560D60D7D052D8758024D8318CEF",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2413,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "assets.json",
+          "sha256": "107489FA0C7A15CA7DF902ADA550C9415B62AAC6DDB2FA38EB357E6777F48F91"
+        },
+        {
+          "file": "arena-level-preservation.json",
+          "sha256": "24F1F509D3370AFFB268BC14FF0164D0A450F6FB86A2203D0F60474C8E4807E5"
+        },
+        {
+          "file": "spawn-pins-before.json",
+          "sha256": "88B26808ABD5452C7BE77AC60DA921E0EEB70F76E4E0830DBA7C433A35001229"
+        },
+        {
+          "file": "spawn-pins-after.json",
+          "sha256": "88B26808ABD5452C7BE77AC60DA921E0EEB70F76E4E0830DBA7C433A35001229"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-level/Python01",
+      "summary_sha256": "F8BF692E1A6D90A29ABFA706FB3BABF4F9224175AFF6243B10E2E30F41FDD045",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2420,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "level.json",
+          "sha256": "3D93D4B95A570E1BD24B75B9275364D50C2D3CCAF4D4BE30371258C0026AF08E"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-level/Fallback01",
+      "summary_sha256": "8F33A8C2B9D4A81B7D7313B58CEE9B95C43331994237022841271FDC3C80DCAE",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2420,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "level.json",
+          "sha256": "D74085006D774800EE499136CFD97E396D657FE9915053714B2B313F46B3DA15"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "D9B2D53D78421AE5C008CB07C800C6FE8E782E578F7213EECA132C59B4B50B5B",
+      "path": "Validation/Run-UEP58ArenaLevelValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58ArenaLevelValidation.ps1"
+    },
+    {
+      "sha256": "BB575F3FD1C2ACB204F8161B2CBD433C6568AD2CEACDEB0CA898242414FCDE53",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1"
+    },
+    {
+      "sha256": "1574AB575A2EAEFD6151DD8D4E184DE583BEFD521D0DFEC5509C02BCAB1ACF79",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_arena_level_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_arena_level_assets.py"
+    },
+    {
+      "sha256": "FD662CC2EFC80D262BC2C9A808B85E79FDCDBA0E98B5C4CF9495FA2BF9118734",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_arena_level_probe.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_arena_level_probe.py"
+    },
+    {
+      "sha256": "48AF410634F15DEB419736D8EAE0EAA03616D4D9828F603E2F3A442BC3C9A776",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py"
+    },
+    {
+      "sha256": "7E7105263B71BF7DB55966791981556AA3A208266CB6D65B58915E2CF2561B98",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "sha256": "CC6A487917BA502BCC830D1314E7FE5564723369A8FD446A690F45F0721A22C0",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_level_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_level_mixin.py"
+    },
+    {
+      "sha256": "8EE057EFEEB2590FA172F4FA71146604CA8BC646939C2406407104076BDEBD73",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_level_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_level_validation.py"
+    },
+    {
+      "sha256": "2B62E5CA491E16DAC9E6A63018E3CE4477FDA9342458A940331EA9AB452940EC",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_level_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_level_contract.py"
+    }
+  ],
+  "host_report": {
+    "sha256": "B6F28D373A9F6DBCDC175DC442CD172C658A60D314A8854364301583E0DFD5EB",
+    "path": ".build/LyraValidation/BlueprintPython/20261021-arena-level/host-focused01.json",
+    "result": {
+      "status": "passed",
+      "tests_run": 12,
+      "failures": 0,
+      "errors": 0,
+      "runtime_acceptance": false
+    }
+  },
+  "supplemental_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-level/native-comparison01.json",
+      "sha256": "ABD9837080B10D685D77010A2AB5C75FCC7AA65B2560ADD93E86DDE46C5B78F5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-level/guards01.json",
+      "sha256": "90A8FAE9AD30EC1F5A8818B16524F5FCB0019BC63DDBF3B271B6C85F6D5205B7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-level/Probe01/probe.json",
+      "sha256": "D1962560158A1D1D5834BFF504D2812D58C23BA98968928ADAB63B391BE7FAEF"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-level/Probe01/process.json",
+      "sha256": "DC1D0D824E95AB24171A1F4D9B6055847C18B1DD405302763FBA0C9693BB0679"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-level/Assets01/summary.json",
+      "sha256": "20B1891507FD1AB996FF3F0821E52D6A676EF7BE022579A26698E0CE4B2E46D9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-level/Assets01/assets.json",
+      "sha256": "E47153744720C3DA919034FFECDEDC7467142F577783962A90A7663244BE7EEB"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-level/Assets02/summary.json",
+      "sha256": "43421E4B00A0C2C9D3B14ED24DEB2A03B8F783BD5D135A12A0E1DE1E6139D316"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-level/Assets02/assets.json",
+      "sha256": "78507CB7F2C717A09D0515B1A67A7315A8ED199BD2B452885BA6C1747A4B322E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-level/Assets02/spawn-pins-before.json",
+      "sha256": "88B26808ABD5452C7BE77AC60DA921E0EEB70F76E4E0830DBA7C433A35001229"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-level/Assets02/spawn-pins-after.json",
+      "sha256": "0E0B0592DDB720638E1F7F85F0C94E761E2AFB8F95DD34D2579B48222C4EAB15"
+    }
+  ]
+}

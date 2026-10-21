@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 198,
+    "bounded_evidence_ledgers": 199,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -11783,8 +11783,18 @@
       "group": "TopDownArena 玩法",
       "method_candidates": 8,
       "business_nodes": 56,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Python owns GenerateLevel/ClearWalls/BlockingPlayerSpawn/DistanceBlocking. Original inclusive0..Height/Width loops,fixed100 cell spacing,GridSize-based centering/radius,native RandomIntegerInRange(0,100) and strict percentage comparison remain. BlockingArea appends native PlayerStart then Pickup world locations with Z0 and preserves duplicates. IsBlocking is a function-local bool initializedfalse per call. Native visibility line trace gates spawning;original SpawnActor node/GUID/class/rotation/scale/collision defaults moved intact to typed native helper. OverrideRootScale explicitly restored after editor PostPlacedNewNode default reset. Original66 nodes/GUIDs,CDO/ABI/graphs/local variables and empty events remain. Original baseline/both Profiles pass7 native generation cases and8 distance cases. Random50-percent case is compared as a valid original grid subset,not identical global RNG output. Broader network/input/pixel/audio/package/version acceptance remains open.",
+      "status": "bounded_arena_level_generation_python_native_inclusive_grid_blocking_scope_trace_and_spawn_verified_broader_acceptance_open",
+      "implemented_helpers": [
+        "GenerateLevel",
+        "ClearWalls",
+        "BlockingPlayerSpawn",
+        "DistanceBlocking"
+      ],
+      "whole_actor_business_migrated": true,
+      "evidence_run": "20261021-arena-level/Python01",
+      "evidence_ledger": "197-arena-grid-generation-native-trace-and-spawn.json",
+      "pixels_tested": false
     },
     {
       "path": "/TopDownArena/Game/Modes/B_TopDownArena_GameComponent_Base.B_TopDownArena_GameComponent_Base",
@@ -13766,5 +13776,60 @@
     "native_physical_overlap_level_zero_effect_and_actor_destroy_verified": true,
     "authority_vfx_and_null_effect_branches_verified": true,
     "selectors_and_owned_roots_restored": true
+  },
+  "arena_level_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_original_grid_baseline_and_both_profiles_native_grid_blocking_trace_and_spawn_verified_broader_acceptance_open",
+    "evidence_ledger": "197-arena-grid-generation-native-trace-and-spawn.json",
+    "owner": "uep_lyra_world.arena_level_mixin",
+    "native_original_baseline": "20261021-arena-level/Baseline01",
+    "native_asset_authoring": "20261021-arena-level/Assets03",
+    "native_runtime_runs": [
+      "20261021-arena-level/Python01",
+      "20261021-arena-level/Fallback01"
+    ],
+    "actual_map": "/TopDownArena/Maps/L_TopDown_LocalMultiplayer",
+    "method_counts": {
+      "Python": 4,
+      "BlueprintFallback": 4
+    },
+    "new_interface_nodes": 5,
+    "native_transport_nodes": 2,
+    "new_business_nodes": 0,
+    "native_generation_cases_per_mode": 7,
+    "native_distance_cases_per_mode": 8,
+    "deterministic_spawn_counts": [
+      9,
+      8,
+      6,
+      0,
+      0,
+      1
+    ],
+    "default_percent_random_case_subset_only": true,
+    "whole_actor_business_migrated": true,
+    "whole_arena_business_migrated": false,
+    "remaining_unaccepted_arena_candidates": 3,
+    "focused_host_checks": 12,
+    "boundary_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "full_acceptance": false,
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "preserved_failed_attempts": [
+      "Assets01 and02 fingerprint checks caught PostPlacedNewNode changing spawn scale OverrideRootScale to MultiplyWithRoot;Assets03 restores exact original enum and all node fingerprints pass"
+    ],
+    "next": "Continue remaining3 Arena bomb candidates plus all earlier bounded natural-ingress/network/input/pixel/audio/package/version requirements. Full migration remains open.",
+    "original_cdo_abis_sixty_six_nodes_guids_and_graph_partitions_preserved": true,
+    "original_spawn_node_defaults_and_guid_moved_intact": true,
+    "original_override_root_scale_restored_after_postplaced_default": true,
+    "empty_actor_events_retained": true,
+    "inclusive_grid_loops_fixed100_spacing_and_centering_preserved": true,
+    "native_global_random_0_to_100_and_strict_percentage_preserved": true,
+    "persistent_block_array_append_duplicates_and_native_order_preserved": true,
+    "function_local_IsBlocking_reset_scope_preserved": true,
+    "native_visibility_trace_and_world_wide_clear_verified": true,
+    "selector_and_owned_roots_restored": true
   }
 }

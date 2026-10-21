@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(a.startswith("-UEPArenaLevelResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):
+        return "uep_lyra_world.arena_level_validation"
     if any(a.startswith("-UEPArenaActorsResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):
         return "uep_lyra_world.arena_actor_validation"
     if any(a.startswith("-UEPArenaModeResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):

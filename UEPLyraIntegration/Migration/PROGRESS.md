@@ -31,6 +31,27 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded batch197 (2026-10-21),Arena grid generation:**
+GenerateLevel,ClearWalls,BlockingPlayerSpawn and DistanceBlocking now use Python
+policy. Original inclusive loop bounds,fixed100 spacing,GridSize centering/
+radius,native0..100 RNG and strict percentage comparison remain. BlockingArea
+appends PlayerStart then Pickup projected locations in native order,preserving
+duplicates across calls. IsBlocking is a per-call local,not persistent Actor
+state. World-wide block destruction and native visibility trace remain.
+Original SpawnActor node moves intact to native helper,retaining class/GUID/
+rotation/scale/collision defaults. The initial two author attempts caught editor
+PostPlacedNewNode resetting OverrideRootScale to MultiplyWithRoot;Assets03
+restores exact source enum and full spawn fingerprint passes. Original66 nodes/
+GUIDs,CDO/ABIs,local variable and graph partitions remain;only five interface
+plus two transport nodes are added. Original baseline and both Profiles match
+7 native generation/8 distance cases,with deterministic counts9/8/6/0/0/1.
+Default50-percent randomness is validated as an allowed grid subset,with no
+seed/replacement or claim of identical random draws. All three process/gate
+pairs exit0 with strict ordered logs;12 focused checks/five launch guards pass.
+Ledger197 records bounded proof. Remaining3 Arena bombs and all earlier
+natural-ingress/network/input/pixel/audio/package/version gates remain open.
+Accepted work is committed and pushed Demos first,then core.
+
 **Completed bounded batch196 (2026-10-21),Arena avatar/death/pickup:**
 Arena Hero child startup,team/parts/display and next-tick unhide decisions now
 use Python;retained Character_Default native startup and static construction
