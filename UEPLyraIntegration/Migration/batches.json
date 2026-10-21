@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 205,
+    "bounded_evidence_ledgers": 206,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -4697,18 +4697,20 @@
     "production_providers_roots_owned_actors_and_health_cleanup_verified": true,
     "native_diagnostic_error_paths_exercised": false,
     "natural_animation_dispatch_tested": true,
-    "pixels_tested": false,
+    "pixels_tested": true,
     "audio_playback_tested": false,
     "network_acceptance": false,
     "packaged_runtime": false,
     "full_actor_acceptance": false,
     "full_acceptance": false,
-    "next": "Visible footprint pixels,audible output,physical keyboard and broader supported multiplayer/package/version gates remain open; actual native input/AnimBP footstep ingress is proven.",
+    "next": "Remaining supported surface/lighting visual coverage,audible output,physical keyboard and broader multiplayer/package/version requirements remain open. Original-floor bounded footprint rendering and actual input/AnimBP ingress are proven.",
     "natural_animation_dispatch_scope": "Five unchanged native single-node sequences on owned original HeroDefault Actors in actual client/listen-server worlds; normal movement-input/AnimBP locomotion remains untested.",
     "natural_animation_evidence_ledger": "202-native-animation-footstep-interface-niagara-and-delay.json",
     "normal_locomotion_input_state_machine_tested": true,
     "normal_locomotion_scope": "Actual playable client with unchanged AnimBP and native Enhanced Input action injection; one-owner listen-server authority observations. Physical keyboard and full multiplayer acceptance are not claimed.",
-    "normal_locomotion_evidence_ledger": "203-real-player-enhanced-input-footstep-locomotion.json"
+    "normal_locomotion_evidence_ledger": "203-real-player-enhanced-input-footstep-locomotion.json",
+    "pixel_scope": "Bounded qualitative original FiringRange tiled-floor native captures for both Profiles,with observer-only character masking and visible/hidden/restored footprint Actor attribution;not all surfaces,lighting,views or exact pixels.",
+    "pixel_evidence_ledger": "204-footstep-original-floor-render-and-visibility-attribution.json"
   },
   "wind_system_pilot": {
     "version": "0.12.0",
@@ -10039,14 +10041,15 @@
       "group": "特效、GameplayCue 与音频调度",
       "method_candidates": 2,
       "business_nodes": 69,
-      "scope_review": "Batch112 retained original policy/interface/latency; batch202 proved controlled unchanged animation playback. Batch203 proves actual playable owner with original AnimBP and native IA_Move Enhanced Input injection: four slow/full-speed forward/back cases per Profile,45 native client footstep forwards and live original-map hit/position/normal/Niagara-location/trigger checks; authority observes real player movement and zero cosmetic footstep calls. Profiles are selected before player creation because per-registration selection is cached and generic live set_mixin_profile targets the nearest router. Native animation playback/Notify/motion/movement receiver callbacks,teleport/velocity/movement-mode writes are not used. Original native miss branch is a no-op,checked conditionally if encountered; accepted runs require positive actual-hit samples per case. Observed Pistol animation assets are compared to official originals after execution,not claimed pre-frozen. Hardware keyboard,visible pixels,audible output,two-owner gameplay/travel/loss/packages and version acceptance remain open.",
-      "status": "bounded_footstep_real_player_enhanced_input_animblueprint_native_hit_niagara_and_controlled_delay_verified_pixels_audio_package_open",
-      "evidence_ledger": "203-real-player-enhanced-input-footstep-locomotion.json",
+      "scope_review": "Batch112 retained original policy/interface/latency; batch202 proved controlled unchanged animation playback. Batch203 proves actual playable owner with original AnimBP and native IA_Move Enhanced Input injection: four slow/full-speed forward/back cases per Profile,45 native client footstep forwards and live original-map hit/position/normal/Niagara-location/trigger checks; authority observes real player movement and zero cosmetic footstep calls. Profiles are selected before player creation because per-registration selection is cached and generic live set_mixin_profile targets the nearest router. Native animation playback/Notify/motion/movement receiver callbacks,teleport/velocity/movement-mode writes are not used. Original native miss branch is a no-op,checked conditionally if encountered; accepted runs require positive actual-hit samples per case. Observed Pistol animation assets are compared to official originals after execution,not claimed pre-frozen. Hardware keyboard,visible pixels,audible output,two-owner gameplay/travel/loss/packages and version acceptance remain open. Batch204 adds original FiringRange tiled-floor render evidence: eight unmodified native PNGs across both Profiles,paired before/after plus effect-hidden/restored controls. Character/part rendering is hidden only in the observer view;native input,animation,physics and particles remain original. New faint sole-shaped marks disappear when the native footprint Actor alone is hidden from that view and reappear when restored. Capture scripts keep visual acceptance false;external view_image inspection supplies bounded qualitative content acceptance. Spawn patches/lighting/frame timing differ,so no bit-identical image or all-surface/lighting claim. Legacy positional FRotator ambiguity in camera/corridor test setup is replaced with native named MakeRotator;production methods/assets are unchanged.",
+      "status": "bounded_footstep_real_player_animblueprint_native_parameters_and_original_floor_visible_hidden_restored_render_verified_audio_package_open",
+      "evidence_ledger": "204-footstep-original-floor-render-and-visibility-attribution.json",
       "previous_evidence_ledgers": [
         "112-footstep-native-niagara-interface-latent.json",
-        "202-native-animation-footstep-interface-niagara-and-delay.json"
+        "202-native-animation-footstep-interface-niagara-and-delay.json",
+        "203-real-player-enhanced-input-footstep-locomotion.json"
       ],
-      "evidence_run": "20261021-footstep-locomotion/Python01"
+      "evidence_run": "20261021-footstep-visual/Python02"
     },
     {
       "path": "/Game/Effects/Blueprints/B_WeaponDecals.B_WeaponDecals",
@@ -14151,5 +14154,61 @@
       "Fallback01 preselects profiles before player creation and exposes a real initial trace miss. The corrected observer requires successful-hit samples plus unchanged original state on native misses,not an invented requirement that every original trace hits."
     ],
     "next": "Continue original footprint pixel/audio/hardware and broader supported multiplayer/package/version checklists. Native input injection is not physical keyboard proof."
+  },
+  "footstep_visual_pilot": {
+    "version": "0.12.0",
+    "evidence_ledger": "204-footstep-original-floor-render-and-visibility-attribution.json",
+    "status": "bounded_original_floor_native_footprint_render_and_actor_visibility_attribution_verified_broader_acceptance_open",
+    "native_runtime_runs": [
+      "20261021-footstep-visual/Fallback04",
+      "20261021-footstep-visual/Python02"
+    ],
+    "actual_map": "/ShooterMaps/Maps/L_FiringRange_WP",
+    "profiles": [
+      "BlueprintFallback",
+      "Python"
+    ],
+    "native_images": 8,
+    "native_viewport_sizes": [
+      [
+        888,
+        500
+      ],
+      [
+        888,
+        500
+      ]
+    ],
+    "capture_sequence": [
+      "before",
+      "after",
+      "effect-hidden",
+      "effect-restored"
+    ],
+    "actual_input_entry": "EnhancedInputLocalPlayerSubsystem.InjectInputVectorForAction",
+    "original_animblueprint_and_notify_pipeline_preserved": true,
+    "native_client_footstep_calls": 39,
+    "gameplay_geometry_animation_notify_or_niagara_parameters_edited": false,
+    "observer_camera_and_hidden_actor_lists_restored": true,
+    "character_render_hidden_in_observer_view_only": true,
+    "effect_hidden_from_observer_view_only_for_attribution": true,
+    "qualitative_view_image_inspection_completed": true,
+    "external_visual_inspection": "20261021-footstep-visual/visual-inspection01.json",
+    "native_capture_does_not_self_certify_visual_content": true,
+    "new_sole_mark_visible_hidden_and_restored_verified": true,
+    "exact_pixel_equality_claimed": false,
+    "all_surfaces_lighting_or_views_tested": false,
+    "pixels_tested": true,
+    "audio_playback_tested": false,
+    "physical_keyboard_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "host_focused_checks": 7,
+    "preserved_attempts": [
+      "Fallback01 camera/corridor helper used legacy positional FRotator order;wrong camera direction produced only a before image. Named native MakeRotator and actual viewport dimensions correct this test setup.",
+      "Fallback02/Python01 captured visible pairs but character occlusion prevented attribution. Fallback03 removed observer-only character rendering. Final Fallback04/Python02 add native footprint Actor visibility controls to distinguish particles from shadows."
+    ],
+    "next": "Continue original supported surface/lighting,pixel/audio/hardware,multiplayer/package/version requirements;this bounded tile-floor render checkpoint is not full actor/version acceptance."
   }
 }

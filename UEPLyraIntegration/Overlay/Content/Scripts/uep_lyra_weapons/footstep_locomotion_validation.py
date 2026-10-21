@@ -86,7 +86,8 @@ class Validation(Animation):
                 if self.trace(origin, point)['ReturnValue']:
                     clear = False;break
             if clear:
-                self.controller.call_function('SetControlRotation', ue.FRotator(0., yaw, 0.))
+                rotation = policy.lib('KismetMathLibrary').call_function('MakeRotator', Roll=0., Pitch=0., Yaw=yaw)
+                self.controller.call_function('SetControlRotation', rotation)
                 self.report['selected_original_floor_corridor_yaw'] = yaw
                 return
         raise RuntimeError('no unchanged original floor corridor long enough for locomotion trials')

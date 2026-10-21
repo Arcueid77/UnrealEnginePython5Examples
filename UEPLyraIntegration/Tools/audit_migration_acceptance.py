@@ -83,7 +83,10 @@ def inspect(current, original, roadmap, *, acceptance_directory):
             evidence_semantics_verified_by_this_audit=False, completion_proven=False))
     recorded_animation = current.get('footstep_pilot', {}).get('natural_animation_dispatch_tested') is True
     recorded_locomotion = current.get('footstep_pilot', {}).get('normal_locomotion_input_state_machine_tested') is True
-    next_task = ('Review visible footprint pixels, audible output, physical keyboard and remaining supported multiplayer/package/version checklists. Controlled animation and actual-player Enhanced Input/AnimBP locomotion are already recorded separately.'
+    recorded_floor_pixels = current.get('footstep_pilot', {}).get('pixels_tested') is True
+    next_task = ('Review remaining supported surface/lighting visual coverage, audible output, physical keyboard and multiplayer/package/version checklists. Bounded original-floor render attribution and actual-player Enhanced Input/AnimBP locomotion are already recorded separately.'
+                 if recorded_locomotion and recorded_floor_pixels else
+                 'Review visible footprint pixels, audible output, physical keyboard and remaining supported multiplayer/package/version checklists. Controlled animation and actual-player Enhanced Input/AnimBP locomotion are already recorded separately.'
                  if recorded_locomotion else
                  'Review normal movement-input/AnimBP locomotion, visible footprint pixels, audible output and the remaining original version checklists. Controlled native animation playback is already recorded separately.'
                  if recorded_animation else

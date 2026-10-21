@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "batch": "204",
+  "scope": "Original tiled-floor native rendered footstep before/after and view-only effect visibility attribution; separately inspected unmodified PNGs, broader visual/audio/package acceptance open",
+  "recorded_utc": "2026-10-21T08:50:17.0456264Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "177f77aa8dfc21f76449ef2f2473095246110234",
+  "examples_parent_commit": "dea9f706ce284941fe6e4ff786de73a8e0dcb084",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-footstep-visual/Fallback04",
+      "summary_sha256": "AFE4DC093D88E6D1F54722522050EB887167A2235679DFE2462A0182C34BC963",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2464,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "client": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "FE6C55EA5FBD3DB3D1938D9B8CF28D18C4D856E823E82569431F9AE8F766596F"
+        },
+        {
+          "file": "server.json",
+          "sha256": "FE6C55EA5FBD3DB3D1938D9B8CF28D18C4D856E823E82569431F9AE8F766596F"
+        },
+        {
+          "file": "client.json",
+          "sha256": "1864214D8D791539FC4B11197693F10EA8620EC80FF7C9073BAB225C8612A95C"
+        },
+        {
+          "file": "motion-assets.json",
+          "sha256": "214D32BC84CFC1D5578A5A7A8D2FC1A1E71F50C3BCB12C63491242D85E358840"
+        },
+        {
+          "file": "blueprintfallback-footstep-before.png",
+          "sha256": "9506124E1F4FDC5A4F441B5601CCFE4183B92B0133088BC85A905FF094FF6ABE"
+        },
+        {
+          "file": "blueprintfallback-footstep-after.png",
+          "sha256": "C8F2A25E1811440745BF761683D94B0709709ED146B31E64A9B6AE5A395AD773"
+        },
+        {
+          "file": "blueprintfallback-footstep-effect-hidden.png",
+          "sha256": "86023F39EE4DD31EE634F3039455B0FDC208DE724BF18AA0805707D40BA909EE"
+        },
+        {
+          "file": "blueprintfallback-footstep-effect-restored.png",
+          "sha256": "9DE73C83F1BFA901B4A533DD393FB6800C6D0B8401E37F9670CD1E090A5E8115"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-footstep-visual/Python02",
+      "summary_sha256": "D7BE1A5CD224998BA2C3C490028C9C3E1C4F7A506B5471BAEF859FBB0C5BEBB1",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2464,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "client": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "EAAF23A3FD43FB8FA1C876BD3BAE4CD97302A550E3E391C1EBF39994FDE61C77"
+        },
+        {
+          "file": "server.json",
+          "sha256": "EAAF23A3FD43FB8FA1C876BD3BAE4CD97302A550E3E391C1EBF39994FDE61C77"
+        },
+        {
+          "file": "client.json",
+          "sha256": "5882C19F6AE264F1148F1225871B3437B913A298DE3967B3BC754203F944A032"
+        },
+        {
+          "file": "motion-assets.json",
+          "sha256": "214D32BC84CFC1D5578A5A7A8D2FC1A1E71F50C3BCB12C63491242D85E358840"
+        },
+        {
+          "file": "python-footstep-before.png",
+          "sha256": "E2CC09E1B2279D64F839EB8BAB71D75C35A2FD98E8BFEC2E3B911D91984546FF"
+        },
+        {
+          "file": "python-footstep-after.png",
+          "sha256": "BCC5988373552A1B0118E6B77DB220860495E44D70DEA3C45C619B46E92E61E0"
+        },
+        {
+          "file": "python-footstep-effect-hidden.png",
+          "sha256": "E6C5D41224A32BC7A96AD430479D06E5A84A7090C2A7F0C1659A57C86C3138D9"
+        },
+        {
+          "file": "python-footstep-effect-restored.png",
+          "sha256": "2FDCEF928954CEA4B75A0500BBEDF56A866495C851DDDA99248C9999712B8A32"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "8DD6D279046B1EA59262D1955CFD537920A1B2A2230AE91D49CA515B5950F57A",
+      "native_input_path": "Validation/Run-UEP58FootstepVisualValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58FootstepVisualValidation.ps1"
+    },
+    {
+      "sha256": "72B831A6BA158844E099E174FC746F6452994201A2A2D973F914970A54316A34",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/footstep_visual_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/footstep_visual_validation.py"
+    },
+    {
+      "sha256": "E9155594DAEC1D4CDD6851CDF7831C10E025B3BCF688A7B8C7A0E49FAC2677BA",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/footstep_visual_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/footstep_visual_contract.py"
+    },
+    {
+      "sha256": "22A6029EDAD69DE9F1FE4D80DC40DA7AE59F37DC9FA9BDFD0F07604BE68B1C0E",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/footstep_locomotion_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/footstep_locomotion_validation.py"
+    },
+    {
+      "sha256": "C8C8BAE8A34D982D5A9E5A2145E9F3EA056E3520E587D4C5ED1E7C3E9603B7AA",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    }
+  ],
+  "host_report": {
+    "sha256": "6016F6823B1E7D10CE7F56ABCAB151A063BCB7BFAA7DE74082015EFD2BF5D46D",
+    "path": ".build/LyraValidation/BlueprintPython/20261021-footstep-visual/host-focused01.json",
+    "result": {
+      "status": "passed",
+      "tests_run": 7,
+      "runtime_acceptance": false,
+      "full_regression": false
+    }
+  },
+  "native_independent_gate_exit_codes": {
+    "Fallback04": {
+      "client": 0,
+      "server": 0
+    },
+    "Python02": {
+      "server": 0,
+      "client": 0
+    }
+  },
+  "supplemental_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-footstep-visual/native-comparison01.json",
+      "sha256": "B59F32A5C9AD2893BB4737D4266AFC642D0B12D399ED6DE7EAD0ABD6EA46B54B"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-footstep-visual/visual-inspection01.json",
+      "sha256": "5EF9AD0DD57EA8AEAD7BD68C2AE3E5D5DDA6C725657BB9EFCFF9C6BE85108569"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-footstep-visual/guards01.json",
+      "sha256": "E670C7178B04F5F3BE82975FC85FDE6F357617783447F0A6D7111C8F75A40E6A"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-footstep-visual/host-focused01.json",
+      "sha256": "6016F6823B1E7D10CE7F56ABCAB151A063BCB7BFAA7DE74082015EFD2BF5D46D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-footstep-visual/inventory01.json",
+      "sha256": "51ED046E64CA9A41EC22200A24A94F8F83E3785EA8C090CC098E87E6769B6E0B"
+    }
+  ],
+  "evidence_kind": "bounded_original_floor_native_png_capture_and_separate_qualitative_visibility_attribution",
+  "pixels_tested": true,
+  "pixel_scope": "Original FiringRange tiled floor only;view-only body/effect masking;no exact pixel/all-surface claim.",
+  "audio_playback_tested": false
+}

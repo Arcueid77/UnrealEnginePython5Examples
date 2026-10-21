@@ -123,7 +123,7 @@ These are recorded flags requiring requirement and platform review, not automati
 - `character_damage_pilot`: network_acceptance, pixels_tested, audio_playback_tested, packaged_runtime.
 - `message_widget_pilot`: pixels_tested, audio_playback_tested, network_acceptance, packaged_runtime.
 - `cue_widget_pilot`: pixels_tested, audio_playback_tested, network_acceptance, packaged_runtime.
-- `footstep_pilot`: pixels_tested, audio_playback_tested, network_acceptance, packaged_runtime.
+- `footstep_pilot`: audio_playback_tested, network_acceptance, packaged_runtime.
 - `wind_system_pilot`: audible_playback_accepted, network_acceptance.
 - `music_manager_family_pilot`: network_acceptance.
 - `weapon_fire_cue_network_pilot`: audible_playback_accepted.
@@ -199,10 +199,11 @@ These are recorded flags requiring requirement and platform review, not automati
 - `migration_acceptance_review`: natural_animation_dispatch_tested.
 - `footstep_animation_pilot`: normal_locomotion_input_state_machine_tested, network_acceptance, pixels_tested, audio_playback_tested, packaged_runtime.
 - `footstep_locomotion_pilot`: network_acceptance, pixels_tested, audio_playback_tested, packaged_runtime.
+- `footstep_visual_pilot`: audio_playback_tested, network_acceptance, packaged_runtime.
 
 ## Next evidence work
 
-Review visible footprint pixels, audible output, physical keyboard and remaining supported multiplayer/package/version checklists. Controlled animation and actual-player Enhanced Input/AnimBP locomotion are already recorded separately.
+Review remaining supported surface/lighting visual coverage, audible output, physical keyboard and multiplayer/package/version checklists. Bounded original-floor render attribution and actual-player Enhanced Input/AnimBP locomotion are already recorded separately.
 
 Recorded capabilities still need their linked semantic/source evidence reviewed; this index
 does not rerun them. Continue unresolved readiness observations and the original version scope.

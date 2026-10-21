@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(a.startswith("-UEPFootstepVisualResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):
+        return "uep_lyra_weapons.footstep_visual_validation"
     if any(a.startswith("-UEPFootstepLocomotionResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):
         return "uep_lyra_weapons.footstep_locomotion_validation"
     if any(a.startswith("-UEPFootstepAnimationResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):

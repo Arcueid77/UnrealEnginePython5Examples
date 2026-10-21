@@ -31,6 +31,27 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded batch204 (2026-10-21),original-floor rendered footsteps:**
+Eight original native PNGs cover before/after,effect-hidden/effect-restored
+controls under both Profiles while actual native-input/AnimBP movement runs
+on original FiringRange. The observer camera uses native named MakeRotator;
+actual888x500 viewport dimensions drive projection checks. Legacy positional
+FRotator order had misdirected the initial camera and corridor helper;only
+test setup changes. Native game methods,animation/notify/Mixin assets,geometry
+and Niagara parameters remain unchanged. Character/part rendering is hidden
+only from the observer view;footprint Actor rendering is then hidden/restored
+for attribution. External view_image inspection confirms new faint sole-shaped
+marks absent before,visible after,absent with the effect Actor hidden and
+visible again after restoration. Native captures keep visual acceptance false;
+the separate hashed inspection receipt accepts this bounded content check.
+Different spawn patches,lighting and frame timing prohibit a bit-identical or
+all-surface/lighting claim. All view-target/hidden-Actor/input/Profile state
+restores. Final Fallback04/Python02 processes and gates exit0 with strict logs;
+seven focused checks pass. Earlier wrong-view,occluded and unisolated captures
+remain preserved. Ledger204 records the bounded original-tile render scope.
+Audible output,hardware input,remaining supported surface/lighting and broader
+multiplayer/package/version requirements remain open.
+
 **Completed bounded batch203 (2026-10-21),actual-player locomotion:**
 The real playable owner retains its original AnimBP and moves through native
 IA_Move Enhanced Input injection,not playback/Notify/motion/movement-receiver
