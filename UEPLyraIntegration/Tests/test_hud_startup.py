@@ -9,6 +9,10 @@ from uep_lyra_hud.startup import validation_module
 
 
 class StartupSelectionTests(unittest.TestCase):
+    def test_hero_parent_ragdoll_requires_explicit_native_lane(self):
+        self.assertEqual(validation_module(['-UEPHeroParentRagdollResult=report.json']),'uep_lyra_characters.hero_default_ragdoll_validation')
+        self.assertIsNone(validation_module(['-run=Py','-UEPHeroParentRagdollResult=report.json']))
+
     def test_hero_parent_equipment_requires_explicit_native_lane(self):
         self.assertEqual(validation_module(['-UEPHeroParentEquipmentResult=report.json']),'uep_lyra_characters.hero_default_equipment_validation')
         self.assertIsNone(validation_module(['-run=Py','-UEPHeroParentEquipmentResult=report.json']))

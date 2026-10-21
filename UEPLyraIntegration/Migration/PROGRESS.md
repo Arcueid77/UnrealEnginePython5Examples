@@ -23,6 +23,48 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch186 (2026-10-21),Hero parent Ragdoll:**
+Parent Profiles retain exact stencil/hide methods and add only the already
+audited Ragdoll function reference. Original14-node order is collision profile
+Ragdoll -> simulate below configured bone including self -> velocity-change
+impulse = velocity + Normal(velocity,.0001)*strength. Animation and Chaos stay
+native. Only the existing Mixin DataAsset changes; parent Blueprint bytes,
+all original CDO/ABIs/graphs/GUIDs and descendant files remain unchanged.
+Both Profiles pass48 cases over direct parent and five derived classes:
+stationary,moving,zero strength and repeat twice. A second Blueprint makes
+typed virtual UFunction calls. Native AI possession and LaunchCharacter
+produce actual movement inputs. Disposable owned meshes use a fresh one-body,
+constraint-free deep copy of PA_Mannequin; official/stage originals stay hash
+identical. Gravity/damping and known initial velocity use public native APIs.
+Velocity-change results are checked after two native physics frames. This
+control establishes numeric impulse behavior,not original multibody visuals.
+Primary inventory/Health/kinematic mesh configuration,existing Shooter child
+router,and owned Actors/controllers/Profiles/roots/selectors remain protected.
+Affected combined-family regressions pass72 equipment scenarios and14 stencil
+family cases/84 team calls. Native process exits0,independent gates0,strict
+logs and ordered shutdown pass. Ragdoll01 failure is retained: parameter
+concatenation,deferred impulse observation and natural kinematic velocity
+snapshot were corrected in the test fixture; final accepted run is Ragdoll02.
+9 focused checks and5 invalid lane guards pass. Isolated staged checks use
+incremental scope. No Engine/general Cpp/official edits,build,cook,push,tag or
+publication. Static246/182/63/11 and exact246 candidate paths/order remain.
+Health death-started native delay and AnimMotionEffect remain open,alongside
+Arena and previous bounded network/pixel/package/version acceptance.
+
+Batch186 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261021-hero-default-ragdoll/Assets01/summary.json` b19592b8f739e30a760ee15191a2127518090d470844d642360ef22c6bf2a948
+`20261021-hero-default-ragdoll/Assets01/assets.json` acc63f2109fd452f232fbb36c0b37e45f98641929529f06e415cdfcb8e3cddc9
+`20261021-hero-default-ragdoll/Assets01/parent-ragdoll-preservation.json` 0a52e8a7978280ffa42aa39fe001b7f53d9b81cac133eff083bfc5925a9e335c
+`20261021-hero-default-ragdoll/Ragdoll01/summary.json` af13887180a45c5945eafc620fe9a5a13d3f7216dcad56484e3df4e9dbb71087
+`20261021-hero-default-ragdoll/Ragdoll02/summary.json` ae993883df497d6182e4c4ffb377d68bfe6e9d749232086e5d3597983c2434bf
+`20261021-hero-default-ragdoll/Ragdoll02/jump.json` a8ed29fd3f73a7d7f9178a265918cd94fcb5cf186eb332900f9caf38fe44d8b7
+`20261021-hero-default-ragdoll/Equipment01Affected/summary.json` 74276893ea29162a3ffe44e56c97eb2df455ad6e63f14ef34435b9e78242b7c0
+`20261021-hero-default-ragdoll/Equipment01Affected/jump.json` 68eeaa11b0ffe97a694bad7277c3402d9e1a97339f14da04ce69aa57bc3495ed
+`20261021-hero-default-ragdoll/Stencil01Affected/summary.json` ad49fb0203e0410a4e6aa6bf4b0c0f077a06d87b4ec523aeaba8df3113182c7a
+`20261021-hero-default-ragdoll/Stencil01Affected/jump.json` 8fde24789aea6e394c6a1564ab3ee3f9644ba40ba7d1a065517defff6e7e9306
+`20261021-hero-default-ragdoll/host-focused01.json` 0b5749d5efac2dc0993ef1181ea6c7c9a2b75a0a5e2940503c95bd8f0651c41a
+`20261021-hero-default-ragdoll/guards01.json` d15f41e3f9fac555e710cb26f4cb0f2a1a93ee683b330fb2a48b1a5ad1de2217
+
 **Completed bounded batch185 (2026-10-21),Hero parent equipment hiding:**
 Actual parent Profiles now retain stencil and add HideEquippedWeapons by exact
 method reference to the already-audited policy. Valid manager -> weapon-instance

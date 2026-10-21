@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "herodefaultragdoll":
+        from generate_hero_default_ragdoll_assets import generate as hero_default_ragdoll
+        return hero_default_ragdoll(stage)
     if kind == "herodefaultequipment":
         from generate_hero_default_equipment_assets import generate as hero_default_equipment
         return hero_default_equipment(stage)
