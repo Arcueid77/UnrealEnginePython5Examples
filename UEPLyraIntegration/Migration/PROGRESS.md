@@ -23,6 +23,14 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+User workflow update (2026-10-21): after each verified bounded batch,commit
+and push the current dev/lyra-blueprint-python branch. Push Demos/Examples
+first,then the core branch after its referenced Demos commit is remote. This
+explicit user instruction supersedes the earlier local-only/no-push workflow.
+Existing accepted commits through batch189 have now been pushed in both
+repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
+force-push,tags,release publication or full-version acceptance is authorized.
+
 **Completed bounded batch189 (2026-10-21),Arena GetReady animation and Cue:**
 Original20 Arena candidates now have a native read-only graph/CDO/ABI inventory.
 Inline macros and custom-named Ubergraphs remain fully exported but are not

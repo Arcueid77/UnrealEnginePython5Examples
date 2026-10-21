@@ -16,7 +16,7 @@
   "migration_complete": false,
   "accepted_batch_commit_workflow": {
     "review_date": "2026-10-16",
-    "cadence": "modify, verify affected tests in isolated indexes, commit one coherent bounded batch",
+    "cadence": "modify, verify affected tests in isolated indexes, commit one coherent bounded batch, then push Demos/Examples followed by core",
     "regression_policy": {
       "default": "incremental",
       "scope": "changed features and affected callers,inheritance and contracts",
@@ -47,7 +47,23 @@
     "auto_respawn_death_avatar_restart_event_business_accepted": true,
     "auto_respawn_activation_reset_ui_lifetime_bounded_accepted": true,
     "full_version_accepted": false,
-    "pushed_or_published": false
+    "pushed_or_published": true,
+    "push_policy": {
+      "user_authorized_date": "2026-10-21",
+      "after_each_verified_batch_commit": true,
+      "branches": [
+        "dev/lyra-blueprint-python"
+      ],
+      "order": [
+        "Demos/Examples repository",
+        "core repository after the referenced Demos commit is remote"
+      ],
+      "force_push": false,
+      "push_tags": false,
+      "publish_release": false,
+      "uncommitted_or_unaccepted_work_not_pushed": true
+    },
+    "release_published": false
   },
   "bounded_join_lifecycle_diagnostics": {
     "version": "0.11.0",
