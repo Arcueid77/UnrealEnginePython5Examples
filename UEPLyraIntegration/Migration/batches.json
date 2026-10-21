@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 192,
+    "bounded_evidence_ledgers": 193,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -11884,8 +11884,18 @@
       "group": "TopDownArena 玩法",
       "method_candidates": 2,
       "business_nodes": 23,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Configure now sets native player name text, replaces team observer, then configures Bomb/Range/Speed children in original order. Python cancels old observer, binds exact original generated UFunction, activates native ObserveTeam, and applies original team1-4 colors; unset team preserves tint. Native adapters carry unchanged FGameplayAttribute and lazy display-asset literals. Original30 nodes/GUIDs,CDO,ABI,WidgetTree retained; five interface plus13 branch-free transport nodes added. Actual Arena natural HUD and original baseline/both Profiles pass nine native scenarios, including independent observer replacement and stale-target rejection. W_Powerup_Stat remains a separate open candidate; pixels/network/package/version acceptance remains open.",
+      "status": "bounded_arena_player_tile_configure_monitor_and_native_team_callback_python_verified_broader_ui_acceptance_open",
+      "implemented_helpers": [
+        "Configure",
+        "Monitor Team Change",
+        "OnTeamChanged_651EFD6A4A656440ED3534BB77B849B5"
+      ],
+      "whole_widget_business_migrated": true,
+      "child_stat_business_migrated": false,
+      "pixels_tested": false,
+      "evidence_run": "20261021-arena-player-tile/Python01",
+      "evidence_ledger": "191-arena-player-tile-native-team-observer.json"
     },
     {
       "path": "/TopDownArena/UserInterface/Player/W_Powerup_Stat.W_Powerup_Stat",
@@ -13313,5 +13323,51 @@
       "Baseline01 observer Install tuple chose const-ref AllowedDataClasses instead of Handle; corrected using reflected parameter flags; no production lifecycle bug"
     ],
     "next": "Continue remaining17 Arena candidates and every earlier bounded natural-ingress/network/pixel/audio/package/version requirement; batch acceptance does not finish the full goal."
+  },
+  "arena_player_tile_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_original_arena_baseline_and_both_tile_profiles_native_configure_team_and_replacement_verified_broader_acceptance_open",
+    "evidence_ledger": "191-arena-player-tile-native-team-observer.json",
+    "owner": "uep_lyra_hud.arena_player_tile_mixin",
+    "native_original_baseline": "20261021-arena-player-tile/Baseline03",
+    "native_asset_authoring": "20261021-arena-player-tile/Assets01",
+    "native_runtime_runs": [
+      "20261021-arena-player-tile/Python01",
+      "20261021-arena-player-tile/Fallback01"
+    ],
+    "actual_map": "/TopDownArena/Maps/L_TopDown_LocalMultiplayer",
+    "method_counts": {
+      "Python": 3,
+      "BlueprintFallback": 3
+    },
+    "original_cdo_abis_thirty_nodes_guids_widget_tree_preserved": true,
+    "new_interface_nodes": 5,
+    "native_transport_nodes": 13,
+    "new_business_nodes": 0,
+    "native_generated_ufunction_delegate_binding": true,
+    "natural_arena_hud_configure_observed": true,
+    "native_cases_per_mode": 9,
+    "four_native_team_colors": true,
+    "repeated_configure_cancels_old_native_proxy": true,
+    "unset_team_preserves_tint": true,
+    "old_target_change_does_not_deliver_stale_callback": true,
+    "child_attribute_and_soft_display_literals_preserved": true,
+    "whole_widget_business_migrated": true,
+    "child_stat_business_migrated": false,
+    "whole_arena_business_migrated": false,
+    "remaining_unaccepted_arena_candidates": 16,
+    "profile_owned_roots_and_actual_team_restored": true,
+    "focused_host_checks": 11,
+    "boundary_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "full_acceptance": false,
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "preserved_failed_attempts": [
+      "Probe01 guessed callback suffix from source node GUID; original exported generated function reveals compiler-derived suffix; no saved asset",
+      "Baseline01 and Baseline02 used Actor/component-only UEP get_world on a widget; correct native owning-controller world used; no production logic change"
+    ],
+    "next": "Continue remaining16 Arena candidates including W_Powerup_Stat,plus every earlier bounded natural-ingress/network/pixel/audio/package/version requirement. Batch acceptance does not finish the full goal."
   }
 }

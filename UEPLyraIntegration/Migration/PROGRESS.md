@@ -31,6 +31,27 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded batch191 (2026-10-21),Arena player tile:**
+W_PlayerTile Configure,Monitor Team Change and the original generated team
+callback now run Python policy. Name text,monitor replacement and Bomb/Range/
+Speed child calls keep their original order. Native ObserveTeam uses the exact
+original generated UFunction delegate;old valid proxy cancels before replacing.
+Original team1-4 colors are retained;unset team leaves tint unchanged. Native
+branch-free transports preserve original FGameplayAttribute/soft display
+literals and child calls. Original30 nodes/GUIDs,full CDO/ABIs/WidgetTree remain;
+only five interface plus13 native transport nodes are added. W_Powerup_Stat's
+own business remains an explicitly open candidate with unchanged package bytes.
+Actual Arena HUD and an owned tile pass original baseline and both Profiles:
+nine cases cover native Configure,four real team changes,repeated replacement,
+unset-team no-op,old-target stale-callback rejection,and reconfiguration.
+Native team/owned observers/roots/selector restore;three process/gate pairs exit0
+with ordered shutdown. Eleven focused checks and five launch guards pass.
+Probe01's compiler-derived callback suffix and Baseline01/02's Actor-only
+get_world sampling failures remain;owning-controller world fixes sampling.
+Ledger191 retains bounded proof. Remaining16 Arena plus every earlier
+natural-ingress/network/pixel/audio/package/version gate remain open. Accepted
+commits are pushed Demos first,then core on dev/lyra-blueprint-python.
+
 **Completed bounded batch190 (2026-10-21),Arena PlayerState UI component:**
 B_PlayerUIComponent BeginPlay now registers its pure-cast LyraPlayerState owner
 as global TopDownArena.ExtensionPoint.Players Data at priority-1;EndPlay
