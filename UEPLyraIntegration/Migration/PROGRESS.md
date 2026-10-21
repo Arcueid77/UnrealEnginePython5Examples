@@ -23,6 +23,48 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch185 (2026-10-21),Hero parent equipment hiding:**
+Actual parent Profiles now retain stencil and add HideEquippedWeapons by exact
+method reference to the already-audited policy. Valid manager -> weapon-instance
+filter -> each native spawned Actor -> native hidden=true order stays intact.
+Missing manager is a no-op. Nonweapon instances and pawn visibility remain
+unchanged. The unique parent selector and previous stencil method stay intact.
+Only the existing parent Mixin DataAsset changes. Parent Blueprint bytes,all
+original CDO/public ABIs/graphs/node GUIDs and descendant files stay unchanged.
+Stage-only native definitions produce weapon instances with2 Actors,nonweapon
+instances with1 Actor and empty weapon instances with0 Actors via real native
+EquipItem/SpawnEquipmentActors. They grant no abilities. A second Blueprint
+invokes the parent's virtual UFunction through a typed Actor reference.
+Both Profiles pass12 direct/inherited family cases over parent,SimpleHero,
+regular/big Follow and Explorer Hero/Pawn.72 scenarios cover empty manager,
+equipped types,repeat twice,already-hidden,empty weapon and missing manager.
+All weapon Actors hide;nonweapon and pawn visibility/equipment identities stay
+fixed. Native UnequipItem destroys all owned spawned Actors before owned
+component/Actor cleanup. Existing Shooter child routing,primary inventory/
+Health/equipment/visibility and all owned roots/selectors remain protected.
+The combined2-method family also passes the prior14 native stencil family cases
+and84 team edge calls. Equipment01 preserves the first green equipment run;
+Equipment02 uses the final driver after adding the combined-family stencil
+proof gate. Both accepted final lanes share current source hashes.
+Final native exit0,independent gates0,strict logs and ordered shutdown pass.
+10 focused checks and5 invalid lanes pass;staged checks remain incremental at
+.build/CommitVerification/20261021-hero-default-equipment/Index01. No Engine/
+general Cpp/official edits,build,cook,push,tag or publication. Static246/182/63/11
+and exact candidate path/order remain;whole-parent/full migration are false.
+Ragdoll,Health death native-delay and AnimMotionEffect plus remaining Arena/
+network/pixel/package/version acceptance stay open.
+
+Batch185 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261021-hero-default-equipment/Assets01/summary.json` 19e3c42755af390a20843195c6176aabac8317439ec360084d4c367c2a374604
+`20261021-hero-default-equipment/Assets01/assets.json` ca879d112c8be1a040d34a1667861283bce30df588edd1dc64846e3ed23752e2
+`20261021-hero-default-equipment/Assets01/parent-hide-preservation.json` 0a52e8a7978280ffa42aa39fe001b7f53d9b81cac133eff083bfc5925a9e335c
+`20261021-hero-default-equipment/Equipment02/summary.json` 9684acf18296211592b14cf7c9ed821ff0fd8b8c40061f501332eb7aa1fc198c
+`20261021-hero-default-equipment/Equipment02/jump.json` 68eeaa11b0ffe97a694bad7277c3402d9e1a97339f14da04ce69aa57bc3495ed
+`20261021-hero-default-equipment/Stencil01Affected/summary.json` ea8b15bdb9acad48e33b4158bd03c26e7133628883516579f020b4135e43dfc7
+`20261021-hero-default-equipment/Stencil01Affected/jump.json` 8fde24789aea6e394c6a1564ab3ee3f9644ba40ba7d1a065517defff6e7e9306
+`20261021-hero-default-equipment/host-focused01.json` 71d3a5d32bffa82b07b6eb39efd755c22ed6fca6612d81e0faff9f2ec7cf6a45
+`20261021-hero-default-equipment/guards01.json` 34f8a76f92109308993afad21c28dc926ba805ee3abca29d76b3037c74e77df2
+
 **Completed bounded batch184 (2026-10-21),Hero default parent stencil family:**
 A current native read-only audit captures the original full B_Hero_Default:
 69 nodes across constructor,Ragdoll,empty Death,equipment hide,stencil and

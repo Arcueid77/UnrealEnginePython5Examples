@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "batch": "185-hero-default-parent-equipment-hide-native-actors",
+  "scope": "Actual parent equipment hiding across native direct/inherited families with real equipment spawn/unequip and retained stencil regression; remaining parent/network/pixel/package/version open",
+  "recorded_utc": "2026-10-21T00:32:56.8753887Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "d4f7d02b1ae18b630337b2ea22f7466976dfe8ca",
+  "examples_parent_commit": "ca53883cfe2afe65038f34d1f37fc93a959a65a5",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-hero-default-equipment/Assets01",
+      "summary_sha256": "19E3C42755AF390A20843195C6176AABAC8317439EC360084D4C367C2A374604",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2342,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-hero-default-equipment/Equipment02",
+      "summary_sha256": "9684ACF18296211592B14CF7C9ED821FF0FD8B8C40061F501332EB7AA1FC198C",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3211,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "68EEAA11B0FFE97A694BAD7277C3402D9E1A97339F14DA04CE69AA57BC3495ED"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-hero-default-equipment/Stencil01Affected",
+      "summary_sha256": "EA8B15BDB9ACAD48E33B4158BD03C26E7133628883516579F020B4135E43DFC7",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3206,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "8FDE24789AEA6E394C6A1564AB3EE3F9644BA40BA7D1A065517DEFFF6E7E9306"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_default_equipment_assets.py",
+      "sha256": "B39B0948836F21F53112ECD62BA01D0B519F18EEA0CB93DB38B5D0D3738460B7",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_default_equipment_assets.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/hero_default_equipment_mixin.py",
+      "sha256": "89F9350D5A19A3A9BEE6DB8E59FDD4AFA562C52B88BBA85A0D7347E50BDD96C8",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/hero_default_equipment_mixin.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/hero_default_equipment_contract.py",
+      "sha256": "F876DFBA24F42BBC768232F7ED98CE1A833A129FC5EFBBCCC5EC18AADB99B1CA",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/hero_default_equipment_contract.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/hero_default_equipment_validation.py",
+      "sha256": "92726F015933DA39C0104A15DCE87776F8FD90188A067527D362C05D5F120C07",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/hero_default_equipment_validation.py"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "3E32284FF62AE39653E40FA50ED66E474339DC947CE537778DE3898C80851A5C",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    }
+  ],
+  "host_report": {
+    "sha256": "71D3A5D32BFFA82B07B6EB39EFD755C22ED6FCA6612D81E0FAFF9F2EC7CF6A45",
+    "result": {
+      "status": "passed",
+      "tests_run": 10,
+      "runtime_acceptance": false,
+      "full_regression": false
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261021-hero-default-equipment/host-focused01.json"
+  }
+}

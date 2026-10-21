@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 186,
+    "bounded_evidence_ledgers": 187,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -9654,20 +9654,20 @@
       "group": "角色、输入与英雄能力",
       "method_candidates": 7,
       "business_nodes": 54,
-      "scope_review": "Parent itself now declares the audited stencil method through a unique UEPHeroDefaultMixinProfile selector. Direct parent,SimpleHero,regular/big Follow,Explorer Hero/Pawn and owned local-parent recursive primitive/native clamp routes pass both Profiles. Shooter child-owned router remains intact. Ragdoll/equipment hide/Health death delay/AnimMotionEffect remain open;no whole-parent acceptance.",
-      "status": "bounded_direct_and_inherited_hero_parent_stencil_verified_remaining_parent_business_open",
+      "scope_review": "Actual parent now declares stencil and equipment hiding through the unique selector;direct/inherited families pass native EquipItem/spawn/filter/hide/repeat/missing-manager/UnequipItem plus retained stencil regressions. Parent Blueprint and descendants stay byte-identical to the accepted baseline. Ragdoll/Health death delay/AnimMotionEffect remain open;no whole-parent acceptance.",
+      "status": "bounded_hero_parent_stencil_and_equipment_hide_native_family_verified_remaining_parent_business_open",
       "implemented_helpers": [
-        "UpdateCustomStencilFromTeamID"
+        "UpdateCustomStencilFromTeamID",
+        "HideEquippedWeapons"
       ],
       "remaining_business": [
         "Ragdoll",
-        "HideEquippedWeapons",
         "Health death-started native delay orchestration",
         "AnimMotionEffect footstep effects"
       ],
       "whole_parent_business_migrated": false,
-      "evidence_run": "20261021-hero-default/Stencil01",
-      "evidence_ledger": "184-hero-default-parent-family-stencil-inheritance.json"
+      "evidence_run": "20261021-hero-default-equipment/Equipment02",
+      "evidence_ledger": "185-hero-default-parent-equipment-hide-native-actors.json"
     },
     {
       "path": "/Game/Characters/Heroes/B_SimpleHeroPawn.B_SimpleHeroPawn",
@@ -12901,5 +12901,57 @@
     "packaged_runtime": false,
     "full_acceptance": false,
     "next": "Continue original parent ragdoll/equipment hide/Health death native-delay and AnimMotionEffect paths plus Arena and all prior bounded version/network/pixel/package acceptance."
+  },
+  "hero_default_equipment_pilot": {
+    "version": "0.11.0",
+    "status": "bounded_hero_parent_stencil_and_equipment_hide_native_family_verified_remaining_parent_business_open",
+    "evidence_ledger": "185-hero-default-parent-equipment-hide-native-actors.json",
+    "owner": "uep_lyra_characters.hero_default_equipment_mixin",
+    "accepted_parent_baseline": "20261021-hero-default/Assets01",
+    "native_asset_authoring": "20261021-hero-default-equipment/Assets01",
+    "native_runtime_runs": [
+      "20261021-hero-default-equipment/Equipment02",
+      "20261021-hero-default-equipment/Stencil01Affected"
+    ],
+    "method_counts": {
+      "Python": 2,
+      "BlueprintFallback": 2
+    },
+    "selector": "UEPHeroDefaultMixinProfile",
+    "parent_blueprint_bytes_and_all_cdo_abis_graphs_guids_unchanged": true,
+    "only_parent_mixin_data_asset_changed": true,
+    "retains_exact_previous_stencil_method": true,
+    "reuses_exact_audited_equipment_hide_policy": true,
+    "source_order": "valid native equipment manager -> LyraWeaponInstance query -> each native GetSpawnedActors -> SetActorHiddenInGame(true)",
+    "native_equipment_family_cases": 12,
+    "native_equipment_scenarios": 72,
+    "native_family": [
+      "parent",
+      "simple-base",
+      "simple",
+      "big",
+      "explorer-hero",
+      "explorer-pawn"
+    ],
+    "native_fixture_definitions_and_virtual_second_blueprint_caller": true,
+    "fixture_only_ability_sets_empty": true,
+    "nonweapon_actor_and_pawn_visibility_unchanged": true,
+    "native_equipment_identity_and_repeat_idempotence_preserved": true,
+    "native_empty_weapon_instance_and_missing_manager_noops": true,
+    "native_unequip_destroys_all_owned_spawned_actors": true,
+    "existing_shooter_child_router_and_descendant_bytes_unchanged": true,
+    "affected_stencil_family_cases": 14,
+    "affected_stencil_team_calls": 84,
+    "primary_player_inventory_health_equipment_and_visibility_unchanged": true,
+    "focused_host_checks": 10,
+    "invalid_lane_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261021-hero-default-equipment/Index01",
+    "whole_parent_business_migrated": false,
+    "pixels_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Continue original parent Ragdoll/Health death native-delay/AnimMotionEffect paths plus Arena and all prior bounded version/network/pixel/package acceptance."
   }
 }

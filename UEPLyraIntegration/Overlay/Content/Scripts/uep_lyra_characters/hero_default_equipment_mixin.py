@@ -1,0 +1,9 @@
+"""Parent stencil and equipment hiding; use exact previously audited policies."""
+from .hero_default_stencil_mixin import LyraHeroDefaultStencilPythonProfile,LyraHeroDefaultStencilBlueprintFallbackProfile,CLASS,SELECTOR
+from .equipment_hide_mixin import LyraCharacterEquipmentHidePythonProfile,LyraCharacterEquipmentHideBlueprintFallbackProfile
+class LyraHeroDefaultEquipmentPythonProfile:
+    UpdateCustomStencilFromTeamID=LyraHeroDefaultStencilPythonProfile.__dict__['UpdateCustomStencilFromTeamID']
+    HideEquippedWeapons=LyraCharacterEquipmentHidePythonProfile.__dict__['HideEquippedWeapons']
+class LyraHeroDefaultEquipmentBlueprintFallbackProfile:
+    UpdateCustomStencilFromTeamID=LyraHeroDefaultStencilBlueprintFallbackProfile.__dict__['UpdateCustomStencilFromTeamID']
+    HideEquippedWeapons=LyraCharacterEquipmentHideBlueprintFallbackProfile.__dict__['HideEquippedWeapons']

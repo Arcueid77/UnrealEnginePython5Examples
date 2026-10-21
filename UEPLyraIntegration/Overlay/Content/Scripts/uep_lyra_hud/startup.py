@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(a.startswith("-UEPHeroParentEquipmentResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):
+        return "uep_lyra_characters.hero_default_equipment_validation"
     if any(a.startswith("-UEPHeroParentStencilResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):
         return "uep_lyra_characters.hero_default_stencil_validation"
     if any(a.startswith("-UEPExplorerShellsResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):
