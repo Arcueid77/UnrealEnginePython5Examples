@@ -31,6 +31,31 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded batch196 (2026-10-21),Arena avatar/death/pickup:**
+Arena Hero child startup,team/parts/display and next-tick unhide decisions now
+use Python;retained Character_Default native startup and static construction
+remain. A unique hero selector avoids ancestor profile collisions. Original
+GamePlayReady/immediate native registration and DelayUntilNextTick remain.
+Death keeps native GAS activation entry and2s WaitDelay task;typed Python gates
+perform original Cue/wait/end intent. Pickup keeps native construction/Begin/
+Volume binding and Python UI-data validity/authority-remote VFX and level0
+apply-then-destroy decisions. Original66 nodes/GUIDs,full CDO/component defaults/
+ABIs/graphs survive;15 interface plus29 transport nodes are added. Original
+baseline and both Profiles prove next-frame show,actual team material changes/
+restore,parts add/remove callbacks,real local-player lethal GE/Cue/death finish,
+no-ASC pickup retention and actual ASC overlap/BombRange+1/destruction. Standalone
+rep-notify authority no-op is native;remote/replication remains a broader gate.
+Retained parent is traced by forwarding its original function under existing
+profile names. Earlier generic Shooter assumptions,non-local-controller GAS
+asserts and initial CDO export sibling-order rejection remain as failed evidence.
+Final baseline uses actual native local player;no callback/death event/health
+write is manufactured. Existing canonical CDO tree comparison preserves all
+values while allowing only sibling subobject order. Three process/gate pairs
+exit0 with strict ordered logs;12 focused checks and five launch guards pass.
+Ledger196 is bounded proof. Remaining4 Arena and every earlier natural-ingress/
+network/input/pixel/audio/package/version gate remain open. Accepted work is
+committed and pushed Demos first,then core.
+
 **Completed bounded batch195 (2026-10-21),Arena mode component family:**
 Base-owned Python gates cover native startup/ready,warmup-end/scoring/tick,
 named round-time output and child local-user decisions. Original authority

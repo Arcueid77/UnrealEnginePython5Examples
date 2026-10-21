@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 197,
+    "bounded_evidence_ledgers": 198,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -11718,8 +11718,20 @@
       "group": "TopDownArena 玩法",
       "method_candidates": 6,
       "business_nodes": 20,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Python owns child startup after retained static parent call,team listener/native callback,display ApplyToActor(includeChildren=true),parts LinkAnimClassLayers/query and native next-tick unhide intent. Arena retains Character_Default startup parent;no Shooter parent is substituted. Unique UEPArenaHeroMixinProfile isolates existing Hero parent selector. Original30 nodes/GUIDs,CDO/component defaults/ABIs and static construction remain. Original baseline and both Profiles verify actual native flows;broader network/input/pixel/audio/package/version acceptance remains open.",
+      "status": "bounded_arena_actor_python_native_visibility_team_parts_death_task_and_pickup_overlap_verified_broader_acceptance_open",
+      "implemented_helpers": [
+        "UEPArenaHeroAfterParentBegin",
+        "ListenForTeam",
+        "OnTeamChanged_BE127F834A7CBFE12C02FD836BDABEA2",
+        "On Team or Cosmetics Changed",
+        "BndEvt__B_Hero_Arena_B_MannequinPawnCosmetics_K2Node_ComponentBoundEvent_4_LyraSpawnedCharacterPartsChanged__DelegateSignature",
+        "UEPArenaHeroAfterNativeShowWait"
+      ],
+      "whole_actor_or_ability_business_migrated": true,
+      "evidence_run": "20261021-arena-actors/Python01",
+      "evidence_ledger": "196-arena-avatar-death-and-pickup-native-lifecycle.json",
+      "pixels_tested": false
     },
     {
       "path": "/TopDownArena/Game/Bombs/B_Bomb_Base.B_Bomb_Base",
@@ -11754,8 +11766,16 @@
       "group": "TopDownArena 玩法",
       "method_candidates": 1,
       "business_nodes": 4,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Original GAS activation event remains native script;typed gates run Python Cue/wait/end intent. Original WaitDelay task,Duration2s,GAS death parent,bAutoStartDeath and native task finish binding remain. Original6 nodes/GUIDs,CDO/GAS policies/tags/ABIs retained. Real native local-player lethal GE starts and finishes original ability;no death event replay or health writes. Original baseline and both Profiles verify actual native flows;broader network/input/pixel/audio/package/version acceptance remains open.",
+      "status": "bounded_arena_actor_python_native_visibility_team_parts_death_task_and_pickup_overlap_verified_broader_acceptance_open",
+      "implemented_helpers": [
+        "UEPArenaDeathActivate",
+        "UEPArenaDeathAfterNativeWait"
+      ],
+      "whole_actor_or_ability_business_migrated": true,
+      "evidence_run": "20261021-arena-actors/Python01",
+      "evidence_ledger": "196-arena-avatar-death-and-pickup-native-lifecycle.json",
+      "pixels_tested": false
     },
     {
       "path": "/TopDownArena/Game/MapsGenerator/B_LevelGeneration.B_LevelGeneration",
@@ -11879,8 +11899,17 @@
       "group": "TopDownArena 玩法",
       "method_candidates": 5,
       "business_nodes": 24,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Python preserves UI-data/VFX validity checks,authority Change/remote OnRep split and SetAsset(reset=true). Original native Volume overlap binding stays;valid ASC plus authority applies original GE at level0/empty context then destroys pickup unconditionally. Original30 nodes/GUIDs,CDO/components/ABIs and native construction/Begin calls retained. Actual no-ASC collision retains actor;native GAS-enabled collision increases BombRange by1 and destroys it. Remote/replication branch is host checked only;network acceptance remains open. Original baseline and both Profiles verify actual native flows;broader network/input/pixel/audio/package/version acceptance remains open.",
+      "status": "bounded_arena_actor_python_native_visibility_team_parts_death_task_and_pickup_overlap_verified_broader_acceptance_open",
+      "implemented_helpers": [
+        "ChangePickupEffect",
+        "OnRep_GameplayEffectToApply",
+        "UEPArenaPickupOverlap"
+      ],
+      "whole_actor_or_ability_business_migrated": true,
+      "evidence_run": "20261021-arena-actors/Python01",
+      "evidence_ledger": "196-arena-avatar-death-and-pickup-native-lifecycle.json",
+      "pixels_tested": false
     },
     {
       "path": "/TopDownArena/GameplayCues/GCN_GetReady.GCN_GetReady",
@@ -13670,6 +13699,72 @@
     "named_seconds_remaining_output_and_clamp_verified": true,
     "owned_native_begin_and_message_lifetime_verified": true,
     "original_empty_hook_and_ticks_retained": true,
+    "selectors_and_owned_roots_restored": true
+  },
+  "arena_actor_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_original_arena_baseline_and_both_actor_profiles_native_avatar_death_and_pickup_lifecycle_verified_broader_acceptance_open",
+    "evidence_ledger": "196-arena-avatar-death-and-pickup-native-lifecycle.json",
+    "owner": "uep_lyra_world.arena_actor_mixin",
+    "native_original_baseline": "20261021-arena-actors/Baseline08",
+    "native_asset_authoring": "20261021-arena-actors/Assets02",
+    "native_runtime_runs": [
+      "20261021-arena-actors/Python01",
+      "20261021-arena-actors/Fallback01"
+    ],
+    "actual_map": "/TopDownArena/Maps/L_TopDown_LocalMultiplayer",
+    "method_counts": {
+      "hero": {
+        "Python": 6,
+        "BlueprintFallback": 6
+      },
+      "death": {
+        "Python": 2,
+        "BlueprintFallback": 2
+      },
+      "pickup": {
+        "Python": 3,
+        "BlueprintFallback": 3
+      }
+    },
+    "new_interface_nodes": 15,
+    "native_transport_nodes": 29,
+    "new_business_nodes": 0,
+    "native_team_cases_per_mode": 3,
+    "native_death_duration": 2.0,
+    "physical_overlap_cases_per_mode": 2,
+    "remote_rep_notify_host_checked_only": true,
+    "replication_verified": false,
+    "whole_own_actor_ability_business_migrated": true,
+    "whole_arena_business_migrated": false,
+    "remaining_unaccepted_arena_candidates": 4,
+    "focused_host_checks": 12,
+    "boundary_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "full_acceptance": false,
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "audio_playback_tested": false,
+    "packaged_runtime": false,
+    "preserved_failed_attempts": [
+      "Baseline01 generic visual sampler required absent Shooter outline property;sampler now records actual Arena primitives/materials",
+      "Baseline02 parent startup metric incorrectly used unrelated Shooter begin profile;retained Character_Default parent is traced natively instead",
+      "Baseline03 startup tried declared interface registration on retained non-interface parent;owned diagnostic process stopped",
+      "Baseline04 trace profile name did not match inherited selector;both existing profile names now forward original parent",
+      "Baseline05/06/07 owned non-local controller death exposed GAS exclusive-group/Cdo errors;unaccepted strict logs preserved;baseline now uses actual native local player and read-only ability-state sampling",
+      "Assets01 CDO exporter reordered sibling subobjects;existing canonical object-tree comparator preserves every value while ignoring only sibling order"
+    ],
+    "next": "Continue remaining4 Arena candidates and all earlier bounded natural-ingress/network/input/pixel/audio/package/version requirements. Full migration remains open.",
+    "original_cdo_abis_sixty_six_nodes_guids_components_and_graphs_preserved": true,
+    "retained_character_default_parent_native_call_verified": true,
+    "unique_hero_selector_preserves_ancestor_profiles": true,
+    "native_gameplayready_next_tick_visibility_verified": true,
+    "native_team_visual_changes_and_restore_verified": true,
+    "native_parts_add_remove_and_unarmed_layer_callback_verified": true,
+    "original_native_gas_activation_event_and_two_second_task_preserved": true,
+    "real_local_player_lethal_ge_cue_and_death_finish_verified": true,
+    "native_physical_overlap_level_zero_effect_and_actor_destroy_verified": true,
+    "authority_vfx_and_null_effect_branches_verified": true,
     "selectors_and_owned_roots_restored": true
   }
 }

@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "batch": "196-arena-avatar-death-and-pickup-native-lifecycle",
+  "scope": "Arena Hero child lifecycle/team/parts,native two-second GAS death,and physical pickup overlap;original baseline and both Profiles pass native next-frame visibility,materials,Cue/lethal GE/effect and actor lifetime checks. Original66 nodes,CDO/component values,ABIs,GUIDs,tasks and parent calls retained. Temporary actor instance names normalized only in parity comparison. Retained parent trace forwards original source. Remote replication/input/pixels/audio/package/version remain open;remaining4 Arena.",
+  "recorded_utc": "2026-10-21T05:43:05.1471736Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "989629532ed1efdff5422aad99f606fa7e6c7865",
+  "examples_parent_commit": "e65298131ebaa9fd9297a61226c433717f3fb9b5",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-actors/Baseline08",
+      "summary_sha256": "457C022DF0B39C8DE34AC2AE70F14A8B7972E2E87BF1C340681FE0641E0E18E9",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2420,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "actors.json",
+          "sha256": "60FD2A8ADC7B7459B43A110022A4E9DA634D1840A8AB6C7B768625A16D2E8D43"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-actors/Assets02",
+      "summary_sha256": "3BC387D146B438CFA1C8E898D054C3FC7B12E187864E090BB9643C2A162B182B",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2409,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "assets.json",
+          "sha256": "9663E6E545E8774D5D8575B16005DBE03EA0FD2955D128818A4AC1FBC8BF7959"
+        },
+        {
+          "file": "hero-arena-actor-preservation.json",
+          "sha256": "A49CE0A0C3548D7EC1CE36F3A932A9385D5813A7CF30EF48F292F9FB4862346B"
+        },
+        {
+          "file": "death-arena-actor-preservation.json",
+          "sha256": "27F725BD1AA3ECCF94127E9C61F80916FDB354BF22C32FDAE1D5F1ED51AD1B11"
+        },
+        {
+          "file": "pickup-arena-actor-preservation.json",
+          "sha256": "41966A8FB9792A2CF9172950CA2B129C811148A3041F965FFA009906528A9C66"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-actors/Python01",
+      "summary_sha256": "B3533DFB4999532041E9BFDC4B4544BF29B0A1096CB3CF6D735118BF5A905490",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2428,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "actors.json",
+          "sha256": "765D14BD3944D47B45FECE63CC234F88B0573222DA24CD18F25700AF682584E0"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-actors/Fallback01",
+      "summary_sha256": "14E4204A1133B8FB887E5CD92B2524E47196DDBA6CB2D5A5D47F1B29577F090B",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2428,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "actors.json",
+          "sha256": "16F3E6BE7C498A448D8080CBD2D4363B287882D027AD1F9E80B1B6D5F44D5A5D"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58ArenaActorsValidation.ps1",
+      "sha256": "438D24DE910205020B9482CDA3C543DE53C39A24AA17B94991306A1AF738829E",
+      "native_input_path": "Validation/Run-UEP58ArenaActorsValidation.ps1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "E0590F0041225F601FC82E34F7C3CEF1288628958343DFB4849F05ED85E8CE92",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_arena_actor_assets.py",
+      "sha256": "51B1F0DF3C03D007D101B717FC577A66F582586852991BD41BD5D798B4E3BB57",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_arena_actor_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_arena_actor_probe.py",
+      "sha256": "420F0389D7BC773D051E67CAA7A1D256A1E80CF836779F6E5863A97A3882CB72",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_arena_actor_probe.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "2818DEB2AC2D2B7C70472E515A2E224E42E7AA9E895F09A8E12AE19DA1358041",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "BE71A43EC7CF2EF481C321B127E0D1AC9759A687E14A983A6A6FAA03203E2CA4",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_actor_mixin.py",
+      "sha256": "CC877BC5C70E028B16079C6E7AC764706F49BA3BD354F3DA7E30AD3F40ABA731",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_actor_mixin.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_actor_validation.py",
+      "sha256": "92224EBD52B38EC37327F9CFA416FCB1212F5A991C56973395726003FB340EF4",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_actor_validation.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_actor_contract.py",
+      "sha256": "A83734F5428A71056F74EB4BAC78D9A03FA4B5A6CAA78167C79C8CA717EA79A3",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_actor_contract.py"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261021-arena-actors/host-focused03.json",
+    "sha256": "B6F28D373A9F6DBCDC175DC442CD172C658A60D314A8854364301583E0DFD5EB",
+    "result": {
+      "status": "passed",
+      "tests_run": 12,
+      "failures": 0,
+      "errors": 0,
+      "runtime_acceptance": false
+    }
+  },
+  "supplemental_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-actors/native-comparison01.json",
+      "sha256": "6E12788890C4776062A11882EC8358C57617156F7CC3622BBF9259EEC837681E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-actors/guards01.json",
+      "sha256": "EF01223A7F58B89D356AF6AFD0ADC27338A1AF5DFCEDCED63D0118AA8CB52EA0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-actors/Probe01/probe.json",
+      "sha256": "9B4777B1999B6F723426E1194B7554A6A2FE22E06FCE711DA869629B5C1596C3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-actors/Probe01/process.json",
+      "sha256": "14861A1513955CA68E4EC2CC4B7215480ACA549883AAD4A67266DE91C36B1EA7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-actors/Assets01/summary.json",
+      "sha256": "216FD56EA89098B16253180F21577169D37A75D5EE46D1CBEF0CD469C1ECBEAF"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-actors/Assets01/assets.json",
+      "sha256": "2AB3DB5D2B65D66CE65DD6AFEC181263A14CB9BA689DBAB3214724A38DAE44D1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-actors/Assets01/hero-arena-actor-preservation.json",
+      "sha256": "5B146F665402A7159DC642E46B5F4946B6B107EFD9B1F34CFDE2F69DF501C7A8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-actors/Baseline01/summary.json",
+      "sha256": "36F839BC80CE1B37EFBD1B739F2B6714977B379B595B28D549B6F1441F81DCF3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-actors/Baseline02/summary.json",
+      "sha256": "343FA72750A268DF113EEADA30FA92F4B3FCD49E75C634EC9E0102D783FC821C"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-actors/Baseline03/summary.json",
+      "sha256": "CC7BAF27940D931A1743C492133A72E787C069D640DA7F7B568210B5C16C91E8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-actors/Baseline04/summary.json",
+      "sha256": "38C053D817C36ACA80179AC23B03C4FB4C86485BE7147DC876022AD52D875483"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-actors/Baseline05/summary.json",
+      "sha256": "FE9CE9F483A12545CF8052BFCA7E247C6FC50E701DEA8FE64282FBA69EC33659"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-actors/Baseline06/summary.json",
+      "sha256": "D870960B6D9AD85FB629695F49AF5AB22B235E76B4676436110B9466CE82FB59"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-actors/Baseline07/summary.json",
+      "sha256": "351EA7ED05102CAA978B01675E8880237E2B535A318A94CBC27C980FC4B35DE2"
+    }
+  ],
+  "unchanged_comparison_helper": {
+    "path": "Demos/UEPLyraIntegration/Tools/explorer_character_cdo.py",
+    "sha256": "3E263190CD326BFF68EF9DAB2C85F5A518B5C1AAE00A2F8DE3E3D1D422DE40B3",
+    "role": "existing object-tree comparison ignores only sibling export order,not property values"
+  }
+}
