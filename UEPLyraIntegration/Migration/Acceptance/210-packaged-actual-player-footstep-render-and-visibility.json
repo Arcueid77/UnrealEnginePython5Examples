@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "batch": "210-packaged-actual-player-footstep-render-and-visibility",
+  "scope": "Reuse exact current accepted Cook01 archive;no build/cook/source/Blueprint policy edits. Both BlueprintFallback and Python run actual cooked rendered listen-server/client FiringRange pairs. Original playable owner retains native AnimBP and injects native IA_Move;four original slow/full forward/back cases perProfile,authority movement observation and zero authority cosmetic forwarding. Current8images visually inspected:before empty,after sole marks,hidden removes,restored reappears. Actual viewport888x500 observed;crossProfile camera/timing is not pixel-identical.20/19 native client samples;no replay,teleport,velocity/animation-mode/animation-position writes. Original view/HiddenActors/input/profiles/selectors/roots/observers/inventory/Health restore. Four actual Game processes and four independent gates exit0,strict ordered shutdown/no errors.49 focused host tests pass;isolated staged incremental follows. No physical keyboard,audible output,all surfaces/lighting,full2owner network/travel/loss orversion acceptance claimed. Commit/push verified batch Demos first then core.",
+  "recorded_utc": "2026-10-21T12:34:38.8732215Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "4f398dd071304dc8e837545caad02503fb20fabe",
+  "examples_parent_commit": "aabc2177b1b05a17a044d81e920461371fc6000f",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/PackagedFootstepFallback01",
+      "summary_sha256": "64DE8068BA3767E3AADA0E594044259EE355FF64A3C1F6FA297EFA61B81B330B",
+      "status": "passed",
+      "uep_dll_sha256": [],
+      "frozen_input_records": 2558,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "client": 0,
+        "server": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "C594950AA1B0D526F96FE72820C682703C1AA4BC97DD512C438109B1DCD9D4DC"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/PackagedFootstepPython01",
+      "summary_sha256": "9C25888E0E24CACF31687823E7DF4EA63247EF30B9AEA5FEA48CC00FBD9927B7",
+      "status": "passed",
+      "uep_dll_sha256": [],
+      "frozen_input_records": 2558,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "client": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "8D3D3871408D5DC76E83095E45A3D792681F52AF926129D9E99770D880CDDEF2"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "native_input_path": "Validation/Run-UEP58PackagedFootstepVisualValidation.ps1",
+      "sha256": "4FA011D9AF55F89A9CC3759FA970434376E08D575810F2B2B33862D25E08FC93",
+      "path": "Validation/Run-UEP58PackagedFootstepVisualValidation.ps1",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": {
+    "sha256": "E662546DD7A2632417D49F1B27489DC4D5280DD0149A8BFD9137DEC175038E62",
+    "result": {
+      "schema_version": 2,
+      "status": "passed",
+      "tests_run": 49,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "selection": {
+        "mode": "incremental",
+        "status": "ready",
+        "changed_files": [
+          ".gitmodules",
+          "Demos/README.md",
+          "Demos/UEPLyraIntegration/README.md",
+          "README.md",
+          "UnrealEnginePython.uplugin",
+          "Validation/Run-UEP58PackagedFootstepVisualValidation.ps1",
+          "docs/Third_Person_Demo_0.6.0.md"
+        ],
+        "selected_test_files": [
+          "Demos/UEPLyraIntegration/Tests/test_footstep_animation_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_footstep_animation_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_footstep_locomotion_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_footstep_locomotion_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_footstep_visual_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_footstep_visual_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_migration_package_plan.py",
+          "Validation/Tests/test_incremental_regression.py"
+        ],
+        "affected_files": [
+          "Demos/UEPLyraIntegration/Tests/test_migration_package_plan.py",
+          "Demos/UEPLyraIntegration/Tools/plan_migration_package.py",
+          "Validation/Tests/test_incremental_regression.py"
+        ],
+        "selection_reasons": {
+          "Demos/UEPLyraIntegration/Tests/test_footstep_animation_contract.py": [
+            "explicit pattern test_footstep_animation_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_footstep_animation_fixture.py": [
+            "explicit pattern test_footstep_animation_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_footstep_locomotion_contract.py": [
+            "explicit pattern test_footstep_locomotion_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_footstep_locomotion_fixture.py": [
+            "explicit pattern test_footstep_locomotion_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_footstep_visual_contract.py": [
+            "explicit pattern test_footstep_visual_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_footstep_visual_fixture.py": [
+            "explicit pattern test_footstep_visual_*.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_migration_package_plan.py": [
+            "depends on Demos/UEPLyraIntegration/Tools/plan_migration_package.py"
+          ],
+          "Validation/Tests/test_incremental_regression.py": [
+            "depends on Demos/README.md",
+            "depends on Demos/UEPLyraIntegration/README.md",
+            "depends on README.md"
+          ]
+        },
+        "unmapped_changed_files": [
+          ".gitmodules",
+          "Validation/Run-UEP58PackagedFootstepVisualValidation.ps1"
+        ],
+        "unparsed_unaffected_files": [],
+        "dependency_analysis": "local imports including inheritance, literal module names and file references; dynamic dependencies require explicit patterns/native lanes",
+        "full_regression_requested": false
+      },
+      "failed_cases": []
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/packaged-footstep-host01.json"
+  },
+  "packaged_runtime_proven_by_external_executable_provenance": true,
+  "build_executed": false,
+  "cook_package_executed": false,
+  "reused_exact_package": "20261021-current-game-package/Cook01",
+  "original_scope": [
+    246,
+    182,
+    63,
+    11
+  ],
+  "original_asset_rows_unchanged": true,
+  "actual_game_processes": 4,
+  "independent_native_report_gates": 4,
+  "actual_client_footstep_samples": [
+    20,
+    19
+  ],
+  "images_visually_inspected": 8,
+  "actual_image_and_client_viewport": [
+    888,
+    500
+  ],
+  "physical_keyboard_tested": false,
+  "audible_output_tested": false,
+  "all_surfaces_or_lighting_accepted": false,
+  "full_two_owner_network_acceptance": false,
+  "full_acceptance": false,
+  "supplemental_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/packaged-footstep-visual-review01.json",
+      "sha256": "2851E9CFF2A07833D2F874EF02C6A7F1E16846D84A71E74F9AF8A44EAF2A9EEB"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/Cook01/summary.json",
+      "sha256": "D6DD6B5A12528CBD0ADA0377582102630C7293AB43B45F0358AD0E42C42FB86D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/Cook01/package-inventory.json",
+      "sha256": "5117D801C8254387BB85DF68A2CF3D46056F9CD9B157FB243CB5471C7D80E118"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/PackagedFootstepFallback01/client.json",
+      "sha256": "AEFFACBA72023B4910E783CF52F95FF49501ED9D6255B4CDF36508C5BDE325C7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/PackagedFootstepFallback01/server.json",
+      "sha256": "C594950AA1B0D526F96FE72820C682703C1AA4BC97DD512C438109B1DCD9D4DC"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/PackagedFootstepFallback01/blueprintfallback-footstep-before.png",
+      "sha256": "D220C2BA8FDFD142BD4B4F351A6A08939556B6461463AD7CD2C5508B106D1456"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/PackagedFootstepFallback01/blueprintfallback-footstep-after.png",
+      "sha256": "971302D0523E7F2D104F41A822462143E1C7FF0BD5F0ED68A25845D8D22954E5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/PackagedFootstepFallback01/blueprintfallback-footstep-effect-hidden.png",
+      "sha256": "0B3F8CD8C7E5CDC7EE84A689618510999E51DA5A2A86DC10F7D80CC29927E300"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/PackagedFootstepFallback01/blueprintfallback-footstep-effect-restored.png",
+      "sha256": "5CA09C86E0B38BEEAD229A2CD504921368379AA1CA2503B68F606FD6B28FF599"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/PackagedFootstepPython01/client.json",
+      "sha256": "64CC6B80A006A38D2C26807116356063B86F8167F0DCC860624C702BA93FDCC6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/PackagedFootstepPython01/server.json",
+      "sha256": "8D3D3871408D5DC76E83095E45A3D792681F52AF926129D9E99770D880CDDEF2"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/PackagedFootstepPython01/python-footstep-before.png",
+      "sha256": "4DCFFFFB421D638449309C787504686B4CA704634081348141B79B7F69F33530"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/PackagedFootstepPython01/python-footstep-after.png",
+      "sha256": "A6E109B02B4CFA08B3AC30B4ED0C01EA17111DDCBE74940768E40499DEAFD258"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/PackagedFootstepPython01/python-footstep-effect-hidden.png",
+      "sha256": "CA4A136FE8BF67B481BB70247878E54D776E47F06A422BE82A8CCDBAEC84C159"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/PackagedFootstepPython01/python-footstep-effect-restored.png",
+      "sha256": "0257E5DDE48961D9D1D504439C8A77841D696165ECB4E5865C1951E7EA2D80BF"
+    }
+  ]
+}

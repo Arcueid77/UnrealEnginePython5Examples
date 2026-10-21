@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 211,
+    "bounded_evidence_ledgers": 212,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -4721,7 +4721,9 @@
     "normal_locomotion_scope": "Actual playable client with unchanged AnimBP and native Enhanced Input action injection; one-owner listen-server authority observations. Physical keyboard and full multiplayer acceptance are not claimed.",
     "normal_locomotion_evidence_ledger": "203-real-player-enhanced-input-footstep-locomotion.json",
     "pixel_scope": "Bounded qualitative original FiringRange tiled-floor native captures for both Profiles,with observer-only character masking and visible/hidden/restored footprint Actor attribution;not all surfaces,lighting,views or exact pixels.",
-    "pixel_evidence_ledger": "204-footstep-original-floor-render-and-visibility-attribution.json"
+    "pixel_evidence_ledger": "204-footstep-original-floor-render-and-visibility-attribution.json",
+    "bounded_original_floor_packaged_visual_and_locomotion_verified": true,
+    "packaged_visual_and_locomotion_evidence_ledger": "210-packaged-actual-player-footstep-render-and-visibility.json"
   },
   "wind_system_pilot": {
     "version": "0.12.0",
@@ -13419,7 +13421,9 @@
       "Network01: state report atomically replaced during PowerShell read; sharing-safe reader added"
     ],
     "next": "Controlled native animation notify ingress is proven for the parent and downstream footstep; continue all original normal-play,network,pixel,audio,package/version requirements.",
-    "natural_animation_notify_evidence_ledger": "202-native-animation-footstep-interface-niagara-and-delay.json"
+    "natural_animation_notify_evidence_ledger": "202-native-animation-footstep-interface-niagara-and-delay.json",
+    "bounded_packaged_actual_player_motion_verified": true,
+    "packaged_actual_player_motion_evidence_ledger": "210-packaged-actual-player-footstep-render-and-visibility.json"
   },
   "arena_ready_pilot": {
     "version": "0.13.0",
@@ -14170,12 +14174,17 @@
     "physical_keyboard_tested": false,
     "pixels_tested": false,
     "audio_playback_tested": false,
-    "packaged_runtime": false,
+    "packaged_runtime": true,
     "preserved_failed_runs": [
       "Runtime01 attempted live inherited profile changes; nearest-router API and existing parent cache retained Python while downstream fallback changed. No SDK behavior was modified.",
       "Fallback01 preselects profiles before player creation and exposes a real initial trace miss. The corrected observer requires successful-hit samples plus unchanged original state on native misses,not an invented requirement that every original trace hits."
     ],
-    "next": "Continue original footprint pixel/audio/hardware and broader supported multiplayer/package/version checklists. Native input injection is not physical keyboard proof."
+    "next": "Continue original footprint pixel/audio/hardware and broader supported multiplayer/package/version checklists. Native input injection is not physical keyboard proof.",
+    "packaged_evidence_ledger": "210-packaged-actual-player-footstep-render-and-visibility.json",
+    "packaged_runtime_runs": [
+      "20261021-current-game-package/PackagedFootstepFallback01",
+      "20261021-current-game-package/PackagedFootstepPython01"
+    ]
   },
   "footstep_visual_pilot": {
     "version": "0.12.0",
@@ -14224,14 +14233,19 @@
     "audio_playback_tested": false,
     "physical_keyboard_tested": false,
     "network_acceptance": false,
-    "packaged_runtime": false,
+    "packaged_runtime": true,
     "full_acceptance": false,
     "host_focused_checks": 7,
     "preserved_attempts": [
       "Fallback01 camera/corridor helper used legacy positional FRotator order;wrong camera direction produced only a before image. Named native MakeRotator and actual viewport dimensions correct this test setup.",
       "Fallback02/Python01 captured visible pairs but character occlusion prevented attribution. Fallback03 removed observer-only character rendering. Final Fallback04/Python02 add native footprint Actor visibility controls to distinguish particles from shadows."
     ],
-    "next": "Continue original supported surface/lighting,pixel/audio/hardware,multiplayer/package/version requirements;this bounded tile-floor render checkpoint is not full actor/version acceptance."
+    "next": "Continue original supported surface/lighting,pixel/audio/hardware,multiplayer/package/version requirements;this bounded tile-floor render checkpoint is not full actor/version acceptance.",
+    "packaged_evidence_ledger": "210-packaged-actual-player-footstep-render-and-visibility.json",
+    "packaged_runtime_runs": [
+      "20261021-current-game-package/PackagedFootstepFallback01",
+      "20261021-current-game-package/PackagedFootstepPython01"
+    ]
   },
   "tdm_lethal_network_pilot": {
     "version": "0.12.0",

@@ -31,6 +31,28 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded package batch210 (2026-10-21),actual-player footstep pixels:**
+Reuse the unchanged current Cook01 archive;no compile,cook,gameplay Python,
+Blueprint or animation changes. Both Profiles run actual packaged rendered
+FiringRange listen-server/client pairs. The playable owner keeps its original
+AnimBP and enters four slow/full forward/back cases through native IA_Move.
+Authority observes movement and emits no cosmetic footstep effects. Clients
+record20/19 native samples;exact stride count or camera framing across processes
+is not a new networking/pixel-equality guarantee. Eight actual PNGs are viewed:
+empty original floor,visible sole marks after movement,marks removed by native
+observer-only HiddenActors,and marks restored when that visibility is restored.
+Actual888x500 viewport/image dimensions are recorded instead of the requested
+launch dimensions. Original camera/hidden actors,input,profiles/selectors,
+roots/observers,inventory/Health and animation class/mode restore. All four
+actual Game processes and four independent report gates exit0 with strict
+ordered shutdown and no errors.49 focused host checks pass;the isolated staged
+incremental gate follows. This closes the bounded package floor/locomotion
+visual gap,not audible output,physical keyboard,all materials/lighting,
+two-owner/travel/loss or full-version acceptance. General parent-motion and
+controlled-animation family package flags remain open beyond this proved path.
+Verified work is committed and pushed Demos first,then core. Ledger210 records
+the package provenance and separate post-execution image inspection.
+
 **Completed bounded prerequisite209 (2026-10-21),safe current cooked discovery:**
 The current Game build exposed the known unsafe/deprecated non-Editor package
 callback. The native UEP implementation now subscribes to completed hotfixable
