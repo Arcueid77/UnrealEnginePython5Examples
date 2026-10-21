@@ -23,6 +23,46 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch182 (2026-10-21),Explorer world marker ability:**
+Original K2_ActivateAbility,native ValidData decision and original sphere
+transport are routed in3-method Profiles. Activation starts the retained native
+WaitTargetData/SingleLineTrace task. Instant confirmation,range10000,BlockAll,
+pitch-affecting aim,debug=false and native avatar start transform stay intact.
+The actual source decision is TargetDataHasActor(index0),not HasEndPoint or
+HasHitResult. Those unused source nodes remain. Actor hits query native endpoint,
+draw the original radius100/12-segment/color/duration2/thickness0/World sphere
+then end. No-actor data does not draw or end. The empty End event stays native.
+All11 original nodes/GUIDs,full CDO/public ABI,remaining graph partitions and
+native sphere-node defaults remain checked.8 typed transports and5 interface
+nodes;0 new BP business nodes. Both Profiles pass8 native GAS/instant trace
+cases:owned box hit,sky miss,rejected retrigger while miss remains active,and
+cancel/Profile-switch/reactivation hit. Miss really has an endpoint with no
+Actor,yet stays active with0 draws and0 live target tasks/actors. Hits identify
+the exact owned box,draw at the actual target endpoint once and end. Native
+target actors/tasks close. Primary inventory/Health and owned player/pawn/state/
+box,roots/selectors restore. Production ability sets stay unchanged;activation
+uses native GAS API,not a physical-keyboard acceptance claim. Pixels and actual
+multiplayer prediction/replication remain open.
+Marker01 preserves an observation lifetime error:the borrowed target-data handle
+was read after the instant callback/task cleaned it. Marker02 stores a native
+UScriptStruct clone during the callback for evidence only. SDK clone uses
+CopyScriptStruct and FGameplayAbilityTargetDataHandle has WithCopy=true for its
+shared target-data array;the original task payload/decision remains untouched.
+Final native exit0,independent gate0,strict logs and ordered shutdown pass.
+13 focused checks and5 invalid lanes pass;staged checks remain incremental at
+.build/CommitVerification/20261021-explorer-marker/Index01. No Engine/general
+Cpp/official edits,build,cook,push,tag or publication. Static246/182/63/11 and
+exact candidate paths/order remain;full migration is false.
+
+Batch182 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261021-explorer-marker/Assets01/summary.json` d8c5c29268d6e37f2b74677a8a798d03be70fdae15e9ac2cbd15b65759e3003a
+`20261021-explorer-marker/Assets01/assets.json` 376d6ff6d352a87e1a1add73d708bb57713fe5788d92f40975def998688e8361
+`20261021-explorer-marker/Assets01/marker-preservation.json` 53a3764116fbc885a04fd57ae0c7ec3a65b710c9cd4ea5da422a75e75e697e54
+`20261021-explorer-marker/Marker02/summary.json` e4f7a72e6826c45b39170bd5ac6d5fc54158ea6ffef1095a1485bdfb0d822e15
+`20261021-explorer-marker/Marker02/jump.json` 645b8f5358856d44a09840feaf7172dabe761416f20589abd948260463d29e07
+`20261021-explorer-marker/host-focused02.json` 6ca55a70bf39066a71541e505d616fd06f4e7e77af81aca36f8ad5628f4f0766
+`20261021-explorer-marker/guards01.json` 8c536d50eceeeae58b71314e59852662035b57d7c7dd96940f852e26af4abc61
+
 **Completed bounded batch181 (2026-10-21),collect Cue spline/Timeline business:**
 PlayPickup and native Timeline Update/Finished now join the3 accepted lifecycle
 methods in complete6-method Profiles. Original OnExecute forwarding and empty

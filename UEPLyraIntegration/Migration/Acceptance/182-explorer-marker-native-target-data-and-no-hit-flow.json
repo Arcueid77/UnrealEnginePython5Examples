@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "batch": "182-explorer-marker-native-target-data-and-no-hit-flow",
+  "scope": "Original marker native instant target data HasActor-only draw/end and no-hit active/retry lifecycle; pixels/physical keyboard/network/package remains open",
+  "recorded_utc": "2026-10-20T23:59:05.1868345Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "d65ecc3028c6bec6d4c233b2b48f6ebcc4475b47",
+  "examples_parent_commit": "b722d327461791ed11ae43e4b2d6fcd0ba336b1f",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-marker/Assets01",
+      "summary_sha256": "D8C5C29268D6E37F2B74677A8A798D03BE70FDAE15E9AC2CBD15B65759E3003A",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2323,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-marker/Marker02",
+      "summary_sha256": "E4F7A72E6826C45B39170BD5AC6D5FC54158EA6FFEF1095A1485BDFB0D822E15",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3180,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "645B8F5358856D44A09840FEAF7172DABE761416F20589ABD948260463D29E07"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_explorer_marker_assets.py",
+      "sha256": "FF9A6CBD389F1C3D8B1380A06F63B963DDA42C8935C68FC5E1A8A79F1D846363",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_explorer_marker_assets.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/explorer_marker_mixin.py",
+      "sha256": "94639376890DFC567AC032129A9D05E46A41D806F330219731799FBA184E2262",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/explorer_marker_mixin.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/explorer_marker_contract.py",
+      "sha256": "A648FC6B42AA96C109B6D5587C7802AF19B5B6D14D54935A3C7F982716D9C7D1",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/explorer_marker_contract.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/explorer_marker_validation.py",
+      "sha256": "79AB47E758F263B8F1EF3B1DDC18314782B041F681F1BD55FBF66ED68C9FD763",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/explorer_marker_validation.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "F94554EAD09C5A0C6F334C04F5CF43A3A548C6375BCEC2B58F4D53E971442F26",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261021-explorer-marker/host-focused02.json",
+    "sha256": "6CA55A70BF39066A71541E505D616FD06F4E7E77AF81ACA36F8AD5628F4F0766",
+    "result": {
+      "status": "passed",
+      "tests_run": 13,
+      "runtime_acceptance": false,
+      "full_regression": false
+    }
+  }
+}

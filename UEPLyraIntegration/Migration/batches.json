@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 183,
+    "bounded_evidence_ledgers": 184,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -11481,7 +11481,18 @@
       "method_candidates": 2,
       "business_nodes": 9,
       "scope_review": null,
-      "status": "not_accepted"
+      "status": "bounded_explorer_marker_native_instant_target_has_actor_sphere_and_no_hit_lifecycle_verified_network_pixels_package_pending",
+      "implemented_methods": [
+        "K2_ActivateAbility",
+        "typed original native ValidData callback",
+        "original native DrawDebugSphere transport"
+      ],
+      "reviewed_native_empty_events": [
+        "K2_OnEndAbility"
+      ],
+      "evidence_run": "20261021-explorer-marker/Marker02",
+      "evidence_ledger": "182-explorer-marker-native-target-data-and-no-hit-flow.json",
+      "original_cdo_public_abi_node_guids_target_task_defaults_and_sphere_payload_preserved": true
     },
     {
       "path": "/ShooterExplorer/Interact/GA_Interaction_Collect.GA_Interaction_Collect",
@@ -12717,5 +12728,68 @@
     "packaged_runtime": false,
     "full_acceptance": false,
     "next": "Continue remaining Explorer marker/follow/prompt reviews and Arena candidates,all inherited parent and prior bounded full version/network/pixel/package acceptance. Full migration remains open."
+  },
+  "explorer_marker_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_explorer_marker_native_instant_target_has_actor_sphere_and_no_hit_lifecycle_verified_network_pixels_package_pending",
+    "evidence_ledger": "182-explorer-marker-native-target-data-and-no-hit-flow.json",
+    "owner": "uep_lyra_abilities.explorer_marker_mixin",
+    "original_source_audit": "20261021-explorer-characters/Audit03ShooterReference",
+    "native_asset_authoring": "20261021-explorer-marker/Assets01",
+    "native_runtime_runs": [
+      "20261021-explorer-marker/Marker02"
+    ],
+    "method_counts": {
+      "Python": 3,
+      "BlueprintFallback": 3
+    },
+    "original_nodes": 11,
+    "transport_nodes": 8,
+    "interface_nodes": 5,
+    "new_business_nodes": 0,
+    "original_cdo_public_abi_node_guids_graph_partitions_target_start_transform_and_native_sphere_payload_preserved": true,
+    "native_target_task": {
+      "confirmation": "Instant",
+      "target_class": "GameplayAbilityTargetActor_SingleLineTrace",
+      "max_range": 10000,
+      "trace_profile": "BlockAll",
+      "trace_affects_pitch": true,
+      "debug": false
+    },
+    "branch": "TargetDataHasActor at index0; unused HasEndPoint/HasHitResult nodes retained",
+    "has_actor_order": "native GetTargetDataEndPoint index0 -> original native debug sphere -> K2_EndAbility",
+    "sphere": {
+      "radius": 100,
+      "segments": 12,
+      "duration": 2,
+      "thickness": 0,
+      "depth_priority": "World",
+      "color": [
+        1,
+        0,
+        0.051918,
+        1
+      ]
+    },
+    "no_actor_behavior": "no draw/no end; ability remains active with task closed; retrigger rejected until owned cancellation",
+    "original_empty_end_event_retained": true,
+    "native_case_count": 8,
+    "native_owned_box_hit_and_sky_miss_target_payloads_verified": true,
+    "endpoint_exists_without_actor_does_not_draw_or_end": true,
+    "native_target_task_and_spawned_target_actor_destroyed": true,
+    "profile_switch_after_cancellation_uses_new_activation_callback_profile": true,
+    "target_data_observation_uses_native_CopyScriptStruct_owned_clone": true,
+    "focused_host_checks": 13,
+    "invalid_lane_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261021-explorer-marker/Index01",
+    "target_data_callbacks_replayed": false,
+    "production_ability_sets_modified": false,
+    "pixels_tested": false,
+    "physical_keyboard_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Continue remaining Explorer follow-parent/prompt reviews and Arena candidates,all prior bounded inherited-parent/full version/network/pixel/package acceptance. Full migration remains open."
   }
 }

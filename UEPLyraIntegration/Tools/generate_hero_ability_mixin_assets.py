@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "explorermarker":
+        from generate_explorer_marker_assets import generate as explorer_marker
+        return explorer_marker(stage)
     if kind == "collectcue":
         from generate_collect_cue_assets import generate as collect_cue
         return collect_cue(stage)
