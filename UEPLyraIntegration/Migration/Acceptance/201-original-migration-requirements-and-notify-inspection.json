@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "batch": "201",
+  "scope": "Original migration requirement and inventory evidence review; read-only native locomotion notify inspection, no new gameplay acceptance",
+  "recorded_utc": "2026-10-21T07:16:10.8404193Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "8804a80a29657ed997e1b9722ed4e7bc149e3e07",
+  "examples_parent_commit": "d77a18fa88774c98ac28fbc313563212dfab91f6",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-migration-acceptance-audit/Animation01",
+      "summary_sha256": "F47FA2AAE800CD430AD48DF07C2708236809547F5356526F8F7E53478969A3BF",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 842,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "BC9113E29C396EFCB020A3EFEAE1E1B1D8F7760F39B319981AE5EBA35A05D732",
+          "file": "audit.json"
+        },
+        {
+          "file": "audit.json",
+          "sha256": "BC9113E29C396EFCB020A3EFEAE1E1B1D8F7760F39B319981AE5EBA35A05D732"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58FootstepAnimationAudit.ps1",
+      "sha256": "D83C7DC2AB770085DACC5282DDD9FE70EAF9767CBB62B55EBDAB72B0C812B4CA",
+      "native_input_path": "Validation/Run-UEP58FootstepAnimationAudit.ps1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/audit_footstep_animation_ingress.py",
+      "sha256": "BC6509D282C380C98527CABB26CFF2AB6C67CC7F5867B54ED7C5BC3C01BA0A4F",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_footstep_animation_ingress.py"
+    }
+  ],
+  "host_report": {
+    "result": {
+      "status": "passed",
+      "tests_run": 8,
+      "runtime_acceptance": false,
+      "full_regression": false
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261021-migration-acceptance-audit/host-focused01.json",
+    "sha256": "12820C879C5131CE71BEA4BEC04307652FCE0BAF321D0D64DF4D165218DC7F74"
+  },
+  "supplemental_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-migration-acceptance-audit/inventory02.json",
+      "sha256": "AF54367F57BDEAD5B14428EC6E9D5B85ADCBF97A48275F7A0C08FE678F768EBE"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-migration-acceptance-audit/guards01.json",
+      "sha256": "10313963ADB626FAA0BE65B96194F9B70AA5B782D6DCC695D2C9E2D6EA7B4635"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-migration-acceptance-audit/host-focused01.json",
+      "sha256": "12820C879C5131CE71BEA4BEC04307652FCE0BAF321D0D64DF4D165218DC7F74"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-migration-acceptance-audit/original-inventory.json",
+      "sha256": "9FEC83F97043792DA37B40AF2CFBEE3DD82B1BB609FA5AF6FE9B7F53E30553BC"
+    }
+  ],
+  "evidence_kind": "inventory_consistency_and_native_read_only_inspection",
+  "new_gameplay_runtime_acceptance": false,
+  "animation_playback_executed": false
+}

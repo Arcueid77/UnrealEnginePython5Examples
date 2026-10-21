@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 202,
+    "bounded_evidence_ledgers": 203,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -13995,7 +13995,6 @@
     "controlled_test_token_uses_original_increment_ge": true,
     "whole_ability_business_migrated": true,
     "remaining_unaccepted_arena_candidates": 0,
-    "all_runtime_candidate_rows_have_bounded_implementation_evidence": true,
     "full_migration_acceptance": false,
     "focused_host_checks": 17,
     "boundary_guards": 5,
@@ -14012,6 +14011,40 @@
       "Probe01 native compiler rejected calling the non-BlueprintCallable K2_CanActivateAbility event from Blueprint. Probe02 keeps the callable typed location probe; actual CanActivate query uses native reflection and real activation uses ASC.TryActivateAbilityByClass.",
       "Baseline01 grid observer attempted to move a default-static mesh actor. Baseline02 makes only the test observer movable; exact original native grid results and both Profiles match."
     ],
-    "next": "All246 candidate rows now have bounded implementations, but full migration remains open. Audit every original natural-ingress/network/input/pixel/audio/package/version requirement, including unrun native spawn-failure and commit-race failure paths. Do not redefine completion as zero not_accepted rows."
+    "next": "All246 candidate rows now have recorded bounded dispositions, but full migration remains open. Audit every original natural-ingress/network/input/pixel/audio/package/version requirement, including unrun native spawn-failure and commit-race failure paths. Do not redefine completion as zero not_accepted rows.",
+    "all_runtime_candidate_rows_have_recorded_bounded_dispositions": true
+  },
+  "migration_acceptance_review": {
+    "evidence_ledger": "201-original-migration-requirements-and-notify-inspection.json",
+    "status": "original_inventory_and_version_checklists_indexed_full_acceptance_unproven",
+    "original_inventory_commit": "8b2a2ec8265d240c510a0e5ad02615edcabfaa3c",
+    "original_candidate_paths_and_order_preserved": 246,
+    "original_static_counts": [
+      246,
+      182,
+      63,
+      11
+    ],
+    "original_version_counts": {
+      "0.9.0": 5,
+      "0.10.0": 32,
+      "0.11.0": 37,
+      "0.12.0": 75,
+      "0.13.0": 57,
+      "0.14.0": 40
+    },
+    "original_version_checklist_requirements": 22,
+    "candidate_row_status_is_not_full_acceptance": true,
+    "false_capability_flags_require_scope_review_not_automatic_extra_scope": true,
+    "read_only_original_animation_sequences": 5,
+    "native_context_effect_notifies_inspected": 28,
+    "native_animation_audit": "20261021-migration-acceptance-audit/Animation01",
+    "animation_assets_modified": false,
+    "animation_playback_executed": false,
+    "natural_animation_dispatch_tested": false,
+    "runtime_evidence_reexecuted": false,
+    "full_acceptance": false,
+    "focused_host_checks": 8,
+    "next": "Prove unchanged native animation playback -> context-effect Notify -> original interface dispatch -> migrated footstep policy. Continue all original version checklists using existing hash-matched evidence where applicable; keep RC publication/configuration and game-project C++ separate."
   }
 }

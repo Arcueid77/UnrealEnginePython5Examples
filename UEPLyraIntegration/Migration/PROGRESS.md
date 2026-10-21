@@ -31,6 +31,27 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed evidence audit201 (2026-10-21),original migration acceptance:**
+The first committed inventory8b2a2ec is compared against all246 current paths,
+order and version assignments;static counts246/182/63/11 remain exact. The
+audit indexes22 original0.9–0.14 Roadmap checklist requirements and current
+explicitly unverified capability flags. Checked historical boxes,status strings
+and evidence paths remain leads requiring semantic/source review;zero
+not_accepted rows does not prove completion. Runtime rows include retained
+dispositions,so batch200's broad implementation-evidence label is corrected to
+recorded dispositions. The new ACCEPTANCE_REVIEW.md summarizes the remaining
+checklist and capability review without treating every false prohibition or
+unsupported platform capability as automatic new scope.
+A read-only native commandlet inspects five original locomotion animations,
+finding28 native context-effect notifies with foot_l/foot_r,Walk effect tags
+and original50-unit floor traces. Official/stage animation hashes match and
+all frozen inputs remain unchanged. No animation is played,modified,saved or
+compiled;natural animation dispatch is still unproven. Eight audit negative/
+scope tests pass. This refreshes the requirement index,not previous gameplay/
+network/pixel/audio/package evidence. Next:actual native animation playback
+through original Notify/interface delivery into the migrated footstep policy,
+then the remaining original version requirements. Migration remains incomplete.
+
 **Completed bounded batch200 (2026-10-21),Arena drop-bomb ability:**
 Python owns Z0/native100-grid snapping,native32-radius dynamic-bomb occupancy,
 original failure tags,commit/authority decisions and spawn terminal ends.
