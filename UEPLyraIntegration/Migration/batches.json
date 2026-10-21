@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 185,
+    "bounded_evidence_ledgers": 186,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -9654,8 +9654,20 @@
       "group": "角色、输入与英雄能力",
       "method_candidates": 7,
       "business_nodes": 54,
-      "scope_review": "Ledger 45 migrates inherited UpdateCustomStencilFromTeamID decisions only for retained Shooter Character instances via that child's router. Parent asset/full original function remains unchanged; native recursive primitives/setter/clamping and real ChildActor/GC/three-world results are verified there. Direct parent and other subclass families plus remaining parent business remain open; no whole-parent asset acceptance.",
-      "status": "bounded_inherited_stencil_on_shooter_child_only_parent_family_business_open"
+      "scope_review": "Parent itself now declares the audited stencil method through a unique UEPHeroDefaultMixinProfile selector. Direct parent,SimpleHero,regular/big Follow,Explorer Hero/Pawn and owned local-parent recursive primitive/native clamp routes pass both Profiles. Shooter child-owned router remains intact. Ragdoll/equipment hide/Health death delay/AnimMotionEffect remain open;no whole-parent acceptance.",
+      "status": "bounded_direct_and_inherited_hero_parent_stencil_verified_remaining_parent_business_open",
+      "implemented_helpers": [
+        "UpdateCustomStencilFromTeamID"
+      ],
+      "remaining_business": [
+        "Ragdoll",
+        "HideEquippedWeapons",
+        "Health death-started native delay orchestration",
+        "AnimMotionEffect footstep effects"
+      ],
+      "whole_parent_business_migrated": false,
+      "evidence_run": "20261021-hero-default/Stencil01",
+      "evidence_ledger": "184-hero-default-parent-family-stencil-inheritance.json"
     },
     {
       "path": "/Game/Characters/Heroes/B_SimpleHeroPawn.B_SimpleHeroPawn",
@@ -12841,5 +12853,53 @@
     "packaged_runtime": false,
     "full_acceptance": false,
     "next": "Continue inherited B_Hero_Default/other parent families and original Arena candidates plus all prior bounded version/network/pixel/package acceptance. No complete inherited-character claim."
+  },
+  "hero_default_stencil_pilot": {
+    "version": "0.11.0",
+    "status": "bounded_direct_and_inherited_hero_parent_stencil_verified_remaining_parent_business_open",
+    "evidence_ledger": "184-hero-default-parent-family-stencil-inheritance.json",
+    "owner": "uep_lyra_characters.hero_default_stencil_mixin",
+    "source_audit": "20261021-hero-default/Audit01",
+    "native_asset_authoring": "20261021-hero-default/Assets01",
+    "native_runtime_runs": [
+      "20261021-hero-default/Stencil01"
+    ],
+    "original_nodes": 69,
+    "interface_nodes": 5,
+    "new_business_nodes": 0,
+    "method_counts": {
+      "Python": 1,
+      "BlueprintFallback": 1
+    },
+    "selector": "UEPHeroDefaultMixinProfile",
+    "unique_parent_selector_avoids_descendant_owned_field_collision": true,
+    "original_parent_cdo_properties_public_abis_nodes_guids_and_all_business_graphs_preserved": true,
+    "reused_exact_audited_stencil_method_implementation": true,
+    "native_family_cases": 14,
+    "native_team_calls": 84,
+    "native_family": [
+      "parent",
+      "simple-base",
+      "simple",
+      "big",
+      "explorer-hero",
+      "explorer-pawn",
+      "local-parent"
+    ],
+    "source_rule": "0 for native locally-and-player controlled,otherwise TeamId;native setter clamps0..255 on recursive primitive components",
+    "render_custom_depth_enable_flags_unchanged": true,
+    "existing_shooter_child_router_owner_preserved": true,
+    "original_descendant_assets_byte_unchanged": true,
+    "primary_inventory_health_and_stencil_unchanged": true,
+    "focused_host_checks": 10,
+    "invalid_lane_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261021-hero-default/Index01",
+    "whole_parent_business_migrated": false,
+    "pixels_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Continue original parent ragdoll/equipment hide/Health death native-delay and AnimMotionEffect paths plus Arena and all prior bounded version/network/pixel/package acceptance."
   }
 }

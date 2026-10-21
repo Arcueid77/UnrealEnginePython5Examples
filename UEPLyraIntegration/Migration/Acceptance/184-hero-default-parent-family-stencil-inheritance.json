@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "batch": "184-hero-default-parent-family-stencil-inheritance",
+  "scope": "Actual Hero parent stencil declaration and recursive native setter across direct/inherited/local families; remaining parent business and pixel/network/package/version scope open",
+  "recorded_utc": "2026-10-21T00:20:48.9571157Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "0b094adabd7dcc0e70a84f1c8a621fbb6bc5d312",
+  "examples_parent_commit": "6ed7facc0d0bd711872d8d0f5fa0365ccf23bdf1",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-hero-default/Audit01",
+      "summary_sha256": "2A59DE677022F2997FA5F4582CDE2C9B0A46067B041FF7B4EE1C2AD585AC4FAA",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 824,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "audit.json",
+          "sha256": "A38BCB463F7AF8EA58705F67549CCE791788FA01ABA224E59398CB82CDC21456"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-hero-default/Assets01",
+      "summary_sha256": "22645FD38F8C81FE52AFF2627E18F9FB3789AE96C6F627B29870882DA4A476C6",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2330,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-hero-default/Stencil01",
+      "summary_sha256": "BCA62019C4FBE20E849EF435713873FD0869FC92B1C78BD55E47B927956648B7",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3200,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "8FDE24789AEA6E394C6A1564AB3EE3F9644BA40BA7D1A065517DEFFF6E7E9306"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/audit_hero_default.py",
+      "sha256": "17A3B368A5E92CFF84A6B288ACC5B55598FBFC32768945714DCD1EBB85782AF4",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_hero_default.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_default_stencil_assets.py",
+      "sha256": "60E744F89EF5062AF3A529960E89925B3519885D30183E82ED81D734434BCF59",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_default_stencil_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/hero_default_stencil_mixin.py",
+      "sha256": "BDC0C6863EB4AF50C4E63A911F0CA8E0C33BDA33D29A81967A4F512D511768DD",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/hero_default_stencil_mixin.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/hero_default_stencil_contract.py",
+      "sha256": "C266800AF5648D80B28D10E05E365041A98346554245949AEC2BA2B5E8837529",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/hero_default_stencil_contract.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/hero_default_stencil_validation.py",
+      "sha256": "F6F5C89453DB6E0D589693EB23338710F48FA3DA845C94256EC73BF4740BCFC9",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/hero_default_stencil_validation.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "DFAF98C18DBEEB52B6EB24BCCC657FC1657C4CE0B7B64F8C69414A94ECA4222C",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    }
+  ],
+  "host_report": {
+    "result": {
+      "status": "passed",
+      "tests_run": 10,
+      "runtime_acceptance": false,
+      "full_regression": false
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261021-hero-default/host-focused01.json",
+    "sha256": "71D3A5D32BFFA82B07B6EB39EFD755C22ED6FCA6612D81E0FAFF9F2EC7CF6A45"
+  }
+}

@@ -23,6 +23,46 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch184 (2026-10-21),Hero default parent stencil family:**
+A current native read-only audit captures the original full B_Hero_Default:
+69 nodes across constructor,Ragdoll,empty Death,equipment hide,stencil and
+death/motion event paths. This batch extends the already-audited stencil method
+from the Shooter child-only scope to the actual parent declaration. It does
+not close remaining Ragdoll/HideEquippedWeapons/Health-death-delay/AnimMotionEffect
+business. All69 original nodes/GUIDs,full original CDO properties/public ABIs
+and every original business graph remain unchanged. Only5 Mixin interface nodes
+are added;0 new BP business. The selector UEPHeroDefaultMixinProfile is distinct
+from descendant-owned PythonMixinProfile fields to avoid inherited-name clashes.
+Each Profile declares only UpdateCustomStencilFromTeamID and reuses its exact
+previously-audited policy. Native local-and-player control selects0;otherwise
+TeamId is passed to the native0..255-clamping setter. Recursive native primitive
+enumeration includes ChildActor primitives;render-depth enable flags stay fixed.
+Both Profiles pass14 actual native family cases:direct parent,SimpleHero,
+regular/big Follow,Explorer Hero/Pawn and a parent pawn possessed by an owned
+local player.6 team edge values per case produce84 native calls. All family
+calls resolve to the actual parent PythonFunction owner with one routed call;
+the Shooter child's existing owned stencil router stays distinct. Descendant
+Blueprint file hashes stay identical. Primary player inventory/Health/stencil,
+owned actors/child primitives/player state,roots and class selectors restore.
+Original native audit and asset/runtime processes exit0;independent runtime
+gate0,strict logs and ordered shutdown pass.10 focused checks and5 invalid
+lanes pass;staged checks remain incremental at
+.build/CommitVerification/20261021-hero-default/Index01. No Engine/general Cpp/
+official edits,build,cook,push,tag or publication. Original static246/182/63/11
+and exact candidate path/order remain;whole-parent and full migration remain
+false with remaining parent/network/pixel/package/version scope explicit.
+
+Batch184 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261021-hero-default/Audit01/summary.json` 2a59de677022f2997fa5f4582cde2c9b0a46067b041ff7b4ee1c2ad585ac4faa
+`20261021-hero-default/Audit01/audit.json` a38bcb463f7af8ea58705f67549cce791788fa01aba224e59398cb82cdc21456
+`20261021-hero-default/Assets01/summary.json` 22645fd38f8c81fe52aff2627e18f9fb3789ae96c6f627b29870882da4a476c6
+`20261021-hero-default/Assets01/assets.json` f4bbe2461089c39098cb45c6f93cb9345c73f8bff60d0486d912ffb2b9bf799f
+`20261021-hero-default/Assets01/hero-parent-stencil-preservation.json` 422a309236c75fa033165a34236550e78891a927399a58bfaf14296d6913fc44
+`20261021-hero-default/Stencil01/summary.json` bca62019c4fbe20e849ef435713873fd0869fc92b1c78bd55e47b927956648b7
+`20261021-hero-default/Stencil01/jump.json` 8fde24789aea6e394c6a1564ab3ee3f9644ba40ba7d1a065517defff6e7e9306
+`20261021-hero-default/host-focused01.json` 71d3a5d32bffa82b07b6eb39efd755c22ed6fca6612d81e0faff9f2ec7cf6a45
+`20261021-hero-default/guards01.json` c28c21290c5d76a2b1ebea7311f50e89a691dff9f5189bbe8ab450d8adee578a
+
 **Completed bounded batch183 (2026-10-21),original Explorer shells/prompt retention review:**
 A current read-only UE audit rechecks Character_Default,B_SimpleHeroPawn,
 B_SimpleFollowPawn,B_SimpleFollowPawn_Big and W_InteractionPrompt against exact
