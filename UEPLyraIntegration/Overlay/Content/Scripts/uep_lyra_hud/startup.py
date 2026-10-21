@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(a.startswith("-UEPHeroParentDeathResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):
+        return "uep_lyra_characters.hero_default_death_validation"
     if any(a.startswith("-UEPHeroParentRagdollResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):
         return "uep_lyra_characters.hero_default_ragdoll_validation"
     if any(a.startswith("-UEPHeroParentEquipmentResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):

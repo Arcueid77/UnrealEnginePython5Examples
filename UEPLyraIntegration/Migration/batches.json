@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 188,
+    "bounded_evidence_ledgers": 189,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -9654,20 +9654,20 @@
       "group": "角色、输入与英雄能力",
       "method_candidates": 7,
       "business_nodes": 54,
-      "scope_review": "Parent now declares exact audited stencil/hide/Ragdoll methods. Typed virtual native calls pass stationary/moving/zero-strength/repeat on direct parent and five derived classes with a new stage-only one-body control. Original parent Blueprint/CDO/ABI/graphs/GUIDs and descendants remain unchanged. Health death native delay and AnimMotionEffect remain open; no full parent or multibody visual/network/package acceptance.",
-      "status": "bounded_hero_parent_stencil_equipment_hide_ragdoll_native_family_verified_remaining_parent_business_open",
+      "scope_review": "Parent stencil/hide/Ragdoll retained and Health death-started orchestration uses native random montage/sight unregister/Delay then virtual Ragdoll/hide/empty Death. Real lethal GAS drives20 original/inherited/lifetime cases;one empty int32 native resume declaration added while all original CDO/ABIs/graphs/GUIDs remain. AnimMotionEffect remains open; no whole-parent acceptance.",
+      "status": "bounded_hero_parent_stencil_hide_ragdoll_health_death_delay_verified_motion_effect_open",
       "implemented_helpers": [
         "UpdateCustomStencilFromTeamID",
         "HideEquippedWeapons",
-        "Ragdoll"
+        "Ragdoll",
+        "Health death-started native delay orchestration"
       ],
       "remaining_business": [
-        "Health death-started native delay orchestration",
         "AnimMotionEffect footstep effects"
       ],
       "whole_parent_business_migrated": false,
-      "evidence_run": "20261021-hero-default-ragdoll/Ragdoll02",
-      "evidence_ledger": "186-hero-default-parent-ragdoll-native-physics.json"
+      "evidence_run": "20261021-hero-default-death/Death04",
+      "evidence_ledger": "187-hero-default-parent-native-death-delay.json"
     },
     {
       "path": "/Game/Characters/Heroes/B_SimpleHeroPawn.B_SimpleHeroPawn",
@@ -10135,7 +10135,14 @@
       "business_nodes": 44,
       "scope_review": "Batch116: native original timelines/curves/GUIDs/defaults/signatures retained;3 Python methods per Profile,8 transport nodes each.10 native paired Timeline/material/Niagara cases and2 real manager tags pass. Broad duration/error/network/pixel/package/version gates remain open.",
       "status": "bounded_dash_death_python_business_native_timeline_curve_material_niagara_finish_profile_switch_and_manager_verified_broader_acceptance_open",
-      "evidence_ledger": "116-hero-burst-native-timelines-material-niagara.json"
+      "evidence_ledger": "116-hero-burst-native-timelines-material-niagara.json",
+      "invalid_effect_reference_followup": {
+        "ledger": "187-hero-default-parent-native-death-delay.json",
+        "native_run": "20261021-hero-default-death/HeroBurst01Affected",
+        "native_parent_death_integration": "20261021-hero-default-death/Death04",
+        "preserves_array_slots_and_null_semantics": true,
+        "original_assets_unchanged": true
+      }
     },
     {
       "path": "/ShooterCore/GameplayCues/GCNL_Death.GCNL_Death",
@@ -10145,7 +10152,14 @@
       "business_nodes": 63,
       "scope_review": "Batch116: native original timelines/curves/GUIDs/defaults/signatures retained;3 Python methods per Profile,8 transport nodes each.10 native paired Timeline/material/Niagara cases and2 real manager tags pass. Broad duration/error/network/pixel/package/version gates remain open.",
       "status": "bounded_dash_death_python_business_native_timeline_curve_material_niagara_finish_profile_switch_and_manager_verified_broader_acceptance_open",
-      "evidence_ledger": "116-hero-burst-native-timelines-material-niagara.json"
+      "evidence_ledger": "116-hero-burst-native-timelines-material-niagara.json",
+      "invalid_effect_reference_followup": {
+        "ledger": "187-hero-default-parent-native-death-delay.json",
+        "native_run": "20261021-hero-default-death/HeroBurst01Affected",
+        "native_parent_death_integration": "20261021-hero-default-death/Death04",
+        "preserves_array_slots_and_null_semantics": true,
+        "original_assets_unchanged": true
+      }
     },
     {
       "path": "/ShooterCore/GameplayCues/GCNL_Launcher_Activate.GCNL_Launcher_Activate",
@@ -12900,7 +12914,14 @@
     "network_acceptance": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Continue original parent ragdoll/equipment hide/Health death native-delay and AnimMotionEffect paths plus Arena and all prior bounded version/network/pixel/package acceptance."
+    "next": "Continue original parent ragdoll/equipment hide/Health death native-delay and AnimMotionEffect paths plus Arena and all prior bounded version/network/pixel/package acceptance.",
+    "profile_execution_evidence_followup": {
+      "ledger": "187-hero-default-parent-native-death-delay.json",
+      "old_explorer_fallback_labels_did_not_assert_actual_branch": true,
+      "prior_batch186_explorer_ragdoll_fallback_labelled_rows_actual_python": 8,
+      "old_raw_reports_preserved": true,
+      "refreshed_exact_parent_profile_counters": true
+    }
   },
   "hero_default_equipment_pilot": {
     "version": "0.11.0",
@@ -12952,7 +12973,14 @@
     "network_acceptance": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Continue original parent Ragdoll/Health death native-delay/AnimMotionEffect paths plus Arena and all prior bounded version/network/pixel/package acceptance."
+    "next": "Continue original parent Ragdoll/Health death native-delay/AnimMotionEffect paths plus Arena and all prior bounded version/network/pixel/package acceptance.",
+    "profile_execution_evidence_followup": {
+      "ledger": "187-hero-default-parent-native-death-delay.json",
+      "old_explorer_fallback_labels_did_not_assert_actual_branch": true,
+      "prior_batch186_explorer_ragdoll_fallback_labelled_rows_actual_python": 8,
+      "old_raw_reports_preserved": true,
+      "refreshed_exact_parent_profile_counters": true
+    }
   },
   "hero_default_ragdoll_pilot": {
     "version": "0.11.0",
@@ -13013,6 +13041,81 @@
     "network_acceptance": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Continue original parent Health death native-delay/AnimMotionEffect plus remaining Arena and prior bounded network/pixel/package/version acceptance."
+    "next": "Continue original parent Health death native-delay/AnimMotionEffect plus remaining Arena and prior bounded network/pixel/package/version acceptance.",
+    "profile_execution_evidence_followup": {
+      "ledger": "187-hero-default-parent-native-death-delay.json",
+      "old_explorer_fallback_labels_did_not_assert_actual_branch": true,
+      "prior_batch186_explorer_ragdoll_fallback_labelled_rows_actual_python": 8,
+      "old_raw_reports_preserved": true,
+      "refreshed_exact_parent_profile_counters": true
+    }
+  },
+  "hero_default_death_pilot": {
+    "version": "0.11.0",
+    "status": "bounded_hero_parent_stencil_hide_ragdoll_health_death_delay_verified_motion_effect_open",
+    "evidence_ledger": "187-hero-default-parent-native-death-delay.json",
+    "owner": "uep_lyra_characters.hero_default_death_mixin",
+    "accepted_parent_baseline": "20261021-hero-default-ragdoll/Assets01",
+    "native_asset_authoring": "20261021-hero-default-death/Assets01",
+    "native_runtime_runs": [
+      "20261021-hero-default-death/Death04",
+      "20261021-hero-default-death/Ragdoll01Affected",
+      "20261021-hero-default-death/Equipment01Affected",
+      "20261021-hero-default-death/Stencil01Affected",
+      "20261021-hero-default-death/HeroBurst01Affected"
+    ],
+    "method_counts": {
+      "Python": 5,
+      "BlueprintFallback": 5
+    },
+    "selector": "UEPHeroDefaultMixinProfile",
+    "retains_exact_previous_stencil_hide_and_ragdoll_methods": true,
+    "original_parent_cdo_public_abis_graphs_and_guids_preserved": true,
+    "empty_native_continuation_nodes": 2,
+    "unique_continuation": "UEPHeroDefaultAfterDeathDelay",
+    "native_delay_backend": "Delay",
+    "native_random_delay_bounds": [
+      0.1,
+      0.6
+    ],
+    "native_health_death_cases": 20,
+    "native_family": [
+      "parent",
+      "simple-base",
+      "simple",
+      "big",
+      "explorer-hero",
+      "explorer-pawn"
+    ],
+    "native_lethal_gas_and_real_health_delegate_witness": true,
+    "health_or_event_payload_not_written_or_replayed": true,
+    "source_random_montage_sight_then_delay_order_preserved": true,
+    "owned_fixture_mesh_animation_and_single_body_control_only": true,
+    "original_multi_body_visuals_verified": false,
+    "native_destroy_pending_owner_and_bidirectional_profile_switch": true,
+    "source_empty_death_endpoint_retained": true,
+    "owned_shared_pawndata_class_override_immediately_restored": true,
+    "owned_loaded_class_roots_released": true,
+    "affected_native_ragdoll_cases": 48,
+    "affected_equipment_scenarios": 72,
+    "affected_stencil_team_calls": 84,
+    "affected_dash_death_timeline_pairs": 10,
+    "pooled_effect_array_invalid_reference_conversion_preserves_null_slots": true,
+    "whole_parent_business_migrated": false,
+    "focused_host_checks": 57,
+    "invalid_lane_guards": 5,
+    "parent_family_proof_checks": 7,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261021-hero-default-death/Index01",
+    "failed_evidence_retained": [
+      "Death01: early context references and stale pooled effect property conversion",
+      "Death02: unused native class collected before next scenario; root owned loaded classes",
+      "Death03: Explorer child interface cache selected Python for labelled fallback; choose both interface defaults before owned spawn and assert actual branch counts"
+    ],
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Continue original parent AnimMotionEffect plus remaining Arena and prior bounded network/pixel/package/version acceptance."
   }
 }

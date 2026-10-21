@@ -7,6 +7,7 @@ from uep_lyra_weapons.hero_burst_cue_mixin import lib
 from uep_lyra_world.effect_pad_mixin import valid
 from uep_lyra_world.inventory_pad_network_state import capture
 from . import hero_default_stencil_mixin as policy,stencil_mixin as stencil
+from .hero_parent_test_profiles import defaults
 from .hero_default_stencil_contract import FALSE_FIELDS,KINDS,TEAMS,require,validate
 CLASSES={'parent':policy.CLASS,'simple-base':'/Game/Characters/Heroes/B_SimpleHeroPawn.B_SimpleHeroPawn_C','simple':'/ShooterExplorer/Blueprint/B_SimpleFollowPawn.B_SimpleFollowPawn_C','big':'/ShooterExplorer/Blueprint/B_SimpleFollowPawn_Big.B_SimpleFollowPawn_Big_C','explorer-hero':'/ShooterExplorer/Blueprint/B_Hero_Explorer.B_Hero_Explorer_C','explorer-pawn':'/ShooterExplorer/Blueprint/B_Pawn_Explorer.B_Pawn_Explorer_C'}
 def path(v):return v.get_path_name() if valid(v) else None
@@ -20,11 +21,12 @@ class Validation(Ready):
         if not self.rooted:self.cls.add_to_root()
         ue.register_declared_mixin(self.cls);self.classes={key:ue.load_class(value) for key,value in CLASSES.items()};self.start_profile()
     def spawn(self,kind):
-        actor=self.world.actor_spawn(self.classes[kind],ue.FVector(200000.+len(self.actors)*1000.,200000.,2000.));self.actors.append(actor);actor.get_component_by_type(ue.find_class('CharacterMovementComponent')).call_function('SetMovementMode',5,0);return actor
+        with defaults(self.classes[kind],self.profile):actor=self.world.actor_spawn(self.classes[kind],ue.FVector(200000.+len(self.actors)*1000.,200000.,2000.))
+        self.actors.append(actor);actor.get_component_by_type(ue.find_class('CharacterMovementComponent')).call_function('SetMovementMode',5,0);return actor
     def exercise(self,actor,kind):
         ue.set_mixin_profile(actor,self.profile);child_component=actor.add_actor_component(ue.find_class('ChildActorComponent'),'UEPParentStencilChild',actor.get_property('RootComponent'));child_component.call_function('SetChildActorClass',ue.find_class('StaticMeshActor'),None);child=child_component.get_property('ChildActor');require(valid(child),'recursive native ChildActor fixture missing');targets=components(actor);child_targets=components(child);require(child_targets,'recursive child primitive fixture missing');enabled={path(c):bool(c.get_property('bRenderCustomDepth')) for c in targets};row=dict(profile=self.profile,kind=kind,target_function_is_parent_router=actor.find_function('UpdateCustomStencilFromTeamID').get_class().get_name()=='PythonFunction' and ue.describe_function(actor.get_class(),'UpdateCustomStencilFromTeamID')['owner']==policy.CLASS,recursive_child_primitives_present=all(c in targets for c in child_targets),native_locally_and_player_controlled=bool(actor.call_function('IsLocallyControlled')) and bool(actor.call_function('IsPlayerControlled')),values=[])
         for team in TEAMS:
-            before=count(actor);actor.call_function('UpdateCustomStencilFromTeamID',team);expected=0 if row['native_locally_and_player_controlled'] else max(0,min(255,team));row['values'].append(dict(team=team,all_components_match_source=all(int(c.get_property('CustomDepthStencilValue'))==expected for c in targets),render_custom_depth_enable_flags_unchanged=all(bool(c.get_property('bRenderCustomDepth'))==enabled[path(c)] for c in targets),parent_route_delta=count(actor)-before))
+            before=count(actor);py_before=stencil.evidence(actor)['python_calls'];bp_before=stencil.evidence(actor)['fallback_calls'];actor.call_function('UpdateCustomStencilFromTeamID',team);expected=0 if row['native_locally_and_player_controlled'] else max(0,min(255,team));row['values'].append(dict(team=team,all_components_match_source=all(int(c.get_property('CustomDepthStencilValue'))==expected for c in targets),render_custom_depth_enable_flags_unchanged=all(bool(c.get_property('bRenderCustomDepth'))==enabled[path(c)] for c in targets),parent_route_delta=count(actor)-before,python_calls_delta=stencil.evidence(actor)['python_calls']-py_before,fallback_calls_delta=stencil.evidence(actor)['fallback_calls']-bp_before))
         self.report['cases'].append(row);ue.clear_mixin_profile(actor)
     def start_profile(self):
         self.profile=('BlueprintFallback','Python')[self.index]

@@ -13,7 +13,9 @@ def validate(r):
     for c in r['cases']:
         require(c['target_function_is_parent_router'] and c['native_manager_equipped_real_instances_and_actors'],'parent equipment route/native producer missing')
         require([v['name'] for v in c['scenarios']]==list(SCENARIOS),'parent equipment scenario matrix incomplete')
-        for v in c['scenarios']:require(v['all_weapon_actors_hidden'] and v['nonweapon_actor_visibility_unchanged'] and v['pawn_visibility_and_equipment_identity_unchanged'] and v['route_delta']==v['calls'],'parent equipment filter/visibility/identity differs')
+        for v in c['scenarios']:
+            require(v['python_calls_delta']==(v['calls'] if c['profile']=='Python' else 0) and v['fallback_calls_delta']==(v['calls'] if c['profile']=='BlueprintFallback' else 0),'equipment parent selected Profile did not execute')
+            require(v['all_weapon_actors_hidden'] and v['nonweapon_actor_visibility_unchanged'] and v['pawn_visibility_and_equipment_identity_unchanged'] and v['route_delta']==v['calls'],'parent equipment filter/visibility/identity differs')
         require(c['native_unequip_destroyed_all_fixture_spawned_actors'],'parent equipment native cleanup leaked actors')
     return dict(status='passed',native_parent_equipment_family_cases=12,native_equipment_scenarios=72,whole_parent_business_migrated=False,full_acceptance=False)
 if __name__=='__main__':

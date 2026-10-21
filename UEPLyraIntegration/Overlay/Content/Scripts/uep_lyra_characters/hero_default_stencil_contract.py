@@ -14,6 +14,7 @@ def validate(r):
         require(c['target_function_is_parent_router'] and c['recursive_child_primitives_present'],'parent inherited function or recursive fixture missing')
         require([v['team'] for v in c['values']]==list(TEAMS),'parent stencil team edge cases missing')
         for v in c['values']:
+            require(v['python_calls_delta']==int(c['profile']=='Python') and v['fallback_calls_delta']==int(c['profile']=='BlueprintFallback'),'stencil parent selected Profile did not execute')
             require(v['all_components_match_source'] and v['render_custom_depth_enable_flags_unchanged'] and v['parent_route_delta']==1,'parent stencil decision/setter/profile differs')
         if c['kind']=='local-parent':require(c['native_locally_and_player_controlled'],'owned parent pawn did not exercise local-player zero')
     return dict(status='passed',native_parent_stencil_family_cases=14,whole_parent_business_migrated=False,full_acceptance=False)

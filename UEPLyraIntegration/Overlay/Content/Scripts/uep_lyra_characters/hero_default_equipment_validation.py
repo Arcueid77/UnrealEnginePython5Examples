@@ -7,6 +7,7 @@ from uep_lyra_weapons.hero_burst_cue_mixin import lib
 from uep_lyra_world.effect_pad_mixin import valid
 from uep_lyra_world.inventory_pad_network_state import capture
 from .hero_default_stencil_validation import CLASSES
+from .hero_parent_test_profiles import defaults
 from . import hero_default_equipment_mixin as policy,equipment_hide_mixin as hiding
 from .hero_default_equipment_contract import FALSE_FIELDS,KINDS,require,validate
 def path(obj):return obj.get_path_name() if valid(obj) else None
@@ -23,13 +24,15 @@ class Validation(Ready):
             if not obj.is_rooted():obj.add_to_root();self.roots.append(obj)
         self.classes={key:ue.load_class(value) for key,value in CLASSES.items()};self.queue=[(p,k) for p in ('BlueprintFallback','Python') for k in KINDS];self.case_index=0;self.enter('cases')
     def run_scenario(self,actor,row,name,calls=1):
-        m=manager(actor);instances=all_instances(m);weapons=[i for i in instances if i.is_a(ue.find_class('LyraWeaponInstance'))];weapon_actors=[a for i in weapons for a in i.call_function('GetSpawnedActors') if valid(a)];others=[a for i in instances if not i.is_a(ue.find_class('LyraWeaponInstance')) for a in i.call_function('GetSpawnedActors') if valid(a)];before_other={path(a):bool(a.get_property('bHidden')) for a in others};before_identity=equipment_identity(m);before_hidden=bool(actor.get_property('bHidden'));before=count(actor)
+        m=manager(actor);instances=all_instances(m);weapons=[i for i in instances if i.is_a(ue.find_class('LyraWeaponInstance'))];weapon_actors=[a for i in weapons for a in i.call_function('GetSpawnedActors') if valid(a)];others=[a for i in instances if not i.is_a(ue.find_class('LyraWeaponInstance')) for a in i.call_function('GetSpawnedActors') if valid(a)];before_other={path(a):bool(a.get_property('bHidden')) for a in others};before_identity=equipment_identity(m);before_hidden=bool(actor.get_property('bHidden'));before=count(actor);py_before=hiding.evidence(actor)['python_calls'];bp_before=hiding.evidence(actor)['fallback_calls']
         for _ in range(calls):self.caller.call_function('Hide',actor)
-        row['scenarios'].append(dict(name=name,calls=calls,route_delta=count(actor)-before,all_weapon_actors_hidden=all(a.get_property('bHidden') for a in weapon_actors),nonweapon_actor_visibility_unchanged=all(bool(a.get_property('bHidden'))==before_other[path(a)] for a in others),pawn_visibility_and_equipment_identity_unchanged=bool(actor.get_property('bHidden'))==before_hidden and equipment_identity(manager(actor))==before_identity))
+        row['scenarios'].append(dict(name=name,calls=calls,route_delta=count(actor)-before,python_calls_delta=hiding.evidence(actor)['python_calls']-py_before,fallback_calls_delta=hiding.evidence(actor)['fallback_calls']-bp_before,all_weapon_actors_hidden=all(a.get_property('bHidden') for a in weapon_actors),nonweapon_actor_visibility_unchanged=all(bool(a.get_property('bHidden'))==before_other[path(a)] for a in others),pawn_visibility_and_equipment_identity_unchanged=bool(actor.get_property('bHidden'))==before_hidden and equipment_identity(manager(actor))==before_identity))
     def observe(self):
         require(time.monotonic()-self.phase_started<90.,'parent equipment case timeout')
         if self.case_index>=len(self.queue):self.finish();return
-        profile,kind=self.queue[self.case_index];actor=self.world.actor_spawn(self.classes[kind],ue.FVector(200000.+self.case_index*1000.,200000.,2000.));self.actors.append(actor);actor.get_component_by_type(ue.find_class('CharacterMovementComponent')).call_function('SetMovementMode',5,0);ue.set_mixin_profile(actor,profile);m=manager(actor)
+        profile,kind=self.queue[self.case_index]
+        with defaults(self.classes[kind],profile):actor=self.world.actor_spawn(self.classes[kind],ue.FVector(200000.+self.case_index*1000.,200000.,2000.))
+        self.actors.append(actor);actor.get_component_by_type(ue.find_class('CharacterMovementComponent')).call_function('SetMovementMode',5,0);ue.set_mixin_profile(actor,profile);m=manager(actor)
         if not valid(m):m=actor.add_actor_component(ue.find_class('LyraEquipmentManagerComponent'),'UEPParentHideEquipmentManager')
         require(not all_instances(m),'new native equipment fixture is not empty');row=dict(profile=profile,kind=kind,target_function_is_parent_router=actor.find_function('HideEquippedWeapons').get_class().get_name()=='PythonFunction' and ue.describe_function(actor.get_class(),'HideEquippedWeapons')['owner']==policy.CLASS,scenarios=[]);self.report['cases'].append(row);self.run_scenario(actor,row,'empty-manager');weapon=m.call_function('EquipItem',self.defs['Weapon']);other=m.call_function('EquipItem',self.defs['Other']);self.instance_refs.extend([weapon,other]);weapon_actors=list(weapon.call_function('GetSpawnedActors'));other_actors=list(other.call_function('GetSpawnedActors'));self.spawned.extend(weapon_actors+other_actors);row['native_manager_equipped_real_instances_and_actors']=len(weapon_actors)==2 and len(other_actors)==1 and weapon.is_a(ue.find_class('LyraWeaponInstance')) and not other.is_a(ue.find_class('LyraWeaponInstance'))
         for a in weapon_actors+other_actors:a.call_function('SetActorHiddenInGame',False)

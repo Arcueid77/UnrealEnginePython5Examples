@@ -23,6 +23,56 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch187 (2026-10-21),Hero parent Health death delay:**
+Parent Profiles retain exact stencil/hide/Ragdoll references and add Health
+death orchestration plus one empty int32 native continuation declaration.
+Original CDO/public ABIs/business graphs/node GUIDs stay intact. Native random
+montage and sight unregister precede native Delay(.1.. .6); the continuation
+makes virtual Ragdoll,HideEquippedWeapons and original empty Death calls.
+The parent resume name is distinct from the existing Shooter child resume.
+20 real lethal GAS cases cover both Profiles,direct parent and five derived
+classes. Parent controls include one/empty montage arrays,destroyed pending
+owners and bidirectional Profile changes during the native delay. An actual
+Health multicast observer verifies owner/health/prefix timing; no delegate or
+Health value is replayed/written. Native GameMode creates owned local players
+through an immediately restored PawnClass fixture override. Owned meshes use
+the previous quantitative geometry/animation/one-body control only; no original
+multibody visual claim. All owned contexts,loaded-class roots,Profiles and
+selectors are restored; primary state and existing Shooter child route stay
+unchanged. Death01/02 failures remain: context lifetime,pooled dead FX array
+conversion and unrooted unused loaded classes were corrected. FX array slots
+are preserved while dead references become null for checked Python conversion.
+Death03 exposes child interface caching: both parent/child selectors are set
+only during owned spawn and restored immediately. All three retained feature
+contracts now require exact actual Python/fallback deltas,not only total calls.
+Historical correction: batch186 has8 Explorer Ragdoll rows labelled fallback
+that actually ran Python. Earlier stencil/equipment did not assert the actual
+branch. Historical raw reports remain; this batch supersedes those Profile
+execution claims with explicit counter gates and refreshed native runs.
+Affected native gates pass48 Ragdoll cases,72 equipment scenarios,14 stencil
+family cases/84 calls and10 paired dash/death native Timeline cases.57 focused
+host checks,5 invalid lanes and7 parent proof compatibility/rejection checks
+pass. Staged verification is incremental. No Engine/general Cpp/official edits,
+build,cook,push,tag or publication. Static246/182/63/11 and exact candidate order
+remain. AnimMotionEffect,Arena and earlier bounded broader acceptance stay open.
+
+Batch187 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261021-hero-default-death/Assets01/summary.json` a94d3982bd13d41063f97571b20868cd6eac4819a8dfabe6f4393f12d1e23176
+`20261021-hero-default-death/Assets01/assets.json` e7faf0f3c5c19c0b9c87a01faffefddee82a09167be83e06b2ce0dcabee51152
+`20261021-hero-default-death/Assets01/parent-death-preservation.json` 0a52e8a7978280ffa42aa39fe001b7f53d9b81cac133eff083bfc5925a9e335c
+`20261021-hero-default-death/Death01/summary.json` a00b8c9afb711d69bda38d8067780b5f09261d2f5b576fa037d758884b27557e
+`20261021-hero-default-death/Death02/summary.json` e456d53000ff915131b874f81b703914d63fa9df7c990343d3549d7971cc5619
+`20261021-hero-default-death/Death03/summary.json` ce9fc1d538835fcbd861e12c2c1d0a146b9c190b3472e3c5e82d161b1140cee8
+`20261021-hero-default-death/Death04/summary.json` d41f4bdd679dc2117e121d577174c99973a587e8790a845e57aab48c167a8ca7
+`20261021-hero-default-death/Death04/jump.json` a4c33f11a24ceae734575f64a84640c293f28d3519cfad8861a893b83c5452a6
+`20261021-hero-default-death/Ragdoll01Affected/summary.json` b1995ecb863e73e1b7e739c7d1ef2254c75a8478a3a3fa9debf075e2e5a869aa
+`20261021-hero-default-death/Equipment01Affected/summary.json` 5a942a996814c5aa898551d7a1e9fb761f6735efae08d54a6c91c6324bc38320
+`20261021-hero-default-death/Stencil01Affected/summary.json` e1aaa4cd8e15df4666a0751993023b3bc5090330a64fc5824cdbb19c6c92cff6
+`20261021-hero-default-death/HeroBurst01Affected/summary.json` 0c66a2b38cb6ace7497db471fa447513c1c4c0ce00f281f4577483c2790d1a3f
+`20261021-hero-default-death/host-focused03.json` 14fde0095964c42a2215a9215897b5e980790c038a4098d97dc53f2f7cf9c3c9
+`20261021-hero-default-death/guards01.json` 2ebdab7a6b64b079ad55eacb86effe3a508e8ec53743d418f386ec0bee6f132a
+`20261021-hero-default-death/parent-family-gates01.json` 893c3b677bdda4dfafc0136cfb4dffe591399c7889ac819ef2ae5a6adc174b22
+
 **Completed bounded batch186 (2026-10-21),Hero parent Ragdoll:**
 Parent Profiles retain exact stencil/hide methods and add only the already
 audited Ragdoll function reference. Original14-node order is collision profile

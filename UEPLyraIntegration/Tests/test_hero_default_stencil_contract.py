@@ -3,9 +3,12 @@ from uep_lyra_characters.hero_default_stencil_contract import KINDS,TEAMS,FALSE_
 def report():
     r=dict(status='passed',error=None,cases=[],primary_player_inventory_health_and_stencil_unchanged=True,existing_shooter_child_router_owner_preserved=True,owned_contexts_primitives_profiles_roots_and_selectors_restored=True,original_descendant_file_hashes_unchanged=True);r.update(dict.fromkeys(FALSE_FIELDS,False))
     for profile in ('BlueprintFallback','Python'):
-        for kind in KINDS:r['cases'].append(dict(profile=profile,kind=kind,target_function_is_parent_router=True,recursive_child_primitives_present=True,native_locally_and_player_controlled=kind=='local-parent',values=[dict(team=t,all_components_match_source=True,render_custom_depth_enable_flags_unchanged=True,parent_route_delta=1) for t in TEAMS]))
+        for kind in KINDS:r['cases'].append(dict(profile=profile,kind=kind,target_function_is_parent_router=True,recursive_child_primitives_present=True,native_locally_and_player_controlled=kind=='local-parent',values=[dict(team=t,all_components_match_source=True,render_custom_depth_enable_flags_unchanged=True,parent_route_delta=1,python_calls_delta=int(profile=="Python"),fallback_calls_delta=int(profile=="BlueprintFallback")) for t in TEAMS]))
     return r
 class HeroDefaultStencilContractTests(unittest.TestCase):
+    def test_fallback_label_without_fallback_execution_rejected(self):
+        r=report();v=r['cases'][0]['values'][0];v['python_calls_delta']=1;v['fallback_calls_delta']=0
+        with self.assertRaises(RuntimeError):validate(r)
     def test_complete_native_family_matrix(self):self.assertEqual(validate(report())['native_parent_stencil_family_cases'],14)
     def test_missing_explorer_or_local_case_rejected(self):
         r=report();r['cases'].pop()

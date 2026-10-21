@@ -17,7 +17,7 @@ with patch.dict(sys.modules,{'unreal_engine':native,'unreal_engine.structs':stru
 class HeroBurstPolicyTests(unittest.TestCase):
     def setUp(self):
         self.calls=[];self.kill=False;self.meshes=[];self.decals=[]
-        self.effect=types.SimpleNamespace(call_function=lambda *a:self.calls.append(('effect',*a)))
+        self.effect=types.SimpleNamespace(call_function=lambda *a:self.calls.append(('effect',*a)),is_a=lambda cls:True)
         self.timeline=types.SimpleNamespace(call_function=lambda *a:self.calls.append(('timeline',*a)))
         self.data={'SpawnedEffects':[],'TargetActor':'target','SpawningDuration':2.,'DashDeformTimeline':self.timeline,'DeathCubesTimeline':self.timeline}
         self.actor=types.SimpleNamespace(get_property=self.data.get,set_property=self.write,call_function=lambda *a:self.calls.append(('actor',*a)))
@@ -25,6 +25,8 @@ class HeroBurstPolicyTests(unittest.TestCase):
         native.find_class=lambda name:types.SimpleNamespace(get_cdo=lambda:types.SimpleNamespace(call_function=lambda method,*a,**kw:self.backend(method,a,kw)))
         native.load_object=lambda cls,path:path;native.FVector=lambda *a:a;native.FRotator=lambda:();native.FLinearColor=lambda *a:a
     def write(self,name,value):self.data[name]=value;self.calls.append(('write',name,value))
+    def test_append_preserves_null_slots_and_normalizes_dead_component_references(self):
+        dead=types.SimpleNamespace(is_a=lambda cls:False);self.data['SpawnedEffects']=[self.effect,None,dead];policy.append(self.actor,self.effect);self.assertEqual(self.data['SpawnedEffects'],[self.effect,None,None,self.effect])
     def backend(self,name,args,kwargs):
         self.calls.append(('native',name,args,kwargs))
         if name=='FindTeamFromObject':return {'DisplayAsset':'team-style','bIsPartOfTeam':True,'TeamId':1}
@@ -51,7 +53,7 @@ class HeroBurstPolicyTests(unittest.TestCase):
         self.meshes=[self.mesh()];policy.dash(self.actor,'target',self.params);kw=next(c[3] for c in self.calls if c[:2]==('native','SpawnSystemAttached'))
         self.assertEqual((kw['bAutoDestroy'],kw['bAutoActivate'],kw['bPreCullCheck']),(False,True,True))
     def test_source_array_is_appended_not_reset_at_burst(self):
-        prior=object();self.data['SpawnedEffects']=[prior];self.meshes=[self.mesh()];policy.dash(self.actor,'target',self.params);self.assertEqual(self.data['SpawnedEffects'],[prior,self.effect])
+        prior=types.SimpleNamespace(is_a=lambda cls:True);self.data['SpawnedEffects']=[prior];self.meshes=[self.mesh()];policy.dash(self.actor,'target',self.params);self.assertEqual(self.data['SpawnedEffects'],[prior,self.effect])
     def test_dash_sets_twice_duration_and_keeps_normal_unnormalized(self):
         self.meshes=[self.mesh()];policy.dash(self.actor,'target',self.params)
         self.assertIn(('effect','SetVariableFloat','DashDuration',.5),self.calls);self.assertIn(('effect','SetVariableVec3','DashDirection',(.25,-.5,.75)),self.calls)

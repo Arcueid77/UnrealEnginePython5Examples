@@ -15,6 +15,7 @@ def validate(r):
     require([(v['profile'],v['kind'],v['name']) for v in r['cases']]==[(p,k,n) for p in ('BlueprintFallback','Python') for k in KINDS for n in SCENARIOS],'parent ragdoll family matrix incomplete')
     for v in r['cases']:
         calls=2 if v['name']=='repeat' else 1
+        require(v['python_calls_delta']==(calls if v['profile']=='Python' else 0) and v['fallback_calls_delta']==(calls if v['profile']=='BlueprintFallback' else 0),'parent ragdoll selected Profile did not execute')
         require(v['calls']==calls and v['route_delta']==calls and v['target_function_is_parent_router'],'parent ragdoll route differs')
         require(v['single_body_native_control'] and v['native_ai_possession'] and v['owned_strength_restored_before_destroy'] and v['pawn_hidden_unchanged'],'parent native physics preparation or cleanup differs')
         velocity=v['input_velocity'];magnitude=math.sqrt(sum(x*x for x in velocity));strength=v['strength']

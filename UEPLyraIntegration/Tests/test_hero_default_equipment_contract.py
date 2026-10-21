@@ -3,9 +3,12 @@ from uep_lyra_characters.hero_default_equipment_contract import KINDS,SCENARIOS,
 def report():
     r=dict(status='passed',error=None,cases=[],primary_player_inventory_health_and_equipment_unchanged=True,existing_shooter_child_router_owner_preserved=True,owned_actors_equipment_instances_profiles_roots_and_selectors_restored=True,original_descendant_file_hashes_unchanged=True);r.update(dict.fromkeys(FALSE_FIELDS,False))
     for profile in ('BlueprintFallback','Python'):
-        for kind in KINDS:r['cases'].append(dict(profile=profile,kind=kind,target_function_is_parent_router=True,native_manager_equipped_real_instances_and_actors=True,native_unequip_destroyed_all_fixture_spawned_actors=True,scenarios=[dict(name=n,calls=2 if n=='repeat' else 1,route_delta=2 if n=='repeat' else 1,all_weapon_actors_hidden=True,nonweapon_actor_visibility_unchanged=True,pawn_visibility_and_equipment_identity_unchanged=True) for n in SCENARIOS]))
+        for kind in KINDS:r['cases'].append(dict(profile=profile,kind=kind,target_function_is_parent_router=True,native_manager_equipped_real_instances_and_actors=True,native_unequip_destroyed_all_fixture_spawned_actors=True,scenarios=[dict(name=n,calls=2 if n=='repeat' else 1,route_delta=2 if n=='repeat' else 1,python_calls_delta=(2 if n=="repeat" else 1) if profile=="Python" else 0,fallback_calls_delta=(2 if n=="repeat" else 1) if profile=="BlueprintFallback" else 0,all_weapon_actors_hidden=True,nonweapon_actor_visibility_unchanged=True,pawn_visibility_and_equipment_identity_unchanged=True) for n in SCENARIOS]))
     return r
 class HeroDefaultEquipmentContractTests(unittest.TestCase):
+    def test_fallback_label_without_fallback_execution_rejected(self):
+        r=report();v=r['cases'][0]['scenarios'][0];v['python_calls_delta']=1;v['fallback_calls_delta']=0
+        with self.assertRaises(RuntimeError):validate(r)
     def test_complete_native_family_matrix(self):self.assertEqual(validate(report())['native_equipment_scenarios'],72)
     def test_missing_explorer_or_manager_case_rejected(self):
         r=report();r['cases'][0]['scenarios'].pop()

@@ -34,7 +34,11 @@ def components(target,cls,children):return lib('LyraSystemStatics').call_functio
 
 
 def append(actor,component):
-    values=list(actor.get_property('SpawnedEffects'));values.append(component);actor.set_property('SpawnedEffects',values)
+    # Native pooled arrays can retain dead components until their next finish.
+    # Preserve every array slot while converting dead references to null before
+    # passing the array through Python's checked native property conversion.
+    def live(value):return valid(value) and value.is_a(ue.find_class('NiagaraComponent'))
+    previous=list(actor.get_property('SpawnedEffects'));values=[v if live(v) else None for v in previous];values.append(component if live(component) else None);actor.set_property('SpawnedEffects',values)
 
 
 def attached(actor,mesh,system,activate):
