@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 199,
+    "bounded_evidence_ledgers": 200,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -11748,8 +11748,16 @@
       "group": "TopDownArena 玩法",
       "method_candidates": 2,
       "business_nodes": 31,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Python owns material initialization after original static parent construction and ClientUpdateFireballVisuals. Shared Sphere/Cylinder MID, native GetRealTimeSeconds, BombLifespan scalar, audio Activate(false), fresh local position array, inclusive1..radius, native int multiplication, fixed100 spacing, AddUnique order, Niagara User.PositionArray and Activate(true) remain. Original33 nodes/GUIDs, full CDO/components/ABI and all original graphs retained; five interface/four transport nodes added. Original baseline and both Profiles match six native coordinate cases and material state, and natural unreplayed parent fuse/propagation invokes child display then destroys actor. Far-away fixtures preserve native Niagara culling; actual pixels/audio/network/package/version boundaries remain open.",
+      "status": "bounded_arena_standard_bomb_python_material_array_and_native_fuse_verified_broader_acceptance_open",
+      "implemented_helpers": [
+        "UEPArenaBombConstructVisuals",
+        "ClientUpdateFireballVisuals"
+      ],
+      "whole_actor_business_migrated": true,
+      "evidence_run": "20261021-arena-bomb-visual/Python01",
+      "evidence_ledger": "198-arena-standard-bomb-visuals-and-natural-fuse.json",
+      "pixels_tested": false
     },
     {
       "path": "/TopDownArena/Game/Bombs/GA_DropBomb.GA_DropBomb",
@@ -13831,5 +13839,47 @@
     "function_local_IsBlocking_reset_scope_preserved": true,
     "native_visibility_trace_and_world_wide_clear_verified": true,
     "selector_and_owned_roots_restored": true
+  },
+  "arena_bomb_visual_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_standard_bomb_original_baseline_and_both_profiles_native_material_arrays_and_natural_fuse_verified_broader_acceptance_open",
+    "evidence_ledger": "198-arena-standard-bomb-visuals-and-natural-fuse.json",
+    "owner": "uep_lyra_world.arena_bomb_visual_mixin",
+    "native_original_baseline": "20261021-arena-bomb-visual/Baseline02",
+    "native_asset_authoring": "20261021-arena-bomb-visual/Assets01",
+    "native_runtime_runs": [
+      "20261021-arena-bomb-visual/Python01",
+      "20261021-arena-bomb-visual/Fallback01"
+    ],
+    "actual_map": "/TopDownArena/Maps/L_TopDown_LocalMultiplayer",
+    "method_counts": {
+      "Python": 2,
+      "BlueprintFallback": 2
+    },
+    "original_nodes": 33,
+    "new_interface_nodes": 5,
+    "native_transport_nodes": 4,
+    "new_business_nodes": 0,
+    "native_array_cases_per_mode": 6,
+    "original_cdo_abis_guids_components_and_static_parent_construction_preserved": true,
+    "real_time_clock_native_integer_math_and_fresh_local_array_preserved": true,
+    "native_niagara_array_and_activation_reset_flags_preserved": true,
+    "original_parent_fuse_propagation_and_destruction_observed_without_callback_replay": true,
+    "offscreen_niagara_culling_equal_original": true,
+    "whole_actor_business_migrated": true,
+    "whole_arena_business_migrated": false,
+    "remaining_unaccepted_arena_candidates": 2,
+    "focused_host_checks": 12,
+    "boundary_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "full_acceptance": false,
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "audio_playback_tested": false,
+    "packaged_runtime": false,
+    "preserved_failed_attempts": [
+      "Baseline01 expected IsActive after Activate(true), but original far-away Niagara fixtures are culled. Baseline02 records exact original false state and both Profiles must match; pixels/audio remain unverified."
+    ],
+    "next": "Continue B_Bomb_Base and GA_DropBomb plus all earlier bounded natural-ingress/network/input/pixel/audio/package/version requirements. Full migration remains open."
   }
 }

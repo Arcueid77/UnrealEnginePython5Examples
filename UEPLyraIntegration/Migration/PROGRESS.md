@@ -31,6 +31,24 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded batch198 (2026-10-21),standard Arena bomb visuals:**
+Python initializes the shared Sphere/Cylinder MID after original static parent
+construction,using native real time and original BombLifespan. Python also owns
+ClientUpdateFireballVisuals: audio Activate(false),fresh local position array,
+inclusive1..radius,native integer multiplication,fixed100 spacing,AddUnique order,
+Niagara User.PositionArray and Activate(true). Original33 nodes/GUIDs,full CDO,
+component templates,ABIs and all original graphs remain;five interface/four
+transport nodes are added. Original baseline and both Profiles match materials
+and six native coordinate cases. The unreplayed original parent fuse naturally
+calls child visuals,propagates and destroys the actor in all three modes.
+Baseline01's IsActive expectation was invalid for far-away culled Niagara;
+Baseline02 preserves the observed original false state,matched by both Profiles.
+Pixel/audio playback verification remains open. Strict ordered logs and all
+process/gate exits pass;12 focused checks and five launch guards pass. Ledger198
+records bounded proof. B_Bomb_Base,GA_DropBomb and all earlier natural-ingress/
+network/input/pixel/audio/package/version gates remain open. Accepted work is
+committed and pushed Demos first,then core.
+
 **Completed bounded batch197 (2026-10-21),Arena grid generation:**
 GenerateLevel,ClearWalls,BlockingPlayerSpawn and DistanceBlocking now use Python
 policy. Original inclusive loop bounds,fixed100 spacing,GridSize centering/

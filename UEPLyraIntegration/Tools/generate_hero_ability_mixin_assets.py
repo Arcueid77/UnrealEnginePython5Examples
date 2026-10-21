@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "arenabombvisual":
+        from generate_arena_bomb_visual_assets import generate as arena_bomb_visual
+        return arena_bomb_visual(stage)
     if kind == "arenalevel":
         from generate_arena_level_assets import generate as arena_level
         return arena_level(stage)
