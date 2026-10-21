@@ -13,7 +13,8 @@ CAPABILITIES = {'network_acceptance', 'packaged_runtime', 'packaged_runtime_veri
     'physical_shotgun_pickup_tested', 'real_elimination_gameplay_tested',
     'healthbar_specific_precompiled_caller_tested', 'production_placement_tested',
     'explicit_native_dead_actor_variant_tested', 'context_array_order_native_direct_tested',
-    'spawn_failure_native_tested', 'commit_race_failure_native_tested'}
+    'spawn_failure_native_tested', 'commit_race_failure_native_tested',
+    'normal_locomotion_input_state_machine_tested'}
 
 
 def digest(path):
@@ -80,11 +81,16 @@ def inspect(current, original, roadmap, *, acceptance_directory):
             declared_evidence_run=asset.get('evidence_run'), declared_evidence_ledger=ledger,
             declared_ledger_exists=(acceptance_directory/ledger).is_file() if ledger else None,
             evidence_semantics_verified_by_this_audit=False, completion_proven=False))
+    recorded_animation = current.get('footstep_pilot', {}).get('natural_animation_dispatch_tested') is True
+    next_task = ('Review normal movement-input/AnimBP locomotion, visible footprint pixels, audible output and the remaining original version checklists. Controlled native animation playback is already recorded separately.'
+                 if recorded_animation else
+                 'Inspect unchanged locomotion sequences and prove actual native animation playback reaches the migrated footstep policy through the original Notify/interface chain.')
     return dict(schema_version=1, status='passed', scope_check_passed=True,
         static_counts=list(COUNTS), version_counts=versions, original_paths_and_order_preserved=True,
         candidate_rows=rows, candidate_rows_not_accepted=sum(row['status'] == 'not_accepted' for row in rows),
         requirements=checklists, explicit_unverified_capabilities=unverified(current),
         full_migration_acceptance_proven=False, native_runtime_executed_by_this_tool=False,
+        next_evidence_task=next_task,
         notes=['Candidate rows include implementations and explicit retained dispositions.',
                'A declared path, status, true flag or old checked box is an evidence lead, not a new runtime pass.',
                'False capability flags require scope review; prohibited behavior such as callback replay is not a missing test.',
@@ -109,11 +115,9 @@ def markdown(report):
         groups.setdefault(row['manifest_field'].split('.')[0], []).append(row['capability'])
     for group, fields in groups.items():
         lines.append(f"- `{group}`: {', '.join(dict.fromkeys(fields))}.")
-    lines.extend(['', '## Next evidence work', '',
-        'Inspect unchanged locomotion sequences and the native context-effect notification path, then',
-        'prove actual animation playback reaches the migrated footstep policy. Keep inspection separate',
-        'from runtime dispatch, pixel/audio playback and network proof. Continue the remaining original',
-        'version checklists and unresolved readiness observations with the same scope discipline.', ''])
+    lines.extend(['', '## Next evidence work', '', report['next_evidence_task'], '',
+        'Recorded capabilities still need their linked semantic/source evidence reviewed; this index',
+        'does not rerun them. Continue unresolved readiness observations and the original version scope.', ''])
     return '\n'.join(lines)
 
 

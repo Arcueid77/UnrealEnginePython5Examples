@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 203,
+    "bounded_evidence_ledgers": 204,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -4696,14 +4696,16 @@
     "original_validity_not_active_cleanup_and_retrigger_profiles": 2,
     "production_providers_roots_owned_actors_and_health_cleanup_verified": true,
     "native_diagnostic_error_paths_exercised": false,
-    "natural_animation_dispatch_tested": false,
+    "natural_animation_dispatch_tested": true,
     "pixels_tested": false,
     "audio_playback_tested": false,
     "network_acceptance": false,
     "packaged_runtime": false,
     "full_actor_acceptance": false,
     "full_acceptance": false,
-    "next": "Natural motion-effect/animation integration and remaining0.12/later business; broader visual/audio/network/package/version gates remain open."
+    "next": "Normal movement-input/AnimBP locomotion,visible footprint pixels,audible output,broader network/package/version gates remain open; controlled native animation notification ingress is now proven.",
+    "natural_animation_dispatch_scope": "Five unchanged native single-node sequences on owned original HeroDefault Actors in actual client/listen-server worlds; normal movement-input/AnimBP locomotion remains untested.",
+    "natural_animation_evidence_ledger": "202-native-animation-footstep-interface-niagara-and-delay.json"
   },
   "wind_system_pilot": {
     "version": "0.12.0",
@@ -10034,9 +10036,13 @@
       "group": "特效、GameplayCue 与音频调度",
       "method_candidates": 2,
       "business_nodes": 69,
-      "scope_review": "Batch112: original93 total nodes/12-input interface and native latent node retained;64 native direct/BP motion calls,32 paired Niagara state comparisons and2 native timer Profiles. Natural animation/visual/network/package/full actor acceptance remains open.",
-      "status": "bounded_footstep_native_motion_niagara_state_and_original_latent_cleanup_verified_natural_animation_and_full_acceptance_open",
-      "evidence_ledger": "112-footstep-native-niagara-interface-latent.json"
+      "scope_review": "Batch112 retained original93 nodes/native interface and latent node; batch202 adds unchanged native animation playback on owned original HeroDefault Actors in an actual rendered client and listen server. Five original sequences with28 context-effect notifies per Profile produce56 native parent calls per world. Client forwards56 times into original/Python footstep profiles, with actual owned-floor trace hits, native HitResult fields, live Niagara parameter store parity and original3s retriggerable cleanup/validity branches. Server has56 parent calls and zero footstep spawn/forward calls, preserving original IsServer branch. No Notify/interface callback is replayed, no animation seek/notify/asset/timer is edited, and original primary players remain unchanged. Controlled single-node playback on owned Characters does not certify normal movement-input/AnimBP locomotion, visible pixels, audible output, dedicated/two-owner networking or packages.",
+      "status": "bounded_footstep_native_animation_notify_parent_interface_niagara_and_original_delay_verified_visual_audio_network_package_open",
+      "evidence_ledger": "202-native-animation-footstep-interface-niagara-and-delay.json",
+      "previous_evidence_ledgers": [
+        "112-footstep-native-niagara-interface-latent.json"
+      ],
+      "evidence_run": "20261021-footstep-natural-animation/Runtime03"
     },
     {
       "path": "/Game/Effects/Blueprints/B_WeaponDecals.B_WeaponDecals",
@@ -13370,7 +13376,7 @@
     "prior_ragdoll_equipment_full_matrix_evidence": "187 ledger remains historical; current death chain integrates real native Ragdoll and equipped weapon hiding",
     "all_original_business_methods_implemented": true,
     "whole_parent_business_migrated": false,
-    "natural_animation_notify_ingress_tested": false,
+    "natural_animation_notify_ingress_tested": true,
     "footprint_particles_tested": false,
     "audio_playback_tested": false,
     "pixels_tested": false,
@@ -13383,7 +13389,8 @@
     "failed_evidence_retained": [
       "Network01: state report atomically replaced during PowerShell read; sharing-safe reader added"
     ],
-    "next": "Continue20 Arena candidates and all earlier bounded natural-ingress/network/pixel/package/version requirements; parent implementation alone does not finish the full goal."
+    "next": "Controlled native animation notify ingress is proven for the parent and downstream footstep; continue all original normal-play,network,pixel,audio,package/version requirements.",
+    "natural_animation_notify_evidence_ledger": "202-native-animation-footstep-interface-niagara-and-delay.json"
   },
   "arena_ready_pilot": {
     "version": "0.13.0",
@@ -14046,5 +14053,53 @@
     "full_acceptance": false,
     "focused_host_checks": 8,
     "next": "Prove unchanged native animation playback -> context-effect Notify -> original interface dispatch -> migrated footstep policy. Continue all original version checklists using existing hash-matched evidence where applicable; keep RC publication/configuration and game-project C++ separate."
+  },
+  "footstep_animation_pilot": {
+    "version": "0.12.0",
+    "evidence_ledger": "202-native-animation-footstep-interface-niagara-and-delay.json",
+    "status": "bounded_native_animation_notify_parent_interface_footstep_niagara_and_retrigger_delay_verified_broader_acceptance_open",
+    "native_runtime": "20261021-footstep-natural-animation/Runtime03",
+    "original_animation_inspection": "20261021-migration-acceptance-audit/Animation01",
+    "actual_map": "/ShooterMaps/Maps/L_FiringRange_WP",
+    "actual_worlds": [
+      "ListenServer",
+      "Client"
+    ],
+    "animation_sequences": 5,
+    "profiles": [
+      "BlueprintFallback",
+      "Python"
+    ],
+    "animation_cases_per_world": 10,
+    "native_original_context_notifies_per_profile": 28,
+    "native_parent_notifications_per_world": 56,
+    "native_client_footstep_calls": 56,
+    "native_server_footstep_calls": 0,
+    "native_client_niagara_parameter_samples": 56,
+    "original_animation_and_notify_assets_unchanged": true,
+    "original_parent_and_footstep_mixin_assets_unchanged": true,
+    "native_floor_traces_and_hit_payloads_verified": true,
+    "native_animation_advancement_and_completion_verified": true,
+    "native_three_second_retriggerable_delay_and_validity_branch_verified": true,
+    "primary_players_and_all_profile_classes_restored": true,
+    "fixture_mesh_relative_location_matches_original_player": true,
+    "controlled_playback_on_owned_original_parent_characters": true,
+    "normal_locomotion_input_state_machine_tested": false,
+    "callback_replay": false,
+    "animation_position_written": false,
+    "animation_assets_modified": false,
+    "native_timer_properties_written": false,
+    "full_acceptance": false,
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "audio_playback_tested": false,
+    "packaged_runtime": false,
+    "host_focused_checks": 11,
+    "boundary_guards": 2,
+    "preserved_failed_runs": [
+      "Runtime01 rendered Expanse listen server GPU/device-removed crash before cases;no renderer fix claim.",
+      "Runtime02 NullRHI listen server exposed null spawning-Cue output errors;not accepted or repaired here. Client completed native notify observations but missed the floor because base mesh offset differed from the player,then accessed a retired actor wrapper during cleanup. Runtime03 uses rendered original FiringRange,player-relative owned mesh placement and live-world path lookup."
+    ],
+    "next": "Continue normal gameplay input/AnimBP locomotion,pixel/audio/multiplayer/package/version requirements and remaining original migration checklists. GPU and NullRHI-listen observations remain preserved,not claimed fixed."
   }
 }

@@ -123,7 +123,7 @@ These are recorded flags requiring requirement and platform review, not automati
 - `character_damage_pilot`: network_acceptance, pixels_tested, audio_playback_tested, packaged_runtime.
 - `message_widget_pilot`: pixels_tested, audio_playback_tested, network_acceptance, packaged_runtime.
 - `cue_widget_pilot`: pixels_tested, audio_playback_tested, network_acceptance, packaged_runtime.
-- `footstep_pilot`: natural_animation_dispatch_tested, pixels_tested, audio_playback_tested, network_acceptance, packaged_runtime.
+- `footstep_pilot`: pixels_tested, audio_playback_tested, network_acceptance, packaged_runtime.
 - `wind_system_pilot`: audible_playback_accepted, network_acceptance.
 - `music_manager_family_pilot`: network_acceptance.
 - `weapon_fire_cue_network_pilot`: audible_playback_accepted.
@@ -197,10 +197,11 @@ These are recorded flags requiring requirement and platform review, not automati
 - `arena_bomb_base_pilot`: network_acceptance, pixels_tested, audio_playback_tested, packaged_runtime.
 - `arena_drop_bomb_pilot`: network_acceptance, physical_input_tested, pixels_tested, audio_playback_tested, packaged_runtime, spawn_failure_native_tested, commit_race_failure_native_tested.
 - `migration_acceptance_review`: natural_animation_dispatch_tested.
+- `footstep_animation_pilot`: normal_locomotion_input_state_machine_tested, network_acceptance, pixels_tested, audio_playback_tested, packaged_runtime.
 
 ## Next evidence work
 
-Inspect unchanged locomotion sequences and the native context-effect notification path, then
-prove actual animation playback reaches the migrated footstep policy. Keep inspection separate
-from runtime dispatch, pixel/audio playback and network proof. Continue the remaining original
-version checklists and unresolved readiness observations with the same scope discipline.
+Review normal movement-input/AnimBP locomotion, visible footprint pixels, audible output and the remaining original version checklists. Controlled native animation playback is already recorded separately.
+
+Recorded capabilities still need their linked semantic/source evidence reviewed; this index
+does not rerun them. Continue unresolved readiness observations and the original version scope.

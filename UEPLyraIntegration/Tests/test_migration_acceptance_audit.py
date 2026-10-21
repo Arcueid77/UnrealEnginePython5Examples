@@ -70,6 +70,13 @@ class MigrationAcceptanceAuditTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.run_audit(data, original, roadmap)
 
+    def test_recorded_animation_updates_next_work_without_proving_migration(self):
+        data, original, roadmap = fixture()
+        data['footstep_pilot'] = dict(natural_animation_dispatch_tested=True)
+        result = self.run_audit(data, original, roadmap)
+        self.assertIn('already recorded', result['next_evidence_task'])
+        self.assertFalse(result['full_migration_acceptance_proven'])
+
     def test_requirement_continuations_and_source_lines_are_retained(self):
         rows = audit.requirements('## 0.12.0 Effects\n- [ ] Multi-client phase state\n  and native cleanup agree.\n\n## 1.0.0 Release\n- [ ] Publish tags.\n')
         self.assertEqual(len(rows), 1)

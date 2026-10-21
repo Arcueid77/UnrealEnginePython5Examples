@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "batch": "202",
+  "scope": "Controlled unchanged native animation playback through original context Notify and parent interface into both footstep Profiles; original Niagara payload and native delay, broader normal-play acceptance open",
+  "recorded_utc": "2026-10-21T07:43:11.7645664Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "783956b4b20a437ff0da4f1324a0169c0c0d3be1",
+  "examples_parent_commit": "8a6b370044f4cecb674b5b92610678417d31df87",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-footstep-natural-animation/Runtime03",
+      "summary_sha256": "864D0882B0FA5DE4C6DC3EB3EB898748D4589BFEE68805A3D0207FA7E0FD020F",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2456,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "client": 0,
+        "server": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "F427D562BA7DFED1A51885EE78331DE5B4234DDA2FC5C51BB4800B437A2DCCEB"
+        },
+        {
+          "file": "server.json",
+          "sha256": "F427D562BA7DFED1A51885EE78331DE5B4234DDA2FC5C51BB4800B437A2DCCEB"
+        },
+        {
+          "file": "client.json",
+          "sha256": "DFEA951DFAA1F4393F5FB0263E0D99A3EF9C9AADEF0AB8674AF1950EC76BE140"
+        },
+        {
+          "file": "motion-assets.json",
+          "sha256": "214D32BC84CFC1D5578A5A7A8D2FC1A1E71F50C3BCB12C63491242D85E358840"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "88D411F49F61CF66D6B94148CA956DFE8C4689608E11800486CCF584356C79CC",
+      "native_input_path": "Validation/Run-UEP58FootstepAnimationValidation.ps1",
+      "path": "Validation/Run-UEP58FootstepAnimationValidation.ps1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "1625D8D2E59396705964B00124C8A588716E0E500E75896CFD9EDE54F423B2D9",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/footstep_animation_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/footstep_animation_validation.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "80B52471155CF3F0FCABD5AE8DF5D7F18DB98197DCBAA56EC4068A1DA35E8A12",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/footstep_animation_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/footstep_animation_contract.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "979C4E832A045A141E9A9C02326D8BD41FA6F5FE43D0FA2886CEC355FF5BADA5",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    }
+  ],
+  "host_report": {
+    "sha256": "D22BD36A7775F2972F864CC5913B1BEE18FD03B93393632DCF2B85BE539BF2D5",
+    "result": {
+      "status": "passed",
+      "tests_run": 11,
+      "runtime_acceptance": false,
+      "full_regression": false
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261021-footstep-natural-animation/host-focused02.json"
+  },
+  "native_independent_gate_exit_codes": {
+    "server": 0,
+    "client": 0
+  },
+  "supplemental_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-footstep-natural-animation/native-comparison01.json",
+      "sha256": "86707DFED01859AE8C70FED9402D7F3CCB626D77DA1BA97DF6BA654989D7D998"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-footstep-natural-animation/guards01.json",
+      "sha256": "5B2DF20FF6B3A05F230D5280C58676D5102B939736213B2DBE9EEF314CEE461B"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-footstep-natural-animation/host-focused02.json",
+      "sha256": "D22BD36A7775F2972F864CC5913B1BEE18FD03B93393632DCF2B85BE539BF2D5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-footstep-natural-animation/inventory02.json",
+      "sha256": "767ECCC6DDFD9E329DF2B0FFF67A9F641F035E1C71D0F5022885024CE74B8AEF"
+    }
+  ],
+  "evidence_kind": "native_animation_notify_ingress_and_read_only_parameter_observation",
+  "normal_locomotion_input_state_machine_tested": false,
+  "pixels_tested": false,
+  "audio_playback_tested": false
+}
