@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 190,
+    "bounded_evidence_ledgers": 191,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -11819,8 +11819,15 @@
       "group": "TopDownArena 玩法",
       "method_candidates": 5,
       "business_nodes": 5,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Original constructor and four looping Cue events contain only static parent forwards with exact payloads. Application/Recurring target native GameplayCueNotify_Looping; constructor/LoopingStart/Removal target existing GCNL_Widget_Base. Existing parent Python widget policy creates and removes newly migrated W_GetReady through actual Arena warmup. Child bytes/CDO/config/graphs remain original; no child Python no-op added. Broader audio/pixel/network/package acceptance remains open.",
+      "status": "bounded_original_arena_getready_static_parent_forwarders_retained_native_cue_widget_integration_verified",
+      "source_disposition": "original_static_parent_forwarders_retained",
+      "own_business_nodes": 0,
+      "own_python_mixin_required": false,
+      "parent_python_business": "uep_lyra_hud.cue_widget_mixin",
+      "cue_child_bytes_unchanged": true,
+      "evidence_run": "20261021-arena-ready/Python01",
+      "evidence_ledger": "189-arena-getready-native-cue-animation.json"
     },
     {
       "path": "/TopDownArena/GameplayCues/W_GetReady.W_GetReady",
@@ -11828,8 +11835,15 @@
       "group": "TopDownArena 玩法",
       "method_candidates": 3,
       "business_nodes": 2,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Own Construct plays original GetReady_Intro forward at1x/restore=false; empty PreConstruct/Tick stay native. Original five nodes/GUIDs,CDO/ABI,WidgetTree and animation templates/curves retained. Actual unmodified Arena warmup naturally produces/removes Cue widget; original baseline and both Profiles match1.6500167s native animation and final transform; separate owned visible widget completes naturally. No phase/Cue callback replay or Python clock; pixels/audio/network/package acceptance open.",
+      "status": "bounded_arena_getready_construct_python_native_animation_and_natural_cue_lifecycle_verified_broader_ui_acceptance_open",
+      "implemented_helpers": [
+        "Construct"
+      ],
+      "whole_widget_business_migrated": true,
+      "pixels_tested": false,
+      "evidence_run": "20261021-arena-ready/Python01",
+      "evidence_ledger": "189-arena-getready-native-cue-animation.json"
     },
     {
       "path": "/TopDownArena/UserInterface/Player/B_PlayerUIComponent.B_PlayerUIComponent",
@@ -13178,5 +13192,59 @@
       "Network01: state report atomically replaced during PowerShell read; sharing-safe reader added"
     ],
     "next": "Continue20 Arena candidates and all earlier bounded natural-ingress/network/pixel/package/version requirements; parent implementation alone does not finish the full goal."
+  },
+  "arena_ready_pilot": {
+    "version": "0.13.0",
+    "status": "bounded_original_arena_baseline_and_both_construct_profiles_native_cue_animation_verified_broader_acceptance_open",
+    "evidence_ledger": "189-arena-getready-native-cue-animation.json",
+    "owner": "uep_lyra_hud.arena_ready_mixin",
+    "native_read_only_audit": "20261021-arena-runtime/Audit03",
+    "native_original_baseline": "20261021-arena-ready/Baseline02",
+    "native_asset_authoring": "20261021-arena-ready/Assets02",
+    "native_runtime_runs": [
+      "20261021-arena-ready/Python01",
+      "20261021-arena-ready/Fallback01"
+    ],
+    "actual_map": "/TopDownArena/Maps/L_TopDown_LocalMultiplayer",
+    "method_counts": {
+      "Python": 1,
+      "BlueprintFallback": 1
+    },
+    "original_widget_cdo_abi_five_nodes_guids_tree_animation_templates_and_curves_preserved": true,
+    "new_interface_nodes": 5,
+    "new_business_nodes": 0,
+    "empty_preconstruct_and_tick_retained": true,
+    "source_construct": "PlayAnimationForward(GetReady_Intro,1,false)",
+    "native_animation_duration": 1.6500166654586792,
+    "native_warmup_getready_time_unchanged": 3.0,
+    "actual_phase_cue_widget_creation_and_removal_observed": true,
+    "original_animation_finishes_before_natural_warmup_cue_removal": true,
+    "owned_visible_widget_full_native_animation_completed": true,
+    "natural_and_owned_final_transform_match_baseline": true,
+    "original_getready_cue_five_static_parent_forwarders_and_all_bytes_preserved": true,
+    "parent_widget_cue_python_start_and_remove_observed": true,
+    "whole_widget_business_migrated": true,
+    "whole_arena_business_migrated": false,
+    "remaining_unaccepted_arena_candidates": 18,
+    "profile_and_owned_roots_restored": true,
+    "focused_host_checks": 10,
+    "boundary_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261021-arena-ready/Index01",
+    "phase_or_cue_callbacks_replayed": false,
+    "phase_timers_changed": false,
+    "python_animation_clock_added": false,
+    "pixels_tested": false,
+    "audio_playback_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "failed_evidence_retained": [
+      "Arena Audit01 inline macro classification",
+      "Arena Audit02 custom named Ubergraph classification",
+      "Baseline01 transform getter not reflected; property reader used",
+      "Assets01 unconnected delegate output is not parent event payload"
+    ],
+    "next": "Continue remaining18 Arena candidates and all previous bounded natural ingress/network/pixel/package/version requirements; no full goal completion implied."
   }
 }

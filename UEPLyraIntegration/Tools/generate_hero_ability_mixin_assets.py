@@ -44,6 +44,9 @@ def spawn_cdo_snapshot(bp, label):
 def generate():
     stage = require_authoring_stage(arg("UEPHeroAbilityStageRoot"), ue.convert_relative_path_to_full(ue.get_content_dir()))
     kind = arg("UEPHeroAbilityKind")
+    if kind == "arenaready":
+        from generate_arena_ready_assets import generate as arena_ready
+        return arena_ready(stage)
     if kind == "herodefaultmotion":
         from generate_hero_default_motion_assets import generate as hero_default_motion
         return hero_default_motion(stage)

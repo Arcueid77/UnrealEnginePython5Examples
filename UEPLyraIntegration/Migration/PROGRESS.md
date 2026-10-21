@@ -23,6 +23,51 @@ requirement. Keep feature-specific native authoring/runtime/lifetime checks.
 Batch112's already completed3510-test/1027-file full evidence stays historical;
 later incremental checks do not refresh unrelated native or full-suite evidence.
 
+**Completed bounded batch189 (2026-10-21),Arena GetReady animation and Cue:**
+Original20 Arena candidates now have a native read-only graph/CDO/ABI inventory.
+Inline macros and custom-named Ubergraphs remain fully exported but are not
+misclassified as independently callable functions. Original package hashes
+match official/staged copies; audit does not modify assets. First migration is
+W_GetReady Construct:PlayAnimationForward(GetReady_Intro,1,false). Original
+five nodes/GUIDs,all CDO/ABIs,WidgetTree,animation templates/curves remain.
+Only five interface nodes and a1-method Profile family are added. Empty
+PreConstruct/Tick stay native. GCN_GetReady has five static parent forwards
+only;its original bytes/config/CDO/graphs remain,no child Python no-op is added.
+Actual Arena map warmup naturally invokes the existing GCNL_Widget_Base Python
+policy,which creates/adds/removes this widget. Original baseline and both
+Profiles pass natural warmup->playing Cue removal and a separate owned visible
+widget's complete native animation. Native duration is1.6500167s;unchanged
+warmup is3s,so the animation completes before Cue removal. Exact duration and
+natural/owned final transforms match baseline. No callbacks replayed,no phase
+timer changed,no Python animation clock. Parent Cue start/remove and selected
+widget Construct execute once. Owned contexts/roots/selectors restore.
+Audit01/02,Baseline01 and Assets01 failures remain as source/tool evidence;
+accepted runs are Audit03,Baseline02,Assets02,Python01,Fallback01. Native process
+and independent gates exit0,strict logs and ordered shutdown pass.10 focused
+checks and5 boundary guards pass;staged checks remain incremental. No Engine/
+general Cpp/official edits,build,cook,push,tag or publication. Static246/182/63/11
+and exact candidate order remain.18 Arena candidates remain unaccepted,and
+all prior broader natural ingress/network/pixel/audio/package/version boundaries
+remain in the original full objective. Whole-arena/full acceptance is false.
+
+Batch189 raw evidence SHA256 (workspace-owned ignored artifacts):
+`20261021-arena-runtime/Audit03/summary.json` b21227e7b65945b875e28e528a993e1d9f6a4b4bffe8062305654a0320f36572
+`20261021-arena-runtime/Audit03/audit.json` 5ed111527751d59d51b01da6b993c245d0f3dc46e9b41db2c549c326d3df5a0c
+`20261021-arena-ready/Baseline01/summary.json` d589695fb03881ca278f3f6563365cbc8ac35880a0448efccc705b46e731b3b8
+`20261021-arena-ready/Baseline02/summary.json` da6fc6e7d85c583c655e83796b22966b1017f81244acea29ea8c51e041a6f2a0
+`20261021-arena-ready/Baseline02/ready.json` bf1418ea9b526dc37cf07aa87d7f5585427cb273ba97fc5517f8f704f1f63414
+`20261021-arena-ready/Assets01/summary.json` 33e324d23d8694aaf52bb0bb1f0e4e0389738773edc106b7724829fcfadfc7ac
+`20261021-arena-ready/Assets02/summary.json` 07f25d35c011ca04dc31524799f7ed38cc734bc80ad3135b5c34e012ba9f25c0
+`20261021-arena-ready/Assets02/assets.json` 5753016094765eb77d58486daeb5c9f6dfaebaf15d8b68694efb0fa98fdea02b
+`20261021-arena-ready/Assets02/arena-ready-preservation.json` fb014ca61e33d2d8155c55b695fc02b091abfc90fef5fe4c768ab3ee2baa65fc
+`20261021-arena-ready/Python01/summary.json` 019ed7967e4fc2941c4620ba0fff72bbd999f3872e2b9ae0825b028099a46bbb
+`20261021-arena-ready/Python01/ready.json` 22f7cacb8bcbf06768fd76272de507e62cfe1affba2bb27ffdbc6a107e359870
+`20261021-arena-ready/Fallback01/summary.json` 5f3745e449b1b28577bbb9192af0dd734ef41ae79ade83dd299019a644dabbc4
+`20261021-arena-ready/Fallback01/ready.json` ee68b8017589610f6668fa67f169556e7877f7f91fdf49e128cfd2f11df6a9a0
+`20261021-arena-ready/native-comparison01.json` 447d5558ed6e28d220372e43a3975f9a94a8f358af815c56ddb8282dbe00ecc6
+`20261021-arena-ready/host-focused01.json` 53b1de942fe517b4f4f2695de9df2e03b6fbf937cccb26f43d02904df9269733
+`20261021-arena-ready/guards01.json` 345cb09aaaa83138b0cf92d0f1ab04ce4452bf9af27feb3b59c45ab830626e23
+
 **Completed bounded batch188 (2026-10-21),Hero parent client motion dispatch:**
 All original parent business methods now have Python implementations. The
 existing five methods remain exact function references; AnimMotionEffect is

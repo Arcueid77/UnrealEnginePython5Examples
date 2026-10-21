@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(a.startswith("-UEPArenaReadyResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):
+        return "uep_lyra_hud.arena_ready_validation"
     if any(a.startswith("-UEPHeroParentMotionResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):
         return "uep_lyra_characters.hero_default_motion_validation"
     if any(a.startswith("-UEPHeroParentDeathResult=") for a in arguments) and not any(a.startswith("-run=") for a in arguments):
