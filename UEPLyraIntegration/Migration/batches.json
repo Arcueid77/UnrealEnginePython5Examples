@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 195,
+    "bounded_evidence_ledgers": 196,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -11799,8 +11799,16 @@
       "group": "TopDownArena 玩法",
       "method_candidates": 2,
       "business_nodes": 2,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Python preserves authored Playing/Ended PrintString calls. Original four nodes/GUIDs,full CDO/GAS parent/tags/ABIs remain;only five interface nodes added. Native base component retains120s round and phase transitions;no clock/game-mode property changed. Original baseline and both Profiles pass full3/120/10s cycle,global effect/Cue lifecycle and next-round startup. Broader network/pixel/audio/package/version acceptance remains open.",
+      "status": "bounded_arena_phase_python_original_default_cycle_and_native_seamless_restart_verified_broader_acceptance_open",
+      "implemented_helpers": [
+        "K2_ActivateAbility",
+        "K2_OnEndAbility"
+      ],
+      "whole_ability_business_migrated": true,
+      "evidence_run": "20261021-arena-phases/Python02",
+      "evidence_ledger": "194-arena-phases-native-default-cycle-and-seamless-restart.json",
+      "pixels_tested": false
     },
     {
       "path": "/TopDownArena/Game/Modes/Phase_PostGame.Phase_PostGame",
@@ -11808,8 +11816,16 @@
       "group": "TopDownArena 玩法",
       "method_candidates": 2,
       "business_nodes": 3,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Python schedules original10s Delay and invokes native PlayNextGame from its typed completion gate. Original six nodes/GUIDs,CDO/GAS policies/tags/ABIs retained. Empty end event stays native. Actual source starts two concurrent postgames;native ServerTravel performs seamless restart and preserves game time. No shortened duration,manual phase/travel callback or new clock. Original baseline and both Profiles pass full3/120/10s cycle,global effect/Cue lifecycle and next-round startup. Broader network/pixel/audio/package/version acceptance remains open.",
+      "status": "bounded_arena_phase_python_original_default_cycle_and_native_seamless_restart_verified_broader_acceptance_open",
+      "implemented_helpers": [
+        "K2_ActivateAbility",
+        "UEPArenaPostGameAfterNativeWait"
+      ],
+      "whole_ability_business_migrated": true,
+      "evidence_run": "20261021-arena-phases/Python02",
+      "evidence_ledger": "194-arena-phases-native-default-cycle-and-seamless-restart.json",
+      "pixels_tested": false
     },
     {
       "path": "/TopDownArena/Game/Modes/Phase_Warmup.Phase_Warmup",
@@ -11817,8 +11833,19 @@
       "group": "TopDownArena 玩法",
       "method_candidates": 4,
       "business_nodes": 27,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Python preserves original unconnected true skip branch;regular activation applies native GE_Warmup,sets GetReady Cue parameters and schedules original3s Delay. Native completion clears Cue,removes global effect and starts Playing through retained native call. End event only prints as authored. Original39 nodes/GUIDs,CDO/GAS policies/tags/ABIs and native Delay UUID retained. Actual original Arena has two concurrent warmups;native GAS ends both when Playing starts. Original baseline and both Profiles pass full3/120/10s cycle,global effect/Cue lifecycle and next-round startup. Broader network/pixel/audio/package/version acceptance remains open.",
+      "status": "bounded_arena_phase_python_original_default_cycle_and_native_seamless_restart_verified_broader_acceptance_open",
+      "implemented_helpers": [
+        "K2_ActivateAbility",
+        "K2_OnEndAbility",
+        "ClearUserFacingCue",
+        "ActivateUserFacingCue",
+        "UEPArenaWarmupAfterNativeWait"
+      ],
+      "whole_ability_business_migrated": true,
+      "evidence_run": "20261021-arena-phases/Python02",
+      "evidence_ledger": "194-arena-phases-native-default-cycle-and-seamless-restart.json",
+      "pixels_tested": false
     },
     {
       "path": "/TopDownArena/Game/Pickups/B_TopDownArena_Pickup.B_TopDownArena_Pickup",
@@ -13498,5 +13525,73 @@
     "actual_production_round_properties_untouched": true,
     "whole_widgets_business_migrated": true,
     "profile_owned_roots_and_pause_restored": true
+  },
+  "arena_phases_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_original_default_cycle_and_both_phase_profiles_native_gas_cue_effect_delay_and_seamless_restart_verified_broader_acceptance_open",
+    "evidence_ledger": "194-arena-phases-native-default-cycle-and-seamless-restart.json",
+    "owner": "uep_lyra_world.arena_phases_mixin",
+    "native_original_baseline": "20261021-arena-phases/Baseline02",
+    "native_asset_authoring": "20261021-arena-phases/Assets01",
+    "native_runtime_runs": [
+      "20261021-arena-phases/Python02",
+      "20261021-arena-phases/Fallback01"
+    ],
+    "actual_map": "/TopDownArena/Maps/L_TopDown_LocalMultiplayer",
+    "method_counts": {
+      "warmup": {
+        "Python": 5,
+        "BlueprintFallback": 5
+      },
+      "playing": {
+        "Python": 2,
+        "BlueprintFallback": 2
+      },
+      "postgame": {
+        "Python": 2,
+        "BlueprintFallback": 2
+      }
+    },
+    "new_interface_nodes": 15,
+    "native_transport_nodes": 11,
+    "new_business_nodes": 0,
+    "original_default_durations": {
+      "warmup": 3.0,
+      "round": 120.0,
+      "postgame": 10.0
+    },
+    "source_parallel_phase_counts": [
+      2,
+      1,
+      2,
+      2
+    ],
+    "historical_baseline_and_author_observer_snapshot": "20261021-arena-phases/HistoricalInputs/mapping.json",
+    "whole_arena_business_migrated": false,
+    "remaining_unaccepted_arena_candidates": 10,
+    "focused_host_checks": 14,
+    "boundary_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "full_acceptance": false,
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "audio_playback_tested": false,
+    "packaged_runtime": false,
+    "preserved_failed_attempts": [
+      "Baseline01 first full cycle recorded;initial validator assumed unique phases/reset clock,so diagnostic process stopped",
+      "Python01 observer dereferenced a natively retired ability;production policy unchanged;observer now captures POD metadata/counters before handler"
+    ],
+    "next": "Continue remaining10 Arena candidates and all earlier bounded natural-ingress/network/pixel/audio/package/version requirements. Full migration remains open.",
+    "original_cdo_gas_policies_tags_abis_forty_nine_nodes_guids_and_delay_uuids_preserved": true,
+    "source_unconnected_skip_true_branch_preserved": true,
+    "postgame_empty_end_event_retained": true,
+    "global_effect_apply_remove_and_cue_widget_lifecycle_verified": true,
+    "native_phase_authority_and_end_callbacks_verified": true,
+    "actual_native_seamless_restart_verified": true,
+    "source_seamless_game_clock_continuity_preserved": true,
+    "no_timers_durations_dilation_or_game_mode_properties_changed": true,
+    "metadata_captured_before_native_ability_retirement": true,
+    "whole_phase_ability_business_migrated": true,
+    "selectors_and_owned_class_roots_restored": true
   }
 }

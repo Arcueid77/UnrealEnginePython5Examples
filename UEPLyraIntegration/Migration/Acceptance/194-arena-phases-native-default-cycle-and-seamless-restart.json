@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "batch": "194-arena-phases-native-default-cycle-and-seamless-restart",
+  "scope": "Three Arena phase abilities; original baseline and both Profiles verify default3/120/10s native cycle,parallel phase counts2/1/2/2,global effect/Cue lifecycle and real seamless restart retaining game time. Original49 nodes,CDO,GAS policies,tags,ABIs,GUIDs and native Delay UUIDs retained. Historical baseline/author observer input is preserved;current observer matches passing runtime runs. Remaining10 Arena plus broader original gates remain open.",
+  "recorded_utc": "2026-10-21T04:27:24.3610307Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "09cb46e1472615707e992b7a25fb8c93896cd7ba",
+  "examples_parent_commit": "9a36bb4ed116b37bc9e75df733068a94cf02e264",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-phases/Baseline02",
+      "summary_sha256": "93780C310E01804FE059048C44D50F3847C5EA71E3A836640741A8C74273FD8A",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2408,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "phases.json",
+          "sha256": "E306343B05E512988620757FD7CD8600E9C1C3C8C2B69040239B2922361C28E6"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-phases/Assets01",
+      "summary_sha256": "347F674390B4E2EB26EAE1AD344594137AB1CAF2EF1E85C1491ECB0E0782ED86",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2397,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "assets.json",
+          "sha256": "11A1308C7451DD2F52EC1FC1F094D494749D2EDF479B875AD7B107AC531E5333"
+        },
+        {
+          "file": "warmup-arena-phase-preservation.json",
+          "sha256": "935ABB95C7B14EF639D9CC38449ED16D73167F3C04E03DE421E273A1D0BB753A"
+        },
+        {
+          "file": "playing-arena-phase-preservation.json",
+          "sha256": "924C1DBC92FFE94080C45DCEF9B1919C8FFCF55E33544647A5363AB4754C270C"
+        },
+        {
+          "file": "postgame-arena-phase-preservation.json",
+          "sha256": "4A8FBF8939351106ED596C0ADFBF1D216703A022E1FA48284160F316D04A04C5"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-phases/Python02",
+      "summary_sha256": "B0D449C9018467716F3A544CB0CA54C8F864BF17F0C354304C872EE733678D3F",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2416,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "phases.json",
+          "sha256": "0D93D0CD3533A4E1B10B28785BD3C01236B88675FF3C085C7F917D2C619A5DA3"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-phases/Fallback01",
+      "summary_sha256": "2B196695DCDF94589A40E5524B749CE67AF52DEBD9EFF194E732C63CE3B2A3DA",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2416,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "phases.json",
+          "sha256": "BAFBD4C2D33F557A81AE08BCDF50CE2C301822DE9EC6DC17AF162227232387A4"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58ArenaPhasesValidation.ps1",
+      "sha256": "0E63FCDC54CFC0191AF640EDFD80C81E3C10C69128BE1ED1F270C5C1503625A6",
+      "native_input_path": "Validation/Run-UEP58ArenaPhasesValidation.ps1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "sha256": "EFD29FA89EC136F3454E4C72F224B12EF1C3CB1A2E7BB0627B9FFF9D3C97C6B6",
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_arena_phases_assets.py",
+      "sha256": "BAC647DE59F39263DBCF04B23E713D31E2C2E85F4EBC86028FE5738248199313",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_arena_phases_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "sha256": "1394C150EFE4D87CA153B56E855577667A2617463C7560B3FF87E8890B9851DD",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "4C51152CC686093257F767753A34770BCE2C34D5FB6AA2FED5DEBFFD20E91CC1",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_phases_mixin.py",
+      "sha256": "78948533F45B772D35B2BC81BF54493520F4F9D2EAF44392C50CEC22155341AF",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_phases_mixin.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_phases_validation.py",
+      "sha256": "D2E69D1582F28F7B73986A67B547C1EABA3A274B2C7DC17ED04D12C87CE9D28C",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_phases_validation.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_phases_contract.py",
+      "sha256": "97A7F2D2DA018B3F5818A7BC06B0A3AC01943B489F94EEAA3D9F20560AC00AD3",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_phases_contract.py"
+    }
+  ],
+  "host_report": {
+    "path": ".build/LyraValidation/BlueprintPython/20261021-arena-phases/host-focused02.json",
+    "sha256": "E17FB0A8364BAA7B6738D3E91F8CD678F635A01D625710F137623E73DC01E81E",
+    "result": {
+      "status": "passed",
+      "tests_run": 14,
+      "failures": 0,
+      "errors": 0,
+      "runtime_acceptance": false
+    }
+  },
+  "supplemental_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-phases/native-comparison01.json",
+      "sha256": "0CC7A92A2ABD18D1C54E011157F1F3B736517C22E6562BCA1EB0F3966B8344BB"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-phases/guards01.json",
+      "sha256": "458E4815CD89BC036416FE2D1A06BE4CDF08AE48C495731CDCADFC8AA15A7BB1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-phases/HistoricalInputs/mapping.json",
+      "sha256": "2C1C90D64BB6BE664AB1A3338DA01E9C4BB7FEFAAE95DC9C9A354F8D7B9D4842"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-phases/HistoricalInputs/arena_phases_validation.py",
+      "sha256": "7DEFD27BCE4B3B7C8421ED9789F748F64D98BFE78CF1893819678CF76C9C4285"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-phases/Baseline01/summary.json",
+      "sha256": "E773F281FF67932F37937E796462664695A1B6236257F270839AC3B08111AA38"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-phases/Baseline01/phases.json",
+      "sha256": "4C19AAE7255FAC8019C1DFA1617696FE363A189B21742223E07632922E09B084"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-phases/Baseline01/known-fixture-mismatch.json",
+      "sha256": "32EFE3B869F57EA4E7ED1EDC9217BB16314C5C82C3C6782B64B0AA9D25DE1B07"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-phases/Python01/summary.json",
+      "sha256": "9E032240EE0429EE7B6C36FAEF5FFFAB42283307E50DCE0B1E0095E79B4D523A"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-phases/Python01/phases.json",
+      "sha256": "1E0AB0A8B89957736D886B0E2DB710285928B4C0A7433886AFC8BF285F7AC3D8"
+    }
+  ],
+  "historical_input_boundary": "Baseline02 and Assets01 observer sources match preserved HistoricalInputs snapshot;current production phase policy is unchanged and current observer sources match Python02/Fallback01. Strict failed runs stay unaccepted."
+}

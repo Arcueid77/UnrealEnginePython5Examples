@@ -31,6 +31,27 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded batch194 (2026-10-21),Arena native phase cycle:**
+Warmup,Playing and PostGame ability business now uses Python with original GAS
+phase parent,CDO/tags/policies/ABIs and49 nodes/GUIDs retained. Original3s and
+10s Delay nodes/UUIDs stay native;existing base component keeps120s round.
+Fifteen interface plus11 typed transport nodes are added. Warmup's true skip
+branch stays unconnected;postgame's empty end stays native. Source map starts
+two concurrent warmups and two postgames. Native GAS ends phases correctly;
+ServerTravel completes seamless restart and preserves world time. No phase
+deduplication,shortened durations,clock/dilation/property changes or manual
+phase/travel calls. Original baseline and both Profiles pass full3/120/10s
+flow,global effect/Cue creation/removal and next-round startup. Three process/
+gate pairs exit0 with ordered shutdown;14 focused checks and five guards pass.
+Baseline01's unique-phase/reset-clock assumptions and Python01's retired
+ability observation error remain. Fixed observer keeps POD metadata and Python
+counters before handlers;production phase code is unchanged. Baseline02 and
+Assets01 preserve their exact historical observer input;passing Python02 and
+Fallback01 freeze the current observer. No old evidence is overwritten.
+Ledger194 records bounded proof. Remaining10 Arena and all earlier natural-
+ingress/network/pixel/audio/package/version gates remain open. Accepted work
+is committed and pushed Demos first,then core.
+
 **Completed bounded batch193 (2026-10-21),Arena list and localized round timer:**
 W_TopDownPlayers class selection and typed tile configuration now use Python;
 all three empty widget events remain native. W_RoundTimer Construct uses native
