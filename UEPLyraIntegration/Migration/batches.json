@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 206,
+    "bounded_evidence_ledgers": 207,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -3485,7 +3485,9 @@
     "pixels_tested": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Actual network and PIE development skip/cancel variants,default-duration wall timing,pixels/packaging/version acceptance and full original migration candidates remain open."
+    "next": "Both Profiles now pass dedicated/two-client natural Playing->PostGame and native postgame damage-immunity/cue observations. Delayed block/restart/travel,PIE cancel/skip,full network/package/version requirements remain open.",
+    "bounded_native_startup_and_postgame_network_verified": true,
+    "native_network_evidence_ledger": "205-native-lethal-gas-two-client-score-phase-and-feed.json"
   },
   "elimination_score_widget_pilot": {
     "version": "0.12.0",
@@ -3945,7 +3947,9 @@
     "pixels_tested": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Physical lethal-damage producer,invalid native diagnostic branches,pixels,packet loss/travel where required,packaging and full original scope remain open."
+    "next": "Native HealthSet lethal-GAS producer now drives the real two-client reliable kill feed. Physical weapon producer,accolade-chain lethal ingress,invalid diagnostics,pixels,travel/loss/package/version requirements remain open.",
+    "native_lethal_gas_producer_verified": true,
+    "native_lethal_evidence_ledger": "205-native-lethal-gas-two-client-score-phase-and-feed.json"
   },
   "accolade_relay_pilot": {
     "version": "0.12.0",
@@ -4228,12 +4232,15 @@
     "native_big_team_six_character_branch_tested": false,
     "native_force_game_over_draw_phase_tested": false,
     "native_restart_replaces_existing_pawn_tested": false,
-    "remote_authority_network_tested": false,
+    "remote_authority_network_tested": true,
     "network_acceptance": false,
     "pixels_tested": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "CP specialized logic and all remaining candidates;broader TDM large-team/force-game-over/remote replication/UI/package/version acceptance remains open."
+    "next": "Large-team,draw/error variants,physical weapon producer,pixels,travel/loss/package/version requirements remain open;native lethal-GAS score/postgame replication to two clients is proven.",
+    "network_scope": "Bounded dedicated authority/two-client real native lethal GAS,score replication and natural winning PostGame transition under both Profiles;not full multiplayer/stress/version acceptance.",
+    "native_lethal_network_evidence_ledger": "205-native-lethal-gas-two-client-score-phase-and-feed.json",
+    "bounded_native_lethal_two_client_pipeline_verified": true
   },
   "scoring_base_pilot": {
     "version": "0.12.0",
@@ -10361,10 +10368,14 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 1,
       "business_nodes": 21,
-      "scope_review": "Batch127:relay business uses Python;native exact Lyra.Elimination.Message subscription,authority/cosmetic graph,reliable GameState RPC and user-defined typed notification transport retained. Original30-node graph/full CDO preserved;1 method/Profile,8 transport/5 interface/0 new business nodes.12 real GMS cases/16 compared payloads cover swapped names/teams,self,pawnless,instigator tags,HUD slot,exact/wrong/child channels and native proxy GC release. Standalone only;remote/dedicated-server,invalid native diagnostics,pixels,package and broader acceptance pending. Batch129 additionally verifies dedicated-server/two-client Legacy RPC payloads and actor wire identity,BlueprintFallback/Python,kill multicast to both owners,accolade PS/Pawn/Controller owner-only delivery,null/parent negatives,zero dedicated cosmetics,Health stability and cleanup before disconnect. Real packet loss/lethal producer/pixels/package/full acceptance remain pending.",
-      "status": "partial_python_standalone_and_native_legacy_two_client_rpc_verified_pixels_package_pending",
-      "evidence_ledger": "127-elimination-feed-relay-native-typed-messages-lifetime.json",
-      "network_evidence_ledger": "129-notification-relays-native-two-client-rpc-routing.json"
+      "scope_review": "Batch127:relay business uses Python;native exact Lyra.Elimination.Message subscription,authority/cosmetic graph,reliable GameState RPC and user-defined typed notification transport retained. Original30-node graph/full CDO preserved;1 method/Profile,8 transport/5 interface/0 new business nodes.12 real GMS cases/16 compared payloads cover swapped names/teams,self,pawnless,instigator tags,HUD slot,exact/wrong/child channels and native proxy GC release. Standalone only;remote/dedicated-server,invalid native diagnostics,pixels,package and broader acceptance pending. Batch129 additionally verifies dedicated-server/two-client Legacy RPC payloads and actor wire identity,BlueprintFallback/Python,kill multicast to both owners,accolade PS/Pawn/Controller owner-only delivery,null/parent negatives,zero dedicated cosmetics,Health stability and cleanup before disconnect. Real packet loss/lethal producer/pixels/package/full acceptance remain pending. Batch205 adds actual authority GAS damage from real owner A to opposing owner B0,not a fixture-broadcast elimination message. Native HealthSet/OnOutOfHealth produces score and relay input;both clients receive native health/kill/death/team score and identical reliable kill-feed payloads plus natural MatchDecided cue. TargetScore1 is a declared runtime configuration;native phase APIs/victory callbacks and Health fields are not written. Original/Python scoring and phase Profiles are selected before component/ability creation. Server records Playing->PostGame and clients receive native postgame damage immunity;the later input-block delay/travel are not claimed. Two clients physically exit before the authority release marker. Physical weapon firing,large-team/draw/error variants,pixels,loss/travel/package/version remain open.",
+      "status": "bounded_native_lethal_gas_two_client_score_postgame_and_elimination_feed_replication_verified_broader_acceptance_open",
+      "evidence_ledger": "205-native-lethal-gas-two-client-score-phase-and-feed.json",
+      "network_evidence_ledger": "129-notification-relays-native-two-client-rpc-routing.json",
+      "previous_evidence_ledgers": [
+        "127-elimination-feed-relay-native-typed-messages-lifetime.json"
+      ],
+      "evidence_run": "20261021-tdm-lethal-network/Python01"
     },
     {
       "path": "/ShooterCore/Blueprint/B_ControlPointVolume.B_ControlPointVolume",
@@ -10452,9 +10463,13 @@
       "group": "对局阶段、计分与通知",
       "method_candidates": 15,
       "business_nodes": 87,
-      "scope_review": "Batch122:123 original nodes/CDO/signatures/native RepNotify/phase/experience/timer delegates retained;16 methods/Profile including5 shared base gates,57 transport/5 interface/0 business nodes.6 native query/6 actual countdown/4 GMS victory/2 GAS/2 Cue/2 existing-controller restart cases and1 actual PostGame transition pass. Source exact equality and immunity-tag mismatch preserved;large-team/force/network/UI/package/full acceptance stays open.",
-      "status": "bounded_tdm_python_score_countdown_cue_gas_notify_timer_and_native_postgame_verified_broader_acceptance_open",
-      "evidence_ledger": "122-tdm-scoring-native-timer-notify-gas-postgame.json"
+      "scope_review": "Batch122:123 original nodes/CDO/signatures/native RepNotify/phase/experience/timer delegates retained;16 methods/Profile including5 shared base gates,57 transport/5 interface/0 business nodes.6 native query/6 actual countdown/4 GMS victory/2 GAS/2 Cue/2 existing-controller restart cases and1 actual PostGame transition pass. Source exact equality and immunity-tag mismatch preserved;large-team/force/network/UI/package/full acceptance stays open. Batch205 adds actual authority GAS damage from real owner A to opposing owner B0,not a fixture-broadcast elimination message. Native HealthSet/OnOutOfHealth produces score and relay input;both clients receive native health/kill/death/team score and identical reliable kill-feed payloads plus natural MatchDecided cue. TargetScore1 is a declared runtime configuration;native phase APIs/victory callbacks and Health fields are not written. Original/Python scoring and phase Profiles are selected before component/ability creation. Server records Playing->PostGame and clients receive native postgame damage immunity;the later input-block delay/travel are not claimed. Two clients physically exit before the authority release marker. Physical weapon firing,large-team/draw/error variants,pixels,loss/travel/package/version remain open.",
+      "status": "bounded_native_lethal_gas_two_client_score_postgame_and_elimination_feed_replication_verified_broader_acceptance_open",
+      "evidence_ledger": "205-native-lethal-gas-two-client-score-phase-and-feed.json",
+      "previous_evidence_ledgers": [
+        "122-tdm-scoring-native-timer-notify-gas-postgame.json"
+      ],
+      "evidence_run": "20261021-tdm-lethal-network/Python01"
     },
     {
       "path": "/ShooterCore/Elimination/UI/W_MatchScoreBoard_Elimination.W_MatchScoreBoard_Elimination",
@@ -14210,5 +14225,59 @@
       "Fallback02/Python01 captured visible pairs but character occlusion prevented attribution. Fallback03 removed observer-only character rendering. Final Fallback04/Python02 add native footprint Actor visibility controls to distinguish particles from shadows."
     ],
     "next": "Continue original supported surface/lighting,pixel/audio/hardware,multiplayer/package/version requirements;this bounded tile-floor render checkpoint is not full actor/version acceptance."
+  },
+  "tdm_lethal_network_pilot": {
+    "version": "0.12.0",
+    "evidence_ledger": "205-native-lethal-gas-two-client-score-phase-and-feed.json",
+    "status": "bounded_actual_lethal_gas_dedicated_two_client_scores_natural_postgame_and_reliable_feed_verified_broader_acceptance_open",
+    "native_runtime_runs": [
+      "20261021-tdm-lethal-network/Fallback04",
+      "20261021-tdm-lethal-network/Python01"
+    ],
+    "actual_map": "/ShooterMaps/Maps/L_Expanse",
+    "network_transport": "Legacy",
+    "actual_clients_per_run": 2,
+    "native_processes": 6,
+    "native_independent_three_peer_gates": 2,
+    "profiles": [
+      "BlueprintFallback",
+      "Python"
+    ],
+    "profiles_selected_before_component_and_ability_creation": true,
+    "declared_runtime_target_score": 1,
+    "native_damage_entry": "ASC.MakeOutgoingSpec/AssignTagSetByCallerMagnitude/BP_ApplyGameplayEffectSpecToTarget",
+    "native_real_owner_lethal_cases": 2,
+    "native_attacker_health": 100,
+    "native_victim_health": 0,
+    "native_attacker_kill_victim_death_and_team_score_deltas": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "native_healthset_elimination_messages_not_synthesized": true,
+    "original_reliable_rpc_payloads_and_both_client_killfeed_content_identical": true,
+    "native_server_playing_to_postgame_verified": true,
+    "native_client_match_decided_cue_and_damage_immunity_verified": true,
+    "delayed_input_block_or_travel_claimed": false,
+    "server_cosmetic_killfeed_broadcasts": 0,
+    "authority_released_only_after_both_actual_client_process_exits": true,
+    "score_target_profiles_boot_selectors_and_observation_resources_restored": true,
+    "host_focused_checks": 9,
+    "network_acceptance": false,
+    "full_acceptance": false,
+    "physical_weapon_input_tested": false,
+    "packaged_runtime": false,
+    "pixels_tested": false,
+    "travel_rejoin_tested": false,
+    "packet_loss_emulated": false,
+    "preserved_attempts": [
+      "Fallback01 contract syntax error prevented probe installation;owned processes stopped and failure preserved. Driver now parses new scripts before UE launch.",
+      "Fallback02 native kill/score/phase/notifications occurred but observer incorrectly required input blocking before the original PostGame delay;Fallback03 correctly checks immediate native damage immunity. No gameplay timing or assertions about damage/score/RPC were weakened.",
+      "Fallback03 passes pipeline evidence but precedes explicit actual-client-process exit barrier;final Fallback04/Python01 wait for both client exits before releasing authority."
+    ],
+    "next": "Continue physical weapon/accolade-chain ingress,large-team/draw/error/late-join/travel/loss/UI/package/version and all remaining original migration requirements.",
+    "bounded_native_lethal_two_client_pipeline_verified": true,
+    "full_network_acceptance": false
   }
 }

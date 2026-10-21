@@ -31,6 +31,27 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded batch205 (2026-10-21),native lethal-GAS multiplayer chain:**
+Actual dedicated authority applies the original native SetByCaller damage GE
+from real owner A to opposing owner B0. Native HealthSet/OnOutOfHealth produces
+the elimination,score and relay messages;the fixture broadcasts no elimination
+message and calls no death/victory/phase callback. A declared TargetScore1
+configuration lets the original scoring listener naturally enter PostGame.
+Original/Python scoring and phase Profiles are selected before creation. Both
+clients observe attackerHealth100/victimHealth0,kill/death/team deltas1/1/1/0,
+identical native reliable kill-feed payloads and natural MatchDecided cue plus
+postgame damage immunity. The dedicated server emits no cosmetic feed. Phase
+input blocking belongs after its original delay and is not required early.
+Both actual client processes exit0 before authority receives its release marker;
+authority then exits0. Final Fallback04/Python01 and both three-peer independent
+gates pass strict ordered logs. Score/target/Profile/selector/listener/root
+resources restore;production assets and native code remain unchanged. Nine
+focused checks pass. Failed syntax startup and incorrect early input-block
+expectation remain preserved;Fallback03 precedes the final exit barrier and
+does not substitute for it. Ledger205 closes this bounded lethal-GAS score/
+phase/reliable-feed chain. Physical weapon/accolade-chain ingress,large-team/
+draw/error variants,UI pixels,travel/loss/package/version remain open.
+
 **Completed bounded batch204 (2026-10-21),original-floor rendered footsteps:**
 Eight original native PNGs cover before/after,effect-hidden/effect-restored
 controls under both Profiles while actual native-input/AnimBP movement runs

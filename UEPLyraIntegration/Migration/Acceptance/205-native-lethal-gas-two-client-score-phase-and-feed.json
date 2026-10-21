@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "batch": "205",
+  "scope": "Bounded actual native lethal GAS dedicated/two-client score and reliable notification pipeline with natural PostGame;full network/version acceptance remains open",
+  "recorded_utc": "2026-10-21T09:27:55.6375214Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "7d9c8eb6c5d75cb7fe719eb796e8bb3481332616",
+  "examples_parent_commit": "f2731255279c474993f8f4dc0fea8d19751865b6",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-tdm-lethal-network/Fallback04",
+      "summary_sha256": "6C49565381B23AF60B888A59A35583E7D8F7CBB20A1D2AC076A2E83DB348EDF9",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3368,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "B0": 0,
+        "A": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "F17818101C05E77430A82A5CF1574FB1954A99A6F3BB22A5BA591F26D4425C2C"
+        },
+        {
+          "file": "A.json",
+          "sha256": "1F13347705B504AFC44FBAF68601A261D214BB2F9B5518966E60C1C468D224F9"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "4922EFE16C53D0FB5C9EC38A41A84BD4211E3C5EF3E86B0009D0C92EA9C4AAF5"
+        },
+        {
+          "file": "server.json",
+          "sha256": "F17818101C05E77430A82A5CF1574FB1954A99A6F3BB22A5BA591F26D4425C2C"
+        },
+        {
+          "file": "A.json",
+          "sha256": "1F13347705B504AFC44FBAF68601A261D214BB2F9B5518966E60C1C468D224F9"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "4922EFE16C53D0FB5C9EC38A41A84BD4211E3C5EF3E86B0009D0C92EA9C4AAF5"
+        },
+        {
+          "file": "server-release.json",
+          "sha256": "272DF0DF7EB614E9AAFF4314F76A09FF43F8C99ED2C8BFD2EDFC9763B2DD188A"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-tdm-lethal-network/Python01",
+      "summary_sha256": "102BA22FDFC57FA5663FB339C512DA132986ED08494AF21FAADDFE3FF79D9BE5",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 3368,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "B0": 0,
+        "server": 0,
+        "A": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "C2887CDD1D454C084D7CF681031EE8C80D03C9AAB03C0E8903FAC33109EBC2CA"
+        },
+        {
+          "file": "A.json",
+          "sha256": "A155726F8B04237EF450F82F7907FC539FAC317DA474763F88AB9D2294E51499"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "35D3930485815980091D674291E7E66CEDF92E4722BEB0A72DC10E7F6101A8FB"
+        },
+        {
+          "file": "server.json",
+          "sha256": "C2887CDD1D454C084D7CF681031EE8C80D03C9AAB03C0E8903FAC33109EBC2CA"
+        },
+        {
+          "file": "A.json",
+          "sha256": "A155726F8B04237EF450F82F7907FC539FAC317DA474763F88AB9D2294E51499"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "35D3930485815980091D674291E7E66CEDF92E4722BEB0A72DC10E7F6101A8FB"
+        },
+        {
+          "file": "server-release.json",
+          "sha256": "F2B1A749C884BDDEA7465A0904CCFC0F983B34E158582466F9A49AD98B7DEF2D"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "7362BA455F51B693E2EA48DFF4A75D0040DE4DA9C196C97D8ED1476850CFCD49",
+      "path": "Validation/Run-UEP58TDMLethalNetworkValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58TDMLethalNetworkValidation.ps1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "581331D2C46C2390E0F36E9E114CC08267C714200215CC3EA58298397A78FFF5",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/tdm_lethal_network_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/tdm_lethal_network_validation.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "386329C449AF96935E375DE9444544EA0A7B45C7D6B36DBC78514241C56CF94C",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/tdm_lethal_network_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/tdm_lethal_network_contract.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "35753E238CBEDF763C96A6F6B9D379A91834B6FBD3D8004241026C27A027843B",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    }
+  ],
+  "host_report": {
+    "sha256": "15778C166AC78994F8F1A14CA2407030145B3EFF50DEDDDF8B5BF72E5233F822",
+    "path": ".build/LyraValidation/BlueprintPython/20261021-tdm-lethal-network/host-focused01.json",
+    "result": {
+      "status": "passed",
+      "tests_run": 9,
+      "runtime_acceptance": false,
+      "full_regression": false
+    }
+  },
+  "supplemental_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-tdm-lethal-network/native-comparison01.json",
+      "sha256": "49A219B19EDB9C5C86BD1DEEB002CAC415598EE72906AE92DF943211252E1C50"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-tdm-lethal-network/guards01.json",
+      "sha256": "10313963ADB626FAA0BE65B96194F9B70AA5B782D6DCC695D2C9E2D6EA7B4635"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-tdm-lethal-network/host-focused01.json",
+      "sha256": "15778C166AC78994F8F1A14CA2407030145B3EFF50DEDDDF8B5BF72E5233F822"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-tdm-lethal-network/inventory02.json",
+      "sha256": "E18DB1474578D45967ADECC5FD1847DC57C180166B592D363AE8BFE184932542"
+    }
+  ],
+  "evidence_kind": "bounded_actual_lethal_gas_score_phase_and_reliable_feed_three_peer_pipeline",
+  "bounded_native_lethal_two_client_pipeline_verified": true,
+  "full_network_acceptance": false,
+  "physical_weapon_input_tested": false
+}
