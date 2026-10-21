@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "batch": "199",
+  "scope": "Base Arena bomb collision, native fuse macro and delay preservation, natural chain and refund with accepted child inheritance; broader acceptance remains open",
+  "recorded_utc": "2026-10-21T06:42:11.9541416Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "ab729d166ab45e77a2f511bcde92e8560c160048",
+  "examples_parent_commit": "01f2b49d9f356d53c0d396416f65dae39fc3338e",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-bomb-base/Assets02",
+      "summary_sha256": "C3EE4C1DA8DAA5EEA85460E9CD2C9A49E4A56F25FF902DE31EB09BEC36932093",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2427,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "assets.json",
+          "sha256": "3BF371CD69EBE0DC8B4E10AF770A4FD389FB1C5F77ECA8D435D9168F373533CF"
+        },
+        {
+          "file": "arena-bomb-base-preservation.json",
+          "sha256": "9D7EE5E3A52DA29CED6F273ACE462C43766A5E96AB56892FBDA78305B44F9211"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-bomb-base/Baseline01",
+      "summary_sha256": "F176650D015D7E87CF3DCF8529294DAC9E2DFCF1B827E8A5E9F2AEF10CC23244",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2429,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "bomb-base.json",
+          "sha256": "B6526A8BC881CF372CC24EF7EC733A230FD9D9C369B06959903955FE2685718A"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-bomb-base/Python01",
+      "summary_sha256": "3155AE5E9D6B0AC44B99B31601B97D1DF1775D4A5EBAC3FE0A11BA37B562F590",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2433,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "bomb-base.json",
+          "sha256": "0696E6102594ACE6DF867CB3D1B54DC429A7ACE29E55968FB6F5047BA79F0869"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-arena-bomb-base/Fallback01",
+      "summary_sha256": "75C0CBCACFDEE8CDA73B3937893E9B5D29B837541B92D15F265794721F3762C2",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14"
+      ],
+      "frozen_input_records": 2433,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "bomb-base.json",
+          "sha256": "1F50C7904133B31B4FDEBC653793B3FA3207385B237AA6BC6F29C57655A400F3"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "07381EA588D3D265D681AF015649833C74508FE259AEF2F9BF35C99D1E3F0634",
+      "path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58HeroAbilityAssetAuthoring.ps1"
+    },
+    {
+      "sha256": "73CE1D85E5B6CDCFD273FC670E2DE4251004851F91CEA79E43ACEF754B6E8653",
+      "path": "Validation/Run-UEP58ArenaBombBaseValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58ArenaBombBaseValidation.ps1"
+    },
+    {
+      "sha256": "F05345C9DB9DF0EA1EEEFB153540EAA1BCCCBCFD884A25280D3A81FEC8936E7A",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_hero_ability_mixin_assets.py"
+    },
+    {
+      "sha256": "0B6822A5156E5A801538B575083D8963770F1440279771EB0F3CA3A8B5E720E3",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_arena_bomb_base_assets.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_arena_bomb_base_assets.py"
+    },
+    {
+      "sha256": "AC4AF3AD582DB73B343C8A9D1BD3429D848B3C425B505EF13B9E6BB555E56DE9",
+      "path": "Demos/UEPLyraIntegration/Tools/generate_arena_bomb_base_probe.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/generate_arena_bomb_base_probe.py"
+    },
+    {
+      "sha256": "D60DD8C6A0511EB2524DA0E6960026E539AC9EF9A0A8A4E09015D4C1F4DACD9E",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_bomb_base_mixin.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_bomb_base_mixin.py"
+    },
+    {
+      "sha256": "A970D6A8BC04C9482216047C1FB2E45C9C18A0397DA41C20D85493F488C5C09A",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_bomb_base_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_bomb_base_validation.py"
+    },
+    {
+      "sha256": "4D96C559BB43DC1A64B065A698C1530009271636515502796DE3BD3267873C22",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_bomb_base_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_bomb_base_contract.py"
+    },
+    {
+      "sha256": "2BFAAD555E92C9C652BD652F0215033E88304009E93D605E655F535B30346D72",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    }
+  ],
+  "host_report": {
+    "sha256": "13F3832DD585DC27DF555D93ADA61F2863000EA8F6C1649DD302D62231C6E39C",
+    "path": ".build/LyraValidation/BlueprintPython/20261021-arena-bomb-base/host-focused01.json",
+    "result": {
+      "status": "passed",
+      "tests_run": 20,
+      "runtime_acceptance": false,
+      "full_regression": false
+    }
+  },
+  "supplemental_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-bomb-base/native-comparison01.json",
+      "sha256": "C1DF86AE04537A54FFCAA715D0D559B3955523F5E5FAECC03830DC543E2DFD7D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-bomb-base/guards01.json",
+      "sha256": "A7A748C7476C7292809A33F4E218E6D7B1955BB7AB81A1FB1B05993C896D33A3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-bomb-base/host-focused01.json",
+      "sha256": "13F3832DD585DC27DF555D93ADA61F2863000EA8F6C1649DD302D62231C6E39C"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-bomb-base/Probe01/probe.json",
+      "sha256": "395DB00A34D7C8B557E55BBB9ACCB5BD228E14D92C9C944830112BD7E56D66AA"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-bomb-base/Probe01/process.json",
+      "sha256": "DC38CE68AB0F6DBB4A1B0CE279B1EB2EB5D170FDA54CDC61AE91C6937F96CD2D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-arena-bomb-base/Probe01/bomb-damage-cdo.t3d",
+      "sha256": "61C6093B65200B00304E943FC9DF3E4EEFD39A66F53B4934F18B36A9B08FF2E4"
+    }
+  ]
+}

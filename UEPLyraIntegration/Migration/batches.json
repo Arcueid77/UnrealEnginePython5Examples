@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 200,
+    "bounded_evidence_ledgers": 201,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -11739,8 +11739,27 @@
       "group": "TopDownArena 玩法",
       "method_candidates": 12,
       "business_nodes": 126,
-      "scope_review": null,
-      "status": "not_accepted"
+      "scope_review": "Python owns five original functions and eight lifecycle/latent query handlers, with complete BlueprintFallback. Native BeginPlay/destroy/overlap/RPC/repnotify metadata, original FuseStepPause macro instance and four Delay node GUIDs remain. Python uses native overlap ordering/types48-cube/self-ignore and source cast precedence: StaticMeshActor blocks fireball; destructible/other bomb/pickup block propagation but retain fireball. Native ASC effect is level0/empty context. Range uses exact original GameplayAttribute field path and native truncation. Bonus retains native0..100 strict chance, original two-effect random subset and exact moved native SpawnActor/GUID/defaults including OverrideRootScale. Directional Array_Set never resizes; cosmetic macro retained. Original156 nodes/GUIDs/full CDO/ABI/components and graph partitions remain; five interface/46 native transport nodes. Original baseline and both Profiles match collision matrix including actual local-pawn health100->0, native overlap-end restore, attribute present/missing, bonus0/101, short arrays, natural two-bomb chain, minimum burn and destruction refund. Unique base selector preserves accepted child bytes and child display dispatch. Remote/network/pixel/audio/package/version acceptance remains open.",
+      "status": "bounded_arena_base_bomb_python_collision_native_fuse_chain_attribute_bonus_and_refund_verified_broader_acceptance_open",
+      "implemented_helpers": [
+        "ServerAddFireballInstance",
+        "ServerExpandFireballInAllDirections",
+        "SnapshotRange",
+        "SpawnBonus",
+        "OnRep_DirectionalRadius",
+        "UEPArenaBombBegin",
+        "UEPArenaBombDestroyed",
+        "UEPArenaBombEndOverlap",
+        "UEPArenaBombTrigger",
+        "UEPArenaBombIncrement",
+        "UEPArenaBombAfterPropagation",
+        "UEPArenaBombAfterHover",
+        "UEPArenaBombFuseStillLit"
+      ],
+      "whole_actor_business_migrated": true,
+      "evidence_run": "20261021-arena-bomb-base/Python01",
+      "evidence_ledger": "199-arena-base-bomb-collision-native-fuse-and-chain.json",
+      "pixels_tested": false
     },
     {
       "path": "/TopDownArena/Game/Bombs/B_Bomb_Standard.B_Bomb_Standard",
@@ -13881,5 +13900,55 @@
       "Baseline01 expected IsActive after Activate(true), but original far-away Niagara fixtures are culled. Baseline02 records exact original false state and both Profiles must match; pixels/audio remain unverified."
     ],
     "next": "Continue B_Bomb_Base and GA_DropBomb plus all earlier bounded natural-ingress/network/input/pixel/audio/package/version requirements. Full migration remains open."
+  },
+  "arena_bomb_base_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_original_base_bomb_and_both_profiles_native_collision_fuse_chain_and_refund_verified_broader_acceptance_open",
+    "evidence_ledger": "199-arena-base-bomb-collision-native-fuse-and-chain.json",
+    "owner": "uep_lyra_world.arena_bomb_base_mixin",
+    "native_original_baseline": "20261021-arena-bomb-base/Baseline01",
+    "native_asset_authoring": "20261021-arena-bomb-base/Assets02",
+    "native_runtime_runs": [
+      "20261021-arena-bomb-base/Python01",
+      "20261021-arena-bomb-base/Fallback01"
+    ],
+    "actual_map": "/TopDownArena/Maps/L_TopDown_LocalMultiplayer",
+    "method_counts": {
+      "Python": 13,
+      "BlueprintFallback": 13
+    },
+    "original_nodes": 156,
+    "new_interface_nodes": 5,
+    "native_transport_nodes": 46,
+    "new_business_nodes": 0,
+    "original_full_cdo_abis_guids_components_graph_partitions_and_empty_events_preserved": true,
+    "original_four_delays_and_fuse_macro_instance_guids_preserved": true,
+    "original_bonus_spawn_node_defaults_guid_and_exposed_effect_preserved": true,
+    "original_attribute_literal_and_cosmetic_macro_preserved": true,
+    "unique_base_selector_accepted_child_bytes_and_dispatch_preserved": true,
+    "native_collision_cases_per_mode": 5,
+    "native_damage_health": [
+      100,
+      0
+    ],
+    "native_chain_bombs": 2,
+    "minimum_burn_native_half_second": true,
+    "native_overlap_end_and_bomb_refund_verified": true,
+    "no_resize_array_semantics_verified": true,
+    "whole_actor_business_migrated": true,
+    "whole_arena_business_migrated": false,
+    "remaining_unaccepted_arena_candidates": 1,
+    "focused_host_checks": 20,
+    "boundary_guards": 5,
+    "full_regression_executed_this_batch": false,
+    "full_acceptance": false,
+    "network_acceptance": false,
+    "pixels_tested": false,
+    "audio_playback_tested": false,
+    "packaged_runtime": false,
+    "preserved_failed_attempts": [
+      "Assets01 preserved all original fingerprints but failed native compile because editor automatically copied the first return signature before a duplicate output pin was added to the second cosmetic result. Assets02 reuses the copied signature; all original preservation gates pass."
+    ],
+    "next": "Continue GA_DropBomb and every earlier bounded natural-ingress/network/input/pixel/audio/package/version requirement. Full migration remains open."
   }
 }

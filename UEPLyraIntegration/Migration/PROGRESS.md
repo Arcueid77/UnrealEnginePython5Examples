@@ -31,6 +31,26 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded batch199 (2026-10-21),Arena base bomb:**
+Python owns collision classification,range snapshot,bonus decisions,propagation,
+repnotify and lifecycle decisions through thirteen methods per Profile. Original
+156 nodes/GUIDs,full CDO/components/ABIs,RPC/repnotify entry metadata,four native
+Delay nodes and FuseStepPause macro instance remain. The original bonus spawn
+node moves intact with exposed GE/class/scale/collision defaults and GUID;
+native attribute literal and cosmetic macro stay exact. Five interface and46
+native transport nodes are added. The base uses its own selector and preserves
+accepted standard-bomb bytes and inherited display dispatch. Original baseline
+and both Profiles match native empty/static/destructible/pickup/ASC collisions,
+actual local-pawn health100->0,end-overlap collision restoration,present/missing
+BombRange,strict0/101 bonus outcomes,short arrays without resizing,and natural
+two-bomb fuse/chain/minimum-burn/propagation/destruction with bomb refund.
+Assets01 preserved all fingerprints but caught an editor-generated duplicate
+return pin;Assets02 reuses the auto-copied result signature and compiles cleanly.
+All process/gate exits and strict ordered logs pass;20 focused checks and five
+launch guards pass. Ledger199 records bounded proof. GA_DropBomb and all prior
+natural-ingress/network/input/pixel/audio/package/version requirements remain
+open. Accepted work is committed and pushed Demos first,then core.
+
 **Completed bounded batch198 (2026-10-21),standard Arena bomb visuals:**
 Python initializes the shared Sphere/Cylinder MID after original static parent
 construction,using native real time and original BombLifespan. Python also owns
