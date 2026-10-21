@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 212,
+    "bounded_evidence_ledgers": 213,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -3761,7 +3761,7 @@
   },
   "weapon_hud_existing_acceptance_closure": {
     "version": "0.9.0",
-    "status": "partial_existing_python_weapon_hud_current_native_presenter_lifetime_graphs_verified_gameplay_network_package_pending",
+    "status": "bounded_current_native_and_cooked_presenter_state_material_profile_reload_gc_and_exit_verified_gameplay_network_open",
     "evidence_ledger": "132-existing-weapon-hud-current-native-acceptance-closure.json",
     "existing_implementation_backfilled_not_replaced": true,
     "production_scripts_and_assets_changed": false,
@@ -3796,9 +3796,11 @@
     "current_persisted_overlay_audit_used": true,
     "fire_gas_reload_acceptance": false,
     "network_acceptance": false,
-    "packaged_runtime": false,
+    "packaged_runtime": true,
     "full_acceptance": false,
-    "next": "Presenter fixtures set item/slot inputs and call methods;actual weapon/input/GAS/replication/visual fidelity/packaging/full-version gates remain separate and original scope stays intact."
+    "next": "Presenter fixtures set item/slot inputs and call methods;actual weapon/input/GAS/replication/visual fidelity/packaging/full-version gates remain separate and original scope stays intact.",
+    "current_packaged_evidence_ledger": "211-current-packaged-weapon-presenters-and-controlled-lifetime.json",
+    "current_packaged_run": "20261021-current-game-package/PackagedWeaponHUD01"
   },
   "elimination_widgets_pilot": {
     "version": "0.12.0",
@@ -8288,7 +8290,9 @@
       "弹药耗尽",
       "死亡和重生重新绑定",
       "至少两个客户端 HUD 互不串状态"
-    ]
+    ],
+    "current_exact_package_presentation_evidence_ledger": "211-current-packaged-weapon-presenters-and-controlled-lifetime.json",
+    "current_exact_package_presentation_run": "20261021-current-game-package/PackagedWeaponHUD01"
   },
   "second_batch": {
     "id": "0.10.0-2A",

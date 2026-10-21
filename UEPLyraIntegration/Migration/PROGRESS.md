@@ -31,6 +31,27 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded package batch211 (2026-10-21),weapon/ammo presentation:**
+The actual current packaged Game runs the isolated Entry-map four presenter
+BP/Python pairs:42 state/material/input-intent cases,native signal cancellation,
+live profile changes and three controlled module reload/native UE GC cycles.
+Both visible columns show matching magazine/spare text and all three ammo
+material counters in a viewed1440x900 PNG. This is deterministic native
+inventory/quickbar presenter input,not actual fire/reload/equipment gameplay.
+The old validation fixture now records pure-data Python atexit completion
+after its owned resources have already closed;no retired UObject is sampled.
+Use an independent full archive copy and replace exactly this one NonUFS test
+script. Native executable and all cooked containers stay byte-identical to
+accepted Cook01,the base archive stays untouched,and no compile/cook occurs.
+Native process0 and an independent report/image-header/lifetime gate0 pass;
+strict differential/Goodbye/shutdown/file-close order is retained.936 affected
+host checks pass;the isolated staged incremental gate follows. This strengthens
+the current packaged weapon/ammo example,not multiplayer/local-owner isolation,
+real firing/reload,death/respawn,travel,interpreter restart orfull0.9 acceptance.
+Engine/general SDK C++,gameplay Python policy and Blueprint assets are unchanged.
+Verified work is committed and pushed Demos first,then core. Ledger211 records
+the independent snapshot's sole script override and post-execution image view.
+
 **Completed bounded package batch210 (2026-10-21),actual-player footstep pixels:**
 Reuse the unchanged current Cook01 archive;no compile,cook,gameplay Python,
 Blueprint or animation changes. Both Profiles run actual packaged rendered

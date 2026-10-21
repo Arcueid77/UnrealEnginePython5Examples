@@ -3,6 +3,7 @@
 The isolated Entry-map fixture is not a claim of fire/GAS or network parity.
 """
 
+import atexit
 import json
 import importlib
 from pathlib import Path
@@ -272,7 +273,7 @@ class WeaponValidation:
                 if len(self.report["reload_cycles"]) < 3:
                     self.reload_cycle()
                     return True
-                self.report["status"] = "passed"
+                self.report["status"] = "awaiting_shutdown"
                 self.path.write_text(json.dumps(self.report, indent=2), encoding="utf-8")
                 ue.log("UEP_WEAPON_HUD_DIFFERENTIAL_PASSED")
                 ue.request_exit()
@@ -287,8 +288,22 @@ class WeaponValidation:
             ue.request_exit()
             return False
 
+    def finalize(self):
+        # Cleanup is sampled before engine teardown; atexit records completion
+        # without dereferencing retired widgets or Actors.
+        if self.report["status"] == "awaiting_shutdown":
+            after = self.report["reload_cycles"][-1]["after"]
+            closed = (after["active_count"] == after["active_scopes"] == 0 and
+                      not after["ticker_active"] and after["subscribed"] == after["unsubscribed"])
+            self.report["status"] = "passed" if closed else "failed"
+            self.report["shutdown"] = {"phase": "python_atexit", "owned_resources_closed_before_exit": closed}
+        self.path.write_text(json.dumps(self.report, indent=2), encoding="utf-8")
+        (ue.log if self.report["status"] == "passed" else ue.log_error)(
+            "UEP_WEAPON_HUD_SHUTDOWN_" + self.report["status"].upper())
+
 
 prefix = "-UEPLyraWeaponHUDResult="
 result_path = next(arg[len(prefix):] for arg in sys.argv if arg.startswith(prefix))
 fixture = WeaponValidation(result_path)
+atexit.register(fixture.finalize)
 ticker = ue.add_ticker(fixture.tick)

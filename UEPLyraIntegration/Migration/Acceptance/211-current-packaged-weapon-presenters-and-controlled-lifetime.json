@@ -1,0 +1,521 @@
+{
+  "schema_version": 1,
+  "batch": "211-current-packaged-weapon-presenters-and-controlled-lifetime",
+  "scope": "Actual packaged Win64 Development Entry-map weapon/ammo example;four original BP/Python presenter pairs,42 exact state/material/input-intent cases,live profile switches,native signal/cancel and3controlled module reload/native UE GC cleanup cycles. Add pure-data atexit completion to test fixture,no gameplay policy edits. Use independent archive copy and override exactly that one NonUFS validation script;native exe andall cooked containers identical to accepted Cook01;base archive immutable. Native process0,independent PowerShell semantic gate0,strict differential/Goodbye/shutdown/file-close order.1440x900 actual screenshot visually inspected;both columns numbers/material counters visible.936 affected host checks pass;isolated incremental follows. No new build/cook,C++ orBlueprint edits. Controlled presenter setup is not actual fire/reload/GAS/equipment ormultiplayer/respawn/travel proof. Full0.9/version/migration remains open. Verified commit/push Demos first then core.",
+  "recorded_utc": "2026-10-21T14:39:47.0251372Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "c3fca8241a6a087fb653422f59a109f13438a633",
+  "examples_parent_commit": "783823c8c13d10e1e0b5d16e0bbff37c35b531ef",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/PackagedWeaponHUD01",
+      "summary_sha256": "745299E5241D499C70E36EAD8F0C1FD1FEF599DF809C869430D0480B20D6484D",
+      "status": "passed",
+      "uep_dll_sha256": [],
+      "frozen_input_records": 89,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58PackagedWeaponHUDValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58PackagedWeaponHUDValidation.ps1",
+      "sha256": "834E7D71BA4AB42747D5C733A7ED7D429D721E5114DDC991969C7AA06B255ABD"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/weapon_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/weapon_validation.py",
+      "sha256": "2D385117C8E74EE56243A8428745F1B5F4A28CF7A2FB6FBEF43D71A3674BAFC5"
+    }
+  ],
+  "host_report": {
+    "result": {
+      "schema_version": 2,
+      "status": "passed",
+      "tests_run": 936,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "runtime_acceptance": false,
+      "temporary_root": "F:\\UnrealEnginePython5\\.build\\HostTestTemp",
+      "selection": {
+        "mode": "incremental",
+        "status": "ready",
+        "changed_files": [
+          ".gitmodules",
+          "Demos/README.md",
+          "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/weapon_validation.py",
+          "Demos/UEPLyraIntegration/README.md",
+          "README.md",
+          "UnrealEnginePython.uplugin",
+          "docs/Third_Person_Demo_0.6.0.md"
+        ],
+        "selected_test_files": [
+          "Demos/UEPLyraIntegration/Tests/test_ability_failure_native.py",
+          "Demos/UEPLyraIntegration/Tests/test_action_touch_network.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_begin_play_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_begin_play_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_death_replication_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_death_replication_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_death_started_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_death_started_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_emote_audio_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_emote_audio_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_enhanced_input_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_enhanced_input_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_equipment_hide_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_equipment_hide_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_health_changed_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_health_changed_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_initial_inventory_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_initial_inventory_natural_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_initial_inventory_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_ready_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_ready_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_wait_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_wait_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_legacy_player_info_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_legacy_player_info_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_lifecycle_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_lifecycle_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_outline_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_outline_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_parts_changed_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_parts_changed_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_possessed_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_possessed_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_quickbar_input_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_quickbar_input_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_ragdoll_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_ragdoll_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_stencil_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_stencil_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_team_cosmetics_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_team_cosmetics_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_team_listener_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_team_listener_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_team_observer_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_team_observer_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_visibility_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_visibility_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_activation_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_local_direction_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_local_direction_standalone_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_rpc_input_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_selector_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_tasks_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_tasks_lifecycle_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_tasks_network_lifecycle_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_callbacks_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_grant_ge_pad_network.py",
+          "Demos/UEPLyraIntegration/Tests/test_heal_ability_network.py",
+          "Demos/UEPLyraIntegration/Tests/test_hud_ammo.py",
+          "Demos/UEPLyraIntegration/Tests/test_hud_startup.py",
+          "Demos/UEPLyraIntegration/Tests/test_inventory_pad_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_inventory_pad_network_protocol.py",
+          "Demos/UEPLyraIntegration/Tests/test_launcher_network.py",
+          "Demos/UEPLyraIntegration/Tests/test_melee_activation_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_melee_activation_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_melee_hit_montage_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_migration_package_plan.py",
+          "Demos/UEPLyraIntegration/Tests/test_spawn_effect_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_spawn_effect_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_spawner_network.py",
+          "Demos/UEPLyraIntegration/Tests/test_team_color_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_teleporter_network.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_hud_graph_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_instance_death_contract.py",
+          "Validation/Tests/test_incremental_regression.py"
+        ],
+        "affected_files": [
+          "Demos/UEPLyraIntegration/Overlay/Content/Scripts/ue_site.py",
+          "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+          "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/weapon_validation.py",
+          "Demos/UEPLyraIntegration/Tests/test_ability_failure_native.py",
+          "Demos/UEPLyraIntegration/Tests/test_action_touch_network.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_begin_play_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_begin_play_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_death_replication_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_death_replication_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_death_started_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_death_started_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_emote_audio_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_emote_audio_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_enhanced_input_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_enhanced_input_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_equipment_hide_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_equipment_hide_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_health_changed_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_health_changed_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_initial_inventory_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_initial_inventory_natural_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_initial_inventory_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_ready_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_ready_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_wait_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_wait_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_legacy_player_info_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_legacy_player_info_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_lifecycle_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_lifecycle_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_outline_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_outline_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_parts_changed_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_parts_changed_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_possessed_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_possessed_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_quickbar_input_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_quickbar_input_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_ragdoll_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_ragdoll_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_stencil_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_stencil_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_team_cosmetics_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_team_cosmetics_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_team_listener_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_team_listener_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_team_observer_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_team_observer_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_visibility_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_character_visibility_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_activation_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_local_direction_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_local_direction_standalone_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_rpc_input_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_selector_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_tasks_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_tasks_lifecycle_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_dash_tasks_network_lifecycle_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_explorer_callbacks_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_grant_ge_pad_network.py",
+          "Demos/UEPLyraIntegration/Tests/test_heal_ability_network.py",
+          "Demos/UEPLyraIntegration/Tests/test_hud_startup.py",
+          "Demos/UEPLyraIntegration/Tests/test_inventory_pad_fixture.py",
+          "Demos/UEPLyraIntegration/Tests/test_inventory_pad_network_protocol.py",
+          "Demos/UEPLyraIntegration/Tests/test_launcher_network.py",
+          "Demos/UEPLyraIntegration/Tests/test_melee_activation_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_melee_activation_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_melee_hit_montage_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_migration_package_plan.py",
+          "Demos/UEPLyraIntegration/Tests/test_spawn_effect_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_spawn_effect_network_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_spawner_network.py",
+          "Demos/UEPLyraIntegration/Tests/test_team_color_contract.py",
+          "Demos/UEPLyraIntegration/Tests/test_teleporter_network.py",
+          "Demos/UEPLyraIntegration/Tests/test_weapon_instance_death_contract.py",
+          "Demos/UEPLyraIntegration/Tools/plan_migration_package.py",
+          "Validation/Tests/test_incremental_regression.py"
+        ],
+        "selection_reasons": {
+          "Demos/UEPLyraIntegration/Tests/test_ability_failure_native.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_action_touch_network.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_begin_play_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_begin_play_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Tests/test_character_begin_play_contract.py",
+            "depends on Demos/UEPLyraIntegration/Tests/test_character_visibility_network_contract.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_death_replication_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Tests/test_character_equipment_hide_contract.py",
+            "depends on Demos/UEPLyraIntegration/Tests/test_character_lifecycle_network_contract.py",
+            "depends on Demos/UEPLyraIntegration/Tests/test_character_ragdoll_contract.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_death_replication_fixture.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_death_started_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Tests/test_character_equipment_hide_contract.py",
+            "depends on Demos/UEPLyraIntegration/Tests/test_character_ragdoll_contract.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_death_started_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_emote_audio_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_emote_audio_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_enhanced_input_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_enhanced_input_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_equipment_hide_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_equipment_hide_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Tests/test_character_equipment_hide_contract.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_health_changed_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_health_changed_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_initial_inventory_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_initial_inventory_natural_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Tests/test_character_initial_inventory_contract.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_initial_inventory_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_ready_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_ready_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_wait_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Tests/test_character_inventory_ready_contract.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_inventory_wait_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_legacy_player_info_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_legacy_player_info_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_lifecycle_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_lifecycle_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_outline_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_outline_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_parts_changed_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_parts_changed_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_possessed_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_possessed_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_quickbar_input_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_quickbar_input_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_ragdoll_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_ragdoll_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Tests/test_character_ragdoll_contract.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_stencil_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_stencil_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_team_cosmetics_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_team_cosmetics_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_team_listener_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_team_listener_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_team_observer_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_team_observer_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_visibility_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_character_visibility_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_dash_activation_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_dash_local_direction_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_dash_local_direction_standalone_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_dash_rpc_input_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_dash_selector_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_dash_tasks_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_dash_tasks_lifecycle_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_dash_tasks_network_lifecycle_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_explorer_callbacks_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Tests/test_character_health_changed_contract.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_grant_ge_pad_network.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_heal_ability_network.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hud_ammo.py": [
+            "explicit pattern test_hud_ammo.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_hud_startup.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/weapon_validation.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_inventory_pad_fixture.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_inventory_pad_network_protocol.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_launcher_network.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_melee_activation_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_melee_activation_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_melee_hit_montage_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_migration_package_plan.py": [
+            "depends on Demos/UEPLyraIntegration/Tools/plan_migration_package.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_spawn_effect_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_spawn_effect_network_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_spawner_network.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_team_color_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_teleporter_network.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_hud_graph_contract.py": [
+            "explicit pattern test_weapon_hud_graph_contract.py"
+          ],
+          "Demos/UEPLyraIntegration/Tests/test_weapon_instance_death_contract.py": [
+            "depends on Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+          ],
+          "Validation/Tests/test_incremental_regression.py": [
+            "depends on Demos/README.md",
+            "depends on Demos/UEPLyraIntegration/README.md",
+            "depends on README.md"
+          ]
+        },
+        "unmapped_changed_files": [
+          ".gitmodules"
+        ],
+        "unparsed_unaffected_files": [],
+        "dependency_analysis": "local imports including inheritance, literal module names and file references; dynamic dependencies require explicit patterns/native lanes",
+        "full_regression_requested": false
+      },
+      "failed_cases": []
+    },
+    "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/packaged-weapon-host01.json",
+    "sha256": "4273DB484CF27DCEBDD39B3AD05AF9DA6E8D6A81CF48626BAFACF39FD2A26699"
+  },
+  "build_executed": false,
+  "cook_package_executed": false,
+  "original_scope": [
+    246,
+    182,
+    63,
+    11
+  ],
+  "original_candidate_rows_unchanged": true,
+  "native_processes": 1,
+  "independent_gate_exit_code": 0,
+  "presenter_components": 4,
+  "state_and_input_intent_cases": 42,
+  "controlled_module_reload_gc_cycles": 3,
+  "actual_image_dimensions": [
+    1440,
+    900
+  ],
+  "visual_inspection_completed": true,
+  "actual_weapon_fire_or_reload_gameplay_verified": false,
+  "multiplayer_or_respawn_travel_verified": false,
+  "base_package_unchanged": true,
+  "independent_snapshot_validation_script_overrides": 1,
+  "full_acceptance": false,
+  "supplemental_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/PackagedWeaponHUD01/weapon.json",
+      "sha256": "A8F0398CA07DBD4A1E6A4D147A5B11CC5536E6D9916C67BBD401DD6FC0A7F05E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/PackagedWeaponHUD01/weapon.log",
+      "sha256": "B35565E0997BA8B04EA8D1FE2AF478ED66DF6F23570215AEED81CFA79AB33DEC"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/PackagedWeaponHUD01/weapon.png",
+      "sha256": "8BC1B6F8C37B250DBCA630E061819647469CE07B8A28A1CDBD2B0926EFB441D5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/PackagedWeaponHUD01/independent-gate-process.json",
+      "sha256": "790EECF20D397825E818300A00C12E2F149E54422F312C0E06C92F6AD0BAD59C"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/PackagedWeaponHUD01/independent-gate.json",
+      "sha256": "B129D80A502772CA4424A6D62F2FF2BDEF70F8F9964FE225A6565DBB0FD818D9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/PackagedWeaponHUD01/visual-review.json",
+      "sha256": "ED1B66E30EC3BE230CF8DF47CA66C2C6C07E5488DFF63A171BD5CE9C372D94B9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/PackagedWeaponHUD01/base-weapon-validation.py",
+      "sha256": "714788A67F03136E1AC5FF5713675C063800D3A1EA97B8548A47FD96E332A0FF"
+    },
+    {
+      "path": "Validation/Test-UEP58PackagedWeaponHUDReport.ps1",
+      "sha256": "D35381307B5B91EDA78A8DB8522E94C78408CBE447C7597C3521500E001D6DC6"
+    }
+  ]
+}
