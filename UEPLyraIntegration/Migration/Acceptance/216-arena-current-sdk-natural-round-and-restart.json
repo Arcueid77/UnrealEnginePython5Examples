@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "batch": "216-arena-current-sdk-natural-round-and-restart",
+  "scope": "Current source-matching Editor SDK;original BlueprintFallback and Python default Arena3s warmup/120s round/10s postgame and native seamless restart. Existing driver,phase sources and six accepted assets unchanged. Original parallel2/1/2/2 and selected callbacks match;native global warmup effect/GetReady widget observed then removed. Phase-owned sources/selectors/class roots restored,not a claim of global gameplay/UI subscription cleanup. Two actual processes and two independent gates0;strict ordered shutdown,no errors. No manual phase/travel,duration/time-step/dilation override. Only metadata/evidence changes;incremental staged gate;no compile,cook/package,new network/pixel/audio or full-version acceptance. Preserve exact246 paths/order/versions,246/182/63/11 and historical194 evidence. Commit/push Examples then core gitlink.",
+  "recorded_utc": "2026-10-22T17:00:02.5780933Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "563568d2f399b0e97ee43e92944c6559d54d730e",
+  "examples_parent_commit": "7205e2a86fd0e6b5479963ec3734700573a5fac2",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-arena-current-round/Fallback01",
+      "summary_sha256": "843C6D9EC78309AA2298D68F2B255285ACD8E8776F113FE35B9BC3EC58B27B26",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "E87452CC8D645D7C1C9C26C39968CED38B200A482743CB611558E19B0AC63AEF"
+      ],
+      "frozen_input_records": 2490,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-arena-current-round/Python01",
+      "summary_sha256": "4C05323792178C900CB2B3924812F86EB3881869435730DD3E06E009E8E2300A",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "E87452CC8D645D7C1C9C26C39968CED38B200A482743CB611558E19B0AC63AEF"
+      ],
+      "frozen_input_records": 2490,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": []
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58ArenaPhasesValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58ArenaPhasesValidation.ps1",
+      "sha256": "0E63FCDC54CFC0191AF640EDFD80C81E3C10C69128BE1ED1F270C5C1503625A6"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_phases_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_phases_validation.py",
+      "sha256": "D2E69D1582F28F7B73986A67B547C1EABA3A274B2C7DC17ED04D12C87CE9D28C"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_phases_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/arena_phases_contract.py",
+      "sha256": "97A7F2D2DA018B3F5818A7BC06B0A3AC01943B489F94EEAA3D9F20560AC00AD3"
+    }
+  ],
+  "host_report": null,
+  "full_acceptance": false,
+  "packaged_runtime": false,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "supplemental_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-arena-current-round/independent-review01.json",
+      "sha256": "45D00BC0D549E13E4C27D0B22BDE960F42BD8E07B60ADA3CBE2D16A33D17B065"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-arena-current-round/Fallback01/phases.json",
+      "sha256": "E0B8D8C5B14C30791206EA8F3FB07ACA5CEA3870CF8594132FB5A6D751A2BCEB"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-arena-current-round/Python01/phases.json",
+      "sha256": "7BF65E3AE9408ABC91E7A74CB0B59D6EEE9FCF1322133862D4A56462C0FE1EBF"
+    }
+  ]
+}

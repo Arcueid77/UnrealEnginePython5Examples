@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 217,
+    "bounded_evidence_ledgers": 218,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -13810,7 +13810,8 @@
     "no_timers_durations_dilation_or_game_mode_properties_changed": true,
     "metadata_captured_before_native_ability_retirement": true,
     "whole_phase_ability_business_migrated": true,
-    "selectors_and_owned_class_roots_restored": true
+    "selectors_and_owned_class_roots_restored": true,
+    "current_sdk_round_evidence_ledger": "216-arena-current-sdk-natural-round-and-restart.json"
   },
   "arena_mode_pilot": {
     "version": "0.14.0",
@@ -14711,5 +14712,44 @@
     "network_acceptance": false,
     "full_acceptance": false,
     "next": "Continue original opponent elimination/score,remote multiplayer,travel/hardware/audio/current package and whole Experience/version requirements;local self-death is not complete Arena acceptance."
+  },
+  "arena_current_round_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_current_editor_sdk_original_and_python_default_round_and_natural_restart_verified",
+    "evidence_ledger": "216-arena-current-sdk-natural-round-and-restart.json",
+    "current_editor_sdk": true,
+    "native_runs": [
+      "20261023-arena-current-round/Fallback01",
+      "20261023-arena-current-round/Python01"
+    ],
+    "actual_map": "/TopDownArena/Maps/L_TopDown_LocalMultiplayer",
+    "original_default_durations_seconds": [
+      3,
+      120,
+      10
+    ],
+    "source_parallel_phase_counts": [
+      2,
+      1,
+      2,
+      2
+    ],
+    "no_duration_time_step_or_dilation_override": true,
+    "no_manual_phase_or_travel": true,
+    "natural_native_seamless_restart": true,
+    "matching_selected_phase_callback_counts": true,
+    "warmup_global_effect_and_ready_widget_lifetime_observed": true,
+    "phase_profile_sources_selectors_and_owned_class_roots_restored": true,
+    "all_gameplay_and_ui_subscription_cleanup_acceptance": false,
+    "original_batch194_evidence_preserved_as_historical": true,
+    "unchanged_driver_overlay_phase_sources_and_six_accepted_assets": true,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261023-arena-current-round/Index01",
+    "full_regression_executed": false,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "packaged_runtime": false,
+    "network_acceptance": false,
+    "full_acceptance": false,
+    "next": "Continue original opponent elimination/score,remote multiplayer,hardware/audio/current package and whole Experience/version requirements;phase-owned cleanup does not establish global subscription lifetime acceptance."
   }
 }

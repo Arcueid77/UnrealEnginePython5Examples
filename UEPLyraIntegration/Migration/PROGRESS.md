@@ -31,6 +31,25 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded Arena batch216 (2026-10-23),current-SDK natural round:**
+Reuse the existing phase driver,Overlay phase sources and six accepted assets
+with the current source-matching Editor SDK. Both original BlueprintFallback
+and Python run the default3s warmup,120s playing and10s postgame,then native
+seamless travel starts the next warmup. No phase/travel call,duration override,
+fixed World step or time dilation is injected. The observed parallel phase
+counts remain the original2/1/2/2;selected phase callback counts match.
+Both native processes and independent semantic gates exit0 with strict ordered
+shutdown and no errors. Warmup's registered global effect handles and native
+GetReady widget are observed,then removed during playing. Phase Profile sources,
+selectors and owned class roots restore. This bounded phase cleanup does not
+prove all gameplay/UI subscription lifetime requirements. Batch194's prior
+binary proof stays historical;this ledger records the current SDK executions.
+Only migration metadata and the evidence ledger change. Staged checks are
+incremental;no C++/Blueprint/driver/Overlay changes,compile,cook/package or new
+network/pixel/audio/full-version acceptance. Keep original246 paths/order/
+versions and246/182/63/11;the full Experience/version requirements remain open.
+Commit/push Examples first,then the core gitlink;ledger216.
+
 **Completed bounded Arena batch215 (2026-10-23),native variable-frame waits:**
 The same two-player natural bomb/death/HUD scenario now runs without fixed
 World stepping in both Profiles. Keep FixedSeed and native restart at the same
