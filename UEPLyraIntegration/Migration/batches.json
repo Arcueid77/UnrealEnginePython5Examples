@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 214,
+    "bounded_evidence_ledgers": 215,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -14128,7 +14128,8 @@
       "Baseline01 grid observer attempted to move a default-static mesh actor. Baseline02 makes only the test observer movable; exact original native grid results and both Profiles match."
     ],
     "next": "All246 candidate rows now have recorded bounded dispositions, but full migration remains open. Audit every original natural-ingress/network/input/pixel/audio/package/version requirement, including unrun native spawn-failure and commit-race failure paths. Do not redefine completion as zero not_accepted rows.",
-    "all_runtime_candidate_rows_have_recorded_bounded_dispositions": true
+    "all_runtime_candidate_rows_have_recorded_bounded_dispositions": true,
+    "two_local_player_native_input_evidence_ledger": "213-arena-two-local-player-native-input-and-bomb-ownership.json"
   },
   "migration_acceptance_review": {
     "evidence_ledger": "201-original-migration-requirements-and-notify-inspection.json",
@@ -14501,5 +14502,64 @@
     "controlled_reload_runtime_verified": false,
     "full_version_acceptance": false,
     "full_acceptance": false
+  },
+  "arena_local_input_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_two_real_local_player_native_input_cost_bomb_ownership_and_refund_profiles_verified",
+    "evidence_ledger": "213-arena-two-local-player-native-input-and-bomb-ownership.json",
+    "native_runtime_runs": [
+      "20261022-arena-local-input/Fallback02",
+      "20261022-arena-local-input/Python01"
+    ],
+    "map": "/TopDownArena/Maps/L_TopDown_LocalMultiplayer",
+    "native_mode": "Editor standalone",
+    "native_local_player_creation": "GameplayStatics.CreatePlayer",
+    "synthetic_slate_user_bootstrap": "unhandled NUL event for user index1 before native local player creation;native Slate destruction checked after exit",
+    "profiles_selected_before_experience": [
+      "GA_DropBomb",
+      "B_Bomb_Base",
+      "B_Bomb_Standard"
+    ],
+    "other_arena_profiles_default_python_not_baseline_compared": true,
+    "players_per_run": 2,
+    "original_player_state_asc_and_localplayer_distinct": true,
+    "original_experience_ability_grant_and_pawn_input_data": true,
+    "input_action": "/Game/Input/Actions/IA_Weapon_Fire.IA_Weapon_Fire",
+    "input_tag": "InputTag.Weapon.Fire",
+    "native_input_entry": "PlayerController.inject_enhanced_input_for_action",
+    "successful_drops": 4,
+    "repeat_inputs_without_new_bomb": 4,
+    "original_cost_one_to_zero_owning_player_only": true,
+    "actual_native_instigator_and_saved_player_state_match": true,
+    "selected_profile_callbacks_and_no_other_profile_entry": true,
+    "native_test_bomb_destroy_refunds_original_owner": true,
+    "pawn_relocated_by_test": false,
+    "health_unchanged": true,
+    "test_bombs_destroyed_before_fuse": true,
+    "natural_explosion_tested": false,
+    "direct_ability_activation": false,
+    "manual_ability_grant": false,
+    "manual_bomb_spawn": false,
+    "callbacks_replayed": false,
+    "attributes_written": false,
+    "pawn_position_written": false,
+    "native_second_player_removed": true,
+    "selectors_roots_and_owned_bombs_restored": true,
+    "normalized_profile_results_match": true,
+    "focused_contract_checks": 8,
+    "full_regression_executed": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261023-arena-local-input/Index01",
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "physical_input_tested": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "pixels_tested": false,
+    "audio_playback_tested": false,
+    "full_acceptance": false,
+    "preserved_failed_runs": [
+      "Fallback01: both gameplay cases pass but native CommonUI ensure requires the missing Slate user1;whole run rejected,not ignored"
+    ],
+    "next": "Continue original Experience presentation,real explosion/death/respawn,remote multiplayer,travel,current package and complete version requirements. Two local players are not remote clients or hardware-device coverage."
   }
 }

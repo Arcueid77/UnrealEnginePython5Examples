@@ -31,6 +31,35 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded Arena batch213 (2026-10-23),two local input owners:**
+Two actual local players run the original TopDownArena LocalMultiplayer
+Experience. The second is created by native GameplayStatics.CreatePlayer;
+an unhandled synthetic NUL character first establishes its process-local Slate
+user,whose destruction is checked in the final native log. This is explicit
+test setup,not a second physical device. Keep each original Pawn spawn position,
+PawnData,ability grant,input action/tag and native input/GAS bindings. Both
+players independently inject original IA_Weapon_Fire. Native ability/montage/
+spawn tasks create one standard bomb at the original location;only that owner
+spends its one bomb. The other player's attribute is unchanged. Repeated input
+adds no bomb at zero cost. Actual Instigator and stored PlayerState belong to
+the correct owner. Controlled native bomb destruction before the fuse refunds
+only that owner;natural explosion is covered separately,not by this run.
+Four successful drops across original-BP/Python trials compare equal. The drop
+ability,base bomb and visual child Profiles are selected before Experience
+creation;actual selected callbacks execute with zero other-profile entries.
+Other Arena families keep their default Python mode and are not a full Arena
+baseline comparison. Both native processes/two independent gates exit0 with
+strict ordered shutdown and no errors. The test never relocates either Pawn;
+Health stays unchanged and selectors,roots,test bombs and second local-player
+ownership restore. Eight focused
+contract/routing checks pass;the isolated staged check is incremental. Preserve
+Fallback01: its two gameplay cases pass but a missing Slate user1 causes a
+CommonUI ensure,so the entire first run remains failed. No diagnostic is ignored.
+No C++/Blueprint changes,compile,cook or package. Remote clients,hardware input,
+presentation,explosion/death/respawn,travel/package/full0.14 remain distinct
+requirements. Original246 paths/order/versions and246/182/63/11 stay unchanged.
+Verified work is committed and pushed Demos first,then core;ledger213 is bounded.
+
 **Completed bounded settings batch212 (2026-10-22),native save/cancel persistence:**
 The real GamepadVibration bool is assigned by native GameSettingListView to the
 original settings entry. Both original-BP and Python Profiles receive actual

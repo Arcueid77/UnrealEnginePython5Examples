@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "batch": "213-arena-two-local-player-native-input-and-bomb-ownership",
+  "scope": "Original Arena Experience,2real local players,native original IA_Weapon_Fire input through natural ability grants and original PawnData. Four original-BP/Python drops:one own cost,foreign owner unchanged,actual Instigator/stored PlayerState match,repeat input no extra bomb,native controlled pre-fuse destroy refunds only owner. No direct ability activation,ability grants,manual bomb spawn,attribute writes orPawn relocation. Actual selected drop/base/visual callbacks,zero other profile entries;other Arena families keep default Python,not full original Arena baseline. Two native process0/two independent gate0/strict ordered logs and native Slate user1 registration/destruction. Synthetic unhandled NUL event bootstraps Slate user1;no physical device claim. Preserve initial missing-Slate-user ensure as a failed run. No C++/Blueprint change,compile,cook,package orfull migration acceptance. Commit/push Examples then core.",
+  "recorded_utc": "2026-10-22T16:03:36.6552328Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "d68e9d41775b659df7a9b700df5020ebf287092b",
+  "examples_parent_commit": "7dfa6c0de941ecffd0e43763cb32f58ee3b1d2d6",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261022-arena-local-input/Fallback02",
+      "summary_sha256": "8383D6308C2376635FF73BB230083D66A877FDA09AC9BD6AC8B96FE144851FAA",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "E87452CC8D645D7C1C9C26C39968CED38B200A482743CB611558E19B0AC63AEF"
+      ],
+      "frozen_input_records": 1661,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261022-arena-local-input/Python01",
+      "summary_sha256": "68490122BD7B48A16BE7DA0B4C2ACD476691168BA080DCD4507FD14ED7A46410",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "E87452CC8D645D7C1C9C26C39968CED38B200A482743CB611558E19B0AC63AEF"
+      ],
+      "frozen_input_records": 1661,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": []
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "2612975126C3A2AB465A11C9DDFD86D0F274F214AB513DF549A0DE2EC837BA92",
+      "native_input_path": "Validation/Run-UEP58ArenaLocalInputValidation.ps1",
+      "path": "Validation/Run-UEP58ArenaLocalInputValidation.ps1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "3A4D5E2DEA9686A8380ED886EC76D147E64C6397E43FCAF940A263CBAB64D1E4",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "443069B2A6A28C81980ECA80F2E794322C85E1BAB43CEE2C83EA477BDDAAE229",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/arena_local_input_contract.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/arena_local_input_contract.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "E2F15835D5C91C2C75DD3A30825EA785AB004481DF7533223E11CF91339D85F0",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/arena_local_input_validation.py",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/arena_local_input_validation.py"
+    }
+  ],
+  "host_report": null,
+  "full_acceptance": false,
+  "packaged_runtime": false,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "supplemental_evidence": [
+    {
+      "sha256": "C8AD672498C3D1C4120748F505D788B084FC92224F1E23B8168F189151A08BF0",
+      "path": ".build/LyraValidation/BlueprintPython/20261022-arena-local-input/independent-review01.json"
+    },
+    {
+      "sha256": "79D9277C63FC593588544AE49BBB78C90ADC50874E929F57BB9655A95384EF7E",
+      "path": ".build/LyraValidation/BlueprintPython/20261022-arena-local-input/Fallback02/result.json"
+    },
+    {
+      "sha256": "FBFE468BC6799F7FEFBE4181F9563AD86A711890C711A3C45BFAED3A0F0DF200",
+      "path": ".build/LyraValidation/BlueprintPython/20261022-arena-local-input/Python01/result.json"
+    },
+    {
+      "sha256": "DFE246BD52525E19789105440FF7F348DC0DD7FC3FB3D6C6F91859407B5B7CFA",
+      "path": "Demos/UEPLyraIntegration/Tests/test_arena_local_input_contract.py"
+    },
+    {
+      "sha256": "50A6E69DAE72F2FDBC9E0C93CBB0C930E255ED5876A9AAFE605137EA8D1D5EB0",
+      "path": ".build/LyraValidation/BlueprintPython/20261022-arena-local-input/Fallback01/summary.json"
+    }
+  ]
+}
