@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 216,
+    "bounded_evidence_ledgers": 217,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -14648,6 +14648,68 @@
       "Python01",
       "AffectedPreFuse01"
     ],
-    "next": "Continue original variable-frame,opponent elimination/score,remote multiplayer,travel,presentation/audio/current package and full Experience/version requirements. This fixed-step self-death scenario is bounded proof."
+    "next": "Continue original variable-frame,opponent elimination/score,remote multiplayer,travel,presentation/audio/current package and full Experience/version requirements. This fixed-step self-death scenario is bounded proof.",
+    "variable_frame_timing_followup_evidence_ledger": "215-arena-variable-frame-native-delay-boundaries.json"
+  },
+  "arena_native_delay_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_actual_variable_frame_original_and_python_native_delay_boundaries_verified",
+    "evidence_ledger": "215-arena-variable-frame-native-delay-boundaries.json",
+    "native_runs": [
+      "20261023-arena-variable-timing/Fallback01",
+      "20261023-arena-variable-timing/Python01"
+    ],
+    "affected_fixed_step_run": "20261023-arena-variable-timing/FixedAffected01",
+    "variable_frame_timing": true,
+    "fixed_world_step_not_enabled_in_primary_runs": true,
+    "fixed_seed_and_same_native_original_player_starts": true,
+    "original_layout_and_input_vectors_match": true,
+    "read_only_callback_metadata_before_original_handler": true,
+    "source_profile_classes_restored_before_exit": true,
+    "native_delay_requested_seconds": [
+      1.5,
+      0.5,
+      2.0
+    ],
+    "boundary_tolerance": "sum of the measured start/end native World delta seconds;no fixed widened constant",
+    "native_creation_age_and_sampler_values_retained_as_diagnostics": true,
+    "first_bomb_creation_frame_seconds": 0.4,
+    "first_delay_consumes_current_native_frame": true,
+    "original_fuse_minimum_burn_and_death_task_not_replaced": true,
+    "actual_owner_health": [
+      0,
+      100
+    ],
+    "native_owner_refund": [
+      1,
+      1
+    ],
+    "native_hud_counts": [
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "profile_source_widget_selectors_roots_and_second_local_player_cleanup": true,
+    "unchanged_physical_input_and_ui_visual_limits_from_batch214": true,
+    "new_full_visual_acceptance": false,
+    "focused_native_delay_contract_tests": 9,
+    "invalid_mode_guard_before_native_start": true,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261023-arena-variable-timing/Index01",
+    "full_regression_executed": false,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "packaged_runtime": false,
+    "network_acceptance": false,
+    "full_acceptance": false,
+    "next": "Continue original opponent elimination/score,remote multiplayer,travel/hardware/audio/current package and whole Experience/version requirements;local self-death is not complete Arena acceptance."
   }
 }

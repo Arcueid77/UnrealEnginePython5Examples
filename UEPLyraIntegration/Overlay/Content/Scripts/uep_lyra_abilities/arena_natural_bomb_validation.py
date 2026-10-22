@@ -4,7 +4,7 @@ The input owner starts at its original spawn,then moves by original IA_Move
 into a free adjacent blast cell. No damage/phase/death callback,position setter,
 attribute or bomb lifetime is written by this observer.
 """
-import atexit,copy,math,time,traceback
+import atexit,copy,math,sys,time,traceback
 from pathlib import Path
 import unreal_engine as ue
 from unreal_engine.structs import GameplayTag
@@ -22,6 +22,7 @@ class Validation(InputValidation):
         self.last_health=[]
         self.widget_profiles=[];self.move_input=None
         self.fixture_restarted=False
+        self.timing_sources=[]
         super().__init__(arg('UEPArenaNaturalResult'),arg('UEPArenaNaturalProfile'))
         self.report.update(test_bombs_destroyed_before_fuse=False,natural_explosion_tested=True,damage_applied_by_fixture=False,explosion_called_by_fixture=False,death_called_by_fixture=False,natural_gameplay_state_reverted=False,hud={},images=[])
         selected=[(actors.HERO,actors.SELECTOR),(actors.DEATH,'PythonMixinProfile')]
@@ -33,6 +34,29 @@ class Validation(InputValidation):
             cls.get_cdo().set_property(selector,self.profile)
         self.death_class=ue.load_class(actors.DEATH);self.stat_class=ue.load_class(stats.CLASS)
         self.report['profile_families_selected_before_experience']=['drop','base bomb','standard bomb','Arena hero/death','Arena mode/phase','Arena player registration/list/tile/stat/clock']
+        self.report['native_timing_mode']='variable' if '-UEPArenaNativeVariableTiming' in sys.argv else 'fixed60'
+        if self.report['native_timing_mode']=='variable':self.install_timing_observers()
+
+    def install_timing_observers(self):
+        self.report['native_timing_events']=[]
+        groups=[('bomb',self.classes['base'],('UEPArenaBombBegin','UEPArenaBombTrigger','UEPArenaBombIncrement','UEPArenaBombDestroyed')),
+                ('death',self.death_class,('Activate','AfterWait'))]
+        owner=self
+        def observed(function,scope,name,profile):
+            def call(obj,*args):
+                # Capture POD metadata before the real handler can retire obj.
+                owner.report['native_timing_events'].append(dict(scope=scope,method=name,profile=profile,object=path(obj),frame=int(drop.lib('KismetSystemLibrary').call_function('GetFrameCount')),game_seconds=float(owner.statics.call_function('GetTimeSeconds',obj)),world_delta_seconds=float(owner.statics.call_function('GetWorldDeltaSeconds',obj))))
+                return function(obj,*args)
+            if hasattr(function,'override'):call.override=function.override
+            return call
+        for scope,cls,names in groups:
+            ue.register_declared_mixin(cls)
+            entry=next(row for row in ue.get_registered_mixins() if row['target_class']==cls)
+            for profile,row in entry['profiles'].items():
+                source=row['python_class'];self.timing_sources.append((cls,profile,source))
+                methods={name:value for name,value in source.__dict__.items() if callable(value) and not name.startswith('_')}
+                for name in names:methods[name]=observed(getattr(source,name),scope,name,profile)
+                ue.register_mixin_profile(cls,profile,type('ObservedArenaNatural'+scope+profile,(),methods))
 
     def discover_players(self):
         super().discover_players()
@@ -110,7 +134,7 @@ class Validation(InputValidation):
         self.bomb_counts=base.evidence(self.bomb)
         self.original_fuse=float(self.bomb.get_property('BombLifespan'))
         self.report['drop']=copy.deepcopy(self.current)
-        self.report['natural']=dict(health_before=list(self.initial_health),original_fuse_seconds=self.original_fuse,bomb_age_at_first_observation_seconds=self.first_observed_bomb_age,observed_world_delta_seconds=[])
+        self.report['natural']=dict(health_before=list(self.initial_health),original_fuse_seconds=self.original_fuse,original_minimum_burn_seconds=float(self.bomb.get_property('MinBurnTimeEvenIfShortened')),bomb_age_at_first_observation_seconds=self.first_observed_bomb_age,observed_world_delta_seconds=[])
         self.prepare_move()
         self.enter('armed')
 
@@ -173,6 +197,9 @@ class Validation(InputValidation):
         if valid(self.move_input):self.move_input.call_function('InjectInputVectorForAction',self.move_action,ue.FVector())
         for widget,previous in self.widget_profiles:
             if valid(widget):ue.set_mixin_profile(widget,previous)
+        for cls,profile,source in self.timing_sources:ue.register_mixin_profile(cls,profile,source)
+        if self.timing_sources:
+            self.report['native_timing_observer_profiles_restored']=all(next(row for row in ue.get_registered_mixins() if row['target_class']==cls)['profiles'][profile]['python_class'] is source for cls,profile,source in self.timing_sources)
         super().cleanup()
 
     def finish(self,error=None):

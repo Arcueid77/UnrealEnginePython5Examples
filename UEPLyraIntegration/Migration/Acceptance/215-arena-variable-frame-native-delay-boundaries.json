@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "batch": "215-arena-variable-frame-native-delay-boundaries",
+  "scope": "Actual Editor Standalone two-local-player Arena natural self-death/HUD under variable World stepping. Same original native PlayerStarts,FixedSeed,block layout,bomb location andmove vectors;original native input/GAS grants and all health/refund/HUD outcomes match. Read-only wrappers capture native time/frame/delta before original bomb/death handlers. Original1.5s fuse pause,0.5s minimum burn,2s death task checked using measured boundary-frame allowance;no blanket widened timer. First creation frame0.4s is consumed by native FDelayAction,explaining about1.106s later-time first pause. Original profile source classes restored after observed tasks. Two variable profiles plus affected fixed60 process/gate0 pass strict ordered shutdown. Original policy/C++/Blueprint/delays unchanged;no compile,cook/package,new full visual orfull-version claim. Invalid-mode guard and9focused contract tests. Preserve prior failed evidence. Original246 paths/order/versions and246/182/63/11 preserved. Commit/push Examples then core.",
+  "recorded_utc": "2026-10-22T16:45:12.9326025Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "295bf19187a67f4bf66b74c325525e19f51c8c52",
+  "examples_parent_commit": "46285d0ccac13645cf2399265cf200e68acb126c",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-arena-variable-timing/Fallback01",
+      "summary_sha256": "95BD6A39EAAAE7AFE6BF94059B8F6ED18B04C4104E2CABC84DEE3E21913C71A2",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "E87452CC8D645D7C1C9C26C39968CED38B200A482743CB611558E19B0AC63AEF"
+      ],
+      "frozen_input_records": 1735,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-arena-variable-timing/Python01",
+      "summary_sha256": "39508F9C5EFE82CC100FD2938385705F18DC60F2FEC92741A069CA20CC861D55",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "E87452CC8D645D7C1C9C26C39968CED38B200A482743CB611558E19B0AC63AEF"
+      ],
+      "frozen_input_records": 1735,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-arena-variable-timing/FixedAffected01",
+      "summary_sha256": "611A4D8824C96EC39D52D5E4D6FCCA4840829936FF7987BCE75F93FE9420F2B2",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "E87452CC8D645D7C1C9C26C39968CED38B200A482743CB611558E19B0AC63AEF"
+      ],
+      "frozen_input_records": 1735,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": []
+    }
+  ],
+  "source_files": [
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "311EAC53DAB53071B60153474B1A3F47138836901BD39B489167721A08E097D9",
+      "path": "Validation/Run-UEP58ArenaLocalInputValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58ArenaLocalInputValidation.ps1"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "0B7942EBB34688EC50EFDF99D33296765761723B4473FBDA710C32D2BD0EAFD7",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/arena_natural_bomb_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/arena_natural_bomb_validation.py"
+    },
+    {
+      "matches_at_least_one_listed_native_input": true,
+      "sha256": "2C3A4B595095DC5E37768E78B7A7DDA035A8DB98578440773859D40888935ABA",
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/arena_natural_bomb_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/arena_natural_bomb_contract.py"
+    }
+  ],
+  "host_report": null,
+  "full_acceptance": false,
+  "packaged_runtime": false,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "supplemental_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-arena-variable-timing/independent-review01.json",
+      "sha256": "0E27B0BB3FDEF2F74135564CBDC15D70FA11532A7554707738056FEFD792DC65"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-arena-variable-timing/guard.json",
+      "sha256": "9A9BAFCCEFB02A1062588B816CF2F5C46532ED6272292C8C550203A31017B803"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-arena-variable-timing/native-delay-source-context.json",
+      "sha256": "3FC5592F65D1F87812F38BA799D25947D7F9F034E0FE1949C38E6639406A23C5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-arena-variable-timing/Fallback01/result.json",
+      "sha256": "3E0EE45FBF2A8ADAB026A56FAFC0441B2E948DBD0E09F6C58E3A44BC489AB287"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-arena-variable-timing/Python01/result.json",
+      "sha256": "12AA93AD98E785007B03832DB3F1657F6F534C7280D9BBE7D3C7BA82163380DB"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-arena-variable-timing/FixedAffected01/result.json",
+      "sha256": "A8B6C421374096AB524CB51783D5B2BAFF16BB690FCAD0DFE50721F8E85D3761"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tests/test_arena_native_delay_contract.py",
+      "sha256": "4A4C63452FB99203B2B37DBDD6666EA0663CF3F1AD82A22C425B7638CBA16026"
+    }
+  ]
+}

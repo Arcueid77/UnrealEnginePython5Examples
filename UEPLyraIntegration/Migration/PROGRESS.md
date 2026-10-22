@@ -31,6 +31,32 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded Arena batch215 (2026-10-23),native variable-frame waits:**
+The same two-player natural bomb/death/HUD scenario now runs without fixed
+World stepping in both Profiles. Keep FixedSeed and native restart at the same
+two original PlayerStarts;generated blocks,bomb locations,move vectors and
+health/cost/HUD outcomes match. Read-only wrappers capture native World time,
+frame and delta before real bomb/death handlers;no callback,Delay,damage or
+gameplay policy is replaced. Restore the exact original Profile source classes
+after all observed work ends. Both actual processes and independent gates pass
+strict ordered shutdown. One affected fixed60 run also passes,with no timing
+observer installed. The old fixed-only proof stays historical and unchanged.
+Native FDelayAction subtracts the current frame elapsed time. A bomb created
+during an observed0.4s frame therefore completes its first1.5s native pause
+after about1.106s of later World time. The next0.5s minimum burn observes about
+0.507/0.510s,and the two-second death task observes about2.009/2.005s. Each
+segment is checked against its own measured boundary frames;there is no blanket
+timing widening or claim of exact cross-process stride/render timing. The old
+aggregate variable-frame timing failures remain preserved;this new observation
+explains their fixed-constant expectation instead of relabeling those runs.
+Nine focused positive/early/late/nonfinite/order/Profile/restore gate tests pass.
+The unsupported variable-mode/pre-fuse combination is rejected before native
+startup or output creation. The staged regression is incremental. No production
+C++/Blueprint changes,compile,cook/package or new full visual acceptance. Earlier
+UI construction,hardware,remote clients,opponent kills/travel/audio/current
+package and full Experience/version requirements remain open. Preserve exact246
+paths/order/versions and246/182/63/11. Commit/push Examples first,then core.
+
 **Completed bounded Arena batch214 (2026-10-23),natural bomb/death/HUD:**
 Two real local players keep the original Experience ability/input grants. Native
 RestartPlayerAtPlayerStart places them at the same two original map starts;

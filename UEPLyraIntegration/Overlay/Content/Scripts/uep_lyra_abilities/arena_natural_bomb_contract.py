@@ -1,4 +1,32 @@
 """Natural input -> Arena bomb fuse -> self damage/death and native HUD."""
+import math
+
+
+def validate_native_delays(report):
+    events=report['native_timing_events'];profile=report['profile']
+    assert events and all(e['profile']==profile and math.isfinite(e['game_seconds']) and math.isfinite(e['world_delta_seconds']) and e['world_delta_seconds']>0 for e in events)
+    assert all(a['frame']<=b['frame'] and a['game_seconds']<=b['game_seconds'] for a,b in zip(events,events[1:]))
+    def first(scope,method):
+        matches=[e for e in events if e['scope']==scope and e['method']==method]
+        assert matches
+        return matches[0]
+    begin=first('bomb','UEPArenaBombBegin');trigger=first('bomb','UEPArenaBombTrigger');blast=first('bomb','UEPArenaBombIncrement');destroy=first('bomb','UEPArenaBombDestroyed')
+    death=first('death','Activate');finish=first('death','AfterWait')
+    assert begin['object']==trigger['object']==blast['object']==destroy['object'] and death['object']==finish['object']
+    assert begin['frame']<trigger['frame']<=blast['frame']<=death['frame']<finish['frame']
+    natural=report['natural'];minimum=natural['original_minimum_burn_seconds'];fuse=natural['original_fuse_seconds']
+    assert 0<minimum<fuse
+    def check(start,end,duration):
+        elapsed=end['game_seconds']-start['game_seconds']
+        # FDelayAction subtracts the current native frame's elapsed time. A
+        # latent callback may create another Delay during that same frame.
+        # Both boundary frames are measured; no fixed widened timer allowance.
+        allowance=start['world_delta_seconds']+end['world_delta_seconds']
+        assert duration-allowance-1e-4<=elapsed<=duration+allowance+1e-4
+        return dict(requested_seconds=duration,observed_seconds=elapsed,boundary_frame_seconds=allowance)
+    result=dict(fuse_pause=check(begin,trigger,fuse-minimum),minimum_burn=check(trigger,blast,minimum),death_task=check(death,finish,2.))
+    assert report['native_timing_observer_profiles_restored']
+    return result
 
 
 def validate(report):
@@ -17,10 +45,11 @@ def validate(report):
     assert natural['native_death_started'] and natural['native_death_finished']
     assert natural['selected_death_callbacks']==[1,1] and natural['other_death_callbacks']==[0,0]
     assert natural['selected_bomb_destroyed_callback']==1 and natural['bombs_destroyed_by_cleanup']==0
-    assert natural['original_fuse_seconds']>0 and natural['damage_after_creation_seconds']>=natural['original_fuse_seconds']-.15
+    if report.get('native_timing_mode','fixed60')=='variable':validate_native_delays(report)
+    else:assert report.get('native_timing_mode','fixed60')=='fixed60' and natural['original_fuse_seconds']>0 and natural['damage_after_creation_seconds']>=natural['original_fuse_seconds']-.15
     assert natural['bomb_age_at_first_observation_seconds']>=0
     assert abs(natural['damage_after_creation_seconds']-natural['damage_after_observation_seconds']-natural['bomb_age_at_first_observation_seconds'])<1e-5
-    assert 1.85<=natural['death_task_seconds']<=2.5
+    if report.get('native_timing_mode','fixed60')=='fixed60':assert 1.85<=natural['death_task_seconds']<=2.5
     for phase,values in (('before',[1,1]),('spent',[0,1]),('refunded',[1,1])):
         rows=report['hud'][phase]
         assert {r['target_owner'] for r in rows}=={0,1}
