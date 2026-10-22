@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 219,
+    "bounded_evidence_ledgers": 220,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -14451,7 +14451,8 @@
       "Fallback03 five true hits/12->7 native ammo left targetHealth10;five-gesture fixture budget was invalid for unchanged native Pistol damage. Budget now derives from original remaining magazine,with unchanged native damage/Health/timeouts.",
       "Fallback04 completed real lethal/scoring/notification flow but cached early weapon class defaults were collected before cleanup;held UClass roots now release after restoration."
     ],
-    "next": "Continue physical keyboard,two-owner turnover,other weapons/accolade-chain ingress,large-team/error/late-join/travel/loss/UI/package/version and the remaining original migration requirements."
+    "next": "Continue physical keyboard,two-owner turnover,other weapons/accolade-chain ingress,large-team/error/late-join/travel/loss/UI/package/version and the remaining original migration requirements.",
+    "both_owners_current_sdk_evidence_ledger": "218-both-actual-weapon-owners-native-lethal-score-and-feed.json"
   },
   "migration_package_inventory": {
     "status": "current_original_scope_cook_presence_and_bounded_discovery_verified_full_runtime_open",
@@ -14803,5 +14804,48 @@
     "network_acceptance": false,
     "full_acceptance": false,
     "next": "Continue original current-runtime/network/presentation/package/version requirements. This SDK fix and bounded candidate regressions do not finish the full246 migration or repair unrelated native Dataflow startup self-tests."
+  },
+  "weapon_two_owner_lethal_pilot": {
+    "version": "0.11.0",
+    "status": "bounded_both_actual_client_weapon_owners_original_python_native_lethal_score_feed_and_foreign_ammo_verified",
+    "evidence_ledger": "218-both-actual-weapon-owners-native-lethal-score-and-feed.json",
+    "current_editor_sdk_from_batch217": true,
+    "owners": [
+      "A",
+      "B0"
+    ],
+    "native_runs": [
+      "20261023-two-owner-weapon-lethal/B0Fallback01",
+      "20261023-two-owner-weapon-lethal/B0Python01",
+      "20261023-two-owner-weapon-lethal/AFallback01",
+      "20261023-two-owner-weapon-lethal/APython01"
+    ],
+    "native_processes": 12,
+    "actual_editor_dedicated_server_and_two_independent_clients": true,
+    "four_independent_semantic_gates": true,
+    "actual_original_native_input_and_equipped_pistol": true,
+    "no_fixture_damage_spec_health_write_elimination_phase_or_rpc_replay": true,
+    "original_and_python_outcomes_match_per_owner": true,
+    "owner_authority_ammo_and_source_wire_match": true,
+    "foreign_owner_magazine_unchanged_and_no_weapon_activation": true,
+    "actual_two_client_feed_names_teams_and_reliable_payload_match_roles": true,
+    "native_lethal_score_postgame_and_cleanup": true,
+    "early_profile_class_selection_and_native_cdo_roots_restored": true,
+    "original_gas_fixture_keeps_default_owner_A": true,
+    "all_gameplay_python_native_and_blueprint_business_unchanged": true,
+    "fixture_target_score_one_and_native_target_placement_are_explicit": true,
+    "adaptive_native_aim_and_fire_until_lethal_control_policy": true,
+    "physical_input_tested": false,
+    "pixels_tested": false,
+    "travel_rejoin_tested": false,
+    "other_weapons_or_combined_full_version_matrix": false,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261023-two-owner-weapon-lethal/Index01",
+    "full_regression_executed": false,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "packaged_runtime": false,
+    "network_acceptance": false,
+    "full_acceptance": false,
+    "next": "Continue original reload/empty/switch/respawn/travel/loss,presentation/audio/current packages and whole Experience/version requirements;these four single-kill trials are bounded two-owner evidence."
   }
 }

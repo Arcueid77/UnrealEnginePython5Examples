@@ -31,6 +31,41 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded weapon batch218 (2026-10-23),both actual input owners:**
+Extend the existing native lethal observer/driver to select clientA orB0 as
+the attacker. The other real client is the victim. The shared GAS fixture
+retains default attackerA;its authority/stat/health reads now use explicit
+roles. No game business,Blueprint,SDK C++,native RPC or damage policy changes.
+Each owner runs separately through original BlueprintFallback and Python with
+the current source-matching Editor SDK from217. There is one actual dedicated
+Editor server and two independent Editor clients per trial,twelve processes
+across four trials. All process exits and four independent semantic gates0
+pass strict completion/Goodbye/Python-exit/log-close ordering with no errors.
+Input enters the selected real PlayerController's original Enhanced Input
+actions and equipped native pistol/GAS grant. Native target data/trace/damage,
+HealthSet death,one-point team score,natural PostGame and reliable native
+kill-feed pipeline all execute;the fixture never applies a damage spec or
+replays elimination,phase,victory or RPC callbacks. Native source-pawn wire
+identities,authority/Profile and event counts are now checked explicitly.
+Both original/Python runs match each owner's health,score,ammo/activation/input
+and phase outcomes. Authority and owner magazine values match. The non-firing
+owner's magazine is unchanged,with zero observed weapon activation. Server and
+victim agree on those native item values. Both clients' feed names/team IDs and
+the native elimination instigator/target payload match their actual roster
+roles. Cross-run player names,wire IDs and team allocation are not compared as
+literal identities. Original scores,ammo,observers,selectors,roots and input
+are restored after observation;the dead victim's Health is not rewritten.
+The existing explicit fixture setup remains:TargetScore1,bounded native target
+teleport/clear-line placement and adaptive native aim/fire-until-lethal. These
+are four bounded single-kill trials,not a full match or physical-device input.
+Twenty-five affected lethal-network fixture/contract tests pass,including
+second-owner positives and invalid roles,foreign ammo/activation,wrong source/
+authority/Profile,wrong feed target and cross-peer plan rejection. The staged
+gate is incremental;no compile,cook/package,new pixel/audio/travel/rejoin/loss
+or full-version acceptance. Earlier206 evidence remains historical. Preserve
+the exact246 paths/order/versions and246/182/63/11,and all remaining original
+Experience/version requirements. Commit/push Examples first,then core;ledger218.
+
 **Completed bounded SDK batch217 (2026-10-23),runtime property writes:**
 Current-SDK Third Person regression exposed a real Python-first rendering bug:
 each reflected runtime state assignment sent editor Pre/PostEditChange,which

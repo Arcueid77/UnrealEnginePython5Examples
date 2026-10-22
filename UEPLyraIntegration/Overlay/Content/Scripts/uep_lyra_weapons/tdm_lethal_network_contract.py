@@ -9,6 +9,11 @@ FALSE_FIELDS = ('full_acceptance', 'packaged_runtime', 'pixels_tested', 'physica
     'phase_start_or_victory_callbacks_called_by_fixture', 'native_rpc_replaced', 'travel_rejoin_tested')
 
 
+def player_roles(attacker='A'):
+    require(attacker in ('A', 'B0'), 'native lethal attacker must be an actual client')
+    return attacker, 'B0' if attacker == 'A' else 'A'
+
+
 def validate(report, *, producer='gas'):
     require(report['status'] == 'passed' and report['error'] is None and report['peer'] in PEERS, 'native lethal network peer failed')
     require(report['requested_profile'] in ('BlueprintFallback', 'Python') and report['profiles_selected_before_component_creation'], 'early original/Python scoring/phase selection required')
@@ -17,6 +22,8 @@ def validate(report, *, producer='gas'):
     for key in ('observer_scopes_closed', 'profile_classes_restored', 'probe_roots_removed', 'target_score_restored', 'original_scores_restored', 'boot_selectors_restored'):
         require(report[key], 'lethal pipeline cleanup missing: '+key)
     row = report['result']
+    attacker, victim = player_roles(report.get('attacker_peer', 'A'))
+    require(report.get('victim_peer', victim) == victim, 'native lethal victim must be the other client')
     require(row['attacker_health'] == 100. and row['victim_health'] == 0., 'native targeted lethal damage/foreign invariance differs')
     require(row['attacker_kills_delta'] == row['victim_deaths_delta'] == row['attacker_team_score_delta'] == 1 and row['other_team_score_delta'] == 0, 'native score replication differs')
     require(row['target_score'] == 1 and row['postgame_damage_immunity'], 'configured victory/postgame native immunity missing')

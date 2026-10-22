@@ -9,7 +9,7 @@ from uep_lyra_hud.notification_relays_network_validation import Network as Relay
 from uep_lyra_hud import elimination_feed_relay_mixin as kill
 from .hero_burst_cue_mixin import lib
 from . import tdm_scoring_mixin as scoring, scoring_base_mixin as shared, game_phases_mixin as phases
-from .tdm_lethal_network_contract import PEERS, FALSE_FIELDS, require, validate
+from .tdm_lethal_network_contract import PEERS, FALSE_FIELDS, require, validate, player_roles
 
 DAMAGE = '/Game/GameplayEffects/Damage/GE_Damage_Basic_SetByCaller.GE_Damage_Basic_SetByCaller_C'
 
@@ -19,11 +19,13 @@ def arg(name):
 
 
 class Network(Relays):
-    def __init__(self, result, peer, run):
+    def __init__(self, result, peer, run, attacker='A'):
         super().__init__(result, peer, run)
+        self.attacker, self.victim = player_roles(attacker)
         self.profile = arg('UEPTDMNetworkProfile')
         self.report = dict(status='running', error=None, peer=peer, run_id=run, requested_profile=self.profile,
-            profiles_selected_before_component_creation=True, actual_native_damage_spec_applied=False, server_waited_for_client_process_exit=False)
+            profiles_selected_before_component_creation=True, actual_native_damage_spec_applied=False, server_waited_for_client_process_exit=False,
+            attacker_peer=self.attacker, victim_peer=self.victim)
         self.report.update(dict.fromkeys(FALSE_FIELDS, False))
         self.boot_selectors = []
         for path in (shared.CLASS, scoring.CLASS, *phases.CLASSES.values()):
@@ -73,15 +75,15 @@ class Network(Relays):
         self.armed = True
 
     def stats(self):
-        source, target = self.players['A']['state'], self.players['B0']['state']
+        source, target = self.players[self.attacker]['state'], self.players[self.victim]['state']
         return dict(kills=int(source.call_function('GetStatTagStackCount', GameplayTag(TagName='ShooterGame.Score.Eliminations'))),
             deaths=int(target.call_function('GetStatTagStackCount', GameplayTag(TagName='ShooterGame.Score.Deaths'))),
-            team=int(self.team.call_function('GetTeamTagStackCount', self.roster['A']['team'], GameplayTag(TagName='ShooterGame.Score.Eliminations'))),
-            other=int(self.team.call_function('GetTeamTagStackCount', self.roster['B0']['team'], GameplayTag(TagName='ShooterGame.Score.Eliminations'))))
+            team=int(self.team.call_function('GetTeamTagStackCount', self.roster[self.attacker]['team'], GameplayTag(TagName='ShooterGame.Score.Eliminations'))),
+            other=int(self.team.call_function('GetTeamTagStackCount', self.roster[self.victim]['team'], GameplayTag(TagName='ShooterGame.Score.Eliminations'))))
 
     def apply_lethal(self):
         require(self.peer == 'server', 'only authority produces native GAS damage')
-        source = ability_system(self.players['A']['pawn']);target = ability_system(self.players['B0']['pawn'])
+        source = ability_system(self.players[self.attacker]['pawn']);target = ability_system(self.players[self.victim]['pawn'])
         spec = source.call_function('MakeOutgoingSpec', ue.load_class(DAMAGE), 1., source.call_function('MakeEffectContext'))
         spec = lib('AbilitySystemBlueprintLibrary').call_function('AssignTagSetByCallerMagnitude', spec, GameplayTag(TagName='SetByCaller.Damage'), 100.)
         source.call_function('BP_ApplyGameplayEffectSpecToTarget', spec, target)
@@ -91,10 +93,10 @@ class Network(Relays):
 
     def record(self):
         after = self.stats();before = self.baseline_stats
-        asc = self.players['A']['state'].get_property('AbilitySystemComponent')
+        asc = self.players[self.attacker]['state'].get_property('AbilitySystemComponent')
         cue_cls = ue.find_class('/ShooterCore/GameplayCues/GCNL_MatchDecided.GCNL_MatchDecided_C')
         cues = [actor for actor in ue.tobject_iterator(cue_cls) if valid(actor) and actor.get_world() == self.world] if cue_cls else []
-        row = dict(roster=self.roster, attacker_health=self.attribute_health(self.players['A']['state']), victim_health=self.attribute_health(self.players['B0']['state']),
+        row = dict(roster=self.roster, attacker_health=self.attribute_health(self.players[self.attacker]['state']), victim_health=self.attribute_health(self.players[self.victim]['state']),
             attacker_kills_delta=after['kills']-before['kills'], victim_deaths_delta=after['deaths']-before['deaths'],
             attacker_team_score_delta=after['team']-before['team'], other_team_score_delta=after['other']-before['other'],
             target_score=int(self.scoring.get_property('TargetScore')), ability_input_blocked=bool(asc.call_function('GetGameplayTagCount', GameplayTag(TagName='Gameplay.AbilityInputBlocked'))),

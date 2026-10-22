@@ -1,0 +1,278 @@
+{
+  "schema_version": 1,
+  "batch": "218-both-actual-weapon-owners-native-lethal-score-and-feed",
+  "scope": "Current Editor SDK from217:clientA andB0 independently supply original Enhanced Input to their equipped native pistol/GAS ability. Four original BlueprintFallback/Python paired single-kill trials,each with actual dedicated Editor server and two independent Editor clients;twelve process exits0 and four independent semantic gates0;strict ordered shutdown,no errors. Native target data/trace/damage,HealthSet death,score1,natural PostGame and native reliable feed;no fixture damage,health write,callback/phase/RPC replay. Source wire identity,authority/Profile,event counts,owner/authority ammo and untouched other-owner magazine/activation are checked. Native feed player names/teams and elimination payload match actual roster roles;original/Python health,score,input/ammo and phase outcomes match for each owner. Restore observers,input,selectors,owned roots,scores/ammo and poses where still original Pawn;dead Health not rewritten. Existing explicit TargetScore1,bounded native target placement and adaptive aim/fire-until-lethal remain fixture setup. Original direct-GAS fixture default ownerA preserved. Only validation scripts/contracts/tests and metadata change;incremental staged gate,no compile,cook/package,pixels,physical/audio,travel/rejoin/loss,other weapons or full-version claim. Preserve exact246 paths/order/versions and246/182/63/11;206 remains historical. Commit/push Examples then core.",
+  "recorded_utc": "2026-10-22T17:57:55.3406314Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "b2e93bc794993977326b85e70099005cf733cae9",
+  "examples_parent_commit": "a0ed290c614b8b64f73c88e04f7f8d7cc342f69b",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-two-owner-weapon-lethal/B0Fallback01",
+      "summary_sha256": "ED407521B20AEB707435E91C57E8C8E0B9071B866D783F6B22D8AAE27AEAECFC",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "305ACB63588ABEDA69EC0F2028110EDF06E5D6548D0E5806F1D8A2A847D8A410"
+      ],
+      "frozen_input_records": 3390,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "A": 0,
+        "B0": 0,
+        "server": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "8BE48E1F0052BF9C366FA18A270EB1B8DA453EFBCF2AACCE14A30D0BC7FACB88",
+          "file": "server.json"
+        },
+        {
+          "sha256": "2DBDC7327BD541F43B11374768871104B85AE75616C83C4B32CC34B705F903C0",
+          "file": "A.json"
+        },
+        {
+          "sha256": "A80A256AD3C6D869D09045321391CD9C4E57F3820126C94CA345602F4FAA244D",
+          "file": "B0.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-two-owner-weapon-lethal/B0Python01",
+      "summary_sha256": "EC5E1327A42ACC2155F18505FE677690C56529E0ADD0CB1DEC7AB60E48D82F5D",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "305ACB63588ABEDA69EC0F2028110EDF06E5D6548D0E5806F1D8A2A847D8A410"
+      ],
+      "frozen_input_records": 3390,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "B0": 0,
+        "A": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "FF7C4E01934223EF1F6BD79385D3128C11D52BF5623AF37536D3D41059A662EE",
+          "file": "server.json"
+        },
+        {
+          "sha256": "997C0D088417B19918815DE00B4AD977B8C670ED28B319D9A1780E89DB73D6EA",
+          "file": "A.json"
+        },
+        {
+          "sha256": "829F0610F93435B947AA9992C5A6E146B9909988E88B1D2D6001E1F1C46D522E",
+          "file": "B0.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-two-owner-weapon-lethal/AFallback01",
+      "summary_sha256": "CBFD16FBE9A9BB48AC3D1E91139750A1CA7120A650763656810DE25070B6BE28",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "305ACB63588ABEDA69EC0F2028110EDF06E5D6548D0E5806F1D8A2A847D8A410"
+      ],
+      "frozen_input_records": 3390,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "B0": 0,
+        "A": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "0566D5BD340EB3829708FC5171611F37BF595FB4B8E5F13FEF6F96619D8A2E2A",
+          "file": "server.json"
+        },
+        {
+          "sha256": "9F4168162C1CC0693B5381BCA12BD16A3EDE96ED5C0849DBC95A0B51ADAB990C",
+          "file": "A.json"
+        },
+        {
+          "sha256": "196300F2AF16D7B2DE00D744D177C2A9DCB9C792B26FBB40B912667A903A5AE1",
+          "file": "B0.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-two-owner-weapon-lethal/APython01",
+      "summary_sha256": "5F66C1FCCA5CB4B2EBC7DF937BE9EDC81EF813C07FBBBC5960D2B316CA6B70E0",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "305ACB63588ABEDA69EC0F2028110EDF06E5D6548D0E5806F1D8A2A847D8A410"
+      ],
+      "frozen_input_records": 3390,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "B0": 0,
+        "A": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "sha256": "E269DB654185D98BBFBBDE0E6605D839EDB1A220C52619974F39657523BC6277",
+          "file": "server.json"
+        },
+        {
+          "sha256": "F9306D9411417B125C6C2B694C2396FB91200034D208AC0266188AA30387A701",
+          "file": "A.json"
+        },
+        {
+          "sha256": "404BE5E38719B9686792FD655118D36C32E77FE37A0BC3B0A3658D6482764AEB",
+          "file": "B0.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Validation/Run-UEP58WeaponLethalNetworkValidation.ps1",
+      "sha256": "39F3962DB31ED98884BCC61D2D8D7FA8799D2C03C0028E9085B1339E6BAEC630",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Validation/Run-UEP58WeaponLethalNetworkValidation.ps1"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/tdm_lethal_network_contract.py",
+      "sha256": "6F2471183AA215159B86F79E0BE7A34D0C3E38813A99476BBE8EA442D1889DFC",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/tdm_lethal_network_contract.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/tdm_lethal_network_validation.py",
+      "sha256": "409588728F679989F127A824EBD525D9CEA50359F6C581D2F2923D543BB7F7A1",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/tdm_lethal_network_validation.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_lethal_network_contract.py",
+      "sha256": "27C42A7DC29045A2AB75D417191C2CEF2653FADC8FF64079C8448B6B2E5BD685",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_lethal_network_contract.py"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_lethal_network_validation.py",
+      "sha256": "5269FDA536945D8C8A32A6E3604FE277CFDCCBB6951F74100036FAE10CA43DDD",
+      "matches_at_least_one_listed_native_input": true,
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_lethal_network_validation.py"
+    }
+  ],
+  "host_report": null,
+  "full_acceptance": false,
+  "packaged_runtime": false,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "accepted_runtime_processes": 12,
+  "actual_weapon_owners": [
+    "A",
+    "B0"
+  ],
+  "supplemental_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-two-owner-weapon-lethal/independent-review01.json",
+      "sha256": "F10DB184C4F409FDA0E1E06C175E608E467A26517C80E06CCB67FD499955B72C"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-two-owner-weapon-lethal/independent-review-process01.json",
+      "sha256": "911DD4A6B534EA86A3883B3CD8E89BF08A3AE5DF79AC7CE888971990B147F2D9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-two-owner-weapon-lethal/preflight.json",
+      "sha256": "84246E266A9D70F255522C9EB384D41E70289AFAD9E635340E36DC0D7EB505C9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-two-owner-weapon-lethal/B0Fallback01/server.json",
+      "sha256": "8BE48E1F0052BF9C366FA18A270EB1B8DA453EFBCF2AACCE14A30D0BC7FACB88"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-two-owner-weapon-lethal/B0Fallback01/A.json",
+      "sha256": "2DBDC7327BD541F43B11374768871104B85AE75616C83C4B32CC34B705F903C0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-two-owner-weapon-lethal/B0Fallback01/B0.json",
+      "sha256": "A80A256AD3C6D869D09045321391CD9C4E57F3820126C94CA345602F4FAA244D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-two-owner-weapon-lethal/B0Fallback01/server-release.json",
+      "sha256": "0E895349AE695CBDE2DF340006EC873FDF2B6E2DFFA9BF9D9BAC30C37C60483C"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-two-owner-weapon-lethal/B0Fallback01/weapon-placement.json",
+      "sha256": "862E1A184ADEFD13E5B5141C2F304567DBCFD768482B757F0DB958CB782A5B4F"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-two-owner-weapon-lethal/B0Python01/server.json",
+      "sha256": "FF7C4E01934223EF1F6BD79385D3128C11D52BF5623AF37536D3D41059A662EE"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-two-owner-weapon-lethal/B0Python01/A.json",
+      "sha256": "997C0D088417B19918815DE00B4AD977B8C670ED28B319D9A1780E89DB73D6EA"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-two-owner-weapon-lethal/B0Python01/B0.json",
+      "sha256": "829F0610F93435B947AA9992C5A6E146B9909988E88B1D2D6001E1F1C46D522E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-two-owner-weapon-lethal/B0Python01/server-release.json",
+      "sha256": "12002B1F47AF8CCDF020A46CEDB9B63B27C47AD69756CB048B6F11804E47AA95"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-two-owner-weapon-lethal/B0Python01/weapon-placement.json",
+      "sha256": "9E3F6C0109E500F3122D8C54AC2B84612632251D2F871006753CDE1C876E6809"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-two-owner-weapon-lethal/AFallback01/server.json",
+      "sha256": "0566D5BD340EB3829708FC5171611F37BF595FB4B8E5F13FEF6F96619D8A2E2A"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-two-owner-weapon-lethal/AFallback01/A.json",
+      "sha256": "9F4168162C1CC0693B5381BCA12BD16A3EDE96ED5C0849DBC95A0B51ADAB990C"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-two-owner-weapon-lethal/AFallback01/B0.json",
+      "sha256": "196300F2AF16D7B2DE00D744D177C2A9DCB9C792B26FBB40B912667A903A5AE1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-two-owner-weapon-lethal/AFallback01/server-release.json",
+      "sha256": "82002F8A82F7433ABC3536A8DD381A3E522B5B0E40F5911707C232A3CA757AE6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-two-owner-weapon-lethal/AFallback01/weapon-placement.json",
+      "sha256": "A555C7742180FEEE746BAC94D0F4F45FA005F0A58CABF532309104468844FE1F"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-two-owner-weapon-lethal/APython01/server.json",
+      "sha256": "E269DB654185D98BBFBBDE0E6605D839EDB1A220C52619974F39657523BC6277"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-two-owner-weapon-lethal/APython01/A.json",
+      "sha256": "F9306D9411417B125C6C2B694C2396FB91200034D208AC0266188AA30387A701"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-two-owner-weapon-lethal/APython01/B0.json",
+      "sha256": "404BE5E38719B9686792FD655118D36C32E77FE37A0BC3B0A3658D6482764AEB"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-two-owner-weapon-lethal/APython01/server-release.json",
+      "sha256": "60710D68BEAF16691AC1CAD583182455B7A0AE82EBFE68784CCC5A57209E94DA"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-two-owner-weapon-lethal/APython01/weapon-placement.json",
+      "sha256": "D1C4B37BE13FA46DAD25C3997C34DEDCD011DE45C9C8B6E187E5CB35156DB858"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tests/test_weapon_lethal_network_contract.py",
+      "sha256": "08C7EF021F33138B376EE8FF0DA18D663C39590B8E7D3DFC1D048304F48FC6EB"
+    }
+  ]
+}
