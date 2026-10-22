@@ -31,6 +31,36 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded Arena batch214 (2026-10-23),natural bomb/death/HUD:**
+Two real local players keep the original Experience ability/input grants. Native
+RestartPlayerAtPlayerStart places them at the same two original map starts;
+this is an explicit setup respawn,not a normal-startup equivalence claim. The
+input owner drops through IA_Weapon_Fire and moves by original IA_Move into an
+observed free adjacent blast cell. No position setter,damage effect,explosion
+or death callback is issued by the fixture. Original native overlap finds that
+owner. Native fuse/propagation gives Health100->0 while the foreign owner stays
+100. The selected original/Python death ability completes its native two-second
+task. Natural bomb destruction refunds only the owner. Real HUD widgets target
+the two original PlayerStates and show1/1->0/1->1/1;the changed target receives
+the selected Profile's callbacks. Designer template construction keeps its
+original setup;live HUD Profiles are explicitly selected before gameplay,so this
+does not compare initial HUD construction. Six1280x720 showui PNGs are viewed.
+Native death blur and original warning banners remain;no pixel-equality claim.
+FixedSeed and a measured1/60 native World step make the generated layout,input
+vectors,health,cost/refund and HUD values match. Actor creation age supplies the
+fuse clock;both native fuse and death task observe two game seconds. Self-death
+does not award opponent elimination scores;both modes retain zero score deltas.
+Two natural runs and one affected pre-fuse regression pass process0,independent
+gate0 and strict ordered shutdown with no errors. Profile selectors,roots,input
+and second local-player resources restore;dead Health is intentionally not reset.
+Nine focused contract checks pass;the staged gate is incremental. No C++/
+Blueprint changes,compile,cook or package. Preserve Fallback01's old-World wait/
+shutdown failure and Fallback02/03's variable-frame timing expectation failures.
+Fixed-step acceptance does not relabel them or prove variable-frame timing.
+Opponent elimination,remote clients,travel,hardware,audio,current packages and
+the full original Experience/version matrix remain open. Exact246 paths/order/
+versions and246/182/63/11 remain. Commit/push Demos first,then core;ledger214.
+
 **Completed bounded Arena batch213 (2026-10-23),two local input owners:**
 Two actual local players run the original TopDownArena LocalMultiplayer
 Experience. The second is created by native GameplayStatics.CreatePlayer;

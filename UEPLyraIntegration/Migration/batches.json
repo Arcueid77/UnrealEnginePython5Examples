@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 215,
+    "bounded_evidence_ledgers": 216,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -14560,6 +14560,94 @@
     "preserved_failed_runs": [
       "Fallback01: both gameplay cases pass but native CommonUI ensure requires the missing Slate user1;whole run rejected,not ignored"
     ],
-    "next": "Continue original Experience presentation,real explosion/death/respawn,remote multiplayer,travel,current package and complete version requirements. Two local players are not remote clients or hardware-device coverage."
+    "next": "Continue original Experience presentation,real explosion/death/respawn,remote multiplayer,travel,current package and complete version requirements. Two local players are not remote clients or hardware-device coverage.",
+    "natural_bomb_followup_evidence_ledger": "214-arena-natural-input-bomb-death-and-native-hud.json"
+  },
+  "arena_natural_bomb_pilot": {
+    "version": "0.14.0",
+    "status": "bounded_fixed60_native_input_movement_natural_bomb_self_death_and_hud_comparison_verified",
+    "evidence_ledger": "214-arena-natural-input-bomb-death-and-native-hud.json",
+    "native_runtime_runs": [
+      "20261023-arena-natural-bomb/Fallback05",
+      "20261023-arena-natural-bomb/Python02"
+    ],
+    "affected_pre_fuse_run": "20261023-arena-natural-bomb/AffectedPreFuse02",
+    "actual_map": "/TopDownArena/Maps/L_TopDown_LocalMultiplayer",
+    "native_mode": "Editor standalone",
+    "players_per_run": 2,
+    "fixed_seed": true,
+    "fixed_world_step_seconds": 0.016666666666666666,
+    "observed_world_steps_checked": true,
+    "native_fixture_restart_to_two_original_player_starts": true,
+    "original_generated_layout_and_input_vectors_match": true,
+    "original_experience_ability_grant": true,
+    "native_drop_input": "IA_Weapon_Fire",
+    "native_move_input": "IA_Move toward original free adjacent blast cell",
+    "pawn_position_setter_called": false,
+    "native_overlap_query_contains_input_owner": true,
+    "damage_explosion_or_death_called_by_fixture": false,
+    "health_before": [
+      100,
+      100
+    ],
+    "health_after": [
+      0,
+      100
+    ],
+    "foreign_player_unchanged": true,
+    "actual_instigator_and_stored_player_state_match": true,
+    "original_bomb_lifetime_two_seconds_observed_from_native_actor_creation": true,
+    "original_two_second_death_task_completed": true,
+    "natural_destroy_refunds_original_owner": true,
+    "hud_bomb_text": [
+      [
+        "1",
+        "1"
+      ],
+      [
+        "0",
+        "1"
+      ],
+      [
+        "1",
+        "1"
+      ]
+    ],
+    "native_hud_target_and_attribute_match": true,
+    "hud_profiles_selected_live_after_original_construction_before_input": true,
+    "original_hud_construction_not_bp_python_comparison": true,
+    "changed_owner_selected_hud_callbacks_verified": true,
+    "unchanged_foreign_attribute_update_not_required": true,
+    "actual_images": 6,
+    "image_dimensions": [
+      1280,
+      720
+    ],
+    "image_review": "independent visual-review01.json after actual file view",
+    "automated_pixel_diff_executed": false,
+    "death_suicide_scores_unchanged_in_both_profiles": true,
+    "opponent_elimination_or_scoring_claimed": false,
+    "dead_health_not_restored_by_fixture": true,
+    "selectors_roots_widgets_and_second_local_player_cleaned": true,
+    "focused_contract_checks": 9,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261023-arena-natural-bomb/Index01",
+    "full_regression_executed": false,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "physical_input_tested": false,
+    "audio_playback_tested": false,
+    "full_acceptance": false,
+    "preserved_failed_runs": [
+      "Fallback01: no center-cell death observed;observer carried old World past original round travel and native shutdown failed. Failed evidence retained.",
+      "Fallback02/Fallback03: natural damage/death/HUD occur,but variable-frame aggregate fuse timing expectation fails;not accepted. Fixed-step proof does not certify variable-frame timing."
+    ],
+    "superseded_individual_passes": [
+      "Fallback04",
+      "Python01",
+      "AffectedPreFuse01"
+    ],
+    "next": "Continue original variable-frame,opponent elimination/score,remote multiplayer,travel,presentation/audio/current package and full Experience/version requirements. This fixed-step self-death scenario is bounded proof."
   }
 }

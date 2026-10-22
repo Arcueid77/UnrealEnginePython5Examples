@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "batch": "214-arena-natural-input-bomb-death-and-native-hud",
+  "scope": "Actual Editor Standalone Arena 2local players;original experience/input grants,native controlled restart at same2original player starts,FixedSeed and observed fixed1/60step. Actual IA_Weapon_Fire drop and IA_Move to original free blast cell;nothing directly invokes damage,explosion or death and no position setter. Selected original/Python bomb/death/HUD paths yield owner Health100->0,foreign100,native2second fuse from Actor creation and2second death task,natural destroy/refund1/1 andreal HUD1/1->0/1->1/1. Live HUD Profiles selected after original native construction;not initial-construct parity. Six actual1280x720 showui files viewed;native warning banners/death blur retained,no pixel-equality claim. Three process0/gate0/ordered shutdown passes including affected old pre-fuse lane. Initial old-World wait/crash and variable-frame timing failures preserved;fixed-step proof not variable-frame/full-version or full migration acceptance. No C++/Blueprint edit,compile,cook/package. Original246 paths/order/versions and246/182/63/11 preserved. Commit/push Examples then core.",
+  "recorded_utc": "2026-10-22T16:32:53.0345956Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "a9d373ef0339633683ae0fca6688778eacb85f8e",
+  "examples_parent_commit": "d19e9e8aa54c6490735bceba502723bb5745a456",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-arena-natural-bomb/Fallback05",
+      "summary_sha256": "42AB77D63907DA79BB83F8A111CDE3043ECBA8FF18CEF5B4439B20E12AEC8DF2",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "E87452CC8D645D7C1C9C26C39968CED38B200A482743CB611558E19B0AC63AEF"
+      ],
+      "frozen_input_records": 1735,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-arena-natural-bomb/Python02",
+      "summary_sha256": "DA6666E05A4B5B165C56BA937BC4A283B5DCEFF48A52EA61866066B52F5CCF9E",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "E87452CC8D645D7C1C9C26C39968CED38B200A482743CB611558E19B0AC63AEF"
+      ],
+      "frozen_input_records": 1735,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-arena-natural-bomb/AffectedPreFuse02",
+      "summary_sha256": "3C32DE2086B50B536121586398F87A3F2575B361A2AB5CC4A180CD8E1490C3FE",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "E87452CC8D645D7C1C9C26C39968CED38B200A482743CB611558E19B0AC63AEF"
+      ],
+      "frozen_input_records": 1665,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": []
+    }
+  ],
+  "source_files": [
+    {
+      "native_input_path": "Validation/Run-UEP58ArenaLocalInputValidation.ps1",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Validation/Run-UEP58ArenaLocalInputValidation.ps1",
+      "sha256": "78615551B640F9C1A293E12796515682F19E54F004FE4E57ED920C1BF1E93E86"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "FF14A94F82B0F6222C0F2880D28A745A9798DBB0F9F0656C9B778787286C8CA0"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/arena_local_input_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/arena_local_input_validation.py",
+      "sha256": "23E338CF204F329550EFB7F954BE263ABC7501CD65413473AA0E4CF59B15A710"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/arena_natural_bomb_validation.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/arena_natural_bomb_validation.py",
+      "sha256": "0D1C10B137C07ED2FA781D0FB56E9D34060AB07A73ED4A6650E646B7F4C3075D"
+    },
+    {
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/arena_natural_bomb_contract.py",
+      "matches_at_least_one_listed_native_input": true,
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/arena_natural_bomb_contract.py",
+      "sha256": "5A8C63ABE9BE3C2522FE76C3D54A50C2D77A8457CF46448F8A44621BB7A96A14"
+    }
+  ],
+  "host_report": null,
+  "full_acceptance": false,
+  "packaged_runtime": false,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "supplemental_evidence": [
+    {
+      "sha256": "4AC2778D555FCA7942487C10E8AAC3DB2EEA06A4FD765CB401233398AE15972C",
+      "path": ".build/LyraValidation/BlueprintPython/20261023-arena-natural-bomb/independent-review01.json"
+    },
+    {
+      "sha256": "FF4CE4777C9DC49C18D0B4529B2D4871207DBCF6C78952DD5FE5EB6066197C34",
+      "path": ".build/LyraValidation/BlueprintPython/20261023-arena-natural-bomb/visual-review01.json"
+    },
+    {
+      "sha256": "F5C4309C0A221F61DF1265E5F81A46E1D9E699BC17E8F1C0EA4B5FE9394CC37D",
+      "path": ".build/LyraValidation/BlueprintPython/20261023-arena-natural-bomb/Fallback05/result.json"
+    },
+    {
+      "sha256": "83A4915F7C5965D96142C911A8832D2446CBC7F74196B42EE97071856260747D",
+      "path": ".build/LyraValidation/BlueprintPython/20261023-arena-natural-bomb/Python02/result.json"
+    },
+    {
+      "sha256": "79D9277C63FC593588544AE49BBB78C90ADC50874E929F57BB9655A95384EF7E",
+      "path": ".build/LyraValidation/BlueprintPython/20261023-arena-natural-bomb/AffectedPreFuse02/result.json"
+    },
+    {
+      "sha256": "977AC628098439DA319B8EE6C144721B9AA2B0807E965859E25F53DDA2CA4491",
+      "path": ".build/LyraValidation/BlueprintPython/20261023-arena-natural-bomb/Fallback01/summary.json"
+    },
+    {
+      "sha256": "3F8285B5EED0AA2AF24125789816C9A7A63FE9FFF58ECE77B8754A5596CD5A9F",
+      "path": ".build/LyraValidation/BlueprintPython/20261023-arena-natural-bomb/Fallback02/summary.json"
+    },
+    {
+      "sha256": "3DA2247C7B41A0F6F5D2B4CA83181EDB24002125A7C68FF8DB26C74B7485D349",
+      "path": ".build/LyraValidation/BlueprintPython/20261023-arena-natural-bomb/Fallback03/summary.json"
+    },
+    {
+      "sha256": "861C05B3B964C718AC82C4E16D42926C5A2F5A1078ABE069F1D6A0D1958C5EBA",
+      "path": ".build/LyraValidation/BlueprintPython/20261023-arena-natural-bomb/fuse-graph.json"
+    },
+    {
+      "sha256": "FB87C773E91A6DC55EFD59B3A036274216A7591A82EC6E23C8223560B7BA8E59",
+      "path": ".build/LyraValidation/BlueprintPython/20261023-arena-natural-bomb/read-fuse02-process.json"
+    },
+    {
+      "sha256": "5B115B940DF58CC3DA107D935F651C34AC339A51D14B769C1BCB334CE2FB9A74",
+      "path": "Demos/UEPLyraIntegration/Tests/test_arena_natural_bomb_contract.py"
+    }
+  ]
+}

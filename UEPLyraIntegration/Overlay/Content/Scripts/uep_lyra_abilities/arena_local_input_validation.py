@@ -23,8 +23,8 @@ def dead(value):return not valid(value) or value.call_function('IsActorBeingDest
 
 
 class Validation:
-    def __init__(self):
-        self.path=Path(arg('UEPArenaLocalInputResult'));self.profile=arg('UEPArenaLocalInputProfile')
+    def __init__(self,result=None,profile=None):
+        self.path=Path(result if result is not None else arg('UEPArenaLocalInputResult'));self.profile=profile if profile is not None else arg('UEPArenaLocalInputProfile')
         self.started=time.monotonic();self.phase='world';self.finished=False;self.created=None
         self.roots=[];self.selectors=[];self.players=[];self.bombs_owned=[];self.index=0
         self.report=dict(status='running',error=None,profile=self.profile,cases=[],input_entry='PlayerController.inject_enhanced_input_for_action',test_bombs_destroyed_before_fuse=True,natural_explosion_tested=False)
@@ -185,4 +185,5 @@ class Validation:
         return not self.finished
 
 
-validation=Validation();atexit.register(validation.finalize);ticker=ue.add_ticker(validation.tick)
+if any(a.startswith('-UEPArenaLocalInputResult=') for a in sys.argv):
+    validation=Validation();atexit.register(validation.finalize);ticker=ue.add_ticker(validation.tick)
