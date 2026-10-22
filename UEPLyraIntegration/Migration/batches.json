@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 220,
+    "bounded_evidence_ledgers": 221,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -8108,7 +8108,8 @@
     "post_family_regressions_prefix": "20261016-reload-magazine/PostFamily-",
     "models_passed": 816,
     "network_acceptance": true,
-    "full_acceptance": false
+    "full_acceptance": false,
+    "current_sdk_family_evidence_ledger": "219-current-sdk-four-family-two-owner-native-reload-matrix.json"
   },
   "weapon_instance_pilot": {
     "version": "0.11.0",
@@ -14847,5 +14848,48 @@
     "network_acceptance": false,
     "full_acceptance": false,
     "next": "Continue original reload/empty/switch/respawn/travel/loss,presentation/audio/current packages and whole Experience/version requirements;these four single-kill trials are bounded two-owner evidence."
+  },
+  "current_reload_family_pilot": {
+    "version": "0.11.0",
+    "status": "bounded_current_editor_sdk_four_weapon_family_two_owner_reload_cancel_refusal_and_cleanup_verified",
+    "evidence_ledger": "219-current-sdk-four-family-two-owner-native-reload-matrix.json",
+    "current_editor_sdk_from_batch217": true,
+    "weapons": [
+      "pistol",
+      "rifle",
+      "shotgun",
+      "netshooter"
+    ],
+    "native_runs": [
+      "20261023-current-reload-family/Pistol01",
+      "20261023-current-reload-family/Rifle01",
+      "20261023-current-reload-family/Shotgun01",
+      "20261023-current-reload-family/NetShooter01"
+    ],
+    "native_processes": 12,
+    "native_authority_trials": 144,
+    "client_profile_pairs": 72,
+    "nine_reload_cases_per_owner_and_weapon": true,
+    "original_and_python_ammo_failure_notify_end_and_cleanup_match": true,
+    "actual_native_owner_input_gas_rpc_montage_notify_and_two_tasks": true,
+    "owner_authority_ammo_replication_and_foreign_owner_invariance": true,
+    "native_type_and_equipped_item_source_preserved": true,
+    "owned_no_firing_and_task_scope_cleanup": true,
+    "original_inventory_and_autoreload_state_restored": true,
+    "prototype_netshooter_original_autoreload_absence_preserved": true,
+    "explicit_authority_ammo_seeding_and_temporary_family_equipment_setup": true,
+    "natural_empty_magazine_from_firing_tested": false,
+    "network_pause_tested": false,
+    "travel_rejoin_tested": false,
+    "production_sources_driver_blueprint_and_native_inputs_unchanged": true,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261023-current-reload-family/Index01",
+    "full_regression_executed": false,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "packaged_runtime": false,
+    "pixels_tested": false,
+    "physical_input_tested": false,
+    "full_acceptance": false,
+    "next": "Continue original natural firing-to-empty/AutoReload,switch/death/respawn/travel/rejoin/loss,presentation/audio/current packages and whole Experience/version requirements. Seeded native reload states are bounded fixtures,not natural weapon exhaustion."
   }
 }

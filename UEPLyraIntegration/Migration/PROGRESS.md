@@ -31,6 +31,36 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded reload batch219 (2026-10-23),current four-family matrix:**
+Reuse the existing reload observer,driver,accepted assets and current Editor SDK
+from217. No production/validation source,Blueprint,C++,montage or native input
+changes. Pistol,Rifle,Shotgun and prototype NetShooter each run one dedicated
+Editor server and two independent Editor clients. Each owner runs nine cases
+through both original BlueprintFallback and Python:empty magazine,partial with
+limited spare,full-magazine refusal,no-spare refusal,native cancel,montage
+interruption,external native End,active Profile switch and repeat partial.
+That is144 native authority trials,72 client Profile pairs and12 process exits.
+Every process and four independent semantic gates0 pass strict native Python-
+exit/log closure and no errors. Exact runtime hashes match the current SDK and
+all frozen source/asset/reference inputs. Retained child classes/montages and
+equipment item sources match. Native owner input and GAS RPC start the real
+reload ability,two native tasks,original montage/notify and authority ammo
+transfer. Reject full/no-spare cases with original failure tags and messages.
+Cancel/interruption/end/Profile teardown transfer no ammo;native tasks and owned
+NoFiring state release with no late callback. Original/Python initial/final
+ammo,refusal,notify and end outcomes match. Authority agrees with the owning
+replica;foreign owner inventory/tags remain unchanged. Restore original inventory,
+AutoReload state,profiles,observers and temporary family equipment. Prototype
+NetShooter's original zero AutoReload grant remains zero;no ability is added.
+The existing fixture explicitly seeds ammo on authority through native stat APIs
+and equips temporary family weapons;clients never write inventory. This does
+not prove natural firing-to-empty/AutoReload,network pause,travel/rejoin/loss,
+physical input,pixels or sound. Earlier20261016 evidence remains historical.
+Only metadata/ledger change,and staged checks are incremental. No compile,cook/
+package or full-version acceptance. Preserve exact246 paths/order/versions and
+246/182/63/11. Remaining original Experience/version requirements stay open.
+Commit/push Examples first,then core gitlink;ledger219.
+
 **Completed bounded weapon batch218 (2026-10-23),both actual input owners:**
 Extend the existing native lethal observer/driver to select clientA orB0 as
 the attacker. The other real client is the victim. The shared GAS fixture
