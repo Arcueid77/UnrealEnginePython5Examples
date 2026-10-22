@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 213,
+    "bounded_evidence_ledgers": 214,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -2008,7 +2008,43 @@
     "pixels_tested": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Remaining original0.13/0.14 replacements and prior FText audit/diagnostic/owner/network/culture/pixel/package/version gates remain open;native settings application/calibration code remains native."
+    "next": "Remaining original0.13/0.14 replacements and prior FText audit/diagnostic/owner/network/culture/pixel/package/version gates remain open;native settings application/calibration code remains native.",
+    "gamepad_vibration_native_persistence_followup": {
+      "evidence_ledger": "212-settings-native-ui-cancel-owned-save-and-fresh-process-read.json",
+      "setting": "GamepadVibration",
+      "native_mode": "Editor standalone",
+      "profiles": [
+        "BlueprintFallback",
+        "Python"
+      ],
+      "native_processes": 4,
+      "write_runs": [
+        "20261021-current-game-package/SettingsFallbackWrite02",
+        "20261021-current-game-package/SettingsPythonWrite02"
+      ],
+      "fresh_read_restore_runs": [
+        "20261021-current-game-package/SettingsFallbackRead02",
+        "20261021-current-game-package/SettingsPythonRead02"
+      ],
+      "actual_native_listview_setting_assignment": true,
+      "selected_component_callback_entries": 10,
+      "native_common_button_handler_invoked": true,
+      "physical_keyboard_or_pointer_tested": false,
+      "native_cancel_restores_value_without_file_write": true,
+      "native_apply_async_save_success": true,
+      "owned_user_directory_only": true,
+      "was_loaded_and_saved_value_match_in_fresh_process": true,
+      "original_owned_value_restored_by_native_apply": true,
+      "same_process_reopen_and_cancel_keep_saved": true,
+      "profile_selectors_roots_widgets_and_health_restored": true,
+      "normalized_profile_results_match": true,
+      "direct_settings_setter_called": false,
+      "configuration_files_written_by_python": false,
+      "cpp_compile_executed": false,
+      "cook_package_executed": false,
+      "packaged_runtime": false,
+      "full_settings_or_version_acceptance": false
+    }
   },
   "settings_editors_pilot": {
     "version": "0.13.0",
@@ -2153,7 +2189,43 @@
     "pixels_tested": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Remaining original0.13/0.14 replacements and prior FText audit/diagnostic/owner/network/culture/pixel/package/version gates remain open;native settings value code is retained."
+    "next": "Remaining original0.13/0.14 replacements and prior FText audit/diagnostic/owner/network/culture/pixel/package/version gates remain open;native settings value code is retained.",
+    "gamepad_vibration_native_persistence_followup": {
+      "evidence_ledger": "212-settings-native-ui-cancel-owned-save-and-fresh-process-read.json",
+      "setting": "GamepadVibration",
+      "native_mode": "Editor standalone",
+      "profiles": [
+        "BlueprintFallback",
+        "Python"
+      ],
+      "native_processes": 4,
+      "write_runs": [
+        "20261021-current-game-package/SettingsFallbackWrite02",
+        "20261021-current-game-package/SettingsPythonWrite02"
+      ],
+      "fresh_read_restore_runs": [
+        "20261021-current-game-package/SettingsFallbackRead02",
+        "20261021-current-game-package/SettingsPythonRead02"
+      ],
+      "actual_native_listview_setting_assignment": true,
+      "selected_component_callback_entries": 10,
+      "native_common_button_handler_invoked": true,
+      "physical_keyboard_or_pointer_tested": false,
+      "native_cancel_restores_value_without_file_write": true,
+      "native_apply_async_save_success": true,
+      "owned_user_directory_only": true,
+      "was_loaded_and_saved_value_match_in_fresh_process": true,
+      "original_owned_value_restored_by_native_apply": true,
+      "same_process_reopen_and_cancel_keep_saved": true,
+      "profile_selectors_roots_widgets_and_health_restored": true,
+      "normalized_profile_results_match": true,
+      "direct_settings_setter_called": false,
+      "configuration_files_written_by_python": false,
+      "cpp_compile_executed": false,
+      "cook_package_executed": false,
+      "packaged_runtime": false,
+      "full_settings_or_version_acceptance": false
+    }
   },
   "foundation_widgets_pilot": {
     "version": "0.13.0",

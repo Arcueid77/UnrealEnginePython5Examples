@@ -31,6 +31,32 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded settings batch212 (2026-10-22),native save/cancel persistence:**
+The real GamepadVibration bool is assigned by native GameSettingListView to the
+original settings entry. Both original-BP and Python Profiles receive actual
+component callbacks when the native CommonButton handler runs;this is not a
+physical pointer/keyboard claim. Ten callbacks across four actual Editor
+standalone processes pass. Cancel restores the initial value without changing
+owned sav/ini bytes. Native Apply clears the tracker and completes an actual
+asynchronous SharedGameSettings save inside an explicit isolated UserDir.
+Closing/reopening keeps the saved value,and cancelling another edit keeps it.
+Fresh processes report WasLoaded and read the prior saved value,then restore
+the original owned value through the same UI/native Apply path. Pre-restore
+save bytes are retained and hashed separately. Profile selectors,class/widget
+roots,viewport ownership and Health restore. Four process0/four independent
+gate0 and strict differential/Goodbye/shutdown/file-close orders pass;normalized
+BP/Python results match. No Python settings setter or direct configuration
+write substitutes for native value/save code. No C++/Blueprint changes,compile,
+cook or package. The first observer revision's01 runs remain historical;the
+accepted02 runs additionally prove selected callback entry and selector/root
+restoration. Eight focused contract/routing checks pass;isolated staged
+incremental verification covers affected callers and settings families.
+This proves this one setting's native shared-save path,not every settings
+type/calibration/input binding,hardware input,travel,packaged runtime orfull0.13.
+All original246 paths/order/versions and246/182/63/11 counts stay unchanged.
+Verified work is committed and pushed Demos first,then core. Ledger212 records
+the exact sources,four native runs and separate cross-profile semantic review.
+
 **Completed bounded package batch211 (2026-10-21),weapon/ammo presentation:**
 The actual current packaged Game runs the isolated Entry-map four presenter
 BP/Python pairs:42 state/material/input-intent cases,native signal cancellation,
