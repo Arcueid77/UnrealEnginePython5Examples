@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "batch": "217-runtime-property-notifications-and-current-sdk-regressions",
+  "scope": "SDK runtime property assignment must preserve live animation/components while editor-world/CDO notifications remain. One source UEPyModule.cpp compile and two links only,Engine unchanged. Current source-matching Editor SDK:both Third Person variants/native input/cleanup/six actual viewed1280x720 frames;Python-first original animation asset/native clock/stable instance and travel. Three actual PIE sessions preserve editor notifications and six runtime writes without reconstruction,GC/subscriptions/router cleanup and actual shared-VM shutdown order. Eleven generic call fixtures include nine clean exits and two explicit negative/recovery exits1. Current Lyra original/Python variable-frame natural bomb/self-death/refund/HUD outcomes match. Sixteen runtime processes total,14 ordinary clean and2 expected negative boundaries,independent semantic/provenance review0. Per-variant binary/script bytes frozen before next prepare. Five focused exit-gate tests reject missing cleanup/animation evidence. Shared-SDK full staged host/index gate;ordinary batches stay incremental. Preserve old missing Resonance/pose/diagnostic/order/Dataflow failures;Dataflow intermittent startup test not fixed or ignored. No Engine/gameplay/asset policy change,cook/package,new packaged/network/hardware/audio/full-version claim. Exact246 paths/order/versions,246/182/63/11 unchanged. Commit/push Examples then core.",
+  "recorded_utc": "2026-10-22T17:34:44.8430029Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "77ce2398cb1174bb9cba4318084b25636f235592",
+  "examples_parent_commit": "c486f2c16dc6a293d0f85d0edf8a462fcf11e391",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-current-third-person/NativeFixed05",
+      "summary_sha256": "F9451353F8C63DF3C17A2F1F95B9B524A8B10B20904EF066FE3E50A8CA41BA4C",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "305ACB63588ABEDA69EC0F2028110EDF06E5D6548D0E5806F1D8A2A847D8A410"
+      ],
+      "frozen_input_records": 466,
+      "process_exit_code": null,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {
+        "Mixin": 0,
+        "PythonFirst": 0
+      },
+      "independent_gate_exit_code": null,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-current-third-person/PIE03Shared",
+      "summary_sha256": "22AD4ABDA2BC34E8C27B2489FC17C08DCE0FD8FFBD839C7D06484E5BE50DF0C5",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "305ACB63588ABEDA69EC0F2028110EDF06E5D6548D0E5806F1D8A2A847D8A410"
+      ],
+      "frozen_input_records": 422,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "43A89F98F8BBC776BB0D9E7C91875D5880A329F55A4D1F036061AE0307C1A064",
+          "file": "pie.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-current-third-person/CallMatrix01",
+      "summary_sha256": "171BC02EEEF3096AD96200B3D0AF30F34EF7BA96E7B8C60FD6B2C88E6D61E496",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "305ACB63588ABEDA69EC0F2028110EDF06E5D6548D0E5806F1D8A2A847D8A410"
+      ],
+      "frozen_input_records": 843,
+      "process_exit_code": null,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [],
+      "explicit_named_test_exit_codes": {
+        "delegate-broadcast": 0,
+        "signature-standalone": 0,
+        "signature-shared": 0,
+        "callsite": 0,
+        "experimental-body": 0,
+        "named-outputs": 0,
+        "named-outputs-negative": 1,
+        "inherited-selector": 0,
+        "construction-forwarder": 0,
+        "soft-class-path": 0,
+        "mixin-exception": 1
+      }
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-current-third-person/LyraFallback01",
+      "summary_sha256": "761746EEB94BB4749066EF6401D884D2B0CE597648479A882039D7041086A725",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "305ACB63588ABEDA69EC0F2028110EDF06E5D6548D0E5806F1D8A2A847D8A410"
+      ],
+      "frozen_input_records": 1735,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": []
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-current-third-person/LyraPython01",
+      "summary_sha256": "7AC26A7E9890DB1EAACB901FDF7B327C154A54B658948ED35CEEAD7AF7EFDBAF",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "305ACB63588ABEDA69EC0F2028110EDF06E5D6548D0E5806F1D8A2A847D8A410"
+      ],
+      "frozen_input_records": 1735,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": []
+    }
+  ],
+  "source_files": [
+    {
+      "native_input_path": "Source/UnrealEnginePython/Private/UEPyModule.cpp",
+      "path": "Source/UnrealEnginePython/Private/UEPyModule.cpp",
+      "sha256": "2797063492780CF5135F7B17174DCE12511E086BD435EC20ACFC34D49FF3E341",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Validation/Run-UEP58FocusedThirdPersonValidation.ps1",
+      "path": "Validation/Run-UEP58FocusedThirdPersonValidation.ps1",
+      "sha256": "D13B96716E2DD1047C2CA2C52736D86AE80DDE102E3F931D3155699945019005",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": "Validation/UEP58Host/Tests/mixin_pie_validation.py",
+      "path": "Validation/UEP58Host/Tests/mixin_pie_validation.py",
+      "sha256": "DB511C51428BA305AC1E1290498F192A58E3D2688AD56CECFB6BA029E7E67168",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "native_input_path": ".build/LyraValidation/BlueprintPython/20261023-current-third-person/NativeFixed05/PythonFirst/inputs/Content/Scripts/uep_third_person/visible_validation.py",
+      "path": "Demos/UEPPythonThirdPerson/Overlay/Content/Scripts/uep_third_person/visible_validation.py",
+      "sha256": "9981E249073709F772134FE4B9E646E305E19FA5D0D9AFB649AD21B48F777BF1",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": null,
+  "full_acceptance": false,
+  "packaged_runtime": false,
+  "cpp_compile_executed": true,
+  "engine_full_compile_executed": false,
+  "cook_package_executed": false,
+  "accepted_runtime_processes": 16,
+  "ordinary_clean_runtime_processes": 14,
+  "explicit_expected_negative_processes": [
+    {
+      "name": "named-outputs-negative",
+      "actual_exit_code": 1,
+      "expected_rejection_boundary": true
+    },
+    {
+      "name": "mixin-exception",
+      "actual_exit_code": 1,
+      "expected_rejection_boundary": true
+    }
+  ],
+  "reviewed_build_actions": 3,
+  "per_variant_input_capture": "run summary path stores immutable exact bytes;native_input_path records the actual staged execution path",
+  "supplemental_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-third-person/independent-review01.json",
+      "sha256": "7068DF5E3CF39A6A70980A64D2339154619CDF85CDABCCDB7836C198BE9EAF15"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-third-person/independent-review-process01.json",
+      "sha256": "1C3EE2DCE363BCD6F92AA11AAA12342902E6C90ADE87A2A8D6D7E2ADFE4F785E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-third-person/sdk-build-review01.json",
+      "sha256": "99242210C6179E0B8B161C4873251955996FDEBAAE9AA160C101993A1B4FFB16"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-third-person/sdk-build-frozen-inputs.json",
+      "sha256": "1E4D30D5AE259BED98A762DF34E48D3900FF7BF618E5EC2CBAB305AA6E9317DA"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-third-person/SDKBuild01/summary.json",
+      "sha256": "2D47DD86C19F2DD28F9867D23325E7B9618209059547D6C9BA7FEF0FACCBE184"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-third-person/SDKPlan01/summary.json",
+      "sha256": "9E30C8E77472E89570D8A5C18C74A2A9B4B1D44F75C1C548494037852F22B690"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-third-person/SDKPlan01/actions.json",
+      "sha256": "A0FD1142A491B34498BFE090761C16AEB43144EA9D6888DB794F941B1BD0529D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-third-person/generic-stage-preparation.json",
+      "sha256": "8553B6564316F035CAE5721F5F2E8895A67B0D03FF950CE49553C78071C724CD"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-third-person/NativeFixed05/Mixin/smoke.json",
+      "sha256": "B921C426F67FFB15CA81D3CFF082314C4D241CA256011683CEF630D281F62FA8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-third-person/NativeFixed05/Mixin/visible.json",
+      "sha256": "12942CC9B311C279E36CD5AA712A5D749E437656E35F126F60FC8AFEDBCB40AC"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-third-person/NativeFixed05/PythonFirst/smoke.json",
+      "sha256": "5E7673C77B985E40AA65AA5598CEC7BDD6DEE12C89EEDA24C32ED843B6DED0E7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-third-person/NativeFixed05/PythonFirst/visible.json",
+      "sha256": "5E97720B6D71BF836D0F73B5EB8D59DDCC4876623CAA33AD04EEBBF0C6DD86C3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-third-person/PIE03Shared/pie.json",
+      "sha256": "43A89F98F8BBC776BB0D9E7C91875D5880A329F55A4D1F036061AE0307C1A064"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-third-person/LyraFallback01/result.json",
+      "sha256": "E5556DBAF335817B28A5347483B16A71D28F1EA88BCD1B4B2C001F62A6A402AB"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-third-person/LyraPython01/result.json",
+      "sha256": "38A6180A96F1D54C449197970F0F75DA2DA6CB275578AE9DC96529A579997CAC"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-third-person/PoseTrace04/PythonFirst/visible.json",
+      "sha256": "4E649801F4213A26D5659C61EA41B9A1F390D436594F07514B74CC9A2892F8EF"
+    },
+    {
+      "path": "Validation/Run-UEP58FocusedLifecycleValidation.ps1",
+      "sha256": "38FD54059B861C46D0A62BAA9B9C317B06DEC3C46ADF5F477EBBCE7AD1762D89"
+    },
+    {
+      "path": "Validation/Run-UEP58FocusedCallMatrixValidation.ps1",
+      "sha256": "BF34602A7C617CF98CFF96A54669394522DF98143567CC9EF2D77E58D21FCBCC"
+    },
+    {
+      "path": "Validation/Tests/test_third_person_visible_shutdown.py",
+      "sha256": "2FC6B77F8366D31E3BEBE65E0CD21AD2ECE6A651F4DE02B0104EB01E47D86A84"
+    }
+  ]
+}

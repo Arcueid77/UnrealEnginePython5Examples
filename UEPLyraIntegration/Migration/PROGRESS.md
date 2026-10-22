@@ -31,6 +31,49 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded SDK batch217 (2026-10-23),runtime property writes:**
+Current-SDK Third Person regression exposed a real Python-first rendering bug:
+each reflected runtime state assignment sent editor Pre/PostEditChange,which
+recreated the native animation instance and cleared its asset. The old smoke
+state-name/movement check passed while screenshots showed a reference pose.
+Preserve Native02,PoseDiagnostic03 and PoseTrace04 as that pre-fix evidence.
+The SDK now sends automatic property notifications only outside native object
+construction,in editor mode,outside standalone Game and outside a Game/PIE
+World. Normal editor-world/CDO notifications remain. Original Third Person
+gameplay Python and template assets remain unchanged;no animation replay or
+per-tick workaround replaces the SDK fix. Exact reviewed build:one UEPyModule.cpp
+compile plus DLL/library links,three actions,zero diagnostics,Engine unchanged.
+Both Third Person variants pass real native movement/look/jump and cleanup;
+Python-first also completes its existing pickup scenario and same-map travel.
+Its original blendspace/jump assets now remain installed,clock values advance,
+and all three sampled phases keep one AnimSingleNodeInstance. Six1280x720 PNGs
+are viewed;this is not frame-for-frame pose/pixel parity or physical input.
+Per-variant scripts/binaries are frozen before preparing the next variant.
+A pure-file interpreter-exit gate rejects missing teardown,images,asset/time
+and playing state. Five focused gate tests pass,including eleven negative cases.
+One shared-VM Editor process passes three real PIE sessions:editor writes still
+notify construction,while six PIE property writes preserve lifecycle counts.
+Native GC,closed scopes and router restoration pass each session. Because the
+built-in PythonScriptPlugin owns that VM,its atexit marker precedes UEP's later
+Goodbye message;the gate verifies actual attachment and this strict shutdown
+order. PIE01's earlier incorrect order expectation is preserved. PIE02Shared
+has an intermittent native Dataflow snapshot Date initialization self-test
+error;the same inputs in PIE03Shared pass cleanly. No errors are ignored or
+Engine self-tests disabled,and that unrelated Engine issue is not fixed here.
+Generic's eleven current-DLL call fixtures pass:nine clean processes and two
+explicit negative/recovery boundaries retain their actual exit codes. Current
+Lyra original/Python natural bomb,self-death,refund and HUD outcomes match under
+variable World timing,with strict cleanup and both independent gates0.
+There are16 runtime processes in this accepted matrix,14 ordinary clean exits
+plus2 expected negative boundaries. Native01's incompatible optional Resonance
+module startup failure and the standalone diagnostic script's old __file__
+failure remain. Exclude ResonanceAudio only in this no-sound Third Person lane.
+Shared SDK changes justify one full staged host/index check;ordinary behavior
+batches still default to incremental checks. No cook/package,new packaged
+runtime,network,hardware/audio or full-version acceptance. Keep exact246 paths/
+order/versions and246/182/63/11,and preserve the original full migration scope.
+Commit/push Examples first,then core;ledger217.
+
 **Completed bounded Arena batch216 (2026-10-23),current-SDK natural round:**
 Reuse the existing phase driver,Overlay phase sources and six accepted assets
 with the current source-matching Editor SDK. Both original BlueprintFallback

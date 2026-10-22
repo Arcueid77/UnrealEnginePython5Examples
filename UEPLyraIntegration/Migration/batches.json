@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 218,
+    "bounded_evidence_ledgers": 219,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -14751,5 +14751,57 @@
     "network_acceptance": false,
     "full_acceptance": false,
     "next": "Continue original opponent elimination/score,remote multiplayer,hardware/audio/current package and whole Experience/version requirements;phase-owned cleanup does not establish global subscription lifetime acceptance."
+  },
+  "runtime_property_notification_pilot": {
+    "version": "0.9.0",
+    "status": "bounded_current_editor_sdk_property_writes_and_generic_third_person_lyra_affected_regression_verified",
+    "evidence_ledger": "217-runtime-property-notifications-and-current-sdk-regressions.json",
+    "native_source": "Source/UnrealEnginePython/Private/UEPyModule.cpp",
+    "runtime_property_assignment_does_not_send_editor_reconstruction_notifications": true,
+    "editor_world_notifications_and_cdo_propagation_retained": true,
+    "native_constructor_notification_guard_retained": true,
+    "standalone_game_and_pie_world_boundaries": true,
+    "reviewed_native_build_actions": 3,
+    "compiled_source_files": [
+      "UEPyModule.cpp"
+    ],
+    "engine_full_compile_executed": false,
+    "source_matching_editor_dll": true,
+    "third_person_variants": [
+      "Mixin",
+      "PythonFirst"
+    ],
+    "native_regressions": [
+      "NativeFixed05",
+      "PIE03Shared",
+      "CallMatrix01",
+      "LyraFallback01",
+      "LyraPython01"
+    ],
+    "native_processes": 16,
+    "ordinary_clean_processes": 14,
+    "expected_negative_boundary_processes": 2,
+    "editor_property_notifications_observed_in_each_of_three_pie_sessions": true,
+    "pie_property_writes_without_reconstruction": 6,
+    "python_first_original_animation_assets_and_native_clock_verified": true,
+    "same_animation_instance_across_three_observed_phases": true,
+    "original_third_person_gameplay_sources_unchanged": true,
+    "six_actual_1280x720_frames_visually_reviewed": true,
+    "pure_file_exit_gate_rejects_missing_teardown_or_animation_asset_clock": true,
+    "shared_vm_exit_gate_follows_actual_python_script_plugin_ownership": true,
+    "per_variant_native_inputs_frozen_before_next_variant": true,
+    "lyra_actual_original_and_python_bomb_death_hud_semantics_match": true,
+    "variable_world_timing": true,
+    "failed_pre_fix_pose_and_startup_evidence_preserved": true,
+    "intermittent_native_dataflow_struct_date_startup_self_test_failure_preserved_not_fixed": true,
+    "isolated_staged_verification": ".build/CommitVerification/20261023-current-third-person/Index01",
+    "full_host_regression_executed": true,
+    "full_host_reason": "Shared SDK property assignment behavior changed;ordinary feature batches remain incremental",
+    "cpp_compile_executed": true,
+    "cook_package_executed": false,
+    "packaged_runtime": false,
+    "network_acceptance": false,
+    "full_acceptance": false,
+    "next": "Continue original current-runtime/network/presentation/package/version requirements. This SDK fix and bounded candidate regressions do not finish the full246 migration or repair unrelated native Dataflow startup self-tests."
   }
 }
