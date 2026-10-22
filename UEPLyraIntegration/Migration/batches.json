@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 222,
+    "bounded_evidence_ledgers": 223,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -14940,5 +14940,51 @@
       "20261023-autoreload-family/Pistol01",
       "20261023-autoreload-family/Pistol02Observed"
     ]
+  },
+  "current_integrated_weapon_profile_pilot": {
+    "version": "0.11.0",
+    "status": "bounded_current_sdk_original_python_nineteen_phase_weapon_hud_two_travel_and_rejoin_verified",
+    "evidence_ledger": "221-integrated-original-python-weapon-travel-and-rejoin.json",
+    "current_editor_sdk_from_batch217": true,
+    "native_runs": [
+      "20261023-integrated-weapon-network/Original01",
+      "20261023-integrated-weapon-network/Python01"
+    ],
+    "profiles": [
+      "BlueprintFallback",
+      "Python"
+    ],
+    "eight_retained_class_cdo_selectors_in_four_policy_families": true,
+    "policy_families": [
+      "fire",
+      "reload",
+      "autoreload",
+      "quickslot"
+    ],
+    "native_network_processes": 8,
+    "native_phase_comparisons": 19,
+    "exact_authority_ammo_slot_and_definition_match": true,
+    "actual_firing_policy_ownership_without_implicit_original_call": true,
+    "original_python_native_production_hud_state_comparison": true,
+    "two_native_travels_and_three_world_generations": true,
+    "new_pawn_and_rejoined_client_profile_ownership": true,
+    "native_client_fire_reload_and_rejoined_fire": true,
+    "native_rifle_pickup_entry_and_direct_quickbar_rpc_fixture_explicit": true,
+    "controlled_player_restart_not_natural_death": true,
+    "quickslot_input_execution_not_claimed": true,
+    "all_hud_and_gameplay_policy_shutdown_scopes_closed": true,
+    "original_selectors_and_owned_roots_restored": true,
+    "focused_network_driver_defaults_to_incremental_host_checks": true,
+    "hud_audits_passed": 2,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261023-integrated-weapon-network/Index01",
+    "full_regression_executed": false,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "packaged_runtime": false,
+    "packet_loss_tested": false,
+    "physical_input_tested": false,
+    "pixels_or_audio_tested": false,
+    "full_acceptance": false,
+    "next": "Continue original whole Experience and version requirements,using this integrated ownership/travel/rejoin evidence alongside natural lethal/respawn and family AutoReload evidence. Native pickup entry and direct QuickBar RPC are explicit fixtures;this does not prove physical pickup overlap or QuickSlot input execution,natural death,loss,FX/audio/pixels or current packages."
   }
 }

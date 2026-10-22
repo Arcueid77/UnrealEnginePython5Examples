@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "batch": "221-integrated-original-python-weapon-travel-and-rejoin",
+  "scope": "Current SDK217 original BlueprintFallback/Python game-policy comparison across19 native weapon/HUD phases,one dedicated Editor server and A/B0/rejoinedB1 Editor clients per Profile:8 network exits0;exact authority magazine/capacity/spare/slot/definition match. Actual Fire policy counters and eight CDO selectors in four ability families prove exclusive Profile ownership through three Worlds and new Pawns;all HUD and gameplay scopes close. Native Rifle pickup entry,direct QuickBar RPC and controlled RequestPlayerRestart are explicit fixtures. QuickSlot input,natural death,hardware/overlap,loss,pixel/audio,package and complete Experience/version acceptance are not claimed. No compile or cook;host checks are incremental.",
+  "recorded_utc": "2026-10-22T19:10:08.1661485Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "e9ca2d83bf41e78ea617f6060f8e55394dd95167",
+  "examples_parent_commit": "8b1593ba6097d9dd33a66f0352ae8bf0fd449777",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-integrated-weapon-network/Original01",
+      "summary_sha256": "4D8E09AACDE2B57A66C4F649D69B8F99BA5E3F0047831279905BA20B1BE20197",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "305ACB63588ABEDA69EC0F2028110EDF06E5D6548D0E5806F1D8A2A847D8A410"
+      ],
+      "frozen_input_records": 2734,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "A": 0,
+        "B0": 0,
+        "server": 0,
+        "B1": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "B7FBFD7742C8B581D4927DB34DA5E1AD6047E64A5ED5DFA4123B8DB8468549E6",
+          "file": "server.json"
+        },
+        {
+          "sha256": "54EBB9FBA74100E234BB4BB0DA4216BAEE3DC48E591E107DC0D014161CECA3B6",
+          "file": "A.json"
+        },
+        {
+          "sha256": "787CA02AD450D2D7E1B702340D12EC2F80CE04F5A8FB52FF7497A63B9E0ECFDA",
+          "file": "B0.json"
+        },
+        {
+          "sha256": "885AC903D322938D1EAB9B1FA7186BB015F3CB0F75BF7F4E70561F78224ED532",
+          "file": "B1.json"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-integrated-weapon-network/Python01",
+      "summary_sha256": "AE06B003AFDC294B6CDEBA55F1E701B26E55830CC6F389647AFD1DE6BCC95313",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "305ACB63588ABEDA69EC0F2028110EDF06E5D6548D0E5806F1D8A2A847D8A410"
+      ],
+      "frozen_input_records": 2734,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "server": 0,
+        "B1": 0,
+        "A": 0,
+        "B0": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "sha256": "0E836ECE83B52D542823C625F1D5AB35716C5BA94C41AEDD7CC90EA032D7D294",
+          "file": "server.json"
+        },
+        {
+          "sha256": "E52905F6B1EB2581A2BB2B2C01ADE9E7846517718D4D3E471A4AEDB07E1B09F3",
+          "file": "A.json"
+        },
+        {
+          "sha256": "BAF0E039D3359DA98731F25A6FA326A9C938AFE02E0928ECBB356FC7E518CD9F",
+          "file": "B0.json"
+        },
+        {
+          "sha256": "0AA2AD6BE07F9A217DCFD98D6AC363FF706EE09E0E7F9E6523D1390D8BC75995",
+          "file": "B1.json"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Validation/Run-UEP58FocusedNetworkValidation.ps1",
+      "sha256": "CBACA5FEF57B422BFA5A3CABC34BFD9094F62A744E66F79B50FD701B43AA4115",
+      "native_input_path": "Validation/Run-UEP58FocusedNetworkValidation.ps1",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapon_network.py",
+      "sha256": "30EF8488B76A0347E38280721EB40010C24CCE632225DFD4724AC6627CAF0BBA",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapon_network.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/integrated_profile_contract.py",
+      "sha256": "FDBEEDA0D49F0CC1190FB5265EAF1725DD6A6E21ABB706BCC0053326E8B86F08",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/integrated_profile_contract.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/integrated_profile_validation.py",
+      "sha256": "2E8DBFD145960F80B44957BD7B9726DEE553E048AFA839C4F1F2AAC22B371B98",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/integrated_profile_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapon_protocol.py",
+      "sha256": "B99D9D31E7DBF523598D5B82D98A2802825B565EB6A26FD710CB48BE96B156FE",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapon_protocol.py",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/shutdown_validation.py",
+      "sha256": "6B716B8439C3A132BBEABB62D4A32ED87B4FC70480E87C1A05BA8833BB9FA0E3",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/shutdown_validation.py",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": null,
+  "full_acceptance": false,
+  "packaged_runtime": false,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "native_phase_comparisons": 19,
+  "accepted_network_processes": 8,
+  "profiles": [
+    "BlueprintFallback",
+    "Python"
+  ],
+  "supplemental_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-integrated-weapon-network/independent-review01.json",
+      "sha256": "164D219C89700A92F19C7875921E34367DDC6103F589AE56F4118900A2BF2CBA"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-integrated-weapon-network/independent-review-process01.json",
+      "sha256": "EB50E05B52FE2102A3A747C18B9CDF6E732E8CD1D68A6F5AAD5285544662D7D6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-integrated-weapon-network/preflight.json",
+      "sha256": "A82F054787A21F5C8F22591C8BFEEB9F6AD01A891D49F9CD24A68E647B2AE268"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-integrated-weapon-network/report-tool-source-freeze.json",
+      "sha256": "2861EC73190319FD0CA39EDB29EAB65B2A7804A0C0CC2DF6486EB99AF0C932ED"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-integrated-weapon-network/validate-weapon-network-reports-frozen.py",
+      "sha256": "F7D1E0CBA7CF34662B83ED8784358CD673FCDB704BEE93C4E1A4FCDD3B86823B"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-integrated-weapon-network/Original01/server.json",
+      "sha256": "B7FBFD7742C8B581D4927DB34DA5E1AD6047E64A5ED5DFA4123B8DB8468549E6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-integrated-weapon-network/Original01/A.json",
+      "sha256": "54EBB9FBA74100E234BB4BB0DA4216BAEE3DC48E591E107DC0D014161CECA3B6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-integrated-weapon-network/Original01/B0.json",
+      "sha256": "787CA02AD450D2D7E1B702340D12EC2F80CE04F5A8FB52FF7497A63B9E0ECFDA"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-integrated-weapon-network/Original01/B1.json",
+      "sha256": "885AC903D322938D1EAB9B1FA7186BB015F3CB0F75BF7F4E70561F78224ED532"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-integrated-weapon-network/Original01/hud-audit.json",
+      "sha256": "D6459477A7D6AEFF3569F97DCABA1DDCBB2A81D1C6F4975B4CAF0A63F3F6A3BE"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-integrated-weapon-network/Original01/host-tests.json",
+      "sha256": "6C1ED953C7655D3308EF52CB22B08AEC6AD96271927A5E27F3E984B8FFFA0E6E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-integrated-weapon-network/Python01/server.json",
+      "sha256": "0E836ECE83B52D542823C625F1D5AB35716C5BA94C41AEDD7CC90EA032D7D294"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-integrated-weapon-network/Python01/A.json",
+      "sha256": "E52905F6B1EB2581A2BB2B2C01ADE9E7846517718D4D3E471A4AEDB07E1B09F3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-integrated-weapon-network/Python01/B0.json",
+      "sha256": "BAF0E039D3359DA98731F25A6FA326A9C938AFE02E0928ECBB356FC7E518CD9F"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-integrated-weapon-network/Python01/B1.json",
+      "sha256": "0AA2AD6BE07F9A217DCFD98D6AC363FF706EE09E0E7F9E6523D1390D8BC75995"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-integrated-weapon-network/Python01/hud-audit.json",
+      "sha256": "D6459477A7D6AEFF3569F97DCABA1DDCBB2A81D1C6F4975B4CAF0A63F3F6A3BE"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-integrated-weapon-network/Python01/host-tests.json",
+      "sha256": "6C1ED953C7655D3308EF52CB22B08AEC6AD96271927A5E27F3E984B8FFFA0E6E"
+    }
+  ]
+}

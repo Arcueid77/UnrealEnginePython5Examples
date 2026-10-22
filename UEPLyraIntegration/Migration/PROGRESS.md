@@ -31,6 +31,43 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded integrated weapon batch221 (2026-10-23),travel/rejoin:**
+The existing19-phase weapon network lane compared the original/Python/native
+HUD while game policies stayed Python. Add an explicit opt-in gameplay Profile
+comparison using eight retained-class CDO selectors across Fire,Reload,
+AutoReload and QuickSlot. No production business,Blueprint,C++,GAS/input/RPC,
+authority,prediction or replication changes. Pin only the owned class roots,
+observe actual native ability instances in each Pawn/World and restore exact
+original selectors/owned roots. Per-instance Fire counters prove only the
+requested Python/original policy activates;no implicit original fire follows
+Python success. QuickSlot default/listener lifetime is observed;the existing
+slot-switch step calls native QuickBar RPC directly,not QuickSlot input.
+Original01 and Python01 each use one dedicated Editor server and real A,B0,
+rejoined B1 Editor clients on current source-matching SDK217. All eight network
+process exits and independent final protocol gates0 pass strict Goodbye,
+HUD shutdown,gameplay shutdown,log closure and no errors. Each run also passes
+its strict HUD asset audit. Related host selection is incremental;the focused
+driver now exposes explicit full-regression opt-in instead of always running
+every host test. RemoteSession stays disabled in these network processes.
+Compare all19 native phase checkpoints:joinA/B,fireA/B,reloadA,emptyB,reloadB,
+switchA,fire switchedA,controlled restartA,fire restartedA,two native travels,
+fire after travel,exitB,fireA solo,rejoinB1,fireB1,complete. Authority magazine,
+capacity,spare,slot and weapon definition match exactly between Profiles.
+Each run independently proves owner/authority replication,foreign-owner
+isolation and original/Python/native HUD state. Server,A,B0 actual policy
+witnesses span all three native World generations;new B1 has its own instances.
+Native gameplay task scopes and HUD callbacks end at interpreter exit,with
+original selectors restored and owned roots released. Frozen source/asset/
+binary/reference hashes match,and native source parity remains exact.
+The existing native Rifle spawner AttemptPickUpWeapon entry and direct QuickBar
+RPC are explicit fixture inputs. Restart uses native RequestPlayerRestart;
+it is not natural death/respawn. Keep natural lethal218 and exhaustion220
+evidence separate. This is state/ownership/travel acceptance,no new physical
+input/overlap,packet loss,pixel/audio,package or complete version claim.
+No compile or cook. Seventeen focused contract tests pass. Preserve exact246
+paths/order/versions and246/182/63/11,and all remaining original requirements.
+Commit/push Examples first,then core driver/gitlink;ledger221.
+
 **Completed bounded AutoReload batch220 (2026-10-23),real family exhaustion:**
 The prior AutoReload native input evidence covered Pistol only;reload batch219
 seeded reload states for the other families. Extend the test observer/driver to

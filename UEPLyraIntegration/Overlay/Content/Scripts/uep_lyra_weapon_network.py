@@ -70,6 +70,11 @@ def panel_state(widget):
 class WeaponNetworkProbe(NetworkProbe):
     def __init__(self):
         super().__init__()
+        selected = next((value.split('=', 1)[1] for value in sys.argv if value.startswith('-UEPLyraGameplayProfile=')), None)
+        self.gameplay_profile_guard = None
+        if selected is not None:
+            from uep_lyra_weapons.integrated_profile_validation import ProfileGuard
+            self.gameplay_profile_guard = ProfileGuard(selected, self.peer, self.result_path)
         self.baseline = None
         self.baseline_world = None
         self.command_seen = -1
@@ -183,6 +188,7 @@ class WeaponNetworkProbe(NetworkProbe):
             self.current_weapon = self.current_hud = None
             return
         controller = ue.find_object(self.player['controller_path'])
+        if self.gameplay_profile_guard is not None: self.gameplay_profile_guard.observe(controller, self.player['world_token'])
         self.current_weapon = weapon_state(controller)
         widget = self._actual_hud(controller)
         self.readiness_reason = 'native-weapon-or-production-panel-unavailable'
@@ -293,6 +299,8 @@ class WeaponNetworkProbe(NetworkProbe):
         if roster is None:
             return None
         for peer, row in roster.items():
+            if self.gameplay_profile_guard is not None:
+                self.gameplay_profile_guard.observe(ue.find_object(row['controller_path']), row['world_token'])
             weapon = weapon_state(ue.find_object(row['controller_path']))
             status = self._peer_status(peer)
             if status is None:
@@ -615,6 +623,8 @@ class WeaponNetworkProbe(NetworkProbe):
                 'native_placement': read_placement()}
             if self.nameplates is not None:
                 report['nameplate_comparator_roots'] = self.nameplates.root_evidence()
+        if self.gameplay_profile_guard is not None:
+            report['integrated_gameplay'] = self.gameplay_profile_guard.close()
         if error is None:
             defer_until_shutdown(report, self.result_path)
         atomic_write(Path(self.result_path), report)

@@ -20,10 +20,14 @@ parser.add_argument('--dash-cooldown', action='store_true')
 parser.add_argument('--respawn-timer', action='store_true')
 parser.add_argument('--quickbar-slots', action='store_true')
 parser.add_argument('--nameplates', action='store_true')
+parser.add_argument('--gameplay-profile', choices=('Python', 'BlueprintFallback'))
 args = parser.parse_args()
 root = Path(args.directory)
 reports = {peer: json.loads((root / (peer + '.json')).read_text(encoding='utf-8-sig'))
            for peer in ('server', 'A', 'B0', 'B1')}
+if args.gameplay_profile:
+    from uep_lyra_weapons.integrated_profile_contract import validate
+    for report in reports.values(): validate(report['integrated_gameplay'], args.gameplay_profile)
 print(json.dumps(validate_reports(reports, args.run_id, combat_hud=args.combat_hud, debug_spread=args.debug_spread,
                                  production_reticles=args.production_reticles, reticle_hosts=args.reticle_hosts,
                                  ability_progress=args.ability_progress, ability_failure=args.ability_failure,
