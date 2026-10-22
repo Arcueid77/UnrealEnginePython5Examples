@@ -31,6 +31,48 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded AutoReload batch220 (2026-10-23),real family exhaustion:**
+The prior AutoReload native input evidence covered Pistol only;reload batch219
+seeded reload states for the other families. Extend the test observer/driver to
+the original Rifle and Shotgun equipment grants,without changing game business,
+SDK/C++,Blueprints,montages,LocalOnly policy or Fire/Reload implementations.
+Keep prototype NetShooter's original absence of AutoReload;do not add a grant.
+Each of Pistol,Rifle and Shotgun runs one dedicated Editor server and two real
+independent Editor clients on current SDK217. Each owner compares six cases
+through AutoReload BlueprintFallback/Python:nonempty,empty/no spare,empty/spare,
+real fire to empty/automatic reload,native cancel and active Profile teardown.
+That is72 authority trials,36 client Profile pairs and9 process exits;the shared
+standalone Pistol observer also passes its six pairs and one process exit.
+All10 exits and four independent semantic gates0 pass strict Python-exit/log
+closure with no errors. Every native frozen source/asset/reference hash matches.
+In the real-fire cases,original client EnhancedInput fires every round from the
+full native magazine. Both owners/families/Profiles produce12 natural network
+exhaustions,then the native GAS reload RPC,montage/notify and ammo transfer refill
+the magazine. Authority separately sees zero ammo and active Reload;authority
+and owning replica final ammo agree,and the other owner's inventory is unchanged.
+Original/Python AutoReload decisions,initial/final ammo and task/end outcomes
+match. Authority LocalOnly AutoReload stays inactive. Test-only initial
+authority ammo setup and temporary family equipment are explicit;no authority
+or client fixture ammo API call occurs during the firing/reload interval.
+Restore original family ammo,temporary equipment,original Pistol inventory,
+aim and native default AutoReload;all observer/policy scopes close with no late
+callback. Schema2 gates reject cross-family/grant/capacity/initial/spare,mid-fire
+reseed and missing equipment restoration;legacy schema1 evidence stays historical.
+Pistol01 and Pistol02Observed retain failed checks which wrongly required one
+client request despite the retained BP's predictive retries. Read-only timelines
+show a client montage can end before authority completes its one native reload;
+both original and Python then retry. Schema2 now requires every Python request
+to match an observed event and exactly one actual authority activation,notify,
+transfer,End and balanced two-task scope,regardless of request timing. Negative
+tests reject duplicate actual reloads/transfers and mismatched request counts.
+Standalone and historical schema1 retain their strict one-request gate.
+Twenty-six focused host tests pass. Staged verification is incremental.
+These compare AutoReload Profiles using existing Fire/Reload implementations;
+no new pixel/audio/hardware,travel/rejoin/loss,package or full-version claim.
+No compile or cook. Keep exact246 paths/order/versions and246/182/63/11.
+Original whole Experience/version migration acceptance remains open.
+Commit/push Examples first,then core driver/gitlink;ledger220.
+
 **Completed bounded reload batch219 (2026-10-23),current four-family matrix:**
 Reuse the existing reload observer,driver,accepted assets and current Editor SDK
 from217. No production/validation source,Blueprint,C++,montage or native input

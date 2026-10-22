@@ -27,8 +27,35 @@ def report():
     return result
 
 
+def family_report(weapon="pistol", capacity=12):
+    result = report()
+    result.update(schema_version=2, weapon=weapon, native_weapon_definition="/Game/Weapons/ID_"+weapon.title(), magazine_capacity=capacity)
+    for case in result["cases"]:
+        for side in ("blueprint", "python"):
+            row = case[side]; reload = case["name"] in ("empty-spare", "real-fire-auto-reload")
+            initial = gate.initial_ammo(case["name"], capacity)
+            row.update(magazine_capacity=capacity, initial_ammo=initial, final_magazine=capacity if reload else initial[0],
+                final_spare=capacity if reload else initial[1], real_fire_rounds=capacity if case["name"] == "real-fire-auto-reload" else 0)
+    return result
+
+
 class AutoReloadGate(unittest.TestCase):
     def test_complete_matrix(self): self.assertEqual(gate.validate(report())["pairs"], 6)
+
+    def test_native_family_capacities_and_absent_prototype_grant(self):
+        for weapon, capacity in (("pistol", 12), ("rifle", 30), ("shotgun", 8)):
+            with self.subTest(weapon=weapon): self.assertEqual(gate.validate(family_report(weapon, capacity))["pairs"], 6)
+        value = family_report("netshooter", 1)
+        with self.assertRaises(RuntimeError): gate.validate(value)
+
+    def test_reject_wrong_family_capacity_initial_ammo_and_spare_conservation(self):
+        for key, replacement in (("magazine_capacity", 13), ("initial_ammo", [0, 0]), ("final_spare", 99)):
+            value = family_report(); value["cases"][3]["python"][key] = replacement
+            with self.subTest(key=key), self.assertRaises(RuntimeError): gate.validate(value)
+        value = family_report("rifle", 30); value["native_weapon_definition"] = "/Game/Weapons/ID_Pistol"
+        with self.assertRaises(RuntimeError): gate.validate(value)
+        value = family_report(); value["cases"][4]["python"]["final_magazine"] = 0
+        with self.assertRaises(RuntimeError): gate.validate(value)
 
     def test_reject_faked_empty_magazine_and_missing_input(self):
         for field, value in (("ammo_api_calls_after_firing_began", 1), ("native_input_injections", 0), ("real_fire_rounds", 0)):

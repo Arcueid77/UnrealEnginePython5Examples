@@ -15,7 +15,8 @@ from uep_lyra_world.effect_pad_mixin import ability_system, valid
 from uep_lyra_world.inventory_pad_network_state import capture, services
 from uep_lyra_hud.weapon_validation_helpers import set_stat
 from . import autoreload_mixin as policy
-from .autoreload_contract import PLAN, require, validate
+from .autoreload_contract import PLAN, WEAPONS, require, validate
+from .reload_magazine_contract import WEAPONS as RELOAD_WEAPONS
 
 CAPACITY = "Lyra.ShooterGame.Weapon.MagazineSize"
 
@@ -25,7 +26,9 @@ class Validation:
         self.path, self.started, self.phase, self.index = Path(result), time.monotonic(), "ready", 0
         self.finished, self.scope, self.sides = False, None, []
         self.timeout = 240.
-        self.report = dict(schema_version=1, status="running", error=None, cases=[], fixture_native_inventory_api_used=True,
+        self.weapon = next((value.split("=", 1)[1] for value in sys.argv if value.startswith("-UEPAutoReloadWeapon=")), "pistol")
+        require(self.weapon in WEAPONS, "weapon has no original AutoReload grant")
+        self.report = dict(schema_version=2, weapon=self.weapon, status="running", error=None, cases=[], fixture_native_inventory_api_used=True,
             original_player_restored=False, original_ability_active_restored=False, native_default_python_loop_owned=False,
             observer_scopes_created=0, observer_scopes_closed=0)
         self.report.update({key: False for key in ("full_acceptance", "network_acceptance", "packaged_runtime", "ammo_properties_written",
@@ -53,14 +56,18 @@ class Validation:
         if pressed: self.row["native_input_injections"] += 1
 
     def end_native(self):
-        if self.ability.get_property("bIsActive"): self.ability.call_function("K2_EndAbility")
+        if valid(self.ability) and self.ability.get_property("bIsActive"): self.ability.call_function("K2_EndAbility")
 
     def close_observer(self):
         if self.scope is not None:
             self.scope.close(); self.scope = None; self.report["observer_scopes_closed"] += 1
 
     def set_ammo(self, values):
+        if self.phase == "running" and self.name == "real-fire-auto-reload":
+            self.row["ammo_api_calls_after_firing_began"] += 1
         for tag, value in zip((policy.MAGAZINE, policy.SPARE), values): set_stat(self.item, tag, value)
+
+    def prepare_weapon(self, controller, model): return True
 
     def initial_ammo(self):
         return (0, self.capacity*2) if self.name == "empty-spare" else ((0, 0) if self.name == "empty-no-spare" else (self.capacity, self.capacity*2))
@@ -75,7 +82,8 @@ class Validation:
             if not (snap.bHeroInputReady and snap.bHealthReady and not snap.bDamageImmune and snap.Health > 0): continue
             controller = self.statics.call_function("GetPlayerController", world, 0)
             model = capture(controller)
-            if model is None or "ID_Pistol" not in model["definition"]: continue
+            if model is None or not self.prepare_weapon(controller, model): continue
+            if RELOAD_WEAPONS[self.weapon][2] not in model["definition"]: continue
             self.world, self.bridge, self.controller, self.pawn = world, bridge, controller, controller.get_controlled_pawn()
             self.asc, self.cls = ability_system(self.pawn), ue.load_class(policy.CLASS)
             matches = [value for spec in self.asc.get_property("ActivatableAbilities").Items if valid(spec.Ability) and spec.Ability.get_class() == self.cls
@@ -92,6 +100,7 @@ class Validation:
             self.capacity = int(self.item.call_function("GetStatTagStackCount", GameplayTag(TagName=CAPACITY)))
             require(self.capacity > 0, "native magazine capacity missing")
             self.original_ammo, self.original_model, self.original_aim = self.ammo(), model, aim_snapshot(controller)
+            self.report.update(native_weapon_definition=model["definition"], magazine_capacity=self.capacity)
             self.report["native_default_python_loop_owned"] = (self.ability.get_path_name() in policy.snapshot()["active_abilities"] and
                 str(ue.get_mixin_profile(self.ability)) == "Python" and self.tasks() == 1)
             require(self.report["native_default_python_loop_owned"], "native LocalOnly OnSpawn did not start Python WaitDelay")
@@ -103,9 +112,12 @@ class Validation:
         self.set_ammo(self.initial_ammo())
         self.before = policy.instance_snapshot(self.ability)
         self.row = dict(native_type_preserved=self.ability.get_class() == self.cls, native_equipment_item_source_matches=True,
+            initial_ammo=list(self.ammo()),
             magazine_capacity=self.capacity, ammo_check=bool(self.ability.call_function("CheckAmmoState")), reload_event_deliveries=0,
             native_reload_active_observed=False, native_reload_tag_observed=False, real_fire_rounds=0, native_input_injections=0,
             ammo_api_calls_after_firing_began=0, profile_teardown_ended_native_ability=False)
+        require(not self.reload_active() and not self.reload_tag(), "previous native Reload still active at AutoReload trial start")
+        self.row["native_reload_observations"] = []
         require(self.asc.call_function("TryActivateAbilityByClass", self.cls, False), "native AutoReload activation refused")
         self.row["tasks_at_start"] = self.tasks()
         self.scope = SubscriptionScope(); self.report["observer_scopes_created"] += 1
@@ -120,6 +132,10 @@ class Validation:
         elapsed = self.game_time()-self.trial_started
         require(elapsed < 18., "native AutoReload case timeout: "+self.name)
         magazine, spare = self.ammo()
+        observed = dict(ammo=[magazine, spare], active=self.reload_active(), tag=self.reload_tag())
+        history = self.row["native_reload_observations"]
+        if not history or any(history[-1][key] != value for key, value in observed.items()):
+            if len(history) < 64: history.append(dict(observed, elapsed=elapsed, requests=self.row["reload_event_deliveries"]))
         self.row["native_reload_active_observed"] |= self.reload_active()
         self.row["native_reload_tag_observed"] |= self.reload_tag()
         if self.name == "real-fire-auto-reload":
@@ -196,10 +212,12 @@ class Validation:
         (ue.log_error if error else ue.log)("UEP_AUTORELOAD_DIFFERENTIAL_"+("FAILED "+error if error else "PASSED"))
         ue.request_exit()
 
+    def validate_report(self): validate(self.report)
+
     def finalize(self):
         self.report["policy_shutdown"] = policy.snapshot()
         if self.report["status"] == "awaiting_shutdown":
-            try: self.report["status"] = "passed"; validate(self.report)
+            try: self.report["status"] = "passed"; self.validate_report()
             except Exception: self.report.update(status="failed", error=traceback.format_exc())
         self.path.write_text(json.dumps(self.report, indent=2), encoding="utf-8")
         (ue.log if self.report["status"] == "passed" else ue.log_error)("UEP_AUTORELOAD_SHUTDOWN_"+self.report["status"].upper())

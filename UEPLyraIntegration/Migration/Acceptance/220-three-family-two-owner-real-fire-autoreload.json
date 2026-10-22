@@ -1,0 +1,276 @@
+{
+  "schema_version": 1,
+  "batch": "220-three-family-two-owner-real-fire-autoreload",
+  "scope": "Current Editor SDK217 native AutoReload Blueprint/Python comparison for Pistol/Rifle/Shotgun across two independent clients:72 authority trials,36 profile pairs,12 real magazine exhaustions and200 fired rounds;shared standalone six-pair regression. Initial authority ammo and temporary family equipment are explicit. Predicted retry requests are observed separately from exactly one actual authority reload/notify/ammo transfer and balanced task scope. Preserve Pistol01/Pistol02Observed strict-request-gate failures. No game business,SDK,Blueprint,Fire/Reload policy,compile,cook/package,pixel/audio,hardware,travel/rejoin/loss or full Experience/version acceptance.",
+  "recorded_utc": "2026-10-22T18:48:59.3226597Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "248910d028d735d6ea73605dfa08be35cfdc83d5",
+  "examples_parent_commit": "24850abc79deeea25eb272d61432c94dfcd02155",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-autoreload-family/Pistol03",
+      "summary_sha256": "DE3FC43C92FC7BEE918FD337444B5551CCC300346EC506635196A4DABF72D6A0",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "305ACB63588ABEDA69EC0F2028110EDF06E5D6548D0E5806F1D8A2A847D8A410"
+      ],
+      "frozen_input_records": 3389,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "A": 0,
+        "B0": 0,
+        "server": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "7C6ED1B31681A3662B7F8D058984A2D7E1992BE06C7BF4A5173E45EC503ECA0B"
+        },
+        {
+          "file": "A.json",
+          "sha256": "B6EA2212CF47E8018260D9E384A158FB9E1937A99849F4E99FD1E722CA095B6F"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "CFB8BA24D6A3537A44B6913636BC74C2F31AC9BB7D5BAEAE8359A85B9986AE26"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-autoreload-family/Rifle01",
+      "summary_sha256": "AF2A4694C42E807CFFF6F2A5F42329A7A052AB0FE330F5D6AEBEBC9F741CCA08",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "305ACB63588ABEDA69EC0F2028110EDF06E5D6548D0E5806F1D8A2A847D8A410"
+      ],
+      "frozen_input_records": 3389,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "A": 0,
+        "B0": 0,
+        "server": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "F15A9F56D6850A6DB54FF386FF9CFD5FEF4059B6C63E8B522D7EA68DD327D391"
+        },
+        {
+          "file": "A.json",
+          "sha256": "1EC3ADF1A96A71AC6F01229E23AB2BFA11879D44CF36B03A57B75C2E690CF1BB"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "80CA2AE00CEAF8269FDC5C8B6FAF813E4F6D1124823E8DA877A255C1834CCCE7"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-autoreload-family/Shotgun01",
+      "summary_sha256": "34CBBB0966917E129FCE946B4FC1F4F6B065282B4F3A9003B689FAABF0098928",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "305ACB63588ABEDA69EC0F2028110EDF06E5D6548D0E5806F1D8A2A847D8A410"
+      ],
+      "frozen_input_records": 3389,
+      "process_exit_code": null,
+      "peer_exit_codes": {
+        "A": 0,
+        "B0": 0,
+        "server": 0
+      },
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "server.json",
+          "sha256": "07097B0CC295B571AD0A33C6CCA6E25E8EE99E7CE1E076652C97F7ABF4AA8994"
+        },
+        {
+          "file": "A.json",
+          "sha256": "3485B7527E50CC755E16FFB2A043915B3B1B7355D9CA96396BD222C660D21950"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "00AE58B1C9C43505756508EC60DF2541A3042BA790DA3449F62F41E5E5ABF0B8"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-autoreload-family/Standalone01",
+      "summary_sha256": "5EE3D9003639E20554FEDCBF12249B0336FD67482B1C382D6717779EDA5D0667",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "305ACB63588ABEDA69EC0F2028110EDF06E5D6548D0E5806F1D8A2A847D8A410"
+      ],
+      "frozen_input_records": 3389,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "jump.json",
+          "sha256": "318302F9F765E262382A37F992766B209DF20B8C2F6E133BADA919E2DD6F18A8"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Validation/Run-UEP58JumpValidation.ps1",
+      "native_input_path": "Validation/Run-UEP58JumpValidation.ps1",
+      "sha256": "5A4E1105A9500206AE3A450348734709E4BDB400E5F33DC7E8540A5890D61D81",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/autoreload_network_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/autoreload_network_validation.py",
+      "sha256": "78BE15E35340B225052BBF3AAE88C6DEEFF8CEEFDEE92CAD0C4343A6113BE9F0",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/autoreload_network_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/autoreload_network_contract.py",
+      "sha256": "40013F54C9F06FDE8E5C71D2976588294E4B0B44DDE45C078C4AFFEA51879C9B",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/autoreload_validation.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/autoreload_validation.py",
+      "sha256": "E2F18F0A8CA0946D389BE1B333E03F4BA6DB4F977B6D5109D2FF17CD77FD59D7",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/autoreload_contract.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/autoreload_contract.py",
+      "sha256": "9EC9B19C23556C44836D656BB01FA8154E49EE3759430EEA1C50F5DCB0C9F74F",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/autoreload_mixin.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/autoreload_mixin.py",
+      "sha256": "A4DF73750AA044E4DFFBE78C9FCCE56EF004FAB535045540825185C40BB3F5EE",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/reload_weapon_fixture.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/reload_weapon_fixture.py",
+      "sha256": "5834BD4AF7016C5BEAF36B66C66A608B894B96CBEF5459347D0C69D66E7C6498",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": null,
+  "full_acceptance": false,
+  "packaged_runtime": false,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "native_authority_trials": 72,
+  "network_client_profile_pairs": 36,
+  "standalone_profile_pairs": 6,
+  "accepted_runtime_processes": 10,
+  "native_network_fired_rounds": 200,
+  "natural_network_magazine_exhaustions": 12,
+  "weapons": [
+    "pistol",
+    "rifle",
+    "shotgun"
+  ],
+  "preserved_failed_runs": [
+    "Pistol01",
+    "Pistol02Observed"
+  ],
+  "supplemental_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-autoreload-family/independent-review01.json",
+      "sha256": "DDCA72A1D1C5C35DFA12AF572D5545F7092EAC647F951CDC6D0989A79C21EFD8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-autoreload-family/independent-review-process01.json",
+      "sha256": "0B3E640E89ABC5502F099DC98FA728CD9706939B7D0260A8CCEFEDD50A68FAF4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-autoreload-family/preflight.json",
+      "sha256": "18F6FF34B3DD6407D52BA0E923401CE6EAAF912264FB7745B36107FD2EE339A0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-autoreload-family/Pistol03/server.json",
+      "sha256": "7C6ED1B31681A3662B7F8D058984A2D7E1992BE06C7BF4A5173E45EC503ECA0B"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-autoreload-family/Pistol03/A.json",
+      "sha256": "B6EA2212CF47E8018260D9E384A158FB9E1937A99849F4E99FD1E722CA095B6F"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-autoreload-family/Pistol03/B0.json",
+      "sha256": "CFB8BA24D6A3537A44B6913636BC74C2F31AC9BB7D5BAEAE8359A85B9986AE26"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-autoreload-family/Pistol03/A-exited.json",
+      "sha256": "2CDBE7659E015C6DFA89A4602BC2A73DFDFFF0EF9F11862F1F364C8BBFD5EF3A"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-autoreload-family/Pistol03/B0-exited.json",
+      "sha256": "9556B5EC9F46DEF4F36911437AAFC73E6CE5E400FC94567A8C9A8FF3B9C23701"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-autoreload-family/Rifle01/server.json",
+      "sha256": "F15A9F56D6850A6DB54FF386FF9CFD5FEF4059B6C63E8B522D7EA68DD327D391"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-autoreload-family/Rifle01/A.json",
+      "sha256": "1EC3ADF1A96A71AC6F01229E23AB2BFA11879D44CF36B03A57B75C2E690CF1BB"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-autoreload-family/Rifle01/B0.json",
+      "sha256": "80CA2AE00CEAF8269FDC5C8B6FAF813E4F6D1124823E8DA877A255C1834CCCE7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-autoreload-family/Rifle01/A-exited.json",
+      "sha256": "531754BB3DBB665F05F18197E5553B9376043900AD8644D83CBB381857A6A14A"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-autoreload-family/Rifle01/B0-exited.json",
+      "sha256": "7A32F52A1E495B26290EB347C4E32BE2A4332A69DC4DBA89786B504A4AD43971"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-autoreload-family/Shotgun01/server.json",
+      "sha256": "07097B0CC295B571AD0A33C6CCA6E25E8EE99E7CE1E076652C97F7ABF4AA8994"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-autoreload-family/Shotgun01/A.json",
+      "sha256": "3485B7527E50CC755E16FFB2A043915B3B1B7355D9CA96396BD222C660D21950"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-autoreload-family/Shotgun01/B0.json",
+      "sha256": "00AE58B1C9C43505756508EC60DF2541A3042BA790DA3449F62F41E5E5ABF0B8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-autoreload-family/Shotgun01/A-exited.json",
+      "sha256": "B3129D134D2B8F35D76CFC043DC3300821131AFF5FA92F11C6EBDAAE0BE0DFD5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-autoreload-family/Shotgun01/B0-exited.json",
+      "sha256": "05789A3BEE7E0756D66A6CDEB868FEBC0E354626D7722B19FC5706AF72114352"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-autoreload-family/Standalone01/jump.json",
+      "sha256": "318302F9F765E262382A37F992766B209DF20B8C2F6E133BADA919E2DD6F18A8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-autoreload-family/Pistol01/summary.json",
+      "sha256": "E4B6D1BC95C3FC222E9C784FC76B744193B82A677BFC95BAC9EA0C169EB0033E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-autoreload-family/Pistol02Observed/summary.json",
+      "sha256": "C2B2A739312139285BDA7D2DA291231282E283D9CF50A86B3E689582E518F213"
+    }
+  ]
+}

@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 221,
+    "bounded_evidence_ledgers": 222,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -7881,7 +7881,8 @@
     "original_idle_threshold": 0.6600000262260437,
     "original_class_defaults_public_signatures_graphs_preserved": true,
     "network_acceptance": true,
-    "full_acceptance": false
+    "full_acceptance": false,
+    "current_sdk_family_evidence_ledger": "220-three-family-two-owner-real-fire-autoreload.json"
   },
   "hero_heal_ability_pilot": {
     "version": "0.11.0",
@@ -14891,5 +14892,53 @@
     "physical_input_tested": false,
     "full_acceptance": false,
     "next": "Continue original natural firing-to-empty/AutoReload,switch/death/respawn/travel/rejoin/loss,presentation/audio/current packages and whole Experience/version requirements. Seeded native reload states are bounded fixtures,not natural weapon exhaustion."
+  },
+  "current_autoreload_family_pilot": {
+    "version": "0.11.0",
+    "status": "bounded_three_original_weapon_families_two_owner_real_fire_empty_and_automatic_reload_verified",
+    "evidence_ledger": "220-three-family-two-owner-real-fire-autoreload.json",
+    "current_editor_sdk_from_batch217": true,
+    "weapons": [
+      "pistol",
+      "rifle",
+      "shotgun"
+    ],
+    "native_network_runs": [
+      "20261023-autoreload-family/Pistol03",
+      "20261023-autoreload-family/Rifle01",
+      "20261023-autoreload-family/Shotgun01"
+    ],
+    "native_standalone_regression_run": "20261023-autoreload-family/Standalone01",
+    "native_processes": 10,
+    "native_authority_trials": 72,
+    "network_client_profile_pairs": 36,
+    "standalone_profile_pairs": 6,
+    "natural_network_magazine_exhaustions": 12,
+    "native_network_fired_rounds": 200,
+    "original_and_python_autoreload_decisions_match": true,
+    "enhanced_input_native_fire_rpc_reload_montage_and_ammo_replication": true,
+    "foreign_owner_inventory_unchanged": true,
+    "original_inventory_equipment_aim_and_autoreload_restored": true,
+    "localonly_authority_ability_stays_inactive": true,
+    "native_family_equipment_fixture_and_initial_authority_ammo_setup_explicit": true,
+    "no_authority_or_client_ammo_reseed_during_firing": true,
+    "fire_and_reload_implementations_unchanged": true,
+    "prototype_netshooter_original_no_autoreload_preserved": true,
+    "negative_gate_tests_cover_family_reseed_grant_capacity_spare_and_restore": true,
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261023-autoreload-family/Index01",
+    "full_regression_executed": false,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "packaged_runtime": false,
+    "pixels_or_audio_tested": false,
+    "travel_rejoin_loss_tested": false,
+    "physical_input_tested": false,
+    "full_acceptance": false,
+    "next": "Continue integrated weapon switch/death/respawn/travel/rejoin/loss,FX/audio/presentation,Experience and original full-version requirements. This compares AutoReload BP/Python decisions using existing native firing/reload paths;it is not a complete original/Python weapon presentation matrix.",
+    "predicted_retry_requests_distinguished_from_one_actual_authority_reload_and_transfer": true,
+    "preserved_failed_runs": [
+      "20261023-autoreload-family/Pistol01",
+      "20261023-autoreload-family/Pistol02Observed"
+    ]
   }
 }

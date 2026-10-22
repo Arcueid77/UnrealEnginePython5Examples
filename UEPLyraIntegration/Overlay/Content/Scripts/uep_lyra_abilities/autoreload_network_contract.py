@@ -2,13 +2,23 @@
 import argparse
 import json
 from pathlib import Path
-from .autoreload_contract import PLAN, require, validate as validate_client
+from .autoreload_contract import PLAN, WEAPONS, initial_ammo, require, validate as validate_client
 
 PEERS = ("A", "B0")
 
 
 def validate(reports):
     server = reports["server"]
+    current = server.get("schema_version", 1) >= 2
+    if current:
+        require(server["weapon"] in WEAPONS and server["native_equipped_autoreload_grants"] == {peer: 1 for peer in PEERS},
+            "original family AutoReload grants changed")
+        if server["weapon"] != "pistol":
+            require(server["equipped_fixture_states_restored"] and server["temporary_weapons_removed"] and
+                set(server["native_weapon_fixtures"]) == set(PEERS), "native family inventory fixture was not restored")
+            for peer, fixture in server["native_weapon_fixtures"].items():
+                require(fixture["weapon"] == server["weapon"] and fixture["slot"] > 0 and fixture["owned_item"] and
+                    "ID_Pistol" in fixture["original_model"]["definition"], "wrong authority native family fixture")
     require(server["status"] == "passed" and server["error"] is None and server["original_inventory_restored"] and
         server["server_waited_for_client_process_exit"] and server["native_playing_gate"]["native_playing_phase"] and
         server["fixture_authority_inventory_setup"], "AutoReload authority/restore/exit proof missing")
@@ -17,7 +27,13 @@ def validate(reports):
         require(server[field] is False, "unsupported AutoReload network claim: "+field)
     require(set(server["player_ids"]) == set(PEERS) and len(set(server["player_ids"].values())) == 2, "AutoReload owner IDs not distinct")
     for peer in PEERS:
-        client = reports[peer]; validate_client(client)
+        client = reports[peer]; validate_client(client, network=True)
+        if current:
+            require(client["schema_version"] == server["schema_version"] and client["weapon"] == server["weapon"] and
+                client["equipped_fixture_state_restored"], "owner/authority weapon family differs")
+            if server["weapon"] != "pistol":
+                require(client["temporary_weapon_removed"] and "ID_Pistol" in client["native_weapon_fixture"]["original_model"]["definition"],
+                    "owner original pistol inventory was not restored")
         require((client["peer"], client["run_id"], client["player_id"]) == (peer, server["run_id"], server["player_ids"][peer]),
             "AutoReload client identity differs")
         for field in ("local_inventory_written", "gameplay_event_replication_tested", "native_rpc_bypassed", "packet_loss_tested", "travel_rejoin_tested"):
@@ -31,6 +47,15 @@ def validate(reports):
             row["authoritative_role"] == 3 and row["other_inventory_unchanged"] and row["local_only_authority_stayed_inactive"] and
             row["authority_original_restored"], "AutoReload authority/foreign owner/LocalOnly/restore failed")
         client = reports[peer]["cases"][index//2]["python" if index % 2 else "blueprint"]
+        if current:
+            require(row["initial_ammo"] == client["initial_ammo"] == initial_ammo(name, client["magazine_capacity"]) and
+                row["authority_ammo_api_calls_after_permit"] == 0, "authority ammo was reseeded during native AutoReload input")
+            reload = int(name in ("empty-spare", "real-fire-auto-reload"))
+            expected_counts = dict(activations=reload, native_ends=reload, authority_reloads=reload,
+                transferred_rounds=client["magazine_capacity"]*reload, reload_events=reload,
+                tasks_created=2*reload, scopes_created=reload, scopes_closed=reload)
+            require(row["authority_reload_counts"] == expected_counts,
+                "network AutoReload requested duplicate actual reloads/transfers or leaked native tasks")
         ack = row["client"]
         require((ack["run_id"], ack["peer"], ack["index"]) == (server["run_id"], peer, index), "foreign AutoReload ack")
         expected_ack = {key: value for key, value in client.items() if key != "fixture_ammo_restored"}

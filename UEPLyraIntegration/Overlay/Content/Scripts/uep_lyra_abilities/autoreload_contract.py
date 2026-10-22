@@ -4,13 +4,23 @@ import json
 from pathlib import Path
 
 PLAN = ("nonempty", "empty-no-spare", "empty-spare", "real-fire-auto-reload", "native-cancel", "active-profile-switch")
+WEAPONS = ("pistol", "rifle", "shotgun")
+
+
+def initial_ammo(name, capacity):
+    return [0, capacity*2] if name == "empty-spare" else ([0, 0] if name == "empty-no-spare" else [capacity, capacity*2])
 
 
 def require(value, message):
     if not value: raise RuntimeError(message)
 
 
-def validate(report):
+def validate(report, network=False):
+    current = report.get("schema_version", 1) >= 2
+    if current:
+        weapon = report["weapon"]
+        require(weapon in WEAPONS and "ID_"+weapon.title() in report["native_weapon_definition"] and
+            report["magazine_capacity"] > 0, "original AutoReload weapon definition/capacity differs")
     require(report["status"] == "passed" and report["error"] is None and report["native_default_python_loop_owned"] and
         report["original_player_restored"] and report["original_ability_active_restored"], "native AutoReload fixture/default/restore failed")
     for field in ("full_acceptance", "network_acceptance", "packaged_runtime", "ammo_properties_written", "activation_handler_replayed",
@@ -20,13 +30,26 @@ def validate(report):
     for row in report["cases"]:
         for side in ("blueprint", "python"):
             value = row[side]
+            if current:
+                require(value["magazine_capacity"] == report["magazine_capacity"] and
+                    value["initial_ammo"] == initial_ammo(row["name"], report["magazine_capacity"]),
+                    "AutoReload initial native magazine/spare differs")
             require(value["native_type_preserved"] and value["native_equipment_item_source_matches"] and value["tasks_at_start"] == 1 and
                 value["tasks_after_end"] == 0 and value["no_callbacks_after_end"] and value["fixture_ammo_restored"], "native AutoReload type/source/task cleanup missing")
             require(value["ammo_check"] == (row["name"] == "empty-spare"), "native public ammo predicate differs")
             if row["name"] in ("empty-spare", "real-fire-auto-reload"):
-                require(value["reload_event_deliveries"] == 1 and value["native_reload_active_observed"] and value["native_reload_tag_observed"] and
+                # A predicted montage can end before authority transfers ammo.
+                # The retained BP then retries; the network gate separately
+                # requires exactly one actual authority activation/transfer.
+                requests = value["reload_event_deliveries"]
+                require((requests >= 1 if network and current else requests == 1) and value["native_reload_active_observed"] and value["native_reload_tag_observed"] and
                     value["final_magazine"] == value["magazine_capacity"] and value["ammo_conserved"], "native automatic event/reload completion missing or duplicated")
+                if current:
+                    require(value["final_spare"] == value["magazine_capacity"], "native automatic reload spare conservation differs")
             else: require(value["reload_event_deliveries"] == 0, "ineligible/canceled AutoReload requested a reload")
+            if current and row["name"] not in ("empty-spare", "real-fire-auto-reload"):
+                require([value["final_magazine"], value["final_spare"]] == value["initial_ammo"],
+                    "ineligible/canceled AutoReload changed native ammo")
             if row["name"] == "real-fire-auto-reload":
                 require(value["real_fire_rounds"] == value["magazine_capacity"] and value["native_input_injections"] > 2 and
                     value["ammo_api_calls_after_firing_began"] == 0, "real fire-to-empty was replaced by ammo fixture writes")
@@ -34,8 +57,9 @@ def validate(report):
         require(row["blueprint"]["final_magazine"] == row["python"]["final_magazine"] and
             row["blueprint"]["final_spare"] == row["python"]["final_spare"], "original/Python native ammo outcomes differ")
         stats = row["python"]["counters"]
+        expected_requests = row["python"]["reload_event_deliveries"] if network and current else int(row["name"] in ("empty-spare", "real-fire-auto-reload"))
         require(stats["activations"] == 1 and stats["polls"] >= 1 and stats["scopes_created"] == stats["scopes_closed"] and
-            stats["reload_requests"] == int(row["name"] in ("empty-spare", "real-fire-auto-reload")), "AutoReload per-instance policy/scope count differs")
+            stats["reload_requests"] == expected_requests, "AutoReload per-instance policy/scope count differs")
     stats = report["policy_shutdown"]
     require(stats["active_count"] == 0 and stats["scopes_created"] == stats["scopes_closed"] and stats["errors"] == [] and
         report["observer_scopes_created"] == report["observer_scopes_closed"] == len(PLAN)*2, "AutoReload native observer/policy leak")
