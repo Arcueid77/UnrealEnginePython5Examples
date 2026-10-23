@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "batch": 231,
+  "name": "Original Explorer follow-map navigation,cancel and travel",
+  "accepted_at_utc": "2026-10-23T13:02:11.884196+00:00",
+  "scope": "Three original placed B_Pawn_Explorer actors run unchanged compiled L_STT_FollowPlayer in original L_StateTree_FollowTest. Runtime class/template profile treatment is restored;tree source bytes,compiled bindings and graph data are unchanged. Both isolated profiles follow the same two reachable goals over full native routes;each AI has a native GoTo and Follow success. Active moves stop,drain,stay quiet,restart,then World travel occurs during movement. After a later engine frame and actual GC all old AI/task objects are invalid with no late callbacks. Three original task classes are directly checked;unused evaluator/delay are not claimed as executed by this map. No visual,network/local-player or whole-version acceptance.",
+  "original_scope": [
+    246,
+    182,
+    63,
+    11
+  ],
+  "full_acceptance": false,
+  "candidate_rows_changed": 0,
+  "core_head_before": "b917313c91ea08d759ef824991086c2935db49a2",
+  "demos_head_before": "30f1e9ab5d5970493bc561ce46e4a0596e37d175",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-explorer-follow/Original03DeferredGC",
+      "status": "passed",
+      "summary_sha256": "D18F258D07B8D2FBBE64D2F0291921E3160462C3B636454663DD005BF0774A7B",
+      "process_exit_code": 0,
+      "independent_gate_exit_code": 0,
+      "frozen_input_records": 3558,
+      "profile": "BlueprintFallback",
+      "garbage_collection_requested_frame": 2244,
+      "garbage_collection_checked_frame": 2345
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-explorer-follow/Python03DeferredGC",
+      "status": "passed",
+      "summary_sha256": "16254C958750AB3338F8E19A546BA0368A6E78447B9B5507ED9B321B1392EE3A",
+      "process_exit_code": 0,
+      "independent_gate_exit_code": 0,
+      "frozen_input_records": 3558,
+      "profile": "Python",
+      "garbage_collection_requested_frame": 2268,
+      "garbage_collection_checked_frame": 2368
+    }
+  ],
+  "actual_native_attempts": 6,
+  "accepted_native_processes": 2,
+  "current_sdk217": true,
+  "direct_candidate_paths": [
+    "/ShooterExplorer/AI/StateTrees/Tasks/STT_GetPlayerLocation.STT_GetPlayerLocation",
+    "/ShooterExplorer/AI/StateTrees/Tasks/STT_GoTo.STT_GoTo",
+    "/ShooterExplorer/AI/StateTrees/Tasks/STT_Follow.STT_Follow"
+  ],
+  "original_placed_ai": 3,
+  "serialized_template_profiles_selected_and_restored": 6,
+  "tree_file_bytes_and_compiled_bindings_unchanged": true,
+  "successful_full_navmesh_routes": true,
+  "each_ai_goto_and_follow_success": true,
+  "same_two_navigation_goals": true,
+  "player_position_and_movement_mode_controlled": true,
+  "cancel_drain_quiet_restart_and_in_flight_travel_verified": true,
+  "old_actor_and_task_release_checked_after_deferred_gc": true,
+  "late_old_world_callbacks": 0,
+  "preserved_historical_attempts": [
+    {
+      "directory": "Original01",
+      "status": "failed",
+      "summary_sha256": "1BFB38AEA2ED599842C994B1AF85BD9F6F8C08A8AEFC9BE468DACC6604E4E93A"
+    },
+    {
+      "directory": "Original02TransparentObserver",
+      "status": "passed",
+      "summary_sha256": "F369B19401B611F7C3C1245D4ABA0969DB23DA9F6D6FBED8C5579820C3503432"
+    },
+    {
+      "directory": "Python01TransparentObserver",
+      "status": "failed",
+      "summary_sha256": "5863F65C8FF4BAB70F9FE6CC9F3F9994726CE78B00267E375844AF039E9FEDF2"
+    },
+    {
+      "directory": "Python02ReferenceDiagnostics",
+      "status": "passed",
+      "summary_sha256": "C9A9BDC50D50635CA27769AC373B3195337031579C8C93278124AECB10FB35B0"
+    }
+  ],
+  "failed_observer_note": "Original01 observer called actor-only get_world on a StateTree UObject and threw before returning fallback True;this skipped original graph continuation. Original02 forwards the original result unchanged and samples the completed location in the next control frame.",
+  "early_gc_note": "Python01 cached old-node validity immediately after a deferred CollectGarbage request. Python02 repeated the immediate check with diagnostics and passed;this is not a production leak repair. Final Original03/Python03 record different request/check engine frames and test actual node invalidation after the frame boundary. Preserve all original failed/passed statuses and exact sources.",
+  "independent_review": {
+    "path": ".build/LyraValidation/BlueprintPython/20261023-explorer-follow/independent-review01.json",
+    "sha256": "A2C8C332FBF69362BD4AB055DDDD80CF3C3DA78876B5820DCF782BFA0FAEDFC4",
+    "process_exit_code": 0
+  },
+  "input_hashes": [
+    {
+      "path": "Validation/Run-UEP58ExplorerFollowValidation.ps1",
+      "sha256": "F57FF59D8F16FC44BBE4CB7ADDCF3A7B5BBDD0BC94CEB4D0D34C7C353B4B4CCF"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "7FBE897EF989B0AE81685167778DBA0098B99AEC334AC41261A237E770FD7646"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/explorer_follow_validation.py",
+      "sha256": "FA5B2EF37B6F5092F4D5CD90A46BF354C8EAB45C20EBDBA532DD2826DC3CF9EE"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/explorer_follow_contract.py",
+      "sha256": "E345A5D830257CAE7A01C32F7F1C46FF91E1F0BB60800D3839DDEE40E6236D32"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tests/test_explorer_follow_contract.py",
+      "sha256": "43EEED1C83520FB4D461CD73726E06D19029EE7772A179E851D42F3F6558A6B0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-explorer-follow/independent-review01.json",
+      "sha256": "A2C8C332FBF69362BD4AB055DDDD80CF3C3DA78876B5820DCF782BFA0FAEDFC4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-explorer-follow/independent-review-process01.json",
+      "sha256": "4FA4337CB9401BB58C0ED44F355A8944ECE2A79D2A2D0984A930A134AAF48CE9"
+    },
+    {
+      "path": "docs/Supported_API_Inventory.md",
+      "sha256": "76DB5D14A51F598B3BF996AE893666CDD9895B7A86D44B569A54AAA1EE798774"
+    },
+    {
+      "path": "docs/Mixin_Call_Lifecycle_Matrix.md",
+      "sha256": "90DDCE009A26C83B5AFDA910FF78E5AB208AEF22E09655762D08ED64F98C22FF"
+    }
+  ],
+  "production_policy_and_base_experience_validation_unchanged": true,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "callbacks_replayed": false,
+  "gameplay_policies_changed": false,
+  "blueprint_assets_changed": false,
+  "physical_input_tested": false,
+  "network_acceptance": false,
+  "packaged_runtime": false,
+  "pixels_tested": false,
+  "isolated_staged_incremental_verification": ".build/CommitVerification/20261023-explorer-follow/Index01"
+}

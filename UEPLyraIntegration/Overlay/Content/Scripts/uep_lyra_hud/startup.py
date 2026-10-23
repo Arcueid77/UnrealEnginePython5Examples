@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(a.startswith('-UEPExplorerFollowResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):
+        return 'uep_lyra_world.explorer_follow_validation'
     if any(a.startswith('-UEPExplorerGameplayResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):
         return 'uep_lyra_abilities.explorer_gameplay_validation'
     if any(a.startswith('-UEPExplorerExperienceResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):

@@ -31,6 +31,40 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed original follow-map Explorer batch231 (2026-10-23):**
+Three original placed B_Pawn_Explorer actors automatically execute the original
+compiled L_STT_FollowPlayer in unchanged L_StateTree_FollowTest. Current SDK217,
+same two projected native navigation goals and full nonpartial paths in both
+isolated Profiles. Each AI physically moves and has one native GoTo and Follow
+success. Six serialized template profile fields are treated only at runtime,
+then restored;original map/tree/config bytes and compiled bindings are unchanged.
+Only location/GoTo/Follow are claimed as actual tree nodes;the unused evaluator/
+delay retain their separate prior event evidence. Stop actual active moves/tree
+logic,allow original completion callbacks to drain,require a quiet interval,
+restart native logic,then travel while all three resume movement. Restore player
+pose,profiles/templates/observer handlers/roots. Both final runs check after a
+later engine frame:old placed AI and runtime task objects are invalid,inventory
+is unchanged and no old callback arrives. Each location sample matches player0.
+Preserve Original01's failed observer:its convenience get_world call rejects
+StateTree UObjects and prevented returning fallback True. Pure observer now
+forwards the original result once;control-frame sampling lets the original BP
+graph finish first. Preserve passed Original02 and failed Python01 immediate-GC
+check,plus passed Python02 diagnostic repeat. Kismet CollectGarbage requests
+ForceGarbageCollection;an immediate cached verdict is too early. Final
+Original03DeferredGC/Python03DeferredGC record requested/checked engine frames
+and inspect actual release after the frame boundary. No production leak/race
+repair is claimed from this test correction or the diagnostic repeat.
+Both final processes and external semantic gates exit0 with3558 frozen inputs
+and strict ordered shutdown. Independent review matches goals,class/template
+scope and every original AI's success callbacks. Update API/lifecycle notes for
+World convenience types,Boolean gateway observation and deferred GC. Three
+original0.14 task classes have direct bounded evidence;all246 candidate rows/
+order/versions,246/182/63/11 and22 requirement texts remain. No production policy,
+C++/Blueprint changes,build,cook/package or full regression. Incremental staged
+checks follow;commit/push Examples first,then core driver/docs/gitlink;ledger231.
+Continue remaining presentation,applicable local/multiplayer and original-version
+evidence review;do not turn this map run into full migration acceptance.
+
 **Completed original placed-target Explorer gameplay batch230 (2026-10-23):**
 Run the unchanged original L_InteractionTestMap/B_TestInventoryExperience with
 the naturally spawned Explorer Hero,current SDK217 and two naturally active

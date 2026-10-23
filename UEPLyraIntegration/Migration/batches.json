@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 232,
+    "bounded_evidence_ledgers": 233,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -12460,7 +12460,16 @@
     "network_acceptance": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Continue all remaining0.14 candidates and prior owner/FText/culture/network/pixel/package/version requirements. Successful projected-location navmesh traversal remains untested. No complete migration/version acceptance claim."
+    "next": "Continue all remaining0.14 candidates and prior owner/FText/culture/network/pixel/package/version requirements. Successful projected-location navmesh traversal remains untested. No complete migration/version acceptance claim.",
+    "current_original_follow_map_followup": {
+      "evidence_ledger": "231-explorer-original-follow-map-navigation-cancel-and-travel.json",
+      "native_runs": [
+        "20261023-explorer-follow/Original03DeferredGC",
+        "20261023-explorer-follow/Python03DeferredGC"
+      ],
+      "status": "three_actual_placed_ai_full_native_navigation_and_cancel_travel_cleanup_verified",
+      "full_acceptance": false
+    }
   },
   "explorer_character_helpers_pilot": {
     "version": "0.14.0",
@@ -15691,6 +15700,15 @@
       ],
       "status": "actual_original_interaction_map_controlled_player_native_input_gameplay_and_cleanup_verified",
       "full_acceptance": false
+    },
+    "current_original_follow_map_followup": {
+      "evidence_ledger": "231-explorer-original-follow-map-navigation-cancel-and-travel.json",
+      "native_runs": [
+        "20261023-explorer-follow/Original03DeferredGC",
+        "20261023-explorer-follow/Python03DeferredGC"
+      ],
+      "status": "three_actual_placed_ai_full_native_navigation_and_cancel_travel_cleanup_verified",
+      "full_acceptance": false
     }
   },
   "explorer_gameplay_pilot": {
@@ -15727,5 +15745,37 @@
     "full_regression_executed": false,
     "full_acceptance": false,
     "next": "Continue actual Explorer StateTree/follow-map behavior,applicable multiplayer/local-player comparisons and remaining presentation/version requirements. Controlled primary-player interaction is not natural navigation,complete pixel parity or whole0.14 acceptance."
+  },
+  "explorer_follow_pilot": {
+    "version": "0.14.0",
+    "status": "original_placed_ai_full_navmesh_goals_selected_profiles_cancel_restart_and_deferred_gc_travel_verified",
+    "evidence_ledger": "231-explorer-original-follow-map-navigation-cancel-and-travel.json",
+    "native_runs": [
+      "20261023-explorer-follow/Original03DeferredGC",
+      "20261023-explorer-follow/Python03DeferredGC"
+    ],
+    "current_sdk217": true,
+    "direct_candidate_paths": [
+      "/ShooterExplorer/AI/StateTrees/Tasks/STT_GetPlayerLocation.STT_GetPlayerLocation",
+      "/ShooterExplorer/AI/StateTrees/Tasks/STT_GoTo.STT_GoTo",
+      "/ShooterExplorer/AI/StateTrees/Tasks/STT_Follow.STT_Follow"
+    ],
+    "accepted_native_processes": 2,
+    "actual_native_attempts": 6,
+    "original_placed_ai": 3,
+    "serialized_template_profiles_selected_and_restored": 6,
+    "successful_original_navmesh_routes_verified": true,
+    "same_goal_inputs_and_per_ai_goto_follow_success": true,
+    "active_move_cancel_restart_and_in_flight_travel_verified": true,
+    "post_gc_check_crosses_engine_frame": true,
+    "old_ai_and_runtime_nodes_released": true,
+    "late_old_world_callbacks": 0,
+    "production_policy_unchanged": true,
+    "unused_evaluator_and_delay_claimed_as_map_execution": false,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_acceptance": false,
+    "next": "Review remaining original Explorer/TopDown presentation and applicable multiplayer/local-player scope,then reconcile existing source/runtime evidence against all original version checklists. This warm-started original follow map does not claim every Explorer node family,all API support or whole0.14 acceptance."
   }
 }
