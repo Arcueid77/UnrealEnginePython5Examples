@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "batch": 230,
+  "name": "Original placed Explorer target gameplay and native input",
+  "accepted_at_utc": "2026-10-23T20:21:23.323931+08:00",
+  "scope": "Original L_InteractionTestMap/Experience/primary Hero and placed Rock/Chair. Controlled native positioning,movement mode and aim;actual Enhanced Input reaches two naturally active Interact instances,one accepted collect and one sit per profile,two native marker activations. Native event-entry snapshots preserve original handlers once;no callback replay. Original pickup template/count,inventory,sit montage/target lifetime,three-second Rock expiry,Cue pool resource cleanup,marker actor/endpoint/draw and cleanup travel agree. Five direct original0.14 candidates. No complete presentation,StateTree,applicable network/local-player or whole-version acceptance.",
+  "original_scope": [
+    246,
+    182,
+    63,
+    11
+  ],
+  "full_acceptance": false,
+  "candidate_rows_changed": 0,
+  "core_head_before": "44537c035d4b9898771f6782d7ac944e6645ef77",
+  "demos_head_before": "5ecc6968b7fc73b37d500d5b50cad26fea5cecd3",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-explorer-gameplay/Original02EntrySnapshot",
+      "status": "passed",
+      "summary_sha256": "1F2A01380EE2F2EFC4119BC93D366EFDDB60B2389E8FFA46878907CE55D346D4",
+      "process_exit_code": 0,
+      "independent_gate_exit_code": 0,
+      "frozen_input_records": 3556,
+      "profile": "BlueprintFallback"
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-explorer-gameplay/Python01EntrySnapshot",
+      "status": "passed",
+      "summary_sha256": "AE55DA1E49E3933E14448C0B1FC9FD1E794271A48C9299EF6DFA8829B262C163",
+      "process_exit_code": 0,
+      "independent_gate_exit_code": 0,
+      "frozen_input_records": 3556,
+      "profile": "Python"
+    }
+  ],
+  "actual_native_attempts": 3,
+  "accepted_native_processes": 2,
+  "current_sdk217": true,
+  "direct_candidate_paths": [
+    "/ShooterExplorer/Input/Abilities/GA_Interact.GA_Interact",
+    "/ShooterExplorer/Interact/GA_Interaction_Collect.GA_Interaction_Collect",
+    "/ShooterExplorer/Interact/GA_Interaction_Sit.GA_Interaction_Sit",
+    "/ShooterExplorer/Input/Abilities/GA_ToggleMarkerInWorld.GA_ToggleMarkerInWorld",
+    "/ShooterMaps/GameplayCues/GC_Collect_Effect.GC_Collect_Effect"
+  ],
+  "original_map_actor_and_config_inputs_byte_equal": true,
+  "fixture_position_movement_and_aim": true,
+  "fixture_actors_spawned": false,
+  "inventory_or_health_written": false,
+  "abilities_granted_by_fixture": false,
+  "actual_interactors": 2,
+  "collect_activations_per_profile": 1,
+  "sit_activations_per_profile": 1,
+  "marker_activations_per_profile": 2,
+  "native_gameplay_images": [
+    {
+      "profile": "BlueprintFallback",
+      "kind": "collect",
+      "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261023-explorer-gameplay\\Original02EntrySnapshot\\collect.png",
+      "game_time": 3.577322494238615,
+      "sha256": "0f768149d0597859ea41ffc8adf33ec68cd54a7c651ef16c0bd1fb44054ce787"
+    },
+    {
+      "profile": "BlueprintFallback",
+      "kind": "sit",
+      "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261023-explorer-gameplay\\Original02EntrySnapshot\\sit.png",
+      "game_time": 10.330577000975609,
+      "sha256": "8b5b4226adba9b05ecb9c49df74f24f74cafaa5a652a3877ae04201161eeaede"
+    },
+    {
+      "profile": "BlueprintFallback",
+      "kind": "marker",
+      "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261023-explorer-gameplay\\Original02EntrySnapshot\\marker.png",
+      "game_time": 11.887332499027252,
+      "sha256": "912e59b8b9463150450b0cc99d0aed469d1321b7d712933b1a92a9896e60dc63"
+    },
+    {
+      "profile": "Python",
+      "kind": "collect",
+      "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261023-explorer-gameplay\\Python01EntrySnapshot\\collect.png",
+      "game_time": 3.5752259977161884,
+      "sha256": "4277e4907da84347578542ee99ffbbd7045eeb3334012551f7af07ce3150e387"
+    },
+    {
+      "profile": "Python",
+      "kind": "sit",
+      "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261023-explorer-gameplay\\Python01EntrySnapshot\\sit.png",
+      "game_time": 10.332120805978775,
+      "sha256": "6b8970c45181e1e9c962f867ae8ffd79c682f7172aa51db8fa8ceb1a2cc4d69e"
+    },
+    {
+      "profile": "Python",
+      "kind": "marker",
+      "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261023-explorer-gameplay\\Python01EntrySnapshot\\marker.png",
+      "game_time": 11.888355605304241,
+      "sha256": "19e968caaaaa036ad5be67183dc1599d7e06ba2445b3fbeebf870db4dc597af1"
+    }
+  ],
+  "native_frames_visually_reviewed": true,
+  "full_presentation_acceptance": false,
+  "visual_limit": "Original collect frame has cube/Cue occlusion and animation capture poses differ slightly;no full pixel,motion or presentation parity claim.",
+  "preserved_failed_attempts": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-explorer-gameplay/Original01",
+      "status": "failed",
+      "summary_sha256": "BBC0DE8A2F3544BE5F5B41EB876F82D0526B9FC54FD32BF844045C787471F9E0",
+      "reason": "Late CurrentEventData read failed after native end clears it;preserve exact validation/contract/driver and failed report. Accepted runs capture the unmodified native entry payload before forwarding the original handler once."
+    }
+  ],
+  "independent_review": {
+    "path": ".build/LyraValidation/BlueprintPython/20261023-explorer-gameplay/independent-review01.json",
+    "sha256": "82B8DC82E9E6E3798A15696EBED32B1795539F85F483E2551367899604EFA362",
+    "process_exit_code": 0
+  },
+  "input_hashes": [
+    {
+      "path": "Validation/Run-UEP58ExplorerGameplayValidation.ps1",
+      "sha256": "AE05FC59B10EE94BB04ECC19DAF8D8D50FE53BD66DAAF81264FB179C47E7119F"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "24130234819F33F5A9C7B654DC35AA250DC838AA5733E6913FCDEC2EFA354F93"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/explorer_gameplay_validation.py",
+      "sha256": "F70A8CBDF19C4631AB7DE4D6CD480EEBCFA85034C46F62E555845A7E958960E2"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/explorer_gameplay_contract.py",
+      "sha256": "5A44BFBFF0EF4F72383E333D472726BBD1A0F519AA44DCCBB6FC29752ABC6020"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tests/test_explorer_gameplay_contract.py",
+      "sha256": "334C7DE5BAD71237A260FB4EB5C70D8FA3C8B7027FA0D0A547A1C201E7AF602A"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-explorer-gameplay/independent-review01.json",
+      "sha256": "82B8DC82E9E6E3798A15696EBED32B1795539F85F483E2551367899604EFA362"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-explorer-gameplay/independent-review-process01.json",
+      "sha256": "4165FE7D42C43B1B68F65DCEB36A059D0FD238E384CBEF00077417F6494D5F96"
+    }
+  ],
+  "production_policies_and_base_experience_validation_unchanged": true,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "callbacks_replayed": false,
+  "gameplay_policies_changed": false,
+  "blueprint_assets_changed": false,
+  "physical_input_tested": false,
+  "network_acceptance": false,
+  "packaged_runtime": false,
+  "pixels_tested": false,
+  "isolated_staged_incremental_verification": ".build/CommitVerification/20261023-explorer-gameplay/Index02",
+  "preserved_failed_incremental_verification": {
+    "directory": ".build/CommitVerification/20261023-explorer-gameplay/Index01",
+    "status": "failed",
+    "reason": "Host test imported the engine-only validation module. Test now compiles only the unchanged entry-observer method in isolation;native inputs are unchanged."
+  }
+}

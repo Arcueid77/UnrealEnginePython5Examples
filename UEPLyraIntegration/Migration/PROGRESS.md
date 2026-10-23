@@ -31,6 +31,39 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed original placed-target Explorer gameplay batch230 (2026-10-23):**
+Run the unchanged original L_InteractionTestMap/B_TestInventoryExperience with
+the naturally spawned Explorer Hero,current SDK217 and two naturally active
+Interact instances. Original map,Rock/Chair,Experience,PawnData and ability-set
+inputs byte-match official source and stay frozen. Each isolated Profile uses
+controlled native player location/movement mode/aim,then real Enhanced Input
+IA_Interact twice and IA_ToggleMarkerInWorld. No substitute targets,fixture
+ability grants,manual inventory/Health changes or callback replay. Both original
+interactors receive each input once;native GAS accepts one collect/one sit and
+two marker activations. Original Rock template adds exactly one TestID_Rock;
+sit preserves inventory and target collision/lifetime. Real native montages
+complete,tasks close,the collected original Actor expires after3 seconds and
+the managed native collect Cue returns alive/hidden/unowned with zero splines
+or lifespan. Native marker data hits the placed Chair and draws at its actual
+endpoint. Restore controlled player pose,then reopen the original map:initial
+inventory and all2 Rock/4 Chair instances return;old player,targets and ability
+instances die. Profile defaults,class roots and temporary entry observers restore.
+Preserve failed Original01 and exact source snapshots:checking CurrentEventData
+after native end loses the input payload because engine EndAbility clears it.
+Read-only native entry observers now copy incoming identities before forwarding
+the existing handler exactly once. Original02EntrySnapshot/Python01EntrySnapshot
+both pass process0,semantic gate0,3556 frozen inputs and strict actual shutdown.
+Independent pair review matches setup,selected class scope,amounts and activation
+counts. Six native PNGs were viewed;the original collect cube/Cue obscures the
+camera and animation capture poses vary slightly. Keep pixels/full presentation
+false;do not turn these checkpoints into complete visual or motion parity.
+Five original0.14 classes have direct bounded evidence here. Production policies,
+base batch229 validation,all246 candidate rows/order/versions,246/182/63/11 and
+22 original requirement texts remain. No C++/Blueprint changes,compile,cook,
+package or full regression. Continue actual StateTree/follow map,applicable local/
+multiplayer and remaining presentation/version scope. Incremental staged checks
+follow;commit/push Examples first,then core driver/gitlink;ledger230.
+
 **Completed actual Explorer inventory Experience batch229 (2026-10-23):**
 Use the original L_InventoryTestMap,B_TestInventoryExperience and naturally
 spawned B_Hero_Explorer with unchanged original grants/inventory and current

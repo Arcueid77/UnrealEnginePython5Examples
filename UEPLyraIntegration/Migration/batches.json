@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 231,
+    "bounded_evidence_ledgers": 232,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -13165,7 +13165,16 @@
     "network_acceptance": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Continue original Explorer marker/interaction collect/sit and remaining candidates plus inherited parents and all prior bounded full version/network/pixel/package acceptance. Full migration remains open."
+    "next": "Continue original Explorer marker/interaction collect/sit and remaining candidates plus inherited parents and all prior bounded full version/network/pixel/package acceptance. Full migration remains open.",
+    "current_original_gameplay_followup": {
+      "evidence_ledger": "230-explorer-original-placed-target-gameplay-and-native-input.json",
+      "native_runs": [
+        "20261023-explorer-gameplay/Original02EntrySnapshot",
+        "20261023-explorer-gameplay/Python01EntrySnapshot"
+      ],
+      "status": "actual_original_interaction_map_controlled_player_native_input_gameplay_and_cleanup_verified",
+      "full_acceptance": false
+    }
   },
   "explorer_actions_pilot": {
     "version": "0.14.0",
@@ -13231,7 +13240,16 @@
     "network_acceptance": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Continue full original collect Cue business plus remaining Explorer marker/follow-parent/prompt and Arena candidates,all prior bounded inherited-parent/full version/network/pixel/package acceptance. Full migration remains open."
+    "next": "Continue full original collect Cue business plus remaining Explorer marker/follow-parent/prompt and Arena candidates,all prior bounded inherited-parent/full version/network/pixel/package acceptance. Full migration remains open.",
+    "current_original_gameplay_followup": {
+      "evidence_ledger": "230-explorer-original-placed-target-gameplay-and-native-input.json",
+      "native_runs": [
+        "20261023-explorer-gameplay/Original02EntrySnapshot",
+        "20261023-explorer-gameplay/Python01EntrySnapshot"
+      ],
+      "status": "actual_original_interaction_map_controlled_player_native_input_gameplay_and_cleanup_verified",
+      "full_acceptance": false
+    }
   },
   "collect_cue_pilot": {
     "version": "0.14.0",
@@ -13282,7 +13300,16 @@
     "network_acceptance": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Continue remaining Explorer marker/follow/prompt reviews and Arena candidates,all inherited parent and prior bounded full version/network/pixel/package acceptance. Full migration remains open."
+    "next": "Continue remaining Explorer marker/follow/prompt reviews and Arena candidates,all inherited parent and prior bounded full version/network/pixel/package acceptance. Full migration remains open.",
+    "current_original_gameplay_followup": {
+      "evidence_ledger": "230-explorer-original-placed-target-gameplay-and-native-input.json",
+      "native_runs": [
+        "20261023-explorer-gameplay/Original02EntrySnapshot",
+        "20261023-explorer-gameplay/Python01EntrySnapshot"
+      ],
+      "status": "actual_original_interaction_map_controlled_player_native_input_gameplay_and_cleanup_verified",
+      "full_acceptance": false
+    }
   },
   "explorer_marker_pilot": {
     "version": "0.14.0",
@@ -13345,7 +13372,16 @@
     "network_acceptance": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Continue remaining Explorer follow-parent/prompt reviews and Arena candidates,all prior bounded inherited-parent/full version/network/pixel/package acceptance. Full migration remains open."
+    "next": "Continue remaining Explorer follow-parent/prompt reviews and Arena candidates,all prior bounded inherited-parent/full version/network/pixel/package acceptance. Full migration remains open.",
+    "current_original_gameplay_followup": {
+      "evidence_ledger": "230-explorer-original-placed-target-gameplay-and-native-input.json",
+      "native_runs": [
+        "20261023-explorer-gameplay/Original02EntrySnapshot",
+        "20261023-explorer-gameplay/Python01EntrySnapshot"
+      ],
+      "status": "actual_original_interaction_map_controlled_player_native_input_gameplay_and_cleanup_verified",
+      "full_acceptance": false
+    }
   },
   "explorer_shell_retention_review": {
     "version": "0.14.0",
@@ -15646,6 +15682,50 @@
     "cook_package_executed": false,
     "full_regression_executed": false,
     "full_acceptance": false,
-    "next": "Continue actual Explorer collect/sit/marker and StateTree maps,presentation and applicable multiplayer/local-player comparisons plus original version requirements. Inventory-map native input/UI travel does not accept all20 Explorer candidates or whole0.14."
+    "next": "Continue actual Explorer collect/sit/marker and StateTree maps,presentation and applicable multiplayer/local-player comparisons plus original version requirements. Inventory-map native input/UI travel does not accept all20 Explorer candidates or whole0.14.",
+    "current_original_gameplay_followup": {
+      "evidence_ledger": "230-explorer-original-placed-target-gameplay-and-native-input.json",
+      "native_runs": [
+        "20261023-explorer-gameplay/Original02EntrySnapshot",
+        "20261023-explorer-gameplay/Python01EntrySnapshot"
+      ],
+      "status": "actual_original_interaction_map_controlled_player_native_input_gameplay_and_cleanup_verified",
+      "full_acceptance": false
+    }
+  },
+  "explorer_gameplay_pilot": {
+    "version": "0.14.0",
+    "status": "original_placed_actor_interaction_input_pickup_montage_marker_pool_and_travel_verified",
+    "evidence_ledger": "230-explorer-original-placed-target-gameplay-and-native-input.json",
+    "native_runs": [
+      "20261023-explorer-gameplay/Original02EntrySnapshot",
+      "20261023-explorer-gameplay/Python01EntrySnapshot"
+    ],
+    "current_sdk217": true,
+    "direct_candidate_paths": [
+      "/ShooterExplorer/Input/Abilities/GA_Interact.GA_Interact",
+      "/ShooterExplorer/Interact/GA_Interaction_Collect.GA_Interaction_Collect",
+      "/ShooterExplorer/Interact/GA_Interaction_Sit.GA_Interaction_Sit",
+      "/ShooterExplorer/Input/Abilities/GA_ToggleMarkerInWorld.GA_ToggleMarkerInWorld",
+      "/ShooterMaps/GameplayCues/GC_Collect_Effect.GC_Collect_Effect"
+    ],
+    "accepted_native_processes": 2,
+    "actual_native_attempts": 3,
+    "actual_input_asset_injections": [
+      "IA_Interact",
+      "IA_Interact",
+      "IA_ToggleMarkerInWorld"
+    ],
+    "original_actor_and_config_bytes_equal": true,
+    "original_entry_payload_and_selected_profile_without_replay_verified": true,
+    "original_pickup_template_and_inventory_delta_equal": true,
+    "native_task_montage_target_expiry_cue_pool_and_cleanup_travel_verified": true,
+    "native_frames_visually_reviewed": true,
+    "full_presentation_acceptance": false,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_acceptance": false,
+    "next": "Continue actual Explorer StateTree/follow-map behavior,applicable multiplayer/local-player comparisons and remaining presentation/version requirements. Controlled primary-player interaction is not natural navigation,complete pixel parity or whole0.14 acceptance."
   }
 }
