@@ -79,6 +79,14 @@ class EarlyWatch:
     def __init__(self, root, peer, run):
         self.root,self.peer,self.run=root,peer,run; self.scopes={}; self.closed=False
         self.started=time.monotonic();self.last={};self.files=[];self.watched=set()
+        self.native_stack_capture=None
+        if '-UEPReplicaNativeConstructionStacks' in sys.argv:
+            from .native_construction_stack import capture
+            self.native_stack_capture=capture
+    def native_stack(self,row):
+        if self.native_stack_capture is not None:
+            try:row['native_callstack']=self.native_stack_capture()
+            except Exception:row['native_callstack_error']=traceback.format_exc()
     def publish(self, kind, data):
         if self.closed: return
         if len(self.files) >= 2048: raise RuntimeError("bounded native early-readiness history exhausted")
@@ -90,6 +98,7 @@ class EarlyWatch:
         scope=self.scopes.pop(actor_path,None)
         if scope is not None: scope.close()
         row=dict(actor=actor_path,reason=int(reason),python_stack=traceback.format_stack(limit=16))
+        self.native_stack(row)
         if "-UEPRequireNetworkIdentity" in sys.argv:
             from .network_identity import read
             row["network_identity"]=read(actor)
@@ -98,6 +107,7 @@ class EarlyWatch:
         scope=self.scopes.pop(actor_path,None)
         if scope is not None: scope.close()
         row=dict(actor=actor_path,python_stack=traceback.format_stack(limit=16))
+        self.native_stack(row)
         if "-UEPRequireNetworkIdentity" in sys.argv:
             from .network_identity import read
             row["network_identity"]=read(actor)
@@ -112,6 +122,7 @@ class EarlyWatch:
         actor_path=path(pawn)
         if actor_path not in self.watched: self.watch(pawn,actor_path,construction=True)
         row=dict(actor=actor_path,actor_class=path(pawn.get_class()),role=int(pawn.call_function("GetLocalRole")),python_stack=traceback.format_stack(limit=16))
+        self.native_stack(row)
         if "-UEPRequireNetworkIdentity" in sys.argv:
             from .network_identity import read
             row["network_identity"]=read(pawn)

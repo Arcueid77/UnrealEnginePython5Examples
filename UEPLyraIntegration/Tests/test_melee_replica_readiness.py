@@ -2,12 +2,17 @@
 import importlib
 import json
 from pathlib import Path
+import sys
 import tempfile
 import types
 import unittest
 from unittest.mock import patch
 
-observation = importlib.import_module("uep_lyra_abilities.melee_replica_readiness")
+effects=types.ModuleType("uep_lyra_world.effect_pad_mixin")
+effects.valid=lambda value:value is not None and value.is_valid()
+effects.ability_system=lambda actor:None
+with patch.dict(sys.modules, {"unreal_engine": types.ModuleType("unreal_engine"),effects.__name__:effects}):
+    observation = importlib.import_module("uep_lyra_abilities.melee_replica_readiness")
 
 
 class Native:
@@ -116,7 +121,8 @@ class TestEarlyWatchLifetime(unittest.TestCase):
         # Other policy models install a minimal uep_runtime module during test
         # discovery. This lifetime regression must exercise the real cleanup.
         spec=importlib.util.spec_from_file_location("_melee_readiness_scope",Path(__file__).resolve().parents[3]/"Content/Scripts/uep_runtime/subscriptions.py")
-        scope_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(scope_module)
+        scope_module=importlib.util.module_from_spec(spec)
+        with patch.dict(sys.modules,{"unreal_engine":types.ModuleType("unreal_engine")}):spec.loader.exec_module(scope_module)
         scope_patch=patch.object(observation,"SubscriptionScope",scope_module.SubscriptionScope)
         scope_patch.start();self.addCleanup(scope_patch.stop)
         self.watch=observation.EarlyWatch(Path(temporary.name),"server","model")
@@ -154,6 +160,26 @@ class TestEarlyWatchLifetime(unittest.TestCase):
     def test_repeated_construction_does_not_duplicate_native_listeners(self):
         pawn=EndPlayActor();self.watch.constructed(pawn);self.watch.constructed(pawn);self.watch.close()
         self.assertEqual(pawn.unbound,2)
+    def test_native_stack_capture_is_disabled_without_explicit_flag(self):
+        self.assertIsNone(self.watch.native_stack_capture)
+        row={"actor":"pawn"};self.watch.native_stack(row)
+        self.assertEqual(row,{"actor":"pawn"})
+    def test_explicit_flag_installs_capture_without_calling_it_during_startup(self):
+        calls=[];capture=lambda:calls.append("capture") or {"frames":["observed"]}
+        module=types.ModuleType("uep_lyra_abilities.native_construction_stack");module.capture=capture
+        with patch.object(observation.sys,"argv",["model","-UEPReplicaNativeConstructionStacks"]),patch.dict(sys.modules,{module.__name__:module}):
+            value=observation.EarlyWatch(self.watch.root,"client","model")
+        self.addCleanup(value.close);self.assertEqual(calls,[])
+        row={};value.native_stack(row)
+        self.assertEqual(calls,["capture"]);self.assertEqual(row["native_callstack"],{"frames":["observed"]})
+    def test_capture_error_preserves_endplay_cleanup_and_error_evidence(self):
+        def unavailable():raise OSError("stack unavailable")
+        self.watch.native_stack_capture=unavailable
+        pawn=EndPlayActor();self.watch.constructed(pawn);pawn.end_play();self.watch.close()
+        rows=[json.loads((self.watch.root/name).read_text(encoding="utf-8")) for name in self.watch.files]
+        self.assertEqual([row["kind"] for row in rows],["native-construction","native-end-play"])
+        self.assertEqual(pawn.unbound,2);self.assertEqual(self.watch.scopes,{})
+        for row in rows:self.assertIn("stack unavailable",row["data"]["native_callstack_error"])
 
 
 if __name__ == "__main__": unittest.main()

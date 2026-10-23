@@ -31,6 +31,36 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed native construction-stack diagnostic batch235 (2026-10-23):**
+Add an explicit optional stack-capture flag to the existing current melee
+readiness driver. Capture bounded current-thread native addresses only at
+construction/EndPlay/destruction observations;normal startup does not load the
+capture API. After all Unreal processes exit,resolve symbols offline using
+existing local DLL/PDB files,exact image ranges and isolated per-PID contexts.
+Reject changed module fingerprints and inconsistent addresses. Record matched
+PDB GUID/age for Engine/CoreUObject/LyraGame on all three peers. No debugger,
+target DLL execution,symbol download,Health/ASC mutation or C++ changes.
+One native server/two-client group passes20 authority/40 viewer rows with all
+three exits0 and the original semantic gate0. All65 lifecycle stacks resolve
+Unreal symbols:39 construction calls show authority restart/client spawn paths;
+26 EndPlay calls show native destruction. Add three focused opt-in/error/cleanup
+models and make the affected readiness test independently importable on host.
+Preserve the first overly broad1299-test selection with three import errors;
+the next static dependency walk still crosses the unchanged startup dispatcher
+into unrelated opt-in diagnostics (1158 tests,one host fixture import error).
+Isolate the effect-pad host fixture and select the four affected test modules
+explicitly;review additive bookkeeping separately. The89-test narrowed run
+exposed10 lifetime-fixture imports lacking their own engine stub;isolate that
+import while retaining real SubscriptionScope cleanup. Keep all failed snapshots.
+No extra Unreal group is started. This run has no canonical
+empty-binding/takeover rows. No reinstancing/duplication was captured;this does
+not exclude those paths from the historical failure. The original intermittent
+Pawn/ASC defect remains OPEN,not fixed. Preserve host-only symbol diagnostics;
+they started no extra Unreal runs. Reuse current binaries:zero compilation,
+cook/package or full regression. Run affected staged checks,then commit/push
+Examples before core. All246 asset rows/order/versions and original acceptance
+criteria remain unchanged. Ledger235;continue the original migration scope.
+
 **Completed original inventory-disposition batch234 (2026-10-23):**
 Reconcile all246 original candidates/963 original entries and245 configuration/
 retained assets against actual current source and the hash-bound native census.

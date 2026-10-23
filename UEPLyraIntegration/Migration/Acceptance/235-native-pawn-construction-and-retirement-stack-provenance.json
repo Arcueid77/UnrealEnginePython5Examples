@@ -1,0 +1,227 @@
+{
+  "status": "evidence_snapshot",
+  "batch": 235,
+  "native_processes": 3,
+  "native_exit_codes": {
+    "server": 0,
+    "B0": 0,
+    "A": 0
+  },
+  "authority_trials": 20,
+  "viewer_rows": 40,
+  "native_lifecycle_stacks": 65,
+  "construction_stacks": 39,
+  "end_play_stacks": 26,
+  "per_peer_counts": [
+    {
+      "peer": "A",
+      "kind": "native-construction",
+      "provenance": [
+        "native-spawn"
+      ],
+      "count": 13
+    },
+    {
+      "peer": "A",
+      "kind": "native-end-play",
+      "provenance": [
+        "native-destruction"
+      ],
+      "count": 8
+    },
+    {
+      "peer": "B0",
+      "kind": "native-construction",
+      "provenance": [
+        "native-spawn"
+      ],
+      "count": 13
+    },
+    {
+      "peer": "B0",
+      "kind": "native-end-play",
+      "provenance": [
+        "native-destruction"
+      ],
+      "count": 8
+    },
+    {
+      "peer": "server",
+      "kind": "native-construction",
+      "provenance": [
+        "native-restart"
+      ],
+      "count": 13
+    },
+    {
+      "peer": "server",
+      "kind": "native-end-play",
+      "provenance": [
+        "native-destruction"
+      ],
+      "count": 10
+    }
+  ],
+  "matching_local_pdbs": [
+    {
+      "pid": 37032,
+      "module": "UnrealEditor-Engine.dll",
+      "pdb_guid": "72e10c521288cb43bdb91d9cc38ab3b1",
+      "pdb_age": 1
+    },
+    {
+      "pid": 37032,
+      "module": "UnrealEditor-CoreUObject.dll",
+      "pdb_guid": "309d12f62650b04bac5747637a427693",
+      "pdb_age": 1
+    },
+    {
+      "pid": 37032,
+      "module": "UnrealEditor-LyraGame.dll",
+      "pdb_guid": "4c887ffebaee2f478e5590a60ab094c6",
+      "pdb_age": 1
+    },
+    {
+      "pid": 48944,
+      "module": "UnrealEditor-Engine.dll",
+      "pdb_guid": "72e10c521288cb43bdb91d9cc38ab3b1",
+      "pdb_age": 1
+    },
+    {
+      "pid": 48944,
+      "module": "UnrealEditor-CoreUObject.dll",
+      "pdb_guid": "309d12f62650b04bac5747637a427693",
+      "pdb_age": 1
+    },
+    {
+      "pid": 48944,
+      "module": "UnrealEditor-LyraGame.dll",
+      "pdb_guid": "4c887ffebaee2f478e5590a60ab094c6",
+      "pdb_age": 1
+    },
+    {
+      "pid": 53680,
+      "module": "UnrealEditor-Engine.dll",
+      "pdb_guid": "72e10c521288cb43bdb91d9cc38ab3b1",
+      "pdb_age": 1
+    },
+    {
+      "pid": 53680,
+      "module": "UnrealEditor-CoreUObject.dll",
+      "pdb_guid": "309d12f62650b04bac5747637a427693",
+      "pdb_age": 1
+    },
+    {
+      "pid": 53680,
+      "module": "UnrealEditor-LyraGame.dll",
+      "pdb_guid": "4c887ffebaee2f478e5590a60ab094c6",
+      "pdb_age": 1
+    }
+  ],
+  "frozen_native_inputs": 3561,
+  "resolved_input_hashes": 65,
+  "current_failure_reproduced": false,
+  "original_readiness_issue": "open_not_fixed",
+  "original_readiness_race_fixed": false,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "full_acceptance": false,
+  "debugger_attached": false,
+  "target_dll_executed": false,
+  "symbols_downloaded": false,
+  "unreal_state_written": false,
+  "protected_files_unchanged": 6,
+  "schema_version": 1,
+  "recorded_utc": "2026-10-23T15:06:48.602235+00:00",
+  "scope": "Opt-in native current-thread lifecycle stack diagnosis using existing Editor binaries and exact local PDBs. One server/two clients complete the unchanged original/Python melee matrix. All65 actual native stacks resolve Unreal symbols in separate per-PID offline contexts;39 construction and26 EndPlay calls show normal spawn/restart/destruction paths in this healthy run. No current takeover/empty-binding defect is reproduced. Absence of reinstancing/duplication in this capture does not exclude those paths from historical failures. Original intermittent Pawn/ASC issue remains open;no gameplay repair or complete stability/version acceptance is claimed.",
+  "core_parent_commit": "f2b42bc235077194b542e03d5a9bb357252cf965",
+  "examples_parent_commit": "30a52ac6497410b71a420eb683a1f9060bf75181",
+  "original_scope": [
+    246,
+    182,
+    63,
+    11
+  ],
+  "candidate_rows_changed": 0,
+  "native_attempts": 1,
+  "native_failures": 0,
+  "prior_offline_symbol_diagnostics": "Retained host-only diagnostics found zero-length SymLoadModuleEx image ranges. Passing PE SizeOfImage resolves local symbols;these diagnostics started no additional Unreal processes.",
+  "input_hashes": [
+    {
+      "path": "Validation/Run-UEP58CurrentMeleeReadinessValidation.ps1",
+      "sha256": "4984C6A51C9B4A06328F5C40489EFB265EEBB6E1A0DD7565ABB3855BBE95B7FC"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_replica_readiness.py",
+      "sha256": "6A1256D281E2A68CE6E29D74530EEE57DB3C3ED41E2CF000E5A89C2D26D253F6"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/native_construction_stack.py",
+      "sha256": "CA05DCE8381935EE8C5349115B3D96C49567DF369BF27183B1CFA43CC8FC2784"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/resolve_native_construction_stacks.py",
+      "sha256": "2DA97AFBD82E90D57711406FD6C62E0E48361E0E4570735FB26B907F8308D2FB"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tests/test_native_construction_stack.py",
+      "sha256": "DF74FC31EA924634285E9538D7516F1D6859BEDFBF545F59198C7F9BF4049591"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-native-construction-stack/independent-review01.json",
+      "sha256": "A3ED7F90A32017BE515BB700E0DE3673A7D46A1BDB0373737143630CD74CCB0B"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-native-construction-stack/native-symbols03.json",
+      "sha256": "64C058D93F4501659EE12A1C8BC4B12654BCAB79F7F18F5CE76964DA57B5C642"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-native-construction-stack/resolve-process03.json",
+      "sha256": "431BA97272E69BE99785C19E14C7560799F59F1A5B9C4B9672EC6B3FAB3BA9EA"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-native-construction-stack/local-pdb-smoke01.json",
+      "sha256": "05777B9C87505A9A304B749C57716F5B1D88DFDA09007E341D9D2DC80C80A61D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-native-construction-stack/takeovers01.json",
+      "sha256": "182C6D7BD90F3E9EE773F64F883379E259E8991E8AFCD7DE1B18AA3F1D4031DE"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-native-construction-stack/before-batches.json",
+      "sha256": "08194ABF4CE23D572FC5F010CE59FB9DF563EF93DD4658C0DD5127BF54EA230D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-native-construction-stack/Native01/summary.json",
+      "sha256": "62FF4D431432699EFB73F5E7A94ECEECF85214CF210096834896FD794A5037E3"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tests/test_melee_replica_readiness.py",
+      "sha256": "67C82140B175E05AFCDA0B1427CBE86597F8990F73EE0BF73C4DC618727E0C51"
+    }
+  ],
+  "isolated_staged_incremental_verification": ".build/CommitVerification/20261023-native-construction-stack/Index04",
+  "initial_host_selection_attempt": {
+    "path": ".build/CommitVerification/20261023-native-construction-stack/Index01",
+    "status": "failed",
+    "tests_run": 1299,
+    "errors": 3,
+    "reason": "Unnecessarily broad manifest-literal dependencies and an explicit melee wildcard selected three engine-dependent model imports without their own host fixture. No native process/build rerun. Correct the affected readiness test import fixture and narrow selection to substantive paths;keep exact metadata review separate."
+  },
+  "host_scope": "Snapshot both complete indexes. Explicitly select the four affected capture/resolver,readiness,transparent lazy caller and melee trace contract test modules after source review. Normal startup/other diagnostics and the original20/40 native semantic matrix are unchanged. Exact additive manifest/docs differences are independently checked. No source/test is silently accepted as native evidence.",
+  "second_host_selection_attempt": {
+    "path": ".build/CommitVerification/20261023-native-construction-stack/Index02",
+    "status": "failed",
+    "tests_run": 1158,
+    "errors": 1,
+    "reason": "Static reverse imports also cross the unchanged guarded HUD startup dispatcher into unrelated diagnostic modes. The readiness host fixture additionally needed its effect-pad dependency isolated from native structs. Keep the failed snapshot;final explicit affected selection covers capture/resolver,readiness,transparent caller and melee semantic contract. No Unreal/build rerun."
+  },
+  "third_host_selection_attempt": {
+    "path": ".build/CommitVerification/20261023-native-construction-stack/Index03",
+    "status": "failed",
+    "tests_run": 89,
+    "errors": 10,
+    "reason": "The narrowed suite exposed the lifetime fixture dynamically loading real subscriptions without its own engine import stub. Scope the import stub to that fixture;real SubscriptionScope cleanup is still exercised. Preserve failure,then rerun the affected suite. No Unreal/build rerun."
+  }
+}

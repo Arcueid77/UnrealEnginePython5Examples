@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 236,
+    "bounded_evidence_ledgers": 237,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -5493,6 +5493,13 @@
         "current_failure_reproduced": false,
         "original_race_fixed": false,
         "spawning_cleanup_error_is_separate": true
+      },
+      "native_stack_followup": {
+        "evidence_ledger": "235-native-pawn-construction-and-retirement-stack-provenance.json",
+        "actual_native_lifecycle_stacks": 65,
+        "matching_local_pdbs": true,
+        "current_failure_reproduced": false,
+        "original_race_fixed": false
       }
     },
     "physical_input_tested": false,
@@ -15908,5 +15915,20 @@
     "runtime_acceptance": false,
     "full_acceptance": false,
     "next": "Review the remaining20 original gameplay,presentation,lifecycle,network/package requirements against actual evidence. Inventory disposition is now checked separately;the Pawn/ASC issue still requires its own cause/repair proof. Do not infer full migration from this source census."
+  },
+  "native_pawn_stack_diagnostic_pilot": {
+    "status": "opt_in_native_stack_capture_and_offline_matching_pdb_resolution_verified",
+    "evidence_ledger": "235-native-pawn-construction-and-retirement-stack-provenance.json",
+    "native_lifecycle_stacks": 65,
+    "native_processes": 3,
+    "native_attempts": 1,
+    "original_readiness_issue": "open_not_fixed",
+    "current_failure_reproduced": false,
+    "original_readiness_race_fixed": false,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_acceptance": false,
+    "next": "Use the opt-in capture in a future affected readiness reproduction. Correlate replacement creation/retirement with the same-peer canonical empty-binding transition before identifying a cause or repair. A healthy native stack run is not a fix."
   }
 }

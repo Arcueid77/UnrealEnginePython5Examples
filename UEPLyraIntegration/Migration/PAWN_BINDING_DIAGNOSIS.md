@@ -60,3 +60,24 @@ an outer transient sharing violation,a missing exit-token run_id,and the real
 Spawn Cue error. Exact reader tests exercise replacement gaps,exclusive file
 access,released JSON,bad JSON,unrelated I/O errors and owned exit identity.
 No C++,Engine/Blueprint edits,compile,cook/package or full-version acceptance.
+
+## Native stack capture baseline (batch235)
+
+`20261023-native-construction-stack/Native01` adds the explicit
+`-UEPReplicaNativeConstructionStacks` option to the existing lazy diagnostic.
+It captures at most96 native current-thread frames per construction/EndPlay/
+destruction event. Symbol resolution happens after Unreal exits,in separate
+per-PID offline contexts,using existing matching local PDBs. Module fingerprints,
+PE SizeOfImage,address arithmetic and PDB match/GUID/age are checked. No debugger,
+target DLL execution,symbol download or native gameplay mutation is involved.
+
+All three processes exit0 and the original20-authority/40-viewer melee gate
+passes. The65 stacks contain39 construction calls and26 EndPlay calls. Authority
+construction reaches `SpawnDefaultPawnFor`/`RestartPlayer`;client construction
+reaches `UWorld::SpawnActor` through ActorChannel processing. EndPlay reaches
+native destruction. No Blueprint reinstancing,construction rerun or duplication
+was observed in this healthy capture. This does not rule out those mechanisms
+in a failing run. No canonical empty-binding/takeover row was reproduced,so the
+original issue remains **open,not fixed**. The capture is available for a future
+affected reproduction;no repeated full build or broad regression is required.
+See [ledger235](Acceptance/235-native-pawn-construction-and-retirement-stack-provenance.json).
