@@ -31,6 +31,33 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed original inventory-disposition batch234 (2026-10-23):**
+Reconcile all246 original candidates/963 original entries and245 configuration/
+retained assets against actual current source and the hash-bound native census.
+135 registered-profile modules plus211 local dependency modules match the exact
+native Git input;the sole semantic delta is batch233's exact accepted Spawn Cue
+private helper transformation. Public profile ClassDefs remain identical;its
+current source bytes are frozen in the successful native followup. Every other
+module AST,all frozen non-manifest native inputs and binding/asset bytes remain
+valid. The old manifest is checked against its immutable native input snapshot,
+not incorrectly rehashed as if later bookkeeping never happened. No unknown
+source/asset change is accepted. Eleven retained native entry transports keep
+their individual byte-matched historical evidence. Record each candidate's
+current profile/class,inactive-family stubs,entry dispositions,retention reason
+and named issues;zero unclassified original entries. Official/stage exclusions
+are reconstructed and compared again. Pawn/ASC readiness stays OPEN;the original
+NetShooter component discrepancy remains explicit and game C++ stays separate.
+Add a reusable source verifier and14 focused rejection/dependency tests. The
+acceptance audit requires live source/asset verification,not a true flag,before
+marking the exact original inventory-disposition criterion. Only that checkbox
+changes;all22 original criterion texts and all246 candidate rows/order/versions
+remain. The two inventory/exclusion requirements are now proven in this review;
+the other20 are not accepted by this batch. Update ACCEPTANCE_REVIEW without
+turning historical checked boxes or registration into gameplay acceptance.
+No new Unreal process,gameplay replay,C++/asset edits,build,cook/package or full
+regression. Incremental staged checks follow,then commit/push Examples/core
+separately. Ledger234;continue the remaining original runtime/version scope.
+
 **Completed cached-target cleanup and current melee batch233 (2026-10-23):**
 Fix a real GCNL_Spawning OnRemoval error exposed by current melee regression:
 an invalid cached TargetActor could not pass checked reflection conversion,so

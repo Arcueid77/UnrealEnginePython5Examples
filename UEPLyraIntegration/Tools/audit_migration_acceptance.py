@@ -137,6 +137,7 @@ def main():
     parser.add_argument('--result', required=True)
     parser.add_argument('--markdown')
     parser.add_argument('--static-scope-review', help='Verify per-asset exclusion reasons;never accepts migrated gameplay')
+    parser.add_argument('--candidate-dispositions', help='Verify current per-candidate source/retention coverage;does not accept gameplay or the whole migration')
     args = parser.parse_args()
     manifest = Path(args.manifest)
     current = json.loads(manifest.read_text(encoding='utf-8-sig'))
@@ -157,6 +158,18 @@ def main():
             evidence_artifact=str(path.resolve()), runtime_acceptance=False)
         report['static_scope_reason_review'] = verified
         report['inputs'].append(dict(path=str(path.resolve()), sha256=digest(path)))
+    if args.candidate_dispositions:
+        from audit_candidate_dispositions import verify_documentation as verify_candidates, REQUIREMENT
+        path = Path(args.candidate_dispositions)
+        verified = verify_candidates(json.loads(path.read_text(encoding='utf-8-sig')), current, initial, manifest.resolve().parents[3])
+        target = [row for row in report['requirements'] if row['version']=='0.14.0' and row['text']==REQUIREMENT]
+        if len(target)!=1:
+            raise ValueError('Exact original candidate disposition requirement required')
+        target[0].update(completion_proven=True,evidence_state='current_candidate_source_binding_retention_and_named_issue_dispositions_verified',
+            evidence_artifact=str(path.resolve()),runtime_acceptance=False)
+        report['candidate_disposition_review']=verified
+        report['inputs'].append(dict(path=str(path.resolve()),sha256=digest(path)))
+        report['next_evidence_task']='Review the remaining original0.9-0.14 gameplay,presentation,lifecycle,network and package requirements against their actual native evidence. The named Pawn/ASC readiness issue remains open;inventory disposition does not close these requirements.'
     Path(args.result).write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     if args.markdown:
         Path(args.markdown).write_text(markdown(report), encoding='utf-8')

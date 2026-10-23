@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 235,
+    "bounded_evidence_ledgers": 236,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -15496,7 +15496,13 @@
     "assets_explicitly_compiled_or_saved": false,
     "load_time_blueprint_warnings": 4,
     "full_acceptance": false,
-    "next": "Review the33 named original entries through transitive Python dispatch,native transport and actual caller/reference semantics;then close the22 original whole-version requirements. Native registration and retained source dispositions are not gameplay or completion proof."
+    "next": "Review the33 named original entries through transitive Python dispatch,native transport and actual caller/reference semantics;then close the22 original whole-version requirements. Native registration and retained source dispositions are not gameplay or completion proof.",
+    "current_inventory_disposition_followup": {
+      "evidence_ledger": "234-current-candidate-source-retention-and-named-issue-dispositions.json",
+      "status": "current_source_and_retained_inventory_criterion_verified",
+      "runtime_acceptance": false,
+      "full_acceptance": false
+    }
   },
   "current_candidate_entrypoint_source_review": {
     "status": "963_original_entries_structurally_classified_semantic_and_version_acceptance_remain_open",
@@ -15527,7 +15533,13 @@
     "full_regression_executed": false,
     "full_acceptance": false,
     "original_roadmap_requirements": 22,
-    "next": "Review original version acceptance criteria and existing bounded native evidence against their supported semantic/runtime scope. Source reachability and retained native transports do not close gameplay,presentation,network/package or version acceptance."
+    "next": "Review original version acceptance criteria and existing bounded native evidence against their supported semantic/runtime scope. Source reachability and retained native transports do not close gameplay,presentation,network/package or version acceptance.",
+    "current_inventory_disposition_followup": {
+      "evidence_ledger": "234-current-candidate-source-retention-and-named-issue-dispositions.json",
+      "status": "current_source_and_retained_inventory_criterion_verified",
+      "runtime_acceptance": false,
+      "full_acceptance": false
+    }
   },
   "configuration_exclusion_scope_review": {
     "status": "all_original_configuration_and_retained_assets_have_source_verified_documented_reasons",
@@ -15873,5 +15885,28 @@
     "full_regression_executed": false,
     "full_acceptance": false,
     "next": "Continue the original migration acceptance requirements;the independent initial-join Pawn/ASC binding issue remains open. Capture why native replacement Pawns are created/retired without writing Health or repairing ASC. A clean current matrix does not prove general stability."
+  },
+  "candidate_disposition_closeout": {
+    "version": "0.14.0",
+    "status": "original_candidate_inventory_current_source_retention_and_named_issue_dispositions_verified",
+    "evidence_ledger": "234-current-candidate-source-retention-and-named-issue-dispositions.json",
+    "artifact": "candidate_dispositions.json",
+    "runtime_candidates": 246,
+    "original_audited_assets": 491,
+    "excluded_assets": 245,
+    "original_entrypoints": 963,
+    "unclassified_original_entries": 0,
+    "source_profile_modules": 135,
+    "source_dependency_modules": 211,
+    "original_criteria_preserved": 22,
+    "proven_inventory_and_exclusion_requirements": 2,
+    "original_readiness_issue": "open_not_fixed",
+    "new_native_processes": 0,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "runtime_acceptance": false,
+    "full_acceptance": false,
+    "next": "Review the remaining20 original gameplay,presentation,lifecycle,network/package requirements against actual evidence. Inventory disposition is now checked separately;the Pawn/ASC issue still requires its own cause/repair proof. Do not infer full migration from this source census."
   }
 }

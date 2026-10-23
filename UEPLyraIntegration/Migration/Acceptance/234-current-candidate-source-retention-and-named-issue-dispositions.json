@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "batch": 234,
+  "recorded_utc": "2026-10-23T14:28:45.986141+00:00",
+  "status": "evidence_snapshot",
+  "scope": "Original inventory disposition criterion only:all246 exact candidate paths/order/versions and963 original entries receive checked current source/binding/explicit-retention dispositions;245 excluded assets retain individually reconstructed official/stage byte-matched reasons. Reuse native222 read-only census with all frozen non-manifest inputs unchanged and the exact immutable native manifest snapshot.135 profile modules/211 local dependency modules match their native Git input except the exact accepted233 private Spawn Cue fix,whose public ClassDefs remain identical and current bytes are frozen in its accepted native followup. Current binding assets match stage;source/binding asset changes fail closed. All11 retained native entry transports keep individual byte-matched historical provenance. Known Pawn/ASC issue and original NetShooter component discrepancy remain explicit. This closes source inventory disposition,not gameplay,presentation,lifecycle,network/package or full-version acceptance.",
+  "core_parent_commit": "a92ecd4b329a36ebedde896346039045a90bc912",
+  "examples_parent_commit": "05d73066e896e625130a790671fa46309d853c82",
+  "original_scope": [
+    246,
+    182,
+    63,
+    11
+  ],
+  "candidate_rows_changed": 0,
+  "original_audited_assets": 491,
+  "runtime_candidates": 246,
+  "excluded_assets": 245,
+  "original_entrypoints": 963,
+  "unclassified_original_entries": 0,
+  "source_profile_modules": 135,
+  "source_dependency_modules": 211,
+  "disposition_artifact": "Demos/UEPLyraIntegration/Migration/candidate_dispositions.json",
+  "disposition_artifact_sha256": "24AC38B4592EECAF82525AA1C825D2C303E0413BE5AFD0B1AF4126858F6AF058",
+  "documentation_criterion_proven": "Every audited candidate is migrated, explicitly retained, unreachable with checked references, or a named blocker; no silent coverage gaps remain.",
+  "original_criteria_texts_preserved": 22,
+  "proven_inventory_and_exclusion_requirements": 2,
+  "remaining_criteria_not_proven_by_this_batch": 20,
+  "inherited_native_census": "222-all-original-candidate-native-routing-and-inheritance-review.json",
+  "inherited_entrypoint_review": "223-original-entrypoint-transitive-routes-and-retained-native-source-review.json",
+  "inherited_exclusion_reasons": "224-configuration-shells-and-retained-assets-source-reasons.json",
+  "current_source_delta": "Only the accepted233 Spawn Cue private cached-target guard transformation;public profile ClassDefs unchanged. All other declaration/dependency ASTs unchanged.",
+  "known_readiness_issue": "open_not_fixed",
+  "known_original_netshooter_discrepancy_explicit": true,
+  "runtime_acceptance": false,
+  "new_native_processes": 0,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "full_acceptance": false,
+  "full_migration_acceptance_proven": false,
+  "independent_review": {
+    "path": ".build/LyraValidation/BlueprintPython/20261023-candidate-dispositions/independent-review01.json",
+    "sha256": "24B644433C5A9E2E51EF4F98B76F0391EF12AF2338A00B306BDE5F5DBCB63657",
+    "process_exit_code": 0
+  },
+  "input_hashes": [
+    {
+      "path": "ROADMAP.md",
+      "sha256": "77BAE1FFEF6DE75D90742A94C038952C61752DCA539CF8140A307FB6456902A3"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Migration/candidate_dispositions.json",
+      "sha256": "24AC38B4592EECAF82525AA1C825D2C303E0413BE5AFD0B1AF4126858F6AF058"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Migration/ACCEPTANCE_REVIEW.md",
+      "sha256": "1E382EAF06B850621C55512ABDA6910B7240DB12F4C41DC0A6A38F278CF5CE30"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/audit_candidate_dispositions.py",
+      "sha256": "15CDF795CF8891CDD0FF844A63B396D634300926264F8583C0B59158BCB16C72"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/audit_migration_acceptance.py",
+      "sha256": "2D432224A2F79906B2CF2B4B9028CEAF8EB73A622958A394B3018F6C6112CB78"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tests/test_candidate_dispositions.py",
+      "sha256": "C2B0E1C1B5BF7E0044B68F79D274D287A300B51CE8364CC4E8D68CFDE4B01C97"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-candidate-dispositions/independent-review01.json",
+      "sha256": "24B644433C5A9E2E51EF4F98B76F0391EF12AF2338A00B306BDE5F5DBCB63657"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-candidate-dispositions/independent-review-process01.json",
+      "sha256": "B1D2EDF56A922AE0B0012ED7849AEFBAB0BFE6DDE14565DBA2A0DC4D72E8D115"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-candidate-dispositions/acceptance02.json",
+      "sha256": "94BE6A20B56D35F901F29F5846103034928787BCA95F17E7AD826985F1006978"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-candidate-dispositions/before-batches.json",
+      "sha256": "F5D34BF3B70CEF7A5FEED3FBC0CE2B1B353A20E20228E57CF88AB7BF3F73E5A6"
+    }
+  ],
+  "isolated_staged_incremental_verification": ".build/CommitVerification/20261023-candidate-dispositions/Index01"
+}

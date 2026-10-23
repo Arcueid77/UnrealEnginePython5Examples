@@ -35,8 +35,8 @@ This index does not execute or semantically revalidate the referenced runtime ev
 - `0.13.0` — Repeated screen open/close and travel restore subscriptions and state. (ROADMAP.md:1739; unproven).
 - `0.13.0` — Failures/cancellations are tested, not accepted only on the success path. (ROADMAP.md:1740; unproven).
 - `0.14.0` — Both Experiences pass original-BP/Python gameplay, presentation and applicable multi-client/local-player comparisons. (ROADMAP.md:1751; unproven).
-- `0.14.0` — Every audited candidate is migrated, explicitly retained, unreachable with checked references, or a named blocker; no silent coverage gaps remain. (ROADMAP.md:1753; unproven).
-- `0.14.0` — Configuration-only BP shells and animation/editor/test exclusions have documented reasons. Game-project C++ migration stays a separate phase. (ROADMAP.md:1755; unproven).
+- `0.14.0` — Every audited candidate is migrated, explicitly retained, unreachable with checked references, or a named blocker; no silent coverage gaps remain. (ROADMAP.md:1753; current_candidate_source_binding_retention_and_named_issue_dispositions_verified).
+- `0.14.0` — Configuration-only BP shells and animation/editor/test exclusions have documented reasons. Game-project C++ migration stays a separate phase. (ROADMAP.md:1755; per_asset_reasons_and_current_reference_stage_copies_verified).
 
 ## Explicit unverified capabilities
 
@@ -103,7 +103,7 @@ These are recorded flags requiring requirement and platform review, not automati
 - `scoreboard_style_pilot`: network_acceptance, pixels_tested, packaged_runtime.
 - `scoreboard_list_pilot`: network_acceptance, pixels_tested, packaged_runtime.
 - `scoreboard_rows_pilot`: network_acceptance, pixels_tested, packaged_runtime.
-- `weapon_hud_existing_acceptance_closure`: network_acceptance, packaged_runtime.
+- `weapon_hud_existing_acceptance_closure`: network_acceptance.
 - `elimination_widgets_pilot`: network_acceptance, pixels_tested, packaged_runtime.
 - `accolade_widgets_pilot`: network_acceptance, pixels_tested, packaged_runtime.
 - `notification_relays_network_pilot`: pixels_tested, packaged_runtime.
@@ -198,14 +198,24 @@ These are recorded flags requiring requirement and platform review, not automati
 - `arena_drop_bomb_pilot`: network_acceptance, physical_input_tested, pixels_tested, audio_playback_tested, packaged_runtime, spawn_failure_native_tested, commit_race_failure_native_tested.
 - `migration_acceptance_review`: natural_animation_dispatch_tested.
 - `footstep_animation_pilot`: normal_locomotion_input_state_machine_tested, network_acceptance, pixels_tested, audio_playback_tested, packaged_runtime.
-- `footstep_locomotion_pilot`: network_acceptance, pixels_tested, audio_playback_tested, packaged_runtime.
-- `footstep_visual_pilot`: audio_playback_tested, network_acceptance, packaged_runtime.
+- `footstep_locomotion_pilot`: network_acceptance, pixels_tested, audio_playback_tested.
+- `footstep_visual_pilot`: audio_playback_tested, network_acceptance.
 - `tdm_lethal_network_pilot`: network_acceptance, packaged_runtime, pixels_tested.
 - `weapon_lethal_network_pilot`: network_acceptance, packaged_runtime, pixels_tested.
+- `migration_package_inventory`: packaged_runtime_verified.
+- `arena_local_input_pilot`: physical_input_tested, network_acceptance, packaged_runtime, pixels_tested, audio_playback_tested.
+- `arena_natural_bomb_pilot`: network_acceptance, packaged_runtime, physical_input_tested, audio_playback_tested.
+- `arena_native_delay_pilot`: packaged_runtime, network_acceptance.
+- `arena_current_round_pilot`: packaged_runtime, network_acceptance.
+- `runtime_property_notification_pilot`: packaged_runtime, network_acceptance.
+- `weapon_two_owner_lethal_pilot`: physical_input_tested, pixels_tested, packaged_runtime, network_acceptance.
+- `current_reload_family_pilot`: packaged_runtime, pixels_tested, physical_input_tested.
+- `current_autoreload_family_pilot`: packaged_runtime, physical_input_tested.
+- `current_integrated_weapon_profile_pilot`: packaged_runtime, physical_input_tested.
 
 ## Next evidence work
 
-Review remaining supported surface/lighting visual coverage, audible output, physical keyboard and multiplayer/package/version checklists. Bounded original-floor render attribution and actual-player Enhanced Input/AnimBP locomotion are already recorded separately.
+Review the remaining original0.9-0.14 gameplay,presentation,lifecycle,network and package requirements against their actual native evidence. The named Pawn/ASC readiness issue remains open;inventory disposition does not close these requirements.
 
 Recorded capabilities still need their linked semantic/source evidence reviewed; this index
 does not rerun them. Continue unresolved readiness observations and the original version scope.
