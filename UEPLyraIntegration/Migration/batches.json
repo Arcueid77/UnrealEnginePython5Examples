@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 223,
+    "bounded_evidence_ledgers": 224,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -9705,8 +9705,10 @@
       "group": "角色、输入与英雄能力",
       "method_candidates": 2,
       "business_nodes": 1,
-      "scope_review": "Retain empty BeginPlay and native-parent construction forwarding; source audit has zero independent business nodes",
-      "status": "source_reviewed_parent_forwarder_runtime_inheritance_pending"
+      "scope_review": "Retain empty BeginPlay and native-parent construction forwarding; source audit has zero independent business nodes Batch222: Current native read-only census confirms the original class,empty BeginPlay and native-parent-only construction. Original/stage bytes match;retain the shell without a Python no-op.",
+      "status": "retained_empty_beginplay_and_native_parent_construction_current_class_verified",
+      "registration_evidence_ledger": "222-all-original-candidate-native-routing-and-inheritance-review.json",
+      "registration_evidence_run": "20261023-completion-coverage/Coverage03ScopeFix"
     },
     {
       "path": "/Game/Characters/Cosmetics/B_CharacterSelection.B_CharacterSelection",
@@ -9794,8 +9796,10 @@
       "group": "角色、输入与英雄能力",
       "method_candidates": 4,
       "business_nodes": 2,
-      "scope_review": "Retain empty Tick/overlap and parent BeginPlay/construction forwarding; zero independent business nodes",
-      "status": "source_reviewed_parent_forwarder_runtime_inheritance_pending"
+      "scope_review": "Retain empty Tick/overlap and parent BeginPlay/construction forwarding; zero independent business nodes Batch222: Current native read-only census confirms only original empty/parent-forwarding entries and inherited B_Hero_Default Python registration for all six parent methods. Parent implementation followed the old pending checkpoint in184-188;this refresh is registration/source disposition,not new inherited gameplay acceptance.",
+      "status": "retained_original_forwarders_current_inherited_python_parent_routes_verified_gameplay_scope_open",
+      "registration_evidence_ledger": "222-all-original-candidate-native-routing-and-inheritance-review.json",
+      "registration_evidence_run": "20261023-completion-coverage/Coverage03ScopeFix"
     },
     {
       "path": "/ShooterCore/Game/B_Hero_ShooterMannequin.B_Hero_ShooterMannequin",
@@ -11513,8 +11517,8 @@
       "group": "ShooterExplorer 玩法",
       "method_candidates": 18,
       "business_nodes": 137,
-      "scope_review": null,
-      "status": "bounded_explorer_construction_behavior_and_possession_tail_verified_inherited_parent_business_open",
+      "scope_review": "Batch222: Current native read-only census confirms every declared own helper is registered under the effective Python Profile,and all six B_Hero_Default parent methods are present in the actual ancestor binding. Existing original empty child overrides remain unchanged. This updates old parent-open bookkeeping;whole-Experience gameplay/presentation/network/package acceptance remains open.",
+      "status": "bounded_explorer_declared_own_and_parent_python_routes_current_verified_whole_experience_open",
       "evidence_run": "20261021-explorer-behavior/Behavior03Python",
       "evidence_ledger": "174-explorer-construction-behavior-and-captured-controller.json",
       "implemented_helpers": [
@@ -11551,7 +11555,9 @@
       "reviewed_native_no_business_overrides": {
         "UserConstructionScript": "original static B_Hero_Default constructor forwarder retained",
         "AnimMotionEffect": "original empty override retained; suppresses parent motion effect"
-      }
+      },
+      "registration_evidence_ledger": "222-all-original-candidate-native-routing-and-inheritance-review.json",
+      "registration_evidence_run": "20261023-completion-coverage/Coverage03ScopeFix"
     },
     {
       "path": "/ShooterExplorer/Blueprint/B_Pawn_Explorer.B_Pawn_Explorer",
@@ -11559,8 +11565,8 @@
       "group": "ShooterExplorer 玩法",
       "method_candidates": 18,
       "business_nodes": 153,
-      "scope_review": null,
-      "status": "bounded_explorer_construction_behavior_and_possession_tail_verified_inherited_parent_business_open",
+      "scope_review": "Batch222: Current native read-only census confirms every declared own helper is registered under the effective Python Profile,and all six B_Hero_Default parent methods are present in the actual ancestor binding. Existing original empty child overrides remain unchanged. This updates old parent-open bookkeeping;whole-Experience gameplay/presentation/network/package acceptance remains open.",
+      "status": "bounded_explorer_declared_own_and_parent_python_routes_current_verified_whole_experience_open",
       "evidence_run": "20261021-explorer-behavior/Behavior03Python",
       "evidence_ledger": "174-explorer-construction-behavior-and-captured-controller.json",
       "implemented_helpers": [
@@ -11596,7 +11602,9 @@
       "remaining_business": [
         "remaining inherited parent business"
       ],
-      "captured_controller_after_inventory_grant": "latest ReceivePossessed NewController stored before authority in transient native property"
+      "captured_controller_after_inventory_grant": "latest ReceivePossessed NewController stored before authority in transient native property",
+      "registration_evidence_ledger": "222-all-original-candidate-native-routing-and-inheritance-review.json",
+      "registration_evidence_run": "20261023-completion-coverage/Coverage03ScopeFix"
     },
     {
       "path": "/ShooterExplorer/Blueprint/B_SimpleFollowPawn.B_SimpleFollowPawn",
@@ -11604,13 +11612,15 @@
       "group": "ShooterExplorer 玩法",
       "method_candidates": 4,
       "business_nodes": 4,
-      "scope_review": "All8 original nodes are4 parent-only construction/BeginPlay/overlap/Tick forwarders with exact payload forwarding. Retain original class/geometry/config;zero independent BP business. B_SimpleHeroPawn/B_Hero_Default parent-family migration remains open.",
-      "status": "source_reviewed_original_parent_forwarders_retained_native_runtime_observed_parent_business_open",
+      "scope_review": "All8 original nodes are4 parent-only construction/BeginPlay/overlap/Tick forwarders with exact payload forwarding. Retain original class/geometry/config;zero independent BP business. B_SimpleHeroPawn/B_Hero_Default parent-family migration remains open. Batch222: Current native read-only census confirms only original empty/parent-forwarding entries and inherited B_Hero_Default Python registration for all six parent methods. Parent implementation followed the old pending checkpoint in184-188;this refresh is registration/source disposition,not new inherited gameplay acceptance.",
+      "status": "retained_original_forwarders_current_inherited_python_parent_routes_verified_gameplay_scope_open",
       "independent_business_nodes": 0,
       "python_replacement_required_for_own_graphs": false,
       "inherited_parent_business_migrated": false,
       "evidence_run": "20261021-explorer-shell-review/Runtime01",
-      "evidence_ledger": "183-explorer-original-forwarders-and-empty-prompt-review.json"
+      "evidence_ledger": "183-explorer-original-forwarders-and-empty-prompt-review.json",
+      "registration_evidence_ledger": "222-all-original-candidate-native-routing-and-inheritance-review.json",
+      "registration_evidence_run": "20261023-completion-coverage/Coverage03ScopeFix"
     },
     {
       "path": "/ShooterExplorer/Blueprint/B_SimpleFollowPawn_Big.B_SimpleFollowPawn_Big",
@@ -11618,13 +11628,15 @@
       "group": "ShooterExplorer 玩法",
       "method_candidates": 4,
       "business_nodes": 4,
-      "scope_review": "All8 original nodes are4 parent-only construction/BeginPlay/overlap/Tick forwarders with exact payload forwarding. Retain original class/geometry/config;zero independent BP business. B_SimpleHeroPawn/B_Hero_Default parent-family migration remains open.",
-      "status": "source_reviewed_original_parent_forwarders_retained_native_runtime_observed_parent_business_open",
+      "scope_review": "All8 original nodes are4 parent-only construction/BeginPlay/overlap/Tick forwarders with exact payload forwarding. Retain original class/geometry/config;zero independent BP business. B_SimpleHeroPawn/B_Hero_Default parent-family migration remains open. Batch222: Current native read-only census confirms only original empty/parent-forwarding entries and inherited B_Hero_Default Python registration for all six parent methods. Parent implementation followed the old pending checkpoint in184-188;this refresh is registration/source disposition,not new inherited gameplay acceptance.",
+      "status": "retained_original_forwarders_current_inherited_python_parent_routes_verified_gameplay_scope_open",
       "independent_business_nodes": 0,
       "python_replacement_required_for_own_graphs": false,
       "inherited_parent_business_migrated": false,
       "evidence_run": "20261021-explorer-shell-review/Runtime01",
-      "evidence_ledger": "183-explorer-original-forwarders-and-empty-prompt-review.json"
+      "evidence_ledger": "183-explorer-original-forwarders-and-empty-prompt-review.json",
+      "registration_evidence_ledger": "222-all-original-candidate-native-routing-and-inheritance-review.json",
+      "registration_evidence_run": "20261023-completion-coverage/Coverage03ScopeFix"
     },
     {
       "path": "/ShooterExplorer/Input/Abilities/GA_Interact.GA_Interact",
@@ -14986,5 +14998,249 @@
     "pixels_or_audio_tested": false,
     "full_acceptance": false,
     "next": "Continue original whole Experience and version requirements,using this integrated ownership/travel/rejoin evidence alongside natural lethal/respawn and family AutoReload evidence. Native pickup entry and direct QuickBar RPC are explicit fixtures;this does not prove physical pickup overlap or QuickSlot input execution,natural death,loss,FX/audio/pixels or current packages."
+  },
+  "current_candidate_routing_review": {
+    "status": "all246_current_native_registration_dispositions_and_original_entry_census_reviewed_gameplay_acceptance_open",
+    "evidence_ledger": "222-all-original-candidate-native-routing-and-inheritance-review.json",
+    "native_read_only_run": "20261023-completion-coverage/Coverage03ScopeFix",
+    "reviewed_candidates": 246,
+    "original_class_paths_preserved": 246,
+    "effective_profile_selection_verified": true,
+    "all_ancestor_bindings_inspected": true,
+    "disposition_counts": {
+      "native-python-router": 231,
+      "retained-native-cpp-touch-parent-forwarder": 2,
+      "retained-empty-native-parent-shell": 1,
+      "native-python-router-with-reviewed-family-stubs": 3,
+      "retained-forwarder-inherited-python-parent": 3,
+      "typed-static-python-forwarding": 2,
+      "retained-macro-definition-python-consumers": 3,
+      "retained-unobservable-prompt-shell": 1
+    },
+    "known_inactive_family_stub_sets": 3,
+    "typed_static_libraries": 2,
+    "inherited_candidate_status_rows_reconciled": 6,
+    "original_entrypoints": 963,
+    "entrypoint_disposition_counts": {
+      "python-routed": 347,
+      "no-connected-execution-business": 105,
+      "direct-parent-forwarder-review": 48,
+      "staged-script-dispatch-forwarder-review": 421,
+      "unrouted-business-review": 33,
+      "staged-typed-script-dispatch-forwarder-review": 9
+    },
+    "semantic_review_required": 33,
+    "semantic_review_entries": [
+      {
+        "asset": "/ShooterCore/Blueprint/B_WeaponSpawner.B_WeaponSpawner",
+        "entry": "Broadcast Failure Message",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/ShooterCore/Items/HealthPickup_Unused/GA_HealPickup.GA_HealPickup",
+        "entry": "End Heal",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/ShooterCore/ControlPoint/UI/W_CPScoreWidget.W_CPScoreWidget",
+        "entry": "Tick",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/ShooterCore/ControlPoint/UI/W_ScoreBoard_HeaderRow_CP.W_ScoreBoard_HeaderRow_CP",
+        "entry": "Construct",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/ShooterCore/Elimination/B_TeamDeathMatchScoring.B_TeamDeathMatchScoring",
+        "entry": "OnRep_TargetScore",
+        "graph": "OnRep_TargetScore",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/ShooterCore/Elimination/B_TeamDeathMatchScoring.B_TeamDeathMatchScoring",
+        "entry": "OnRep_CountDownTime",
+        "graph": "OnRep_CountDownTime",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/ShooterCore/Elimination/UI/W_ScoreBoard_HeaderRow_EliminationMode.W_ScoreBoard_HeaderRow_EliminationMode",
+        "entry": "Construct",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/ShooterCore/Elimination/UI/W_ScoreWidget_Elimination.W_ScoreWidget_Elimination",
+        "entry": "Tick",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/ShooterCore/Elimination/UI/W_ScoreWidget_Elimination.W_ScoreWidget_Elimination",
+        "entry": "PlayerCounted",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/ShooterCore/Elimination/UI/W_ScoreWidget_Elimination.W_ScoreWidget_Elimination",
+        "entry": "CountDown",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/ShooterCore/UserInterface/Notifications/EliminationFeed/W_EliminationFeed.W_EliminationFeed",
+        "entry": "BndEvt__W_ItemAcquiredList_ToastListWidget_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/ShooterCore/UserInterface/ScoreBoard/W_SB_PlayerList.W_SB_PlayerList",
+        "entry": "Update Leaderboard While Active",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/ShooterCore/Bot/B_AI_Controller_LyraShooter.B_AI_Controller_LyraShooter",
+        "entry": "ReceiveUnPossess",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/Game/UI/Foundation/Buttons/W_LyraButton.W_LyraButton",
+        "entry": "OnCurrentTextStyleChanged",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/Game/UI/Foundation/Buttons/W_LyraButton.W_LyraButton",
+        "entry": "UpdateButtonStyle",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/Game/UI/Foundation/LoadingScreen/W_LoadingScreen_Host.W_LoadingScreen_Host",
+        "entry": "Construct",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/Game/UI/Foundation/TabbedView/W_HorizontalTabList.W_HorizontalTabList",
+        "entry": "Construct",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/Game/UI/Foundation/TabbedView/W_HorizontalTabList.W_HorizontalTabList",
+        "entry": "CustomEvent_0",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/Game/UI/Foundation/TabbedView/W_HorizontalTabList.W_HorizontalTabList",
+        "entry": "CustomEvent_1",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/Game/UI/Foundation/TabbedView/W_HorizontalTabList.W_HorizontalTabList",
+        "entry": "HandleTabCreation",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/Game/UI/Foundation/TabbedView/W_HorizontalTabList.W_HorizontalTabList",
+        "entry": "HandleTabRemoval",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/Game/UI/Foundation/Widgets/BottomBar/W_BoundActionButton.W_BoundActionButton",
+        "entry": "Destruct",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/Game/UI/Foundation/Widgets/BottomBar/W_BoundActionButton.W_BoundActionButton",
+        "entry": "PreConstruct",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/Game/UI/Foundation/Widgets/BottomBar/W_BoundActionButton.W_BoundActionButton",
+        "entry": "Construct",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/Game/UI/Foundation/Widgets/BottomBar/W_BoundActionButton.W_BoundActionButton",
+        "entry": "Event Input Method Changed",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/Game/UI/Menu/Experiences/W_LyraSessionButton.W_LyraSessionButton",
+        "entry": "Set Texts",
+        "graph": "Set Texts",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/Game/UI/Menu/W_LyraExperienceTileButton.W_LyraExperienceTileButton",
+        "entry": "UpdateTileText",
+        "graph": "UpdateTileText",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/Game/UI/Settings/Editors/W_SettingsListEntry_Action.W_SettingsListEntry_Action",
+        "entry": "OnSettingAssigned",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/Game/UI/Settings/Editors/W_SettingsListEntry_SubCollection.W_SettingsListEntry_SubCollection",
+        "entry": "OnSettingAssigned",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/Game/UI/Settings/Editors/W_SettingsRotator.W_SettingsRotator",
+        "entry": "BP_OnOptionsPopulated",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/Game/UI/Settings/Extensions/Enum/W_EnumOptionExtension.W_EnumOptionExtension",
+        "entry": "OnSettingAssigned",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/Game/UI/Settings/Extensions/Enum/W_EnumOptionExtension.W_EnumOptionExtension",
+        "entry": "OnSettingValueChanged",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      },
+      {
+        "asset": "/ShooterExplorer/UserInterface/W_InteractionPrompt.W_InteractionPrompt",
+        "entry": "BindIndicator",
+        "graph": "EventGraph",
+        "state": "requires_transitive_transport_or_body_semantics_review"
+      }
+    ],
+    "original_business_entry_semantics_all_reviewed": false,
+    "native_gameplay_executed": false,
+    "new_gameplay_acceptance": false,
+    "preserved_failed_run": "20261023-completion-coverage/Coverage02EffectiveProfiles",
+    "isolated_staged_incremental_verification": ".build/CommitVerification/20261023-completion-coverage/Index01",
+    "full_regression_executed": false,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "assets_explicitly_compiled_or_saved": false,
+    "load_time_blueprint_warnings": 4,
+    "full_acceptance": false,
+    "next": "Review the33 named original entries through transitive Python dispatch,native transport and actual caller/reference semantics;then close the22 original whole-version requirements. Native registration and retained source dispositions are not gameplay or completion proof."
   }
 }

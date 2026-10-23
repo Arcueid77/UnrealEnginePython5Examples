@@ -16,7 +16,7 @@ def audit(original, coverage):
     rows = []
     for asset in coverage["assets"]:
         bp = blueprints[asset["asset"]]
-        profile = asset.get("profiles", {}).get(asset.get("default_profile"), {})
+        profile = asset.get("profiles", {}).get(asset.get("effective_cdo_profile", asset.get("default_profile")), {})
         python = set(profile.get("functions", []))
         current_entries = {(row["graph"], row["entry"]): row for row in asset.get("staged_wired_entries", [])}
         for graph in bp["graphs"]:
@@ -46,6 +46,10 @@ def audit(original, coverage):
                     disposition = "python-routed"
                 elif current is not None and current["calls_python_dispatch"]:
                     disposition = "staged-script-dispatch-forwarder-review"
+                elif any(bridge["entry"] == name and bridge["default_profile"] == "Python" and
+                         bridge["method"] in bridge["profiles"]["Python"]["functions"]
+                         for bridge in asset.get("typed_dispatch_bridges", [])):
+                    disposition = "staged-typed-script-dispatch-forwarder-review"
                 elif current is not None and not current["reachable_execution_nodes"] and business:
                     disposition = "staged-disconnected-original-body-review"
                 elif not business:

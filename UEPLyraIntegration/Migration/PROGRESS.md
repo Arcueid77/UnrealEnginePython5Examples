@@ -31,6 +31,46 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded source review batch222 (2026-10-23),all246 native routes:**
+Extend the existing read-only37-candidate audit with explicit AllCandidates;
+default37 behavior remains. Current source-matching SDK217 loads all exact246
+original candidate classes and scans every native ancestor binding,effective
+CDO Profile,actual staged graph entries and typed static call targets. This is
+registration/source inspection,no gameplay execution or Blueprint save/compile
+request. Coverage03ScopeFix exits0 and passes strict no-error completion/log
+closure plus unchanged input/asset hashes. It retains two load-time Blueprint
+compiler warnings for original EventReply returns;no warning is relabeled fixed.
+Coverage01 remains the initial inventory. Preserve failed Coverage02Effective-
+Profiles:a profile variable shadowed the candidate list before version summary.
+Rename it and test both37/246 scopes,duplicates/missing paths and typed targets.
+The246 registration dispositions are231 ordinary Python routes,three reviewed
+inactive-family-stub sets,three retained forwarders with Python parent routing,
+two native C++ touch-region parent forwarders,two typed static Python libraries,
+three retained macro definitions with existing Python-consumer evidence,one
+empty native-parent character shell and one unobservable prompt shell.
+ADS/Emote effective ADSPython/EmotePython selectors handle their own family gates;
+other-family internal stubs have only return nodes and no own callers. Typed
+GeneralAudio/WeaponAudio helpers account for all one/eight static entry targets.
+Retained shell/macro bytes still match official Lyra. Their historical semantic
+ledgers remain separate;registration is not a fresh replay of those cases.
+Reconcile six old candidate status rows:Character_Default,SimpleHeroPawn,two
+SimpleFollow shells and two Explorer characters. Actual inherited Hero parent
+registration now includes all six later-implemented methods;Explorer own declared
+helpers are also present. Preserve old runtime leads and add registration-only
+evidence fields. Do not manufacture Python no-ops or claim whole characters pass.
+Compare the original471-nonABP snapshot against current246 entry inventories:
+963 original entries yield347 Python routes,421 direct dispatch-forwarder review,
+nine typed-static dispatch review,105 no connected execution business,48 parent-
+forwarder review and33 named semantic-review entries. The33 may include transitive
+Python calls,native delegate/End transport or retained original helpers;they are
+not automatically missing business and are not silently passed. Their exact
+asset/function/graph list is recorded in the manifest and independent review.
+Fourteen focused tests pass,including effective selectors,missing static targets,
+referenced missing methods,nonempty stubs,changed shells and false completion.
+No game business,C++,asset changes,compile,cook/package or full-version closure.
+Keep exact246 paths/order/versions and246/182/63/11,and all22 original requirements.
+Commit/push Examples first,then core audit entry/gitlink;ledger222.
+
 **Completed bounded integrated weapon batch221 (2026-10-23),travel/rejoin:**
 The existing19-phase weapon network lane compared the original/Python/native
 HUD while game policies stayed Python. Add an explicit opt-in gameplay Profile

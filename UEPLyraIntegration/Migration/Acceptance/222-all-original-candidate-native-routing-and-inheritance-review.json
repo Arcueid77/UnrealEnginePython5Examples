@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "batch": "222-all-original-candidate-native-routing-and-inheritance-review",
+  "scope": "Read-only current SDK217 native registration/source review of all original246 candidates; original963-entry census retains33 named semantic review leads; reconcile six stale inheritance status rows without gameplay promotion. Preserve failed Coverage02 and two EventReply load warnings. No C++, asset save, compile, cook/package or full-version acceptance.",
+  "recorded_utc": "2026-10-23T10:09:53.1249931Z",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "release_publication": false,
+  "evidence_scope": "Only the explicitly listed runs; historical binaries remain historical",
+  "core_parent_commit": "641d2bcf5e59b369ce394dd90e2f1af8fec97dcc",
+  "examples_parent_commit": "5ce4d5e5b9d7eb7f7beb0761d071f58ad526189b",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-completion-coverage/Coverage03ScopeFix",
+      "summary_sha256": "251329041C5D4C3F220ED5F10DBF996DFB5AFEEE729F5D885431F4BAF84DEDC8",
+      "status": "passed",
+      "uep_dll_sha256": [
+        "305ACB63588ABEDA69EC0F2028110EDF06E5D6548D0E5806F1D8A2A847D8A410"
+      ],
+      "frozen_input_records": 1071,
+      "process_exit_code": 0,
+      "peer_exit_codes": {},
+      "variant_exit_codes": {},
+      "independent_gate_exit_code": null,
+      "report_hashes": [
+        {
+          "file": "audit.json",
+          "sha256": "70DDB72F859CD236E1597F36CB7E02FB4D75E41087543D92F7F38957BAFAED61"
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Validation/Run-UEP58AbilityProducerAudit.ps1",
+      "native_input_path": "Validation/Run-UEP58AbilityProducerAudit.ps1",
+      "sha256": "093FD59652D07C597216078D832FE9392B3372B59970DF36BD610BE3A2B7A4F7",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/audit_runtime_mixin_coverage.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/audit_runtime_mixin_coverage.py",
+      "sha256": "B16111D7DC7E64FACFF05BF235B812CE024E8F40745CDB8DD5B1554D364F2094",
+      "matches_at_least_one_listed_native_input": true
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/blueprint_model.py",
+      "native_input_path": "Demos/UEPLyraIntegration/Tools/blueprint_model.py",
+      "sha256": "50B0B7D44FBE1E3B824149B163BA129F2340A30EC1947D160B3EEBF18D5628E4",
+      "matches_at_least_one_listed_native_input": true
+    }
+  ],
+  "host_report": null,
+  "full_acceptance": false,
+  "new_gameplay_acceptance": false,
+  "native_gameplay_executed": false,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "reviewed_native_candidate_classes": 246,
+  "original_entrypoints": 963,
+  "semantic_review_required": 33,
+  "reconciled_inherited_status_rows": 6,
+  "supplemental_evidence": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-completion-coverage/independent-review01.json",
+      "sha256": "6BAB24F649E62D609043ECF8952E741137DD51809213C0D4594E8619C16A276E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-completion-coverage/independent-review-process01.json",
+      "sha256": "EE87C092914651019DE5C7F1BB8A8C70D1CDFD33417AE3C1E1459CACF07C69F0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-completion-coverage/before-batches.json",
+      "sha256": "0A8D523BF97A68D27E465CF3D7F16A3226CB1CA7A122BB02C2E4B4F454D06A25"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-completion-coverage/dispositions02.json",
+      "sha256": "F44F896AD1FE7F26AFABAC39B83ECF870AACDD51DDF1D7CE94146735114B808E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-completion-coverage/original-entrypoints01.json",
+      "sha256": "91CE0DC973168D0679FA8C7BD352DE7B94927C116ED14A97D8EF40C05866DF1C"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-completion-coverage/Coverage03ScopeFix/audit.json",
+      "sha256": "70DDB72F859CD236E1597F36CB7E02FB4D75E41087543D92F7F38957BAFAED61"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-completion-coverage/Coverage02EffectiveProfiles/summary.json",
+      "sha256": "D2605C223598E91AAA2EC5EB949BF361EE251FDEC1559B2BD1154324C254BD38"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/review_runtime_mixin_coverage.py",
+      "sha256": "A695E5561CEAD8F793544A795901CBBB13481076602FA20EB53DF94C6F1990CD"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/audit_runtime_entrypoint_coverage.py",
+      "sha256": "7FB5E0C05FAD3480D95F72B66BDD64F80AB5D6D49140A719C0D17A534C459B94"
+    }
+  ],
+  "native_manifest_input_snapshot": {
+    "path": ".build/LyraValidation/BlueprintPython/20261023-completion-coverage/before-batches.json",
+    "sha256": "0A8D523BF97A68D27E465CF3D7F16A3226CB1CA7A122BB02C2E4B4F454D06A25",
+    "scope": "Manifest bytes actually frozen during native audit;later changes only reconcile six metadata rows and add this review"
+  }
+}
