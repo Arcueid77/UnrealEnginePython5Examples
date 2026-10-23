@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "batch": 229,
+  "name": "Original Explorer inventory Experience native input,UI and travel",
+  "accepted_at_utc": "2026-10-23T12:03:03.692040+00:00",
+  "scope": "Actual original inventory map/Experience/primary Explorer hero,one fresh profile world per independent native process. Native Enhanced Input opens inventory and map through unchanged granted abilities;selected native deactivation pops their real GameMenu layer. Native movement,original inventory/grants,travel old-player destruction,class roots/selectors and actual interpreter exit verified. Three directly checked original0.14 candidate classes;other Explorer maps,collect/sit/marker/StateTree,applicable multiplayer/local players and presentation/version requirements remain open.",
+  "original_scope": [
+    246,
+    182,
+    63,
+    11
+  ],
+  "full_acceptance": false,
+  "candidate_rows_changed": 0,
+  "core_head_before": "48a3e6bc197b3e6e6cf7973be5de00ca17eeee28",
+  "demos_head_before": "3b8cd090262cf1146fd3f1599a0cd96d563db6d3",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-explorer-experience/Native06Original",
+      "status": "passed",
+      "summary_sha256": "6F4BD82868AF600E8AEBE82B29641686850B5B1B39E1D25130D6FE90A297C0FB",
+      "process_exit_code": 0,
+      "independent_gate_exit_code": 0,
+      "frozen_input_records": 3540,
+      "profile": "BlueprintFallback"
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-explorer-experience/Native07Python",
+      "status": "passed",
+      "summary_sha256": "8A0296BF05C5C58DC48C88B435DFB64DF466DC7DCB25C99D5CE3034C4E388B1C",
+      "process_exit_code": 0,
+      "independent_gate_exit_code": 0,
+      "frozen_input_records": 3540,
+      "profile": "Python"
+    }
+  ],
+  "actual_native_attempts": 7,
+  "accepted_native_processes": 2,
+  "current_sdk217": true,
+  "direct_candidate_paths": [
+    "/ShooterExplorer/Blueprint/B_Hero_Explorer.B_Hero_Explorer",
+    "/ShooterExplorer/UserInterface/W_InventoryScreen.W_InventoryScreen",
+    "/ShooterExplorer/UserInterface/W_MapScreen.W_MapScreen"
+  ],
+  "initial_registered_class_defaults_selected": 105,
+  "whole_registered_class_runtime_coverage_claimed": false,
+  "preserved_failed_attempts": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-explorer-experience/Scout01",
+      "status": "failed",
+      "summary_sha256": "9E0D48E7687DB9DB4D6D71CA2E23F3F2AC0E7F05F7A6EFB801738BC3CB1458B0"
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-explorer-experience/Scout02RetainedTicker",
+      "status": "failed",
+      "summary_sha256": "4A13BCC0476FBA590DC30EAB73DC7016326E86C36E9855CB1E57C2739F7D8E50"
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-explorer-experience/Scout03ExplicitStartup",
+      "status": "failed",
+      "summary_sha256": "0FA6985A9263D0983294A036263FD13EE9A352C1AF7A2FAAA86CAF352B7C2D26"
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-explorer-experience/Native04ActualInput",
+      "status": "failed",
+      "summary_sha256": "04890840B87EE083A3DAED681FF1C5542A0ACF31F788C580999FD0028E6E5B3A"
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-explorer-experience/Native05GameMenuLayer",
+      "status": "failed",
+      "summary_sha256": "108E4B8A4109B20A47221C6222AEAD1EBC303A6E5A95664B269FC20994CD30F1"
+    }
+  ],
+  "failed_same_process_variant_kept": "Native05GameMenuLayer: fresh Python hero selected,previous BlueprintFallback menu widgets reused by native GameInstance pool. Preserve source snapshots;separate processes make normal fresh-start profile comparison valid. No pooling production repair claimed.",
+  "independent_review": {
+    "path": ".build/LyraValidation/BlueprintPython/20261023-explorer-experience/independent-review01.json",
+    "sha256": "AE94245C399852950BCAB84942022A55607DFB98BC08C771324FFD4FE7FA1FC2",
+    "process_exit_code": 0
+  },
+  "input_hashes": [
+    {
+      "path": "Validation/Run-UEP58ExplorerExperienceValidation.ps1",
+      "sha256": "E8B795C33EAB267795B7F53DEAF450B35770DBC9BAF840200CE50CE8153AC104"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "6A5A42C6043687E77DF43E7DCD91ABD43BCEA96FFA397050A6CA7431FD94EAC1"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_experience_validation.py",
+      "sha256": "70F629A08D96C642788F84FE7A85B97FF22C893BFDED76F74DCA2633186D6D48"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_characters/explorer_experience_contract.py",
+      "sha256": "A831E6DE37702045E49B786D0D82F3E83C0375BC7AE26438AB1C722BA7B847C4"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tests/test_explorer_experience_contract.py",
+      "sha256": "8012191DF21E3E25C9B71AA9B47726DB698CD3DEE54B635203274B8B0E355820"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-explorer-experience/independent-review01.json",
+      "sha256": "AE94245C399852950BCAB84942022A55607DFB98BC08C771324FFD4FE7FA1FC2"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-explorer-experience/independent-review-process01.json",
+      "sha256": "BE8BCFD57AF019733F66B8881643ACD5E457062D3476D547AAB122CC55A6CF26"
+    }
+  ],
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "callbacks_replayed": false,
+  "gameplay_policies_changed": false,
+  "blueprint_assets_changed": false,
+  "physical_input_tested": false,
+  "network_acceptance": false,
+  "packaged_runtime": false,
+  "pixels_tested": false,
+  "quantitative_movement_parity_claimed": false,
+  "isolated_staged_incremental_verification": ".build/CommitVerification/20261023-explorer-experience/Index01"
+}

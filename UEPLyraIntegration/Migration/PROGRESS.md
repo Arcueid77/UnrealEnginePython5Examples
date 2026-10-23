@@ -31,6 +31,37 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed actual Explorer inventory Experience batch229 (2026-10-23):**
+Use the original L_InventoryTestMap,B_TestInventoryExperience and naturally
+spawned B_Hero_Explorer with unchanged original grants/inventory and current
+SDK217. Each profile runs in its own native process:after warm startup,set the
+105 already registered class defaults and reopen the original map. This count
+records selection scope,not105 gameplay acceptances. Actual Hero BeginPlay runs
+once in the selected profile. Real Enhanced Input opens Inventory and Map via
+the unchanged granted ability;their actual UI.Layer.GameMenu stack activates
+and native DeactivateWidget removes each screen once. Python deactivation has
+one Python callback and zero BlueprintFallback calls. Actual IA_Move input moves
+the real player;inventory and native grant multisets match between profiles.
+Old warmup player/Pawn are destroyed after travel;class defaults/roots restore,
+and both actual interpreter finalizers pass. No fixture Actors,ability grants,
+Health/inventory writes,teleportation or callback replay.
+Preserve five failed preparations:console scout timeout,owned stopped second
+console scout,explicit read-only scout's unavailable reflected component call,
+wrong Menu-layer observation,and same-process native cached-menu Profile reuse.
+The last has a real Python Hero but old BlueprintFallback screens;it remains
+failed. Correct only test orchestration:observe GameMenu and isolate native
+processes. No production pooling fix claimed. Native06Original andNative07Python
+both have process0,semantic gate0,3540 frozen inputs and strict ordered closed
+logs. Independent pair review verifies same selected class scope,original
+inventory/grants,actual menu counts and correct callbacks. Three original0.14
+classes are directly covered here;native movement is functional,not quantitative
+trajectory/pixel/physical-input acceptance. No C++/Blueprint changes,compile,
+cook/package or full regression. Original246 paths/order/versions,246/182/63/11,
+22 requirement texts and the unresolved melee-readiness observation remain.
+Continue Explorer collect/sit/marker,StateTree maps,presentation and applicable
+local/multiplayer and remaining version scope. Incremental staged checks follow;
+commit/push Examples first,then core driver/gitlink;ledger229.
+
 **Completed combined current-UI regression batch228 (2026-10-23):**
 Ten existing native fixtures now share one current SDK217 Standalone World:
 foundation buttons,bound action,foundation widgets,settings editors,settings

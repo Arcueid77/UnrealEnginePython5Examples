@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 230,
+    "bounded_evidence_ledgers": 231,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -12798,7 +12798,16 @@
     "packaged_runtime": false,
     "whole_characters_migrated": false,
     "full_acceptance": false,
-    "next": "Continue original Explorer EnhancedInput/behavior selection/construction/empty motion override review and inherited parent business,all remaining original candidates and version boundaries. No whole-character/full migration completion claim."
+    "next": "Continue original Explorer EnhancedInput/behavior selection/construction/empty motion override review and inherited parent business,all remaining original candidates and version boundaries. No whole-character/full migration completion claim.",
+    "current_inventory_experience_followup": {
+      "evidence_ledger": "229-explorer-inventory-experience-native-input-ui-and-travel.json",
+      "native_runs": [
+        "20261023-explorer-experience/Native06Original",
+        "20261023-explorer-experience/Native07Python"
+      ],
+      "status": "actual_original_inventory_experience_primary_hero_and_two_screens_verified",
+      "full_acceptance": false
+    }
   },
   "explorer_input_pilot": {
     "version": "0.14.0",
@@ -12961,7 +12970,16 @@
     "network_acceptance": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Continue original Explorer interaction/collection/widget candidates,all prior bounded parent and full version/network/pixel/package boundaries."
+    "next": "Continue original Explorer interaction/collection/widget candidates,all prior bounded parent and full version/network/pixel/package boundaries.",
+    "current_inventory_experience_followup": {
+      "evidence_ledger": "229-explorer-inventory-experience-native-input-ui-and-travel.json",
+      "native_runs": [
+        "20261023-explorer-experience/Native06Original",
+        "20261023-explorer-experience/Native07Python"
+      ],
+      "status": "actual_original_inventory_experience_primary_hero_and_two_screens_verified",
+      "full_acceptance": false
+    }
   },
   "explorer_grid_pilot": {
     "version": "0.14.0",
@@ -15602,5 +15620,32 @@
     "full_regression_executed": false,
     "full_acceptance": false,
     "next": "Continue remaining original frontend/session/replay/travel/Experience and version requirements. These ten groups refresh33 direct UI candidates;they do not claim all57 UI candidates,physical/pixel/network/package or whole0.13 acceptance."
+  },
+  "explorer_experience_pilot": {
+    "version": "0.14.0",
+    "status": "original_inventory_experience_native_input_menu_movement_travel_and_isolated_profile_comparison_verified",
+    "evidence_ledger": "229-explorer-inventory-experience-native-input-ui-and-travel.json",
+    "native_runs": [
+      "20261023-explorer-experience/Native06Original",
+      "20261023-explorer-experience/Native07Python"
+    ],
+    "current_sdk217": true,
+    "direct_candidate_paths": [
+      "/ShooterExplorer/Blueprint/B_Hero_Explorer.B_Hero_Explorer",
+      "/ShooterExplorer/UserInterface/W_InventoryScreen.W_InventoryScreen",
+      "/ShooterExplorer/UserInterface/W_MapScreen.W_MapScreen"
+    ],
+    "accepted_native_processes": 2,
+    "actual_native_attempts": 7,
+    "native_input_opened_screens": true,
+    "python_screen_deactivation_without_fallthrough": true,
+    "natural_hero_begin_once": true,
+    "original_native_inventory_and_ability_grants_equal": true,
+    "profile_processes_isolated": true,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_acceptance": false,
+    "next": "Continue actual Explorer collect/sit/marker and StateTree maps,presentation and applicable multiplayer/local-player comparisons plus original version requirements. Inventory-map native input/UI travel does not accept all20 Explorer candidates or whole0.14."
   }
 }
