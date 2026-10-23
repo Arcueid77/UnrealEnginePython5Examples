@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "batch": "225-host-session-native-invalid-request-error-ui-and-unbind",
+  "scope": "Current SDK217 original/Python native host request failure UI. Real tile click/spinner/preparation;owned selection invalidated at prepared entry,original request creation returns null,native HostSession produces typed failure. Compare localized dialog histories,actual acknowledgement and a second public native failure after each widget unbound. One actual native process;no online-provider-error,physical/pixel/network/package/version claim.",
+  "status": "evidence_snapshot",
+  "recorded_utc": "2026-10-23T10:48:53.004195+00:00",
+  "core_parent_commit": "4d43ee13b3a163087dd874586ae4ef62bb99de81",
+  "examples_parent_commit": "74d7c25c6b6f601147457d5546359240cabaf544",
+  "full_version_acceptance": false,
+  "full_acceptance": false,
+  "release_publication": false,
+  "native_processes": 1,
+  "native_process_exit_code": 0,
+  "profiles": [
+    "BlueprintFallback",
+    "Python"
+  ],
+  "native_failure_notifications": 4,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "native_run": {
+    "directory": ".build/LyraValidation/BlueprintPython/20261023-host-session-failure/Native01",
+    "summary_sha256": "E298EA4D2A08556996BEA182240BA6AF4A87D35952C8486FD29D4A05395AC192",
+    "outer_status": "failed",
+    "outer_failure": "Read-only expected log matcher used empty error id;runtime/report semantic gate passed",
+    "process_exit_code": 0,
+    "semantic_gate_exit_code": 0,
+    "report_sha256": "B6A9FBD334B89AE47D1F4285F170EE19B085ECAF44781358495B3ADCD3849B28",
+    "frozen_input_records": 3440
+  },
+  "corrected_read_only_review": {
+    "directory": ".build/LyraValidation/BlueprintPython/20261023-host-session-failure/LogReview02",
+    "summary_sha256": "7711E2071E59C25A74F074245EC1DFA51AFBE52B7181C3217D314002FCB869F8",
+    "status": "passed",
+    "semantic_gate_exit_code": 0,
+    "new_native_processes": 0,
+    "repair": "Match exactly four native InternalFailure lines;reject every other native error. Preserve original failed outer summary and exact frozen driver bytes."
+  },
+  "independent_review": {
+    "path": ".build/LyraValidation/BlueprintPython/20261023-host-session-failure/independent-review01.json",
+    "sha256": "941D221F18FFD5606441E712D19FE65581923F8CD9ACC8B94D1806CB362B21F4",
+    "process_exit_code": 0
+  },
+  "input_hashes": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-host-session-failure/review.py",
+      "sha256": "8F526B5C4A98D0C389C0877822FDBC7D52F949E1DA24E87ACF82AF1CA900A0CD"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-host-session-failure/before-batches.json",
+      "sha256": "BDE58B897BE5972ECD9C6FC794E5317D6CAFF2C64C913CC1189C1E372E382961"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-host-session-failure/Native01/summary.json",
+      "sha256": "E298EA4D2A08556996BEA182240BA6AF4A87D35952C8486FD29D4A05395AC192"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-host-session-failure/Native01/failure.json",
+      "sha256": "B6A9FBD334B89AE47D1F4285F170EE19B085ECAF44781358495B3ADCD3849B28"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-host-session-failure/Native01/failure.log",
+      "sha256": "33C98D027942FBF3CB9CBEEBBA7A507968CD3472A5CFFE44D19AB26CE4A124EE"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-host-session-failure/Native01/driver-frozen-input.ps1",
+      "sha256": "3E5C9B3B196D3EB645AACD2EF97BC7E4823B84A60A7456A396114C9B930381EB"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-host-session-failure/LogReview02/summary.json",
+      "sha256": "7711E2071E59C25A74F074245EC1DFA51AFBE52B7181C3217D314002FCB869F8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-host-session-failure/review-native-log.ps1",
+      "sha256": "7FA369C03F625421C2151C096BACEDFC7C8E287362271CBC98E2ABE4519C8088"
+    },
+    {
+      "path": "Validation/Run-UEP58SessionFailureValidation.ps1",
+      "sha256": "C68CD15A3B6D109BFE945B103648EFB68A642BEE2752CE4BD8EC23B1831D324E"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "EB0A28E7F052505D9CB34818D16E4F9005710818A35133AE405D4873989D5287"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/host_session_failure_validation.py",
+      "sha256": "6E9A6B1D37A329CEB7E14DCDFCCD42336E226851A6D2C2ABC0950919F1F6F514"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/host_session_failure_contract.py",
+      "sha256": "AC7179DD43FFD333B7F3E761D790626A6B507C4C6875144CBB12424746C8F29A"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tests/test_host_session_failure_contract.py",
+      "sha256": "EC5C6D57CF9AB6F823CA9596C442F198A85BD4B4D4A6E23421514B23B1BAD834"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-host-session-failure/Native01/BlueprintFallback-error-title.t3d",
+      "sha256": "8C6C4C17F154246F41BDD15A616D9E9A6096C362A58A773A48CEE5437BE0B69A"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-host-session-failure/Native01/BlueprintFallback-error-body.t3d",
+      "sha256": "651351D30813B7962E71308F27F9874DF8F7EBEF004AA1F663AA651D14312784"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-host-session-failure/Native01/Python-error-title.t3d",
+      "sha256": "8C6C4C17F154246F41BDD15A616D9E9A6096C362A58A773A48CEE5437BE0B69A"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-host-session-failure/Native01/Python-error-body.t3d",
+      "sha256": "651351D30813B7962E71308F27F9874DF8F7EBEF004AA1F663AA651D14312784"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-host-session-failure/independent-review01.json",
+      "sha256": "941D221F18FFD5606441E712D19FE65581923F8CD9ACC8B94D1806CB362B21F4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-host-session-failure/independent-review-process01.json",
+      "sha256": "AE786D85F4DAE583A681F04EEFBA9A51F3910E95E37B9DDB3D385CBEB43CBEF5"
+    }
+  ],
+  "callbacks_replayed": false,
+  "gameplay_policy_changed": false,
+  "blueprint_assets_changed": false,
+  "online_provider_failure_tested": false,
+  "network_acceptance": false,
+  "packaged_runtime": false,
+  "pixels_tested": false,
+  "isolated_staged_incremental_verification": ".build/CommitVerification/20261023-host-session-failure/Index02",
+  "preserved_failed_staged_setup": "Index01:explicit test_experience_preparation*.py matched no files;use existing test_ui_experience_preparation*.py,without changing code or native evidence"
+}

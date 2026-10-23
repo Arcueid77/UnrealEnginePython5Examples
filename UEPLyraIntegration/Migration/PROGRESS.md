@@ -31,6 +31,38 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded host failure batch225 (2026-10-23),current SDK217:**
+Add an explicit opt-in host-failure validation lane;normal play/commandlets never
+select it. One actual offscreen Editor Standalone process runs original and
+Python host screens through real tile clicks,spinner pushes and native async
+preparation. Only at the real prepared gate,clear the owned selected experience;
+each original handler executes once and its public CreateHostingRequest returns
+null. Native CommonSession.HostSession rejects it and broadcasts the real
+FOnlineResultInformation;no error/delegate/callback is replayed by the fixture.
+Both Profiles produce identical localized title/error FText histories,including
+NetworkErrors/InvalidRequest;native failure pops the spinner and one actual
+acknowledgement button closes the dialog. Each rooted widget then receives a
+second public native HostSession(null) control after its original delegate was
+unbound:two native notifications per Profile,but one prepared/completed UI call
+and no second dialog or late callback/travel. Selected Profile counters are
+exclusive;owned methods/selectors/roots/input/loading and gameplay Health restore.
+All3440 native input records are preserved. The actual process and runtime report
+gate exit0. Preserve Native01's failed outer log assertion:the checker expected
+an empty error id;actual native SetCreateSessionError yields InternalFailure.
+Save the exact frozen driver,change only its read-only matcher,and recheck the
+same closed logs/report in LogReview02. Exactly four specific native errors are
+required and every other error remains fatal;no second game process or wider
+gameplay tolerance. Independent review verifies old/new driver differ only in
+that matcher and all other frozen native inputs still match. Six focused negative
+contract/startup checks pass. Preserve Index01:an explicit preparation-test glob
+matched no files before any tests ran. Index02 uses the existing UI preparation
+test filenames for the same staged implementation;no native rerun.
+No production policy,C++ or Blueprint asset edits,compile,cook/package or full
+version acceptance. This is invalid-request error UI,not a provider/authentication
+failure,physical input,pixel comparison or whole-session/network acceptance.
+Keep original246 paths/order/versions,246/182/63/11 and all22 requirement texts.
+Commit/push Examples first,then the core validation driver/gitlink;ledger225.
+
 **Completed bounded exclusion documentation batch224 (2026-10-23):**
 Record a reason for each original182 configuration shell and63 retained asset
 in static_scope_dispositions.json. Reconstruct all491 original assets from the

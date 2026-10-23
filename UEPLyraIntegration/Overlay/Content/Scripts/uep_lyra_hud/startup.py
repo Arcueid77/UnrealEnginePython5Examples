@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(a.startswith('-UEPHostSessionFailureResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):
+        return 'uep_lyra_hud.host_session_failure_validation'
     if any(a.startswith('-UEPArenaNaturalResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):
         return 'uep_lyra_abilities.arena_natural_bomb_validation'
     if any(a.startswith('-UEPArenaLocalInputResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):

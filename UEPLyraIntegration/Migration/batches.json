@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 226,
+    "bounded_evidence_ledgers": 227,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -2895,7 +2895,32 @@
     "packaged_runtime": false,
     "failed_create_session_error_ui_natively_executed": false,
     "full_acceptance": false,
-    "next": "Migrate original session browser/entry/button,replay/default-map and0.14 candidates. UIExperienceMacros closure still needs the original browser-entry consumer. Retain failed-session UI/real-provider/remote-peer/FText/culture/owner/pixel/package/version gates."
+    "next": "Migrate original session browser/entry/button,replay/default-map and0.14 candidates. UIExperienceMacros closure still needs the original browser-entry consumer. Retain failed-session UI/real-provider/remote-peer/FText/culture/owner/pixel/package/version gates.",
+    "native_failure_followup": {
+      "evidence_ledger": "225-host-session-native-invalid-request-error-ui-and-unbind.json",
+      "status": "current_sdk217_native_invalid_host_request_error_ui_and_unbind_verified",
+      "native_run": "20261023-host-session-failure/Native01",
+      "corrected_read_only_log_review": "20261023-host-session-failure/LogReview02",
+      "failed_create_session_error_ui_natively_executed": true,
+      "source_python_native_ftext_histories_match": true,
+      "actual_acknowledge_button_closes_dialog": true,
+      "second_native_failure_does_not_reenter_unbound_widget": true,
+      "profile_methods_and_class_selectors_roots_input_loading_and_gameplay_health_restored": true,
+      "native_processes": 1,
+      "profiles": [
+        "BlueprintFallback",
+        "Python"
+      ],
+      "native_failure_notifications": 4,
+      "failure_stimulus": "Owned selected experience cleared only at real preparation completion;original public request creation returns null;native HostSession reports failure",
+      "original_outer_log_matcher_failure_preserved": true,
+      "callbacks_replayed": false,
+      "online_provider_failure_tested": false,
+      "cpp_compile_executed": false,
+      "cook_package_executed": false,
+      "full_regression_executed": false,
+      "full_acceptance": false
+    }
   },
   "experience_selection_pilot": {
     "version": "0.13.0",
@@ -15302,5 +15327,32 @@
     "cpp_compile_executed": false,
     "cook_package_executed": false,
     "next": "Continue original semantic/gameplay/presentation and applicable network/Experience/version requirements. These245 source dispositions accept only the documentation criterion,not inherited native behavior or the246 runtime implementations."
+  },
+  "host_session_failure_pilot": {
+    "evidence_ledger": "225-host-session-native-invalid-request-error-ui-and-unbind.json",
+    "status": "current_sdk217_native_invalid_host_request_error_ui_and_unbind_verified",
+    "native_run": "20261023-host-session-failure/Native01",
+    "corrected_read_only_log_review": "20261023-host-session-failure/LogReview02",
+    "failed_create_session_error_ui_natively_executed": true,
+    "source_python_native_ftext_histories_match": true,
+    "actual_acknowledge_button_closes_dialog": true,
+    "second_native_failure_does_not_reenter_unbound_widget": true,
+    "profile_methods_and_class_selectors_roots_input_loading_and_gameplay_health_restored": true,
+    "native_processes": 1,
+    "profiles": [
+      "BlueprintFallback",
+      "Python"
+    ],
+    "native_failure_notifications": 4,
+    "failure_stimulus": "Owned selected experience cleared only at real preparation completion;original public request creation returns null;native HostSession reports failure",
+    "original_outer_log_matcher_failure_preserved": true,
+    "callbacks_replayed": false,
+    "online_provider_failure_tested": false,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_acceptance": false,
+    "version": "0.13.0",
+    "next": "Continue session search/join errors and cancellation,other original0.13 lifecycle/focus/settings/replay requirements and whole Experience/version acceptance. Invalid-request failure is not authenticated-provider failure or whole-session acceptance."
   }
 }
