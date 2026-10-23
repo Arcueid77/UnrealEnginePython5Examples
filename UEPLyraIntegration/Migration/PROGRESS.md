@@ -31,6 +31,34 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed combined current-UI regression batch228 (2026-10-23):**
+Ten existing native fixtures now share one current SDK217 Standalone World:
+foundation buttons,bound action,foundation widgets,settings editors,settings
+screens,menu buttons,session button,experience tile,credits anddiagnostics.
+Their unchanged production policies/original semantic assertions cover33 direct
+original0.13 candidates. Keep the original finish code object/cleanup/result
+writes/logs;only a private copied finish namespace defers request_exit. The real
+module's ue.request_exit and actual native callbacks stay unchanged. Each case
+requests exit once,then the next fixture runs after cleanup. At the one actual
+interpreter exit,all ten original finalizers and external original contracts
+pass. Record the identical actual World path for all groups. Normal play and
+commandlets cannot auto-select the explicit suite lane.
+Preserve failed Native01 and exact frozen driver:copied NoSound disabled the
+native SpawnSound2D prerequisite. Seven child reports passed but the whole run
+remains failed. Restore the existing original DeterministicAudio/offline-renderer
+condition and require its native log marker. Native02OfflineAudio passes all ten
+groups without changing their inputs,tolerances,assertions or production code.
+It has native process0,semantic gate0,ordered per-case/suite post-exit markers,
+no unexpected errors and3536 unchanged frozen inputs. There were two actual
+native attempts;the successful combined run is one process. Native audio-object
+state is covered;physical audible output/pixel comparison are not claimed.
+Six orchestration/startup/audio-prerequisite checks pass;isolated staged
+incremental checks follow. No C++/Blueprint asset changes,compile,cook/package,
+full host regression or whole-version acceptance. Keep exact246 original
+paths/order/versions,246/182/63/11 and22 original requirement texts. Commit/push
+Examples first,then core combined driver/gitlink;ledger228. Remaining24 direct
+UI candidates and other original runtime/Experience/version evidence remain open.
+
 **Completed bounded duplicate-join batch227 (2026-10-23),current SDK217:**
 Reuse original real-LAN host/browser-entry success helpers with an explicit
 join-failure lane. One owned listen host serves two serial independent clients,

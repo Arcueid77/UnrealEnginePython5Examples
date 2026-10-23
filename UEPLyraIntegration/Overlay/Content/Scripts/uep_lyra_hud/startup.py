@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(a.startswith('-UEPUIRegressionSuiteResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):
+        return 'uep_lyra_hud.ui_regression_suite_validation'
     if any(a.startswith('-UEPSessionJoinFailureResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):
         return 'uep_lyra_hud.session_join_failure_validation'
     if any(a.startswith('-UEPSessionBrowserFailureResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):

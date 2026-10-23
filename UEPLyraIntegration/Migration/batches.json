@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 229,
+    "bounded_evidence_ledgers": 230,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1844,7 +1844,15 @@
     "network_acceptance": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Remaining original0.13/0.14 replacements and prior FText audit/diagnostic/owner/network/culture/pixel/package/version gates stay open;original credits timer cleanup behavior remains unchanged."
+    "next": "Remaining original0.13/0.14 replacements and prior FText audit/diagnostic/owner/network/culture/pixel/package/version gates stay open;original credits timer cleanup behavior remains unchanged.",
+    "current_sdk217_suite_followup": {
+      "evidence_ledger": "228-current-sdk-ten-ui-groups-combined-native-regression.json",
+      "native_run": "20261023-current-ui-regression/Native02OfflineAudio",
+      "scenario": "credits_widgets",
+      "report_file": "credits_widgets.json",
+      "status": "current_sdk217_original_python_native_group_and_actual_exit_finalizer_verified",
+      "full_acceptance": false
+    }
   },
   "diagnostic_widgets_pilot": {
     "version": "0.13.0",
@@ -1925,7 +1933,15 @@
     "network_acceptance": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Remaining original0.13/0.14 replacements and prior FText audit/diagnostic unavailable-user/owner/network/culture/pixel/package/version gates remain open."
+    "next": "Remaining original0.13/0.14 replacements and prior FText audit/diagnostic unavailable-user/owner/network/culture/pixel/package/version gates remain open.",
+    "current_sdk217_suite_followup": {
+      "evidence_ledger": "228-current-sdk-ten-ui-groups-combined-native-regression.json",
+      "native_run": "20261023-current-ui-regression/Native02OfflineAudio",
+      "scenario": "diagnostic_widgets",
+      "report_file": "diagnostic_widgets.json",
+      "status": "current_sdk217_original_python_native_group_and_actual_exit_finalizer_verified",
+      "full_acceptance": false
+    }
   },
   "settings_screens_pilot": {
     "version": "0.13.0",
@@ -2044,6 +2060,14 @@
       "cook_package_executed": false,
       "packaged_runtime": false,
       "full_settings_or_version_acceptance": false
+    },
+    "current_sdk217_suite_followup": {
+      "evidence_ledger": "228-current-sdk-ten-ui-groups-combined-native-regression.json",
+      "native_run": "20261023-current-ui-regression/Native02OfflineAudio",
+      "scenario": "settings_screens",
+      "report_file": "settings_screens.json",
+      "status": "current_sdk217_original_python_native_group_and_actual_exit_finalizer_verified",
+      "full_acceptance": false
     }
   },
   "settings_editors_pilot": {
@@ -2225,6 +2249,14 @@
       "cook_package_executed": false,
       "packaged_runtime": false,
       "full_settings_or_version_acceptance": false
+    },
+    "current_sdk217_suite_followup": {
+      "evidence_ledger": "228-current-sdk-ten-ui-groups-combined-native-regression.json",
+      "native_run": "20261023-current-ui-regression/Native02OfflineAudio",
+      "scenario": "settings_editors",
+      "report_file": "settings_editors.json",
+      "status": "current_sdk217_original_python_native_group_and_actual_exit_finalizer_verified",
+      "full_acceptance": false
     }
   },
   "foundation_widgets_pilot": {
@@ -2311,7 +2343,15 @@
     "pixels_tested": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Remaining original0.13/0.14 candidates and prior FText audit/diagnostic/owner/network/culture/pixel/package/version gates stay open. Original loading-host delegate behavior is retained,not repaired."
+    "next": "Remaining original0.13/0.14 candidates and prior FText audit/diagnostic/owner/network/culture/pixel/package/version gates stay open. Original loading-host delegate behavior is retained,not repaired.",
+    "current_sdk217_suite_followup": {
+      "evidence_ledger": "228-current-sdk-ten-ui-groups-combined-native-regression.json",
+      "native_run": "20261023-current-ui-regression/Native02OfflineAudio",
+      "scenario": "foundation_widgets",
+      "report_file": "foundation_widgets.json",
+      "status": "current_sdk217_original_python_native_group_and_actual_exit_finalizer_verified",
+      "full_acceptance": false
+    }
   },
   "bound_action_pilot": {
     "version": "0.13.0",
@@ -2357,7 +2397,15 @@
     "pixels_tested": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Remaining original0.13/0.14 candidates and prior FText audit/diagnostic/owner/network/culture/pixel/package/version gates stay open. Existing native parent input listener behavior is retained,not reimplemented or certified."
+    "next": "Remaining original0.13/0.14 candidates and prior FText audit/diagnostic/owner/network/culture/pixel/package/version gates stay open. Existing native parent input listener behavior is retained,not reimplemented or certified.",
+    "current_sdk217_suite_followup": {
+      "evidence_ledger": "228-current-sdk-ten-ui-groups-combined-native-regression.json",
+      "native_run": "20261023-current-ui-regression/Native02OfflineAudio",
+      "scenario": "bound_action",
+      "report_file": "bound_action.json",
+      "status": "current_sdk217_original_python_native_group_and_actual_exit_finalizer_verified",
+      "full_acceptance": false
+    }
   },
   "editor_experiences_pilot": {
     "version": "0.13.0",
@@ -2892,7 +2940,15 @@
     "packaged_runtime": false,
     "browser_entry_or_join_migrated": false,
     "full_acceptance": false,
-    "next": "Migrate original browser entry/screen and its latent join/macro consumer,then replay/default-map and0.14 candidates. Prior FText/culture/owner/network/pixel/package/version requirements remain open."
+    "next": "Migrate original browser entry/screen and its latent join/macro consumer,then replay/default-map and0.14 candidates. Prior FText/culture/owner/network/pixel/package/version requirements remain open.",
+    "current_sdk217_suite_followup": {
+      "evidence_ledger": "228-current-sdk-ten-ui-groups-combined-native-regression.json",
+      "native_run": "20261023-current-ui-regression/Native02OfflineAudio",
+      "scenario": "session_button",
+      "report_file": "session_button.json",
+      "status": "current_sdk217_original_python_native_group_and_actual_exit_finalizer_verified",
+      "full_acceptance": false
+    }
   },
   "host_session_pilot": {
     "version": "0.13.0",
@@ -3181,7 +3237,15 @@
     "pixels_tested": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Bound-action button plus all remaining original0.13/0.14 candidates and prior FText audit/diagnostic/owner/network/culture/pixel/package/version gates remain open."
+    "next": "Bound-action button plus all remaining original0.13/0.14 candidates and prior FText audit/diagnostic/owner/network/culture/pixel/package/version gates remain open.",
+    "current_sdk217_suite_followup": {
+      "evidence_ledger": "228-current-sdk-ten-ui-groups-combined-native-regression.json",
+      "native_run": "20261023-current-ui-regression/Native02OfflineAudio",
+      "scenario": "experience_tile",
+      "report_file": "experience_tile.json",
+      "status": "current_sdk217_original_python_native_group_and_actual_exit_finalizer_verified",
+      "full_acceptance": false
+    }
   },
   "menu_buttons_pilot": {
     "version": "0.13.0",
@@ -3253,7 +3317,15 @@
     "pixels_tested": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Experience tile/bound-action buttons and all remaining original0.13/0.14 migration plus prior FText audit and diagnostic/owner/network/culture/pixel/package/version gates stay open."
+    "next": "Experience tile/bound-action buttons and all remaining original0.13/0.14 migration plus prior FText audit and diagnostic/owner/network/culture/pixel/package/version gates stay open.",
+    "current_sdk217_suite_followup": {
+      "evidence_ledger": "228-current-sdk-ten-ui-groups-combined-native-regression.json",
+      "native_run": "20261023-current-ui-regression/Native02OfflineAudio",
+      "scenario": "menu_buttons",
+      "report_file": "menu_buttons.json",
+      "status": "current_sdk217_original_python_native_group_and_actual_exit_finalizer_verified",
+      "full_acceptance": false
+    }
   },
   "foundation_buttons_pilot": {
     "version": "0.13.0",
@@ -3333,7 +3405,15 @@
     "pixels_tested": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Other six audited menu/button widgets remain unaccepted; retain all original0.13/0.14 candidates and remaining diagnostic/owner/network/culture/pixel/package/version gates. Audit earlier Python FText crossings before whole migration acceptance."
+    "next": "Other six audited menu/button widgets remain unaccepted; retain all original0.13/0.14 candidates and remaining diagnostic/owner/network/culture/pixel/package/version gates. Audit earlier Python FText crossings before whole migration acceptance.",
+    "current_sdk217_suite_followup": {
+      "evidence_ledger": "228-current-sdk-ten-ui-groups-combined-native-regression.json",
+      "native_run": "20261023-current-ui-regression/Native02OfflineAudio",
+      "scenario": "foundation_buttons",
+      "report_file": "foundation_buttons.json",
+      "status": "current_sdk217_original_python_native_group_and_actual_exit_finalizer_verified",
+      "full_acceptance": false
+    }
   },
   "macro_consumer_closure_pilot": {
     "version": "0.12.0",
@@ -15466,5 +15546,61 @@
     "full_acceptance": false,
     "version": "0.13.0",
     "next": "Continue remaining original frontend/session cancellation,navigation,settings,replay and whole Experience/version evidence. This tests NULL-provider duplicate rejection/recovery;external provider authentication,other join errors,loss and dedicated simultaneous clients remain unclaimed."
+  },
+  "current_ui_regression_pilot": {
+    "status": "ten_ui_groups_and33_original_direct_candidates_current_sdk217_same_world_and_exit_verified",
+    "evidence_ledger": "228-current-sdk-ten-ui-groups-combined-native-regression.json",
+    "native_run": "20261023-current-ui-regression/Native02OfflineAudio",
+    "version": "0.13.0",
+    "native_scenario_groups": 10,
+    "direct_candidate_paths": [
+      "/Game/UI/Credits/W_Credits.W_Credits",
+      "/Game/UI/Credits/W_TapToggleActionBar.W_TapToggleActionBar",
+      "/Game/UI/Foundation/Buttons/W_LyraButton.W_LyraButton",
+      "/Game/UI/Foundation/Buttons/W_LyraButtonTab.W_LyraButtonTab",
+      "/Game/UI/Foundation/Dialogs/W_ConfirmationDialog.W_ConfirmationDialog",
+      "/Game/UI/Foundation/LoadingScreen/W_LoadingScreenReasonDebugText.W_LoadingScreenReasonDebugText",
+      "/Game/UI/Foundation/LoadingScreen/W_LoadingScreen_Host.W_LoadingScreen_Host",
+      "/Game/UI/Foundation/TabbedView/W_HorizontalTabList.W_HorizontalTabList",
+      "/Game/UI/Foundation/Widgets/BottomBar/W_BoundActionButton.W_BoundActionButton",
+      "/Game/UI/Foundation/Widgets/W_AspectImageWithBlur.W_AspectImageWithBlur",
+      "/Game/UI/Foundation/Widgets/W_ProgressSpinner.W_ProgressSpinner",
+      "/Game/UI/Menu/Experiences/W_LyraSessionButton.W_LyraSessionButton",
+      "/Game/UI/Menu/W_BuildConfiguration.W_BuildConfiguration",
+      "/Game/UI/Menu/W_LyraExperienceTileButton.W_LyraExperienceTileButton",
+      "/Game/UI/Menu/W_LyraMenuButton.W_LyraMenuButton",
+      "/Game/UI/Menu/W_LyraTileButton.W_LyraTileButton",
+      "/Game/UI/Menu/W_UserWatermark.W_UserWatermark",
+      "/Game/UI/PerfStats/W_SingleGraphStat.W_SingleGraphStat",
+      "/Game/UI/PerfStats/W_SingleTextStat.W_SingleTextStat",
+      "/Game/UI/Settings/Editors/W_SettingEntryBackground.W_SettingEntryBackground",
+      "/Game/UI/Settings/Editors/W_SettingsListEntry_Action.W_SettingsListEntry_Action",
+      "/Game/UI/Settings/Editors/W_SettingsListEntry_Discrete.W_SettingsListEntry_Discrete",
+      "/Game/UI/Settings/Editors/W_SettingsListEntry_KBMBinding.W_SettingsListEntry_KBMBinding",
+      "/Game/UI/Settings/Editors/W_SettingsListEntry_Missing.W_SettingsListEntry_Missing",
+      "/Game/UI/Settings/Editors/W_SettingsListEntry_Scalar.W_SettingsListEntry_Scalar",
+      "/Game/UI/Settings/Editors/W_SettingsListEntry_SubCollection.W_SettingsListEntry_SubCollection",
+      "/Game/UI/Settings/Editors/W_SettingsRotator.W_SettingsRotator",
+      "/Game/UI/Settings/Extensions/Enum/W_EnumOptionDetailsEntry.W_EnumOptionDetailsEntry",
+      "/Game/UI/Settings/Extensions/Enum/W_EnumOptionExtension.W_EnumOptionExtension",
+      "/Game/UI/Settings/Screens/Gamma/W_GammaEditor.W_GammaEditor",
+      "/Game/UI/Settings/Screens/HDRCalibration/W_HDRCalibrationEditor.W_HDRCalibrationEditor",
+      "/Game/UI/Settings/W_LyraSettingScreen.W_LyraSettingScreen",
+      "/Game/UI/Settings/W_SettingsPanel.W_SettingsPanel"
+    ],
+    "successful_combined_native_processes": 1,
+    "actual_native_attempts": 2,
+    "original_scenario_assertions_and_policy_sources_unchanged": true,
+    "original_finish_bytecode_preserved": true,
+    "original_module_global_exit_function_unchanged": true,
+    "shared_native_world": "/ShooterMaps/Maps/L_Expanse.L_Expanse",
+    "all_original_case_finalizers_run_during_actual_interpreter_exit": true,
+    "offline_native_audio_renderer": true,
+    "failed_nosound_prerequisite_preserved": true,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_acceptance": false,
+    "next": "Continue remaining original frontend/session/replay/travel/Experience and version requirements. These ten groups refresh33 direct UI candidates;they do not claim all57 UI candidates,physical/pixel/network/package or whole0.13 acceptance."
   }
 }

@@ -1,0 +1,292 @@
+{
+  "schema_version": 1,
+  "batch": "228-current-sdk-ten-ui-groups-combined-native-regression",
+  "status": "evidence_snapshot",
+  "recorded_utc": "2026-10-23T11:35:12.835608+00:00",
+  "scope": "Current SDK217 ten original UI validation groups/33 direct original0.13 candidate classes. Preserve each original finish bytecode,cleanup,semantic assertions and finalizers;only its private finish namespace defers request_exit. One successful combined native World and one actual shutdown,all ten groups pass original/Python checks plus post-exit finalizers. Preserve failed Native01 whose copied driver disabled required audio;Native02 restores original offline audio prerequisite. No whole0.13/pixel/hardware/network/package/version acceptance.",
+  "core_parent_commit": "784f810ffeeb545ab6ba55963dc266d826165da9",
+  "examples_parent_commit": "7ead2e8b05b22183301245dce0d45e2b620059c0",
+  "full_version_acceptance": false,
+  "full_acceptance": false,
+  "release_publication": false,
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-current-ui-regression/Native02OfflineAudio",
+      "summary_sha256": "8257BA5F5328FD12F9F8ED6E5FCD3D6BF0AB7DCDCF7A64DC7C0C0F3515047C56",
+      "status": "passed",
+      "process_exit_code": 0,
+      "independent_gate_exit_code": 0,
+      "frozen_input_records": 3536
+    }
+  ],
+  "successful_combined_native_processes": 1,
+  "actual_native_attempts": 2,
+  "native_scenario_groups": 10,
+  "direct_candidate_paths": [
+    "/Game/UI/Credits/W_Credits.W_Credits",
+    "/Game/UI/Credits/W_TapToggleActionBar.W_TapToggleActionBar",
+    "/Game/UI/Foundation/Buttons/W_LyraButton.W_LyraButton",
+    "/Game/UI/Foundation/Buttons/W_LyraButtonTab.W_LyraButtonTab",
+    "/Game/UI/Foundation/Dialogs/W_ConfirmationDialog.W_ConfirmationDialog",
+    "/Game/UI/Foundation/LoadingScreen/W_LoadingScreenReasonDebugText.W_LoadingScreenReasonDebugText",
+    "/Game/UI/Foundation/LoadingScreen/W_LoadingScreen_Host.W_LoadingScreen_Host",
+    "/Game/UI/Foundation/TabbedView/W_HorizontalTabList.W_HorizontalTabList",
+    "/Game/UI/Foundation/Widgets/BottomBar/W_BoundActionButton.W_BoundActionButton",
+    "/Game/UI/Foundation/Widgets/W_AspectImageWithBlur.W_AspectImageWithBlur",
+    "/Game/UI/Foundation/Widgets/W_ProgressSpinner.W_ProgressSpinner",
+    "/Game/UI/Menu/Experiences/W_LyraSessionButton.W_LyraSessionButton",
+    "/Game/UI/Menu/W_BuildConfiguration.W_BuildConfiguration",
+    "/Game/UI/Menu/W_LyraExperienceTileButton.W_LyraExperienceTileButton",
+    "/Game/UI/Menu/W_LyraMenuButton.W_LyraMenuButton",
+    "/Game/UI/Menu/W_LyraTileButton.W_LyraTileButton",
+    "/Game/UI/Menu/W_UserWatermark.W_UserWatermark",
+    "/Game/UI/PerfStats/W_SingleGraphStat.W_SingleGraphStat",
+    "/Game/UI/PerfStats/W_SingleTextStat.W_SingleTextStat",
+    "/Game/UI/Settings/Editors/W_SettingEntryBackground.W_SettingEntryBackground",
+    "/Game/UI/Settings/Editors/W_SettingsListEntry_Action.W_SettingsListEntry_Action",
+    "/Game/UI/Settings/Editors/W_SettingsListEntry_Discrete.W_SettingsListEntry_Discrete",
+    "/Game/UI/Settings/Editors/W_SettingsListEntry_KBMBinding.W_SettingsListEntry_KBMBinding",
+    "/Game/UI/Settings/Editors/W_SettingsListEntry_Missing.W_SettingsListEntry_Missing",
+    "/Game/UI/Settings/Editors/W_SettingsListEntry_Scalar.W_SettingsListEntry_Scalar",
+    "/Game/UI/Settings/Editors/W_SettingsListEntry_SubCollection.W_SettingsListEntry_SubCollection",
+    "/Game/UI/Settings/Editors/W_SettingsRotator.W_SettingsRotator",
+    "/Game/UI/Settings/Extensions/Enum/W_EnumOptionDetailsEntry.W_EnumOptionDetailsEntry",
+    "/Game/UI/Settings/Extensions/Enum/W_EnumOptionExtension.W_EnumOptionExtension",
+    "/Game/UI/Settings/Screens/Gamma/W_GammaEditor.W_GammaEditor",
+    "/Game/UI/Settings/Screens/HDRCalibration/W_HDRCalibrationEditor.W_HDRCalibrationEditor",
+    "/Game/UI/Settings/W_LyraSettingScreen.W_LyraSettingScreen",
+    "/Game/UI/Settings/W_SettingsPanel.W_SettingsPanel"
+  ],
+  "scenarios": [
+    {
+      "scenario": "foundation_buttons",
+      "report_file": "foundation_buttons.json",
+      "report_sha256": "15634307B0D1DA1681936613AC5FEF7CF4BAB217C996DEA776A186935BA7ADF4",
+      "declared_direct_candidate_classes": [
+        "/Game/UI/Foundation/Buttons/W_LyraButton.W_LyraButton_C",
+        "/Game/UI/Foundation/Buttons/W_LyraButtonTab.W_LyraButtonTab_C",
+        "/Game/UI/Foundation/TabbedView/W_HorizontalTabList.W_HorizontalTabList_C"
+      ]
+    },
+    {
+      "scenario": "bound_action",
+      "report_file": "bound_action.json",
+      "report_sha256": "ACFAAAF73816DC286BC7820E29169C9C9AFF34534FEE14D952285EBB0B16CFCC",
+      "declared_direct_candidate_classes": [
+        "/Game/UI/Foundation/Widgets/BottomBar/W_BoundActionButton.W_BoundActionButton_C"
+      ]
+    },
+    {
+      "scenario": "foundation_widgets",
+      "report_file": "foundation_widgets.json",
+      "report_sha256": "2EBCE18A809555BA6EBB5E2602F2E99C4E8FDF5E3AC790759D0DD002AFFAC83D",
+      "declared_direct_candidate_classes": [
+        "/Game/UI/Foundation/Dialogs/W_ConfirmationDialog.W_ConfirmationDialog_C",
+        "/Game/UI/Foundation/LoadingScreen/W_LoadingScreenReasonDebugText.W_LoadingScreenReasonDebugText_C",
+        "/Game/UI/Foundation/LoadingScreen/W_LoadingScreen_Host.W_LoadingScreen_Host_C",
+        "/Game/UI/Foundation/Widgets/W_AspectImageWithBlur.W_AspectImageWithBlur_C",
+        "/Game/UI/Foundation/Widgets/W_ProgressSpinner.W_ProgressSpinner_C"
+      ]
+    },
+    {
+      "scenario": "settings_editors",
+      "report_file": "settings_editors.json",
+      "report_sha256": "CC4185FC4920F2A8C18FAB081211B4411348DB75176431922010A2E7235F16A2",
+      "declared_direct_candidate_classes": [
+        "/Game/UI/Settings/Editors/W_SettingEntryBackground.W_SettingEntryBackground_C",
+        "/Game/UI/Settings/Editors/W_SettingsListEntry_Action.W_SettingsListEntry_Action_C",
+        "/Game/UI/Settings/Editors/W_SettingsListEntry_Discrete.W_SettingsListEntry_Discrete_C",
+        "/Game/UI/Settings/Editors/W_SettingsListEntry_KBMBinding.W_SettingsListEntry_KBMBinding_C",
+        "/Game/UI/Settings/Editors/W_SettingsListEntry_Missing.W_SettingsListEntry_Missing_C",
+        "/Game/UI/Settings/Editors/W_SettingsListEntry_Scalar.W_SettingsListEntry_Scalar_C",
+        "/Game/UI/Settings/Editors/W_SettingsListEntry_SubCollection.W_SettingsListEntry_SubCollection_C",
+        "/Game/UI/Settings/Editors/W_SettingsRotator.W_SettingsRotator_C",
+        "/Game/UI/Settings/Extensions/Enum/W_EnumOptionDetailsEntry.W_EnumOptionDetailsEntry_C",
+        "/Game/UI/Settings/Extensions/Enum/W_EnumOptionExtension.W_EnumOptionExtension_C"
+      ]
+    },
+    {
+      "scenario": "settings_screens",
+      "report_file": "settings_screens.json",
+      "report_sha256": "F2456B987CFEF109AA7A8DC1812FCF6698FDB666D3130A11B71B572566FD9994",
+      "declared_direct_candidate_classes": [
+        "/Game/UI/Settings/Screens/Gamma/W_GammaEditor.W_GammaEditor_C",
+        "/Game/UI/Settings/Screens/HDRCalibration/W_HDRCalibrationEditor.W_HDRCalibrationEditor_C",
+        "/Game/UI/Settings/W_LyraSettingScreen.W_LyraSettingScreen_C",
+        "/Game/UI/Settings/W_SettingsPanel.W_SettingsPanel_C"
+      ]
+    },
+    {
+      "scenario": "menu_buttons",
+      "report_file": "menu_buttons.json",
+      "report_sha256": "7045A17EB971DDFAF1B0C59F7943B19A203590E2EB6AA2F5358AB5B076E2D9E5",
+      "declared_direct_candidate_classes": [
+        "/Game/UI/Menu/W_LyraMenuButton.W_LyraMenuButton_C",
+        "/Game/UI/Menu/W_LyraTileButton.W_LyraTileButton_C"
+      ]
+    },
+    {
+      "scenario": "session_button",
+      "report_file": "session_button.json",
+      "report_sha256": "4AABECD3FC2C42381D96D28A2D196D4087BB996FFC9FC397033250BCE85A00AD",
+      "declared_direct_candidate_classes": [
+        "/Game/UI/Menu/Experiences/W_LyraSessionButton.W_LyraSessionButton_C"
+      ]
+    },
+    {
+      "scenario": "experience_tile",
+      "report_file": "experience_tile.json",
+      "report_sha256": "E75E11FA7B33045AECADAD3A20A72F6568B525DA55902367E075BFFF11FAE20F",
+      "declared_direct_candidate_classes": [
+        "/Game/UI/Menu/W_LyraExperienceTileButton.W_LyraExperienceTileButton_C"
+      ]
+    },
+    {
+      "scenario": "credits_widgets",
+      "report_file": "credits_widgets.json",
+      "report_sha256": "F64C51BBB6598898055885958485469CC5314413D94A3EA89133EE6F4CF5B374",
+      "declared_direct_candidate_classes": [
+        "/Game/UI/Credits/W_Credits.W_Credits_C",
+        "/Game/UI/Credits/W_TapToggleActionBar.W_TapToggleActionBar_C"
+      ]
+    },
+    {
+      "scenario": "diagnostic_widgets",
+      "report_file": "diagnostic_widgets.json",
+      "report_sha256": "DC2B74DC16B89CF1EE600631BFBD603C1FB369305AF4CC83B12844DD34EE1374",
+      "declared_direct_candidate_classes": [
+        "/Game/UI/PerfStats/W_SingleGraphStat.W_SingleGraphStat_C",
+        "/Game/UI/PerfStats/W_SingleTextStat.W_SingleTextStat_C",
+        "/Game/UI/Menu/W_BuildConfiguration.W_BuildConfiguration_C",
+        "/Game/UI/Menu/W_UserWatermark.W_UserWatermark_C"
+      ]
+    }
+  ],
+  "same_native_world": "/ShooterMaps/Maps/L_Expanse.L_Expanse",
+  "original_scenario_assertion_and_policy_sources_unchanged": true,
+  "original_finish_code_preserved": true,
+  "native_offline_audio_renderer": true,
+  "preserved_failed_prerequisite": {
+    "directory": "Native01",
+    "outer_status": "failed",
+    "failure": "Driver copied NoSound,violating original experience-tile/audio prerequisite;seven child reports passed but whole run remains failed",
+    "frozen_driver": "Native01/driver-frozen-input.ps1"
+  },
+  "independent_review": {
+    "path": ".build/LyraValidation/BlueprintPython/20261023-current-ui-regression/independent-review01.json",
+    "sha256": "7E469AF34C7331C4A6CCAFA663672210A4D6B9CFFBAACBD5100F864D345CB206",
+    "process_exit_code": 0
+  },
+  "input_hashes": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-ui-regression/review.py",
+      "sha256": "D1B8638C6FE280C55B0C418EE2AB0C6F28CBD88B44953A70032C88D6EF8D38EB"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-ui-regression/before-batches.json",
+      "sha256": "88F498BEE98064AC65DA63970B977909EAF2E2B2ABB0A1DC00729C38D2552FA3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-ui-regression/Native02OfflineAudio/summary.json",
+      "sha256": "8257BA5F5328FD12F9F8ED6E5FCD3D6BF0AB7DCDCF7A64DC7C0C0F3515047C56"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-ui-regression/Native02OfflineAudio/failure.json",
+      "sha256": "7538DC9B0D5AB3253C697FDAD428A5100711449A4B0D8723996B4D1B1E29E47F"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-ui-regression/Native02OfflineAudio/failure.log",
+      "sha256": "A12F32D064224D629B6DC3029A38EB461A6D92FCFE137C8C498F9FE49FF71C49"
+    },
+    {
+      "path": "Validation/Run-UEP58UIRegressionSuite.ps1",
+      "sha256": "E7F4B9D4D8AAE0ED3DC23D2E9288054B9BB16254C71FF52944B4E519A29DD493"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "E9F56628DF1BB1C3B522BD74D4D5D6F64F295219DCF9C466BC9EE4BFA3681E3A"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/ui_regression_suite_validation.py",
+      "sha256": "C05DF2CA5D87C7F08AB89C77A492D1F58E6B6762925E2E5B1A80AA9DD2B00346"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/ui_regression_suite_contract.py",
+      "sha256": "025EBE3EB2E3D46CEA941A4D458A1ADA7161AF5F88BE976E548A3362C95402AA"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tests/test_ui_regression_suite.py",
+      "sha256": "41FAEBB7ECDA5CB52B813B52E9D515C76AD5C600B7B49B9E0C618AA6A5E4DA86"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-ui-regression/Native01/summary.json",
+      "sha256": "7F21D32AD2FA5CB99D2B35D03DE64C827DE8C0607F0C94F1BA3676F7A29D7B32"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-ui-regression/Native01/driver-frozen-input.ps1",
+      "sha256": "E720275790950B9CC949F24B4C87C3723534263AA8EE71CE30D10DD7C56200A6"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-ui-regression/Native01/experience_tile.json",
+      "sha256": "D84254F5A5D67B956FB7DBF407865C70DC42F84A12F4CA3E643B6553F0D2E48B"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-ui-regression/Native02OfflineAudio/foundation_buttons.json",
+      "sha256": "15634307B0D1DA1681936613AC5FEF7CF4BAB217C996DEA776A186935BA7ADF4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-ui-regression/Native02OfflineAudio/bound_action.json",
+      "sha256": "ACFAAAF73816DC286BC7820E29169C9C9AFF34534FEE14D952285EBB0B16CFCC"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-ui-regression/Native02OfflineAudio/foundation_widgets.json",
+      "sha256": "2EBCE18A809555BA6EBB5E2602F2E99C4E8FDF5E3AC790759D0DD002AFFAC83D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-ui-regression/Native02OfflineAudio/settings_editors.json",
+      "sha256": "CC4185FC4920F2A8C18FAB081211B4411348DB75176431922010A2E7235F16A2"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-ui-regression/Native02OfflineAudio/settings_screens.json",
+      "sha256": "F2456B987CFEF109AA7A8DC1812FCF6698FDB666D3130A11B71B572566FD9994"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-ui-regression/Native02OfflineAudio/menu_buttons.json",
+      "sha256": "7045A17EB971DDFAF1B0C59F7943B19A203590E2EB6AA2F5358AB5B076E2D9E5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-ui-regression/Native02OfflineAudio/session_button.json",
+      "sha256": "4AABECD3FC2C42381D96D28A2D196D4087BB996FFC9FC397033250BCE85A00AD"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-ui-regression/Native02OfflineAudio/experience_tile.json",
+      "sha256": "E75E11FA7B33045AECADAD3A20A72F6568B525DA55902367E075BFFF11FAE20F"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-ui-regression/Native02OfflineAudio/credits_widgets.json",
+      "sha256": "F64C51BBB6598898055885958485469CC5314413D94A3EA89133EE6F4CF5B374"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-ui-regression/Native02OfflineAudio/diagnostic_widgets.json",
+      "sha256": "DC2B74DC16B89CF1EE600631BFBD603C1FB369305AF4CC83B12844DD34EE1374"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-ui-regression/independent-review01.json",
+      "sha256": "7E469AF34C7331C4A6CCAFA663672210A4D6B9CFFBAACBD5100F864D345CB206"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-ui-regression/independent-review-process01.json",
+      "sha256": "5273F9FA846427FE8A81DA6D349CCE75CB47FB7004E54A2831676FF091AB5452"
+    }
+  ],
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "callbacks_replayed": false,
+  "gameplay_policies_changed": false,
+  "blueprint_assets_changed": false,
+  "network_acceptance": false,
+  "packaged_runtime": false,
+  "pixels_tested": false,
+  "isolated_staged_incremental_verification": ".build/CommitVerification/20261023-current-ui-regression/Index01"
+}
