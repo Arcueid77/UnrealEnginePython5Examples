@@ -31,6 +31,35 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded browser failure/lifetime batch226 (2026-10-23):**
+One current SDK217 offscreen Editor Standalone process compares the original
+and Python browser. Each starts an actual native NULL search,then reuses its
+actual completed native request/delegate with public FindSessions(null,request).
+Native CommonSession rejects the missing local player,emits the original typed
+failure and shows the real error dialog. Both Profiles preserve identical
+CommonUser/Error_FindSessionBadPlayer FText histories;actual acknowledgement
+buttons close the dialog and the real RefreshButton starts a distinct request.
+Close the rooted browser while that refresh is pending:its native background
+search continues and its original hidden receiver updates/unlocks once. Reopen
+the same browser to start a third distinct native request. Close/unroot/stop
+owned animations and request native GC;prove the old receiver is collected
+before completion while the independently rooted actual request remains alive.
+The native request then succeeds without any destroyed-widget callback or new
+dialog. No backend cancel API or completion/error callback is replayed. Two
+Profiles yield six native successful requests/two native bad-player failures,
+notification sequences success/failure/success/success,and three exclusive
+selected-Profile search/results/unlock calls each. Native roots,selectors,input
+and gameplay Health restore;both semantic state/text matrices match.
+Native01 process0,independent gate0,exactly two declared SearchingPlayer errors,
+six native success log records,strict other diagnostics/ordered shutdown and
+all3444 frozen native inputs pass. Six focused negative contract/startup checks
+pass;isolated staged incremental checks follow. No production policy,C++ or
+Blueprint asset edits,compile,cook/package,pixel/physical/provider-error or
+whole-version acceptance. Screen close retains the original background task;
+it is not reported as backend cancellation. Preserve original246 paths/order/
+versions,246/182/63/11 and all22 original requirement texts. Commit/push Examples
+first,then the core focused driver/gitlink;ledger226.
+
 **Completed bounded host failure batch225 (2026-10-23),current SDK217:**
 Add an explicit opt-in host-failure validation lane;normal play/commandlets never
 select it. One actual offscreen Editor Standalone process runs original and

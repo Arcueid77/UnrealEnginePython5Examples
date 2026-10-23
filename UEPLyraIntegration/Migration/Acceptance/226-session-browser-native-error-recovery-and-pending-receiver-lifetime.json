@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "batch": "226-session-browser-native-error-recovery-and-pending-receiver-lifetime",
+  "status": "evidence_snapshot",
+  "recorded_utc": "2026-10-23T11:03:06.991205+00:00",
+  "scope": "Current SDK217 original/Python browser error and pending-screen lifetime. Public native FindSessions(null,actual completed request) emits a native bad-player error through the original UI delegate. Verify localized dialog,actual acknowledgement/refresh,rooted hidden completion,reopen/new request and native GC before pending completion without a late destroyed-receiver callback. One native process;backend search continues after screen close. No provider error/backend cancellation/whole-version claim.",
+  "core_parent_commit": "d88a7f83c6d494e10ca571e6e5696cb65bead642",
+  "examples_parent_commit": "e7f8cf32646d512795fbe09a35fc8e8bd35a905f",
+  "full_version_acceptance": false,
+  "full_acceptance": false,
+  "release_publication": false,
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-browser-search-failure/Native01",
+      "summary_sha256": "5A449D2D869C0A8D509A40180153E3A0071FDB773679C9FCD7DD2D79E3CFCB39",
+      "status": "passed",
+      "process_exit_code": 0,
+      "independent_gate_exit_code": 0,
+      "report_sha256": "A5D273C69F95AAF09BB2753EF16402548BD7E0C0F763C6A0C220FE1DA2287DB3",
+      "frozen_input_records": 3444
+    }
+  ],
+  "native_processes": 1,
+  "profiles": [
+    "BlueprintFallback",
+    "Python"
+  ],
+  "native_successful_requests": 6,
+  "native_bad_player_failures": 2,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "independent_review": {
+    "path": ".build/LyraValidation/BlueprintPython/20261023-browser-search-failure/independent-review01.json",
+    "sha256": "A2221AAB6C2CF27B7C58DBC32D4C7278B8BD8C9914D74C799DFB9D462847A823",
+    "process_exit_code": 0
+  },
+  "input_hashes": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-browser-search-failure/review.py",
+      "sha256": "1F061CABBA4D66C895C1EA00D8D781AD993F37D5BBD902E59DAACEF6C09E7EC4"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-browser-search-failure/before-batches.json",
+      "sha256": "F1B66413A1F2ACCBB605A4C149466857879421D184DEA6A075770BB6C6ACE390"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-browser-search-failure/Native01/summary.json",
+      "sha256": "5A449D2D869C0A8D509A40180153E3A0071FDB773679C9FCD7DD2D79E3CFCB39"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-browser-search-failure/Native01/failure.json",
+      "sha256": "A5D273C69F95AAF09BB2753EF16402548BD7E0C0F763C6A0C220FE1DA2287DB3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-browser-search-failure/Native01/failure.log",
+      "sha256": "15D0C548A4C1F379493098E32FB2F8235E167903AF678425EE51E6B41FAB3710"
+    },
+    {
+      "path": "Validation/Run-UEP58BrowserFailureValidation.ps1",
+      "sha256": "9CA2207C0F52D91E8772BB7467473B253EF8B974251E57D9C1BD9DDF90667C36"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "A7F0158EC6458B6DD76ED5AF4C103E46F8EAF70B03C60F43E01539341D8F72A9"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/session_browser_failure_validation.py",
+      "sha256": "9B43AD4359F2186795BC6320A04D4889FC1A30B27671E8DD2877297B973AD71B"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/session_browser_failure_contract.py",
+      "sha256": "7535186AC117AE82519C0ED592EF4C590301BDF2713F1F3E96BEA50F77B546BC"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tests/test_session_browser_failure_contract.py",
+      "sha256": "4B268C9F49BF18536B22BEC96DE9270B23A2E3E54C69924DD98BC0A48D5253FF"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-browser-search-failure/Native01/BlueprintFallback-search-error-title.t3d",
+      "sha256": "CD4768F6EE86C954654565FED59713799E9C73273E3FAF6B10D1960ED3E447E9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-browser-search-failure/Native01/BlueprintFallback-search-error-body.t3d",
+      "sha256": "93944B51C953375A6238D9218A527954E904FBF38CBBAB0548D6BDC765250055"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-browser-search-failure/Native01/Python-search-error-title.t3d",
+      "sha256": "CD4768F6EE86C954654565FED59713799E9C73273E3FAF6B10D1960ED3E447E9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-browser-search-failure/Native01/Python-search-error-body.t3d",
+      "sha256": "93944B51C953375A6238D9218A527954E904FBF38CBBAB0548D6BDC765250055"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-browser-search-failure/independent-review01.json",
+      "sha256": "A2221AAB6C2CF27B7C58DBC32D4C7278B8BD8C9914D74C799DFB9D462847A823"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-browser-search-failure/independent-review-process01.json",
+      "sha256": "AEAB03485D6876F3F31E5F8DEB4B2A75B994DEF0A60E28CBF9F840E2B2B495F3"
+    }
+  ],
+  "callbacks_replayed": false,
+  "backend_search_cancelled": false,
+  "gameplay_policy_changed": false,
+  "blueprint_assets_changed": false,
+  "online_provider_failure_tested": false,
+  "network_acceptance": false,
+  "packaged_runtime": false,
+  "pixels_tested": false,
+  "isolated_staged_incremental_verification": ".build/CommitVerification/20261023-browser-search-failure/Index01"
+}

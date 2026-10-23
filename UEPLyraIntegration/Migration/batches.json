@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 227,
+    "bounded_evidence_ledgers": 228,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -2788,7 +2788,35 @@
     "nonempty_provider_results_natively_tested": false,
     "failed_search_system_message_natively_tested": false,
     "full_acceptance": false,
-    "next": "Migrate original browser entry/join and shared preparation-macro consumer,then replay/default-map and0.14 candidates. Real-provider/nonempty/error UI,FText/culture/owner/network/pixel/package/version gates remain open."
+    "next": "Migrate original browser entry/join and shared preparation-macro consumer,then replay/default-map and0.14 candidates. Real-provider/nonempty/error UI,FText/culture/owner/network/pixel/package/version gates remain open.",
+    "native_failure_lifetime_followup": {
+      "evidence_ledger": "226-session-browser-native-error-recovery-and-pending-receiver-lifetime.json",
+      "status": "current_sdk217_native_bad_player_error_refresh_hidden_completion_and_pending_widget_gc_verified",
+      "native_run": "20261023-browser-search-failure/Native01",
+      "failed_search_system_message_natively_tested": true,
+      "source_python_error_ftext_histories_and_states_match": true,
+      "actual_acknowledgement_and_refresh_recovery": true,
+      "rooted_offscreen_receiver_keeps_original_native_completion": true,
+      "reopened_widget_starts_new_request": true,
+      "native_widget_collected_before_pending_request_completion": true,
+      "no_destroyed_receiver_callback": true,
+      "class_selectors_roots_input_and_gameplay_health_restored": true,
+      "native_processes": 1,
+      "profiles": [
+        "BlueprintFallback",
+        "Python"
+      ],
+      "native_successful_requests": 6,
+      "native_bad_player_failures": 2,
+      "failure_stimulus": "Public FindSessions(null,actual previously completed request) produces native bad-player failure through its existing original UI delegate;no manual callback",
+      "callbacks_replayed": false,
+      "backend_search_cancelled": false,
+      "online_provider_failure_tested": false,
+      "cpp_compile_executed": false,
+      "cook_package_executed": false,
+      "full_regression_executed": false,
+      "full_acceptance": false
+    }
   },
   "session_button_pilot": {
     "version": "0.13.0",
@@ -15354,5 +15382,35 @@
     "full_acceptance": false,
     "version": "0.13.0",
     "next": "Continue session search/join errors and cancellation,other original0.13 lifecycle/focus/settings/replay requirements and whole Experience/version acceptance. Invalid-request failure is not authenticated-provider failure or whole-session acceptance."
+  },
+  "session_browser_failure_pilot": {
+    "evidence_ledger": "226-session-browser-native-error-recovery-and-pending-receiver-lifetime.json",
+    "status": "current_sdk217_native_bad_player_error_refresh_hidden_completion_and_pending_widget_gc_verified",
+    "native_run": "20261023-browser-search-failure/Native01",
+    "failed_search_system_message_natively_tested": true,
+    "source_python_error_ftext_histories_and_states_match": true,
+    "actual_acknowledgement_and_refresh_recovery": true,
+    "rooted_offscreen_receiver_keeps_original_native_completion": true,
+    "reopened_widget_starts_new_request": true,
+    "native_widget_collected_before_pending_request_completion": true,
+    "no_destroyed_receiver_callback": true,
+    "class_selectors_roots_input_and_gameplay_health_restored": true,
+    "native_processes": 1,
+    "profiles": [
+      "BlueprintFallback",
+      "Python"
+    ],
+    "native_successful_requests": 6,
+    "native_bad_player_failures": 2,
+    "failure_stimulus": "Public FindSessions(null,actual previously completed request) produces native bad-player failure through its existing original UI delegate;no manual callback",
+    "callbacks_replayed": false,
+    "backend_search_cancelled": false,
+    "online_provider_failure_tested": false,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_acceptance": false,
+    "version": "0.13.0",
+    "next": "Continue join errors/cancellation and remaining original frontend/session/replay/navigation/Experience/version requirements. Screen close preserves native background search;native provider failures and backend cancellation are not established by this lane."
   }
 }
