@@ -1,0 +1,538 @@
+{
+  "schema_version": 1,
+  "batch": "223-original-entrypoint-transitive-routes-and-retained-native-source-review",
+  "scope": "Read-only postprocessing of batch222 SDK217 native graph inventory:22 qualified transitive Python source call witnesses and11 individually retained native transports/empty prompt. Every retained asset byte-matches accepted historical native inputs. No fresh Editor/gameplay/build/package run;963-entry structural census and246/182/63/11 preserved;all22 original version requirements remain unproven.",
+  "recorded_utc": "2026-10-23T10:19:11.637102+00:00",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "full_acceptance": false,
+  "release_publication": false,
+  "core_parent_commit": "029a7273ca0e2cbf6c9a1c21c1c3dfb511d1a7e2",
+  "examples_parent_commit": "4d3c75051c0d1efea4a5e784b06d5daa4af49a0e",
+  "runs": [],
+  "reused_native_evidence": {
+    "directory": ".build/LyraValidation/BlueprintPython/20261023-completion-coverage/Coverage03ScopeFix",
+    "scope": "Reuse existing read-only native registration/graph inventory only;not a new runtime replay"
+  },
+  "host_review": {
+    "path": ".build/LyraValidation/BlueprintPython/20261023-entrypoint-source-review/independent-review01.json",
+    "sha256": "A254DAD7CD8448740141E29219965D23470EF7035093DF5955BD0CD61D5837A3",
+    "process_receipt": ".build/LyraValidation/BlueprintPython/20261023-entrypoint-source-review/independent-review-process01.json",
+    "exit_code": 0
+  },
+  "input_hashes": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-completion-coverage/Coverage03ScopeFix/audit.json",
+      "sha256": "70DDB72F859CD236E1597F36CB7E02FB4D75E41087543D92F7F38957BAFAED61"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-completion-coverage/Coverage03ScopeFix/summary.json",
+      "sha256": "251329041C5D4C3F220ED5F10DBF996DFB5AFEEE729F5D885431F4BAF84DEDC8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-completion-coverage/original-entrypoints01.json",
+      "sha256": "91CE0DC973168D0679FA8C7BD352DE7B94927C116ED14A97D8EF40C05866DF1C"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-entrypoint-source-review/before-batches.json",
+      "sha256": "CE42102D9A73E68460AC1555F5FC96055F42547FD17886E05CCDA88DE4A540C1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-entrypoint-source-review/entrypoints01.json",
+      "sha256": "B4E30C69D48227C48DD7B7BAA27961063AF69816A6DD8557A37AC441E4D6E029"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-entrypoint-source-review/review.py",
+      "sha256": "36FD316FD6075D81775C0695980CA3457D4AC7C0A8D1A2D053F9F8A3F7287B21"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Migration/entrypoint_source_reviews.json",
+      "sha256": "733A2CF1B6646875CF1AD474F5D836020EFEB3D581391B2A8AF5EA7FEC572CA1"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tests/test_runtime_entrypoint_coverage.py",
+      "sha256": "47E0A3CE2AFC3529EE88E544A5937E6F72C61FEBA98DDD0E898DDFEC2C6E76E7"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/audit_runtime_entrypoint_coverage.py",
+      "sha256": "699C1E0A20986751192A0575F3E4792E95CD3D2669EE506EB0C0CF3B144FA38F"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/explorer_shell_review.py",
+      "sha256": "993E4C86E7DA51347E58D5AB589BA33E9E453617966B5317FA20C0DC2D5E551B"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_bound_action_assets.py",
+      "sha256": "60C154ACEDE7B058E041E3118BA118B50C8F7B7430C870F875E7BE585A1CF02E"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_elimination_widget_assets.py",
+      "sha256": "F0884544E10C331FD47DE5F37352928D61BA7B3D785AAE14A09455665E725C4A"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_experience_tile_assets.py",
+      "sha256": "C8D6F5F274DBD6025B0E2260ABA71DCDFDA864A6D791BEEBE4C9384806CE8E96"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_heal_ability_mixin_assets.py",
+      "sha256": "73895E079F634957E0C3C8268A68477A0FA0019D322E81C4E6D65BD086EF60F3"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_session_button_assets.py",
+      "sha256": "5D2895844FC05FDD66D09BFE249EE71C3CCAA8DAA8F3B9B53162B88419400C5D"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_settings_editor_assets.py",
+      "sha256": "12ABADDAEECD9821A2C2C9B20872452582CD08C8480D98FFCDF678275967805F"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_spawner_mixin_assets.py",
+      "sha256": "F670917D03A0772EEC3DB87430C460677E1EDC7E5D69CBCDDEFCCE8E8A348A1A"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/generate_tdm_scoring_assets.py",
+      "sha256": "BF19F4FC0567B21961EFA61EB136429184FD9AC88DAC828C210BCD9B15C2F613"
+    },
+    {
+      "path": "ROADMAP.md",
+      "sha256": "5AB66C8CEB62240E38D313464B97BFB62F1873475BF8D133B388A69651CA2E72"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-entrypoint-source-review/independent-review01.json",
+      "sha256": "A254DAD7CD8448740141E29219965D23470EF7035093DF5955BD0CD61D5837A3"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-entrypoint-source-review/independent-review-process01.json",
+      "sha256": "1CFB743261C9E1107026066897F261EDD7777D57095CC99BBE46AA3A264AAC5D"
+    }
+  ],
+  "original_candidates": 246,
+  "original_entrypoints": 963,
+  "previously_flagged_entries": 33,
+  "qualified_transitive_source_routes": 22,
+  "retained_native_source_dispositions": 11,
+  "unclassified_original_entries": 0,
+  "entrypoint_counts": {
+    "python-routed": 347,
+    "no-connected-execution-business": 105,
+    "direct-parent-forwarder-review": 48,
+    "staged-script-dispatch-forwarder-review": 421,
+    "retained-native-source-review": 11,
+    "staged-typed-script-dispatch-forwarder-review": 9,
+    "staged-transitive-script-dispatch-review": 22
+  },
+  "retained_native_asset_provenance": [
+    {
+      "asset": "/ShooterCore/Blueprint/B_WeaponSpawner.B_WeaponSpawner",
+      "graph": "EventGraph",
+      "entry": "Broadcast Failure Message",
+      "kind": "typed-native-client-rpc",
+      "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/14-spawners.json",
+      "ledger_sha256": "7CD91BE9AB63C3945149DFD6BCFB0E4CD1E02155F41F3701ECE799E2894D0C57",
+      "current_native_asset": {
+        "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\Blueprint\\B_WeaponSpawner.uasset",
+        "sha256": "D110EFD566BA6B9608BBAED1BB6ED39045A0323744E2A62314F967EA41D0606F"
+      },
+      "byte_matched_historical_inputs": [
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261016-spawners/Differential03",
+          "summary_sha256": "2C755F222F59B53BB6BC50E31AFFDE4B83AF0F6FB903C3375775F82C6E146D05",
+          "sha256": "D110EFD566BA6B9608BBAED1BB6ED39045A0323744E2A62314F967EA41D0606F"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261016-spawners/Differential03",
+          "summary_sha256": "2C755F222F59B53BB6BC50E31AFFDE4B83AF0F6FB903C3375775F82C6E146D05",
+          "sha256": "D110EFD566BA6B9608BBAED1BB6ED39045A0323744E2A62314F967EA41D0606F"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261016-spawners/Differential03",
+          "summary_sha256": "2C755F222F59B53BB6BC50E31AFFDE4B83AF0F6FB903C3375775F82C6E146D05",
+          "sha256": "D110EFD566BA6B9608BBAED1BB6ED39045A0323744E2A62314F967EA41D0606F"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261016-spawners/Network02",
+          "summary_sha256": "EFE642C11B74C2AA4B8D18E72A3408BC58E6644B2491AA15F75FCE4B82EE0ED9",
+          "sha256": "D110EFD566BA6B9608BBAED1BB6ED39045A0323744E2A62314F967EA41D0606F"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261016-spawners/Network02",
+          "summary_sha256": "EFE642C11B74C2AA4B8D18E72A3408BC58E6644B2491AA15F75FCE4B82EE0ED9",
+          "sha256": "D110EFD566BA6B9608BBAED1BB6ED39045A0323744E2A62314F967EA41D0606F"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+          "summary_sha256": "9F2E167CDA4F151193F7A7855A8D15181FACAD232C9A51EB328DA1157F8F15AC",
+          "sha256": "D110EFD566BA6B9608BBAED1BB6ED39045A0323744E2A62314F967EA41D0606F"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+          "summary_sha256": "9F2E167CDA4F151193F7A7855A8D15181FACAD232C9A51EB328DA1157F8F15AC",
+          "sha256": "D110EFD566BA6B9608BBAED1BB6ED39045A0323744E2A62314F967EA41D0606F"
+        }
+      ]
+    },
+    {
+      "asset": "/ShooterCore/Items/HealthPickup_Unused/GA_HealPickup.GA_HealPickup",
+      "graph": "EventGraph",
+      "entry": "End Heal",
+      "kind": "native-gas-teardown",
+      "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/18-heal-pickup.json",
+      "ledger_sha256": "99A959708852AE9E2BFFF145965B8B3927D11AE983243D0D0D4A418F0A9C03D3",
+      "current_native_asset": {
+        "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\Items\\HealthPickup_Unused\\GA_HealPickup.uasset",
+        "sha256": "9BA9CE5DA94A3557F0277BEBF663DE6676D6E3FDD84EC0D890763A2D0700BACC"
+      },
+      "byte_matched_historical_inputs": [
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261016-heal-ability/Differential05",
+          "summary_sha256": "87A9703AB723325FAF87CFB9A374BB16F657E6F5A3430EC369ADE3B21D1324E2",
+          "sha256": "9BA9CE5DA94A3557F0277BEBF663DE6676D6E3FDD84EC0D890763A2D0700BACC"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261016-heal-ability/Differential05",
+          "summary_sha256": "87A9703AB723325FAF87CFB9A374BB16F657E6F5A3430EC369ADE3B21D1324E2",
+          "sha256": "9BA9CE5DA94A3557F0277BEBF663DE6676D6E3FDD84EC0D890763A2D0700BACC"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261016-heal-ability/Differential05",
+          "summary_sha256": "87A9703AB723325FAF87CFB9A374BB16F657E6F5A3430EC369ADE3B21D1324E2",
+          "sha256": "9BA9CE5DA94A3557F0277BEBF663DE6676D6E3FDD84EC0D890763A2D0700BACC"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261016-heal-ability/Network03",
+          "summary_sha256": "A053B169A1C9A9A093D98EBFEEA0640CC8E28DF9DB2FD68DB6823BA9051F4C12",
+          "sha256": "9BA9CE5DA94A3557F0277BEBF663DE6676D6E3FDD84EC0D890763A2D0700BACC"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261016-heal-ability/Network03",
+          "summary_sha256": "A053B169A1C9A9A093D98EBFEEA0640CC8E28DF9DB2FD68DB6823BA9051F4C12",
+          "sha256": "9BA9CE5DA94A3557F0277BEBF663DE6676D6E3FDD84EC0D890763A2D0700BACC"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+          "summary_sha256": "9F2E167CDA4F151193F7A7855A8D15181FACAD232C9A51EB328DA1157F8F15AC",
+          "sha256": "9BA9CE5DA94A3557F0277BEBF663DE6676D6E3FDD84EC0D890763A2D0700BACC"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+          "summary_sha256": "9F2E167CDA4F151193F7A7855A8D15181FACAD232C9A51EB328DA1157F8F15AC",
+          "sha256": "9BA9CE5DA94A3557F0277BEBF663DE6676D6E3FDD84EC0D890763A2D0700BACC"
+        }
+      ]
+    },
+    {
+      "asset": "/ShooterCore/Elimination/B_TeamDeathMatchScoring.B_TeamDeathMatchScoring",
+      "graph": "OnRep_TargetScore",
+      "entry": "OnRep_TargetScore",
+      "kind": "native-repnotify-delegate",
+      "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/122-tdm-scoring-native-timer-notify-gas-postgame.json",
+      "ledger_sha256": "85BEC6151A09A7584072308995BDF3658835752CBF329D529A76EE45E081EFA2",
+      "current_native_asset": {
+        "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\Elimination\\B_TeamDeathMatchScoring.uasset",
+        "sha256": "AA4DE4B78AAC851A80FAEFF75C08CFB2B1D16B81A72B846897FE44DDFC96CC59"
+      },
+      "byte_matched_historical_inputs": [
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Differential02SourceSemantics",
+          "summary_sha256": "1DBA318CD3AA8D04C8017C028C81616FD8C5FCCBC1F062B169F2000E9B910CEE",
+          "sha256": "AA4DE4B78AAC851A80FAEFF75C08CFB2B1D16B81A72B846897FE44DDFC96CC59"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Differential02SourceSemantics",
+          "summary_sha256": "1DBA318CD3AA8D04C8017C028C81616FD8C5FCCBC1F062B169F2000E9B910CEE",
+          "sha256": "AA4DE4B78AAC851A80FAEFF75C08CFB2B1D16B81A72B846897FE44DDFC96CC59"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Differential02SourceSemantics",
+          "summary_sha256": "1DBA318CD3AA8D04C8017C028C81616FD8C5FCCBC1F062B169F2000E9B910CEE",
+          "sha256": "AA4DE4B78AAC851A80FAEFF75C08CFB2B1D16B81A72B846897FE44DDFC96CC59"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Differential02SourceSemantics",
+          "summary_sha256": "1DBA318CD3AA8D04C8017C028C81616FD8C5FCCBC1F062B169F2000E9B910CEE",
+          "sha256": "AA4DE4B78AAC851A80FAEFF75C08CFB2B1D16B81A72B846897FE44DDFC96CC59"
+        }
+      ]
+    },
+    {
+      "asset": "/ShooterCore/Elimination/B_TeamDeathMatchScoring.B_TeamDeathMatchScoring",
+      "graph": "OnRep_CountDownTime",
+      "entry": "OnRep_CountDownTime",
+      "kind": "native-repnotify-delegate",
+      "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/122-tdm-scoring-native-timer-notify-gas-postgame.json",
+      "ledger_sha256": "85BEC6151A09A7584072308995BDF3658835752CBF329D529A76EE45E081EFA2",
+      "current_native_asset": {
+        "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\Elimination\\B_TeamDeathMatchScoring.uasset",
+        "sha256": "AA4DE4B78AAC851A80FAEFF75C08CFB2B1D16B81A72B846897FE44DDFC96CC59"
+      },
+      "byte_matched_historical_inputs": [
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Differential02SourceSemantics",
+          "summary_sha256": "1DBA318CD3AA8D04C8017C028C81616FD8C5FCCBC1F062B169F2000E9B910CEE",
+          "sha256": "AA4DE4B78AAC851A80FAEFF75C08CFB2B1D16B81A72B846897FE44DDFC96CC59"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Differential02SourceSemantics",
+          "summary_sha256": "1DBA318CD3AA8D04C8017C028C81616FD8C5FCCBC1F062B169F2000E9B910CEE",
+          "sha256": "AA4DE4B78AAC851A80FAEFF75C08CFB2B1D16B81A72B846897FE44DDFC96CC59"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Differential02SourceSemantics",
+          "summary_sha256": "1DBA318CD3AA8D04C8017C028C81616FD8C5FCCBC1F062B169F2000E9B910CEE",
+          "sha256": "AA4DE4B78AAC851A80FAEFF75C08CFB2B1D16B81A72B846897FE44DDFC96CC59"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-tdm-scoring/Differential02SourceSemantics",
+          "summary_sha256": "1DBA318CD3AA8D04C8017C028C81616FD8C5FCCBC1F062B169F2000E9B910CEE",
+          "sha256": "AA4DE4B78AAC851A80FAEFF75C08CFB2B1D16B81A72B846897FE44DDFC96CC59"
+        }
+      ]
+    },
+    {
+      "asset": "/ShooterCore/UserInterface/Notifications/EliminationFeed/W_EliminationFeed.W_EliminationFeed",
+      "graph": "EventGraph",
+      "entry": "BndEvt__W_ItemAcquiredList_ToastListWidget_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature",
+      "kind": "native-delegate-lifetime",
+      "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/131-elimination-list-entry-native-materials-icons-expiry.json",
+      "ledger_sha256": "ADE86DB931D4AB81E8BCAA442F181B403164FE9B1B0CCFD754419CEC05854FCC",
+      "current_native_asset": {
+        "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\UserInterface\\Notifications\\EliminationFeed\\W_EliminationFeed.uasset",
+        "sha256": "178062B70DA4DBF8BECEEE1FA4C4F408DE8D843A6FF67A165317CCE8A663F81F"
+      },
+      "byte_matched_historical_inputs": [
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Differential02NativeRefresh",
+          "summary_sha256": "2C8D2AA6277AFA4CAB5346442D8F10BE6B14F5506620DF2B6100C279101F87A0",
+          "sha256": "178062B70DA4DBF8BECEEE1FA4C4F408DE8D843A6FF67A165317CCE8A663F81F"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Differential02NativeRefresh",
+          "summary_sha256": "2C8D2AA6277AFA4CAB5346442D8F10BE6B14F5506620DF2B6100C279101F87A0",
+          "sha256": "178062B70DA4DBF8BECEEE1FA4C4F408DE8D843A6FF67A165317CCE8A663F81F"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Differential02NativeRefresh",
+          "summary_sha256": "2C8D2AA6277AFA4CAB5346442D8F10BE6B14F5506620DF2B6100C279101F87A0",
+          "sha256": "178062B70DA4DBF8BECEEE1FA4C4F408DE8D843A6FF67A165317CCE8A663F81F"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-elimination-widgets/Differential02NativeRefresh",
+          "summary_sha256": "2C8D2AA6277AFA4CAB5346442D8F10BE6B14F5506620DF2B6100C279101F87A0",
+          "sha256": "178062B70DA4DBF8BECEEE1FA4C4F408DE8D843A6FF67A165317CCE8A663F81F"
+        }
+      ]
+    },
+    {
+      "asset": "/Game/UI/Foundation/Widgets/BottomBar/W_BoundActionButton.W_BoundActionButton",
+      "graph": "EventGraph",
+      "entry": "Destruct",
+      "kind": "native-delegate-lifetime",
+      "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/145-bound-action-native-input-lifetime-and-brush.json",
+      "ledger_sha256": "4E38B59C144B97F632C2A1A9D977097E7F8E33A21DAB83EA924332D953EFF7C6",
+      "current_native_asset": {
+        "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UI\\Foundation\\Widgets\\BottomBar\\W_BoundActionButton.uasset",
+        "sha256": "A9864764DBB751F8DECAE8ED6C8F0FB7C67570EAFEC64415F402F0B062C48AB0"
+      },
+      "byte_matched_historical_inputs": [
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-bound-action/Differential02NativeBrushEnum",
+          "summary_sha256": "E2E7E6FE294DECA6BF57D99780F8B184AAC07A3604D0875FB8D830EC8383A2EF",
+          "sha256": "A9864764DBB751F8DECAE8ED6C8F0FB7C67570EAFEC64415F402F0B062C48AB0"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-bound-action/Differential02NativeBrushEnum",
+          "summary_sha256": "E2E7E6FE294DECA6BF57D99780F8B184AAC07A3604D0875FB8D830EC8383A2EF",
+          "sha256": "A9864764DBB751F8DECAE8ED6C8F0FB7C67570EAFEC64415F402F0B062C48AB0"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-bound-action/Differential02NativeBrushEnum",
+          "summary_sha256": "E2E7E6FE294DECA6BF57D99780F8B184AAC07A3604D0875FB8D830EC8383A2EF",
+          "sha256": "A9864764DBB751F8DECAE8ED6C8F0FB7C67570EAFEC64415F402F0B062C48AB0"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-bound-action/Differential02NativeBrushEnum",
+          "summary_sha256": "E2E7E6FE294DECA6BF57D99780F8B184AAC07A3604D0875FB8D830EC8383A2EF",
+          "sha256": "A9864764DBB751F8DECAE8ED6C8F0FB7C67570EAFEC64415F402F0B062C48AB0"
+        }
+      ]
+    },
+    {
+      "asset": "/Game/UI/Menu/Experiences/W_LyraSessionButton.W_LyraSessionButton",
+      "graph": "Set Texts",
+      "entry": "Set Texts",
+      "kind": "native-ftext-transport",
+      "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/159-session-button-native-text-materials-and-latent-click.json",
+      "ledger_sha256": "FDB203525B7311903B9C1A1B943749FF41078DCFCC91E8234EAD01D4609522FA",
+      "current_native_asset": {
+        "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UI\\Menu\\Experiences\\W_LyraSessionButton.uasset",
+        "sha256": "6D6EDCD3DE28637D529CE30B39036580DE845C5AA7452EA536A4932067BB2980"
+      },
+      "byte_matched_historical_inputs": [
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-session-browser/Lifecycle01Button",
+          "summary_sha256": "30BA59C388CCD44A1378AE3B545D70EB7368D41536925FD66D28CAC9DF52F9A4",
+          "sha256": "6D6EDCD3DE28637D529CE30B39036580DE845C5AA7452EA536A4932067BB2980"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-session-browser/Lifecycle01Button",
+          "summary_sha256": "30BA59C388CCD44A1378AE3B545D70EB7368D41536925FD66D28CAC9DF52F9A4",
+          "sha256": "6D6EDCD3DE28637D529CE30B39036580DE845C5AA7452EA536A4932067BB2980"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-session-browser/Lifecycle01Button",
+          "summary_sha256": "30BA59C388CCD44A1378AE3B545D70EB7368D41536925FD66D28CAC9DF52F9A4",
+          "sha256": "6D6EDCD3DE28637D529CE30B39036580DE845C5AA7452EA536A4932067BB2980"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-session-browser/Lifecycle01Button",
+          "summary_sha256": "30BA59C388CCD44A1378AE3B545D70EB7368D41536925FD66D28CAC9DF52F9A4",
+          "sha256": "6D6EDCD3DE28637D529CE30B39036580DE845C5AA7452EA536A4932067BB2980"
+        }
+      ]
+    },
+    {
+      "asset": "/Game/UI/Menu/W_LyraExperienceTileButton.W_LyraExperienceTileButton",
+      "graph": "UpdateTileText",
+      "entry": "UpdateTileText",
+      "kind": "native-ftext-transport",
+      "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/144-experience-tile-native-material-audio-and-text.json",
+      "ledger_sha256": "136B8C83A5E40491BAAF7001C616E4B35BB0A6ED72005D27E70E06BEA80CBD9F",
+      "current_native_asset": {
+        "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UI\\Menu\\W_LyraExperienceTileButton.uasset",
+        "sha256": "E7E1186539D335A7B1CF00B63395AFDF643B268E062CCB4E0360B727531AD9BB"
+      },
+      "byte_matched_historical_inputs": [
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-experience-tile/Differential04GlobalPersistentAudio",
+          "summary_sha256": "44F7F8E1136AC66ADDDC000DBD839C3D645EA739E7BF7E22DC5098EEE207EB5D",
+          "sha256": "E7E1186539D335A7B1CF00B63395AFDF643B268E062CCB4E0360B727531AD9BB"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-experience-tile/Differential04GlobalPersistentAudio",
+          "summary_sha256": "44F7F8E1136AC66ADDDC000DBD839C3D645EA739E7BF7E22DC5098EEE207EB5D",
+          "sha256": "E7E1186539D335A7B1CF00B63395AFDF643B268E062CCB4E0360B727531AD9BB"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-experience-tile/Differential04GlobalPersistentAudio",
+          "summary_sha256": "44F7F8E1136AC66ADDDC000DBD839C3D645EA739E7BF7E22DC5098EEE207EB5D",
+          "sha256": "E7E1186539D335A7B1CF00B63395AFDF643B268E062CCB4E0360B727531AD9BB"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-experience-tile/Differential04GlobalPersistentAudio",
+          "summary_sha256": "44F7F8E1136AC66ADDDC000DBD839C3D645EA739E7BF7E22DC5098EEE207EB5D",
+          "sha256": "E7E1186539D335A7B1CF00B63395AFDF643B268E062CCB4E0360B727531AD9BB"
+        }
+      ]
+    },
+    {
+      "asset": "/Game/UI/Settings/Editors/W_SettingsListEntry_Action.W_SettingsListEntry_Action",
+      "graph": "EventGraph",
+      "entry": "OnSettingAssigned",
+      "kind": "native-ftext-transport",
+      "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/147-settings-editors-native-model-localization-and-presentation.json",
+      "ledger_sha256": "ABF484335F1976AA90ACCD9AC0B3C04F3D05EBC0CA86784C3BFA807EEFEAB2F1",
+      "current_native_asset": {
+        "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UI\\Settings\\Editors\\W_SettingsListEntry_Action.uasset",
+        "sha256": "5079C7E4A731C32B87A34FC5EB6E5AE044D1FDB8BBD9FFC4369E48EC39C324DA"
+      },
+      "byte_matched_historical_inputs": [
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-settings-editors/Differential02NativeListSetter",
+          "summary_sha256": "E9423778A314F62FC0F96DA2DBFC0681DAFBB8C4F8E9708703AAC7F9F44399E8",
+          "sha256": "5079C7E4A731C32B87A34FC5EB6E5AE044D1FDB8BBD9FFC4369E48EC39C324DA"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-settings-editors/Differential02NativeListSetter",
+          "summary_sha256": "E9423778A314F62FC0F96DA2DBFC0681DAFBB8C4F8E9708703AAC7F9F44399E8",
+          "sha256": "5079C7E4A731C32B87A34FC5EB6E5AE044D1FDB8BBD9FFC4369E48EC39C324DA"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-settings-editors/Differential02NativeListSetter",
+          "summary_sha256": "E9423778A314F62FC0F96DA2DBFC0681DAFBB8C4F8E9708703AAC7F9F44399E8",
+          "sha256": "5079C7E4A731C32B87A34FC5EB6E5AE044D1FDB8BBD9FFC4369E48EC39C324DA"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-settings-editors/Differential02NativeListSetter",
+          "summary_sha256": "E9423778A314F62FC0F96DA2DBFC0681DAFBB8C4F8E9708703AAC7F9F44399E8",
+          "sha256": "5079C7E4A731C32B87A34FC5EB6E5AE044D1FDB8BBD9FFC4369E48EC39C324DA"
+        }
+      ]
+    },
+    {
+      "asset": "/Game/UI/Settings/Editors/W_SettingsListEntry_SubCollection.W_SettingsListEntry_SubCollection",
+      "graph": "EventGraph",
+      "entry": "OnSettingAssigned",
+      "kind": "native-ftext-transport",
+      "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/147-settings-editors-native-model-localization-and-presentation.json",
+      "ledger_sha256": "ABF484335F1976AA90ACCD9AC0B3C04F3D05EBC0CA86784C3BFA807EEFEAB2F1",
+      "current_native_asset": {
+        "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\UI\\Settings\\Editors\\W_SettingsListEntry_SubCollection.uasset",
+        "sha256": "077F6864FDC94DF12D666703D21DEFCC77D6AD2831BAEF68DF030D8003712C48"
+      },
+      "byte_matched_historical_inputs": [
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-settings-editors/Differential02NativeListSetter",
+          "summary_sha256": "E9423778A314F62FC0F96DA2DBFC0681DAFBB8C4F8E9708703AAC7F9F44399E8",
+          "sha256": "077F6864FDC94DF12D666703D21DEFCC77D6AD2831BAEF68DF030D8003712C48"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-settings-editors/Differential02NativeListSetter",
+          "summary_sha256": "E9423778A314F62FC0F96DA2DBFC0681DAFBB8C4F8E9708703AAC7F9F44399E8",
+          "sha256": "077F6864FDC94DF12D666703D21DEFCC77D6AD2831BAEF68DF030D8003712C48"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-settings-editors/Differential02NativeListSetter",
+          "summary_sha256": "E9423778A314F62FC0F96DA2DBFC0681DAFBB8C4F8E9708703AAC7F9F44399E8",
+          "sha256": "077F6864FDC94DF12D666703D21DEFCC77D6AD2831BAEF68DF030D8003712C48"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261020-settings-editors/Differential02NativeListSetter",
+          "summary_sha256": "E9423778A314F62FC0F96DA2DBFC0681DAFBB8C4F8E9708703AAC7F9F44399E8",
+          "sha256": "077F6864FDC94DF12D666703D21DEFCC77D6AD2831BAEF68DF030D8003712C48"
+        }
+      ]
+    },
+    {
+      "asset": "/ShooterExplorer/UserInterface/W_InteractionPrompt.W_InteractionPrompt",
+      "graph": "EventGraph",
+      "entry": "BindIndicator",
+      "kind": "unobservable-original-cast",
+      "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/183-explorer-original-forwarders-and-empty-prompt-review.json",
+      "ledger_sha256": "3A9CAF902797104CBEFF4EB233BB0247F089EE04BABE069CCA5FC0A020067152",
+      "current_native_asset": {
+        "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterExplorer\\Content\\UserInterface\\W_InteractionPrompt.uasset",
+        "sha256": "DE4780971461D7A5BAAE38FCCAE8C0DAE1795902C92C52785DE0567C20457E42"
+      },
+      "byte_matched_historical_inputs": [
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-shell-review/Audit01",
+          "summary_sha256": "04D4CFD4145EF499CD53E5E6F7221D9AE66C493ED7522F7A05272C9D24C3AB7C",
+          "sha256": "DE4780971461D7A5BAAE38FCCAE8C0DAE1795902C92C52785DE0567C20457E42"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-shell-review/Audit01",
+          "summary_sha256": "04D4CFD4145EF499CD53E5E6F7221D9AE66C493ED7522F7A05272C9D24C3AB7C",
+          "sha256": "DE4780971461D7A5BAAE38FCCAE8C0DAE1795902C92C52785DE0567C20457E42"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-shell-review/Runtime01",
+          "summary_sha256": "2FFB09B653FF2AE98F4F6392AF50F877DB190BCDD450D1882431B761F06A834A",
+          "sha256": "DE4780971461D7A5BAAE38FCCAE8C0DAE1795902C92C52785DE0567C20457E42"
+        },
+        {
+          "directory": ".build/LyraValidation/BlueprintPython/20261021-explorer-shell-review/Runtime01",
+          "summary_sha256": "2FFB09B653FF2AE98F4F6392AF50F877DB190BCDD450D1882431B761F06A834A",
+          "sha256": "DE4780971461D7A5BAAE38FCCAE8C0DAE1795902C92C52785DE0567C20457E42"
+        }
+      ]
+    }
+  ],
+  "original_business_entry_semantics_all_reviewed": false,
+  "new_gameplay_acceptance": false,
+  "native_processes_launched": 0,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "historical_runtime_replayed": false,
+  "isolated_staged_incremental_verification": ".build/CommitVerification/20261023-entrypoint-source-review/Index01"
+}

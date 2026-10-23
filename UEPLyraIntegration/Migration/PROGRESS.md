@@ -31,6 +31,37 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded entrypoint source review batch223 (2026-10-23):**
+Reuse batch222 Coverage03ScopeFix's source-matching SDK217 read-only native
+inventory;zero new Editor/gameplay processes,C++ compile,cook/package or full
+regression. Extend the source entry audit with qualified transitive call paths,
+effective Profile selection,nearest definition/empty-child shadowing and cycle
+termination. Unknown owners/default receivers,ambiguous entries and absent
+qualified targets cannot borrow same-named methods from another class.
+All33 formerly named review leads are now individually classified:22 source
+call witnesses reach registered Python gates through actual staged functions;
+11 are retained native transports or the already reviewed unobservable prompt.
+The22 include score Tick/delegates,leaderboard refresh,AI unpossess,foundation
+text/style,loading/tab/input lifecycle and settings rotator/enum callbacks.
+Document all11 retained entries and exact original/current execution shapes in
+entrypoint_source_reviews.json:spawner failure RPC,heal EndAbility teardown,
+two RepNotify multicasts,feed-expiry binding,input Destruct unbinding,five/three
+FText setters,two native settings-label assignments and empty prompt cast.
+Independently verify every retained current native asset byte-matches a frozen
+input in its existing accepted native ledger;verify those summary hashes and
+all reused native frozen inputs/current SDK. Historical runtime is not replayed.
+Changed shapes/stale or duplicate exemptions fail closed. Fifteen focused tests
+cover transitive cycles,unknown targets,child shadowing,Profile mismatches and
+changed native transport bodies;isolated staged incremental verification follows.
+The963 census remains347 direct Python,421 direct dispatch-review,nine typed
+static dispatch-review,22 transitive source-review,11 retained native source-
+review,105 no connected execution business and48 parent-forwarder review.
+Zero unclassified entries is a structural result,not proof that every original
+business path or branch ran. Preserve batch222's historical33-lead checkpoint,
+exact246 candidates/order/versions and246/182/63/11;all22 original whole-version
+requirements remain unproven. No gameplay/C++/Blueprint asset edits. Commit/push
+Examples first,then core gitlink;ledger223.
+
 **Completed bounded source review batch222 (2026-10-23),all246 native routes:**
 Extend the existing read-only37-candidate audit with explicit AllCandidates;
 default37 behavior remains. Current source-matching SDK217 loads all exact246

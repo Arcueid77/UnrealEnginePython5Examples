@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 224,
+    "bounded_evidence_ledgers": 225,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -15242,5 +15242,36 @@
     "load_time_blueprint_warnings": 4,
     "full_acceptance": false,
     "next": "Review the33 named original entries through transitive Python dispatch,native transport and actual caller/reference semantics;then close the22 original whole-version requirements. Native registration and retained source dispositions are not gameplay or completion proof."
+  },
+  "current_candidate_entrypoint_source_review": {
+    "status": "963_original_entries_structurally_classified_semantic_and_version_acceptance_remain_open",
+    "evidence_ledger": "223-original-entrypoint-transitive-routes-and-retained-native-source-review.json",
+    "prior_review": "current_candidate_routing_review",
+    "reused_native_run": "20261023-completion-coverage/Coverage03ScopeFix",
+    "source_reviews": "entrypoint_source_reviews.json",
+    "original_candidates": 246,
+    "original_entrypoints": 963,
+    "previously_flagged_entries": 33,
+    "transitive_source_routes": 22,
+    "retained_native_source_dispositions": 11,
+    "unclassified_original_entries": 0,
+    "entrypoint_counts": {
+      "python-routed": 347,
+      "no-connected-execution-business": 105,
+      "direct-parent-forwarder-review": 48,
+      "staged-script-dispatch-forwarder-review": 421,
+      "retained-native-source-review": 11,
+      "staged-typed-script-dispatch-forwarder-review": 9,
+      "staged-transitive-script-dispatch-review": 22
+    },
+    "original_business_entry_semantics_all_reviewed": false,
+    "new_gameplay_acceptance": false,
+    "native_processes_launched": 0,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_acceptance": false,
+    "original_roadmap_requirements": 22,
+    "next": "Review original version acceptance criteria and existing bounded native evidence against their supported semantic/runtime scope. Source reachability and retained native transports do not close gameplay,presentation,network/package or version acceptance."
   }
 }
