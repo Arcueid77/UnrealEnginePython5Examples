@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "batch": "227-session-entry-native-duplicate-join-failure-cleanup-and-retry",
+  "status": "evidence_snapshot",
+  "recorded_utc": "2026-10-23T11:17:25.388370+00:00",
+  "scope": "Current SDK217 one owned LAN listen host/two serial independent UI clients. Both original/Python clients naturally search/join,then use the actual advertised result in an owned current-world row. Real NULL-provider duplicate join returns UnknownError/JoinSessionFailed. Verify typed error UI/spinner pop,actual acknowledgement,native failure session cleanup and UI retry to the same host. Old completed rooted row stays unbound. Four successful joins/two real failures,all three native exits0. No dedicated two-simultaneous-client,external/authenticated-provider,physical/pixel/package/version claim.",
+  "core_parent_commit": "ff0b000ca6013a850bfa12759f183ba58744bea9",
+  "examples_parent_commit": "1097fae3af4e14a47ffd646b7a7b4e00913187dd",
+  "full_version_acceptance": false,
+  "full_acceptance": false,
+  "release_publication": false,
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-session-join-failure/Native01",
+      "summary_sha256": "21A26744335A22BA2BC5CC3F7418BC683A9C18B4FC46288CABBE5BB99D780DF9",
+      "status": "passed",
+      "peer_exit_codes": {
+        "host": 0,
+        "Python": 0,
+        "BlueprintFallback": 0
+      },
+      "independent_gate_exit_code": 0,
+      "frozen_input_records": 3449
+    }
+  ],
+  "native_processes": 3,
+  "profiles": [
+    "BlueprintFallback",
+    "Python"
+  ],
+  "native_successful_joins": 4,
+  "native_duplicate_join_failures": 2,
+  "native_failure_error_id": "UnknownError",
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "independent_review": {
+    "path": ".build/LyraValidation/BlueprintPython/20261023-session-join-failure/independent-review01.json",
+    "sha256": "6178EE399EA77BE9B4922F5D3DCC5F192F763EA5B6144DFBB677ABEC8AA6178F",
+    "process_exit_code": 0
+  },
+  "input_hashes": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-session-join-failure/review.py",
+      "sha256": "2964F120AE699C3A0519A0E1BC619F5E4674D6BDA40177698B58C85A89153CE1"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-session-join-failure/before-batches.json",
+      "sha256": "7B128CC2FD6661A400C700DAF8744059E3ED3E7D9C6A6BBCEB980B291380AA2D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-session-join-failure/Native01/summary.json",
+      "sha256": "21A26744335A22BA2BC5CC3F7418BC683A9C18B4FC46288CABBE5BB99D780DF9"
+    },
+    {
+      "path": "Validation/Run-UEP58SessionJoinFailureValidation.ps1",
+      "sha256": "53E5CFE536C9735DBA38FD43A12BAC3F298DB0FC92CB83B55047BABFB1C3684F"
+    },
+    {
+      "path": "Validation/UEPSessionJoinFailureProcesses.ps1",
+      "sha256": "8323F1EF28A91589E647059C620AE3DD90BDD797E8962418197871DA25E29DC9"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "B105A922789CFA5EF09016548A2914751705FE103E3150EC76822F68A7ADAA5D"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/session_join_failure_validation.py",
+      "sha256": "035E89C80F994C0A6F515CDA3404AD2A133313FDC413115703492B5C54C39592"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/session_join_failure_contract.py",
+      "sha256": "10E918FAA007B4649D88DF25917B11637DBDFD18D29D16700B381A29A83E755F"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tests/test_session_join_failure_contract.py",
+      "sha256": "308BE25FDE5F3BB5A1D5B277415E0229A1DAA53B77D996DCDBE46DF7ED07300C"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-session-join-failure/Native01/host.json",
+      "sha256": "E4E20E77101DEE095BB5C1922019636FE21090E5F04C6E6353D061499FD31322"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-session-join-failure/Native01/host.log",
+      "sha256": "8018C5A0647E68AED2B6278DC47D75C5D61A623E0EE804725549773384F72E45"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-session-join-failure/Native01/BlueprintFallback.json",
+      "sha256": "7F9D534F298E1776DB0D776719C46A61E931C9BF2A69975A2D8425B25AFB02A7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-session-join-failure/Native01/BlueprintFallback.log",
+      "sha256": "6C5FD650B202BE5B3C3F91B707872EEFB3451C057B3B7D33F9701535234BBE7C"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-session-join-failure/Native01/Python.json",
+      "sha256": "8BE1C59E678D91BA6F4580834399608ED5FAFFA95661F780E49FF29445BF5142"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-session-join-failure/Native01/Python.log",
+      "sha256": "99754315467C674A2F1C91A1CF4C71AEB86E9A20143F947EC8BCEF3E8FDD2736"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-session-join-failure/Native01/BlueprintFallback-duplicate-title.t3d",
+      "sha256": "D8435FBFF1CDFC5F74DC7FA0F2D02B5FE8C62B136C39527D4A9A6A21EE7B25AE"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-session-join-failure/Native01/BlueprintFallback-duplicate-body.t3d",
+      "sha256": "6AF522AE2A18460205BECDC2681DA36FD5AADFAAD79CBAE64F91F157380DAC61"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-session-join-failure/Native01/Python-duplicate-title.t3d",
+      "sha256": "D8435FBFF1CDFC5F74DC7FA0F2D02B5FE8C62B136C39527D4A9A6A21EE7B25AE"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-session-join-failure/Native01/Python-duplicate-body.t3d",
+      "sha256": "6AF522AE2A18460205BECDC2681DA36FD5AADFAAD79CBAE64F91F157380DAC61"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-session-join-failure/independent-review01.json",
+      "sha256": "6178EE399EA77BE9B4922F5D3DCC5F192F763EA5B6144DFBB677ABEC8AA6178F"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-session-join-failure/independent-review-process01.json",
+      "sha256": "D116167EC318E88D4FA9AE78E99E0BC080A3331CD4DD83A5EA8F1864CD392E6B"
+    }
+  ],
+  "native_callbacks_replayed": false,
+  "gameplay_policies_changed": false,
+  "blueprint_assets_changed": false,
+  "online_provider_authentication_tested": false,
+  "network_acceptance": false,
+  "packaged_runtime": false,
+  "pixels_tested": false,
+  "isolated_staged_incremental_verification": ".build/CommitVerification/20261023-session-join-failure/Index01"
+}

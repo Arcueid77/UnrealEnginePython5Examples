@@ -31,6 +31,36 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded duplicate-join batch227 (2026-10-23),current SDK217:**
+Reuse original real-LAN host/browser-entry success helpers with an explicit
+join-failure lane. One owned listen host serves two serial independent clients,
+original then Python. Each actual selection/login/nonempty browser row joins
+the host naturally;retain its real advertised native result across travel.
+Create an owned entry under the new actual controller and assign that result
+through the original public item interface. Its real button/spinner/preparation
+submits a duplicate join while the native GameSession exists. NULL rejects it
+through the real provider callback;its native code maps this to UnknownError,
+not an invented AlreadyInSession result. Both Profiles preserve exact native
+NetworkErrors/JoinSessionFailed FText histories and original spinner-pop/order.
+Actual acknowledgement closes the error. Native failure handling destroys the
+owned named session;the same entry's actual button can then retry and naturally
+rejoin the same host/map/Experience. The initial completed row stays rooted but
+its counters never change on failure/retry notifications,proving its original
+unbind. Each client observes native success/failure/success;the new row has two
+exclusive selected-Profile prepared/completed calls,without callback replay.
+Keep cross-travel actor identity/Health separate;failed duplicate join itself
+does not travel or change the current gameplay Health. All owned session/proxy/
+widget roots,selectors,input and loading state clean up. Native01 has four real
+successful joins/two provider failures,three exits0,independent gate0,exact
+provider-warning/error counts,strict remaining logs/ordered shutdown and3449
+unchanged frozen inputs. Six focused negative contract/startup checks pass;
+isolated staged incremental checks follow. No gameplay policy,C++,Blueprint
+asset,compile,cook/package or full-version changes. This is one local listen
+host and serial UI clients,not dedicated simultaneous-client/provider-auth/
+physical/pixel/loss/full network acceptance. Preserve original246 paths/order/
+versions,246/182/63/11 and all22 requirement texts. Commit/push Examples first,
+then core focused driver/process helper/gitlink;ledger227.
+
 **Completed bounded browser failure/lifetime batch226 (2026-10-23):**
 One current SDK217 offscreen Editor Standalone process compares the original
 and Python browser. Each starts an actual native NULL search,then reuses its
