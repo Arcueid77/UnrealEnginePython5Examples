@@ -23,6 +23,14 @@ def evidence(actor):
 def mark(actor,name):evidence(actor)['python_'+name]+=1
 
 
+def mesh_target(actor):
+    # A removed target can leave an invalid cached wrapper until Cue recycle.
+    # Native mesh helpers accept null and then do no work; retain the source
+    # TargetActor field while allowing effects/listener cleanup to continue.
+    target=actor.get_property('TargetActor')
+    return target if valid(target) else None
+
+
 def application(actor,target,parameters,results):
     mark(actor,'application');templates=list(actor.get_property('NiagaraSystemTemplates'))
     if not templates:
@@ -42,7 +50,7 @@ def spawn(actor):
     if not valid(template):
         evidence(actor)['diagnostic_fallbacks']+=1;return actor.call_mixin_original('SpawnEffectForEachMeshComponent')
     mapping=dict(actor.get_property('SpawnedEffectMap'));effects=list(actor.get_property('SpawnedEffects'))
-    for mesh in components(actor.get_property('TargetActor'),'SkeletalMeshComponent',True):
+    for mesh in components(mesh_target(actor),'SkeletalMeshComponent',True):
         if ignore_tag(mesh):evidence(actor)['ignored_meshes']+=1;continue
         if mesh in mapping:evidence(actor)['existing_meshes']+=1;continue
         effect=lib('NiagaraFunctionLibrary').call_function('SpawnSystemAttached',SystemTemplate=template,AttachToComponent=mesh,AttachPointName='None',Location=ue.FVector(),Rotation=ue.FRotator(),LocationType=EAttachLocation.KeepRelativeOffset,bAutoDestroy=False,bAutoActivate=True,PoolingMethod=getattr(ENCPoolMethod,'None'),bPreCullCheck=True)
@@ -58,21 +66,21 @@ def team(actor,asset):
 
 
 def colors(actor):
-    mark(actor,'colors');target=actor.get_property('TargetActor')
+    mark(actor,'colors');target=mesh_target(actor)
     lib('LyraSystemStatics').call_function('SetColorParameterValueOnAllMeshComponents',target,'KillEdgeColor',actor.get_property('TeamColor'),True)
     lib('LyraSystemStatics').call_function('SetScalarParameterValueOnAllMeshComponents',target,'SpawnAge',actor.get_property('Spawn Linear Time'),True)
 
 
 def update(actor,value):
     mark(actor,'update');evidence(actor)['last_time']=float(value);actor.set_property('Spawn Linear Time',value)
-    lib('LyraSystemStatics').call_function('SetScalarParameterValueOnAllMeshComponents',actor.get_property('TargetActor'),'SpawnAge',value,True)
+    lib('LyraSystemStatics').call_function('SetScalarParameterValueOnAllMeshComponents',mesh_target(actor),'SpawnAge',value,True)
     for effect in actor.get_property('SpawnedEffects'):
         if valid(effect):effect.call_function('SetVariableFloat','SpawnTimeline',value)
     return False
 
 
 def removal(actor):
-    mark(actor,'removal');lib('LyraSystemStatics').call_function('SetScalarParameterValueOnAllMeshComponents',actor.get_property('TargetActor'),'SpawnAge',1.,True)
+    mark(actor,'removal');lib('LyraSystemStatics').call_function('SetScalarParameterValueOnAllMeshComponents',mesh_target(actor),'SpawnAge',1.,True)
     for effect in actor.get_property('SpawnedEffects'):
         if valid(effect):effect.call_function('Deactivate')
     actor.set_property('SpawnedEffects',[]);actor.set_property('SpawnedEffectMap',{})

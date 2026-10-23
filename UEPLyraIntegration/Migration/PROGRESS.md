@@ -31,6 +31,40 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed cached-target cleanup and current melee batch233 (2026-10-23):**
+Fix a real GCNL_Spawning OnRemoval error exposed by current melee regression:
+an invalid cached TargetActor could not pass checked reflection conversion,so
+the first material call aborted effect/cache/team/parts cleanup. Invalid cached
+targets now become null native mesh-helper arguments,which native code accepts;
+retain TargetActor and native clock fields/live-target order. Cover color,
+Timeline and mesh queries too. Forced-invalid-target host regressions ensure
+removal finishes and caches/watchers/parts are cleared without BP fallthrough.
+Current SDK217 Native05DestroyedTarget passes the original20 authority/40 viewer
+two-owner melee matrix,four native hostile100-damage hits,all three process
+exits0/external gate0/strict clean logs and3559 frozen inputs. Existing native
+prediction Cue filtering remains. Lazy Character construction/Begin/End reads
+avoid preload/CDO writes;current Cue observation forwards/restores the two
+production profiles exactly. This is not an additional controlled native
+destroyed-target pair or complete spawning presentation acceptance.
+Historical same-peer logs/snapshots identify four canonical simulated Pawns
+losing ASC/Health binding while PlayerState Health stays100;new local native
+avatars take over those ASCs. Official native source proves the old-avatar
+uninitialize -> Health binding clear -> GetHealth0 boundary. It does not prove
+why new Pawns appeared/retired. Accepted current capture has no such rows;the
+original readiness race stays OPEN,not fixed by a successful run or Spawn Cue
+repair. Native construction/retirement provenance is the next targeted question.
+Preserve four rejected groups:Native01 obsolete unbound-Cue precondition;
+Native02 outer sharing violation;Native03 missing exit-token run_id after all
+20 cases;Native04 three clean process exits/all cases but a real Spawn Cue
+Python error rejected by strict logs. Five groups/fifteen actual native process
+attempts total,only Native05's three accepted. Exact-function protocol checks
+cover missing/locked files,release,bad JSON,unrelated I/O and owned run identity.
+Do not suppress runtime errors or reinterpret the earlier reports as passes.
+Seven forensic/observer and32 Spawn Cue focused host checks pass;incremental
+staged checks follow. All246 candidate rows/order/versions,246/182/63/11 and
+original checklist scope remain. No C++/Blueprint edits,compile,cook/package or
+full regression. Commit/push accepted Examples/core separately;ledger233.
+
 **Completed original predicted-network Explorer batch232 (2026-10-23):**
 Current SDK217,unchanged original L_InteractionTestMap/Experience,one dedicated
 Editor server and two actual clients for each of BlueprintFallback/Python. Each

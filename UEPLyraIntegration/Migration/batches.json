@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 234,
+    "bounded_evidence_ledgers": 235,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -4665,7 +4665,12 @@
     "audio_playback_tested": false,
     "packaged_runtime": false,
     "full_acceptance": false,
-    "next": "Remaining GameplayCue0.12 and later business plus broad runtime/network/pixel/audio/package/version acceptance;preserve full original scope."
+    "next": "Remaining GameplayCue0.12 and later business plus broad runtime/network/pixel/audio/package/version acceptance;preserve full original scope.",
+    "current_cached_target_cleanup_followup": {
+      "evidence_ledger": "233-spawning-cached-target-cleanup-and-current-melee-diagnosis.json",
+      "status": "invalid_cached_target_mesh_dispatch_no_longer_interrupts_native_spawning_cleanup",
+      "full_acceptance": false
+    }
   },
   "traversal_cue_pilot": {
     "version": "0.12.0",
@@ -5480,7 +5485,15 @@
       "reproduced_on_human_simulated_proxy_without_teleport": "20261018-grenade-widget-network/Network02",
       "construction_begin_end_destroy_python_stack_diagnostics_available": true,
       "method_isolation_does_not_prove_cause": true,
-      "next_batch": "Native join across warmup/reset boundary; no general stability or production race repair accepted"
+      "next_batch": "Capture why replacement native Pawns are created/retired when canonical Pawn loses ASC. Current accepted run does not reproduce original failure;do not treat the fixed Spawn Cue cleanup as race cause or repair.",
+      "current_native_takeover_diagnosis": {
+        "evidence_ledger": "233-spawning-cached-target-cleanup-and-current-melee-diagnosis.json",
+        "historical_same_peer_canonical_empty_bindings_with_healthy_attributes": 4,
+        "current_sdk217_native_matrix": "20261023-current-melee-readiness/Native05DestroyedTarget",
+        "current_failure_reproduced": false,
+        "original_race_fixed": false,
+        "spawning_cleanup_error_is_separate": true
+      }
     },
     "physical_input_tested": false,
     "pvp_avatar_turnover_tested": false,
@@ -15839,5 +15852,26 @@
     "cook_package_executed": false,
     "full_regression_executed": false,
     "next": "Reconcile original Explorer/TopDown remaining presentation,applicable local/multiplayer and lifecycle requirements against current source/runtime evidence. This proves real predicted collect/sit through native input with two network owners;it does not claim natural HUD reachability,travel/rejoin,all abilities or whole0.14 acceptance."
+  },
+  "spawning_cached_target_cleanup_pilot": {
+    "version": "0.12.0",
+    "status": "invalid_cached_target_mesh_dispatch_no_longer_interrupts_native_spawning_cleanup",
+    "evidence_ledger": "233-spawning-cached-target-cleanup-and-current-melee-diagnosis.json",
+    "native_run": "20261023-current-melee-readiness/Native05DestroyedTarget",
+    "current_sdk217": true,
+    "production_fix_class": "/ShooterCore/GameplayCues/GCNL_Spawning.GCNL_Spawning_C",
+    "accepted_native_processes": 3,
+    "actual_native_group_attempts": 5,
+    "actual_native_process_attempts": 15,
+    "native_authority_trials": 20,
+    "native_viewer_trials": 40,
+    "forced_invalid_target_host_regression": true,
+    "controlled_destroyed_target_native_pair_tested": false,
+    "original_readiness_race_fixed": false,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_acceptance": false,
+    "next": "Continue the original migration acceptance requirements;the independent initial-join Pawn/ASC binding issue remains open. Capture why native replacement Pawns are created/retired without writing Health or repairing ASC. A clean current matrix does not prove general stability."
   }
 }

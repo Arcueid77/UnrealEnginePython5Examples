@@ -70,6 +70,24 @@ class SpawningPolicyTests(unittest.TestCase):
         policy.removal(self.actor);self.assertEqual((self.data['Spawn Linear Time'],self.data['TargetActor'],self.data['PawnCosmeticSystem'],self.data['TeamColorWatcherHandle']),(.6,'old-target','parts',self.watcher));self.assertFalse(any(c[0]=='timeline' for c in self.calls))
     def test_missing_watcher_still_unbinds_parts(self):
         self.data['TeamColorWatcherHandle']=None;policy.removal(self.actor);self.assertEqual(self.calls[-1],('actor','StopWatchingForParts'));self.assertFalse(any(c[0]=='watcher' for c in self.calls))
+    def test_destroyed_cached_target_does_not_interrupt_removal_cleanup(self):
+        dead=object();self.data['TargetActor']=dead;self.data['SpawnedEffects']=[self.fx];self.data['SpawnedEffectMap']={'mesh':self.fx}
+        original=self.backend
+        def strict(fn,args,kw):
+            if args and args[0] is dead:raise TypeError('invalid native TargetActor argument')
+            return original(fn,args,kw)
+        self.backend=strict
+        with patch.object(policy,'valid',lambda value:value is not None and value is not dead):policy.removal(self.actor)
+        self.assertIsNone(self.calls[0][2][0]);self.assertIn(('effect','Deactivate'),self.calls)
+        self.assertEqual(self.data['SpawnedEffects'],[]);self.assertEqual(self.data['SpawnedEffectMap'],{})
+        self.assertEqual(self.calls[-2:],[('watcher','Cancel'),('actor','StopWatchingForParts')])
+        self.assertIs(self.data['TargetActor'],dead);self.assertEqual(self.data['Spawn Linear Time'],.6)
+    def test_destroyed_cached_target_is_null_for_color_clock_and_mesh_queries(self):
+        dead=object();self.data['TargetActor']=dead;seen=[];policy.components=lambda target,*args:seen.append(target) or []
+        with patch.object(policy,'valid',lambda value:value is not None and value is not dead):
+            policy.colors(self.actor);policy.update(self.actor,.37);policy.spawn(self.actor)
+        self.assertEqual(seen,[None]);self.assertTrue(all(call[2][0] is None for call in self.calls if call[0]=='native' and 'ParameterValueOnAllMeshComponents' in call[1]))
+        self.assertIs(self.data['TargetActor'],dead)
     def test_parts_callback_ignores_payload_and_keeps_spawn_before_colors(self):
         policy.LyraSpawningCuePythonProfile.OnCharacterPartsChanged(self.actor,object());self.assertEqual(self.calls,[('actor','SpawnEffectForEachMeshComponent'),('actor','UpdateActorColors')])
     def test_stop_uses_source_delegate_identity_transport(self):

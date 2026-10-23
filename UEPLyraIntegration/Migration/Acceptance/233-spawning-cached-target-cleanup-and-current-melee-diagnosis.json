@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "batch": 233,
+  "accepted_at_utc": "2026-10-23T13:56:14.188030+00:00",
+  "name": "Spawn Cue cached-target lifetime fix and current melee diagnosis",
+  "scope": "Fix GCNL_Spawning cached invalid TargetActor conversion at removal;color/Timeline/mesh-query helpers also pass null for invalid cached targets. Native mesh helpers already accept null;retain source fields and live-target order,continue effect/cache/team/parts cleanup. Forced-invalid host cases and current SDK217 original/Python two-owner melee matrix pass. Lazy existing-class lifecycle observation and current production Cue handler observation restore exact handlers;driver transient JSON/owned exit identity fixed. Historical same-peer native ASC takeover explains four healthy-attribute/canonical-empty-binding snapshots,but replacement-Pawn creation/retirement cause and original race repair remain unproven.",
+  "original_scope": [
+    246,
+    182,
+    63,
+    11
+  ],
+  "candidate_rows_changed": 0,
+  "full_acceptance": false,
+  "core_head_before": "d571b130894f9a515bfba4c4e274b38f2629470f",
+  "demos_head_before": "9f29a7988b283c9f53ef6bfb913b5b1542ec335a",
+  "accepted_run": {
+    "directory": ".build/LyraValidation/BlueprintPython/20261023-current-melee-readiness/Native05DestroyedTarget",
+    "summary_sha256": "8E71DB3C52B0AE9DD5490E14224D5ADE766C148F3F271BFE896FEE2A0C4FECAC",
+    "frozen_input_records": 3559,
+    "process_exit_codes": {
+      "A": 0,
+      "server": 0,
+      "B0": 0
+    },
+    "gate_exit_code": 0
+  },
+  "accepted_native_processes": 3,
+  "actual_native_group_attempts": 5,
+  "actual_native_process_attempts": 15,
+  "current_sdk217": true,
+  "native_matrix": {
+    "status": "passed",
+    "native_authority_trials": 20,
+    "actual_owning_clients": 2,
+    "native_owner_requests": 20,
+    "replicated_viewer_trials": 40,
+    "native_hostile_damage_trials": 4,
+    "full_acceptance": false,
+    "packet_loss_tested": false
+  },
+  "lifecycle_events": {
+    "server": {
+      "native-construction": 13,
+      "native-begin-play": 13,
+      "native-binding-change": 56,
+      "native-end-play": 10
+    },
+    "A": {
+      "native-construction": 12,
+      "native-begin-play": 12,
+      "native-binding-change": 28,
+      "native-end-play": 7
+    },
+    "B0": {
+      "native-construction": 12,
+      "native-begin-play": 12,
+      "native-binding-change": 27,
+      "native-end-play": 7
+    }
+  },
+  "historical_same_peer_canonical_empty_bindings_and_native_takeovers": 4,
+  "cross_peer_identity_claimed_from_local_names": false,
+  "original_readiness_race_status": "open_not_fixed",
+  "original_race_fixed": false,
+  "original_race_reproduced_in_accepted_current_run": false,
+  "production_fix_class": "/ShooterCore/GameplayCues/GCNL_Spawning.GCNL_Spawning_C",
+  "melee_and_character_policy_unchanged": true,
+  "forced_invalid_target_host_regression": true,
+  "controlled_destroyed_target_native_pair_tested": false,
+  "source_retained_handles_and_native_timeline_policy_preserved": true,
+  "production_cue_handlers_forwarded_and_restored": true,
+  "private_fixture_unchanged": true,
+  "preserved_failed_groups": [
+    {
+      "directory": "Native01",
+      "summary_sha256": "1739BD80D93ABB53F0339C3F277E4B0D531FFF27E91A6B054300CC87030ED719",
+      "reason": "do not replace production Cue routing",
+      "exit_codes": {
+        "server": -1,
+        "B0": -1,
+        "A": -1
+      }
+    },
+    {
+      "directory": "Native02CurrentCue",
+      "summary_sha256": "AC37903E46AC49ECBF8C9D25ACC4001775DADD1A2F822E6C6F82196413C38C91",
+      "reason": "being used by another process",
+      "exit_codes": {
+        "A": -1,
+        "server": -1,
+        "B0": -1
+      }
+    },
+    {
+      "directory": "Native03TransientRead",
+      "summary_sha256": "C397EE003923FA84881FADBA910DAB44548F3EBE3D6DCB6494CB1379F62DDA35",
+      "reason": "KeyError: 'run_id'",
+      "exit_codes": {
+        "B0": 0,
+        "server": -1,
+        "A": 0
+      }
+    },
+    {
+      "directory": "Native04ExitIdentity",
+      "summary_sha256": "7D3BB220607983898D69F8727A92012F59A207EA8C3CCC5955B48CBF29B2330C",
+      "reason": "Focused Unreal log contains an unexpected error",
+      "exit_codes": {
+        "A": 0,
+        "server": 0,
+        "B0": 0
+      }
+    }
+  ],
+  "prior_completed_matrix_rejected_for_real_spawning_error": true,
+  "reader_and_exit_protocol_tests": "Reader02ExitIdentity;actual token parser accepts owned run/rejects foreign run",
+  "independent_review": {
+    "path": ".build/LyraValidation/BlueprintPython/20261023-current-melee-readiness/independent-review01.json",
+    "sha256": "5DBEAFF048950B27444676C3230D69C4F94108EAA129EBCEE695CC0C96EA74C0",
+    "process_exit_code": 0
+  },
+  "input_hashes": [
+    {
+      "path": "Validation/Run-UEP58CurrentMeleeReadinessValidation.ps1",
+      "sha256": "F8281030537C447E69E8DFC8A6B6B2D60AA3AC408BA453D7B767B130FD2B90F2"
+    },
+    {
+      "path": "Validation/Test-UEPMeleeLiveJsonReader.ps1",
+      "sha256": "12691D5F3884F621111F18B4C56E5334756EF46F1163B7C1347A58257FF3A508"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "372872149FB1FB453106FF3468E75801D16812C29E3AB7178FE6BC74FE9FD65C"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_readiness_diagnostic_validation.py",
+      "sha256": "449CC36775B0D607F7510FB7B738E4C577D8C75354BE77869EB16D86892F8095"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_cue_observation.py",
+      "sha256": "3A9C4B40A8E4A57BD697F28F769C8BF1CAA58D356E6C9416E73472D2DDD90526"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_trace_network_validation.py",
+      "sha256": "2E303DCD22A76583AE3E3FCA4D0F484FD57391445EF88753AFE2C0C19C80E6B5"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/spawning_cue_mixin.py",
+      "sha256": "FFD75BE083BE079CC01D1AA1442B17C9657D688CC2559AB4F01E8393103201B0"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tests/test_pawn_asc_takeover_analysis.py",
+      "sha256": "22C6D66182FE4EEAB6FA9A6307C1ADA0E8DE862173382EBF19D6AE6365A4F11C"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tests/test_spawning_cue_mixin.py",
+      "sha256": "66B23E2F3CA2D15D0EEB2873B2828820C129959B93EE960DFB55B3E6C5112975"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/analyze_pawn_asc_takeovers.py",
+      "sha256": "0A18A29BBDA1B12F9906FDBABA58FF4A8FBBF0DF74AA62E76EA9264E15B3B1B3"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Migration/PAWN_BINDING_DIAGNOSIS.md",
+      "sha256": "A3BBB98BB371F6178E4C834A0BCA92CA084FF80F97D4F08936EA5C15136CB830"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-melee-readiness/independent-review01.json",
+      "sha256": "5DBEAFF048950B27444676C3230D69C4F94108EAA129EBCEE695CC0C96EA74C0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-melee-readiness/independent-review-process01.json",
+      "sha256": "90997EB1E1178E4CFA2A73529884C976BA29986F04C9BF6C25146097D1513F62"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-melee-readiness/historical-takeovers01.json",
+      "sha256": "0009C5872637AD31DFDBD17AA39A72CC5AB59FFB5039F328FDDA607CF64282C2"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-melee-readiness/current-takeovers01.json",
+      "sha256": "3BE41AA891C709354F0870AC80FE2B43DF0B8A581EAFCACCF8BB7E22245999DC"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-melee-readiness/native-source-review01.json",
+      "sha256": "14D3F0CB977563C22E4551805D92C96B85B6C2848482550F2902EBAA08789442"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-melee-readiness/Reader02ExitIdentity/summary.json",
+      "sha256": "CC8C6FF2120BECAE4B2209C8780809C0C27E22C6A97506DB3FAB4861368B6F13"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-melee-readiness/Native05DestroyedTarget/summary.json",
+      "sha256": "8E71DB3C52B0AE9DD5490E14224D5ADE766C148F3F271BFE896FEE2A0C4FECAC"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-melee-readiness/Native04ExitIdentity/A.log",
+      "sha256": "E90BBA825AFF6AD52C909C7F68A0F9195070906B4B234EF980BB2AEE50A198E9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-melee-readiness/Native04ExitIdentity/FrozenFailedInputs/spawning_cue_mixin.py",
+      "sha256": "EBE9CAF62858761EE2BC80E8ADCC551592546EAC2A81A3F50B2824E5677F9BD0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-third-person/SDKBuild01/summary.json",
+      "sha256": "2D47DD86C19F2DD28F9867D23325E7B9618209059547D6C9BA7FEF0FACCBE184"
+    }
+  ],
+  "full_frozen_input_index": "Accepted run summary.json binds all3559 frozen inputs;complete historical logs/history are bound by historical-takeovers01.json.",
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "blueprint_assets_changed": false,
+  "health_or_asc_repaired": false,
+  "physical_input_tested": false,
+  "pixels_tested": false,
+  "packaged_runtime": false,
+  "isolated_staged_incremental_verification": ".build/CommitVerification/20261023-current-melee-readiness/Index02",
+  "preserved_incremental_driver_failure": {
+    "directory": ".build/CommitVerification/20261023-current-melee-readiness/Index01",
+    "status": "failed",
+    "reason": "PowerShell native -File encoded two test patterns as one quoted comma pattern;no host cases executed. Corrected script invocation passes a real string array;no native input changes."
+  }
+}

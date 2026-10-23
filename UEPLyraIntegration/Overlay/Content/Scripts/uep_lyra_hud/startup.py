@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if '-UEPMeleeReadinessDiagnostic' in arguments and any(a.startswith('-UEPMeleeTraceNetworkResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):
+        return 'uep_lyra_abilities.melee_readiness_diagnostic_validation'
     if any(a.startswith('-UEPExplorerActionsNetworkResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):
         return 'uep_lyra_abilities.explorer_actions_network_validation'
     if any(a.startswith('-UEPExplorerFollowResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):

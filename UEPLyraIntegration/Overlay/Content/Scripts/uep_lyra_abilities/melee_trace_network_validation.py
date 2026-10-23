@@ -77,16 +77,24 @@ class Client(Activation):
     def begin(self):
         super().begin(); self.report.update(player_id=player_id(self.pawn),post_warmup_pawn=path(self.pawn), native_net_mode=str(ue.find_class("UEPLyraBridgeLibrary").get_cdo().call_function("GetBridgeForWorld", self.world).call_function("CaptureSnapshot").NetMode))
         observation.install(self); self.installed = True; self.cue_class = ue.load_class(CUE)
-        require(not any(row["target_class"] == self.cue_class for row in ue.get_registered_mixins()), "do not replace production Cue routing")
-        self.original_cue = self.cue_class.get_cdo().find_function("OnBurst"); owner = self
+        cue_bindings=[row for row in ue.get_registered_mixins() if row["target_class"]==self.cue_class]
+        owner = self
+        def record(Target,Parameters):
+            try:
+                if owner.command is not None and player_id(Target)==owner.command["source_player_id"]:
+                    value=cue_values(Target,Parameters);value["source_player_id"]=player_id(Target);owner.cues.append(value)
+            except Exception:owner.observation_errors.append(traceback.format_exc())
         class ObserveCue:
             def OnBurst(self, Target, Parameters, SpawnResults):
-                try:
-                    if owner.command is not None and player_id(Target) == owner.command["source_player_id"]:
-                        value = cue_values(Target, Parameters); value["source_player_id"] = player_id(Target); owner.cues.append(value)
-                except Exception: owner.observation_errors.append(traceback.format_exc())
+                record(Target,Parameters)
                 return self.call_mixin_original("OnBurst", Target, Parameters, SpawnResults)
-        ue.register_mixin_profile(self.cue_class, "UEPMeleeTraceNetworkObserve", ObserveCue, make_default=True)
+        if cue_bindings:
+            from .melee_cue_observation import ExistingCueObservation
+            self.current_cue_observation=ExistingCueObservation(ue,self.cue_class,cue_bindings[0],record)
+            self.report['production_cue_profiles_observed']=sorted(self.current_cue_observation.originals)
+        else:
+            self.original_cue=self.cue_class.get_cdo().find_function('OnBurst')
+            ue.register_mixin_profile(self.cue_class,"UEPMeleeTraceNetworkObserve",ObserveCue,make_default=True)
         atomic_write(self.root/(self.peer+"-ready.json"), dict(run_id=self.run, player_id=self.report["player_id"])); self.enter("idle")
     def before_activation(self, instance): pass
     def after_activation(self, instance):
@@ -180,7 +188,9 @@ class Client(Activation):
         self.early_watch.close(); self.report["early_readiness_event_files"]=list(self.early_watch.files)
         if self.observer is not None: self.observer.close(); self.observer = None
         self.report["observer_scope_closed"] = self.observer is None
-        if hasattr(self, "cue_class"):
+        if getattr(self,'current_cue_observation',None) is not None:
+            self.report['cue_observer_restored']=self.current_cue_observation.restore()
+        elif hasattr(self, "original_cue"):
             self.report["cue_observer_restored"] = bool(ue.unregister_mixin(self.cue_class)) and self.cue_class.get_cdo().find_function("OnBurst") == self.original_cue
         if self.installed: self.report["activation_observers_restored"] = observation.restore()
         if hasattr(self, "original"):
