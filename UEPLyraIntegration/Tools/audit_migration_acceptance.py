@@ -136,18 +136,33 @@ def main():
     parser.add_argument('--roadmap', required=True)
     parser.add_argument('--result', required=True)
     parser.add_argument('--markdown')
+    parser.add_argument('--static-scope-review', help='Verify per-asset exclusion reasons;never accepts migrated gameplay')
     args = parser.parse_args()
     manifest = Path(args.manifest)
-    report = inspect(json.loads(manifest.read_text(encoding='utf-8-sig')),
-        json.loads(Path(args.original_inventory).read_text(encoding='utf-8-sig')),
+    current = json.loads(manifest.read_text(encoding='utf-8-sig'))
+    initial = json.loads(Path(args.original_inventory).read_text(encoding='utf-8-sig'))
+    report = inspect(current, initial,
         Path(args.roadmap).read_text(encoding='utf-8-sig'), acceptance_directory=manifest.parent/'Acceptance')
     report['inputs'] = [dict(path=str(Path(p).resolve()), sha256=digest(p))
                         for p in (args.manifest, args.original_inventory, args.roadmap)]
+    if args.static_scope_review:
+        from audit_static_scope_dispositions import verify_documentation
+        path = Path(args.static_scope_review)
+        verified = verify_documentation(json.loads(path.read_text(encoding='utf-8-sig')), current, initial)
+        target = [row for row in report['requirements'] if row['version'] == '0.14.0' and row['text'] ==
+            'Configuration-only BP shells and animation/editor/test exclusions have documented reasons. Game-project C++ migration stays a separate phase.']
+        if len(target) != 1:
+            raise ValueError('Exact original configuration/exclusion reason requirement required')
+        target[0].update(completion_proven=True, evidence_state='per_asset_reasons_and_current_reference_stage_copies_verified',
+            evidence_artifact=str(path.resolve()), runtime_acceptance=False)
+        report['static_scope_reason_review'] = verified
+        report['inputs'].append(dict(path=str(path.resolve()), sha256=digest(path)))
     Path(args.result).write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     if args.markdown:
         Path(args.markdown).write_text(markdown(report), encoding='utf-8')
     print(json.dumps(dict(status=report['status'], candidates=len(report['candidate_rows']),
-        requirements=len(report['requirements']), explicitly_unverified=len(report['explicit_unverified_capabilities']),
+        requirements=len(report['requirements']), requirements_proven=sum(r['completion_proven'] for r in report['requirements']),
+        explicitly_unverified=len(report['explicit_unverified_capabilities']),
         full_migration_acceptance_proven=False)))
 
 

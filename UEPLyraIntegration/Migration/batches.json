@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 225,
+    "bounded_evidence_ledgers": 226,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -15273,5 +15273,34 @@
     "full_acceptance": false,
     "original_roadmap_requirements": 22,
     "next": "Review original version acceptance criteria and existing bounded native evidence against their supported semantic/runtime scope. Source reachability and retained native transports do not close gameplay,presentation,network/package or version acceptance."
+  },
+  "configuration_exclusion_scope_review": {
+    "status": "all_original_configuration_and_retained_assets_have_source_verified_documented_reasons",
+    "evidence_ledger": "224-configuration-shells-and-retained-assets-source-reasons.json",
+    "artifact": "static_scope_dispositions.json",
+    "original_assets": 491,
+    "runtime_candidates": 246,
+    "configuration_only": 182,
+    "retained": 63,
+    "retained_abps": 20,
+    "current_reference_stage_byte_matches": 245,
+    "retained_reason_counts": {
+      "editor tooling retained": 19,
+      "animation system retained": 13,
+      "interface declaration retained": 3,
+      "test tooling retained": 8,
+      "ABP retained by user scope": 20
+    },
+    "original_requirement": "0.14.0 configuration-only and animation/editor/test exclusion reasons;game-project C++ separate",
+    "documentation_requirement_proven": true,
+    "original_requirement_texts_preserved": 22,
+    "other_original_requirements_unproven_by_this_batch": 21,
+    "candidate_rows_unchanged": true,
+    "runtime_acceptance": false,
+    "full_acceptance": false,
+    "new_native_processes": 0,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "next": "Continue original semantic/gameplay/presentation and applicable network/Experience/version requirements. These245 source dispositions accept only the documentation criterion,not inherited native behavior or the246 runtime implementations."
   }
 }

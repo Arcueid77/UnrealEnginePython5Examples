@@ -31,6 +31,32 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded exclusion documentation batch224 (2026-10-23):**
+Record a reason for each original182 configuration shell and63 retained asset
+in static_scope_dispositions.json. Reconstruct all491 original assets from the
+successful471 non-ABP/20-ABP audit,without changing the246 runtime candidate
+paths/order/versions or246/182/63/11. Configuration shells have zero independent
+own-graph business;name any inherited runtime-candidate parent rather than
+pretending its behavior disappeared. The63 retained reasons are20 ABPs,13 other
+animation assets,19 editor tools,eight test tools andthree interfaces.
+All245 current excluded stage files byte-match the supplied official reference,
+including the editor-only LyraExtTool mount. No source/reference asset is edited.
+The acceptance index has an explicit static-scope-review option:verify frozen
+original inputs,reconstruct the reasons and compare current source copies before
+completing exactly the original0.14 configuration/exclusion documentation gate.
+Without this evidence it still leaves the checkbox unproven;it never accepts
+runtime business or the whole version from counts,flags or a checked box.
+Mark that one original ROADMAP criterion complete and link the per-asset reasons.
+All22 requirement texts remain exact;the other21 need continued evidence review.
+Nine focused checks cover new shell business,missing/duplicate assets,version
+changes,explicit ABP reasons,parent cycles,inherited behavior,forged flags and
+changed source copies. Preserve initial invalid synthetic graph fixture failure
+and the deliberately stopped read-only scan;cache each plugin content mount to
+remove repeated directory scans. Final isolated staged incremental checks follow.
+Zero new Unreal/gameplay processes,C++ compile,cook/package or full regression.
+Game-project C++ remains a separate phase. Commit/push Examples first,then the
+core ROADMAP/gitlink;ledger224. Full migration acceptance remains false.
+
 **Completed bounded entrypoint source review batch223 (2026-10-23):**
 Reuse batch222 Coverage03ScopeFix's source-matching SDK217 read-only native
 inventory;zero new Editor/gameplay processes,C++ compile,cook/package or full

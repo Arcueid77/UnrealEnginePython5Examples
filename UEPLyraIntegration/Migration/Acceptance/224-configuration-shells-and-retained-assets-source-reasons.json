@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "batch": "224-configuration-shells-and-retained-assets-source-reasons",
+  "scope": "Document and source-verify every original182 configuration shell and63 retained asset. Complete only the original0.14 exclusion-reason documentation criterion;all246 runtime candidate rows and22 requirement texts preserved. No runtime/gameplay/build/package replay.",
+  "recorded_utc": "2026-10-23T10:33:03.285847+00:00",
+  "status": "evidence_snapshot",
+  "full_version_acceptance": false,
+  "full_acceptance": false,
+  "release_publication": false,
+  "core_parent_commit": "f2a7fd42594c98a35846f69f4a54d543ce1aa2a3",
+  "examples_parent_commit": "8f5c20ed60da4d95d26cc05df7a7cd41a1a9a4c9",
+  "runs": [],
+  "original_assets": 491,
+  "original_scope": [
+    246,
+    182,
+    63,
+    11
+  ],
+  "documented_configuration_shells": 182,
+  "documented_retained_assets": 63,
+  "retained_reason_counts": {
+    "editor tooling retained": 19,
+    "animation system retained": 13,
+    "interface declaration retained": 3,
+    "test tooling retained": 8,
+    "ABP retained by user scope": 20
+  },
+  "current_reference_stage_asset_byte_matches": 245,
+  "documentation_criterion_proven": true,
+  "other_original_requirements_unproven_by_this_batch": 21,
+  "runtime_acceptance": false,
+  "new_native_processes": 0,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "source_review_artifact": "UEPLyraIntegration/Migration/static_scope_dispositions.json",
+  "independent_review": {
+    "path": ".build/LyraValidation/BlueprintPython/20261023-static-scope-dispositions/independent-review01.json",
+    "sha256": "1A5F8A308E1B890936934A5CC6E9A559CD1EB56209316D327DAFB855486CE094",
+    "process_exit_code": 0
+  },
+  "input_hashes": [
+    {
+      "path": "Demos/UEPLyraIntegration/Migration/static_scope_dispositions.json",
+      "sha256": "376941593DEB36FFBE67427C802E73A46D15C7BCAAF004F84E250F895FA49C1B"
+    },
+    {
+      "path": "ROADMAP.md",
+      "sha256": "8B61BD64EF35154A4877CB902B83FD0A5B5464414A712E151F4873FB15FF402A"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-static-scope-dispositions/review.py",
+      "sha256": "448EE7102445620B50D26E6B3278151BF978FAC073D165259B03AF4E74A1586E"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/audit_static_scope_dispositions.py",
+      "sha256": "16D2461778ECEE65C255F3B71595ABB19EE46D7CD7D6F9ABC2F0B377C62801D1"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/audit_migration_acceptance.py",
+      "sha256": "776D334F7EF092E62B892297D7EB52975106DAE4A480E97DC0D816E3D810CD08"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/blueprint_model.py",
+      "sha256": "50B0B7D44FBE1E3B824149B163BA129F2340A30EC1947D160B3EEBF18D5628E4"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tests/test_static_scope_dispositions.py",
+      "sha256": "9A7023441528E266693A2FDBF657E354B14317D7B72084953054841ECA8404ED"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-static-scope-dispositions/requirements02.json",
+      "sha256": "06BAB663F7313601FE61C4A6D00A842CF10AD7B57D46C3F1A835B17B9EE17B00"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-static-scope-dispositions/before-batches.json",
+      "sha256": "55E98D7B8D2DB8D199C150402624EBF32B702E53713C99539D5AF0C4D6C54BB7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-static-scope-dispositions/host-red01.json",
+      "sha256": "22DB9D7C408451AED2C559FFF964AB3554AFA26D00F784CAB150B872621D1BE7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-static-scope-dispositions/host-red01-stderr.log",
+      "sha256": "657217598A4E2E05FB454604E7DEC79182952C1B4ADCA2CF73B7508DC23229BE"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-static-scope-dispositions/host-green01.json",
+      "sha256": "5460E378AB481E8AF5BEB5D6001EB8589F58CF7F10990F679B2540A516D13A0D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-static-scope-dispositions/scan01-interrupted.json",
+      "sha256": "A41AAB1DD2A5531D7EA82EAF2ED6FD79EAB44A96DF8303B1A73533730682E13E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-static-scope-dispositions/source-scope02-process.json",
+      "sha256": "2A897C8F506F6226FCD124425E4E1CF741A81C82AD6074B92D44CF7F97159394"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-static-scope-dispositions/source-scope02-stdout.log",
+      "sha256": "C9F29445E5FEFCFF25E0573448F613D13FC03C1EA6B343E87D561A0AED6F0A0E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-static-scope-dispositions/independent-review01.json",
+      "sha256": "1A5F8A308E1B890936934A5CC6E9A559CD1EB56209316D327DAFB855486CE094"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-static-scope-dispositions/independent-review-process01.json",
+      "sha256": "8C654B1A24A179427D40151EEC71503A95A0296283CE7B4A69934711E6BA5358"
+    }
+  ],
+  "preserved_initial_test_fixture_failure": "host-red01",
+  "preserved_owned_read_only_scan_interruption": "scan01-interrupted.json",
+  "isolated_staged_incremental_verification": ".build/CommitVerification/20261023-static-scope-dispositions/Index01"
+}
