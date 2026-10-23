@@ -31,6 +31,38 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed original predicted-network Explorer batch232 (2026-10-23):**
+Current SDK217,unchanged original L_InteractionTestMap/Experience,one dedicated
+Editor server and two actual clients for each of BlueprintFallback/Python. Each
+owner injects original IA_Interact through both naturally active Interact
+instances;native GAS accepts exactly one Collect/Sit action on the predicted
+client and one on authority. Eight actual native-input interactions/sixteen
+action entries in total. Original event-entry observation forwards its handler
+once;payload instigator/placed target and actual local role are checked. The
+Python authority-false branch runs naturally;no helper call substitutes for it.
+Native pickup adds one original TestID_Rock to only its owner's replicated
+inventory. Both actual Rocks expire;the original Chair remains. Every predicted
+action emits one native half-second duration locally,eight in total;authority
+and the other client receive none. Test-owned existing W_AbilityProgress pairs
+compare original/Python presentation and naturally collapse. This does not prove
+production HUD reachability,physical input,pixels or replicated message transport.
+Instance profiles are selected before tested input,not before initial spawn/
+Interact activation. Native tasks finish;server fixture positions/movement and
+client aim,instance selectors,entry observers,UI roots and typed duration scopes
+are restored/closed. Clients actually exit before the server;all six accepted
+processes and both external semantic gates exit0,3564 frozen input records per
+group,strict ordered shutdown,independent paired-source/evidence review0.
+Preserve Original01's outer live-reader replacement-gap failure:all three owned
+peers stopped with-1,none accepted. FileShare.ReadWrite|Delete stays;only a
+FileNotFound between existence/open becomes pending. Deterministic gap/shared
+read test passes. Original02AtomicRead/Python01 are accepted;three network-group
+attempts/nine actual native process attempts total. No gameplay policy,Blueprint,
+C++,build,cook/package or full host regression. Three original0.14 candidates
+receive direct bounded network evidence;all246 asset rows/order/versions and
+246/182/63/11 remain. Earlier melee readiness issue stays open. Ledger232;
+incremental staged verification,then commit/push Examples and core separately.
+Full original migration/version acceptance remains open.
+
 **Completed original follow-map Explorer batch231 (2026-10-23):**
 Three original placed B_Pawn_Explorer actors automatically execute the original
 compiled L_STT_FollowPlayer in unchanged L_StateTree_FollowTest. Current SDK217,

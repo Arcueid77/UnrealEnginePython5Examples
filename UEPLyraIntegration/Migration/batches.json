@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 233,
+    "bounded_evidence_ledgers": 234,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -13183,6 +13183,16 @@
       ],
       "status": "actual_original_interaction_map_controlled_player_native_input_gameplay_and_cleanup_verified",
       "full_acceptance": false
+    },
+    "current_original_predicted_network_followup": {
+      "evidence_ledger": "232-explorer-original-target-predicted-input-two-owner-network.json",
+      "native_runs": [
+        "20261023-explorer-actions-network/Original02AtomicRead",
+        "20261023-explorer-actions-network/Python01"
+      ],
+      "status": "two_real_clients_native_input_predicted_and_authority_collect_sit_owner_isolation_verified",
+      "authority_false_runtime_executed": true,
+      "full_acceptance": false
     }
   },
   "explorer_actions_pilot": {
@@ -13257,6 +13267,16 @@
         "20261023-explorer-gameplay/Python01EntrySnapshot"
       ],
       "status": "actual_original_interaction_map_controlled_player_native_input_gameplay_and_cleanup_verified",
+      "full_acceptance": false
+    },
+    "current_original_predicted_network_followup": {
+      "evidence_ledger": "232-explorer-original-target-predicted-input-two-owner-network.json",
+      "native_runs": [
+        "20261023-explorer-actions-network/Original02AtomicRead",
+        "20261023-explorer-actions-network/Python01"
+      ],
+      "status": "two_real_clients_native_input_predicted_and_authority_collect_sit_owner_isolation_verified",
+      "authority_false_runtime_executed": true,
       "full_acceptance": false
     }
   },
@@ -15744,7 +15764,17 @@
     "cook_package_executed": false,
     "full_regression_executed": false,
     "full_acceptance": false,
-    "next": "Continue actual Explorer StateTree/follow-map behavior,applicable multiplayer/local-player comparisons and remaining presentation/version requirements. Controlled primary-player interaction is not natural navigation,complete pixel parity or whole0.14 acceptance."
+    "next": "Continue actual Explorer StateTree/follow-map behavior,applicable multiplayer/local-player comparisons and remaining presentation/version requirements. Controlled primary-player interaction is not natural navigation,complete pixel parity or whole0.14 acceptance.",
+    "current_original_predicted_network_followup": {
+      "evidence_ledger": "232-explorer-original-target-predicted-input-two-owner-network.json",
+      "native_runs": [
+        "20261023-explorer-actions-network/Original02AtomicRead",
+        "20261023-explorer-actions-network/Python01"
+      ],
+      "status": "two_real_clients_native_input_predicted_and_authority_collect_sit_owner_isolation_verified",
+      "authority_false_runtime_executed": true,
+      "full_acceptance": false
+    }
   },
   "explorer_follow_pilot": {
     "version": "0.14.0",
@@ -15777,5 +15807,37 @@
     "full_regression_executed": false,
     "full_acceptance": false,
     "next": "Review remaining original Explorer/TopDown presentation and applicable multiplayer/local-player scope,then reconcile existing source/runtime evidence against all original version checklists. This warm-started original follow map does not claim every Explorer node family,all API support or whole0.14 acceptance."
+  },
+  "explorer_actions_network_pilot": {
+    "version": "0.14.0",
+    "status": "original_placed_targets_native_input_actual_predicted_and_authority_actions_two_network_owners_verified",
+    "evidence_ledger": "232-explorer-original-target-predicted-input-two-owner-network.json",
+    "native_runs": [
+      "20261023-explorer-actions-network/Original02AtomicRead",
+      "20261023-explorer-actions-network/Python01"
+    ],
+    "current_sdk217": true,
+    "network_acceptance": true,
+    "full_acceptance": false,
+    "direct_candidate_paths": [
+      "/ShooterExplorer/Input/Abilities/GA_Interact.GA_Interact_C",
+      "/ShooterExplorer/Interact/GA_Interaction_Collect.GA_Interaction_Collect_C",
+      "/ShooterExplorer/Interact/GA_Interaction_Sit.GA_Interaction_Sit_C"
+    ],
+    "accepted_native_processes": 6,
+    "actual_network_group_attempts": 3,
+    "actual_native_process_attempts": 9,
+    "authority_false_runtime_executed": true,
+    "native_input_interactions": 8,
+    "client_and_authority_action_entries": 16,
+    "local_predicted_duration_deliveries": 8,
+    "owner_only_pickup_replication_and_local_duration_isolation": true,
+    "test_owned_ui_pair_only": true,
+    "production_widget_reachability_tested": false,
+    "initial_spawn_profile_claimed": false,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "next": "Reconcile original Explorer/TopDown remaining presentation,applicable local/multiplayer and lifecycle requirements against current source/runtime evidence. This proves real predicted collect/sit through native input with two network owners;it does not claim natural HUD reachability,travel/rejoin,all abilities or whole0.14 acceptance."
   }
 }

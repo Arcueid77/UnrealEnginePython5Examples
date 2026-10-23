@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "batch": 232,
+  "name": "Original Explorer native input and predicted collect/sit for two network owners",
+  "accepted_at_utc": "2026-10-23T13:23:56.496601+00:00",
+  "scope": "Original L_InteractionTestMap/B_TestInventoryExperience,one dedicated Editor server and two genuine clients per profile. Both owners inject original IA_Interact through naturally granted Interact instances,then original placed Rock/Chair/native GAS deliver one predicted client and one authority action. Native authoritative pickup replicates only to its owner;native duration stays local to the predicting client. Each actual duration drives test-owned original/Python W_AbilityProgress pairs without handler replay or synthetic broadcast. Original/Python inventory,target lifetime,selected Interact press/action entry/end and cleanup match. Profiles are selected on existing ability instances before tested input;initial spawn/Interact activation profile is not claimed. Production HUD reachability,pixels,travel/rejoin,all Explorer abilities and whole0.14 remain outside this bounded evidence.",
+  "original_scope": [
+    246,
+    182,
+    63,
+    11
+  ],
+  "candidate_rows_changed": 0,
+  "full_acceptance": false,
+  "core_head_before": "daa810e03116c932dc16772cfe018d6921c12934",
+  "demos_head_before": "f5e34768fcc2a080bda4a7dd292117c728fe0deb",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-explorer-actions-network/Original02AtomicRead",
+      "profile": "BlueprintFallback",
+      "summary_sha256": "0AFE190392D630DF1509EB9D304F5CB920D6AF3C8820B80117E0184638F044BA",
+      "frozen_input_records": 3564,
+      "native_processes": 3,
+      "process_exit_codes": [
+        0,
+        0,
+        0
+      ],
+      "gate_exit_code": 0
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-explorer-actions-network/Python01",
+      "profile": "Python",
+      "summary_sha256": "8876E7A8B988C75E6AC9B8EEA3118A4700A7DA660943CA72DD92C126701D5F2D",
+      "frozen_input_records": 3564,
+      "native_processes": 3,
+      "process_exit_codes": [
+        0,
+        0,
+        0
+      ],
+      "gate_exit_code": 0
+    }
+  ],
+  "current_sdk217": true,
+  "accepted_network_groups": 2,
+  "accepted_native_processes": 6,
+  "actual_network_group_attempts": 3,
+  "actual_native_process_attempts": 9,
+  "direct_candidate_paths": [
+    "/ShooterExplorer/Input/Abilities/GA_Interact.GA_Interact_C",
+    "/ShooterExplorer/Interact/GA_Interaction_Collect.GA_Interaction_Collect_C",
+    "/ShooterExplorer/Interact/GA_Interaction_Sit.GA_Interaction_Sit_C"
+  ],
+  "actual_native_input_interactions": 8,
+  "actual_client_and_authority_action_entries": 16,
+  "local_predicted_duration_deliveries": 8,
+  "actual_authority_false_runtime_executed": true,
+  "authoritative_pickup_owner_replication_and_foreign_isolation": true,
+  "test_owned_original_python_progress_pairs": true,
+  "production_widget_reachability_tested": false,
+  "replicated_duration_message_claimed": false,
+  "initial_spawn_profile_claimed": false,
+  "selectors_observers_and_duration_scopes_restored": true,
+  "preserved_failed_group": {
+    "directory": "Original01",
+    "summary_sha256": "0AEADE24CB2FC4BE6DEDE53142BF19B91A471573B59FF1FD652FC621543434F3",
+    "reason": "outer live reader existence/open replacement gap;owned peers stopped;not accepted"
+  },
+  "atomic_reader_fix": "Keep FileShare.ReadWrite|Delete;an existence/open replacement-gap FileNotFound returns pending. Other I/O errors still propagate. Deterministic gap test and shared live JSON read passed. Original01 owned three peers stopped with -1 and never accepted.",
+  "independent_review": {
+    "path": ".build/LyraValidation/BlueprintPython/20261023-explorer-actions-network/independent-review01.json",
+    "sha256": "E50F272F61BCF4310430E0CDC09B310446CC342E029DEBEB96E4C3960F572A90",
+    "process_exit_code": 0
+  },
+  "input_hashes": [
+    {
+      "path": ".build/LyraValidation/Full/Stage/Lyra/Plugins/UnrealEnginePython/Binaries/Win64/UnrealEditor-UnrealEnginePython.dll",
+      "sha256": "305ACB63588ABEDA69EC0F2028110EDF06E5D6548D0E5806F1D8A2A847D8A410"
+    },
+    {
+      "path": "Source/UnrealEnginePython/Private/UEPyModule.cpp",
+      "sha256": "2797063492780CF5135F7B17174DCE12511E086BD435EC20ACFC34D49FF3E341"
+    },
+    {
+      "path": ".build/LyraValidation/Full/Stage/Lyra/Plugins/UnrealEnginePython/Source/UnrealEnginePython/Private/UEPyModule.cpp",
+      "sha256": "2797063492780CF5135F7B17174DCE12511E086BD435EC20ACFC34D49FF3E341"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_network_io.py",
+      "sha256": "7BBCCCF018CFA4BC696B78850E3B7C18482A4C8E94469FB88109B5CE551D9D95"
+    },
+    {
+      "path": ".build/LyraValidation/Full/Stage/Lyra/Content/Scripts/uep_lyra_network_io.py",
+      "sha256": "7BBCCCF018CFA4BC696B78850E3B7C18482A4C8E94469FB88109B5CE551D9D95"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/explorer_actions_mixin.py",
+      "sha256": "DABDB977F3ACA3E695A07DF95DEEAD0D430F2A8DEA186E3BE4167E7601222326"
+    },
+    {
+      "path": ".build/LyraValidation/Full/Stage/Lyra/Content/Scripts/uep_lyra_abilities/explorer_actions_mixin.py",
+      "sha256": "DABDB977F3ACA3E695A07DF95DEEAD0D430F2A8DEA186E3BE4167E7601222326"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/explorer_actions_network_contract.py",
+      "sha256": "F21D30695141173CAB0AE436EE7F6AEECB790C6AFE86FA7263F1ACDF373386A0"
+    },
+    {
+      "path": ".build/LyraValidation/Full/Stage/Lyra/Content/Scripts/uep_lyra_abilities/explorer_actions_network_contract.py",
+      "sha256": "F21D30695141173CAB0AE436EE7F6AEECB790C6AFE86FA7263F1ACDF373386A0"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/explorer_actions_network_validation.py",
+      "sha256": "2879DC0AE9230564BA1ED770A3E17210B0AA242ED53C721178958AC4169E9100"
+    },
+    {
+      "path": ".build/LyraValidation/Full/Stage/Lyra/Content/Scripts/uep_lyra_abilities/explorer_actions_network_validation.py",
+      "sha256": "2879DC0AE9230564BA1ED770A3E17210B0AA242ED53C721178958AC4169E9100"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/explorer_interact_mixin.py",
+      "sha256": "1D2CC9B4A49047EEC5D2AAFB863E40F23A9AB91B0C6FA8177E72CBBC6B9AD753"
+    },
+    {
+      "path": ".build/LyraValidation/Full/Stage/Lyra/Content/Scripts/uep_lyra_abilities/explorer_interact_mixin.py",
+      "sha256": "1D2CC9B4A49047EEC5D2AAFB863E40F23A9AB91B0C6FA8177E72CBBC6B9AD753"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/ability_progress_mixin.py",
+      "sha256": "4F350AFD42C20185CC78446EE1A2EC272C8BDB4C116935DBA91A3C092D483C77"
+    },
+    {
+      "path": ".build/LyraValidation/Full/Stage/Lyra/Content/Scripts/uep_lyra_hud/ability_progress_mixin.py",
+      "sha256": "4F350AFD42C20185CC78446EE1A2EC272C8BDB4C116935DBA91A3C092D483C77"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "68B4C8A28FD2F24891F4AA8BB73955EFAF124D2CED8A4C07FA7641AB9D11247E"
+    },
+    {
+      "path": ".build/LyraValidation/Full/Stage/Lyra/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "68B4C8A28FD2F24891F4AA8BB73955EFAF124D2CED8A4C07FA7641AB9D11247E"
+    },
+    {
+      "path": "Validation/Run-UEP58ExplorerActionsNetworkValidation.ps1",
+      "sha256": "24E6608CDF2057A0403AD45596AB81F214A7EA9C625F63F5B7C050D94E82499E"
+    },
+    {
+      "path": ".build/LyraValidation/Full/Stage/Lyra/Content/UEPValidation/BP_ExplorerActionDurationProbe.uasset",
+      "sha256": "A39F4F6D8C1B3F46CBA1AA793BAC79010FCFB50E112F4F73DE1BC21680C2A8D8"
+    },
+    {
+      "path": ".build/LyraValidation/Full/Stage/Lyra/Plugins/GameFeatures/ShooterExplorer/Content/Maps/L_InteractionTestMap.umap",
+      "sha256": "A0406EC6FB0E8F349E3EB1DE12BAD826CCA548190A65465AF61EDC8C05A541D9"
+    },
+    {
+      "path": ".build/LyraValidation/Full/Stage/Lyra/Plugins/GameFeatures/ShooterExplorer/Content/Items/B_InteractableRock.uasset",
+      "sha256": "1A40EA4B3F899A58A5A42C5381D4E2B1464E7A32572BA3495A145043112BD74F"
+    },
+    {
+      "path": ".build/LyraValidation/Full/Stage/Lyra/Plugins/GameFeatures/ShooterExplorer/Content/Items/B_InteractableChair.uasset",
+      "sha256": "CFA8905F8CEB224AFBE121BA93866C022825F33C8F4EEA093FA870F4DC4B0550"
+    },
+    {
+      "path": ".build/LyraValidation/Full/Stage/Lyra/Plugins/GameFeatures/ShooterExplorer/Content/System/Experiences/B_TestInventoryExperience.uasset",
+      "sha256": "09822B1CA07B86EB91C5E94F95B2DFB769401406001C6DDC6440A9EA57875559"
+    },
+    {
+      "path": ".build/LyraValidation/Full/Stage/Lyra/Plugins/GameFeatures/ShooterExplorer/Content/Game/HeroData_Explorer.uasset",
+      "sha256": "1A0EA6B7B60CC498E5FCAD3AB892B92A0B1C3AD689CA9039A704BE9CDA5CFE8F"
+    },
+    {
+      "path": ".build/LyraValidation/Full/Stage/Lyra/Plugins/GameFeatures/ShooterExplorer/Content/Input/Abilities/AbilitySet_InventoryTest.uasset",
+      "sha256": "6E613D204AD917952919657E76A76C25DA4C8EAF24698E743C50AECA6D281C61"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tests/test_explorer_actions_network_contract.py",
+      "sha256": "3186E7A64D1C7CEEDDD260549288537D679E5AD604D9E8A863483EABB455939E"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-explorer-actions-network/independent-review01.json",
+      "sha256": "E50F272F61BCF4310430E0CDC09B310446CC342E029DEBEB96E4C3960F572A90"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-explorer-actions-network/independent-review-process01.json",
+      "sha256": "B5436D32571B7E9A98800DFCF8CAF540ECDBB4FB148013271FCAECC20F0E56AE"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-explorer-actions-network/atomic-reader-test-process01.json",
+      "sha256": "C57B430BD81BF08D47F2F23E75E708553DE39EFC61BB1A3C95E86A68B4C79692"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-explorer-actions-network/atomic-reader-test01-stdout.log",
+      "sha256": "957CADF08A4A860CBCDC07FCDEC592AFB1124B5BEC033743BA7FA652DE98E0D8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-explorer-actions-network/test-atomic-reader.ps1",
+      "sha256": "5F52C15015EADE179FB809F74E7943902B3C123648584AEBF59D61AA3BCE35DE"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-current-third-person/SDKBuild01/summary.json",
+      "sha256": "2D47DD86C19F2DD28F9867D23325E7B9618209059547D6C9BA7FEF0FACCBE184"
+    }
+  ],
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "gameplay_policies_changed": false,
+  "blueprint_assets_changed": false,
+  "callbacks_replayed": false,
+  "inventory_or_health_written": false,
+  "abilities_granted_by_fixture": false,
+  "fixture_actors_spawned": false,
+  "physical_input_tested": false,
+  "pixels_tested": false,
+  "packaged_runtime": false,
+  "isolated_staged_incremental_verification": ".build/CommitVerification/20261023-explorer-actions-network/Index01",
+  "full_frozen_input_indexes": "Each run summary.json contains all3564 frozen input records;their summary digests and the independent review digest above bind the full lists. input_hashes retains direct source/asset/binary/test evidence without duplicating the entire shared stage index."
+}
