@@ -31,6 +31,26 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded incremental native matrix batch258 (2026-10-26):**
+The focused native call-matrix entry now accepts optional TestName selection.
+Default behavior preserves all eleven original fixtures and their order;
+unknown or duplicate names fail before staging or launching native processes.
+Only delegate-broadcast and signature-standalone run in this increment,using
+the unchanged source-matching SDK236 host. Both exit0;all836 frozen inputs match.
+The dispatcher covers delivery,empty dispatch,argument rejection,recovery and
+no callback after unbinding. Signature checks cover seven supported cases,
+three explicit rejection profiles,class identity and unregister restoration.
+
+Six immutable-index selection checks and PowerShell parse pass. No production
+runtime/asset edit,compile/link,binary refresh,cook/package or full regression.
+Retain the prior11/22 accepted criteria through their pinned unchanged proof
+inputs except previously recorded manifest metadata;no unrelated semantic gate
+is rerun. All246 candidates and22 original texts remain. The complete original
+task/delegate/cancellation/latent lifecycle criterion remains open while its
+source-bound lifetime review continues. The old Quickslot Standalone report
+lacks a current contract field and is neither rewritten nor promoted.
+Ledger:`Acceptance/258-incremental-call-matrix-selection-and-current-delegate-signatures.json`.
+
 **Completed bounded native signature rejection batch257 (2026-10-26):**
 The current SDK236 generic host runs actual native registration failures for
 inherited PlayerController.ServerRestartPlayer,compiled BP dispatcher signature

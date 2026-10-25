@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "batch": 258,
+  "recorded_utc": "2026-10-25T22:06:59.990782+00:00",
+  "status": "bounded_incremental_call_matrix_selection_and_native_delegate_signatures_verified",
+  "core_parent_commit": "091e2fc6bd1b6b63fa8cf80633c23670d0e2ec0f",
+  "examples_parent_commit": "b79dd4d7dfcf4c8766023f9085289c6e55c13f1a",
+  "native_run": {
+    "directory": ".build/LyraValidation/BlueprintPython/20261026-ability-lifetime/Generic01",
+    "summary_sha256": "659D531FD8A27C3A67B19A3F893FDCB2A0A08C34DE34B8A829B4AAA9D0C1C4B1",
+    "selected_test_names": [
+      "delegate-broadcast",
+      "signature-standalone"
+    ],
+    "tests": [
+      {
+        "name": "delegate-broadcast",
+        "process": {
+          "pid": 36928,
+          "environment_names": [],
+          "stdout": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-lifetime\\Generic01\\delegate-broadcast-stdout.log",
+          "exit_code": 0,
+          "name": "delegate-broadcast",
+          "arguments": [
+            "F:/UnrealEnginePython5/.build/Validation/UEP58Host/UEP58Host.uproject",
+            "-unattended",
+            "-nop4",
+            "-NullRHI",
+            "-NoSound",
+            "-NoSplash",
+            "-UTF8Output",
+            "-culture=en",
+            "-DisablePlugins=AndroidFileServer,UdpMessaging,TcpMessaging",
+            "-notraceserver",
+            "-trace=none",
+            "-run=Py",
+            "F:\\UnrealEnginePython5\\Validation\\UEP58Host\\Tests\\delegate_broadcast_validation.py",
+            "-UEPDelegateBroadcastResult=F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-lifetime\\Generic01\\delegate-broadcast.json",
+            "-abslog=F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-lifetime\\Generic01\\delegate-broadcast.log",
+            "-DisablePython"
+          ],
+          "executable": "F:\\UnrealEngine\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe",
+          "duration_seconds": 13.21,
+          "stderr": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-lifetime\\Generic01\\delegate-broadcast-stderr.log"
+        },
+        "report": ".build/LyraValidation/BlueprintPython/20261026-ability-lifetime/Generic01/delegate-broadcast.json",
+        "report_sha256": "DF944171068020AEAF9E8A8326353AAA2F0B79B4AE86AF409A8CF9B21F75E88B",
+        "log_sha256": "19C90796C880B3DDCD8F39128CCD2F71724FD20DCD37A6A3598FA9A99C0436DE",
+        "data": {
+          "status": "passed",
+          "signals": [
+            11,
+            22,
+            33
+          ],
+          "empty_delegate": true,
+          "rejected_parameter": true,
+          "recovery": true,
+          "no_late_delivery": true,
+          "full_acceptance": false
+        }
+      },
+      {
+        "name": "signature-standalone",
+        "process": {
+          "pid": 46912,
+          "environment_names": [],
+          "stdout": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-lifetime\\Generic01\\signature-standalone-stdout.log",
+          "exit_code": 0,
+          "name": "signature-standalone",
+          "arguments": [
+            "F:/UnrealEnginePython5/.build/Validation/UEP58Host/UEP58Host.uproject",
+            "-unattended",
+            "-nop4",
+            "-NullRHI",
+            "-NoSound",
+            "-NoSplash",
+            "-UTF8Output",
+            "-culture=en",
+            "-DisablePlugins=AndroidFileServer,UdpMessaging,TcpMessaging",
+            "-notraceserver",
+            "-trace=none",
+            "-run=Py",
+            "F:\\UnrealEnginePython5\\Validation\\UEP58Host\\Tests\\mixin_signature_validation.py",
+            "-UEPMixinSignatureResult=F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-lifetime\\Generic01\\signature-standalone.json",
+            "-abslog=F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-lifetime\\Generic01\\signature-standalone.log",
+            "-DisablePython"
+          ],
+          "executable": "F:\\UnrealEngine\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe",
+          "duration_seconds": 12.371,
+          "stderr": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-lifetime\\Generic01\\signature-standalone-stderr.log"
+        },
+        "report": ".build/LyraValidation/BlueprintPython/20261026-ability-lifetime/Generic01/signature-standalone.json",
+        "report_sha256": "BA9FADE499A8FDBF06482C85C98DD41E1A85AEC5D2027704FBFBB57C518250F8",
+        "log_sha256": "716F663D74A461A37F28BD024B6CA6199D9BD112FC1C3B7409063EA6531A2D1F",
+        "data": {
+          "status": "passed",
+          "supported": [
+            "integer-return",
+            "explicit-original",
+            "const-struct-input",
+            "struct-return",
+            "reflected-native-event",
+            "missing-method-native-fallback",
+            "unregister-restoration"
+          ],
+          "rejected": [
+            {
+              "profile": "BadSignature",
+              "reason": "mixin method for AddIntegers must accept 3 positional arguments (self plus reflected inputs): too many positional arguments"
+            },
+            {
+              "profile": "NonConstOutputs",
+              "reason": "cannot mix in Signature_32e5ec79d6bc402786ae48e617dd5412_C.ComputeOutputs: non-const output parameter 'Doubled' is outside the 0.7 mixin contract"
+            },
+            {
+              "profile": "StaticFunction",
+              "reason": "cannot mix in StaticSignature_32e5ec79d6bc402786ae48e617dd5412_C.IsValid: static, RPC, and delegate functions are outside the 0.7 mixin contract"
+            }
+          ],
+          "same_class": true
+        }
+      }
+    ],
+    "frozen_inputs": 836,
+    "full_matrix_executed": false
+  },
+  "incremental_verification": {
+    "artifact": "incremental-acceptance-integrity.json",
+    "sha256": "92398E0AA92A310B1343FEE382D48DE4D34A267735113A95FEBAA1ADA2A91E50",
+    "status": "passed",
+    "previous_full_index": {
+      "path": ".build/LyraValidation/BlueprintPython/20261026-ability-identity/acceptance-final.json",
+      "sha256": "698217329A34B8494DB59AA84C4B5BDC40289C4FF01F73BA7482406191E510CD",
+      "requirements_proven": 11
+    },
+    "prior_proof_inputs_unchanged_except_previously_recorded_manifest_metadata": true,
+    "core_runtime_source_and_scripts_unchanged": true,
+    "examples_runtime_source_and_assets_unchanged": true,
+    "original_246_candidates_unchanged": true,
+    "original_22_texts_unchanged": true,
+    "full_semantic_regression_reexecuted": false,
+    "focused_host_checks": 6,
+    "powershell_driver_parse_passed": true,
+    "selected_native_cases": [
+      "delegate-broadcast",
+      "signature-standalone"
+    ],
+    "selected_native_processes_passed": 2,
+    "frozen_native_inputs": 836,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false
+  },
+  "selected_host_checks": 6,
+  "original_candidates": 246,
+  "original_requirements": 22,
+  "requirements_proven": 11,
+  "new_native_processes": 2,
+  "accepted_native_processes": 2,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "full_original_011_lifecycle_criterion_proven": false,
+  "full_version_acceptance": false,
+  "full_migration_acceptance_proven": false,
+  "limits": [
+    "Adds optional TestName selection to the existing focused native call matrix. Empty selection keeps the original eleven fixtures and original order; unknown or duplicate names fail before staging or native launch. A selected subset never expands to the whole matrix.",
+    "Only delegate-broadcast and signature-standalone execute against the current source-matching SDK236 generic host. Both native processes exit0; all836 frozen inputs remain unchanged. No C++ compilation,link,binary refresh,cook or package occurs.",
+    "Actual multicast delivery proves signals11/22/33,empty dispatcher,parameter rejection,recovery and no delivery after unbinding. Signature tests prove seven supported cases,three explicit rejection profiles,class identity and unregister restoration.",
+    "Six immutable-index selection checks and PowerShell parse pass. Core/Examples runtime source and assets are unchanged. Retain the pinned prior eleven accepted original criteria after checking all their proof inputs except previously recorded manifest metadata; do not rerun unrelated semantic gates.",
+    "All246 original candidates and22 original texts remain. The complete original0.11 task/delegate/cancellation/latent criterion remains open: source-bound lifetime evidence review is still in progress. The old Quickslot Standalone report lacks a field now required by its current pure contract and is not promoted or rewritten."
+  ]
+}

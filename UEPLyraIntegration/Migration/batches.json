@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 259,
+    "bounded_evidence_ledgers": 260,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -16471,6 +16471,25 @@
     "editor_latent_metadata_rejection_tested": true,
     "cooked_latent_rejection_tested": false,
     "selected_host_checks": 8,
+    "requirements_proven": 11,
+    "original_requirements": 22,
+    "full_original_011_lifecycle_criterion_proven": false,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_acceptance": false
+  },
+  "incremental_call_matrix_selection_evidence": {
+    "status": "bounded_incremental_call_matrix_selection_and_native_delegate_signatures_verified",
+    "evidence_ledger": "258-incremental-call-matrix-selection-and-current-delegate-signatures.json",
+    "selected_test_names": [
+      "delegate-broadcast",
+      "signature-standalone"
+    ],
+    "selected_host_checks": 6,
+    "current_sdk_native_processes_passed": 2,
+    "original_default_cases": 11,
+    "full_matrix_executed": false,
     "requirements_proven": 11,
     "original_requirements": 22,
     "full_original_011_lifecycle_criterion_proven": false,
