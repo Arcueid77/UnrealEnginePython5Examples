@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 244,
+    "bounded_evidence_ledgers": 245,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -16108,5 +16108,41 @@
     "full_regression_executed": false,
     "full_acceptance": false,
     "next": "Review remaining original0.13 navigation/settings/session/replay,screen lifetime/travel and all other version/Experience requirements. No full criterion or migration acceptance is inferred."
+  },
+  "settings_local_persistence_pilot": {
+    "version": "0.13.0",
+    "status": "both_profiles_native_slider_local_ini_cancel_save_reopen_and_fresh_process_restore_verified",
+    "evidence_ledger": "243-native-scalar-local-settings-ini-persistence-and-fresh-restore.json",
+    "native_runtime_runs": [
+      "20261025-settings-local/FallbackWrite03",
+      "20261025-settings-local/FallbackRead01",
+      "20261025-settings-local/PythonWrite01",
+      "20261025-settings-local/PythonRead01"
+    ],
+    "actual_clean_native_processes": 4,
+    "native_pointer_changes": 10,
+    "native_store": "LyraSettingsLocal/GameUserSettings.ini",
+    "native_scalar": "OverallVolume",
+    "write_values": [
+      1.0,
+      0.5
+    ],
+    "fresh_read_restore_values": [
+      0.5,
+      1.0
+    ],
+    "native_ui_material_and_data_source_match": true,
+    "native_initial_cancel_preserves_loaded_value_and_files": true,
+    "exact_original_python_callback_multiplicity_matches": true,
+    "native_cancel_does_not_write_files": true,
+    "native_user_data_isolated": true,
+    "owned_original_value_restored": true,
+    "selectors_roots_widgets_and_health_restored": true,
+    "focused_host_checks": 71,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_acceptance": false,
+    "next": "Review remaining original navigation/settings/session/replay,lifetime/travel and Experience/version requirements without expanding false capability flags into new scope."
   }
 }

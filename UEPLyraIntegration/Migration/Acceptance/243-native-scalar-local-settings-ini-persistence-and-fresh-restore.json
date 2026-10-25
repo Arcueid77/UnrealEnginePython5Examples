@@ -1,0 +1,395 @@
+{
+  "schema_version": 1,
+  "batch": 243,
+  "recorded_utc": "2026-10-25T15:44:34.042367+00:00",
+  "status": "bounded_original_python_native_local_scalar_persistence_verified",
+  "scope": "Actual rendered native SSlider pointer input changes OverallVolume through the original scalar data source and selected BP/Python progress material callback. Native CancelChanges preserves files;ApplyChanges writes owned GameUserSettings.ini;reopen retains the chosen value;fresh native processes load it and restore the original owned value through the same UI/native save path. Four current-SDK Editor processes reuse the existing build.",
+  "core_parent_commit": "de14008d19f35c63044f9e6a04842ed2d18f2276",
+  "examples_parent_commit": "1c14a586859f809de232d63b3b4ad60719df5511",
+  "native_runs": [
+    {
+      "directory": ".build\\LyraValidation\\BlueprintPython\\20261025-settings-local\\FallbackWrite03",
+      "profile": "BlueprintFallback",
+      "mode": "write",
+      "summary_sha256": "04E52CCB9A0B62873527DD7BEA855074A0ABBF57AA6BB08E3CE571B0EEC22D79",
+      "report_sha256": "FC1A634D8EAB5880CB2B358149B6518D53671E2C1E3D6ED2A3C7AE7798FC97A9",
+      "native_exit_code": 0,
+      "external_gate_exit_code": 0,
+      "duration_seconds": 65.801,
+      "frozen_input_records": 3579,
+      "initial": 1.0,
+      "saved": 0.5,
+      "native_pointer_events": [
+        {
+          "entry": "SSlider.OnMouseButtonDown",
+          "handled": true,
+          "target": 0.5,
+          "before": 1.0,
+          "after": 0.5,
+          "ui_value": 0.5,
+          "material_progress": 0.5,
+          "selected_callbacks": 2,
+          "other_callbacks": 0,
+          "native_geometry": [
+            920.0,
+            64.0
+          ],
+          "synthetic_pointer_up_sent": true
+        },
+        {
+          "entry": "SSlider.OnMouseButtonDown",
+          "handled": true,
+          "target": 0.5,
+          "before": 1.0,
+          "after": 0.5,
+          "ui_value": 0.5,
+          "material_progress": 0.5,
+          "selected_callbacks": 2,
+          "other_callbacks": 0,
+          "native_geometry": [
+            920.0,
+            64.0
+          ],
+          "synthetic_pointer_up_sent": true
+        },
+        {
+          "entry": "SSlider.OnMouseButtonDown",
+          "handled": true,
+          "target": 1.0,
+          "before": 0.5,
+          "after": 1.0,
+          "ui_value": 1.0,
+          "material_progress": 1.0,
+          "selected_callbacks": 2,
+          "other_callbacks": 0,
+          "native_geometry": [
+            920.0,
+            64.0
+          ],
+          "synthetic_pointer_up_sent": true
+        }
+      ],
+      "native_screen_baselines": [
+        {
+          "initially_dirty": true,
+          "original_cancel_used": true,
+          "value_before": 1.0,
+          "value_after": 1.0,
+          "config_files_unchanged": true,
+          "clean_after_cancel": true
+        },
+        {
+          "initially_dirty": true,
+          "original_cancel_used": true,
+          "value_before": 0.5,
+          "value_after": 0.5,
+          "config_files_unchanged": true,
+          "clean_after_cancel": true
+        }
+      ],
+      "native_ini_evidence": [
+        {
+          "native_path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261025-settings-local\\Users\\BlueprintFallback03\\Saved\\Config\\WindowsEditor\\GameUserSettings.ini",
+          "value": 0.5,
+          "snapshot": ".build\\LyraValidation\\BlueprintPython\\20261025-settings-local\\FallbackWrite03\\native-local-config-at-apply.txt",
+          "sha256": "E5FE51A405D72A1092829A83759FA32D7E6D75AD56ABBAA1579533A28007F017"
+        }
+      ]
+    },
+    {
+      "directory": ".build\\LyraValidation\\BlueprintPython\\20261025-settings-local\\FallbackRead01",
+      "profile": "BlueprintFallback",
+      "mode": "read_restore",
+      "summary_sha256": "43FAACC83E88303E8B2856706D4C4F93FDC396158AE0595CF0BC46767BB98144",
+      "report_sha256": "80FDE0E576FE96FC05DA26F749FB14C314DBF20CF7892304E75197213D4A5F0B",
+      "native_exit_code": 0,
+      "external_gate_exit_code": 0,
+      "duration_seconds": 67.034,
+      "frozen_input_records": 3580,
+      "initial": 0.5,
+      "saved": 1.0,
+      "native_pointer_events": [
+        {
+          "entry": "SSlider.OnMouseButtonDown",
+          "handled": true,
+          "target": 1.0,
+          "before": 0.5,
+          "after": 1.0,
+          "ui_value": 1.0,
+          "material_progress": 1.0,
+          "selected_callbacks": 2,
+          "other_callbacks": 0,
+          "native_geometry": [
+            920.0,
+            64.0
+          ],
+          "synthetic_pointer_up_sent": true
+        },
+        {
+          "entry": "SSlider.OnMouseButtonDown",
+          "handled": true,
+          "target": 1.0,
+          "before": 0.5,
+          "after": 1.0,
+          "ui_value": 1.0,
+          "material_progress": 1.0,
+          "selected_callbacks": 2,
+          "other_callbacks": 0,
+          "native_geometry": [
+            920.0,
+            64.0
+          ],
+          "synthetic_pointer_up_sent": true
+        }
+      ],
+      "native_screen_baselines": [
+        {
+          "initially_dirty": true,
+          "original_cancel_used": true,
+          "value_before": 0.5,
+          "value_after": 0.5,
+          "config_files_unchanged": true,
+          "clean_after_cancel": true
+        }
+      ],
+      "native_ini_evidence": [
+        {
+          "native_path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261025-settings-local\\Users\\BlueprintFallback03\\Saved\\Config\\WindowsEditor\\GameUserSettings.ini",
+          "value": 1.0,
+          "snapshot": ".build\\LyraValidation\\BlueprintPython\\20261025-settings-local\\FallbackRead01\\native-local-config-at-apply.txt",
+          "sha256": "326138D3BE27D9901CD63A1AE7F5FDC188F6730B215B170F161E160A6868E89C"
+        }
+      ]
+    },
+    {
+      "directory": ".build\\LyraValidation\\BlueprintPython\\20261025-settings-local\\PythonWrite01",
+      "profile": "Python",
+      "mode": "write",
+      "summary_sha256": "936D39905F8F3D931608E43E5F15B3AFDBB443B11F47CC4B905008199AB1D926",
+      "report_sha256": "7D88422B6597C67FD7DA42672099967B8F4DDF8BAEBF3EE1A7B957F6E2FA93AF",
+      "native_exit_code": 0,
+      "external_gate_exit_code": 0,
+      "duration_seconds": 78.717,
+      "frozen_input_records": 3579,
+      "initial": 1.0,
+      "saved": 0.5,
+      "native_pointer_events": [
+        {
+          "entry": "SSlider.OnMouseButtonDown",
+          "handled": true,
+          "target": 0.5,
+          "before": 1.0,
+          "after": 0.5,
+          "ui_value": 0.5,
+          "material_progress": 0.5,
+          "selected_callbacks": 2,
+          "other_callbacks": 0,
+          "native_geometry": [
+            920.0,
+            64.0
+          ],
+          "synthetic_pointer_up_sent": true
+        },
+        {
+          "entry": "SSlider.OnMouseButtonDown",
+          "handled": true,
+          "target": 0.5,
+          "before": 1.0,
+          "after": 0.5,
+          "ui_value": 0.5,
+          "material_progress": 0.5,
+          "selected_callbacks": 2,
+          "other_callbacks": 0,
+          "native_geometry": [
+            920.0,
+            64.0
+          ],
+          "synthetic_pointer_up_sent": true
+        },
+        {
+          "entry": "SSlider.OnMouseButtonDown",
+          "handled": true,
+          "target": 1.0,
+          "before": 0.5,
+          "after": 1.0,
+          "ui_value": 1.0,
+          "material_progress": 1.0,
+          "selected_callbacks": 2,
+          "other_callbacks": 0,
+          "native_geometry": [
+            920.0,
+            64.0
+          ],
+          "synthetic_pointer_up_sent": true
+        }
+      ],
+      "native_screen_baselines": [
+        {
+          "initially_dirty": true,
+          "original_cancel_used": true,
+          "value_before": 1.0,
+          "value_after": 1.0,
+          "config_files_unchanged": true,
+          "clean_after_cancel": true
+        },
+        {
+          "initially_dirty": true,
+          "original_cancel_used": true,
+          "value_before": 0.5,
+          "value_after": 0.5,
+          "config_files_unchanged": true,
+          "clean_after_cancel": true
+        }
+      ],
+      "native_ini_evidence": [
+        {
+          "native_path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261025-settings-local\\Users\\Python01\\Saved\\Config\\WindowsEditor\\GameUserSettings.ini",
+          "value": 0.5,
+          "snapshot": ".build\\LyraValidation\\BlueprintPython\\20261025-settings-local\\PythonWrite01\\native-local-config-at-apply.txt",
+          "sha256": "E5FE51A405D72A1092829A83759FA32D7E6D75AD56ABBAA1579533A28007F017"
+        }
+      ]
+    },
+    {
+      "directory": ".build\\LyraValidation\\BlueprintPython\\20261025-settings-local\\PythonRead01",
+      "profile": "Python",
+      "mode": "read_restore",
+      "summary_sha256": "444FA426856826C1FEACA747EA0F8503ABEA9DB0114581FE0FB98E8D58BED6CF",
+      "report_sha256": "49443C68D562718FFCD16E61DCD0EFE9C580D6C0A87B5BFBD138AA1C5ADEC2EF",
+      "native_exit_code": 0,
+      "external_gate_exit_code": 0,
+      "duration_seconds": 66.453,
+      "frozen_input_records": 3580,
+      "initial": 0.5,
+      "saved": 1.0,
+      "native_pointer_events": [
+        {
+          "entry": "SSlider.OnMouseButtonDown",
+          "handled": true,
+          "target": 1.0,
+          "before": 0.5,
+          "after": 1.0,
+          "ui_value": 1.0,
+          "material_progress": 1.0,
+          "selected_callbacks": 2,
+          "other_callbacks": 0,
+          "native_geometry": [
+            920.0,
+            64.0
+          ],
+          "synthetic_pointer_up_sent": true
+        },
+        {
+          "entry": "SSlider.OnMouseButtonDown",
+          "handled": true,
+          "target": 1.0,
+          "before": 0.5,
+          "after": 1.0,
+          "ui_value": 1.0,
+          "material_progress": 1.0,
+          "selected_callbacks": 2,
+          "other_callbacks": 0,
+          "native_geometry": [
+            920.0,
+            64.0
+          ],
+          "synthetic_pointer_up_sent": true
+        }
+      ],
+      "native_screen_baselines": [
+        {
+          "initially_dirty": true,
+          "original_cancel_used": true,
+          "value_before": 0.5,
+          "value_after": 0.5,
+          "config_files_unchanged": true,
+          "clean_after_cancel": true
+        }
+      ],
+      "native_ini_evidence": [
+        {
+          "native_path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261025-settings-local\\Users\\Python01\\Saved\\Config\\WindowsEditor\\GameUserSettings.ini",
+          "value": 1.0,
+          "snapshot": ".build\\LyraValidation\\BlueprintPython\\20261025-settings-local\\PythonRead01\\native-local-config-at-apply.txt",
+          "sha256": "326138D3BE27D9901CD63A1AE7F5FDC188F6730B215B170F161E160A6868E89C"
+        }
+      ]
+    }
+  ],
+  "comparison": {
+    "path": ".build\\LyraValidation\\BlueprintPython\\20261025-settings-local\\comparison.json",
+    "sha256": "039411A31CA91A6151AAD09C4EACF9522370C02A16092EF38D401A4C7F37E057",
+    "status": "passed",
+    "actual_clean_native_processes": 4,
+    "native_pointer_changes": 10,
+    "original_python_values_match": true,
+    "fresh_process_restores": 2,
+    "full_acceptance": false
+  },
+  "independent_index_tests": {
+    "directory": ".build\\CommitVerification\\20261025-settings-local\\Index03",
+    "summary_sha256": "ACAF970A62C218DEDDA133B525D5E60AC5531BCC04A81A21CA5C3C932F29F53F",
+    "tests_run": 71,
+    "selected_test_files": [
+      "Demos/UEPLyraIntegration/Tests/test_hud_startup.py",
+      "Demos/UEPLyraIntegration/Tests/test_settings_editors_contract.py",
+      "Demos/UEPLyraIntegration/Tests/test_settings_local_persistence_contract.py",
+      "Demos/UEPLyraIntegration/Tests/test_settings_persistence_contract.py",
+      "Demos/UEPLyraIntegration/Tests/test_settings_screens_contract.py"
+    ],
+    "core_index_tree": "a0d4100bb51384f44150672ab3e2461ed2714b31",
+    "examples_index_tree": "c30e714545b43c6682ccdc2d4f1a78980ef5604e",
+    "bookkeeping_added_after_code_tests": true
+  },
+  "distinct_native_store": "LyraSettingsLocal/GameUserSettings.ini;batch212 covered LyraSettingsShared/save-game instead",
+  "pointer_fixture": "Synthetic native FGeometry/FPointerEvent enters SSlider.OnMouseButtonDown/Up;no OS pointer routing or application mouse capture is claimed",
+  "original_initial_dirty_state": "Original native screen may start dirty after scalar initialization. Native CancelChanges is used only if dirty and must keep the loaded OverallVolume and every observed ini/sav file unchanged. Both initial and reopened baselines are recorded.",
+  "callback_multiplicity": "Each input must enter only its selected profile and update native local value,slider and material. Exact callback multiplicity is compared between original/Python;original native refreshes are not assumed single-delivery.",
+  "native_source_review": [
+    {
+      "path": "F:\\UnrealEngine\\Engine\\Source\\Runtime\\UMG\\Private\\Components\\Slider.cpp",
+      "sha256": "85FDAFEDF6BB90931CB23AE18C284163B097206C5EBE7CEA178BDD328377E0A5"
+    },
+    {
+      "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameSettings\\Source\\Private\\Widgets\\GameSettingListEntry.cpp",
+      "sha256": "207E3EA284191889250E537A14F424029B406AED517D8AFF470755A4919C9405"
+    },
+    {
+      "path": "F:\\LyraStarterGame\\Source\\LyraGame\\Settings\\LyraGameSettingRegistry.cpp",
+      "sha256": "06A9F5881A0BB1C85E8D201B980A9EB3AB415C305387DB1254B92379055E10ED"
+    }
+  ],
+  "preserved_failed_runs": [
+    {
+      "directory": "FallbackWrite01",
+      "reason": "Rejected before input because an untested clean-on-construction assumption failed;initial native dirty state retained."
+    },
+    {
+      "directory": "FallbackWrite02",
+      "reason": "Real native pointer changed local/UI/material value1->0.5 and original profile emitted2 refreshes;incorrect single-callback expectation rejected whole run."
+    }
+  ],
+  "failed_input_review": {
+    "path": ".build\\LyraValidation\\BlueprintPython\\20261025-settings-local\\historical-frozen-input-review.json",
+    "sha256": "416B2000615F15C939961A03D0430F2BFF76677D8AE5716AFF5027B1581ACF4A"
+  },
+  "production_profile_sources_changed": false,
+  "existing_shared_store_observer_changed": false,
+  "direct_settings_setter_called": false,
+  "configuration_store_written_by_python": false,
+  "original_246_candidate_rows_preserved": true,
+  "original_22_requirement_text_preserved": true,
+  "protected_unrelated_files_unchanged": true,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "assets_saved": false,
+  "full_regression_executed": false,
+  "physical_input_tested": false,
+  "audible_output_tested": false,
+  "network_acceptance": false,
+  "packaged_runtime": false,
+  "full_acceptance": false,
+  "native_pawn_readiness_issue": "open_not_fixed",
+  "native_pawn_guard_applied": false,
+  "next": "Continue original0.9-0.14 runtime/version acceptance. Local scalar plus earlier shared-setting persistence proof does not by itself close every setting,input mapping,screen lifetime/travel or whole0.13/migration requirement."
+}

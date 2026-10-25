@@ -31,6 +31,29 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed local scalar persistence batch243 (2026-10-25):**
+Batch212 verified a shared save-game setting;this followup covers the distinct
+native local INI store. Actual rendered SSlider pointer input changes
+OverallVolume1->0.5 through the original native data source and BP/Python
+scalar progress material callback. Cancel preserves ini/sav files,Apply writes
+owned GameUserSettings.ini,and reopening retains0.5. Two fresh native reader
+processes load0.5 and restore the original1.0 through native UI/Apply. Both
+profile pairs agree,including exact per-input callback multiplicity. Four
+processes/four semantic gates exit0;ten native pointer changes and71 affected
+host checks pass. No build,cook,asset save or full regression is run.
+
+The original screen can start dirty from native initialization. A recorded
+native Cancel baseline must retain loaded volume and all observed ini/sav
+bytes. Two earlier attempts rejected assumptions about initial clean state
+and single refresh delivery;their user directories and exact inputs remain
+preserved. Native INI snapshots are copied to evidence text files;Python does
+not write the configuration store or call a settings setter. Existing
+production profile sources and the shared-store observer remain unchanged.
+All246 candidate rows and the original22 requirement text stay unchanged.
+Ledger:`Acceptance/243-native-scalar-local-settings-ini-persistence-and-fresh-restore.json`.
+Full settings/0.13/migration acceptance is still open,and the native Pawn guard
+remains unapplied pending the user's scope decision.
+
 **Completed native UI Back/focus batch242 (2026-10-25):**
 The previous menu fixtures read desired focus and manually closed settings;
 this followup enters the real CommonUI layer and the actual bound Back button.

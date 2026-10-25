@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(a.startswith('-UEPSettingsLocalResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):
+        return 'uep_lyra_hud.settings_local_persistence_validation'
     if any(a.startswith('-UEPUIBackResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):
         return 'uep_lyra_hud.ui_back_navigation_validation'
     if any(a.startswith('-UEPArenaOpponentResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):
