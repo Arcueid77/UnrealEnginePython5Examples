@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 246,
+    "bounded_evidence_ledgers": 247,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -16174,5 +16174,21 @@
     "full_regression_executed": false,
     "full_acceptance": false,
     "next": "Review remaining original0.9-0.14 requirements;preserve all settings/session/replay/travel and whole-Experience scope. Do not infer full UI/version acceptance from this bound-Cancel followup."
+  },
+  "ui_failure_cancellation_acceptance_review": {
+    "version": "0.13.0",
+    "criterion": "Failures/cancellations are tested, not accepted only on the success path.",
+    "status": "one_original_criterion_verified",
+    "evidence_ledger": "245-original-ui-failure-cancellation-criterion-evidence-acceptance.json",
+    "review_artifact": "ui_failure_cancellation_acceptance.json",
+    "accepted_historical_native_processes": 9,
+    "new_native_processes": 0,
+    "requirements_proven": 3,
+    "original_requirements": 22,
+    "focused_host_checks": 38,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_version_acceptance": false,
+    "full_acceptance": false
   }
 }

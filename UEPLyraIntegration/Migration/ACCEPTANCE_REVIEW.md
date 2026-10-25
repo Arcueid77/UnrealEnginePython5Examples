@@ -33,7 +33,7 @@ This index does not execute or semantically revalidate the referenced runtime ev
 - `0.12.0` — Multi-client score/phase state, local notifications and cleanup agree. (ROADMAP.md:1726; unproven).
 - `0.13.0` — Navigation, focus/back behavior, settings persistence, session results and replay controls pass original-BP/Python comparisons. (ROADMAP.md:1737; unproven).
 - `0.13.0` — Repeated screen open/close and travel restore subscriptions and state. (ROADMAP.md:1739; unproven).
-- `0.13.0` — Failures/cancellations are tested, not accepted only on the success path. (ROADMAP.md:1740; unproven).
+- `0.13.0` — Failures/cancellations are tested, not accepted only on the success path. (ROADMAP.md:1740; native_ui_failure_and_cancellation_evidence_and_current_source_verified).
 - `0.14.0` — Both Experiences pass original-BP/Python gameplay, presentation and applicable multi-client/local-player comparisons. (ROADMAP.md:1751; unproven).
 - `0.14.0` — Every audited candidate is migrated, explicitly retained, unreachable with checked references, or a named blocker; no silent coverage gaps remain. (ROADMAP.md:1753; current_candidate_source_binding_retention_and_named_issue_dispositions_verified).
 - `0.14.0` — Configuration-only BP shells and animation/editor/test exclusions have documented reasons. Game-project C++ migration stays a separate phase. (ROADMAP.md:1755; per_asset_reasons_and_current_reference_stage_copies_verified).
@@ -212,6 +212,7 @@ These are recorded flags requiring requirement and platform review, not automati
 - `current_reload_family_pilot`: packaged_runtime, pixels_tested, physical_input_tested.
 - `current_autoreload_family_pilot`: packaged_runtime, physical_input_tested.
 - `current_integrated_weapon_profile_pilot`: packaged_runtime, physical_input_tested.
+- `arena_opponent_bomb_pilot`: network_acceptance, packaged_runtime.
 
 ## Next evidence work
 

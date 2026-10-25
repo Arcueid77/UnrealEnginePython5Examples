@@ -31,6 +31,21 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed original UI failure/cancellation criterion review batch245 (2026-10-26):**
+Recompute the exact original0.13 checklist condition from seven obligations and
+nine pinned historical native processes:host invalid-request UI,search failure
+and pending receiver lifetime,duplicate join/retry,replay decline,and represented
+settings Cancel/rollback/reopen in both profiles. Current policy/contract and
+asset fingerprints match the accepted runs;original declared native errors and
+ordered clean shutdown are rechecked. Preserve the original failed host wrapper
+and its independently corrected read-only log review. No new UE process,build,
+cook or full regression is needed for this evidence review. The one original
+checkbox is accepted;3/22 original criteria are now proven. The other UI criteria,
+whole0.13 version and full246 migration remain open. See
+`Acceptance/245-original-ui-failure-cancellation-criterion-evidence-acceptance.json`
+and `ui_failure_cancellation_acceptance.json`. Eight adversarial review checks
+plus the affected migration/disposition suites pass38 isolated host checks.
+
 **Completed represented Cancel action batch244 (2026-10-26):**
 Review original0.13 failure/cancellation evidence rather than rerunning the
 existing session/replay/shared/local-store scenarios. One missing boundary was
