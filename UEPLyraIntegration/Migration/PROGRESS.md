@@ -31,6 +31,42 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed original six-behavior gameplay criterion batch262 (2026-10-26):**
+Accept the exact original0.11 fire,reload,ammo exhaustion,switching,death and
+respawn comparison condition in Standalone and dedicated server/two-client play.
+The12 behavior/mode cells require all selected native families:four gun/reload
+families plus applicable Melee/Grenade fire,three original AutoReload grants and
+prototype last-round/cost refusal with zero AutoReload,Quickslot and DropWeapon,
+and independent natural death/respawn evidence. No criterion is replaced with
+only a representative happy path or a metadata completion flag.
+
+Recheck40 pinned saved native runs(88 actual execution processes),their raw
+report hashes,clean exits/current pure gates,current production dependencies
+and all37 original class/Mixin package hashes. Compare both profiles and both
+human attacker directions for natural network death/respawn;compare the two
+Standalone authored-KillZ outcomes and actual input before/after replacement.
+Separately compare integrated original/Python authority weapon models across
+all19 phases,two native travels and rejoinedB1,including exclusive four-family
+policy ownership and shutdown cleanup. Direct fixture restart/QuickBar RPC is
+explicitly distinct from the natural death/respawn captures.
+
+Historical SDKs remain historical;whole mutable stage hashes are not passed
+off as current equivalence. Exact current selected policy/class guards replace
+that unrelated rehash in respawn comparison. Only the already reviewed private
+three-key readiness allocation bridge is allowed. Original NetShooter template
+component defects/diagnostics remain preserved source parity,with exact log
+pins;general replication correctness is not accepted. Other native errors fail.
+
+Nine adversarial gameplay checks plus twelve affected migration-index checks
+pass in an immutable index. This review launches no new UE process and changes
+no runtime source/asset,C++,official Lyra source or prior accepted ledger.
+No build/link,binary refresh,cook/package or full regression. Retain the other
+twelve accepted criteria through unchanged pinned inputs without rerunning
+their unrelated semantic gates. All246 candidates and22 original texts remain.
+Acceptance is now13/22. Each original0.11 checklist condition is individually
+evidenced;full migration/package/presentation/release scope remains open.
+Ledger:`Acceptance/262-original-six-behavior-standalone-and-two-client-gameplay-acceptance.json`.
+
 **Completed bounded prototype ammo boundary batch261 (2026-10-26):**
 The named incremental NetShooter ammo selector passes native Standalone and one
 dedicated Editor server/two-client play. Original/Python profiles consume one

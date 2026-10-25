@@ -220,6 +220,16 @@ def attach_ability_lifetime_review(report,current,initial,repo,path):
     report['ability_lifetime_review']=verified;report['inputs'].append(dict(path=str(path.resolve()),sha256=digest(path)))
 
 
+def attach_ability_gameplay_review(report,current,initial,repo,path):
+    from audit_ability_gameplay_acceptance import REQUIREMENT,verify_documentation
+    path=Path(path);verified=verify_documentation(json.loads(path.read_text(encoding='utf-8-sig')),current,initial,repo)
+    targets=[row for row in report['requirements'] if row['version']=='0.11.0' and row['text']==REQUIREMENT]
+    if len(targets)!=1:raise ValueError('Exact original six-behavior Standalone/two-client gameplay requirement required')
+    targets[0].update(completion_proven=True,evidence_state='native_six_behavior_standalone_two_client_source_pins_and_original_python_outcomes_verified',
+        evidence_artifact=str(path.resolve()),full_migration_acceptance_proven=False)
+    report['ability_gameplay_review']=verified;report['inputs'].append(dict(path=str(path.resolve()),sha256=digest(path)))
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--manifest', required=True)
@@ -239,6 +249,7 @@ def main():
     parser.add_argument('--world-interaction-review',help='Recheck original pickup/device success,rejection,cooldown,effect and two-owner UI/claim evidence against current source')
     parser.add_argument('--ability-identity-review',help='Recheck all original0.11 UObject identities and required native authority,prediction,replication boundaries')
     parser.add_argument('--ability-lifetime-review',help='Recheck source-bound native ability task,delegate,cancellation,latent and timer lifetimes and explicit unsupported signature rejection')
+    parser.add_argument('--ability-gameplay-review',help='Recheck original fire,reload,exhaustion,switching,death and respawn comparisons in Standalone and server/two-client play')
     args = parser.parse_args()
     manifest = Path(args.manifest)
     current = json.loads(manifest.read_text(encoding='utf-8-sig'))
@@ -291,6 +302,8 @@ def main():
         attach_ability_identity_review(report,current,initial,manifest.resolve().parents[3],args.ability_identity_review)
     if args.ability_lifetime_review:
         attach_ability_lifetime_review(report,current,initial,manifest.resolve().parents[3],args.ability_lifetime_review)
+    if args.ability_gameplay_review:
+        attach_ability_gameplay_review(report,current,initial,manifest.resolve().parents[3],args.ability_gameplay_review)
     Path(args.result).write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     if args.markdown:
         Path(args.markdown).write_text(markdown(report), encoding='utf-8')
