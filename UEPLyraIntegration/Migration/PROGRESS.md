@@ -31,6 +31,25 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed original UI lifetime criterion batch247 (2026-10-26):**
+Two fresh original/Python processes use the accepted binaries without a build.
+Each opens settings and clicks the represented native Back twice in gameplay,
+confirms the actual return-to-frontend dialog,then repeats settings/Back twice
+on the native frontend. All8 cycles and2 real map travels pass native focus,
+one selected/zero foreign-profile callback,actual controller replacement and
+restored screen state. Old UI is naturally deactivated before probe cleanup;
+old async observations are unbound and stay quiet during new-UI operations.
+Selectors,roots and owned UI restore,and both processes/independent gates exit0.
+
+The exact Original01 contract is archived before adding a stronger world/report
+cross-check. Both unchanged raw reports pass the current gate;Python01 executed
+that stricter gate natively. All7196 captured native inputs are rechecked,including
+the accepted SDK/native-guard binaries;80 affected host checks pass. No policy/asset/C++ change,cook/package,
+or full regression. This accepts only the original repeated-screen/travel
+lifetime condition:4/22 original requirements are proven. Navigation,settings,
+session/replay semantics,whole0.13 and the complete246 migration stay open.
+Ledger:`Acceptance/247-native-ui-reopen-across-confirmed-travel-and-lifetime-criterion.json`.
+
 **Approved isolated native guard batch246 (2026-10-26):**
 The user explicitly included the proposed eight-line native Lyra init-state
 repair in the isolated validation stage. Original246 Python candidates and all22

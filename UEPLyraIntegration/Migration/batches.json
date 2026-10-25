@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 248,
+    "bounded_evidence_ledgers": 249,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -16236,5 +16236,26 @@
     "full_regression_executed": false,
     "full_acceptance": false,
     "focused_host_checks": 96
+  },
+  "ui_travel_lifetime_pilot": {
+    "version": "0.13.0",
+    "status": "paired_native_reopen_travel_state_and_callback_restoration_verified",
+    "evidence_ledger": "247-native-ui-reopen-across-confirmed-travel-and-lifetime-criterion.json",
+    "criterion": "Repeated screen open/close and travel restore subscriptions and state.",
+    "completion_proven": true,
+    "native_processes": 2,
+    "settings_reopen_cycles": 8,
+    "actual_confirmed_map_travels": 2,
+    "old_ui_naturally_deactivated_before_probe_cleanup": true,
+    "current_source_and_input_fingerprints_verified": true,
+    "original_runtime_contract_preserved": true,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "focused_host_checks": 80,
+    "requirements_proven": 4,
+    "original_requirements": 22,
+    "full_version_acceptance": false,
+    "full_acceptance": false
   }
 }

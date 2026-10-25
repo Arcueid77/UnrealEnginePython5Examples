@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(a.startswith('-UEPUITravelLifetimeResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):
+        return 'uep_lyra_hud.ui_travel_lifetime_validation'
     if any(a.startswith('-UEPSettingsCancelResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):
         return 'uep_lyra_hud.settings_cancel_action_validation'
     if any(a.startswith('-UEPSettingsLocalResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):

@@ -32,7 +32,7 @@ This index does not execute or semantically revalidate the referenced runtime ev
 - `0.12.0` — AI task/service outcomes and cancellation are reproducible; long-running tasks do not retain a destroyed Pawn or World. (ROADMAP.md:1724; unproven).
 - `0.12.0` — Multi-client score/phase state, local notifications and cleanup agree. (ROADMAP.md:1726; unproven).
 - `0.13.0` — Navigation, focus/back behavior, settings persistence, session results and replay controls pass original-BP/Python comparisons. (ROADMAP.md:1737; unproven).
-- `0.13.0` — Repeated screen open/close and travel restore subscriptions and state. (ROADMAP.md:1739; unproven).
+- `0.13.0` — Repeated screen open/close and travel restore subscriptions and state. (ROADMAP.md:1739; paired_native_reopen_travel_state_and_callback_restoration_verified).
 - `0.13.0` — Failures/cancellations are tested, not accepted only on the success path. (ROADMAP.md:1740; native_ui_failure_and_cancellation_evidence_and_current_source_verified).
 - `0.14.0` — Both Experiences pass original-BP/Python gameplay, presentation and applicable multi-client/local-player comparisons. (ROADMAP.md:1751; unproven).
 - `0.14.0` — Every audited candidate is migrated, explicitly retained, unreachable with checked references, or a named blocker; no silent coverage gaps remain. (ROADMAP.md:1753; current_candidate_source_binding_retention_and_named_issue_dispositions_verified).

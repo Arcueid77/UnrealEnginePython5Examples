@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "batch": 247,
+  "recorded_utc": "2026-10-25T17:04:06.674018+00:00",
+  "status": "paired_native_reopen_travel_state_and_callback_restoration_verified",
+  "criterion": "Repeated screen open/close and travel restore subscriptions and state.",
+  "completion_proven": true,
+  "scope": "Original CommonUI lifetime criterion:actual native Options/Back four cycles per profile on both sides of an actual confirmed frontend-map travel;old UI naturally deactivates before fixture cleanup,old async observers are retired,new controllers/UI have one selected-profile callback and native focus/state restores.",
+  "core_parent_commit": "2bc4a4fec92717210a5195e6d935b0a4465ef3da",
+  "examples_parent_commit": "6062d8cb7a7838edd26665f19cf47f97bf2f3b6c",
+  "native_runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261026-ui-travel-lifetime/Original01",
+      "summary_sha256": "98C4B42C503892244C87EF10BBA1949AB51319054491DF370A0D4AB7258BEB1C",
+      "report_sha256": "33819D838AA816D0EFCD77ACDB296E908B49EB3ECE9EAE6A238E48F432E6998D",
+      "log_sha256": "97F5DEF8AED45C2A3FC268806E50106811028B4CC54C383931FB0AC58E077567",
+      "profile": "BlueprintFallback",
+      "native_exit_code": 0,
+      "semantic_gate_exit_code": 0,
+      "duration_seconds": 72.097,
+      "native_settings_cycles": 4,
+      "native_confirmed_travel": true
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261026-ui-travel-lifetime/Python01",
+      "summary_sha256": "4DC430AB10DDD85840043738B63BED46A44ACAEC0322869CC7A40E0882C91B07",
+      "report_sha256": "D94D36DBEFCBE56FF1E3C3B05778DF15E8B2B386EECE0A2E2FDBA84A03417077",
+      "log_sha256": "1209A551815C11031CCCC97FD0587489FA9FA7FF3E79813175351538FD7B5864",
+      "profile": "Python",
+      "native_exit_code": 0,
+      "semantic_gate_exit_code": 0,
+      "duration_seconds": 86.755,
+      "native_settings_cycles": 4,
+      "native_confirmed_travel": true
+    }
+  ],
+  "original_contract_archive": "Original01/Inputs/ui_travel_lifetime_contract.py",
+  "original_contract_note": "Original01 preserves the exact runtime gate before one stricter cross-check tied UI row worlds to actual travel-world fields. Current stronger gate revalidates both unchanged raw reports;Python01 executed it natively.",
+  "native_processes": 2,
+  "settings_reopen_cycles": 8,
+  "actual_confirmed_map_travels": 2,
+  "production_profiles_or_assets_changed": false,
+  "native_guard_binary_reused": true,
+  "focused_host_checks": 80,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "all57_ui_behavior_accepted": false,
+  "full_version_acceptance": false,
+  "full_migration_acceptance_proven": false,
+  "original_runtime_candidates": 246,
+  "original_requirements": 22,
+  "requirements_proven": 4,
+  "limits": [
+    "Accepts the original screen-lifetime/reopen/travel criterion,not the separate navigation/settings/session/replay semantic criterion or whole0.13 version.",
+    "Retired proxy observers are test-owned;production native button/mixin routing is checked through actual callback counts and new controller ownership. No claim that every widget-specific behavior was replayed.",
+    "One actual game-to-frontend travel per profile;server travel,multiple local users,hardware,pixel/package gates remain governed by their separate original requirements."
+  ]
+}

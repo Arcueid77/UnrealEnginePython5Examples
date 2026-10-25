@@ -142,6 +142,14 @@ def attach_ui_failure_review(report,current,initial,repo,path):
     return verified
 
 
+def attach_ui_lifetime_review(report,repo,path):
+    from audit_ui_travel_lifetime_acceptance import REQUIREMENT,verify_documentation
+    path=Path(path);verified=verify_documentation(json.loads(path.read_text(encoding='utf-8-sig')),repo)
+    target=[row for row in report['requirements'] if row['version']=='0.13.0' and row['text']==REQUIREMENT]
+    if len(target)!=1:raise ValueError('Exact original UI lifetime requirement required')
+    target[0].update(completion_proven=True,evidence_state='paired_native_reopen_travel_state_and_callback_restoration_verified',evidence_artifact=str(path.resolve()),full_version_acceptance=False)
+    report['ui_travel_lifetime_review']=verified;report['inputs'].append(dict(path=str(path.resolve()),sha256=digest(path)))
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--manifest', required=True)
@@ -152,6 +160,7 @@ def main():
     parser.add_argument('--static-scope-review', help='Verify per-asset exclusion reasons;never accepts migrated gameplay')
     parser.add_argument('--candidate-dispositions', help='Verify current per-candidate source/retention coverage;does not accept gameplay or the whole migration')
     parser.add_argument('--ui-failure-cancellation-review',help='Recheck pinned native UI failure/cancel evidence;accepts only that exact original criterion')
+    parser.add_argument('--ui-travel-lifetime-review',help='Recheck paired native reopen/travel callbacks and state;accepts only the original lifetime criterion')
     args = parser.parse_args()
     manifest = Path(args.manifest)
     current = json.loads(manifest.read_text(encoding='utf-8-sig'))
@@ -186,6 +195,8 @@ def main():
         report['next_evidence_task']='Review the remaining original0.9-0.14 gameplay,presentation,lifecycle,network and package requirements against their actual native evidence. The named Pawn/ASC readiness issue remains open;inventory disposition does not close these requirements.'
     if args.ui_failure_cancellation_review:
         attach_ui_failure_review(report,current,initial,manifest.resolve().parents[3],args.ui_failure_cancellation_review)
+    if args.ui_travel_lifetime_review:
+        attach_ui_lifetime_review(report,manifest.resolve().parents[3],args.ui_travel_lifetime_review)
     Path(args.result).write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     if args.markdown:
         Path(args.markdown).write_text(markdown(report), encoding='utf-8')
