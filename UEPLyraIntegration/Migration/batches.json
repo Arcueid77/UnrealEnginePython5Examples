@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 265,
+    "bounded_evidence_ledgers": 266,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -9219,7 +9219,7 @@
       "B1": 2
     },
     "uep_dll_sha256": "1037876718A5B7ECB41B7C60D90EBEAA6183B5D49E4DD75F6CE367A32874DB6A",
-    "bp_initialization_parity_tested": false,
+    "bp_initialization_parity_tested": true,
     "physical_mouse_tested": false,
     "native_weapon_switch_tested": true,
     "network_acceptance": true,
@@ -9228,7 +9228,11 @@
     "cpp_compile_executed": true,
     "cpp_compile_scope": "UEP plugin module only; no Engine full build",
     "cpp_compile_run": "20261015-named-outputs/Build02",
-    "cook_package_executed": false
+    "cook_package_executed": false,
+    "bp_initialization_parity_run": ".build/LyraValidation/BlueprintPython/20261026-quickbar-initialization/Native03",
+    "bp_initialization_parity_evidence_ledger": "264-native-original-python-quickbar-initialization-from-widget-creation.json",
+    "bp_initialization_slot_pairs": 3,
+    "bp_initialization_native_creations": 6
   },
   "nameplate_pilot": {
     "id": "0.10.0-2L",
@@ -16589,6 +16593,26 @@
     "requirements_proven": 14,
     "original_requirements": 22,
     "new_native_processes": 4,
+    "production_policy_or_assets_changed": false,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_acceptance": false
+  },
+  "quickbar_initialization_evidence": {
+    "status": "bounded_current_sdk_original_python_native_quickbar_initialization_verified",
+    "evidence_ledger": "264-native-original-python-quickbar-initialization-from-widget-creation.json",
+    "native_run": ".build/LyraValidation/BlueprintPython/20261026-quickbar-initialization/Native03",
+    "native_initialization_parity_tested": true,
+    "slot_pairs": 3,
+    "native_widget_creations": 6,
+    "selected_host_checks": 8,
+    "requirements_proven": 14,
+    "original_requirements": 22,
+    "original_requirements_newly_accepted": 0,
+    "new_native_processes": 3,
+    "passed_native_processes": 1,
+    "failed_native_processes": 2,
     "production_policy_or_assets_changed": false,
     "cpp_compile_executed": false,
     "cook_package_executed": false,

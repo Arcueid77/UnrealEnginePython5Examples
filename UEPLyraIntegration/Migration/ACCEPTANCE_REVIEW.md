@@ -216,7 +216,7 @@ These are recorded flags requiring requirement and platform review, not automati
 
 ## Next evidence work
 
-Continue the original0.10 each-small-batch BP/Python comparison without BP fallthrough,remaining0.9 call/lifecycle/visible/package matrix,and both complete Experience comparisons. Preserve all246 candidates and22 original texts.
+Continue all32 original0.10 small-batch original/Python comparisons without BP fallthrough. The explicitly named QuickBar native-initialization gap is now closed;physical input and remaining0.9/whole-Experience requirements remain separate.
 
 Recorded capabilities still need their linked semantic/source evidence reviewed; this index
 does not rerun them. Continue unresolved readiness observations and the original version scope.

@@ -31,6 +31,36 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded native QuickBar initialization gap batch264 (2026-10-26):**
+Close the explicitly named original-BP initialization gap without changing the
+production slot policy or Blueprint assets. The earlier baseline had already
+initialized under Python before its Profile changed to BlueprintFallback.
+Select each class-default Profile and SlotIndex before native
+WidgetBlueprintLibrary.Create. Create three original/Python slot pairs:six
+distinct widgets,with equal immediate initial state and native mounted state.
+Original creation enters no Python update/scope and starts its two BP proxies;
+Python creation enters exactly one update/scope and retains neither BP proxy.
+Do not replay lifecycle/resume entries or change a widget Profile after create.
+
+Native03 PID43040 exits0 and its independent gate exits0,with2565 frozen inputs.
+Release all six test roots and all six original proxies;return owned scopes to
+the production baseline3. Actual interpreter shutdown closes all6 quickbar
+scopes with0 active owners/errors. Restore the original class-default Profile
+and SlotIndex;retain the native human-player health,active slot and item paths.
+Eight adversarial checks and immutable driver syntax validation pass.
+
+Two earlier ExecCmds attempts never entered the fixture and reached the owning
+240s bound. Preserve their exit-1 summaries/logs,missing-report/no-gate status
+and exact old driver/fixture input archives. The successful run uses the SDK's
+existing Python.ImportModules per-process override plus an explicit result
+flag. No normal-startup selector edit or persistent configuration change.
+
+No production script/asset,C++,compile/link,cook/package or full regression.
+Keep the other14 accepted criteria through unchanged proof inputs. This closes
+one named evidence gap;the full32-candidate0.10 comparison/no-fallthrough
+criterion,remaining0.9 matrix and whole Experience scope remain open.
+Original246 candidates and22 texts are unchanged;acceptance remains14/22.
+
 **Completed original Widget/Actor lifetime criterion batch263 (2026-10-26):**
 Accept the exact original0.10 owned-subscription cleanup condition after
 teardown,travel or Profile switching. Preserve all32 original candidate paths:

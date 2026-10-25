@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "batch": 264,
+  "recorded_utc": "2026-10-25T23:43:46.553330+00:00",
+  "status": "bounded_current_sdk_original_python_native_quickbar_initialization_verified",
+  "core_parent_commit": "bfc4b89916830cf10584115cc74e0e02927ba3d8",
+  "examples_parent_commit": "70a8c06960a2c87871ce6a6fd873a1463d882076",
+  "native_run": {
+    "directory": ".build/LyraValidation/BlueprintPython/20261026-quickbar-initialization/Native03",
+    "summary_sha256": "AB00B2956C0DD798A65EBEC38489D0739A1CAB84FD370BE089CCC988430BEB6B",
+    "report_sha256": "14ECFE562982790372F15A66C71B8AA0F4018D8E49C596328A8D4EC7D8D36A45",
+    "log_sha256": "7D8FF0F1E3F2D702615B473943D79A287A1C1329C34EB86860C6FC5AF322BC8A",
+    "pid": 43040,
+    "exit_code": 0,
+    "independent_gate_pid": 34540,
+    "independent_gate_exit_code": 0,
+    "frozen_input_records": 2565,
+    "semantic_gate": {
+      "status": "passed",
+      "native_initialization_parity_tested": true,
+      "slot_pairs": 3,
+      "native_widget_creations": 6,
+      "full_acceptance": false,
+      "network_acceptance": false
+    },
+    "cpp_compile_executed": false,
+    "cook_package_executed": false
+  },
+  "failed_native_attempts": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261026-quickbar-initialization/Native01",
+      "summary_sha256": "2DD41221F620DEA8E57E70D88512BFA4966A5E7831A4AAB10282518BCF1922C1",
+      "pid": 36444,
+      "exit_code": -1,
+      "status": "failed_before_fixture_started",
+      "independent_gate_executed": false,
+      "log_sha256": "3BA7EB1FCC7CBEA6B0C7864D549056ADA1BAE86E665338B328991D8803B6861F",
+      "archived_changed_inputs": [
+        {
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\Scripts\\uep_lyra_hud\\quickbar_initialization_validation.py",
+          "sha256": "58E37A4A7DFF84D8541A2E76343559DCAA2581D966BCF6B022790562D3C0BE0A",
+          "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-quickbar-initialization\\Native01\\Inputs\\quickbar_initialization_validation.py"
+        },
+        {
+          "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\Scripts\\uep_lyra_hud\\quickbar_initialization_validation.py",
+          "sha256": "58E37A4A7DFF84D8541A2E76343559DCAA2581D966BCF6B022790562D3C0BE0A",
+          "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-quickbar-initialization\\Native01\\Inputs\\quickbar_initialization_validation.py"
+        },
+        {
+          "path": "F:\\UnrealEnginePython5\\Validation\\Run-UEP58QuickBarInitializationValidation.ps1",
+          "sha256": "BD47106365B7916F19B6690273409497AA1653E794A0AEEAC435012AC2F5232F",
+          "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-quickbar-initialization\\Native01\\Inputs\\Run-UEP58QuickBarInitializationValidation.ps1"
+        }
+      ]
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261026-quickbar-initialization/Native02",
+      "summary_sha256": "9986E9FD69454B7A7C86B6DAF6B369C6D8A37597A1311ABB307E316C224B9F50",
+      "pid": 14748,
+      "exit_code": -1,
+      "status": "failed_before_fixture_started",
+      "independent_gate_executed": false,
+      "log_sha256": "EF8176AE8ABC51495ECD6584E645A5D63D1AB96EB3F687DB346446586645FD92",
+      "archived_changed_inputs": [
+        {
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\Scripts\\uep_lyra_hud\\quickbar_initialization_validation.py",
+          "sha256": "4898EE486660237DC060F19F82AE3761E5DCFFE337DC13EB7E54B3CFBC2A23C8",
+          "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-quickbar-initialization\\Native02\\Inputs\\quickbar_initialization_validation.py",
+          "native_directory": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-quickbar-initialization\\Native02"
+        },
+        {
+          "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\Scripts\\uep_lyra_hud\\quickbar_initialization_validation.py",
+          "sha256": "4898EE486660237DC060F19F82AE3761E5DCFFE337DC13EB7E54B3CFBC2A23C8",
+          "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-quickbar-initialization\\Native02\\Inputs\\quickbar_initialization_validation.py",
+          "native_directory": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-quickbar-initialization\\Native02"
+        },
+        {
+          "path": "F:\\UnrealEnginePython5\\Validation\\Run-UEP58QuickBarInitializationValidation.ps1",
+          "sha256": "FB56DD9DEBC138930C42A6245EAA7B8E7B4A9B9FD3589997939546A284766F2E",
+          "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-quickbar-initialization\\Native02\\Inputs\\Run-UEP58QuickBarInitializationValidation.ps1",
+          "native_directory": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-quickbar-initialization\\Native02"
+        }
+      ]
+    }
+  ],
+  "selected_host_checks": 8,
+  "immutable_driver_parse": "passed",
+  "native_initialization_parity_tested": true,
+  "profiles": [
+    "BlueprintFallback",
+    "Python"
+  ],
+  "slot_configurations": 3,
+  "native_widget_creations": 6,
+  "original_candidates": 246,
+  "original_requirements": 22,
+  "requirements_proven": 14,
+  "previous_acceptance_index": {
+    "path": ".build/LyraValidation/BlueprintPython/20261026-widget-actor-lifetime/acceptance-final.json",
+    "sha256": "1D7D04ED7DE5DFF4EDBD97C8FB60F349B8B92B650A09FE01A9408890228CDC7E"
+  },
+  "original_requirements_newly_accepted": 0,
+  "existing_fourteen_proof_inputs_preserved": true,
+  "new_native_processes": 3,
+  "passed_native_processes": 1,
+  "failed_native_processes": 2,
+  "production_policy_or_assets_changed": false,
+  "normal_startup_scripts_changed": false,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "full_acceptance": false,
+  "full_migration_acceptance_proven": false,
+  "limits": [
+    "Closes the named QuickBar BP-initialization gap only. The old comparison created its baseline under Python before switching to BlueprintFallback and resuming listeners. This capture sets the class-default Profile and SlotIndex before WidgetBlueprintLibrary.Create;it never changes the new instance Profile after creation or replays OnInitialized/Construct/Destruct/resume.",
+    "Three native slot configurations each create a distinct original/Python pair. Immediate initialization state and later native mounted Tick state match. Original creation produces no Python slot-update/scope delta and owns two active original proxies;Python creation produces exactly one update and one scope with both original proxies inactive.",
+    "All six test roots are released,all six original listener proxies become inactive,and test-owned Python subscriptions return to the production baseline3. At actual interpreter shutdown all6 quickbar scopes are closed with0 active owners and no errors. Original class-default Profile/SlotIndex are restored;the native human-player health,active slot and inventory item paths match the pre-test snapshot.",
+    "Use the existing SDK Python.ImportModules configuration as a per-process override plus an explicit result flag. Normal ue_site/startup selector source is unchanged. No default configuration or persistent environment setting is written. The selected current-SDK binary and original/isolated Lyra Hero source fingerprints remain unchanged.",
+    "Native01 and Native02 did not reach the fixture through ExecCmds;both hit the owning240s bound and were terminated by that driver with exit-1. Their reports are absent and no semantic gate ran. Preserve both failed summaries/logs and exact old driver/fixture input archives. Native03 imports the fixture,exits0,and passes an independent gate with2565 unchanged frozen inputs.",
+    "Eight adversarial native-creation/Profile/ownership/class/state/cleanup checks and immutable driver syntax validation pass. Only new test files and a new driver are added;existing production policy,Blueprint packages,SDK/game C++ and official Lyra source are untouched. No compile/link,cook/package or full regression.",
+    "This is not full0.10 acceptance or the complete32-candidate small-batch/no-fallthrough criterion. Physical mouse/touch,network/package/pixel fidelity and the other remaining original requirements stay separately scoped. Preserve all246 paths/order/version assignments and all22 original texts;overall acceptance remains14/22."
+  ]
+}
