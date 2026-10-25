@@ -158,6 +158,14 @@ def attach_ui_navigation_review(report,current,initial,repo,path):
     target[0].update(completion_proven=True,evidence_state='native_navigation_settings_sessions_replay_comparisons_and_current_sources_verified',evidence_artifact=str(path.resolve()),full_migration_acceptance_proven=False)
     report['ui_navigation_review']=verified;report['inputs'].append(dict(path=str(path.resolve()),sha256=digest(path)))
 
+def attach_ai_lifetime_review(report,current,initial,repo,path):
+    from audit_ai_lifetime_acceptance import REQUIREMENT,verify_documentation
+    path=Path(path);verified=verify_documentation(json.loads(path.read_text(encoding='utf-8-sig')),current,initial,repo)
+    target=[row for row in report['requirements'] if row['version']=='0.12.0' and row['text']==REQUIREMENT]
+    if len(target)!=1:raise ValueError('Exact original AI outcome/cancellation/lifetime requirement required')
+    target[0].update(completion_proven=True,evidence_state='native_ai_eqs_outcomes_and_pawn_world_cancellation_with_collection_verified',evidence_artifact=str(path.resolve()),full_migration_acceptance_proven=False)
+    report['ai_lifetime_review']=verified;report['inputs'].append(dict(path=str(path.resolve()),sha256=digest(path)))
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--manifest', required=True)
@@ -170,6 +178,7 @@ def main():
     parser.add_argument('--ui-failure-cancellation-review',help='Recheck pinned native UI failure/cancel evidence;accepts only that exact original criterion')
     parser.add_argument('--ui-travel-lifetime-review',help='Recheck paired native reopen/travel callbacks and state;accepts only the original lifetime criterion')
     parser.add_argument('--ui-navigation-review',help='Recheck original UI navigation,settings stores,session results and replay controls against source-bound native evidence')
+    parser.add_argument('--ai-lifetime-review',help='Recheck original AI/EQS outcomes and real native cancellation/collection on Pawn destruction and world travel')
     args = parser.parse_args()
     manifest = Path(args.manifest)
     current = json.loads(manifest.read_text(encoding='utf-8-sig'))
@@ -208,6 +217,8 @@ def main():
         attach_ui_lifetime_review(report,manifest.resolve().parents[3],args.ui_travel_lifetime_review)
     if args.ui_navigation_review:
         attach_ui_navigation_review(report,current,initial,manifest.resolve().parents[3],args.ui_navigation_review)
+    if args.ai_lifetime_review:
+        attach_ai_lifetime_review(report,current,initial,manifest.resolve().parents[3],args.ai_lifetime_review)
     Path(args.result).write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     if args.markdown:
         Path(args.markdown).write_text(markdown(report), encoding='utf-8')

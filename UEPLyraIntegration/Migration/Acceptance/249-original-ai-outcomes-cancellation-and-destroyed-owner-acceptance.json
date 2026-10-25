@@ -1,0 +1,2775 @@
+{
+  "schema_version": 1,
+  "batch": 249,
+  "recorded_utc": "2026-10-25T18:20:55.918004+00:00",
+  "status": "original_ai_outcomes_cancellation_and_destroyed_owner_criterion_verified",
+  "criterion": "AI task/service outcomes and cancellation are reproducible; long-running tasks do not retain a destroyed Pawn or World.",
+  "completion_proven": true,
+  "core_parent_commit": "041b4d49af1540c82be3953d66b2896975ab4d71",
+  "examples_parent_commit": "e51f1822cdafddbfac2577e202082eb010080166",
+  "current_native_refresh_runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261026-ai-lifetime/TDMOriginal03",
+      "summary_sha256": "BB7DAD438A0382CFB9C2B8AD22B7E820C4ADA258492F9382CD23B75BB135D3B3",
+      "report_sha256": "BA5CB6C41BFAD3781DF6B0E8A08A067D5A586A8E828A7F41CFC730082FB6D6AD",
+      "log_sha256": "455AEEFA37977CC15864C6AFB9785179A0E333CC378FF481E9B17A6376C021A7"
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261026-ai-lifetime/TDMPython01",
+      "summary_sha256": "BC91C23813B6403519D1F33905C216C77D05475F052A0A923F853B6006ADA187",
+      "report_sha256": "474074A6834C59D13E9A8358C5AAC03D22FE0716C2D1AA054B9218360031676E",
+      "log_sha256": "3EFCA28AE18816D137CCE75B1955DB124421C0C252DCB6FDE78CB697B438C1A3"
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261026-ai-lifetime/CPOriginal01",
+      "summary_sha256": "ED86CB4BA526F4962E587B2D315B5BCBA59E6CF56B084571D0B21B173BEF10B9",
+      "report_sha256": "5A754D24E73951311AD3512F11D4AD83F95D268E3355593333853089585ECD99",
+      "log_sha256": "2577F2709FA1FAD2FC558B95F9D06D91A8829FC0739F34CB01175CAD055F85CD"
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261026-ai-lifetime/CPPython01",
+      "summary_sha256": "E5D131545CA1CC33266216BEE949EA0EFE40CD24AA84B32042E3BB79AF602C21",
+      "report_sha256": "FC35C0FE4CB61BE6D440D2B5467BD3DE1DCF0B7349DE5467AB9F2D954243B0A2",
+      "log_sha256": "FF813F355F3FF8E613147D3C3BCDA2C230966BA0D662E6E5F8C1D241F194CF4F"
+    }
+  ],
+  "review": {
+    "schema_version": 1,
+    "status": "passed",
+    "criterion": "AI task/service outcomes and cancellation are reproducible; long-running tasks do not retain a destroyed Pawn or World.",
+    "completion_proven": true,
+    "original_ai_candidates": [
+      "/ShooterCore/Bot/BT/BTDecorator_AllowedToFire.BTDecorator_AllowedToFire",
+      "/ShooterCore/Bot/B_AI_Controller_LyraShooter.B_AI_Controller_LyraShooter",
+      "/ShooterCore/Bot/B_AI_Controller_LyraShooter_Passive.B_AI_Controller_LyraShooter_Passive",
+      "/ShooterCore/Bot/EQS/Context/EQS_Context_ControlPoints.EQS_Context_ControlPoints",
+      "/ShooterCore/Bot/EQS/Context/EQS_Context_TargetEnemy.EQS_Context_TargetEnemy",
+      "/ShooterCore/Bot/EQS/Context/EQS_Context_WeaponCheck.EQS_Context_WeaponCheck",
+      "/ShooterCore/Bot/EQS/Generator/EQS_GetAllEnemy.EQS_GetAllEnemy",
+      "/ShooterCore/Bot/Services/BTS_CheckAmmo.BTS_CheckAmmo",
+      "/ShooterCore/Bot/Services/BTS_ReloadWeapon.BTS_ReloadWeapon",
+      "/ShooterCore/Bot/Services/BTS_SetFocus.BTS_SetFocus",
+      "/ShooterCore/Bot/Services/BTS_Shoot.BTS_Shoot",
+      "/ShooterCore/ControlPoint/AI/B_AI_Controller_LyraShooter_ControlPoint.B_AI_Controller_LyraShooter_ControlPoint"
+    ],
+    "source_candidate_guard": {
+      "path": "Demos/UEPLyraIntegration/Migration/candidate_dispositions.json",
+      "sha256": "2059501E6017683B5D1F5DF03BBAC7196B0BD2A24B411E0EC834379894E0C626",
+      "status": "passed",
+      "runtime_candidates": 246,
+      "original_assets": 491,
+      "original_entrypoints": 963,
+      "excluded_assets": 245,
+      "source_profile_modules": 135,
+      "source_dependency_modules": 211,
+      "runtime_acceptance": false
+    },
+    "native_runs": [
+      {
+        "directory": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Differential04ItemDefinitionTDM",
+        "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/139-shooter-ai-controller-bt-services-native-two-mode-gas.json",
+        "ledger_sha256": "23B8978D883C337857EB42D1E48E4A7ABD2806E8FC26D9349565F82A1BB23306",
+        "summary_sha256": "C47E0F017DF7D5C09B8A75E145EAEAE74630AA1C193ADDD299A9E3AA97F1BC32",
+        "report_sha256": "8379AA426E75D3941D67D5B820E2D12FDDBA873C23A91C714754590DC55AE557",
+        "log_sha256": "AE2B6ACC3AD9E1A97EFA46FFBD519852764FA9297F1E00A0D93134C91851D59D",
+        "semantic_gate": {
+          "status": "passed",
+          "profile": "BlueprintFallback",
+          "mode": "tdm",
+          "ammo_cases": 4,
+          "weapon_cases": 5,
+          "full_acceptance": false
+        },
+        "contract_guard": {
+          "current_sha256": "1946594032A6930D349221332345DA936D6F7489207F4AA4E1A439DE7EF17DA5",
+          "native_sha256": "1946594032A6930D349221332345DA936D6F7489207F4AA4E1A439DE7EF17DA5",
+          "equivalence": "exact-bytes"
+        },
+        "current_policy_and_asset_guards": {
+          "modules": [
+            {
+              "module": "uep_lyra_abilities.melee_activation_mixin",
+              "current_sha256": "3A0CDE4E479BC7FB0B6695F2E9344E68CB467780B9A91059FF008E7A68B79B64",
+              "native_sha256": "3A0CDE4E479BC7FB0B6695F2E9344E68CB467780B9A91059FF008E7A68B79B64",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_abilities.melee_hit_montage_mixin",
+              "current_sha256": "DEE7FA1F61B28D7D1B5C12E8E76A6D82830138A61DC51DCAED2A374CCD3D4663",
+              "native_sha256": "DEE7FA1F61B28D7D1B5C12E8E76A6D82830138A61DC51DCAED2A374CCD3D4663",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_abilities.melee_trace_mixin",
+              "current_sha256": "D1DBE45B3A5469F52081A32BA867644C3B3C6821BFB035E8E870D9F5BBE430DD",
+              "native_sha256": "D1DBE45B3A5469F52081A32BA867644C3B3C6821BFB035E8E870D9F5BBE430DD",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_hud.ammo_mixin",
+              "current_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+              "native_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_hud.weapon_observer",
+              "current_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+              "native_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_weapons.hero_burst_cue_mixin",
+              "current_sha256": "BCB166854A57A375778C79C5BBDBD495A2E1B9C2B0D4CDC307AAE7B9B52EDEF4",
+              "native_sha256": "D26F66856B32D276CAEBEA5A08A3A84C13261AE3263A4CF3845C0827CEF2C77D",
+              "equivalence": "imported-lib-unchanged;reviewed-append-and-native-ignore-tag-body-fixes",
+              "added_macro_import": "imports-existing-guarded-modules;literal-strings-and-zero-counters;function-bodies-not-executed"
+            },
+            {
+              "module": "uep_lyra_weapons.macro_policies",
+              "current_sha256": "73123BC8E8777E0D0F538C3F52A87DCE6D6D680C0BF85BE5416D248D8FCEF13D",
+              "equivalence": "imports-existing-guarded-modules;literal-strings-and-zero-counters;function-bodies-not-executed"
+            },
+            {
+              "module": "uep_lyra_world.effect_pad_mixin",
+              "current_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+              "native_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_world.shooter_ai_mixin",
+              "current_sha256": "4F03E12A0920825F03905390099440F95E37CF62BF520A1D01A5A1CF706B2BA9",
+              "native_sha256": "4F03E12A0920825F03905390099440F95E37CF62BF520A1D01A5A1CF706B2BA9",
+              "equivalence": "exact-bytes"
+            }
+          ],
+          "assets": [
+            {
+              "asset": "/ShooterCore/Bot/BT/BTDecorator_AllowedToFire.BTDecorator_AllowedToFire",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\BT\\BTDecorator_AllowedToFire.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "B3CA0528867774CF0A9BB38CFFB19513F587600603ABD4ED00914B350DC773FB",
+              "native_sha256": "B3CA0528867774CF0A9BB38CFFB19513F587600603ABD4ED00914B350DC773FB",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIAllowedMixin.DA_ShooterAIAllowedMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIAllowedMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "41445310A797037F0A4A49041ED27D93698C2735B275F72CD194EF47D9F187F9",
+              "native_sha256": "41445310A797037F0A4A49041ED27D93698C2735B275F72CD194EF47D9F187F9",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/B_AI_Controller_LyraShooter.B_AI_Controller_LyraShooter",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "7A9EB9B08D6F515D7736F2F514DFE8F2C04CBD3F259540711001BF74E6524E21",
+              "native_sha256": "7A9EB9B08D6F515D7736F2F514DFE8F2C04CBD3F259540711001BF74E6524E21",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIControllerMixin.DA_ShooterAIControllerMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIControllerMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "native_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/B_AI_Controller_LyraShooter_Passive.B_AI_Controller_LyraShooter_Passive",
+              "current_asset_path": "F:\\LyraStarterGame\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter_Passive.uasset",
+              "recorded_stage_asset_paths": [
+                "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter_Passive.uasset"
+              ],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "D39CE9AF3EFFD8C12654AC562E2CD143981F7484840B6923C3BC5BBA3079B62B",
+              "native_sha256": "D39CE9AF3EFFD8C12654AC562E2CD143981F7484840B6923C3BC5BBA3079B62B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIControllerMixin.DA_ShooterAIControllerMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIControllerMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "native_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_CheckAmmo.BTS_CheckAmmo",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_CheckAmmo.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "34CE815C94F2E4BFC9B847C45DCC58C5C6EE20089FAA569A42E92449BA0F9AE1",
+              "native_sha256": "34CE815C94F2E4BFC9B847C45DCC58C5C6EE20089FAA569A42E92449BA0F9AE1",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIAmmoMixin.DA_ShooterAIAmmoMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIAmmoMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "418ECF9E1C189483CB65E110F4D0AC3298D81A7B86CB265D68C3E48E2BD77A8A",
+              "native_sha256": "418ECF9E1C189483CB65E110F4D0AC3298D81A7B86CB265D68C3E48E2BD77A8A",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_ReloadWeapon.BTS_ReloadWeapon",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_ReloadWeapon.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "EEB54D2A6470708BEA9AAC6062F6013DC2B393FBD34BF67281275E14C70F1A4A",
+              "native_sha256": "EEB54D2A6470708BEA9AAC6062F6013DC2B393FBD34BF67281275E14C70F1A4A",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIReloadMixin.DA_ShooterAIReloadMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIReloadMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "D7C48D654A0C0F960B03221FEDEDF93ACE0616F8315749C7308C7B50C486FB6B",
+              "native_sha256": "D7C48D654A0C0F960B03221FEDEDF93ACE0616F8315749C7308C7B50C486FB6B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_SetFocus.BTS_SetFocus",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_SetFocus.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "6F857BE887834A48160EBAC456A465F360D373B52DC18F56B9B615DEE130F285",
+              "native_sha256": "6F857BE887834A48160EBAC456A465F360D373B52DC18F56B9B615DEE130F285",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIFocusMixin.DA_ShooterAIFocusMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIFocusMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "FD0DECCDFBB7C8862BF4BDCE014BB7EF0CA091E6C59034563AF1F4EC58E40020",
+              "native_sha256": "FD0DECCDFBB7C8862BF4BDCE014BB7EF0CA091E6C59034563AF1F4EC58E40020",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_Shoot.BTS_Shoot",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_Shoot.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "C45214FEF2D6DFFDF7ECD72AE3C995CBD7D0FAF06EEFBD13E9C97691B35FE818",
+              "native_sha256": "C45214FEF2D6DFFDF7ECD72AE3C995CBD7D0FAF06EEFBD13E9C97691B35FE818",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIShootMixin.DA_ShooterAIShootMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIShootMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "D0C6A673B6C60F0B13D5B4989261DD656079053B6861DDA21F9E4984E1FE2093",
+              "native_sha256": "D0C6A673B6C60F0B13D5B4989261DD656079053B6861DDA21F9E4984E1FE2093",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/ControlPoint/AI/B_AI_Controller_LyraShooter_ControlPoint.B_AI_Controller_LyraShooter_ControlPoint",
+              "current_asset_path": "F:\\LyraStarterGame\\Plugins\\GameFeatures\\ShooterCore\\Content\\ControlPoint\\AI\\B_AI_Controller_LyraShooter_ControlPoint.uasset",
+              "recorded_stage_asset_paths": [
+                "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\ControlPoint\\AI\\B_AI_Controller_LyraShooter_ControlPoint.uasset"
+              ],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "DE848F7088F67349E768D3E8AC811C24CCD402FD70651131002001B5DDA51245",
+              "native_sha256": "DE848F7088F67349E768D3E8AC811C24CCD402FD70651131002001B5DDA51245",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIControllerMixin.DA_ShooterAIControllerMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIControllerMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "native_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "equivalence": "exact-bytes"
+            }
+          ],
+          "candidate_paths": [
+            "/ShooterCore/Bot/BT/BTDecorator_AllowedToFire.BTDecorator_AllowedToFire",
+            "/ShooterCore/Bot/B_AI_Controller_LyraShooter.B_AI_Controller_LyraShooter",
+            "/ShooterCore/Bot/B_AI_Controller_LyraShooter_Passive.B_AI_Controller_LyraShooter_Passive",
+            "/ShooterCore/Bot/Services/BTS_CheckAmmo.BTS_CheckAmmo",
+            "/ShooterCore/Bot/Services/BTS_ReloadWeapon.BTS_ReloadWeapon",
+            "/ShooterCore/Bot/Services/BTS_SetFocus.BTS_SetFocus",
+            "/ShooterCore/Bot/Services/BTS_Shoot.BTS_Shoot",
+            "/ShooterCore/ControlPoint/AI/B_AI_Controller_LyraShooter_ControlPoint.B_AI_Controller_LyraShooter_ControlPoint"
+          ]
+        },
+        "runtime_version_historical": true
+      },
+      {
+        "directory": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Differential05PythonTDM",
+        "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/139-shooter-ai-controller-bt-services-native-two-mode-gas.json",
+        "ledger_sha256": "23B8978D883C337857EB42D1E48E4A7ABD2806E8FC26D9349565F82A1BB23306",
+        "summary_sha256": "77DEAC5A4F6FA9662800ACD022F6378B919BFF60CE7217FA6D814746D4E3C3E8",
+        "report_sha256": "9743CCE3ED008F2E83E2F2E80F4BC9549B05907E6FC85CC7F5F6505177BE47D9",
+        "log_sha256": "79816AD2B4873B0D15756F341E426F50FFD4A4DFE857AB704086C199D82A0CD5",
+        "semantic_gate": {
+          "status": "passed",
+          "profile": "Python",
+          "mode": "tdm",
+          "ammo_cases": 4,
+          "weapon_cases": 5,
+          "full_acceptance": false
+        },
+        "contract_guard": {
+          "current_sha256": "1946594032A6930D349221332345DA936D6F7489207F4AA4E1A439DE7EF17DA5",
+          "native_sha256": "1946594032A6930D349221332345DA936D6F7489207F4AA4E1A439DE7EF17DA5",
+          "equivalence": "exact-bytes"
+        },
+        "current_policy_and_asset_guards": {
+          "modules": [
+            {
+              "module": "uep_lyra_abilities.melee_activation_mixin",
+              "current_sha256": "3A0CDE4E479BC7FB0B6695F2E9344E68CB467780B9A91059FF008E7A68B79B64",
+              "native_sha256": "3A0CDE4E479BC7FB0B6695F2E9344E68CB467780B9A91059FF008E7A68B79B64",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_abilities.melee_hit_montage_mixin",
+              "current_sha256": "DEE7FA1F61B28D7D1B5C12E8E76A6D82830138A61DC51DCAED2A374CCD3D4663",
+              "native_sha256": "DEE7FA1F61B28D7D1B5C12E8E76A6D82830138A61DC51DCAED2A374CCD3D4663",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_abilities.melee_trace_mixin",
+              "current_sha256": "D1DBE45B3A5469F52081A32BA867644C3B3C6821BFB035E8E870D9F5BBE430DD",
+              "native_sha256": "D1DBE45B3A5469F52081A32BA867644C3B3C6821BFB035E8E870D9F5BBE430DD",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_hud.ammo_mixin",
+              "current_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+              "native_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_hud.weapon_observer",
+              "current_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+              "native_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_weapons.hero_burst_cue_mixin",
+              "current_sha256": "BCB166854A57A375778C79C5BBDBD495A2E1B9C2B0D4CDC307AAE7B9B52EDEF4",
+              "native_sha256": "D26F66856B32D276CAEBEA5A08A3A84C13261AE3263A4CF3845C0827CEF2C77D",
+              "equivalence": "imported-lib-unchanged;reviewed-append-and-native-ignore-tag-body-fixes",
+              "added_macro_import": "imports-existing-guarded-modules;literal-strings-and-zero-counters;function-bodies-not-executed"
+            },
+            {
+              "module": "uep_lyra_weapons.macro_policies",
+              "current_sha256": "73123BC8E8777E0D0F538C3F52A87DCE6D6D680C0BF85BE5416D248D8FCEF13D",
+              "equivalence": "imports-existing-guarded-modules;literal-strings-and-zero-counters;function-bodies-not-executed"
+            },
+            {
+              "module": "uep_lyra_world.effect_pad_mixin",
+              "current_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+              "native_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_world.shooter_ai_mixin",
+              "current_sha256": "4F03E12A0920825F03905390099440F95E37CF62BF520A1D01A5A1CF706B2BA9",
+              "native_sha256": "4F03E12A0920825F03905390099440F95E37CF62BF520A1D01A5A1CF706B2BA9",
+              "equivalence": "exact-bytes"
+            }
+          ],
+          "assets": [
+            {
+              "asset": "/ShooterCore/Bot/BT/BTDecorator_AllowedToFire.BTDecorator_AllowedToFire",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\BT\\BTDecorator_AllowedToFire.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "B3CA0528867774CF0A9BB38CFFB19513F587600603ABD4ED00914B350DC773FB",
+              "native_sha256": "B3CA0528867774CF0A9BB38CFFB19513F587600603ABD4ED00914B350DC773FB",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIAllowedMixin.DA_ShooterAIAllowedMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIAllowedMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "41445310A797037F0A4A49041ED27D93698C2735B275F72CD194EF47D9F187F9",
+              "native_sha256": "41445310A797037F0A4A49041ED27D93698C2735B275F72CD194EF47D9F187F9",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/B_AI_Controller_LyraShooter.B_AI_Controller_LyraShooter",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "7A9EB9B08D6F515D7736F2F514DFE8F2C04CBD3F259540711001BF74E6524E21",
+              "native_sha256": "7A9EB9B08D6F515D7736F2F514DFE8F2C04CBD3F259540711001BF74E6524E21",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIControllerMixin.DA_ShooterAIControllerMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIControllerMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "native_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/B_AI_Controller_LyraShooter_Passive.B_AI_Controller_LyraShooter_Passive",
+              "current_asset_path": "F:\\LyraStarterGame\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter_Passive.uasset",
+              "recorded_stage_asset_paths": [
+                "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter_Passive.uasset"
+              ],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "D39CE9AF3EFFD8C12654AC562E2CD143981F7484840B6923C3BC5BBA3079B62B",
+              "native_sha256": "D39CE9AF3EFFD8C12654AC562E2CD143981F7484840B6923C3BC5BBA3079B62B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIControllerMixin.DA_ShooterAIControllerMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIControllerMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "native_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_CheckAmmo.BTS_CheckAmmo",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_CheckAmmo.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "34CE815C94F2E4BFC9B847C45DCC58C5C6EE20089FAA569A42E92449BA0F9AE1",
+              "native_sha256": "34CE815C94F2E4BFC9B847C45DCC58C5C6EE20089FAA569A42E92449BA0F9AE1",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIAmmoMixin.DA_ShooterAIAmmoMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIAmmoMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "418ECF9E1C189483CB65E110F4D0AC3298D81A7B86CB265D68C3E48E2BD77A8A",
+              "native_sha256": "418ECF9E1C189483CB65E110F4D0AC3298D81A7B86CB265D68C3E48E2BD77A8A",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_ReloadWeapon.BTS_ReloadWeapon",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_ReloadWeapon.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "EEB54D2A6470708BEA9AAC6062F6013DC2B393FBD34BF67281275E14C70F1A4A",
+              "native_sha256": "EEB54D2A6470708BEA9AAC6062F6013DC2B393FBD34BF67281275E14C70F1A4A",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIReloadMixin.DA_ShooterAIReloadMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIReloadMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "D7C48D654A0C0F960B03221FEDEDF93ACE0616F8315749C7308C7B50C486FB6B",
+              "native_sha256": "D7C48D654A0C0F960B03221FEDEDF93ACE0616F8315749C7308C7B50C486FB6B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_SetFocus.BTS_SetFocus",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_SetFocus.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "6F857BE887834A48160EBAC456A465F360D373B52DC18F56B9B615DEE130F285",
+              "native_sha256": "6F857BE887834A48160EBAC456A465F360D373B52DC18F56B9B615DEE130F285",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIFocusMixin.DA_ShooterAIFocusMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIFocusMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "FD0DECCDFBB7C8862BF4BDCE014BB7EF0CA091E6C59034563AF1F4EC58E40020",
+              "native_sha256": "FD0DECCDFBB7C8862BF4BDCE014BB7EF0CA091E6C59034563AF1F4EC58E40020",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_Shoot.BTS_Shoot",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_Shoot.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "C45214FEF2D6DFFDF7ECD72AE3C995CBD7D0FAF06EEFBD13E9C97691B35FE818",
+              "native_sha256": "C45214FEF2D6DFFDF7ECD72AE3C995CBD7D0FAF06EEFBD13E9C97691B35FE818",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIShootMixin.DA_ShooterAIShootMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIShootMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "D0C6A673B6C60F0B13D5B4989261DD656079053B6861DDA21F9E4984E1FE2093",
+              "native_sha256": "D0C6A673B6C60F0B13D5B4989261DD656079053B6861DDA21F9E4984E1FE2093",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/ControlPoint/AI/B_AI_Controller_LyraShooter_ControlPoint.B_AI_Controller_LyraShooter_ControlPoint",
+              "current_asset_path": "F:\\LyraStarterGame\\Plugins\\GameFeatures\\ShooterCore\\Content\\ControlPoint\\AI\\B_AI_Controller_LyraShooter_ControlPoint.uasset",
+              "recorded_stage_asset_paths": [
+                "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\ControlPoint\\AI\\B_AI_Controller_LyraShooter_ControlPoint.uasset"
+              ],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "DE848F7088F67349E768D3E8AC811C24CCD402FD70651131002001B5DDA51245",
+              "native_sha256": "DE848F7088F67349E768D3E8AC811C24CCD402FD70651131002001B5DDA51245",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIControllerMixin.DA_ShooterAIControllerMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIControllerMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "native_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "equivalence": "exact-bytes"
+            }
+          ],
+          "candidate_paths": [
+            "/ShooterCore/Bot/BT/BTDecorator_AllowedToFire.BTDecorator_AllowedToFire",
+            "/ShooterCore/Bot/B_AI_Controller_LyraShooter.B_AI_Controller_LyraShooter",
+            "/ShooterCore/Bot/B_AI_Controller_LyraShooter_Passive.B_AI_Controller_LyraShooter_Passive",
+            "/ShooterCore/Bot/Services/BTS_CheckAmmo.BTS_CheckAmmo",
+            "/ShooterCore/Bot/Services/BTS_ReloadWeapon.BTS_ReloadWeapon",
+            "/ShooterCore/Bot/Services/BTS_SetFocus.BTS_SetFocus",
+            "/ShooterCore/Bot/Services/BTS_Shoot.BTS_Shoot",
+            "/ShooterCore/ControlPoint/AI/B_AI_Controller_LyraShooter_ControlPoint.B_AI_Controller_LyraShooter_ControlPoint"
+          ]
+        },
+        "runtime_version_historical": true
+      },
+      {
+        "directory": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Differential06FallbackCP",
+        "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/139-shooter-ai-controller-bt-services-native-two-mode-gas.json",
+        "ledger_sha256": "23B8978D883C337857EB42D1E48E4A7ABD2806E8FC26D9349565F82A1BB23306",
+        "summary_sha256": "C5EBCEBA76E7CB0CAC600D3B7A2172854C320DB62D4DA595E8A612EFD82530C0",
+        "report_sha256": "2371A568714D11A8454905DB1F89AC085E8FA73842D93737CE823ACE770FE643",
+        "log_sha256": "3C54459BCDD06E252AD0A4EDD0667E8C1D7A21FED309A4E917AB0034C2ABAA30",
+        "semantic_gate": {
+          "status": "passed",
+          "profile": "BlueprintFallback",
+          "mode": "cp",
+          "ammo_cases": 4,
+          "weapon_cases": 5,
+          "full_acceptance": false
+        },
+        "contract_guard": {
+          "current_sha256": "1946594032A6930D349221332345DA936D6F7489207F4AA4E1A439DE7EF17DA5",
+          "native_sha256": "1946594032A6930D349221332345DA936D6F7489207F4AA4E1A439DE7EF17DA5",
+          "equivalence": "exact-bytes"
+        },
+        "current_policy_and_asset_guards": {
+          "modules": [
+            {
+              "module": "uep_lyra_abilities.melee_activation_mixin",
+              "current_sha256": "3A0CDE4E479BC7FB0B6695F2E9344E68CB467780B9A91059FF008E7A68B79B64",
+              "native_sha256": "3A0CDE4E479BC7FB0B6695F2E9344E68CB467780B9A91059FF008E7A68B79B64",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_abilities.melee_hit_montage_mixin",
+              "current_sha256": "DEE7FA1F61B28D7D1B5C12E8E76A6D82830138A61DC51DCAED2A374CCD3D4663",
+              "native_sha256": "DEE7FA1F61B28D7D1B5C12E8E76A6D82830138A61DC51DCAED2A374CCD3D4663",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_abilities.melee_trace_mixin",
+              "current_sha256": "D1DBE45B3A5469F52081A32BA867644C3B3C6821BFB035E8E870D9F5BBE430DD",
+              "native_sha256": "D1DBE45B3A5469F52081A32BA867644C3B3C6821BFB035E8E870D9F5BBE430DD",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_hud.ammo_mixin",
+              "current_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+              "native_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_hud.weapon_observer",
+              "current_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+              "native_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_weapons.hero_burst_cue_mixin",
+              "current_sha256": "BCB166854A57A375778C79C5BBDBD495A2E1B9C2B0D4CDC307AAE7B9B52EDEF4",
+              "native_sha256": "D26F66856B32D276CAEBEA5A08A3A84C13261AE3263A4CF3845C0827CEF2C77D",
+              "equivalence": "imported-lib-unchanged;reviewed-append-and-native-ignore-tag-body-fixes",
+              "added_macro_import": "imports-existing-guarded-modules;literal-strings-and-zero-counters;function-bodies-not-executed"
+            },
+            {
+              "module": "uep_lyra_weapons.macro_policies",
+              "current_sha256": "73123BC8E8777E0D0F538C3F52A87DCE6D6D680C0BF85BE5416D248D8FCEF13D",
+              "equivalence": "imports-existing-guarded-modules;literal-strings-and-zero-counters;function-bodies-not-executed"
+            },
+            {
+              "module": "uep_lyra_world.effect_pad_mixin",
+              "current_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+              "native_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_world.shooter_ai_mixin",
+              "current_sha256": "4F03E12A0920825F03905390099440F95E37CF62BF520A1D01A5A1CF706B2BA9",
+              "native_sha256": "4F03E12A0920825F03905390099440F95E37CF62BF520A1D01A5A1CF706B2BA9",
+              "equivalence": "exact-bytes"
+            }
+          ],
+          "assets": [
+            {
+              "asset": "/ShooterCore/Bot/BT/BTDecorator_AllowedToFire.BTDecorator_AllowedToFire",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\BT\\BTDecorator_AllowedToFire.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "B3CA0528867774CF0A9BB38CFFB19513F587600603ABD4ED00914B350DC773FB",
+              "native_sha256": "B3CA0528867774CF0A9BB38CFFB19513F587600603ABD4ED00914B350DC773FB",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIAllowedMixin.DA_ShooterAIAllowedMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIAllowedMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "41445310A797037F0A4A49041ED27D93698C2735B275F72CD194EF47D9F187F9",
+              "native_sha256": "41445310A797037F0A4A49041ED27D93698C2735B275F72CD194EF47D9F187F9",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/B_AI_Controller_LyraShooter.B_AI_Controller_LyraShooter",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "7A9EB9B08D6F515D7736F2F514DFE8F2C04CBD3F259540711001BF74E6524E21",
+              "native_sha256": "7A9EB9B08D6F515D7736F2F514DFE8F2C04CBD3F259540711001BF74E6524E21",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIControllerMixin.DA_ShooterAIControllerMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIControllerMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "native_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/B_AI_Controller_LyraShooter_Passive.B_AI_Controller_LyraShooter_Passive",
+              "current_asset_path": "F:\\LyraStarterGame\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter_Passive.uasset",
+              "recorded_stage_asset_paths": [
+                "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter_Passive.uasset"
+              ],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "D39CE9AF3EFFD8C12654AC562E2CD143981F7484840B6923C3BC5BBA3079B62B",
+              "native_sha256": "D39CE9AF3EFFD8C12654AC562E2CD143981F7484840B6923C3BC5BBA3079B62B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIControllerMixin.DA_ShooterAIControllerMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIControllerMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "native_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_CheckAmmo.BTS_CheckAmmo",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_CheckAmmo.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "34CE815C94F2E4BFC9B847C45DCC58C5C6EE20089FAA569A42E92449BA0F9AE1",
+              "native_sha256": "34CE815C94F2E4BFC9B847C45DCC58C5C6EE20089FAA569A42E92449BA0F9AE1",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIAmmoMixin.DA_ShooterAIAmmoMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIAmmoMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "418ECF9E1C189483CB65E110F4D0AC3298D81A7B86CB265D68C3E48E2BD77A8A",
+              "native_sha256": "418ECF9E1C189483CB65E110F4D0AC3298D81A7B86CB265D68C3E48E2BD77A8A",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_ReloadWeapon.BTS_ReloadWeapon",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_ReloadWeapon.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "EEB54D2A6470708BEA9AAC6062F6013DC2B393FBD34BF67281275E14C70F1A4A",
+              "native_sha256": "EEB54D2A6470708BEA9AAC6062F6013DC2B393FBD34BF67281275E14C70F1A4A",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIReloadMixin.DA_ShooterAIReloadMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIReloadMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "D7C48D654A0C0F960B03221FEDEDF93ACE0616F8315749C7308C7B50C486FB6B",
+              "native_sha256": "D7C48D654A0C0F960B03221FEDEDF93ACE0616F8315749C7308C7B50C486FB6B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_SetFocus.BTS_SetFocus",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_SetFocus.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "6F857BE887834A48160EBAC456A465F360D373B52DC18F56B9B615DEE130F285",
+              "native_sha256": "6F857BE887834A48160EBAC456A465F360D373B52DC18F56B9B615DEE130F285",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIFocusMixin.DA_ShooterAIFocusMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIFocusMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "FD0DECCDFBB7C8862BF4BDCE014BB7EF0CA091E6C59034563AF1F4EC58E40020",
+              "native_sha256": "FD0DECCDFBB7C8862BF4BDCE014BB7EF0CA091E6C59034563AF1F4EC58E40020",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_Shoot.BTS_Shoot",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_Shoot.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "C45214FEF2D6DFFDF7ECD72AE3C995CBD7D0FAF06EEFBD13E9C97691B35FE818",
+              "native_sha256": "C45214FEF2D6DFFDF7ECD72AE3C995CBD7D0FAF06EEFBD13E9C97691B35FE818",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIShootMixin.DA_ShooterAIShootMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIShootMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "D0C6A673B6C60F0B13D5B4989261DD656079053B6861DDA21F9E4984E1FE2093",
+              "native_sha256": "D0C6A673B6C60F0B13D5B4989261DD656079053B6861DDA21F9E4984E1FE2093",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/ControlPoint/AI/B_AI_Controller_LyraShooter_ControlPoint.B_AI_Controller_LyraShooter_ControlPoint",
+              "current_asset_path": "F:\\LyraStarterGame\\Plugins\\GameFeatures\\ShooterCore\\Content\\ControlPoint\\AI\\B_AI_Controller_LyraShooter_ControlPoint.uasset",
+              "recorded_stage_asset_paths": [
+                "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\ControlPoint\\AI\\B_AI_Controller_LyraShooter_ControlPoint.uasset"
+              ],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "DE848F7088F67349E768D3E8AC811C24CCD402FD70651131002001B5DDA51245",
+              "native_sha256": "DE848F7088F67349E768D3E8AC811C24CCD402FD70651131002001B5DDA51245",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIControllerMixin.DA_ShooterAIControllerMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIControllerMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "native_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "equivalence": "exact-bytes"
+            }
+          ],
+          "candidate_paths": [
+            "/ShooterCore/Bot/BT/BTDecorator_AllowedToFire.BTDecorator_AllowedToFire",
+            "/ShooterCore/Bot/B_AI_Controller_LyraShooter.B_AI_Controller_LyraShooter",
+            "/ShooterCore/Bot/B_AI_Controller_LyraShooter_Passive.B_AI_Controller_LyraShooter_Passive",
+            "/ShooterCore/Bot/Services/BTS_CheckAmmo.BTS_CheckAmmo",
+            "/ShooterCore/Bot/Services/BTS_ReloadWeapon.BTS_ReloadWeapon",
+            "/ShooterCore/Bot/Services/BTS_SetFocus.BTS_SetFocus",
+            "/ShooterCore/Bot/Services/BTS_Shoot.BTS_Shoot",
+            "/ShooterCore/ControlPoint/AI/B_AI_Controller_LyraShooter_ControlPoint.B_AI_Controller_LyraShooter_ControlPoint"
+          ]
+        },
+        "runtime_version_historical": true
+      },
+      {
+        "directory": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Differential07PythonCP",
+        "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/139-shooter-ai-controller-bt-services-native-two-mode-gas.json",
+        "ledger_sha256": "23B8978D883C337857EB42D1E48E4A7ABD2806E8FC26D9349565F82A1BB23306",
+        "summary_sha256": "B8DAFB69364A985AFD6E84E8F51F1B205B98277245B3F5F462B79859E31BFB27",
+        "report_sha256": "7576832A155E343CCCE218CED2BF932E3EDAD8973B19D09A38892BB4936569B9",
+        "log_sha256": "EE0C779364E56800E84DC5FC8917CB8ACC1DF057EA818750D14B91E6303B7599",
+        "semantic_gate": {
+          "status": "passed",
+          "profile": "Python",
+          "mode": "cp",
+          "ammo_cases": 4,
+          "weapon_cases": 5,
+          "full_acceptance": false
+        },
+        "contract_guard": {
+          "current_sha256": "1946594032A6930D349221332345DA936D6F7489207F4AA4E1A439DE7EF17DA5",
+          "native_sha256": "1946594032A6930D349221332345DA936D6F7489207F4AA4E1A439DE7EF17DA5",
+          "equivalence": "exact-bytes"
+        },
+        "current_policy_and_asset_guards": {
+          "modules": [
+            {
+              "module": "uep_lyra_abilities.melee_activation_mixin",
+              "current_sha256": "3A0CDE4E479BC7FB0B6695F2E9344E68CB467780B9A91059FF008E7A68B79B64",
+              "native_sha256": "3A0CDE4E479BC7FB0B6695F2E9344E68CB467780B9A91059FF008E7A68B79B64",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_abilities.melee_hit_montage_mixin",
+              "current_sha256": "DEE7FA1F61B28D7D1B5C12E8E76A6D82830138A61DC51DCAED2A374CCD3D4663",
+              "native_sha256": "DEE7FA1F61B28D7D1B5C12E8E76A6D82830138A61DC51DCAED2A374CCD3D4663",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_abilities.melee_trace_mixin",
+              "current_sha256": "D1DBE45B3A5469F52081A32BA867644C3B3C6821BFB035E8E870D9F5BBE430DD",
+              "native_sha256": "D1DBE45B3A5469F52081A32BA867644C3B3C6821BFB035E8E870D9F5BBE430DD",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_hud.ammo_mixin",
+              "current_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+              "native_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_hud.weapon_observer",
+              "current_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+              "native_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_weapons.hero_burst_cue_mixin",
+              "current_sha256": "BCB166854A57A375778C79C5BBDBD495A2E1B9C2B0D4CDC307AAE7B9B52EDEF4",
+              "native_sha256": "D26F66856B32D276CAEBEA5A08A3A84C13261AE3263A4CF3845C0827CEF2C77D",
+              "equivalence": "imported-lib-unchanged;reviewed-append-and-native-ignore-tag-body-fixes",
+              "added_macro_import": "imports-existing-guarded-modules;literal-strings-and-zero-counters;function-bodies-not-executed"
+            },
+            {
+              "module": "uep_lyra_weapons.macro_policies",
+              "current_sha256": "73123BC8E8777E0D0F538C3F52A87DCE6D6D680C0BF85BE5416D248D8FCEF13D",
+              "equivalence": "imports-existing-guarded-modules;literal-strings-and-zero-counters;function-bodies-not-executed"
+            },
+            {
+              "module": "uep_lyra_world.effect_pad_mixin",
+              "current_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+              "native_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_world.shooter_ai_mixin",
+              "current_sha256": "4F03E12A0920825F03905390099440F95E37CF62BF520A1D01A5A1CF706B2BA9",
+              "native_sha256": "4F03E12A0920825F03905390099440F95E37CF62BF520A1D01A5A1CF706B2BA9",
+              "equivalence": "exact-bytes"
+            }
+          ],
+          "assets": [
+            {
+              "asset": "/ShooterCore/Bot/BT/BTDecorator_AllowedToFire.BTDecorator_AllowedToFire",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\BT\\BTDecorator_AllowedToFire.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "B3CA0528867774CF0A9BB38CFFB19513F587600603ABD4ED00914B350DC773FB",
+              "native_sha256": "B3CA0528867774CF0A9BB38CFFB19513F587600603ABD4ED00914B350DC773FB",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIAllowedMixin.DA_ShooterAIAllowedMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIAllowedMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "41445310A797037F0A4A49041ED27D93698C2735B275F72CD194EF47D9F187F9",
+              "native_sha256": "41445310A797037F0A4A49041ED27D93698C2735B275F72CD194EF47D9F187F9",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/B_AI_Controller_LyraShooter.B_AI_Controller_LyraShooter",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "7A9EB9B08D6F515D7736F2F514DFE8F2C04CBD3F259540711001BF74E6524E21",
+              "native_sha256": "7A9EB9B08D6F515D7736F2F514DFE8F2C04CBD3F259540711001BF74E6524E21",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIControllerMixin.DA_ShooterAIControllerMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIControllerMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "native_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/B_AI_Controller_LyraShooter_Passive.B_AI_Controller_LyraShooter_Passive",
+              "current_asset_path": "F:\\LyraStarterGame\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter_Passive.uasset",
+              "recorded_stage_asset_paths": [
+                "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter_Passive.uasset"
+              ],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "D39CE9AF3EFFD8C12654AC562E2CD143981F7484840B6923C3BC5BBA3079B62B",
+              "native_sha256": "D39CE9AF3EFFD8C12654AC562E2CD143981F7484840B6923C3BC5BBA3079B62B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIControllerMixin.DA_ShooterAIControllerMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIControllerMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "native_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_CheckAmmo.BTS_CheckAmmo",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_CheckAmmo.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "34CE815C94F2E4BFC9B847C45DCC58C5C6EE20089FAA569A42E92449BA0F9AE1",
+              "native_sha256": "34CE815C94F2E4BFC9B847C45DCC58C5C6EE20089FAA569A42E92449BA0F9AE1",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIAmmoMixin.DA_ShooterAIAmmoMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIAmmoMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "418ECF9E1C189483CB65E110F4D0AC3298D81A7B86CB265D68C3E48E2BD77A8A",
+              "native_sha256": "418ECF9E1C189483CB65E110F4D0AC3298D81A7B86CB265D68C3E48E2BD77A8A",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_ReloadWeapon.BTS_ReloadWeapon",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_ReloadWeapon.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "EEB54D2A6470708BEA9AAC6062F6013DC2B393FBD34BF67281275E14C70F1A4A",
+              "native_sha256": "EEB54D2A6470708BEA9AAC6062F6013DC2B393FBD34BF67281275E14C70F1A4A",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIReloadMixin.DA_ShooterAIReloadMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIReloadMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "D7C48D654A0C0F960B03221FEDEDF93ACE0616F8315749C7308C7B50C486FB6B",
+              "native_sha256": "D7C48D654A0C0F960B03221FEDEDF93ACE0616F8315749C7308C7B50C486FB6B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_SetFocus.BTS_SetFocus",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_SetFocus.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "6F857BE887834A48160EBAC456A465F360D373B52DC18F56B9B615DEE130F285",
+              "native_sha256": "6F857BE887834A48160EBAC456A465F360D373B52DC18F56B9B615DEE130F285",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIFocusMixin.DA_ShooterAIFocusMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIFocusMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "FD0DECCDFBB7C8862BF4BDCE014BB7EF0CA091E6C59034563AF1F4EC58E40020",
+              "native_sha256": "FD0DECCDFBB7C8862BF4BDCE014BB7EF0CA091E6C59034563AF1F4EC58E40020",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_Shoot.BTS_Shoot",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_Shoot.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "C45214FEF2D6DFFDF7ECD72AE3C995CBD7D0FAF06EEFBD13E9C97691B35FE818",
+              "native_sha256": "C45214FEF2D6DFFDF7ECD72AE3C995CBD7D0FAF06EEFBD13E9C97691B35FE818",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIShootMixin.DA_ShooterAIShootMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIShootMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "D0C6A673B6C60F0B13D5B4989261DD656079053B6861DDA21F9E4984E1FE2093",
+              "native_sha256": "D0C6A673B6C60F0B13D5B4989261DD656079053B6861DDA21F9E4984E1FE2093",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/ControlPoint/AI/B_AI_Controller_LyraShooter_ControlPoint.B_AI_Controller_LyraShooter_ControlPoint",
+              "current_asset_path": "F:\\LyraStarterGame\\Plugins\\GameFeatures\\ShooterCore\\Content\\ControlPoint\\AI\\B_AI_Controller_LyraShooter_ControlPoint.uasset",
+              "recorded_stage_asset_paths": [
+                "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\ControlPoint\\AI\\B_AI_Controller_LyraShooter_ControlPoint.uasset"
+              ],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "DE848F7088F67349E768D3E8AC811C24CCD402FD70651131002001B5DDA51245",
+              "native_sha256": "DE848F7088F67349E768D3E8AC811C24CCD402FD70651131002001B5DDA51245",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIControllerMixin.DA_ShooterAIControllerMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIControllerMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "native_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "equivalence": "exact-bytes"
+            }
+          ],
+          "candidate_paths": [
+            "/ShooterCore/Bot/BT/BTDecorator_AllowedToFire.BTDecorator_AllowedToFire",
+            "/ShooterCore/Bot/B_AI_Controller_LyraShooter.B_AI_Controller_LyraShooter",
+            "/ShooterCore/Bot/B_AI_Controller_LyraShooter_Passive.B_AI_Controller_LyraShooter_Passive",
+            "/ShooterCore/Bot/Services/BTS_CheckAmmo.BTS_CheckAmmo",
+            "/ShooterCore/Bot/Services/BTS_ReloadWeapon.BTS_ReloadWeapon",
+            "/ShooterCore/Bot/Services/BTS_SetFocus.BTS_SetFocus",
+            "/ShooterCore/Bot/Services/BTS_Shoot.BTS_Shoot",
+            "/ShooterCore/ControlPoint/AI/B_AI_Controller_LyraShooter_ControlPoint.B_AI_Controller_LyraShooter_ControlPoint"
+          ]
+        },
+        "runtime_version_historical": true
+      },
+      {
+        "directory": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential02OptionalFallbackTDM",
+        "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/140-shooter-eqs-native-context-generator-queries.json",
+        "ledger_sha256": "FC3B3E6FD80D3E9E88BD6C6801B5FC058C298830558B50B733771F8693C08AF1",
+        "summary_sha256": "C87D24218534D7EA9F2A50B29A0762AB965223B6EECD8F89EE8896ADCE041ED9",
+        "report_sha256": "DE20D3884D90CBE2835843B26142A1428202B99B6D7AAFFA6E056B70536B6A27",
+        "log_sha256": "41FA61132ED23CC1933BABAC7A1F69B9ABE1301F44E3544888BAB206ADD83C36",
+        "semantic_gate": {
+          "status": "passed",
+          "profile": "BlueprintFallback",
+          "mode": "tdm",
+          "native_queries": 16,
+          "full_acceptance": false
+        },
+        "contract_guard": {
+          "current_sha256": "A4C5BB150B0A62A1440EEB8D66C96909B1E9145F0AD76A7D6FABC6DDDD68BA24",
+          "native_sha256": "A4C5BB150B0A62A1440EEB8D66C96909B1E9145F0AD76A7D6FABC6DDDD68BA24",
+          "equivalence": "exact-bytes"
+        },
+        "current_policy_and_asset_guards": {
+          "modules": [
+            {
+              "module": "uep_lyra_abilities.melee_activation_mixin",
+              "current_sha256": "3A0CDE4E479BC7FB0B6695F2E9344E68CB467780B9A91059FF008E7A68B79B64",
+              "native_sha256": "3A0CDE4E479BC7FB0B6695F2E9344E68CB467780B9A91059FF008E7A68B79B64",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_abilities.melee_hit_montage_mixin",
+              "current_sha256": "DEE7FA1F61B28D7D1B5C12E8E76A6D82830138A61DC51DCAED2A374CCD3D4663",
+              "native_sha256": "DEE7FA1F61B28D7D1B5C12E8E76A6D82830138A61DC51DCAED2A374CCD3D4663",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_abilities.melee_trace_mixin",
+              "current_sha256": "D1DBE45B3A5469F52081A32BA867644C3B3C6821BFB035E8E870D9F5BBE430DD",
+              "native_sha256": "D1DBE45B3A5469F52081A32BA867644C3B3C6821BFB035E8E870D9F5BBE430DD",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_hud.ammo_mixin",
+              "current_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+              "native_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_hud.weapon_observer",
+              "current_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+              "native_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_weapons.hero_burst_cue_mixin",
+              "current_sha256": "BCB166854A57A375778C79C5BBDBD495A2E1B9C2B0D4CDC307AAE7B9B52EDEF4",
+              "native_sha256": "D26F66856B32D276CAEBEA5A08A3A84C13261AE3263A4CF3845C0827CEF2C77D",
+              "equivalence": "imported-lib-unchanged;reviewed-append-and-native-ignore-tag-body-fixes",
+              "added_macro_import": "imports-existing-guarded-modules;literal-strings-and-zero-counters;function-bodies-not-executed"
+            },
+            {
+              "module": "uep_lyra_weapons.macro_policies",
+              "current_sha256": "73123BC8E8777E0D0F538C3F52A87DCE6D6D680C0BF85BE5416D248D8FCEF13D",
+              "equivalence": "imports-existing-guarded-modules;literal-strings-and-zero-counters;function-bodies-not-executed"
+            },
+            {
+              "module": "uep_lyra_world.effect_pad_mixin",
+              "current_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+              "native_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_world.shooter_ai_mixin",
+              "current_sha256": "4F03E12A0920825F03905390099440F95E37CF62BF520A1D01A5A1CF706B2BA9",
+              "native_sha256": "4F03E12A0920825F03905390099440F95E37CF62BF520A1D01A5A1CF706B2BA9",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_world.shooter_eqs_mixin",
+              "current_sha256": "6FE06CA080E1043BCE87A3BA0B73D31E7A52DE3D204393F5624F2C347C168AA1",
+              "native_sha256": "6FE06CA080E1043BCE87A3BA0B73D31E7A52DE3D204393F5624F2C347C168AA1",
+              "equivalence": "exact-bytes"
+            }
+          ],
+          "assets": [
+            {
+              "asset": "/ShooterCore/Bot/EQS/Context/EQS_Context_ControlPoints.EQS_Context_ControlPoints",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\EQS\\Context\\EQS_Context_ControlPoints.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "910047A49DCF2AFFA8AC548CCF0EED5FC3F597E3EAA012B2580702A53AE6E608",
+              "native_sha256": "910047A49DCF2AFFA8AC548CCF0EED5FC3F597E3EAA012B2580702A53AE6E608",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterEQSPointsMixin.DA_ShooterEQSPointsMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterEQSPointsMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "4837E2FDD7AB526C004890F5C0D5E56D89DADC3D3E06201D3216334A424706F6",
+              "native_sha256": "4837E2FDD7AB526C004890F5C0D5E56D89DADC3D3E06201D3216334A424706F6",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/EQS/Context/EQS_Context_TargetEnemy.EQS_Context_TargetEnemy",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\EQS\\Context\\EQS_Context_TargetEnemy.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "2B7A599CD43153BE730910E598D1681518F464C0133ABCEC9CDB7DD34B6B757E",
+              "native_sha256": "2B7A599CD43153BE730910E598D1681518F464C0133ABCEC9CDB7DD34B6B757E",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterEQSEnemyMixin.DA_ShooterEQSEnemyMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterEQSEnemyMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "EFC43EBA4E66EF047C6290613A8E3A0EB6369C9FC14487094333E9D522DAD26B",
+              "native_sha256": "EFC43EBA4E66EF047C6290613A8E3A0EB6369C9FC14487094333E9D522DAD26B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/EQS/Context/EQS_Context_WeaponCheck.EQS_Context_WeaponCheck",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\EQS\\Context\\EQS_Context_WeaponCheck.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "CE3462D41E51AADA07988644CF2B2553C91B8988D0664FC14454922422FC85E3",
+              "native_sha256": "CE3462D41E51AADA07988644CF2B2553C91B8988D0664FC14454922422FC85E3",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterEQSWeaponMixin.DA_ShooterEQSWeaponMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterEQSWeaponMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "1704CC83FEBAA4C529A20672BF15D8E83B717CC857DAC4F83B35002B3C24958C",
+              "native_sha256": "1704CC83FEBAA4C529A20672BF15D8E83B717CC857DAC4F83B35002B3C24958C",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/EQS/Generator/EQS_GetAllEnemy.EQS_GetAllEnemy",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\EQS\\Generator\\EQS_GetAllEnemy.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "C8FB52DE1CF2E944213DEA1F638C044BD1E48BF5FAAF913227DABDFC7CF89B22",
+              "native_sha256": "C8FB52DE1CF2E944213DEA1F638C044BD1E48BF5FAAF913227DABDFC7CF89B22",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterEQSEnemiesMixin.DA_ShooterEQSEnemiesMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterEQSEnemiesMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "848159F924D5BFC010D09057A70592014AF6F138382FE68BAB429084B94EE02A",
+              "native_sha256": "848159F924D5BFC010D09057A70592014AF6F138382FE68BAB429084B94EE02A",
+              "equivalence": "exact-bytes"
+            }
+          ],
+          "candidate_paths": [
+            "/ShooterCore/Bot/EQS/Context/EQS_Context_ControlPoints.EQS_Context_ControlPoints",
+            "/ShooterCore/Bot/EQS/Context/EQS_Context_TargetEnemy.EQS_Context_TargetEnemy",
+            "/ShooterCore/Bot/EQS/Context/EQS_Context_WeaponCheck.EQS_Context_WeaponCheck",
+            "/ShooterCore/Bot/EQS/Generator/EQS_GetAllEnemy.EQS_GetAllEnemy"
+          ]
+        },
+        "runtime_version_historical": true
+      },
+      {
+        "directory": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential03PythonTDM",
+        "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/140-shooter-eqs-native-context-generator-queries.json",
+        "ledger_sha256": "FC3B3E6FD80D3E9E88BD6C6801B5FC058C298830558B50B733771F8693C08AF1",
+        "summary_sha256": "356C8ECC670A8CC971B3BF05681BD084D92231B0FA570DEE0A9703867BAC735D",
+        "report_sha256": "35C54E94A87DDAE878FF12C360EA9C247CEDBE72A9BA06AF485D376D85EC158E",
+        "log_sha256": "54F928B663539C236B1F86956594A4DCA68D40AB48C9CAE32F239E620CD71855",
+        "semantic_gate": {
+          "status": "passed",
+          "profile": "Python",
+          "mode": "tdm",
+          "native_queries": 16,
+          "full_acceptance": false
+        },
+        "contract_guard": {
+          "current_sha256": "A4C5BB150B0A62A1440EEB8D66C96909B1E9145F0AD76A7D6FABC6DDDD68BA24",
+          "native_sha256": "A4C5BB150B0A62A1440EEB8D66C96909B1E9145F0AD76A7D6FABC6DDDD68BA24",
+          "equivalence": "exact-bytes"
+        },
+        "current_policy_and_asset_guards": {
+          "modules": [
+            {
+              "module": "uep_lyra_abilities.melee_activation_mixin",
+              "current_sha256": "3A0CDE4E479BC7FB0B6695F2E9344E68CB467780B9A91059FF008E7A68B79B64",
+              "native_sha256": "3A0CDE4E479BC7FB0B6695F2E9344E68CB467780B9A91059FF008E7A68B79B64",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_abilities.melee_hit_montage_mixin",
+              "current_sha256": "DEE7FA1F61B28D7D1B5C12E8E76A6D82830138A61DC51DCAED2A374CCD3D4663",
+              "native_sha256": "DEE7FA1F61B28D7D1B5C12E8E76A6D82830138A61DC51DCAED2A374CCD3D4663",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_abilities.melee_trace_mixin",
+              "current_sha256": "D1DBE45B3A5469F52081A32BA867644C3B3C6821BFB035E8E870D9F5BBE430DD",
+              "native_sha256": "D1DBE45B3A5469F52081A32BA867644C3B3C6821BFB035E8E870D9F5BBE430DD",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_hud.ammo_mixin",
+              "current_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+              "native_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_hud.weapon_observer",
+              "current_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+              "native_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_weapons.hero_burst_cue_mixin",
+              "current_sha256": "BCB166854A57A375778C79C5BBDBD495A2E1B9C2B0D4CDC307AAE7B9B52EDEF4",
+              "native_sha256": "D26F66856B32D276CAEBEA5A08A3A84C13261AE3263A4CF3845C0827CEF2C77D",
+              "equivalence": "imported-lib-unchanged;reviewed-append-and-native-ignore-tag-body-fixes",
+              "added_macro_import": "imports-existing-guarded-modules;literal-strings-and-zero-counters;function-bodies-not-executed"
+            },
+            {
+              "module": "uep_lyra_weapons.macro_policies",
+              "current_sha256": "73123BC8E8777E0D0F538C3F52A87DCE6D6D680C0BF85BE5416D248D8FCEF13D",
+              "equivalence": "imports-existing-guarded-modules;literal-strings-and-zero-counters;function-bodies-not-executed"
+            },
+            {
+              "module": "uep_lyra_world.effect_pad_mixin",
+              "current_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+              "native_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_world.shooter_ai_mixin",
+              "current_sha256": "4F03E12A0920825F03905390099440F95E37CF62BF520A1D01A5A1CF706B2BA9",
+              "native_sha256": "4F03E12A0920825F03905390099440F95E37CF62BF520A1D01A5A1CF706B2BA9",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_world.shooter_eqs_mixin",
+              "current_sha256": "6FE06CA080E1043BCE87A3BA0B73D31E7A52DE3D204393F5624F2C347C168AA1",
+              "native_sha256": "6FE06CA080E1043BCE87A3BA0B73D31E7A52DE3D204393F5624F2C347C168AA1",
+              "equivalence": "exact-bytes"
+            }
+          ],
+          "assets": [
+            {
+              "asset": "/ShooterCore/Bot/EQS/Context/EQS_Context_ControlPoints.EQS_Context_ControlPoints",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\EQS\\Context\\EQS_Context_ControlPoints.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "910047A49DCF2AFFA8AC548CCF0EED5FC3F597E3EAA012B2580702A53AE6E608",
+              "native_sha256": "910047A49DCF2AFFA8AC548CCF0EED5FC3F597E3EAA012B2580702A53AE6E608",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterEQSPointsMixin.DA_ShooterEQSPointsMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterEQSPointsMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "4837E2FDD7AB526C004890F5C0D5E56D89DADC3D3E06201D3216334A424706F6",
+              "native_sha256": "4837E2FDD7AB526C004890F5C0D5E56D89DADC3D3E06201D3216334A424706F6",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/EQS/Context/EQS_Context_TargetEnemy.EQS_Context_TargetEnemy",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\EQS\\Context\\EQS_Context_TargetEnemy.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "2B7A599CD43153BE730910E598D1681518F464C0133ABCEC9CDB7DD34B6B757E",
+              "native_sha256": "2B7A599CD43153BE730910E598D1681518F464C0133ABCEC9CDB7DD34B6B757E",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterEQSEnemyMixin.DA_ShooterEQSEnemyMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterEQSEnemyMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "EFC43EBA4E66EF047C6290613A8E3A0EB6369C9FC14487094333E9D522DAD26B",
+              "native_sha256": "EFC43EBA4E66EF047C6290613A8E3A0EB6369C9FC14487094333E9D522DAD26B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/EQS/Context/EQS_Context_WeaponCheck.EQS_Context_WeaponCheck",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\EQS\\Context\\EQS_Context_WeaponCheck.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "CE3462D41E51AADA07988644CF2B2553C91B8988D0664FC14454922422FC85E3",
+              "native_sha256": "CE3462D41E51AADA07988644CF2B2553C91B8988D0664FC14454922422FC85E3",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterEQSWeaponMixin.DA_ShooterEQSWeaponMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterEQSWeaponMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "1704CC83FEBAA4C529A20672BF15D8E83B717CC857DAC4F83B35002B3C24958C",
+              "native_sha256": "1704CC83FEBAA4C529A20672BF15D8E83B717CC857DAC4F83B35002B3C24958C",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/EQS/Generator/EQS_GetAllEnemy.EQS_GetAllEnemy",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\EQS\\Generator\\EQS_GetAllEnemy.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "C8FB52DE1CF2E944213DEA1F638C044BD1E48BF5FAAF913227DABDFC7CF89B22",
+              "native_sha256": "C8FB52DE1CF2E944213DEA1F638C044BD1E48BF5FAAF913227DABDFC7CF89B22",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterEQSEnemiesMixin.DA_ShooterEQSEnemiesMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterEQSEnemiesMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "848159F924D5BFC010D09057A70592014AF6F138382FE68BAB429084B94EE02A",
+              "native_sha256": "848159F924D5BFC010D09057A70592014AF6F138382FE68BAB429084B94EE02A",
+              "equivalence": "exact-bytes"
+            }
+          ],
+          "candidate_paths": [
+            "/ShooterCore/Bot/EQS/Context/EQS_Context_ControlPoints.EQS_Context_ControlPoints",
+            "/ShooterCore/Bot/EQS/Context/EQS_Context_TargetEnemy.EQS_Context_TargetEnemy",
+            "/ShooterCore/Bot/EQS/Context/EQS_Context_WeaponCheck.EQS_Context_WeaponCheck",
+            "/ShooterCore/Bot/EQS/Generator/EQS_GetAllEnemy.EQS_GetAllEnemy"
+          ]
+        },
+        "runtime_version_historical": true
+      },
+      {
+        "directory": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential04FallbackCP",
+        "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/140-shooter-eqs-native-context-generator-queries.json",
+        "ledger_sha256": "FC3B3E6FD80D3E9E88BD6C6801B5FC058C298830558B50B733771F8693C08AF1",
+        "summary_sha256": "6DA4DA9B61F896B31F5E777F00127A3D2CE6F1E2291D55ACA0007D8DC8E54C17",
+        "report_sha256": "FFEAE426A522205134E144F47E9B7DB0D9CB2CE1213451EDBBCF44FBCE0C97E4",
+        "log_sha256": "7E8EC61A31AFB29BD3D91236610C623D74FD1ADE2445A3B68BC39476C6160D3F",
+        "semantic_gate": {
+          "status": "passed",
+          "profile": "BlueprintFallback",
+          "mode": "cp",
+          "native_queries": 16,
+          "full_acceptance": false
+        },
+        "contract_guard": {
+          "current_sha256": "A4C5BB150B0A62A1440EEB8D66C96909B1E9145F0AD76A7D6FABC6DDDD68BA24",
+          "native_sha256": "A4C5BB150B0A62A1440EEB8D66C96909B1E9145F0AD76A7D6FABC6DDDD68BA24",
+          "equivalence": "exact-bytes"
+        },
+        "current_policy_and_asset_guards": {
+          "modules": [
+            {
+              "module": "uep_lyra_abilities.melee_activation_mixin",
+              "current_sha256": "3A0CDE4E479BC7FB0B6695F2E9344E68CB467780B9A91059FF008E7A68B79B64",
+              "native_sha256": "3A0CDE4E479BC7FB0B6695F2E9344E68CB467780B9A91059FF008E7A68B79B64",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_abilities.melee_hit_montage_mixin",
+              "current_sha256": "DEE7FA1F61B28D7D1B5C12E8E76A6D82830138A61DC51DCAED2A374CCD3D4663",
+              "native_sha256": "DEE7FA1F61B28D7D1B5C12E8E76A6D82830138A61DC51DCAED2A374CCD3D4663",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_abilities.melee_trace_mixin",
+              "current_sha256": "D1DBE45B3A5469F52081A32BA867644C3B3C6821BFB035E8E870D9F5BBE430DD",
+              "native_sha256": "D1DBE45B3A5469F52081A32BA867644C3B3C6821BFB035E8E870D9F5BBE430DD",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_hud.ammo_mixin",
+              "current_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+              "native_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_hud.weapon_observer",
+              "current_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+              "native_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_weapons.hero_burst_cue_mixin",
+              "current_sha256": "BCB166854A57A375778C79C5BBDBD495A2E1B9C2B0D4CDC307AAE7B9B52EDEF4",
+              "native_sha256": "D26F66856B32D276CAEBEA5A08A3A84C13261AE3263A4CF3845C0827CEF2C77D",
+              "equivalence": "imported-lib-unchanged;reviewed-append-and-native-ignore-tag-body-fixes",
+              "added_macro_import": "imports-existing-guarded-modules;literal-strings-and-zero-counters;function-bodies-not-executed"
+            },
+            {
+              "module": "uep_lyra_weapons.macro_policies",
+              "current_sha256": "73123BC8E8777E0D0F538C3F52A87DCE6D6D680C0BF85BE5416D248D8FCEF13D",
+              "equivalence": "imports-existing-guarded-modules;literal-strings-and-zero-counters;function-bodies-not-executed"
+            },
+            {
+              "module": "uep_lyra_world.effect_pad_mixin",
+              "current_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+              "native_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_world.shooter_ai_mixin",
+              "current_sha256": "4F03E12A0920825F03905390099440F95E37CF62BF520A1D01A5A1CF706B2BA9",
+              "native_sha256": "4F03E12A0920825F03905390099440F95E37CF62BF520A1D01A5A1CF706B2BA9",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_world.shooter_eqs_mixin",
+              "current_sha256": "6FE06CA080E1043BCE87A3BA0B73D31E7A52DE3D204393F5624F2C347C168AA1",
+              "native_sha256": "6FE06CA080E1043BCE87A3BA0B73D31E7A52DE3D204393F5624F2C347C168AA1",
+              "equivalence": "exact-bytes"
+            }
+          ],
+          "assets": [
+            {
+              "asset": "/ShooterCore/Bot/EQS/Context/EQS_Context_ControlPoints.EQS_Context_ControlPoints",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\EQS\\Context\\EQS_Context_ControlPoints.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "910047A49DCF2AFFA8AC548CCF0EED5FC3F597E3EAA012B2580702A53AE6E608",
+              "native_sha256": "910047A49DCF2AFFA8AC548CCF0EED5FC3F597E3EAA012B2580702A53AE6E608",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterEQSPointsMixin.DA_ShooterEQSPointsMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterEQSPointsMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "4837E2FDD7AB526C004890F5C0D5E56D89DADC3D3E06201D3216334A424706F6",
+              "native_sha256": "4837E2FDD7AB526C004890F5C0D5E56D89DADC3D3E06201D3216334A424706F6",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/EQS/Context/EQS_Context_TargetEnemy.EQS_Context_TargetEnemy",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\EQS\\Context\\EQS_Context_TargetEnemy.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "2B7A599CD43153BE730910E598D1681518F464C0133ABCEC9CDB7DD34B6B757E",
+              "native_sha256": "2B7A599CD43153BE730910E598D1681518F464C0133ABCEC9CDB7DD34B6B757E",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterEQSEnemyMixin.DA_ShooterEQSEnemyMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterEQSEnemyMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "EFC43EBA4E66EF047C6290613A8E3A0EB6369C9FC14487094333E9D522DAD26B",
+              "native_sha256": "EFC43EBA4E66EF047C6290613A8E3A0EB6369C9FC14487094333E9D522DAD26B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/EQS/Context/EQS_Context_WeaponCheck.EQS_Context_WeaponCheck",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\EQS\\Context\\EQS_Context_WeaponCheck.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "CE3462D41E51AADA07988644CF2B2553C91B8988D0664FC14454922422FC85E3",
+              "native_sha256": "CE3462D41E51AADA07988644CF2B2553C91B8988D0664FC14454922422FC85E3",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterEQSWeaponMixin.DA_ShooterEQSWeaponMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterEQSWeaponMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "1704CC83FEBAA4C529A20672BF15D8E83B717CC857DAC4F83B35002B3C24958C",
+              "native_sha256": "1704CC83FEBAA4C529A20672BF15D8E83B717CC857DAC4F83B35002B3C24958C",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/EQS/Generator/EQS_GetAllEnemy.EQS_GetAllEnemy",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\EQS\\Generator\\EQS_GetAllEnemy.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "C8FB52DE1CF2E944213DEA1F638C044BD1E48BF5FAAF913227DABDFC7CF89B22",
+              "native_sha256": "C8FB52DE1CF2E944213DEA1F638C044BD1E48BF5FAAF913227DABDFC7CF89B22",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterEQSEnemiesMixin.DA_ShooterEQSEnemiesMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterEQSEnemiesMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "848159F924D5BFC010D09057A70592014AF6F138382FE68BAB429084B94EE02A",
+              "native_sha256": "848159F924D5BFC010D09057A70592014AF6F138382FE68BAB429084B94EE02A",
+              "equivalence": "exact-bytes"
+            }
+          ],
+          "candidate_paths": [
+            "/ShooterCore/Bot/EQS/Context/EQS_Context_ControlPoints.EQS_Context_ControlPoints",
+            "/ShooterCore/Bot/EQS/Context/EQS_Context_TargetEnemy.EQS_Context_TargetEnemy",
+            "/ShooterCore/Bot/EQS/Context/EQS_Context_WeaponCheck.EQS_Context_WeaponCheck",
+            "/ShooterCore/Bot/EQS/Generator/EQS_GetAllEnemy.EQS_GetAllEnemy"
+          ]
+        },
+        "runtime_version_historical": true
+      },
+      {
+        "directory": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/EQSDifferential05PythonCP",
+        "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/140-shooter-eqs-native-context-generator-queries.json",
+        "ledger_sha256": "FC3B3E6FD80D3E9E88BD6C6801B5FC058C298830558B50B733771F8693C08AF1",
+        "summary_sha256": "AA730114946EFC105DC0B1EBE74574F5C57E88AE6158A97915D2CE12BF608503",
+        "report_sha256": "CEBE774194A8000199E8FA6316F2C27DD8B3C61CD0C58D07EE7020208B94A3B6",
+        "log_sha256": "98F0CBDD5318F9F052F97A7CBEBA7C9B5506562C77A0B9725D1E4A8EFE056E06",
+        "semantic_gate": {
+          "status": "passed",
+          "profile": "Python",
+          "mode": "cp",
+          "native_queries": 16,
+          "full_acceptance": false
+        },
+        "contract_guard": {
+          "current_sha256": "A4C5BB150B0A62A1440EEB8D66C96909B1E9145F0AD76A7D6FABC6DDDD68BA24",
+          "native_sha256": "A4C5BB150B0A62A1440EEB8D66C96909B1E9145F0AD76A7D6FABC6DDDD68BA24",
+          "equivalence": "exact-bytes"
+        },
+        "current_policy_and_asset_guards": {
+          "modules": [
+            {
+              "module": "uep_lyra_abilities.melee_activation_mixin",
+              "current_sha256": "3A0CDE4E479BC7FB0B6695F2E9344E68CB467780B9A91059FF008E7A68B79B64",
+              "native_sha256": "3A0CDE4E479BC7FB0B6695F2E9344E68CB467780B9A91059FF008E7A68B79B64",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_abilities.melee_hit_montage_mixin",
+              "current_sha256": "DEE7FA1F61B28D7D1B5C12E8E76A6D82830138A61DC51DCAED2A374CCD3D4663",
+              "native_sha256": "DEE7FA1F61B28D7D1B5C12E8E76A6D82830138A61DC51DCAED2A374CCD3D4663",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_abilities.melee_trace_mixin",
+              "current_sha256": "D1DBE45B3A5469F52081A32BA867644C3B3C6821BFB035E8E870D9F5BBE430DD",
+              "native_sha256": "D1DBE45B3A5469F52081A32BA867644C3B3C6821BFB035E8E870D9F5BBE430DD",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_hud.ammo_mixin",
+              "current_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+              "native_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_hud.weapon_observer",
+              "current_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+              "native_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_weapons.hero_burst_cue_mixin",
+              "current_sha256": "BCB166854A57A375778C79C5BBDBD495A2E1B9C2B0D4CDC307AAE7B9B52EDEF4",
+              "native_sha256": "D26F66856B32D276CAEBEA5A08A3A84C13261AE3263A4CF3845C0827CEF2C77D",
+              "equivalence": "imported-lib-unchanged;reviewed-append-and-native-ignore-tag-body-fixes",
+              "added_macro_import": "imports-existing-guarded-modules;literal-strings-and-zero-counters;function-bodies-not-executed"
+            },
+            {
+              "module": "uep_lyra_weapons.macro_policies",
+              "current_sha256": "73123BC8E8777E0D0F538C3F52A87DCE6D6D680C0BF85BE5416D248D8FCEF13D",
+              "equivalence": "imports-existing-guarded-modules;literal-strings-and-zero-counters;function-bodies-not-executed"
+            },
+            {
+              "module": "uep_lyra_world.effect_pad_mixin",
+              "current_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+              "native_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_world.shooter_ai_mixin",
+              "current_sha256": "4F03E12A0920825F03905390099440F95E37CF62BF520A1D01A5A1CF706B2BA9",
+              "native_sha256": "4F03E12A0920825F03905390099440F95E37CF62BF520A1D01A5A1CF706B2BA9",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_world.shooter_eqs_mixin",
+              "current_sha256": "6FE06CA080E1043BCE87A3BA0B73D31E7A52DE3D204393F5624F2C347C168AA1",
+              "native_sha256": "6FE06CA080E1043BCE87A3BA0B73D31E7A52DE3D204393F5624F2C347C168AA1",
+              "equivalence": "exact-bytes"
+            }
+          ],
+          "assets": [
+            {
+              "asset": "/ShooterCore/Bot/EQS/Context/EQS_Context_ControlPoints.EQS_Context_ControlPoints",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\EQS\\Context\\EQS_Context_ControlPoints.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "910047A49DCF2AFFA8AC548CCF0EED5FC3F597E3EAA012B2580702A53AE6E608",
+              "native_sha256": "910047A49DCF2AFFA8AC548CCF0EED5FC3F597E3EAA012B2580702A53AE6E608",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterEQSPointsMixin.DA_ShooterEQSPointsMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterEQSPointsMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "4837E2FDD7AB526C004890F5C0D5E56D89DADC3D3E06201D3216334A424706F6",
+              "native_sha256": "4837E2FDD7AB526C004890F5C0D5E56D89DADC3D3E06201D3216334A424706F6",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/EQS/Context/EQS_Context_TargetEnemy.EQS_Context_TargetEnemy",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\EQS\\Context\\EQS_Context_TargetEnemy.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "2B7A599CD43153BE730910E598D1681518F464C0133ABCEC9CDB7DD34B6B757E",
+              "native_sha256": "2B7A599CD43153BE730910E598D1681518F464C0133ABCEC9CDB7DD34B6B757E",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterEQSEnemyMixin.DA_ShooterEQSEnemyMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterEQSEnemyMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "EFC43EBA4E66EF047C6290613A8E3A0EB6369C9FC14487094333E9D522DAD26B",
+              "native_sha256": "EFC43EBA4E66EF047C6290613A8E3A0EB6369C9FC14487094333E9D522DAD26B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/EQS/Context/EQS_Context_WeaponCheck.EQS_Context_WeaponCheck",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\EQS\\Context\\EQS_Context_WeaponCheck.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "CE3462D41E51AADA07988644CF2B2553C91B8988D0664FC14454922422FC85E3",
+              "native_sha256": "CE3462D41E51AADA07988644CF2B2553C91B8988D0664FC14454922422FC85E3",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterEQSWeaponMixin.DA_ShooterEQSWeaponMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterEQSWeaponMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "1704CC83FEBAA4C529A20672BF15D8E83B717CC857DAC4F83B35002B3C24958C",
+              "native_sha256": "1704CC83FEBAA4C529A20672BF15D8E83B717CC857DAC4F83B35002B3C24958C",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/EQS/Generator/EQS_GetAllEnemy.EQS_GetAllEnemy",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\EQS\\Generator\\EQS_GetAllEnemy.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "C8FB52DE1CF2E944213DEA1F638C044BD1E48BF5FAAF913227DABDFC7CF89B22",
+              "native_sha256": "C8FB52DE1CF2E944213DEA1F638C044BD1E48BF5FAAF913227DABDFC7CF89B22",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterEQSEnemiesMixin.DA_ShooterEQSEnemiesMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterEQSEnemiesMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "848159F924D5BFC010D09057A70592014AF6F138382FE68BAB429084B94EE02A",
+              "native_sha256": "848159F924D5BFC010D09057A70592014AF6F138382FE68BAB429084B94EE02A",
+              "equivalence": "exact-bytes"
+            }
+          ],
+          "candidate_paths": [
+            "/ShooterCore/Bot/EQS/Context/EQS_Context_ControlPoints.EQS_Context_ControlPoints",
+            "/ShooterCore/Bot/EQS/Context/EQS_Context_TargetEnemy.EQS_Context_TargetEnemy",
+            "/ShooterCore/Bot/EQS/Context/EQS_Context_WeaponCheck.EQS_Context_WeaponCheck",
+            "/ShooterCore/Bot/EQS/Generator/EQS_GetAllEnemy.EQS_GetAllEnemy"
+          ]
+        },
+        "runtime_version_historical": true
+      },
+      {
+        "directory": ".build/LyraValidation/BlueprintPython/20261026-ai-lifetime/TDMOriginal03",
+        "summary_sha256": "BB7DAD438A0382CFB9C2B8AD22B7E820C4ADA258492F9382CD23B75BB135D3B3",
+        "report_sha256": "BA5CB6C41BFAD3781DF6B0E8A08A067D5A586A8E828A7F41CFC730082FB6D6AD",
+        "log_sha256": "455AEEFA37977CC15864C6AFB9785179A0E333CC378FF481E9B17A6376C021A7",
+        "semantic_gate": {
+          "status": "passed",
+          "profile": "BlueprintFallback",
+          "mode": "tdm",
+          "native_lifetime_boundaries": 2,
+          "full_acceptance": false
+        },
+        "current_policy_and_asset_guards": {
+          "modules": [
+            {
+              "module": "uep_lyra_abilities.melee_activation_mixin",
+              "current_sha256": "3A0CDE4E479BC7FB0B6695F2E9344E68CB467780B9A91059FF008E7A68B79B64",
+              "native_sha256": "3A0CDE4E479BC7FB0B6695F2E9344E68CB467780B9A91059FF008E7A68B79B64",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_abilities.melee_hit_montage_mixin",
+              "current_sha256": "DEE7FA1F61B28D7D1B5C12E8E76A6D82830138A61DC51DCAED2A374CCD3D4663",
+              "native_sha256": "DEE7FA1F61B28D7D1B5C12E8E76A6D82830138A61DC51DCAED2A374CCD3D4663",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_abilities.melee_trace_mixin",
+              "current_sha256": "D1DBE45B3A5469F52081A32BA867644C3B3C6821BFB035E8E870D9F5BBE430DD",
+              "native_sha256": "D1DBE45B3A5469F52081A32BA867644C3B3C6821BFB035E8E870D9F5BBE430DD",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_hud.ammo_mixin",
+              "current_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+              "native_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_hud.weapon_observer",
+              "current_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+              "native_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_weapons.hero_burst_cue_mixin",
+              "current_sha256": "BCB166854A57A375778C79C5BBDBD495A2E1B9C2B0D4CDC307AAE7B9B52EDEF4",
+              "native_sha256": "BCB166854A57A375778C79C5BBDBD495A2E1B9C2B0D4CDC307AAE7B9B52EDEF4",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_weapons.macro_policies",
+              "current_sha256": "73123BC8E8777E0D0F538C3F52A87DCE6D6D680C0BF85BE5416D248D8FCEF13D",
+              "native_sha256": "73123BC8E8777E0D0F538C3F52A87DCE6D6D680C0BF85BE5416D248D8FCEF13D",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_world.effect_pad_mixin",
+              "current_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+              "native_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_world.shooter_ai_mixin",
+              "current_sha256": "4F03E12A0920825F03905390099440F95E37CF62BF520A1D01A5A1CF706B2BA9",
+              "native_sha256": "4F03E12A0920825F03905390099440F95E37CF62BF520A1D01A5A1CF706B2BA9",
+              "equivalence": "exact-bytes"
+            }
+          ],
+          "assets": [
+            {
+              "asset": "/ShooterCore/Bot/BT/BTDecorator_AllowedToFire.BTDecorator_AllowedToFire",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\BT\\BTDecorator_AllowedToFire.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "B3CA0528867774CF0A9BB38CFFB19513F587600603ABD4ED00914B350DC773FB",
+              "native_sha256": "B3CA0528867774CF0A9BB38CFFB19513F587600603ABD4ED00914B350DC773FB",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIAllowedMixin.DA_ShooterAIAllowedMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIAllowedMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "41445310A797037F0A4A49041ED27D93698C2735B275F72CD194EF47D9F187F9",
+              "native_sha256": "41445310A797037F0A4A49041ED27D93698C2735B275F72CD194EF47D9F187F9",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/B_AI_Controller_LyraShooter.B_AI_Controller_LyraShooter",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "7A9EB9B08D6F515D7736F2F514DFE8F2C04CBD3F259540711001BF74E6524E21",
+              "native_sha256": "7A9EB9B08D6F515D7736F2F514DFE8F2C04CBD3F259540711001BF74E6524E21",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIControllerMixin.DA_ShooterAIControllerMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIControllerMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "native_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/B_AI_Controller_LyraShooter_Passive.B_AI_Controller_LyraShooter_Passive",
+              "current_asset_path": "F:\\LyraStarterGame\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter_Passive.uasset",
+              "current_sha256": "D39CE9AF3EFFD8C12654AC562E2CD143981F7484840B6923C3BC5BBA3079B62B",
+              "frozen_by_this_native_run": false,
+              "historical_native_fingerprint": {
+                "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/139-shooter-ai-controller-bt-services-native-two-mode-gas.json",
+                "directory": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Differential04ItemDefinitionTDM",
+                "guard": {
+                  "asset": "/ShooterCore/Bot/B_AI_Controller_LyraShooter_Passive.B_AI_Controller_LyraShooter_Passive",
+                  "current_asset_path": "F:\\LyraStarterGame\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter_Passive.uasset",
+                  "recorded_stage_asset_paths": [
+                    "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter_Passive.uasset"
+                  ],
+                  "frozen_by_this_native_run": true,
+                  "current_sha256": "D39CE9AF3EFFD8C12654AC562E2CD143981F7484840B6923C3BC5BBA3079B62B",
+                  "native_sha256": "D39CE9AF3EFFD8C12654AC562E2CD143981F7484840B6923C3BC5BBA3079B62B",
+                  "equivalence": "exact-bytes"
+                }
+              }
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIControllerMixin.DA_ShooterAIControllerMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIControllerMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "native_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_CheckAmmo.BTS_CheckAmmo",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_CheckAmmo.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "34CE815C94F2E4BFC9B847C45DCC58C5C6EE20089FAA569A42E92449BA0F9AE1",
+              "native_sha256": "34CE815C94F2E4BFC9B847C45DCC58C5C6EE20089FAA569A42E92449BA0F9AE1",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIAmmoMixin.DA_ShooterAIAmmoMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIAmmoMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "418ECF9E1C189483CB65E110F4D0AC3298D81A7B86CB265D68C3E48E2BD77A8A",
+              "native_sha256": "418ECF9E1C189483CB65E110F4D0AC3298D81A7B86CB265D68C3E48E2BD77A8A",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_ReloadWeapon.BTS_ReloadWeapon",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_ReloadWeapon.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "EEB54D2A6470708BEA9AAC6062F6013DC2B393FBD34BF67281275E14C70F1A4A",
+              "native_sha256": "EEB54D2A6470708BEA9AAC6062F6013DC2B393FBD34BF67281275E14C70F1A4A",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIReloadMixin.DA_ShooterAIReloadMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIReloadMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "D7C48D654A0C0F960B03221FEDEDF93ACE0616F8315749C7308C7B50C486FB6B",
+              "native_sha256": "D7C48D654A0C0F960B03221FEDEDF93ACE0616F8315749C7308C7B50C486FB6B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_SetFocus.BTS_SetFocus",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_SetFocus.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "6F857BE887834A48160EBAC456A465F360D373B52DC18F56B9B615DEE130F285",
+              "native_sha256": "6F857BE887834A48160EBAC456A465F360D373B52DC18F56B9B615DEE130F285",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIFocusMixin.DA_ShooterAIFocusMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIFocusMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "FD0DECCDFBB7C8862BF4BDCE014BB7EF0CA091E6C59034563AF1F4EC58E40020",
+              "native_sha256": "FD0DECCDFBB7C8862BF4BDCE014BB7EF0CA091E6C59034563AF1F4EC58E40020",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_Shoot.BTS_Shoot",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_Shoot.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "C45214FEF2D6DFFDF7ECD72AE3C995CBD7D0FAF06EEFBD13E9C97691B35FE818",
+              "native_sha256": "C45214FEF2D6DFFDF7ECD72AE3C995CBD7D0FAF06EEFBD13E9C97691B35FE818",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIShootMixin.DA_ShooterAIShootMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIShootMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "D0C6A673B6C60F0B13D5B4989261DD656079053B6861DDA21F9E4984E1FE2093",
+              "native_sha256": "D0C6A673B6C60F0B13D5B4989261DD656079053B6861DDA21F9E4984E1FE2093",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/ControlPoint/AI/B_AI_Controller_LyraShooter_ControlPoint.B_AI_Controller_LyraShooter_ControlPoint",
+              "current_asset_path": "F:\\LyraStarterGame\\Plugins\\GameFeatures\\ShooterCore\\Content\\ControlPoint\\AI\\B_AI_Controller_LyraShooter_ControlPoint.uasset",
+              "current_sha256": "DE848F7088F67349E768D3E8AC811C24CCD402FD70651131002001B5DDA51245",
+              "frozen_by_this_native_run": false,
+              "historical_native_fingerprint": {
+                "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/139-shooter-ai-controller-bt-services-native-two-mode-gas.json",
+                "directory": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Differential04ItemDefinitionTDM",
+                "guard": {
+                  "asset": "/ShooterCore/ControlPoint/AI/B_AI_Controller_LyraShooter_ControlPoint.B_AI_Controller_LyraShooter_ControlPoint",
+                  "current_asset_path": "F:\\LyraStarterGame\\Plugins\\GameFeatures\\ShooterCore\\Content\\ControlPoint\\AI\\B_AI_Controller_LyraShooter_ControlPoint.uasset",
+                  "recorded_stage_asset_paths": [
+                    "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\ControlPoint\\AI\\B_AI_Controller_LyraShooter_ControlPoint.uasset"
+                  ],
+                  "frozen_by_this_native_run": true,
+                  "current_sha256": "DE848F7088F67349E768D3E8AC811C24CCD402FD70651131002001B5DDA51245",
+                  "native_sha256": "DE848F7088F67349E768D3E8AC811C24CCD402FD70651131002001B5DDA51245",
+                  "equivalence": "exact-bytes"
+                }
+              }
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIControllerMixin.DA_ShooterAIControllerMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIControllerMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "native_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "equivalence": "exact-bytes"
+            }
+          ],
+          "candidate_paths": [
+            "/ShooterCore/Bot/BT/BTDecorator_AllowedToFire.BTDecorator_AllowedToFire",
+            "/ShooterCore/Bot/B_AI_Controller_LyraShooter.B_AI_Controller_LyraShooter",
+            "/ShooterCore/Bot/B_AI_Controller_LyraShooter_Passive.B_AI_Controller_LyraShooter_Passive",
+            "/ShooterCore/Bot/Services/BTS_CheckAmmo.BTS_CheckAmmo",
+            "/ShooterCore/Bot/Services/BTS_ReloadWeapon.BTS_ReloadWeapon",
+            "/ShooterCore/Bot/Services/BTS_SetFocus.BTS_SetFocus",
+            "/ShooterCore/Bot/Services/BTS_Shoot.BTS_Shoot",
+            "/ShooterCore/ControlPoint/AI/B_AI_Controller_LyraShooter_ControlPoint.B_AI_Controller_LyraShooter_ControlPoint"
+          ]
+        },
+        "observer_guard": {
+          "current_sha256": "3BD58A7F0B54D85BD5A11578A8FF6F3240A6F293A5F989CFD1C5047F6FEEA474",
+          "native_sha256": "3BD58A7F0B54D85BD5A11578A8FF6F3240A6F293A5F989CFD1C5047F6FEEA474",
+          "equivalence": "exact-bytes"
+        },
+        "current_gate_rechecked": true,
+        "runtime_version_historical": false
+      },
+      {
+        "directory": ".build/LyraValidation/BlueprintPython/20261026-ai-lifetime/TDMPython01",
+        "summary_sha256": "BC91C23813B6403519D1F33905C216C77D05475F052A0A923F853B6006ADA187",
+        "report_sha256": "474074A6834C59D13E9A8358C5AAC03D22FE0716C2D1AA054B9218360031676E",
+        "log_sha256": "3EFCA28AE18816D137CCE75B1955DB124421C0C252DCB6FDE78CB697B438C1A3",
+        "semantic_gate": {
+          "status": "passed",
+          "profile": "Python",
+          "mode": "tdm",
+          "native_lifetime_boundaries": 2,
+          "full_acceptance": false
+        },
+        "current_policy_and_asset_guards": {
+          "modules": [
+            {
+              "module": "uep_lyra_abilities.melee_activation_mixin",
+              "current_sha256": "3A0CDE4E479BC7FB0B6695F2E9344E68CB467780B9A91059FF008E7A68B79B64",
+              "native_sha256": "3A0CDE4E479BC7FB0B6695F2E9344E68CB467780B9A91059FF008E7A68B79B64",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_abilities.melee_hit_montage_mixin",
+              "current_sha256": "DEE7FA1F61B28D7D1B5C12E8E76A6D82830138A61DC51DCAED2A374CCD3D4663",
+              "native_sha256": "DEE7FA1F61B28D7D1B5C12E8E76A6D82830138A61DC51DCAED2A374CCD3D4663",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_abilities.melee_trace_mixin",
+              "current_sha256": "D1DBE45B3A5469F52081A32BA867644C3B3C6821BFB035E8E870D9F5BBE430DD",
+              "native_sha256": "D1DBE45B3A5469F52081A32BA867644C3B3C6821BFB035E8E870D9F5BBE430DD",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_hud.ammo_mixin",
+              "current_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+              "native_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_hud.weapon_observer",
+              "current_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+              "native_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_weapons.hero_burst_cue_mixin",
+              "current_sha256": "BCB166854A57A375778C79C5BBDBD495A2E1B9C2B0D4CDC307AAE7B9B52EDEF4",
+              "native_sha256": "BCB166854A57A375778C79C5BBDBD495A2E1B9C2B0D4CDC307AAE7B9B52EDEF4",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_weapons.macro_policies",
+              "current_sha256": "73123BC8E8777E0D0F538C3F52A87DCE6D6D680C0BF85BE5416D248D8FCEF13D",
+              "native_sha256": "73123BC8E8777E0D0F538C3F52A87DCE6D6D680C0BF85BE5416D248D8FCEF13D",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_world.effect_pad_mixin",
+              "current_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+              "native_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_world.shooter_ai_mixin",
+              "current_sha256": "4F03E12A0920825F03905390099440F95E37CF62BF520A1D01A5A1CF706B2BA9",
+              "native_sha256": "4F03E12A0920825F03905390099440F95E37CF62BF520A1D01A5A1CF706B2BA9",
+              "equivalence": "exact-bytes"
+            }
+          ],
+          "assets": [
+            {
+              "asset": "/ShooterCore/Bot/BT/BTDecorator_AllowedToFire.BTDecorator_AllowedToFire",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\BT\\BTDecorator_AllowedToFire.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "B3CA0528867774CF0A9BB38CFFB19513F587600603ABD4ED00914B350DC773FB",
+              "native_sha256": "B3CA0528867774CF0A9BB38CFFB19513F587600603ABD4ED00914B350DC773FB",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIAllowedMixin.DA_ShooterAIAllowedMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIAllowedMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "41445310A797037F0A4A49041ED27D93698C2735B275F72CD194EF47D9F187F9",
+              "native_sha256": "41445310A797037F0A4A49041ED27D93698C2735B275F72CD194EF47D9F187F9",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/B_AI_Controller_LyraShooter.B_AI_Controller_LyraShooter",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "7A9EB9B08D6F515D7736F2F514DFE8F2C04CBD3F259540711001BF74E6524E21",
+              "native_sha256": "7A9EB9B08D6F515D7736F2F514DFE8F2C04CBD3F259540711001BF74E6524E21",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIControllerMixin.DA_ShooterAIControllerMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIControllerMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "native_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/B_AI_Controller_LyraShooter_Passive.B_AI_Controller_LyraShooter_Passive",
+              "current_asset_path": "F:\\LyraStarterGame\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter_Passive.uasset",
+              "current_sha256": "D39CE9AF3EFFD8C12654AC562E2CD143981F7484840B6923C3BC5BBA3079B62B",
+              "frozen_by_this_native_run": false,
+              "historical_native_fingerprint": {
+                "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/139-shooter-ai-controller-bt-services-native-two-mode-gas.json",
+                "directory": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Differential04ItemDefinitionTDM",
+                "guard": {
+                  "asset": "/ShooterCore/Bot/B_AI_Controller_LyraShooter_Passive.B_AI_Controller_LyraShooter_Passive",
+                  "current_asset_path": "F:\\LyraStarterGame\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter_Passive.uasset",
+                  "recorded_stage_asset_paths": [
+                    "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter_Passive.uasset"
+                  ],
+                  "frozen_by_this_native_run": true,
+                  "current_sha256": "D39CE9AF3EFFD8C12654AC562E2CD143981F7484840B6923C3BC5BBA3079B62B",
+                  "native_sha256": "D39CE9AF3EFFD8C12654AC562E2CD143981F7484840B6923C3BC5BBA3079B62B",
+                  "equivalence": "exact-bytes"
+                }
+              }
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIControllerMixin.DA_ShooterAIControllerMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIControllerMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "native_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_CheckAmmo.BTS_CheckAmmo",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_CheckAmmo.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "34CE815C94F2E4BFC9B847C45DCC58C5C6EE20089FAA569A42E92449BA0F9AE1",
+              "native_sha256": "34CE815C94F2E4BFC9B847C45DCC58C5C6EE20089FAA569A42E92449BA0F9AE1",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIAmmoMixin.DA_ShooterAIAmmoMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIAmmoMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "418ECF9E1C189483CB65E110F4D0AC3298D81A7B86CB265D68C3E48E2BD77A8A",
+              "native_sha256": "418ECF9E1C189483CB65E110F4D0AC3298D81A7B86CB265D68C3E48E2BD77A8A",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_ReloadWeapon.BTS_ReloadWeapon",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_ReloadWeapon.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "EEB54D2A6470708BEA9AAC6062F6013DC2B393FBD34BF67281275E14C70F1A4A",
+              "native_sha256": "EEB54D2A6470708BEA9AAC6062F6013DC2B393FBD34BF67281275E14C70F1A4A",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIReloadMixin.DA_ShooterAIReloadMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIReloadMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "D7C48D654A0C0F960B03221FEDEDF93ACE0616F8315749C7308C7B50C486FB6B",
+              "native_sha256": "D7C48D654A0C0F960B03221FEDEDF93ACE0616F8315749C7308C7B50C486FB6B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_SetFocus.BTS_SetFocus",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_SetFocus.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "6F857BE887834A48160EBAC456A465F360D373B52DC18F56B9B615DEE130F285",
+              "native_sha256": "6F857BE887834A48160EBAC456A465F360D373B52DC18F56B9B615DEE130F285",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIFocusMixin.DA_ShooterAIFocusMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIFocusMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "FD0DECCDFBB7C8862BF4BDCE014BB7EF0CA091E6C59034563AF1F4EC58E40020",
+              "native_sha256": "FD0DECCDFBB7C8862BF4BDCE014BB7EF0CA091E6C59034563AF1F4EC58E40020",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_Shoot.BTS_Shoot",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_Shoot.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "C45214FEF2D6DFFDF7ECD72AE3C995CBD7D0FAF06EEFBD13E9C97691B35FE818",
+              "native_sha256": "C45214FEF2D6DFFDF7ECD72AE3C995CBD7D0FAF06EEFBD13E9C97691B35FE818",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIShootMixin.DA_ShooterAIShootMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIShootMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "D0C6A673B6C60F0B13D5B4989261DD656079053B6861DDA21F9E4984E1FE2093",
+              "native_sha256": "D0C6A673B6C60F0B13D5B4989261DD656079053B6861DDA21F9E4984E1FE2093",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/ControlPoint/AI/B_AI_Controller_LyraShooter_ControlPoint.B_AI_Controller_LyraShooter_ControlPoint",
+              "current_asset_path": "F:\\LyraStarterGame\\Plugins\\GameFeatures\\ShooterCore\\Content\\ControlPoint\\AI\\B_AI_Controller_LyraShooter_ControlPoint.uasset",
+              "current_sha256": "DE848F7088F67349E768D3E8AC811C24CCD402FD70651131002001B5DDA51245",
+              "frozen_by_this_native_run": false,
+              "historical_native_fingerprint": {
+                "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/139-shooter-ai-controller-bt-services-native-two-mode-gas.json",
+                "directory": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Differential04ItemDefinitionTDM",
+                "guard": {
+                  "asset": "/ShooterCore/ControlPoint/AI/B_AI_Controller_LyraShooter_ControlPoint.B_AI_Controller_LyraShooter_ControlPoint",
+                  "current_asset_path": "F:\\LyraStarterGame\\Plugins\\GameFeatures\\ShooterCore\\Content\\ControlPoint\\AI\\B_AI_Controller_LyraShooter_ControlPoint.uasset",
+                  "recorded_stage_asset_paths": [
+                    "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\ControlPoint\\AI\\B_AI_Controller_LyraShooter_ControlPoint.uasset"
+                  ],
+                  "frozen_by_this_native_run": true,
+                  "current_sha256": "DE848F7088F67349E768D3E8AC811C24CCD402FD70651131002001B5DDA51245",
+                  "native_sha256": "DE848F7088F67349E768D3E8AC811C24CCD402FD70651131002001B5DDA51245",
+                  "equivalence": "exact-bytes"
+                }
+              }
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIControllerMixin.DA_ShooterAIControllerMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIControllerMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "native_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "equivalence": "exact-bytes"
+            }
+          ],
+          "candidate_paths": [
+            "/ShooterCore/Bot/BT/BTDecorator_AllowedToFire.BTDecorator_AllowedToFire",
+            "/ShooterCore/Bot/B_AI_Controller_LyraShooter.B_AI_Controller_LyraShooter",
+            "/ShooterCore/Bot/B_AI_Controller_LyraShooter_Passive.B_AI_Controller_LyraShooter_Passive",
+            "/ShooterCore/Bot/Services/BTS_CheckAmmo.BTS_CheckAmmo",
+            "/ShooterCore/Bot/Services/BTS_ReloadWeapon.BTS_ReloadWeapon",
+            "/ShooterCore/Bot/Services/BTS_SetFocus.BTS_SetFocus",
+            "/ShooterCore/Bot/Services/BTS_Shoot.BTS_Shoot",
+            "/ShooterCore/ControlPoint/AI/B_AI_Controller_LyraShooter_ControlPoint.B_AI_Controller_LyraShooter_ControlPoint"
+          ]
+        },
+        "observer_guard": {
+          "current_sha256": "3BD58A7F0B54D85BD5A11578A8FF6F3240A6F293A5F989CFD1C5047F6FEEA474",
+          "native_sha256": "3BD58A7F0B54D85BD5A11578A8FF6F3240A6F293A5F989CFD1C5047F6FEEA474",
+          "equivalence": "exact-bytes"
+        },
+        "current_gate_rechecked": true,
+        "runtime_version_historical": false
+      },
+      {
+        "directory": ".build/LyraValidation/BlueprintPython/20261026-ai-lifetime/CPOriginal01",
+        "summary_sha256": "ED86CB4BA526F4962E587B2D315B5BCBA59E6CF56B084571D0B21B173BEF10B9",
+        "report_sha256": "5A754D24E73951311AD3512F11D4AD83F95D268E3355593333853089585ECD99",
+        "log_sha256": "2577F2709FA1FAD2FC558B95F9D06D91A8829FC0739F34CB01175CAD055F85CD",
+        "semantic_gate": {
+          "status": "passed",
+          "profile": "BlueprintFallback",
+          "mode": "cp",
+          "native_lifetime_boundaries": 2,
+          "full_acceptance": false
+        },
+        "current_policy_and_asset_guards": {
+          "modules": [
+            {
+              "module": "uep_lyra_abilities.melee_activation_mixin",
+              "current_sha256": "3A0CDE4E479BC7FB0B6695F2E9344E68CB467780B9A91059FF008E7A68B79B64",
+              "native_sha256": "3A0CDE4E479BC7FB0B6695F2E9344E68CB467780B9A91059FF008E7A68B79B64",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_abilities.melee_hit_montage_mixin",
+              "current_sha256": "DEE7FA1F61B28D7D1B5C12E8E76A6D82830138A61DC51DCAED2A374CCD3D4663",
+              "native_sha256": "DEE7FA1F61B28D7D1B5C12E8E76A6D82830138A61DC51DCAED2A374CCD3D4663",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_abilities.melee_trace_mixin",
+              "current_sha256": "D1DBE45B3A5469F52081A32BA867644C3B3C6821BFB035E8E870D9F5BBE430DD",
+              "native_sha256": "D1DBE45B3A5469F52081A32BA867644C3B3C6821BFB035E8E870D9F5BBE430DD",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_hud.ammo_mixin",
+              "current_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+              "native_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_hud.weapon_observer",
+              "current_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+              "native_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_weapons.hero_burst_cue_mixin",
+              "current_sha256": "BCB166854A57A375778C79C5BBDBD495A2E1B9C2B0D4CDC307AAE7B9B52EDEF4",
+              "native_sha256": "BCB166854A57A375778C79C5BBDBD495A2E1B9C2B0D4CDC307AAE7B9B52EDEF4",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_weapons.macro_policies",
+              "current_sha256": "73123BC8E8777E0D0F538C3F52A87DCE6D6D680C0BF85BE5416D248D8FCEF13D",
+              "native_sha256": "73123BC8E8777E0D0F538C3F52A87DCE6D6D680C0BF85BE5416D248D8FCEF13D",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_world.effect_pad_mixin",
+              "current_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+              "native_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_world.shooter_ai_mixin",
+              "current_sha256": "4F03E12A0920825F03905390099440F95E37CF62BF520A1D01A5A1CF706B2BA9",
+              "native_sha256": "4F03E12A0920825F03905390099440F95E37CF62BF520A1D01A5A1CF706B2BA9",
+              "equivalence": "exact-bytes"
+            }
+          ],
+          "assets": [
+            {
+              "asset": "/ShooterCore/Bot/BT/BTDecorator_AllowedToFire.BTDecorator_AllowedToFire",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\BT\\BTDecorator_AllowedToFire.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "B3CA0528867774CF0A9BB38CFFB19513F587600603ABD4ED00914B350DC773FB",
+              "native_sha256": "B3CA0528867774CF0A9BB38CFFB19513F587600603ABD4ED00914B350DC773FB",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIAllowedMixin.DA_ShooterAIAllowedMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIAllowedMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "41445310A797037F0A4A49041ED27D93698C2735B275F72CD194EF47D9F187F9",
+              "native_sha256": "41445310A797037F0A4A49041ED27D93698C2735B275F72CD194EF47D9F187F9",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/B_AI_Controller_LyraShooter.B_AI_Controller_LyraShooter",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "7A9EB9B08D6F515D7736F2F514DFE8F2C04CBD3F259540711001BF74E6524E21",
+              "native_sha256": "7A9EB9B08D6F515D7736F2F514DFE8F2C04CBD3F259540711001BF74E6524E21",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIControllerMixin.DA_ShooterAIControllerMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIControllerMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "native_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/B_AI_Controller_LyraShooter_Passive.B_AI_Controller_LyraShooter_Passive",
+              "current_asset_path": "F:\\LyraStarterGame\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter_Passive.uasset",
+              "current_sha256": "D39CE9AF3EFFD8C12654AC562E2CD143981F7484840B6923C3BC5BBA3079B62B",
+              "frozen_by_this_native_run": false,
+              "historical_native_fingerprint": {
+                "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/139-shooter-ai-controller-bt-services-native-two-mode-gas.json",
+                "directory": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Differential04ItemDefinitionTDM",
+                "guard": {
+                  "asset": "/ShooterCore/Bot/B_AI_Controller_LyraShooter_Passive.B_AI_Controller_LyraShooter_Passive",
+                  "current_asset_path": "F:\\LyraStarterGame\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter_Passive.uasset",
+                  "recorded_stage_asset_paths": [
+                    "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter_Passive.uasset"
+                  ],
+                  "frozen_by_this_native_run": true,
+                  "current_sha256": "D39CE9AF3EFFD8C12654AC562E2CD143981F7484840B6923C3BC5BBA3079B62B",
+                  "native_sha256": "D39CE9AF3EFFD8C12654AC562E2CD143981F7484840B6923C3BC5BBA3079B62B",
+                  "equivalence": "exact-bytes"
+                }
+              }
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIControllerMixin.DA_ShooterAIControllerMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIControllerMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "native_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_CheckAmmo.BTS_CheckAmmo",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_CheckAmmo.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "34CE815C94F2E4BFC9B847C45DCC58C5C6EE20089FAA569A42E92449BA0F9AE1",
+              "native_sha256": "34CE815C94F2E4BFC9B847C45DCC58C5C6EE20089FAA569A42E92449BA0F9AE1",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIAmmoMixin.DA_ShooterAIAmmoMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIAmmoMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "418ECF9E1C189483CB65E110F4D0AC3298D81A7B86CB265D68C3E48E2BD77A8A",
+              "native_sha256": "418ECF9E1C189483CB65E110F4D0AC3298D81A7B86CB265D68C3E48E2BD77A8A",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_ReloadWeapon.BTS_ReloadWeapon",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_ReloadWeapon.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "EEB54D2A6470708BEA9AAC6062F6013DC2B393FBD34BF67281275E14C70F1A4A",
+              "native_sha256": "EEB54D2A6470708BEA9AAC6062F6013DC2B393FBD34BF67281275E14C70F1A4A",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIReloadMixin.DA_ShooterAIReloadMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIReloadMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "D7C48D654A0C0F960B03221FEDEDF93ACE0616F8315749C7308C7B50C486FB6B",
+              "native_sha256": "D7C48D654A0C0F960B03221FEDEDF93ACE0616F8315749C7308C7B50C486FB6B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_SetFocus.BTS_SetFocus",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_SetFocus.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "6F857BE887834A48160EBAC456A465F360D373B52DC18F56B9B615DEE130F285",
+              "native_sha256": "6F857BE887834A48160EBAC456A465F360D373B52DC18F56B9B615DEE130F285",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIFocusMixin.DA_ShooterAIFocusMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIFocusMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "FD0DECCDFBB7C8862BF4BDCE014BB7EF0CA091E6C59034563AF1F4EC58E40020",
+              "native_sha256": "FD0DECCDFBB7C8862BF4BDCE014BB7EF0CA091E6C59034563AF1F4EC58E40020",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_Shoot.BTS_Shoot",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_Shoot.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "C45214FEF2D6DFFDF7ECD72AE3C995CBD7D0FAF06EEFBD13E9C97691B35FE818",
+              "native_sha256": "C45214FEF2D6DFFDF7ECD72AE3C995CBD7D0FAF06EEFBD13E9C97691B35FE818",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIShootMixin.DA_ShooterAIShootMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIShootMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "D0C6A673B6C60F0B13D5B4989261DD656079053B6861DDA21F9E4984E1FE2093",
+              "native_sha256": "D0C6A673B6C60F0B13D5B4989261DD656079053B6861DDA21F9E4984E1FE2093",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/ControlPoint/AI/B_AI_Controller_LyraShooter_ControlPoint.B_AI_Controller_LyraShooter_ControlPoint",
+              "current_asset_path": "F:\\LyraStarterGame\\Plugins\\GameFeatures\\ShooterCore\\Content\\ControlPoint\\AI\\B_AI_Controller_LyraShooter_ControlPoint.uasset",
+              "current_sha256": "DE848F7088F67349E768D3E8AC811C24CCD402FD70651131002001B5DDA51245",
+              "frozen_by_this_native_run": false,
+              "historical_native_fingerprint": {
+                "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/139-shooter-ai-controller-bt-services-native-two-mode-gas.json",
+                "directory": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Differential04ItemDefinitionTDM",
+                "guard": {
+                  "asset": "/ShooterCore/ControlPoint/AI/B_AI_Controller_LyraShooter_ControlPoint.B_AI_Controller_LyraShooter_ControlPoint",
+                  "current_asset_path": "F:\\LyraStarterGame\\Plugins\\GameFeatures\\ShooterCore\\Content\\ControlPoint\\AI\\B_AI_Controller_LyraShooter_ControlPoint.uasset",
+                  "recorded_stage_asset_paths": [
+                    "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\ControlPoint\\AI\\B_AI_Controller_LyraShooter_ControlPoint.uasset"
+                  ],
+                  "frozen_by_this_native_run": true,
+                  "current_sha256": "DE848F7088F67349E768D3E8AC811C24CCD402FD70651131002001B5DDA51245",
+                  "native_sha256": "DE848F7088F67349E768D3E8AC811C24CCD402FD70651131002001B5DDA51245",
+                  "equivalence": "exact-bytes"
+                }
+              }
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIControllerMixin.DA_ShooterAIControllerMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIControllerMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "native_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "equivalence": "exact-bytes"
+            }
+          ],
+          "candidate_paths": [
+            "/ShooterCore/Bot/BT/BTDecorator_AllowedToFire.BTDecorator_AllowedToFire",
+            "/ShooterCore/Bot/B_AI_Controller_LyraShooter.B_AI_Controller_LyraShooter",
+            "/ShooterCore/Bot/B_AI_Controller_LyraShooter_Passive.B_AI_Controller_LyraShooter_Passive",
+            "/ShooterCore/Bot/Services/BTS_CheckAmmo.BTS_CheckAmmo",
+            "/ShooterCore/Bot/Services/BTS_ReloadWeapon.BTS_ReloadWeapon",
+            "/ShooterCore/Bot/Services/BTS_SetFocus.BTS_SetFocus",
+            "/ShooterCore/Bot/Services/BTS_Shoot.BTS_Shoot",
+            "/ShooterCore/ControlPoint/AI/B_AI_Controller_LyraShooter_ControlPoint.B_AI_Controller_LyraShooter_ControlPoint"
+          ]
+        },
+        "observer_guard": {
+          "current_sha256": "3BD58A7F0B54D85BD5A11578A8FF6F3240A6F293A5F989CFD1C5047F6FEEA474",
+          "native_sha256": "3BD58A7F0B54D85BD5A11578A8FF6F3240A6F293A5F989CFD1C5047F6FEEA474",
+          "equivalence": "exact-bytes"
+        },
+        "current_gate_rechecked": true,
+        "runtime_version_historical": false
+      },
+      {
+        "directory": ".build/LyraValidation/BlueprintPython/20261026-ai-lifetime/CPPython01",
+        "summary_sha256": "E5D131545CA1CC33266216BEE949EA0EFE40CD24AA84B32042E3BB79AF602C21",
+        "report_sha256": "FC35C0FE4CB61BE6D440D2B5467BD3DE1DCF0B7349DE5467AB9F2D954243B0A2",
+        "log_sha256": "FF813F355F3FF8E613147D3C3BCDA2C230966BA0D662E6E5F8C1D241F194CF4F",
+        "semantic_gate": {
+          "status": "passed",
+          "profile": "Python",
+          "mode": "cp",
+          "native_lifetime_boundaries": 2,
+          "full_acceptance": false
+        },
+        "current_policy_and_asset_guards": {
+          "modules": [
+            {
+              "module": "uep_lyra_abilities.melee_activation_mixin",
+              "current_sha256": "3A0CDE4E479BC7FB0B6695F2E9344E68CB467780B9A91059FF008E7A68B79B64",
+              "native_sha256": "3A0CDE4E479BC7FB0B6695F2E9344E68CB467780B9A91059FF008E7A68B79B64",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_abilities.melee_hit_montage_mixin",
+              "current_sha256": "DEE7FA1F61B28D7D1B5C12E8E76A6D82830138A61DC51DCAED2A374CCD3D4663",
+              "native_sha256": "DEE7FA1F61B28D7D1B5C12E8E76A6D82830138A61DC51DCAED2A374CCD3D4663",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_abilities.melee_trace_mixin",
+              "current_sha256": "D1DBE45B3A5469F52081A32BA867644C3B3C6821BFB035E8E870D9F5BBE430DD",
+              "native_sha256": "D1DBE45B3A5469F52081A32BA867644C3B3C6821BFB035E8E870D9F5BBE430DD",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_hud.ammo_mixin",
+              "current_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+              "native_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_hud.weapon_observer",
+              "current_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+              "native_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_weapons.hero_burst_cue_mixin",
+              "current_sha256": "BCB166854A57A375778C79C5BBDBD495A2E1B9C2B0D4CDC307AAE7B9B52EDEF4",
+              "native_sha256": "BCB166854A57A375778C79C5BBDBD495A2E1B9C2B0D4CDC307AAE7B9B52EDEF4",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_weapons.macro_policies",
+              "current_sha256": "73123BC8E8777E0D0F538C3F52A87DCE6D6D680C0BF85BE5416D248D8FCEF13D",
+              "native_sha256": "73123BC8E8777E0D0F538C3F52A87DCE6D6D680C0BF85BE5416D248D8FCEF13D",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_world.effect_pad_mixin",
+              "current_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+              "native_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "module": "uep_lyra_world.shooter_ai_mixin",
+              "current_sha256": "4F03E12A0920825F03905390099440F95E37CF62BF520A1D01A5A1CF706B2BA9",
+              "native_sha256": "4F03E12A0920825F03905390099440F95E37CF62BF520A1D01A5A1CF706B2BA9",
+              "equivalence": "exact-bytes"
+            }
+          ],
+          "assets": [
+            {
+              "asset": "/ShooterCore/Bot/BT/BTDecorator_AllowedToFire.BTDecorator_AllowedToFire",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\BT\\BTDecorator_AllowedToFire.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "B3CA0528867774CF0A9BB38CFFB19513F587600603ABD4ED00914B350DC773FB",
+              "native_sha256": "B3CA0528867774CF0A9BB38CFFB19513F587600603ABD4ED00914B350DC773FB",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIAllowedMixin.DA_ShooterAIAllowedMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIAllowedMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "41445310A797037F0A4A49041ED27D93698C2735B275F72CD194EF47D9F187F9",
+              "native_sha256": "41445310A797037F0A4A49041ED27D93698C2735B275F72CD194EF47D9F187F9",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/B_AI_Controller_LyraShooter.B_AI_Controller_LyraShooter",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "7A9EB9B08D6F515D7736F2F514DFE8F2C04CBD3F259540711001BF74E6524E21",
+              "native_sha256": "7A9EB9B08D6F515D7736F2F514DFE8F2C04CBD3F259540711001BF74E6524E21",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIControllerMixin.DA_ShooterAIControllerMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIControllerMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "native_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/B_AI_Controller_LyraShooter_Passive.B_AI_Controller_LyraShooter_Passive",
+              "current_asset_path": "F:\\LyraStarterGame\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter_Passive.uasset",
+              "current_sha256": "D39CE9AF3EFFD8C12654AC562E2CD143981F7484840B6923C3BC5BBA3079B62B",
+              "frozen_by_this_native_run": false,
+              "historical_native_fingerprint": {
+                "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/139-shooter-ai-controller-bt-services-native-two-mode-gas.json",
+                "directory": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Differential04ItemDefinitionTDM",
+                "guard": {
+                  "asset": "/ShooterCore/Bot/B_AI_Controller_LyraShooter_Passive.B_AI_Controller_LyraShooter_Passive",
+                  "current_asset_path": "F:\\LyraStarterGame\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter_Passive.uasset",
+                  "recorded_stage_asset_paths": [
+                    "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_AI_Controller_LyraShooter_Passive.uasset"
+                  ],
+                  "frozen_by_this_native_run": true,
+                  "current_sha256": "D39CE9AF3EFFD8C12654AC562E2CD143981F7484840B6923C3BC5BBA3079B62B",
+                  "native_sha256": "D39CE9AF3EFFD8C12654AC562E2CD143981F7484840B6923C3BC5BBA3079B62B",
+                  "equivalence": "exact-bytes"
+                }
+              }
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIControllerMixin.DA_ShooterAIControllerMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIControllerMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "native_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_CheckAmmo.BTS_CheckAmmo",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_CheckAmmo.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "34CE815C94F2E4BFC9B847C45DCC58C5C6EE20089FAA569A42E92449BA0F9AE1",
+              "native_sha256": "34CE815C94F2E4BFC9B847C45DCC58C5C6EE20089FAA569A42E92449BA0F9AE1",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIAmmoMixin.DA_ShooterAIAmmoMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIAmmoMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "418ECF9E1C189483CB65E110F4D0AC3298D81A7B86CB265D68C3E48E2BD77A8A",
+              "native_sha256": "418ECF9E1C189483CB65E110F4D0AC3298D81A7B86CB265D68C3E48E2BD77A8A",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_ReloadWeapon.BTS_ReloadWeapon",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_ReloadWeapon.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "EEB54D2A6470708BEA9AAC6062F6013DC2B393FBD34BF67281275E14C70F1A4A",
+              "native_sha256": "EEB54D2A6470708BEA9AAC6062F6013DC2B393FBD34BF67281275E14C70F1A4A",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIReloadMixin.DA_ShooterAIReloadMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIReloadMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "D7C48D654A0C0F960B03221FEDEDF93ACE0616F8315749C7308C7B50C486FB6B",
+              "native_sha256": "D7C48D654A0C0F960B03221FEDEDF93ACE0616F8315749C7308C7B50C486FB6B",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_SetFocus.BTS_SetFocus",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_SetFocus.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "6F857BE887834A48160EBAC456A465F360D373B52DC18F56B9B615DEE130F285",
+              "native_sha256": "6F857BE887834A48160EBAC456A465F360D373B52DC18F56B9B615DEE130F285",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIFocusMixin.DA_ShooterAIFocusMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIFocusMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "FD0DECCDFBB7C8862BF4BDCE014BB7EF0CA091E6C59034563AF1F4EC58E40020",
+              "native_sha256": "FD0DECCDFBB7C8862BF4BDCE014BB7EF0CA091E6C59034563AF1F4EC58E40020",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/Bot/Services/BTS_Shoot.BTS_Shoot",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\Services\\BTS_Shoot.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "C45214FEF2D6DFFDF7ECD72AE3C995CBD7D0FAF06EEFBD13E9C97691B35FE818",
+              "native_sha256": "C45214FEF2D6DFFDF7ECD72AE3C995CBD7D0FAF06EEFBD13E9C97691B35FE818",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIShootMixin.DA_ShooterAIShootMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIShootMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "D0C6A673B6C60F0B13D5B4989261DD656079053B6861DDA21F9E4984E1FE2093",
+              "native_sha256": "D0C6A673B6C60F0B13D5B4989261DD656079053B6861DDA21F9E4984E1FE2093",
+              "equivalence": "exact-bytes"
+            },
+            {
+              "asset": "/ShooterCore/ControlPoint/AI/B_AI_Controller_LyraShooter_ControlPoint.B_AI_Controller_LyraShooter_ControlPoint",
+              "current_asset_path": "F:\\LyraStarterGame\\Plugins\\GameFeatures\\ShooterCore\\Content\\ControlPoint\\AI\\B_AI_Controller_LyraShooter_ControlPoint.uasset",
+              "current_sha256": "DE848F7088F67349E768D3E8AC811C24CCD402FD70651131002001B5DDA51245",
+              "frozen_by_this_native_run": false,
+              "historical_native_fingerprint": {
+                "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/139-shooter-ai-controller-bt-services-native-two-mode-gas.json",
+                "directory": ".build/LyraValidation/BlueprintPython/20261020-shooter-ai/Differential04ItemDefinitionTDM",
+                "guard": {
+                  "asset": "/ShooterCore/ControlPoint/AI/B_AI_Controller_LyraShooter_ControlPoint.B_AI_Controller_LyraShooter_ControlPoint",
+                  "current_asset_path": "F:\\LyraStarterGame\\Plugins\\GameFeatures\\ShooterCore\\Content\\ControlPoint\\AI\\B_AI_Controller_LyraShooter_ControlPoint.uasset",
+                  "recorded_stage_asset_paths": [
+                    "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\ControlPoint\\AI\\B_AI_Controller_LyraShooter_ControlPoint.uasset"
+                  ],
+                  "frozen_by_this_native_run": true,
+                  "current_sha256": "DE848F7088F67349E768D3E8AC811C24CCD402FD70651131002001B5DDA51245",
+                  "native_sha256": "DE848F7088F67349E768D3E8AC811C24CCD402FD70651131002001B5DDA51245",
+                  "equivalence": "exact-bytes"
+                }
+              }
+            },
+            {
+              "asset": "/Game/UEPMixins/DA_ShooterAIControllerMixin.DA_ShooterAIControllerMixin",
+              "current_asset_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ShooterAIControllerMixin.uasset",
+              "recorded_stage_asset_paths": [],
+              "frozen_by_this_native_run": true,
+              "current_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "native_sha256": "0413F68325ED06C02A87128206D9466C4D10E5232F9DF93ECB14EC68ADDCA979",
+              "equivalence": "exact-bytes"
+            }
+          ],
+          "candidate_paths": [
+            "/ShooterCore/Bot/BT/BTDecorator_AllowedToFire.BTDecorator_AllowedToFire",
+            "/ShooterCore/Bot/B_AI_Controller_LyraShooter.B_AI_Controller_LyraShooter",
+            "/ShooterCore/Bot/B_AI_Controller_LyraShooter_Passive.B_AI_Controller_LyraShooter_Passive",
+            "/ShooterCore/Bot/Services/BTS_CheckAmmo.BTS_CheckAmmo",
+            "/ShooterCore/Bot/Services/BTS_ReloadWeapon.BTS_ReloadWeapon",
+            "/ShooterCore/Bot/Services/BTS_SetFocus.BTS_SetFocus",
+            "/ShooterCore/Bot/Services/BTS_Shoot.BTS_Shoot",
+            "/ShooterCore/ControlPoint/AI/B_AI_Controller_LyraShooter_ControlPoint.B_AI_Controller_LyraShooter_ControlPoint"
+          ]
+        },
+        "observer_guard": {
+          "current_sha256": "3BD58A7F0B54D85BD5A11578A8FF6F3240A6F293A5F989CFD1C5047F6FEEA474",
+          "native_sha256": "3BD58A7F0B54D85BD5A11578A8FF6F3240A6F293A5F989CFD1C5047F6FEEA474",
+          "equivalence": "exact-bytes"
+        },
+        "current_gate_rechecked": true,
+        "runtime_version_historical": false
+      }
+    ],
+    "referenced_native_processes": 12,
+    "accepted_historical_native_processes": 8,
+    "current_native_refresh_processes": 4,
+    "native_lifetime_boundaries": 8,
+    "original_native_bt_and_eqs_schedulers_preserved": true,
+    "old_runtime_versions_retained": true,
+    "new_native_processes_launched_by_review": 0,
+    "retained_child_assets_use_explicit_historical_native_fingerprints": true,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_migration_acceptance_proven": false
+  },
+  "refresh_input_review": {
+    "path": ".build/LyraValidation/BlueprintPython/20261026-ai-lifetime/frozen-refresh-inputs.json",
+    "sha256": "F3E7C3A83535D47301913D39660EDB39779F65168AF7C35570D6B310B65FC243",
+    "successful_native_processes": 4,
+    "preserved_failed_native_processes": 2,
+    "total_frozen_records": 21612
+  },
+  "selected_host_checks": 53,
+  "original_candidates": 246,
+  "original_requirements": 22,
+  "requirements_proven": 6,
+  "production_ai_policies_changed": false,
+  "assets_saved": false,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "full_migration_acceptance_proven": false,
+  "limits": [
+    "Accepts only the exact original0.12 AI task/service outcome,cancellation and destroyed Pawn/World lifetime criterion. Original246 candidates and all22 criteria remain unchanged;overall acceptance is6/22.",
+    "Eight historical standalone original/Python TDM/CP runs retain their actual SDK and configuration. Current policy/dependency and native asset bytes are checked against their frozen inputs;the existing decision fixtures also include direct callbacks,explicitly distinct from actual native BT-scheduled service ticks and asynchronous EQS results.",
+    "Four current native lifetime runs observe an actual still-running5-second native BTTask_Wait and native service callbacks,then destroy its Pawn or travel to the native frontend. Native UnPossess stops the brain;old service callbacks stay quiet;native GC removes both old AI owners,Pawns,brains and the old World. New-Pawn respawn callbacks are recorded separately from the cancelled old service instances.",
+    "Only lib is imported from the older shared Cue helper. Its body is unchanged;the separate append and ignore-tag Cue changes are bounded by AST comparison. The added macro import has only existing guarded imports,literal strings,zero counters and unevaluated function bodies. Current lifetime runs additionally freeze the current helper files.",
+    "The retained Passive/ControlPoint child Blueprints have no Overlay copies. Their current reference bytes and staged copies are checked by the candidate proof and exact historical native fingerprints. They are explicitly not claimed as newly frozen asset inputs of the lifetime runs.",
+    "TDMOriginal01 failed on reading a native struct as float. TDMOriginal02 reached GC but its object lookup raised on an already collected World;its broad controller callback/health comparisons also included normal respawn and the destroyed Bot. Both raw failures and exact script snapshots remain. The corrected reader filters exact old service instances and compares only the local player. TDMOriginal03 is additionally rechecked with the final stricter semantic gate without repeating its successful native run.",
+    "This batch uses existing SDK236 and the previously accepted isolated Lyra init guard. No new C++ compile/link,cook,package,asset save or full regression. Network,other0.12 conditions,release/SDK candidate matrix and full migration remain open.",
+    "The old UI lifetime source guard initially rejected the new AI-only startup branch. A narrow Git/frozen-input/AST/argv check now proves it cannot run in either recorded UI process and rejects every other startup change. Only the16 newly affected UI host checks are added to the37 already passed AI checks;no UI runtime is repeated."
+  ],
+  "incremental_host_selection": {
+    "ai_checks": 37,
+    "additional_ui_compatibility_checks": 16,
+    "unchanged_ai_suites_not_repeated_for_ui_proof": true
+  },
+  "startup_compatibility_review": {
+    "original_ui_batch": 247,
+    "original_startup_commit": "3944cc0733f5149ee9f0e730ee1e08c8ebd21e39",
+    "original_frozen_sha256": "F587A29CB7419F60A3105D3A8BA136F3C1F4D5179B031DC61F3586779A2CF203",
+    "proof": "The exact first AI-only opt-in branch is absent from the pinned old UI argv. Removing only that AST node restores the entire historical startup module;Git text must match its frozen native input. Every other source/asset fingerprint remains enforced.",
+    "tool_index_blob": "9955f9a754f6944542d67796c4dac0200c594aa6",
+    "test_index_blob": "4a036e44bd5343d5613ae7117d94f19d949504ec",
+    "native_ui_processes_reexecuted": 0
+  }
+}

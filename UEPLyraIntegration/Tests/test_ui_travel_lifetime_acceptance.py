@@ -7,6 +7,19 @@ import audit_migration_acceptance as migration
 from test_ui_travel_lifetime_contract import report
 
 class UITravelLifetimeAcceptanceTests(unittest.TestCase):
+    def selector_pair(self):
+        before='def validation_module(arguments):\n    return None\n'
+        after="def validation_module(arguments):\n    if any(a.startswith('-UEPShooterAILifetimeResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):\n        return 'uep_lyra_world.shooter_ai_lifetime_validation'\n    return None\n"
+        return before,after
+    def test_unrelated_exact_ai_opt_in_preserves_old_ui_startup(self):
+        before,after=self.selector_pair();audit.startup_selector_equivalent(before,after,['-game','-UEPUITravelLifetimeResult=report.json'])
+    def test_ai_opt_in_cannot_be_enabled_in_the_historical_ui_process(self):
+        before,after=self.selector_pair()
+        with self.assertRaises(ValueError):audit.startup_selector_equivalent(before,after,['-UEPShooterAILifetimeResult=other.json'])
+    def test_other_startup_changes_cannot_use_the_ai_selector_exception(self):
+        before,after=self.selector_pair()
+        for changed in (after.replace('return None',"return 'changed'"),after.replace('-UEPShooterAILifetimeResult=','-OtherFlag='),after+'print("side effect")\n'):
+            with self.assertRaises(ValueError):audit.startup_selector_equivalent(before,changed,[])
     def test_complete_pair_requires_both_profiles(self):
         audit.pair([report('BlueprintFallback'),report('Python')])
         with self.assertRaises(ValueError):audit.pair([report('Python'),report('Python')])

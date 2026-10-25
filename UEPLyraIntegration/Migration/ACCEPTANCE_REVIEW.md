@@ -29,7 +29,7 @@ This index does not execute or semantically revalidate the referenced runtime ev
 - `0.11.0` — Supported ability tasks, delegates, cancellation and latent boundaries have call/lifetime regressions; unsupported signatures fail explicitly. (ROADMAP.md:1707; unproven).
 - `0.11.0` — No replacement changes UObject class identity or bypasses the required authority, prediction or replication checks. (ROADMAP.md:1709; unproven).
 - `0.12.0` — Effect/audio triggering, warmup/play/postgame, scoring and notifications match the original BP checkpoints under the same inputs. (ROADMAP.md:1722; unproven).
-- `0.12.0` — AI task/service outcomes and cancellation are reproducible; long-running tasks do not retain a destroyed Pawn or World. (ROADMAP.md:1724; unproven).
+- `0.12.0` — AI task/service outcomes and cancellation are reproducible; long-running tasks do not retain a destroyed Pawn or World. (ROADMAP.md:1724; native_ai_eqs_outcomes_and_pawn_world_cancellation_with_collection_verified).
 - `0.12.0` — Multi-client score/phase state, local notifications and cleanup agree. (ROADMAP.md:1726; unproven).
 - `0.13.0` — Navigation, focus/back behavior, settings persistence, session results and replay controls pass original-BP/Python comparisons. (ROADMAP.md:1737; native_navigation_settings_sessions_replay_comparisons_and_current_sources_verified).
 - `0.13.0` — Repeated screen open/close and travel restore subscriptions and state. (ROADMAP.md:1739; paired_native_reopen_travel_state_and_callback_restoration_verified).

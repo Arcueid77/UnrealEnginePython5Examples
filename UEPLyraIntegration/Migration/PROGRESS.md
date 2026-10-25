@@ -31,6 +31,36 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed original AI outcome/cancellation/lifetime criterion batch249 (2026-10-26):**
+Recheck all12 original AI controller/decorator/service/EQS candidates against
+current policy/dependency/native asset bytes and8 pinned original/Python TDM/CP
+runtime records. Native BT schedules,GAS decision outcomes,UnPossess/repossess
+and64 asynchronous EQS queries remain explicitly historical. The imported lib
+helper is unchanged;unrelated Cue append/ignore-tag fixes and the new macro
+import are bounded by AST and import-time checks. Retained child BP fingerprints
+remain historical;current candidate proof also checks their staged/reference
+copies. They are not described as newly frozen lifetime-run inputs.
+
+Four fresh original/Python TDM/CP processes exercise8 real lifetime boundaries:
+destroy a Pawn while native BTTask_Wait/services run,then travel from another
+live AI owner to the frontend. Old service callbacks stop;normal respawn uses
+new service instances. Native GC collects the old World,Pawns,controllers and
+brains after probe-owned references/subscriptions are released. Local-player
+health stays unchanged. Two reader failures and exact snapshots remain;the
+successful first original run is rechecked with the final stricter contract.
+
+All4 current native processes and53 affected immutable-index host tests pass;
+21612 frozen input records across4 successes and2 preserved failures are
+reviewed. The AI-only startup branch changes an old UI input fingerprint:
+Git/frozen-input/AST/argv checks prove that exact branch is unreachable in the
+recorded UI processes. Only16 newly affected UI host checks are added to the37
+already passed AI checks;no UI native runtime or unchanged AI suite is repeated.
+No AI production-policy or asset changes,no compile/link,cook/package
+or full regression. Overall original acceptance is6/22;all246 candidates and
+all22 requirement texts remain. Other0.12 conditions and the full migration
+remain open.
+Ledger:`Acceptance/249-original-ai-outcomes-cancellation-and-destroyed-owner-acceptance.json`.
+
 **Completed original UI navigation/settings/session/replay criterion batch248 (2026-10-26):**
 Recheck current policy/dependency sources,Blueprint/Mixin Set bytes,pinned raw
 reports,native errors/shutdown order and semantic gates across the original UI

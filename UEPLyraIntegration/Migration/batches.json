@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 250,
+    "bounded_evidence_ledgers": 251,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -16276,5 +16276,27 @@
     "cook_package_executed": false,
     "full_regression_executed": false,
     "full_acceptance": false
+  },
+  "ai_lifetime_acceptance_review": {
+    "version": "0.12.0",
+    "status": "original_ai_outcomes_cancellation_and_destroyed_owner_criterion_verified",
+    "criterion": "AI task/service outcomes and cancellation are reproducible; long-running tasks do not retain a destroyed Pawn or World.",
+    "completion_proven": true,
+    "evidence_ledger": "249-original-ai-outcomes-cancellation-and-destroyed-owner-acceptance.json",
+    "current_native_refresh_processes": 4,
+    "preserved_failed_native_processes": 2,
+    "accepted_historical_native_processes": 8,
+    "referenced_native_processes": 12,
+    "native_lifetime_boundaries": 8,
+    "selected_host_checks": 53,
+    "requirements_proven": 6,
+    "original_requirements": 22,
+    "production_ai_policies_changed": false,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_acceptance": false,
+    "ai_host_checks": 37,
+    "ui_startup_compatibility_checks": 16
   }
 }
