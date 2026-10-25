@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "batch": 253,
+  "recorded_utc": "2026-10-25T20:18:04.836224+00:00",
+  "status": "native_null_spawning_result_guard_verified_with_current_startup_and_affected_regressions",
+  "core_parent_commit": "80c69a753401b556fdae2c8d5c736ce693725d22",
+  "examples_parent_commit": "f74d5ff96ed3e69cff75e391b4927944717aaac8",
+  "production_fix_class": "/ShooterCore/GameplayCues/GCNL_Spawning.GCNL_Spawning_C",
+  "production_fix_source_sha256": "A549A6901354680AABE5F4B02D8AD3F2E2D9547B4FBDBAE6923B9C70BBED8104",
+  "source_guard": "Only the two effect parameter setters are guarded by valid(effect);the original null array/map entries and repeated-discovery deduplication stay outside the guard.",
+  "source_fix_review": {
+    "status": "passed",
+    "ledger": "253-spawning-null-result-guard-and-current-startup-validation.json",
+    "sha256": "A549A6901354680AABE5F4B02D8AD3F2E2D9547B4FBDBAE6923B9C70BBED8104",
+    "public_declarations_unchanged": true,
+    "native_profile_methods": 8,
+    "native_runs": [
+      {
+        "directory": ".build\\LyraValidation\\BlueprintPython\\20261026-playable-startup\\SpawningNull01GateReview",
+        "native_directory": ".build\\LyraValidation\\BlueprintPython\\20261026-playable-startup\\SpawningNull01",
+        "summary_sha256": "D7A611241247397681ABEFC9FB7D6308F658E2CF4D9F70B235C33A94004FC332",
+        "report_sha256": "8C12D14DAC95C72F3B3461492B37CF8F1F42E8EEE34DA205EFD1DEC083C98B3A",
+        "log_sha256": "2771600D556F1EF9B823290D0C98B9C5ADB81A7E0013C06D4DD649EB13001F1E",
+        "semantic_gate": {
+          "status": "passed",
+          "original_python_pairs": 1,
+          "native_null_results": 4,
+          "repeat_native_cache_cases": 2,
+          "full_acceptance": false
+        },
+        "native_pid": 47640,
+        "exit_code": 0,
+        "original_null_setter_warnings": 4
+      },
+      {
+        "directory": ".build\\LyraValidation\\BlueprintPython\\20261026-playable-startup\\SpawningRendered01",
+        "native_directory": ".build\\LyraValidation\\BlueprintPython\\20261026-playable-startup\\SpawningRendered01",
+        "summary_sha256": "45AF2F4BB8A099ACB4A10967ACC0BAA4B564AC2C23589DD9D40BFBB5E194005E",
+        "report_sha256": "1FE580D8A293FA25B249885364CEC1AB2AF32110F1BE6F5CC276887C4A9C8C8A",
+        "log_sha256": "4DF17BD2C90091D40ED29CCA1E454D8460AF0F4452F204063860A6A16513AA75",
+        "semantic_gate": {
+          "status": "passed",
+          "paired_native_cases": 4,
+          "native_timelines": 8,
+          "real_manager_cases": 1,
+          "full_acceptance": false
+        },
+        "native_pid": 12332,
+        "exit_code": 0,
+        "original_null_setter_warnings": 0
+      },
+      {
+        "directory": ".build\\LyraValidation\\BlueprintPython\\20261026-playable-startup\\SpawningDestroyed01",
+        "native_directory": ".build\\LyraValidation\\BlueprintPython\\20261026-playable-startup\\SpawningDestroyed01",
+        "summary_sha256": "5C4EF7FE2DF63C0A03AE0CA998AAC5725362ADB3989D51A78E1F0A7BCCF188F6",
+        "report_sha256": "2B4F1638C7CB5D5202D9A2EF7998B53D27CAE2BAC24B65F93000FE3CA46E72CD",
+        "log_sha256": "5F98FA1337BDCF09B8C2CEC99B16069A18622776032B22FBCB50E5D81619FC61",
+        "semantic_gate": {
+          "status": "passed",
+          "paired_native_cases": 2,
+          "native_target_destructions": 4,
+          "native_timelines": 4,
+          "full_acceptance": false
+        },
+        "native_pid": 43332,
+        "exit_code": 0,
+        "original_null_setter_warnings": 0
+      }
+    ],
+    "native_processes": 3,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_acceptance": false
+  },
+  "runs": [
+    {
+      "directory": ".build\\LyraValidation\\BlueprintPython\\20261026-playable-startup\\SpawningNull01GateReview",
+      "summary_sha256": "D7A611241247397681ABEFC9FB7D6308F658E2CF4D9F70B235C33A94004FC332",
+      "status": "passed",
+      "report_hashes": [
+        {
+          "file": "failure.json",
+          "sha256": "8C12D14DAC95C72F3B3461492B37CF8F1F42E8EEE34DA205EFD1DEC083C98B3A"
+        }
+      ],
+      "native_directory": ".build\\LyraValidation\\BlueprintPython\\20261026-playable-startup\\SpawningNull01",
+      "native_pid": 47640,
+      "process_exit_code": 0
+    },
+    {
+      "directory": ".build\\LyraValidation\\BlueprintPython\\20261026-playable-startup\\SpawningRendered01",
+      "summary_sha256": "45AF2F4BB8A099ACB4A10967ACC0BAA4B564AC2C23589DD9D40BFBB5E194005E",
+      "status": "passed",
+      "report_hashes": [
+        {
+          "file": "failure.json",
+          "sha256": "1FE580D8A293FA25B249885364CEC1AB2AF32110F1BE6F5CC276887C4A9C8C8A"
+        }
+      ],
+      "native_directory": ".build\\LyraValidation\\BlueprintPython\\20261026-playable-startup\\SpawningRendered01",
+      "native_pid": 12332,
+      "process_exit_code": 0
+    },
+    {
+      "directory": ".build\\LyraValidation\\BlueprintPython\\20261026-playable-startup\\SpawningDestroyed01",
+      "summary_sha256": "5C4EF7FE2DF63C0A03AE0CA998AAC5725362ADB3989D51A78E1F0A7BCCF188F6",
+      "status": "passed",
+      "report_hashes": [
+        {
+          "file": "failure.json",
+          "sha256": "2B4F1638C7CB5D5202D9A2EF7998B53D27CAE2BAC24B65F93000FE3CA46E72CD"
+        }
+      ],
+      "native_directory": ".build\\LyraValidation\\BlueprintPython\\20261026-playable-startup\\SpawningDestroyed01",
+      "native_pid": 43332,
+      "process_exit_code": 0
+    }
+  ],
+  "current_startup_pair": {
+    "directory": ".build\\LyraValidation\\BlueprintPython\\20261026-playable-startup\\Current02",
+    "summary_sha256": "93CB4882E4BB1FB1DEC3211C457A74666534B799DB4AFDCCA19CA5C87E1D6823",
+    "focused_directory": ".build\\LyraValidation\\BlueprintPython\\20261026-playable-startup\\Current02\\Focused",
+    "focused_summary_sha256": "B4C1A117534CED2B99102440E30DC22CD1978A4345FB5D238D21FC35FC09ADF8",
+    "focused_report_sha256": "A382021D66D4513934932AAAE90E765EB8CAA6B722514DDA8A5FF9B78CA4980A",
+    "focused_log_sha256": "6FD4D5841E1756DF14049FA20EA476C8CC8DD3023D1926528ECF95C8A4E357C7",
+    "normal_log_sha256": "C92CA298A5BF2BB7FB62971279BADFDCF69E541A8A1AED6B2153F5806243FAA9",
+    "focused_case_count": 42,
+    "focused_exit_code": 0,
+    "normal_no_validation_flags": true,
+    "normal_alive_observation_seconds": 20,
+    "normal_intentional_owned_stop": true,
+    "normal_exit_code": -1,
+    "image": {
+      "path": ".build\\LyraValidation\\BlueprintPython\\20261026-playable-startup\\Current02\\Focused\\weapon.png",
+      "sha256": "18A3B44150982B4050F34290C958ADFE81AFAB0378DFF3D38F54E1A97AD6BD07",
+      "visually_inspected": true,
+      "observation": "Both original/Python columns show30 magazine and1,234 spare ammo with matching three counter material arcs;this is an isolated presenter fixture."
+    },
+    "full_original_startup_criterion_proven": false
+  },
+  "failed_startup_reproduction": {
+    "directory": ".build\\LyraValidation\\BlueprintPython\\20261026-playable-startup\\Current01",
+    "status": "failed",
+    "summary_sha256": "155C883DAF78088039981A1B4EA4AA4F950683B0DA3B347DC8123162BE0BF40A",
+    "focused_summary_sha256": "55E5016C7178493B116C6BCE5DB834F992CEBDC2DC7033F8BDAFF653E0435825",
+    "normal_log_sha256": "6BF053091CEA414B99C358F5881A24C19FED983DF6052A693B410B4532D50E94",
+    "archived_policy_sha256": "FFD75BE083BE079CC01D1AA1442B17C9657D688CC2559AB4F01E8393103201B0",
+    "archived_policy": ".build\\LyraValidation\\BlueprintPython\\20261026-playable-startup\\Current01\\Inputs\\spawning_cue_mixin.py",
+    "error": "Normal playable log contains an unexpected error"
+  },
+  "selected_host_checks": 62,
+  "current_accepted_native_processes": 5,
+  "normal_intentionally_stopped_processes": 1,
+  "total_new_native_processes_including_initial_startup_attempt": 7,
+  "read_only_null_gate_correction_new_native_processes": 0,
+  "original_candidates": 246,
+  "original_requirements": 22,
+  "requirements_proven": 8,
+  "new_original_criteria_accepted": 0,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "blueprint_assets_changed": false,
+  "full_regression_executed": false,
+  "full_version_acceptance": false,
+  "full_acceptance": false,
+  "limits": [
+    "A real current normal NullRHI startup exposed a Python None dereference after native SpawnSystemAttached returned null. The original BP stores the null in both caches,then its parameter setters have no effect. The fix retains these cache/dedup semantics and skips only the invalid-result setters.",
+    "One actual NullRHI process compares original/Python public method entries without replacing the native spawn function or injecting a null return. Four actual native null results and repeated-cache suppression agree. The original BP emits four Accessed None setter warnings;Python emits no errors. Eight methods per original class/profile remain unchanged.",
+    "Refresh the normal spawning four-pair/eight-Timeline/actual-manager comparison and the two-pair/four-destroyed-target comparison on current SDK236 and approved native guard246. All three feature processes exit0 with strict ordered shutdown. Native compiled assets and C++ remain unchanged.",
+    "The initial independent null-report check used a file entry instead of its Python package and failed after the native process/report had already passed. Preserve the failed summary,gate stderr and exact driver archive. A read-only package-aware independent gate rechecks the same raw report and native process;no UE process is repeated for that correction.",
+    "The current weapon HUD probe passes42 original/Python states,three reload/native-GC cycles and clean exit0;the matching screenshot is visually inspected. A separate no-UEP-test-flag Lyra process loads its Experience and remains alive for20seconds,then only its owning driver stops it intentionally with exit-1. This is not a graceful game-exit claim or full0.9 acceptance.",
+    "Preserve the failed initial startup and raw inputs. The original246 candidates and22 criteria remain;the existing eight proven criteria require their refreshed current-source evidence. New startup criterion acceptance is a separate review. No build,cook/package,asset authoring or full test suite."
+  ]
+}

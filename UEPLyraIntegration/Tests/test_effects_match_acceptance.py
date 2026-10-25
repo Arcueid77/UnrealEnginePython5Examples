@@ -41,7 +41,7 @@ class EffectsMatchAcceptanceTests(unittest.TestCase):
             with self.assertRaises(ValueError):audit.cue_helper_equivalence(before,after,files)
     def test_full_pinned_plan_keeps_both_modes_and_new_cache_case(self):
         pairs={(n,name) for n,name,_ in audit.SPECS};self.assertEqual(len(pairs),len(audit.SPECS));self.assertEqual(len(pairs),45)
-        self.assertTrue({(138,'Differential02FallbackSeamless'),(138,'Differential03PythonSeamless'),(135,'Differential06StyleGameFrames'),(135,'Differential07StyleCP'),(250,'SpawningDestroyed02'),(92,'ImpactsRegression01Expired')}<=pairs)
+        self.assertTrue({(138,'Differential02FallbackSeamless'),(138,'Differential03PythonSeamless'),(135,'Differential06StyleGameFrames'),(135,'Differential07StyleCP'),(253,'SpawningRendered01'),(253,'SpawningDestroyed01'),(92,'ImpactsRegression01Expired')}<=pairs)
     def test_attachment_accepts_only_this_exact_original_criterion(self):
         with tempfile.TemporaryDirectory() as folder:
             path=Path(folder)/'review.json';path.write_text('{}');rows=[dict(version='0.12.0',text=audit.REQUIREMENT,completion_proven=False),dict(version='0.12.0',text='Multi-client score/phase state',completion_proven=False)];report=dict(requirements=rows,inputs=[])

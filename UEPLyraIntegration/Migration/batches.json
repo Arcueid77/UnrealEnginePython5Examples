@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 254,
+    "bounded_evidence_ledgers": 255,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -16212,7 +16212,9 @@
     "cpp_compile_executed": false,
     "cook_package_executed": false,
     "full_version_acceptance": false,
-    "full_acceptance": false
+    "full_acceptance": false,
+    "current_source_review_artifact": "CurrentAcceptance/ui_failure_cancellation.json",
+    "source_reference_refresh_batch": 253
   },
   "native_pawn_init_guard_pilot": {
     "status": "isolated_native_guard_and_two_affected_network_runs_verified",
@@ -16275,7 +16277,9 @@
     "cpp_compile_executed": false,
     "cook_package_executed": false,
     "full_regression_executed": false,
-    "full_acceptance": false
+    "full_acceptance": false,
+    "current_source_review_artifact": "CurrentAcceptance/ui_navigation.json",
+    "source_reference_refresh_batch": 253
   },
   "ai_lifetime_acceptance_review": {
     "version": "0.12.0",
@@ -16297,7 +16301,9 @@
     "full_regression_executed": false,
     "full_acceptance": false,
     "ai_host_checks": 37,
-    "ui_startup_compatibility_checks": 16
+    "ui_startup_compatibility_checks": 16,
+    "current_source_review_artifact": "CurrentAcceptance/ai_lifetime.json",
+    "source_reference_refresh_batch": 253
   },
   "spawning_destroyed_target_comparison_pilot": {
     "version": "0.12.0",
@@ -16334,7 +16340,12 @@
     "cpp_compile_executed": false,
     "cook_package_executed": false,
     "full_regression_executed": false,
-    "full_acceptance": false
+    "full_acceptance": false,
+    "current_source_review_artifact": "effects_match_acceptance.json",
+    "source_refresh_batch": 253,
+    "source_refresh_ledger": "253-spawning-null-result-guard-and-current-startup-validation.json",
+    "current_source_checkpoint_runs_refreshed": 2,
+    "current_source_refresh_host_checks": 62
   },
   "match_network_acceptance_review": {
     "version": "0.12.0",
@@ -16351,6 +16362,30 @@
     "requirements_proven": 8,
     "original_requirements": 22,
     "original_012_requirements_proven": 3,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_acceptance": false
+  },
+  "spawning_null_result_guard_pilot": {
+    "status": "actual_native_null_result_cache_parity_and_current_startup_verified",
+    "evidence_ledger": "253-spawning-null-result-guard-and-current-startup-validation.json",
+    "production_policy_changed": true,
+    "public_declarations_changed": false,
+    "blueprint_assets_changed": false,
+    "native_profile_methods": 8,
+    "native_null_results": 4,
+    "normal_spawning_pairs": 4,
+    "destroyed_target_pairs": 2,
+    "accepted_native_processes": 5,
+    "normal_intentionally_stopped_processes": 1,
+    "total_new_native_processes_including_initial_startup_attempt": 7,
+    "selected_host_checks": 62,
+    "read_only_null_gate_correction_new_native_processes": 0,
+    "current_no_test_flag_startup_observation_seconds": 20,
+    "requirements_proven": 8,
+    "original_requirements": 22,
+    "new_original_criteria_accepted": 0,
     "cpp_compile_executed": false,
     "cook_package_executed": false,
     "full_regression_executed": false,

@@ -1245,9 +1245,9 @@
     {
       "module": "uep_lyra_weapons.spawning_cue_mixin",
       "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/spawning_cue_mixin.py",
-      "sha256": "FFD75BE083BE079CC01D1AA1442B17C9657D688CC2559AB4F01E8393103201B0",
+      "sha256": "A549A6901354680AABE5F4B02D8AD3F2E2D9547B4FBDBAE6923B9C70BBED8104",
       "native_baseline_sha256": "FFD75BE083BE079CC01D1AA1442B17C9657D688CC2559AB4F01E8393103201B0",
-      "state": "unchanged-python-ast"
+      "state": "reviewed-private-native-null-effect-result-guard-declarations-unchanged"
     },
     {
       "module": "uep_lyra_weapons.tdm_scoring_mixin",
@@ -2317,7 +2317,70 @@
       "sha256": "A3536D7265212270E8E9171A1C16303D2D33450959AE42AE44237166A98D81B5"
     }
   ],
-  "reviewed_spawning_fix": null,
+  "reviewed_spawning_fix": {
+    "status": "passed",
+    "ledger": "253-spawning-null-result-guard-and-current-startup-validation.json",
+    "sha256": "A549A6901354680AABE5F4B02D8AD3F2E2D9547B4FBDBAE6923B9C70BBED8104",
+    "public_declarations_unchanged": true,
+    "native_profile_methods": 8,
+    "native_runs": [
+      {
+        "directory": ".build\\LyraValidation\\BlueprintPython\\20261026-playable-startup\\SpawningNull01GateReview",
+        "native_directory": ".build\\LyraValidation\\BlueprintPython\\20261026-playable-startup\\SpawningNull01",
+        "summary_sha256": "D7A611241247397681ABEFC9FB7D6308F658E2CF4D9F70B235C33A94004FC332",
+        "report_sha256": "8C12D14DAC95C72F3B3461492B37CF8F1F42E8EEE34DA205EFD1DEC083C98B3A",
+        "log_sha256": "2771600D556F1EF9B823290D0C98B9C5ADB81A7E0013C06D4DD649EB13001F1E",
+        "semantic_gate": {
+          "status": "passed",
+          "original_python_pairs": 1,
+          "native_null_results": 4,
+          "repeat_native_cache_cases": 2,
+          "full_acceptance": false
+        },
+        "native_pid": 47640,
+        "exit_code": 0,
+        "original_null_setter_warnings": 4
+      },
+      {
+        "directory": ".build\\LyraValidation\\BlueprintPython\\20261026-playable-startup\\SpawningRendered01",
+        "native_directory": ".build\\LyraValidation\\BlueprintPython\\20261026-playable-startup\\SpawningRendered01",
+        "summary_sha256": "45AF2F4BB8A099ACB4A10967ACC0BAA4B564AC2C23589DD9D40BFBB5E194005E",
+        "report_sha256": "1FE580D8A293FA25B249885364CEC1AB2AF32110F1BE6F5CC276887C4A9C8C8A",
+        "log_sha256": "4DF17BD2C90091D40ED29CCA1E454D8460AF0F4452F204063860A6A16513AA75",
+        "semantic_gate": {
+          "status": "passed",
+          "paired_native_cases": 4,
+          "native_timelines": 8,
+          "real_manager_cases": 1,
+          "full_acceptance": false
+        },
+        "native_pid": 12332,
+        "exit_code": 0,
+        "original_null_setter_warnings": 0
+      },
+      {
+        "directory": ".build\\LyraValidation\\BlueprintPython\\20261026-playable-startup\\SpawningDestroyed01",
+        "native_directory": ".build\\LyraValidation\\BlueprintPython\\20261026-playable-startup\\SpawningDestroyed01",
+        "summary_sha256": "5C4EF7FE2DF63C0A03AE0CA998AAC5725362ADB3989D51A78E1F0A7BCCF188F6",
+        "report_sha256": "2B4F1638C7CB5D5202D9A2EF7998B53D27CAE2BAC24B65F93000FE3CA46E72CD",
+        "log_sha256": "5F98FA1337BDCF09B8C2CEC99B16069A18622776032B22FBCB50E5D81619FC61",
+        "semantic_gate": {
+          "status": "passed",
+          "paired_native_cases": 2,
+          "native_target_destructions": 4,
+          "native_timelines": 4,
+          "full_acceptance": false
+        },
+        "native_pid": 43332,
+        "exit_code": 0,
+        "original_null_setter_warnings": 0
+      }
+    ],
+    "native_processes": 3,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_acceptance": false
+  },
   "native_census_log_sha256": "2F27A145FE1D862BF5B8B25819FB270808A73E01C9BC0AB165B79C9E8367F0B3",
   "entrypoint_counts": {
     "python-routed": 347,

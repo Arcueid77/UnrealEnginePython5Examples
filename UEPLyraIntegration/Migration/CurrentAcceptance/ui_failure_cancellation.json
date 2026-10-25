@@ -1,0 +1,462 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "criterion": "Failures/cancellations are tested, not accepted only on the success path.",
+  "version": "0.13.0",
+  "completion_proven": true,
+  "proof_scope": "Original/Python native UI failure and cancellation paths,not only success:invalid hosting,bad-player search,pending receiver collection,duplicate join/recovery,replay decline and represented settings Cancel/rollback/reopen.",
+  "source_candidate_guard": {
+    "path": "Demos/UEPLyraIntegration/Migration/candidate_dispositions.json",
+    "sha256": "0B546E00113114C4EBC55A2DED1E53F4C3877EED5402B7A6E5626293195AE8E4",
+    "status": "passed",
+    "runtime_candidates": 246,
+    "original_assets": 491,
+    "original_entrypoints": 963,
+    "excluded_assets": 245,
+    "source_profile_modules": 135,
+    "source_dependency_modules": 211,
+    "runtime_acceptance": false
+  },
+  "original_candidate_paths_versions_sha256": "D42A9FE5ED845E93BA2C58846184043619C395C5C89DBBEC22788E94870514F5",
+  "verified_obligations": [
+    {
+      "obligation": "host-request-failure",
+      "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/225-host-session-native-invalid-request-error-ui-and-unbind.json",
+      "ledger_sha256": "1DF704941F0C72F3DA4D0F16C0645D13071FA1B10D7922893187E64B566D073A",
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-host-session-failure/Native01",
+      "summary_sha256": "E298EA4D2A08556996BEA182240BA6AF4A87D35952C8486FD29D4A05395AC192",
+      "reports": [
+        {
+          "path": ".build/LyraValidation/BlueprintPython/20261023-host-session-failure/Native01/failure.json",
+          "sha256": "B6A9FBD334B89AE47D1F4285F170EE19B085ECAF44781358495B3ADCD3849B28"
+        }
+      ],
+      "logs": [
+        {
+          "path": ".build/LyraValidation/BlueprintPython/20261023-host-session-failure/Native01/failure.log",
+          "sha256": "33C98D027942FBF3CB9CBEEBBA7A507968CD3472A5CFFE44D19AB26CE4A124EE",
+          "declared_native_error_count": 4
+        }
+      ],
+      "current_source_and_asset_guards": [
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/host_session_mixin.py",
+          "current_sha256": "698770381333E07F7A733EC24A9470440D11F817CA87B921A2A05CEC87A93320",
+          "native_sha256": "698770381333E07F7A733EC24A9470440D11F817CA87B921A2A05CEC87A93320",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/host_session_failure_contract.py",
+          "current_sha256": "AC7179DD43FFD333B7F3E761D790626A6B507C4C6875144CBB12424746C8F29A",
+          "native_sha256": "AC7179DD43FFD333B7F3E761D790626A6B507C4C6875144CBB12424746C8F29A",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/UI/Menu/Experiences/W_HostSessionScreen.uasset",
+          "current_sha256": "E76E1C7E6F2C47AD3B79FC04DB6980AECE52E51D8CE3891064F63886E41D612A",
+          "native_sha256": "E76E1C7E6F2C47AD3B79FC04DB6980AECE52E51D8CE3891064F63886E41D612A",
+          "equivalence": "exact-bytes"
+        }
+      ],
+      "corrected_host_review": {
+        "path": ".build/LyraValidation/BlueprintPython/20261023-host-session-failure/LogReview02/summary.json",
+        "sha256": "7711E2071E59C25A74F074245EC1DFA51AFBE52B7181C3217D314002FCB869F8",
+        "original_failed_summary_preserved": true
+      },
+      "native_runtime_reexecuted": false
+    },
+    {
+      "obligation": "search-failure-and-retired-receiver",
+      "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/226-session-browser-native-error-recovery-and-pending-receiver-lifetime.json",
+      "ledger_sha256": "D257B2AC8920F1EE76FF11E7A375AD9AB9EDFFEE064EAF349E14C38A6980FC9C",
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-browser-search-failure/Native01",
+      "summary_sha256": "5A449D2D869C0A8D509A40180153E3A0071FDB773679C9FCD7DD2D79E3CFCB39",
+      "reports": [
+        {
+          "path": ".build/LyraValidation/BlueprintPython/20261023-browser-search-failure/Native01/failure.json",
+          "sha256": "A5D273C69F95AAF09BB2753EF16402548BD7E0C0F763C6A0C220FE1DA2287DB3"
+        }
+      ],
+      "logs": [
+        {
+          "path": ".build/LyraValidation/BlueprintPython/20261023-browser-search-failure/Native01/failure.log",
+          "sha256": "15D0C548A4C1F379493098E32FB2F8235E167903AF678425EE51E6B41FAB3710",
+          "declared_native_error_count": 2
+        }
+      ],
+      "current_source_and_asset_guards": [
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/session_browser_mixin.py",
+          "current_sha256": "35BA515C1AD2CF4C968F08883EEC6A9E04244139B1453C27C913AD9B9EA4D92C",
+          "native_sha256": "35BA515C1AD2CF4C968F08883EEC6A9E04244139B1453C27C913AD9B9EA4D92C",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/session_browser_failure_contract.py",
+          "current_sha256": "7535186AC117AE82519C0ED592EF4C590301BDF2713F1F3E96BEA50F77B546BC",
+          "native_sha256": "7535186AC117AE82519C0ED592EF4C590301BDF2713F1F3E96BEA50F77B546BC",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/UI/Menu/Experiences/W_SessionBrowserScreen.uasset",
+          "current_sha256": "508760D62C8B218D89031D7D5EEB21C07FA07C6FE3C8E91ADE69C13CE1502D11",
+          "native_sha256": "508760D62C8B218D89031D7D5EEB21C07FA07C6FE3C8E91ADE69C13CE1502D11",
+          "equivalence": "exact-bytes"
+        }
+      ],
+      "corrected_host_review": null,
+      "native_runtime_reexecuted": false
+    },
+    {
+      "obligation": "join-rejection-and-ui-retry",
+      "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/227-session-entry-native-duplicate-join-failure-cleanup-and-retry.json",
+      "ledger_sha256": "ECE8B4B3A7783674BC8010BDD1FA75912D36A410F2921B2CD30A5A0546A999A7",
+      "directory": ".build/LyraValidation/BlueprintPython/20261023-session-join-failure/Native01",
+      "summary_sha256": "21A26744335A22BA2BC5CC3F7418BC683A9C18B4FC46288CABBE5BB99D780DF9",
+      "reports": [
+        {
+          "path": ".build/LyraValidation/BlueprintPython/20261023-session-join-failure/Native01/host.json",
+          "sha256": "E4E20E77101DEE095BB5C1922019636FE21090E5F04C6E6353D061499FD31322"
+        },
+        {
+          "path": ".build/LyraValidation/BlueprintPython/20261023-session-join-failure/Native01/BlueprintFallback.json",
+          "sha256": "7F9D534F298E1776DB0D776719C46A61E931C9BF2A69975A2D8425B25AFB02A7"
+        },
+        {
+          "path": ".build/LyraValidation/BlueprintPython/20261023-session-join-failure/Native01/Python.json",
+          "sha256": "8BE1C59E678D91BA6F4580834399608ED5FAFFA95661F780E49FF29445BF5142"
+        }
+      ],
+      "logs": [
+        {
+          "path": ".build/LyraValidation/BlueprintPython/20261023-session-join-failure/Native01/host.log",
+          "sha256": "8018C5A0647E68AED2B6278DC47D75C5D61A623E0EE804725549773384F72E45",
+          "declared_native_error_count": 0
+        },
+        {
+          "path": ".build/LyraValidation/BlueprintPython/20261023-session-join-failure/Native01/BlueprintFallback.log",
+          "sha256": "6C5FD650B202BE5B3C3F91B707872EEFB3451C057B3B7D33F9701535234BBE7C",
+          "declared_native_error_count": 1
+        },
+        {
+          "path": ".build/LyraValidation/BlueprintPython/20261023-session-join-failure/Native01/Python.log",
+          "sha256": "99754315467C674A2F1C91A1CF4C71AEB86E9A20143F947EC8BCEF3E8FDD2736",
+          "declared_native_error_count": 1
+        }
+      ],
+      "current_source_and_asset_guards": [
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/session_entry_mixin.py",
+          "current_sha256": "DABB875703BAD80A29B754CC5F835393CC1464542D57C34FCB9D9B45D338AD2A",
+          "native_sha256": "DABB875703BAD80A29B754CC5F835393CC1464542D57C34FCB9D9B45D338AD2A",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/session_browser_mixin.py",
+          "current_sha256": "35BA515C1AD2CF4C968F08883EEC6A9E04244139B1453C27C913AD9B9EA4D92C",
+          "native_sha256": "35BA515C1AD2CF4C968F08883EEC6A9E04244139B1453C27C913AD9B9EA4D92C",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/session_join_failure_contract.py",
+          "current_sha256": "10E918FAA007B4649D88DF25917B11637DBDFD18D29D16700B381A29A83E755F",
+          "native_sha256": "10E918FAA007B4649D88DF25917B11637DBDFD18D29D16700B381A29A83E755F",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/UI/Menu/Experiences/W_SessionBrowserEntry.uasset",
+          "current_sha256": "3A141791644CFC2D92004B1F0A7834A6CD6B443292E9B880482F27A7A9C4E9D1",
+          "native_sha256": "3A141791644CFC2D92004B1F0A7834A6CD6B443292E9B880482F27A7A9C4E9D1",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/UI/Menu/Experiences/W_SessionBrowserScreen.uasset",
+          "current_sha256": "508760D62C8B218D89031D7D5EEB21C07FA07C6FE3C8E91ADE69C13CE1502D11",
+          "native_sha256": "508760D62C8B218D89031D7D5EEB21C07FA07C6FE3C8E91ADE69C13CE1502D11",
+          "equivalence": "exact-bytes"
+        }
+      ],
+      "corrected_host_review": null,
+      "native_runtime_reexecuted": false
+    },
+    {
+      "obligation": "replay-decline-original",
+      "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/163-replay-browser-entry-native-recordings-and-current-item-playback.json",
+      "ledger_sha256": "6C0E4C37A5FCFA1CF13B734850EA4CA50E895ECC4E5044D22275FD78CFB8965C",
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-replays/Playback03FallbackGeneratedID",
+      "summary_sha256": "13DE2EED82D7DA2BF355008AC92B727B64100CA0F6A37D41FA5879A6EDD99E60",
+      "reports": [
+        {
+          "path": ".build/LyraValidation/BlueprintPython/20261021-replays/Playback03FallbackGeneratedID/jump.json",
+          "sha256": "A4FF6055077BBE37555C0BC46D14757EBEDD5134D7BB67B7996BFE243CC2F61A"
+        }
+      ],
+      "logs": [
+        {
+          "path": ".build/LyraValidation/BlueprintPython/20261021-replays/Playback03FallbackGeneratedID/jump.log",
+          "sha256": "614A719CD26015602306ED016E380C3886D2C3EE2107713E42450F332EE55829",
+          "declared_native_error_count": 0
+        }
+      ],
+      "current_source_and_asset_guards": [
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/replay_browser_mixin.py",
+          "current_sha256": "D87EEC0797F01C0322D78EF0D5A3F183E5856C57EAF84EEB0B4C97A459120726",
+          "native_sha256": "D87EEC0797F01C0322D78EF0D5A3F183E5856C57EAF84EEB0B4C97A459120726",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/replay_entry_mixin.py",
+          "current_sha256": "27ABA7C9552D5DC4FC9D53509B48AE121C7ED9C720020B1AF19AFC3CEFBE523D",
+          "native_sha256": "27ABA7C9552D5DC4FC9D53509B48AE121C7ED9C720020B1AF19AFC3CEFBE523D",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/replay_browser_contract.py",
+          "current_sha256": "A09800D5C2E3D4D0C2A1CEF1D3A0A222575AA1ADB1FDAB3DFAB48DAE7202A2E8",
+          "native_sha256": "A09800D5C2E3D4D0C2A1CEF1D3A0A222575AA1ADB1FDAB3DFAB48DAE7202A2E8",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/UI/Menu/Replays/W_ReplayBrowserScreen.uasset",
+          "current_sha256": "DC038FCE4BC8C67FCEF4572F40434451A674CEB4851E536EBF96A94694C2962E",
+          "native_sha256": "DC038FCE4BC8C67FCEF4572F40434451A674CEB4851E536EBF96A94694C2962E",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/UI/Menu/Replays/W_ReplayListEntry.uasset",
+          "current_sha256": "98E435EA6F127C53CB371AC599B6B1F74511B607F97E992FBA98E0F0E4C0BE1A",
+          "native_sha256": "98E435EA6F127C53CB371AC599B6B1F74511B607F97E992FBA98E0F0E4C0BE1A",
+          "equivalence": "exact-bytes"
+        }
+      ],
+      "corrected_host_review": null,
+      "native_runtime_reexecuted": false
+    },
+    {
+      "obligation": "replay-decline-python",
+      "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/163-replay-browser-entry-native-recordings-and-current-item-playback.json",
+      "ledger_sha256": "6C0E4C37A5FCFA1CF13B734850EA4CA50E895ECC4E5044D22275FD78CFB8965C",
+      "directory": ".build/LyraValidation/BlueprintPython/20261021-replays/Playback04Python",
+      "summary_sha256": "2A851CF39375D07579591886D614DBCAF1602B175F981F6EE716EE1168D4409C",
+      "reports": [
+        {
+          "path": ".build/LyraValidation/BlueprintPython/20261021-replays/Playback04Python/jump.json",
+          "sha256": "43B605D818991BFA0D6878C4B5F386AFE7198D7263490B11F26E889DA72C9C29"
+        }
+      ],
+      "logs": [
+        {
+          "path": ".build/LyraValidation/BlueprintPython/20261021-replays/Playback04Python/jump.log",
+          "sha256": "F9E4D98385C5ECC637B47E11BE674E16389FFF27ACC3FA52A18E6EE69A1E723E",
+          "declared_native_error_count": 0
+        }
+      ],
+      "current_source_and_asset_guards": [
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/replay_browser_mixin.py",
+          "current_sha256": "D87EEC0797F01C0322D78EF0D5A3F183E5856C57EAF84EEB0B4C97A459120726",
+          "native_sha256": "D87EEC0797F01C0322D78EF0D5A3F183E5856C57EAF84EEB0B4C97A459120726",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/replay_entry_mixin.py",
+          "current_sha256": "27ABA7C9552D5DC4FC9D53509B48AE121C7ED9C720020B1AF19AFC3CEFBE523D",
+          "native_sha256": "27ABA7C9552D5DC4FC9D53509B48AE121C7ED9C720020B1AF19AFC3CEFBE523D",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/replay_browser_contract.py",
+          "current_sha256": "A09800D5C2E3D4D0C2A1CEF1D3A0A222575AA1ADB1FDAB3DFAB48DAE7202A2E8",
+          "native_sha256": "A09800D5C2E3D4D0C2A1CEF1D3A0A222575AA1ADB1FDAB3DFAB48DAE7202A2E8",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/UI/Menu/Replays/W_ReplayBrowserScreen.uasset",
+          "current_sha256": "DC038FCE4BC8C67FCEF4572F40434451A674CEB4851E536EBF96A94694C2962E",
+          "native_sha256": "DC038FCE4BC8C67FCEF4572F40434451A674CEB4851E536EBF96A94694C2962E",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/UI/Menu/Replays/W_ReplayListEntry.uasset",
+          "current_sha256": "98E435EA6F127C53CB371AC599B6B1F74511B607F97E992FBA98E0F0E4C0BE1A",
+          "native_sha256": "98E435EA6F127C53CB371AC599B6B1F74511B607F97E992FBA98E0F0E4C0BE1A",
+          "equivalence": "exact-bytes"
+        }
+      ],
+      "corrected_host_review": null,
+      "native_runtime_reexecuted": false
+    },
+    {
+      "obligation": "represented-settings-cancel-original",
+      "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/244-native-settings-cancel-action-dirty-rollback-and-reopen.json",
+      "ledger_sha256": "6789A1BEB80BCE201DDA4A2AB2E0DFC54FC79D1E415DB789912B0C22ED715DD1",
+      "directory": ".build/LyraValidation/BlueprintPython/20261025-settings-cancel/Original03",
+      "summary_sha256": "3567D712522886EB79462BB02458F5027E72855A4FF3F0F049BD9BCB83548784",
+      "reports": [
+        {
+          "path": ".build/LyraValidation/BlueprintPython/20261025-settings-cancel/Original03/failure.json",
+          "sha256": "C2FFA554DE4164FB88599810619F8CF279E67C007219452CDAACD811B39C72FF"
+        }
+      ],
+      "logs": [
+        {
+          "path": ".build/LyraValidation/BlueprintPython/20261025-settings-cancel/Original03/failure.log",
+          "sha256": "E4EDE7B27204CC289D614818A792C1804068D112597BADE972AED19D038AE3DF",
+          "declared_native_error_count": 0
+        }
+      ],
+      "current_source_and_asset_guards": [
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/settings_screens_mixin.py",
+          "current_sha256": "362CBCAA03BA44D9801A9AAC00E5C17905AD58230B0016645FD865C44B2EEAD4",
+          "native_sha256": "362CBCAA03BA44D9801A9AAC00E5C17905AD58230B0016645FD865C44B2EEAD4",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/settings_editors_mixin.py",
+          "current_sha256": "228BDC368C60213164F6B505EC10EFD4869DDF6ACDCEAB4E11772056FFA1163B",
+          "native_sha256": "228BDC368C60213164F6B505EC10EFD4869DDF6ACDCEAB4E11772056FFA1163B",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/bound_action_mixin.py",
+          "current_sha256": "70A0AA65988C8F46B0533C7243164705BF1EAFA8953FF74FC472B3BB5C554A0B",
+          "native_sha256": "70A0AA65988C8F46B0533C7243164705BF1EAFA8953FF74FC472B3BB5C554A0B",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/menu_layers_mixin.py",
+          "current_sha256": "33990E9C7D33376FF94C7D3DBFA67BEFE41DCD0B155D2A254812164527E4213E",
+          "native_sha256": "33990E9C7D33376FF94C7D3DBFA67BEFE41DCD0B155D2A254812164527E4213E",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/settings_cancel_action_contract.py",
+          "current_sha256": "71F0DE4137F8C70AD5FF4F7196E908BF22656259B3B412CD92B0A7FA544AB904",
+          "native_sha256": "71F0DE4137F8C70AD5FF4F7196E908BF22656259B3B412CD92B0A7FA544AB904",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/UI/Settings/W_LyraSettingScreen.uasset",
+          "current_sha256": "233AFE4FCD22902F74D13941BC9A9F18E0D8674BA607EEFD772801C9A84E534A",
+          "native_sha256": "233AFE4FCD22902F74D13941BC9A9F18E0D8674BA607EEFD772801C9A84E534A",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/UI/Settings/Editors/W_SettingsListEntry_Scalar.uasset",
+          "current_sha256": "EAF2253A0CCB32AE84D3E5B7BBF862EDDB406DADD27F40DD2886E2F5CD6F6E2E",
+          "native_sha256": "EAF2253A0CCB32AE84D3E5B7BBF862EDDB406DADD27F40DD2886E2F5CD6F6E2E",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/UI/Foundation/Widgets/BottomBar/W_BoundActionButton.uasset",
+          "current_sha256": "A9864764DBB751F8DECAE8ED6C8F0FB7C67570EAFEC64415F402F0B062C48AB0",
+          "native_sha256": "A9864764DBB751F8DECAE8ED6C8F0FB7C67570EAFEC64415F402F0B062C48AB0",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/UI/Hud/W_LyraGameMenu.uasset",
+          "current_sha256": "4518E1C17C0B2E01111207291ABCFEEB5613377FE79C47983CC1C7495D22DD46",
+          "native_sha256": "4518E1C17C0B2E01111207291ABCFEEB5613377FE79C47983CC1C7495D22DD46",
+          "equivalence": "exact-bytes"
+        }
+      ],
+      "corrected_host_review": null,
+      "native_runtime_reexecuted": false
+    },
+    {
+      "obligation": "represented-settings-cancel-python",
+      "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/244-native-settings-cancel-action-dirty-rollback-and-reopen.json",
+      "ledger_sha256": "6789A1BEB80BCE201DDA4A2AB2E0DFC54FC79D1E415DB789912B0C22ED715DD1",
+      "directory": ".build/LyraValidation/BlueprintPython/20261025-settings-cancel/Python01",
+      "summary_sha256": "8A2DF2F633881E0E898EA07D3BD14F16BAF0F5AF362AC0E33254B095340D9784",
+      "reports": [
+        {
+          "path": ".build/LyraValidation/BlueprintPython/20261025-settings-cancel/Python01/failure.json",
+          "sha256": "7A7A4C22C33C1B1924DB5C220FCE3E5BCC6E969578CDF55C0673C8BF5C0A165F"
+        }
+      ],
+      "logs": [
+        {
+          "path": ".build/LyraValidation/BlueprintPython/20261025-settings-cancel/Python01/failure.log",
+          "sha256": "688DC0555D68B69E41177ADF984985B55FE5B319904B7226AFBBB16E0C096C90",
+          "declared_native_error_count": 0
+        }
+      ],
+      "current_source_and_asset_guards": [
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/settings_screens_mixin.py",
+          "current_sha256": "362CBCAA03BA44D9801A9AAC00E5C17905AD58230B0016645FD865C44B2EEAD4",
+          "native_sha256": "362CBCAA03BA44D9801A9AAC00E5C17905AD58230B0016645FD865C44B2EEAD4",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/settings_editors_mixin.py",
+          "current_sha256": "228BDC368C60213164F6B505EC10EFD4869DDF6ACDCEAB4E11772056FFA1163B",
+          "native_sha256": "228BDC368C60213164F6B505EC10EFD4869DDF6ACDCEAB4E11772056FFA1163B",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/bound_action_mixin.py",
+          "current_sha256": "70A0AA65988C8F46B0533C7243164705BF1EAFA8953FF74FC472B3BB5C554A0B",
+          "native_sha256": "70A0AA65988C8F46B0533C7243164705BF1EAFA8953FF74FC472B3BB5C554A0B",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/menu_layers_mixin.py",
+          "current_sha256": "33990E9C7D33376FF94C7D3DBFA67BEFE41DCD0B155D2A254812164527E4213E",
+          "native_sha256": "33990E9C7D33376FF94C7D3DBFA67BEFE41DCD0B155D2A254812164527E4213E",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/settings_cancel_action_contract.py",
+          "current_sha256": "71F0DE4137F8C70AD5FF4F7196E908BF22656259B3B412CD92B0A7FA544AB904",
+          "native_sha256": "71F0DE4137F8C70AD5FF4F7196E908BF22656259B3B412CD92B0A7FA544AB904",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/UI/Settings/W_LyraSettingScreen.uasset",
+          "current_sha256": "233AFE4FCD22902F74D13941BC9A9F18E0D8674BA607EEFD772801C9A84E534A",
+          "native_sha256": "233AFE4FCD22902F74D13941BC9A9F18E0D8674BA607EEFD772801C9A84E534A",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/UI/Settings/Editors/W_SettingsListEntry_Scalar.uasset",
+          "current_sha256": "EAF2253A0CCB32AE84D3E5B7BBF862EDDB406DADD27F40DD2886E2F5CD6F6E2E",
+          "native_sha256": "EAF2253A0CCB32AE84D3E5B7BBF862EDDB406DADD27F40DD2886E2F5CD6F6E2E",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/UI/Foundation/Widgets/BottomBar/W_BoundActionButton.uasset",
+          "current_sha256": "A9864764DBB751F8DECAE8ED6C8F0FB7C67570EAFEC64415F402F0B062C48AB0",
+          "native_sha256": "A9864764DBB751F8DECAE8ED6C8F0FB7C67570EAFEC64415F402F0B062C48AB0",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "path": "Demos/UEPLyraIntegration/Overlay/Content/UI/Hud/W_LyraGameMenu.uasset",
+          "current_sha256": "4518E1C17C0B2E01111207291ABCFEEB5613377FE79C47983CC1C7495D22DD46",
+          "native_sha256": "4518E1C17C0B2E01111207291ABCFEEB5613377FE79C47983CC1C7495D22DD46",
+          "equivalence": "exact-bytes"
+        }
+      ],
+      "corrected_host_review": null,
+      "native_runtime_reexecuted": false
+    }
+  ],
+  "accepted_historical_native_processes": 9,
+  "new_native_processes": 0,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "original_runtime_versions_retained": true,
+  "current_policy_or_assets_changed": false,
+  "all57_ui_candidates_accepted": false,
+  "full_version_acceptance": false,
+  "full_migration_acceptance_proven": false,
+  "limits": [
+    "Native errors are declared stimuli and exactly matched;every other Error/Traceback/Ensure/Fatal fails.",
+    "Recorded native SDK/configurations remain historical;this review launches no new runtime and does not claim all paths refreshed on the newest SDK.",
+    "NULL/local sessions,replay decline and owned settings rollback are covered;authenticated provider behavior,backend search cancellation,hardware/pixels/package and other original criteria remain unclaimed.",
+    "The full original22 criteria and246 candidates remain;this accepts only the original failure/cancellation-testing condition."
+  ]
+}

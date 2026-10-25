@@ -31,6 +31,50 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed native spawning null-result guard batch253 (2026-10-26):**
+Current no-test-flag NullRHI startup exposed a Python None dereference after
+SpawnSystemAttached returned no Niagara component. Preserve the original BP's
+null array/map cache entries and repeated-discovery suppression;guard only the
+two parameter setter calls. Original class,Interface/CDO,eight Profile methods,
+native spawn call and all valid-result behavior remain unchanged.
+
+Actual NullRHI original/Python comparison produces four native null results,
+retains two null entries per Cue,suppresses repeated creation and clears caches
+on native removal. The original BP emits four Accessed None setter warnings;
+Python has no errors. Refresh four normal paired cases/eight native Timelines
+and the actual Cue manager,plus two destroyed-target pairs/four destructions.
+Three feature processes exit0 with independent gates and ordered shutdown.
+
+Preserve the initial failed startup and the separate null-report CLI import
+failure. That native null process/report had already passed;recheck its exact
+unchanged report through the package-aware gate without another UE process.
+Archive the original driver and require only that CLI invocation to differ.
+
+The current rendered weapon probe passes42 original/Python checkpoints,three
+reload/native-GC cycles and exit0;both screenshot columns are visually checked.
+A separate Lyra process has no UEP test flags,loads its Experience and remains
+alive for20seconds. Only the owning driver then stops it intentionally(exit-1);
+this is not a graceful-exit claim. The two-process current startup pair passes.
+
+Sixty-two primary immutable-index host checks and19 additional UI source
+compatibility checks pass(total81). The UI lifetime verifier permits only the
+exact two-setter guard backed by the three new native boundaries;all other
+frozen inputs remain strict. Refresh only the changed policy's source proof against the retained246-candidate native census;require
+the exact two-setter AST guard and all three current native boundaries. Retain
+all211 dependency modules,135 Profile modules,963 original entrypoints and
+all original assets. No new census,build,cook/package or Blueprint edit.
+
+Keep the original effects acceptance valid by replacing only its two spawning
+checkpoint references with current native runs. Preserve the historical251
+ledger;the updated current-source artifact is `effects_match_acceptance.json`.
+All other effect/audio/phase/scoring/notification evidence stays historical.
+UI failure/navigation and AI current-source review copies update only their
+candidate-artifact fingerprint. Original ledgers/reports/logs remain untouched;
+the complete semantic checks must still accept those derived copies.
+Overall acceptance remains8/22;the full original startup criterion receives its
+own follow-up review rather than being inferred from this bounded observation.
+Ledger:`Acceptance/253-spawning-null-result-guard-and-current-startup-validation.json`.
+
 **Completed original multi-client score/phase/notification/cleanup criterion batch252 (2026-10-26):**
 Add two current-SDK CP groups:one dedicated authority and two actual clients per
 original/Python profile. Move a healthy authority Pawn into an existing point;

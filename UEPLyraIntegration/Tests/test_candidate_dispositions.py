@@ -31,6 +31,14 @@ class CandidateDispositionSourceTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'helpers missing'):audit.check_source_change(audit.SPAWNING,source,AFTER)
     def test_class_identity_rename_is_not_an_allowed_private_fix(self):
         with self.assertRaisesRegex(ValueError,'exceeds'):audit.check_source_change(audit.SPAWNING,BEFORE,AFTER.replace('class Profile:','class Replacement:'))
+    def null_pair(self):
+        before="def spawn(actor):\n for mesh in meshes:\n  effects.append(effect)\n  mapping[mesh]=effect\n  effect.call_function('SetVariableFloat','SpawnTImeLength',duration)\n  effect.call_function('SetVariableVec3','BodyColor',color)\n"
+        after=before.replace("  effect.call_function('SetVariableFloat'","  if valid(effect):\n   effect.call_function('SetVariableFloat'").replace("  effect.call_function('SetVariableVec3'","   effect.call_function('SetVariableVec3'")
+        return before,after
+    def test_only_the_two_null_effect_setters_may_be_guarded(self):
+        before,after=self.null_pair();self.assertIn('native-null-effect-result',audit.check_source_change(audit.SPAWNING,before,after))
+        for bad in (after.replace('valid(effect)','False'),after.replace("'BodyColor'","'WrongColor'"),after.replace('  effects.append(effect)','  if valid(effect):effects.append(effect)'),after+'EXTRA=1\n'):
+            with self.assertRaises(ValueError):audit.check_source_change(audit.SPAWNING,before,bad)
     def test_dependency_walk_resolves_relative_imports_and_cycles(self):
         files={'pkg':('pkg/__init__.py',''), 'pkg.profile':('pkg/profile.py','from .helper import f\nfrom . import helper\n'),
             'pkg.helper':('pkg/helper.py','from .profile import Profile\n'), 'unrelated':('unrelated.py','raise RuntimeError()')}

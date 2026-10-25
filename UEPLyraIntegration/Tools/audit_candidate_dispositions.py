@@ -24,10 +24,27 @@ def read(path):return json.loads(Path(path).read_text(encoding='utf-8-sig'))
 def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest().upper()
 def shape(tree):return ast.dump(tree,include_attributes=False)
 
+def null_spawn_guard_only(old,new):
+    expected=copy.deepcopy(old)
+    functions=[n for n in expected.body if isinstance(n,ast.FunctionDef) and n.name=='spawn']
+    if len(functions)!=1:return False
+    loops=[n for n in functions[0].body if isinstance(n,ast.For)]
+    if len(loops)!=1:return False
+    loop=loops[0];setters=loop.body[-2:]
+    if len(setters)!=2:return False
+    for node,name in zip(setters,('SetVariableFloat','SetVariableVec3')):
+        if not(isinstance(node,ast.Expr) and isinstance(node.value,ast.Call)):return False
+        call=node.value
+        if not(isinstance(call.func,ast.Attribute) and isinstance(call.func.value,ast.Name) and call.func.value.id=='effect' and call.func.attr=='call_function' and call.args and isinstance(call.args[0],ast.Constant) and call.args[0].value==name):return False
+    condition=ast.parse('valid(effect)',mode='eval').body
+    loop.body[-2:]=[ast.If(test=condition,body=setters,orelse=[])]
+    return shape(expected)==shape(new)
+
 def check_source_change(module,before,after):
     old,new=ast.parse(before),ast.parse(after)
     if shape(old)==shape(new):return 'unchanged-python-ast'
     require(module==SPAWNING,'Unreviewed declaration/dependency source change: '+module)
+    if null_spawn_guard_only(old,new):return 'reviewed-private-native-null-effect-result-guard-declarations-unchanged'
     expected=copy.deepcopy(old);changed=[]
     class Target(ast.NodeTransformer):
         def visit_Call(self,node):
@@ -146,7 +163,10 @@ def inspect(repo,current,initial,paths):
         if captured is not None:
             require(captured[module]['path']=='Demos/'+relative,'Native profile script snapshot path differs')
             verify_captured_script(repo,captured[module],previous,text,native_stage/Path(relative).relative_to('UEPLyraIntegration/Overlay'))
-        if state.startswith('reviewed-private'):fix=verify_spawn_fix(repo,repo/'Demos'/relative)
+        if state=='reviewed-private-native-null-effect-result-guard-declarations-unchanged':
+            from audit_spawning_spawn_result_fix import verify as verify_null_spawn_fix
+            fix=verify_null_spawn_fix(repo,repo/'Demos'/relative)
+        elif state.startswith('reviewed-private'):fix=verify_spawn_fix(repo,repo/'Demos'/relative)
         sources.append(dict(module=module,path='Demos/'+relative,sha256=sha(repo/'Demos'/relative),native_baseline_sha256=hashlib.sha256(old[relative]).hexdigest().upper(),state=state))
     changed=subprocess.check_output(['git','-C',str(repo/'Demos'),'diff',baseline,'--name-only','--','UEPLyraIntegration/Overlay'],encoding='utf-8').splitlines()
     require(not any(p.endswith(('.uasset','.umap','.ini')) for p in changed),'Binding/asset/config changed since native census;new native/source review required')

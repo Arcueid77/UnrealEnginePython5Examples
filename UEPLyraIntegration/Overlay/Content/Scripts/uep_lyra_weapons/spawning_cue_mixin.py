@@ -55,8 +55,11 @@ def spawn(actor):
         if mesh in mapping:evidence(actor)['existing_meshes']+=1;continue
         effect=lib('NiagaraFunctionLibrary').call_function('SpawnSystemAttached',SystemTemplate=template,AttachToComponent=mesh,AttachPointName='None',Location=ue.FVector(),Rotation=ue.FRotator(),LocationType=EAttachLocation.KeepRelativeOffset,bAutoDestroy=False,bAutoActivate=True,PoolingMethod=getattr(ENCPoolMethod,'None'),bPreCullCheck=True)
         effects.append(effect);actor.set_property('SpawnedEffects',effects);mapping[mesh]=effect;actor.set_property('SpawnedEffectMap',mapping);evidence(actor)['spawns']+=1
-        effect.call_function('SetVariableFloat','SpawnTImeLength',actor.get_property('SpawningDuration'))
-        effect.call_function('SetVariableVec3','BodyColor',lib('KismetMathLibrary').call_function('Conv_LinearColorToVector',actor.get_property('TeamColor')))
+        # Native spawn may return null (for example with NullRHI/pre-culling).
+        # Keep the BP's null cache/deduplication, and skip its no-op setters.
+        if valid(effect):
+            effect.call_function('SetVariableFloat','SpawnTImeLength',actor.get_property('SpawningDuration'))
+            effect.call_function('SetVariableVec3','BodyColor',lib('KismetMathLibrary').call_function('Conv_LinearColorToVector',actor.get_property('TeamColor')))
 
 
 def team(actor,asset):

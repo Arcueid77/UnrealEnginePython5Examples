@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "source_refresh_batch": 253,
+  "status": "passed",
+  "original_candidate_artifact_sha256": "2059501E6017683B5D1F5DF03BBAC7196B0BD2A24B411E0EC834379894E0C626",
+  "current_candidate_artifact_sha256": "0B546E00113114C4EBC55A2DED1E53F4C3877EED5402B7A6E5626293195AE8E4",
+  "artifacts": [
+    {
+      "baseline": "ui_failure_cancellation_acceptance.json",
+      "baseline_sha256": "029CCB0FFFCDD58D4F10648A8BFD4EC93EFBF311737AB737274AB2DA51D21DE0",
+      "current_artifact": "CurrentAcceptance\\ui_failure_cancellation.json",
+      "current_artifact_sha256": "354E03960FA04F6394F25966C1F19839C14B29D8EC6659787143E00E6C89841E",
+      "only_changed_json_pointer": "/source_candidate_guard/sha256"
+    },
+    {
+      "baseline": "Acceptance/248-original-ui-navigation-settings-session-replay-acceptance.json",
+      "baseline_sha256": "0724CFC9D27D4A579F57AE77F109B25E1673C37869BD53602CDCDA7F1C0B9032",
+      "current_artifact": "CurrentAcceptance\\ui_navigation.json",
+      "current_artifact_sha256": "7B772FDD8E147EC123C504013EA0813E43E87E62458208D417C554A14930E024",
+      "only_changed_json_pointer": "/review/source_candidate_guard/sha256"
+    },
+    {
+      "baseline": "Acceptance/249-original-ai-outcomes-cancellation-and-destroyed-owner-acceptance.json",
+      "baseline_sha256": "04A47D999F6C5C30F50C5B15435D6EE4BFC12DD3A6F02946FF175914CD45E187",
+      "current_artifact": "CurrentAcceptance\\ai_lifetime.json",
+      "current_artifact_sha256": "BF40B391219BDDF1CF2E1895306DD5C00B40B326EAA2A1288FA2CA4BB5D43A78",
+      "only_changed_json_pointer": "/review/source_candidate_guard/sha256"
+    }
+  ],
+  "native_reports_or_logs_changed": false,
+  "new_native_processes": 0,
+  "full_acceptance": false,
+  "full_semantic_recheck_sha256": "A7B94697D537B74D2D2067081B1FC044B4120C60BE0BE148764FD73B472B3590",
+  "primary_spawning_host_checks": 62,
+  "additional_ui_source_compatibility_checks": 19,
+  "total_selected_host_checks": 81,
+  "spawning_null_setter_guard_native_boundaries_separately_checked": true
+}

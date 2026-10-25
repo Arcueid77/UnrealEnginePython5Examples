@@ -32,6 +32,13 @@ class UITravelLifetimeAcceptanceTests(unittest.TestCase):
         before,after=self.selector_pair()
         for changed in (after.replace('return None',"return 'changed'"),after.replace('-UEPShooterAILifetimeResult=','-OtherFlag='),after+'print("side effect")\n'):
             with self.assertRaises(ValueError):audit.startup_selector_equivalent(before,changed,[])
+    def test_historical_ui_can_only_reuse_the_exact_native_null_setter_guard(self):
+        before="def spawn(actor):\n for mesh in meshes:\n  effects.append(effect)\n  effect.call_function('SetVariableFloat','SpawnTImeLength',duration)\n  effect.call_function('SetVariableVec3','BodyColor',color)\n"
+        after=before.replace("  effect.call_function('SetVariableFloat'","  if valid(effect):\n   effect.call_function('SetVariableFloat'").replace("  effect.call_function('SetVariableVec3'","   effect.call_function('SetVariableVec3'")
+        audit.spawning_null_guard_equivalent(before,after,['-UEPUITravelLifetimeResult=ui.json'])
+        for args in (['-UEPSpawningNullEffect'],['-UEPSpawningDestroyedResult=fx.json']):
+            with self.assertRaises(ValueError):audit.spawning_null_guard_equivalent(before,after,args)
+        with self.assertRaises(ValueError):audit.spawning_null_guard_equivalent(before,after.replace('valid(effect)','False'),[])
     def test_complete_pair_requires_both_profiles(self):
         audit.pair([report('BlueprintFallback'),report('Python')])
         with self.assertRaises(ValueError):audit.pair([report('Python'),report('Python')])

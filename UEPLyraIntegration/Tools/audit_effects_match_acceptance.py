@@ -25,7 +25,7 @@ SPECS=[
     (119, 'Differential04DeferredSpawner', ('uep_lyra_weapons.small_burst_cue_mixin',)),
     (187, 'HeroBurst01Affected', ('uep_lyra_weapons.hero_burst_cue_mixin',)),
     (141, 'ConsumerTraversal01', ('uep_lyra_weapons.traversal_cue_mixin',)),
-    (141, 'ConsumerSpawning01', ('uep_lyra_weapons.spawning_cue_mixin',)),
+    (253, 'SpawningRendered01', ('uep_lyra_weapons.spawning_cue_mixin',)),
     (114, 'Differential02SelectedProfiles', ('uep_lyra_hud.match_message_mixin', 'uep_lyra_hud.waiting_message_mixin')),
     (141, 'ConsumerFire01', ('uep_lyra_weapons.weapon_fire_cue_mixin',)),
     (128, 'Differential02Accolade', ('uep_lyra_hud.accolade_relay_mixin',)),
@@ -57,7 +57,7 @@ SPECS=[
     (138, 'Differential02FallbackSeamless', ('uep_lyra_weapons.game_phases_mixin',)),
     (141, 'Differential01OriginalMacro', ('uep_lyra_weapons.macro_policies',)),
     (141, 'ConsumerAudioEffect01', ('uep_lyra_weapons.weapon_audio_early_mixin',)),
-    (250, 'SpawningDestroyed02', ('uep_lyra_weapons.spawning_cue_mixin',)),
+    (253, 'SpawningDestroyed01', ('uep_lyra_weapons.spawning_cue_mixin',)),
 ]
 _HISTORY={}
 
@@ -209,7 +209,7 @@ def inspect(repo,current,initial):
         for marker in markers:log_gate(text,marker)
         contract_path=scripts/Path(*target.split('.')).with_suffix('.py');index=index_hashes(summary['hashes']);contract_guard=source_guard(contract_path,index.get(key(contract_path),[]))
         jobs.append(dict(batch=number,directory=record['directory'],policy_modules=list(seeds),ledger=ledger_path.relative_to(repo).as_posix(),ledger_sha256=sha(ledger_path),summary_sha256=sha(summary_path),report_sha256=sha(report_path),log_sha256=sha(log),report_file=report_path.name,contract=target,contract_guard=contract_guard,semantic_gate=gate,markers=sorted(markers),native_processes=count,_summary=summary,_index=index,_raw=raw))
-    macro=next(j for j in jobs if j['batch']==141 and j['contract'].endswith('macro_closure_contract'));destroyed=next(j for j in jobs if j['batch']==250)
+    macro=next(j for j in jobs if j['batch']==141 and j['contract'].endswith('macro_closure_contract'));destroyed=next(j for j in jobs if j['contract'].endswith('spawning_destroyed_target_contract'))
     require(macro['semantic_gate']['ammo_cases']==5 and macro['semantic_gate']['weapon_cases']==7 and macro['semantic_gate']['tag_cases']==4 and macro['semantic_gate']['specific_cases']==3,'Full original macro comparison required')
     require(destroyed['semantic_gate']['native_target_destructions']==4 and destroyed['semantic_gate']['paired_native_cases']==2,'Both destroyed-target native boundary comparisons required')
     macro_path=scripts/Path(*MACRO.split('.')).with_suffix('.py');spawn_path=scripts/Path(*SPAWNING.split('.')).with_suffix('.py')

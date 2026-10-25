@@ -32,6 +32,18 @@ def startup_guard(repo,path,entry,arguments):
     text=before.replace('\r\n','\n');variants={hashlib.sha256(bom+value.encode()).hexdigest().upper() for value in (text,text.replace('\n','\r\n')) for bom in (b'',b'\xef\xbb\xbf')}
     require(entry['sha256'] in variants,'Historical startup Git source does not match the frozen native input')
     startup_selector_equivalent(before,path.read_text(encoding='utf-8-sig'),arguments)
+
+def spawning_null_guard_equivalent(before,after,arguments):
+    from audit_candidate_dispositions import null_spawn_guard_only
+    require('-UEPSpawningNullEffect' not in arguments and not any(a.startswith('-UEPSpawningDestroyedResult=') for a in arguments),'Historical UI run enabled the new unrelated spawning fixture')
+    require(null_spawn_guard_only(ast.parse(before),ast.parse(after)),'Only the exact two null effect setters may differ from the historical UI input')
+
+def spawning_policy_guard(repo,path,entry,arguments):
+    relative='UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/spawning_cue_mixin.py'
+    before=subprocess.check_output(['git','show','f74d5ff96ed3e69cff75e391b4927944717aaac8:'+relative],cwd=repo/'Demos').decode('utf-8-sig')
+    text=before.replace('\r\n','\n');variants={hashlib.sha256(bom+value.encode()).hexdigest().upper() for value in (text,text.replace('\n','\r\n')) for bom in (b'',b'\xef\xbb\xbf')}
+    require(entry['sha256'].upper() in variants,'Historical spawning source must match its frozen native UI input')
+    spawning_null_guard_equivalent(before,path.read_text(encoding='utf-8-sig'),arguments)
 def pair(reports):
     require([r['profile'] for r in reports]==['BlueprintFallback','Python'],'Both separate native profiles required')
     for report in reports:validate(report)
@@ -43,7 +55,7 @@ def verify_documentation(document,repo):
     require(document.get('criterion')==REQUIREMENT and document.get('completion_proven') is True,'Exact original UI lifetime criterion required')
     runs=document.get('native_runs',[])
     require([r.get('directory') for r in runs]==[BASE+'/Original01',BASE+'/Python01'],'Two exact native run records required')
-    reports=[];frozen=0
+    reports=[];frozen=0;spawning_fix=None
     for row in runs:
         folder=repo/row['directory'];summary=folder/'summary.json';report=folder/'failure.json';log=folder/'failure.log'
         require(sha(summary)==row['summary_sha256'] and sha(report)==row['report_sha256'] and sha(log)==row['log_sha256'],'Pinned native lifetime report changed')
@@ -59,9 +71,15 @@ def verify_documentation(document,repo):
             else:
                 try:source_guard(path,[entry])
                 except ValueError:
-                    if path.parts[-2:]!=('uep_lyra_hud','startup.py'):raise
-                    startup_guard(repo,path,entry,native['process']['arguments'])
+                    if path.parts[-2:]==('uep_lyra_hud','startup.py'):startup_guard(repo,path,entry,native['process']['arguments'])
+                    elif path.parts[-2:]==('uep_lyra_weapons','spawning_cue_mixin.py'):
+                        spawning_policy_guard(repo,path,entry,native['process']['arguments'])
+                        if spawning_fix is None:
+                            from audit_spawning_spawn_result_fix import verify
+                            spawning_fix=verify(repo,repo/'Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/spawning_cue_mixin.py')
+                    else:raise
             frozen+=1
     pair(reports)
     return dict(status='passed',criterion=REQUIREMENT,native_processes=2,settings_reopen_cycles=8,actual_confirmed_map_travels=2,current_semantic_gate_rechecked=True,frozen_native_input_records=frozen,
-        original_runtime_contract_preserved=True,new_native_processes=0,all57_ui_behavior_accepted=False,full_version_acceptance=False)
+        original_runtime_contract_preserved=True,new_native_processes=0,all57_ui_behavior_accepted=False,full_version_acceptance=False,
+        exact_spawning_null_setter_guard_separately_native_verified=spawning_fix is not None)

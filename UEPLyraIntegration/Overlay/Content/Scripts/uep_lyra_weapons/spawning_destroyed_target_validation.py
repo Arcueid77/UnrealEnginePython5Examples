@@ -74,4 +74,6 @@ class Validation(Fixtures):
 
 result=next((v.split('=',1)[1] for v in sys.argv if v.startswith('-UEPSpawningDestroyedResult=')),None)
 if result:
+    if '-UEPSpawningNullEffect' in sys.argv:
+        from uep_lyra_weapons.spawning_null_effect_validation import Validation
     validation=Validation(result);atexit.register(validation.finalize);ticker=ue.add_ticker(validation.tick)
