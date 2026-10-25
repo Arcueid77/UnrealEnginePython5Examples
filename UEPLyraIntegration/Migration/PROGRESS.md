@@ -31,6 +31,33 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Approved isolated native guard batch246 (2026-10-26):**
+The user explicitly included the proposed eight-line native Lyra init-state
+repair in the isolated validation stage. Original246 Python candidates and all22
+requirement texts remain unchanged;official Lyra remains unpatched. Simulated
+proxies wait for their PlayerState's canonical Pawn before binding the persistent
+ASC. Authority/autonomous init,Health and manual ASC APIs are unchanged.
+
+One LyraGame unity compile and two links completed in about92s. Two earlier UBT
+plans were blocked by the Engine-change guard before compilation. The initial
+import-library invocation omitted /LIB;its failure is preserved,and the same
+successful compiled object was reused for the corrected two links. No Engine
+binary,NetCore object/import library,UEP or bridge DLL changed. No cook/package.
+
+Two dedicated-server/two-real-client runs,with B0 delayed8s and immediate join,
+passed40 original/Python authority interactions and80 replicated viewer checks.
+All six native processes and both independent semantic gates exit0;12 observed
+simulated proxies wait unbound before canonical initialization,and no prior
+canonical-GameplayReady/healthy-attributes/empty-component-binding signature is
+observed. The four affected host suites pass96 checks; six scope/parse checks
+reject official/outside-workspace mutation.
+The exact old retired-channel timing is not deterministically replayed,and this
+does not claim arbitrary network stability or whole-version acceptance. Keep the
+original official-source issue and failed batch240 evidence intact;the isolated
+guard is a separately verified followup. See
+`Acceptance/246-isolated-native-pawn-init-guard-and-network-regression.json` and
+`NativeFixes/README.md`. Original acceptance remains3/22.
+
 **Completed original UI failure/cancellation criterion review batch245 (2026-10-26):**
 Recompute the exact original0.13 checklist condition from seven obligations and
 nine pinned historical native processes:host invalid-request UI,search failure

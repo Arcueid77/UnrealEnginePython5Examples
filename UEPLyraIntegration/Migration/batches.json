@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 247,
+    "bounded_evidence_ledgers": 248,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -5486,7 +5486,7 @@
       "reproduced_on_human_simulated_proxy_without_teleport": "20261018-grenade-widget-network/Network02",
       "construction_begin_end_destroy_python_stack_diagnostics_available": true,
       "method_isolation_does_not_prove_cause": true,
-      "next_batch": "Validate the proposed canonical simulated-proxy init-state guard in an isolated Lyra game stage only if the user includes this native-game repair. Game C++ remains separate from the246 Python candidates. Never write Health,manually initialize an ASC or treat a healthy retry as a fix.",
+      "next_batch": "The user approved the isolated native game-C++ guard and batch246 verified its init waits plus two affected network matrices. Continue remaining original requirements using that marked stage. Official Lyra remains unpatched;retain its original-source finding and do not infer arbitrary network stability or full-version acceptance.",
       "current_native_takeover_diagnosis": {
         "evidence_ledger": "233-spawning-cached-target-cleanup-and-current-melee-diagnosis.json",
         "historical_same_peer_canonical_empty_bindings_with_healthy_attributes": 4,
@@ -5519,6 +5519,29 @@
         "native_actor_channel_late_spawn_and_cleanup_observed": true,
         "native_fix_applied": false,
         "original_race_fixed": false
+      },
+      "isolated_native_guard_followup": {
+        "status": "isolated_native_guard_and_two_affected_network_runs_verified",
+        "evidence_ledger": "246-isolated-native-pawn-init-guard-and-network-regression.json",
+        "patch": "NativeFixes/LyraHeroComponent-simulated-proxy-owner.patch",
+        "user_approved_date": "2026-10-26",
+        "official_source_unchanged": true,
+        "official_source_issue_remains_recorded": true,
+        "stage_native_added_lines": 8,
+        "compile_actions": 1,
+        "link_actions": 2,
+        "network_native_processes": 6,
+        "authority_interactions": 40,
+        "replicated_viewer_checks": 80,
+        "guarded_waits": 12,
+        "canonical_ready_empty_bindings_observed": 0,
+        "exact_retired_channel_timing_deterministically_replayed": false,
+        "health_written": false,
+        "manual_asc_initialization": false,
+        "cook_package_executed": false,
+        "full_regression_executed": false,
+        "full_acceptance": false,
+        "focused_host_checks": 96
       }
     },
     "physical_input_tested": false,
@@ -16190,5 +16213,28 @@
     "cook_package_executed": false,
     "full_version_acceptance": false,
     "full_acceptance": false
+  },
+  "native_pawn_init_guard_pilot": {
+    "status": "isolated_native_guard_and_two_affected_network_runs_verified",
+    "evidence_ledger": "246-isolated-native-pawn-init-guard-and-network-regression.json",
+    "patch": "NativeFixes/LyraHeroComponent-simulated-proxy-owner.patch",
+    "user_approved_date": "2026-10-26",
+    "official_source_unchanged": true,
+    "official_source_issue_remains_recorded": true,
+    "stage_native_added_lines": 8,
+    "compile_actions": 1,
+    "link_actions": 2,
+    "network_native_processes": 6,
+    "authority_interactions": 40,
+    "replicated_viewer_checks": 80,
+    "guarded_waits": 12,
+    "canonical_ready_empty_bindings_observed": 0,
+    "exact_retired_channel_timing_deterministically_replayed": false,
+    "health_written": false,
+    "manual_asc_initialization": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_acceptance": false,
+    "focused_host_checks": 96
   }
 }

@@ -1,0 +1,321 @@
+{
+  "schema_version": 1,
+  "batch": 246,
+  "recorded_utc": "2026-10-25T16:45:38.550443+00:00",
+  "status": "approved_isolated_native_init_guard_and_affected_network_matrix_verified",
+  "scope": "approved isolated native initialization guard with two bounded network regressions",
+  "core_parent_commit": "da06c3715983681b29bce0ff0957a2661873c7af",
+  "examples_parent_commit": "9dc87e6c34825a79a84c3f56a03a04ecc8e50abc",
+  "user_scope_approval": "纳入修复并验证（推荐）",
+  "approval_boundary": "Apply and incrementally build the eight-line native init guard in the isolated validation project only;leave official Lyra unchanged.",
+  "native_fix_review": {
+    "schema_version": 1,
+    "status": "passed",
+    "scope": "approved isolated native initialization guard with two bounded network regressions",
+    "official_source_unchanged": true,
+    "official_source_sha256": "D036B6BBBF0FC8170CB31D0F3271D887D44F1B683DB564F0E036F74B0E68D3E7",
+    "stage_source_sha256": "4227BC2DD70E6414E91F90ED1301E5A16CB9B056FAD0A9B33CAB6CE67F27D4CB",
+    "patch_sha256": "C9D7CE321A3968A139431096D43CB1263B1CCA35C4D266756770A2F12C07740E",
+    "native_added_lines": 8,
+    "build": {
+      "compile_summary": ".build/LyraValidation/BlueprintPython/20261026-pawn-init-guard/Build03/summary.json",
+      "compile_summary_sha256": "04F7F024267F1BC2CA03A14ED9BBFFDC5CD10AD842013EF41EC7DB09414D45B2",
+      "compile_exit_code": 0,
+      "compile_actions": 1,
+      "compile_seconds": 86.527,
+      "link_summary": ".build/LyraValidation/BlueprintPython/20261026-pawn-init-guard/Build04LinkResume/summary.json",
+      "link_summary_sha256": "6EC49AB4F55F6A2204FE17C1E228666AD1060EF5DE27DC29E0F1A4675656A099",
+      "link_actions": 2,
+      "link_seconds": 5.007000000000001,
+      "engine_netcore_objects_and_import_library_unchanged": true,
+      "products": [
+        {
+          "sha256": "50369D1E295E50652DC079D0CEF2163E04790DCCB494F8FC4201C780BB61A098",
+          "path": "F:/UnrealEnginePython5/.build/LyraValidation/Full/Stage/Lyra/Binaries/Win64/UnrealEditor-LyraGame.dll"
+        },
+        {
+          "sha256": "7132C8BEA6A1CEE1F472CA95746A45926278199837A7E7462FDBA0F02ABB4AC0",
+          "path": "F:/UnrealEnginePython5/.build/LyraValidation/Full/Stage/Lyra/Binaries/Win64/UnrealEditor.modules"
+        }
+      ]
+    },
+    "preserved_failed_prechecks_and_link": [
+      {
+        "directory": ".build/LyraValidation/BlueprintPython/20261026-pawn-init-guard/Build01",
+        "summary_sha256": "3BCE6FCD7667581DC021EBAA7ABC2C7CEA9DDAD29C50A7E2394232398AC51468",
+        "status": "failed",
+        "error": "LyraGame affected-action export exited 5; F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-pawn-init-guard\\Build01/plan",
+        "frozen_records": 10,
+        "original_driver_snapshot": ".build/LyraValidation/BlueprintPython/20261026-pawn-init-guard/Build01/Inputs/Run-UEP58LyraPawnInitGuardBuild.ps1"
+      },
+      {
+        "directory": ".build/LyraValidation/BlueprintPython/20261026-pawn-init-guard/Build02",
+        "summary_sha256": "E32BC440E7F67D9C374594FA8778442FEAE216C59A2B601D61089C5595452014",
+        "status": "failed",
+        "error": "LyraGame affected-action export exited 5; F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-pawn-init-guard\\Build02/plan",
+        "frozen_records": 10,
+        "original_driver_snapshot": ".build/LyraValidation/BlueprintPython/20261026-pawn-init-guard/Build02/Inputs/Run-UEP58LyraPawnInitGuardBuild.ps1"
+      },
+      {
+        "directory": ".build/LyraValidation/BlueprintPython/20261026-pawn-init-guard/Build03",
+        "summary_sha256": "04F7F024267F1BC2CA03A14ED9BBFFDC5CD10AD842013EF41EC7DB09414D45B2",
+        "status": "failed",
+        "error": "import-library exited 1146; F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-pawn-init-guard\\Build03\\import-library",
+        "frozen_records": 518,
+        "original_driver_snapshot": ".build/LyraValidation/BlueprintPython/20261026-pawn-init-guard/Build03/Inputs/Run-UEP58LyraPawnInitGuardBuild.ps1"
+      }
+    ],
+    "original_failed_gameplay_summary_sha256": "B3F3F5ECBBF9B53460A7C82856C644A1B65C2B2723D19CAD449DBCCB4C108656",
+    "runs": [
+      {
+        "directory": ".build/LyraValidation/BlueprintPython/20261026-pawn-init-guard/DelayedB01",
+        "summary_sha256": "9F0B032D47B30731FED328D8DEFC02041F0F5040FA8BC74C87F721315809D49C",
+        "native_summary_sha256": "20F2DA09AA072C4BBCAC963F801AC886267AAA207594EE071757EBA043F1329E",
+        "client_b0_launch_delay_seconds": 8,
+        "frozen_input_records": 3601,
+        "semantic_gate": {
+          "status": "passed",
+          "native_authority_trials": 20,
+          "actual_owning_clients": 2,
+          "native_owner_requests": 20,
+          "replicated_viewer_trials": 40,
+          "native_hostile_damage_trials": 4,
+          "full_acceptance": false,
+          "packet_loss_tested": false
+        },
+        "processes_and_reports": [
+          {
+            "peer": "server",
+            "report_sha256": "D60572FE6B674EF99A1FFDD191AA741478C28355A5EFBADD8DD5B99EDF7B855B",
+            "log_sha256": "DC18CA20C3181C148CC58BEAE6793616746FE69B11725DD0081583352B1CFA22",
+            "exit_code": 0,
+            "duration_seconds": 107.318
+          },
+          {
+            "peer": "A",
+            "report_sha256": "ED391AA7BAE354CD8996BE1867457CDA172306FC228213B59AC66E66DD38D3A5",
+            "log_sha256": "C08B078E09C4CB2F6AEC52B30EE177BD3BA6FE3C66756DF1FCFD038E4AD9F03C",
+            "exit_code": 0,
+            "duration_seconds": 85.492
+          },
+          {
+            "peer": "B0",
+            "report_sha256": "9D58B21D9DDF0924506EB31EE610DB3CF3DEAC84AC7C4174FBF9047DB2162720",
+            "log_sha256": "F9E72176C5CA2D904AB87ACB7376CE935BBAA670C2846EE20210C8D16DD37E5A",
+            "exit_code": 0,
+            "duration_seconds": 78.08
+          }
+        ],
+        "guarded_simulated_proxy_waits": [
+          {
+            "peer": "A",
+            "file": "A-early-readiness-1.json",
+            "sha256": "08EF9FF682558A17729FD8E46E89FC7B5C098352B04E4366DD0ED05F694F9079",
+            "actor": "/ShooterMaps/Maps/L_Expanse.L_Expanse:PersistentLevel.B_Hero_ShooterMannequin_C_0",
+            "player_state_pawn": null,
+            "hero_state": "InitState.DataAvailable",
+            "asc_bound": false,
+            "later_canonical_binding_file": "A-early-readiness-2.json"
+          },
+          {
+            "peer": "A",
+            "file": "A-early-readiness-4.json",
+            "sha256": "E346A2F3B6239EE0FC2C49A042B09276708DC5D7BA696AE30C592709442EA30D",
+            "actor": "/ShooterMaps/Maps/L_Expanse.L_Expanse:PersistentLevel.B_Hero_ShooterMannequin_C_1",
+            "player_state_pawn": null,
+            "hero_state": "InitState.DataAvailable",
+            "asc_bound": false,
+            "later_canonical_binding_file": "A-early-readiness-8.json"
+          },
+          {
+            "peer": "A",
+            "file": "A-early-readiness-6.json",
+            "sha256": "915E84E3A5B0105268DF3324B555AD95908BBA9C7BA78EFF17DAB02C8915011B",
+            "actor": "/ShooterMaps/Maps/L_Expanse.L_Expanse:PersistentLevel.B_Hero_ShooterMannequin_C_2",
+            "player_state_pawn": null,
+            "hero_state": "InitState.DataAvailable",
+            "asc_bound": false,
+            "later_canonical_binding_file": "A-early-readiness-9.json"
+          },
+          {
+            "peer": "B0",
+            "file": "B0-early-readiness-14.json",
+            "sha256": "7FA0F834C958348C8485994492B7BC22352FEB780BF207CDB657DD32858F2710",
+            "actor": "/ShooterMaps/Maps/L_Expanse.L_Expanse:PersistentLevel.B_Hero_ShooterMannequin_C_3",
+            "player_state_pawn": null,
+            "hero_state": "InitState.DataAvailable",
+            "asc_bound": false,
+            "later_canonical_binding_file": "B0-early-readiness-15.json"
+          },
+          {
+            "peer": "B0",
+            "file": "B0-early-readiness-17.json",
+            "sha256": "42BC6D1B78D2F34C4DEAC5FCD949D045BF0E36CDB74BF9EC37D5B56F70B283DE",
+            "actor": "/ShooterMaps/Maps/L_Expanse.L_Expanse:PersistentLevel.B_Hero_ShooterMannequin_C_4",
+            "player_state_pawn": null,
+            "hero_state": "InitState.DataAvailable",
+            "asc_bound": false,
+            "later_canonical_binding_file": "B0-early-readiness-19.json"
+          }
+        ],
+        "canonical_ready_empty_binding_rows": [],
+        "native_asc_takeovers": {
+          "server": [],
+          "A": [],
+          "B0": []
+        },
+        "local_native_stacks": 56,
+        "symbol_capture_sha256": "9AA7A0E80438189A699DBAC2EB1552C912926C5AA19713AE0F9F82F86C1B38F6",
+        "deterministic_replay_of_original_retired_channel_sequence": false
+      },
+      {
+        "directory": ".build/LyraValidation/BlueprintPython/20261026-pawn-init-guard/Simultaneous01",
+        "summary_sha256": "31E1586D37E87FE8EF8BD30614B86AA770B567C02EE1E4B746BB19AFDF722B8D",
+        "native_summary_sha256": "70E68CE3B2138BC809B69EBCAC24268181C8BA60776454ED0B1957F87A699E88",
+        "client_b0_launch_delay_seconds": 0,
+        "frozen_input_records": 4061,
+        "semantic_gate": {
+          "status": "passed",
+          "native_authority_trials": 20,
+          "actual_owning_clients": 2,
+          "native_owner_requests": 20,
+          "replicated_viewer_trials": 40,
+          "native_hostile_damage_trials": 4,
+          "full_acceptance": false,
+          "packet_loss_tested": false
+        },
+        "processes_and_reports": [
+          {
+            "peer": "server",
+            "report_sha256": "2CC579F23B233105731B3308927DB07234C00049ED3FE8C82D5A146857CB84E2",
+            "log_sha256": "8E88F4D48300FA9CDA22CF390459B8F802CAC3113453331A5F509E5A7BC34015",
+            "exit_code": 0,
+            "duration_seconds": 109.452
+          },
+          {
+            "peer": "A",
+            "report_sha256": "F8AF040CBB274B8C2AD8B37C024778E1F2F0D39A4553EB7B08FCCB6457844F94",
+            "log_sha256": "EEFCFE1334A742BC9AB745894E326C9C78822A2CC548ED0F1886E14F9E93AB35",
+            "exit_code": 0,
+            "duration_seconds": 85.697
+          },
+          {
+            "peer": "B0",
+            "report_sha256": "2EE7B6FC1A8A6A49AA80556DD78560593DF446563CC5D2F8E27413C9BE709226",
+            "log_sha256": "9F7C864864A6EB6A2B7AA4B208F60A08F36998214A4A6C8221C9E21888BDFD95",
+            "exit_code": 0,
+            "duration_seconds": 86.454
+          }
+        ],
+        "guarded_simulated_proxy_waits": [
+          {
+            "peer": "A",
+            "file": "A-early-readiness-1.json",
+            "sha256": "2A91FCA2E0CCACA5732727D9CD22CE7E7A5960793FDEE2395C204B6423B3A128",
+            "actor": "/ShooterMaps/Maps/L_Expanse.L_Expanse:PersistentLevel.B_Hero_ShooterMannequin_C_0",
+            "player_state_pawn": null,
+            "hero_state": "InitState.DataAvailable",
+            "asc_bound": false,
+            "later_canonical_binding_file": "A-early-readiness-2.json"
+          },
+          {
+            "peer": "A",
+            "file": "A-early-readiness-4.json",
+            "sha256": "B2F9BA008E0270D972C875CC842198B0156BA897FA154A6096B64A4ADB1D1B2B",
+            "actor": "/ShooterMaps/Maps/L_Expanse.L_Expanse:PersistentLevel.B_Hero_ShooterMannequin_C_1",
+            "player_state_pawn": null,
+            "hero_state": "InitState.DataAvailable",
+            "asc_bound": false,
+            "later_canonical_binding_file": "A-early-readiness-8.json"
+          },
+          {
+            "peer": "A",
+            "file": "A-early-readiness-6.json",
+            "sha256": "5EB24507B7617F797387E9F5770A221A84995E9F19C978E7BE424F6E5EC9B4FA",
+            "actor": "/ShooterMaps/Maps/L_Expanse.L_Expanse:PersistentLevel.B_Hero_ShooterMannequin_C_2",
+            "player_state_pawn": null,
+            "hero_state": "InitState.DataAvailable",
+            "asc_bound": false,
+            "later_canonical_binding_file": "A-early-readiness-9.json"
+          },
+          {
+            "peer": "A",
+            "file": "A-early-readiness-11.json",
+            "sha256": "A497E46EF8DA948470490BB6E51A2F89986E24B84D1BBACC0D185BC3D460316A",
+            "actor": "/ShooterMaps/Maps/L_Expanse.L_Expanse:PersistentLevel.B_Hero_ShooterMannequin_C_3",
+            "player_state_pawn": null,
+            "hero_state": "InitState.DataAvailable",
+            "asc_bound": false,
+            "later_canonical_binding_file": "A-early-readiness-16.json"
+          },
+          {
+            "peer": "B0",
+            "file": "B0-early-readiness-1.json",
+            "sha256": "BC874128F2844AFF3054CEAFA0F26B7E34ABCEAC2DAE03128CDDDC39B6D831DB",
+            "actor": "/ShooterMaps/Maps/L_Expanse.L_Expanse:PersistentLevel.B_Hero_ShooterMannequin_C_0",
+            "player_state_pawn": null,
+            "hero_state": "InitState.DataAvailable",
+            "asc_bound": false,
+            "later_canonical_binding_file": "B0-early-readiness-2.json"
+          },
+          {
+            "peer": "B0",
+            "file": "B0-early-readiness-4.json",
+            "sha256": "9196BD0AD71F11F5B46DF51D9F3854CBD9839962A7FD5B3E4B04B4CB31089663",
+            "actor": "/ShooterMaps/Maps/L_Expanse.L_Expanse:PersistentLevel.B_Hero_ShooterMannequin_C_1",
+            "player_state_pawn": null,
+            "hero_state": "InitState.DataAvailable",
+            "asc_bound": false,
+            "later_canonical_binding_file": "B0-early-readiness-10.json"
+          },
+          {
+            "peer": "B0",
+            "file": "B0-early-readiness-6.json",
+            "sha256": "8BB67F947D0A6ACD12330EDD591634DDB451CD861B1DDCC305A1147409BED406",
+            "actor": "/ShooterMaps/Maps/L_Expanse.L_Expanse:PersistentLevel.B_Hero_ShooterMannequin_C_2",
+            "player_state_pawn": null,
+            "hero_state": "InitState.DataAvailable",
+            "asc_bound": false,
+            "later_canonical_binding_file": "B0-early-readiness-11.json"
+          }
+        ],
+        "canonical_ready_empty_binding_rows": [],
+        "native_asc_takeovers": {
+          "server": [],
+          "A": [],
+          "B0": []
+        },
+        "local_native_stacks": 68,
+        "symbol_capture_sha256": "D8DFD2B87FF8823E2EFBF0497B54898B85537EE11544A81AFBA01C738E48DE07",
+        "deterministic_replay_of_original_retired_channel_sequence": false
+      }
+    ],
+    "actual_native_processes": 6,
+    "native_authority_trials": 40,
+    "replicated_viewer_trials": 80,
+    "cpp_compile_executed": true,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "health_written_by_fix": false,
+    "manual_asc_initialization": false,
+    "authority_or_autonomous_init_branch_changed": false,
+    "original246_scope_unchanged": true,
+    "full_version_acceptance": false,
+    "full_migration_acceptance_proven": false,
+    "limits": [
+      "Original Lyra remains unpatched;this is an explicitly approved isolated game-C++ followup,not an extra Python migration candidate.",
+      "Exact prior retired-actor channel timing is not deterministically replayed;two healthy retries alone do not prove arbitrary network stability. Source guard and observed unbound-to-canonical native init transitions are additional evidence.",
+      "Old failed gameplay evidence and all failed build prechecks/link diagnostics remain intact. The compiler object was reused for link correction;it was compiled only once.",
+      "Generic/ThirdPerson/package/physical-input/pixel/audio acceptance and other original requirements are not refreshed by these focused native runs."
+    ]
+  },
+  "driver_scope_guard_checks": 6,
+  "focused_host_checks": 96,
+  "original_requirements_proven": 3,
+  "original_requirements": 22,
+  "original_runtime_candidates": 246,
+  "native_cpp_becomes_python_candidate": false,
+  "original_official_source_issue_remains_unmodified": true,
+  "full_version_acceptance": false,
+  "full_migration_acceptance_proven": false
+}

@@ -1,0 +1,17 @@
+--- a/Source/LyraGame/Character/LyraHeroComponent.cpp
++++ b/Source/LyraGame/Character/LyraHeroComponent.cpp
+@@ -131,6 +131,14 @@
+ 		// Wait for player state and extension component
+ 		ALyraPlayerState* LyraPS = GetPlayerState<ALyraPlayerState>();
+ 
++		// Wait for OnRep_PlayerState to select this simulated proxy before
++		// binding its persistent ASC. A queued closed channel can briefly
++		// spawn a retired pawn after a newer pawn already owns that ASC.
++		if (LyraPS && Pawn->GetLocalRole() == ROLE_SimulatedProxy && LyraPS->GetPawn() != Pawn)
++		{
++			return false;
++		}
++
+ 		return LyraPS && Manager->HasFeatureReachedInitState(Pawn, ULyraPawnExtensionComponent::NAME_ActorFeatureName, LyraGameplayTags::InitState_DataInitialized);
+ 	}
+ 	else if (CurrentState == LyraGameplayTags::InitState_DataInitialized && DesiredState == LyraGameplayTags::InitState_GameplayReady)
