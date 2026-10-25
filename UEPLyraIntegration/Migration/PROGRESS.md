@@ -31,6 +31,44 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed original native identity/execution-boundary criterion batch256 (2026-10-26):**
+All37 original0.11 candidates retain their native generated-class paths and
+ancestries in the current native census. Source-reviewed Character_Default
+empty/native-parent behavior and B_SimpleHeroPawn forwarders remain original
+packages,matching both official reference and isolated stage. Inherited routers
+stay in the original native hierarchy;current class/Mixin packages are frozen
+against their corresponding native execution records.
+
+Revalidate55 existing native execution records(160 actual UE processes)and56
+independent pure report gates:ability/UI,movement,cosmetics,death/respawn,
+character/input/inventory/possession,Dash,Melee,Grenade,weapons,NetShooter and
+all four reload families. Required original native authority/prediction/RPC/
+replication checks remain active. The native37-class census is separately
+referenced and is not counted among those160 execution processes.
+
+Replace the pre-repair28 SpawnEffect record with current-source33 Network02.
+For54/55,restore the exact three-key extraction AST and prove every other
+readiness branch/native call unchanged;current latent_keys allocator bytes are
+frozen by the separately revalidated60 native death-delay network record.
+Updated post-exit contracts reexecute on pinned raw reports with explicit old
+hashes;their edits never receive a production runtime-equivalence exemption.
+
+Scan79 current dependency modules for native class factories and literal/direct
+native role/execution/replication-policy writes. List dynamic property-write
+sites explicitly;their existing owned-state/component/FX/array targets were
+reviewed,without claiming a formal whole-program assignment analysis.
+
+Preserve the original NetShooter component replication defect and its exact
+accepted template-diagnostic log hashes. This accepts native behavior parity
+and transport boundaries,not general component replication correctness. Other
+gameplay,task/delegate/latent lifetime,readiness stability,SDK/package/pixel/
+hardware and original version conditions remain separate.
+
+Twenty-three affected immutable-index host checks pass. No new UE process,
+runtime/asset/C++ change,build,cook/package or full regression occurs. Overall
+acceptance becomes11/22,with all246 candidates and22 original texts preserved.
+Ledger:`Acceptance/256-original-uobject-identity-and-native-authority-prediction-replication-acceptance.json`.
+
 **Completed original pickup/device interaction criterion batch255 (2026-10-26):**
 Revalidate the twelve original0.10 interaction candidates against seven pinned
 authority-plus-two-client groups:108 rows cover both owners and BP/Python
