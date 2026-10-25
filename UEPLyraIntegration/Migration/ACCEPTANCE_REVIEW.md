@@ -24,7 +24,7 @@ This index does not execute or semantically revalidate the referenced runtime ev
 - `0.9.0` — The supported API inventory and migration/deprecation rules are ready for RC freeze, with no known release-blocking correctness defects. (ROADMAP.md:258; historical_claim_needs_source_and_evidence_review).
 - `0.10.0` — Each small batch passes original-BP/Python comparison without BP fallthrough. (ROADMAP.md:605; unproven).
 - `0.10.0` — Pickup failure/success, cooldown/respawn and interaction effects match the baseline; two players cannot share another player's UI or claim state. (ROADMAP.md:606; native_pickup_rejection_cooldown_interaction_effects_and_two_owner_ui_claim_sources_verified).
-- `0.10.0` — Widget and Actor lifetime tests leave no owned subscriptions after teardown, travel or profile switching. (ROADMAP.md:608; unproven).
+- `0.10.0` — Widget and Actor lifetime tests leave no owned subscriptions after teardown, travel or profile switching. (ROADMAP.md:608; native_widget_actor_scope_teardown_travel_profile_cleanup_source_verified).
 - `0.11.0` — Fire, reload, ammo exhaustion, switching, death and respawn pass BP/Python comparison in Standalone and one-server/two-client play. (ROADMAP.md:1705; native_six_behavior_standalone_two_client_source_pins_and_original_python_outcomes_verified).
 - `0.11.0` — Supported ability tasks, delegates, cancellation and latent boundaries have call/lifetime regressions; unsupported signatures fail explicitly. (ROADMAP.md:1707; native_task_delegate_cancel_latent_and_timer_lifetimes_with_current_source_guards_verified).
 - `0.11.0` — No replacement changes UObject class identity or bypasses the required authority, prediction or replication checks. (ROADMAP.md:1709; native_original_class_identity_authority_prediction_replication_boundaries_and_current_sources_verified).
@@ -216,7 +216,7 @@ These are recorded flags requiring requirement and platform review, not automati
 
 ## Next evidence work
 
-Review the remaining original0.9-0.14 gameplay,presentation,lifecycle,network and package requirements against their actual native evidence. The named Pawn/ASC readiness issue remains open;inventory disposition does not close these requirements.
+Continue the original0.10 each-small-batch BP/Python comparison without BP fallthrough,remaining0.9 call/lifecycle/visible/package matrix,and both complete Experience comparisons. Preserve all246 candidates and22 original texts.
 
 Recorded capabilities still need their linked semantic/source evidence reviewed; this index
 does not rerun them. Continue unresolved readiness observations and the original version scope.

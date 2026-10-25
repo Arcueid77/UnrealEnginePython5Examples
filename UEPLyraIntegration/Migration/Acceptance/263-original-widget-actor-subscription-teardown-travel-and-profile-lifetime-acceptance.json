@@ -1,0 +1,2114 @@
+{
+  "schema_version": 1,
+  "batch": 263,
+  "recorded_utc": "2026-10-25T23:22:32.697441+00:00",
+  "status": "original_010_widget_actor_owned_subscription_lifetime_criterion_verified",
+  "criterion": "Widget and Actor lifetime tests leave no owned subscriptions after teardown, travel or profile switching.",
+  "completion_proven": true,
+  "core_parent_commit": "084a9cb9e29c6f2a06397f8bec71c2012e1c0399",
+  "examples_parent_commit": "678961a78d4b05f8eec575401b00cc2fc27dc759",
+  "review": {
+    "status": "passed",
+    "criterion": "Widget and Actor lifetime tests leave no owned subscriptions after teardown, travel or profile switching.",
+    "completion_proven": true,
+    "original_candidates": 32,
+    "subscription_owning_candidates": 16,
+    "source_reviewed_no_python_subscription_candidates": 14,
+    "retained_native_parent_forwarders": [
+      {
+        "asset": "/Game/UI/Hud/W_TouchRegion_Right.W_TouchRegion_Right",
+        "version": "0.10.0",
+        "disposition": "retained-native-cpp-touch-parent-forwarder",
+        "effective_profile": null,
+        "effective_python_class": null,
+        "reviewed_inactive_family_stubs": [],
+        "original_entry_dispositions": {
+          "direct-parent-forwarder-review": 3
+        },
+        "explicit_retention_reasons": [
+          "retained-native-cpp-touch-parent-forwarder"
+        ],
+        "named_open_issues": []
+      },
+      {
+        "asset": "/ShooterCore/Input/W_TouchRegion_Left.W_TouchRegion_Left",
+        "version": "0.10.0",
+        "disposition": "retained-native-cpp-touch-parent-forwarder",
+        "effective_profile": null,
+        "effective_python_class": null,
+        "reviewed_inactive_family_stubs": [],
+        "original_entry_dispositions": {
+          "direct-parent-forwarder-review": 3
+        },
+        "explicit_retention_reasons": [
+          "retained-native-cpp-touch-parent-forwarder"
+        ],
+        "named_open_issues": []
+      }
+    ],
+    "source_ownership_inventory": [
+      {
+        "module": "uep_lyra_hud.ability_failure_mixin",
+        "owns_python_subscriptions": true,
+        "factories": [
+          "SubscriptionScope"
+        ],
+        "native_gameinstance_async_push": false
+      },
+      {
+        "module": "uep_lyra_hud.ability_progress_mixin",
+        "owns_python_subscriptions": true,
+        "factories": [
+          "SubscriptionScope"
+        ],
+        "native_gameinstance_async_push": false
+      },
+      {
+        "module": "uep_lyra_hud.action_touch_mixin",
+        "owns_python_subscriptions": true,
+        "factories": [
+          "SubscriptionScope"
+        ],
+        "native_gameinstance_async_push": false
+      },
+      {
+        "module": "uep_lyra_hud.dash_cooldown_mixin",
+        "owns_python_subscriptions": true,
+        "factories": [
+          "SubscriptionScope",
+          "bind_event"
+        ],
+        "native_gameinstance_async_push": false
+      },
+      {
+        "module": "uep_lyra_hud.debug_spread_mixin",
+        "owns_python_subscriptions": false,
+        "factories": [],
+        "native_gameinstance_async_push": false
+      },
+      {
+        "module": "uep_lyra_hud.fire_button_mixin",
+        "owns_python_subscriptions": false,
+        "factories": [],
+        "native_gameinstance_async_push": false
+      },
+      {
+        "module": "uep_lyra_hud.nameplate_manager_mixin",
+        "owns_python_subscriptions": true,
+        "factories": [
+          "SubscriptionScope"
+        ],
+        "native_gameinstance_async_push": false
+      },
+      {
+        "module": "uep_lyra_hud.nameplate_mixin",
+        "owns_python_subscriptions": true,
+        "factories": [
+          "SubscriptionScope",
+          "bind_event"
+        ],
+        "native_gameinstance_async_push": false
+      },
+      {
+        "module": "uep_lyra_hud.nameplate_source_mixin",
+        "owns_python_subscriptions": true,
+        "factories": [
+          "SubscriptionScope"
+        ],
+        "native_gameinstance_async_push": false
+      },
+      {
+        "module": "uep_lyra_hud.open_menu_mixin",
+        "owns_python_subscriptions": false,
+        "factories": [],
+        "native_gameinstance_async_push": true
+      },
+      {
+        "module": "uep_lyra_hud.quickbar_slot_mixin",
+        "owns_python_subscriptions": true,
+        "factories": [
+          "SubscriptionScope"
+        ],
+        "native_gameinstance_async_push": false
+      },
+      {
+        "module": "uep_lyra_hud.respawn_timer_mixin",
+        "owns_python_subscriptions": true,
+        "factories": [
+          "SubscriptionScope",
+          "set_timer"
+        ],
+        "native_gameinstance_async_push": false
+      },
+      {
+        "module": "uep_lyra_hud.reticle_ammo_mixin",
+        "owns_python_subscriptions": true,
+        "factories": [
+          "subscribe"
+        ],
+        "native_gameinstance_async_push": false
+      },
+      {
+        "module": "uep_lyra_hud.reticle_host_mixin",
+        "owns_python_subscriptions": true,
+        "factories": [
+          "SubscriptionScope",
+          "bind_event"
+        ],
+        "native_gameinstance_async_push": false
+      },
+      {
+        "module": "uep_lyra_hud.weapon_reticle_mixin",
+        "owns_python_subscriptions": true,
+        "factories": [
+          "SubscriptionScope"
+        ],
+        "native_gameinstance_async_push": false
+      },
+      {
+        "module": "uep_lyra_world.effect_pad_mixin",
+        "owns_python_subscriptions": false,
+        "factories": [],
+        "native_gameinstance_async_push": false
+      },
+      {
+        "module": "uep_lyra_world.grant_ge_pad_mixin",
+        "owns_python_subscriptions": false,
+        "factories": [],
+        "native_gameinstance_async_push": false
+      },
+      {
+        "module": "uep_lyra_world.heal_ability_mixin",
+        "owns_python_subscriptions": true,
+        "factories": [
+          "SubscriptionScope",
+          "bind_event",
+          "set_timer"
+        ],
+        "native_gameinstance_async_push": false
+      },
+      {
+        "module": "uep_lyra_world.inventory_pad_mixin",
+        "owns_python_subscriptions": false,
+        "factories": [],
+        "native_gameinstance_async_push": false
+      },
+      {
+        "module": "uep_lyra_world.launcher_mixin",
+        "owns_python_subscriptions": false,
+        "factories": [],
+        "native_gameinstance_async_push": false
+      },
+      {
+        "module": "uep_lyra_world.spawner_mixin",
+        "owns_python_subscriptions": false,
+        "factories": [],
+        "native_gameinstance_async_push": false
+      },
+      {
+        "module": "uep_lyra_world.teleporter_mixin",
+        "owns_python_subscriptions": false,
+        "factories": [],
+        "native_gameinstance_async_push": false
+      }
+    ],
+    "current_candidate_census": {
+      "status": "passed",
+      "candidate_document_sha256": "0B546E00113114C4EBC55A2DED1E53F4C3877EED5402B7A6E5626293195AE8E4",
+      "accepted_source_review": {
+        "path": "Demos/UEPLyraIntegration/Migration/Acceptance/256-original-uobject-identity-and-native-authority-prediction-replication-acceptance.json",
+        "sha256": "2851E877AC742723E4D52FC0F1E4B78446BC2C6C0A6D0347881A4B3B1207E4EB"
+      },
+      "native_census_directory": ".build/LyraValidation/BlueprintPython/20261025-current-census/Census01",
+      "summary_sha256": "3A9851E4C1665C41E5E8C949E566871C207D036341380B6A718C6AAC2F683FC2",
+      "report_sha256": "620417D70CC3752B5F5F6558D6DCC6EEE7AF003A93BE1EB640CBDD9CCDAC1C99",
+      "original_candidates": 32,
+      "current_class_and_transport_guards": [
+        {
+          "asset": "/Game/UI/Hud/W_ActionTouchButton.W_ActionTouchButton",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UI\\Hud\\W_ActionTouchButton.uasset",
+          "current_sha256": "7EEC65015904C1EBDFC14DA237313E2F684A0F647CF01C59FD221060200A0A37",
+          "native_sha256": "7EEC65015904C1EBDFC14DA237313E2F684A0F647CF01C59FD221060200A0A37",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_ActionTouchMixin.DA_ActionTouchMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ActionTouchMixin.uasset",
+          "current_sha256": "DAE7CA6FE8786EE6794862F1636B6BEFDFC590F64EE13507CB6EB9E584DE79BC",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/Game/UI/Hud/W_ActionTouchButton_MobileOnly.W_ActionTouchButton_MobileOnly",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UI\\Hud\\W_ActionTouchButton_MobileOnly.uasset",
+          "current_sha256": "CB312931A5DA5454EF3CE7D86F93EA5F97403E978CA4DCCD7FF3EFBD11444AE1",
+          "native_sha256": "CB312931A5DA5454EF3CE7D86F93EA5F97403E978CA4DCCD7FF3EFBD11444AE1",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_ActionTouchMixin.DA_ActionTouchMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ActionTouchMixin.uasset",
+          "current_sha256": "DAE7CA6FE8786EE6794862F1636B6BEFDFC590F64EE13507CB6EB9E584DE79BC",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/Game/UI/Hud/W_OpenMenuTouchButton.W_OpenMenuTouchButton",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UI\\Hud\\W_OpenMenuTouchButton.uasset",
+          "current_sha256": "F6151C3938C8333427509915E67CDE4C33E63D7C6638A51A44F47C32520BF4C7",
+          "native_sha256": "F6151C3938C8333427509915E67CDE4C33E63D7C6638A51A44F47C32520BF4C7",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_W_OpenMenuTouchButtonMixin.DA_W_OpenMenuTouchButtonMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_W_OpenMenuTouchButtonMixin.uasset",
+          "current_sha256": "ECE557157BAA339DC10E6484D100B352740A6895CC93FE8C7270D1D163D8AD81",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/Game/UI/Hud/W_TouchRegion_Right.W_TouchRegion_Right",
+          "path": "F:\\LyraStarterGame\\Content\\UI\\Hud\\W_TouchRegion_Right.uasset",
+          "current_sha256": "116825958F73C241926611A15848C4F3538077F476B770971673F78E50C59103",
+          "native_sha256": "116825958F73C241926611A15848C4F3538077F476B770971673F78E50C59103",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UI/Indicators/NameplateManagerComponent.NameplateManagerComponent",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UI\\Indicators\\NameplateManagerComponent.uasset",
+          "current_sha256": "24538F8EB0BDD0701D3C270E659381B3F6B54215B6A842573AAE7217B38817BB",
+          "native_sha256": "24538F8EB0BDD0701D3C270E659381B3F6B54215B6A842573AAE7217B38817BB",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_NameplateManagerComponentMixin.DA_NameplateManagerComponentMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_NameplateManagerComponentMixin.uasset",
+          "current_sha256": "3960A2D37C9F71FF1A92383485EFE02717C9C74C0CFB2FEC2A01B5063461C02C",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/Game/UI/Indicators/NameplateSource.NameplateSource",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UI\\Indicators\\NameplateSource.uasset",
+          "current_sha256": "C3D7E12E323D4D42951F506B3DB9CF9C01134B91F007835D4C08CDAF46F3433A",
+          "native_sha256": "C3D7E12E323D4D42951F506B3DB9CF9C01134B91F007835D4C08CDAF46F3433A",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_NameplateSourceMixin.DA_NameplateSourceMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_NameplateSourceMixin.uasset",
+          "current_sha256": "0F1130F73914EE52970DA0742ACE521547B400DA872013F076F3429B09BDACF2",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/Game/UI/Indicators/W_Nameplate.W_Nameplate",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UI\\Indicators\\W_Nameplate.uasset",
+          "current_sha256": "C2C068B40B253894CC7252813CB43046DEFBFFA0A5A9C399CAD72193CBF34D72",
+          "native_sha256": "C2C068B40B253894CC7252813CB43046DEFBFFA0A5A9C399CAD72193CBF34D72",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_W_NameplateMixin.DA_W_NameplateMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_W_NameplateMixin.uasset",
+          "current_sha256": "9D77D63860E2E638C4A1592DE99D9BBF198AC91ADC31E21920A7BE7A9E721B04",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/ShooterCore/Game/Dash/W_DashCooldown.W_DashCooldown",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Game\\Dash\\W_DashCooldown.uasset",
+          "current_sha256": "41F095E0F3335C1229E9F3AC1170BFFB2EE1834E31E02B0AE447550BCAE3439C",
+          "native_sha256": "41F095E0F3335C1229E9F3AC1170BFFB2EE1834E31E02B0AE447550BCAE3439C",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_W_DashCooldownMixin.DA_W_DashCooldownMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_W_DashCooldownMixin.uasset",
+          "current_sha256": "E1CDC080A982E2533272BA0BB3ACA1F1F238006D7C432C35E2B7CE2B5F9A3AD8",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/ShooterCore/Game/Respawn/W_RespawnTimer.W_RespawnTimer",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Game\\Respawn\\W_RespawnTimer.uasset",
+          "current_sha256": "81D8F5EF6FBB0206312ED2E48B01DD5FB03AAA28C8490C6859EA3373C0FECBF3",
+          "native_sha256": "81D8F5EF6FBB0206312ED2E48B01DD5FB03AAA28C8490C6859EA3373C0FECBF3",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_W_RespawnTimerMixin.DA_W_RespawnTimerMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_W_RespawnTimerMixin.uasset",
+          "current_sha256": "F839905A8A7C17388488B5D05E87583D7B257AA7A3BE255BE8A8D54981E628A0",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/ShooterCore/Input/W_TouchRegion_Left.W_TouchRegion_Left",
+          "path": "F:\\LyraStarterGame\\Plugins\\GameFeatures\\ShooterCore\\Content\\Input\\W_TouchRegion_Left.uasset",
+          "current_sha256": "73E8214B39FAE4C70911299B8692DB52C87919CC2EA77C9F24E216D3B186058D",
+          "native_sha256": "73E8214B39FAE4C70911299B8692DB52C87919CC2EA77C9F24E216D3B186058D",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/ShooterCore/UserInterface/HUD/W_AbilityFailureFeedback.W_AbilityFailureFeedback",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\UserInterface\\HUD\\W_AbilityFailureFeedback.uasset",
+          "current_sha256": "0EA52167942CC59FE53114F6E69E9C9D8064C40BE3B2BD1B0CD95B2E57AA2D3D",
+          "native_sha256": "0EA52167942CC59FE53114F6E69E9C9D8064C40BE3B2BD1B0CD95B2E57AA2D3D",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_W_AbilityFailureFeedbackMixin.DA_W_AbilityFailureFeedbackMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_W_AbilityFailureFeedbackMixin.uasset",
+          "current_sha256": "32AB08F64B5E48DF2DD85DF31111DFC85CAEA46D2FC8701AECAB82F0A1D772F2",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/ShooterCore/UserInterface/HUD/W_AbilityProgress.W_AbilityProgress",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\UserInterface\\HUD\\W_AbilityProgress.uasset",
+          "current_sha256": "3B801C31897C9125815F9F53D9D23C949D1D2623337E017BD00F7CFE9F60D462",
+          "native_sha256": "3B801C31897C9125815F9F53D9D23C949D1D2623337E017BD00F7CFE9F60D462",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_W_AbilityProgressMixin.DA_W_AbilityProgressMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_W_AbilityProgressMixin.uasset",
+          "current_sha256": "87DBC01B4134FC1F72B111BE7E897713540478FB972FC343DF28350FB4E5BEFC",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/ShooterCore/UserInterface/HUD/W_DebugWeaponSpreadWidget.W_DebugWeaponSpreadWidget",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\UserInterface\\HUD\\W_DebugWeaponSpreadWidget.uasset",
+          "current_sha256": "4B5A227DB3CF2057CC5042EFF8A706E8E862DD4472D24B7803FF1F3DCD9A1E3D",
+          "native_sha256": "4B5A227DB3CF2057CC5042EFF8A706E8E862DD4472D24B7803FF1F3DCD9A1E3D",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_W_DebugWeaponSpreadWidgetMixin.DA_W_DebugWeaponSpreadWidgetMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_W_DebugWeaponSpreadWidgetMixin.uasset",
+          "current_sha256": "4492DAFC16E14B41ADF9E44E5D296B4CBE6E5AA365C4CC4780546A656BDF0444",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/ShooterCore/UserInterface/HUD/W_QuickBarSlot.W_QuickBarSlot",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\UserInterface\\HUD\\W_QuickBarSlot.uasset",
+          "current_sha256": "3BBCF27A5F829F9FEB65CF39C2BA24AD6FFB9EFA576EA2FE1091645C3A6CBAE3",
+          "native_sha256": "3BBCF27A5F829F9FEB65CF39C2BA24AD6FFB9EFA576EA2FE1091645C3A6CBAE3",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_W_QuickBarSlotMixin.DA_W_QuickBarSlotMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_W_QuickBarSlotMixin.uasset",
+          "current_sha256": "1B04571A025E8562E95FC4A968E26D4C1022511195F3E378205EFCD3355F7BBD",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/ShooterCore/UserInterface/HUD/W_Reticle_AmmoBar.W_Reticle_AmmoBar",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\UserInterface\\HUD\\W_Reticle_AmmoBar.uasset",
+          "current_sha256": "2A13A3124403AFD21A5DF7C34AAFD67C0083C63F3341EB168578EE731D421713",
+          "native_sha256": "2A13A3124403AFD21A5DF7C34AAFD67C0083C63F3341EB168578EE731D421713",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_W_Reticle_AmmoBarMixin.DA_W_Reticle_AmmoBarMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_W_Reticle_AmmoBarMixin.uasset",
+          "current_sha256": "AD530A96991B02B746CEA3140A42A6B66EA36458E370BF5C7F62D974F74E8397",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/ShooterCore/UserInterface/HUD/W_WeaponReticleHost.W_WeaponReticleHost",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\UserInterface\\HUD\\W_WeaponReticleHost.uasset",
+          "current_sha256": "6C28F73D3CC2729628F39A3F8FC0CEB9478AD4E5CE2A629F7068637D7508E9C8",
+          "native_sha256": "6C28F73D3CC2729628F39A3F8FC0CEB9478AD4E5CE2A629F7068637D7508E9C8",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_W_WeaponReticleHostMixin.DA_W_WeaponReticleHostMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_W_WeaponReticleHostMixin.uasset",
+          "current_sha256": "F5A5316D53CB8079E396E1612544D41036FC83EA0BE98524DA76A36480DDA414",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/ShooterCore/UserInterface/W_FireButton.W_FireButton",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\UserInterface\\W_FireButton.uasset",
+          "current_sha256": "34E8FBDE3D636EA88F2888937829356DDBFF88837A8BA7AE4725F38719E0CD04",
+          "native_sha256": "34E8FBDE3D636EA88F2888937829356DDBFF88837A8BA7AE4725F38719E0CD04",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_W_FireButtonMixin.DA_W_FireButtonMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_W_FireButtonMixin.uasset",
+          "current_sha256": "3E2FF7B3F0D9B37A4FBFF199AE0C3327049F2A4F22F39CDC0F1521AC9D14987E",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/ShooterCore/Weapons/Pistol/W_Reticle_Pistol.W_Reticle_Pistol",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Weapons\\Pistol\\W_Reticle_Pistol.uasset",
+          "current_sha256": "DD017455E2FBB61B11F97C3F311B9DDE39F2A084B01EA404422CED13A48C4968",
+          "native_sha256": "DD017455E2FBB61B11F97C3F311B9DDE39F2A084B01EA404422CED13A48C4968",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_W_Reticle_PistolMixin.DA_W_Reticle_PistolMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_W_Reticle_PistolMixin.uasset",
+          "current_sha256": "482F9B0ED71D3A38641D9D907260C5B88EFFB9E2A2480DB59AC016C4362A0537",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/ShooterCore/Weapons/Rifle/W_Reticle_Rifle.W_Reticle_Rifle",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Weapons\\Rifle\\W_Reticle_Rifle.uasset",
+          "current_sha256": "F8CE6E788FA92E7EC3F9B967A514DB3894EF7D29A8406C6CCA0C40F13F08E19C",
+          "native_sha256": "F8CE6E788FA92E7EC3F9B967A514DB3894EF7D29A8406C6CCA0C40F13F08E19C",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_W_Reticle_RifleMixin.DA_W_Reticle_RifleMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_W_Reticle_RifleMixin.uasset",
+          "current_sha256": "4DD02E577FABC40816E5E9ADEA7FFA7FC7C95AA15319426703D945FBADFDEC55",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/ShooterCore/Weapons/Shotgun/W_Reticle_Shotgun.W_Reticle_Shotgun",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Weapons\\Shotgun\\W_Reticle_Shotgun.uasset",
+          "current_sha256": "9142D7565132A54A256BB494E6F2D30567711E7781D1EEE44FF99D71396F2E05",
+          "native_sha256": "9142D7565132A54A256BB494E6F2D30567711E7781D1EEE44FF99D71396F2E05",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_W_Reticle_ShotgunMixin.DA_W_Reticle_ShotgunMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_W_Reticle_ShotgunMixin.uasset",
+          "current_sha256": "C31661473C58B4B7697E031076B0085C28C1F9DE6B1E1B452DB90C6D6D0DF10B",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/Game/Environments/Gameplay/BP_GameplayEffectPad.BP_GameplayEffectPad",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\Environments\\Gameplay\\BP_GameplayEffectPad.uasset",
+          "current_sha256": "38AA48DF4E5AFFB06A1902BC4763CCD365B528934363BBEEB9D8B87E99008B85",
+          "native_sha256": "38AA48DF4E5AFFB06A1902BC4763CCD365B528934363BBEEB9D8B87E99008B85",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_BP_GameplayEffectPadMixin.DA_BP_GameplayEffectPadMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_BP_GameplayEffectPadMixin.uasset",
+          "current_sha256": "4BF5A58797CFF14DA0963660404C2E31B51BD4DDD1F92062E218F70AB32835F8",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/Game/Environments/Gameplay/B_GameplayEffectPad_Child_Healing.B_GameplayEffectPad_Child_Healing",
+          "path": "F:\\LyraStarterGame\\Content\\Environments\\Gameplay\\B_GameplayEffectPad_Child_Healing.uasset",
+          "current_sha256": "F36840F5A9B9F1CA181504A2DB2D7C1EAE8602248A49E16BEED6621E06BFEA09",
+          "native_sha256": "F36840F5A9B9F1CA181504A2DB2D7C1EAE8602248A49E16BEED6621E06BFEA09",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_BP_GameplayEffectPadMixin.DA_BP_GameplayEffectPadMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_BP_GameplayEffectPadMixin.uasset",
+          "current_sha256": "4BF5A58797CFF14DA0963660404C2E31B51BD4DDD1F92062E218F70AB32835F8",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/ShooterCore/Blueprint/B_AbilitySpawner.B_AbilitySpawner",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Blueprint\\B_AbilitySpawner.uasset",
+          "current_sha256": "6C1764B77F71AB14B3771E58330CA997C1630DFFAC4273628AA0F0F63D718E85",
+          "native_sha256": "6C1764B77F71AB14B3771E58330CA997C1630DFFAC4273628AA0F0F63D718E85",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_SpawnerMixin.DA_SpawnerMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_SpawnerMixin.uasset",
+          "current_sha256": "26C107F3F377AA67B9955CEF9B8287C6EBB4B5AF6ECA8ED173703A62BC485A0B",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/ShooterCore/Blueprint/B_GrantAbilityPad_ApplyGE.B_GrantAbilityPad_ApplyGE",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Blueprint\\B_GrantAbilityPad_ApplyGE.uasset",
+          "current_sha256": "0232556109255BB449A87CEF8ABF865FEE89BCA6013D96764CA6F8E665236202",
+          "native_sha256": "0232556109255BB449A87CEF8ABF865FEE89BCA6013D96764CA6F8E665236202",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_GrantGEPadMixin.DA_GrantGEPadMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_GrantGEPadMixin.uasset",
+          "current_sha256": "CF74814520737BA72D9FA94F7D8CD5D346F718EAB5A6541DC7B8008A20854C99",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/ShooterCore/Blueprint/B_GrantInventoryPad_WithMesh.B_GrantInventoryPad_WithMesh",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Blueprint\\B_GrantInventoryPad_WithMesh.uasset",
+          "current_sha256": "EAFDB8DFAA55930700D0224AFBDC2BA5B3C17820649389E7C8AF6B1DF0F6D440",
+          "native_sha256": "EAFDB8DFAA55930700D0224AFBDC2BA5B3C17820649389E7C8AF6B1DF0F6D440",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_InventoryPadMixin.DA_InventoryPadMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_InventoryPadMixin.uasset",
+          "current_sha256": "3E2D37BE3865CB778363042E1F94BEB3F76B8EBF3FF5CE72ECEC54BEA8E714D8",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/ShooterCore/Blueprint/B_GrantInventory_Pad.B_GrantInventory_Pad",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Blueprint\\B_GrantInventory_Pad.uasset",
+          "current_sha256": "42CC02398F8823F548E9680E5C589B99CC017E8AB3BC7B300FDB25DCA7D9F727",
+          "native_sha256": "42CC02398F8823F548E9680E5C589B99CC017E8AB3BC7B300FDB25DCA7D9F727",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_InventoryPadMixin.DA_InventoryPadMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_InventoryPadMixin.uasset",
+          "current_sha256": "3E2D37BE3865CB778363042E1F94BEB3F76B8EBF3FF5CE72ECEC54BEA8E714D8",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/ShooterCore/Blueprint/B_Launcher.B_Launcher",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Blueprint\\B_Launcher.uasset",
+          "current_sha256": "EF2E07205E76D73DD5424CF4EF7FFFD97D3E76232A8EE6A5260AAD3F47F6B21C",
+          "native_sha256": "EF2E07205E76D73DD5424CF4EF7FFFD97D3E76232A8EE6A5260AAD3F47F6B21C",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_LauncherMixin.DA_LauncherMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_LauncherMixin.uasset",
+          "current_sha256": "C2CD872242CA4CFCCA2D431B0D110A13BCF765E9C6139429F39C339A3469FCED",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/ShooterCore/Blueprint/B_Launcher_Push.B_Launcher_Push",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Blueprint\\B_Launcher_Push.uasset",
+          "current_sha256": "E1F44E63062299A73EE82E088916CE7104FDECF47B5EBB00613CF085F567F7BE",
+          "native_sha256": "E1F44E63062299A73EE82E088916CE7104FDECF47B5EBB00613CF085F567F7BE",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_LauncherMixin.DA_LauncherMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_LauncherMixin.uasset",
+          "current_sha256": "C2CD872242CA4CFCCA2D431B0D110A13BCF765E9C6139429F39C339A3469FCED",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/ShooterCore/Blueprint/B_Launcher_Up.B_Launcher_Up",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Blueprint\\B_Launcher_Up.uasset",
+          "current_sha256": "DF0450017D08F0E5EEB727196650D404603FE45A1A9CC50AD70F9BCDEC7A36EF",
+          "native_sha256": "DF0450017D08F0E5EEB727196650D404603FE45A1A9CC50AD70F9BCDEC7A36EF",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_LauncherMixin.DA_LauncherMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_LauncherMixin.uasset",
+          "current_sha256": "C2CD872242CA4CFCCA2D431B0D110A13BCF765E9C6139429F39C339A3469FCED",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/ShooterCore/Blueprint/B_Teleport.B_Teleport",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Blueprint\\B_Teleport.uasset",
+          "current_sha256": "86AC04A209F8D0C5E80E1DFF28EC386FAA6DA5A652A0F6408FAC9EC81BA2502A",
+          "native_sha256": "86AC04A209F8D0C5E80E1DFF28EC386FAA6DA5A652A0F6408FAC9EC81BA2502A",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_TeleporterMixin.DA_TeleporterMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_TeleporterMixin.uasset",
+          "current_sha256": "73AE2DA68615D6C2B1470100F6EB0A0F7041DEA00FDE4AF440219D0BD6AC23FA",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/ShooterCore/Blueprint/B_WeaponSpawner.B_WeaponSpawner",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Blueprint\\B_WeaponSpawner.uasset",
+          "current_sha256": "D110EFD566BA6B9608BBAED1BB6ED39045A0323744E2A62314F967EA41D0606F",
+          "native_sha256": "D110EFD566BA6B9608BBAED1BB6ED39045A0323744E2A62314F967EA41D0606F",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_SpawnerMixin.DA_SpawnerMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_SpawnerMixin.uasset",
+          "current_sha256": "26C107F3F377AA67B9955CEF9B8287C6EBB4B5AF6ECA8ED173703A62BC485A0B",
+          "provenance": "accepted-source-disposition-binding-asset"
+        },
+        {
+          "asset": "/ShooterCore/Items/HealthPickup_Unused/GA_HealPickup.GA_HealPickup",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Items\\HealthPickup_Unused\\GA_HealPickup.uasset",
+          "current_sha256": "9BA9CE5DA94A3557F0277BEBF663DE6676D6E3FDD84EC0D890763A2D0700BACC",
+          "native_sha256": "9BA9CE5DA94A3557F0277BEBF663DE6676D6E3FDD84EC0D890763A2D0700BACC",
+          "equivalence": "exact-bytes"
+        },
+        {
+          "asset": "/Game/UEPMixins/DA_HealAbilityMixin.DA_HealAbilityMixin",
+          "path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_HealAbilityMixin.uasset",
+          "current_sha256": "523F141FE1C43AC06F1029E422504CEE2D34ACD1BA6A540073C4B9C8EE95BD9E",
+          "provenance": "accepted-source-disposition-binding-asset"
+        }
+      ],
+      "unrelated_gameplay_semantic_gates_reexecuted": false
+    },
+    "candidate_document_sha256": "0B546E00113114C4EBC55A2DED1E53F4C3877EED5402B7A6E5626293195AE8E4",
+    "current_native_build_preflight": {
+      "path": ".build/LyraValidation/BlueprintPython/20261026-widget-actor-lifetime/preflight.json",
+      "sha256": "EC5BF1B831EFDF8F120C61C3257ACD675B494E486BA0C620A52F2EB6E6F7ECE1",
+      "binary_source_guards": [
+        {
+          "kind": "sdk",
+          "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Plugins\\UnrealEnginePython\\Binaries\\Win64\\UnrealEditor-UnrealEnginePython.dll",
+          "sha256": "96049A85163F7EBE98CDDBB324BDC7973F640E0CBC13CA758AA8499772F2044F"
+        },
+        {
+          "kind": "isolated_game",
+          "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Binaries\\Win64\\UnrealEditor-LyraGame.dll",
+          "sha256": "50369D1E295E50652DC079D0CEF2163E04790DCCB494F8FC4201C780BB61A098"
+        },
+        {
+          "kind": "official_hero",
+          "path": "F:\\LyraStarterGame\\Source\\LyraGame\\Character\\LyraHeroComponent.cpp",
+          "sha256": "D036B6BBBF0FC8170CB31D0F3271D887D44F1B683DB564F0E036F74B0E68D3E7"
+        },
+        {
+          "kind": "isolated_hero",
+          "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Source\\LyraGame\\Character\\LyraHeroComponent.cpp",
+          "sha256": "4227BC2DD70E6414E91F90ED1301E5A16CB9B056FAD0A9B33CAB6CE67F27D4CB"
+        }
+      ]
+    },
+    "current_policy_dependency_guards": [
+      {
+        "module": "uep_lyra_hud.ability_failure_mixin",
+        "current_sha256": "4AE4A455419E1A044EEDE75475B7E93A106ABBE25B6485F39B34F7307391E60E",
+        "native_sha256": "4AE4A455419E1A044EEDE75475B7E93A106ABBE25B6485F39B34F7307391E60E",
+        "equivalence": "exact-bytes"
+      },
+      {
+        "module": "uep_lyra_hud.ability_progress_mixin",
+        "current_sha256": "4F350AFD42C20185CC78446EE1A2EC272C8BDB4C116935DBA91A3C092D483C77",
+        "native_sha256": "4F350AFD42C20185CC78446EE1A2EC272C8BDB4C116935DBA91A3C092D483C77",
+        "equivalence": "exact-bytes"
+      },
+      {
+        "module": "uep_lyra_hud.action_touch_mixin",
+        "current_sha256": "6DD3DDD8FCC1587BB98EB64989940371B348690C815E187C631AA8DBB017CE72",
+        "native_sha256": "6DD3DDD8FCC1587BB98EB64989940371B348690C815E187C631AA8DBB017CE72",
+        "equivalence": "exact-bytes"
+      },
+      {
+        "module": "uep_lyra_hud.ammo_mixin",
+        "current_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+        "native_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+        "equivalence": "exact-bytes"
+      },
+      {
+        "module": "uep_lyra_hud.dash_cooldown_mixin",
+        "current_sha256": "73547C9D51067FF3533F0AED2039CE030BFADF729C647A9DD5579FE40342012B",
+        "native_sha256": "73547C9D51067FF3533F0AED2039CE030BFADF729C647A9DD5579FE40342012B",
+        "equivalence": "exact-bytes"
+      },
+      {
+        "module": "uep_lyra_hud.debug_spread_mixin",
+        "current_sha256": "47BE4BB43E302DE3A4C7944DEAFC47D58ACE3093C77E270733A894B58397746B",
+        "native_sha256": "47BE4BB43E302DE3A4C7944DEAFC47D58ACE3093C77E270733A894B58397746B",
+        "equivalence": "exact-bytes"
+      },
+      {
+        "module": "uep_lyra_hud.fire_button_mixin",
+        "current_sha256": "2F4E264A88DBC0715163CB5E85C261D37116351B192BB6A806744B6B5C211F48",
+        "native_sha256": "2F4E264A88DBC0715163CB5E85C261D37116351B192BB6A806744B6B5C211F48",
+        "equivalence": "exact-bytes"
+      },
+      {
+        "module": "uep_lyra_hud.nameplate_manager_mixin",
+        "current_sha256": "478B12826CFB78FB6E514877DD16363CCB93A9D038CB163F6D8CABB058C0B216",
+        "native_sha256": "478B12826CFB78FB6E514877DD16363CCB93A9D038CB163F6D8CABB058C0B216",
+        "equivalence": "exact-bytes"
+      },
+      {
+        "module": "uep_lyra_hud.nameplate_messages",
+        "current_sha256": "611EA15AB26E8512AF4D08CD50C786D4D014D4821C6604A36603EDD3BB287466",
+        "native_sha256": "611EA15AB26E8512AF4D08CD50C786D4D014D4821C6604A36603EDD3BB287466",
+        "equivalence": "exact-bytes"
+      },
+      {
+        "module": "uep_lyra_hud.nameplate_mixin",
+        "current_sha256": "2AB7649A04EFCCBDB418A95C1E806B56653123A6E7F150DA654C5715EE208F3A",
+        "native_sha256": "2AB7649A04EFCCBDB418A95C1E806B56653123A6E7F150DA654C5715EE208F3A",
+        "equivalence": "exact-bytes"
+      },
+      {
+        "module": "uep_lyra_hud.nameplate_refs",
+        "current_sha256": "EA092DFAE7C1A5A3CA802A9AC7525EC5E2870197182DFE1DD7F80B1521635400",
+        "native_sha256": "EA092DFAE7C1A5A3CA802A9AC7525EC5E2870197182DFE1DD7F80B1521635400",
+        "equivalence": "exact-bytes"
+      },
+      {
+        "module": "uep_lyra_hud.nameplate_source_mixin",
+        "current_sha256": "9787F9A653F8735BD6305003762F1F004D08261848502C088CC57B0C41F25B14",
+        "native_sha256": "9787F9A653F8735BD6305003762F1F004D08261848502C088CC57B0C41F25B14",
+        "equivalence": "exact-bytes"
+      },
+      {
+        "module": "uep_lyra_hud.open_menu_mixin",
+        "current_sha256": "C5DB44FC48F51A8A4667CF9188B1263F066851B799BE395986A049A9F192821C",
+        "native_sha256": "C5DB44FC48F51A8A4667CF9188B1263F066851B799BE395986A049A9F192821C",
+        "equivalence": "exact-bytes"
+      },
+      {
+        "module": "uep_lyra_hud.pooled_widget_lifetime",
+        "current_sha256": "E41C4480A9C90555F1919B4B3AC240CC12A51D2139F2BF5E4C84282C2D3EEE4A",
+        "native_sha256": "E41C4480A9C90555F1919B4B3AC240CC12A51D2139F2BF5E4C84282C2D3EEE4A",
+        "equivalence": "exact-bytes"
+      },
+      {
+        "module": "uep_lyra_hud.quickbar_slot_mixin",
+        "current_sha256": "B16569DC731DE645B4D26EE730195CCFDF9D2DD5DD0D07EDDBB0D84589CB79FA",
+        "native_sha256": "B16569DC731DE645B4D26EE730195CCFDF9D2DD5DD0D07EDDBB0D84589CB79FA",
+        "equivalence": "exact-bytes"
+      },
+      {
+        "module": "uep_lyra_hud.respawn_timer_mixin",
+        "current_sha256": "A4171F38A7D09A0014B9C57053F3B93AE94F87578DF269E9BFCBDF068C8DBF72",
+        "native_sha256": "A4171F38A7D09A0014B9C57053F3B93AE94F87578DF269E9BFCBDF068C8DBF72",
+        "equivalence": "exact-bytes"
+      },
+      {
+        "module": "uep_lyra_hud.reticle_ammo_mixin",
+        "current_sha256": "E141E2606B7DC4BF518F23B5A0E070A0D650136799CB515A446EBE13D4500E52",
+        "native_sha256": "E141E2606B7DC4BF518F23B5A0E070A0D650136799CB515A446EBE13D4500E52",
+        "equivalence": "exact-bytes"
+      },
+      {
+        "module": "uep_lyra_hud.reticle_host_mixin",
+        "current_sha256": "08B26DAEAAA36E6EA1C2D8CA33913446D6FF02E6EF2A0806360919FCBD693DFB",
+        "native_sha256": "08B26DAEAAA36E6EA1C2D8CA33913446D6FF02E6EF2A0806360919FCBD693DFB",
+        "equivalence": "exact-bytes"
+      },
+      {
+        "module": "uep_lyra_hud.weapon_observer",
+        "current_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+        "native_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+        "equivalence": "exact-bytes"
+      },
+      {
+        "module": "uep_lyra_hud.weapon_reticle_mixin",
+        "current_sha256": "FD590D8C7DA4CDC48724A6CD986AB2FCD3DA392F1CAE91E3CE16597CF332B3A4",
+        "native_sha256": "FD590D8C7DA4CDC48724A6CD986AB2FCD3DA392F1CAE91E3CE16597CF332B3A4",
+        "equivalence": "exact-bytes"
+      },
+      {
+        "module": "uep_lyra_world.effect_pad_mixin",
+        "current_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+        "native_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+        "equivalence": "exact-bytes"
+      },
+      {
+        "module": "uep_lyra_world.grant_ge_pad_mixin",
+        "current_sha256": "554A14D826E21846F264C024C6F9C55368D7C07D45A701077259B8BEBBF0BFE2",
+        "native_sha256": "554A14D826E21846F264C024C6F9C55368D7C07D45A701077259B8BEBBF0BFE2",
+        "equivalence": "exact-bytes"
+      },
+      {
+        "module": "uep_lyra_world.heal_ability_mixin",
+        "current_sha256": "CB62601443A56F0C69E0135EA1E1CE6A3719DAA971FE59E9C16A4F55DED4035D",
+        "native_sha256": "CB62601443A56F0C69E0135EA1E1CE6A3719DAA971FE59E9C16A4F55DED4035D",
+        "equivalence": "exact-bytes"
+      },
+      {
+        "module": "uep_lyra_world.inventory_pad_mixin",
+        "current_sha256": "AB986EF6A1AD673DA4CFDC7ECA867243E23404BD681799184B5E5B6937CE3C5A",
+        "native_sha256": "AB986EF6A1AD673DA4CFDC7ECA867243E23404BD681799184B5E5B6937CE3C5A",
+        "equivalence": "exact-bytes"
+      },
+      {
+        "module": "uep_lyra_world.launcher_mixin",
+        "current_sha256": "5E7E6D811577EB34FFE59E76147736D1305860C56F95E5ADA0B5ABAE0C60549A",
+        "native_sha256": "5E7E6D811577EB34FFE59E76147736D1305860C56F95E5ADA0B5ABAE0C60549A",
+        "equivalence": "exact-bytes"
+      },
+      {
+        "module": "uep_lyra_world.spawner_mixin",
+        "current_sha256": "444A4CAF0A70947ECA96FD81F1654E168730E0C06727778A59738857EAF5C170",
+        "native_sha256": "444A4CAF0A70947ECA96FD81F1654E168730E0C06727778A59738857EAF5C170",
+        "equivalence": "exact-bytes"
+      },
+      {
+        "module": "uep_lyra_world.teleporter_mixin",
+        "current_sha256": "28C3F153AE4A97C7508E9402364A6514DB038C55248150FD3C848EFD1D614A77",
+        "native_sha256": "28C3F153AE4A97C7508E9402364A6514DB038C55248150FD3C848EFD1D614A77",
+        "equivalence": "exact-bytes"
+      }
+    ],
+    "shared_scope_git_provenance": [
+      {
+        "path": "Content/Scripts/uep_runtime/__init__.py",
+        "current_sha256": "53791B6C725DB2DA2A44C5491ADE6C0027A49ACE11FD5CFA976CC786B6821A1A",
+        "core_parent_commit": "00ff90a6854809baf49ce8179342d653cf18d53c",
+        "historical_native_file_hash_claimed": false,
+        "git_parent_source_matches": true
+      },
+      {
+        "path": "Content/Scripts/uep_runtime/subscriptions.py",
+        "current_sha256": "04ED799CE533550A0228FE347670D808729B28C6B23CFE2759246942F532D83B",
+        "core_parent_commit": "00ff90a6854809baf49ce8179342d653cf18d53c",
+        "historical_native_file_hash_claimed": false,
+        "git_parent_source_matches": true
+      },
+      {
+        "path": "Content/Scripts/uep_runtime/__init__.py",
+        "current_sha256": "53791B6C725DB2DA2A44C5491ADE6C0027A49ACE11FD5CFA976CC786B6821A1A",
+        "core_parent_commit": "00ff90a6854809baf49ce8179342d653cf18d53c",
+        "historical_native_file_hash_claimed": false,
+        "git_parent_source_matches": true
+      },
+      {
+        "path": "Content/Scripts/uep_runtime/subscriptions.py",
+        "current_sha256": "04ED799CE533550A0228FE347670D808729B28C6B23CFE2759246942F532D83B",
+        "core_parent_commit": "00ff90a6854809baf49ce8179342d653cf18d53c",
+        "historical_native_file_hash_claimed": false,
+        "git_parent_source_matches": true
+      }
+    ],
+    "native_lifetime_runs": [
+      {
+        "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+        "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/11-inventory-pads.json",
+        "ledger_sha256": "9E4D6D26F82DD94F3072102A29258A32308C2BF07DBA6C2C92ADD9EDA6AEE5CF",
+        "summary_sha256": "9F2E167CDA4F151193F7A7855A8D15181FACAD232C9A51EB328DA1157F8F15AC",
+        "native_peers": [
+          {
+            "peer": "A",
+            "pid": 46596,
+            "exit_code": 0,
+            "report_sha256": "BFCD48199D27814F640AFC0185B4EE3FE605AB64D6AE03863F843D00D6681CB7",
+            "log_sha256": "2C9D5DA9632A5F08ABC3A77B940547A6CF2EACD191D2D4E77A3977650E20C622"
+          },
+          {
+            "peer": "B0",
+            "pid": 6188,
+            "exit_code": 0,
+            "report_sha256": "A35F2174D1D4298CFAA9FAF0316139D008259B3F51D5348926DC9008F1A4F8DE",
+            "log_sha256": "3C20004D6BFDD6DCA0910F3D5210D6EB605BFC135E88FD4168E533BADE1747AF"
+          },
+          {
+            "peer": "B1",
+            "pid": 49188,
+            "exit_code": 0,
+            "report_sha256": "7779365601C319731DFC9579EAD83FD581262E615B55A7E8939CF66C2FDC1E38",
+            "log_sha256": "E41CF5B8D54968FD81E3F4009FEA9D31C0F21CA99B0BB4AB7A0617CEACF1203C"
+          },
+          {
+            "peer": "server",
+            "pid": 49404,
+            "exit_code": 0,
+            "report_sha256": "F7F3D83AAB932DE589F396F1B06E49E1993054D49A1B927167D4C28F2D7157F3",
+            "log_sha256": "661DCA4B95B161935E06C84E4E8A688320D958DFAE854C13D5D9A893FB046EAE"
+          }
+        ],
+        "semantic_gate": {
+          "status": "passed",
+          "phase_count": 19,
+          "clients": 2,
+          "rejoin_tested": true,
+          "real_fire_reload": true,
+          "blueprint_python_native_parity": true,
+          "sampling_source_declared": true,
+          "combat_hud_acceptance": true,
+          "debug_spread_acceptance": true,
+          "production_reticle_acceptance": true,
+          "reticle_host_acceptance": true,
+          "ability_progress_acceptance": true,
+          "ability_failure_acceptance": true,
+          "dash_cooldown_acceptance": true,
+          "respawn_timer_acceptance": true,
+          "quickbar_slots_acceptance": true,
+          "nameplate_acceptance": true,
+          "native_interaction_producer_tested": false,
+          "replicated_duration_message_tested": false,
+          "physical_touch_tested": false
+        },
+        "current_presenter_and_protocol_guards": [
+          {
+            "module": "uep_lyra_ability_failure_protocol",
+            "current_sha256": "FD29D772B8B1FFDE15AF4BA4FBCB037F023B2ADF970D7985A9E0DD15BBFB1297",
+            "native_sha256": "FD29D772B8B1FFDE15AF4BA4FBCB037F023B2ADF970D7985A9E0DD15BBFB1297",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_ability_progress_protocol",
+            "current_sha256": "C73D99FA1D9D62E10205F7C872F41A176CFC862004EE3E218ED26C0C621C5195",
+            "native_sha256": "C73D99FA1D9D62E10205F7C872F41A176CFC862004EE3E218ED26C0C621C5195",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_combat_hud_protocol",
+            "current_sha256": "AEE44FFD50B1187F0F79B57BC50434DED29EB23781326638166FE4F65523304B",
+            "native_sha256": "AEE44FFD50B1187F0F79B57BC50434DED29EB23781326638166FE4F65523304B",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_dash_protocol",
+            "current_sha256": "FD29E55E4EA66A160FBD10F6F90AA91C281356735B29D42182A6ADF49EB76074",
+            "native_sha256": "FD29E55E4EA66A160FBD10F6F90AA91C281356735B29D42182A6ADF49EB76074",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.ability_failure_mixin",
+            "current_sha256": "4AE4A455419E1A044EEDE75475B7E93A106ABBE25B6485F39B34F7307391E60E",
+            "native_sha256": "4AE4A455419E1A044EEDE75475B7E93A106ABBE25B6485F39B34F7307391E60E",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.ammo_mixin",
+            "current_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+            "native_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.healthbar_mixin",
+            "current_sha256": "1EC7619658F7EC697D60183A9280EB1D44CE5279A9725428BADB90A9316A5AC0",
+            "native_sha256": "1EC7619658F7EC697D60183A9280EB1D44CE5279A9725428BADB90A9316A5AC0",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.pooled_widget_lifetime",
+            "current_sha256": "E41C4480A9C90555F1919B4B3AC240CC12A51D2139F2BF5E4C84282C2D3EEE4A",
+            "native_sha256": "E41C4480A9C90555F1919B4B3AC240CC12A51D2139F2BF5E4C84282C2D3EEE4A",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.quickbar_slot_mixin",
+            "current_sha256": "B16569DC731DE645B4D26EE730195CCFDF9D2DD5DD0D07EDDBB0D84589CB79FA",
+            "native_sha256": "B16569DC731DE645B4D26EE730195CCFDF9D2DD5DD0D07EDDBB0D84589CB79FA",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.state",
+            "current_sha256": "D47B5B3387EFF1F1ADCDDD941243E2648D046280F6EED011094FE8E9D5E98136",
+            "native_sha256": "D47B5B3387EFF1F1ADCDDD941243E2648D046280F6EED011094FE8E9D5E98136",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.weapon_observer",
+            "current_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+            "native_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_nameplate_protocol",
+            "current_sha256": "E3CC7CEAE8896BDE22FEA2F73A49941E30A125D9C0AD9EBF078DFD60C467F3F0",
+            "native_sha256": "E3CC7CEAE8896BDE22FEA2F73A49941E30A125D9C0AD9EBF078DFD60C467F3F0",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_network_protocol",
+            "current_sha256": "914B2E12954F8BDA6E597BB270DBCEA7456A53A52CA7B8CF1E8EE904F4FA78A4",
+            "native_sha256": "914B2E12954F8BDA6E597BB270DBCEA7456A53A52CA7B8CF1E8EE904F4FA78A4",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_network_screenshots",
+            "current_sha256": "7846E85E074D6E1F17166F86695F65316DA4E088128BFC5761AC24688BEA4035",
+            "native_sha256": "7846E85E074D6E1F17166F86695F65316DA4E088128BFC5761AC24688BEA4035",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_quickbar_protocol",
+            "current_sha256": "5E119C05D1A8DC04477FDDF146133A23D136F7B29948A16DEA1231E311655FA0",
+            "native_sha256": "5E119C05D1A8DC04477FDDF146133A23D136F7B29948A16DEA1231E311655FA0",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_respawn_protocol",
+            "current_sha256": "A4424A92739B208BDEB18EDDBFE6528D76824BE9DDE389F36E9C8F668E3CFEAE",
+            "native_sha256": "A4424A92739B208BDEB18EDDBFE6528D76824BE9DDE389F36E9C8F668E3CFEAE",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_weapon_protocol",
+            "current_sha256": "B99D9D31E7DBF523598D5B82D98A2802825B565EB6A26FD710CB48BE96B156FE",
+            "native_sha256": "B99D9D31E7DBF523598D5B82D98A2802825B565EB6A26FD710CB48BE96B156FE",
+            "equivalence": "exact-bytes"
+          }
+        ],
+        "native_processes": 4,
+        "policy_modules": [
+          "uep_lyra_hud.healthbar_mixin",
+          "uep_lyra_hud.ability_failure_mixin",
+          "uep_lyra_hud.quickbar_slot_mixin",
+          "uep_lyra_weapon_protocol"
+        ],
+        "current_source_guards": [
+          {
+            "module": "uep_lyra_hud.ability_failure_mixin",
+            "current_sha256": "4AE4A455419E1A044EEDE75475B7E93A106ABBE25B6485F39B34F7307391E60E",
+            "native_sha256": "4AE4A455419E1A044EEDE75475B7E93A106ABBE25B6485F39B34F7307391E60E",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.ability_progress_mixin",
+            "current_sha256": "4F350AFD42C20185CC78446EE1A2EC272C8BDB4C116935DBA91A3C092D483C77",
+            "native_sha256": "4F350AFD42C20185CC78446EE1A2EC272C8BDB4C116935DBA91A3C092D483C77",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.action_touch_mixin",
+            "current_sha256": "6DD3DDD8FCC1587BB98EB64989940371B348690C815E187C631AA8DBB017CE72",
+            "native_sha256": "6DD3DDD8FCC1587BB98EB64989940371B348690C815E187C631AA8DBB017CE72",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.ammo_mixin",
+            "current_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+            "native_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.dash_cooldown_mixin",
+            "current_sha256": "73547C9D51067FF3533F0AED2039CE030BFADF729C647A9DD5579FE40342012B",
+            "native_sha256": "73547C9D51067FF3533F0AED2039CE030BFADF729C647A9DD5579FE40342012B",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.debug_spread_mixin",
+            "current_sha256": "47BE4BB43E302DE3A4C7944DEAFC47D58ACE3093C77E270733A894B58397746B",
+            "native_sha256": "47BE4BB43E302DE3A4C7944DEAFC47D58ACE3093C77E270733A894B58397746B",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.fire_button_mixin",
+            "current_sha256": "2F4E264A88DBC0715163CB5E85C261D37116351B192BB6A806744B6B5C211F48",
+            "native_sha256": "2F4E264A88DBC0715163CB5E85C261D37116351B192BB6A806744B6B5C211F48",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.nameplate_manager_mixin",
+            "current_sha256": "478B12826CFB78FB6E514877DD16363CCB93A9D038CB163F6D8CABB058C0B216",
+            "native_sha256": "478B12826CFB78FB6E514877DD16363CCB93A9D038CB163F6D8CABB058C0B216",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.nameplate_messages",
+            "current_sha256": "611EA15AB26E8512AF4D08CD50C786D4D014D4821C6604A36603EDD3BB287466",
+            "native_sha256": "611EA15AB26E8512AF4D08CD50C786D4D014D4821C6604A36603EDD3BB287466",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.nameplate_mixin",
+            "current_sha256": "2AB7649A04EFCCBDB418A95C1E806B56653123A6E7F150DA654C5715EE208F3A",
+            "native_sha256": "2AB7649A04EFCCBDB418A95C1E806B56653123A6E7F150DA654C5715EE208F3A",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.nameplate_refs",
+            "current_sha256": "EA092DFAE7C1A5A3CA802A9AC7525EC5E2870197182DFE1DD7F80B1521635400",
+            "native_sha256": "EA092DFAE7C1A5A3CA802A9AC7525EC5E2870197182DFE1DD7F80B1521635400",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.nameplate_source_mixin",
+            "current_sha256": "9787F9A653F8735BD6305003762F1F004D08261848502C088CC57B0C41F25B14",
+            "native_sha256": "9787F9A653F8735BD6305003762F1F004D08261848502C088CC57B0C41F25B14",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.open_menu_mixin",
+            "current_sha256": "C5DB44FC48F51A8A4667CF9188B1263F066851B799BE395986A049A9F192821C",
+            "native_sha256": "C5DB44FC48F51A8A4667CF9188B1263F066851B799BE395986A049A9F192821C",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.pooled_widget_lifetime",
+            "current_sha256": "E41C4480A9C90555F1919B4B3AC240CC12A51D2139F2BF5E4C84282C2D3EEE4A",
+            "native_sha256": "E41C4480A9C90555F1919B4B3AC240CC12A51D2139F2BF5E4C84282C2D3EEE4A",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.quickbar_slot_mixin",
+            "current_sha256": "B16569DC731DE645B4D26EE730195CCFDF9D2DD5DD0D07EDDBB0D84589CB79FA",
+            "native_sha256": "B16569DC731DE645B4D26EE730195CCFDF9D2DD5DD0D07EDDBB0D84589CB79FA",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.respawn_timer_mixin",
+            "current_sha256": "A4171F38A7D09A0014B9C57053F3B93AE94F87578DF269E9BFCBDF068C8DBF72",
+            "native_sha256": "A4171F38A7D09A0014B9C57053F3B93AE94F87578DF269E9BFCBDF068C8DBF72",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.reticle_ammo_mixin",
+            "current_sha256": "E141E2606B7DC4BF518F23B5A0E070A0D650136799CB515A446EBE13D4500E52",
+            "native_sha256": "E141E2606B7DC4BF518F23B5A0E070A0D650136799CB515A446EBE13D4500E52",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.reticle_host_mixin",
+            "current_sha256": "08B26DAEAAA36E6EA1C2D8CA33913446D6FF02E6EF2A0806360919FCBD693DFB",
+            "native_sha256": "08B26DAEAAA36E6EA1C2D8CA33913446D6FF02E6EF2A0806360919FCBD693DFB",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.weapon_observer",
+            "current_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+            "native_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.weapon_reticle_mixin",
+            "current_sha256": "FD590D8C7DA4CDC48724A6CD986AB2FCD3DA392F1CAE91E3CE16597CF332B3A4",
+            "native_sha256": "FD590D8C7DA4CDC48724A6CD986AB2FCD3DA392F1CAE91E3CE16597CF332B3A4",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_world.effect_pad_mixin",
+            "current_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+            "native_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_world.grant_ge_pad_mixin",
+            "current_sha256": "554A14D826E21846F264C024C6F9C55368D7C07D45A701077259B8BEBBF0BFE2",
+            "native_sha256": "554A14D826E21846F264C024C6F9C55368D7C07D45A701077259B8BEBBF0BFE2",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_world.heal_ability_mixin",
+            "current_sha256": "CB62601443A56F0C69E0135EA1E1CE6A3719DAA971FE59E9C16A4F55DED4035D",
+            "native_sha256": "CB62601443A56F0C69E0135EA1E1CE6A3719DAA971FE59E9C16A4F55DED4035D",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_world.inventory_pad_mixin",
+            "current_sha256": "AB986EF6A1AD673DA4CFDC7ECA867243E23404BD681799184B5E5B6937CE3C5A",
+            "native_sha256": "AB986EF6A1AD673DA4CFDC7ECA867243E23404BD681799184B5E5B6937CE3C5A",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_world.launcher_mixin",
+            "current_sha256": "5E7E6D811577EB34FFE59E76147736D1305860C56F95E5ADA0B5ABAE0C60549A",
+            "native_sha256": "5E7E6D811577EB34FFE59E76147736D1305860C56F95E5ADA0B5ABAE0C60549A",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_world.spawner_mixin",
+            "current_sha256": "444A4CAF0A70947ECA96FD81F1654E168730E0C06727778A59738857EAF5C170",
+            "native_sha256": "444A4CAF0A70947ECA96FD81F1654E168730E0C06727778A59738857EAF5C170",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_world.teleporter_mixin",
+            "current_sha256": "28C3F153AE4A97C7508E9402364A6514DB038C55248150FD3C848EFD1D614A77",
+            "native_sha256": "28C3F153AE4A97C7508E9402364A6514DB038C55248150FD3C848EFD1D614A77",
+            "equivalence": "exact-bytes"
+          }
+        ],
+        "lifetime_cleanup": [
+          {
+            "peer": "A",
+            "owning_groups": 11,
+            "active_owned_subscriptions": 0
+          },
+          {
+            "peer": "B0",
+            "owning_groups": 11,
+            "active_owned_subscriptions": 0
+          },
+          {
+            "peer": "B1",
+            "owning_groups": 11,
+            "active_owned_subscriptions": 0
+          },
+          {
+            "peer": "server",
+            "owning_groups": 11,
+            "active_owned_subscriptions": 0
+          }
+        ],
+        "lifetime_boundaries": [
+          "two-actual-travels",
+          "pawn-replacement",
+          "client-exit",
+          "rejoin",
+          "shutdown"
+        ],
+        "actual_travel_tested": true
+      },
+      {
+        "directory": ".build/LyraValidation/BlueprintPython/20261026-widget-actor-lifetime/TouchNetwork01",
+        "summary_sha256": "9F8C0AB11CEFB48D1AA6229FCEE20672BBC12FC153919484F8F96DBF4E971546",
+        "native_peers": [
+          {
+            "peer": "server",
+            "pid": 43500,
+            "exit_code": 0,
+            "report_sha256": "FA701CEDAD9334F0F07D3AEE3424727AFD6CA4545C2E810CECFBC849AF74C856",
+            "log_sha256": "35D0AE3011CB7266F811D0E008C52CAE6107D5F2013881E787C3292310E08C55"
+          },
+          {
+            "peer": "A",
+            "pid": 15972,
+            "exit_code": 0,
+            "report_sha256": "BDE5456BDDE3680737DF5A202D46C9D92E13BD0525CDDC0B58F4AE20BC46FC33",
+            "log_sha256": "58083FEECACB3D55F871EC8CD0BFBC5690D87DA86F09B81AF70208217D57F357"
+          },
+          {
+            "peer": "B0",
+            "pid": 37392,
+            "exit_code": 0,
+            "report_sha256": "41C09498A815C97247D480B220C77D3D6A98DD405113DA69A53CFDB7B2A958B8",
+            "log_sha256": "11A16AE7919F1E7DC8CCF96FD92F7C444C4F80A05D84CC134D41FEF3773CBB27"
+          }
+        ],
+        "semantic_gate": {
+          "status": "passed",
+          "phases": 8,
+          "clients": 2,
+          "run_id": "ea0773c8d31e4e5f9a5f9fad87cbe62b",
+          "native_action_touch_two_owner_local_message_lifetime": true,
+          "gameplay_message_network_replication": false,
+          "full_acceptance": false
+        },
+        "current_source_guards": [
+          {
+            "module": "uep_lyra_hud.ability_failure_mixin",
+            "current_sha256": "4AE4A455419E1A044EEDE75475B7E93A106ABBE25B6485F39B34F7307391E60E",
+            "native_sha256": "4AE4A455419E1A044EEDE75475B7E93A106ABBE25B6485F39B34F7307391E60E",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.ability_progress_mixin",
+            "current_sha256": "4F350AFD42C20185CC78446EE1A2EC272C8BDB4C116935DBA91A3C092D483C77",
+            "native_sha256": "4F350AFD42C20185CC78446EE1A2EC272C8BDB4C116935DBA91A3C092D483C77",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.action_touch_contract",
+            "current_sha256": "F0350CEF3D06F1ABD4E9305694DF95D8BF8D09B498B7482908C65F0101E30387",
+            "native_sha256": "F0350CEF3D06F1ABD4E9305694DF95D8BF8D09B498B7482908C65F0101E30387",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.action_touch_mixin",
+            "current_sha256": "6DD3DDD8FCC1587BB98EB64989940371B348690C815E187C631AA8DBB017CE72",
+            "native_sha256": "6DD3DDD8FCC1587BB98EB64989940371B348690C815E187C631AA8DBB017CE72",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.action_touch_network_protocol",
+            "current_sha256": "610DCAA03C2D189C979894D9B4409EF73B29E96E61035903BBA3F59B92A777C2",
+            "native_sha256": "610DCAA03C2D189C979894D9B4409EF73B29E96E61035903BBA3F59B92A777C2",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.action_touch_network_validation",
+            "current_sha256": "40C8F7057AC32C2A56AC64E2876CB03B3442E355417E13C533EF03E83212697C",
+            "native_sha256": "40C8F7057AC32C2A56AC64E2876CB03B3442E355417E13C533EF03E83212697C",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.ammo_mixin",
+            "current_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+            "native_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.dash_cooldown_mixin",
+            "current_sha256": "73547C9D51067FF3533F0AED2039CE030BFADF729C647A9DD5579FE40342012B",
+            "native_sha256": "73547C9D51067FF3533F0AED2039CE030BFADF729C647A9DD5579FE40342012B",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.nameplate_manager_mixin",
+            "current_sha256": "478B12826CFB78FB6E514877DD16363CCB93A9D038CB163F6D8CABB058C0B216",
+            "native_sha256": "478B12826CFB78FB6E514877DD16363CCB93A9D038CB163F6D8CABB058C0B216",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.nameplate_messages",
+            "current_sha256": "611EA15AB26E8512AF4D08CD50C786D4D014D4821C6604A36603EDD3BB287466",
+            "native_sha256": "611EA15AB26E8512AF4D08CD50C786D4D014D4821C6604A36603EDD3BB287466",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.nameplate_mixin",
+            "current_sha256": "2AB7649A04EFCCBDB418A95C1E806B56653123A6E7F150DA654C5715EE208F3A",
+            "native_sha256": "2AB7649A04EFCCBDB418A95C1E806B56653123A6E7F150DA654C5715EE208F3A",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.nameplate_refs",
+            "current_sha256": "EA092DFAE7C1A5A3CA802A9AC7525EC5E2870197182DFE1DD7F80B1521635400",
+            "native_sha256": "EA092DFAE7C1A5A3CA802A9AC7525EC5E2870197182DFE1DD7F80B1521635400",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.nameplate_source_mixin",
+            "current_sha256": "9787F9A653F8735BD6305003762F1F004D08261848502C088CC57B0C41F25B14",
+            "native_sha256": "9787F9A653F8735BD6305003762F1F004D08261848502C088CC57B0C41F25B14",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.pooled_widget_lifetime",
+            "current_sha256": "E41C4480A9C90555F1919B4B3AC240CC12A51D2139F2BF5E4C84282C2D3EEE4A",
+            "native_sha256": "E41C4480A9C90555F1919B4B3AC240CC12A51D2139F2BF5E4C84282C2D3EEE4A",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.quickbar_slot_mixin",
+            "current_sha256": "B16569DC731DE645B4D26EE730195CCFDF9D2DD5DD0D07EDDBB0D84589CB79FA",
+            "native_sha256": "B16569DC731DE645B4D26EE730195CCFDF9D2DD5DD0D07EDDBB0D84589CB79FA",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.respawn_timer_mixin",
+            "current_sha256": "A4171F38A7D09A0014B9C57053F3B93AE94F87578DF269E9BFCBDF068C8DBF72",
+            "native_sha256": "A4171F38A7D09A0014B9C57053F3B93AE94F87578DF269E9BFCBDF068C8DBF72",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.reticle_host_mixin",
+            "current_sha256": "08B26DAEAAA36E6EA1C2D8CA33913446D6FF02E6EF2A0806360919FCBD693DFB",
+            "native_sha256": "08B26DAEAAA36E6EA1C2D8CA33913446D6FF02E6EF2A0806360919FCBD693DFB",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.shutdown_validation",
+            "current_sha256": "6B716B8439C3A132BBEABB62D4A32ED87B4FC70480E87C1A05BA8833BB9FA0E3",
+            "native_sha256": "6B716B8439C3A132BBEABB62D4A32ED87B4FC70480E87C1A05BA8833BB9FA0E3",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.state",
+            "current_sha256": "D47B5B3387EFF1F1ADCDDD941243E2648D046280F6EED011094FE8E9D5E98136",
+            "native_sha256": "D47B5B3387EFF1F1ADCDDD941243E2648D046280F6EED011094FE8E9D5E98136",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.weapon_observer",
+            "current_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+            "native_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.weapon_reticle_mixin",
+            "current_sha256": "FD590D8C7DA4CDC48724A6CD986AB2FCD3DA392F1CAE91E3CE16597CF332B3A4",
+            "native_sha256": "FD590D8C7DA4CDC48724A6CD986AB2FCD3DA392F1CAE91E3CE16597CF332B3A4",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_nameplate_protocol",
+            "current_sha256": "E3CC7CEAE8896BDE22FEA2F73A49941E30A125D9C0AD9EBF078DFD60C467F3F0",
+            "native_sha256": "E3CC7CEAE8896BDE22FEA2F73A49941E30A125D9C0AD9EBF078DFD60C467F3F0",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_network",
+            "current_sha256": "90AF80FE9F3864CD4F1C1411E51C579FFA3F2417EE7DACDE3680B2CE2746F8A1",
+            "native_sha256": "90AF80FE9F3864CD4F1C1411E51C579FFA3F2417EE7DACDE3680B2CE2746F8A1",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_network_bots",
+            "current_sha256": "FFBDB6CC3736A3DF21E5532C373EE765FC990813A24DB2664722D5CCF01D4B97",
+            "native_sha256": "FFBDB6CC3736A3DF21E5532C373EE765FC990813A24DB2664722D5CCF01D4B97",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_network_io",
+            "current_sha256": "7BBCCCF018CFA4BC696B78850E3B7C18482A4C8E94469FB88109B5CE551D9D95",
+            "native_sha256": "7BBCCCF018CFA4BC696B78850E3B7C18482A4C8E94469FB88109B5CE551D9D95",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_network_protocol",
+            "current_sha256": "914B2E12954F8BDA6E597BB270DBCEA7456A53A52CA7B8CF1E8EE904F4FA78A4",
+            "native_sha256": "914B2E12954F8BDA6E597BB270DBCEA7456A53A52CA7B8CF1E8EE904F4FA78A4",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_probe",
+            "current_sha256": "2851E6272A1665ABE7753BCC9A22E39D09835DC2123CBD9CF114060D9FB855AD",
+            "native_sha256": "2851E6272A1665ABE7753BCC9A22E39D09835DC2123CBD9CF114060D9FB855AD",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_world.effect_pad_mixin",
+            "current_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+            "native_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_world.effect_pad_network_protocol",
+            "current_sha256": "A72296147DA82238EAEA60D360CC4704FC06A019235D280C93835B3FF5A8ABF0",
+            "native_sha256": "A72296147DA82238EAEA60D360CC4704FC06A019235D280C93835B3FF5A8ABF0",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_world.effect_pad_network_validation",
+            "current_sha256": "1079711515A1C0228165FC3F8EEDEDB77F3185C18684C807C69C6CEE8AFC10A2",
+            "native_sha256": "1079711515A1C0228165FC3F8EEDEDB77F3185C18684C807C69C6CEE8AFC10A2",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_world.heal_ability_mixin",
+            "current_sha256": "CB62601443A56F0C69E0135EA1E1CE6A3719DAA971FE59E9C16A4F55DED4035D",
+            "native_sha256": "CB62601443A56F0C69E0135EA1E1CE6A3719DAA971FE59E9C16A4F55DED4035D",
+            "equivalence": "exact-bytes"
+          }
+        ],
+        "native_processes": 3,
+        "frozen_native_inputs": 2542,
+        "lifetime_boundaries": [
+          "unmount",
+          "reconstruct",
+          "profile-round-trip",
+          "shutdown"
+        ],
+        "actual_travel_tested": false,
+        "physical_touch_tested": false
+      },
+      {
+        "directory": ".build/LyraValidation/BlueprintPython/20261026-widget-actor-lifetime/HealStandalone01",
+        "summary_sha256": "6437A5A1CB4C223E1F4B18E43CC60A9977FC68DB79A9C34E7CEE909DC41D65F3",
+        "native_peers": [
+          {
+            "peer": "Standalone",
+            "pid": 4856,
+            "exit_code": 0,
+            "report_sha256": "5525B3A05CDE155A6211568BC8DBCC75FFE0C669A95E2F79429E11A550296E9A",
+            "log_sha256": "EBBB572B13A10F513C41EE7A07DCF24FA85B5AC983BA339E5BF25C36BB1077EF"
+          }
+        ],
+        "semantic_gate": {
+          "status": "passed",
+          "bounded_runtime_acceptance": true,
+          "cases": 7,
+          "network_acceptance": false
+        },
+        "current_source_guards": [
+          {
+            "module": "uep_lyra_hud.ammo_mixin",
+            "current_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+            "native_sha256": "F51DD7E57550B71CE771A395747804209D1FCB84089592F9AEBC657281F8954D",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_hud.weapon_observer",
+            "current_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+            "native_sha256": "E027CED3EDC43EE9CFD1328DB4E6367F3E85A3EE3C51D008DED15618FFEB1D1B",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_network_bots",
+            "current_sha256": "FFBDB6CC3736A3DF21E5532C373EE765FC990813A24DB2664722D5CCF01D4B97",
+            "native_sha256": "FFBDB6CC3736A3DF21E5532C373EE765FC990813A24DB2664722D5CCF01D4B97",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_weapon_input",
+            "current_sha256": "2E0D77AD980BFFEBA05B9F5771E5BD2AA258C29D597D25718C19B045F6301AB1",
+            "native_sha256": "2E0D77AD980BFFEBA05B9F5771E5BD2AA258C29D597D25718C19B045F6301AB1",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_world.effect_pad_mixin",
+            "current_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+            "native_sha256": "B923B16AFA4B68139750536ADA2F5671C6F6B872AE17BEA9D72BF9698D264F29",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_world.heal_ability_contract",
+            "current_sha256": "97B5B916A9056CB4EC67C2EC8C5158598050F8C11456CD50BB95A2DC88687B9F",
+            "native_sha256": "97B5B916A9056CB4EC67C2EC8C5158598050F8C11456CD50BB95A2DC88687B9F",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_world.heal_ability_mixin",
+            "current_sha256": "CB62601443A56F0C69E0135EA1E1CE6A3719DAA971FE59E9C16A4F55DED4035D",
+            "native_sha256": "CB62601443A56F0C69E0135EA1E1CE6A3719DAA971FE59E9C16A4F55DED4035D",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_world.heal_ability_validation",
+            "current_sha256": "AC7DC0254C9AAB594249696328CBA5585F8520AED16117051D9DF01B917133A4",
+            "native_sha256": "AC7DC0254C9AAB594249696328CBA5585F8520AED16117051D9DF01B917133A4",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_world.inventory_pad_mixin",
+            "current_sha256": "AB986EF6A1AD673DA4CFDC7ECA867243E23404BD681799184B5E5B6937CE3C5A",
+            "native_sha256": "AB986EF6A1AD673DA4CFDC7ECA867243E23404BD681799184B5E5B6937CE3C5A",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_world.inventory_pad_player_contract",
+            "current_sha256": "3C5C9A75CE1320F5CBC2D55A19621402D2BDBBB26FB94C29808D813E7BA193FA",
+            "native_sha256": "3C5C9A75CE1320F5CBC2D55A19621402D2BDBBB26FB94C29808D813E7BA193FA",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_world.inventory_pad_player_validation",
+            "current_sha256": "01F1335BEE59658D31AF85AEB584BAE1CE3122EDC3D102A82A4BABF7CF012B2D",
+            "native_sha256": "01F1335BEE59658D31AF85AEB584BAE1CE3122EDC3D102A82A4BABF7CF012B2D",
+            "equivalence": "exact-bytes"
+          },
+          {
+            "module": "uep_lyra_world.launcher_contract",
+            "current_sha256": "CFF2FCAA69103823210C7019704AF9676736CFBFACB3E603F13D738C76752EA8",
+            "native_sha256": "CFF2FCAA69103823210C7019704AF9676736CFBFACB3E603F13D738C76752EA8",
+            "equivalence": "exact-bytes"
+          }
+        ],
+        "frozen_native_inputs": 2559,
+        "native_processes": 1,
+        "lifetime_boundaries": [
+          "montage-end",
+          "native-cancel",
+          "native-interrupt",
+          "native-timer",
+          "paused-world-time",
+          "active-profile-switch",
+          "external-native-end",
+          "shutdown"
+        ],
+        "actual_travel_tested": false
+      }
+    ],
+    "native_lifetime_runs_revalidated": 3,
+    "referenced_lifetime_processes": 8,
+    "fresh_native_processes": 4,
+    "owned_candidate_asset_guards": [
+      {
+        "asset": "/Game/UI/Hud/W_ActionTouchButton.W_ActionTouchButton",
+        "policy_module": "uep_lyra_hud.action_touch_mixin",
+        "guards": [
+          {
+            "asset": "/Game/UI/Hud/W_ActionTouchButton.W_ActionTouchButton",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UI\\Hud\\W_ActionTouchButton.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261026-widget-actor-lifetime/TouchNetwork01",
+                "current_sha256": "7EEC65015904C1EBDFC14DA237313E2F684A0F647CF01C59FD221060200A0A37",
+                "native_sha256": "7EEC65015904C1EBDFC14DA237313E2F684A0F647CF01C59FD221060200A0A37",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          },
+          {
+            "asset": "/Game/UEPMixins/DA_ActionTouchMixin.DA_ActionTouchMixin",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ActionTouchMixin.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261026-widget-actor-lifetime/TouchNetwork01",
+                "current_sha256": "DAE7CA6FE8786EE6794862F1636B6BEFDFC590F64EE13507CB6EB9E584DE79BC",
+                "native_sha256": "DAE7CA6FE8786EE6794862F1636B6BEFDFC590F64EE13507CB6EB9E584DE79BC",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "asset": "/Game/UI/Hud/W_ActionTouchButton_MobileOnly.W_ActionTouchButton_MobileOnly",
+        "policy_module": "uep_lyra_hud.action_touch_mixin",
+        "guards": [
+          {
+            "asset": "/Game/UI/Hud/W_ActionTouchButton_MobileOnly.W_ActionTouchButton_MobileOnly",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UI\\Hud\\W_ActionTouchButton_MobileOnly.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261026-widget-actor-lifetime/TouchNetwork01",
+                "current_sha256": "CB312931A5DA5454EF3CE7D86F93EA5F97403E978CA4DCCD7FF3EFBD11444AE1",
+                "native_sha256": "CB312931A5DA5454EF3CE7D86F93EA5F97403E978CA4DCCD7FF3EFBD11444AE1",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          },
+          {
+            "asset": "/Game/UEPMixins/DA_ActionTouchMixin.DA_ActionTouchMixin",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_ActionTouchMixin.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261026-widget-actor-lifetime/TouchNetwork01",
+                "current_sha256": "DAE7CA6FE8786EE6794862F1636B6BEFDFC590F64EE13507CB6EB9E584DE79BC",
+                "native_sha256": "DAE7CA6FE8786EE6794862F1636B6BEFDFC590F64EE13507CB6EB9E584DE79BC",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "asset": "/Game/UI/Indicators/NameplateManagerComponent.NameplateManagerComponent",
+        "policy_module": "uep_lyra_hud.nameplate_manager_mixin",
+        "guards": [
+          {
+            "asset": "/Game/UI/Indicators/NameplateManagerComponent.NameplateManagerComponent",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UI\\Indicators\\NameplateManagerComponent.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+                "current_sha256": "24538F8EB0BDD0701D3C270E659381B3F6B54215B6A842573AAE7217B38817BB",
+                "native_sha256": "24538F8EB0BDD0701D3C270E659381B3F6B54215B6A842573AAE7217B38817BB",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          },
+          {
+            "asset": "/Game/UEPMixins/DA_NameplateManagerComponentMixin.DA_NameplateManagerComponentMixin",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_NameplateManagerComponentMixin.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+                "current_sha256": "3960A2D37C9F71FF1A92383485EFE02717C9C74C0CFB2FEC2A01B5063461C02C",
+                "native_sha256": "3960A2D37C9F71FF1A92383485EFE02717C9C74C0CFB2FEC2A01B5063461C02C",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "asset": "/Game/UI/Indicators/NameplateSource.NameplateSource",
+        "policy_module": "uep_lyra_hud.nameplate_source_mixin",
+        "guards": [
+          {
+            "asset": "/Game/UI/Indicators/NameplateSource.NameplateSource",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UI\\Indicators\\NameplateSource.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+                "current_sha256": "C3D7E12E323D4D42951F506B3DB9CF9C01134B91F007835D4C08CDAF46F3433A",
+                "native_sha256": "C3D7E12E323D4D42951F506B3DB9CF9C01134B91F007835D4C08CDAF46F3433A",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          },
+          {
+            "asset": "/Game/UEPMixins/DA_NameplateSourceMixin.DA_NameplateSourceMixin",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_NameplateSourceMixin.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+                "current_sha256": "0F1130F73914EE52970DA0742ACE521547B400DA872013F076F3429B09BDACF2",
+                "native_sha256": "0F1130F73914EE52970DA0742ACE521547B400DA872013F076F3429B09BDACF2",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "asset": "/Game/UI/Indicators/W_Nameplate.W_Nameplate",
+        "policy_module": "uep_lyra_hud.nameplate_mixin",
+        "guards": [
+          {
+            "asset": "/Game/UI/Indicators/W_Nameplate.W_Nameplate",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UI\\Indicators\\W_Nameplate.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+                "current_sha256": "C2C068B40B253894CC7252813CB43046DEFBFFA0A5A9C399CAD72193CBF34D72",
+                "native_sha256": "C2C068B40B253894CC7252813CB43046DEFBFFA0A5A9C399CAD72193CBF34D72",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          },
+          {
+            "asset": "/Game/UEPMixins/DA_W_NameplateMixin.DA_W_NameplateMixin",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_W_NameplateMixin.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+                "current_sha256": "9D77D63860E2E638C4A1592DE99D9BBF198AC91ADC31E21920A7BE7A9E721B04",
+                "native_sha256": "9D77D63860E2E638C4A1592DE99D9BBF198AC91ADC31E21920A7BE7A9E721B04",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "asset": "/ShooterCore/Game/Dash/W_DashCooldown.W_DashCooldown",
+        "policy_module": "uep_lyra_hud.dash_cooldown_mixin",
+        "guards": [
+          {
+            "asset": "/ShooterCore/Game/Dash/W_DashCooldown.W_DashCooldown",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Game\\Dash\\W_DashCooldown.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+                "current_sha256": "41F095E0F3335C1229E9F3AC1170BFFB2EE1834E31E02B0AE447550BCAE3439C",
+                "native_sha256": "41F095E0F3335C1229E9F3AC1170BFFB2EE1834E31E02B0AE447550BCAE3439C",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          },
+          {
+            "asset": "/Game/UEPMixins/DA_W_DashCooldownMixin.DA_W_DashCooldownMixin",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_W_DashCooldownMixin.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+                "current_sha256": "E1CDC080A982E2533272BA0BB3ACA1F1F238006D7C432C35E2B7CE2B5F9A3AD8",
+                "native_sha256": "E1CDC080A982E2533272BA0BB3ACA1F1F238006D7C432C35E2B7CE2B5F9A3AD8",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "asset": "/ShooterCore/Game/Respawn/W_RespawnTimer.W_RespawnTimer",
+        "policy_module": "uep_lyra_hud.respawn_timer_mixin",
+        "guards": [
+          {
+            "asset": "/ShooterCore/Game/Respawn/W_RespawnTimer.W_RespawnTimer",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Game\\Respawn\\W_RespawnTimer.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+                "current_sha256": "81D8F5EF6FBB0206312ED2E48B01DD5FB03AAA28C8490C6859EA3373C0FECBF3",
+                "native_sha256": "81D8F5EF6FBB0206312ED2E48B01DD5FB03AAA28C8490C6859EA3373C0FECBF3",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          },
+          {
+            "asset": "/Game/UEPMixins/DA_W_RespawnTimerMixin.DA_W_RespawnTimerMixin",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_W_RespawnTimerMixin.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+                "current_sha256": "F839905A8A7C17388488B5D05E87583D7B257AA7A3BE255BE8A8D54981E628A0",
+                "native_sha256": "F839905A8A7C17388488B5D05E87583D7B257AA7A3BE255BE8A8D54981E628A0",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "asset": "/ShooterCore/UserInterface/HUD/W_AbilityFailureFeedback.W_AbilityFailureFeedback",
+        "policy_module": "uep_lyra_hud.ability_failure_mixin",
+        "guards": [
+          {
+            "asset": "/ShooterCore/UserInterface/HUD/W_AbilityFailureFeedback.W_AbilityFailureFeedback",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\UserInterface\\HUD\\W_AbilityFailureFeedback.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+                "current_sha256": "0EA52167942CC59FE53114F6E69E9C9D8064C40BE3B2BD1B0CD95B2E57AA2D3D",
+                "native_sha256": "0EA52167942CC59FE53114F6E69E9C9D8064C40BE3B2BD1B0CD95B2E57AA2D3D",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          },
+          {
+            "asset": "/Game/UEPMixins/DA_W_AbilityFailureFeedbackMixin.DA_W_AbilityFailureFeedbackMixin",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_W_AbilityFailureFeedbackMixin.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+                "current_sha256": "32AB08F64B5E48DF2DD85DF31111DFC85CAEA46D2FC8701AECAB82F0A1D772F2",
+                "native_sha256": "32AB08F64B5E48DF2DD85DF31111DFC85CAEA46D2FC8701AECAB82F0A1D772F2",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "asset": "/ShooterCore/UserInterface/HUD/W_AbilityProgress.W_AbilityProgress",
+        "policy_module": "uep_lyra_hud.ability_progress_mixin",
+        "guards": [
+          {
+            "asset": "/ShooterCore/UserInterface/HUD/W_AbilityProgress.W_AbilityProgress",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\UserInterface\\HUD\\W_AbilityProgress.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+                "current_sha256": "3B801C31897C9125815F9F53D9D23C949D1D2623337E017BD00F7CFE9F60D462",
+                "native_sha256": "3B801C31897C9125815F9F53D9D23C949D1D2623337E017BD00F7CFE9F60D462",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          },
+          {
+            "asset": "/Game/UEPMixins/DA_W_AbilityProgressMixin.DA_W_AbilityProgressMixin",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_W_AbilityProgressMixin.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+                "current_sha256": "87DBC01B4134FC1F72B111BE7E897713540478FB972FC343DF28350FB4E5BEFC",
+                "native_sha256": "87DBC01B4134FC1F72B111BE7E897713540478FB972FC343DF28350FB4E5BEFC",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "asset": "/ShooterCore/UserInterface/HUD/W_QuickBarSlot.W_QuickBarSlot",
+        "policy_module": "uep_lyra_hud.quickbar_slot_mixin",
+        "guards": [
+          {
+            "asset": "/ShooterCore/UserInterface/HUD/W_QuickBarSlot.W_QuickBarSlot",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\UserInterface\\HUD\\W_QuickBarSlot.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+                "current_sha256": "3BBCF27A5F829F9FEB65CF39C2BA24AD6FFB9EFA576EA2FE1091645C3A6CBAE3",
+                "native_sha256": "3BBCF27A5F829F9FEB65CF39C2BA24AD6FFB9EFA576EA2FE1091645C3A6CBAE3",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          },
+          {
+            "asset": "/Game/UEPMixins/DA_W_QuickBarSlotMixin.DA_W_QuickBarSlotMixin",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_W_QuickBarSlotMixin.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+                "current_sha256": "1B04571A025E8562E95FC4A968E26D4C1022511195F3E378205EFCD3355F7BBD",
+                "native_sha256": "1B04571A025E8562E95FC4A968E26D4C1022511195F3E378205EFCD3355F7BBD",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "asset": "/ShooterCore/UserInterface/HUD/W_Reticle_AmmoBar.W_Reticle_AmmoBar",
+        "policy_module": "uep_lyra_hud.reticle_ammo_mixin",
+        "guards": [
+          {
+            "asset": "/ShooterCore/UserInterface/HUD/W_Reticle_AmmoBar.W_Reticle_AmmoBar",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\UserInterface\\HUD\\W_Reticle_AmmoBar.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+                "current_sha256": "2A13A3124403AFD21A5DF7C34AAFD67C0083C63F3341EB168578EE731D421713",
+                "native_sha256": "2A13A3124403AFD21A5DF7C34AAFD67C0083C63F3341EB168578EE731D421713",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          },
+          {
+            "asset": "/Game/UEPMixins/DA_W_Reticle_AmmoBarMixin.DA_W_Reticle_AmmoBarMixin",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_W_Reticle_AmmoBarMixin.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+                "current_sha256": "AD530A96991B02B746CEA3140A42A6B66EA36458E370BF5C7F62D974F74E8397",
+                "native_sha256": "AD530A96991B02B746CEA3140A42A6B66EA36458E370BF5C7F62D974F74E8397",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "asset": "/ShooterCore/UserInterface/HUD/W_WeaponReticleHost.W_WeaponReticleHost",
+        "policy_module": "uep_lyra_hud.reticle_host_mixin",
+        "guards": [
+          {
+            "asset": "/ShooterCore/UserInterface/HUD/W_WeaponReticleHost.W_WeaponReticleHost",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\UserInterface\\HUD\\W_WeaponReticleHost.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+                "current_sha256": "6C28F73D3CC2729628F39A3F8FC0CEB9478AD4E5CE2A629F7068637D7508E9C8",
+                "native_sha256": "6C28F73D3CC2729628F39A3F8FC0CEB9478AD4E5CE2A629F7068637D7508E9C8",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          },
+          {
+            "asset": "/Game/UEPMixins/DA_W_WeaponReticleHostMixin.DA_W_WeaponReticleHostMixin",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_W_WeaponReticleHostMixin.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+                "current_sha256": "F5A5316D53CB8079E396E1612544D41036FC83EA0BE98524DA76A36480DDA414",
+                "native_sha256": "F5A5316D53CB8079E396E1612544D41036FC83EA0BE98524DA76A36480DDA414",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "asset": "/ShooterCore/Weapons/Pistol/W_Reticle_Pistol.W_Reticle_Pistol",
+        "policy_module": "uep_lyra_hud.weapon_reticle_mixin",
+        "guards": [
+          {
+            "asset": "/ShooterCore/Weapons/Pistol/W_Reticle_Pistol.W_Reticle_Pistol",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Weapons\\Pistol\\W_Reticle_Pistol.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+                "current_sha256": "DD017455E2FBB61B11F97C3F311B9DDE39F2A084B01EA404422CED13A48C4968",
+                "native_sha256": "DD017455E2FBB61B11F97C3F311B9DDE39F2A084B01EA404422CED13A48C4968",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          },
+          {
+            "asset": "/Game/UEPMixins/DA_W_Reticle_PistolMixin.DA_W_Reticle_PistolMixin",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_W_Reticle_PistolMixin.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+                "current_sha256": "482F9B0ED71D3A38641D9D907260C5B88EFFB9E2A2480DB59AC016C4362A0537",
+                "native_sha256": "482F9B0ED71D3A38641D9D907260C5B88EFFB9E2A2480DB59AC016C4362A0537",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "asset": "/ShooterCore/Weapons/Rifle/W_Reticle_Rifle.W_Reticle_Rifle",
+        "policy_module": "uep_lyra_hud.weapon_reticle_mixin",
+        "guards": [
+          {
+            "asset": "/ShooterCore/Weapons/Rifle/W_Reticle_Rifle.W_Reticle_Rifle",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Weapons\\Rifle\\W_Reticle_Rifle.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+                "current_sha256": "F8CE6E788FA92E7EC3F9B967A514DB3894EF7D29A8406C6CCA0C40F13F08E19C",
+                "native_sha256": "F8CE6E788FA92E7EC3F9B967A514DB3894EF7D29A8406C6CCA0C40F13F08E19C",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          },
+          {
+            "asset": "/Game/UEPMixins/DA_W_Reticle_RifleMixin.DA_W_Reticle_RifleMixin",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_W_Reticle_RifleMixin.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+                "current_sha256": "4DD02E577FABC40816E5E9ADEA7FFA7FC7C95AA15319426703D945FBADFDEC55",
+                "native_sha256": "4DD02E577FABC40816E5E9ADEA7FFA7FC7C95AA15319426703D945FBADFDEC55",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "asset": "/ShooterCore/Weapons/Shotgun/W_Reticle_Shotgun.W_Reticle_Shotgun",
+        "policy_module": "uep_lyra_hud.weapon_reticle_mixin",
+        "guards": [
+          {
+            "asset": "/ShooterCore/Weapons/Shotgun/W_Reticle_Shotgun.W_Reticle_Shotgun",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Weapons\\Shotgun\\W_Reticle_Shotgun.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+                "current_sha256": "9142D7565132A54A256BB494E6F2D30567711E7781D1EEE44FF99D71396F2E05",
+                "native_sha256": "9142D7565132A54A256BB494E6F2D30567711E7781D1EEE44FF99D71396F2E05",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          },
+          {
+            "asset": "/Game/UEPMixins/DA_W_Reticle_ShotgunMixin.DA_W_Reticle_ShotgunMixin",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_W_Reticle_ShotgunMixin.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+                "current_sha256": "C31661473C58B4B7697E031076B0085C28C1F9DE6B1E1B452DB90C6D6D0DF10B",
+                "native_sha256": "C31661473C58B4B7697E031076B0085C28C1F9DE6B1E1B452DB90C6D6D0DF10B",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "asset": "/ShooterCore/Items/HealthPickup_Unused/GA_HealPickup.GA_HealPickup",
+        "policy_module": "uep_lyra_world.heal_ability_mixin",
+        "guards": [
+          {
+            "asset": "/ShooterCore/Items/HealthPickup_Unused/GA_HealPickup.GA_HealPickup",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Plugins\\GameFeatures\\ShooterCore\\Content\\Items\\HealthPickup_Unused\\GA_HealPickup.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+                "current_sha256": "9BA9CE5DA94A3557F0277BEBF663DE6676D6E3FDD84EC0D890763A2D0700BACC",
+                "native_sha256": "9BA9CE5DA94A3557F0277BEBF663DE6676D6E3FDD84EC0D890763A2D0700BACC",
+                "equivalence": "exact-bytes"
+              },
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261026-widget-actor-lifetime/HealStandalone01",
+                "current_sha256": "9BA9CE5DA94A3557F0277BEBF663DE6676D6E3FDD84EC0D890763A2D0700BACC",
+                "native_sha256": "9BA9CE5DA94A3557F0277BEBF663DE6676D6E3FDD84EC0D890763A2D0700BACC",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          },
+          {
+            "asset": "/Game/UEPMixins/DA_HealAbilityMixin.DA_HealAbilityMixin",
+            "current_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\UEPMixins\\DA_HealAbilityMixin.uasset",
+            "matching_native_fingerprints": [
+              {
+                "directory": ".build/LyraValidation/BlueprintPython/20261026-widget-actor-lifetime/HealStandalone01",
+                "current_sha256": "523F141FE1C43AC06F1029E422504CEE2D34ACD1BA6A540073C4B9C8EE95BD9E",
+                "native_sha256": "523F141FE1C43AC06F1029E422504CEE2D34ACD1BA6A540073C4B9C8EE95BD9E",
+                "equivalence": "exact-bytes"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_version_acceptance": false,
+    "full_migration_acceptance_proven": false,
+    "limits": [
+      "The eight native processes cover distinct lifetime boundaries,not every asset/scenario combination. Touch tests use mounted same-class pairs and local typed messages;they do not claim actual touch-widget travel,physical touch or production placement.",
+      "The complete nineteen-phase HUD record includes actual map changes and rejoin. Scope,delegate,team/init-state helper roots and pool/weapon sampler cleanup are checked from original raw reports using current frozen source.",
+      "Fourteen candidates own no Python subscriptions in their frozen policy source. OpenMenu activates a native GameInstance-owned async action without Python callbacks;native GAS,timers,overlap transport and native C++ touch behavior retain their authored ownership.",
+      "The two touch-region shells retain only three direct native-parent forwarders each. Current census/source retention evidence is reused without claiming their native C++ was migrated.",
+      "Fresh current-SDK heal and touch captures replace the old unpinned heal Standalone report and the old touch observer with a changed imported fixture. Heal supplies seven original/Python pairs,including active Profile switch,native cancellation,end and timer cleanup. Touch supplies eight synchronized two-owner phases.",
+      "Only this original lifetime criterion is accepted. Each-small-batch behavior/no-fallthrough,pixels,audio,hardware input,packaged and full Experience/version/release acceptance remain separate."
+    ]
+  },
+  "selected_host_checks": 20,
+  "original_candidates": 246,
+  "original_requirements": 22,
+  "requirements_proven": 14,
+  "incremental_verification": {
+    "artifact": "incremental-acceptance-integrity.json",
+    "sha256": "04209E363925325817FF4E876052809185DD78DE9AAB0364D0CBDE9A8E8C13C6",
+    "status": "passed",
+    "previous_index": {
+      "path": ".build/LyraValidation/BlueprintPython/20261026-ability-gameplay-acceptance/acceptance-final.json",
+      "sha256": "135D045B585EC46B781B00772B5B1A0642F4DF9F88B2650E01753530FC7013AD",
+      "requirements_proven": 13
+    },
+    "previous_accepted_criteria_retained": 13,
+    "prior_proof_inputs_unchanged_except_recorded_manifest_metadata": true,
+    "runtime_sources_and_assets_unchanged": true,
+    "original_246_candidates_unchanged": true,
+    "original_22_texts_unchanged": true,
+    "new_criterion": "Widget and Actor lifetime tests leave no owned subscriptions after teardown, travel or profile switching.",
+    "new_criterion_rechecked_from_immutable_tested_tool": true,
+    "unrelated_semantic_gates_reexecuted": false,
+    "selected_host_checks": 20,
+    "referenced_lifetime_processes": 8,
+    "new_native_processes": 4,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false
+  },
+  "new_native_processes": 4,
+  "production_policy_or_assets_changed": false,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "full_version_acceptance": false,
+  "full_migration_acceptance_proven": false,
+  "limits": [
+    "The eight native processes cover distinct lifetime boundaries,not every asset/scenario combination. Touch tests use mounted same-class pairs and local typed messages;they do not claim actual touch-widget travel,physical touch or production placement.",
+    "The complete nineteen-phase HUD record includes actual map changes and rejoin. Scope,delegate,team/init-state helper roots and pool/weapon sampler cleanup are checked from original raw reports using current frozen source.",
+    "Fourteen candidates own no Python subscriptions in their frozen policy source. OpenMenu activates a native GameInstance-owned async action without Python callbacks;native GAS,timers,overlap transport and native C++ touch behavior retain their authored ownership.",
+    "The two touch-region shells retain only three direct native-parent forwarders each. Current census/source retention evidence is reused without claiming their native C++ was migrated.",
+    "Fresh current-SDK heal and touch captures replace the old unpinned heal Standalone report and the old touch observer with a changed imported fixture. Heal supplies seven original/Python pairs,including active Profile switch,native cancellation,end and timer cleanup. Touch supplies eight synchronized two-owner phases.",
+    "Only this original lifetime criterion is accepted. Each-small-batch behavior/no-fallthrough,pixels,audio,hardware input,packaged and full Experience/version/release acceptance remain separate.",
+    "All32 original0.10 paths remain in scope:16 candidates own subscriptions across13 policy modules;14 candidates across9 policy modules own no Python subscriptions;two native touch-parent forwarding shells retain their individually reviewed three forwarding entries.",
+    "The historical four-process HUD run supplies19 phases,two actual map changes and client exit/rejoin. All27 current0.10 production dependency modules byte/newline-match its frozen input source. Original raw peer reports and clean shutdown order are checked;every owning group must be exercised on each client and close its scopes,roots,proxies and tickers.",
+    "Fresh HealStandalone01 PID4856 exits0 with2559 frozen inputs and seven original/Python native GAS pairs. TouchNetwork01 authority43500,A15972,B037392 all exit0 with2542 frozen inputs,an independent gate exit0,and eight synchronized owner/unmount/reconstruct/profile/cleanup phases. This refresh changes no production script or asset.",
+    "Do not reuse the old heal Standalone output without its missing historical report pin,or the old touch network observer with a changed imported fixture. Their new current-SDK captures close only these two focused evidence gaps;no historical SDK equivalence exception is introduced.",
+    "The32 current native class packages are matched to the accepted census;current Mixin bindings match the already accepted source-disposition document. All16 subscription-owning candidate classes and transport packages additionally match actual lifetime-run input hashes.",
+    "Reuse the other13 accepted original criteria through unchanged pinned proof inputs and unchanged runtime sources/assets. This focused proof does not repeat their unrelated gameplay semantic gates. Overall original acceptance is14/22;full migration,complete0.10 batch behavior/presentation,package and release remain open."
+  ]
+}

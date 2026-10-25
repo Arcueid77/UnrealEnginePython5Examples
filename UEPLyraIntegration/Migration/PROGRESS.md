@@ -31,6 +31,42 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed original Widget/Actor lifetime criterion batch263 (2026-10-26):**
+Accept the exact original0.10 owned-subscription cleanup condition after
+teardown,travel or Profile switching. Preserve all32 original candidate paths:
+16 own Python subscriptions across13 policy modules;14 own no Python
+subscriptions across9 modules;two touch-region shells retain only three native
+parent forwarders each. OpenMenu activates a native GameInstance-owned async
+push without binding a Python callback. Native GAS,timers and overlap transport
+retain their authored ownership.
+
+Reuse the pinned four-process,nineteen-phase HUD capture for two actual map
+changes,Pawn replacement,client exit/rejoin and shutdown. All27 current0.10
+production dependency sources match its frozen inputs. Check every owning
+client group closes scopes,team/init-state proxies,helper roots and pool/weapon
+samplers. Match all32 current class packages to the native census and accepted
+Mixin bindings;add actual lifetime-run class/transport hashes for all16 owners.
+
+Close two specific evidence gaps with existing binaries:the old heal Standalone
+report lacked a historical output hash,and the old touch observer imports a
+changed fixture. Fresh HealStandalone01 supplies seven original/Python native
+GAS completion/cancel/interrupt/timer/pause/active-Profile/native-end pairs and
+clean shutdown. Fresh TouchNetwork01 supplies eight synchronized two-owner
+unmount/reconstruct/Profile/cleanup phases. Four new native processes exit0;
+2559 heal and2542 touch frozen inputs remain unchanged. Touch is mounted-pair
+local-message proof;physical touch,production placement and touch-widget map
+travel are not claimed. This is a lifetime boundary suite,not every candidate
+crossed with every scenario.
+
+Eight adversarial scope/leak/pool/native-lease/candidate/criterion checks plus
+twelve directly affected migration-index checks pass from an immutable index.
+No production policy or asset edits,no C++,compile/link,cook/package or full
+regression. Official Lyra remains untouched. Reuse the other13 accepted
+criteria through unchanged pinned inputs instead of repeating unrelated gates.
+Original acceptance is14/22. The0.10 each-small-batch original/Python behavior
+and no-fallthrough criterion remains open,as do the remaining0.9 and whole
+Experience/version/package/release requirements.
+
 **Completed original six-behavior gameplay criterion batch262 (2026-10-26):**
 Accept the exact original0.11 fire,reload,ammo exhaustion,switching,death and
 respawn comparison condition in Standalone and dedicated server/two-client play.
