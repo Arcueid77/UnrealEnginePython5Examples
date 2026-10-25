@@ -31,6 +31,35 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded native signature rejection batch257 (2026-10-26):**
+The current SDK236 generic host runs actual native registration failures for
+inherited PlayerController.ServerRestartPlayer,compiled BP dispatcher signature
+RejectedDelegate__DelegateSignature and a test-owned BP function carrying real
+editor Latent metadata. All three reject explicitly before callback entry;
+valid installed routing remains usable,and original function ABI/pointers/
+native returns restore after unregister. This fills the source-only RPC/delegate
+rejection evidence in the call/lifecycle matrix,without adding API support.
+
+Native02 exits0 and the independent pure report gate exits0. Its838 input/
+module/source hashes remain unchanged. Two transient test Blueprint classes and
+one object release all three temporary roots;no package is saved. The RPC is
+never invoked and cooked-metadata/packaged latent rejection is not claimed.
+
+Preserve failed Native01:compiling a second BP collected the unrooted test object
+before any rejection check. Archive all three exact original inputs and retain
+the failed summary/report/raw log. The old Invoke helper discarded structured
+process metadata while throwing(exit1);PID38148 is separately traceable in two
+native log paths. The test-only root/order repair passes Native02;the driver
+now records its process on failure as well.
+
+Eight affected immutable-index host checks and driver parse pass. No runtime
+source/asset edit,binary refresh,compile/link,cook/package or full regression.
+Keep the prior11/22 accepted criteria using their pinned full index and unchanged
+runtime/proof inputs,without rerunning their semantic checks. All246 candidates
+and22 original texts remain. Complete task/delegate/cancellation/latent lifetime
+and the other original conditions remain open;no new checklist is promoted.
+Ledger:`Acceptance/257-current-native-rpc-delegate-and-editor-latent-rejection.json`.
+
 **Completed original native identity/execution-boundary criterion batch256 (2026-10-26):**
 All37 original0.11 candidates retain their native generated-class paths and
 ancestries in the current native census. Source-reviewed Character_Default

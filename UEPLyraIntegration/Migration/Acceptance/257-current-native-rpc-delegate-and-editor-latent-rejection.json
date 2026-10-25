@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "batch": 257,
+  "recorded_utc": "2026-10-25T21:54:05.343954+00:00",
+  "status": "bounded_current_native_mixin_rejection_families_verified",
+  "core_parent_commit": "0bbebf38b1b36202ffb20557763a4630cf841ae2",
+  "examples_parent_commit": "af1f417625101330226ff8b6d9fff57591725a8c",
+  "native_run": {
+    "directory": ".build/LyraValidation/BlueprintPython/20261026-mixin-rejection/Native02",
+    "summary_sha256": "4F25F48B3469A4D19E8978A67E1EB2F3638AB5EB3DEB7E1021BA5829C108DFBB",
+    "process": {
+      "stderr": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-mixin-rejection\\Native02\\native-stderr.log",
+      "name": "Focused native Mixin rejection",
+      "arguments": [
+        "F:\\UnrealEnginePython5\\.build\\Validation\\UEP58Host\\UEP58Host.uproject",
+        "-unattended",
+        "-nop4",
+        "-NullRHI",
+        "-NoSound",
+        "-NoSplash",
+        "-UTF8Output",
+        "-culture=en",
+        "-DisablePython",
+        "-DisablePlugins=AndroidFileServer,UdpMessaging,TcpMessaging",
+        "-notraceserver",
+        "-trace=none",
+        "-run=Py",
+        "F:\\UnrealEnginePython5\\Validation\\UEP58Host\\Tests\\mixin_rejection_validation.py",
+        "-UEPMixinRejectionResult=F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-mixin-rejection\\Native02\\rejection.json",
+        "-abslog=F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-mixin-rejection\\Native02\\rejection.log"
+      ],
+      "pid": 38108,
+      "environment_names": [],
+      "executable": "F:\\UnrealEngine\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe",
+      "stdout": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-mixin-rejection\\Native02\\native-stdout.log",
+      "duration_seconds": 12.863,
+      "exit_code": 0
+    },
+    "external_gate": {
+      "stderr": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-mixin-rejection\\Native02\\gate-stderr.log",
+      "name": "Independent Mixin rejection report gate",
+      "arguments": [
+        "-B",
+        "-X",
+        "utf8",
+        "F:\\UnrealEnginePython5\\Validation\\UEP58Host\\Tests\\mixin_rejection_contract.py",
+        "--report",
+        "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-mixin-rejection\\Native02\\rejection.json",
+        "--log",
+        "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-mixin-rejection\\Native02\\rejection.log"
+      ],
+      "pid": 47752,
+      "environment_names": [],
+      "executable": "F:\\UnrealEngine\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\python.exe",
+      "stdout": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-mixin-rejection\\Native02\\gate-stdout.log",
+      "duration_seconds": 0.108,
+      "exit_code": 0
+    },
+    "report_sha256": "23D73CDA1C20FB5E57A41956A8D3A1690594DBF72DC5471619477B367F03C772",
+    "log_sha256": "9E124BD94EFB76F3E4B8E7CAA7D16D0D05095B0577B2FB5965414D515A2287BC",
+    "frozen_inputs": 838,
+    "semantic_gate": {
+      "status": "passed",
+      "native_rejection_families": 3,
+      "active_router_recovery_cases": 3,
+      "original_functions_restored": true,
+      "current_editor_runtime": true,
+      "cooked_latent_rejection_tested": false,
+      "full_acceptance": false
+    },
+    "native_rejections": [
+      {
+        "kind": "rpc",
+        "function": "ServerRestartPlayer",
+        "flags": 2149715138,
+        "reason": "cannot mix in RejectRPC_0f775a5eddc847478429149e3ef5dc06_C.ServerRestartPlayer: static, RPC, and delegate functions are outside the 0.7 mixin contract"
+      },
+      {
+        "kind": "delegate",
+        "function": "RejectedDelegate__DelegateSignature",
+        "flags": 202506240,
+        "reason": "cannot mix in Reject_0f775a5eddc847478429149e3ef5dc06_C.RejectedDelegate__DelegateSignature: static, RPC, and delegate functions are outside the 0.7 mixin contract"
+      },
+      {
+        "kind": "latent",
+        "function": "RejectedLatent",
+        "flags": 201457664,
+        "reason": "cannot mix in Reject_0f775a5eddc847478429149e3ef5dc06_C.RejectedLatent: latent functions are outside the 0.7 mixin contract"
+      }
+    ]
+  },
+  "preserved_failed_attempt": {
+    "directory": ".build/LyraValidation/BlueprintPython/20261026-mixin-rejection/Native01",
+    "summary_sha256": "D0116661E5094E3E6364B11185AA077D3EFBC887FF01A51674AA15E539DFBEEE",
+    "report_sha256": "EEB95291A748EC369411170E4297D284818C824EAFCBEBC6EC6CB84795CC7571",
+    "log_sha256": "223620A0317B9AFE5E4F2BDBB5E79D014D6BB2DE15582EA3FE83A109F7F66CD7",
+    "status": "failed",
+    "error": "Traceback (most recent call last):\n  File \"F:\\UnrealEnginePython5\\Validation\\UEP58Host\\Tests\\mixin_rejection_validation.py\", line 111, in <module>\n    report = validate()\n             ^^^^^^^^^^\n  File \"F:\\UnrealEnginePython5\\Validation\\UEP58Host\\Tests\\mixin_rejection_validation.py\", line 77, in validate\n    originals = [(obj, 'AddIntegers', obj.find_function('AddIntegers')),\n                                      ^^^^^^^^^^^^^^^^^\nException: PyUObject is in invalid state\n",
+    "native_exit_code": 1,
+    "native_pid_from_exact_log_owner_and_shader_paths": 38148,
+    "driver_process_result_missing_because_old_invoke_helper_threw_before_assignment": true,
+    "archived_inputs": [
+      {
+        "path": ".build/LyraValidation/BlueprintPython/20261026-mixin-rejection/Native01/Inputs/mixin_rejection_contract.py",
+        "sha256": "F5D7C64123AE6DB47D475C7E8B02BD96F283BB078C9044846ABDACFB124568F3"
+      },
+      {
+        "path": ".build/LyraValidation/BlueprintPython/20261026-mixin-rejection/Native01/Inputs/mixin_rejection_validation.py",
+        "sha256": "6A5892987259B19637302E9788FF919B8E7856152BFE9CB768957982E4FEE8D2"
+      },
+      {
+        "path": ".build/LyraValidation/BlueprintPython/20261026-mixin-rejection/Native01/Inputs/Run-UEP58FocusedMixinRejectionValidation.ps1",
+        "sha256": "0A19EAA1B7668FFE6C99245C3F4DB57825939A48F92A35936282512210E87C48"
+      }
+    ]
+  },
+  "incremental_verification": {
+    "artifact": "incremental-acceptance-integrity.json",
+    "sha256": "5F52C77C7F49E89186C42BC7B4C551911FB8816F271C532C8873C11908426109",
+    "status": "passed",
+    "previous_full_index": {
+      "path": ".build/LyraValidation/BlueprintPython/20261026-ability-identity/acceptance-final.json",
+      "sha256": "698217329A34B8494DB59AA84C4B5BDC40289C4FF01F73BA7482406191E510CD",
+      "requirements_proven": 11
+    },
+    "previous_index_inputs_unchanged_before_metadata_update": true,
+    "core_runtime_source_and_scripts_unchanged": true,
+    "examples_runtime_source_and_assets_unchanged": true,
+    "original_246_candidates_unchanged": true,
+    "original_22_texts_unchanged": true,
+    "full_semantic_regression_reexecuted": false,
+    "new_native_rejection_record": {
+      "directory": ".build/LyraValidation/BlueprintPython/20261026-mixin-rejection/Native02",
+      "summary_sha256": "4F25F48B3469A4D19E8978A67E1EB2F3638AB5EB3DEB7E1021BA5829C108DFBB",
+      "semantic_gate": {
+        "status": "passed",
+        "native_rejection_families": 3,
+        "active_router_recovery_cases": 3,
+        "original_functions_restored": true,
+        "current_editor_runtime": true,
+        "cooked_latent_rejection_tested": false,
+        "full_acceptance": false
+      }
+    },
+    "focused_host_checks": 8,
+    "powershell_driver_parse_passed": true,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false
+  },
+  "selected_host_checks": 8,
+  "original_candidates": 246,
+  "original_requirements": 22,
+  "requirements_proven": 11,
+  "new_native_processes": 2,
+  "accepted_native_processes": 1,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "full_original_011_lifecycle_criterion_proven": false,
+  "full_version_acceptance": false,
+  "full_migration_acceptance_proven": false,
+  "limits": [
+    "Closes the missing actual native registration-rejection evidence for real inherited RPC,compiled Blueprint dispatcher signature and actual editor Latent metadata. Each rejected callback remains uncalled,active valid routing survives,the rejected function ABI/pointer/class stays unchanged,and unregister restores native functions/returns.",
+    "The RPC function is never invoked or sent over a network. This does not extend generic Mixin support to RPC/delegate/latent signatures,claim cooked-metadata rejection or promise latent interception/coroutines.",
+    "Two test-owned transient Blueprint classes and one test object use three temporary native roots during compilation/checks;all three are removed. No package is saved and no production class is modified. The current source-matching generic host reuses the approved SDK236 DLL;no binary refresh,compile or link occurs.",
+    "Native01 failed before rejection checks because compiling a second Blueprint collected the unrooted test object. Its raw report/log/summary remain failed and all three exact original inputs are archived. The old driver lost its structured process result while throwing;the native exit1 is explicit and PID38148 is derived from two original log paths. Native02 fixes the test-only roots/order and records its process even on failure.",
+    "Eight affected immutable-index host checks and PowerShell parse pass. Existing eleven accepted criteria are retained from the pinned prior full index,with all its inputs checked before the metadata update and no core/Examples runtime-source or asset changes. Their semantic tests are not rerun in this increment.",
+    "All246 candidates and22 original texts remain. No original checklist item is newly promoted;the complete original0.11 task/delegate/cancellation/latent lifetime criterion and the other remaining conditions stay open."
+  ]
+}
