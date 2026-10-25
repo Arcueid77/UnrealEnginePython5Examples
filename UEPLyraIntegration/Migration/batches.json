@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 237,
+    "bounded_evidence_ledgers": 238,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -5499,6 +5499,14 @@
         "actual_native_lifecycle_stacks": 65,
         "matching_local_pdbs": true,
         "current_failure_reproduced": false,
+        "original_race_fixed": false
+      },
+      "sdk_counterfactual_followup": {
+        "evidence_ledger": "236-python-bootstrap-path-conversion-lifetime-and-sdk-counterfactual.json",
+        "exact_historical_dll_and_pdb": true,
+        "historical_current_policy_matrix_passed": true,
+        "current_fixed_bootstrap_matrix_passed": true,
+        "original_failure_reproduced": false,
         "original_race_fixed": false
       }
     },
@@ -15930,5 +15938,31 @@
     "full_regression_executed": false,
     "full_acceptance": false,
     "next": "Use the opt-in capture in a future affected readiness reproduction. Correlate replacement creation/retirement with the same-peer canonical empty-binding transition before identifying a cause or repair. A healthy native stack run is not a fix."
+  },
+  "sdk_bootstrap_path_lifetime_pilot": {
+    "status": "temporary_utf8_pointer_lifetime_fixed_and_native_path_modes_verified",
+    "evidence_ledger": "236-python-bootstrap-path-conversion-lifetime-and-sdk-counterfactual.json",
+    "actual_build_actions": 3,
+    "compiled_sources": [
+      "UnrealEnginePython.cpp"
+    ],
+    "engine_full_compile_executed": false,
+    "bootstrap_modes_accepted": [
+      "default",
+      "long-ascii",
+      "long-unicode-exact-negative-fixture",
+      "shared-unicode"
+    ],
+    "exact_unicode_before_after_fixture": true,
+    "exported_names_and_ordinals_unchanged": 327,
+    "fixed_melee_authority_cases": 20,
+    "fixed_melee_viewer_rows": 40,
+    "original_readiness_issue": "open_not_fixed",
+    "original_readiness_race_fixed": false,
+    "all_candidate_census_refreshed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_acceptance": false,
+    "next": "Continue the original remaining runtime/version requirements. The246-class census remains earlier-SDK evidence and needs a current-SDK provenance refresh before final inventory/runtime closeout;do not infer complete migration from this bootstrap repair. Capture an actual empty-binding failure before claiming a Pawn/ASC cause or fix."
   }
 }

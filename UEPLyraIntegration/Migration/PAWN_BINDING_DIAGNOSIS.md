@@ -81,3 +81,24 @@ in a failing run. No canonical empty-binding/takeover row was reproduced,so the
 original issue remains **open,not fixed**. The capture is available for a future
 affected reproduction;no repeated full build or broad regression is required.
 See [ledger235](Acceptance/235-native-pawn-construction-and-retirement-stack-provenance.json).
+
+## Historical SDK counterfactual and separate bootstrap repair (batch236)
+
+An archived DLL exactly matches the failing historical capture's ED133E... hash;
+its local PDB matches. The old DLL passes the current20-authority/40-viewer
+matrix in a short isolated stage path and captures native lifecycle stacks with
+zero canonical empty-binding rows. This successful counterfactual does not
+exclude a timing/load-order cause or prove any Pawn/ASC repair.
+
+The first long isolated stage crashes in interpreter path setup before any
+Pawn observation. Its exact source retains TCHAR_TO_UTF8 temporary pointers and
+reaches null Py_DECREF. The current217 DLL independently loses a configured long
+Unicode ScriptsPath. Fix the conversion lifetime and Python error handling in
+the SDK startup function,keeping search order and327 exports unchanged. One
+plugin compile plus two links suffices;Engine stays unchanged. The exact failed
+Unicode fixture then passes,as do normal/long-ASCII/shared-interpreter modes and
+real native reflection. The fixed SDK's melee group also passes with all three
+exits0. This fixes startup paths,not the original **open,not fixed** binding issue.
+Earlier candidate census evidence remains historical pending SDK provenance
+refresh;neither this bounded check nor a healthy retry closes full migration.
+See [ledger236](Acceptance/236-python-bootstrap-path-conversion-lifetime-and-sdk-counterfactual.json).

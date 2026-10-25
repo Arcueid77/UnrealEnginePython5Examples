@@ -31,6 +31,32 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bootstrap path lifetime batch236 (2026-10-25;native evidence2026-10-23):**
+Fix three retained TCHAR_TO_UTF8 temporary pointers in interpreter path setup.
+Long paths could corrupt sys.path or reach null Py_DECREF. Keep conversion
+storage alive through Python's copy and check Python/list failures. Preserve
+Zip/Scripts/AdditionalModules search order and all327 exported names/ordinals;
+only this startup function and its StringConv include change. Review and execute
+one plugin source compile plus DLL/library links:three actions,about26s,Engine
+unchanged. No interface header/game C++/asset changes or cook/package.
+Current217 loses the configured long Unicode ScriptsPath. The repaired DLL
+passes the exact same path/module fixture,normal startup,long ASCII and shared
+official/UEP interpreter modes. Each configured case imports four real modules
+and every mode executes a reflected native20+22=42 call. Reuse the already
+successful default process after correcting an outer marker-order expectation;
+preserve that rejected outer report and the earlier too-narrow negative gate.
+Current repaired SDK also passes the unchanged20-authority/40-viewer melee
+matrix with one server/two clients,all exits0 and semanticgate0. No broad host
+or gameplay replay beyond affected startup/melee checks. The exact historical
+DLL/PDB crashes before gameplay at a long isolated stage path;its short alias
+passes the current melee matrix and captures native stacks without the original
+empty-binding defect. Preserve both attempts and exact pre-fix input snapshots.
+This does not prove/exclude a cause or fix for the original Pawn/ASC issue;
+it stays OPEN. Twelve native process attempts total,seven accepted on the fixed
+current SDK. All246 candidate rows/order/versions stay unchanged. Earlier full
+class-census evidence is not refreshed by this batch;final inventory provenance
+still needs review against the new SDK. Commit/push accepted Examples then core.
+
 **Completed native construction-stack diagnostic batch235 (2026-10-23):**
 Add an explicit optional stack-capture flag to the existing current melee
 readiness driver. Capture bounded current-thread native addresses only at

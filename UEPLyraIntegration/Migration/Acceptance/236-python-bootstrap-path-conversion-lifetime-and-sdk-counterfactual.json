@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "batch": 236,
+  "recorded_utc": "2026-10-25T12:15:46.189837+00:00",
+  "status": "evidence_snapshot",
+  "scope": "Fix a real UEP interpreter bootstrap lifetime defect:retained TCHAR_TO_UTF8 temporary pointers corrupted long configured paths and could lead to null Py_DECREF. Keep FTCHARToUTF8 alive through Python string creation;check conversion/list insertion failures;preserve search order. Verify the current217 missing-Unicode-path negative against the exact same fixture after repair,plus normal/long-ASCII/shared-interpreter modes and a real reflected native sum42. Recheck unchanged melee original/Python20 authority/40 viewer cases with one server/two clients. A separate exact historical SDK/PDB counterfactual passes in a short isolated stage and does not reproduce or repair the original intermittent Pawn/ASC issue.",
+  "core_parent_commit": "50ce1d86d5fe91d7cb462b3cfc6402d3abf9d341",
+  "examples_parent_commit": "00d7a2cf84aaca1792c68572ce3adc2e74c8c598",
+  "original_scope": [
+    246,
+    182,
+    63,
+    11
+  ],
+  "candidate_rows_changed": 0,
+  "only_startup_function_and_stringconv_include_changed": true,
+  "exported_names_and_ordinals_unchanged": 327,
+  "cpp_compile_executed": true,
+  "compiled_sources": [
+    "UnrealEnginePython.cpp"
+  ],
+  "reviewed_build_actions": 3,
+  "actual_build_actions": 3,
+  "build_seconds": 25.764,
+  "engine_full_compile_executed": false,
+  "bootstrap_modes_accepted": [
+    "default",
+    "long-ascii",
+    "long-unicode-exact-negative-fixture",
+    "shared-unicode"
+  ],
+  "configured_imports_per_case": 4,
+  "native_reflection_sum_each": 42,
+  "exact_before_after_unicode_fixture_reused": true,
+  "current217_negative_failure": "Configured long Unicode ScriptsPath absent from sys.path;native process1,reportfailed. The first outer negative gate expected only a crash and was too narrow;preserve it and review the existing closed report without a rerun.",
+  "default_positive_gate_correction": "The first fixed default process0/reportpassed was rejected by an outer gate expecting the wrong marker order. Independently verify marker->Goodbye Python->closed log and reuse that same closed native run;do not add another default process.",
+  "historical_sdk_sha256": "ED133E2336DFA22CA6012973ECE6A6C88B7EB1F4345579B181CA0FFE173CFD14",
+  "historical_pdb_matched": true,
+  "historical_long_stage_attempt": "Historical01:serverexit3 in UESetupPythonInterpreter at null Py_DECREF;no client or gameplay result. Exact init source633E0B3E... is preserved.",
+  "historical_short_stage_attempt": "Historical02ShortPath:server/A/B0all0,semanticgate0;current policies with the exact old DLL. This healthy counterfactual is not a cause exclusion or stability proof.",
+  "historical_native_lifecycle_stacks": 47,
+  "historical_canonical_empty_binding_rows": 0,
+  "fixed_melee_exit_codes": {
+    "server": 0,
+    "A": 0,
+    "B0": 0
+  },
+  "fixed_authority_cases": 20,
+  "fixed_viewer_rows": 40,
+  "total_native_process_attempts": 12,
+  "accepted_current_sdk_native_processes": 7,
+  "cpp_interface_headers_changed": false,
+  "game_cpp_changed": false,
+  "assets_saved": false,
+  "original_readiness_issue": "open_not_fixed",
+  "current_failure_reproduced": false,
+  "original_readiness_race_fixed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "all_candidate_census_refreshed": false,
+  "full_acceptance": false,
+  "full_migration_acceptance_proven": false,
+  "input_hashes": [
+    {
+      "path": "Source/UnrealEnginePython/Private/UnrealEnginePython.cpp",
+      "sha256": "365B520B9749859E23B6E644E72EDF4A5497363FC3187BD910CB0721E91CC03D"
+    },
+    {
+      "path": "Validation/Run-UEP58BootstrapPathsValidation.ps1",
+      "sha256": "4B909CF24C3B5550EB2E63238836203AA428ACE78675BAAA46C730DA8BC29E38"
+    },
+    {
+      "path": "Validation/UEP58Host/Tests/bootstrap_path_validation.py",
+      "sha256": "A03F2AB4FA801DBD99BD3B96B16A5BD8211B639FA6CBD8855988BA658A10F902"
+    },
+    {
+      "path": "Validation/Run-UEP58ReviewedMixinRefresh.ps1",
+      "sha256": "7B3DE43EC861519CC4D75032B80054914856737886C4D7DF4A885E3F63382B78"
+    },
+    {
+      "path": "Validation/Run-UEP58CurrentMeleeReadinessValidation.ps1",
+      "sha256": "B2C8FE7CCACA8E55EA7FCC2E8F2516EE7BDE15DF6A7F5E29E9CBDCAB9EB4F1D2"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-pawn-sdk-causality/independent-review01.json",
+      "sha256": "887EC66A47528AACFEC5CA6913CF869101CEF70E5F2F425BD109B5DEEB6E5414"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-pawn-sdk-causality/SDKPlan01/summary.json",
+      "sha256": "81FCC875574FEFFED7ED4BE52E6EDB6056F8982F770566C01471DD7E50D1A865"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-pawn-sdk-causality/SDKPlan01/actions.json",
+      "sha256": "08E8B30B4239A231CA81822120E95E1C88F294A5F632130038B0080D507EA999"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-pawn-sdk-causality/SDKBuild01/summary.json",
+      "sha256": "8D0ABE27188C0113A11EBBC9C1F2AA186CF47834343B43B76E25AFAAED0961E7"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-pawn-sdk-causality/FixedMelee01/summary.json",
+      "sha256": "3FF93870C4462F3D60B235B5DA986C5792558D63C38EE03107BDDF8447553580"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-pawn-sdk-causality/FixedBootstrap01/summary.json",
+      "sha256": "9993200A6E2A5765F2E16FD7DADE90D2D1A3AF4A2EEBACF893F1764F1FDF983D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-pawn-sdk-causality/FixedBootstrap01/default/result.json",
+      "sha256": "DA03B54CCA05327F4B12913CAE362660D245BF00A98EB046BC68CB0D505F5A84"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-pawn-sdk-causality/FixedBootstrap01/Inputs/Run-UEP58BootstrapPathsValidation.ps1",
+      "sha256": "57BC2CF0BBC7705A12FA2F2DB72B20CB58E63500E8FCBB2C7B307C816F0CD284"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-pawn-sdk-causality/FixedBootstrap02ExactUnicodeFixture/summary.json",
+      "sha256": "5D542ACCC81DC381FCEBE912C053F4AD92E42E4AFF17EE100D6BCC8B1A47CB60"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-pawn-sdk-causality/FixedBootstrap03OtherModes/summary.json",
+      "sha256": "33FBE4D81AE075B9E4AC01E4A7B7604EF5395B905F690B37A512BC25715B497F"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-pawn-sdk-causality/Current217LongUnicodeBaseline/summary.json",
+      "sha256": "A302EEFEB7416ACDAF51E6E34E4D3ED69970D9372E6E6B7B5E1030DC7F5C4781"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-pawn-sdk-causality/Current217LongUnicodeBaseline/long-unicode/result.json",
+      "sha256": "4D81584BA5A2294D46C90559A503A72F234042BDD08033D8C46DE22E3D9D34EF"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-pawn-sdk-causality/Current217LongUnicodeBaseline/Inputs/Run-UEP58BootstrapPathsValidation.ps1",
+      "sha256": "7A7F29CC140817689D77B6C956CC1CEB8204EEA2984FDC46DD4387E425EEAC7B"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-pawn-sdk-causality/baseline-path-failure-review.json",
+      "sha256": "09CDFA678641EFDAD2AD627CDCBB7DFF7CADB1644D77E5986AD1CED74F874FDC"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-pawn-sdk-causality/Historical01/summary.json",
+      "sha256": "616F9B77E379E22B65ED0EA12AE4CFFDFE4A662743A59AFAA1FEF0748AFDD086"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-pawn-sdk-causality/Historical02ShortPath/summary.json",
+      "sha256": "7736DF50379B1CBF7E29E29FE57F537956CDAC4438035E55C058092AA342C422"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-pawn-sdk-causality/historical-binary-proof.json",
+      "sha256": "0CFC3791644102DAD39CE3BE363BE9193161CC896E97C75077BB89080FFE85ED"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-pawn-sdk-causality/historical-native-symbols.json",
+      "sha256": "601D1DA99B63426ABA48D55C3345AFBA317F4F9313CB90B1CD5D78EE1EDE92E9"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-pawn-sdk-causality/historical-symbols-process.json",
+      "sha256": "F56F96E133A6E2C3621549A49E8C4A6F8D380F05DD7BC9A777599BF8EDADA31D"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-pawn-sdk-causality/historical-takeovers.json",
+      "sha256": "6871ADC4E150F4570DE295AFEFE2B303F5775834911310DF708C6B04D3800ADE"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-pawn-sdk-causality/historical-frozen-input-review.json",
+      "sha256": "8D5CB943C92F9D583D31F88B7C9998F9D26FDC57CECD800ACBE78822674FF4A0"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-pawn-sdk-causality/before-UnrealEnginePython.cpp",
+      "sha256": "633E0B3E5764B267A6DD7FFBFDB2756DC78D9C0F43874D20277CF4204F630C4F"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261023-pawn-sdk-causality/before-batches.json",
+      "sha256": "FBFFC166F1CB3FD2B4E7448F5DF1FD61E528BF126986247514C7854FC0FF549A"
+    }
+  ],
+  "isolated_staged_index_verification": ".build/CommitVerification/20261025-bootstrap-paths/Index01"
+}
