@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 243,
+    "bounded_evidence_ledgers": 244,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -1781,7 +1781,8 @@
     "confirmed_frontend_travel_runs": [
       "20261020-menu-travel/Travel01Fallback",
       "20261020-menu-travel/Travel02Python"
-    ]
+    ],
+    "native_back_focus_followup_evidence_ledger": "242-native-ui-back-action-focus-and-reopen-parity.json"
   },
   "credits_widgets_pilot": {
     "version": "0.13.0",
@@ -16084,5 +16085,28 @@
     "packaged_runtime": false,
     "full_acceptance": false,
     "next": "Review remaining original Experience/version requirements and the open delayed-retired-Pawn ASC binding issue. Original Arena self-attribution is preserved; this is bounded opponent-death/scoring parity, not proof of credited enemy kills or full migration acceptance."
+  },
+  "ui_back_navigation_pilot": {
+    "version": "0.13.0",
+    "status": "both_isolated_profiles_actual_back_action_native_focus_and_menu_reopen_verified",
+    "evidence_ledger": "242-native-ui-back-action-focus-and-reopen-parity.json",
+    "native_runtime_runs": [
+      "20261025-ui-back/Original02",
+      "20261025-ui-back/Python01"
+    ],
+    "native_back_actions": 4,
+    "actual_clean_native_processes": 2,
+    "native_settings_button_and_bound_back_action": true,
+    "focus_set_by_probe": false,
+    "manual_close_used_as_return_stimulus": false,
+    "original_native_control_pool_behavior_preserved": true,
+    "fresh_process_profile_isolation": true,
+    "source_python_outcomes_match": true,
+    "focused_host_checks": 64,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_acceptance": false,
+    "next": "Review remaining original0.13 navigation/settings/session/replay,screen lifetime/travel and all other version/Experience requirements. No full criterion or migration acceptance is inferred."
   }
 }

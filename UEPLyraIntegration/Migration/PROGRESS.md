@@ -31,6 +31,27 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed native UI Back/focus batch242 (2026-10-25):**
+The previous menu fixtures read desired focus and manually closed settings;
+this followup enters the real CommonUI layer and the actual bound Back button.
+Each isolated original/Python process performs two menu/settings/Back/reopen
+cycles. Native focus reaches OptionsButtons and Settings_Panel;the represented
+native action closes settings without a probe focus/deactivate/pop stimulus.
+Reopening the menu restores actual focus. Each selected click/routing callback
+fires once per cycle with no other-profile entry,World/health stay unchanged,
+and selectors/probe roots/owned widgets are cleaned up. Both native processes
+and independent gates exit0;five affected suites pass64 checks. No build,cook,
+asset save or full regression. Existing production profile code stays unchanged.
+
+Native01's attempted in-process profile switch reused the old native widget
+pool;the whole failed attempt and exact input bytes are retained. Accepted
+comparisons use fresh process ownership for each profile. This is native
+Back/focus/reopen evidence,not keyboard/gamepad hardware coverage,all screen
+travel/lifetime or full0.13/migration acceptance. All246 rows and the original
+22 requirement text remain unchanged. Ledger:
+`Acceptance/242-native-ui-back-action-focus-and-reopen-parity.json`.
+The native Pawn guard remains unapplied pending the user's scope decision.
+
 **Completed incremental runtime batch241 (2026-10-25):**
 Reuse the current SDK236 Editor binaries for one original-BP and one Python
 Arena run. Actual owner input drops one bomb; its authored2s fuse and radius2
