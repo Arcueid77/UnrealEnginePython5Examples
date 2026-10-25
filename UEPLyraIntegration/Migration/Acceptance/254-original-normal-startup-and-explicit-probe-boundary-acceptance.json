@@ -1,0 +1,1880 @@
+{
+  "schema_version": 1,
+  "batch": 254,
+  "recorded_utc": "2026-10-25T20:46:40.184240+00:00",
+  "status": "original_normal_startup_and_explicit_rendered_probe_boundary_criterion_verified",
+  "criterion": "Normal playable startup does not auto-run validation or request exit; explicitly enabled test modes retain bounded timeouts and cleanup evidence. Focused rendered weapon mode exits cleanly; the no-test-flag Lyra observation is bounded and stopped only by its owning test driver, not by a probe.",
+  "completion_proven": true,
+  "core_parent_commit": "515cf331560e37c85e99720db9803e9ced18ffa9",
+  "examples_parent_commit": "00a49615fdade8fb5ba7e0acdbfc8567d4f180c9",
+  "review": {
+    "schema_version": 1,
+    "status": "passed",
+    "criterion": "Normal playable startup does not auto-run validation or request exit; explicitly enabled test modes retain bounded timeouts and cleanup evidence. Focused rendered weapon mode exits cleanly; the no-test-flag Lyra observation is bounded and stopped only by its owning test driver, not by a probe.",
+    "completion_proven": true,
+    "version": "0.9.0",
+    "native_scope": {
+      "status": "passed",
+      "native_processes": 2,
+      "focused_exit_code": 0,
+      "normal_intentional_owned_stop_exit_code": -1,
+      "normal_observation_seconds": 20,
+      "rendered_presenter_cases": 42,
+      "controlled_reload_gc_cycles": 3,
+      "full_version_acceptance": false
+    },
+    "source_selector_catalogue": {
+      "explicit_flag_literals": [
+        {
+          "flag": "-UEPADSNetworkResult=",
+          "single_flag_selection": "uep_lyra_abilities.ads_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPADSResult=",
+          "single_flag_selection": "uep_lyra_abilities.ads_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPAbilityFailureCulture",
+          "single_flag_selection": null,
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPAbilityFailureNativeProducer",
+          "single_flag_selection": null,
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPAbilityFailureResult=",
+          "single_flag_selection": "uep_lyra_hud.ability_failure_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPAbilityProgressResult=",
+          "single_flag_selection": "uep_lyra_hud.ability_progress_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPAbilityWidgetResult=",
+          "single_flag_selection": "uep_lyra_abilities.widget_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPAccoladeRelayResult=",
+          "single_flag_selection": "uep_lyra_hud.accolade_relay_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.accolade_relay_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPAccoladeWidgetsResult=",
+          "single_flag_selection": "uep_lyra_hud.accolade_widgets_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.accolade_widgets_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPActionTouchClickResult=",
+          "single_flag_selection": "uep_lyra_hud.action_touch_click_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPActionTouchNetwork",
+          "single_flag_selection": "uep_lyra_hud.action_touch_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPActionTouchResult=",
+          "single_flag_selection": "uep_lyra_hud.action_touch_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPArenaActorsResult=",
+          "single_flag_selection": "uep_lyra_world.arena_actor_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPArenaBombBaseResult=",
+          "single_flag_selection": "uep_lyra_world.arena_bomb_base_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPArenaBombVisualResult=",
+          "single_flag_selection": "uep_lyra_world.arena_bomb_visual_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPArenaDropBombResult=",
+          "single_flag_selection": "uep_lyra_abilities.arena_drop_bomb_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPArenaHUDResult=",
+          "single_flag_selection": "uep_lyra_hud.arena_hud_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPArenaLevelResult=",
+          "single_flag_selection": "uep_lyra_world.arena_level_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPArenaLocalInputResult=",
+          "single_flag_selection": "uep_lyra_abilities.arena_local_input_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPArenaModeResult=",
+          "single_flag_selection": "uep_lyra_world.arena_mode_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPArenaNaturalResult=",
+          "single_flag_selection": "uep_lyra_abilities.arena_natural_bomb_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPArenaOpponentResult=",
+          "single_flag_selection": "uep_lyra_abilities.arena_opponent_bomb_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPArenaPhasesResult=",
+          "single_flag_selection": "uep_lyra_world.arena_phases_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPArenaPlayerTileResult=",
+          "single_flag_selection": "uep_lyra_hud.arena_player_tile_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPArenaPlayerUIResult=",
+          "single_flag_selection": "uep_lyra_hud.arena_player_ui_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPArenaPowerupStatResult=",
+          "single_flag_selection": "uep_lyra_hud.arena_powerup_stat_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPArenaReadyResult=",
+          "single_flag_selection": "uep_lyra_hud.arena_ready_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPAutoReloadNetworkResult=",
+          "single_flag_selection": "uep_lyra_abilities.autoreload_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPAutoReloadResult=",
+          "single_flag_selection": "uep_lyra_abilities.autoreload_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPAutoRespawnActivation",
+          "single_flag_selection": null,
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPAutoRespawnEvents",
+          "single_flag_selection": null,
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPAutoRespawnHelpersNetworkResult=",
+          "single_flag_selection": "uep_lyra_abilities.auto_respawn_helpers_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPAutoRespawnHelpersResult=",
+          "single_flag_selection": "uep_lyra_abilities.auto_respawn_helpers_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPAutoRespawnLifecycleResult=",
+          "single_flag_selection": "uep_lyra_abilities.auto_respawn_lifecycle_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPAutoRespawnListeners",
+          "single_flag_selection": null,
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPAutoRespawnResetNetworkResult=",
+          "single_flag_selection": "uep_lyra_abilities.auto_respawn_reset_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPAutoRespawnResetResult=",
+          "single_flag_selection": "uep_lyra_abilities.auto_respawn_reset_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPBoundActionResult=",
+          "single_flag_selection": "uep_lyra_hud.bound_action_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.bound_action_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCPNetworkResult=",
+          "single_flag_selection": "uep_lyra_weapons.cp_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCPScoringResult=",
+          "single_flag_selection": "uep_lyra_weapons.cp_scoring_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.cp_scoring_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterAudioNetworkResult=",
+          "single_flag_selection": "uep_lyra_characters.emote_audio_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterAudioResult=",
+          "single_flag_selection": "uep_lyra_characters.emote_audio_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterBeginPlayNetworkResult=",
+          "single_flag_selection": "uep_lyra_characters.begin_play_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterBeginPlayResult=",
+          "single_flag_selection": "uep_lyra_characters.begin_play_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterDamageResult=",
+          "single_flag_selection": "uep_lyra_weapons.character_damage_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.character_damage_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterDeathReplicationNetworkResult=",
+          "single_flag_selection": "uep_lyra_characters.death_replication_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterDeathStartedNetworkResult=",
+          "single_flag_selection": "uep_lyra_characters.death_started_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterDeathStartedResult=",
+          "single_flag_selection": "uep_lyra_characters.death_started_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterEquipmentHideNetworkResult=",
+          "single_flag_selection": "uep_lyra_characters.equipment_hide_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterEquipmentHideResult=",
+          "single_flag_selection": "uep_lyra_characters.equipment_hide_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterHealthNetworkResult=",
+          "single_flag_selection": "uep_lyra_characters.health_changed_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterHealthResult=",
+          "single_flag_selection": "uep_lyra_characters.health_changed_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterInputNetworkResult=",
+          "single_flag_selection": "uep_lyra_characters.enhanced_input_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterInputResult=",
+          "single_flag_selection": "uep_lyra_characters.enhanced_input_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterInventory",
+          "single_flag_selection": null,
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterLegacyNetworkResult=",
+          "single_flag_selection": "uep_lyra_characters.legacy_player_info_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterLegacyResult=",
+          "single_flag_selection": "uep_lyra_characters.legacy_player_info_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterLifecycleNetworkResult=",
+          "single_flag_selection": "uep_lyra_characters.lifecycle_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterLifecycleResetResult=",
+          "single_flag_selection": "uep_lyra_characters.lifecycle_reset_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterLifecycleResult=",
+          "single_flag_selection": "uep_lyra_characters.lifecycle_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterListenerNetworkResult=",
+          "single_flag_selection": "uep_lyra_characters.team_listener_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterListenerResult=",
+          "single_flag_selection": "uep_lyra_characters.team_listener_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterLoadoutNatural",
+          "single_flag_selection": null,
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterLoadoutNetworkResult=",
+          "single_flag_selection": "uep_lyra_characters.initial_inventory_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterLoadoutResult=",
+          "single_flag_selection": "uep_lyra_characters.initial_inventory_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterObserverNetworkResult=",
+          "single_flag_selection": "uep_lyra_characters.team_observer_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterObserverResult=",
+          "single_flag_selection": "uep_lyra_characters.team_observer_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterOutlineNetworkResult=",
+          "single_flag_selection": "uep_lyra_characters.outline_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterOutlineResult=",
+          "single_flag_selection": "uep_lyra_characters.outline_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterPartsNetworkResult=",
+          "single_flag_selection": "uep_lyra_characters.parts_changed_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterPartsResult=",
+          "single_flag_selection": "uep_lyra_characters.parts_changed_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterPossessedNetworkResult=",
+          "single_flag_selection": "uep_lyra_characters.possessed_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterPossessedResult=",
+          "single_flag_selection": "uep_lyra_characters.possessed_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterQuickbarNetworkResult=",
+          "single_flag_selection": "uep_lyra_characters.quickbar_input_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterQuickbarResult=",
+          "single_flag_selection": "uep_lyra_characters.quickbar_input_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterRagdollNetworkResult=",
+          "single_flag_selection": "uep_lyra_characters.ragdoll_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterRagdollResult=",
+          "single_flag_selection": "uep_lyra_characters.ragdoll_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterReadyNetworkResult=",
+          "single_flag_selection": "uep_lyra_characters.inventory_ready_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterReadyResult=",
+          "single_flag_selection": "uep_lyra_characters.inventory_ready_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterStencilNetworkResult=",
+          "single_flag_selection": "uep_lyra_characters.stencil_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterStencilResult=",
+          "single_flag_selection": "uep_lyra_characters.stencil_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterTeamNetworkResult=",
+          "single_flag_selection": "uep_lyra_characters.team_cosmetics_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterTeamResult=",
+          "single_flag_selection": "uep_lyra_characters.team_cosmetics_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterVisibilityNetworkResult=",
+          "single_flag_selection": "uep_lyra_characters.visibility_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterVisibilityResult=",
+          "single_flag_selection": "uep_lyra_characters.visibility_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterWaitNetworkResult=",
+          "single_flag_selection": "uep_lyra_characters.inventory_wait_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCharacterWaitResult=",
+          "single_flag_selection": "uep_lyra_characters.inventory_wait_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCollectCueResult=",
+          "single_flag_selection": "uep_lyra_weapons.collect_cue_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPControlPointFeedbackResult=",
+          "single_flag_selection": "uep_lyra_world.control_point_feedback_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_world.control_point_feedback_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPControlPointHelpersResult=",
+          "single_flag_selection": "uep_lyra_world.control_point_helpers_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_world.control_point_helpers_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPControlPointStateResult=",
+          "single_flag_selection": "uep_lyra_world.control_point_state_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_world.control_point_state_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPControlPointWidgetsResult=",
+          "single_flag_selection": "uep_lyra_hud.control_point_widgets_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.control_point_widgets_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCosmeticNetworkResult=",
+          "single_flag_selection": "uep_lyra_characters.cosmetic_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCosmeticResult=",
+          "single_flag_selection": "uep_lyra_characters.cosmetic_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCreditsWidgetsResult=",
+          "single_flag_selection": "uep_lyra_hud.credits_widgets_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.credits_widgets_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPCueWidgetResult=",
+          "single_flag_selection": "uep_lyra_hud.cue_widget_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.cue_widget_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPDashActivationNetworkResult=",
+          "single_flag_selection": "uep_lyra_abilities.dash_activation_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPDashActivationResult=",
+          "single_flag_selection": "uep_lyra_abilities.dash_activation_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPDashLocalDirectionNetworkResult=",
+          "single_flag_selection": "uep_lyra_abilities.dash_local_direction_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPDashLocalDirectionResult=",
+          "single_flag_selection": "uep_lyra_abilities.dash_local_direction_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPDashNativeResult=",
+          "single_flag_selection": "uep_lyra_hud.dash_native_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPDashRPCInputNetworkResult=",
+          "single_flag_selection": "uep_lyra_abilities.dash_rpc_input_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPDashResult=",
+          "single_flag_selection": "uep_lyra_hud.dash_cooldown_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPDashSelectorNetworkResult=",
+          "single_flag_selection": "uep_lyra_abilities.dash_selector_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPDashSelectorResult=",
+          "single_flag_selection": "uep_lyra_abilities.dash_selector_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPDashTasksLifecycleResult=",
+          "single_flag_selection": "uep_lyra_abilities.dash_tasks_lifecycle_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPDashTasksNetworkLifecycleResult=",
+          "single_flag_selection": "uep_lyra_abilities.dash_tasks_network_lifecycle_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPDashTasksNetworkResult=",
+          "single_flag_selection": "uep_lyra_abilities.dash_tasks_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPDashTasksResult=",
+          "single_flag_selection": "uep_lyra_abilities.dash_tasks_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPDeathAbilityResult=",
+          "single_flag_selection": "uep_lyra_abilities.death_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPDeathNetworkResult=",
+          "single_flag_selection": "uep_lyra_abilities.death_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPDeviceColorResult=",
+          "single_flag_selection": "uep_lyra_devices.team_color_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPDiagnosticWidgetsResult=",
+          "single_flag_selection": "uep_lyra_hud.diagnostic_widgets_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.diagnostic_widgets_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPDropWeaponNetworkResult=",
+          "single_flag_selection": "uep_lyra_abilities.drop_weapon_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPDropWeaponResult=",
+          "single_flag_selection": "uep_lyra_abilities.drop_weapon_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPEditorExperienceResult=",
+          "single_flag_selection": "uep_lyra_hud.editor_experience_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.editor_experience_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPEffectPadGameplayResult=",
+          "single_flag_selection": "uep_lyra_world.effect_pad_gameplay_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPEffectPadNetwork",
+          "single_flag_selection": "uep_lyra_world.effect_pad_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPEffectPadResult=",
+          "single_flag_selection": "uep_lyra_world.effect_pad_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPEliminationFeedRelayResult=",
+          "single_flag_selection": "uep_lyra_hud.elimination_feed_relay_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.elimination_feed_relay_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPEliminationScoreResult=",
+          "single_flag_selection": "uep_lyra_hud.elimination_score_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.elimination_score_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPEliminationWidgetsResult=",
+          "single_flag_selection": "uep_lyra_hud.elimination_widgets_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.elimination_widgets_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPEmoteNetworkResult=",
+          "single_flag_selection": "uep_lyra_abilities.emote_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPEmoteResult=",
+          "single_flag_selection": "uep_lyra_abilities.emote_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPExperienceListResult=",
+          "single_flag_selection": "uep_lyra_hud.experience_list_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.experience_list_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPExperienceScreenResult=",
+          "single_flag_selection": "uep_lyra_hud.experience_screen_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.experience_screen_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPExperienceTileResult=",
+          "single_flag_selection": "uep_lyra_hud.experience_tile_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.experience_tile_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPExplorerActionsNetworkResult=",
+          "single_flag_selection": "uep_lyra_abilities.explorer_actions_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPExplorerActionsResult=",
+          "single_flag_selection": "uep_lyra_abilities.explorer_actions_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPExplorerBeginPlayResult=",
+          "single_flag_selection": "uep_lyra_characters.explorer_beginplay_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPExplorerBehaviorResult=",
+          "single_flag_selection": "uep_lyra_characters.explorer_behavior_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPExplorerCallbacksResult=",
+          "single_flag_selection": "uep_lyra_characters.explorer_callbacks_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPExplorerExperienceResult=",
+          "single_flag_selection": "uep_lyra_characters.explorer_experience_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPExplorerFollowResult=",
+          "single_flag_selection": "uep_lyra_world.explorer_follow_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPExplorerGameplayResult=",
+          "single_flag_selection": "uep_lyra_abilities.explorer_gameplay_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPExplorerGridResult=",
+          "single_flag_selection": "uep_lyra_hud.explorer_grid_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPExplorerHelpersResult=",
+          "single_flag_selection": "uep_lyra_characters.explorer_helpers_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPExplorerInitResult=",
+          "single_flag_selection": "uep_lyra_characters.explorer_init_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPExplorerInputResult=",
+          "single_flag_selection": "uep_lyra_characters.explorer_input_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPExplorerInteractResult=",
+          "single_flag_selection": "uep_lyra_abilities.explorer_interact_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPExplorerItemListResult=",
+          "single_flag_selection": "uep_lyra_hud.explorer_item_list_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPExplorerMarkerResult=",
+          "single_flag_selection": "uep_lyra_abilities.explorer_marker_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPExplorerScreensResult=",
+          "single_flag_selection": "uep_lyra_hud.explorer_screens_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPExplorerShellsResult=",
+          "single_flag_selection": "uep_lyra_characters.explorer_shells_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPExplorerStateResult=",
+          "single_flag_selection": "uep_lyra_world.explorer_state_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPExplorerStyleResult=",
+          "single_flag_selection": "uep_lyra_characters.explorer_style_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPExplorerToastResult=",
+          "single_flag_selection": "uep_lyra_hud.explorer_toast_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPFootstepAnimationResult=",
+          "single_flag_selection": "uep_lyra_weapons.footstep_animation_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPFootstepLocomotionResult=",
+          "single_flag_selection": "uep_lyra_weapons.footstep_locomotion_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPFootstepResult=",
+          "single_flag_selection": "uep_lyra_weapons.footstep_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.footstep_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPFootstepVisualResult=",
+          "single_flag_selection": "uep_lyra_weapons.footstep_visual_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPFoundationButtonsResult=",
+          "single_flag_selection": "uep_lyra_hud.foundation_buttons_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.foundation_buttons_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPFoundationWidgetsResult=",
+          "single_flag_selection": "uep_lyra_hud.foundation_widgets_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.foundation_widgets_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPFrontendLogoutResult=",
+          "single_flag_selection": "uep_lyra_hud.frontend_logout_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.frontend_logout_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPFrontendMenuResult=",
+          "single_flag_selection": "uep_lyra_hud.frontend_menu_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.frontend_menu_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPGamePhasesResult=",
+          "single_flag_selection": "uep_lyra_weapons.game_phases_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.game_phases_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPGeneralAudioResult=",
+          "single_flag_selection": "uep_lyra_audio.general_audio_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_audio.general_audio_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPGrantGENetwork",
+          "single_flag_selection": "uep_lyra_world.grant_ge_pad_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPGrantGEResult=",
+          "single_flag_selection": "uep_lyra_world.grant_ge_pad_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPGrenadeActionsResult=",
+          "single_flag_selection": "uep_lyra_weapons.grenade_actions_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.grenade_actions_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPGrenadeActivationNetworkResult=",
+          "single_flag_selection": "uep_lyra_abilities.grenade_activation_network_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_abilities.grenade_activation_network_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPGrenadeActivationResult=",
+          "single_flag_selection": "uep_lyra_abilities.grenade_activation_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_abilities.grenade_activation_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPGrenadeBeginResult=",
+          "single_flag_selection": "uep_lyra_weapons.grenade_begin_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.grenade_begin_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPGrenadeCleanupResult=",
+          "single_flag_selection": "uep_lyra_weapons.grenade_cleanup_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.grenade_cleanup_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPGrenadeDetonateNetworkResult=",
+          "single_flag_selection": "uep_lyra_weapons.grenade_detonate_network_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.grenade_detonate_network_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPGrenadeDetonateResult=",
+          "single_flag_selection": "uep_lyra_weapons.grenade_detonate_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.grenade_detonate_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPGrenadeFlightNetworkResult=",
+          "single_flag_selection": "uep_lyra_weapons.grenade_flight_network_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.grenade_flight_network_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPGrenadeHeadless",
+          "single_flag_selection": null,
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPGrenadeHitResult=",
+          "single_flag_selection": "uep_lyra_weapons.grenade_hit_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.grenade_hit_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPGrenadeVFXResult=",
+          "single_flag_selection": "uep_lyra_weapons.grenade_vfx_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.grenade_vfx_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPGrenadeWidgetNetworkResult=",
+          "single_flag_selection": "uep_lyra_abilities.grenade_widget_network_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_abilities.grenade_widget_network_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPGrenadeWidgetResult=",
+          "single_flag_selection": "uep_lyra_abilities.grenade_widget_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_abilities.grenade_widget_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPHealAbilityNetwork",
+          "single_flag_selection": "uep_lyra_world.heal_ability_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPHealAbilityResult=",
+          "single_flag_selection": "uep_lyra_world.heal_ability_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPHeroBurstCueResult=",
+          "single_flag_selection": "uep_lyra_weapons.hero_burst_cue_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.hero_burst_cue_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPHeroHealNetworkResult=",
+          "single_flag_selection": "uep_lyra_abilities.hero_heal_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPHeroHealResult=",
+          "single_flag_selection": "uep_lyra_abilities.hero_heal_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPHeroParentDeathResult=",
+          "single_flag_selection": "uep_lyra_characters.hero_default_death_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPHeroParentEquipmentResult=",
+          "single_flag_selection": "uep_lyra_characters.hero_default_equipment_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPHeroParentMotionResult=",
+          "single_flag_selection": "uep_lyra_characters.hero_default_motion_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPHeroParentRagdollResult=",
+          "single_flag_selection": "uep_lyra_characters.hero_default_ragdoll_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPHeroParentStencilResult=",
+          "single_flag_selection": "uep_lyra_characters.hero_default_stencil_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPHostSessionFailureResult=",
+          "single_flag_selection": "uep_lyra_hud.host_session_failure_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPHostSessionResult=",
+          "single_flag_selection": "uep_lyra_hud.host_session_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.host_session_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPInteractionInspectionResult=",
+          "single_flag_selection": "uep_lyra_world.interaction_inspection",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPInteractionProducer",
+          "single_flag_selection": null,
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPInventoryPadNetwork",
+          "single_flag_selection": "uep_lyra_world.inventory_pad_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPInventoryPadPlayerResult=",
+          "single_flag_selection": "uep_lyra_world.inventory_pad_player_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPInventoryPadResult=",
+          "single_flag_selection": "uep_lyra_world.inventory_pad_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPJumpAbilityResult=",
+          "single_flag_selection": "uep_lyra_abilities.jump_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPJumpNetworkResult=",
+          "single_flag_selection": "uep_lyra_abilities.jump_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPLauncherNetwork",
+          "single_flag_selection": "uep_lyra_world.launcher_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPLauncherResult=",
+          "single_flag_selection": "uep_lyra_world.launcher_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPLobbyBackgroundResult=",
+          "single_flag_selection": "uep_lyra_hud.lobby_background_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.lobby_background_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPLyraHUDVisualResult=",
+          "single_flag_selection": "uep_lyra_hud.visual_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPLyraMode=",
+          "single_flag_selection": "uep_lyra_probe",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPLyraMultiClient",
+          "single_flag_selection": "uep_lyra_network",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPLyraSmokeResult=",
+          "single_flag_selection": "uep_lyra_probe",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPLyraWeaponHUDResult=",
+          "single_flag_selection": "uep_lyra_hud.weapon_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPLyraWeaponNetwork",
+          "single_flag_selection": "uep_lyra_weapon_network",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPMacroClosureResult=",
+          "single_flag_selection": "uep_lyra_weapons.macro_closure_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.macro_closure_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPMeleeActivationNetworkResult=",
+          "single_flag_selection": "uep_lyra_abilities.melee_activation_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPMeleeActivationResult=",
+          "single_flag_selection": "uep_lyra_abilities.melee_activation_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPMeleeHitMontageNetworkResult=",
+          "single_flag_selection": "uep_lyra_abilities.melee_hit_montage_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPMeleeHitMontageResult=",
+          "single_flag_selection": "uep_lyra_abilities.melee_hit_montage_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPMeleeReadinessDiagnostic",
+          "single_flag_selection": null,
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPMeleeTraceNetworkResult=",
+          "single_flag_selection": "uep_lyra_abilities.melee_trace_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPMeleeTraceResult=",
+          "single_flag_selection": "uep_lyra_abilities.melee_trace_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPMenuButtonsResult=",
+          "single_flag_selection": "uep_lyra_hud.menu_buttons_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.menu_buttons_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPMenuLayersResult=",
+          "single_flag_selection": "uep_lyra_hud.menu_layers_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.menu_layers_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPMenuTravelResult=",
+          "single_flag_selection": "uep_lyra_hud.menu_travel_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.menu_travel_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPMessageWidgetResult=",
+          "single_flag_selection": "uep_lyra_hud.message_widget_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.message_widget_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPMusicControlsResult=",
+          "single_flag_selection": "uep_lyra_audio.music_manager_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_audio.music_manager_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPMusicFamilyResult=",
+          "single_flag_selection": "uep_lyra_audio.music_family_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_audio.music_family_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPMusicLifecycleResult=",
+          "single_flag_selection": "uep_lyra_audio.music_lifecycle_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_audio.music_lifecycle_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPNameplateComponentsResult=",
+          "single_flag_selection": "uep_lyra_hud.nameplate_components_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPNameplateResult=",
+          "single_flag_selection": "uep_lyra_hud.nameplate_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPNetShooterAbilityResult=",
+          "single_flag_selection": "uep_lyra_weapons.netshooter_ability_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.netshooter_ability_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPNetShooterActorResult=",
+          "single_flag_selection": "uep_lyra_weapons.netshooter_actor_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.netshooter_actor_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPNetShooterImpactNetworkResult=",
+          "single_flag_selection": "uep_lyra_weapons.netshooter_impact_network_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.netshooter_impact_network_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPNetShooterNetworkResult=",
+          "single_flag_selection": "uep_lyra_weapons.netshooter_network_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.netshooter_network_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPNotificationRelaysNetworkResult=",
+          "single_flag_selection": "uep_lyra_hud.notification_relays_network_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.notification_relays_network_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPOpenMenuResult=",
+          "single_flag_selection": "uep_lyra_hud.open_menu_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPPackagedDiscoveryResult=",
+          "single_flag_selection": "uep_packaged_discovery_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPPhysicsFieldResult=",
+          "single_flag_selection": "uep_lyra_weapons.physics_field_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.physics_field_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPQuickBarSlotResult=",
+          "single_flag_selection": "uep_lyra_hud.quickbar_slot_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPQuickslotNetworkResult=",
+          "single_flag_selection": "uep_lyra_abilities.quickslot_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPQuickslotResult=",
+          "single_flag_selection": "uep_lyra_abilities.quickslot_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPReloadMagazineNetworkResult=",
+          "single_flag_selection": "uep_lyra_abilities.reload_magazine_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPReloadMagazineResult=",
+          "single_flag_selection": "uep_lyra_abilities.reload_magazine_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPReplayBrowserResult=",
+          "single_flag_selection": "uep_lyra_hud.replay_browser_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.replay_browser_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPReplayRuntimeResult=",
+          "single_flag_selection": "uep_lyra_hud.replay_runtime_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.replay_runtime_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPRespawnNativeResult=",
+          "single_flag_selection": "uep_lyra_hud.respawn_native_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPRespawnResult=",
+          "single_flag_selection": "uep_lyra_hud.respawn_timer_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPReticleAmmoResult=",
+          "single_flag_selection": "uep_lyra_hud.reticle_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPReticleHostResult=",
+          "single_flag_selection": "uep_lyra_hud.reticle_host_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPScoreboardListResult=",
+          "single_flag_selection": "uep_lyra_hud.scoreboard_list_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.scoreboard_list_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPScoreboardRowsResult=",
+          "single_flag_selection": "uep_lyra_hud.scoreboard_rows_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.scoreboard_rows_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPScoreboardStyleResult=",
+          "single_flag_selection": "uep_lyra_hud.scoreboard_style_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.scoreboard_style_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPScoringBaseResult=",
+          "single_flag_selection": "uep_lyra_weapons.scoring_base_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.scoring_base_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPSessionBrowserFailureResult=",
+          "single_flag_selection": "uep_lyra_hud.session_browser_failure_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPSessionBrowserResult=",
+          "single_flag_selection": "uep_lyra_hud.session_browser_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.session_browser_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPSessionButtonResult=",
+          "single_flag_selection": "uep_lyra_hud.session_button_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.session_button_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPSessionEntryResult=",
+          "single_flag_selection": "uep_lyra_hud.session_entry_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.session_entry_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPSessionJoinFailureResult=",
+          "single_flag_selection": "uep_lyra_hud.session_join_failure_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPSettingsCancelResult=",
+          "single_flag_selection": "uep_lyra_hud.settings_cancel_action_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPSettingsEditorsResult=",
+          "single_flag_selection": "uep_lyra_hud.settings_editors_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.settings_editors_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPSettingsLocalResult=",
+          "single_flag_selection": "uep_lyra_hud.settings_local_persistence_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPSettingsPersistenceResult=",
+          "single_flag_selection": "uep_lyra_hud.settings_persistence_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPSettingsScreensResult=",
+          "single_flag_selection": "uep_lyra_hud.settings_screens_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.settings_screens_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPShooterAILifetimeResult=",
+          "single_flag_selection": "uep_lyra_world.shooter_ai_lifetime_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPShooterAIResult=",
+          "single_flag_selection": "uep_lyra_world.shooter_ai_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_world.shooter_ai_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPShooterEQSResult=",
+          "single_flag_selection": "uep_lyra_world.shooter_eqs_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_world.shooter_eqs_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPSmallBurstCueResult=",
+          "single_flag_selection": "uep_lyra_weapons.small_burst_cue_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.small_burst_cue_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPSpawnEffectNetworkResult=",
+          "single_flag_selection": "uep_lyra_abilities.spawn_effect_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPSpawnEffectResult=",
+          "single_flag_selection": "uep_lyra_abilities.spawn_effect_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPSpawnerNetwork",
+          "single_flag_selection": "uep_lyra_world.spawner_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPSpawnerResult=",
+          "single_flag_selection": "uep_lyra_world.spawner_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPSpawningCueResult=",
+          "single_flag_selection": "uep_lyra_weapons.spawning_cue_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.spawning_cue_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPSpawningDestroyedResult=",
+          "single_flag_selection": "uep_lyra_weapons.spawning_destroyed_target_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPStartupLoginResult=",
+          "single_flag_selection": "uep_lyra_hud.startup_login_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.startup_login_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPTDMNetworkResult=",
+          "single_flag_selection": "uep_lyra_weapons.tdm_lethal_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPTDMScoringResult=",
+          "single_flag_selection": "uep_lyra_weapons.tdm_scoring_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.tdm_scoring_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPTeleporterNetwork",
+          "single_flag_selection": "uep_lyra_world.teleporter_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPTeleporterResult=",
+          "single_flag_selection": "uep_lyra_world.teleporter_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPTraversalCueResult=",
+          "single_flag_selection": "uep_lyra_weapons.traversal_cue_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.traversal_cue_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPTypedMessageResult=",
+          "single_flag_selection": "uep_lyra_hud.message_payload_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPUIBackResult=",
+          "single_flag_selection": "uep_lyra_hud.ui_back_navigation_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPUIPreparationProbeResult=",
+          "single_flag_selection": "uep_lyra_hud.ui_preparation_probe_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_hud.ui_preparation_probe_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPUIRegressionSuiteResult=",
+          "single_flag_selection": "uep_lyra_hud.ui_regression_suite_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPUITravelLifetimeResult=",
+          "single_flag_selection": "uep_lyra_hud.ui_travel_lifetime_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWeaponAbilityFireNetworkResult=",
+          "single_flag_selection": "uep_lyra_weapons.weapon_ability_fire_network_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.weapon_ability_fire_network_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWeaponAbilityFireResult=",
+          "single_flag_selection": "uep_lyra_weapons.weapon_ability_fire_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.weapon_ability_fire_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWeaponActorBeginResult=",
+          "single_flag_selection": "uep_lyra_weapons.weapon_actor_begin_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.weapon_actor_begin_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWeaponActorFireResult=",
+          "single_flag_selection": "uep_lyra_weapons.weapon_actor_fire_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.weapon_actor_fire_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWeaponActorHelpersResult=",
+          "single_flag_selection": "uep_lyra_weapons.weapon_actor_helpers_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.weapon_actor_helpers_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWeaponAudioColdResult=",
+          "single_flag_selection": "uep_lyra_weapons.weapon_audio_cold_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.weapon_audio_cold_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWeaponAudioDispatchResult=",
+          "single_flag_selection": "uep_lyra_weapons.weapon_audio_dispatch_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.weapon_audio_dispatch_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWeaponAudioEarlyResult=",
+          "single_flag_selection": "uep_lyra_weapons.weapon_audio_early_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.weapon_audio_early_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWeaponAudioEffectResult=",
+          "single_flag_selection": "uep_lyra_weapons.weapon_audio_effect_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.weapon_audio_effect_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWeaponAudioMathResult=",
+          "single_flag_selection": "uep_lyra_weapons.weapon_audio_math_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.weapon_audio_math_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWeaponAudioWhizResult=",
+          "single_flag_selection": "uep_lyra_weapons.weapon_audio_whiz_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.weapon_audio_whiz_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWeaponDecalsResult=",
+          "single_flag_selection": "uep_lyra_weapons.weapon_decals_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.weapon_decals_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWeaponFireCueNetworkResult=",
+          "single_flag_selection": "uep_lyra_weapons.weapon_fire_cue_network_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.weapon_fire_cue_network_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWeaponFireCuesResult=",
+          "single_flag_selection": "uep_lyra_weapons.weapon_fire_cue_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.weapon_fire_cue_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWeaponFireFXResult=",
+          "single_flag_selection": "uep_lyra_weapons.weapon_fire_fx_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.weapon_fire_fx_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWeaponImpactsResult=",
+          "single_flag_selection": "uep_lyra_weapons.weapon_impacts_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_weapons.weapon_impacts_validation",
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWeaponInstanceDeathResult=",
+          "single_flag_selection": "uep_lyra_weapons.weapon_instance_death_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWeaponInstanceResult=",
+          "single_flag_selection": "uep_lyra_weapons.weapon_instance_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWeaponLethalNetworkResult=",
+          "single_flag_selection": "uep_lyra_weapons.weapon_lethal_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWeaponRespawnNetworkResult=",
+          "single_flag_selection": "uep_lyra_weapons.weapon_respawn_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWeaponRespawnStandaloneResult=",
+          "single_flag_selection": "uep_lyra_weapons.weapon_respawn_standalone_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWeaponReticleResult=",
+          "single_flag_selection": "uep_lyra_hud.weapon_reticle_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWidgetHeldNetworkResult=",
+          "single_flag_selection": "uep_lyra_abilities.widget_held_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWidgetHeldResult=",
+          "single_flag_selection": "uep_lyra_abilities.widget_held_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWidgetPressedContextResult=",
+          "single_flag_selection": "uep_lyra_abilities.widget_pressed_context_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWidgetPressedNetworkResult=",
+          "single_flag_selection": "uep_lyra_abilities.widget_pressed_network_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWidgetPressedResult=",
+          "single_flag_selection": "uep_lyra_abilities.widget_pressed_validation",
+          "raw_selector_with_commandlet_flag": null,
+          "effective_commandlet_selection": null
+        },
+        {
+          "flag": "-UEPWindSystemResult=",
+          "single_flag_selection": "uep_lyra_audio.wind_system_validation",
+          "raw_selector_with_commandlet_flag": "uep_lyra_audio.wind_system_validation",
+          "effective_commandlet_selection": null
+        }
+      ],
+      "returned_module_count": 303,
+      "all_non_null_returns_require_explicit_test_flag": true
+    },
+    "evidence_ledger": {
+      "path": "Demos/UEPLyraIntegration/Migration/Acceptance/253-spawning-null-result-guard-and-current-startup-validation.json",
+      "sha256": "3E227E98C813C51DD6E00E6512FC9E117FB67F40E73F9999896BA718A397F494"
+    },
+    "startup_summary_sha256": "93CB4882E4BB1FB1DEC3211C457A74666534B799DB4AFDCCA19CA5C87E1D6823",
+    "focused_summary_sha256": "B4C1A117534CED2B99102440E30DC22CD1978A4345FB5D238D21FC35FC09ADF8",
+    "focused_report_sha256": "A382021D66D4513934932AAAE90E765EB8CAA6B722514DDA8A5FF9B78CA4980A",
+    "focused_log_sha256": "6FD4D5841E1756DF14049FA20EA476C8CC8DD3023D1926528ECF95C8A4E357C7",
+    "normal_log_sha256": "C92CA298A5BF2BB7FB62971279BADFDCF69E541A8A1AED6B2153F5806243FAA9",
+    "independent_gate": {
+      "directory": ".build/LyraValidation/BlueprintPython/20261026-startup-acceptance/WeaponReportGate01",
+      "summary_sha256": "9E5BBD59EFBA6C87FC28D07CA3BBA58A404BF7252C7D1B8DC26119000CC34360",
+      "report_sha256": "7B69F3E8DBED8F2D1073660E67C1E4037A9350F86FC2B1DE4FB210A9D62BBD45"
+    },
+    "frozen_input_records": 2595,
+    "explicit_weapon_probe_timeout_seconds": 120,
+    "owned_process_timeout_seconds": 240,
+    "commandlet_outer_bootstrap_guard_verified": true,
+    "normal_process_exit_is_intentional_driver_stop": true,
+    "normal_graceful_exit_tested": false,
+    "normal_pixels_tested": false,
+    "focused_native_image_visually_inspected": true,
+    "referenced_native_processes": 2,
+    "new_native_processes_launched_by_review": 0,
+    "all_other_probe_gameplay_rerun": false,
+    "physical_input_tested": false,
+    "packaged_runtime": false,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_version_acceptance": false,
+    "full_migration_acceptance_proven": false
+  },
+  "selected_host_checks": 61,
+  "original_candidates": 246,
+  "original_requirements": 22,
+  "requirements_proven": 9,
+  "referenced_native_processes": 2,
+  "new_native_processes": 0,
+  "production_policy_or_assets_changed": false,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "full_version_acceptance": false,
+  "full_migration_acceptance_proven": false,
+  "limits": [
+    "Accepts the exact original normal-startup/explicit-probe boundary criterion. It does not accept the other original0.9 call/lifecycle,PIE/GC/travel,package,full gameplay or support-matrix criteria. All246 candidates and22 texts remain;overall proof is9/22.",
+    "Reuse the two actual current-SDK processes from batch253/Current02. The rendered Entry-map weapon probe passes42 original/Python presenter states,three controlled reload/native-GC cycles,closed subscriptions/ticker and normal exit0 with strict differential/Goodbye/shutdown/file-close ordering. Re-execute the full existing PowerShell presenter/lifetime report gate without launching UE.",
+    "The separate no-UEP-test-flag Lyra process loads its native Experience and remains alive for20seconds after readiness. Its owning driver intentionally stops that exact handle with exit-1;graceful native game exit and normal-mode pixels are not claimed.",
+    "Freeze2595 original runtime inputs/references. Every non-null selector return requires a real UEP argument;all299 flag literals are catalogued without importing a probe. The exact outer bootstrap preempts commandlets before imports. Some raw selector branches alone can return a module with a commandlet flag;the effective startup remains skipped by that verified outer guard.",
+    "The explicit weapon fixture retains its120-second readiness deadline,cleanup and requested exit;the owned native process driver retains its240-second bound. This verifies the named startup/probe boundary rather than rerunning the gameplay of all other probes.",
+    "The actual screenshot hash remains pinned to the prior visual inspection showing matching original/Python magazine/spare counters and materials. This does not claim full screenshot diff,physical input,hardware audio,network gameplay or packaged/current full-version acceptance.",
+    "Sixty-one affected immutable-index host checks pass. No runtime script,Blueprint,C++ or official Lyra source changes,no new native process,build,cook/package or full regression."
+  ]
+}

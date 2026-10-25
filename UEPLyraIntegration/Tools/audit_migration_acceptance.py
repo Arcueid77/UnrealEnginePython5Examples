@@ -182,6 +182,14 @@ def attach_match_network_review(report,repo,path):
     target[0].update(completion_proven=True,evidence_state='native_multi_client_score_phase_local_notification_cleanup_and_current_sources_verified',evidence_artifact=str(path.resolve()),full_migration_acceptance_proven=False)
     report['match_network_review']=verified;report['inputs'].append(dict(path=str(path.resolve()),sha256=digest(path)))
 
+def attach_playable_startup_review(report,repo,path):
+    from audit_playable_startup_acceptance import REQUIREMENT,verify_documentation
+    path=Path(path);verified=verify_documentation(json.loads(path.read_text(encoding='utf-8-sig')),repo)
+    target=[r for r in report['requirements'] if r['version']=='0.9.0' and r['text']==REQUIREMENT]
+    if len(target)!=1:raise ValueError('Exact original normal-startup/explicit-probe requirement required')
+    target[0].update(completion_proven=True,evidence_state='native_normal_no_probe_observation_and_focused_rendered_probe_cleanup_and_sources_verified',evidence_artifact=str(path.resolve()),full_migration_acceptance_proven=False)
+    report['playable_startup_review']=verified;report['inputs'].append(dict(path=str(path.resolve()),sha256=digest(path)))
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--manifest', required=True)
@@ -197,6 +205,7 @@ def main():
     parser.add_argument('--ai-lifetime-review',help='Recheck original AI/EQS outcomes and real native cancellation/collection on Pawn destruction and world travel')
     parser.add_argument('--effects-match-review',help='Recheck all original non-AI0.12 effect/audio/phase/scoring/notification checkpoints against pinned native evidence and current source')
     parser.add_argument('--match-network-review',help='Recheck original two-client score/phase/local notifications and cleanup for TDM and physical control-point capture')
+    parser.add_argument('--playable-startup-review',help='Recheck original no-test-flag startup observation and explicit rendered weapon probe timeout/cleanup boundary')
     args = parser.parse_args()
     manifest = Path(args.manifest)
     current = json.loads(manifest.read_text(encoding='utf-8-sig'))
@@ -241,6 +250,8 @@ def main():
         attach_effects_match_review(report,current,initial,manifest.resolve().parents[3],args.effects_match_review)
     if args.match_network_review:
         attach_match_network_review(report,manifest.resolve().parents[3],args.match_network_review)
+    if args.playable_startup_review:
+        attach_playable_startup_review(report,manifest.resolve().parents[3],args.playable_startup_review)
     Path(args.result).write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     if args.markdown:
         Path(args.markdown).write_text(markdown(report), encoding='utf-8')

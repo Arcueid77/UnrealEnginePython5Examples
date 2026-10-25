@@ -31,6 +31,31 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed original startup/probe boundary criterion batch254 (2026-10-26):**
+Reuse the current batch253/Current02 two-process record. The rendered weapon
+probe passes42 native original/Python presenter checkpoints,three controlled
+reload/native-GC boundaries,subscription/ticker cleanup and clean exit0 with
+strict ordered shutdown. Independently recheck the full existing presenter/
+lifetime PowerShell gate and its actual pinned screenshot;no UE process runs.
+
+The normal Lyra process has no UEP test flags,loads its native Experience and
+remains alive for20seconds. Only its owning driver then stops its exact handle
+intentionally(exit-1). This proves a bounded no-probe/no-auto-exit observation;
+normal graceful exit and normal-mode pixels remain untested.
+
+Catalogue all299 explicit flag literals and prove each non-null selector return
+requires a real UEP argument. The exact outer bootstrap skips commandlets before
+imports,including branches whose raw selector alone is not commandlet-aware.
+The named weapon probe retains its120-second readiness deadline/cleanup/exit;
+the native owning driver retains its240-second bound. Recheck2595 frozen input/
+reference records. No normal or opt-in runtime source/asset changes occur.
+
+Sixty-one affected immutable-index host checks pass. Zero new UE runs,build,
+cook/package or full regression. This accepts only the exact original startup/
+explicit-probe boundary criterion;other original0.9 requirements remain open.
+Overall acceptance is9/22,with all246 candidates and22 original texts preserved.
+Ledger:`Acceptance/254-original-normal-startup-and-explicit-probe-boundary-acceptance.json`.
+
 **Completed native spawning null-result guard batch253 (2026-10-26):**
 Current no-test-flag NullRHI startup exposed a Python None dereference after
 SpawnSystemAttached returned no Niagara component. Preserve the original BP's
