@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 242,
+    "bounded_evidence_ledgers": 243,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -14857,7 +14857,8 @@
       "Fallback01: both gameplay cases pass but native CommonUI ensure requires the missing Slate user1;whole run rejected,not ignored"
     ],
     "next": "Continue original Experience presentation,real explosion/death/respawn,remote multiplayer,travel,current package and complete version requirements. Two local players are not remote clients or hardware-device coverage.",
-    "natural_bomb_followup_evidence_ledger": "214-arena-natural-input-bomb-death-and-native-hud.json"
+    "natural_bomb_followup_evidence_ledger": "214-arena-natural-input-bomb-death-and-native-hud.json",
+    "opponent_outcome_followup_evidence_ledger": "241-arena-opponent-bomb-native-death-and-score-attribution.json"
   },
   "arena_natural_bomb_pilot": {
     "version": "0.14.0",
@@ -14945,7 +14946,8 @@
       "AffectedPreFuse01"
     ],
     "next": "Continue original variable-frame,opponent elimination/score,remote multiplayer,travel,presentation/audio/current package and full Experience/version requirements. This fixed-step self-death scenario is bounded proof.",
-    "variable_frame_timing_followup_evidence_ledger": "215-arena-variable-frame-native-delay-boundaries.json"
+    "variable_frame_timing_followup_evidence_ledger": "215-arena-variable-frame-native-delay-boundaries.json",
+    "opponent_outcome_followup_evidence_ledger": "241-arena-opponent-bomb-native-death-and-score-attribution.json"
   },
   "arena_native_delay_pilot": {
     "version": "0.14.0",
@@ -16050,5 +16052,37 @@
     "native_game_cpp_patch_applied": false,
     "cpp_compile_executed": false,
     "full_acceptance": false
+  },
+  "arena_opponent_bomb_pilot": {
+    "status": "bounded_original_python_opponent_death_and_native_score_attribution_match",
+    "version": "0.14.0",
+    "evidence_ledger": "241-arena-opponent-bomb-native-death-and-score-attribution.json",
+    "native_runtime_runs": [
+      "20261025-arena-opponent/Original03",
+      "20261025-arena-opponent/Python01"
+    ],
+    "native_opponent_deaths": 2,
+    "actual_clean_native_processes": 2,
+    "native_input_and_owner_only_cost_refund": true,
+    "original_fuse_seconds": 2.0,
+    "original_explosion_radius": 2,
+    "variable_frame_execution": true,
+    "native_elimination_source": "victim PlayerState",
+    "native_elimination_team_comparison": "OnSameTeam",
+    "original_and_python_scores_unchanged": true,
+    "credited_enemy_kill_verified": false,
+    "source_attribution_repair_claimed": false,
+    "pawn_position_written": true,
+    "pose_fixture": "two original map PlayerStarts and one adjacent free blast cell",
+    "original_ability_grants_and_map_input_data_unchanged": true,
+    "observers_selectors_roots_input_and_created_local_player_cleaned": true,
+    "focused_host_checks": 69,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "network_acceptance": false,
+    "packaged_runtime": false,
+    "full_acceptance": false,
+    "next": "Review remaining original Experience/version requirements and the open delayed-retired-Pawn ASC binding issue. Original Arena self-attribution is preserved; this is bounded opponent-death/scoring parity, not proof of credited enemy kills or full migration acceptance."
   }
 }

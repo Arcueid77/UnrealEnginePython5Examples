@@ -1,0 +1,407 @@
+{
+  "schema_version": 1,
+  "batch": 241,
+  "recorded_utc": "2026-10-25T15:04:30.237259+00:00",
+  "status": "bounded_native_original_python_outcomes_verified",
+  "scope": "One original-map bomb placed by actual local-owner Enhanced Input kills the other native local player; compare original BP/Python death, owner cost/refund, authored fuse/radius, native elimination attribution and resulting scores. Native pose fixtures use original map PlayerStarts. Reuse current SDK236 Editor build; no compilation, cooking or asset save.",
+  "core_parent_commit": "e4c5978ea372500b1a94cf5b78e51e7df82cd3af",
+  "examples_parent_commit": "ede5d9af0db9397309a646ac0d12965942670ca4",
+  "native_runs": [
+    {
+      "directory": ".build\\LyraValidation\\BlueprintPython\\20261025-arena-opponent\\Original03",
+      "profile": "BlueprintFallback",
+      "summary_sha256": "A3289E2A439F5935D7E1984F6EB19F76FB50D083457B098906356330261EE289",
+      "report_sha256": "84AA000ED0ECC059C3E9F4B8D6F61F1D19BD391C7AF678594CA17CB9814F988E",
+      "native_exit_code": 0,
+      "external_gate_exit_code": 0,
+      "duration_seconds": 34.803,
+      "frozen_input_records": 2650,
+      "native_elimination_messages": [
+        {
+          "channel": "Lyra.Elimination.Message",
+          "instigator": "/TopDownArena/Maps/L_TopDown_LocalMultiplayer.L_TopDown_LocalMultiplayer:PersistentLevel.LyraPlayerState_1",
+          "target": "/TopDownArena/Maps/L_TopDown_LocalMultiplayer.L_TopDown_LocalMultiplayer:PersistentLevel.LyraPlayerState_1",
+          "target_is_opponent": true,
+          "instigator_is_null": false,
+          "source_owner": 1,
+          "team_comparison": "OnSameTeam"
+        }
+      ],
+      "result": {
+        "drop": {
+          "owner": 0,
+          "remaining_before": [
+            1.0,
+            1.0
+          ],
+          "new_bombs": 1,
+          "instigator_matches_owner": true,
+          "saved_state_matches_owner": true,
+          "remaining_after": [
+            0.0,
+            1.0
+          ],
+          "bomb_profiles_match": true,
+          "foreign_owner_unchanged": true
+        },
+        "health_before": [
+          100.0,
+          100.0
+        ],
+        "health_after": [
+          100.0,
+          0.0
+        ],
+        "opponent_death": {
+          "observed": true,
+          "pawn": "/TopDownArena/Maps/L_TopDown_LocalMultiplayer.L_TopDown_LocalMultiplayer:PersistentLevel.B_Hero_Arena_C_1",
+          "player_state": "/TopDownArena/Maps/L_TopDown_LocalMultiplayer.L_TopDown_LocalMultiplayer:PersistentLevel.LyraPlayerState_1",
+          "health": 0.0,
+          "seconds_after_bomb_creation": 1.9942885413765907
+        },
+        "score_before": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_after": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_delta": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "team_score_delta": [
+          0,
+          0
+        ],
+        "different_native_teams": true,
+        "selected_elimination_callbacks": 1,
+        "other_elimination_callbacks": 0,
+        "selected_input_callbacks": 5,
+        "other_input_callbacks": 0,
+        "native_bomb_callbacks": {
+          "trigger": 1,
+          "increment": 2,
+          "destroyed": 1
+        },
+        "remaining_after_refund": [
+          1.0,
+          1.0
+        ],
+        "original_fuse_seconds": 2.0,
+        "original_explosion_radius": 2,
+        "fixed_timestep_used": false,
+        "bombs_destroyed_by_cleanup": 0
+      },
+      "pose_fixture": {
+        "owner_original_player_start": [
+          -600.0,
+          -300.0
+        ],
+        "opponent_cell": [
+          -500.0,
+          -300.0
+        ],
+        "safe_original_player_start": [
+          500.0,
+          600.0
+        ],
+        "purpose": "Place owner at one original map start and opponent in its adjacent blast cell;move owner to another original map start after real bomb creation.No movement/pixel parity claim."
+      }
+    },
+    {
+      "directory": ".build\\LyraValidation\\BlueprintPython\\20261025-arena-opponent\\Python01",
+      "profile": "Python",
+      "summary_sha256": "6ED4F03E9B50CBE11618ACCC10DC2C89F762CE7DD8F7D55089C6B3E0345C5862",
+      "report_sha256": "D79A4FBFB017CC63538FF9CAAE3F2EA5070A0EDFC91F5F83D7C0850153CC2B5A",
+      "native_exit_code": 0,
+      "external_gate_exit_code": 0,
+      "duration_seconds": 36.792,
+      "frozen_input_records": 2650,
+      "native_elimination_messages": [
+        {
+          "channel": "Lyra.Elimination.Message",
+          "instigator": "/TopDownArena/Maps/L_TopDown_LocalMultiplayer.L_TopDown_LocalMultiplayer:PersistentLevel.LyraPlayerState_1",
+          "target": "/TopDownArena/Maps/L_TopDown_LocalMultiplayer.L_TopDown_LocalMultiplayer:PersistentLevel.LyraPlayerState_1",
+          "target_is_opponent": true,
+          "instigator_is_null": false,
+          "source_owner": 1,
+          "team_comparison": "OnSameTeam"
+        }
+      ],
+      "result": {
+        "drop": {
+          "owner": 0,
+          "remaining_before": [
+            1.0,
+            1.0
+          ],
+          "new_bombs": 1,
+          "instigator_matches_owner": true,
+          "saved_state_matches_owner": true,
+          "remaining_after": [
+            0.0,
+            1.0
+          ],
+          "bomb_profiles_match": true,
+          "foreign_owner_unchanged": true
+        },
+        "health_before": [
+          100.0,
+          100.0
+        ],
+        "health_after": [
+          100.0,
+          0.0
+        ],
+        "opponent_death": {
+          "observed": true,
+          "pawn": "/TopDownArena/Maps/L_TopDown_LocalMultiplayer.L_TopDown_LocalMultiplayer:PersistentLevel.B_Hero_Arena_C_1",
+          "player_state": "/TopDownArena/Maps/L_TopDown_LocalMultiplayer.L_TopDown_LocalMultiplayer:PersistentLevel.LyraPlayerState_1",
+          "health": 0.0,
+          "seconds_after_bomb_creation": 1.9950446337461472
+        },
+        "score_before": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_after": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_delta": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "team_score_delta": [
+          0,
+          0
+        ],
+        "different_native_teams": true,
+        "selected_elimination_callbacks": 1,
+        "other_elimination_callbacks": 0,
+        "selected_input_callbacks": 5,
+        "other_input_callbacks": 0,
+        "native_bomb_callbacks": {
+          "trigger": 1,
+          "increment": 2,
+          "destroyed": 1
+        },
+        "remaining_after_refund": [
+          1.0,
+          1.0
+        ],
+        "original_fuse_seconds": 2.0,
+        "original_explosion_radius": 2,
+        "fixed_timestep_used": false,
+        "bombs_destroyed_by_cleanup": 0
+      },
+      "pose_fixture": {
+        "owner_original_player_start": [
+          -600.0,
+          -300.0
+        ],
+        "opponent_cell": [
+          -500.0,
+          -300.0
+        ],
+        "safe_original_player_start": [
+          500.0,
+          600.0
+        ],
+        "purpose": "Place owner at one original map start and opponent in its adjacent blast cell;move owner to another original map start after real bomb creation.No movement/pixel parity claim."
+      }
+    }
+  ],
+  "comparison": {
+    "path": ".build\\LyraValidation\\BlueprintPython\\20261025-arena-opponent\\comparison.json",
+    "sha256": "7BB641B8072FC8620D6E5A9D2F535C7C8B32F8054B3197030C3E47BBC5A4D2B2",
+    "status": "passed",
+    "native_opponent_eliminations": 2,
+    "actual_clean_native_processes": 2,
+    "outcome": {
+      "health_before": [
+        100.0,
+        100.0
+      ],
+      "health_after": [
+        100.0,
+        0.0
+      ],
+      "score_delta": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "team_score_delta": [
+        0,
+        0
+      ],
+      "remaining_after_refund": [
+        1.0,
+        1.0
+      ],
+      "native_bomb_callbacks": {
+        "trigger": 1,
+        "increment": 2,
+        "destroyed": 1
+      },
+      "original_fuse_seconds": 2.0,
+      "original_explosion_radius": 2,
+      "elimination_attribution": {
+        "instigator_is_null": false,
+        "source_owner": 1,
+        "team_comparison": "OnSameTeam",
+        "target_is_opponent": true
+      }
+    },
+    "input_hashes": [
+      {
+        "directory": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261025-arena-opponent\\Original03",
+        "summary_sha256": "A3289E2A439F5935D7E1984F6EB19F76FB50D083457B098906356330261EE289",
+        "report_sha256": "84AA000ED0ECC059C3E9F4B8D6F61F1D19BD391C7AF678594CA17CB9814F988E"
+      },
+      {
+        "directory": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261025-arena-opponent\\Python01",
+        "summary_sha256": "6ED4F03E9B50CBE11618ACCC10DC2C89F762CE7DD8F7D55089C6B3E0345C5862",
+        "report_sha256": "D79A4FBFB017CC63538FF9CAAE3F2EA5070A0EDFC91F5F83D7C0850153CC2B5A"
+      }
+    ],
+    "full_acceptance": false
+  },
+  "original_behavior": {
+    "bomb_instigator_is_input_owner": true,
+    "native_elimination_source_is_victim": true,
+    "team_comparison": "OnSameTeam",
+    "no_kill_death_or_team_points_added": true,
+    "credited_enemy_kill_verified": false,
+    "note": "The real original Blueprint run supplies the victim PlayerState as both native elimination source and target. Preserve that observed self-attribution and zero-score result in Python. This batch does not repair Arena source attribution or claim a credited opponent kill."
+  },
+  "selected_families": [
+    "original drop ability",
+    "base and standard bomb",
+    "Arena hero/death",
+    "Arena mode and phase"
+  ],
+  "unselected_presentation_and_environment_profiles": "existing defaults; no whole-Experience baseline claim",
+  "isolated_staged_incremental_verification": {
+    "directory": ".build\\CommitVerification\\20261025-arena-opponent\\Index01",
+    "summary_sha256": "096E4B58FF8C97B02A53FAC0C5F90222F99C94439B06FC39FE05A2251466C0DA",
+    "tests_run": 69,
+    "selected_test_files": [
+      "Demos/UEPLyraIntegration/Tests/test_arena_local_input_contract.py",
+      "Demos/UEPLyraIntegration/Tests/test_arena_natural_bomb_contract.py",
+      "Demos/UEPLyraIntegration/Tests/test_arena_opponent_bomb_contract.py",
+      "Demos/UEPLyraIntegration/Tests/test_hud_startup.py"
+    ],
+    "tested_core_index_tree": "4c2310cb08f2c26bf67f6ed9249e56e3c7122453",
+    "tested_examples_index_tree": "481dfee6f99a4b3a26022f4dfcabb482839f6d17",
+    "bookkeeping_added_after_code_tests": true
+  },
+  "preserved_failed_runs": [
+    {
+      "directory": "Original01",
+      "reason": "Fixture incorrectly assumed automatically joined players had separated spawn positions; rejected before input."
+    },
+    {
+      "directory": "Original02",
+      "reason": "Real opponent death and zero scores observed; gate incorrectly assumed one blast expansion and credited enemy points. Failed run retained; original radius2 and message attribution checked by subsequent readonly observation."
+    }
+  ],
+  "failed_input_review": {
+    "path": ".build\\LyraValidation\\BlueprintPython\\20261025-arena-opponent\\historical-frozen-input-review.json",
+    "sha256": "6C599A935E4AA60D4BE4DE7E2EAF5C112F975ED870E51D007CEDA6168A457BCE",
+    "runs": [
+      {
+        "directory": "Original01",
+        "status": "all_failed_run_inputs_verified_against_exact_bytes",
+        "native_run_status": "failed",
+        "input_records": 2649,
+        "captured_records": 5
+      },
+      {
+        "directory": "Original02",
+        "status": "all_failed_run_inputs_verified_against_exact_bytes",
+        "native_run_status": "failed",
+        "input_records": 2649,
+        "captured_records": 5
+      }
+    ]
+  },
+  "original_246_candidate_paths_order_versions_preserved": true,
+  "original_22_requirement_text_preserved": true,
+  "protected_files_unchanged": true,
+  "full_regression_executed": false,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "assets_saved": false,
+  "physical_input_tested": false,
+  "packaged_runtime": false,
+  "pawn_position_written": true,
+  "bounded_pose_fixture_used": true,
+  "damage_or_health_or_score_written_by_fixture": false,
+  "full_acceptance": false,
+  "network_acceptance": false,
+  "pending_native_pawn_guard": {
+    "applied": false,
+    "stage_and_official_hero_cpp_sha256": "D036B6BBBF0FC8170CB31D0F3271D887D44F1B683DB564F0E036F74B0E68D3E7",
+    "original_readiness_issue": "open_not_fixed",
+    "user_scope_answer_received": false
+  }
+}

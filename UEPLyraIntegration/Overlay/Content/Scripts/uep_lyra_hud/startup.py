@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(a.startswith('-UEPArenaOpponentResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):
+        return 'uep_lyra_abilities.arena_opponent_bomb_validation'
     if any(a.startswith('-UEPWeaponRespawnStandaloneResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):
         return 'uep_lyra_weapons.weapon_respawn_standalone_validation'
     if any(a.startswith('-UEPWeaponRespawnNetworkResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):

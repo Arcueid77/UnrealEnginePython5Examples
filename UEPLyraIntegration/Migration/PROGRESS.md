@@ -31,6 +31,24 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed incremental runtime batch241 (2026-10-25):**
+Reuse the current SDK236 Editor binaries for one original-BP and one Python
+Arena run. Actual owner input drops one bomb; its authored2s fuse and radius2
+kill the other real local player while the owner remains healthy,then native
+destruction refunds only the bomb owner. Original-map PlayerStart poses are an
+explicit fixture;movement,pixel and whole-Experience parity are not claimed.
+Both native processes and independent gates exit0;four affected host suites
+pass69 tests. No C++ compilation,cook,asset save or full regression is run.
+
+The original native elimination message identifies the victim PlayerState as
+both source and target. Both profiles consequently retain zero kill/death/team
+points;this verifies that original attribution behavior,not a credited enemy
+kill or a fix. Two rejected setup/expectation attempts and their exact frozen
+inputs remain preserved. All246 candidate rows and the original22 requirement
+text stay unchanged. Ledger:
+`Acceptance/241-arena-opponent-bomb-native-death-and-score-attribution.json`.
+The native Pawn guard still awaits the user's scope decision and is unapplied.
+
 **Completed binding diagnosis batch240 (2026-10-25;gameplay still fails):**
 Observe real Character Reset callbacks before forwarding their original handler
 exactly once;capture failures never suppress that handler. Add a bounded8s
