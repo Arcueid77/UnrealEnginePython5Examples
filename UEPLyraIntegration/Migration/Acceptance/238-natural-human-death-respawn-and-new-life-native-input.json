@@ -1,0 +1,274 @@
+{
+  "schema_version": 1,
+  "batch": 238,
+  "recorded_utc": "2026-10-25T13:27:00.682329+00:00",
+  "status": "bounded_native_differential_passed",
+  "scope": "Original/Python real owner pistol death of the other human,authored natural respawn,replicated replacement identity and one real new-life owner fire gesture. Dedicated Editor server and two actual Editor clients,both attacker directions. This does not close original criterion11:Standalone and broader version acceptance remain open.",
+  "core_parent_commit": "5cd25fa2b1bb4ba942080205fa05d3e50261dd06",
+  "examples_parent_commit": "80eb5f6e00c78d1f26564da956681889fbabe51e",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261025-natural-respawn/OriginalA03CaptureBarrier",
+      "profile": "BlueprintFallback",
+      "attacker_peer": "A",
+      "run_id": "b5cba4007a7b416f86d3f39f30fb59a4",
+      "status": "passed",
+      "summary_sha256": "962C7DD5D78923E85EC4D16220BF47892CB3BD12182DBDBD4A47904913D96A19",
+      "external_gate_exit_code": 0,
+      "processes": {
+        "server": {
+          "exit_code": 0
+        },
+        "B0": {
+          "exit_code": 0
+        },
+        "A": {
+          "exit_code": 0
+        }
+      },
+      "report_hashes": {
+        "server": "B88195CA61D373D0671DA6E3ABB2CFC84F535FDE125523428A669CF07CC05E75",
+        "A": "5E60377B8192BC64F84BE9F8CC9E055C4C71DD077FE77FAFC9C2676C40F8DAE4",
+        "B0": "08B027A51263EE3C3A05B91E584C8902730C520D09F7FFDFAC931833AD27F74A"
+      },
+      "frozen_input_records": 3436,
+      "final_modified_input_snapshot": {
+        "path": ".build/LyraValidation/BlueprintPython/20261025-natural-respawn/OriginalA03CaptureBarrier/final-modified-inputs.json",
+        "sha256": "133D69F47ECCE202B5DBEBCE4F9877ED8CB76AAE566AC32052844A7D535DAB38"
+      },
+      "natural_respawn_seconds": 5.094000000000051
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261025-natural-respawn/OriginalB02CaptureBarrier",
+      "profile": "BlueprintFallback",
+      "attacker_peer": "B0",
+      "run_id": "aa9d8256a73841919f9c2bcb8c5374e9",
+      "status": "passed",
+      "summary_sha256": "DDF09D27A75D195CEB79F0621C4BD3DE460F2CF937373936B9FC67889E8401C6",
+      "external_gate_exit_code": 0,
+      "processes": {
+        "server": {
+          "exit_code": 0
+        },
+        "B0": {
+          "exit_code": 0
+        },
+        "A": {
+          "exit_code": 0
+        }
+      },
+      "report_hashes": {
+        "server": "DEDA4CA356BA6CA6E7CAC3C098476F4F40A1E602E97A47B68FBC191B1FCBAAFE",
+        "A": "2E075D927786B43EE3B694544B4400971A49063D699E078ADE7284FF98BB00A9",
+        "B0": "FB9D8E9CCB084429C0FCE319204637D867736EC3BFC1F2757A77704BE82B200C"
+      },
+      "frozen_input_records": 3436,
+      "final_modified_input_snapshot": {
+        "path": ".build/LyraValidation/BlueprintPython/20261025-natural-respawn/OriginalB02CaptureBarrier/final-modified-inputs.json",
+        "sha256": "133D69F47ECCE202B5DBEBCE4F9877ED8CB76AAE566AC32052844A7D535DAB38"
+      },
+      "natural_respawn_seconds": 5.139999999999418
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261025-natural-respawn/PythonA03CaptureBarrier",
+      "profile": "Python",
+      "attacker_peer": "A",
+      "run_id": "b82538735c604cdfbda461ebfc2d2893",
+      "status": "passed",
+      "summary_sha256": "5C137CF0E177C8EFE03B6D9948FD8FF2398F06B78EF3C719E33AA10B4DB82C02",
+      "external_gate_exit_code": 0,
+      "processes": {
+        "B0": {
+          "exit_code": 0
+        },
+        "server": {
+          "exit_code": 0
+        },
+        "A": {
+          "exit_code": 0
+        }
+      },
+      "report_hashes": {
+        "server": "6460E7D125778DCA4A5A78933BC4581703CEC65CB229ADC15CC341220E54AD9D",
+        "A": "D13B3B9199CD05FB0E8A926DF92FB84909276CA0E6C8C909C36914EE42B02396",
+        "B0": "6B4FAE42C1B6C6173668660F0CA536E18B045513C11AE69CD70D255A7F6C5876"
+      },
+      "frozen_input_records": 3436,
+      "final_modified_input_snapshot": {
+        "path": ".build/LyraValidation/BlueprintPython/20261025-natural-respawn/PythonA03CaptureBarrier/final-modified-inputs.json",
+        "sha256": "133D69F47ECCE202B5DBEBCE4F9877ED8CB76AAE566AC32052844A7D535DAB38"
+      },
+      "natural_respawn_seconds": 5.155999999999949
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261025-natural-respawn/PythonB01CaptureBarrier",
+      "profile": "Python",
+      "attacker_peer": "B0",
+      "run_id": "023840ae2d9b449bbfe50c5e68e453b7",
+      "status": "passed",
+      "summary_sha256": "6D37842C457D52813B11A86CAC0F46FA193002F124B3194945646F65D2A5CB38",
+      "external_gate_exit_code": 0,
+      "processes": {
+        "server": {
+          "exit_code": 0
+        },
+        "A": {
+          "exit_code": 0
+        },
+        "B0": {
+          "exit_code": 0
+        }
+      },
+      "report_hashes": {
+        "server": "5921C50F7DCD677F17B89B498AFBF9C9976234D312DF35DEA5BA0A80AFC07A21",
+        "A": "8CAD8D47E529E32CF9E22B01120F8503D53EFF106ACE6EAAACBF7CE0C4B29AF5",
+        "B0": "0C87DA068E1AB8C7445F03429FB9ACBFF3C7FBFA800645595DB26A1729DF44F1"
+      },
+      "frozen_input_records": 3436,
+      "final_modified_input_snapshot": {
+        "path": ".build/LyraValidation/BlueprintPython/20261025-natural-respawn/PythonB01CaptureBarrier/final-modified-inputs.json",
+        "sha256": "133D69F47ECCE202B5DBEBCE4F9877ED8CB76AAE566AC32052844A7D535DAB38"
+      },
+      "natural_respawn_seconds": 5.109999999999673
+    }
+  ],
+  "preserved_nonaccepted_revision_attempts": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261025-natural-respawn/OriginalA01",
+      "status": "failed",
+      "error": "Native lethal A report failed",
+      "summary_sha256": "D3AEDFF95FAE5E811424498742D5B48CC591EAC6710EDCEC6641EFD321B6DFEF",
+      "accepted_in_current_comparison": false,
+      "reports": {
+        "A": "07B2339E89A7D3BB9A5B46E35FB4ABF8E211E16169066F4B999853C82EC07A8A",
+        "B0": "968A697882EAEC5168EB784B0A0907C368DAB22F12AA2A99049929479EA51183"
+      }
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261025-natural-respawn/OriginalA02DeathOrdering",
+      "status": "passed",
+      "error": null,
+      "summary_sha256": "1537D7AB8353F7C860DB2EAC0C784AEC639D92EDB0362ACAF426203A7CFC1159",
+      "accepted_in_current_comparison": false,
+      "reports": {
+        "server": "5C86697FA4B6A31CF2D1E93835D9CA5227CEF71795C8B0C6DA8BE479F82721FB",
+        "A": "0744AF9AEF620D52A9DDD752085A0A5D0DFA0458E56AA88BEDFD14FCF177AA6B",
+        "B0": "4D5AAC525C7FFEEAD1CA2510C00C16F148087F7C7156C77898D46C9C5F6E0CFC"
+      }
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261025-natural-respawn/OriginalB01",
+      "status": "passed",
+      "error": null,
+      "summary_sha256": "D84D35C3A89AC0D71FE5C88B3E81794F2F06E5C6E7668B8C95277EADAEA08D4D",
+      "accepted_in_current_comparison": false,
+      "reports": {
+        "server": "C5E4322925D409BDAAF57382B9F23CC39F10B1EFC9D39C1616679A17725F2D57",
+        "A": "7FD8FB51CF8A99820D8988AE6B51CD045215A969D75D35E16946F0A7C9FB0A02",
+        "B0": "4B3AD7F438F098887893A15BBB5112BADB53F41B24D9EC1EB4CD6CB77116B7CB"
+      }
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261025-natural-respawn/PythonA01",
+      "status": "failed",
+      "error": "Native lethal peer B0 failed",
+      "summary_sha256": "2F5DE483BE0D83E52448639B6E53E86B335177CE2FA589E37876313BB2AD8728",
+      "accepted_in_current_comparison": false,
+      "reports": {
+        "server": "7E31AD5D206738896E53665631B664DECDC364FD8077D3C997423FEC18E01D3B",
+        "B0": "95793DD5770E65F7730ECE01304E5AF9CCACE1E4DD90DBA8CF8CF92D4AA285B7"
+      }
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261025-natural-respawn/PythonA02BindingDetails",
+      "status": "failed",
+      "error": "Native lethal A report failed",
+      "summary_sha256": "CEAA3F621A0AF0ED28D8F2892F7301A3C8CB17E8DFC3B4956857C51D9477A96E",
+      "accepted_in_current_comparison": false,
+      "reports": {
+        "server": "0734C42EFD0B2805C3645BB2BC3ACEF113C7900CA10341EF773FBE1D2725777B",
+        "A": "622B52FCF49FE8294926047C6D464C57CC95032B7C47FFC20664A52CA688FED5",
+        "B0": "25939C569441D3F1AFCAA7736F8243C9C5719B6E4D50078015E1636F6CEACE4A"
+      }
+    }
+  ],
+  "comparison": {
+    "path": ".build/LyraValidation/BlueprintPython/20261025-natural-respawn/comparison.json",
+    "sha256": "F9C94175BF50D26B075925C69D0004C20207AC15D5E84C425A96C33C09DE1A1F"
+  },
+  "historical_frozen_input_review": {
+    "path": ".build/LyraValidation/BlueprintPython/20261025-natural-respawn/historical-frozen-input-review.json",
+    "sha256": "F6E7574F89CB01795A426468A6F1C5689EFA258BDE3652AD53876162CFA121CD"
+  },
+  "native_manifest_input_snapshot": {
+    "path": ".build/LyraValidation/BlueprintPython/20261025-natural-respawn/before-batches.json",
+    "sha256": "D855B398AFCE8E63E5A43A83AE8C6E9AA9D3E87EC6C82FA7B3FD00B772D7476C"
+  },
+  "natural_human_deaths": 4,
+  "natural_human_respawns": 4,
+  "new_life_native_owner_fire_cases": 4,
+  "actual_clean_native_processes": 12,
+  "server_restores_fixture_only_after_all_three_result_snapshots": true,
+  "client_death_callback_may_precede_replicated_zero_health": true,
+  "actual_zero_health_still_required": true,
+  "phase_subsystem_playing_asserted_on_authority": true,
+  "authored_target_score_preserved": 15,
+  "winning_postgame_fixture_used": false,
+  "direct_health_writes": false,
+  "fixture_damage_spec_applied": false,
+  "death_events_replayed": false,
+  "manual_restart_or_pawn_spawn": false,
+  "fixture_ability_grant_or_asc_initialization": false,
+  "native_rpc_replaced": false,
+  "original_readiness_issue": "open_not_fixed",
+  "previous_foreign_pawn_missing_observation": {
+    "case": "PythonA01",
+    "status": "cause_not_proven",
+    "healthy_later_runs_do_not_prove_a_fix": true
+  },
+  "original_scope": [
+    246,
+    182,
+    63,
+    11
+  ],
+  "original_candidate_rows_changed": 0,
+  "original_acceptance_checklist_changed": false,
+  "cpp_compile_executed": false,
+  "engine_full_compile_executed": false,
+  "cook_package_executed": false,
+  "assets_saved": false,
+  "full_regression_executed": false,
+  "standalone_tested": false,
+  "pixels_tested": false,
+  "bounded_network_runtime_passed": true,
+  "full_acceptance": false,
+  "full_migration_acceptance_proven": false,
+  "isolated_staged_incremental_verification": ".build/CommitVerification/20261025-natural-respawn/Index01",
+  "input_hashes": [
+    {
+      "path": "Validation/Run-UEP58WeaponRespawnNetworkValidation.ps1",
+      "sha256": "2B61E2602FA69832A02E8C15555222517C6D2B6B012A43FAEFA6AADEA2414403"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py",
+      "sha256": "AFB945BFA8E0EC6B3A36E2DD3AB49770AE0585DE3CD3F7C2E8F3638E7070EBCF"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_respawn_network_validation.py",
+      "sha256": "8EA5114C6BFB7DA7949148962DA428468FC447FF77C396B11C199EB80FA268EE"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/weapon_respawn_network_contract.py",
+      "sha256": "349A0AA0608A7956C6820342F4C071BC7788F3BE78ECFD96F77AC2768AC3D9C7"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tests/test_weapon_respawn_network_contract.py",
+      "sha256": "411E3EEE0971A566CADF0C3A1B3B349116DC3FE69C29134F3BFFF95C869C9056"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/compare_weapon_respawn_runs.py",
+      "sha256": "518CEE9B67D2A967B4040F49D2030749F18BF82670BDE3A5432C51E305368368"
+    }
+  ]
+}

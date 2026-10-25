@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 239,
+    "bounded_evidence_ledgers": 240,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -15991,5 +15991,20 @@
     "runtime_acceptance": false,
     "full_acceptance": false,
     "next": "Review the remaining20 original gameplay/presentation/lifetime/network/package requirements against their actual evidence. The original Pawn/ASC issue remains open;do not infer gameplay completion from registration/source inventory."
+  },
+  "weapon_natural_respawn_network_pilot": {
+    "status": "both_profiles_both_human_attacker_directions_native_death_respawn_and_new_life_input_verified",
+    "evidence_ledger": "238-natural-human-death-respawn-and-new-life-native-input.json",
+    "natural_human_respawns": 4,
+    "actual_clean_native_processes": 12,
+    "direct_health_or_damage_fixture": false,
+    "manual_restart_or_spawn": false,
+    "full_regression_executed": false,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "standalone_tested": false,
+    "full_acceptance": false,
+    "original_readiness_issue": "open_not_fixed",
+    "next": "Continue original criterion11 Standalone natural death/respawn and remaining original runtime/version requirements. Preserve PythonA01 foreign-Pawn absence as unresolved evidence;the healthy network comparison does not prove its cause or a fix."
   }
 }

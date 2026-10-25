@@ -31,6 +31,28 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed natural human death/respawn network batch238 (2026-10-25):**
+Add one explicit opt-in validation lane for actual owner pistol input killing
+the other human,authored natural death/respawn and a fresh-Pawn native fire
+gesture. Keep the authored target score15,so the kill does not end the match.
+Both original/Python profiles and both attacker directions pass:four groups,
+twelve clean native process exits,all independent gates and semantic comparison.
+Every peer observes old-Pawn EndPlay,new identity with the same native class,
+health/ASC restoration and persistent PlayerState identity;new-life owner and
+authority magazine values agree. The fixture never writes health,applies its
+own damage spec,replays death,spawns/restarts a Pawn or initializes an ASC.
+Correct observer assumptions:client death callbacks can precede zero-health
+replication;the actual zero transition remains required. Phase state is
+authoritative only on the server. Wait for all three result snapshots before
+restoring scores/poses,preventing cleanup from racing another client's sample.
+Twenty focused host checks include execution of that snapshot barrier.
+Preserve all five earlier revision attempts and exact changed input bytes.
+PythonA01's foreign-Pawn absence remains unexplained;later healthy groups do
+not prove the original Pawn/ASC issue fixed. No C++ build,asset save,cook/package
+or full regression. Original246 candidate rows and22-checklist text remain.
+Standalone natural death/respawn and broader version acceptance are still open.
+Commit/push Examples then core;see ledger238.
+
 **Completed current-SDK inventory refresh batch237 (2026-10-25):**
 Refresh the read-only246-candidate native census after the private bootstrap
 repair. One Editor commandlet exits0;no source/asset edit,compile,cook/package
