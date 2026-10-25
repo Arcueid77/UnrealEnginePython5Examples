@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "batch": 250,
+  "recorded_utc": "2026-10-25T18:55:31.778873+00:00",
+  "status": "controlled_destroyed_cached_target_native_original_python_cleanup_comparison_verified",
+  "version": "0.12.0",
+  "core_parent_commit": "8e0a8a7d891ef1cf610a664fc8df356190d7ee15",
+  "examples_parent_commit": "0e495f214fe35585756810094274a2bcc0eb464b",
+  "scope": "Complete the missing controlled original/Python comparison for the existing GCNL_Spawning invalid cached-target cleanup fix. Preserve the complete original migration scope.",
+  "native_runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261026-effects-match-acceptance/SpawningDestroyed01",
+      "summary_sha256": "48419B0CAAD973DDC050B4436DE144B08B30BF02035445F0AD3007457F6DD08C",
+      "log_sha256": "13369613326D759D31155A76765B9CC753CD0093D182DD0063616D008EAC7011",
+      "status": "failed",
+      "frozen_input_records": 3606,
+      "archived_inputs": [
+        {
+          "original": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\Scripts\\uep_lyra_hud\\startup.py",
+          "archive": ".build/LyraValidation/BlueprintPython/20261026-effects-match-acceptance/SpawningDestroyed01/Inputs/startup.py",
+          "sha256": "8A182B37A80535868DEA43D7AD684E552394C74DBA0FA4E8994C646DD602D28E"
+        },
+        {
+          "original": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\Scripts\\uep_lyra_hud\\startup.py",
+          "archive": ".build/LyraValidation/BlueprintPython/20261026-effects-match-acceptance/SpawningDestroyed01/Inputs/startup.py",
+          "sha256": "8A182B37A80535868DEA43D7AD684E552394C74DBA0FA4E8994C646DD602D28E"
+        },
+        {
+          "original": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\Scripts\\uep_lyra_weapons\\spawning_destroyed_target_validation.py",
+          "archive": ".build/LyraValidation/BlueprintPython/20261026-effects-match-acceptance/SpawningDestroyed02/Inputs/spawning_destroyed_target_validation.py",
+          "sha256": "FFCD79340D65783B1D280E667CBA8DC61EFD6C2CA45E976982F18BBC236F48E9"
+        },
+        {
+          "original": "F:\\UnrealEnginePython5\\Validation\\Run-UEP58SpawningDestroyedTargetValidation.ps1",
+          "archive": ".build/LyraValidation/BlueprintPython/20261026-effects-match-acceptance/SpawningDestroyed01/Inputs/Run-UEP58SpawningDestroyedTargetValidation.ps1",
+          "sha256": "6D5AB40590C73F115AD6C9ED09C670F5EBEC2FCBD919F58B1BA8631614D92EB4"
+        }
+      ],
+      "observer_never_produced_case_evidence": true,
+      "owned_termination_note_sha256": "F337C00E7BF1630510B457DB38A8AF3932F2248156E8779D2523B11741414A1C",
+      "process_summary_unassigned_after_throw": true
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261026-effects-match-acceptance/SpawningDestroyed02",
+      "summary_sha256": "39E934B419490CE5B2A73A73558DAE35CCB46ABB6967A84C1EEB329904480EDA",
+      "log_sha256": "39AD778C357C566E160FA9C0B15F532E0019AB940274067C5FF24AEB72333679",
+      "status": "passed",
+      "frozen_input_records": 3606,
+      "archived_inputs": [
+        {
+          "original": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\Scripts\\uep_lyra_weapons\\spawning_destroyed_target_validation.py",
+          "archive": ".build/LyraValidation/BlueprintPython/20261026-effects-match-acceptance/SpawningDestroyed02/Inputs/spawning_destroyed_target_validation.py",
+          "sha256": "FFCD79340D65783B1D280E667CBA8DC61EFD6C2CA45E976982F18BBC236F48E9"
+        }
+      ],
+      "report_sha256": "5C36E552C6508B33EA5DAE8C7518474C5A39F80E4E98AC48BA255006119C543E",
+      "gate": {
+        "status": "passed",
+        "paired_native_cases": 2,
+        "native_target_destructions": 4,
+        "native_timelines": 4,
+        "full_acceptance": false
+      },
+      "policy_guard": {
+        "current_sha256": "FFD75BE083BE079CC01D1AA1442B17C9657D688CC2559AB4F01E8393103201B0",
+        "native_sha256": "FFD75BE083BE079CC01D1AA1442B17C9657D688CC2559AB4F01E8393103201B0",
+        "equivalence": "exact-bytes"
+      },
+      "asset_guard": {
+        "current_sha256": "FC6446A0921DD60BA8ED6D409662BB774D29BD2D2E31847745FF7784B7DF2E93",
+        "native_sha256": "FC6446A0921DD60BA8ED6D409662BB774D29BD2D2E31847745FF7784B7DF2E93",
+        "equivalence": "exact-bytes"
+      },
+      "actual_entrypoint": "ue_site.validation_module -> explicit spawning-destroyed flag",
+      "old_report_entrypoint_label_informational_and_stale": true
+    }
+  ],
+  "runtime_review": {
+    "path": ".build/LyraValidation/BlueprintPython/20261026-effects-match-acceptance/runtime-review.json",
+    "sha256": "625CA33EFF94615E33BF8EEC41B4A483782D48740D25D547F59C462E3103C829"
+  },
+  "selected_host_checks": 57,
+  "host_index_review": {
+    "path": ".build/LyraValidation/BlueprintPython/20261026-effects-match-acceptance/Index01/summary.json",
+    "sha256": "91EEDA3F48D671F636309B6E96F97549C7ADC69B2D512E577E83A6565927A9FF"
+  },
+  "current_sdk236": true,
+  "existing_isolated_lyra_init_guard_reused": true,
+  "production_cue_class": "/ShooterCore/GameplayCues/GCNL_Spawning.GCNL_Spawning_C",
+  "production_cue_policy_changed": false,
+  "blueprint_assets_changed": false,
+  "controlled_destroyed_target_native_pair_tested": true,
+  "paired_native_cases": 2,
+  "native_target_destructions": 4,
+  "native_timelines": 4,
+  "current_native_processes": 1,
+  "preserved_failed_bootstrap_processes": 1,
+  "source_cached_target_field_preserved": true,
+  "source_watch_and_parts_handles_retained": true,
+  "native_removal_does_not_stop_timeline": true,
+  "ui_startup_compatibility_review": {
+    "path": ".build/LyraValidation/BlueprintPython/20261026-effects-match-acceptance/ui-startup-review.json",
+    "sha256": "51FC289A230C446C1EA903AFE4243F7E5A0D2006D9BCC9DCA8466D0FF6CE5324",
+    "review": {
+      "status": "passed",
+      "criterion": "Repeated screen open/close and travel restore subscriptions and state.",
+      "native_processes": 2,
+      "settings_reopen_cycles": 8,
+      "actual_confirmed_map_travels": 2,
+      "current_semantic_gate_rechecked": true,
+      "frozen_native_input_records": 7196,
+      "original_runtime_contract_preserved": true,
+      "new_native_processes": 0,
+      "all57_ui_behavior_accepted": false,
+      "full_version_acceptance": false
+    }
+  },
+  "observer_metadata_only_change_after_success": {
+    "only_module_docstring_and_unused_report_label_changed": true,
+    "gameplay_and_probe_control_flow_unchanged": true,
+    "current_sha256": "97D87E8A8F77EE33FF86798C942A1510F2F5F6E95FD51D9EFC1705A0F50D4142",
+    "native_archive_sha256": "FFCD79340D65783B1D280E667CBA8DC61EFD6C2CA45E976982F18BBC236F48E9",
+    "successful_native_run_not_repeated_for_labels": true
+  },
+  "total_frozen_input_records": 7212,
+  "original_candidates": 246,
+  "original_requirements": 22,
+  "requirements_proven": 6,
+  "original_effects_match_criterion_proven": false,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "network_acceptance": false,
+  "packaged_runtime": false,
+  "pixels_tested": false,
+  "full_acceptance": false,
+  "limits": [
+    "This accepts only the controlled destroyed-cache comparison. The original effect/audio/phase/scoring/notification criterion still requires the rest of its source-bound checkpoints;the complete migration remains6/22.",
+    "Actual original/Python native Cue instances receive the same null OnRemoval input while their retained TargetActor property still references a genuinely destroyed LyraCharacter. This is an explicit native event-entry comparison;it does not claim automatic GAS removal delivery or a network test.",
+    "The mid-Timeline case with native character-parts support retains the playing clock and observes59 subsequent native update callbacks per profile. The completed-Timeline case without parts observes zero subsequent updates. Both reach1.0,clear FX/map caches,cancel watchers and retain source fields without diagnostic fallback.",
+    "The first console-command bootstrap produced no observer report/case evidence. Its owned render-offscreen process was explicitly terminated after identity verification;raw logs,frozen inputs,original driver/startup snapshots and the termination note remain. The successful second process uses the regular explicit validation startup selector.",
+    "The successful raw report retains an unused stale entrypoint label from the console attempt. Recorded native arguments and the frozen/current startup selector prove the actual regular startup route. Only that label and the module docstring were corrected afterward;exact text equivalence proves all probe/gameplay control flow unchanged. Raw native evidence is not edited or rerun for those labels.",
+    "The added opt-in startup branch is unreachable for the old UI process arguments. Removing only the reviewed AI and spawning branches restores the full Git/frozen historical startup AST;all other native UI input fingerprints remain enforced. No UI runtime is repeated.",
+    "Existing SDK236 and isolated init-guard products are hash checked. No new compile/link,cook/package,asset save,game C++ change or full regression. Official Lyra and unrelated dirt remain untouched."
+  ]
+}

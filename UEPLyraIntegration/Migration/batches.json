@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 251,
+    "bounded_evidence_ledgers": 252,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -16298,5 +16298,23 @@
     "full_acceptance": false,
     "ai_host_checks": 37,
     "ui_startup_compatibility_checks": 16
+  },
+  "spawning_destroyed_target_comparison_pilot": {
+    "version": "0.12.0",
+    "status": "controlled_destroyed_cached_target_native_original_python_cleanup_comparison_verified",
+    "evidence_ledger": "250-spawning-cue-native-destroyed-cache-original-python-comparison.json",
+    "current_sdk236": true,
+    "production_policy_changed": false,
+    "controlled_destroyed_target_native_pair_tested": true,
+    "paired_native_cases": 2,
+    "native_target_destructions": 4,
+    "current_native_processes": 1,
+    "preserved_failed_bootstrap_processes": 1,
+    "selected_host_checks": 57,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_acceptance": false,
+    "original_effects_match_criterion_proven": false
   }
 }

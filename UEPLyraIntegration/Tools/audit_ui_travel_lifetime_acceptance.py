@@ -7,21 +7,23 @@ REQUIREMENT='Repeated screen open/close and travel restore subscriptions and sta
 BASE='.build/LyraValidation/BlueprintPython/20261026-ui-travel-lifetime'
 STARTUP_BASE_COMMIT='3944cc0733f5149ee9f0e730ee1e08c8ebd21e39'
 AI_FLAG='-UEPShooterAILifetimeResult='
+SPAWNING_FLAG='-UEPSpawningDestroyedResult='
 def require(value,message):
     if not value:raise ValueError(message)
 def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest().upper()
 def read(path):return json.loads(Path(path).read_text(encoding='utf-8-sig'))
 
 def startup_selector_equivalent(before,after,arguments):
-    require(not any(a.startswith(AI_FLAG) for a in arguments),'Historical UI process enabled the new AI-only selector')
+    require(not any(a.startswith((AI_FLAG,SPAWNING_FLAG)) for a in arguments),'Historical UI process enabled a new unrelated validation selector')
     old,new=ast.parse(before),ast.parse(after)
     functions=[n for n in new.body if isinstance(n,ast.FunctionDef) and n.name=='validation_module']
     require(len(functions)==1,'One startup validation selector required')
-    expected=ast.parse("def validation_module(arguments):\n    if any(a.startswith('-UEPShooterAILifetimeResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):\n        return 'uep_lyra_world.shooter_ai_lifetime_validation'\n").body[0].body[0]
+    expected=ast.parse("def validation_module(arguments):\n    if any(a.startswith('-UEPSpawningDestroyedResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):\n        return 'uep_lyra_weapons.spawning_destroyed_target_validation'\n    if any(a.startswith('-UEPShooterAILifetimeResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):\n        return 'uep_lyra_world.shooter_ai_lifetime_validation'\n").body[0].body
     function=functions[0]
-    require(function.body and ast.dump(function.body[0],include_attributes=False)==ast.dump(expected,include_attributes=False),'Only the exact AI opt-in branch may be added')
-    function.body.pop(0)
-    require(ast.dump(old,include_attributes=False)==ast.dump(new,include_attributes=False),'Existing startup behavior changed beyond the AI opt-in branch')
+    shapes={ast.dump(n,include_attributes=False) for n in expected};removed=[]
+    while function.body and ast.dump(function.body[0],include_attributes=False) in shapes:removed.append(ast.dump(function.body.pop(0),include_attributes=False))
+    require(removed and len(set(removed))==len(removed) and ast.dump(expected[-1],include_attributes=False) in removed,'Only the exact reviewed opt-in branches may be added')
+    require(ast.dump(old,include_attributes=False)==ast.dump(new,include_attributes=False),'Existing startup behavior changed beyond the reviewed opt-in branches')
 
 def startup_guard(repo,path,entry,arguments):
     relative='UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/startup.py'

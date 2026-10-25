@@ -13,6 +13,12 @@ class UITravelLifetimeAcceptanceTests(unittest.TestCase):
         return before,after
     def test_unrelated_exact_ai_opt_in_preserves_old_ui_startup(self):
         before,after=self.selector_pair();audit.startup_selector_equivalent(before,after,['-game','-UEPUITravelLifetimeResult=report.json'])
+    def test_new_spawning_opt_in_is_also_unreachable_for_old_ui_inputs(self):
+        before,after=self.selector_pair()
+        branch="    if any(a.startswith('-UEPSpawningDestroyedResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):\n        return 'uep_lyra_weapons.spawning_destroyed_target_validation'\n"
+        after=after.replace('def validation_module(arguments):\n','def validation_module(arguments):\n'+branch)
+        audit.startup_selector_equivalent(before,after,['-UEPUITravelLifetimeResult=report.json'])
+        with self.assertRaises(ValueError):audit.startup_selector_equivalent(before,after,['-UEPSpawningDestroyedResult=other.json'])
     def test_ai_opt_in_cannot_be_enabled_in_the_historical_ui_process(self):
         before,after=self.selector_pair()
         with self.assertRaises(ValueError):audit.startup_selector_equivalent(before,after,['-UEPShooterAILifetimeResult=other.json'])

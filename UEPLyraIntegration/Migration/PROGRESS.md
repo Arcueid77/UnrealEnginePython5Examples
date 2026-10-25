@@ -31,6 +31,33 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed controlled spawning Cue destroyed-cache comparison batch250 (2026-10-26):**
+Close the explicitly missing controlled native original/Python comparison for
+the existing batch233 cached-target cleanup fix. Two paired cases use actual
+retained Cue classes and4 genuinely destroyed LyraCharacter targets:one during
+the native Timeline with character parts,one after completion without parts.
+Both receive the same null native OnRemoval input while their cached source
+TargetActor reference remains invalid and unchanged. FX/map caches empty,
+watchers cancel and source handles remain. Native clock behavior matches:
+59 further updates per profile for the live case,zero for the completed case;
+both finish at1.0 without diagnostic fallback or late effect recreation.
+
+One accepted current-SDK236 native process,57 affected immutable-index host
+checks and7212 frozen input records across2 attempts are verified. The first
+console bootstrap produced no observer/case evidence;its owned process was
+explicitly terminated and its log/input/termination records remain. The regular
+validation startup route succeeds. An unused entrypoint label/module docstring
+are corrected afterward with exact metadata-only source equivalence;the raw
+report is preserved and successful native work is not repeated for labels.
+The new opt-in selector is unreachable for recorded UI arguments;the pinned
+UI lifetime reports/gates and every other frozen input are rechecked with no
+new UI process. Production Cue policy/assets and game C++ remain unchanged.
+
+Original effect/audio/phase/scoring/notification acceptance is still under
+review. All246 candidates and22 requirements remain;overall acceptance stays
+6/22. No compile/link,cook/package,asset authoring or full regression.
+Ledger:`Acceptance/250-spawning-cue-native-destroyed-cache-original-python-comparison.json`.
+
 **Completed original AI outcome/cancellation/lifetime criterion batch249 (2026-10-26):**
 Recheck all12 original AI controller/decorator/service/EQS candidates against
 current policy/dependency/native asset bytes and8 pinned original/Python TDM/CP
