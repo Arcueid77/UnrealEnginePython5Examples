@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 252,
+    "bounded_evidence_ledgers": 253,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -16316,5 +16316,24 @@
     "full_regression_executed": false,
     "full_acceptance": false,
     "original_effects_match_criterion_proven": false
+  },
+  "effects_match_acceptance_review": {
+    "version": "0.12.0",
+    "status": "original_effect_audio_phase_score_notification_criterion_verified",
+    "criterion": "Effect/audio triggering, warmup/play/postgame, scoring and notifications match the original BP checkpoints under the same inputs.",
+    "completion_proven": true,
+    "evidence_ledger": "251-original-effect-audio-phase-score-notification-checkpoint-acceptance.json",
+    "original_version_candidates": 75,
+    "checkpoint_candidates": 63,
+    "ai_candidates_separately_reviewed": 12,
+    "referenced_native_processes": 45,
+    "new_native_processes": 0,
+    "selected_host_checks": 56,
+    "requirements_proven": 7,
+    "original_requirements": 22,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_acceptance": false
   }
 }

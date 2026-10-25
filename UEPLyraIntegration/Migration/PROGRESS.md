@@ -31,6 +31,33 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed original effect/audio/phase/scoring/notification criterion batch251 (2026-10-26):**
+Recheck45 pinned native checkpoint runs and all63 original non-AI0.12 candidate
+assets/Mixin Sets against current sources and current report contracts. The12
+AI candidates retain their separate accepted criterion. Source-bound evidence
+covers native Niagara/fields/materials/latents,audio parameters/components and
+native offline triggering,music controls/listeners/children,footstep interface
+and effects,Cue widgets/messages,physical control points,scoring/notifications,
+scoreboards and actual warmup/playing/postgame/seamless restart checkpoints.
+Both scoring/presentation modes and both phase profiles remain represented.
+
+Bound source changes precisely:actually imported Cue lib/components/team bodies
+remain identical;shared ammo extraction inlines to the old dispatch AST apart
+from its numeric diagnostic counter and eager constant-tag allocation. The
+spawning guard is identical on valid targets;the frozen old fixture destroys
+targets after removal/end-Cue,and batch250 separately proves the invalid-cache
+path. The19-case native original-macro matrix and current consumer evidence
+remain required. Retained static audio forwarders/macro definitions are covered
+explicitly,including their original source-disposition reasons.
+
+Fifty-six affected immutable-index host checks pass. Historical runtime binary
+versions remain explicit:zero new UE runs,compile/link,cook/package,asset saves
+or full regression. This accepts the exact triggering/checkpoint criterion;
+hardware audio,all63-pixel refresh,the separate multi-client score/phase/local
+notification/cleanup condition and the full version/migration remain open.
+Original acceptance is now7/22,with all246 candidates and22 texts preserved.
+Ledger:`Acceptance/251-original-effect-audio-phase-score-notification-checkpoint-acceptance.json`.
+
 **Completed controlled spawning Cue destroyed-cache comparison batch250 (2026-10-26):**
 Close the explicitly missing controlled native original/Python comparison for
 the existing batch233 cached-target cleanup fix. Two paired cases use actual
