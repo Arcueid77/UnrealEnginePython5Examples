@@ -23,7 +23,7 @@ This index does not execute or semantically revalidate the referenced runtime ev
 - `0.9.0` — Generic, both Third Person variants and Lyra pass the candidate regression matrix; the missing Mixin Third Person visible gate is closed. (ROADMAP.md:256; historical_claim_needs_source_and_evidence_review).
 - `0.9.0` — The supported API inventory and migration/deprecation rules are ready for RC freeze, with no known release-blocking correctness defects. (ROADMAP.md:258; historical_claim_needs_source_and_evidence_review).
 - `0.10.0` — Each small batch passes original-BP/Python comparison without BP fallthrough. (ROADMAP.md:605; unproven).
-- `0.10.0` — Pickup failure/success, cooldown/respawn and interaction effects match the baseline; two players cannot share another player's UI or claim state. (ROADMAP.md:606; unproven).
+- `0.10.0` — Pickup failure/success, cooldown/respawn and interaction effects match the baseline; two players cannot share another player's UI or claim state. (ROADMAP.md:606; native_pickup_rejection_cooldown_interaction_effects_and_two_owner_ui_claim_sources_verified).
 - `0.10.0` — Widget and Actor lifetime tests leave no owned subscriptions after teardown, travel or profile switching. (ROADMAP.md:608; unproven).
 - `0.11.0` — Fire, reload, ammo exhaustion, switching, death and respawn pass BP/Python comparison in Standalone and one-server/two-client play. (ROADMAP.md:1705; unproven).
 - `0.11.0` — Supported ability tasks, delegates, cancellation and latent boundaries have call/lifetime regressions; unsupported signatures fail explicitly. (ROADMAP.md:1707; unproven).

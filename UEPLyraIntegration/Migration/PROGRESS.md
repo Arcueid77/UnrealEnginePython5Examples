@@ -31,6 +31,40 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed original pickup/device interaction criterion batch255 (2026-10-26):**
+Revalidate the twelve original0.10 interaction candidates against seven pinned
+authority-plus-two-client groups:108 rows cover both owners and BP/Python
+profiles for physical GAS pads,inventory pads,grant-GE pads,launchers,weapon/
+ability spawners,teleporters and equipment-granted healing. Reject full slots,
+full duplicate ammo,full Health and inactive reentry;verify native10/15-second
+cooldown,respawn,inventory/Health replication and unchanged foreign-owner state.
+
+Reexecute every independent raw-report gate and freeze its dependencies against
+the recorded native inputs. Require distinct native processes,player IDs,
+controllers,Pawns and client Worlds;zero authority UI;clean native exit0 and
+ordered Python/HUD shutdown. All seven production policy closures and twelve
+device/Mixin transport asset families match their native records directly.
+The earlier spawner Differential03 source differs and is excluded;Network02
+freezes current policy and passes all36 original scenario/profile/owner rows.
+
+Separately revalidate the later four-process,nineteen-phase HUD record whose
+current Health,failure and quickbar presenters and native protocol dependencies
+match exactly. It checks native local-owner presentation,foreign stability,
+cleanup and rejoin. Two already accepted native Cue runs supply pickup/heal,
+launcher and teleport spawn/material/Niagara/Timeline/audio-component evidence;
+their current contracts,policy closures,assets and raw outputs are rechecked.
+
+Twenty-three affected immutable-index host checks pass. These27 native processes
+are historical references;no new UE process,build,cook/package or full regression
+occurs. Some legacy post-exit tool bytes were not frozen then;their current pure
+gate is reexecuted and newly pinned,while its protocol inputs remain source-bound.
+Native GA_HealPickup cost/commit refusal,other ability branches,all32 candidate
+comparison/lifetime conditions,pixels and physical audio remain separate.
+
+This accepts only the exact original pickup/device interaction criterion.
+Overall proof becomes10/22 with all246 candidates and22 texts preserved.
+Ledger:`Acceptance/255-original-pickup-device-cooldown-effects-and-two-owner-acceptance.json`.
+
 **Completed original startup/probe boundary criterion batch254 (2026-10-26):**
 Reuse the current batch253/Current02 two-process record. The rendered weapon
 probe passes42 native original/Python presenter checkpoints,three controlled

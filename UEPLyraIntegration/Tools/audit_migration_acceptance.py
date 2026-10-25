@@ -190,6 +190,16 @@ def attach_playable_startup_review(report,repo,path):
     target[0].update(completion_proven=True,evidence_state='native_normal_no_probe_observation_and_focused_rendered_probe_cleanup_and_sources_verified',evidence_artifact=str(path.resolve()),full_migration_acceptance_proven=False)
     report['playable_startup_review']=verified;report['inputs'].append(dict(path=str(path.resolve()),sha256=digest(path)))
 
+def attach_world_interaction_review(report,current,initial,repo,path):
+    from audit_world_interaction_acceptance import REQUIREMENT,verify_documentation
+    path=Path(path);verified=verify_documentation(json.loads(path.read_text(encoding='utf-8-sig')),current,initial,repo)
+    targets=[row for row in report['requirements'] if row['version']=='0.10.0' and row['text']==REQUIREMENT]
+    if len(targets)!=1:raise ValueError('Exact original pickup/device interaction requirement required')
+    targets[0].update(completion_proven=True,evidence_state='native_pickup_rejection_cooldown_interaction_effects_and_two_owner_ui_claim_sources_verified',
+        evidence_artifact=str(path.resolve()),full_migration_acceptance_proven=False)
+    report['world_interaction_review']=verified;report['inputs'].append(dict(path=str(path.resolve()),sha256=digest(path)))
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--manifest', required=True)
@@ -206,6 +216,7 @@ def main():
     parser.add_argument('--effects-match-review',help='Recheck all original non-AI0.12 effect/audio/phase/scoring/notification checkpoints against pinned native evidence and current source')
     parser.add_argument('--match-network-review',help='Recheck original two-client score/phase/local notifications and cleanup for TDM and physical control-point capture')
     parser.add_argument('--playable-startup-review',help='Recheck original no-test-flag startup observation and explicit rendered weapon probe timeout/cleanup boundary')
+    parser.add_argument('--world-interaction-review',help='Recheck original pickup/device success,rejection,cooldown,effect and two-owner UI/claim evidence against current source')
     args = parser.parse_args()
     manifest = Path(args.manifest)
     current = json.loads(manifest.read_text(encoding='utf-8-sig'))
@@ -252,6 +263,8 @@ def main():
         attach_match_network_review(report,manifest.resolve().parents[3],args.match_network_review)
     if args.playable_startup_review:
         attach_playable_startup_review(report,manifest.resolve().parents[3],args.playable_startup_review)
+    if args.world_interaction_review:
+        attach_world_interaction_review(report,current,initial,manifest.resolve().parents[3],args.world_interaction_review)
     Path(args.result).write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     if args.markdown:
         Path(args.markdown).write_text(markdown(report), encoding='utf-8')
