@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 249,
+    "bounded_evidence_ledgers": 250,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -16256,6 +16256,25 @@
     "requirements_proven": 4,
     "original_requirements": 22,
     "full_version_acceptance": false,
+    "full_acceptance": false
+  },
+  "ui_navigation_acceptance_review": {
+    "version": "0.13.0",
+    "status": "original_ui_navigation_settings_sessions_and_replay_criterion_verified",
+    "criterion": "Navigation, focus/back behavior, settings persistence, session results and replay controls pass original-BP/Python comparisons.",
+    "completion_proven": true,
+    "evidence_ledger": "248-original-ui-navigation-settings-session-replay-acceptance.json",
+    "current_native_refresh_processes": 13,
+    "preserved_failed_native_processes": 1,
+    "referenced_native_processes": 28,
+    "settings_write_read_pairs": 4,
+    "selected_host_checks": 53,
+    "requirements_proven": 5,
+    "original_requirements": 22,
+    "original_ui_checklist_conditions_proven": 3,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
     "full_acceptance": false
   }
 }

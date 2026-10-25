@@ -31,6 +31,28 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed original UI navigation/settings/session/replay criterion batch248 (2026-10-26):**
+Recheck current policy/dependency sources,Blueprint/Mixin Set bytes,pinned raw
+reports,native errors/shutdown order and semantic gates across the original UI
+requirement. Current frontend/experience/hosting source changes require7 fresh
+native runs. Two current replay runs additionally cover record/query/playback,
+actual pointer/seek/tick and cleanup with the isolated native init guard. Four
+current shared-settings save/read runs supply previously absent asset provenance.
+The first read used a wrong CLI key;its failure and exact input snapshot remain.
+The corrected reader consumes the same successful write without repeating it.
+
+Thirteen accepted current processes,one preserved failed read,53 affected host
+checks and50375 frozen input records are reviewed. Unchanged settings/list/search,
+join/retry/local-store and reopen/travel records remain explicitly historical.
+The UI imports only the unchanged lib helper from the Cue module;older unrelated
+append-body changes are checked against Git/frozen inputs and import-time state,
+not silently accepted as arbitrary dependency changes. Four native write/read
+pairs cover distinct shared SaveGame and local INI stores in both profiles.
+All3 original0.13 checklist conditions now have source-bound native evidence;
+overall acceptance is5/22. All246 candidates and22 requirement texts remain.
+No production policy/asset/C++ change,build,cook/package or full regression.
+Ledger:`Acceptance/248-original-ui-navigation-settings-session-replay-acceptance.json`.
+
 **Completed original UI lifetime criterion batch247 (2026-10-26):**
 Two fresh original/Python processes use the accepted binaries without a build.
 Each opens settings and clicks the represented native Back twice in gameplay,

@@ -31,7 +31,7 @@ This index does not execute or semantically revalidate the referenced runtime ev
 - `0.12.0` — Effect/audio triggering, warmup/play/postgame, scoring and notifications match the original BP checkpoints under the same inputs. (ROADMAP.md:1722; unproven).
 - `0.12.0` — AI task/service outcomes and cancellation are reproducible; long-running tasks do not retain a destroyed Pawn or World. (ROADMAP.md:1724; unproven).
 - `0.12.0` — Multi-client score/phase state, local notifications and cleanup agree. (ROADMAP.md:1726; unproven).
-- `0.13.0` — Navigation, focus/back behavior, settings persistence, session results and replay controls pass original-BP/Python comparisons. (ROADMAP.md:1737; unproven).
+- `0.13.0` — Navigation, focus/back behavior, settings persistence, session results and replay controls pass original-BP/Python comparisons. (ROADMAP.md:1737; native_navigation_settings_sessions_replay_comparisons_and_current_sources_verified).
 - `0.13.0` — Repeated screen open/close and travel restore subscriptions and state. (ROADMAP.md:1739; paired_native_reopen_travel_state_and_callback_restoration_verified).
 - `0.13.0` — Failures/cancellations are tested, not accepted only on the success path. (ROADMAP.md:1740; native_ui_failure_and_cancellation_evidence_and_current_source_verified).
 - `0.14.0` — Both Experiences pass original-BP/Python gameplay, presentation and applicable multi-client/local-player comparisons. (ROADMAP.md:1751; unproven).
