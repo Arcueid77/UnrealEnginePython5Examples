@@ -24,6 +24,9 @@ class NativeConstructionStackTests(unittest.TestCase):
         self.assertEqual(symbols.provenance(['FBlueprintCompileReinstancer::ReinstanceObjects','StaticDuplicateObjectEx']),['blueprint-reinstancing','object-duplication'])
         self.assertEqual(symbols.provenance(['AActor::RerunConstructionScripts','UWorld::DestroyActor']),['construction-rerun','native-destruction'])
         self.assertEqual(symbols.provenance(['UnresolvedOrGenericAllocation']),[])
+    def test_native_reset_ability_is_distinct_from_restart_or_generic_reset(self):
+        self.assertEqual(symbols.provenance(['ULyraGameplayAbility_Reset::ActivateAbility']),['native-ability-reset'])
+        self.assertEqual(symbols.provenance(['SomeOtherAbility::Reset']),[])
     def test_changed_module_fingerprint_is_rejected_before_symbol_lookup(self):
         with tempfile.TemporaryDirectory() as directory:
             path=Path(directory)/'changed.dll';path.write_bytes(b'changed')

@@ -132,6 +132,29 @@ class TestEarlyWatchLifetime(unittest.TestCase):
         pawn.end_play();self.watch.close()
         self.assertEqual(pawn.unbound,1);self.assertEqual(self.watch.scopes,{})
         self.assertEqual(len(self.watch.files),1)
+    def test_native_reset_captures_binding_and_optional_stack_without_mutation(self):
+        health=object();pawn=types.SimpleNamespace(get_component_by_type=lambda cls:health)
+        row=dict(actor='pawn',health=100.,player_state_pawn='pawn')
+        self.watch.native_stack=lambda data:data.update(native_callstack={'frames':['captured']})
+        with patch.object(observation,'ue',types.SimpleNamespace(find_class=lambda name:name)),patch.object(observation,'valid',lambda value:value is not None),patch.object(observation,'snapshot',return_value=row):
+            self.watch.reset(pawn)
+        event=json.loads((self.watch.root/self.watch.files[0]).read_text(encoding='utf-8-sig'))
+        self.assertEqual(event['kind'],'native-reset');self.assertEqual(event['data']['health'],100.)
+        self.assertEqual(event['data']['native_callstack']['frames'],['captured'])
+        self.assertGreater(event['data']['wall_time_unix'],0.)
+    def test_actual_arm_fingerprint_ignores_clock_only_changes_but_keeps_case_and_health(self):
+        import ast
+        source=Path(__file__).resolve().parents[1]/'Overlay/Content/Scripts/uep_lyra_abilities/melee_trace_network_validation.py'
+        tree=ast.parse(source.read_text(encoding='utf-8-sig'))
+        method=next(n for c in tree.body if isinstance(c,ast.ClassDef) and c.name=='Client' for n in c.body if isinstance(n,ast.FunctionDef) and n.name=='arm')
+        expression=next(n.value for n in ast.walk(method) if isinstance(n,ast.Assign) and any(isinstance(t,ast.Name) and t.id=='fingerprint' for t in n.targets))
+        code=compile(ast.Expression(expression),str(source),'eval')
+        owner=types.SimpleNamespace(position=4);binding=dict(health=100.,network_identity=dict(world_seconds=1.,actor_age_seconds=.5,wire_id='198'))
+        namespace=dict(readiness=observation,self=owner,binding=binding,json=json)
+        first=eval(code,namespace);binding['network_identity'].update(world_seconds=9.,actor_age_seconds=8.5)
+        self.assertEqual(first,eval(code,namespace));binding['health']=0.
+        self.assertNotEqual(first,eval(code,namespace));binding['health']=100.;owner.position=5
+        self.assertNotEqual(first,eval(code,namespace))
     def test_shutdown_detaches_only_still_live_actors(self):
         old,new=EndPlayActor(),EndPlayActor()
         self.watch.watch(old,"old");self.watch.watch(new,"new");old.end_play()

@@ -133,6 +133,13 @@ class EarlyWatch:
         if actor_path not in self.watched: self.watch(pawn,actor_path)
         health=pawn.get_component_by_type(ue.find_class("LyraHealthComponent"))
         self.publish("native-begin-play",snapshot(pawn,health) if valid(health) else dict(actor=actor_path))
+    def reset(self,pawn):
+        if self.closed:return
+        health=pawn.get_component_by_type(ue.find_class("LyraHealthComponent"))
+        row=snapshot(pawn,health) if valid(health) else dict(actor=path(pawn))
+        row['wall_time_unix']=time.time()
+        self.native_stack(row)
+        self.publish('native-reset',row)
     def poll(self):
         if self.closed: return
         statics=ue.find_class("GameplayStatics").get_cdo()

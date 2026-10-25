@@ -1,0 +1,290 @@
+{
+  "schema_version": 1,
+  "batch": 240,
+  "recorded_utc": "2026-10-25T14:23:51.188858+00:00",
+  "status": "diagnostic_reproduction_verified_gameplay_failed",
+  "scope": "One current-SDK dedicated Editor server/two actual clients. Delay B0 launch8s without changing native timers,then observe real Reset callbacks,construction/EndPlay and native ASC bindings. Four canonical current simulated proxies lose bindings when already retired authority Pawns arrive late and initialize the same persistent ASCs before ActorChannel cleanup. This is accepted diagnostic evidence,not a passed gameplay matrix or repair.",
+  "core_parent_commit": "efff8986383ac16fabeb149e59778cf5547226a9",
+  "examples_parent_commit": "84f504598942d66a23b1c7be3023a4b6c6052391",
+  "native_run": {
+    "directory": ".build/LyraValidation/BlueprintPython/20261025-reset-boundary/Native01DelayedB",
+    "summary_sha256": "B3F3F5ECBBF9B53460A7C82856C644A1B65C2B2723D19CAD449DBCCB4C108656",
+    "status": "failed",
+    "error": "Melee peer B0 failed: Traceback (most recent call last):\n  File \"F:\\UnrealEngine\\Engine\\Binaries\\Win64\\../../../../UnrealEnginePython5/.build/LyraValidation/Full/Stage/Lyra/Content/Scripts\\uep_lyra_abilities\\melee_trace_network_validation.py\", line 212, in tick\n    if command is not None and command[\"position\"] == self.position: self.arm(command)\n                                                                     ^^^^^^^^^^^^^^^^^\n  File \"F:\\UnrealEngine\\Engine\\Binaries\\Win64\\../../../../UnrealEnginePython5/.build/LyraValidation/Full/Stage/Lyra/Content/Scripts\\uep_lyra_abilities\\melee_trace_network_validation.py\", line 132, in arm\n    require(len(files) < 256, \"bounded native replica diagnostic history exhausted\")\n  File \"F:\\UnrealEngine\\Engine\\Binaries\\Win64\\../../../../UnrealEnginePython5/.build/LyraValidation/Full/Stage/Lyra/Content/Scripts\\uep_lyra_abilities\\melee_hit_montage_contract.py\", line 20, in require\n    if not value: raise RuntimeError(message)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: bounded native replica diagnostic history exhausted\n",
+    "process_exit_codes": {
+      "server": -1,
+      "A": -1,
+      "B0": -1
+    },
+    "process_termination_on_failed_report": true,
+    "gameplay_cases_completed_on_authority": 4,
+    "views_completed_per_client": 4,
+    "all20_cases_passed": false,
+    "external_gate_executed": false,
+    "frozen_input_records": 3570,
+    "client_b0_launch_delay_seconds": 8,
+    "launch_schedule": {
+      "B0": "2026-10-25T14:00:37.7894104Z",
+      "A": "2026-10-25T14:00:29.7038871Z",
+      "server": "2026-10-25T14:00:09.0349995Z"
+    },
+    "report_hashes": {
+      "server": "C8C88818E61FC78B27EF99827E884143E55F577C459D01D3CF26A062F64E130E",
+      "A": "B028E96D04A7E3E1E4323D5343DD769CDBAE7A19882AF092F8A4BD9C501194F6",
+      "B0": "4018D440E99D267F765CF000B5F97ED162C217D818F51DE59DBB366BDD5E33EC"
+    }
+  },
+  "diagnostics": {
+    "status": "reproduced_failure_sequence_verified",
+    "native_gameplay_passed": false,
+    "clean_native_exit_claimed": false,
+    "resolved_native_stacks": 47,
+    "native_reset_stacks": 5,
+    "retired_authority_guid_joins": 4,
+    "native_stack_kinds": {
+      "native-construction": 27,
+      "native-reset": 5,
+      "native-end-play": 15
+    },
+    "matched_target_module_pdb_records": 9,
+    "diagnostic_clock_replay": [
+      256,
+      1
+    ],
+    "source_game_cpp_modified": false,
+    "source_sdk_cpp_modified": false,
+    "native_fix_applied": false,
+    "native_gameplay_fix_proven": false,
+    "scope_decision_for_isolated_native_fix_pending": true
+  },
+  "replication_identity_joins": [
+    {
+      "peer": "B0",
+      "run_id": "6b6b79fb-7e93-4a64-a79f-463a3736be39",
+      "stale_pawn_wire": [
+        "Legacy",
+        "100"
+      ],
+      "player_state_wire": [
+        "Legacy",
+        "104"
+      ],
+      "current_pawn_wire": [
+        "Legacy",
+        "200"
+      ],
+      "authority_reset_file": "server-early-readiness-21.json",
+      "authority_retirement_file": "server-early-readiness-45.json",
+      "authority_current_binding_file": "server-early-readiness-43.json",
+      "previous_healthy_file": "B0-early-readiness-13.json",
+      "late_retired_pawn_birth_file": "B0-early-readiness-16.json",
+      "late_retired_pawn_end_file": "B0-early-readiness-17.json",
+      "current_empty_binding_file": "B0-early-readiness-22.json",
+      "current_pawn": "/ShooterMaps/Maps/L_Expanse.L_Expanse:PersistentLevel.B_Hero_ShooterMannequin_C_3",
+      "late_retired_pawn": "/ShooterMaps/Maps/L_Expanse.L_Expanse:PersistentLevel.B_Hero_ShooterMannequin_C_5",
+      "cross_peer_actor_names_used_for_identity": false,
+      "gameplay_repair_proven": false
+    },
+    {
+      "peer": "B0",
+      "run_id": "6b6b79fb-7e93-4a64-a79f-463a3736be39",
+      "stale_pawn_wire": [
+        "Legacy",
+        "50"
+      ],
+      "player_state_wire": [
+        "Legacy",
+        "54"
+      ],
+      "current_pawn_wire": [
+        "Legacy",
+        "198"
+      ],
+      "authority_reset_file": "server-early-readiness-22.json",
+      "authority_retirement_file": "server-early-readiness-46.json",
+      "authority_current_binding_file": "server-early-readiness-42.json",
+      "previous_healthy_file": "B0-early-readiness-2.json",
+      "late_retired_pawn_birth_file": "B0-early-readiness-19.json",
+      "late_retired_pawn_end_file": "B0-early-readiness-20.json",
+      "current_empty_binding_file": "B0-early-readiness-21.json",
+      "current_pawn": "/ShooterMaps/Maps/L_Expanse.L_Expanse:PersistentLevel.B_Hero_ShooterMannequin_C_0",
+      "late_retired_pawn": "/ShooterMaps/Maps/L_Expanse.L_Expanse:PersistentLevel.B_Hero_ShooterMannequin_C_6",
+      "cross_peer_actor_names_used_for_identity": false,
+      "gameplay_repair_proven": false
+    },
+    {
+      "peer": "B0",
+      "run_id": "6b6b79fb-7e93-4a64-a79f-463a3736be39",
+      "stale_pawn_wire": [
+        "Legacy",
+        "78"
+      ],
+      "player_state_wire": [
+        "Legacy",
+        "82"
+      ],
+      "current_pawn_wire": [
+        "Legacy",
+        "196"
+      ],
+      "authority_reset_file": "server-early-readiness-23.json",
+      "authority_retirement_file": "server-early-readiness-47.json",
+      "authority_current_binding_file": "server-early-readiness-41.json",
+      "previous_healthy_file": "B0-early-readiness-5.json",
+      "late_retired_pawn_birth_file": "B0-early-readiness-24.json",
+      "late_retired_pawn_end_file": "B0-early-readiness-25.json",
+      "current_empty_binding_file": "B0-early-readiness-29.json",
+      "current_pawn": "/ShooterMaps/Maps/L_Expanse.L_Expanse:PersistentLevel.B_Hero_ShooterMannequin_C_1",
+      "late_retired_pawn": "/ShooterMaps/Maps/L_Expanse.L_Expanse:PersistentLevel.B_Hero_ShooterMannequin_C_7",
+      "cross_peer_actor_names_used_for_identity": false,
+      "gameplay_repair_proven": false
+    },
+    {
+      "peer": "B0",
+      "run_id": "6b6b79fb-7e93-4a64-a79f-463a3736be39",
+      "stale_pawn_wire": [
+        "Legacy",
+        "24"
+      ],
+      "player_state_wire": [
+        "Legacy",
+        "4"
+      ],
+      "current_pawn_wire": [
+        "Legacy",
+        "202"
+      ],
+      "authority_reset_file": "server-early-readiness-24.json",
+      "authority_retirement_file": "server-early-readiness-48.json",
+      "authority_current_binding_file": "server-early-readiness-44.json",
+      "previous_healthy_file": "B0-early-readiness-12.json",
+      "late_retired_pawn_birth_file": "B0-early-readiness-27.json",
+      "late_retired_pawn_end_file": "B0-early-readiness-28.json",
+      "current_empty_binding_file": "B0-early-readiness-30.json",
+      "current_pawn": "/ShooterMaps/Maps/L_Expanse.L_Expanse:PersistentLevel.B_Hero_ShooterMannequin_C_2",
+      "late_retired_pawn": "/ShooterMaps/Maps/L_Expanse.L_Expanse:PersistentLevel.B_Hero_ShooterMannequin_C_8",
+      "cross_peer_actor_names_used_for_identity": false,
+      "gameplay_repair_proven": false
+    }
+  ],
+  "native_frozen_input_review": {
+    "path": ".build/LyraValidation/BlueprintPython/20261025-reset-boundary/native-frozen-input-review.json",
+    "sha256": "80BBD6B131DC23061C734C0413F8565ED3B605697E5F411339C00B2D9AE8C107"
+  },
+  "captured_modified_input_bytes": {
+    "path": ".build/LyraValidation/BlueprintPython/20261025-reset-boundary/inputs01.json",
+    "sha256": "F6B773A88FB51A73AFEA2AA19D9C366A0137F822C28E4BA226F07B532201EB6E"
+  },
+  "independent_review": {
+    "path": ".build/LyraValidation/BlueprintPython/20261025-reset-boundary/independent-review.json",
+    "sha256": "8551DF60888D8F18524459AED29B1C3A9DEA8537E5A2776697AFF8DFF2343B69"
+  },
+  "current_wire_join_analysis": {
+    "path": ".build/LyraValidation/BlueprintPython/20261025-reset-boundary/current-takeovers04-authority-confirmed.json",
+    "sha256": "FF5801CFAF9D98ED69D932BB9FA25089E2425BDCEED254119F9121DF9DBCEA0B"
+  },
+  "native_local_symbols": {
+    "path": ".build/LyraValidation/BlueprintPython/20261025-reset-boundary/native-symbols01.json",
+    "sha256": "8F105D5011F04FE8FC354442243B1D83DDB6F97FF3004AB085FDC702536A02B9"
+  },
+  "historical_phase_timing": {
+    "path": ".build/LyraValidation/BlueprintPython/20261025-reset-boundary/historical-phase-timing.json",
+    "sha256": "97B48C0D12614EC5F0A6E9C9D4B6FC1C2730FB23C90C9EB9796E03C434998BC8"
+  },
+  "historical_controlled_timing": {
+    "path": ".build/LyraValidation/BlueprintPython/20261025-reset-boundary/historical-controlled-timing.json",
+    "sha256": "480D6D10767C98A5E4A07D2429C6C525A4DFDAAC6BF65435F6BAE4A1A699EA90"
+  },
+  "diagnostic_fingerprint_replay": {
+    "path": ".build/LyraValidation/BlueprintPython/20261025-reset-boundary/diagnostic-fingerprint-replay.json",
+    "sha256": "17227C41270ABD0A8044FCE17E0C7853D1AEAC210C0CC85561F84F7F4C4F4943"
+  },
+  "native_manifest_input_snapshot": {
+    "path": ".build/LyraValidation/BlueprintPython/20261025-reset-boundary/before-batches.json",
+    "sha256": "D7D21B795AB6D8A90AA30C68AE02E33CB9045CE93764EBA7A4AE9E7EF2615DB0"
+  },
+  "diagnostic_record_limit": 256,
+  "limit_widened": false,
+  "native_timeout_widened": false,
+  "clock_fields_preserved_in_raw_reports": true,
+  "native_reset_observer_forwards_original_exactly_once": true,
+  "native_reset_observation_error_does_not_block_handler": true,
+  "cpp_compile_executed": false,
+  "engine_full_compile_executed": false,
+  "cook_package_executed": false,
+  "assets_saved": false,
+  "health_or_asc_repaired_by_fixture": false,
+  "game_cpp_candidate_fix": {
+    "path": ".build/LyraValidation/BlueprintPython/20261025-reset-boundary/ProposedNativeFix/LyraHeroComponent.cpp.patch",
+    "sha256": "C9D7CE321A3968A139431096D43CB1263B1CCA35C4D266756770A2F12C07740E",
+    "applied": false,
+    "built": false,
+    "runtime_verified": false,
+    "scope_decision_pending": true
+  },
+  "original_scope": [
+    246,
+    182,
+    63,
+    11
+  ],
+  "original_candidate_rows_changed": 0,
+  "original_acceptance_checklist_changed": false,
+  "original_readiness_issue": "open_not_fixed",
+  "failure_reproduced_with_current_sdk": true,
+  "full_regression_executed": false,
+  "runtime_acceptance": false,
+  "full_acceptance": false,
+  "full_migration_acceptance_proven": false,
+  "isolated_staged_incremental_verification": ".build/CommitVerification/20261025-reset-boundary/Index01",
+  "targeted_host_test_files": [
+    "test_native_construction_stack.py",
+    "test_melee_replica_readiness.py",
+    "test_lazy_pawn_lifecycle_observation.py",
+    "test_melee_trace_network_contract.py",
+    "test_pawn_asc_takeover_analysis.py"
+  ],
+  "targeted_host_tests": 111,
+  "input_hashes": [
+    {
+      "path": "Validation/Run-UEP58CurrentMeleeReadinessValidation.ps1",
+      "sha256": "123FF8D8E2F7AE81927195412A9820AEBB80CEED4EE9D717E84440B53146EC68"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/lazy_pawn_lifecycle_observation.py",
+      "sha256": "1AC4A96D2F0641E604B0ECDCB82156AF45971417380398B852B4626E1B5382D8"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_replica_readiness.py",
+      "sha256": "A6DF629A7F02E9CEC4A4ACD4767CAC5C5EAE409175088037EBD62D88EED287DE"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/melee_trace_network_validation.py",
+      "sha256": "89E32E2BEAC043FC2C4FAAEEA686841A321077DCC14EA9FEE2E9A6EE9986A106"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tests/test_lazy_pawn_lifecycle_observation.py",
+      "sha256": "8BB31AF049D39E6D0292FEFC02DB998311472D94A7379BD67288E35DB347FF91"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tests/test_melee_replica_readiness.py",
+      "sha256": "E3164E62319E6999F850FD79115F86CF24CBDEA65B8769BE0F9C9C8D0C928EB8"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tests/test_native_construction_stack.py",
+      "sha256": "FD1D13CB5A0732EAF7A935570534A7ECBF7FDB603D2615E4B1262CE2C6B891EF"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tests/test_pawn_asc_takeover_analysis.py",
+      "sha256": "5A1C40F519BC1A00E4ABF1C58B486622C540BA19CFCC1292A485E06BBD98CD13"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/analyze_pawn_asc_takeovers.py",
+      "sha256": "5DE90C721155C00C98972C6A54ADF9FF32B89EFFD897CB06BE0C6F83A64E6C0C"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/resolve_native_construction_stacks.py",
+      "sha256": "35943B190BB3D7F57FF5EB23712E9906E2D09652E3687A62199CCED1F1B424BD"
+    }
+  ]
+}

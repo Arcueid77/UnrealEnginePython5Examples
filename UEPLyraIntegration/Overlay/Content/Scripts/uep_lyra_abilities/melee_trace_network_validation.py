@@ -125,7 +125,7 @@ class Client(Activation):
                 death_state=int(health.call_function("GetDeathState")), max_health=float(health.call_function("GetMaxHealth")))
             binding = readiness.snapshot(target, health)
             state["native_replica_state"] = binding
-            fingerprint = json.dumps(dict(position=self.position, binding=binding), sort_keys=True)
+            fingerprint = readiness.change_fingerprint(dict(position=self.position, binding=binding))
             if fingerprint != getattr(self,"_last_replica_fingerprint",None):
                 self._last_replica_fingerprint = fingerprint
                 files = self.report.setdefault("replica_binding_event_files",[])

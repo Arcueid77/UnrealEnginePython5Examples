@@ -31,6 +31,31 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed binding diagnosis batch240 (2026-10-25;gameplay still fails):**
+Observe real Character Reset callbacks before forwarding their original handler
+exactly once;capture failures never suppress that handler. Add a bounded8s
+second-client launch delay to target the original warmup/late-load boundary,
+without modifying gameplay timers. One current-SDK group reproduces four
+canonical simulated proxies with empty actor/extension/Health bindings while
+persistent PlayerState HealthSets remain100. The driver terminates all three
+processes after B0's diagnostic-history failure;this is not a green melee group.
+Resolve47 native stacks against matching local PDBs,including five native Reset
+callbacks. Four Legacy actor and PlayerState GUID joins prove that later local
+objects are already-retired authority Pawns,not newer server replacements.
+They take over the live current proxies' ASCs and are immediately destroyed by
+ActorChannel cleanup;the current authority Pawn GUIDs remain healthy.
+Keep exact failed inputs/reports. Fix a separate diagnostic flood by excluding
+only moving clock fields from the arm fingerprint:replay256 captured snapshots
+as one unchanged binding,retaining all raw clocks and the original256 limit.
+Phase offsets assume the local processes' shared clock;frame numbers wrap and
+same-tick callback order uses numeric publication sequence,not lexical names.
+A minimal native Hero init-state guard is proposed under the private build
+folder but is not applied,built or accepted. Game C++ remains outside this
+Python migration scope pending the user's decision. No C++ compile,cook/package,
+asset save or full regression. All246 original rows and22-checklist text stay.
+The original issue is now reproduced and diagnosed on the current SDK;it
+remains open and not fixed. See ledger240. Commit/push diagnostics separately.
+
 **Completed Standalone natural death/respawn batch239 (2026-10-25):**
 Reuse the current SDK without compilation. In the authored L_Expanse world,
 both BlueprintFallback and Python perform one real native owner pistol gesture,

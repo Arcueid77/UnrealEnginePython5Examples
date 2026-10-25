@@ -102,3 +102,35 @@ exits0. This fixes startup paths,not the original **open,not fixed** binding iss
 Earlier candidate census evidence remains historical pending SDK provenance
 refresh;neither this bounded check nor a healthy retry closes full migration.
 See [ledger236](Acceptance/236-python-bootstrap-path-conversion-lifetime-and-sdk-counterfactual.json).
+
+## Current delayed-client reproduction and retired-Pawn identity (batch240)
+
+`20261025-reset-boundary/Native01DelayedB` reproduces the original four canonical
+empty-binding rows with the current fixed-bootstrap SDK. Only B0's process
+launch is delayed8s;gameplay timers,Health and ASC bindings are not written.
+The melee group fails while arming case4 and all processes are terminated.
+The256-record diagnostic limit is unchanged;those256 snapshots differ only in
+moving clocks and replay as one stable binding after the diagnostic correction.
+No successful gameplay matrix or race repair is claimed.
+
+The47 resolved native stacks include five `ULyraGameplayAbility_Reset` calls.
+For B0,the late local objects C5/C6/C7/C8 have Legacy actor GUIDs100/50/78/24,
+matching the server's reset and retired Pawns. The already-live canonical
+client Pawns have GUIDs200/198/196/202,also confirmed as healthy current Pawns
+on the authority with the same PlayerState GUIDs104/54/82/4. Actor names are
+never used across peers for identity. Each late retired Pawn initializes the
+persistent ASC,displacing the healthy current Pawn,then receives native
+ActorChannel cleanup in the same clock tick. Its EndPlay clears the ASC avatar;
+the canonical current Pawn remains unbound with a healthy PlayerState HealthSet.
+Creation/retirement stacks reach ActorChannel/UWorld spawn and destruction.
+This is concrete provenance for the current reproduced failure. The historical
+C5/C6/C7/C8 labels alone did not establish which server generation they were.
+
+The late retired Pawn already has an ASC at BeginPlay while its PlayerState
+still names the healthy current Pawn. Native Hero initialization does not wait
+for canonical simulated-Pawn selection. A proposed8-line `CanChangeInitState`
+guard adds that wait;the existing native OnRep callback rechecks initialization. The
+candidate is not applied or compiled. Game-project C++ is reserved for a later
+phase by the current migration scope,so isolated validation of this repair is
+pending the user's scope decision. No manual ASC/Health repair is introduced.
+See [ledger240](Acceptance/240-delayed-client-retired-pawn-guid-takeover-reproduction.json).

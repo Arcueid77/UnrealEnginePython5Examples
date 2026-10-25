@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 241,
+    "bounded_evidence_ledgers": 242,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -5485,7 +5485,7 @@
       "reproduced_on_human_simulated_proxy_without_teleport": "20261018-grenade-widget-network/Network02",
       "construction_begin_end_destroy_python_stack_diagnostics_available": true,
       "method_isolation_does_not_prove_cause": true,
-      "next_batch": "Capture why replacement native Pawns are created/retired when canonical Pawn loses ASC. Current accepted run does not reproduce original failure;do not treat the fixed Spawn Cue cleanup as race cause or repair.",
+      "next_batch": "Validate the proposed canonical simulated-proxy init-state guard in an isolated Lyra game stage only if the user includes this native-game repair. Game C++ remains separate from the246 Python candidates. Never write Health,manually initialize an ASC or treat a healthy retry as a fix.",
       "current_native_takeover_diagnosis": {
         "evidence_ledger": "233-spawning-cached-target-cleanup-and-current-melee-diagnosis.json",
         "historical_same_peer_canonical_empty_bindings_with_healthy_attributes": 4,
@@ -5507,6 +5507,16 @@
         "historical_current_policy_matrix_passed": true,
         "current_fixed_bootstrap_matrix_passed": true,
         "original_failure_reproduced": false,
+        "original_race_fixed": false
+      },
+      "current_native_failure_reproduced": true,
+      "current_retired_pawn_replication_diagnosis": {
+        "evidence_ledger": "240-delayed-client-retired-pawn-guid-takeover-reproduction.json",
+        "current_sdk_canonical_empty_bindings": 4,
+        "authority_retirement_guid_matches": 4,
+        "native_reset_stacks": 5,
+        "native_actor_channel_late_spawn_and_cleanup_observed": true,
+        "native_fix_applied": false,
         "original_race_fixed": false
       }
     },
@@ -16026,5 +16036,19 @@
     "full_acceptance": false,
     "original_readiness_issue": "open_not_fixed",
     "next": "Review remaining original runtime/version acceptance requirements and diagnose an actual canonical Pawn/ASC empty-binding failure. This bounded Standalone followup and batch238 network evidence do not by themselves close all criterion11 weapon/lifetime/network or full migration requirements."
+  },
+  "pawn_late_channel_reproduction_pilot": {
+    "status": "current_sdk_original_failure_reproduced_and_retired_authority_guids_correlated",
+    "evidence_ledger": "240-delayed-client-retired-pawn-guid-takeover-reproduction.json",
+    "canonical_empty_binding_rows": 4,
+    "resolved_native_stacks": 47,
+    "native_reset_callbacks": 5,
+    "diagnostic_clock_replay_original_records": 256,
+    "diagnostic_clock_replay_stable_records": 1,
+    "native_gameplay_matrix_passed": false,
+    "original_race_fixed": false,
+    "native_game_cpp_patch_applied": false,
+    "cpp_compile_executed": false,
+    "full_acceptance": false
   }
 }

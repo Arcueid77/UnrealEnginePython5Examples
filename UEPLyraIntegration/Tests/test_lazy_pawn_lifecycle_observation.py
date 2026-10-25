@@ -14,6 +14,7 @@ class Watch:
     def poll(self): self.events.append("poll")
     def birth(self,pawn): self.events.append("birth")
     def constructed(self,pawn): self.events.append("construction")
+    def reset(self,pawn):self.events.append('reset')
     def close(self): self.closed=True
 readiness.EarlyWatch=Watch
 spec=importlib.util.spec_from_file_location("uep_lyra_abilities._lazy_lifecycle_model",module_path)
@@ -41,6 +42,23 @@ class TestLazyPawnLifecycleObservation(unittest.TestCase):
         self.available=True;self.value.poll();calls=[]
         self.actual.UserConstructionScript(types.SimpleNamespace(call_mixin_original=lambda name:calls.append(name)))
         self.assertEqual(calls,["UserConstructionScript"]);self.assertIn("construction",self.value.watch.events)
+    def test_native_reset_observed_and_original_result_preserved_once(self):
+        sentinel=object();calls=[]
+        def reset(pawn):calls.append(pawn);return sentinel
+        self.original.K2_OnReset=reset;self.available=True;self.value.poll();pawn=object()
+        self.assertIs(self.actual.K2_OnReset(pawn),sentinel);self.assertEqual(calls,[pawn])
+        self.assertIn('reset',self.value.watch.events);self.assertEqual(self.value.report['reset_observation_errors'],[])
+    def test_native_reset_capture_error_cannot_block_production_handler(self):
+        calls=[]
+        self.original.K2_OnReset=lambda pawn:calls.append('original-reset')
+        self.available=True;self.value.poll()
+        def fail(pawn):raise RuntimeError('readonly reset capture failed')
+        self.value.watch.reset=fail;self.actual.K2_OnReset(object())
+        self.assertEqual(calls,['original-reset']);self.assertIn('readonly reset capture failed',self.value.report['reset_observation_errors'][0])
+    def test_missing_python_reset_uses_original_native_event_once(self):
+        self.available=True;self.value.poll();calls=[]
+        self.actual.K2_OnReset(types.SimpleNamespace(call_mixin_original=lambda name:calls.append(name)))
+        self.assertEqual(calls,['K2_OnReset'])
     def test_handler_overwrite_rejected(self):
         self.available=True;self.value.poll();self.actual=self.original
         with self.assertRaisesRegex(RuntimeError,"overwritten"): self.value.poll()

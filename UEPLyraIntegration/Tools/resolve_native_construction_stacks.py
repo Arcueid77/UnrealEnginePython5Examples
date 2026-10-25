@@ -28,7 +28,8 @@ def provenance(symbols):
         ('object-duplication',('StaticDuplicateObject','DuplicateObjectEx')),
         ('native-spawn',('UWorld::SpawnActor','UWorld::SpawnActorDeferred')),
         ('native-destruction',('UWorld::DestroyActor',)),
-        ('native-restart',('RestartPlayer','SpawnDefaultPawnFor'))):
+        ('native-restart',('RestartPlayer','SpawnDefaultPawnFor')),
+        ('native-ability-reset',('ULyraGameplayAbility_Reset::ActivateAbility',))):
         if any(n in text for n in needles):result.append(label)
     return result
 
