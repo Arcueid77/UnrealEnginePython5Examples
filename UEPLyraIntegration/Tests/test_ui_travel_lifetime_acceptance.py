@@ -22,6 +22,12 @@ class UITravelLifetimeAcceptanceTests(unittest.TestCase):
     def test_ai_opt_in_cannot_be_enabled_in_the_historical_ui_process(self):
         before,after=self.selector_pair()
         with self.assertRaises(ValueError):audit.startup_selector_equivalent(before,after,['-UEPShooterAILifetimeResult=other.json'])
+    def test_cp_opt_in_is_unreachable_in_historical_ui_processes(self):
+        before,after=self.selector_pair()
+        branch="    if any(a.startswith('-UEPCPNetworkResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):\n        return 'uep_lyra_weapons.cp_network_validation'\n"
+        after=after.replace('def validation_module(arguments):\n','def validation_module(arguments):\n'+branch)
+        audit.startup_selector_equivalent(before,after,['-UEPUITravelLifetimeResult=report.json'])
+        with self.assertRaises(ValueError):audit.startup_selector_equivalent(before,after,['-UEPCPNetworkResult=other.json'])
     def test_other_startup_changes_cannot_use_the_ai_selector_exception(self):
         before,after=self.selector_pair()
         for changed in (after.replace('return None',"return 'changed'"),after.replace('-UEPShooterAILifetimeResult=','-OtherFlag='),after+'print("side effect")\n'):

@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(a.startswith('-UEPCPNetworkResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):
+        return 'uep_lyra_weapons.cp_network_validation'
     if any(a.startswith('-UEPSpawningDestroyedResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):
         return 'uep_lyra_weapons.spawning_destroyed_target_validation'
     if any(a.startswith('-UEPShooterAILifetimeResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):

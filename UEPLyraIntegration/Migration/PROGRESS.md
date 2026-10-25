@@ -31,6 +31,43 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed original multi-client score/phase/notification/cleanup criterion batch252 (2026-10-26):**
+Add two current-SDK CP groups:one dedicated authority and two actual clients per
+original/Python profile. Move a healthy authority Pawn into an existing point;
+physical overlap and the native Timeline produce capture,native statistics and
+the original scoring timer's natural victory/PostGame. Both clients replicate
+team score1:0,capture statistics1:0 and point ownership. Their actual local HUD
+shows1:0/0:1 and their native audio component plays the Friendly/Enemy capture
+sound respectively. Native DamageImmunity and MatchDecided Cue verify client
+PostGame presentation;the phase subsystem itself remains authority-owned.
+The dedicated server has no score widgets or playing capture sound.
+
+Use a bounded target1 fixture,then restore score/capture statistics,target125
+and Pawn location. Both clients acknowledge replicated restoration;the server
+waits for their actual exit0 before its own exit0. Restore all observer profiles,
+CDO selectors and temporary class roots,and release observed UObject references.
+The accepted Original03/Python01 groups have six native exit0 processes.
+
+Reuse paired native lethal TDM and relay-network evidence:nine historical native
+processes,10 authority relay cases,20 client observations,reliable multicast and
+unreliable owner delivery with null/nonowner/parent negatives. Recheck current
+policy/dependency sources,Blueprint/Mixin fingerprints,raw contracts and ordered
+shutdown logs. Also execute the original hash-matched historical TDM contract.
+Retained native Cue children still match separately pinned original checkpoint
+fingerprints and current stage copies;they are not newly frozen network inputs.
+
+Preserve Original01/Original02 and six failed observer processes with input
+archives. Fix the observer's widget-world lookup through GetOwningPlayer and
+temporary class-root lifetime;production policies/assets are unchanged. Reuse
+SDK236 and approved isolated guard246:zero compile/link,cook/package or asset
+authoring. Fifty-four affected immutable-index host checks pass;no full suite.
+
+All three original0.12 criteria are now proven;overall acceptance is8/22 with
+all246 candidates and22 original texts preserved. Packet loss,travel/rejoin,
+physical input,hardware audio,pixels,package and full version/migration acceptance
+are not claimed. Ledger:
+`Acceptance/252-original-multi-client-score-phase-notifications-and-cleanup-acceptance.json`.
+
 **Completed original effect/audio/phase/scoring/notification criterion batch251 (2026-10-26):**
 Recheck45 pinned native checkpoint runs and all63 original non-AI0.12 candidate
 assets/Mixin Sets against current sources and current report contracts. The12
