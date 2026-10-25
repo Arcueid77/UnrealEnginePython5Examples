@@ -31,6 +31,42 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed original ability call/lifetime criterion batch259 (2026-10-26):**
+Accept only the original0.11 supported-task/delegate/cancellation/latent lifetime
+condition. The closed source inventory covers26 production modules,seven GAS
+task classes,three direct async action classes,two Kismet delay APIs and owned
+timer set/clear sites. New/missing factory or boundary sites fail explicitly.
+
+Recheck37 pinned saved native runs(41 actual processes),their original report
+hashes/current pure gates,normal interpreter shutdown and current family policy
+dependencies. Actual task cancellation,end,profile handoff,pending widget GC,
+weak destroyed targets,listener removal and expected delay/timer continuations
+are checked per path. Include retained typed Reset message proxies,long/short
+AutoRespawn delays,health/EndPlay bindings,Dash Delay,UIExtension handles and
+native weak fire/timer envelopes. Preserve the original GAS timer-cleanup cvar
+behavior rather than claiming uniform cancellation. Shared SubscriptionScope
+sources match every ledger's Git core parent;that provenance check is distinct
+from a historical runtime file-hash freeze. Current original class/Mixin package
+hashes and census stay pinned. Only the previously exact-reviewed private
+three-key allocation extraction bridges old readiness policy inputs.
+
+Exclude the old Quickslot Standalone report missing a current field;use its
+actual current-source server/two-client task/event lifetime record instead.
+The already completed current SDK236 generic257/258 records supply three native
+processes for supported signatures,real RPC/delegate/editor-latent rejection,
+router recovery,original restoration and native multicast delivery/unbinding.
+Historical SDKs remain historical;cooked latent rejection is not accepted.
+
+Ten adversarial lifetime checks plus twelve affected migration-index checks pass
+in immutable Index03. Preserve the private Index01 wrong-pattern and Index02
+test-import failures;neither launches UE. This review adds zero native runs,
+runtime/asset edits,build/link,binary refresh,cook/package or full regression.
+Keep the other eleven accepted criteria through unchanged pinned proof inputs,
+without rerunning their unrelated semantic gates. All246 candidates and22 exact
+texts remain. Original acceptance is now12/22;complete gameplay/package/version
+and migration acceptance remain open.
+Ledger:`Acceptance/259-original-ability-task-delegate-cancellation-latent-lifetime-acceptance.json`.
+
 **Completed bounded incremental native matrix batch258 (2026-10-26):**
 The focused native call-matrix entry now accepts optional TestName selection.
 Default behavior preserves all eleven original fixtures and their order;
