@@ -31,6 +31,29 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed represented Cancel action batch244 (2026-10-26):**
+Review original0.13 failure/cancellation evidence rather than rerunning the
+existing session/replay/shared/local-store scenarios. One missing boundary was
+the actual native Cancel Changes binding:prior settings probes called its
+native API directly. In two fresh original/Python processes,two real UI cycles
+each enter the menu/settings layer,change OverallVolume1->0.5 by native slider
+input,and click the represented Cancel Changes button. Native cancellation
+restores local value,slider and material to1,keeps the screen active,clears
+dirty state/removes its action,and leaves observed ini/sav bytes unchanged.
+Actual Back then closes the screen,and the cycle reopens. The native source
+distinguishes these operations:Back applies/saves;Cancel rolls back.
+
+Both processes and independent gates exit0;four dirty-cancel actions and75
+affected tests pass,with no build,cook,asset save or full regression. Existing
+production profiles and the Back/scalar helpers are unchanged. Two rejected
+attempts incorrectly demanded one globally enumerated Back button;their exact
+inputs and the later attempt's full cancellation state remain preserved.
+Accepted runs record Back candidates/clicked object and actual target closure.
+All246 candidate rows and the original22 requirement text stay unchanged.
+Ledger:`Acceptance/244-native-settings-cancel-action-dirty-rollback-and-reopen.json`.
+This adds real UI cancellation evidence,not full0.13 or migration acceptance.
+The native Pawn guard remains unapplied pending the user's scope decision.
+
 **Completed local scalar persistence batch243 (2026-10-25):**
 Batch212 verified a shared save-game setting;this followup covers the distinct
 native local INI store. Actual rendered SSlider pointer input changes

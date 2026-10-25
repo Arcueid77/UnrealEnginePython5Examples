@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 245,
+    "bounded_evidence_ledgers": 246,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -16144,5 +16144,35 @@
     "full_regression_executed": false,
     "full_acceptance": false,
     "next": "Review remaining original navigation/settings/session/replay,lifetime/travel and Experience/version requirements without expanding false capability flags into new scope."
+  },
+  "settings_cancel_action_pilot": {
+    "version": "0.13.0",
+    "status": "both_profiles_actual_bound_cancel_dirty_rollback_files_and_reopen_verified",
+    "evidence_ledger": "244-native-settings-cancel-action-dirty-rollback-and-reopen.json",
+    "native_runtime_runs": [
+      "20261025-settings-cancel/Original03",
+      "20261025-settings-cancel/Python01"
+    ],
+    "native_dirty_cancel_actions": 4,
+    "actual_clean_native_processes": 2,
+    "scalar_initial_target_restore": [
+      1.0,
+      0.5,
+      1.0
+    ],
+    "native_value_slider_material_restore": true,
+    "screen_remains_active_after_cancel": true,
+    "cancel_action_removed_when_clean": true,
+    "ini_and_sav_files_unchanged_by_cancel": true,
+    "actual_native_back_closes_after_cancel": true,
+    "source_python_callback_counts_match": true,
+    "direct_cancel_or_apply_api_called": false,
+    "existing_back_and_scalar_helpers_changed": false,
+    "focused_host_checks": 75,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_acceptance": false,
+    "next": "Review remaining original0.9-0.14 requirements;preserve all settings/session/replay/travel and whole-Experience scope. Do not infer full UI/version acceptance from this bound-Cancel followup."
   }
 }

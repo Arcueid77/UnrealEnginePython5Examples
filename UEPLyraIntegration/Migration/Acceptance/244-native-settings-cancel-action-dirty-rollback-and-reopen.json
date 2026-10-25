@@ -1,0 +1,414 @@
+{
+  "schema_version": 1,
+  "batch": 244,
+  "recorded_utc": "2026-10-25T16:13:47.302607+00:00",
+  "status": "bounded_original_python_native_cancel_action_verified",
+  "scope": "Actual CommonUI menu/settings layer and scalar SSlider input -> dirty native settings -> actual represented Cancel Changes button -> native value/slider/material restored,screen stays active,dirty flag and Cancel action removed,ini/sav hashes unchanged -> actual Back action closes settings -> repeat in each isolated profile process. No direct CancelChanges,ApplyChanges,setting setter or manual callback as the stimulus.",
+  "core_parent_commit": "918d9156105c1fb40c2ce5e350d31b97e53f038b",
+  "examples_parent_commit": "eac1f88949b217d5844653c29301f729f0d4df9f",
+  "native_runs": [
+    {
+      "directory": ".build\\LyraValidation\\BlueprintPython\\20261025-settings-cancel\\Original03",
+      "profile": "BlueprintFallback",
+      "summary_sha256": "3567D712522886EB79462BB02458F5027E72855A4FF3F0F049BD9BCB83548784",
+      "report_sha256": "C2FFA554DE4164FB88599810619F8CF279E67C007219452CDAACD811B39C72FF",
+      "native_exit_code": 0,
+      "external_gate_exit_code": 0,
+      "duration_seconds": 70.329,
+      "frozen_input_records": 3583,
+      "cases": [
+        {
+          "profile": "BlueprintFallback",
+          "cycle": 0,
+          "native_push_entry": "CommonUIExtensions.PushContentToLayer_ForPlayer",
+          "world": "/ShooterMaps/Maps/L_Expanse.L_Expanse",
+          "menu_options_native_focus": true,
+          "settings_native_focus": true,
+          "initial": 1.0,
+          "initially_dirty": true,
+          "baseline_cancel": {
+            "kind": "initial",
+            "label": "Cancel Changes",
+            "native_entry": "CommonBoundActionButton.HandleButtonClicked",
+            "profile_matches": true,
+            "selected_clicks": 1,
+            "other_clicks": 0,
+            "value_before": 1.0,
+            "value_after": 1.0,
+            "files_unchanged": true,
+            "clean": true,
+            "screen_active": true
+          },
+          "target": 0.5,
+          "pointer": {
+            "entry": "SSlider.OnMouseButtonDown",
+            "handled": true,
+            "target": 0.5,
+            "before": 1.0,
+            "after": 0.5,
+            "ui_value": 0.5,
+            "material_progress": 0.5,
+            "selected_callbacks": 2,
+            "other_callbacks": 0,
+            "native_geometry": [
+              920.0,
+              64.0
+            ],
+            "synthetic_pointer_up_sent": true
+          },
+          "cancel": {
+            "kind": "edited",
+            "label": "Cancel Changes",
+            "native_entry": "CommonBoundActionButton.HandleButtonClicked",
+            "profile_matches": true,
+            "selected_clicks": 1,
+            "other_clicks": 0,
+            "value_before": 0.5,
+            "value_after": 1.0,
+            "ui_after": 1.0,
+            "material_after": 1.0,
+            "screen_active": true,
+            "clean": true,
+            "files_before": {
+              "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261025-settings-cancel\\Original03\\user\\Saved\\Config\\CrashReportClient\\UECC-Windows-3635B6984929F0AB8DE82B9F42927FC0\\CrashReportClient.ini": "766170aac808e91de0c986a6004039cd0271bb8b4b8b91e47a586f030f1e574b",
+              "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261025-settings-cancel\\Original03\\user\\Saved\\Config\\WindowsEditor\\EditorPerProjectUserSettings.ini": "76c075b648eb99025c43048e24483f3e78fa0fd47a43042a1460656d61f5f365"
+            },
+            "files_after": {
+              "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261025-settings-cancel\\Original03\\user\\Saved\\Config\\CrashReportClient\\UECC-Windows-3635B6984929F0AB8DE82B9F42927FC0\\CrashReportClient.ini": "766170aac808e91de0c986a6004039cd0271bb8b4b8b91e47a586f030f1e574b",
+              "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261025-settings-cancel\\Original03\\user\\Saved\\Config\\WindowsEditor\\EditorPerProjectUserSettings.ini": "76c075b648eb99025c43048e24483f3e78fa0fd47a43042a1460656d61f5f365"
+            },
+            "cancel_action_removed": true
+          },
+          "native_back_candidates": [
+            "/Engine/Transient.LyraGameEngine_0:B_LyraGameInstance_C_0.W_OverallUILayout_C_0.WidgetTree_0.W_LyraGameMenu_C_0.WidgetTree_0.W_BottomActionBar.WidgetTree_0.W_BoundActionButton_C_0",
+            "/Engine/Transient.LyraGameEngine_0:B_LyraGameInstance_C_0.W_OverallUILayout_C_0.WidgetTree_0.W_LyraSettingScreen_C_0.WidgetTree_0.W_BottomActionBar.WidgetTree_0.W_BoundActionButton_C_2"
+          ],
+          "native_back_clicked": "/Engine/Transient.LyraGameEngine_0:B_LyraGameInstance_C_0.W_OverallUILayout_C_0.WidgetTree_0.W_LyraGameMenu_C_0.WidgetTree_0.W_BottomActionBar.WidgetTree_0.W_BoundActionButton_C_0",
+          "native_back_after_cancel_closed": true,
+          "volume_still_original": true,
+          "world_unchanged": true,
+          "health_unchanged": true
+        },
+        {
+          "profile": "BlueprintFallback",
+          "cycle": 1,
+          "native_push_entry": "CommonUIExtensions.PushContentToLayer_ForPlayer",
+          "world": "/ShooterMaps/Maps/L_Expanse.L_Expanse",
+          "menu_options_native_focus": true,
+          "settings_native_focus": true,
+          "initial": 1.0,
+          "initially_dirty": true,
+          "baseline_cancel": {
+            "kind": "initial",
+            "label": "Cancel Changes",
+            "native_entry": "CommonBoundActionButton.HandleButtonClicked",
+            "profile_matches": true,
+            "selected_clicks": 1,
+            "other_clicks": 0,
+            "value_before": 1.0,
+            "value_after": 1.0,
+            "files_unchanged": true,
+            "clean": true,
+            "screen_active": true
+          },
+          "target": 0.5,
+          "pointer": {
+            "entry": "SSlider.OnMouseButtonDown",
+            "handled": true,
+            "target": 0.5,
+            "before": 1.0,
+            "after": 0.5,
+            "ui_value": 0.5,
+            "material_progress": 0.5,
+            "selected_callbacks": 2,
+            "other_callbacks": 0,
+            "native_geometry": [
+              920.0,
+              64.0
+            ],
+            "synthetic_pointer_up_sent": true
+          },
+          "cancel": {
+            "kind": "edited",
+            "label": "Cancel Changes",
+            "native_entry": "CommonBoundActionButton.HandleButtonClicked",
+            "profile_matches": true,
+            "selected_clicks": 1,
+            "other_clicks": 0,
+            "value_before": 0.5,
+            "value_after": 1.0,
+            "ui_after": 1.0,
+            "material_after": 1.0,
+            "screen_active": true,
+            "clean": true,
+            "files_before": {
+              "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261025-settings-cancel\\Original03\\user\\Saved\\Config\\CrashReportClient\\UECC-Windows-3635B6984929F0AB8DE82B9F42927FC0\\CrashReportClient.ini": "766170aac808e91de0c986a6004039cd0271bb8b4b8b91e47a586f030f1e574b",
+              "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261025-settings-cancel\\Original03\\user\\Saved\\Config\\WindowsEditor\\EditorPerProjectUserSettings.ini": "76c075b648eb99025c43048e24483f3e78fa0fd47a43042a1460656d61f5f365"
+            },
+            "files_after": {
+              "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261025-settings-cancel\\Original03\\user\\Saved\\Config\\CrashReportClient\\UECC-Windows-3635B6984929F0AB8DE82B9F42927FC0\\CrashReportClient.ini": "766170aac808e91de0c986a6004039cd0271bb8b4b8b91e47a586f030f1e574b",
+              "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261025-settings-cancel\\Original03\\user\\Saved\\Config\\WindowsEditor\\EditorPerProjectUserSettings.ini": "76c075b648eb99025c43048e24483f3e78fa0fd47a43042a1460656d61f5f365"
+            },
+            "cancel_action_removed": true
+          },
+          "native_back_candidates": [
+            "/Engine/Transient.LyraGameEngine_0:B_LyraGameInstance_C_0.W_OverallUILayout_C_0.WidgetTree_0.W_LyraGameMenu_C_0.WidgetTree_0.W_BottomActionBar.WidgetTree_0.W_BoundActionButton_C_0",
+            "/Engine/Transient.LyraGameEngine_0:B_LyraGameInstance_C_0.W_OverallUILayout_C_0.WidgetTree_0.W_LyraSettingScreen_C_0.WidgetTree_0.W_BottomActionBar.WidgetTree_0.W_BoundActionButton_C_0"
+          ],
+          "native_back_clicked": "/Engine/Transient.LyraGameEngine_0:B_LyraGameInstance_C_0.W_OverallUILayout_C_0.WidgetTree_0.W_LyraGameMenu_C_0.WidgetTree_0.W_BottomActionBar.WidgetTree_0.W_BoundActionButton_C_0",
+          "native_back_after_cancel_closed": true,
+          "volume_still_original": true,
+          "world_unchanged": true,
+          "health_unchanged": true
+        }
+      ]
+    },
+    {
+      "directory": ".build\\LyraValidation\\BlueprintPython\\20261025-settings-cancel\\Python01",
+      "profile": "Python",
+      "summary_sha256": "8A2DF2F633881E0E898EA07D3BD14F16BAF0F5AF362AC0E33254B095340D9784",
+      "report_sha256": "7A7A4C22C33C1B1924DB5C220FCE3E5BCC6E969578CDF55C0673C8BF5C0A165F",
+      "native_exit_code": 0,
+      "external_gate_exit_code": 0,
+      "duration_seconds": 90.696,
+      "frozen_input_records": 3583,
+      "cases": [
+        {
+          "profile": "Python",
+          "cycle": 0,
+          "native_push_entry": "CommonUIExtensions.PushContentToLayer_ForPlayer",
+          "world": "/ShooterMaps/Maps/L_Expanse.L_Expanse",
+          "menu_options_native_focus": true,
+          "settings_native_focus": true,
+          "initial": 1.0,
+          "initially_dirty": true,
+          "baseline_cancel": {
+            "kind": "initial",
+            "label": "Cancel Changes",
+            "native_entry": "CommonBoundActionButton.HandleButtonClicked",
+            "profile_matches": true,
+            "selected_clicks": 1,
+            "other_clicks": 0,
+            "value_before": 1.0,
+            "value_after": 1.0,
+            "files_unchanged": true,
+            "clean": true,
+            "screen_active": true
+          },
+          "target": 0.5,
+          "pointer": {
+            "entry": "SSlider.OnMouseButtonDown",
+            "handled": true,
+            "target": 0.5,
+            "before": 1.0,
+            "after": 0.5,
+            "ui_value": 0.5,
+            "material_progress": 0.5,
+            "selected_callbacks": 2,
+            "other_callbacks": 0,
+            "native_geometry": [
+              920.0,
+              64.0
+            ],
+            "synthetic_pointer_up_sent": true
+          },
+          "cancel": {
+            "kind": "edited",
+            "label": "Cancel Changes",
+            "native_entry": "CommonBoundActionButton.HandleButtonClicked",
+            "profile_matches": true,
+            "selected_clicks": 1,
+            "other_clicks": 0,
+            "value_before": 0.5,
+            "value_after": 1.0,
+            "ui_after": 1.0,
+            "material_after": 1.0,
+            "screen_active": true,
+            "clean": true,
+            "files_before": {
+              "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261025-settings-cancel\\Python01\\user\\Saved\\Config\\CrashReportClient\\UECC-Windows-10AFB07D43A235FCAA3267BD64781757\\CrashReportClient.ini": "766170aac808e91de0c986a6004039cd0271bb8b4b8b91e47a586f030f1e574b",
+              "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261025-settings-cancel\\Python01\\user\\Saved\\Config\\WindowsEditor\\EditorPerProjectUserSettings.ini": "76c075b648eb99025c43048e24483f3e78fa0fd47a43042a1460656d61f5f365"
+            },
+            "files_after": {
+              "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261025-settings-cancel\\Python01\\user\\Saved\\Config\\CrashReportClient\\UECC-Windows-10AFB07D43A235FCAA3267BD64781757\\CrashReportClient.ini": "766170aac808e91de0c986a6004039cd0271bb8b4b8b91e47a586f030f1e574b",
+              "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261025-settings-cancel\\Python01\\user\\Saved\\Config\\WindowsEditor\\EditorPerProjectUserSettings.ini": "76c075b648eb99025c43048e24483f3e78fa0fd47a43042a1460656d61f5f365"
+            },
+            "cancel_action_removed": true
+          },
+          "native_back_candidates": [
+            "/Engine/Transient.LyraGameEngine_0:B_LyraGameInstance_C_0.W_OverallUILayout_C_0.WidgetTree_0.W_LyraGameMenu_C_0.WidgetTree_0.W_BottomActionBar.WidgetTree_0.W_BoundActionButton_C_0",
+            "/Engine/Transient.LyraGameEngine_0:B_LyraGameInstance_C_0.W_OverallUILayout_C_0.WidgetTree_0.W_LyraSettingScreen_C_0.WidgetTree_0.W_BottomActionBar.WidgetTree_0.W_BoundActionButton_C_2"
+          ],
+          "native_back_clicked": "/Engine/Transient.LyraGameEngine_0:B_LyraGameInstance_C_0.W_OverallUILayout_C_0.WidgetTree_0.W_LyraGameMenu_C_0.WidgetTree_0.W_BottomActionBar.WidgetTree_0.W_BoundActionButton_C_0",
+          "native_back_after_cancel_closed": true,
+          "volume_still_original": true,
+          "world_unchanged": true,
+          "health_unchanged": true
+        },
+        {
+          "profile": "Python",
+          "cycle": 1,
+          "native_push_entry": "CommonUIExtensions.PushContentToLayer_ForPlayer",
+          "world": "/ShooterMaps/Maps/L_Expanse.L_Expanse",
+          "menu_options_native_focus": true,
+          "settings_native_focus": true,
+          "initial": 1.0,
+          "initially_dirty": true,
+          "baseline_cancel": {
+            "kind": "initial",
+            "label": "Cancel Changes",
+            "native_entry": "CommonBoundActionButton.HandleButtonClicked",
+            "profile_matches": true,
+            "selected_clicks": 1,
+            "other_clicks": 0,
+            "value_before": 1.0,
+            "value_after": 1.0,
+            "files_unchanged": true,
+            "clean": true,
+            "screen_active": true
+          },
+          "target": 0.5,
+          "pointer": {
+            "entry": "SSlider.OnMouseButtonDown",
+            "handled": true,
+            "target": 0.5,
+            "before": 1.0,
+            "after": 0.5,
+            "ui_value": 0.5,
+            "material_progress": 0.5,
+            "selected_callbacks": 2,
+            "other_callbacks": 0,
+            "native_geometry": [
+              920.0,
+              64.0
+            ],
+            "synthetic_pointer_up_sent": true
+          },
+          "cancel": {
+            "kind": "edited",
+            "label": "Cancel Changes",
+            "native_entry": "CommonBoundActionButton.HandleButtonClicked",
+            "profile_matches": true,
+            "selected_clicks": 1,
+            "other_clicks": 0,
+            "value_before": 0.5,
+            "value_after": 1.0,
+            "ui_after": 1.0,
+            "material_after": 1.0,
+            "screen_active": true,
+            "clean": true,
+            "files_before": {
+              "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261025-settings-cancel\\Python01\\user\\Saved\\Config\\CrashReportClient\\UECC-Windows-10AFB07D43A235FCAA3267BD64781757\\CrashReportClient.ini": "766170aac808e91de0c986a6004039cd0271bb8b4b8b91e47a586f030f1e574b",
+              "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261025-settings-cancel\\Python01\\user\\Saved\\Config\\WindowsEditor\\EditorPerProjectUserSettings.ini": "76c075b648eb99025c43048e24483f3e78fa0fd47a43042a1460656d61f5f365"
+            },
+            "files_after": {
+              "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261025-settings-cancel\\Python01\\user\\Saved\\Config\\CrashReportClient\\UECC-Windows-10AFB07D43A235FCAA3267BD64781757\\CrashReportClient.ini": "766170aac808e91de0c986a6004039cd0271bb8b4b8b91e47a586f030f1e574b",
+              "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261025-settings-cancel\\Python01\\user\\Saved\\Config\\WindowsEditor\\EditorPerProjectUserSettings.ini": "76c075b648eb99025c43048e24483f3e78fa0fd47a43042a1460656d61f5f365"
+            },
+            "cancel_action_removed": true
+          },
+          "native_back_candidates": [
+            "/Engine/Transient.LyraGameEngine_0:B_LyraGameInstance_C_0.W_OverallUILayout_C_0.WidgetTree_0.W_LyraGameMenu_C_0.WidgetTree_0.W_BottomActionBar.WidgetTree_0.W_BoundActionButton_C_0",
+            "/Engine/Transient.LyraGameEngine_0:B_LyraGameInstance_C_0.W_OverallUILayout_C_0.WidgetTree_0.W_LyraSettingScreen_C_0.WidgetTree_0.W_BottomActionBar.WidgetTree_0.W_BoundActionButton_C_0"
+          ],
+          "native_back_clicked": "/Engine/Transient.LyraGameEngine_0:B_LyraGameInstance_C_0.W_OverallUILayout_C_0.WidgetTree_0.W_LyraGameMenu_C_0.WidgetTree_0.W_BottomActionBar.WidgetTree_0.W_BoundActionButton_C_0",
+          "native_back_after_cancel_closed": true,
+          "volume_still_original": true,
+          "world_unchanged": true,
+          "health_unchanged": true
+        }
+      ]
+    }
+  ],
+  "comparison": {
+    "path": ".build\\LyraValidation\\BlueprintPython\\20261025-settings-cancel\\comparison.json",
+    "sha256": "3F4CD46C25EF20F69AEC9E40876C2CE5AC0F47088CEE582D90AA00E01BF44D8B",
+    "status": "passed",
+    "native_dirty_cancel_actions": 4,
+    "actual_clean_native_processes": 2,
+    "outcome": [
+      {
+        "initial": 1.0,
+        "target": 0.5,
+        "pointer_callbacks": 2,
+        "cancel_clicks": 1,
+        "value_after": 1.0,
+        "material_after": 1.0
+      },
+      {
+        "initial": 1.0,
+        "target": 0.5,
+        "pointer_callbacks": 2,
+        "cancel_clicks": 1,
+        "value_after": 1.0,
+        "material_after": 1.0
+      }
+    ],
+    "full_acceptance": false
+  },
+  "independent_index_tests": {
+    "directory": ".build\\CommitVerification\\20261026-settings-cancel\\Index02",
+    "summary_sha256": "BFEF326AFBF1C92E0F83CBC021009671FB8C9D150D212C9232992CDA65E16CF8",
+    "tests_run": 75,
+    "selected_test_files": [
+      "Demos/UEPLyraIntegration/Tests/test_bound_action_contract.py",
+      "Demos/UEPLyraIntegration/Tests/test_hud_startup.py",
+      "Demos/UEPLyraIntegration/Tests/test_settings_cancel_action_contract.py",
+      "Demos/UEPLyraIntegration/Tests/test_settings_local_persistence_contract.py",
+      "Demos/UEPLyraIntegration/Tests/test_ui_back_navigation_contract.py"
+    ],
+    "core_index_tree": "fbba497e33a4ea36adff958572fb7200b16135c1",
+    "examples_index_tree": "365565d1d3fc40970d24336c4cfffbd67a9b59a8",
+    "bookkeeping_added_after_code_tests": true
+  },
+  "native_settings_action_semantics": {
+    "source": "F:\\LyraStarterGame\\Source\\LyraGame\\UI\\LyraSettingScreen.cpp",
+    "sha256": "1D4CE08F6372A4523075CD118F2184DD97606C2B55F88AA80E7CEB6A6CBF3421",
+    "back": "AttemptToPopNavigation else ApplyChanges then DeactivateWidget",
+    "cancel_changes": "CancelChanges only;dirty-state handler adds/removes its represented action"
+  },
+  "original_failure_cancellation_evidence_review": {
+    "session_create_failure_ledger": "225-host-session-native-invalid-request-error-ui-and-unbind.json",
+    "session_search_failure_ledger": "226-session-browser-native-error-recovery-and-pending-receiver-lifetime.json",
+    "session_join_failure_ledger": "227-session-entry-native-duplicate-join-failure-cleanup-and-retry.json",
+    "replay_decline_ledger": "163-replay-browser-entry-native-recordings-and-current-item-playback.json",
+    "shared_settings_cancel_ledger": "212-settings-native-ui-cancel-owned-save-and-fresh-process-read.json",
+    "local_settings_cancel_ledger": "243-native-scalar-local-settings-ini-persistence-and-fresh-restore.json",
+    "newly_observed_gap": "Those settings probes called the native CancelChanges API directly;this followup observes its actual bound action. This review does not accept all57 UI candidates or the complete0.13 checklist."
+  },
+  "preserved_failed_runs": [
+    {
+      "directory": "Original01",
+      "reason": "Native cancellation checks did not fail,but teardown timed out while demanding exactly one globally enumerated Back button;pending case details were not yet published."
+    },
+    {
+      "directory": "Original02",
+      "reason": "Published pending case proves rollback1->0.5->1,active screen,clean state,removed Cancel action and unchanged files;two Back references rejected an incorrect uniqueness assumption. Whole run remains failed."
+    }
+  ],
+  "back_enumeration": "Record every current-player represented Back candidate and the clicked object;verify actual target settings closure rather than imposing global visual-button uniqueness",
+  "failed_input_review": {
+    "path": ".build\\LyraValidation\\BlueprintPython\\20261025-settings-cancel\\historical-frozen-input-review.json",
+    "sha256": "D6C5D1DB0BE7B15EEED7D43016EBED379B1BAF42EC9875DD1215C0741CB72544"
+  },
+  "production_profiles_changed": false,
+  "existing_back_and_scalar_helpers_changed": false,
+  "direct_cancel_or_apply_api_called": false,
+  "direct_setting_setter_called": false,
+  "configuration_store_written_by_python": false,
+  "cleanup": "Remove probe scalar view/host after observed cancellation;native Back closes the real screen;remove remaining probe roots and restore selectors/classes.",
+  "original_246_candidate_rows_preserved": true,
+  "original_22_requirement_text_preserved": true,
+  "protected_unrelated_files_unchanged": true,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "assets_saved": false,
+  "full_regression_executed": false,
+  "physical_input_tested": false,
+  "network_acceptance": false,
+  "packaged_runtime": false,
+  "full_acceptance": false,
+  "native_pawn_readiness_issue": "open_not_fixed",
+  "native_pawn_guard_applied": false,
+  "next": "Continue all original runtime/version acceptance requirements. Native Cancel/action-reopen proof supplements the earlier session/replay failures;it does not by itself certify every0.13 failure,cancellation,lifetime/travel or whole migration requirement."
+}
