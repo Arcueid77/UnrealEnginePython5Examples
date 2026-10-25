@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "batch": 237,
+  "recorded_utc": "2026-10-25T12:30:06.147466+00:00",
+  "status": "evidence_snapshot",
+  "scope": "Read-only registration/inheritance/source inventory refresh after the private SDK bootstrap fix. All246 original candidate paths/order/versions are preserved;this is not a gameplay,presentation,stability or full-version acceptance. No compile,cook/package or asset save. The original Pawn/ASC issue remains open.",
+  "core_parent_commit": "135e1967bedb9d6b281e5169cb3fff4a030fc794",
+  "examples_parent_commit": "ef80bbbbbb523d4fb6f142ae33aad5dc759e4b77",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261025-current-census/Census01",
+      "summary_sha256": "3A9851E4C1665C41E5E8C949E566871C207D036341380B6A718C6AAC2F683FC2",
+      "status": "passed",
+      "process_exit_code": 0,
+      "report_hashes": [
+        {
+          "file": "audit.json",
+          "sha256": "620417D70CC3752B5F5F6558D6DCC6EEE7AF003A93BE1EB640CBDD9CCDAC1C99"
+        }
+      ],
+      "frozen_input_records": 1071,
+      "native_seconds": 148.015
+    }
+  ],
+  "native_manifest_input_snapshot": {
+    "path": ".build/LyraValidation/BlueprintPython/20261025-current-census/before-batches.json",
+    "sha256": "B3EA50F0F9BE4834B3B7A6FA11E1FC1E441AF2D4EBE516BE5AE5A8BFE627DAE8"
+  },
+  "native_profile_script_snapshot": {
+    "path": ".build/LyraValidation/BlueprintPython/20261025-current-census/native-profile-scripts.json",
+    "sha256": "BD5F7AF50B53505CB7EE01576D30FCB846E033E64D10A6A009844BF4E714EBC5",
+    "modules": 211
+  },
+  "paired_source_stage_scripts": 835,
+  "native_candidate_classes": 246,
+  "original_entrypoints": 963,
+  "source_profile_modules": 135,
+  "source_dependency_modules": 211,
+  "original_scope": [
+    246,
+    182,
+    63,
+    11
+  ],
+  "candidate_rows_changed": 0,
+  "original_readiness_issue": "open_not_fixed",
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "assets_saved": false,
+  "full_regression_executed": false,
+  "runtime_acceptance": false,
+  "full_acceptance": false,
+  "full_migration_acceptance_proven": false,
+  "input_hashes": [
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261025-current-census/before-batches.json",
+      "sha256": "B3EA50F0F9BE4834B3B7A6FA11E1FC1E441AF2D4EBE516BE5AE5A8BFE627DAE8"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261025-current-census/current-script-inputs.json",
+      "sha256": "283957E3CAE3412C55B37DF9FDE20137CE0A7C9E42442A1728BFB2AF885B1159"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261025-current-census/script-input-review.json",
+      "sha256": "4AF4BFBD8128A97F7C3FFB1AC3F2991F869F6D9ADD2A962AB4321CABCE85692C"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261025-current-census/native-profile-scripts.json",
+      "sha256": "BD5F7AF50B53505CB7EE01576D30FCB846E033E64D10A6A009844BF4E714EBC5"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261025-current-census/acceptance01.json",
+      "sha256": "A912C360833CC21A86313BF13A3422E823A35680D266E03FE9E42EF5F282B72B"
+    },
+    {
+      "path": ".build/LyraValidation/BlueprintPython/20261025-current-census/before-candidate-dispositions.json",
+      "sha256": "24AC38B4592EECAF82525AA1C825D2C303E0413BE5AFD0B1AF4126858F6AF058"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Migration/candidate_dispositions.json",
+      "sha256": "2059501E6017683B5D1F5DF03BBAC7196B0BD2A24B411E0EC834379894E0C626"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Migration/ACCEPTANCE_REVIEW.md",
+      "sha256": "1E382EAF06B850621C55512ABDA6910B7240DB12F4C41DC0A6A38F278CF5CE30"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tools/audit_candidate_dispositions.py",
+      "sha256": "586CD5381B9CDA537476B541D88B0876CD709892344ADD5850189D0647EF143C"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Tests/test_candidate_dispositions.py",
+      "sha256": "BD6388A2678F1D537FDDA99C176F10A7CC2482738B2C21129540A6E6AA6F727C"
+    }
+  ],
+  "candidate_disposition_rows_unchanged": true,
+  "proven_inventory_and_exclusion_requirements": 2,
+  "runtime_requirements_not_proven_by_this_batch": 20,
+  "isolated_staged_incremental_verification": ".build/CommitVerification/20261025-current-census/Index02",
+  "acceptance_markdown_regenerated_without_content_change": true
+}

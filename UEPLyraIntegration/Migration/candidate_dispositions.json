@@ -15,7 +15,7 @@
   "unclassified_original_entries": 0,
   "source_profile_modules": 135,
   "source_dependency_modules": 211,
-  "source_baseline_examples_commit": "5ce4d5e5b9d7eb7f7beb0761d071f58ad526189b",
+  "source_baseline_examples_commit": "ef80bbbbbb523d4fb6f142ae33aad5dc759e4b77",
   "current_source_reviews": [
     {
       "module": "uep_lyra_abilities",
@@ -1246,8 +1246,8 @@
       "module": "uep_lyra_weapons.spawning_cue_mixin",
       "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/spawning_cue_mixin.py",
       "sha256": "FFD75BE083BE079CC01D1AA1442B17C9657D688CC2559AB4F01E8393103201B0",
-      "native_baseline_sha256": "EBE9CAF62858761EE2BC80E8ADCC551592546EAC2A81A3F50B2824E5677F9BD0",
-      "state": "reviewed-private-cached-target-fix-public-declarations-unchanged"
+      "native_baseline_sha256": "FFD75BE083BE079CC01D1AA1442B17C9657D688CC2559AB4F01E8393103201B0",
+      "state": "unchanged-python-ast"
     },
     {
       "module": "uep_lyra_weapons.tdm_scoring_mixin",
@@ -2317,13 +2317,8 @@
       "sha256": "A3536D7265212270E8E9171A1C16303D2D33450959AE42AE44237166A98D81B5"
     }
   ],
-  "reviewed_spawning_fix": {
-    "ledger": "233-spawning-cached-target-cleanup-and-current-melee-diagnosis.json",
-    "sha256": "FFD75BE083BE079CC01D1AA1442B17C9657D688CC2559AB4F01E8393103201B0",
-    "native_summary_sha256": "8E71DB3C52B0AE9DD5490E14224D5ADE766C148F3F271BFE896FEE2A0C4FECAC",
-    "original_race_fixed": false
-  },
-  "native_census_log_sha256": "63E46988F8C961578EA6A6625953FE316A2FC0CDE8B8983796936B59093EE545",
+  "reviewed_spawning_fix": null,
+  "native_census_log_sha256": "2F27A145FE1D862BF5B8B25819FB270808A73E01C9BC0AB165B79C9E8367F0B3",
   "entrypoint_counts": {
     "python-routed": 347,
     "no-connected-execution-business": 105,
@@ -5717,7 +5712,7 @@
     "Named Pawn/ASC issue stays open;known original NetShooter discrepancy stays explicit."
   ],
   "evidence_paths": {
-    "native_ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/222-all-original-candidate-native-routing-and-inheritance-review.json",
+    "native_ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/237-current-sdk-native-census-and-source-disposition-refresh.json",
     "entrypoint_ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/223-original-entrypoint-transitive-routes-and-retained-native-source-review.json",
     "entrypoint_reviews": "Demos/UEPLyraIntegration/Migration/entrypoint_source_reviews.json",
     "static_scope": "Demos/UEPLyraIntegration/Migration/static_scope_dispositions.json"

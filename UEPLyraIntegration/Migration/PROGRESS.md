@@ -31,6 +31,26 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed current-SDK inventory refresh batch237 (2026-10-25):**
+Refresh the read-only246-candidate native census after the private bootstrap
+repair. One Editor commandlet exits0;no source/asset edit,compile,cook/package
+or gameplay replay occurs in the native lane. All835 project/shared script
+pairs match before/after execution. Preserve exact captured bytes for the211
+local dependencies of135 registered profile modules,and bind their manifest
+to the native ledger. The source verifier checks those frozen inputs against
+the exact native Git baseline and checks current stage/source AST parity;
+formatting remains allowed while altered captures,wrong Git inputs and stale
+stage policies fail closed. Add four focused rejection/formatting regressions
+(18 targeted tests total). CLI can select a new native ledger and otherwise
+reuses the current artifact anchor,which is still fully verified.
+All246 candidate disposition rows and963 original entry classifications match
+the earlier review. Configuration/retention reasons and named Pawn/ASC and
+original NetShooter issues remain explicit. Update candidate_dispositions and
+ACCEPTANCE_REVIEW against the current SDK;the same two inventory/exclusion
+criteria remain proven,the other20 remain separate runtime/version work.
+No original checklist text or246 asset rows/order/versions change. No repeated
+full host/feature regression. Commit/push Examples then the core gitlink.
+
 **Completed bootstrap path lifetime batch236 (2026-10-25;native evidence2026-10-23):**
 Fix three retained TCHAR_TO_UTF8 temporary pointers in interpreter path setup.
 Long paths could corrupt sys.path or reach null Py_DECREF. Keep conversion

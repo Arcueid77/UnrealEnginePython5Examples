@@ -87,6 +87,14 @@ def verify_spawn_fix(repo,path):
     require(any(Path(r['path']).resolve()==path.resolve() and r['sha256'].upper()==sha(path) for r in summary['hashes']),'Spawn Cue source not frozen in accepted native followup')
     return dict(ledger='233-spawning-cached-target-cleanup-and-current-melee-diagnosis.json',sha256=sha(path),native_summary_sha256=sha(summary_path),original_race_fixed=False)
 
+def verify_captured_script(repo,record,baseline_source,current_source,stage_path):
+    frozen=repo/record['frozen_input']
+    require(sha(frozen)==record['sha256'],'Captured native policy script changed')
+    require(shape(ast.parse(frozen.read_text(encoding='utf-8-sig')))==shape(ast.parse(baseline_source)),
+        'Captured native policy script differs from its input Git baseline')
+    require(shape(ast.parse(Path(stage_path).read_text(encoding='utf-8-sig')))==shape(ast.parse(current_source)),
+        'Current staged policy script differs from reviewed source')
+
 def inspect(repo,current,initial,paths):
     repo=Path(repo);base=repo/'Demos/UEPLyraIntegration';manifest=base/'Migration/batches.json'
     coverage_ledger=read(repo/paths['native_ledger']);require(len(coverage_ledger['runs'])==1,'One exact native coverage census required')
@@ -125,9 +133,19 @@ def inspect(repo,current,initial,paths):
         require(name not in files,'Ambiguous current Python module: '+name)
         files[name]=(p.relative_to(repo/'Demos').as_posix(),p.read_text(encoding='utf-8-sig'))
     declared=source_modules(coverage);dependencies=local_dependencies(declared,files);sources=[];fix=None
+    captured=None
+    if coverage_ledger.get('native_profile_script_snapshot'):
+        snapshot=coverage_ledger['native_profile_script_snapshot']
+        require(sha(repo/snapshot['path'])==snapshot['sha256'],'Native profile script snapshot changed')
+        records=read(repo/snapshot['path'])['scripts'];captured={row['module']:row for row in records}
+        require(len(captured)==len(records) and set(captured)==dependencies,'Native profile script snapshot scope differs')
+    native_stage=Path(static_doc['source_copy_roots']['stage'])
     for module in sorted(dependencies):
         relative,text=files[module];require(relative in old,'Native declaration dependency not present in native Git input: '+module)
         previous=old[relative].decode('utf-8-sig');state=check_source_change(module,previous,text)
+        if captured is not None:
+            require(captured[module]['path']=='Demos/'+relative,'Native profile script snapshot path differs')
+            verify_captured_script(repo,captured[module],previous,text,native_stage/Path(relative).relative_to('UEPLyraIntegration/Overlay'))
         if state.startswith('reviewed-private'):fix=verify_spawn_fix(repo,repo/'Demos'/relative)
         sources.append(dict(module=module,path='Demos/'+relative,sha256=sha(repo/'Demos'/relative),native_baseline_sha256=hashlib.sha256(old[relative]).hexdigest().upper(),state=state))
     changed=subprocess.check_output(['git','-C',str(repo/'Demos'),'diff',baseline,'--name-only','--','UEPLyraIntegration/Overlay'],encoding='utf-8').splitlines()
@@ -169,8 +187,13 @@ def verify_documentation(document,current,initial,repo):
     return dict(status='passed',runtime_candidates=246,original_assets=491,original_entrypoints=963,excluded_assets=245,source_profile_modules=expected['source_profile_modules'],source_dependency_modules=expected['source_dependency_modules'],runtime_acceptance=False)
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('--manifest',required=True);parser.add_argument('--initial-inventory',required=True);parser.add_argument('--result',required=True);args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('--manifest',required=True);parser.add_argument('--initial-inventory',required=True);parser.add_argument('--result',required=True)
+    parser.add_argument('--native-ledger',help='Repository-relative current native census ledger;otherwise reuse the existing disposition artifact anchor')
+    args=parser.parse_args()
     manifest=Path(args.manifest).resolve();repo=manifest.parents[3]
-    paths=dict(native_ledger='Demos/UEPLyraIntegration/Migration/Acceptance/222-all-original-candidate-native-routing-and-inheritance-review.json',entrypoint_ledger='Demos/UEPLyraIntegration/Migration/Acceptance/223-original-entrypoint-transitive-routes-and-retained-native-source-review.json',entrypoint_reviews='Demos/UEPLyraIntegration/Migration/entrypoint_source_reviews.json',static_scope='Demos/UEPLyraIntegration/Migration/static_scope_dispositions.json')
+    if not args.native_ledger:
+        existing=manifest.parent/'candidate_dispositions.json'
+        args.native_ledger=(read(existing).get('evidence_paths',{}).get('native_ledger') if existing.is_file() else None) or 'Demos/UEPLyraIntegration/Migration/Acceptance/222-all-original-candidate-native-routing-and-inheritance-review.json'
+    paths=dict(native_ledger=args.native_ledger,entrypoint_ledger='Demos/UEPLyraIntegration/Migration/Acceptance/223-original-entrypoint-transitive-routes-and-retained-native-source-review.json',entrypoint_reviews='Demos/UEPLyraIntegration/Migration/entrypoint_source_reviews.json',static_scope='Demos/UEPLyraIntegration/Migration/static_scope_dispositions.json')
     report=inspect(repo,read(manifest),read(args.initial_inventory),paths)
     Path(args.result).write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8');print(json.dumps({k:v for k,v in report.items() if k not in ('current_source_reviews','current_binding_assets','candidates','limitations','evidence_paths')}))

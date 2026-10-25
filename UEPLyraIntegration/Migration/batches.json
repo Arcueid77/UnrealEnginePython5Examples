@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 238,
+    "bounded_evidence_ledgers": 239,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -15922,7 +15922,13 @@
     "full_regression_executed": false,
     "runtime_acceptance": false,
     "full_acceptance": false,
-    "next": "Review the remaining20 original gameplay,presentation,lifecycle,network/package requirements against actual evidence. Inventory disposition is now checked separately;the Pawn/ASC issue still requires its own cause/repair proof. Do not infer full migration from this source census."
+    "next": "Review the remaining20 original gameplay,presentation,lifecycle,network/package requirements against actual evidence. Inventory disposition is now checked separately;the Pawn/ASC issue still requires its own cause/repair proof. Do not infer full migration from this source census.",
+    "current_sdk_followup": {
+      "evidence_ledger": "237-current-sdk-native-census-and-source-disposition-refresh.json",
+      "current_source_and_native_census_verified": true,
+      "runtime_acceptance": false,
+      "full_acceptance": false
+    }
   },
   "native_pawn_stack_diagnostic_pilot": {
     "status": "opt_in_native_stack_capture_and_offline_matching_pdb_resolution_verified",
@@ -15963,6 +15969,27 @@
     "cook_package_executed": false,
     "full_regression_executed": false,
     "full_acceptance": false,
-    "next": "Continue the original remaining runtime/version requirements. The246-class census remains earlier-SDK evidence and needs a current-SDK provenance refresh before final inventory/runtime closeout;do not infer complete migration from this bootstrap repair. Capture an actual empty-binding failure before claiming a Pawn/ASC cause or fix."
+    "next": "Continue remaining original runtime/version requirements and diagnose an actual Pawn/ASC empty-binding failure. Current inventory provenance was refreshed separately in batch237.",
+    "current_census_followup": {
+      "evidence_ledger": "237-current-sdk-native-census-and-source-disposition-refresh.json",
+      "status": "current_sdk_registration_and_source_provenance_refreshed",
+      "all_candidates": 246,
+      "runtime_acceptance": false
+    }
+  },
+  "current_sdk_inventory_refresh": {
+    "status": "current_native_census_and_captured_profile_sources_verified",
+    "evidence_ledger": "237-current-sdk-native-census-and-source-disposition-refresh.json",
+    "runtime_candidates": 246,
+    "original_entrypoints": 963,
+    "source_profile_modules": 135,
+    "source_dependency_modules": 211,
+    "candidate_disposition_rows_unchanged": true,
+    "native_processes": 1,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "runtime_acceptance": false,
+    "full_acceptance": false,
+    "next": "Review the remaining20 original gameplay/presentation/lifetime/network/package requirements against their actual evidence. The original Pawn/ASC issue remains open;do not infer gameplay completion from registration/source inventory."
   }
 }

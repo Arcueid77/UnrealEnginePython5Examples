@@ -1,5 +1,5 @@
 """Reject unsupported source changes and forged candidate-coverage assertions."""
-import ast,copy,sys,unittest
+import ast,copy,hashlib,sys,tempfile,unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'Tools'))
 import audit_candidate_dispositions as audit
@@ -49,5 +49,30 @@ class CandidateDispositionSourceTests(unittest.TestCase):
     def test_baseline_must_be_an_exact_git_commit(self):
         for value in ('HEAD','--help','deadbeef'):
             with self.assertRaisesRegex(ValueError,'Exact native input'):audit.archive_sources(Path('.'),value,'unused')
+    def test_captured_native_source_and_current_stage_allow_formatting_only(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);frozen=root/'captured.py';stage=root/'stage.py'
+            frozen.write_text('VALUE = 1\n',encoding='utf-8');stage.write_text('# formatting\nVALUE=1\n',encoding='utf-8')
+            record=dict(frozen_input='captured.py',sha256=hashlib.sha256(frozen.read_bytes()).hexdigest().upper())
+            audit.verify_captured_script(root,record,'VALUE=1\n','VALUE = 1\n',stage)
+    def test_mutating_captured_native_source_fails_its_hash(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);frozen=root/'captured.py';stage=root/'stage.py'
+            frozen.write_text('VALUE=1\n',encoding='utf-8');stage.write_text('VALUE=1\n',encoding='utf-8')
+            record=dict(frozen_input='captured.py',sha256=hashlib.sha256(frozen.read_bytes()).hexdigest().upper())
+            frozen.write_text('VALUE=2\n',encoding='utf-8')
+            with self.assertRaisesRegex(ValueError,'Captured native policy script changed'):audit.verify_captured_script(root,record,'VALUE=1\n','VALUE=1\n',stage)
+    def test_captured_native_script_must_match_its_git_input(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);frozen=root/'captured.py';stage=root/'stage.py'
+            frozen.write_text('VALUE=2\n',encoding='utf-8');stage.write_text('VALUE=1\n',encoding='utf-8')
+            record=dict(frozen_input='captured.py',sha256=hashlib.sha256(frozen.read_bytes()).hexdigest().upper())
+            with self.assertRaisesRegex(ValueError,'input Git baseline'):audit.verify_captured_script(root,record,'VALUE=1\n','VALUE=1\n',stage)
+    def test_stale_stage_policy_cannot_borrow_current_source_proof(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);frozen=root/'captured.py';stage=root/'stage.py'
+            frozen.write_text('VALUE=1\n',encoding='utf-8');stage.write_text('VALUE=2\n',encoding='utf-8')
+            record=dict(frozen_input='captured.py',sha256=hashlib.sha256(frozen.read_bytes()).hexdigest().upper())
+            with self.assertRaisesRegex(ValueError,'staged policy script differs'):audit.verify_captured_script(root,record,'VALUE=1\n','VALUE=1\n',stage)
 
 if __name__=='__main__':unittest.main()
