@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 240,
+    "bounded_evidence_ledgers": 241,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -16005,6 +16005,26 @@
     "standalone_tested": false,
     "full_acceptance": false,
     "original_readiness_issue": "open_not_fixed",
-    "next": "Continue original criterion11 Standalone natural death/respawn and remaining original runtime/version requirements. Preserve PythonA01 foreign-Pawn absence as unresolved evidence;the healthy network comparison does not prove its cause or a fix."
+    "next": "Standalone natural death/respawn is now covered separately by batch239. Continue original runtime/version requirements and preserve the unexplained PythonA01 foreign-Pawn absence;healthy followups do not prove its cause or a fix.",
+    "standalone_followup": {
+      "evidence_ledger": "239-standalone-native-world-bounds-death-respawn-and-owner-input.json",
+      "natural_respawns": 2,
+      "full_acceptance": false
+    }
+  },
+  "weapon_natural_respawn_standalone_pilot": {
+    "status": "both_profiles_authored_killz_death_natural_respawn_and_renewed_owner_input_verified",
+    "evidence_ledger": "239-standalone-native-world-bounds-death-respawn-and-owner-input.json",
+    "standalone_natural_respawns": 2,
+    "actual_clean_native_processes": 2,
+    "native_owner_fire_cases": 4,
+    "world_settings_or_health_written": false,
+    "manual_restart_or_spawn": false,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_acceptance": false,
+    "original_readiness_issue": "open_not_fixed",
+    "next": "Review remaining original runtime/version acceptance requirements and diagnose an actual canonical Pawn/ASC empty-binding failure. This bounded Standalone followup and batch238 network evidence do not by themselves close all criterion11 weapon/lifetime/network or full migration requirements."
   }
 }

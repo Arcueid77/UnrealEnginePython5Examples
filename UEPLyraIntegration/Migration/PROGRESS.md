@@ -31,6 +31,27 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed Standalone natural death/respawn batch239 (2026-10-25):**
+Reuse the current SDK without compilation. In the authored L_Expanse world,
+both BlueprintFallback and Python perform one real native owner pistol gesture,
+move below the unchanged authored KillZ,and let native world-bounds/health/death
+handling retire the old Pawn and perform the authored respawn. A second real
+owner gesture reaches the new Pawn's native ability/target-data path and costs
+one round. Both processes and independent semantic gates exit0;original/Python
+outcomes match. Both worlds are actual Standalone with zero bot controllers;
+PlayerState/native class persist and health/ASC/avatar/input/inventory recover.
+The probe does not write Health,construct/apply a damage spec,replay death,
+restart/spawn a Pawn,initialize an ASC or write WorldSettings. Death height
+and world-bounds checks remain authored. Probe scopes,selectors,observer
+classes,roots and input are cleaned up.
+Thirty-six affected host checks cover this lane and the existing network gate,
+including CLI execution,missing profiles,failed processes and changed default
+inventory. Only these two test files are selected;no full regression is run.
+All246 original candidate rows and22-requirement text stay unchanged. The
+original Pawn/ASC empty-binding issue and unexplained foreign-Pawn absence
+remain open. This does not certify all criterion11 paths or full migration.
+No build,cook/package,asset save,tags or release. Commit/push Examples then core.
+
 **Completed natural human death/respawn network batch238 (2026-10-25):**
 Add one explicit opt-in validation lane for actual owner pistol input killing
 the other human,authored natural death/respawn and a fresh-Pawn native fire
