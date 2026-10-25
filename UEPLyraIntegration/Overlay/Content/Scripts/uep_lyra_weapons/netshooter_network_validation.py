@@ -187,5 +187,8 @@ class Server(Witness,base.Server):
 
 if any(value.startswith("-UEPNetShooterNetworkResult=") for value in sys.argv):
     result,peer,run=base.arg("-UEPNetShooterNetworkResult="),base.arg("-UEPJumpPeer="),base.arg("-UEPJumpRun=")
-    validation=Server(result,run) if peer=="server" else Client(result,peer,run)
+    selected_server,selected_client=Server,Client
+    if '-UEPNetShooterAmmoExhaustion' in sys.argv:
+        from .netshooter_ammo_validation import NetworkServer as selected_server,NetworkClient as selected_client
+    validation=selected_server(result,run) if peer=="server" else selected_client(result,peer,run)
     atexit.register(validation.finalize);ticker=ue.add_ticker(validation.tick)

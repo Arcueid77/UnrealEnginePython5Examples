@@ -31,6 +31,40 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded prototype ammo boundary batch261 (2026-10-26):**
+The named incremental NetShooter ammo selector passes native Standalone and one
+dedicated Editor server/two-client play. Original/Python profiles consume one
+remaining seeded round through actual owner input,then a second real gesture
+must receive native Ability.ActivateFail.Cost. Activation,target-data,projectile
+and ammo counts remain unchanged after empty input. The reflected original
+native one-round MagazineAmmo cost and zero AutoReload grants are preserved.
+Standalone has two profile trials;network has four owner/profile trials:six
+actual consumed last rounds and six explicit native empty-cost refusals.
+
+The network authority acknowledgment matches the independent owner capture;
+foreign clients neither input nor consume ammo. The original first-shot native
+prediction,wire identity,moving replicas and cleanup gate remains enforced by
+a read-only first-gesture projection;raw captures retain both gestures. Local
+prediction may reject before a second RPC,so no server failure callback is
+invented. Temporary inherited failure-event hooks restore their original
+function and classes;production Cue bindings/defaults stay unchanged.
+
+Preserve failed Standalone01(exit0 is not a pass):the legacy fixture's Cue guard
+stopped before ammo cases and its early cleanup assumed prototype setup was
+complete. Exact original inputs/report/log/summary remain. The test-only Cue
+hook now permits ammo mode to retain production bindings,and cleanup checks
+completed setup. Standalone02 exits0 and Network01's three peers exit0;both
+independent gates exit0 and all3488/3506 frozen inputs match. Prior260 fixture/
+driver bytes are retained from Git parents matched to original native hashes.
+
+Nine new adversarial checks plus nineteen existing ability/prediction checks
+pass in an immutable index. The accepted lifetime review still reproduces its
+37 records. No production policy,Blueprint,C++,SDK/build/link,binary refresh,
+cook/package or full regression. Preserve all246 candidates and22 exact texts.
+Overall remains12/22;next assemble the complete source/report-pinned six-
+behavior Standalone/two-client gameplay and natural-respawn comparisons.
+Ledger:`Acceptance/261-netshooter-native-last-round-and-explicit-empty-cost-refusal.json`.
+
 **Completed bounded Standalone gameplay gaps batch260 (2026-10-26):**
 Current SDK236 Quickslot Standalone passes10 native GameplayEvent/equipment
 Blueprint/Python pairs,including the previously missing default Python-owned

@@ -84,6 +84,14 @@ class Validation(Ready):
         defaults=(params.NormalizedMagnitude==0. and params.RawMagnitude==0. and params.GameplayEffectLevel==1 and params.AbilityLevel==1 and
             not params.bReplicateLocationWhenUsingMinimalRepProxy and all(getattr(params,name) is None for name in ("Instigator","EffectCauser","SourceObject","PhysicalMaterial","TargetAttachComponent")))
         return dict(location=vec(params.Location),normal=vec(params.Normal),geometry_matches=near(vec(params.Location),point) and near(vec(params.Normal),vec(normal)),defaults_match=defaults)
+    def observe_cue(self):
+        self.cue_cls=ue.load_class(CUE);require(not any(row["target_class"]==self.cue_cls for row in ue.get_registered_mixins()),"do not replace production Cue Profile")
+        self.original_cue=self.cue_cls.get_cdo().find_function("OnBurst");owner=self
+        class ObserveCue:
+            def OnBurst(self,Target,Parameters,SpawnResults):
+                if owner.recording and Target==owner.pawn:owner.cues.append(owner.cue_values(Parameters))
+                return self.call_mixin_original("OnBurst",Target,Parameters,SpawnResults)
+        ue.register_mixin_profile(self.cue_cls,"UEPNetAbilityCueObserve",ObserveCue,make_default=True)
     def begin(self):
         self.report["native_mode"]=str(policy.lib("UEPLyraBridgeLibrary").call_function("GetBridgeForWorld",self.world).call_function("CaptureSnapshot").NetMode)
         require(self.report["native_mode"]=="Standalone","native NetShooter ability standalone required")
@@ -97,13 +105,7 @@ class Validation(Ready):
         require(self.camera_fixture.call_function("K2_TeleportTo",ue.FVector(50000.,50000.,10200.),ue.FRotator(0.,65.,35.)),"native independent view-target pose refused")
         self.controller.call_function("SetViewTargetWithBlend",self.camera_fixture,0.,0,0.,False);self.report["native_independent_camera_view_target_fixture"]=True
         self.math=policy.lib("KismetMathLibrary");self.cls=ue.load_class(policy.CLASS);self.projectile_cls=ue.load_class(policy.PROJECTILE);self.observe()
-        self.cue_cls=ue.load_class(CUE);require(not any(row["target_class"]==self.cue_cls for row in ue.get_registered_mixins()),"do not replace production Cue Profile")
-        self.original_cue=self.cue_cls.get_cdo().find_function("OnBurst");owner=self
-        class ObserveCue:
-            def OnBurst(self,Target,Parameters,SpawnResults):
-                if owner.recording and Target==owner.pawn:owner.cues.append(owner.cue_values(Parameters))
-                return self.call_mixin_original("OnBurst",Target,Parameters,SpawnResults)
-        ue.register_mixin_profile(self.cue_cls,"UEPNetAbilityCueObserve",ObserveCue,make_default=True)
+        self.observe_cue()
         self.actions=[ue.load_object(ue.find_class("InputAction"),"/Game/Input/Actions/"+name+"."+name) for name in ("IA_Weapon_Fire","IA_Weapon_Fire_Auto")]
         inventory,quickbar=services(self.controller);slot=int(quickbar.call_function("GetNextFreeItemSlot"));require(slot>0,"native temporary NetShooter slot missing")
         item=inventory.call_function("AddItemDefinition",ue.load_class(ITEM),1);require(valid(item),"native NetShooter inventory item not created")
@@ -144,7 +146,7 @@ class Validation(Ready):
     def cleanup(self):
         self.recording=False
         if hasattr(self,"actions"):self.inject(False)
-        if hasattr(self,"original_profile"):
+        if hasattr(self,"original_montage"):
             if self.ability.get_property("bIsActive"):self.ability.call_function("K2_CancelAbility")
             self.ability.set_property("CharacterFireMontage",self.original_montage);self.ability.set_property("OffsetGCN",self.original_offset);ue.set_mixin_profile(self.ability,self.original_profile)
             counts=parent.evidence(self.ability);self.report["inherited_added_listener_once"]=self.added_initial==1 and counts["added"]+counts["fallback_added"]==1
@@ -191,4 +193,7 @@ class Validation(Ready):
 
 result=next((value.split("=",1)[1] for value in sys.argv if value.startswith("-UEPNetShooterAbilityResult=")),None)
 if result:
-    validation=Validation(result);atexit.register(validation.finalize);ticker=ue.add_ticker(validation.tick)
+    selected=Validation
+    if '-UEPNetShooterAmmoExhaustion' in sys.argv:
+        from .netshooter_ammo_validation import Standalone as selected
+    validation=selected(result);atexit.register(validation.finalize);ticker=ue.add_ticker(validation.tick)

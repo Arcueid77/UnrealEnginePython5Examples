@@ -1,0 +1,521 @@
+{
+  "schema_version": 1,
+  "batch": 261,
+  "recorded_utc": "2026-10-25T22:57:06.756744+00:00",
+  "status": "bounded_native_prototype_last_round_and_empty_cost_refusal_verified",
+  "core_parent_commit": "171d107069b65ef23b1b777529a563699669b806",
+  "examples_parent_commit": "f9e9b971a9939870c8647e730d60acce15104c68",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261026-netshooter-ammo/Standalone02",
+      "summary_sha256": "8DFA6500D66D03A2FD16BF999ECDE63868DFD9921DC011AB07F8A736DB7BDE6E",
+      "frozen_inputs": 3488,
+      "processes": [
+        {
+          "stdout": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-netshooter-ammo\\Standalone02\\jump-stdout.log",
+          "name": "Native input Jump BP/Python differential",
+          "stderr": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-netshooter-ammo\\Standalone02\\jump-stderr.log",
+          "arguments": [
+            "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\LyraStarterGame.uproject",
+            "/ShooterMaps/Maps/L_Expanse?NumBots=3",
+            "-game",
+            "-RenderOffscreen",
+            "-windowed",
+            "-ResX=640",
+            "-ResY=360",
+            "-NoLoadingScreen",
+            "-ExecCmds=t.MaxFPS 60",
+            "-unattended",
+            "-nop4",
+            "-NoSound",
+            "-NoSplash",
+            "-culture=en",
+            "-UTF8Output",
+            "-DisablePython",
+            "-NoDDCCleanup",
+            "-DisablePlugins=AndroidFileServer,UdpMessaging,TcpMessaging,RemoteSession",
+            "-notraceserver",
+            "-trace=none",
+            "-UEPNetShooterAbilityResult=F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-netshooter-ammo\\Standalone02/jump.json",
+            "-abslog=F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-netshooter-ammo\\Standalone02/jump.log",
+            "-UEPAutoRespawnListeners",
+            "-UEPAutoRespawnEvents",
+            "-UEPAutoRespawnActivation",
+            "-UEPNetShooterAmmoExhaustion"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 68.412,
+          "environment_names": [],
+          "executable": "F:\\UnrealEngine\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+          "pid": 20204
+        }
+      ],
+      "external_gate": {
+        "stdout": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-netshooter-ammo\\Standalone02\\report-gate-stdout.log",
+        "name": "Native ability independent report gate",
+        "stderr": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-netshooter-ammo\\Standalone02\\report-gate-stderr.log",
+        "arguments": [
+          "-B",
+          "-m",
+          "uep_lyra_weapons.netshooter_ammo_contract",
+          "--report",
+          "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-netshooter-ammo\\Standalone02/jump.json"
+        ],
+        "exit_code": 0,
+        "duration_seconds": 0.179,
+        "environment_names": [],
+        "executable": "F:\\UnrealEngine\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\python.exe",
+        "pid": 47912
+      },
+      "reports": [
+        {
+          "file": "jump.json",
+          "sha256": "2907D08F3880EAFEE895FF2A0E158BF4463ACBCA3BCFD0C04B45AD9E2ADD3723"
+        }
+      ],
+      "logs": [
+        {
+          "file": "jump.log",
+          "sha256": "DF1F6A44B10566660DBA3B13107F5BC872CD756FD01FCBFEB0C85A81EA6F6ADD"
+        }
+      ],
+      "semantic_gate": {
+        "status": "passed",
+        "native_mode": "Standalone",
+        "native_profile_pairs": 1,
+        "natural_last_rounds": 2,
+        "native_empty_cost_refusals": 2,
+        "prototype_autoreload_grants": 0,
+        "full_acceptance": false
+      }
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261026-netshooter-ammo/Network01",
+      "summary_sha256": "252CACE2C85C6604E0078DB16BD018816E064E96D7EFBD08671FE6CF9BDD659C",
+      "frozen_inputs": 3506,
+      "processes": [
+        {
+          "stdout": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-netshooter-ammo\\Network01\\B0-stdout.log",
+          "pid": 43184,
+          "exit_code": 0,
+          "name": "Native Jump B0",
+          "executable": "F:\\UnrealEngine\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+          "stderr": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-netshooter-ammo\\Network01\\B0-stderr.log",
+          "duration_seconds": 48.547,
+          "arguments": [
+            "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\LyraStarterGame.uproject",
+            "127.0.0.1:17861",
+            "-RenderOffscreen",
+            "-windowed",
+            "-ResX=640",
+            "-ResY=360",
+            "-NoLoadingScreen",
+            "-unattended",
+            "-nop4",
+            "-NoSound",
+            "-NoSplash",
+            "-culture=en",
+            "-UTF8Output",
+            "-DisablePython",
+            "-NoDDCCleanup",
+            "-DisablePlugins=AndroidFileServer,UdpMessaging,TcpMessaging,RemoteSession",
+            "-notraceserver",
+            "-trace=none",
+            "-UEPRequireNetworkIdentity",
+            "-UEPAutoRespawnListeners",
+            "-UEPAutoRespawnEvents",
+            "-UEPAutoRespawnActivation",
+            "-UEPNetShooterAmmoExhaustion",
+            "-game",
+            "-ExecCmds=t.MaxFPS 30,sg.ShadowQuality 0,sg.GlobalIlluminationQuality 0,sg.ReflectionQuality 0,r.Streaming.PoolSize 256",
+            "-UEPJumpPeer=B0",
+            "-UEPJumpRun=253b11d4-aaf4-4df2-a8bb-0dbaa78a5410",
+            "-UEPNetShooterNetworkResult=F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-netshooter-ammo\\Network01/B0.json",
+            "-abslog=F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-netshooter-ammo\\Network01/B0.log"
+          ],
+          "environment_names": []
+        },
+        {
+          "stdout": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-netshooter-ammo\\Network01\\server-stdout.log",
+          "pid": 46840,
+          "exit_code": 0,
+          "name": "Native Jump server",
+          "executable": "F:\\UnrealEngine\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe",
+          "stderr": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-netshooter-ammo\\Network01\\server-stderr.log",
+          "duration_seconds": 71.923,
+          "arguments": [
+            "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\LyraStarterGame.uproject",
+            "/ShooterMaps/Maps/L_Expanse?NumBots=3",
+            "-windowed",
+            "-ResX=640",
+            "-ResY=360",
+            "-NoLoadingScreen",
+            "-ExecCmds=t.MaxFPS 60",
+            "-unattended",
+            "-nop4",
+            "-NoSound",
+            "-NoSplash",
+            "-culture=en",
+            "-UTF8Output",
+            "-DisablePython",
+            "-NoDDCCleanup",
+            "-DisablePlugins=AndroidFileServer,UdpMessaging,TcpMessaging,RemoteSession",
+            "-notraceserver",
+            "-trace=none",
+            "-UEPRequireNetworkIdentity",
+            "-UEPAutoRespawnListeners",
+            "-UEPAutoRespawnEvents",
+            "-UEPAutoRespawnActivation",
+            "-UEPNetShooterAmmoExhaustion",
+            "-server",
+            "-NullRHI",
+            "-port=17861",
+            "-multihome=127.0.0.1",
+            "-UEPJumpPeer=server",
+            "-UEPJumpRun=253b11d4-aaf4-4df2-a8bb-0dbaa78a5410",
+            "-UEPNetShooterNetworkResult=F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-netshooter-ammo\\Network01/server.json",
+            "-abslog=F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-netshooter-ammo\\Network01/server.log"
+          ],
+          "environment_names": []
+        },
+        {
+          "stdout": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-netshooter-ammo\\Network01\\A-stdout.log",
+          "pid": 48092,
+          "exit_code": 0,
+          "name": "Native Jump A",
+          "executable": "F:\\UnrealEngine\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+          "stderr": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-netshooter-ammo\\Network01\\A-stderr.log",
+          "duration_seconds": 48.848,
+          "arguments": [
+            "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\LyraStarterGame.uproject",
+            "127.0.0.1:17861",
+            "-RenderOffscreen",
+            "-windowed",
+            "-ResX=640",
+            "-ResY=360",
+            "-NoLoadingScreen",
+            "-unattended",
+            "-nop4",
+            "-NoSound",
+            "-NoSplash",
+            "-culture=en",
+            "-UTF8Output",
+            "-DisablePython",
+            "-NoDDCCleanup",
+            "-DisablePlugins=AndroidFileServer,UdpMessaging,TcpMessaging,RemoteSession",
+            "-notraceserver",
+            "-trace=none",
+            "-UEPRequireNetworkIdentity",
+            "-UEPAutoRespawnListeners",
+            "-UEPAutoRespawnEvents",
+            "-UEPAutoRespawnActivation",
+            "-UEPNetShooterAmmoExhaustion",
+            "-game",
+            "-ExecCmds=t.MaxFPS 30,sg.ShadowQuality 0,sg.GlobalIlluminationQuality 0,sg.ReflectionQuality 0,r.Streaming.PoolSize 256",
+            "-UEPJumpPeer=A",
+            "-UEPJumpRun=253b11d4-aaf4-4df2-a8bb-0dbaa78a5410",
+            "-UEPNetShooterNetworkResult=F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-netshooter-ammo\\Network01/A.json",
+            "-abslog=F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-netshooter-ammo\\Network01/A.log"
+          ],
+          "environment_names": []
+        }
+      ],
+      "external_gate": {
+        "stdout": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-netshooter-ammo\\Network01\\report-gate-stdout.log",
+        "pid": 44020,
+        "exit_code": 0,
+        "name": "Native ability independent report gate",
+        "executable": "F:\\UnrealEngine\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\python.exe",
+        "stderr": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-netshooter-ammo\\Network01\\report-gate-stderr.log",
+        "duration_seconds": 0.16,
+        "arguments": [
+          "-B",
+          "-m",
+          "uep_lyra_weapons.netshooter_ammo_contract",
+          "--directory",
+          "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-netshooter-ammo\\Network01"
+        ],
+        "environment_names": []
+      },
+      "reports": [
+        {
+          "file": "server.json",
+          "sha256": "7737F292AB663FB4AF01ECC2BD3C2200455A95494A6B7A5DEF80D007ED19EEA8"
+        },
+        {
+          "file": "A.json",
+          "sha256": "DDE7726243EC532A95C280FB703E87EF3F29930FE5C13CFB8CBA3313AFAC84FF"
+        },
+        {
+          "file": "B0.json",
+          "sha256": "B7A3A9A570C4564A7D3591D488F78D87D44B4E93552B84FCD3AC625158E79681"
+        }
+      ],
+      "logs": [
+        {
+          "file": "B0.log",
+          "sha256": "ACFBED5E3289607363B9CB1F7D607A92AB383E1AFE8EA9D8BBCBFAFFA43A57B2"
+        },
+        {
+          "file": "server.log",
+          "sha256": "6999B56FFB55A92ADEAA4A835A3AC01DCF4B01BE3C9597EE23940F4BA3D864C4"
+        },
+        {
+          "file": "A.log",
+          "sha256": "28CD444226757929C7665F8B2202B41B52AD48838BD30A4DCCD43DF19FB1C2DE"
+        }
+      ],
+      "semantic_gate": {
+        "status": "passed",
+        "owners": 2,
+        "natural_last_rounds": 4,
+        "native_empty_cost_refusals": 4,
+        "prototype_autoreload_grants": 0,
+        "first_shot_native_gate": {
+          "status": "passed",
+          "native_predicted_owner_inputs": 4,
+          "native_authority_projectiles": 4,
+          "native_moving_replica_observations": 8,
+          "impact_or_strand_replication_accepted": false,
+          "full_acceptance": false
+        },
+        "server_cost_failure_callback_required": false,
+        "full_acceptance": false
+      }
+    }
+  ],
+  "original_candidates": 246,
+  "original_requirements": 22,
+  "requirements_proven": 12,
+  "selected_host_checks": 28,
+  "original_011_gameplay_criterion_proven": false,
+  "standalone_profile_pairs": 1,
+  "network_owner_profile_pairs": 4,
+  "actual_last_rounds_consumed": 6,
+  "actual_native_empty_cost_refusals": 6,
+  "new_native_processes": 5,
+  "accepted_native_processes": 4,
+  "prototype_autoreload_grants": 0,
+  "production_policy_or_assets_changed": false,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "preserved_failed_attempt": {
+    "directory": ".build/LyraValidation/BlueprintPython/20261026-netshooter-ammo/Standalone01",
+    "summary_sha256": "31ECC470D7D0F035BB27511B8E5AEB4E0FDCAB9583F6F67B84370671D1FAC68B",
+    "report_sha256": "EDC518C0DD473A5B6E4E089454DAA118F13F5AC3C57C97FC712F4AA96243DE79",
+    "log_sha256": "9227913CDE94F5D0B933200809E8A28DFBA2A301CE7EDCF42D5A3EBEF33B9E06",
+    "process": {
+      "duration_seconds": 62.712,
+      "pid": 21048,
+      "name": "Native input Jump BP/Python differential",
+      "stderr": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-netshooter-ammo\\Standalone01\\jump-stderr.log",
+      "executable": "F:\\UnrealEngine\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+      "environment_names": [],
+      "arguments": [
+        "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\LyraStarterGame.uproject",
+        "/ShooterMaps/Maps/L_Expanse?NumBots=3",
+        "-game",
+        "-RenderOffscreen",
+        "-windowed",
+        "-ResX=640",
+        "-ResY=360",
+        "-NoLoadingScreen",
+        "-ExecCmds=t.MaxFPS 60",
+        "-unattended",
+        "-nop4",
+        "-NoSound",
+        "-NoSplash",
+        "-culture=en",
+        "-UTF8Output",
+        "-DisablePython",
+        "-NoDDCCleanup",
+        "-DisablePlugins=AndroidFileServer,UdpMessaging,TcpMessaging,RemoteSession",
+        "-notraceserver",
+        "-trace=none",
+        "-UEPNetShooterAbilityResult=F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-netshooter-ammo\\Standalone01/jump.json",
+        "-abslog=F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-netshooter-ammo\\Standalone01/jump.log",
+        "-UEPAutoRespawnListeners",
+        "-UEPAutoRespawnEvents",
+        "-UEPAutoRespawnActivation",
+        "-UEPNetShooterAmmoExhaustion"
+      ],
+      "stdout": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-netshooter-ammo\\Standalone01\\jump-stdout.log",
+      "exit_code": 0
+    },
+    "status": "failed",
+    "ammo_checks_started": false,
+    "independent_gate_executed": false,
+    "error": "Traceback (most recent call last):\n  File \"F:\\UnrealEngine\\Engine\\Binaries\\Win64\\../../../../UnrealEnginePython5/.build/LyraValidation/Full/Stage/Lyra/Content/Scripts\\uep_lyra_weapons\\netshooter_ability_validation.py\", line 170, in tick\n    if self.phase==\"ready\":self.ready()\n                           ^^^^^^^^^^^^\n  File \"F:\\UnrealEngine\\Engine\\Binaries\\Win64\\../../../../UnrealEnginePython5/.build/LyraValidation/Full/Stage/Lyra/Content/Scripts\\uep_lyra_abilities\\auto_respawn_helpers_validation.py\", line 98, in ready\n    if self.attach(world, controller): self.begin(); return\n                                       ^^^^^^^^^^^^\n  File \"F:\\UnrealEngine\\Engine\\Binaries\\Win64\\../../../../UnrealEnginePython5/.build/LyraValidation/Full/Stage/Lyra/Content/Scripts\\uep_lyra_weapons\\netshooter_ability_validation.py\", line 100, in begin\n    self.cue_cls=ue.load_class(CUE);require(not any(row[\"target_class\"]==self.cue_cls for row in ue.get_registered_mixins()),\"do not replace production Cue Profile\")\n                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"F:\\UnrealEngine\\Engine\\Binaries\\Win64\\../../../../UnrealEnginePython5/.build/LyraValidation/Full/Stage/Lyra/Content/Scripts\\uep_lyra_weapons\\weapon_actor_helpers_contract.py\", line 16, in require\n    if not value: raise RuntimeError(message)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: do not replace production Cue Profile\nTraceback (most recent call last):\n  File \"F:\\UnrealEngine\\Engine\\Binaries\\Win64\\../../../../UnrealEnginePython5/.build/LyraValidation/Full/Stage/Lyra/Content/Scripts\\uep_lyra_weapons\\netshooter_ability_validation.py\", line 170, in tick\n    if self.phase==\"ready\":self.ready()\n                           ^^^^^^^^^^^^\n  File \"F:\\UnrealEngine\\Engine\\Binaries\\Win64\\../../../../UnrealEnginePython5/.build/LyraValidation/Full/Stage/Lyra/Content/Scripts\\uep_lyra_abilities\\auto_respawn_helpers_validation.py\", line 98, in ready\n    if self.attach(world, controller): self.begin(); return\n                                       ^^^^^^^^^^^^\n  File \"F:\\UnrealEngine\\Engine\\Binaries\\Win64\\../../../../UnrealEnginePython5/.build/LyraValidation/Full/Stage/Lyra/Content/Scripts\\uep_lyra_weapons\\netshooter_ability_validation.py\", line 100, in begin\n    self.cue_cls=ue.load_class(CUE);require(not any(row[\"target_class\"]==self.cue_cls for row in ue.get_registered_mixins()),\"do not replace production Cue Profile\")\n                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"F:\\UnrealEngine\\Engine\\Binaries\\Win64\\../../../../UnrealEnginePython5/.build/LyraValidation/Full/Stage/Lyra/Content/Scripts\\uep_lyra_weapons\\weapon_actor_helpers_contract.py\", line 16, in require\n    if not value: raise RuntimeError(message)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: do not replace production Cue Profile\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"F:\\UnrealEngine\\Engine\\Binaries\\Win64\\../../../../UnrealEnginePython5/.build/LyraValidation/Full/Stage/Lyra/Content/Scripts\\uep_lyra_weapons\\netshooter_ability_validation.py\", line 181, in finish\n    try:self.cleanup()\n        ^^^^^^^^^^^^^^\n  File \"F:\\UnrealEngine\\Engine\\Binaries\\Win64\\../../../../UnrealEnginePython5/.build/LyraValidation/Full/Stage/Lyra/Content/Scripts\\uep_lyra_weapons\\netshooter_ammo_validation.py\", line 72, in cleanup\n    super().cleanup()\n  File \"F:\\UnrealEngine\\Engine\\Binaries\\Win64\\../../../../UnrealEnginePython5/.build/LyraValidation/Full/Stage/Lyra/Content/Scripts\\uep_lyra_weapons\\netshooter_ability_validation.py\", line 149, in cleanup\n    self.ability.set_property(\"CharacterFireMontage\",self.original_montage);self.ability.set_property(\"OffsetGCN\",self.original_offset);ue.set_mixin_profile(self.ability,self.original_profile)\n                                                     ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'Standalone' object has no attribute 'original_montage'\n",
+    "archived_original_inputs": [
+      {
+        "source": "Validation/Run-UEP58JumpValidation.ps1",
+        "archive": ".build/LyraValidation/BlueprintPython/20261026-netshooter-ammo/Inputs01/Run-UEP58JumpValidation.ps1",
+        "sha256": "6F8EFCA3A92547FA9E9508B5CF14C8BD3C648CB5CA9B806CF860854F653B803C"
+      },
+      {
+        "source": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/netshooter_ability_validation.py",
+        "archive": ".build/LyraValidation/BlueprintPython/20261026-netshooter-ammo/Inputs01/netshooter_ability_validation.py",
+        "sha256": "053022E3BD1B1615CEF311CF496DE7D5E0210D716D07C7F9B8E559EE6FC87FB5"
+      },
+      {
+        "source": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/netshooter_network_validation.py",
+        "archive": ".build/LyraValidation/BlueprintPython/20261026-netshooter-ammo/Inputs01/netshooter_network_validation.py",
+        "sha256": "4945A8B87CB5DEC1B06F8A781CC063635EF629B91434988773E2DD40F5DE66D1"
+      },
+      {
+        "source": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/netshooter_ammo_validation.py",
+        "archive": ".build/LyraValidation/BlueprintPython/20261026-netshooter-ammo/Inputs01/netshooter_ammo_validation.py",
+        "sha256": "D6D36AA4EC2E9BF7382053F884B49F58159FCDCB971AAE0938DC5E959977B85D"
+      },
+      {
+        "source": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapons/netshooter_ammo_contract.py",
+        "archive": ".build/LyraValidation/BlueprintPython/20261026-netshooter-ammo/Inputs01/netshooter_ammo_contract.py",
+        "sha256": "2C6D00E9BE9CF0F9900A4796EB6D090A9B455EE83CB5D473EC96592DB7228974"
+      }
+    ]
+  },
+  "preserved_parent260_inputs": [
+    {
+      "parent_directory": "RifleStandalone01",
+      "original_path": "F:\\UnrealEnginePython5\\Validation\\Run-UEP58JumpValidation.ps1",
+      "archive": ".build/LyraValidation/BlueprintPython/20261026-netshooter-ammo/Parent260Inputs/62FDDDCD8F67431C5C070F3E92C698A7062165E54C60FB85D73ACFB972173278-Run-UEP58JumpValidation.ps1",
+      "sha256": "62FDDDCD8F67431C5C070F3E92C698A7062165E54C60FB85D73ACFB972173278",
+      "git_parent": "171d107"
+    },
+    {
+      "parent_directory": "ShotgunStandalone01",
+      "original_path": "F:\\UnrealEnginePython5\\Validation\\Run-UEP58JumpValidation.ps1",
+      "archive": ".build/LyraValidation/BlueprintPython/20261026-netshooter-ammo/Parent260Inputs/62FDDDCD8F67431C5C070F3E92C698A7062165E54C60FB85D73ACFB972173278-Run-UEP58JumpValidation.ps1",
+      "sha256": "62FDDDCD8F67431C5C070F3E92C698A7062165E54C60FB85D73ACFB972173278",
+      "git_parent": "171d107"
+    },
+    {
+      "parent_directory": "QuickslotStandalone01",
+      "original_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\Scripts\\uep_lyra_weapons\\netshooter_ability_validation.py",
+      "archive": ".build/LyraValidation/BlueprintPython/20261026-netshooter-ammo/Parent260Inputs/881FB307232FB050647ADF3F5A4B7A2B07A9BD43C5F32A85BF5F647C765B420C-netshooter_ability_validation.py",
+      "sha256": "881FB307232FB050647ADF3F5A4B7A2B07A9BD43C5F32A85BF5F647C765B420C",
+      "git_parent": "f9e9b97"
+    },
+    {
+      "parent_directory": "QuickslotStandalone01",
+      "original_path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\Scripts\\uep_lyra_weapons\\netshooter_ability_validation.py",
+      "archive": ".build/LyraValidation/BlueprintPython/20261026-netshooter-ammo/Parent260Inputs/881FB307232FB050647ADF3F5A4B7A2B07A9BD43C5F32A85BF5F647C765B420C-netshooter_ability_validation.py",
+      "sha256": "881FB307232FB050647ADF3F5A4B7A2B07A9BD43C5F32A85BF5F647C765B420C",
+      "git_parent": "f9e9b97"
+    },
+    {
+      "parent_directory": "RifleStandalone01",
+      "original_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\Scripts\\uep_lyra_weapons\\netshooter_ability_validation.py",
+      "archive": ".build/LyraValidation/BlueprintPython/20261026-netshooter-ammo/Parent260Inputs/881FB307232FB050647ADF3F5A4B7A2B07A9BD43C5F32A85BF5F647C765B420C-netshooter_ability_validation.py",
+      "sha256": "881FB307232FB050647ADF3F5A4B7A2B07A9BD43C5F32A85BF5F647C765B420C",
+      "git_parent": "f9e9b97"
+    },
+    {
+      "parent_directory": "RifleStandalone01",
+      "original_path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\Scripts\\uep_lyra_weapons\\netshooter_ability_validation.py",
+      "archive": ".build/LyraValidation/BlueprintPython/20261026-netshooter-ammo/Parent260Inputs/881FB307232FB050647ADF3F5A4B7A2B07A9BD43C5F32A85BF5F647C765B420C-netshooter_ability_validation.py",
+      "sha256": "881FB307232FB050647ADF3F5A4B7A2B07A9BD43C5F32A85BF5F647C765B420C",
+      "git_parent": "f9e9b97"
+    },
+    {
+      "parent_directory": "ShotgunStandalone01",
+      "original_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\Scripts\\uep_lyra_weapons\\netshooter_ability_validation.py",
+      "archive": ".build/LyraValidation/BlueprintPython/20261026-netshooter-ammo/Parent260Inputs/881FB307232FB050647ADF3F5A4B7A2B07A9BD43C5F32A85BF5F647C765B420C-netshooter_ability_validation.py",
+      "sha256": "881FB307232FB050647ADF3F5A4B7A2B07A9BD43C5F32A85BF5F647C765B420C",
+      "git_parent": "f9e9b97"
+    },
+    {
+      "parent_directory": "ShotgunStandalone01",
+      "original_path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\Scripts\\uep_lyra_weapons\\netshooter_ability_validation.py",
+      "archive": ".build/LyraValidation/BlueprintPython/20261026-netshooter-ammo/Parent260Inputs/881FB307232FB050647ADF3F5A4B7A2B07A9BD43C5F32A85BF5F647C765B420C-netshooter_ability_validation.py",
+      "sha256": "881FB307232FB050647ADF3F5A4B7A2B07A9BD43C5F32A85BF5F647C765B420C",
+      "git_parent": "f9e9b97"
+    },
+    {
+      "parent_directory": "QuickslotStandalone01",
+      "original_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\Scripts\\uep_lyra_weapons\\netshooter_network_validation.py",
+      "archive": ".build/LyraValidation/BlueprintPython/20261026-netshooter-ammo/Parent260Inputs/670DCA0C4CE4D6568F36A9696E716792C3A4DBE1FAF882B9FA9C4CD4C269BFC3-netshooter_network_validation.py",
+      "sha256": "670DCA0C4CE4D6568F36A9696E716792C3A4DBE1FAF882B9FA9C4CD4C269BFC3",
+      "git_parent": "f9e9b97"
+    },
+    {
+      "parent_directory": "QuickslotStandalone01",
+      "original_path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\Scripts\\uep_lyra_weapons\\netshooter_network_validation.py",
+      "archive": ".build/LyraValidation/BlueprintPython/20261026-netshooter-ammo/Parent260Inputs/670DCA0C4CE4D6568F36A9696E716792C3A4DBE1FAF882B9FA9C4CD4C269BFC3-netshooter_network_validation.py",
+      "sha256": "670DCA0C4CE4D6568F36A9696E716792C3A4DBE1FAF882B9FA9C4CD4C269BFC3",
+      "git_parent": "f9e9b97"
+    },
+    {
+      "parent_directory": "RifleStandalone01",
+      "original_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\Scripts\\uep_lyra_weapons\\netshooter_network_validation.py",
+      "archive": ".build/LyraValidation/BlueprintPython/20261026-netshooter-ammo/Parent260Inputs/670DCA0C4CE4D6568F36A9696E716792C3A4DBE1FAF882B9FA9C4CD4C269BFC3-netshooter_network_validation.py",
+      "sha256": "670DCA0C4CE4D6568F36A9696E716792C3A4DBE1FAF882B9FA9C4CD4C269BFC3",
+      "git_parent": "f9e9b97"
+    },
+    {
+      "parent_directory": "RifleStandalone01",
+      "original_path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\Scripts\\uep_lyra_weapons\\netshooter_network_validation.py",
+      "archive": ".build/LyraValidation/BlueprintPython/20261026-netshooter-ammo/Parent260Inputs/670DCA0C4CE4D6568F36A9696E716792C3A4DBE1FAF882B9FA9C4CD4C269BFC3-netshooter_network_validation.py",
+      "sha256": "670DCA0C4CE4D6568F36A9696E716792C3A4DBE1FAF882B9FA9C4CD4C269BFC3",
+      "git_parent": "f9e9b97"
+    },
+    {
+      "parent_directory": "ShotgunStandalone01",
+      "original_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\Scripts\\uep_lyra_weapons\\netshooter_network_validation.py",
+      "archive": ".build/LyraValidation/BlueprintPython/20261026-netshooter-ammo/Parent260Inputs/670DCA0C4CE4D6568F36A9696E716792C3A4DBE1FAF882B9FA9C4CD4C269BFC3-netshooter_network_validation.py",
+      "sha256": "670DCA0C4CE4D6568F36A9696E716792C3A4DBE1FAF882B9FA9C4CD4C269BFC3",
+      "git_parent": "f9e9b97"
+    },
+    {
+      "parent_directory": "ShotgunStandalone01",
+      "original_path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\Scripts\\uep_lyra_weapons\\netshooter_network_validation.py",
+      "archive": ".build/LyraValidation/BlueprintPython/20261026-netshooter-ammo/Parent260Inputs/670DCA0C4CE4D6568F36A9696E716792C3A4DBE1FAF882B9FA9C4CD4C269BFC3-netshooter_network_validation.py",
+      "sha256": "670DCA0C4CE4D6568F36A9696E716792C3A4DBE1FAF882B9FA9C4CD4C269BFC3",
+      "git_parent": "f9e9b97"
+    }
+  ],
+  "incremental_verification": {
+    "artifact": "incremental-acceptance-integrity.json",
+    "sha256": "D9C97A26BCD7AE165D683C3B554421A966E885F4215AEDF62AE6E1B23D326D5F",
+    "status": "passed",
+    "previous_index": {
+      "path": ".build/LyraValidation/BlueprintPython/20261026-ability-gameplay/acceptance-final.json",
+      "sha256": "BDD5DC59604130EFB7CE954DDE39164B93AA8E8A1B6EFEBAB7F2E626E10494AD",
+      "requirements_proven": 12
+    },
+    "prior_proof_inputs_unchanged_except_prior_manifest_metadata": true,
+    "production_policies_assets_and_cpp_unchanged": true,
+    "related_lifetime_review_reproduced": {
+      "status": "passed",
+      "criterion": "Supported ability tasks, delegates, cancellation and latent boundaries have call/lifetime regressions; unsupported signatures fail explicitly.",
+      "original_candidates": 37,
+      "native_lifetime_runs_revalidated": 37,
+      "referenced_native_lifetime_processes": 41,
+      "referenced_current_generic_processes": 3,
+      "new_native_processes_launched_by_review": 0,
+      "full_migration_acceptance_proven": false
+    },
+    "unrelated_accepted_criteria_semantic_gates_reexecuted": false,
+    "original_246_candidates_unchanged": true,
+    "original_22_texts_unchanged": true,
+    "selected_host_checks": 28,
+    "native_processes_passed": 4,
+    "failed_fixture_processes_preserved": 1,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false
+  },
+  "full_regression_executed": false,
+  "full_version_acceptance": false,
+  "full_migration_acceptance_proven": false,
+  "limits": [
+    "Adds a named incremental test selector for native NetShooter last-round consumption and empty-cost refusal. Existing default ability/network modes remain separate. Production game policies,Blueprint packages,core/native source and SDK are unchanged.",
+    "Standalone02 compares BlueprintFallback/Python. Native equipment setup seeds one remaining round before input;the first real owner gesture consumes1->0 and produces exactly one native activation,target-data event,projectile and completed montage callback. The second real gesture leaves all those counts and ammo unchanged and must deliver an actual ScriptOnAbilityFailedToActivate callback carrying Ability.ActivateFail.Cost.",
+    "Network01 uses one actual dedicated Editor server and two clients across four owner/profile cases. The independently captured owner cost-failure proof equals its authority acknowledgment;authority and owner both consume1->0,foreign clients make no input/consume no ammo,and no extra activation or projectile occurs. The original first-shot prediction,wire identity,moving-replica and cleanup gate remains enforced through a read-only first-gesture projection;raw reports still contain both gestures.",
+    "The original native LyraAbilityCost_ItemTagStack configuration is reflected and checked:MagazineAmmo,quantity1 and the original cost-failure tag. The prototype has zero AutoReload grants before/after;no ability is manufactured. Client prediction may reject locally before any second activation RPC,so a separate server cost-failure callback is not required or claimed.",
+    "The failure observer only forwards the actual inherited native event and copies its tags. It restores the original function and Python profile classes after testing. The new ammo Standalone observer leaves the current production Cue bindings/default/native OnBurst function unchanged. Original inventory,view target,pose/control/movement,health and all test actors are checked at cleanup.",
+    "Standalone01 remains failed despite native exit0:the legacy full-ability fixture required an unmigrated Cue class and stopped before ammo cases,then its early-abort cleanup incorrectly assumed prototype montage setup was complete. Its report/log/summary and exact original inputs remain. The test-only virtual Cue observer now preserves production binding for ammo mode;the early cleanup guard checks completed prototype setup. Standalone02 and Network01 pass without game/asset changes.",
+    "Nine adversarial new ammo/observer/owner checks and nineteen existing ability/prediction checks pass in an immutable index. Preserve exact prior batch260 fixture/driver bytes from their Git parents matched to their original frozen hashes,alongside its existing Quickslot archives;do not rewrite the historical accepted ledgers.",
+    "Four accepted native execution processes and two independent gates exit0;all3488 Standalone02 and3506 Network01 frozen inputs match. The related accepted ability-lifetime review still reproduces its37 native records. Keep the other accepted proof inputs and all246 paths/order/versions plus22 texts. Overall remains12/22 pending the complete six-behavior cross-mode gameplay acceptance composition;no compile/link,binary refresh,cook/package,full regression,hardware or full-version acceptance is claimed."
+  ]
+}
