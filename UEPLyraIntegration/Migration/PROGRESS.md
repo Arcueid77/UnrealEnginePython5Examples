@@ -31,6 +31,42 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded Standalone gameplay gaps batch260 (2026-10-26):**
+Current SDK236 Quickslot Standalone passes10 native GameplayEvent/equipment
+Blueprint/Python pairs,including the previously missing default Python-owned
+OnSpawn scope. The old incomplete report stays unchanged. Before extending the
+later test fixture,archive the exact original Quickslot driver and AutoReload
+fixture;all three changed frozen paths map to those archived original bytes.
+Its other3472 inputs remain unchanged.
+
+Extend only the native test fixture/driver for Standalone Rifle and Shotgun
+equipment. Wait for the original active Pistol AutoReload,install one owned
+temporary weapon through native authority inventory APIs,and restore the exact
+original item/slots/ammo/aim/AutoReload state. Network clients keep their existing
+read-only barrier and cleanup overrides. No production policy or asset changes.
+
+Rifle and Shotgun each pass six actual native Blueprint/Python pairs:nonempty,
+empty-no-spare,empty-spare,real fire-to-empty/AutoReload,cancel and Profile switch.
+Both implementations consume30 Rifle rounds or8 Shotgun rounds before reload:
+76 actual rounds and4 natural magazine exhaustions. No ammo API runs after
+firing starts;native reload,conservation,tasks and late-callback cleanup pass.
+Both processes and their separate pure equipment gates exit0;all3477 frozen
+inputs per run remain unchanged. The three new native processes all exit0.
+
+Eighteen existing affected contract checks plus six new equipment checks pass
+in an immutable index. The related original ability-lifetime review remains
+reproducible without changing its historical ledger. No compile/link,binary
+refresh,cook/package or full regression. Keep12/22 accepted criteria and the
+complete246-candidate/22-text scope;no new original criterion is promoted.
+
+Remaining gameplay work:direct NetShooter prototype natural exhaustion and
+empty-fire refusal in Standalone and two-client play,then complete the pinned
+six-behavior cross-mode and natural-respawn pair acceptance composition. Preserve
+its original zero AutoReload grant;never add a grant just to fit the other
+families. The33 source/current-gate records remain leads rather than full
+gameplay acceptance. Ledger:
+`Acceptance/260-current-standalone-quickslot-rifle-shotgun-exhaustion-and-gameplay-gaps.json`.
+
 **Completed original ability call/lifetime criterion batch259 (2026-10-26):**
 Accept only the original0.11 supported-task/delegate/cancellation/latent lifetime
 condition. The closed source inventory covers26 production modules,seven GAS

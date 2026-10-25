@@ -1,0 +1,313 @@
+{
+  "schema_version": 1,
+  "batch": 260,
+  "recorded_utc": "2026-10-25T22:35:34.752129+00:00",
+  "status": "bounded_current_standalone_switching_and_two_missing_exhaustion_families_verified",
+  "core_parent_commit": "bcb3ab4dbc6ac0aa5b7a71f6d26a975a26aa621b",
+  "examples_parent_commit": "7670e6013b04983cf049ebd9c824b7b7e0f0c2a7",
+  "runs": [
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261026-ability-gameplay/QuickslotStandalone01",
+      "summary_sha256": "30821D0F56941885A4B755C711372AD9CA077F8AF7923E988999B884C3070DD6",
+      "report_sha256": "EA029A5EC02C05AAC8EFC2B3980CAD109E8616E3164E6504805903ED21DFDFAD",
+      "log_sha256": "EC2DE1F528E4E8970EABABBF2E4566C74A23384162EDEB434DF74BE49E5F1B70",
+      "process": {
+        "arguments": [
+          "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\LyraStarterGame.uproject",
+          "/ShooterMaps/Maps/L_Expanse?NumBots=3",
+          "-game",
+          "-RenderOffscreen",
+          "-windowed",
+          "-ResX=640",
+          "-ResY=360",
+          "-NoLoadingScreen",
+          "-ExecCmds=t.MaxFPS 60",
+          "-unattended",
+          "-nop4",
+          "-NoSound",
+          "-NoSplash",
+          "-culture=en",
+          "-UTF8Output",
+          "-DisablePython",
+          "-NoDDCCleanup",
+          "-DisablePlugins=AndroidFileServer,UdpMessaging,TcpMessaging,RemoteSession",
+          "-notraceserver",
+          "-trace=none",
+          "-UEPQuickslotResult=F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-gameplay\\QuickslotStandalone01/jump.json",
+          "-abslog=F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-gameplay\\QuickslotStandalone01/jump.log"
+        ],
+        "pid": 28516,
+        "executable": "F:\\UnrealEngine\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+        "exit_code": 0,
+        "stderr": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-gameplay\\QuickslotStandalone01\\jump-stderr.log",
+        "duration_seconds": 66.896,
+        "stdout": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-gameplay\\QuickslotStandalone01\\jump-stdout.log",
+        "environment_names": [],
+        "name": "Native input Jump BP/Python differential"
+      },
+      "external_gate": {
+        "arguments": [
+          "-B",
+          "-m",
+          "uep_lyra_abilities.quickslot_contract",
+          "--report",
+          "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-gameplay\\QuickslotStandalone01/jump.json"
+        ],
+        "pid": 27336,
+        "executable": "F:\\UnrealEngine\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\python.exe",
+        "exit_code": 0,
+        "stderr": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-gameplay\\QuickslotStandalone01\\report-gate-stderr.log",
+        "duration_seconds": 0.116,
+        "stdout": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-gameplay\\QuickslotStandalone01\\report-gate-stdout.log",
+        "environment_names": [],
+        "name": "Native ability independent report gate"
+      },
+      "frozen_inputs": 3475,
+      "archived_prior_fixture_inputs": [
+        {
+          "original_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\Scripts\\uep_lyra_abilities\\autoreload_validation.py",
+          "archive": ".build/LyraValidation/BlueprintPython/20261026-ability-gameplay/QuickslotStandalone01/Inputs/autoreload_validation.py",
+          "sha256": "E2F18F0A8CA0946D389BE1B333E03F4BA6DB4F977B6D5109D2FF17CD77FD59D7"
+        },
+        {
+          "original_path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\Scripts\\uep_lyra_abilities\\autoreload_validation.py",
+          "archive": ".build/LyraValidation/BlueprintPython/20261026-ability-gameplay/QuickslotStandalone01/Inputs/autoreload_validation.py",
+          "sha256": "E2F18F0A8CA0946D389BE1B333E03F4BA6DB4F977B6D5109D2FF17CD77FD59D7"
+        },
+        {
+          "original_path": "F:\\UnrealEnginePython5\\Validation\\Run-UEP58JumpValidation.ps1",
+          "archive": ".build/LyraValidation/BlueprintPython/20261026-ability-gameplay/QuickslotStandalone01/Inputs/Run-UEP58JumpValidation.ps1",
+          "sha256": "5A4E1105A9500206AE3A450348734709E4BDB400E5F33DC7E8540A5890D61D81"
+        }
+      ],
+      "semantic_gate": {
+        "status": "passed",
+        "bounded_runtime_acceptance": true,
+        "pairs": 10,
+        "hardware_input_tested": false
+      }
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261026-ability-gameplay/RifleStandalone01",
+      "summary_sha256": "6E6BF9CD0D07E3C42B416EBF552215443A4DD92BE6C314A33623A56DB34FCF1F",
+      "report_sha256": "2327E83F68D70058DB200C9AE0832972E907238B0EF077A2B915791950CBC720",
+      "log_sha256": "D3A39325B4BDB90D42CBDA2A83B2DC117F72C84CF807D7F75B86970099D47DDB",
+      "process": {
+        "arguments": [
+          "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\LyraStarterGame.uproject",
+          "/ShooterMaps/Maps/L_Expanse?NumBots=3",
+          "-game",
+          "-RenderOffscreen",
+          "-windowed",
+          "-ResX=640",
+          "-ResY=360",
+          "-NoLoadingScreen",
+          "-ExecCmds=t.MaxFPS 60",
+          "-unattended",
+          "-nop4",
+          "-NoSound",
+          "-NoSplash",
+          "-culture=en",
+          "-UTF8Output",
+          "-DisablePython",
+          "-NoDDCCleanup",
+          "-DisablePlugins=AndroidFileServer,UdpMessaging,TcpMessaging,RemoteSession",
+          "-notraceserver",
+          "-trace=none",
+          "-UEPAutoReloadResult=F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-gameplay\\RifleStandalone01/jump.json",
+          "-abslog=F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-gameplay\\RifleStandalone01/jump.log",
+          "-UEPAutoReloadWeapon=rifle"
+        ],
+        "stderr": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-gameplay\\RifleStandalone01\\jump-stderr.log",
+        "pid": 43396,
+        "environment_names": [],
+        "stdout": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-gameplay\\RifleStandalone01\\jump-stdout.log",
+        "exit_code": 0,
+        "executable": "F:\\UnrealEngine\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+        "name": "Native input Jump BP/Python differential",
+        "duration_seconds": 102.5
+      },
+      "external_gate": {
+        "arguments": [
+          "-B",
+          "-m",
+          "uep_lyra_abilities.autoreload_standalone_contract",
+          "--report",
+          "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-gameplay\\RifleStandalone01/jump.json"
+        ],
+        "stderr": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-gameplay\\RifleStandalone01\\report-gate-stderr.log",
+        "pid": 46628,
+        "environment_names": [],
+        "stdout": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-gameplay\\RifleStandalone01\\report-gate-stdout.log",
+        "exit_code": 0,
+        "executable": "F:\\UnrealEngine\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\python.exe",
+        "name": "Native ability independent report gate",
+        "duration_seconds": 0.113
+      },
+      "frozen_inputs": 3477,
+      "archived_prior_fixture_inputs": [],
+      "semantic_gate": {
+        "status": "passed",
+        "bounded_runtime_acceptance": true,
+        "pairs": 6,
+        "real_fire_to_empty_tested": true,
+        "weapon": "rifle",
+        "native_mode": "Standalone",
+        "native_temporary_equipment_restored": true
+      }
+    },
+    {
+      "directory": ".build/LyraValidation/BlueprintPython/20261026-ability-gameplay/ShotgunStandalone01",
+      "summary_sha256": "CF49AF00D6BECB9A5E0A3C513B31CAC9668D26549B1FE08AA367A34820DA927F",
+      "report_sha256": "039224E1D37A8F02362143D99DF44E9F7474BE6AFE10335E637A09AC59F2C690",
+      "log_sha256": "DA68A2C8C0BA40D40168F98C827B445BA6D9A46372FBE6D140DA76B115209BA9",
+      "process": {
+        "stderr": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-gameplay\\ShotgunStandalone01\\jump-stderr.log",
+        "stdout": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-gameplay\\ShotgunStandalone01\\jump-stdout.log",
+        "duration_seconds": 91.774,
+        "arguments": [
+          "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\LyraStarterGame.uproject",
+          "/ShooterMaps/Maps/L_Expanse?NumBots=3",
+          "-game",
+          "-RenderOffscreen",
+          "-windowed",
+          "-ResX=640",
+          "-ResY=360",
+          "-NoLoadingScreen",
+          "-ExecCmds=t.MaxFPS 60",
+          "-unattended",
+          "-nop4",
+          "-NoSound",
+          "-NoSplash",
+          "-culture=en",
+          "-UTF8Output",
+          "-DisablePython",
+          "-NoDDCCleanup",
+          "-DisablePlugins=AndroidFileServer,UdpMessaging,TcpMessaging,RemoteSession",
+          "-notraceserver",
+          "-trace=none",
+          "-UEPAutoReloadResult=F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-gameplay\\ShotgunStandalone01/jump.json",
+          "-abslog=F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-gameplay\\ShotgunStandalone01/jump.log",
+          "-UEPAutoReloadWeapon=shotgun"
+        ],
+        "pid": 11744,
+        "executable": "F:\\UnrealEngine\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+        "exit_code": 0,
+        "name": "Native input Jump BP/Python differential",
+        "environment_names": []
+      },
+      "external_gate": {
+        "stderr": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-gameplay\\ShotgunStandalone01\\report-gate-stderr.log",
+        "stdout": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-gameplay\\ShotgunStandalone01\\report-gate-stdout.log",
+        "duration_seconds": 0.116,
+        "arguments": [
+          "-B",
+          "-m",
+          "uep_lyra_abilities.autoreload_standalone_contract",
+          "--report",
+          "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261026-ability-gameplay\\ShotgunStandalone01/jump.json"
+        ],
+        "pid": 39184,
+        "executable": "F:\\UnrealEngine\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\python.exe",
+        "exit_code": 0,
+        "name": "Native ability independent report gate",
+        "environment_names": []
+      },
+      "frozen_inputs": 3477,
+      "archived_prior_fixture_inputs": [],
+      "semantic_gate": {
+        "status": "passed",
+        "bounded_runtime_acceptance": true,
+        "pairs": 6,
+        "real_fire_to_empty_tested": true,
+        "weapon": "shotgun",
+        "native_mode": "Standalone",
+        "native_temporary_equipment_restored": true
+      }
+    }
+  ],
+  "original_candidates": 246,
+  "original_requirements": 22,
+  "requirements_proven": 12,
+  "selected_host_checks": 24,
+  "original_011_gameplay_criterion_proven": false,
+  "standalone_profile_pairs": 22,
+  "natural_magazine_exhaustions": 4,
+  "actual_fired_rounds": 76,
+  "archived_prior_quickslot_inputs": [
+    {
+      "original_source": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\Scripts\\uep_lyra_abilities\\autoreload_validation.py",
+      "archive": ".build/LyraValidation/BlueprintPython/20261026-ability-gameplay/QuickslotStandalone01/Inputs/autoreload_validation.py",
+      "sha256": "E2F18F0A8CA0946D389BE1B333E03F4BA6DB4F977B6D5109D2FF17CD77FD59D7",
+      "frozen_path_matches": [
+        "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\Scripts\\uep_lyra_abilities\\autoreload_validation.py",
+        "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\Scripts\\uep_lyra_abilities\\autoreload_validation.py"
+      ]
+    },
+    {
+      "original_source": "F:\\UnrealEnginePython5\\Validation\\Run-UEP58JumpValidation.ps1",
+      "archive": ".build/LyraValidation/BlueprintPython/20261026-ability-gameplay/QuickslotStandalone01/Inputs/Run-UEP58JumpValidation.ps1",
+      "sha256": "5A4E1105A9500206AE3A450348734709E4BDB400E5F33DC7E8540A5890D61D81",
+      "frozen_path_matches": [
+        "F:\\UnrealEnginePython5\\Validation\\Run-UEP58JumpValidation.ps1"
+      ]
+    }
+  ],
+  "partial_gameplay_evidence_review": {
+    "path": ".build/LyraValidation/BlueprintPython/20261026-ability-gameplay/gameplay-leads.json",
+    "sha256": "2D82FD21081C9A27D58F83F903318D5FCCF2DD0F07E2C7BE44469B8E836FD050",
+    "source_and_current_gate_leads": 33,
+    "full_gameplay_acceptance": false,
+    "remaining_gaps": [
+      "Prototype NetShooter natural exhaustion/empty-fire refusal needs direct Standalone and two-client evidence;original zero AutoReload grant stays unchanged.",
+      "Complete six-behavior cross-mode source/report pin and natural-respawn pair acceptance composition remains open."
+    ]
+  },
+  "incremental_verification": {
+    "artifact": "incremental-acceptance-integrity.json",
+    "sha256": "943E86FB0F3471872E8D6CAB35C8C58F678686AF85E208B29EFA457B6152492D",
+    "status": "passed",
+    "previous_index": {
+      "path": ".build/LyraValidation/BlueprintPython/20261026-ability-task-lifetime/acceptance-final.json",
+      "sha256": "80320EFDCC4EDC22EC23FD25D18D065FACD28D9E777DA8501668E540E8E2D847",
+      "requirements_proven": 12
+    },
+    "previous_proof_inputs_unchanged_except_prior_manifest_metadata": true,
+    "production_policies_and_assets_unchanged": true,
+    "related_lifetime_review_reproduced": {
+      "status": "passed",
+      "criterion": "Supported ability tasks, delegates, cancellation and latent boundaries have call/lifetime regressions; unsupported signatures fail explicitly.",
+      "original_candidates": 37,
+      "native_lifetime_runs_revalidated": 37,
+      "referenced_native_lifetime_processes": 41,
+      "referenced_current_generic_processes": 3,
+      "new_native_processes_launched_by_review": 0,
+      "full_migration_acceptance_proven": false
+    },
+    "unrelated_accepted_criteria_semantic_gates_reexecuted": false,
+    "original_246_candidates_unchanged": true,
+    "original_22_texts_unchanged": true,
+    "selected_host_checks": 24,
+    "native_processes_passed": 3,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false
+  },
+  "new_native_processes": 3,
+  "production_policy_or_assets_changed": false,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "full_version_acceptance": false,
+  "full_migration_acceptance_proven": false,
+  "limits": [
+    "Closes the concrete missing current Standalone Quickslot report and the Rifle/Shotgun Standalone natural-exhaustion AutoReload records. The complete original0.11 six-behavior Standalone/two-client gameplay criterion remains open;no original checklist item is newly promoted.",
+    "Quickslot proves ten actual native GameplayEvent/equipment profile pairs,default Python-owned OnSpawn scope,three native WaitGameplayEvent tasks,selection/wrap/refusal,cancel,active Profile switch and ended-event/teardown cleanup. The old incomplete Standalone report remains unchanged.",
+    "The existing test-only AutoReload fixture now permits native Standalone temporary Rifle/Shotgun equipment. It waits for the original active Pistol AutoReload before replacing equipment,uses native authority inventory APIs,removes only its owned item and restores the exact original item/slot/ammo/aim/AutoReload state. Network clients retain their overridden read-only equipment barrier and cleanup path.",
+    "Each new Rifle/Shotgun run contains six Blueprint/Python pairs:nonempty,empty-no-spare,empty-spare,real native firing-to-empty/AutoReload,native cancel and active Profile teardown. Both implementations consume30 Rifle rounds or8 Shotgun rounds before native reload:76 actual rounds and4 exhaustions total. No ammo API is called after real firing starts;native reload/cost/conservation/task and callback cleanup are independently checked.",
+    "Adds a separate pure Standalone equipment contract and six negative/positive checks;the original common AutoReload and network contracts remain unchanged. Eighteen affected existing checks plus six new checks pass in an immutable index;the existing native driver parses and adds only the affected Standalone selection/guard.",
+    "Quickslot ran before the test fixture/driver extension. Archive both original files before editing and map all three changed frozen paths(two source/stage copies plus the driver) to their exact archived original hashes. Its other3472 frozen inputs still match. Rifle and Shotgun retain all3477 frozen input hashes. No source/input is edited while a native process is alive.",
+    "Thirty-three source/current-pure-gate gameplay records are evidence leads only,not a completed report/asset/source-pinned gameplay matrix. Direct prototype NetShooter natural exhaustion/empty-fire refusal in Standalone and two-client play remains unproven. Its original zero AutoReload grant is preserved and must not be replaced by a synthetic grant.",
+    "The related accepted ability-lifetime review is reexecuted unchanged and still reproduces its37 native records. The other accepted proof inputs and production policy/asset bodies are unchanged;their unrelated semantic gates are not rerun. Preserve12/22 accepted criteria,all246 original paths/order/version assignments and22 texts. Reuse the approved SDK236 and isolated native init guard;no compile/link,binary refresh,cook/package or full regression."
+  ]
+}

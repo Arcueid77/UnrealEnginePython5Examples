@@ -25,6 +25,7 @@ class Validation:
     def __init__(self, result):
         self.path, self.started, self.phase, self.index = Path(result), time.monotonic(), "ready", 0
         self.finished, self.scope, self.sides = False, None, []
+        self.standalone_weapon_fixture = None
         self.timeout = 240.
         self.weapon = next((value.split("=", 1)[1] for value in sys.argv if value.startswith("-UEPAutoReloadWeapon=")), "pistol")
         require(self.weapon in WEAPONS, "weapon has no original AutoReload grant")
@@ -67,7 +68,22 @@ class Validation:
             self.row["ammo_api_calls_after_firing_began"] += 1
         for tag, value in zip((policy.MAGAZINE, policy.SPARE), values): set_stat(self.item, tag, value)
 
-    def prepare_weapon(self, controller, model): return True
+    def prepare_weapon(self, controller, model):
+        if self.weapon == "pistol": return True
+        from . import reload_weapon_fixture as weapons
+        if self.standalone_weapon_fixture is None:
+            original = weapons.auto_instances(controller)
+            if len(original) != 1 or not original[0].get_property("bIsActive"): return False
+            bridge = ue.find_class("UEPLyraBridgeLibrary").get_cdo().call_function("GetBridgeForWorld", controller.get_world())
+            mode = str(bridge.call_function("CaptureSnapshot").NetMode)
+            require(mode == "Standalone", "standalone equipment fixture cannot mutate network inventory")
+            self.fixture_controller = controller
+            self.standalone_weapon_fixture = weapons.install(controller, self.weapon)
+            self.report.update(standalone_native_equipment_fixture=True, native_mode=mode,
+                native_weapon_fixture=copy.deepcopy(self.standalone_weapon_fixture),
+                temporary_weapon_removed=False, original_inventory_restored=False)
+            return False  # Re-read the newly equipped native item on the next frame.
+        return True
 
     def initial_ammo(self):
         return (0, self.capacity*2) if self.name == "empty-spare" else ((0, 0) if self.name == "empty-no-spare" else (self.capacity, self.capacity*2))
@@ -206,13 +222,25 @@ class Validation:
                 ue.set_mixin_profile(self.ability, "Python")
                 require(self.asc.call_function("TryActivateAbilityByClass", self.cls, False), "native default AutoReload restore refused")
                 self.report["original_ability_active_restored"] = bool(self.ability.get_property("bIsActive")) and self.tasks() == 1
+            if self.standalone_weapon_fixture is not None:
+                from . import reload_weapon_fixture as weapons
+                weapons.restore(self.fixture_controller, self.standalone_weapon_fixture)
+                restored = weapons.restored(self.fixture_controller, self.standalone_weapon_fixture)
+                require(restored, "standalone temporary equipment or original AutoReload state leaked")
+                self.report["temporary_weapon_removed"] = self.report["original_inventory_restored"] = restored
+                self.report["original_player_restored"] = restored and aim_snapshot(self.fixture_controller) == self.original_aim
+                self.report["original_ability_active_restored"] = weapons.auto_active(self.fixture_controller) == self.standalone_weapon_fixture["original_auto_active"]
         except Exception: error = (error or "")+traceback.format_exc()
         self.report.update(status="failed" if error else "awaiting_shutdown", error=error)
         self.path.write_text(json.dumps(self.report, indent=2), encoding="utf-8")
         (ue.log_error if error else ue.log)("UEP_AUTORELOAD_DIFFERENTIAL_"+("FAILED "+error if error else "PASSED"))
         ue.request_exit()
 
-    def validate_report(self): validate(self.report)
+    def validate_report(self):
+        if self.weapon != "pistol":
+            from .autoreload_standalone_contract import validate as validate_equipped
+            return validate_equipped(self.report)
+        return validate(self.report)
 
     def finalize(self):
         self.report["policy_shutdown"] = policy.snapshot()
