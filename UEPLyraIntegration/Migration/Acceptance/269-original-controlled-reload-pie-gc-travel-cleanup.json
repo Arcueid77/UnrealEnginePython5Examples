@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "batch": 269,
+  "recorded_utc": "2026-10-27T18:06:53.597805+00:00",
+  "status": "original_009_controlled_reload_cleanup_criterion_verified",
+  "criterion": "The controlled reload and cleanup tests pass across repeated PIE, GC and travel; state, callbacks and router restoration are checked after teardown.",
+  "completion_proven": true,
+  "core_parent_commit": "2e0afeab66de03c23902b295205595f0a9adf698",
+  "examples_parent_commit": "1152a0304ab35f1feb060a77e3d6639e295f8624",
+  "review": {
+    "status": "passed",
+    "criterion": "The controlled reload and cleanup tests pass across repeated PIE, GC and travel; state, callbacks and router restoration are checked after teardown.",
+    "completion_proven": true,
+    "runs": [
+      {
+        "directory": ".build/LyraValidation/BlueprintPython/20261028-reload-cleanup/Weapon01",
+        "summary_sha256": "CE8719C03FDE5E0E73A7EC2EBEF39FFF979B245E45A7680423E9C6461A5ABED5",
+        "current_frozen_inputs": 2581,
+        "pid": 17880,
+        "exit_code": 0,
+        "report_sha256": "D309586671D72F709D0734E1369D7993D3891F42E0C360001AD74B34B9A28081",
+        "log_sha256": "80A552AD221A023957162E04BA02B23910DE54674E4168ABB1F86FB0766D12B4"
+      },
+      {
+        "directory": ".build/LyraValidation/BlueprintPython/20261028-reload-cleanup/WeaponNetwork01",
+        "summary_sha256": "D928643380276F888AF3477BA9D6F7094C9C5F96CAC9D7119A1E76816ED02095",
+        "current_frozen_inputs": 2875,
+        "native_peers": [
+          {
+            "peer": "A",
+            "pid": 22788,
+            "exit_code": 0,
+            "report_sha256": "27F861336333A4E50DE6AFC1B29FE6E9CD78660D463285F9CBD26B0C14E4416A",
+            "log_sha256": "335534B5C8884CFDE873F2B56E80DB8C41783EFD8F7569FFBD60472470582C0B"
+          },
+          {
+            "peer": "B0",
+            "pid": 37656,
+            "exit_code": 0,
+            "report_sha256": "AEF3FB65717EE06E64A40F07A440D799B7E5538F47C033BF44B9C5D5C25260DD",
+            "log_sha256": "57782F14695CD55AEE5D37270DC74DC35A8C05AE4AEC87989B031F789E850E5B"
+          },
+          {
+            "peer": "B1",
+            "pid": 12304,
+            "exit_code": 0,
+            "report_sha256": "408A1DD71E5302E9AED45896422554EE756F6ABE46D7802215F9BDDCC501EF4E",
+            "log_sha256": "5D1C3705572FD06AA34571F16BEC7AAFB9ADABDA263307278BB064FE2C2B6E57"
+          },
+          {
+            "peer": "server",
+            "pid": 38612,
+            "exit_code": 0,
+            "report_sha256": "09F48C1737FC0A2FA7869C18417048B1F3D696537F9913FF0D0C7046BF5AA62E",
+            "log_sha256": "3A454564E94C8FD249DA48E9CEAD85165E9407EF266D3AE5D037E3331A302FFD"
+          }
+        ],
+        "protocol": {
+          "status": "passed",
+          "phase_count": 19,
+          "clients": 2,
+          "rejoin_tested": true,
+          "real_fire_reload": true,
+          "blueprint_python_native_parity": true,
+          "sampling_source_declared": true,
+          "combat_hud_acceptance": true,
+          "debug_spread_acceptance": false,
+          "production_reticle_acceptance": false,
+          "reticle_host_acceptance": false,
+          "ability_progress_acceptance": false,
+          "ability_failure_acceptance": false,
+          "dash_cooldown_acceptance": false,
+          "respawn_timer_acceptance": false,
+          "quickbar_slots_acceptance": false,
+          "nameplate_acceptance": false,
+          "native_interaction_producer_tested": false,
+          "replicated_duration_message_tested": false,
+          "physical_touch_tested": false
+        },
+        "cleanup": [
+          {
+            "peer": "A",
+            "subscriptions_closed": 17,
+            "scopes_closed": 3,
+            "native_signals": 25,
+            "active_owned_resources": 0
+          },
+          {
+            "peer": "B0",
+            "subscriptions_closed": 13,
+            "scopes_closed": 3,
+            "native_signals": 15,
+            "active_owned_resources": 0
+          },
+          {
+            "peer": "B1",
+            "subscriptions_closed": 3,
+            "scopes_closed": 1,
+            "native_signals": 0,
+            "active_owned_resources": 0
+          },
+          {
+            "peer": "server",
+            "subscriptions_closed": 0,
+            "scopes_closed": 0,
+            "native_signals": 0,
+            "active_owned_resources": 0
+          }
+        ]
+      },
+      {
+        "directory": ".build/LyraValidation/BlueprintPython/20261027-call-lifecycle-matrix/PIE01",
+        "summary_sha256": "2FDC2C5301F68F037C10A096820C0B94F244015E9DF0A6AFFFA2A5D63C5601C9",
+        "current_frozen_inputs": 422,
+        "pid": 39448,
+        "exit_code": 0,
+        "report_sha256": "C82D009AFEA40255D93C25FBDA2DB8FA927D5FE46D02ADB6ACCA26DEA2113A2C",
+        "log_sha256": "95D0122B11491E45B680034357EDDE5D857A511C3C14EF668E6DB22335E9558B",
+        "reused_without_reexecution": true
+      }
+    ],
+    "controlled_new_widget_reload_cycles": 3,
+    "live_profile_round_trips": 4,
+    "weapon_scenarios": 42,
+    "paired_state_comparisons": 38,
+    "same_editor_pie_sessions": 3,
+    "real_network_phases": 19,
+    "server_travels": 2,
+    "client_rejoin": true,
+    "current_sdk_sha256": "96049A85163F7EBE98CDDBB324BDC7973F640E0CBC13CA758AA8499772F2044F",
+    "fresh_native_processes": 5,
+    "reused_native_pie_processes": 1,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_migration_acceptance_proven": false,
+    "limits": [
+      "Controlled unregister/reload/re-register creates NEW widgets; arbitrary state migration/recompile remains unsupported.",
+      "The three-session current-SDK PIE run is reused after exact frozen source/binary verification.",
+      "Editor game network runtime only; no packaged networking, hardware input or complete visual/audio parity claim.",
+      "Rendered network images include TapIDs/invalid-tap warnings in the NoSound fixture; visual acceptance remains open.",
+      "Only the exact original reload/cleanup criterion is accepted."
+    ]
+  },
+  "selected_host_checks": 22,
+  "network_driver_selected_host_checks": 91,
+  "native_driver_contract_tests_passed": true,
+  "original_candidates": 246,
+  "original_requirements": 22,
+  "requirements_proven": 17,
+  "incremental_verification": {
+    "artifact": "incremental-acceptance-integrity.json",
+    "sha256": "C5E0AFB253AFC55727D137075FA0E3D6759B921CBD14BABA7A9EE9934A9BFC7A",
+    "status": "passed",
+    "previous_index": {
+      "path": ".build/LyraValidation/BlueprintPython/20261028-generic-packaged-core/acceptance-final.json",
+      "sha256": "7976CAD749E6F40157416498C1ED856C96382730EEA424443FDCFA1D470303E8",
+      "requirements_proven": 16
+    },
+    "previous_accepted_criteria_retained": 16,
+    "original_246_candidates_and_22_texts_unchanged": true,
+    "new_original_requirements_accepted": 1,
+    "existing_production_sources_and_assets_unchanged": true,
+    "unrelated_semantic_gates_reexecuted": false,
+    "selected_host_checks": 22,
+    "new_native_processes": 5,
+    "current_sdk_pie_processes_reused": 1,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false
+  },
+  "production_policy_or_assets_changed": false,
+  "normal_startup_scripts_changed": false,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "full_version_acceptance": false,
+  "full_migration_acceptance_proven": false,
+  "other_original_criteria_accepted_by_this_batch": false,
+  "limits": [
+    "Controlled unregister/reload/re-register creates NEW widgets; arbitrary state migration/recompile remains unsupported.",
+    "The three-session current-SDK PIE run is reused after exact frozen source/binary verification.",
+    "Editor game network runtime only; no packaged networking, hardware input or complete visual/audio parity claim.",
+    "Rendered network images include TapIDs/invalid-tap warnings in the NoSound fixture; visual acceptance remains open.",
+    "Only the exact original reload/cleanup criterion is accepted."
+  ]
+}

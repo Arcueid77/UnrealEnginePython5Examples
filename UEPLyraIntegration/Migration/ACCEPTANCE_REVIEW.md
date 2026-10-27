@@ -16,7 +16,7 @@ This index does not execute or semantically revalidate the referenced runtime ev
 ## Original checklist requirements
 
 - `0.9.0` — A checked-in call/lifecycle matrix labels every path as tested supported, intentionally rejected, or bypass/unsupported, with reproducible fixtures. (ROADMAP.md:242; all_33_documented_contract_paths_classified_with_pinned_reproducers_and_current_generic_calls_pie).
-- `0.9.0` — The controlled reload and cleanup tests pass across repeated PIE, GC and travel; state, callbacks and router restoration are checked after teardown. (ROADMAP.md:244; historical_claim_needs_source_and_evidence_review).
+- `0.9.0` — The controlled reload and cleanup tests pass across repeated PIE, GC and travel; state, callbacks and router restoration are checked after teardown. (ROADMAP.md:244; current_sdk_controlled_reload_profile_gc_repeated_pie_and_two_travel_cleanup_source_verified).
 - `0.9.0` — A visible and packaged weapon/ammo example proves native signal plus read-only sampled change updates, safe subscription removal and native authority ownership. (ROADMAP.md:246; historical_claim_needs_source_and_evidence_review).
 - `0.9.0` — Batch 1A has original-BP/Python state and visual comparisons for weapon switching, firing, reload, empty ammo and Pawn replacement. One server and two clients prove that ammo/UI state never crosses local-player ownership. (ROADMAP.md:249; historical_claim_needs_source_and_evidence_review).
 - `0.9.0` — Normal playable startup does not auto-run validation or request exit; explicitly enabled test modes retain bounded timeouts and cleanup evidence. Focused rendered weapon mode exits cleanly; the no-test-flag Lyra observation is bounded and stopped only by its owning test driver, not by a probe. (ROADMAP.md:252; native_normal_no_probe_observation_and_focused_rendered_probe_cleanup_and_sources_verified).
@@ -216,7 +216,7 @@ These are recorded flags requiring requirement and platform review, not automati
 
 ## Next evidence work
 
-Review the independent current Third Person and Lyra full-candidate/package boundaries and the remaining original0.9/0.14 criteria. Generic packaged21 and its clean six-suite70 gate are verified.
+Complete original0.9 visible/packaged weapon and Batch1A state/visual comparisons,remaining Third Person/Lyra candidate package gates and RC inventory;original0.14 full two-Experience acceptance remains open.
 
 Recorded capabilities still need their linked semantic/source evidence reviewed; this index
 does not rerun them. Continue unresolved readiness observations and the original version scope.
@@ -240,3 +240,15 @@ Third Person/Lyra candidate/package boundaries and other original requirements
 stay open. Original acceptance remains16/22. See ledger268 and the updated
 candidate matrix for the cold Game build,versioned Entry-only package,failed
 wrapper evidence and exact runtime/source/artifact fingerprints.
+
+## Controlled reload and cleanup (batch269)
+
+The exact original0.9 reload/cleanup condition is accepted;overall17/22.
+Three controlled new-widget reload/GC cycles,four live profile round trips,
+42 weapon scenarios (38 paired state comparisons),three same-Editor PIE
+sessions and actual nineteen-phase server/two-client travel/rejoin leave no
+owned callbacks,tickers or scopes. Class routers are restored before exit.
+Reuse the current-SDK PIE capture after exact source/binary revalidation;
+five fresh native processes all exit0. Zero compile,cook or full regression.
+Rendered network screenshots retain TapIDs/invalid-tap warnings in the NoSound
+fixture;complete visual/audio and packaged acceptance remain separate.

@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 270,
+    "bounded_evidence_ledgers": 271,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -16705,6 +16705,29 @@
     "original_requirements": 22,
     "original_full_candidate_requirement_proven": false,
     "full_migration_regression_executed": false,
+    "full_acceptance": false
+  },
+  "reload_cleanup_acceptance_evidence": {
+    "status": "original_009_controlled_reload_cleanup_criterion_verified",
+    "criterion": "The controlled reload and cleanup tests pass across repeated PIE, GC and travel; state, callbacks and router restoration are checked after teardown.",
+    "evidence_ledger": "269-original-controlled-reload-pie-gc-travel-cleanup.json",
+    "completion_proven": true,
+    "controlled_new_widget_reload_cycles": 3,
+    "live_profile_round_trips": 4,
+    "same_editor_pie_sessions": 3,
+    "real_network_phases": 19,
+    "server_travels": 2,
+    "client_rejoin": true,
+    "current_sdk_required": true,
+    "selected_host_checks": 22,
+    "new_native_processes": 5,
+    "reused_current_pie_processes": 1,
+    "requirements_proven": 17,
+    "original_requirements": 22,
+    "production_policy_or_assets_changed": false,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
     "full_acceptance": false
   }
 }
