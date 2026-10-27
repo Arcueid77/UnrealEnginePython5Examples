@@ -20,7 +20,7 @@ This index does not execute or semantically revalidate the referenced runtime ev
 - `0.9.0` — A visible and packaged weapon/ammo example proves native signal plus read-only sampled change updates, safe subscription removal and native authority ownership. (ROADMAP.md:246; current_native_python_packaged_and_visible_weapon_with_native_signal_sampler_cleanup_owner_protocol_verified).
 - `0.9.0` — Batch 1A has original-BP/Python state and visual comparisons for weapon switching, firing, reload, empty ammo and Pawn replacement. One server and two clients prove that ammo/UI state never crosses local-player ownership. (ROADMAP.md:249; five_directly_reviewed_bp_python_weapon_component_views_and_current_native_two_owner_protocol_verified).
 - `0.9.0` — Normal playable startup does not auto-run validation or request exit; explicitly enabled test modes retain bounded timeouts and cleanup evidence. Focused rendered weapon mode exits cleanly; the no-test-flag Lyra observation is bounded and stopped only by its owning test driver, not by a probe. (ROADMAP.md:252; native_normal_no_probe_observation_and_focused_rendered_probe_cleanup_and_sources_verified).
-- `0.9.0` — Generic, both Third Person variants and Lyra pass the candidate regression matrix; the missing Mixin Third Person visible gate is closed. (ROADMAP.md:256; historical_claim_needs_source_and_evidence_review).
+- `0.9.0` — Generic, both Third Person variants and Lyra pass the candidate regression matrix; the missing Mixin Third Person visible gate is closed. (ROADMAP.md:256; original_generic_third_person_and_lyra_candidate_cells_source_bound_and_aggregated).
 - `0.9.0` — The supported API inventory and migration/deprecation rules are ready for RC freeze, with no known release-blocking correctness defects. (ROADMAP.md:258; historical_claim_needs_source_and_evidence_review).
 - `0.10.0` — Each small batch passes original-BP/Python comparison without BP fallthrough. (ROADMAP.md:605; all_original_32_candidates_140_entries_source_bound_native_comparisons_without_bp_business_fallthrough).
 - `0.10.0` — Pickup failure/success, cooldown/respawn and interaction effects match the baseline; two players cannot share another player's UI or claim state. (ROADMAP.md:606; native_pickup_rejection_cooldown_interaction_effects_and_two_owner_ui_claim_sources_verified).
@@ -216,7 +216,7 @@ These are recorded flags requiring requirement and platform review, not automati
 
 ## Next evidence work
 
-Aggregate the independently verified current Generic,Third Person Editor/Game and Lyra0.9 candidate components;retain full Explorer/TopDownArena and RC review as separate criteria.
+Review the supported API inventory and RC migration/deprecation decisions;complete the separate original0.14 Explorer/TopDownArena gameplay,presentation and applicable player comparisons.
 
 Recorded capabilities still need their linked semantic/source evidence reviewed; this index
 does not rerun them. Continue unresolved readiness observations and the original version scope.
@@ -301,3 +301,24 @@ runtime/cook. Canonical controls now require the exact staged descriptor value;
 six actual-report/rejection checks pass from an immutable index. Preserve the
 old driver bytes and per-variant payload snapshots. Original migration remains
 19/22;only this candidate component is closed,with no C++ source change.
+
+## Original candidate matrix aggregate (batch273)
+
+**Original candidate matrix accepted batch273 (2026-10-28):**
+The original0.9 Generic/both Third Person/Lyra candidate criterion is accepted;
+overall20/22. Aggregate the existing clean Generic six-suite70/current11call/
+three-PIE proof, both rendered current-SDK Third Person Editor captures and both
+actual current Game packages. Lyra retains normal no-probe startup, the current
+nineteen-phase two-client owner/travel/rejoin protocol, five directly reviewed
+Batch1A paired views and the visible/actual packaged42-scenario weapon example.
+
+Recheck actual source, binary, report, log and image fingerprints. Recover the
+exact old bytes of three unselected ability/weapon test modules from the recorded
+Examples Git parent; identify this as post-execution reconstruction. Both root
+and stage input references remain explicit. Only these named test probes may use
+the exact archive. Normal/focused weapon production inputs must still match.
+Thirty-two immutable-index checks pass, including missing-family, stale-SDK,
+missing-Game, ownership/visual/package cells and production-archive rejection.
+No new native process, build, cook or broad regression. Full Explorer/TopDownArena
+and RC API review remain separate original requirements. Preserve all246 paths,
+22 original texts, prior19 accepted criteria, official Lyra and unrelated dirt.

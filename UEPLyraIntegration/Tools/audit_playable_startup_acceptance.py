@@ -90,7 +90,24 @@ def report_gate(child,report,normal_log,focused_log):
     final=report['reload_cycles'][-1]['after'];require(final['active_count']==final['active_scopes']==0 and not final['ticker_active'] and final['subscribed']==final['unsubscribed'] and not final['errors'],'Probe left owned subscriptions/ticker/errors')
     return dict(status='passed',native_processes=2,focused_exit_code=0,normal_intentional_owned_stop_exit_code=-1,normal_observation_seconds=20,rendered_presenter_cases=42,controlled_reload_gc_cycles=3,full_version_acceptance=False)
 
-def inspect(repo):
+def frozen_startup_input(row,repo,retired_probe_archives):
+    if sha(row['path'])==row['sha256'].upper():return None
+    repo=Path(repo).resolve();path=Path(row['path']).resolve()
+    names=('uep_lyra_abilities/autoreload_validation.py','uep_lyra_weapons/netshooter_ability_validation.py',
+           'uep_lyra_weapons/netshooter_network_validation.py')
+    roots=(repo/'Demos/UEPLyraIntegration/Overlay/Content/Scripts',
+           repo/'.build/LyraValidation/Full/Stage/Lyra/Content/Scripts')
+    allowed={str((root/name).resolve()) for root in roots for name in names}
+    archive=(retired_probe_archives or {}).get(str(path))
+    require(str(path) in allowed and archive is not None,'Frozen native startup input changed: '+str(path))
+    archived=Path(archive).resolve()
+    require(archived.is_relative_to(repo/'.build') and sha(archived)==row['sha256'].upper(),
+            'Exact retired, unselected test-probe bytes required')
+    return dict(native_input_path=str(path),archive=str(archived),recorded_sha256=row['sha256'].upper(),
+                current_sha256=sha(path),reason='Explicit nonselected ability/weapon test probe; normal and focused weapon startup paths unchanged')
+
+
+def inspect(repo,*,retired_probe_archives=None):
     repo=Path(repo).resolve();folder=repo/BASE;child_path=folder/'Focused/summary.json';wrapper_path=folder/'summary.json';ledger_path=repo/RECORD
     ledger=read(ledger_path);record=ledger['current_startup_pair'];wrapper=read(wrapper_path);child=read(child_path)
     require(sha(wrapper_path)==record['summary_sha256'] and sha(child_path)==record['focused_summary_sha256'],'Pinned current startup summaries changed')
@@ -99,9 +116,11 @@ def inspect(repo):
     report_path=folder/'Focused/weapon.json';focused_log_path=folder/'Focused/weapon.log';normal_log_path=folder/'Focused/playable.log'
     for path,key in ((report_path,'focused_report_sha256'),(focused_log_path,'focused_log_sha256'),(normal_log_path,'normal_log_sha256')):require(sha(path)==record[key],'Pinned startup report/log changed')
     report=read(report_path);native=report_gate(child,report,normal_log_path.read_text(encoding='utf-8-sig'),focused_log_path.read_text(encoding='utf-8-sig'))
-    frozen=[]
+    frozen=[];retired=[]
     for row in wrapper['hashes']+child['input_hashes']+child['reference_hashes']:
-        require(sha(row['path'])==row['sha256'].upper(),'Frozen native startup input changed: '+row['path']);frozen.append(row)
+        archived=frozen_startup_input(row,repo,retired_probe_archives)
+        if archived:retired.append(archived)
+        frozen.append(row)
     scripts=repo/'Demos/UEPLyraIntegration/Overlay/Content/Scripts';source=(scripts/'uep_lyra_hud/startup.py').read_text(encoding='utf-8-sig');catalogue,select=selector_catalogue(source)
     require(select(child['playable_startup']['process']['arguments']) is None and select(child['process']['arguments'])=='uep_lyra_hud.weapon_validation','Actual normal/explicit command lines select another startup mode')
     site_source=(scripts/'ue_site.py').read_text(encoding='utf-8-sig');site_guard(site_source);site=ast.parse(site_source);bootstrap=ast.parse((scripts/'uep_lyra_hud/bootstrap.py').read_text(encoding='utf-8-sig'))
@@ -113,11 +132,13 @@ def inspect(repo):
     gate_path=repo/GATE/'summary.json';gate=read(gate_path);require(gate['status']=='passed' and gate['process']['exit_code']==0 and gate['report_sha256']==sha(report_path) and gate['contract_sha256']==sha(repo/'Validation/LyraWeaponHUDContracts.ps1') and gate['checker_sha256']==sha(repo/'Validation/Test-UEP58PackagedWeaponHUDReport.ps1'),'Independent current presenter/lifetime gate missing or changed')
     independent=read(repo/GATE/'report-gate.json');require(independent['status']=='passed' and independent['cases']==42 and independent['controlled_reload_cycles']==3,'Independent full native presenter semantic gate rejected report')
     image=repo/record['image']['path'];require(sha(image)==record['image']['sha256'].upper() and record['image']['visually_inspected'] and independent['native_image']['sha256']==sha(image),'Pinned actual rendered weapon screenshot/visual review changed')
-    return dict(schema_version=1,status='passed',criterion=REQUIREMENT,completion_proven=True,version='0.9.0',native_scope=native,source_selector_catalogue=catalogue,
+    result=dict(schema_version=1,status='passed',criterion=REQUIREMENT,completion_proven=True,version='0.9.0',native_scope=native,source_selector_catalogue=catalogue,
         evidence_ledger=dict(path=RECORD,sha256=sha(ledger_path)),startup_summary_sha256=sha(wrapper_path),focused_summary_sha256=sha(child_path),focused_report_sha256=sha(report_path),focused_log_sha256=sha(focused_log_path),normal_log_sha256=sha(normal_log_path),
         independent_gate=dict(directory=GATE,summary_sha256=sha(gate_path),report_sha256=sha(repo/GATE/'report-gate.json')),frozen_input_records=len(frozen),explicit_weapon_probe_timeout_seconds=120,owned_process_timeout_seconds=240,commandlet_outer_bootstrap_guard_verified=True,
         normal_process_exit_is_intentional_driver_stop=True,normal_graceful_exit_tested=False,normal_pixels_tested=False,focused_native_image_visually_inspected=True,referenced_native_processes=2,new_native_processes_launched_by_review=0,
         all_other_probe_gameplay_rerun=False,physical_input_tested=False,packaged_runtime=False,cpp_compile_executed=False,cook_package_executed=False,full_regression_executed=False,full_version_acceptance=False,full_migration_acceptance_proven=False)
+    if retired_probe_archives is not None:result['retired_unselected_probe_archives']=retired
+    return result
 
 def verify_documentation(document,repo):
     require(document.get('criterion')==REQUIREMENT and document.get('completion_proven') is True,'Exact original normal-startup/explicit-probe criterion required')

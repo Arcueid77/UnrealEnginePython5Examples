@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "batch": 273,
+  "recorded_utc": "2026-10-27T20:21:54.189428+00:00",
+  "status": "original_009_candidate_cells_source_bound_aggregate_verified",
+  "criterion": "Generic, both Third Person variants and Lyra pass the candidate regression matrix; the missing Mixin Third Person visible gate is closed.",
+  "completion_proven": true,
+  "review": {
+    "status": "passed",
+    "criterion": "Generic, both Third Person variants and Lyra pass the candidate regression matrix; the missing Mixin Third Person visible gate is closed.",
+    "completion_proven": true,
+    "platform": "Win64",
+    "configuration": "Development",
+    "scope": "Original0.9 Generic/Third Person/Lyra candidate cells",
+    "components": {
+      "generic": {
+        "clean_suites": 6,
+        "clean_checks": 70,
+        "packaged_checks": 21,
+        "current_call_cases": 11,
+        "same_editor_pie_sessions": 3
+      },
+      "third_person": [
+        {
+          "variant": "Mixin",
+          "current_editor_sdk": "96049A85163F7EBE98CDDBB324BDC7973F640E0CBC13CA758AA8499772F2044F",
+          "rendered_editor_images": 3,
+          "editor_exit_code": 0,
+          "actual_packaged_game": true,
+          "game_exit_code": 0,
+          "behavior_and_cleanup_passed": true,
+          "editor_pid": 4068,
+          "game_pid": 432,
+          "packaged_executable_sha256": "4559C8EDC048B6F70EFCC3F52248247417637D40E355E6978E16C9B105E99E2D"
+        },
+        {
+          "variant": "PythonFirst",
+          "current_editor_sdk": "96049A85163F7EBE98CDDBB324BDC7973F640E0CBC13CA758AA8499772F2044F",
+          "rendered_editor_images": 3,
+          "editor_exit_code": 0,
+          "actual_packaged_game": true,
+          "game_exit_code": 0,
+          "behavior_and_cleanup_passed": true,
+          "editor_pid": 11468,
+          "game_pid": 34344,
+          "packaged_executable_sha256": "4559C8EDC048B6F70EFCC3F52248247417637D40E355E6978E16C9B105E99E2D"
+        }
+      ],
+      "lyra": {
+        "normal_no_probe_observation_seconds": 20,
+        "normal_stop_is_owned_and_intentional": true,
+        "current_network_phases": 19,
+        "native_clients": 2,
+        "travel_and_rejoin": true,
+        "direct_component_visual_pairs": 5,
+        "actual_packaged_weapon_scenarios": 42
+      }
+    },
+    "pinned_ledgers": [
+      {
+        "batch": 266,
+        "path": "Demos/UEPLyraIntegration/Migration/Acceptance/266-original-call-lifecycle-matrix-classifications-and-reproducers.json",
+        "sha256": "314EC33BF03035D1247FE791E6C2A2AE65DF51BCE7602D82B31348782A0EA10F"
+      },
+      {
+        "batch": 267,
+        "path": "Demos/UEPLyraIntegration/Migration/Acceptance/267-current-editor-core49-and-both-third-person-regressions.json",
+        "sha256": "6E341CEDA5D338479B9675DB57115DCAF3C23C1FA65EAC2CF2287A2BECC73A32"
+      },
+      {
+        "batch": 268,
+        "path": "Demos/UEPLyraIntegration/Migration/Acceptance/268-current-generic-game-package-and-clean-six-suite70.json",
+        "sha256": "F379F9F3144EEE0306D6966DE2379D16492A1F608FC87A24B45B3D4A60C74D80"
+      },
+      {
+        "batch": 270,
+        "path": "Demos/UEPLyraIntegration/Migration/Acceptance/270-original-visible-current-packaged-weapon-example.json",
+        "sha256": "F27D790F9AAB16E52E6CC0078F839173B8EDD198F9E826EE2F0DEE63B5995964"
+      },
+      {
+        "batch": 271,
+        "path": "Demos/UEPLyraIntegration/Migration/Acceptance/271-original-batch1a-five-visual-pairs-and-native-owner-protocol.json",
+        "sha256": "848ABD06BBEA0C841850A3221E402F33B68075E200A6A430697314ADF419A9E4"
+      },
+      {
+        "batch": 272,
+        "path": "Demos/UEPLyraIntegration/Migration/Acceptance/272-current-third-person-game-packages-and-exact-version-contract.json",
+        "sha256": "487E4C98C31AE6BD90889D2F1FE7DD6465A44BBBC129BA858E5385EA1638537A"
+      }
+    ],
+    "startup_source_and_output_rechecked": true,
+    "current_weapon_and_batch1a_sources_rechecked": true,
+    "retired_unselected_startup_test_inputs": [
+      {
+        "native_input_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\Scripts\\uep_lyra_abilities\\autoreload_validation.py",
+        "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261028-candidate-matrix\\RecoveredGitInputs\\uep_lyra_abilities\\autoreload_validation.py",
+        "recorded_sha256": "E2F18F0A8CA0946D389BE1B333E03F4BA6DB4F977B6D5109D2FF17CD77FD59D7",
+        "current_sha256": "E3D826C19C196FE6A21BA064E1D69B468FD69D705EB3302C908E68D8CE8145EF",
+        "reason": "Explicit nonselected ability/weapon test probe; normal and focused weapon startup paths unchanged"
+      },
+      {
+        "native_input_path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\Scripts\\uep_lyra_abilities\\autoreload_validation.py",
+        "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261028-candidate-matrix\\RecoveredGitInputs\\uep_lyra_abilities\\autoreload_validation.py",
+        "recorded_sha256": "E2F18F0A8CA0946D389BE1B333E03F4BA6DB4F977B6D5109D2FF17CD77FD59D7",
+        "current_sha256": "E3D826C19C196FE6A21BA064E1D69B468FD69D705EB3302C908E68D8CE8145EF",
+        "reason": "Explicit nonselected ability/weapon test probe; normal and focused weapon startup paths unchanged"
+      },
+      {
+        "native_input_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\Scripts\\uep_lyra_weapons\\netshooter_ability_validation.py",
+        "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261028-candidate-matrix\\RecoveredGitInputs\\uep_lyra_weapons\\netshooter_ability_validation.py",
+        "recorded_sha256": "881FB307232FB050647ADF3F5A4B7A2B07A9BD43C5F32A85BF5F647C765B420C",
+        "current_sha256": "0E0A58BB022B7467CCE5A145A608315EB4EFF49C7EF8E80FE180201E9C683FAD",
+        "reason": "Explicit nonselected ability/weapon test probe; normal and focused weapon startup paths unchanged"
+      },
+      {
+        "native_input_path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\Scripts\\uep_lyra_weapons\\netshooter_ability_validation.py",
+        "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261028-candidate-matrix\\RecoveredGitInputs\\uep_lyra_weapons\\netshooter_ability_validation.py",
+        "recorded_sha256": "881FB307232FB050647ADF3F5A4B7A2B07A9BD43C5F32A85BF5F647C765B420C",
+        "current_sha256": "0E0A58BB022B7467CCE5A145A608315EB4EFF49C7EF8E80FE180201E9C683FAD",
+        "reason": "Explicit nonselected ability/weapon test probe; normal and focused weapon startup paths unchanged"
+      },
+      {
+        "native_input_path": "F:\\UnrealEnginePython5\\Demos\\UEPLyraIntegration\\Overlay\\Content\\Scripts\\uep_lyra_weapons\\netshooter_network_validation.py",
+        "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261028-candidate-matrix\\RecoveredGitInputs\\uep_lyra_weapons\\netshooter_network_validation.py",
+        "recorded_sha256": "670DCA0C4CE4D6568F36A9696E716792C3A4DBE1FAF882B9FA9C4CD4C269BFC3",
+        "current_sha256": "4945A8B87CB5DEC1B06F8A781CC063635EF629B91434988773E2DD40F5DE66D1",
+        "reason": "Explicit nonselected ability/weapon test probe; normal and focused weapon startup paths unchanged"
+      },
+      {
+        "native_input_path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Full\\Stage\\Lyra\\Content\\Scripts\\uep_lyra_weapons\\netshooter_network_validation.py",
+        "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261028-candidate-matrix\\RecoveredGitInputs\\uep_lyra_weapons\\netshooter_network_validation.py",
+        "recorded_sha256": "670DCA0C4CE4D6568F36A9696E716792C3A4DBE1FAF882B9FA9C4CD4C269BFC3",
+        "current_sha256": "4945A8B87CB5DEC1B06F8A781CC063635EF629B91434988773E2DD40F5DE66D1",
+        "reason": "Explicit nonselected ability/weapon test probe; normal and focused weapon startup paths unchanged"
+      }
+    ],
+    "retired_startup_test_input_recovery": {
+      "path": ".build/LyraValidation/BlueprintPython/20261028-candidate-matrix/startup-retired-test-inputs.json",
+      "sha256": "135806BA968EB04FC1933E089AA8E747D3FE6509B4D7CC37794B3DAB0604AC9A"
+    },
+    "original_rendered_run_control_archive": {
+      "path": "F:\\UnrealEnginePython5\\Demos\\Run-UEPThirdPersonDemo.ps1",
+      "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261028-third-person-package\\Inputs\\Run-UEPThirdPersonDemo.before.ps1",
+      "sha256": "5BE5221ACE665751FE2C2EAAAA286ABBCDFE622882F38E96EFBFC08A579B0F4F",
+      "scope": "Exact original runner used by prior native snapshots;preserve before fixing stale version/plugin validation controls"
+    },
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "new_native_processes": 0,
+    "full_migration_regression_executed": false,
+    "full_migration_acceptance_proven": false,
+    "limits": [
+      "Aggregate already verified native cells;do not call this a fresh all-family runtime run.",
+      "Generic retains its one clean six-suite70 run. Third Person visible proof remains rendered Editor;actual packages retain NullRHI native input/gameplay/lifetime scope.",
+      "Lyra0.9 covers normal no-probe startup,actual two-owner weapons,controlled reload/travel and visible/packaged presenters. Full Explorer/TopDownArena belongs to the separate original0.14 criterion.",
+      "Intentional owner-stop normal startup and declared exception exits retain their exact boundaries. No hardware,pixel/audio parity,other platform/configuration,RC tag or publication claim."
+    ]
+  },
+  "core_parent_commit": "284fa34707d03fadcfd02d0cacc11393a40ce926",
+  "examples_parent_commit": "57f8ddba91e13d8723fe9c07995381f126412153",
+  "selected_host_checks": 32,
+  "original_candidates": 246,
+  "original_requirements": 22,
+  "requirements_proven": 20,
+  "new_original_requirements_accepted": 1,
+  "candidate_matrix": {
+    "path": "candidate_editor_regression_matrix.json",
+    "sha256": "D7799ADA2E460DA2849E3955EAB838F374C75DF62E1504949246AB081908FB7D"
+  },
+  "incremental_verification": {
+    "artifact": "incremental-acceptance-integrity.json",
+    "sha256": "6D7E7BF9815334662789925EB231E45BFD397E8E07A52D5AE895A00C7E9BBF0F",
+    "status": "passed",
+    "previous_index": {
+      "path": ".build/LyraValidation/BlueprintPython/20261028-third-person-package/acceptance-final.json",
+      "sha256": "C8CA12712F40CE51594789CE59EDADBB95F956F7353AD74CE404A708B85E8820",
+      "requirements_proven": 19
+    },
+    "previous_accepted_criteria_retained": 19,
+    "new_original_requirements_accepted": 1,
+    "original_246_candidates_and_22_texts_unchanged": true,
+    "production_sources_assets_and_native_binaries_unchanged": true,
+    "selected_host_checks": 32,
+    "new_native_processes": 0,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_migration_regression_executed": false
+  },
+  "new_native_processes": 0,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "full_version_acceptance": false,
+  "full_migration_acceptance_proven": false,
+  "limits": [
+    "Aggregate already verified native cells;do not call this a fresh all-family runtime run.",
+    "Generic retains its one clean six-suite70 run. Third Person visible proof remains rendered Editor;actual packages retain NullRHI native input/gameplay/lifetime scope.",
+    "Lyra0.9 covers normal no-probe startup,actual two-owner weapons,controlled reload/travel and visible/packaged presenters. Full Explorer/TopDownArena belongs to the separate original0.14 criterion.",
+    "Intentional owner-stop normal startup and declared exception exits retain their exact boundaries. No hardware,pixel/audio parity,other platform/configuration,RC tag or publication claim."
+  ]
+}

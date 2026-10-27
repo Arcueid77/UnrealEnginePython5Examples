@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "status": "generic_clean70_current_third_person_editor_and_actual_packages_verified_lyra_candidate_aggregation_open",
+  "status": "original_009_candidate_cells_source_bound_aggregate_verified",
   "original_requirement": "Generic, both Third Person variants and Lyra pass the candidate regression matrix; the missing Mixin Third Person visible gate is closed.",
-  "original_requirement_completion_proven": false,
+  "original_requirement_completion_proven": true,
   "platform": "Win64",
   "configuration": "Development",
   "generic_core": {
@@ -331,7 +331,7 @@
     "current_bounded_startup_ledger_sha256": "47339A9D9A52773FB819607E32F7665B7C40E5C3CCB11CD942AEA67C0DE41C49",
     "current_bounded_comparison_ledger_sha256": "82A035E32C4CA0ECB171DD097E586D1282A5C6454260B2DC620F5FF894716B6C"
   },
-  "required_next_evidence": "Aggregate the independently verified current Generic,Third Person Editor/Game and Lyra0.9 candidate components;retain full Explorer/TopDownArena and RC review as separate criteria.",
+  "required_next_evidence": "Review the supported API inventory and RC migration/deprecation decisions;complete the separate original0.14 Explorer/TopDownArena gameplay,presentation and applicable player comparisons.",
   "cpp_compile_executed": true,
   "cook_package_executed": true,
   "full_regression_executed": true,
@@ -414,6 +414,57 @@
     "packaging_native_compile_executed": false,
     "preserved_missing_editor_plugin_cook_failure": true,
     "preserved_stale_literal_version_wrapper_failure": true,
-    "full_candidate_requirement_accepted": false
+    "full_candidate_requirement_accepted": true
+  },
+  "aggregate_review": {
+    "evidence_ledger": "273-original-candidate-matrix-source-bound-aggregate.json",
+    "components": {
+      "generic": {
+        "clean_suites": 6,
+        "clean_checks": 70,
+        "packaged_checks": 21,
+        "current_call_cases": 11,
+        "same_editor_pie_sessions": 3
+      },
+      "third_person": [
+        {
+          "variant": "Mixin",
+          "current_editor_sdk": "96049A85163F7EBE98CDDBB324BDC7973F640E0CBC13CA758AA8499772F2044F",
+          "rendered_editor_images": 3,
+          "editor_exit_code": 0,
+          "actual_packaged_game": true,
+          "game_exit_code": 0,
+          "behavior_and_cleanup_passed": true,
+          "editor_pid": 4068,
+          "game_pid": 432,
+          "packaged_executable_sha256": "4559C8EDC048B6F70EFCC3F52248247417637D40E355E6978E16C9B105E99E2D"
+        },
+        {
+          "variant": "PythonFirst",
+          "current_editor_sdk": "96049A85163F7EBE98CDDBB324BDC7973F640E0CBC13CA758AA8499772F2044F",
+          "rendered_editor_images": 3,
+          "editor_exit_code": 0,
+          "actual_packaged_game": true,
+          "game_exit_code": 0,
+          "behavior_and_cleanup_passed": true,
+          "editor_pid": 11468,
+          "game_pid": 34344,
+          "packaged_executable_sha256": "4559C8EDC048B6F70EFCC3F52248247417637D40E355E6978E16C9B105E99E2D"
+        }
+      ],
+      "lyra": {
+        "normal_no_probe_observation_seconds": 20,
+        "normal_stop_is_owned_and_intentional": true,
+        "current_network_phases": 19,
+        "native_clients": 2,
+        "travel_and_rejoin": true,
+        "direct_component_visual_pairs": 5,
+        "actual_packaged_weapon_scenarios": 42
+      }
+    },
+    "review_sha256": "854CFE6E4B665D2BDEDA92A3A3D7AF928B4DBC30949525969CD7178DD1419AB5",
+    "new_native_processes": 0,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false
   }
 }

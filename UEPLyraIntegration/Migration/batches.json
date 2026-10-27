@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 274,
+    "bounded_evidence_ledgers": 275,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -16793,5 +16793,18 @@
     "new_original_requirements_accepted": 0,
     "full_candidate_requirement_proven": false,
     "full_acceptance": false
+  },
+  "candidate_matrix_acceptance_evidence": {
+    "status": "original_009_candidate_cells_source_bound_aggregate_verified",
+    "criterion": "Generic, both Third Person variants and Lyra pass the candidate regression matrix; the missing Mixin Third Person visible gate is closed.",
+    "evidence_ledger": "273-original-candidate-matrix-source-bound-aggregate.json",
+    "completion_proven": true,
+    "requirements_proven": 20,
+    "original_requirements": 22,
+    "selected_host_checks": 32,
+    "new_native_processes": 0,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_migration_acceptance_proven": false
   }
 }
