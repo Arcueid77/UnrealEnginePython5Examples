@@ -21,7 +21,10 @@ def group(profile):
             if peer in ('server',owner):
                 d={p+'_'+n:0 for p in ('python','fallback') for n in ('activate','end','press')}
                 d.update({prefix+'_activate':1,prefix+'_end':1,'authority':int(peer=='server'),'client':int(peer!='server'),'native_duration_messages':int(peer!='server')})
-                row.update(role=3 if peer=='server' else 2,pawn='pawn-'+owner,events=[dict(authority=peer=='server',instigator='pawn-'+owner,target=row['target'])],action_deltas=[d],native_tasks_closed=True)
+                role=3 if peer=='server' else 2;instance='action-'+peer+owner+kind
+                row.update(role=role,pawn='pawn-'+owner,events=[dict(instance=instance,authority=peer=='server',instigator='pawn-'+owner,target=row['target'],
+                    native_start=dict(instance=instance,active=True,active_tasks=0,spec_active_counts=[1]))],action_deltas=[d],native_tasks_closed=True,
+                    native_completion=[dict(instance=instance,active=False,active_tasks=0,spec_active_counts=[0])])
                 if peer=='server':row.update(other_inventory_before=before[foreign],other_inventory_after=before[foreign],target_expired=kind=='collect',target_preserved=kind=='sit')
                 else:row.update(input_asset='/ShooterExplorer/Input/Actions/IA_Interact.IA_Interact',interactor_press_deltas=[{prefix+'_press':1,('fallback' if prefix=='python' else 'python')+'_press':0}],durations=[dict(instigator='pawn-'+owner,duration=.5)],progress_matched_original=True,progress_completed=True)
             else:row['own_activation_delta']=0
@@ -49,7 +52,22 @@ class ExplorerActionsNetworkContractTests(unittest.TestCase):
     def test_duplicate_input_and_fallback_leak_rejected(self):
         for key,value in (('python_activate',2),('fallback_activate',1)):
             g=copy.deepcopy(self.groups[1]);g['A']['cases'][0]['action_deltas'][0][key]=value
-            with self.assertRaisesRegex(ValueError,'exactly once'):contract.validate(g)
+            with self.assertRaisesRegex(ValueError,'activation/client'):contract.validate(g)
+    def test_server_native_completion_can_precede_its_local_montage_callback(self):
+        for profile_index,prefix in ((0,'fallback'),(1,'python')):
+            g=copy.deepcopy(self.groups[profile_index]);g['server']['cases'][0]['action_deltas'][0][prefix+'_end']=0
+            contract.validate(g)
+            g['server']['cases'][0]['native_completion']=[]
+            with self.assertRaises(ValueError):contract.validate(g)
+    def test_missing_client_montage_completion_cannot_use_server_native_end(self):
+        g=copy.deepcopy(self.groups[1]);g['A']['cases'][0]['action_deltas'][0]['python_end']=0
+        with self.assertRaises(ValueError):contract.validate(g)
+    def test_native_completion_must_match_actual_action_and_closed_spec(self):
+        for field,value in (('instance','foreign'),('active',True),('active_tasks',1),('spec_active_counts',[1])):
+            g=copy.deepcopy(self.groups[1]);g['server']['cases'][0]['native_completion'][0][field]=value
+            with self.subTest(field=field),self.assertRaises(ValueError):contract.validate(g)
+        g=copy.deepcopy(self.groups[1]);g['server']['cases'][0]['events'][0]['native_start']['active']=False
+        with self.assertRaises(ValueError):contract.validate(g)
     def test_native_payload_and_duration_required(self):
         g=copy.deepcopy(self.groups[1]);g['A']['cases'][0]['events'][0]['instigator']='foreign'
         with self.assertRaisesRegex(ValueError,'payload/role'):contract.validate(g)

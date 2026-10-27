@@ -37,9 +37,14 @@ class Validation:
         atexit.register(self.finalize)
     def observe_entry(self,kind,original):
         def observed(actor,EventData):
-            self.events.append(dict(kind=kind,instance=path(actor),authority=bool(actor.call_function('K2_HasAuthority')),instigator=path(EventData.Instigator),target=path(EventData.Target)))
+            self.events.append(dict(kind=kind,instance=path(actor),authority=bool(actor.call_function('K2_HasAuthority')),instigator=path(EventData.Instigator),target=path(EventData.Target),native_start=self.native_action_state(actor)))
             return original(actor,EventData)
         return observed
+    def native_action_state(self,actor):
+        specs=[int(s.ActiveCount) for s in self.asc.get_property('ActivatableAbilities').Items
+            if path(actor) in {path(a) for a in list(s.NonReplicatedInstances)+list(s.ReplicatedInstances)}]
+        return dict(instance=path(actor),active=bool(actor.get_property('bIsActive')),
+            active_tasks=len(actor.get_property('ActiveTasks')),spec_active_counts=specs)
     def write(self):atomic_write(self.path,self.report)
     def select(self,obj):
         if obj not in self.saved_profiles:self.saved_profiles[obj]=ue.get_mixin_profile(obj);ue.set_mixin_profile(obj,self.profile)
@@ -116,9 +121,11 @@ class Validation:
         require(all(r['passed'] for r in acks.values()),'native client case failed')
         active=[a for a in self.action_instances if sum(delta(a,actions,self.before_actions[path(a)])[p+'_activate'] for p in ('python','fallback'))]
         if not active or any(a.get_property('bIsActive') or a.get_property('ActiveTasks') for a in active):return
+        completion=[self.native_action_state(a) for a in active]
+        if any(row['spec_active_counts']!=[0] for row in completion):return
         if self.kind=='collect' and valid(self.target):return
         foreign=PEERS[1-PEERS.index(self.owner)]
-        row=dict(self.packet,role=int(self.pawn.call_function('GetLocalRole')),pawn=path(self.pawn),events=copy.deepcopy(self.events[self.events_before:]),action_deltas=[delta(a,actions,self.before_actions[path(a)]) for a in active],
+        row=dict(self.packet,role=int(self.pawn.call_function('GetLocalRole')),pawn=path(self.pawn),events=copy.deepcopy(self.events[self.events_before:]),native_completion=completion,action_deltas=[delta(a,actions,self.before_actions[path(a)]) for a in active],
             native_tasks_closed=True,inventory_before=self.before[self.owner],inventory_after=self.inventory(self.current),other_inventory_before=self.before[foreign],other_inventory_after=self.inventory(self.owners[foreign]),duration_delta=len(self.durations)-self.messages_before,
             target_expired=not valid(self.target),target_preserved=valid(self.target) and self.target.call_function('GetActorEnableCollision') and self.target.call_function('GetLifeSpan')==0.)
         self.report['cases'].append(row)
@@ -167,9 +174,11 @@ class Validation:
             if time.monotonic()-self.press_time<3.5 or not self.progress_completed:return
             active=[a for a in self.action_instances if sum(delta(a,actions,self.before_actions[path(a)])[p+'_activate'] for p in ('python','fallback'))]
             if not active or any(a.get_property('bIsActive') or a.get_property('ActiveTasks') for a in active):return
+            completion=[self.native_action_state(a) for a in active]
+            if any(row['spec_active_counts']!=[0] for row in completion):return
             expected=expected_inventory(self.before_inventory,packet['pickup_templates']) if kind=='collect' else self.before_inventory
             if self.inventory(self.pc)!=expected:return
-            row=dict(packet,passed=True,pawn=path(self.pawn),role=int(self.pawn.call_function('GetLocalRole')),events=copy.deepcopy(self.events[self.events_before:]),
+            row=dict(packet,passed=True,pawn=path(self.pawn),role=int(self.pawn.call_function('GetLocalRole')),events=copy.deepcopy(self.events[self.events_before:]),native_completion=completion,
                 action_deltas=[delta(a,actions,self.before_actions[path(a)]) for a in active],native_tasks_closed=True,input_asset=path(self.input_asset),
                 interactor_press_deltas=[delta(a,interact,self.before_interact[path(a)]) for a in self.interactors],duration_delta=len(self.durations)-self.messages_before,durations=copy.deepcopy(self.durations[self.messages_before:]),
                 inventory_before=self.before_inventory,inventory_after=self.inventory(self.pc),progress_matched_original=self.matched,progress_completed=self.progress_completed)

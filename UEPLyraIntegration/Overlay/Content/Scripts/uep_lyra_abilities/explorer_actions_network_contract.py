@@ -16,6 +16,17 @@ def expected_inventory(before,templates):
     for row in templates:result[row['definition']]=result.get(row['definition'],0)+row['count']
     return result
 
+def action_completion(row,prefix,other,role):
+    require(len(row['action_deltas'])==1 and all(d[prefix+'_activate']==1 and d[other+'_activate']==0 and
+        d[other+'_end']==0 and d[prefix+'_end'] in ((0,1) if role==3 else (1,)) for d in row['action_deltas']),
+        'selected action activation/client montage completion differs')
+    start=row['events'][0]['native_start'];completion=row['native_completion']
+    require(start['instance']==row['events'][0]['instance'] and start['active'] is True and len(start['spec_active_counts'])==1,
+        'actual active native action/spec at entry required')
+    require(len(completion)==1 and completion[0]['instance']==start['instance'] and completion[0]['active'] is False and
+        completion[0]['active_tasks']==0 and completion[0]['spec_active_counts']==[0],
+        'exact native action/spec must become inactive with no tasks')
+
 def validate(reports):
     require(set(reports)=={'server',*PEERS},'server and two actual clients required')
     profile=reports['server']['profile'];require(profile in PROFILES,'unsupported action profile')
@@ -35,7 +46,7 @@ def validate(reports):
         for row,role in ((authority,3),(client,2)):
             require(row['role']==role and row['target_class']==TARGETS[kind],'native target/authority role differs')
             require(len(row['events'])==1 and row['events'][0]['authority']==(role==3) and row['events'][0]['instigator']==row['pawn'] and row['events'][0]['target']==row['target'],'native GAS entry payload/role missing')
-            require(len(row['action_deltas'])==1 and all(d[prefix+'_activate']==1 and d[other+'_activate']==0 and d[prefix+'_end']==1 and d[other+'_end']==0 for d in row['action_deltas']),'selected action profile was not executed exactly once')
+            action_completion(row,prefix,other,role)
             require(row['native_tasks_closed'],'native action task survived completion')
         if profile=='Python':
             require(client['action_deltas'][0]['client']==1 and client['action_deltas'][0]['native_duration_messages']==1 and authority['action_deltas'][0]['authority']==1 and authority['action_deltas'][0]['client']==0,'actual predicted/authority Python branch missing')

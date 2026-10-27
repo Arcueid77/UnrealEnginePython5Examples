@@ -13,7 +13,7 @@
   "scope_review_candidates": 11,
   "scope": "Runtime BP business only; retain animation, editor/test utilities, interfaces and data/layout shells. Engine/general-purpose plugin C++ remains native; game-project C++ is a later phase.",
   "counts_are_static_candidates": true,
-  "migration_complete": false,
+  "migration_complete": true,
   "accepted_batch_commit_workflow": {
     "review_date": "2026-10-16",
     "cadence": "modify, verify affected tests in isolated indexes, commit one coherent bounded batch, then push Demos/Examples followed by core",
@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 276,
+    "bounded_evidence_ledgers": 277,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -16825,5 +16825,50 @@
     "cook_package_executed": false,
     "rc_tag_or_release_created": false,
     "full_migration_acceptance_proven": false
+  },
+  "experience_acceptance_evidence": {
+    "status": "original_014_explorer_arena_criterion_accepted",
+    "criterion": "Both Experiences pass original-BP/Python gameplay, presentation and applicable multi-client/local-player comparisons.",
+    "evidence_ledger": "275-original-explorer-arena-and-final-migration-acceptance.json",
+    "completion_proven": true,
+    "original_candidates": 40,
+    "current_comparison_pairs": 6,
+    "current_accepted_native_processes": 16,
+    "reused_original_component_records": 49,
+    "reused_shared_cue_parent_records": 1,
+    "directly_reviewed_native_images": 6,
+    "selected_host_checks": 33,
+    "exact_index_ps_checks": 16,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false
+  },
+  "original_migration_acceptance": {
+    "status": "accepted",
+    "evidence_ledger": "275-original-explorer-arena-and-final-migration-acceptance.json",
+    "completion_proven": true,
+    "runtime_candidates": 246,
+    "configuration_only": 182,
+    "retained": 63,
+    "scope_review_candidates": 11,
+    "original_requirements": 22,
+    "requirements_proven": 22,
+    "versions": [
+      "0.9.0",
+      "0.10.0",
+      "0.11.0",
+      "0.12.0",
+      "0.13.0",
+      "0.14.0"
+    ],
+    "platform": "Win64",
+    "configuration": "Development",
+    "engine": "UE5.8",
+    "python": "CPython3.11",
+    "isolated_lyra_hero_guard_required": true,
+    "official_lyra_unchanged": true,
+    "full_migration_acceptance_proven": true,
+    "fresh_full_migration_regression_executed": false,
+    "publication_or_rc_tag_created": false,
+    "scope_note": "All original criteria accepted by source-bound incremental evidence. Historical per-capture limitation flags retain their original meaning;other platforms/configurations and game-project C++ migration stay separate."
   }
 }

@@ -1,9 +1,11 @@
 """Index original migration requirements; candidate status is never acceptance proof."""
 import argparse
+import copy
 import hashlib
 import json
 from pathlib import Path
 import re
+import subprocess
 
 COUNTS = (246, 182, 63, 11)
 VERSIONS = {'0.9.0': 5, '0.10.0': 32, '0.11.0': 37, '0.12.0': 75, '0.13.0': 57, '0.14.0': 40}
@@ -58,7 +60,7 @@ def unverified(value, path=''):
     return result
 
 
-def inspect(current, original, roadmap, *, acceptance_directory):
+def inspect(current, original, roadmap, *, acceptance_directory, defer_declared_completion=False):
     counts = tuple(current[k] for k in ('runtime_candidates', 'configuration_only', 'retained', 'scope_review_candidates'))
     if counts != COUNTS:
         raise ValueError('original static scope changed')
@@ -70,7 +72,7 @@ def inspect(current, original, roadmap, *, acceptance_directory):
         raise ValueError('original version assignment counts changed')
     if [row['version'] for row in current['assets']] != [row['version'] for row in original['assets']]:
         raise ValueError('original candidate version assignments changed')
-    if current.get('migration_complete') is not False:
+    if current.get('migration_complete') is not False and not defer_declared_completion:
         raise ValueError('full migration completion is not proven by this index')
     checklists = requirements(roadmap)
     if set(row['version'] for row in checklists) != set(VERSIONS):
@@ -310,6 +312,74 @@ def attach_rc_api_review(report,current,initial,repo,path):
     report['rc_api_review']=verified;report['inputs'].append(dict(path=str(path.resolve()),sha256=digest(path)))
 
 
+def attach_experience_review(report,current,initial,repo,path):
+    from audit_experience_acceptance import REQUIREMENT,verify_documentation
+    path=Path(path);verified=verify_documentation(json.loads(path.read_text(encoding='utf-8-sig')),current,initial,repo)
+    targets=[row for row in report['requirements'] if row['version']=='0.14.0' and row['text']==REQUIREMENT]
+    if len(targets)!=1:raise ValueError('Exact original two-Experience requirement required')
+    targets[0].update(completion_proven=True,evidence_state='all_original_explorer_arena_components_and_current_native_bp_python_player_comparisons_verified',
+        evidence_artifact=str(path.resolve()),full_migration_acceptance_proven=False)
+    report['experience_review']=verified;report['inputs'].append(dict(path=str(path.resolve()),sha256=digest(path)))
+
+
+def complete_original_scope(report):
+    if len(report['requirements'])!=22 or not all(r['completion_proven'] for r in report['requirements']):
+        raise ValueError('All twenty-two original requirements need explicit verified evidence')
+    if len(report['candidate_rows'])!=246 or report['candidate_rows_not_accepted']!=0:
+        raise ValueError('Exact original candidate inventory and dispositions required')
+    for row in report['candidate_rows']:
+        row.update(completion_proven=True,evidence_semantics_verified_by_this_audit=True,
+            acceptance_basis='Original version criteria plus explicit migrated/retained source disposition;bounded native evidence may be reused')
+    report.update(status='original_scope_accepted',full_migration_acceptance_proven=True,
+        completion_scope='Original246 candidates and22 checklist criteria,UE5.8/CPython3.11 Win64 Development',
+        release_publication=False,rc_tag_created=False,
+        next_evidence_task='Original agreed Python replacement scope is accepted. Other platforms/configurations,broader native C++ migration and publication remain separate work.')
+
+
+def git_text_snapshot_matches(blob,expected):
+    text=blob.decode('utf-8-sig').replace('\r\n','\n')
+    variants=[bom+value.encode('utf-8') for value in (text,text.replace('\n','\r\n')) for bom in (b'',b'\xef\xbb\xbf')]
+    return expected.lower() in {hashlib.sha256(value).hexdigest() for value in variants}
+
+
+def reuse_verified_baseline(report,current,path,repo):
+    """Reuse accepted criteria only across an exact, bounded source delta."""
+    repo=Path(repo);path=Path(path);baseline=json.loads(path.read_text(encoding='utf-8-sig'))
+    if len(baseline['requirements'])!=22 or sum(r['completion_proven'] for r in baseline['requirements'])!=21:
+        raise ValueError('The previously verified twenty-one original criteria are required')
+    if [(r['version'],r['text']) for r in report['requirements']]!=[(r['version'],r['text']) for r in baseline['requirements']] or report['candidate_rows']!=baseline['candidate_rows']:
+        raise ValueError('Original requirements/candidate index differs from accepted baseline')
+    revisions=baseline['source_revisions'];manifest=repo/'Demos/UEPLyraIntegration/Migration/batches.json'
+    def git(cwd,*args):return subprocess.check_output(['git',*args],cwd=cwd)
+    blob=git(repo/'Demos','show',revisions['examples']+':UEPLyraIntegration/Migration/batches.json')
+    manifest_pins=[r for r in baseline['inputs'] if Path(r['path']).resolve()==manifest.resolve()]
+    if len(manifest_pins)!=1 or not git_text_snapshot_matches(blob,manifest_pins[0]['sha256']):
+        raise ValueError('Accepted manifest Git snapshot does not match its native review index')
+    before=json.loads(blob.decode('utf-8-sig'));after=copy.deepcopy(current)
+    for value in (before,after):
+        for name in ('migration_complete','original_migration_acceptance','experience_acceptance_evidence'):value.pop(name,None)
+        value['accepted_batch_commit_workflow'].pop('bounded_evidence_ledgers',None)
+    if before!=after:raise ValueError('Manifest changed beyond final acceptance metadata')
+    for row in baseline['inputs']:
+        if Path(row['path']).resolve()!=manifest.resolve() and digest(row['path'])!=row['sha256'].lower():
+            raise ValueError('Previously accepted evidence input changed: '+row['path'])
+    allowed={'UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/explorer_actions_network_validation.py',
+             'UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/explorer_actions_network_contract.py'}
+    changed=set(git(repo/'Demos','diff','--name-only',revisions['examples'],'--','UEPLyraIntegration/Overlay').decode().splitlines())
+    if changed-allowed or git(repo,'diff','--name-only',revisions['core'],'--','Source','Content').strip():
+        raise ValueError('Production source/asset delta requires an affected criterion review')
+    for cwd,paths in ((repo,('Source','Content')),(repo/'Demos',('UEPLyraIntegration/Overlay',))):
+        if git(cwd,'ls-files','--others','--exclude-standard','--',*paths).strip():
+            raise ValueError('Untracked production source/asset is outside the accepted delta')
+    result=copy.deepcopy(baseline);result['inputs']=[dict(row,sha256=digest(manifest)) if Path(row['path']).resolve()==manifest.resolve() else row for row in result['inputs']]
+    result['inputs'].append(dict(path=str(path.resolve()),sha256=digest(path)))
+    result['previous_verified_baseline']=dict(path=str(path.resolve()),sha256=digest(path),source_revisions=revisions,
+        previous_accepted_criteria_retained=21,changed_runtime_test_modules=sorted(changed),production_source_or_asset_changed=False,
+        git_manifest_blob_sha256=hashlib.sha256(blob).hexdigest(),native_manifest_sha256=manifest_pins[0]['sha256'],
+        manifest_git_checkout_equivalence='exact text with only LF/CRLF or UTF-8 BOM conversion allowed')
+    return result
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--manifest', required=True)
@@ -338,14 +408,20 @@ def main():
     parser.add_argument('--batch1a-review',help='Recheck five directly reviewed original/Python weapon views over the native two-client producer')
     parser.add_argument('--candidate-matrix-review',help='Aggregate source-bound original 0.9 Generic, both Third Person and Lyra candidate cells')
     parser.add_argument('--rc-api-review',help='Review supported API inventory, registration compatibility and explicit native-game correctness boundaries for RC freeze')
+    parser.add_argument('--experience-review',help='Review exact original Explorer/Arena components and current native original/Python player comparisons')
+    parser.add_argument('--accepted-baseline',help='Reuse the exact prior21 accepted criteria only after input hashes,Git source delta and metadata-only manifest changes are verified')
+    parser.add_argument('--complete-original-scope',action='store_true',help='Finalize only after all22 original criteria have explicit verified evidence')
     args = parser.parse_args()
     manifest = Path(args.manifest)
     current = json.loads(manifest.read_text(encoding='utf-8-sig'))
     initial = json.loads(Path(args.original_inventory).read_text(encoding='utf-8-sig'))
     report = inspect(current, initial,
-        Path(args.roadmap).read_text(encoding='utf-8-sig'), acceptance_directory=manifest.parent/'Acceptance')
+        Path(args.roadmap).read_text(encoding='utf-8-sig'), acceptance_directory=manifest.parent/'Acceptance',
+        defer_declared_completion=bool(args.accepted_baseline and args.experience_review and args.complete_original_scope))
     report['inputs'] = [dict(path=str(Path(p).resolve()), sha256=digest(p))
                         for p in (args.manifest, args.original_inventory, args.roadmap)]
+    if args.accepted_baseline:
+        report=reuse_verified_baseline(report,current,args.accepted_baseline,manifest.resolve().parents[3])
     if args.static_scope_review:
         from audit_static_scope_dispositions import verify_documentation
         path = Path(args.static_scope_review)
@@ -408,13 +484,17 @@ def main():
         attach_candidate_matrix_review(report,current,initial,manifest.resolve().parents[3],args.candidate_matrix_review)
     if args.rc_api_review:
         attach_rc_api_review(report,current,initial,manifest.resolve().parents[3],args.rc_api_review)
+    if args.experience_review:
+        attach_experience_review(report,current,initial,manifest.resolve().parents[3],args.experience_review)
+    if args.complete_original_scope:
+        complete_original_scope(report)
     Path(args.result).write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     if args.markdown:
         Path(args.markdown).write_text(markdown(report), encoding='utf-8')
     print(json.dumps(dict(status=report['status'], candidates=len(report['candidate_rows']),
         requirements=len(report['requirements']), requirements_proven=sum(r['completion_proven'] for r in report['requirements']),
         explicitly_unverified=len(report['explicit_unverified_capabilities']),
-        full_migration_acceptance_proven=False)))
+        full_migration_acceptance_proven=report['full_migration_acceptance_proven'])))
 
 
 if __name__ == '__main__':

@@ -1,8 +1,9 @@
 # Migration acceptance review
 
 The original 246 candidate paths, order and version assignments are preserved.
-Zero `not_accepted` rows records bounded dispositions; full migration acceptance remains unproven.
-This index does not execute or semantically revalidate the referenced runtime evidence.
+The original scope is accepted:22/22 criteria and246 candidate dispositions.
+Acceptance combines source-bound prior native evidence and current affected integration runs;it is not a new full regression.
+Scope:UE5.8/CPython3.11 Win64 Development;approved isolated Lyra Hero guard required.
 
 | Version | Original candidates | Checklist requirements |
 | --- | ---: | ---: |
@@ -34,7 +35,7 @@ This index does not execute or semantically revalidate the referenced runtime ev
 - `0.13.0` — Navigation, focus/back behavior, settings persistence, session results and replay controls pass original-BP/Python comparisons. (ROADMAP.md:1737; native_navigation_settings_sessions_replay_comparisons_and_current_sources_verified).
 - `0.13.0` — Repeated screen open/close and travel restore subscriptions and state. (ROADMAP.md:1739; paired_native_reopen_travel_state_and_callback_restoration_verified).
 - `0.13.0` — Failures/cancellations are tested, not accepted only on the success path. (ROADMAP.md:1740; native_ui_failure_and_cancellation_evidence_and_current_source_verified).
-- `0.14.0` — Both Experiences pass original-BP/Python gameplay, presentation and applicable multi-client/local-player comparisons. (ROADMAP.md:1751; unproven).
+- `0.14.0` — Both Experiences pass original-BP/Python gameplay, presentation and applicable multi-client/local-player comparisons. (ROADMAP.md:1751; all_original_explorer_arena_components_and_current_native_bp_python_player_comparisons_verified).
 - `0.14.0` — Every audited candidate is migrated, explicitly retained, unreachable with checked references, or a named blocker; no silent coverage gaps remain. (ROADMAP.md:1753; current_candidate_source_binding_retention_and_named_issue_dispositions_verified).
 - `0.14.0` — Configuration-only BP shells and animation/editor/test exclusions have documented reasons. Game-project C++ migration stays a separate phase. (ROADMAP.md:1755; per_asset_reasons_and_current_reference_stage_copies_verified).
 
@@ -216,7 +217,7 @@ These are recorded flags requiring requirement and platform review, not automati
 
 ## Next evidence work
 
-Complete the original0.14 Explorer/TopDownArena gameplay,presentation and applicable multi-client/local-player comparisons. All seven original0.9 criteria are accepted within their explicit Win64 Development scope;no tag or publication is authorized.
+Original agreed Python replacement scope is accepted. Other platforms/configurations,broader native C++ migration and publication remain separate work.
 
 Recorded capabilities still need their linked semantic/source evidence reviewed; this index
 does not rerun them. Continue unresolved readiness observations and the original version scope.
@@ -345,3 +346,43 @@ API after these dispositions. Unknown defects are not certified absent.
 Twenty immutable-index checks pass;no new native process,build,cook,tag or release.
 Full original0.14 Explorer/TopDownArena acceptance remains open. Preserve original
 246 paths/22 texts,prior20 accepted criteria,official source and unrelated dirt.
+
+## Final original-scope acceptance (batch275)
+
+**Original migration scope accepted batch275 (2026-10-28):22/22,246 candidates.**
+All original0.9-0.14 criteria are accepted within UE5.8/CPython3.11 Win64 Development.
+Keep491 original audited assets,246 candidate paths/order/versions,182 configuration
+shells,63 retained assets and eleven scope reviews unchanged. This accepts the
+agreed Python replacement scope;other platforms/configurations,broader native
+game-C++ migration,RC tags and publication remain separate.
+
+The final0.14 criterion covers all forty Explorer/TopDownArena candidates.
+Recheck49 original component captures plus the shared GetReady Cue parent against
+current production code and raw semantic reports. Six current original/Python
+integration pairs pass:inventory menus,placed interactions,follow/navigation/
+cancel/travel,two-client predicted collect/sit,two-local-player variable-frame
+natural bombs/death/refund/HUD,and opponent death/kill/team attribution. All16
+accepted native processes exit0. Six actual Arena images show owner0 bomb1->0->1
+while owner1 stays1. Retain native debug/warning text and death-transition blur.
+
+Preserve five earlier network groups:one earlier positive group and four failed
+groups,15 processes in total;31 new UE processes including final16. The first
+Python failure is an overspecified server local-montage end counter. The shared
+reader correction preserves a Windows sharing-violation interruption. Exact
+callback/native-end-observer waits fail within the unchanged70-second phase bound
+and remain preserved. Final evidence observes the same native ability active at
+entry,then inactive with spec count0/no tasks;client montage completion stays
+required. Original/Python authoritative pickup,owner replication,progress and
+cleanup outcomes agree. No generic native C++ event interception is claimed.
+
+Preserve the initial SDK-status and quoted-helper-root prelaunch failures.
+Controls use SDK236,bind helper paths through an explicit variable,and use the
+existing shared JSON reader for the network monitor. Archive exact retired test/
+control inputs;only the two named test modules and wrapper may use them. No
+production policy,asset,normal bootstrap,C++ source,build or cook changes occur.
+Thirty-three immutable-index Python checks and sixteen exact-index PS control checks
+pass. Reuse the previous21 criteria only after their inputs,Git production delta,
+original inventory and metadata-only manifest changes verify. Promote all22
+criteria and246 candidate dispositions together. Historical per-capture scope
+limits remain intact. Official Lyra stays unchanged;the approved isolated Hero
+guard246 remains required. All six unrelated modified files are preserved.
