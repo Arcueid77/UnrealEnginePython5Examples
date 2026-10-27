@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 269,
+    "bounded_evidence_ledgers": 270,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -16682,6 +16682,29 @@
     "original_candidate_regression_criterion_proven": false,
     "cpp_compile_executed": false,
     "cook_package_executed": false,
+    "full_acceptance": false,
+    "generic_packaged_gap_superseded_by": "268-current-generic-game-package-and-clean-six-suite70.json"
+  },
+  "current_generic_core_candidate_evidence": {
+    "status": "current_generic_win64_development_game_package_and_clean_six_suite70_verified_full_candidate_open",
+    "evidence_ledger": "268-current-generic-game-package-and-clean-six-suite70.json",
+    "candidate_matrix": "candidate_editor_regression_matrix.json",
+    "original_core_suites": 6,
+    "original_core_checks": 70,
+    "clean_six_suite_gate": true,
+    "current_packaged_core_checks": 21,
+    "unverified_generic_packaged_core_checks": 0,
+    "compiler_actions": 948,
+    "link_actions": 1,
+    "metadata_actions": 1,
+    "compiler_diagnostics": 0,
+    "selected_host_checks": 6,
+    "driver_parse_checks": 1,
+    "invalid_preflight_checks": 3,
+    "requirements_proven": 16,
+    "original_requirements": 22,
+    "original_full_candidate_requirement_proven": false,
+    "full_migration_regression_executed": false,
     "full_acceptance": false
   }
 }

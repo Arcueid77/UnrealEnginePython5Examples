@@ -216,7 +216,7 @@ These are recorded flags requiring requirement and platform review, not automati
 
 ## Next evidence work
 
-Obtain actual current-source Generic Win64 Development packaged21 core checks;then finish the complete candidate regression and remaining original0.9/0.14 requirements.
+Review the independent current Third Person and Lyra full-candidate/package boundaries and the remaining original0.9/0.14 criteria. Generic packaged21 and its clean six-suite70 gate are verified.
 
 Recorded capabilities still need their linked semantic/source evidence reviewed; this index
 does not rerun them. Continue unresolved readiness observations and the original version scope.
@@ -230,3 +230,13 @@ candidate regression requirement stays unproven. See
 `candidate_editor_regression_matrix.json` and ledger267 for passed components,
 preserved failed captures,exact input archives and unchanged preexisting assets.
 Original acceptance stays16/22. No compile/link,cook/package or full regression.
+
+## Current Generic core candidate (batch268)
+
+The actual packaged Game passes21 and a single clean candidate run then passes
+all six original Generic suites70/70. This supersedes the Generic packaged gap
+recorded in batch267;that earlier capture remains historical. The independent
+Third Person/Lyra candidate/package boundaries and other original requirements
+stay open. Original acceptance remains16/22. See ledger268 and the updated
+candidate matrix for the cold Game build,versioned Entry-only package,failed
+wrapper evidence and exact runtime/source/artifact fingerprints.

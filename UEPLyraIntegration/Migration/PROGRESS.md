@@ -31,6 +31,36 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed current Generic packaged and clean six-suite core gate batch268 (2026-10-28):**
+The actual archived Generic Game passes packaged21,and CleanCandidate01 then
+passes all six original suites70/70 in one clean candidate run. Its existing
+Editor binaries and verified Game package are reused;the clean run does not
+compile or cook. Expected exception exits1 require exact recovery/shutdown
+evidence. Broader Third Person/Lyra candidate and remaining criteria stay open;
+original migration acceptance remains16/22.
+
+The unchanged original Generic Game target lacked a current5.8.1 cache. A guarded
+plan shows all950 produced-action paths inside the owned project. Build02 runs
+948 compile actions,one link and one metadata action at parallel2,exits0 in
+3872.613 seconds with zero compiler diagnostics. No C++ source is changed.
+Preserve the before-native optional-library preflight failure and exact control.
+The real Game exe SHA646BB56A3F690AB079DB3568764E315E186D2C6C7F6CE03BCE9F4995471B3B8E
+is identical in the archive and build receipt.
+
+Package01 Cook/Pak/archive exits0 but its wrapper remains failed before runtime:
+UAT has no separate Pak completion marker. Preserve all artifacts and old driver
+bytes. Correct phase verification and select versioned incremental cooking to
+remove the concrete unversioned serialization warning. Package02 cooks only
+Entry,skips native build,archives successfully and runs real Game PID37948,
+which exits0 and passes21. CleanCandidate01's six runtime PIDs15456,18100,35592,
+11704,34612 and9172 pass21/21/1/1/5/21 with no missing or skipped original case.
+
+Six new pure-gate checks plus one parser and three invalid-input checks pass.
+The explicit full-regression scope is Generic Win64 Development core only;
+no full migration regression or publication claim. All246 original candidate
+paths/order/versions and22 original checklist texts remain intact. Official
+Lyra,the isolated initialization guard/binaries and unrelated files are kept.
+
 **Completed bounded current Editor candidate components batch267 (2026-10-28):**
 ThirdPerson01 refreshes both rendered native-input variants against SDK236,
 using existing binaries and project-owned metadata only. Mixin PID4068 and

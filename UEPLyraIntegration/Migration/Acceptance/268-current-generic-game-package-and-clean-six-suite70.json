@@ -1,0 +1,287 @@
+{
+  "schema_version": 1,
+  "batch": 268,
+  "recorded_utc": "2026-10-27T17:50:49.304549+00:00",
+  "status": "current_generic_win64_development_game_package_and_clean_six_suite70_verified_full_candidate_open",
+  "core_parent_commit": "44c39e130762dbb28aa55a917276923e35757ce5",
+  "examples_parent_commit": "438d31274fe78c23fa9def96544f2030cd98e3b3",
+  "native_review": {
+    "status": "passed",
+    "scope": "Original Generic Win64 Development UE5.8.1 CPython3.11 six-suite core gate",
+    "complete_six_suite_core_gate": true,
+    "original_generic_core_checks": 70,
+    "clean_candidate": {
+      "directory": ".build/LyraValidation/BlueprintPython/20261028-generic-packaged-core/CleanCandidate01",
+      "summary_sha256": "226CE279A8FE24C79EB84A6D5ECF1C9E487E8A743AF439A7D210532665DF1043",
+      "editor_summary_sha256": "DD5544966CD1E9528E65243A448DFDF6B001F535237D33EBD4BC53DA45734F91",
+      "suites": [
+        {
+          "name": "core-shared",
+          "pid": 15456,
+          "exit_code": 0,
+          "checks": 21,
+          "report_sha256": "84852792162FABF5F5714A25CCBB5B234AEDA0B665021949CC0B0C37B1C75F6A",
+          "log_sha256": "56B8B7E5176A90692B6C66D185F5E19B1D9B1A9C1DF9AE728C8020EB8B0C3509",
+          "source_summary": "CleanCandidate01/Editor/summary.json"
+        },
+        {
+          "name": "core-standalone",
+          "pid": 18100,
+          "exit_code": 0,
+          "checks": 21,
+          "report_sha256": "443FD2BF5806800374E2A73B29CDBABB2FF9426B79D3A823927D83756F44E052",
+          "log_sha256": "ED1B5BD12D63BBB24E40E2DDAF2F097F51792A8C1416CB714CA99E0A6304C1CC",
+          "source_summary": "CleanCandidate01/Editor/summary.json"
+        },
+        {
+          "name": "exception-shared",
+          "pid": 35592,
+          "exit_code": 1,
+          "checks": 1,
+          "report_sha256": "393CC0F3C80B245C4B2E2600755BD20848016FEC6B8422BCB978ADBB2B3119D7",
+          "log_sha256": "C41D32E5E9C9CABDB2308F638163805574AD098B06B1DFC3438B44BFDFCD4DC4",
+          "source_summary": "CleanCandidate01/Editor/summary.json"
+        },
+        {
+          "name": "exception-standalone",
+          "pid": 11704,
+          "exit_code": 1,
+          "checks": 1,
+          "report_sha256": "94CC5E9DBCF772140E0F946404259ADDC4355C17B224817D423672963BB450E5",
+          "log_sha256": "C87CE26FF60F54613EDAFCEF5602B6E5BC9732A7414C64FA1E2B3E3FD3264CAF",
+          "source_summary": "CleanCandidate01/Editor/summary.json"
+        },
+        {
+          "name": "editor",
+          "pid": 34612,
+          "exit_code": 0,
+          "checks": 5,
+          "report_sha256": "70380EF16F365501F6965072436B2665E0265552CE7DA2EF805D0F92C09EFD97",
+          "log_sha256": "BE1D5EFF1FE4947E96312AB71B4281B32F631983B0DB9EFDBAE0A56A5FFDCC20",
+          "source_summary": "CleanCandidate01/Editor/summary.json"
+        },
+        {
+          "name": "packaged",
+          "pid": 9172,
+          "exit_code": 0,
+          "checks": 21,
+          "report_sha256": "00DB6DB5340158C9D7C1298E276C5E9894A9A34065BBE40A84A01104F184D4A2",
+          "log_sha256": "F481B2160F7873D6E9345DC226030991795C773F751514670154B85E46C6A486",
+          "source_summary": "CleanCandidate01/summary.json"
+        }
+      ]
+    },
+    "game_build": {
+      "directory": ".build/LyraValidation/BlueprintPython/20261028-generic-packaged-core/Build02",
+      "summary_sha256": "EBA6DC082B6A1A5F0FD46B8B219E53EFBABA56AC064EF146CD2400DBA7CD5385",
+      "process": {
+        "stderr": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261028-generic-packaged-core\\Build02\\build-stderr.log",
+        "environment_names": [
+          "TEMP",
+          "TMP",
+          "LIB"
+        ],
+        "name": "Current Generic Game target",
+        "stdout": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261028-generic-packaged-core\\Build02\\build-stdout.log",
+        "executable": "F:/UnrealEngine/Engine/Binaries/ThirdParty/DotNet/10.0/win-x64/dotnet.exe",
+        "pid": 14532,
+        "arguments": [
+          "F:/UnrealEngine/Engine/Binaries/DotNET/UnrealBuildTool/UnrealBuildTool.dll",
+          "UEP58Host",
+          "Win64",
+          "Development",
+          "-Project=F:\\UnrealEnginePython5\\.build\\Validation\\UEP58Host/UEP58Host.uproject",
+          "-NoEngineChanges",
+          "-NoHotReload",
+          "-NoUBA",
+          "-MaxParallelActions=2",
+          "-Log=F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261028-generic-packaged-core\\Build02/build.log"
+        ],
+        "exit_code": 0,
+        "duration_seconds": 3872.613
+      },
+      "compiler_actions": 948,
+      "link_actions": 1,
+      "metadata_actions": 1,
+      "compiler_diagnostics": 0,
+      "all_produced_paths_inside_owned_project": true,
+      "products": [
+        {
+          "path": "F:\\UnrealEnginePython5\\.build\\Validation\\UEP58Host\\Binaries\\Win64\\UEP58Host.exe",
+          "sha256": "646BB56A3F690AB079DB3568764E315E186D2C6C7F6CE03BCE9F4995471B3B8E"
+        },
+        {
+          "path": "F:\\UnrealEnginePython5\\.build\\Validation\\UEP58Host\\Binaries\\Win64\\UEP58Host.target",
+          "sha256": "15CF6E78B3EB75F1D851A97A2085C8707B11BC888EC9D64306172C4316A396DF"
+        }
+      ]
+    },
+    "package": {
+      "directory": ".build/LyraValidation/BlueprintPython/20261028-generic-packaged-core/Package02",
+      "summary_sha256": "CBF8F6366C8E0E4BE264676B99960FCCA4C5A05BD520D55EC454AA1EEC4AD27E",
+      "cook_process": {
+        "exit_code": 0,
+        "executable": "F:\\UnrealEngine\\Engine\\Binaries\\ThirdParty\\DotNet\\10.0\\win-x64\\dotnet.exe",
+        "name": "Generic Entry cook/stage/archive without rebuild",
+        "pid": 25904,
+        "stdout": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261028-generic-packaged-core\\Package02\\cook-stdout.log",
+        "stderr": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261028-generic-packaged-core\\Package02\\cook-stderr.log",
+        "environment_names": [
+          "uebp_LogFolder",
+          "uebp_FinalLogFolder"
+        ],
+        "duration_seconds": 49.994,
+        "arguments": [
+          "F:\\UnrealEngine\\Engine\\Binaries\\DotNET\\AutomationTool\\AutomationTool.dll",
+          "BuildCookRun",
+          "-project=F:\\UnrealEnginePython5\\.build\\Validation\\UEP58Host\\UEP58Host.uproject",
+          "-noP4",
+          "-utf8output",
+          "-WaitForUATMutex",
+          "-unattended",
+          "-nocompileuat",
+          "-nocompileeditor",
+          "-skipbuild",
+          "-platform=Win64",
+          "-clientconfig=Development",
+          "-target=UEP58Host",
+          "-ubtargs=-NoEngineChanges -NoUBA -MaxParallelActions=2",
+          "-cook",
+          "-iterate",
+          "-VersionCookedContent",
+          "-stage",
+          "-pak",
+          "-archive",
+          "-archivedirectory=F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261028-generic-packaged-core\\Package02\\Archive",
+          "-map=/Engine/Maps/Entry",
+          "-AdditionalCookerOptions=-DisablePlugins=AndroidFileServer -SkipZenStore",
+          "-nodebuginfo"
+        ]
+      },
+      "baseline_runtime_process": {
+        "exit_code": 0,
+        "executable": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261028-generic-packaged-core\\Package02\\Archive\\Windows\\UEP58Host\\Binaries\\Win64\\UEP58Host.exe",
+        "name": "Actual packaged core21",
+        "pid": 37948,
+        "stdout": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261028-generic-packaged-core\\Package02\\packaged-stdout.log",
+        "stderr": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261028-generic-packaged-core\\Package02\\packaged-stderr.log",
+        "environment_names": [],
+        "duration_seconds": 2.423,
+        "arguments": [
+          "-unattended",
+          "-nop4",
+          "-NullRHI",
+          "-NoSound",
+          "-NoSplash",
+          "-UTF8Output",
+          "-DisablePython",
+          "-DisablePlugins=AndroidFileServer,UdpMessaging,TcpMessaging",
+          "-notraceserver",
+          "-trace=none",
+          "-basedir=F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261028-generic-packaged-core\\Package02\\Archive\\Windows\\UEP58Host\\Binaries\\Win64",
+          "-UEPValidationScript=F:\\UnrealEnginePython5\\Validation\\UEP58Host\\Tests\\core_validation.py",
+          "-UEPValidationMode=packaged",
+          "-UEPValidationResult=F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261028-generic-packaged-core\\Package02\\packaged.json",
+          "-abslog=F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261028-generic-packaged-core\\Package02\\packaged.log"
+        ]
+      },
+      "baseline_gate": {
+        "status": "passed",
+        "suite": "core",
+        "mode": "packaged",
+        "checks": 21,
+        "packaged_runtime": true,
+        "native_exit_code": 0,
+        "complete_six_suite_gate": false,
+        "full_candidate_regression_requirement_proven": false
+      },
+      "products": [
+        {
+          "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261028-generic-packaged-core\\Package02\\Archive\\Windows\\UEP58Host\\Binaries\\Win64\\UEP58Host.exe",
+          "sha256": "646BB56A3F690AB079DB3568764E315E186D2C6C7F6CE03BCE9F4995471B3B8E"
+        },
+        {
+          "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261028-generic-packaged-core\\Package02\\Archive\\Windows\\UEP58Host\\Content\\Paks\\UEP58Host-Windows.pak",
+          "sha256": "FBA69C5153C9A7B12612BFE5F160D82A8D6288671FFED1BEEE1251B629CD1D85"
+        }
+      ],
+      "versioned_cooked_content": true,
+      "cook_map": "/Engine/Maps/Entry",
+      "native_rebuild_skipped": true
+    },
+    "preserved_failed_package": {
+      "directory": ".build/LyraValidation/BlueprintPython/20261028-generic-packaged-core/Package01",
+      "summary_sha256": "EEFCD264E6B6424347CD50724E28B12834424FD98496C3713290FC93674BE2E2",
+      "cook_exit_code": 0,
+      "runtime_started": false,
+      "reason": "Incomplete package phase markers",
+      "driver_archives": [
+        {
+          "path": "F:\\UnrealEnginePython5\\Validation\\Run-UEP58FocusedCorePackageValidation.ps1",
+          "sha256": "4072675DE6A28471538FE2F144C4D113A374CABFC8674EE514007976DF33D8CA",
+          "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261028-generic-packaged-core\\Package01\\Inputs\\Run-UEP58FocusedCorePackageValidation.ps1"
+        }
+      ]
+    },
+    "preserved_build_preflight": {
+      "directory": "Build01",
+      "status": "failed_before_native_start",
+      "compiler_actions": 0
+    },
+    "actual_game_executable_sha256": "646BB56A3F690AB079DB3568764E315E186D2C6C7F6CE03BCE9F4995471B3B8E",
+    "validation_runtime_processes": 7,
+    "clean_candidate_runtime_processes": 6,
+    "direct_cpp_build_processes": 1,
+    "uat_cook_stage_archive_processes": 2,
+    "original_full_candidate_requirement_proven": false,
+    "full_version_acceptance": false,
+    "full_migration_acceptance_proven": false
+  },
+  "native_review_sha256": "9FD4EC06DE67CF3E041DA79B01B01DFD8D523D1266E9ECF814CF577872CEC225",
+  "candidate_matrix": {
+    "path": "candidate_editor_regression_matrix.json",
+    "sha256": "2B19D4A9987D561AA10B71EECEB01B03E419BD72245792D2A8D50F97C92B6407"
+  },
+  "selected_host_checks": 6,
+  "driver_parse_checks": 1,
+  "invalid_preflight_checks": 3,
+  "clean_generic_core_gate": true,
+  "clean_generic_suites": 6,
+  "clean_generic_checks": 70,
+  "actual_packaged_core_checks": 21,
+  "compiler_actions": 948,
+  "link_actions": 1,
+  "metadata_actions": 1,
+  "compiler_diagnostics": 0,
+  "direct_game_build_processes": 1,
+  "uat_cook_stage_archive_processes": 2,
+  "direct_validation_runtime_processes": 7,
+  "original_candidates": 246,
+  "original_requirements": 22,
+  "requirements_proven": 16,
+  "new_original_requirements_accepted": 0,
+  "production_policy_or_assets_changed": false,
+  "normal_playable_startup_changed": false,
+  "cpp_source_changed": false,
+  "cpp_compile_executed": true,
+  "cook_package_executed": true,
+  "full_regression_executed": true,
+  "full_regression_scope": "Original Generic Win64 Development six-suite core gate only",
+  "full_migration_regression_executed": false,
+  "full_candidate_regression_requirement_proven": false,
+  "full_version_acceptance": false,
+  "full_migration_acceptance_proven": false,
+  "limits": [
+    "Close the actual current-source Generic packaged21 gap and its original clean six-suite70 core gate. Do not accept the broader original Generic/Third Person/Lyra candidate criterion or any other original criterion. Original migration acceptance remains16/22 with all246 original candidate paths/order/version assignments and all22 original checklist texts unchanged.",
+    "The original Generic Game target had no current UE5.8.1 build/package cache. Export the actual action graph first;all produced paths are inside the owned Generic project. Build the unchanged target once at parallel2 with NoEngineChanges and NoUBA:948 compile actions,one link,one metadata action;3872.613 seconds;zero compiler diagnostics. All frozen native sources match the repository/stage. Existing Engine/official Lyra/isolated guard and Editor binaries retain their fingerprints.",
+    "Build02 PID14532 exits0 and records the actual monolithic UEP58Host.exe SHA646BB56A3F690AB079DB3568764E315E186D2C6C7F6CE03BCE9F4995471B3B8E. A small wrapper preflight incorrectly required optional ATL/MFC before any native build started. Preserve Build01 input hashes,its exact reconstructed-and-hash-verified original wrapper,and failed-before-native-start record. The real build uses installed MSVC/UCRT/UM library directories only in its child environment.",
+    "Package01 Cook/Pak/archive exits0 but its wrapper remains failed before runtime because it expected a standalone PAK COMMAND COMPLETED marker. Actual UAT generates Pak inside STAGE. Preserve the failed wrapper summary,complete UAT logs/archive and exact old driver bytes. Do not count Package01 as a runtime pass. Its unversioned incremental-cook serialization warning motivated a concrete format correction.",
+    "Package02 keeps iterative Entry-only cooking but explicitly selects VersionCookedContent. Its previous serialization warning is absent. UAT uses skipbuild and nocompileeditor;there are no new native compile/link actions in either package step. Real Pak files and archive phase markers are checked. Both prior archive/evidence directories are retained;no old package is removed by the new wrapper.",
+    "Run the real archived Game executable,not an Editor or bootstrap substitute. Its executable hash exactly matches Build02. Package02 PID37948 exits0 and independently passes all21 original cases in packaged mode,UE5.8/CPython3.11.8,without Epic unreal import or skipped cases. Require ordered core/host success markers,Goodbye Python and closed log with no unexpected diagnostics.",
+    "The documented original core gate requires a single clean full candidate run. After the earlier incremental components pass,run CleanCandidate01 once using the existing Editor binaries and the verified actual package:shared core21,standalone core21,two expected-exception recovery cases,Editor/Slate5,and packaged21. All six pass70/70 in one failure-free candidate record. Expected exception exits1 are explicitly gated;no compile or cook occurs during this clean candidate run.",
+    "The first packaged runtime and the six clean-candidate runtimes total seven direct validation processes. Keep compiler,UAT,cook-child and pure-gate processes separate rather than inflating runtime counts. The final six PIDs are15456,18100,35592,11704,34612 and9172;their actual outcomes,exact case names,interpreter modes,recovery and normal shutdown are pinned and rechecked.",
+    "Six new fail-closed packaged-report checks pass from an immutable index. The final package driver parses and rejects unmarked stage,preexisting output and wrong Game build before staging. The two unchanged Python blobs retain their already tested identity;only the changed PowerShell control is rechecked after phase/version corrections. Full generic core regression is explicitly scoped;no full migration,ability/HUD/Experience regression is inferred.",
+    "The new package driver only consumes a verified existing Game build,performs incremental Entry cooking to a fresh archive,checks actual Game/Pak products and runs packaged21. It never recompiles the target. Existing production Python/Blueprint assets,SDK/game C++ and normal startup code are unchanged. Preserve all six unrelated modified files.",
+    "Other platform/configuration,portable-install guarantees,Third Person packaged smoke,Lyra package/network boundaries and original0.9/0.14 conditions remain separate. Generic70 passing alone does not certify complete migration,RC freeze or publication."
+  ]
+}

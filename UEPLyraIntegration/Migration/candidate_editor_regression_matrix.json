@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "current_editor_components_verified_packaged_and_complete_candidate_acceptance_open",
+  "status": "generic_clean_six_suite70_and_current_editor_components_verified_independent_candidate_boundaries_open",
   "original_requirement": "Generic, both Third Person variants and Lyra pass the candidate regression matrix; the missing Mixin Third Person visible gate is closed.",
   "original_requirement_completion_proven": false,
   "platform": "Win64",
@@ -176,11 +176,86 @@
     ],
     "current_editor_checks": 49,
     "packaged_suite": {
-      "status": "not_executed_against_current_source",
+      "status": "current_source_actual_package_passed",
       "required_checks": 21,
-      "historical_package_not_substituted": true
+      "capture": ".build/LyraValidation/BlueprintPython/20261028-generic-packaged-core/Package02",
+      "summary_sha256": "CBF8F6366C8E0E4BE264676B99960FCCA4C5A05BD520D55EC454AA1EEC4AD27E",
+      "actual_executable_sha256": "646BB56A3F690AB079DB3568764E315E186D2C6C7F6CE03BCE9F4995471B3B8E",
+      "versioned_cooked_content": true,
+      "clean_candidate_packaged_suite": {
+        "name": "packaged",
+        "pid": 9172,
+        "exit_code": 0,
+        "checks": 21,
+        "report_sha256": "00DB6DB5340158C9D7C1298E276C5E9894A9A34065BBE40A84A01104F184D4A2",
+        "log_sha256": "F481B2160F7873D6E9345DC226030991795C773F751514670154B85E46C6A486",
+        "source_summary": "CleanCandidate01/summary.json"
+      }
     },
-    "complete_six_suite_gate": false
+    "complete_six_suite_gate": true,
+    "current_packaged_checks": 21,
+    "current_checks": 70,
+    "clean_six_suite_candidate": {
+      "directory": ".build/LyraValidation/BlueprintPython/20261028-generic-packaged-core/CleanCandidate01",
+      "summary_sha256": "226CE279A8FE24C79EB84A6D5ECF1C9E487E8A743AF439A7D210532665DF1043",
+      "editor_summary_sha256": "DD5544966CD1E9528E65243A448DFDF6B001F535237D33EBD4BC53DA45734F91",
+      "suites": [
+        {
+          "name": "core-shared",
+          "pid": 15456,
+          "exit_code": 0,
+          "checks": 21,
+          "report_sha256": "84852792162FABF5F5714A25CCBB5B234AEDA0B665021949CC0B0C37B1C75F6A",
+          "log_sha256": "56B8B7E5176A90692B6C66D185F5E19B1D9B1A9C1DF9AE728C8020EB8B0C3509",
+          "source_summary": "CleanCandidate01/Editor/summary.json"
+        },
+        {
+          "name": "core-standalone",
+          "pid": 18100,
+          "exit_code": 0,
+          "checks": 21,
+          "report_sha256": "443FD2BF5806800374E2A73B29CDBABB2FF9426B79D3A823927D83756F44E052",
+          "log_sha256": "ED1B5BD12D63BBB24E40E2DDAF2F097F51792A8C1416CB714CA99E0A6304C1CC",
+          "source_summary": "CleanCandidate01/Editor/summary.json"
+        },
+        {
+          "name": "exception-shared",
+          "pid": 35592,
+          "exit_code": 1,
+          "checks": 1,
+          "report_sha256": "393CC0F3C80B245C4B2E2600755BD20848016FEC6B8422BCB978ADBB2B3119D7",
+          "log_sha256": "C41D32E5E9C9CABDB2308F638163805574AD098B06B1DFC3438B44BFDFCD4DC4",
+          "source_summary": "CleanCandidate01/Editor/summary.json"
+        },
+        {
+          "name": "exception-standalone",
+          "pid": 11704,
+          "exit_code": 1,
+          "checks": 1,
+          "report_sha256": "94CC5E9DBCF772140E0F946404259ADDC4355C17B224817D423672963BB450E5",
+          "log_sha256": "C87CE26FF60F54613EDAFCEF5602B6E5BC9732A7414C64FA1E2B3E3FD3264CAF",
+          "source_summary": "CleanCandidate01/Editor/summary.json"
+        },
+        {
+          "name": "editor",
+          "pid": 34612,
+          "exit_code": 0,
+          "checks": 5,
+          "report_sha256": "70380EF16F365501F6965072436B2665E0265552CE7DA2EF805D0F92C09EFD97",
+          "log_sha256": "BE1D5EFF1FE4947E96312AB71B4281B32F631983B0DB9EFDBAE0A56A5FFDCC20",
+          "source_summary": "CleanCandidate01/Editor/summary.json"
+        },
+        {
+          "name": "packaged",
+          "pid": 9172,
+          "exit_code": 0,
+          "checks": 21,
+          "report_sha256": "00DB6DB5340158C9D7C1298E276C5E9894A9A34065BBE40A84A01104F184D4A2",
+          "log_sha256": "F481B2160F7873D6E9345DC226030991795C773F751514670154B85E46C6A486",
+          "source_summary": "CleanCandidate01/summary.json"
+        }
+      ]
+    }
   },
   "third_person_editor": {
     "directory": ".build/LyraValidation/BlueprintPython/20261027-candidate-regressions/ThirdPerson01",
@@ -256,9 +331,12 @@
     "current_bounded_startup_ledger_sha256": "47339A9D9A52773FB819607E32F7665B7C40E5C3CCB11CD942AEA67C0DE41C49",
     "current_bounded_comparison_ledger_sha256": "82A035E32C4CA0ECB171DD097E586D1282A5C6454260B2DC620F5FF894716B6C"
   },
-  "required_next_evidence": "Obtain the actual current-source Generic Win64 Development packaged21 core checks;retain the independent Third Person and Lyra candidate/package boundaries before accepting the original complete regression criterion.",
-  "cpp_compile_executed": false,
-  "cook_package_executed": false,
-  "full_regression_executed": false,
-  "full_migration_acceptance_proven": false
+  "required_next_evidence": "Review the independent current Third Person and Lyra full-candidate/package boundaries and the remaining original0.9/0.14 criteria. Generic packaged21 and its clean six-suite70 gate are verified.",
+  "cpp_compile_executed": true,
+  "cook_package_executed": true,
+  "full_regression_executed": true,
+  "full_migration_acceptance_proven": false,
+  "full_generic_core_regression_executed": true,
+  "full_regression_scope": "Original Generic Win64 Development six-suite core gate only;not full migration regression",
+  "full_migration_regression_executed": false
 }
