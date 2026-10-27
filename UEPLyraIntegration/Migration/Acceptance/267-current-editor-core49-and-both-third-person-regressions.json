@@ -1,0 +1,339 @@
+{
+  "schema_version": 1,
+  "batch": 267,
+  "recorded_utc": "2026-10-27T16:11:52.201789+00:00",
+  "status": "current_editor_core49_and_both_rendered_third_person_components_verified_full_candidate_open",
+  "core_parent_commit": "2bb0231abb51e2e62b293e4d82ecbe922881350f",
+  "examples_parent_commit": "eeee7b3b3ea0898a74f639693c439ba3e176a202",
+  "native_review": {
+    "status": "passed",
+    "generic_editor_suites": [
+      {
+        "kind": "core-shared",
+        "directory": ".build/LyraValidation/BlueprintPython/20261027-candidate-regressions/Core01",
+        "capture_status": "failed",
+        "summary_sha256": "060636E36FC92267FC3D5F474A266E01901CC6253FC81420CD608DEE74A326DD",
+        "pid": 38568,
+        "exit_code": 0,
+        "report_sha256": "5BEDD4D4FC557C4BE00E402C4490625C070B25779A0F8E933C70C2ECDBD80237",
+        "log_sha256": "2DD6143B5D52472BD8F5BCFA297050F36BB62CA5B71F5AFBBE78A9E912ED4AF7",
+        "semantic_gate": {
+          "status": "passed",
+          "kind": "core-shared",
+          "mode": "shared",
+          "checks": 21,
+          "expected_exception": false,
+          "native_exit_code": 0,
+          "packaged_runtime": false,
+          "complete_six_suite_gate": false
+        },
+        "frozen_inputs": 842,
+        "archived_control_inputs": [
+          {
+            "path": "F:\\UnrealEnginePython5\\Validation\\Run-UEP58FocusedCoreRegressionValidation.ps1",
+            "sha256": "B29E34095D969BBA938061959530A096063BD6262759399D036F3DA13AA83D20",
+            "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261027-candidate-regressions\\Core01\\Inputs\\Run-UEP58FocusedCoreRegressionValidation.ps1"
+          },
+          {
+            "path": "F:\\UnrealEnginePython5\\Validation\\UEP58Host\\Tests\\core_regression_contract.py",
+            "sha256": "58CFAA54D0985652A87053607C32A459D5C861E367FE5EB5F3945368C2970762",
+            "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261027-candidate-regressions\\Core01\\Inputs\\core_regression_contract.py"
+          }
+        ],
+        "native_fixture_source_unchanged": true,
+        "shared_interpreter_startup": true
+      },
+      {
+        "kind": "core-standalone",
+        "directory": ".build/LyraValidation/BlueprintPython/20261027-candidate-regressions/Core02",
+        "capture_status": "failed",
+        "summary_sha256": "0B1742077CB2ABD71840BA384EE3F5AD14D03B1075CC059DF6DCC06242255AC6",
+        "pid": 15688,
+        "exit_code": 0,
+        "report_sha256": "0F83EFE9FBFC7DFC5629B131A3D116E84EB5025B07E5D6A196E42DD94B031340",
+        "log_sha256": "143658258261A270D5C87F76632EB0491631B03E8D8A6DB0A70F723F2BD4223E",
+        "semantic_gate": {
+          "status": "passed",
+          "kind": "core-standalone",
+          "mode": "standalone",
+          "checks": 21,
+          "expected_exception": false,
+          "native_exit_code": 0,
+          "packaged_runtime": false,
+          "complete_six_suite_gate": false
+        },
+        "frozen_inputs": 843,
+        "archived_control_inputs": [
+          {
+            "path": "F:\\UnrealEnginePython5\\Validation\\Run-UEP58FocusedCoreRegressionValidation.ps1",
+            "sha256": "CBBD7C9778EED5C41E13B7EB32B33237FF170046AC164BE46C49A7FE6B995AE0",
+            "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261027-candidate-regressions\\Core02\\Inputs\\Run-UEP58FocusedCoreRegressionValidation.ps1"
+          },
+          {
+            "path": "F:\\UnrealEnginePython5\\Validation\\UEP58Host\\Tests\\core_regression_contract.py",
+            "sha256": "DFF716D58AE3194F1BB3E624BB8577469C6000F84DCDAB4A0427916654EAC17A",
+            "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261027-candidate-regressions\\Core02\\Inputs\\core_regression_contract.py"
+          }
+        ],
+        "native_fixture_source_unchanged": true,
+        "shared_interpreter_startup": false
+      },
+      {
+        "kind": "exception-shared",
+        "directory": ".build/LyraValidation/BlueprintPython/20261027-candidate-regressions/Core02",
+        "capture_status": "failed",
+        "summary_sha256": "0B1742077CB2ABD71840BA384EE3F5AD14D03B1075CC059DF6DCC06242255AC6",
+        "pid": 11152,
+        "exit_code": 1,
+        "report_sha256": "393CC0F3C80B245C4B2E2600755BD20848016FEC6B8422BCB978ADBB2B3119D7",
+        "log_sha256": "E70383771FD05B22B0255EA2C9858FC60ADB092530C0EFF742FBB41F677FEA23",
+        "semantic_gate": {
+          "status": "passed",
+          "kind": "exception-shared",
+          "mode": "shared",
+          "checks": 1,
+          "expected_exception": true,
+          "native_exit_code": 1,
+          "packaged_runtime": false,
+          "complete_six_suite_gate": false
+        },
+        "frozen_inputs": 843,
+        "archived_control_inputs": [
+          {
+            "path": "F:\\UnrealEnginePython5\\Validation\\Run-UEP58FocusedCoreRegressionValidation.ps1",
+            "sha256": "CBBD7C9778EED5C41E13B7EB32B33237FF170046AC164BE46C49A7FE6B995AE0",
+            "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261027-candidate-regressions\\Core02\\Inputs\\Run-UEP58FocusedCoreRegressionValidation.ps1"
+          },
+          {
+            "path": "F:\\UnrealEnginePython5\\Validation\\UEP58Host\\Tests\\core_regression_contract.py",
+            "sha256": "DFF716D58AE3194F1BB3E624BB8577469C6000F84DCDAB4A0427916654EAC17A",
+            "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261027-candidate-regressions\\Core02\\Inputs\\core_regression_contract.py"
+          }
+        ],
+        "native_fixture_source_unchanged": true,
+        "shared_interpreter_startup": true
+      },
+      {
+        "kind": "exception-standalone",
+        "directory": ".build/LyraValidation/BlueprintPython/20261027-candidate-regressions/Core02",
+        "capture_status": "failed",
+        "summary_sha256": "0B1742077CB2ABD71840BA384EE3F5AD14D03B1075CC059DF6DCC06242255AC6",
+        "pid": 37828,
+        "exit_code": 1,
+        "report_sha256": "94CC5E9DBCF772140E0F946404259ADDC4355C17B224817D423672963BB450E5",
+        "log_sha256": "6A2964449BD6D93919DC818AE48F6A3970BEFA1AAFE9957CC223F0BCA8D641F5",
+        "semantic_gate": {
+          "status": "passed",
+          "kind": "exception-standalone",
+          "mode": "standalone",
+          "checks": 1,
+          "expected_exception": true,
+          "native_exit_code": 1,
+          "packaged_runtime": false,
+          "complete_six_suite_gate": false
+        },
+        "frozen_inputs": 843,
+        "archived_control_inputs": [
+          {
+            "path": "F:\\UnrealEnginePython5\\Validation\\Run-UEP58FocusedCoreRegressionValidation.ps1",
+            "sha256": "CBBD7C9778EED5C41E13B7EB32B33237FF170046AC164BE46C49A7FE6B995AE0",
+            "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261027-candidate-regressions\\Core02\\Inputs\\Run-UEP58FocusedCoreRegressionValidation.ps1"
+          },
+          {
+            "path": "F:\\UnrealEnginePython5\\Validation\\UEP58Host\\Tests\\core_regression_contract.py",
+            "sha256": "DFF716D58AE3194F1BB3E624BB8577469C6000F84DCDAB4A0427916654EAC17A",
+            "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261027-candidate-regressions\\Core02\\Inputs\\core_regression_contract.py"
+          }
+        ],
+        "native_fixture_source_unchanged": true,
+        "shared_interpreter_startup": false
+      },
+      {
+        "kind": "editor",
+        "directory": ".build/LyraValidation/BlueprintPython/20261027-candidate-regressions/Core03",
+        "capture_status": "passed",
+        "summary_sha256": "2820678FD1E02B9A05ED5CCD8D701C69FE57261CCD48AAF91A5F68BC2819E992",
+        "pid": 37908,
+        "exit_code": 0,
+        "report_sha256": "B99FF70CFE4B16D8A6F3F670CC4F7994B2FDFA1845D48667A410464EFEB6405A",
+        "log_sha256": "912B0E6D8F5FE963E5942F7A91A82F7B266CFEA4363384D31D64E5FBA049BFB0",
+        "semantic_gate": {
+          "status": "passed",
+          "kind": "editor",
+          "mode": "shared",
+          "checks": 5,
+          "expected_exception": false,
+          "native_exit_code": 0,
+          "packaged_runtime": false,
+          "complete_six_suite_gate": false
+        },
+        "frozen_inputs": 841,
+        "archived_control_inputs": [],
+        "native_fixture_source_unchanged": true,
+        "shared_interpreter_startup": true
+      }
+    ],
+    "generic_core_checks": 49,
+    "original_generic_core_checks": 70,
+    "packaged_core_checks_not_executed": 21,
+    "complete_six_suite_gate": false,
+    "third_person_directory": ".build/LyraValidation/BlueprintPython/20261027-candidate-regressions/ThirdPerson01",
+    "third_person_summary_sha256": "A7020D0DF3AEDA1F8C0F7D1375E1BC8DDC11BDB9CE57453C6F8AAFC18229493E",
+    "third_person_variants": [
+      {
+        "variant": "Mixin",
+        "pid": 4068,
+        "exit_code": 0,
+        "smoke_sha256": "1BACE0C74105392AFCDDF56C771F4E28C6C11EDA69A144F8EA03683A85993688",
+        "visible_sha256": "459C60F35934FC3274CE3A0205DC9ACEF6EE1C38F3E59EF05D4F0B7674E176FA",
+        "log_sha256": "64C52C90912157A498334EF85B47ED2C3B932BA095D1ECB3B1739C431150526C",
+        "movement_distance": 479.219,
+        "look_delta": 13.65,
+        "teardown": {
+          "unregister_all_count": 2,
+          "mixin_count": 0,
+          "initialization_events": 5,
+          "teardown_events": 5,
+          "runtime_active": false,
+          "session_released": true,
+          "class_preserved": true,
+          "helper_removed": true,
+          "interface_probe": {
+            "teardowns": [
+              1,
+              1
+            ],
+            "helpers_removed": true
+          }
+        },
+        "frozen_binary_records": 7,
+        "frozen_script_records": 24
+      },
+      {
+        "variant": "PythonFirst",
+        "pid": 11468,
+        "exit_code": 0,
+        "smoke_sha256": "1D9EC74030DCDD4D068ECA32C6E24CCD54722F6B998F5C449B2FBCDB66513D09",
+        "visible_sha256": "90BA7D046A30A9A96A9B37B137EC243D783A780B378BAEC3B6981D1C5CAF2603",
+        "log_sha256": "E83049A783DB4E8B6D5908105E915199411C976ECD338C8DC9A51B1219A02006",
+        "movement_distance": 291.522,
+        "look_delta": 9.8,
+        "teardown": {
+          "runtime_active": false,
+          "session_released": true,
+          "hud_detached": true,
+          "input_bindings_removed": true,
+          "mapping_contexts_removed": true
+        },
+        "frozen_binary_records": 7,
+        "frozen_script_records": 18
+      }
+    ],
+    "rendered_images": 6,
+    "visual_review_sha256": "86E4E394E4D8C3BC012D77E7C0CA415500BECE50167C52938B85C1BC27335BE9",
+    "missing_mixin_third_person_visible_component_closed": true,
+    "failed_standalone_attempt": {
+      "directory": ".build/LyraValidation/BlueprintPython/20261027-candidate-regressions/Core01",
+      "pid": 39460,
+      "exit_code": 1,
+      "report_exists": false,
+      "log_sha256": "BE9778BBC42A608AFE76F7F1E2349A70DF84C54FF30C989A33921DD6BFF487BC",
+      "reason": "Wrapper placed result options before the script; native core cases did not execute."
+    },
+    "preserved_capture_summaries_with_failed_status": [
+      "Core01",
+      "Core02"
+    ],
+    "failed_input_archives": [
+      {
+        "path": "F:\\UnrealEnginePython5\\Validation\\Run-UEP58FocusedCoreRegressionValidation.ps1",
+        "sha256": "B29E34095D969BBA938061959530A096063BD6262759399D036F3DA13AA83D20",
+        "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261027-candidate-regressions\\Core01\\Inputs\\Run-UEP58FocusedCoreRegressionValidation.ps1"
+      },
+      {
+        "path": "F:\\UnrealEnginePython5\\Validation\\UEP58Host\\Tests\\core_regression_contract.py",
+        "sha256": "58CFAA54D0985652A87053607C32A459D5C861E367FE5EB5F3945368C2970762",
+        "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261027-candidate-regressions\\Core01\\Inputs\\core_regression_contract.py"
+      },
+      {
+        "path": "F:\\UnrealEnginePython5\\Validation\\Run-UEP58FocusedCoreRegressionValidation.ps1",
+        "sha256": "CBBD7C9778EED5C41E13B7EB32B33237FF170046AC164BE46C49A7FE6B995AE0",
+        "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261027-candidate-regressions\\Core02\\Inputs\\Run-UEP58FocusedCoreRegressionValidation.ps1"
+      },
+      {
+        "path": "F:\\UnrealEnginePython5\\Validation\\UEP58Host\\Tests\\core_regression_contract.py",
+        "sha256": "DFF716D58AE3194F1BB3E624BB8577469C6000F84DCDAB4A0427916654EAC17A",
+        "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261027-candidate-regressions\\Core02\\Inputs\\core_regression_contract.py"
+      }
+    ],
+    "preexisting_editor_assets_unchanged": [
+      {
+        "path": "F:\\UnrealEnginePython5\\.build\\Validation\\UEP58Host\\Content\\UEPValidation\\M_UEP58Validation.uasset",
+        "sha256": "4F1342ECC1DE6969DDD50300441ED817996C00847401424C8837BB20FEAB8C87"
+      },
+      {
+        "path": "F:\\UnrealEnginePython5\\.build\\Validation\\UEP58Host\\Content\\UEPValidation\\LS_UEP58Validation.uasset",
+        "sha256": "46D5872A967798F0FCDCEFBAF92AF9F7B66B50F6D193865CDF615F461603420D"
+      }
+    ],
+    "generated_unique_editor_assets": [
+      {
+        "sha256": "26B970CE2333475000A24052310C52BD4E64F9ED753F8F1E70D449C004D73FB8",
+        "path": "F:\\UnrealEnginePython5\\.build\\Validation\\UEP58Host\\Content\\UEPValidation\\M_UEP58Validation_UEP_16da261f244b4307a6c88e72c8d55120.uasset",
+        "retained_in_stage": true,
+        "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261027-candidate-regressions\\Core03\\EditorAssets\\M_UEP58Validation_UEP_16da261f244b4307a6c88e72c8d55120.uasset"
+      },
+      {
+        "sha256": "D6C4E149F44D56A1912575282416172CDD316D219F94EE98F2831833A06E0E38",
+        "path": "F:\\UnrealEnginePython5\\.build\\Validation\\UEP58Host\\Content\\UEPValidation\\LS_UEP58Validation_UEP_16da261f244b4307a6c88e72c8d55120.uasset",
+        "retained_in_stage": true,
+        "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261027-candidate-regressions\\Core03\\EditorAssets\\LS_UEP58Validation_UEP_16da261f244b4307a6c88e72c8d55120.uasset"
+      }
+    ],
+    "new_native_processes": 8,
+    "accepted_native_component_processes": 7,
+    "failed_native_attempts": 1,
+    "unrelated_passed_native_suites_rerun": false,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_candidate_regression_requirement_proven": false,
+    "full_migration_acceptance_proven": false
+  },
+  "native_review_sha256": "1C5DABD9BEDF8AD634879A4233E8FC340F1284AFDFCE5CED0C0B9F760629451E",
+  "candidate_matrix": {
+    "path": "candidate_editor_regression_matrix.json",
+    "sha256": "95D784BF6665A4F9BC270277C46EA082FAE5CDBEA53D9654F37BC492BBE31A3A"
+  },
+  "selected_host_checks": 8,
+  "driver_parse_checks": 1,
+  "invalid_selection_checks": 3,
+  "generic_core_checks": 49,
+  "unverified_packaged_core_checks": 21,
+  "new_native_processes": 8,
+  "accepted_native_component_processes": 7,
+  "failed_native_attempts": 1,
+  "original_candidates": 246,
+  "original_requirements": 22,
+  "requirements_proven": 16,
+  "new_original_requirements_accepted": 0,
+  "production_policy_or_assets_changed": false,
+  "normal_playable_startup_changed": false,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "full_candidate_regression_requirement_proven": false,
+  "full_version_acceptance": false,
+  "full_migration_acceptance_proven": false,
+  "limits": [
+    "Refresh the missing current-SDK Editor regression components;do not accept the whole original candidate matrix. Original acceptance stays16/22 with all246 original paths/order/version assignments and all22 checklist texts unchanged. The original six-suite Generic gate requires70 checks;these five Editor suites prove49 and leave the actual packaged21 open.",
+    "ThirdPerson01 runs both rendered native-input variants using SDK236 and the existing native host,with only project-owned metadata refresh. Mixin PID4068 and PythonFirst PID11468 exit0. Movement/look/jump,state/class boundaries,interface/profile/reentry checks and final router/input/session teardown pass. PythonFirst performs one travel. All native source,frozen script/binary and engine metadata guards pass.",
+    "View all six1280x720 moving/looking/jumping images directly. Character,map and HUD are visible;images are paired with native-input state. Preserve each original image and its SHA-256. Do not infer physical hardware input,automated pixel comparison or animation parity.",
+    "The original Generic core fixture passes21 shared and21 standalone checks;the two existing isolated dynamic-exception recovery fixtures pass one each;the actual Editor/Slate fixture passes five. The current SDK DLL is96049A85163F7EBE98CDDBB324BDC7973F640E0CBC13CA758AA8499772F2044F. Native source and interpreter modes are checked;exception exits1 require exact expected diagnostics,recovery and ordered normal shutdown.",
+    "Core01 remains failed overall. Shared PID38568 passes21;standalone PID39460 exits1 before testing and writes no report because the new wrapper put result options before the script. Fix only the wrapper ordering. Reuse the valid shared report with its exact frozen original controls and the corrected immutable pure gate;do not rerun the healthy shared native suite or count the failed standalone as a pass.",
+    "Core02 remains failed overall after preserving three passed components:standalone PID15688 exit0,shared exception PID11152 exit1,standalone exception PID37828 exit1. Its Editor preflight refuses to overwrite two preexisting test assets before starting an Editor process. The separate archive/remove proposal was rejected before execution;it did not move or delete assets. Keep both failed summaries/logs and four exact old wrapper/gate input archives.",
+    "Core03 Editor PID37908 exits0 and passes five checks using new UUID-suffixed material/sequence names under the managed validation package root. The two original named assets retain their original fingerprints and stay in place. Two new test assets and copies remain available for inspection;asset deletion remains an explicit exclusion. The existing editor fixture keeps its default names/behavior when the opt-in suffix is absent.",
+    "Eight focused pure-gate checks,one driver parse and three invalid-selection checks pass from an immutable Git-index snapshot. The new driver reuses source-matching generic binaries and supports explicit affected suite selection;it never builds or packages. Current pure gates revalidate the five pinned passed case reports without relaunching native processes. Git archive CRLF and working-tree LF are compared through normalized text/tested blobs,while native file fingerprints retain exact bytes.",
+    "The seven accepted native component processes are distinct from the one failed native attempt. Two wrapper summaries retain failed status and are not promoted;only separately verified successful component reports are carried forward. Zero compiler/linker,cook/package or full-regression actions;no existing production policy/asset,SDK/game C++,official Lyra or protected unrelated file changes.",
+    "Do not substitute an older Generic package or an unrelated Lyra executable for current-source packaged core checks. Existing independent Third Person and Lyra package/network boundaries still apply. The new matrix records pending evidence explicitly and cannot close the original candidate regression,RC freeze or full migration requirements."
+  ]
+}

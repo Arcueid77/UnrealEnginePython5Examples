@@ -216,7 +216,17 @@ These are recorded flags requiring requirement and platform review, not automati
 
 ## Next evidence work
 
-Review the remaining original0.9 controlled reload/cleanup,visible/packaged ammo,candidate regression and RC boundaries;original0.14 Experience acceptance remains open.
+Obtain actual current-source Generic Win64 Development packaged21 core checks;then finish the complete candidate regression and remaining original0.9/0.14 requirements.
 
 Recorded capabilities still need their linked semantic/source evidence reviewed; this index
 does not rerun them. Continue unresolved readiness observations and the original version scope.
+
+## Bounded current Editor candidate components (batch267)
+
+Both current-SDK Third Person Editor variants pass with six directly inspected
+rendered images. The five Generic Editor suites pass49 checks. The original
+six-suite70 gate still requires actual current-source packaged21;the complete
+candidate regression requirement stays unproven. See
+`candidate_editor_regression_matrix.json` and ledger267 for passed components,
+preserved failed captures,exact input archives and unchanged preexisting assets.
+Original acceptance stays16/22. No compile/link,cook/package or full regression.

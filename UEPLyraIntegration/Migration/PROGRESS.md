@@ -31,6 +31,33 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed bounded current Editor candidate components batch267 (2026-10-28):**
+ThirdPerson01 refreshes both rendered native-input variants against SDK236,
+using existing binaries and project-owned metadata only. Mixin PID4068 and
+PythonFirst PID11468 exit0 with movement/look/jump and teardown proof;PythonFirst
+also travels once. Inspect all six1280x720 images directly:characters,map and
+HUD are visible. Keep exact image/script/binary/source fingerprints. No physical
+hardware,pixel comparison or animation-parity claim.
+
+Refresh the five existing Generic Editor suites:shared core21,standalone core21,
+two isolated dynamic-exception recovery checks,and Editor/Slate5. Native49 pass;
+the original six-suite70 gate still lacks current-source packaged21. Correct
+the new wrapper's option order after a failed standalone attempt;reuse the
+already passed shared component without relaunching it. Preserve Core01/Core02
+failed overall statuses,logs,missing-report failure and four exact old control
+inputs. Core02's three passed components are independently rechecked;its Editor
+preflight stops before overwriting preexisting assets. A rejected archive/remove
+command never executes. Core03 uses new UUID-suffixed names,passes five and
+leaves both original assets byte-identical in place;new test artifacts are kept.
+
+Eight pure-gate tests,one driver parse and three invalid-selection guards pass
+from an immutable index. Eight new native attempts total:seven verified passed
+components and one rejected/missing-report standalone attempt. No production
+policy/asset or C++ change,compile/link,cook/package or full regression. The new
+candidate_editor_regression_matrix.json keeps every missing cell explicit.
+Original acceptance remains16/22;complete candidate,RC and migration acceptance
+are open. Preserve all246 original candidates and all22 original requirements.
+
 **Completed original call/lifecycle matrix criterion batch266 (2026-10-27):**
 Accept the exact original0.9 classification/reproducer condition. Give every
 documented path a stable ID and one of three explicit classifications:21 call

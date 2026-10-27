@@ -1,0 +1,264 @@
+{
+  "schema_version": 1,
+  "status": "current_editor_components_verified_packaged_and_complete_candidate_acceptance_open",
+  "original_requirement": "Generic, both Third Person variants and Lyra pass the candidate regression matrix; the missing Mixin Third Person visible gate is closed.",
+  "original_requirement_completion_proven": false,
+  "platform": "Win64",
+  "configuration": "Development",
+  "generic_core": {
+    "original_suites": 6,
+    "original_checks": 70,
+    "current_editor_suites": [
+      {
+        "kind": "core-shared",
+        "directory": ".build/LyraValidation/BlueprintPython/20261027-candidate-regressions/Core01",
+        "capture_status": "failed",
+        "summary_sha256": "060636E36FC92267FC3D5F474A266E01901CC6253FC81420CD608DEE74A326DD",
+        "pid": 38568,
+        "exit_code": 0,
+        "report_sha256": "5BEDD4D4FC557C4BE00E402C4490625C070B25779A0F8E933C70C2ECDBD80237",
+        "log_sha256": "2DD6143B5D52472BD8F5BCFA297050F36BB62CA5B71F5AFBBE78A9E912ED4AF7",
+        "semantic_gate": {
+          "status": "passed",
+          "kind": "core-shared",
+          "mode": "shared",
+          "checks": 21,
+          "expected_exception": false,
+          "native_exit_code": 0,
+          "packaged_runtime": false,
+          "complete_six_suite_gate": false
+        },
+        "frozen_inputs": 842,
+        "archived_control_inputs": [
+          {
+            "path": "F:\\UnrealEnginePython5\\Validation\\Run-UEP58FocusedCoreRegressionValidation.ps1",
+            "sha256": "B29E34095D969BBA938061959530A096063BD6262759399D036F3DA13AA83D20",
+            "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261027-candidate-regressions\\Core01\\Inputs\\Run-UEP58FocusedCoreRegressionValidation.ps1"
+          },
+          {
+            "path": "F:\\UnrealEnginePython5\\Validation\\UEP58Host\\Tests\\core_regression_contract.py",
+            "sha256": "58CFAA54D0985652A87053607C32A459D5C861E367FE5EB5F3945368C2970762",
+            "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261027-candidate-regressions\\Core01\\Inputs\\core_regression_contract.py"
+          }
+        ],
+        "native_fixture_source_unchanged": true,
+        "shared_interpreter_startup": true
+      },
+      {
+        "kind": "core-standalone",
+        "directory": ".build/LyraValidation/BlueprintPython/20261027-candidate-regressions/Core02",
+        "capture_status": "failed",
+        "summary_sha256": "0B1742077CB2ABD71840BA384EE3F5AD14D03B1075CC059DF6DCC06242255AC6",
+        "pid": 15688,
+        "exit_code": 0,
+        "report_sha256": "0F83EFE9FBFC7DFC5629B131A3D116E84EB5025B07E5D6A196E42DD94B031340",
+        "log_sha256": "143658258261A270D5C87F76632EB0491631B03E8D8A6DB0A70F723F2BD4223E",
+        "semantic_gate": {
+          "status": "passed",
+          "kind": "core-standalone",
+          "mode": "standalone",
+          "checks": 21,
+          "expected_exception": false,
+          "native_exit_code": 0,
+          "packaged_runtime": false,
+          "complete_six_suite_gate": false
+        },
+        "frozen_inputs": 843,
+        "archived_control_inputs": [
+          {
+            "path": "F:\\UnrealEnginePython5\\Validation\\Run-UEP58FocusedCoreRegressionValidation.ps1",
+            "sha256": "CBBD7C9778EED5C41E13B7EB32B33237FF170046AC164BE46C49A7FE6B995AE0",
+            "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261027-candidate-regressions\\Core02\\Inputs\\Run-UEP58FocusedCoreRegressionValidation.ps1"
+          },
+          {
+            "path": "F:\\UnrealEnginePython5\\Validation\\UEP58Host\\Tests\\core_regression_contract.py",
+            "sha256": "DFF716D58AE3194F1BB3E624BB8577469C6000F84DCDAB4A0427916654EAC17A",
+            "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261027-candidate-regressions\\Core02\\Inputs\\core_regression_contract.py"
+          }
+        ],
+        "native_fixture_source_unchanged": true,
+        "shared_interpreter_startup": false
+      },
+      {
+        "kind": "exception-shared",
+        "directory": ".build/LyraValidation/BlueprintPython/20261027-candidate-regressions/Core02",
+        "capture_status": "failed",
+        "summary_sha256": "0B1742077CB2ABD71840BA384EE3F5AD14D03B1075CC059DF6DCC06242255AC6",
+        "pid": 11152,
+        "exit_code": 1,
+        "report_sha256": "393CC0F3C80B245C4B2E2600755BD20848016FEC6B8422BCB978ADBB2B3119D7",
+        "log_sha256": "E70383771FD05B22B0255EA2C9858FC60ADB092530C0EFF742FBB41F677FEA23",
+        "semantic_gate": {
+          "status": "passed",
+          "kind": "exception-shared",
+          "mode": "shared",
+          "checks": 1,
+          "expected_exception": true,
+          "native_exit_code": 1,
+          "packaged_runtime": false,
+          "complete_six_suite_gate": false
+        },
+        "frozen_inputs": 843,
+        "archived_control_inputs": [
+          {
+            "path": "F:\\UnrealEnginePython5\\Validation\\Run-UEP58FocusedCoreRegressionValidation.ps1",
+            "sha256": "CBBD7C9778EED5C41E13B7EB32B33237FF170046AC164BE46C49A7FE6B995AE0",
+            "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261027-candidate-regressions\\Core02\\Inputs\\Run-UEP58FocusedCoreRegressionValidation.ps1"
+          },
+          {
+            "path": "F:\\UnrealEnginePython5\\Validation\\UEP58Host\\Tests\\core_regression_contract.py",
+            "sha256": "DFF716D58AE3194F1BB3E624BB8577469C6000F84DCDAB4A0427916654EAC17A",
+            "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261027-candidate-regressions\\Core02\\Inputs\\core_regression_contract.py"
+          }
+        ],
+        "native_fixture_source_unchanged": true,
+        "shared_interpreter_startup": true
+      },
+      {
+        "kind": "exception-standalone",
+        "directory": ".build/LyraValidation/BlueprintPython/20261027-candidate-regressions/Core02",
+        "capture_status": "failed",
+        "summary_sha256": "0B1742077CB2ABD71840BA384EE3F5AD14D03B1075CC059DF6DCC06242255AC6",
+        "pid": 37828,
+        "exit_code": 1,
+        "report_sha256": "94CC5E9DBCF772140E0F946404259ADDC4355C17B224817D423672963BB450E5",
+        "log_sha256": "6A2964449BD6D93919DC818AE48F6A3970BEFA1AAFE9957CC223F0BCA8D641F5",
+        "semantic_gate": {
+          "status": "passed",
+          "kind": "exception-standalone",
+          "mode": "standalone",
+          "checks": 1,
+          "expected_exception": true,
+          "native_exit_code": 1,
+          "packaged_runtime": false,
+          "complete_six_suite_gate": false
+        },
+        "frozen_inputs": 843,
+        "archived_control_inputs": [
+          {
+            "path": "F:\\UnrealEnginePython5\\Validation\\Run-UEP58FocusedCoreRegressionValidation.ps1",
+            "sha256": "CBBD7C9778EED5C41E13B7EB32B33237FF170046AC164BE46C49A7FE6B995AE0",
+            "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261027-candidate-regressions\\Core02\\Inputs\\Run-UEP58FocusedCoreRegressionValidation.ps1"
+          },
+          {
+            "path": "F:\\UnrealEnginePython5\\Validation\\UEP58Host\\Tests\\core_regression_contract.py",
+            "sha256": "DFF716D58AE3194F1BB3E624BB8577469C6000F84DCDAB4A0427916654EAC17A",
+            "archive": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\BlueprintPython\\20261027-candidate-regressions\\Core02\\Inputs\\core_regression_contract.py"
+          }
+        ],
+        "native_fixture_source_unchanged": true,
+        "shared_interpreter_startup": false
+      },
+      {
+        "kind": "editor",
+        "directory": ".build/LyraValidation/BlueprintPython/20261027-candidate-regressions/Core03",
+        "capture_status": "passed",
+        "summary_sha256": "2820678FD1E02B9A05ED5CCD8D701C69FE57261CCD48AAF91A5F68BC2819E992",
+        "pid": 37908,
+        "exit_code": 0,
+        "report_sha256": "B99FF70CFE4B16D8A6F3F670CC4F7994B2FDFA1845D48667A410464EFEB6405A",
+        "log_sha256": "912B0E6D8F5FE963E5942F7A91A82F7B266CFEA4363384D31D64E5FBA049BFB0",
+        "semantic_gate": {
+          "status": "passed",
+          "kind": "editor",
+          "mode": "shared",
+          "checks": 5,
+          "expected_exception": false,
+          "native_exit_code": 0,
+          "packaged_runtime": false,
+          "complete_six_suite_gate": false
+        },
+        "frozen_inputs": 841,
+        "archived_control_inputs": [],
+        "native_fixture_source_unchanged": true,
+        "shared_interpreter_startup": true
+      }
+    ],
+    "current_editor_checks": 49,
+    "packaged_suite": {
+      "status": "not_executed_against_current_source",
+      "required_checks": 21,
+      "historical_package_not_substituted": true
+    },
+    "complete_six_suite_gate": false
+  },
+  "third_person_editor": {
+    "directory": ".build/LyraValidation/BlueprintPython/20261027-candidate-regressions/ThirdPerson01",
+    "summary_sha256": "A7020D0DF3AEDA1F8C0F7D1375E1BC8DDC11BDB9CE57453C6F8AAFC18229493E",
+    "variants": [
+      {
+        "variant": "Mixin",
+        "pid": 4068,
+        "exit_code": 0,
+        "smoke_sha256": "1BACE0C74105392AFCDDF56C771F4E28C6C11EDA69A144F8EA03683A85993688",
+        "visible_sha256": "459C60F35934FC3274CE3A0205DC9ACEF6EE1C38F3E59EF05D4F0B7674E176FA",
+        "log_sha256": "64C52C90912157A498334EF85B47ED2C3B932BA095D1ECB3B1739C431150526C",
+        "movement_distance": 479.219,
+        "look_delta": 13.65,
+        "teardown": {
+          "unregister_all_count": 2,
+          "mixin_count": 0,
+          "initialization_events": 5,
+          "teardown_events": 5,
+          "runtime_active": false,
+          "session_released": true,
+          "class_preserved": true,
+          "helper_removed": true,
+          "interface_probe": {
+            "teardowns": [
+              1,
+              1
+            ],
+            "helpers_removed": true
+          }
+        },
+        "frozen_binary_records": 7,
+        "frozen_script_records": 24
+      },
+      {
+        "variant": "PythonFirst",
+        "pid": 11468,
+        "exit_code": 0,
+        "smoke_sha256": "1D9EC74030DCDD4D068ECA32C6E24CCD54722F6B998F5C449B2FBCDB66513D09",
+        "visible_sha256": "90BA7D046A30A9A96A9B37B137EC243D783A780B378BAEC3B6981D1C5CAF2603",
+        "log_sha256": "E83049A783DB4E8B6D5908105E915199411C976ECD338C8DC9A51B1219A02006",
+        "movement_distance": 291.522,
+        "look_delta": 9.8,
+        "teardown": {
+          "runtime_active": false,
+          "session_released": true,
+          "hud_detached": true,
+          "input_bindings_removed": true,
+          "mapping_contexts_removed": true
+        },
+        "frozen_binary_records": 7,
+        "frozen_script_records": 18
+      }
+    ],
+    "rendered_images": 6,
+    "visual_review_sha256": "86E4E394E4D8C3BC012D77E7C0CA415500BECE50167C52938B85C1BC27335BE9",
+    "current_sdk236": true,
+    "missing_mixin_visible_component_closed": true,
+    "packaged_smoke_reexecuted": false
+  },
+  "generic_call_and_pie_reference": {
+    "ledger": "266-original-call-lifecycle-matrix-classifications-and-reproducers.json",
+    "ledger_sha256": "314EC33BF03035D1247FE791E6C2A2AE65DF51BCE7602D82B31348782A0EA10F",
+    "current_call_cases": 11,
+    "current_same_editor_pie_sessions": 3,
+    "new_native_execution_claimed": false
+  },
+  "lyra": {
+    "current_bounded_startup_ledger": "254-original-normal-startup-and-explicit-probe-boundary-acceptance.json",
+    "current_bounded_comparison_ledger": "265-original-all-small-batch-comparisons-and-python-business-ownership.json",
+    "existing_accepted_requirements_retained": true,
+    "full_candidate_or_packaged_acceptance_proven": false,
+    "current_bounded_startup_ledger_sha256": "47339A9D9A52773FB819607E32F7665B7C40E5C3CCB11CD942AEA67C0DE41C49",
+    "current_bounded_comparison_ledger_sha256": "82A035E32C4CA0ECB171DD097E586D1282A5C6454260B2DC620F5FF894716B6C"
+  },
+  "required_next_evidence": "Obtain the actual current-source Generic Win64 Development packaged21 core checks;retain the independent Third Person and Lyra candidate/package boundaries before accepting the original complete regression criterion.",
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "full_migration_acceptance_proven": false
+}

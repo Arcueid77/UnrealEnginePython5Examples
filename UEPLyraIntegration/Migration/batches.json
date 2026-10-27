@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 268,
+    "bounded_evidence_ledgers": 269,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -16660,6 +16660,28 @@
     "cpp_compile_executed": false,
     "cook_package_executed": false,
     "full_regression_executed": false,
+    "full_acceptance": false
+  },
+  "current_editor_candidate_regression_evidence": {
+    "status": "current_editor_core49_and_both_rendered_third_person_components_verified_full_candidate_open",
+    "evidence_ledger": "267-current-editor-core49-and-both-third-person-regressions.json",
+    "candidate_matrix": "candidate_editor_regression_matrix.json",
+    "generic_core_checks": 49,
+    "unverified_packaged_core_checks": 21,
+    "both_third_person_variants": true,
+    "rendered_images": 6,
+    "missing_mixin_visible_component_closed": true,
+    "selected_host_checks": 8,
+    "driver_parse_checks": 1,
+    "invalid_selection_checks": 3,
+    "new_native_processes": 8,
+    "accepted_native_component_processes": 7,
+    "failed_native_attempts": 1,
+    "requirements_proven": 16,
+    "original_requirements": 22,
+    "original_candidate_regression_criterion_proven": false,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
     "full_acceptance": false
   }
 }
