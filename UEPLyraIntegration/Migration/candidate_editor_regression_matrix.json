@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "generic_clean_six_suite70_and_current_editor_components_verified_independent_candidate_boundaries_open",
+  "status": "generic_clean70_current_third_person_editor_and_actual_packages_verified_lyra_candidate_aggregation_open",
   "original_requirement": "Generic, both Third Person variants and Lyra pass the candidate regression matrix; the missing Mixin Third Person visible gate is closed.",
   "original_requirement_completion_proven": false,
   "platform": "Win64",
@@ -331,12 +331,89 @@
     "current_bounded_startup_ledger_sha256": "47339A9D9A52773FB819607E32F7665B7C40E5C3CCB11CD942AEA67C0DE41C49",
     "current_bounded_comparison_ledger_sha256": "82A035E32C4CA0ECB171DD097E586D1282A5C6454260B2DC620F5FF894716B6C"
   },
-  "required_next_evidence": "Review the independent current Third Person and Lyra full-candidate/package boundaries and the remaining original0.9/0.14 criteria. Generic packaged21 and its clean six-suite70 gate are verified.",
+  "required_next_evidence": "Aggregate the independently verified current Generic,Third Person Editor/Game and Lyra0.9 candidate components;retain full Explorer/TopDownArena and RC review as separate criteria.",
   "cpp_compile_executed": true,
   "cook_package_executed": true,
   "full_regression_executed": true,
   "full_migration_acceptance_proven": false,
   "full_generic_core_regression_executed": true,
   "full_regression_scope": "Original Generic Win64 Development six-suite core gate only;not full migration regression",
-  "full_migration_regression_executed": false
+  "full_migration_regression_executed": false,
+  "third_person_packaged": {
+    "status": "current_source_actual_game_packages_passed",
+    "platform": "Win64",
+    "configuration": "Development",
+    "native_game_build": {
+      "summary_sha256": "E2A4008C60EB8D1EF0012FAEE000F5E8D719927E545AB7321183222643C0FD8C",
+      "directory": ".build/LyraValidation/BlueprintPython/20261028-third-person-package/Build01",
+      "compile_actions": 932,
+      "link_actions": 1,
+      "metadata_actions": 1,
+      "duration_seconds": 3616.429
+    },
+    "actual_game_sha256": "4559C8EDC048B6F70EFCC3F52248247417637D40E355E6978E16C9B105E99E2D",
+    "variants": [
+      {
+        "variant": "Mixin",
+        "directory": ".build/LyraValidation/BlueprintPython/20261028-third-person-package/MixinPackage02",
+        "summary_sha256": "BA5BD3700682873B3661F34F03814007B87AFB6BB193D2B7BC827AD8F08B1BD7",
+        "pid": 432,
+        "exit_code": 0,
+        "report_sha256": "4300DF3239A3E33F84551ACD33787986F76A7F308366122DDB529998C55BE7DB",
+        "log_sha256": "B1D04F30A6E2D5BAC31F5E48DB3EC4593CAAE41F9775EB68DC8B3C126F94CBDD",
+        "executable_sha256": "4559C8EDC048B6F70EFCC3F52248247417637D40E355E6978E16C9B105E99E2D",
+        "movement_distance": 567.194,
+        "look_delta": 269.85,
+        "teardown": {
+          "unregister_all_count": 2,
+          "mixin_count": 0,
+          "initialization_events": 5,
+          "teardown_events": 5,
+          "runtime_active": false,
+          "session_released": true,
+          "class_preserved": true,
+          "helper_removed": true,
+          "interface_probe": {
+            "teardowns": [
+              1,
+              1
+            ],
+            "helpers_removed": true
+          }
+        },
+        "original_report_behavior_contract_passed": true,
+        "wrapper_failure_preserved": true,
+        "pure_contract_version_review": "MixinReview01/summary.json"
+      },
+      {
+        "variant": "PythonFirst",
+        "directory": ".build/LyraValidation/BlueprintPython/20261028-third-person-package/PythonFirstPackage01",
+        "summary_sha256": "BBB36A4D994939F1F1BE2C06B3A7273572979BD37CD9D4C8F49BC14A6587E708",
+        "pid": 34344,
+        "exit_code": 0,
+        "report_sha256": "3C8AA8EB77E33A959F29A05EE474B4EA31627271CF17FD877043A435B0482958",
+        "log_sha256": "A893334F4C4C238ADA62836FEF5010A06E679B360AC942DBA37B348AEB7A7264",
+        "executable_sha256": "4559C8EDC048B6F70EFCC3F52248247417637D40E355E6978E16C9B105E99E2D",
+        "movement_distance": 353.993,
+        "look_delta": 251.3,
+        "teardown": {
+          "runtime_active": false,
+          "session_released": true,
+          "hud_detached": true,
+          "input_bindings_removed": true,
+          "mapping_contexts_removed": true
+        },
+        "original_report_behavior_contract_passed": true,
+        "wrapper_failure_preserved": false,
+        "pure_contract_version_review": null
+      }
+    ],
+    "original_behavior_assertions_passed": true,
+    "exact_compiled_descriptor_version": "0.8.0",
+    "native_target_built_once_for_both_variants": true,
+    "packaging_native_compile_executed": false,
+    "preserved_missing_editor_plugin_cook_failure": true,
+    "preserved_stale_literal_version_wrapper_failure": true,
+    "full_candidate_requirement_accepted": false
+  }
 }

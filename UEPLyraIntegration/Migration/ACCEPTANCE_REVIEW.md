@@ -216,7 +216,7 @@ These are recorded flags requiring requirement and platform review, not automati
 
 ## Next evidence work
 
-Complete the independent current Generic/Third Person/Lyra candidate matrix and RC API inventory review;original0.14 full Explorer and TopDownArena acceptance remains open.
+Aggregate the independently verified current Generic,Third Person Editor/Game and Lyra0.9 candidate components;retain full Explorer/TopDownArena and RC review as separate criteria.
 
 Recorded capabilities still need their linked semantic/source evidence reviewed; this index
 does not rerun them. Continue unresolved readiness observations and the original version scope.
@@ -290,3 +290,14 @@ NoSound TapIDs warnings in logs. Component review is not whole-frame pixel,
 hardware-input or audio acceptance. Twenty-one selected index checks,one parse
 and two preflight rejection checks pass. Candidate,RC and full two-Experience
 criteria remain open;original246/22 scope and existing production code remain.
+
+## Current Third Person Game packages (batch272)
+
+Both actual5.8.1 Game variants pass their original behavior contracts using
+one verified Game build. Mixin432 and PythonFirst34344 exit0. Preserve the
+missing optional Editor plugin cook failure and the stale0.7.0 literal version
+wrapper failure. The latter is corrected over completed output without a new
+runtime/cook. Canonical controls now require the exact staged descriptor value;
+six actual-report/rejection checks pass from an immutable index. Preserve the
+old driver bytes and per-variant payload snapshots. Original migration remains
+19/22;only this candidate component is closed,with no C++ source change.

@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "batch": 272,
+  "recorded_utc": "2026-10-27T20:11:31.744851+00:00",
+  "status": "current_third_person_actual_game_package_components_verified_candidate_criterion_stays_open",
+  "core_parent_commit": "c05a00692fc7bb313251c18e747d14452b44280a",
+  "examples_parent_commit": "ce56c65d91b72fcb860f2bc96167a74477483689",
+  "review": {
+    "status": "passed",
+    "scope": "Current Third Person actual packages only;not full candidate acceptance",
+    "native_game_build": {
+      "status": "passed",
+      "target": "UEPPythonThirdPerson",
+      "pid": 4880,
+      "duration_seconds": 3616.429,
+      "actions": 934,
+      "compile_actions": 932,
+      "link_actions": 1,
+      "metadata_actions": 1,
+      "compiler_diagnostics": 0,
+      "current_version": "5.8.1",
+      "products": [
+        {
+          "path": "F:\\UnrealEnginePython5\\.build\\Demos\\UEPPythonThirdPerson\\Binaries\\Win64\\UEPPythonThirdPerson.exe",
+          "sha256": "4559C8EDC048B6F70EFCC3F52248247417637D40E355E6978E16C9B105E99E2D"
+        },
+        {
+          "path": "F:\\UnrealEnginePython5\\.build\\Demos\\UEPPythonThirdPerson\\Binaries\\Win64\\UEPPythonThirdPerson.target",
+          "sha256": "C94BE101D39741C712B126F7F2F59B0385E69562031B827FBF6AFC57493A3CE7"
+        }
+      ],
+      "all_frozen_inputs_unchanged": true
+    },
+    "native_build_summary_sha256": "E2A4008C60EB8D1EF0012FAEE000F5E8D719927E545AB7321183222643C0FD8C",
+    "variants": [
+      {
+        "variant": "Mixin",
+        "directory": ".build/LyraValidation/BlueprintPython/20261028-third-person-package/MixinPackage02",
+        "summary_sha256": "BA5BD3700682873B3661F34F03814007B87AFB6BB193D2B7BC827AD8F08B1BD7",
+        "pid": 432,
+        "exit_code": 0,
+        "report_sha256": "4300DF3239A3E33F84551ACD33787986F76A7F308366122DDB529998C55BE7DB",
+        "log_sha256": "B1D04F30A6E2D5BAC31F5E48DB3EC4593CAAE41F9775EB68DC8B3C126F94CBDD",
+        "executable_sha256": "4559C8EDC048B6F70EFCC3F52248247417637D40E355E6978E16C9B105E99E2D",
+        "movement_distance": 567.194,
+        "look_delta": 269.85,
+        "teardown": {
+          "unregister_all_count": 2,
+          "mixin_count": 0,
+          "initialization_events": 5,
+          "teardown_events": 5,
+          "runtime_active": false,
+          "session_released": true,
+          "class_preserved": true,
+          "helper_removed": true,
+          "interface_probe": {
+            "teardowns": [
+              1,
+              1
+            ],
+            "helpers_removed": true
+          }
+        },
+        "original_report_behavior_contract_passed": true,
+        "wrapper_failure_preserved": true,
+        "pure_contract_version_review": "MixinReview01/summary.json"
+      },
+      {
+        "variant": "PythonFirst",
+        "directory": ".build/LyraValidation/BlueprintPython/20261028-third-person-package/PythonFirstPackage01",
+        "summary_sha256": "BBB36A4D994939F1F1BE2C06B3A7273572979BD37CD9D4C8F49BC14A6587E708",
+        "pid": 34344,
+        "exit_code": 0,
+        "report_sha256": "3C8AA8EB77E33A959F29A05EE474B4EA31627271CF17FD877043A435B0482958",
+        "log_sha256": "A893334F4C4C238ADA62836FEF5010A06E679B360AC942DBA37B348AEB7A7264",
+        "executable_sha256": "4559C8EDC048B6F70EFCC3F52248247417637D40E355E6978E16C9B105E99E2D",
+        "movement_distance": 353.993,
+        "look_delta": 251.3,
+        "teardown": {
+          "runtime_active": false,
+          "session_released": true,
+          "hud_detached": true,
+          "input_bindings_removed": true,
+          "mapping_contexts_removed": true
+        },
+        "original_report_behavior_contract_passed": true,
+        "wrapper_failure_preserved": false,
+        "pure_contract_version_review": null
+      }
+    ],
+    "actual_game_runtime_processes": 2,
+    "successful_uat_package_runs": 2,
+    "preserved_failed_cook_runs": 1,
+    "native_target_compiled_once_for_both_variants": true,
+    "cpp_source_changed": false,
+    "package_steps_cpp_compile_executed": false,
+    "current_game_executable_sha256": "4559C8EDC048B6F70EFCC3F52248247417637D40E355E6978E16C9B105E99E2D",
+    "full_candidate_requirement_proven": false,
+    "limits": [
+      "Game build uses the preserved descriptor0.8.0;the older Editor binary reports0.7.0. Only version predicates bind to the exact compiled descriptor;all original behavior assertions remain.",
+      "Retain MixinPackage01 missing-ResonanceAudio cook failure and exact source. Use the existing Editor validation scoped disable flag;do not rebuild.",
+      "Retain MixinPackage02 successful package/runtime but failed hardcoded-version wrapper. Pure MixinReview01 launches no native process and accepts only the strict corrected descriptor version.",
+      "Runtime/config build inputs and per-variant stage payloads have exact independent archived copies before variant switching.",
+      "Packaged runs use NullRHI;the current rendered Editor comparisons remain the separate visible proof. No packaged pixel/audio parity claim."
+    ]
+  },
+  "selected_ps_checks": 6,
+  "driver_parse_checks": 1,
+  "actual_call_sites_checked": 4,
+  "original_candidates": 246,
+  "original_requirements": 22,
+  "requirements_proven": 19,
+  "new_original_requirements_accepted": 0,
+  "candidate_matrix": {
+    "path": "candidate_editor_regression_matrix.json",
+    "sha256": "94FE96807377D1059DB5D00C5D2DBAAF3DE4D9374F1D73AF101691508EF4CE47"
+  },
+  "before_candidate_matrix": {
+    "artifact": "candidate-matrix-before.json",
+    "sha256": "2B19D4A9987D561AA10B71EECEB01B03E419BD72245792D2A8D50F97C92B6407"
+  },
+  "original_demo_runner_archive": {
+    "artifact": "original-demo-runner-archive.json",
+    "sha256": "E3D6B4BC31F1A59DC41B2E1FC569B1161F9C5F3D47BD3A93AE5740EEF4F18F39"
+  },
+  "incremental_verification": {
+    "artifact": "incremental-acceptance-integrity.json",
+    "sha256": "1BA3411B7E33F047C4D31B1A588FF75C1BDBDB0C4B4BF58EDB1CAE97D5C6FCE8",
+    "status": "passed",
+    "previous_index": {
+      "path": ".build/LyraValidation/BlueprintPython/20261028-batch1a-visual/acceptance-final.json",
+      "sha256": "5F6A6D2F9443684550DF66BDBD996651C6E349CFBF0331A927B1EE819EC767BD",
+      "requirements_proven": 19
+    },
+    "previous_accepted_criteria_retained": 19,
+    "new_original_requirements_accepted": 0,
+    "original_246_candidates_and_22_texts_unchanged": true,
+    "existing_gameplay_sources_and_assets_unchanged": true,
+    "validation_controls_changed": true,
+    "selected_ps_checks": 6,
+    "driver_parse_checks": 1,
+    "actual_packaged_runtime_processes": 2,
+    "native_game_build_processes": 1,
+    "successful_uat_runs": 2,
+    "preserved_failed_cook_runs": 1,
+    "compile_actions": 932,
+    "link_actions": 1,
+    "metadata_actions": 1,
+    "cpp_compile_executed": true,
+    "cook_package_executed": true,
+    "full_regression_executed": false,
+    "full_candidate_requirement_proven": false
+  },
+  "cpp_source_changed": false,
+  "existing_gameplay_policy_or_assets_changed": false,
+  "normal_gameplay_bootstrap_changed": false,
+  "cpp_compile_executed": true,
+  "cook_package_executed": true,
+  "full_regression_executed": false,
+  "full_candidate_requirement_proven": false,
+  "full_version_acceptance": false,
+  "full_migration_acceptance_proven": false,
+  "limits": [
+    "Game build uses the preserved descriptor0.8.0;the older Editor binary reports0.7.0. Only version predicates bind to the exact compiled descriptor;all original behavior assertions remain.",
+    "Retain MixinPackage01 missing-ResonanceAudio cook failure and exact source. Use the existing Editor validation scoped disable flag;do not rebuild.",
+    "Retain MixinPackage02 successful package/runtime but failed hardcoded-version wrapper. Pure MixinReview01 launches no native process and accepts only the strict corrected descriptor version.",
+    "Runtime/config build inputs and per-variant stage payloads have exact independent archived copies before variant switching.",
+    "Packaged runs use NullRHI;the current rendered Editor comparisons remain the separate visible proof. No packaged pixel/audio parity claim.",
+    "The old Third Person Game receipt is5.8.0. UBT reports Build.version and its own binary are newer. The protected plan contains934 actions,all produced/deleted paths inside the owned project. Build once at parallel2/NoUBA/NoEngineChanges:932 compiles,one link,one metadata write,3616.429 seconds,zero diagnostics. This is a required current Game cache refresh,not932 source changes.",
+    "The exact current executable is4559C8EDC048B6F70EFCC3F52248247417637D40E355E6978E16C9B105E99E2D. Both actual inner packaged executables match it. Mixin PID432 and PythonFirst PID34344 exit0 and satisfy original input/gameplay/travel/lifetime assertions. No native compile/link occurs during either package.",
+    "Fix the canonical demo validation driver:all four smoke/package call sites pass the exact staged descriptor VersionName. Preserve default0.7.0 for direct legacy assertion callers. Require the exact expected value;do not accept an arbitrary version range. Add the already used focused Third Person ResonanceAudio disable scope.",
+    "Six immutable-index checks validate both real native reports,wrong-version rejection and remaining lifecycle rejection. Parse the driver and verify all four real call sites. Do not rerun completed native programs or recook solely for a version-gate correction.",
+    "Preserve six unrelated modified files. Their descriptor diff contains only DocsURL/SupportURL changes;VersionName0.8.0 is already the existing descriptor value. No version bump or unrelated edit is included. API review and current-Experience wrapper drafts remain separate uncommitted work.",
+    "Update only the Third Person package component. Original migration acceptance stays19/22;the full candidate criterion requires its own aggregate review."
+  ]
+}

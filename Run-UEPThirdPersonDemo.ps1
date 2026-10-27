@@ -191,7 +191,8 @@ function Assert-PythonFirstReport {
     param(
         [Parameter(Mandatory = $true)][psobject]$Report,
         [Parameter(Mandatory = $true)][string]$ResultPath,
-        [Parameter(Mandatory = $true)][string]$Label
+        [Parameter(Mandatory = $true)][string]$Label,
+        [ValidateNotNullOrEmpty()][string]$ExpectedUEPVersion = "0.7.0"
     )
 
     if ($Report.schema_version -ne 5 -or
@@ -200,7 +201,7 @@ function Assert-PythonFirstReport {
         $Report.engine_version[0] -ne 5 -or
         $Report.engine_version[1] -ne 8 -or
         $Report.python_version -notlike "3.11.*" -or
-        $Report.uep_version -ne "0.7.0" -or
+        $Report.uep_version -ne $ExpectedUEPVersion -or
         $Report.demo_version -ne "0.6.0" -or
         $Report.game_mode_class -ne "UEPThirdPersonGameMode" -or
         $Report.controller_class -ne "UEPThirdPersonPlayerController" -or
@@ -256,7 +257,8 @@ function Assert-MixinReport {
     param(
         [Parameter(Mandatory = $true)][psobject]$Report,
         [Parameter(Mandatory = $true)][string]$ResultPath,
-        [Parameter(Mandatory = $true)][string]$Label
+        [Parameter(Mandatory = $true)][string]$Label,
+        [ValidateNotNullOrEmpty()][string]$ExpectedUEPVersion = "0.7.0"
     )
 
     if ($Report.status -ne "passed") {
@@ -295,7 +297,7 @@ function Assert-MixinReport {
         $Report.engine_version[0] -ne 5 -or
         $Report.engine_version[1] -ne 8 -or
         $Report.python_version -notlike "3.11.*" -or
-        $Report.uep_version -ne "0.7.0" -or
+        $Report.uep_version -ne $ExpectedUEPVersion -or
         $Report.demo_version -ne "0.7.0" -or
         $Report.game_mode_class -ne "BP_ThirdPersonGameMode_C" -or
         $Report.controller_class -ne "BP_ThirdPersonPlayerController_C" -or
@@ -457,7 +459,7 @@ $stageMarker = Join-Path $stageRoot ".uep-demo-stage"
 $projectPath = Join-Path $stageRoot $projectFileName
 $pluginStage = Join-Path $stageRoot "Plugins\UnrealEnginePython"
 $pluginDescriptor = Join-Path $pluginStage "UnrealEnginePython.uplugin"
-$disabledNetworkPlugins = "AndroidFileServer,UdpMessaging,TcpMessaging"
+$disabledNetworkPlugins = "AndroidFileServer,UdpMessaging,TcpMessaging,ResonanceAudio"
 $disableNetworkPluginsArgument = "-DisablePlugins=$disabledNetworkPlugins"
 $disableTraceServerArgument = "-notraceserver"
 $runId = Get-Date -Format "yyyyMMdd-HHmmss"
@@ -629,6 +631,12 @@ try {
     Copy-FileIfChanged `
         -Source (Join-Path $repoRoot "UnrealEnginePython.uplugin") `
         -Destination $pluginDescriptor
+
+    # Every non-Prepare mode builds against this exact staged descriptor.
+    $expectedUEPVersion = [string](Get-Content -LiteralPath $pluginDescriptor -Raw | ConvertFrom-Json).VersionName
+    if ([string]::IsNullOrWhiteSpace($expectedUEPVersion)) {
+        throw "Staged plugin descriptor has no VersionName: $pluginDescriptor"
+    }
 
     $buildLog = $null
     if ($Mode -ne "Prepare") {
@@ -859,12 +867,14 @@ try {
         if ($Variant -eq "PythonFirst") {
             Assert-PythonFirstReport `
                 -Report $smokeReport `
+                -ExpectedUEPVersion $expectedUEPVersion `
                 -ResultPath $smokeResultPath `
                 -Label "smoke"
         }
         elseif ($Variant -eq "Mixin") {
             Assert-MixinReport `
                 -Report $smokeReport `
+                -ExpectedUEPVersion $expectedUEPVersion `
                 -ResultPath $smokeResultPath `
                 -Label "smoke"
         }
@@ -1056,12 +1066,14 @@ try {
         if ($Variant -eq "PythonFirst") {
             Assert-PythonFirstReport `
                 -Report $packagedReport `
+                -ExpectedUEPVersion $expectedUEPVersion `
                 -ResultPath $packagedResultPath `
                 -Label "packaged smoke"
         }
         else {
             Assert-MixinReport `
                 -Report $packagedReport `
+                -ExpectedUEPVersion $expectedUEPVersion `
                 -ResultPath $packagedResultPath `
                 -Label "packaged smoke"
         }

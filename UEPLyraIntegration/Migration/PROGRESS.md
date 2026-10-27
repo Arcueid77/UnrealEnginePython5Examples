@@ -31,6 +31,36 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed current Third Person packaged components batch272 (2026-10-28):**
+Both actual packaged Game variants pass the original behavior/lifetime contract:
+Mixin PID432 and PythonFirst PID34344 exit0,sharing executable SHA
+4559C8EDC048B6F70EFCC3F52248247417637D40E355E6978E16C9B105E99E2D.
+The current rendered Editor evidence stays separate. Original migration remains
+19/22;candidate aggregation,RC and full Explorer/TopDownArena criteria stay open.
+
+The old Game receipt is5.8.0. UBT invalidates its cache because Build.version and
+UBT are newer. Preserve the old Game/receipt,review934 actions with all produced
+paths inside the owned project,then build once at parallel2/NoUBA/NoEngineChanges.
+Build01 PID4880 exits0 in3616.429 seconds:932 compiles,one link,one metadata write,
+zero diagnostics. No C++ source change;both packages reuse this target.
+
+MixinPackage01 fails Cook before runtime because the Editor lacks ResonanceAudio.
+Keep the failed output and exact old control;apply the same scoped plugin disable
+already used by focused Third Person Editor validation. MixinPackage02 completes
+Cook/Stage/Archive and real runtime432,but its wrapper retains a failed status
+because the original assertion pins UEP0.7.0. The unchanged compiled descriptor
+is0.8.0. MixinReview01 binds only the version predicates to that exact descriptor;
+all original behavior/lifetime assertions pass without another native process or
+cook. PythonFirstPackage01 then passes directly. Packages compile no native code.
+
+Fix the canonical demo controls to pass the staged descriptor version at all four
+smoke/package call sites;retain0.7.0 only as the direct legacy-call default. Keep
+all other assertions. Six immutable-index checks use both actual reports and prove
+wrong versions and teardown failures still reject. Archive the original runner,
+26 original build payload inputs and each variant's mutable stage files. Keep all
+prior failed captures and the previous candidate matrix. Preserve gameplay code,
+assets,official Lyra,the approved guard/binaries and six unrelated modified files.
+
 **Completed original Batch1A state/visual and owner criterion batch271 (2026-10-28):**
 Five actual native operation checkpoints now have directly reviewed paired
 presenter views:fire,reload,weapon switch,empty ammo and Pawn replacement.

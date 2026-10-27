@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 273,
+    "bounded_evidence_ledgers": 274,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -16774,6 +16774,24 @@
     "cpp_compile_executed": false,
     "cook_package_executed": false,
     "full_regression_executed": false,
+    "full_acceptance": false
+  },
+  "current_third_person_packaged_candidate_evidence": {
+    "status": "current_third_person_actual_game_package_components_verified_candidate_criterion_stays_open",
+    "evidence_ledger": "272-current-third-person-game-packages-and-exact-version-contract.json",
+    "current_game_executable_sha256": "4559C8EDC048B6F70EFCC3F52248247417637D40E355E6978E16C9B105E99E2D",
+    "variants": 2,
+    "actual_runtime_processes": 2,
+    "native_target_built_once": true,
+    "compile_actions": 932,
+    "link_actions": 1,
+    "metadata_actions": 1,
+    "selected_ps_checks": 6,
+    "driver_parse_checks": 1,
+    "requirements_proven": 19,
+    "original_requirements": 22,
+    "new_original_requirements_accepted": 0,
+    "full_candidate_requirement_proven": false,
     "full_acceptance": false
   }
 }
