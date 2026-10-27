@@ -18,7 +18,7 @@ This index does not execute or semantically revalidate the referenced runtime ev
 - `0.9.0` — A checked-in call/lifecycle matrix labels every path as tested supported, intentionally rejected, or bypass/unsupported, with reproducible fixtures. (ROADMAP.md:242; all_33_documented_contract_paths_classified_with_pinned_reproducers_and_current_generic_calls_pie).
 - `0.9.0` — The controlled reload and cleanup tests pass across repeated PIE, GC and travel; state, callbacks and router restoration are checked after teardown. (ROADMAP.md:244; current_sdk_controlled_reload_profile_gc_repeated_pie_and_two_travel_cleanup_source_verified).
 - `0.9.0` — A visible and packaged weapon/ammo example proves native signal plus read-only sampled change updates, safe subscription removal and native authority ownership. (ROADMAP.md:246; current_native_python_packaged_and_visible_weapon_with_native_signal_sampler_cleanup_owner_protocol_verified).
-- `0.9.0` — Batch 1A has original-BP/Python state and visual comparisons for weapon switching, firing, reload, empty ammo and Pawn replacement. One server and two clients prove that ammo/UI state never crosses local-player ownership. (ROADMAP.md:249; historical_claim_needs_source_and_evidence_review).
+- `0.9.0` — Batch 1A has original-BP/Python state and visual comparisons for weapon switching, firing, reload, empty ammo and Pawn replacement. One server and two clients prove that ammo/UI state never crosses local-player ownership. (ROADMAP.md:249; five_directly_reviewed_bp_python_weapon_component_views_and_current_native_two_owner_protocol_verified).
 - `0.9.0` — Normal playable startup does not auto-run validation or request exit; explicitly enabled test modes retain bounded timeouts and cleanup evidence. Focused rendered weapon mode exits cleanly; the no-test-flag Lyra observation is bounded and stopped only by its owning test driver, not by a probe. (ROADMAP.md:252; native_normal_no_probe_observation_and_focused_rendered_probe_cleanup_and_sources_verified).
 - `0.9.0` — Generic, both Third Person variants and Lyra pass the candidate regression matrix; the missing Mixin Third Person visible gate is closed. (ROADMAP.md:256; historical_claim_needs_source_and_evidence_review).
 - `0.9.0` — The supported API inventory and migration/deprecation rules are ready for RC freeze, with no known release-blocking correctness defects. (ROADMAP.md:258; historical_claim_needs_source_and_evidence_review).
@@ -216,7 +216,7 @@ These are recorded flags requiring requirement and platform review, not automati
 
 ## Next evidence work
 
-Complete original0.9 Batch1A gameplay visual comparisons,the independent Third Person/Lyra candidate regression gates and RC inventory;original0.14 full two-Experience acceptance remains open.
+Complete the independent current Generic/Third Person/Lyra candidate matrix and RC API inventory review;original0.14 full Explorer and TopDownArena acceptance remains open.
 
 Recorded capabilities still need their linked semantic/source evidence reviewed; this index
 does not rerun them. Continue unresolved readiness observations and the original version scope.
@@ -271,3 +271,22 @@ verified Game and862 project/two core scripts. Preserve its previous payloads,
 old Game,original archive and cooked products;no cook occurs. Native owner,
 replication,slot/possession signals and cleanup reuse batch269's verified
 nineteen-phase Editor-game protocol. Packaged networking remains separate.
+
+## Batch1A component state/visual and owner comparison (batch271)
+
+The exact original0.9 Batch1A criterion is accepted;overall19/22. Five actual
+fire,reload,weapon-switch,empty-ammo and Pawn-replacement checkpoints show
+test-owned original BP left/Python right panels and active counter materials.
+Both read the actual local native item;the real shipped HUD stays present.
+Native02's current-SDK nineteen-phase server/two-client protocol passes two
+travels,exit/rejoin and native owner/replication checks. All four peers exit0;
+visual Widget roots close16/16,12/12,4/4 and0/0. No compile or cook occurs.
+
+Native01's functional protocol passes,but a debug overlay obscures part of
+the original view. Keep its five raw PNGs,reports and exact retired root/stage
+adapter bytes unaccepted for visual completion. Native02 changes only three
+test UI coordinates. Directly review all five new1280x720 images;preserve the
+NoSound TapIDs warnings in logs. Component review is not whole-frame pixel,
+hardware-input or audio acceptance. Twenty-one selected index checks,one parse
+and two preflight rejection checks pass. Candidate,RC and full two-Experience
+criteria remain open;original246/22 scope and existing production code remain.

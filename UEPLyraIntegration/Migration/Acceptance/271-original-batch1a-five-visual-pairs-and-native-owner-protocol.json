@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "batch": 271,
+  "recorded_utc": "2026-10-27T18:42:40.066288+00:00",
+  "status": "original_009_batch1a_state_visual_and_two_owner_criterion_verified",
+  "criterion": "Batch 1A has original-BP/Python state and visual comparisons for weapon switching, firing, reload, empty ammo and Pawn replacement. One server and two clients prove that ammo/UI state never crosses local-player ownership.",
+  "completion_proven": true,
+  "core_parent_commit": "ffb1dbcb6ade1df466fa94d20c4ce9039bf2e715",
+  "examples_parent_commit": "2a9b1507492a4c0c86ab715ba43988b1fb033e04",
+  "review": {
+    "status": "passed",
+    "criterion": "Batch 1A has original-BP/Python state and visual comparisons for weapon switching, firing, reload, empty ammo and Pawn replacement. One server and two clients prove that ammo/UI state never crosses local-player ownership.",
+    "completion_proven": true,
+    "directory": ".build/LyraValidation/BlueprintPython/20261028-batch1a-visual/Native02/Network",
+    "summary_sha256": "3A1CB28117490EEDBCA542BB0CEDAEA487B968AA92241EC628D19FBC40D7A7C4",
+    "current_frozen_input_records": 2883,
+    "native_peers": [
+      {
+        "peer": "A",
+        "pid": 12188,
+        "exit_code": 0,
+        "report_sha256": "AC9D860F404D706E385C8F15CAF38D547A9EE87BAE24FCEBB101486AE0CE1A76",
+        "visual_report_sha256": "980DB26DD00FD04350B334490A645E315CE13A68B3AB1D8E0A29BC7CE338B2BF",
+        "log_sha256": "66DCF0EC321F2AED8CCD8D209A4622B4C306DD694D0370842B8C8105473017E9",
+        "visual_widgets_created": 16,
+        "visual_widgets_closed": 16
+      },
+      {
+        "peer": "B0",
+        "pid": 14308,
+        "exit_code": 0,
+        "report_sha256": "889E04326B1C2CF85BCAF2689A44E6158EB3584C733FFFCCFD1B0D769B9C5A67",
+        "visual_report_sha256": "3DB52647878ED2D89FA37BA8D0E1AC4813AA099F263245F0864EBB273EBCAE44",
+        "log_sha256": "89466F480512FADC961168A6E5A8D1A9B713C92CE4B1C2B131B25987C7492370",
+        "visual_widgets_created": 12,
+        "visual_widgets_closed": 12
+      },
+      {
+        "peer": "B1",
+        "pid": 37984,
+        "exit_code": 0,
+        "report_sha256": "6EA18BFF9F97369DAD2F6F81160F1049E07D823ABC560EFCCACE311748CF8777",
+        "visual_report_sha256": "C4C4D4FBDE933E0DCC26B963D324F0D3C24BC1377800292AF997E9EC2800C5A7",
+        "log_sha256": "C7E3814611D641A98DC4726958F3DB0B9068C1263B43A0A7E3E97C510E1842B9",
+        "visual_widgets_created": 4,
+        "visual_widgets_closed": 4
+      },
+      {
+        "peer": "server",
+        "pid": 36384,
+        "exit_code": 0,
+        "report_sha256": "20FF2A233397F0B6963D4F08397D74AC8A6A966E4B75836C652EF03700AC6C9F",
+        "visual_report_sha256": "70E659F15A885679FC829DD0DF9006BAE247114073B5B31FAF5ACE5E3D1A709A",
+        "log_sha256": "1CCD32724A73FB258C657FF10216405401E906DBBBA45BF8423DFB0E3C715589",
+        "visual_widgets_created": 0,
+        "visual_widgets_closed": 0
+      }
+    ],
+    "native_protocol": {
+      "status": "passed",
+      "phase_count": 19,
+      "clients": 2,
+      "rejoin_tested": true,
+      "real_fire_reload": true,
+      "blueprint_python_native_parity": true,
+      "sampling_source_declared": true,
+      "combat_hud_acceptance": false,
+      "debug_spread_acceptance": false,
+      "production_reticle_acceptance": false,
+      "reticle_host_acceptance": false,
+      "ability_progress_acceptance": false,
+      "ability_failure_acceptance": false,
+      "dash_cooldown_acceptance": false,
+      "respawn_timer_acceptance": false,
+      "quickbar_slots_acceptance": false,
+      "nameplate_acceptance": false,
+      "native_interaction_producer_tested": false,
+      "replicated_duration_message_tested": false,
+      "physical_touch_tested": false
+    },
+    "visual_checkpoint_pairs": 5,
+    "images": [
+      {
+        "peer": "A",
+        "phase": "fire_a",
+        "path": ".build/LyraValidation/BlueprintPython/20261028-batch1a-visual/Native02/Network/batch1a-A-fire_a.png",
+        "sha256": "DE9EC105C06ED950CCF845CA6853117932806E750D6F44B2C82E89CAD95D9184"
+      },
+      {
+        "peer": "A",
+        "phase": "reload_a",
+        "path": ".build/LyraValidation/BlueprintPython/20261028-batch1a-visual/Native02/Network/batch1a-A-reload_a.png",
+        "sha256": "89F5A69CF50EE19C80DDB224610A572E3DE390288D2EBC1D7BF2E692C6C47870"
+      },
+      {
+        "peer": "A",
+        "phase": "switch_a",
+        "path": ".build/LyraValidation/BlueprintPython/20261028-batch1a-visual/Native02/Network/batch1a-A-switch_a.png",
+        "sha256": "921C3C336E3BA85C70FEFDF22F7804C2EE5F3927071C681097A464FDCA065BCF"
+      },
+      {
+        "peer": "A",
+        "phase": "respawn_a",
+        "path": ".build/LyraValidation/BlueprintPython/20261028-batch1a-visual/Native02/Network/batch1a-A-respawn_a.png",
+        "sha256": "56A95371401EF54459968060CDB60E6A875C960315772999E1423598A7BA4227"
+      },
+      {
+        "peer": "B0",
+        "phase": "empty_b",
+        "path": ".build/LyraValidation/BlueprintPython/20261028-batch1a-visual/Native02/Network/batch1a-B0-empty_b.png",
+        "sha256": "392530663F31C5933AE6BF5EABCC424390CEBF6FD922E3E1B658B3965579AB41"
+      }
+    ],
+    "visual_review_sha256": "273E0B5FA4AA8F1A11C798AD41409CE14C9D51BD25FE92D815FA1FCB11917559",
+    "control_provenance_sha256": "0DC97C7697C2C8D815558A376AB31180E5C30BC42EBFF3E1FAB76A1C037392DA",
+    "preserved_partial_visual_review_sha256": "F490588DF7F77D069B84CBB32CB3F5A4D81CF43420ED039EF9FE5D34D93487EF",
+    "exact_retired_source_archives_sha256": "8B3FBEFD2EAA6EC604647CBBE590BC29D004A3837DC0DFB9054ABD0DF1CE538B",
+    "production_policy_or_assets_changed": false,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_migration_acceptance_proven": false,
+    "limits": [
+      "Compare test-owned original-BP-left/Python-right panels and active counter style over actual local native weapon state.",
+      "Keep the real shipped production HUD and the unchanged nineteen-phase native input/server/replication producer.",
+      "Direct review covers five component checkpoints;no whole-frame pixel equality,hardware input or audio acceptance is claimed.",
+      "NoSound TapIDs warnings remain in native logs. The first obscured capture remains unaccepted and exact source bytes are archived.",
+      "Accept only the exact original Batch1A requirement. Candidate,RC and full two-Experience requirements stay separate."
+    ]
+  },
+  "selected_host_checks": 21,
+  "native_driver_selected_host_checks": 97,
+  "driver_parse_checks": 1,
+  "invalid_preflight_checks": 2,
+  "original_candidates": 246,
+  "original_requirements": 22,
+  "requirements_proven": 19,
+  "incremental_verification": {
+    "artifact": "incremental-acceptance-integrity.json",
+    "sha256": "50DD433EBD9B74403F89DBD2E9C9AE902B72B20171F8895F86BE80F61CDF68EF",
+    "status": "passed",
+    "previous_index": {
+      "path": ".build/LyraValidation/BlueprintPython/20261028-weapon-example/acceptance-final.json",
+      "sha256": "0C6A4B0702D68D9F3B5B87BEE2D8B88CB6246411DF403F9A6BBB8D7D7B4343D8",
+      "requirements_proven": 18
+    },
+    "previous_accepted_criteria_retained": 18,
+    "new_original_requirements_accepted": 1,
+    "original_246_candidates_and_22_texts_unchanged": true,
+    "existing_production_sources_and_assets_unchanged": true,
+    "explicit_opt_in_test_modules_added": 2,
+    "unrelated_semantic_gates_reexecuted": false,
+    "selected_host_checks": 21,
+    "driver_parse_checks": 1,
+    "invalid_preflight_checks": 2,
+    "new_native_network_processes": 8,
+    "accepted_recapture_native_processes": 4,
+    "preserved_partial_visual_native_processes": 4,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false
+  },
+  "existing_production_policy_or_assets_changed": false,
+  "normal_startup_changed": false,
+  "explicit_test_modules_added": true,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "full_version_acceptance": false,
+  "full_migration_acceptance_proven": false,
+  "other_original_criteria_accepted_by_this_batch": false,
+  "limits": [
+    "Compare test-owned original-BP-left/Python-right panels and active counter style over actual local native weapon state.",
+    "Keep the real shipped production HUD and the unchanged nineteen-phase native input/server/replication producer.",
+    "Direct review covers five component checkpoints;no whole-frame pixel equality,hardware input or audio acceptance is claimed.",
+    "NoSound TapIDs warnings remain in native logs. The first obscured capture remains unaccepted and exact source bytes are archived.",
+    "Accept only the exact original Batch1A requirement. Candidate,RC and full two-Experience requirements stay separate."
+  ]
+}

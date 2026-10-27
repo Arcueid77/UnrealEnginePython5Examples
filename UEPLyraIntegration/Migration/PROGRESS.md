@@ -31,6 +31,34 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed original Batch1A state/visual and owner criterion batch271 (2026-10-28):**
+Five actual native operation checkpoints now have directly reviewed paired
+presenter views:fire,reload,weapon switch,empty ammo and Pawn replacement.
+The explicit test-only adapter creates original BlueprintFallback left/Python
+right panels and active-style counters,reading each local player's real native
+item. It preserves the actual production HUD and unchanged nineteen-phase
+native input/authority/replication producer. No lifecycle replay,ammo/inventory
+write,asset authoring or normal-startup change occurs.
+
+Native01's four peers pass the functional protocol,but its switch screenshot
+has an obscured original panel. Preserve five raw images,all reports and exact
+retired root/stage source copies;do not accept that partial visual result.
+Change only three test UI coordinates. Native02 server36384,A12188,B014308 and
+rejoinedB137984 all exit0 through19 phases,two travels and client exit/rejoin.
+Widget roots close0/0,16/16,12/12 and4/4. Final original HUD/weapon callbacks,
+scopes and samplers close normally. Directly inspect all five1280x720 recaptures;
+paired ammo and counter values/styles agree. Keep NoSound TapIDs warnings in
+logs;no suppression,whole-frame pixel parity,hardware input or audio claim.
+
+Twenty-one selected immutable-index checks,one driver parse and two preflight
+rejections pass. Eight new network processes total:four in the retained partial
+visual run and four in the accepted recapture. Auxiliary asset audits are
+separate. Zero compile/link,cook/package or full regression. Overall19/22;
+candidate matrix,RC and full Explorer/TopDownArena acceptance remain open.
+All246 original paths/order/versions and22 checklist texts,existing production
+policies/assets,official Lyra,the authorized isolated guard/binaries and six
+unrelated modified files remain intact.
+
 **Completed original visible/current packaged weapon-example criterion batch270 (2026-10-28):**
 Accept only the original0.9 visible and packaged weapon/ammo example condition.
 Visible01 PID17164 and the actual packaged LyraGame PID9996 exit0,each passing
