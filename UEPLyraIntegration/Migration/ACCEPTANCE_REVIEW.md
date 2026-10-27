@@ -17,7 +17,7 @@ This index does not execute or semantically revalidate the referenced runtime ev
 
 - `0.9.0` — A checked-in call/lifecycle matrix labels every path as tested supported, intentionally rejected, or bypass/unsupported, with reproducible fixtures. (ROADMAP.md:242; all_33_documented_contract_paths_classified_with_pinned_reproducers_and_current_generic_calls_pie).
 - `0.9.0` — The controlled reload and cleanup tests pass across repeated PIE, GC and travel; state, callbacks and router restoration are checked after teardown. (ROADMAP.md:244; current_sdk_controlled_reload_profile_gc_repeated_pie_and_two_travel_cleanup_source_verified).
-- `0.9.0` — A visible and packaged weapon/ammo example proves native signal plus read-only sampled change updates, safe subscription removal and native authority ownership. (ROADMAP.md:246; historical_claim_needs_source_and_evidence_review).
+- `0.9.0` — A visible and packaged weapon/ammo example proves native signal plus read-only sampled change updates, safe subscription removal and native authority ownership. (ROADMAP.md:246; current_native_python_packaged_and_visible_weapon_with_native_signal_sampler_cleanup_owner_protocol_verified).
 - `0.9.0` — Batch 1A has original-BP/Python state and visual comparisons for weapon switching, firing, reload, empty ammo and Pawn replacement. One server and two clients prove that ammo/UI state never crosses local-player ownership. (ROADMAP.md:249; historical_claim_needs_source_and_evidence_review).
 - `0.9.0` — Normal playable startup does not auto-run validation or request exit; explicitly enabled test modes retain bounded timeouts and cleanup evidence. Focused rendered weapon mode exits cleanly; the no-test-flag Lyra observation is bounded and stopped only by its owning test driver, not by a probe. (ROADMAP.md:252; native_normal_no_probe_observation_and_focused_rendered_probe_cleanup_and_sources_verified).
 - `0.9.0` — Generic, both Third Person variants and Lyra pass the candidate regression matrix; the missing Mixin Third Person visible gate is closed. (ROADMAP.md:256; historical_claim_needs_source_and_evidence_review).
@@ -216,7 +216,7 @@ These are recorded flags requiring requirement and platform review, not automati
 
 ## Next evidence work
 
-Complete original0.9 visible/packaged weapon and Batch1A state/visual comparisons,remaining Third Person/Lyra candidate package gates and RC inventory;original0.14 full two-Experience acceptance remains open.
+Complete original0.9 Batch1A gameplay visual comparisons,the independent Third Person/Lyra candidate regression gates and RC inventory;original0.14 full two-Experience acceptance remains open.
 
 Recorded capabilities still need their linked semantic/source evidence reviewed; this index
 does not rerun them. Continue unresolved readiness observations and the original version scope.
@@ -252,3 +252,22 @@ Reuse the current-SDK PIE capture after exact source/binary revalidation;
 five fresh native processes all exit0. Zero compile,cook or full regression.
 Rendered network screenshots retain TapIDs/invalid-tap warnings in the NoSound
 fixture;complete visual/audio and packaged acceptance remain separate.
+
+## Visible and current packaged weapon example (batch270)
+
+The exact original0.9 visible/packaged weapon-example criterion is accepted;
+overall18/22. Visible01 PID17164 and real packaged Game PID9996 both exit0,
+pass42 scenarios/38 paired states and three controlled reload/GC cycles.
+Directly review the1280x720 and1440x900 images:paired ammo text and all three
+counter styles are visible without a shader preparation overlay. This does
+not accept every gameplay visual transition or pixel/audio parity.
+
+The guarded Game plan and actual build execute only three compiles,one link
+and one metadata action (PID39092,85.931 seconds). No C++ source is changed.
+An independent package copy reuses unchanged cooked assets:246 candidates,
+460 Overlay assets and12 maps all match their original cook-plan source bytes.
+Replace only this copy's executable and loose Python payload with the current
+verified Game and862 project/two core scripts. Preserve its previous payloads,
+old Game,original archive and cooked products;no cook occurs. Native owner,
+replication,slot/possession signals and cleanup reuse batch269's verified
+nineteen-phase Editor-game protocol. Packaged networking remains separate.

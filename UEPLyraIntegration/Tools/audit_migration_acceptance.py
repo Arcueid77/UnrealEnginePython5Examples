@@ -270,6 +270,16 @@ def attach_reload_cleanup_review(report,current,initial,repo,path):
     report['reload_cleanup_review']=verified;report['inputs'].append(dict(path=str(path.resolve()),sha256=digest(path)))
 
 
+def attach_weapon_example_review(report,current,initial,repo,path):
+    from audit_weapon_example_acceptance import REQUIREMENT,verify_documentation
+    path=Path(path);verified=verify_documentation(json.loads(path.read_text(encoding='utf-8-sig')),current,initial,repo)
+    targets=[row for row in report['requirements'] if row['version']=='0.9.0' and row['text']==REQUIREMENT]
+    if len(targets)!=1:raise ValueError('Exact original visible/packaged weapon-example requirement required')
+    targets[0].update(completion_proven=True,evidence_state='current_native_python_packaged_and_visible_weapon_with_native_signal_sampler_cleanup_owner_protocol_verified',
+        evidence_artifact=str(path.resolve()),full_migration_acceptance_proven=False)
+    report['weapon_example_review']=verified;report['inputs'].append(dict(path=str(path.resolve()),sha256=digest(path)))
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--manifest', required=True)
@@ -294,6 +304,7 @@ def main():
     parser.add_argument('--small-batch-comparison-review',help='Recheck all original 0.10 small-batch comparisons and current Python business ownership')
     parser.add_argument('--call-lifecycle-matrix-review',help='Recheck every documented Mixin call/lifecycle classification and its scoped reproducer')
     parser.add_argument('--reload-cleanup-review',help='Recheck controlled reload, repeated PIE/GC, two-client travel and teardown ownership')
+    parser.add_argument('--weapon-example-review',help='Recheck visible and actual current-native packaged weapon example plus scoped native owner/signal proof')
     args = parser.parse_args()
     manifest = Path(args.manifest)
     current = json.loads(manifest.read_text(encoding='utf-8-sig'))
@@ -356,6 +367,8 @@ def main():
         attach_call_lifecycle_matrix_review(report,current,initial,manifest.resolve().parents[3],args.call_lifecycle_matrix_review)
     if args.reload_cleanup_review:
         attach_reload_cleanup_review(report,current,initial,manifest.resolve().parents[3],args.reload_cleanup_review)
+    if args.weapon_example_review:
+        attach_weapon_example_review(report,current,initial,manifest.resolve().parents[3],args.weapon_example_review)
     Path(args.result).write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     if args.markdown:
         Path(args.markdown).write_text(markdown(report), encoding='utf-8')

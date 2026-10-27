@@ -31,6 +31,40 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed original visible/current packaged weapon-example criterion batch270 (2026-10-28):**
+Accept only the original0.9 visible and packaged weapon/ammo example condition.
+Visible01 PID17164 and the actual packaged LyraGame PID9996 exit0,each passing
+42 scenarios (38 paired BP/Python states),native callback cancellation,four live
+Profile switches,three new-widget reload/native-GC cycles and pre-exit cleanup.
+Direct image review confirms paired ammo text and all three counter styles at
+1280x720 and1440x900,without the earlier shader-preparation overlay. Do not
+promote this initial presenter comparison to every gameplay visual transition.
+
+The current native Game lacked the already authorized isolated Hero guard and
+current SDK changes. UBT exports five owned-project actions before build:three
+compiles,one link,one metadata write. Preserve the old Game/receipt first.
+GameBuild01 PID39092 exits0 in85.931 seconds with zero compiler diagnostics;
+NoEngineChanges is active and Engine/official Lyra remain unchanged. No new
+C++ source change is made. The actual current Game SHA is
+BEA390FA7C42EC59349F24B14E678AE96CDED0F608DFB303479903D93BF2AEFE.
+
+Avoid recooking unchanged data:all246 original candidates,460 original Overlay
+assets and12 runtime maps exactly match the successful prior cook plan. Clone
+its immutable archive into fresh Packaged01/Payload,retain old copied Game and
+Python directories,and place the current Game plus862 project/two core Python
+files in that copy. All original cooked products and source bytes are guarded;
+the real inner executable is run,not a bootstrap or Editor. No cook or full
+regression occurs. The package preparation tool rejects changed data,stale
+native input,escaped paths and existing output before copying.
+
+Reuse and recheck batch269's current-SDK nineteen-phase native owner/replication
+and slot/possession-signal protocol. Production sampler native calls are reads;
+the presenter sends only local reload input intent and UI updates. Twenty-four
+selected immutable-index tests,one driver parse and two preflight rejections
+pass. Overall18/22;the Batch1A gameplay visual,candidate,RC and full two-Experience
+criteria stay open. Original246/22 scope,existing assets and production policies,
+the authorized isolated initialization guard and six unrelated files remain.
+
 **Completed original controlled reload/cleanup criterion batch269 (2026-10-28):**
 Accept only the original0.9 controlled reload,PIE,GC and travel cleanup condition.
 Weapon01 PID17880 exits0 after42 scenarios (38 BP/Python state comparisons),

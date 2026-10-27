@@ -1,0 +1,257 @@
+{
+  "schema_version": 1,
+  "batch": 270,
+  "recorded_utc": "2026-10-27T18:20:44.756076+00:00",
+  "status": "original_009_visible_and_current_packaged_weapon_example_criterion_verified",
+  "criterion": "A visible and packaged weapon/ammo example proves native signal plus read-only sampled change updates, safe subscription removal and native authority ownership.",
+  "completion_proven": true,
+  "core_parent_commit": "2f0ee60ab062af67bebb778e28389bb36b46bbee",
+  "examples_parent_commit": "013f9f8e754c7141138c07e5313653ca414f085f",
+  "review": {
+    "status": "passed",
+    "criterion": "A visible and packaged weapon/ammo example proves native signal plus read-only sampled change updates, safe subscription removal and native authority ownership.",
+    "completion_proven": true,
+    "runs": [
+      {
+        "name": "visible",
+        "directory": ".build/LyraValidation/BlueprintPython/20261028-weapon-example/Visible01",
+        "summary_sha256": "BAB84CD1834EC5E8F1EAEA463C296321E72A3D6056C369BFF033EBAAAA6C6FF6",
+        "pid": 17164,
+        "exit_code": 0,
+        "report_sha256": "6D64345071268C44E84BB37DFCA7C8767C9BEFB9356183ED9A1A47F9DF340757",
+        "log_sha256": "42D9378B5A4009E5EDC825B9DB748F493499516B83F883B708C9B2BA9E4095EA"
+      },
+      {
+        "name": "packaged",
+        "directory": ".build/LyraValidation/BlueprintPython/20261028-weapon-example/Packaged01",
+        "summary_sha256": "FD617DF9ED48A057C57D9DE1C99540A28BADD2B8FA96491DC62DCD4C3BBB369A",
+        "pid": 9996,
+        "exit_code": 0,
+        "report_sha256": "AE9025D6F970059E9E35CB51D60692EDED9EEB13C737B1E22389C298242C0030",
+        "log_sha256": "EC5583D5BE9BA730D5826CCDC862A4ADC8BF4DE223B67301C05E421E48C3EB06"
+      }
+    ],
+    "visual_review_sha256": "D05CCB7E3E09495B7694037AA238D7DFF4A59E91BFA788B930E3BDE430EA86D8",
+    "images": [
+      {
+        "runtime": "Editor",
+        "path": ".build/LyraValidation/BlueprintPython/20261028-weapon-example/Visible01/weapon.png",
+        "sha256": "75380A7795EE23A9453BEA7795A96C54CCFCC7A491A25A2DF0D81EB8A883981A",
+        "width": 1280,
+        "height": 720,
+        "paired_ammo_text": true,
+        "three_counter_styles_visible": true,
+        "shader_preparation_overlay_absent": true
+      },
+      {
+        "runtime": "Packaged",
+        "path": ".build/LyraValidation/BlueprintPython/20261028-weapon-example/Packaged01/weapon.png",
+        "sha256": "A7E55878F33F0E6C413C493DE74E1E1F67AC4E8DCBE776256F3E36640680DCEB",
+        "width": 1440,
+        "height": 900,
+        "paired_ammo_text": true,
+        "three_counter_styles_visible": true,
+        "shader_preparation_overlay_absent": true
+      }
+    ],
+    "production_presenter_calls": [
+      {
+        "module": "ammo_mixin",
+        "native_functions": [
+          "Conv_IntToText",
+          "FindFragmentByClass",
+          "GetDynamicMaterial",
+          "GetLocalPlayerSubsystem",
+          "GetStatTagStackCount",
+          "InjectInputVectorForAction",
+          "SetBrush",
+          "SetScalarParameterValue",
+          "SetText",
+          "SetTextureParameterValue",
+          "SetVisibility"
+        ]
+      },
+      {
+        "module": "weapon_observer",
+        "native_functions": [
+          "GetActiveSlotItem",
+          "GetOwningPlayer",
+          "GetStatTagStackCount"
+        ]
+      }
+    ],
+    "current_visible_frozen_inputs": 2581,
+    "current_packaged_executable_sha256": "BEA390FA7C42EC59349F24B14E678AE96CDED0F608DFB303479903D93BF2AEFE",
+    "current_game_build": {
+      "summary_sha256": "0B00AE9BDE5871CBEFE09CD5A9F2DFC148A4AFEFA9DF28ABA962D884A48E4C90",
+      "pid": 39092,
+      "exit_code": 0,
+      "compile_actions": 3,
+      "link_actions": 1,
+      "metadata_actions": 1,
+      "duration_seconds": 85.931
+    },
+    "payload_summary_sha256": "8301C2DF9EF8E223A74DBBC84415B6BEB9A524C3A2D07486BB9F194BF8A28C69",
+    "current_project_python_files": 862,
+    "current_core_python_files": 2,
+    "reused_current_editor_network_proof": {
+      "directory": ".build/LyraValidation/BlueprintPython/20261028-reload-cleanup/WeaponNetwork01",
+      "summary_sha256": "D928643380276F888AF3477BA9D6F7094C9C5F96CAC9D7119A1E76816ED02095",
+      "current_frozen_inputs": 2875,
+      "native_peers": [
+        {
+          "peer": "A",
+          "pid": 22788,
+          "exit_code": 0,
+          "report_sha256": "27F861336333A4E50DE6AFC1B29FE6E9CD78660D463285F9CBD26B0C14E4416A",
+          "log_sha256": "335534B5C8884CFDE873F2B56E80DB8C41783EFD8F7569FFBD60472470582C0B"
+        },
+        {
+          "peer": "B0",
+          "pid": 37656,
+          "exit_code": 0,
+          "report_sha256": "AEF3FB65717EE06E64A40F07A440D799B7E5538F47C033BF44B9C5D5C25260DD",
+          "log_sha256": "57782F14695CD55AEE5D37270DC74DC35A8C05AE4AEC87989B031F789E850E5B"
+        },
+        {
+          "peer": "B1",
+          "pid": 12304,
+          "exit_code": 0,
+          "report_sha256": "408A1DD71E5302E9AED45896422554EE756F6ABE46D7802215F9BDDCC501EF4E",
+          "log_sha256": "5D1C3705572FD06AA34571F16BEC7AAFB9ADABDA263307278BB064FE2C2B6E57"
+        },
+        {
+          "peer": "server",
+          "pid": 38612,
+          "exit_code": 0,
+          "report_sha256": "09F48C1737FC0A2FA7869C18417048B1F3D696537F9913FF0D0C7046BF5AA62E",
+          "log_sha256": "3A454564E94C8FD249DA48E9CEAD85165E9407EF266D3AE5D037E3331A302FFD"
+        }
+      ],
+      "protocol": {
+        "status": "passed",
+        "phase_count": 19,
+        "clients": 2,
+        "rejoin_tested": true,
+        "real_fire_reload": true,
+        "blueprint_python_native_parity": true,
+        "sampling_source_declared": true,
+        "combat_hud_acceptance": true,
+        "debug_spread_acceptance": false,
+        "production_reticle_acceptance": false,
+        "reticle_host_acceptance": false,
+        "ability_progress_acceptance": false,
+        "ability_failure_acceptance": false,
+        "dash_cooldown_acceptance": false,
+        "respawn_timer_acceptance": false,
+        "quickbar_slots_acceptance": false,
+        "nameplate_acceptance": false,
+        "native_interaction_producer_tested": false,
+        "replicated_duration_message_tested": false,
+        "physical_touch_tested": false
+      },
+      "cleanup": [
+        {
+          "peer": "A",
+          "subscriptions_closed": 17,
+          "scopes_closed": 3,
+          "native_signals": 25,
+          "active_owned_resources": 0
+        },
+        {
+          "peer": "B0",
+          "subscriptions_closed": 13,
+          "scopes_closed": 3,
+          "native_signals": 15,
+          "active_owned_resources": 0
+        },
+        {
+          "peer": "B1",
+          "subscriptions_closed": 3,
+          "scopes_closed": 1,
+          "native_signals": 0,
+          "active_owned_resources": 0
+        },
+        {
+          "peer": "server",
+          "subscriptions_closed": 0,
+          "scopes_closed": 0,
+          "native_signals": 0,
+          "active_owned_resources": 0
+        }
+      ]
+    },
+    "paired_state_comparisons_per_runtime": 38,
+    "weapon_scenarios_per_runtime": 42,
+    "controlled_new_widget_reload_cycles_per_runtime": 3,
+    "native_gameplay_authority_retained": true,
+    "production_ammo_stat_writes": false,
+    "cpp_source_changed": false,
+    "cpp_compile_executed": true,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_migration_acceptance_proven": false,
+    "limits": [
+      "The package is an independent current Game/Python snapshot over byte-identical previously cooked assets; no fresh cook is claimed.",
+      "Native owner/replication and live slot/possession signals reuse the nineteen-phase current-SDK Editor-game run; packaged networking is not claimed.",
+      "Direct image review covers paired initial ammo text and three counter styles only; no pixel parity or every gameplay visual transition claim.",
+      "Only the exact original visible/packaged weapon-example criterion is accepted; Batch1A visual and full candidate/Experience requirements remain separate."
+    ]
+  },
+  "selected_host_checks": 24,
+  "driver_parse_checks": 1,
+  "invalid_preflight_checks": 2,
+  "original_candidates": 246,
+  "original_requirements": 22,
+  "requirements_proven": 18,
+  "plan_review": {
+    "artifact": "game-plan-review.json",
+    "sha256": "8A91EB2111214245D7B2F52F8591549BBA2D24122E94B40426CB7A8126BC4579"
+  },
+  "previous_game_archives": {
+    "artifact": "previous-game-archives.json",
+    "sha256": "0F5E8865635CA4F9360B651EFE5AC1B0C1FA4DD2967E3287EFC59790170E9055"
+  },
+  "incremental_verification": {
+    "artifact": "incremental-acceptance-integrity.json",
+    "sha256": "B221975D2AEB84BB23F868CA25189E2B764A264BE395B7F83B1DAAF2EEE60E1A",
+    "status": "passed",
+    "previous_index": {
+      "path": ".build/LyraValidation/BlueprintPython/20261028-reload-cleanup/acceptance-final.json",
+      "sha256": "E677B8B4E0391217946730DB0D138F27222E54FCEBBC2E22012E462840BC3C40",
+      "requirements_proven": 17
+    },
+    "previous_accepted_criteria_retained": 17,
+    "new_original_requirements_accepted": 1,
+    "original_246_candidates_and_22_texts_unchanged": true,
+    "existing_production_sources_and_assets_unchanged": true,
+    "unrelated_semantic_gates_reexecuted": false,
+    "selected_host_checks": 24,
+    "driver_parse_checks": 1,
+    "invalid_preflight_checks": 2,
+    "new_native_runtime_processes": 2,
+    "current_editor_network_processes_reused": 4,
+    "native_build_processes": 1,
+    "compile_actions": 3,
+    "link_actions": 1,
+    "metadata_actions": 1,
+    "cpp_compile_executed": true,
+    "cook_package_executed": false,
+    "full_regression_executed": false
+  },
+  "production_policy_or_assets_changed": false,
+  "cpp_source_changed": false,
+  "normal_startup_scripts_changed": false,
+  "cpp_compile_executed": true,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "full_version_acceptance": false,
+  "full_migration_acceptance_proven": false,
+  "other_original_criteria_accepted_by_this_batch": false,
+  "limits": [
+    "The package is an independent current Game/Python snapshot over byte-identical previously cooked assets; no fresh cook is claimed.",
+    "Native owner/replication and live slot/possession signals reuse the nineteen-phase current-SDK Editor-game run; packaged networking is not claimed.",
+    "Direct image review covers paired initial ammo text and three counter styles only; no pixel parity or every gameplay visual transition claim.",
+    "Only the exact original visible/packaged weapon-example criterion is accepted; Batch1A visual and full candidate/Experience requirements remain separate."
+  ]
+}
