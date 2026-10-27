@@ -31,6 +31,34 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed original call/lifecycle matrix criterion batch266 (2026-10-27):**
+Accept the exact original0.9 classification/reproducer condition. Give every
+documented path a stable ID and one of three explicit classifications:21 call
+paths and12 lifecycle paths;24 tested supported,six intentionally rejected and
+three bypass/unsupported. Pin named reproducer files and bounded references.
+Correct the old blanket output rejection:unmarked outputs/non-const references
+stay rejected;explicit Boolean named-output opt-in supports only the tested
+non-reference signatures. Add its bad-result recovery and the already tested
+authored Parent Construction/virtual-helper path. Experimental BP body routing
+remains separate from production Mixin support.
+
+Reuse the two current generic call cases and native RPC/delegate/Editor-latent
+rejection evidence from257/258. Run only the nine cases missing currentSDK236
+results. Seven exit0;two deliberate negative/exception fixtures exit1 with exact
+expected diagnostics,recovery/restoration and ordered normal shutdown. All11
+generic call cases now have current-SDK results. PIE01 PID39448 exits0 after
+three actual sessions in one shared-interpreter Editor,each with placed/spawned
+classes,Construction,Begin/End2/2,closed scopes2,native GC and restored routers.
+Ten new processes total;eight ordinary exit0 and two declared negative exit1.
+
+Retain the original SDK/configuration scope of six historical Third Person,
+Dash,packaged reload,Explorer and travel/rejoin references. Do not recertify those
+captures as current-SDK executions. Twenty-two selected checks pass from the
+final immutable index. No runtime/asset/startup edit,compile/link,cook/package
+or full regression. All246 paths/order/version assignments and all22 original
+checklist texts remain intact. Original acceptance is16/22;other0.9 criteria,
+including the combined reload/cleanup criterion,remain separately open.
+
 **Completed original all-small-batch comparison criterion batch265 (2026-10-27):**
 Accept the exact original0.10 each-small-batch BP/Python comparison without BP
 business fallthrough condition for all32 original candidates. Map30 migrated

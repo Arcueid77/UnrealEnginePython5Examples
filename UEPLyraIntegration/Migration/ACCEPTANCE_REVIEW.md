@@ -15,7 +15,7 @@ This index does not execute or semantically revalidate the referenced runtime ev
 
 ## Original checklist requirements
 
-- `0.9.0` — A checked-in call/lifecycle matrix labels every path as tested supported, intentionally rejected, or bypass/unsupported, with reproducible fixtures. (ROADMAP.md:242; historical_claim_needs_source_and_evidence_review).
+- `0.9.0` — A checked-in call/lifecycle matrix labels every path as tested supported, intentionally rejected, or bypass/unsupported, with reproducible fixtures. (ROADMAP.md:242; all_33_documented_contract_paths_classified_with_pinned_reproducers_and_current_generic_calls_pie).
 - `0.9.0` — The controlled reload and cleanup tests pass across repeated PIE, GC and travel; state, callbacks and router restoration are checked after teardown. (ROADMAP.md:244; historical_claim_needs_source_and_evidence_review).
 - `0.9.0` — A visible and packaged weapon/ammo example proves native signal plus read-only sampled change updates, safe subscription removal and native authority ownership. (ROADMAP.md:246; historical_claim_needs_source_and_evidence_review).
 - `0.9.0` — Batch 1A has original-BP/Python state and visual comparisons for weapon switching, firing, reload, empty ammo and Pawn replacement. One server and two clients prove that ammo/UI state never crosses local-player ownership. (ROADMAP.md:249; historical_claim_needs_source_and_evidence_review).
@@ -216,7 +216,7 @@ These are recorded flags requiring requirement and platform review, not automati
 
 ## Next evidence work
 
-Continue the remaining original0.9 call/lifecycle/visible/package/ThirdPerson/Lyra matrix and supported API freeze/correctness gates,and both complete Experience comparisons. Preserve all246 original candidates and22 texts.
+Review the remaining original0.9 controlled reload/cleanup,visible/packaged ammo,candidate regression and RC boundaries;original0.14 Experience acceptance remains open.
 
 Recorded capabilities still need their linked semantic/source evidence reviewed; this index
 does not rerun them. Continue unresolved readiness observations and the original version scope.

@@ -1,0 +1,665 @@
+{
+  "schema_version": 1,
+  "batch": 266,
+  "recorded_utc": "2026-10-27T15:35:51.896604+00:00",
+  "status": "original_009_call_lifecycle_matrix_classification_and_reproducer_criterion_verified",
+  "criterion": "A checked-in call/lifecycle matrix labels every path as tested supported, intentionally rejected, or bypass/unsupported, with reproducible fixtures.",
+  "completion_proven": true,
+  "core_parent_commit": "6aa134b9b7698661f1d1505f086f36e17e643c6e",
+  "examples_parent_commit": "74bdc90435899cef12ec74b83a7bc039f3c52883",
+  "review": {
+    "status": "passed",
+    "criterion": "A checked-in call/lifecycle matrix labels every path as tested supported, intentionally rejected, or bypass/unsupported, with reproducible fixtures.",
+    "completion_proven": true,
+    "matrix_path": "docs/Mixin_Call_Lifecycle_Matrix.md",
+    "matrix_sha256": "8E4AFE918E3E44667735C6A948B1D3FECA207CEFA586B5792D06D30DA0C6368B",
+    "paths": [
+      {
+        "id": "C01",
+        "entry": "Caller BP compiled before injection -> Actor reference -> virtual target function",
+        "classification": "Tested supported",
+        "category": "Tested supported",
+        "proof_group": "callsite"
+      },
+      {
+        "id": "C02",
+        "entry": "Repeated Python success without executing the original BP",
+        "classification": "Tested supported",
+        "category": "Tested supported",
+        "proof_group": "callsite"
+      },
+      {
+        "id": "C03",
+        "entry": "Reflected name lookup / `call_function` / native ProcessEvent entry",
+        "classification": "Tested supported for identified signatures",
+        "category": "Tested supported",
+        "proof_group": "signature"
+      },
+      {
+        "id": "C04",
+        "entry": "Return plus const array input, including inherited Blueprint owner",
+        "classification": "Tested supported",
+        "category": "Tested supported",
+        "proof_group": "third-person"
+      },
+      {
+        "id": "C05",
+        "entry": "Explicit `call_mixin_original`",
+        "classification": "Tested supported",
+        "category": "Tested supported",
+        "proof_group": "signature"
+      },
+      {
+        "id": "C06",
+        "entry": "Explicit parent/child routers with same-name preserved originals",
+        "classification": "Tested supported within the bounded 0.11 fixture",
+        "category": "Tested supported",
+        "proof_group": "inheritance"
+      },
+      {
+        "id": "C07",
+        "entry": "Profile omits one method from the router union",
+        "classification": "Tested supported",
+        "category": "Tested supported",
+        "proof_group": "callsite"
+      },
+      {
+        "id": "C08",
+        "entry": "Python callback raises",
+        "classification": "Tested supported exception boundary",
+        "category": "Tested supported",
+        "proof_group": "exception"
+      },
+      {
+        "id": "C09",
+        "entry": "Python `object.broadcast` -> reflected native multicast -> Python subscriber",
+        "classification": "Tested supported as ordinary reflected multicast, outside Mixin interception",
+        "category": "Tested supported",
+        "proof_group": "delegate"
+      },
+      {
+        "id": "C10",
+        "entry": "Blueprint Enhanced Input -> Character Move/Aim -> Python",
+        "classification": "Tested supported",
+        "category": "Tested supported",
+        "proof_group": "third-person"
+      },
+      {
+        "id": "C11",
+        "entry": "Static functions",
+        "classification": "Intentionally rejected; runtime tested",
+        "category": "Intentionally rejected",
+        "proof_group": "signature"
+      },
+      {
+        "id": "C12",
+        "entry": "Non-const reference parameters, or outputs without explicit named-output opt-in",
+        "classification": "Intentionally rejected; runtime tested",
+        "category": "Intentionally rejected",
+        "proof_group": "signature"
+      },
+      {
+        "id": "C13",
+        "entry": "Wrong Python argument signature",
+        "classification": "Intentionally rejected; runtime tested",
+        "category": "Intentionally rejected",
+        "proof_group": "signature"
+      },
+      {
+        "id": "C14",
+        "entry": "RPC and delegate-signature functions",
+        "classification": "Intentionally rejected; native Editor registration tested",
+        "category": "Intentionally rejected",
+        "proof_group": "rejection"
+      },
+      {
+        "id": "C15",
+        "entry": "Native server RPC -> explicitly authored non-RPC body gateway",
+        "classification": "Tested supported through the authored Lyra gateway; RPC interception remains rejected",
+        "category": "Tested supported",
+        "proof_group": "rpc-gateway"
+      },
+      {
+        "id": "C16",
+        "entry": "Latent functions",
+        "classification": "Intentionally rejected by native Editor metadata validation",
+        "category": "Intentionally rejected",
+        "proof_group": "rejection"
+      },
+      {
+        "id": "C17",
+        "entry": "Cached original UFunction pointer, explicit-parent/final VM calls, direct native C++ calls",
+        "classification": "Bypass/unsupported interception",
+        "category": "Bypass/unsupported",
+        "proof_group": "source-boundary"
+      },
+      {
+        "id": "C18",
+        "entry": "Experimental in-place BP body gateway",
+        "classification": "Bypass/unsupported by production Mixin; separately tested experimental API",
+        "category": "Bypass/unsupported",
+        "proof_group": "experimental"
+      },
+      {
+        "id": "C19",
+        "entry": "Explicit non-reference named-output opt-in on a retained-class Mixin function",
+        "classification": "Tested supported for the named fixture signatures",
+        "category": "Tested supported",
+        "proof_group": "named-outputs"
+      },
+      {
+        "id": "C20",
+        "entry": "Invalid named-output marker, dictionary, missing output or extra key",
+        "classification": "Intentionally rejected; runtime tested",
+        "category": "Intentionally rejected",
+        "proof_group": "named-outputs"
+      },
+      {
+        "id": "C21",
+        "entry": "Authored child Parent Construction -> virtual body helper -> parent Mixin router",
+        "classification": "Tested supported for the explicit forwarding fixture",
+        "category": "Tested supported",
+        "proof_group": "construction-forwarder"
+      },
+      {
+        "id": "L01",
+        "entry": "Already placed BP Actor and newly spawned Actor retain their class",
+        "classification": "Tested supported",
+        "category": "Tested supported",
+        "proof_group": "pie"
+      },
+      {
+        "id": "L02",
+        "entry": "Construction on newly spawned Actor",
+        "classification": "Tested supported with prior registration",
+        "category": "Tested supported",
+        "proof_group": "pie"
+      },
+      {
+        "id": "L03",
+        "entry": "BeginPlay and EndPlay",
+        "classification": "Tested supported",
+        "category": "Tested supported",
+        "proof_group": "pie"
+      },
+      {
+        "id": "L04",
+        "entry": "Per-instance profile, inherited Interface/CDO, fallback, initializer/teardown reentry guards",
+        "classification": "Tested supported",
+        "category": "Tested supported",
+        "proof_group": "third-person"
+      },
+      {
+        "id": "L05",
+        "entry": "Child owns an Interface provider override after compiler removes duplicate Interface descriptors",
+        "classification": "Tested supported within the bounded 0.11 fixture",
+        "category": "Tested supported",
+        "proof_group": "inheritance"
+      },
+      {
+        "id": "L06",
+        "entry": "Live weapon profile Python -> BP -> Python",
+        "classification": "Tested supported in the weapon fixture",
+        "category": "Tested supported",
+        "proof_group": "weapon"
+      },
+      {
+        "id": "L07",
+        "entry": "Controlled unregister -> module reload -> register -> NEW widget",
+        "classification": "Tested supported",
+        "category": "Tested supported",
+        "proof_group": "weapon"
+      },
+      {
+        "id": "L08",
+        "entry": "Native UObject GC between PIE sessions",
+        "classification": "Tested supported",
+        "category": "Tested supported",
+        "proof_group": "pie"
+      },
+      {
+        "id": "L09",
+        "entry": "Blueprint `CollectGarbage` called from Python",
+        "classification": "Tested supported as a deferred request; wait across an engine frame",
+        "category": "Tested supported",
+        "proof_group": "follow"
+      },
+      {
+        "id": "L10",
+        "entry": "Observing a Boolean gateway before original graph continuation",
+        "classification": "Tested supported with the returned Boolean preserved and output sampled next frame",
+        "category": "Tested supported",
+        "proof_group": "follow"
+      },
+      {
+        "id": "L11",
+        "entry": "Pawn replacement, two world travels, client exit/rejoin",
+        "classification": "Tested supported in real Lyra weapon lane",
+        "category": "Tested supported",
+        "proof_group": "travel"
+      },
+      {
+        "id": "L12",
+        "entry": "Arbitrary live BP recompile, changed reflected signatures, generated-class replacement, automatic state migration",
+        "classification": "Bypass/unsupported",
+        "category": "Bypass/unsupported",
+        "proof_group": "source-boundary"
+      }
+    ],
+    "call_paths": 21,
+    "lifecycle_paths": 12,
+    "tested_supported_paths": 24,
+    "intentionally_rejected_paths": 6,
+    "bypass_unsupported_paths": 3,
+    "reproducible_source_fixtures": [
+      {
+        "group": "callsite",
+        "path": "Validation/UEP58Host/Tests/mixin_callsite_validation.py",
+        "sha256": "9F0DC72E40C8CB0C20B7B8014ACADBE778B7C7DAB72409E352F4CEC35F9CBF59"
+      },
+      {
+        "group": "signature",
+        "path": "Validation/UEP58Host/Tests/mixin_signature_validation.py",
+        "sha256": "3B60735C10155C9F820E607B05F47D75E8F7F3862221345D3A41B647E988F776"
+      },
+      {
+        "group": "exception",
+        "path": "Validation/UEP58Host/Tests/mixin_exception_validation.py",
+        "sha256": "BEE3ACA640D1F23304ECA087F1E117AC2C59F805DAE704CD613130B3259664A0"
+      },
+      {
+        "group": "delegate",
+        "path": "Validation/UEP58Host/Tests/delegate_broadcast_validation.py",
+        "sha256": "E5B501793E2E02A24A71C6A92D4923E456D5120A975244191CA1726954FAC85A"
+      },
+      {
+        "group": "rejection",
+        "path": "Validation/UEP58Host/Tests/mixin_rejection_validation.py",
+        "sha256": "9BABDB83B9D892C4B212B08E349CC0F66ED07B9DC937ADBFB44CC28AC91290C7"
+      },
+      {
+        "group": "rejection",
+        "path": "Validation/UEP58Host/Tests/mixin_rejection_contract.py",
+        "sha256": "4128A5A6327F558DD846499E875D7B0E5D5789666CC3348DD979660E6F14A544"
+      },
+      {
+        "group": "experimental",
+        "path": "Validation/UEP58Host/Tests/blueprint_script_body_validation.py",
+        "sha256": "A6C625461C82A29D08CA661EC7A71A7FFF1CEB8FB259318387BBA17BE1A47549"
+      },
+      {
+        "group": "named-outputs",
+        "path": "Validation/UEP58Host/Tests/mixin_named_output_validation.py",
+        "sha256": "884387B65EA2624DB3920579D72DB6040B765D8ECDEDDA27A65E27FE7FEEF894"
+      },
+      {
+        "group": "construction-forwarder",
+        "path": "Validation/UEP58Host/Tests/mixin_construction_forwarder_validation.py",
+        "sha256": "76F7492B2A20878A0C6D5D3EE7F4701F0A8922042EC31A0FF47ACE16992C3101"
+      },
+      {
+        "group": "pie",
+        "path": "Validation/UEP58Host/Tests/mixin_pie_validation.py",
+        "sha256": "DB511C51428BA305AC1E1290498F192A58E3D2688AD56CECFB6BA029E7E67168"
+      },
+      {
+        "group": "pie",
+        "path": "Validation/Run-UEP58FocusedLifecycleValidation.ps1",
+        "sha256": "38FD54059B861C46D0A62BAA9B9C317B06DEC3C46ADF5F477EBBCE7AD1762D89"
+      },
+      {
+        "group": "third-person",
+        "path": "Demos/UEPPythonThirdPerson/Mixin/Content/Scripts/uep_third_person_mixin/interface_probe.py",
+        "sha256": "F75028E975B47D5101086A6760ED1565F1CAA3264148CC94EB67633ACCED2662"
+      },
+      {
+        "group": "third-person",
+        "path": "Demos/UEPPythonThirdPerson/Mixin/Content/Scripts/uep_third_person_mixin/smoke.py",
+        "sha256": "577558EAFF75012D7DEB500E4228D8533E4A2D263D3AD8D6E9106011870AFD4C"
+      },
+      {
+        "group": "third-person",
+        "path": "Demos/UEPPythonThirdPerson/Mixin/Content/Scripts/uep_third_person_mixin/character_mixin.py",
+        "sha256": "2D0722C07EC56C650368BC1C8B1A238EFF183064E3B922191BD110FC8F2A349D"
+      },
+      {
+        "group": "inheritance",
+        "path": "Demos/UEPLyraIntegration/Tools/generate_mixin_inheritance_probe.py",
+        "sha256": "DF42CF21777D411AA28FAA66B77AD45018249A01928D6480A5FB10F944F949A6"
+      },
+      {
+        "group": "inheritance",
+        "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/dash_selector_probe_policy.py",
+        "sha256": "EE0717F180048902E67F55F21E8D0201A120AFE0A157425993A8F14E1037E324"
+      },
+      {
+        "group": "rpc-gateway",
+        "path": "Demos/UEPLyraIntegration/Tools/generate_dash_rpc_input_assets.py",
+        "sha256": "FB179F764CFD593097759F3C381CA1C7B5B5F4A6B1BC208DAE5312408018130E"
+      },
+      {
+        "group": "rpc-gateway",
+        "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_abilities/dash_rpc_input_contract.py",
+        "sha256": "EF2AC9F7404006CF166A2E80C9A521B0DE4550455F1D858EAE2738D04BB5151F"
+      },
+      {
+        "group": "weapon",
+        "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud/weapon_validation.py",
+        "sha256": "2D385117C8E74EE56243A8428745F1B5F4A28CF7A2FB6FBEF43D71A3674BAFC5"
+      },
+      {
+        "group": "weapon",
+        "path": "Validation/Run-UEP58PackagedWeaponHUDValidation.ps1",
+        "sha256": "834E7D71BA4AB42747D5C733A7ED7D429D721E5114DDC991969C7AA06B255ABD"
+      },
+      {
+        "group": "weapon",
+        "path": "Validation/LyraHUDContracts.ps1",
+        "sha256": "6FF225BC9262F177CF886EC2A867CEDB01A1D75F744917952D25C71713E91A31"
+      },
+      {
+        "group": "follow",
+        "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/explorer_follow_validation.py",
+        "sha256": "FA5B2EF37B6F5092F4D5CD90A46BF354C8EAB45C20EBDBA532DD2826DC3CF9EE"
+      },
+      {
+        "group": "follow",
+        "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_world/explorer_follow_contract.py",
+        "sha256": "E345A5D830257CAE7A01C32F7F1C46FF91E1F0BB60800D3839DDEE40E6236D32"
+      },
+      {
+        "group": "travel",
+        "path": "Demos/UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_weapon_protocol.py",
+        "sha256": "B99D9D31E7DBF523598D5B82D98A2802825B565EB6A26FD710CB48BE96B156FE"
+      },
+      {
+        "group": "travel",
+        "path": "Validation/Run-UEP58FocusedNetworkValidation.ps1",
+        "sha256": "CBACA5FEF57B422BFA5A3CABC34BFD9094F62A744E66F79B50FD701B43AA4115"
+      },
+      {
+        "group": "source-boundary",
+        "path": "Source/UnrealEnginePython/Private/UEPyMixin.cpp",
+        "sha256": "DAE7F3E02924E507866BC14156EC7D0FE5873F26F71401F3C821514888C7714C"
+      },
+      {
+        "group": "source-boundary",
+        "path": "Source/UnrealEnginePython/Private/PythonFunction.cpp",
+        "sha256": "476867D3B86DF74DC4A7488F8FCBFF913C3D5F38D97990416717A6D56643473D"
+      },
+      {
+        "group": "source-boundary",
+        "path": "Validation/UEP58Host/Tests/mixin_callsite_validation.py",
+        "sha256": "9F0DC72E40C8CB0C20B7B8014ACADBE778B7C7DAB72409E352F4CEC35F9CBF59"
+      }
+    ],
+    "current_generic_boundary_runs": [
+      {
+        "batch": 257,
+        "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/257-current-native-rpc-delegate-and-editor-latent-rejection.json",
+        "ledger_sha256": "5E9BB9E6006EE8E417C44B3717316886AD604E2FF8F6414D2944F31C280A4094",
+        "directory": ".build/LyraValidation/BlueprintPython/20261026-mixin-rejection/Native02",
+        "summary_sha256": "4F25F48B3469A4D19E8978A67E1EB2F3638AB5EB3DEB7E1021BA5829C108DFBB",
+        "native_pids": [
+          38108
+        ],
+        "referenced_native_processes": 1,
+        "semantic_gate": {
+          "status": "passed",
+          "native_rejection_families": 3,
+          "active_router_recovery_cases": 3,
+          "original_functions_restored": true,
+          "current_editor_runtime": true,
+          "cooked_latent_rejection_tested": false,
+          "full_acceptance": false
+        }
+      },
+      {
+        "batch": 258,
+        "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/258-incremental-call-matrix-selection-and-current-delegate-signatures.json",
+        "ledger_sha256": "CE353F70898C7AF05543CD759BF05D6E8637627C1D0E0B0EC2F863342F18F982",
+        "directory": ".build/LyraValidation/BlueprintPython/20261026-ability-lifetime/Generic01",
+        "summary_sha256": "659D531FD8A27C3A67B19A3F893FDCB2A0A08C34DE34B8A829B4AAA9D0C1C4B1",
+        "native_pids": [
+          36928,
+          46912
+        ],
+        "referenced_native_processes": 2,
+        "semantic_gate": {
+          "status": "passed",
+          "native_delegate_delivery_and_unbind": true,
+          "supported_signature_cases": 7,
+          "rejected_signature_profiles": 3
+        }
+      }
+    ],
+    "missing_current_call_run": {
+      "directory": ".build/LyraValidation/BlueprintPython/20261027-call-lifecycle-matrix/MissingCalls01",
+      "summary_sha256": "C213CDAC556EE2F71B3039FB1B459AB57CFF37051B2ECDE22D9114ADF6CA2213",
+      "selected_cases": [
+        {
+          "name": "signature-shared",
+          "pid": 10268,
+          "exit_code": 0,
+          "report_sha256": "9327A9AC5704A6EA574D91719A842A550D60A2AF2A2340A88B59CB6420A2115C",
+          "log_sha256": "D6C63FE37E3B253C42797B25F6FC8E4109F79805B07CB81EB342FBCA08825F72"
+        },
+        {
+          "name": "callsite",
+          "pid": 38516,
+          "exit_code": 0,
+          "report_sha256": "611C7C1162BFA0AB7B3F00EB5A1DC8840EB7DD3E050D9CB294767EA36E5F9015",
+          "log_sha256": "883726E40625B7B7B3282BF393B3A2FAF54197E9A78BA9B587C56BC9510A4808"
+        },
+        {
+          "name": "experimental-body",
+          "pid": 39548,
+          "exit_code": 0,
+          "report_sha256": "7FDD8354102FFA65F9A57BE580EF0C8474304F1354F5C89520BD1D597C6BA325",
+          "log_sha256": "5CF2346CF7B6F9D701BF6C94153F85F7546630B7A6CD6724C5E059FE6B94C0FA"
+        },
+        {
+          "name": "named-outputs",
+          "pid": 14532,
+          "exit_code": 0,
+          "report_sha256": "00D548CF7AEB9DF92C39CEA6013CEDD08423CC37ABF9E1B585538813C4ED8186",
+          "log_sha256": "21DE65CD831A56A990AB073EA871B2C9CCB658BDC3D855C0743BE2FCE085D575"
+        },
+        {
+          "name": "named-outputs-negative",
+          "pid": 39840,
+          "exit_code": 1,
+          "report_sha256": "86DA6748362E27EFFF468B661CBFDFF754BB8A4ED77991DBBC70048A54C95012",
+          "log_sha256": "20AAC092895E1CC6E13E088A8CAB419F46F5DDC237B70EF1655E9DD4C5CCD82C"
+        },
+        {
+          "name": "inherited-selector",
+          "pid": 12116,
+          "exit_code": 0,
+          "report_sha256": "B2D1E9F8FD4796711624018EDB07A13886E46D81B4519FDC643457F4F8F5F68E",
+          "log_sha256": "1CCC5C002DC691FB42D3B8914B29A1A7777011D91C55CD149041D7BDB498CDFF"
+        },
+        {
+          "name": "construction-forwarder",
+          "pid": 28356,
+          "exit_code": 0,
+          "report_sha256": "DBB110D7BF5830D1418D04E3792EE33C49747A46064ACB40012E93945C2C82E3",
+          "log_sha256": "8AF5F411380890A0B26C60BB4964A1385D63DB2C1EEDB60B95FBC2ECB2CBB134"
+        },
+        {
+          "name": "soft-class-path",
+          "pid": 37104,
+          "exit_code": 0,
+          "report_sha256": "49C7564C6B81FCE90EAC49F3A1399250913033EB48F4B3C388543BCF836ACB87",
+          "log_sha256": "BFAD3333334E0FE4AE8406222E00B75B7C50FA15F64453AE70C6A034648165E0"
+        },
+        {
+          "name": "mixin-exception",
+          "pid": 2440,
+          "exit_code": 1,
+          "report_sha256": "2566FACFC5DA4C1B939D3971A7F0AB4F9053EEF239E6FC5389D71AD1A24C49AB",
+          "log_sha256": "9A02F7EC926403B40A62F944F87F939FC181759AAF14D903A57F6A8D3183FE21"
+        }
+      ],
+      "frozen_input_records": 843
+    },
+    "current_pie_run": {
+      "directory": ".build/LyraValidation/BlueprintPython/20261027-call-lifecycle-matrix/PIE01",
+      "summary_sha256": "2FDC2C5301F68F037C10A096820C0B94F244015E9DF0A6AFFFA2A5D63C5601C9",
+      "pid": 39448,
+      "exit_code": 0,
+      "report_sha256": "C82D009AFEA40255D93C25FBDA2DB8FA927D5FE46D02ADB6ACCA26DEA2113A2C",
+      "log_sha256": "95D0122B11491E45B680034357EDDE5D857A511C3C14EF668E6DB22335E9558B",
+      "same_editor_sessions": 3,
+      "closed_scopes": 6
+    },
+    "historical_bounded_references": [
+      {
+        "batch": 217,
+        "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/217-runtime-property-notifications-and-current-sdk-regressions.json",
+        "ledger_sha256": "800E04D98B565C56911B29C7F62C93B24CFEFCD035B377927AE7FA1569CCB376",
+        "directory": ".build/LyraValidation/BlueprintPython/20261023-current-third-person/NativeFixed05",
+        "summary_sha256": "F9451353F8C63DF3C17A2F1F95B9B524A8B10B20904EF066FE3E50A8CA41BA4C",
+        "current_sdk_equivalence_claimed": false,
+        "new_native_execution_claimed": false
+      },
+      {
+        "batch": 62,
+        "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/62-dash-selector-inherited-routers.json",
+        "ledger_sha256": "77479651F139261E9B2D97FB85BC66745230A9D31AC097AB4E8CC6E9D92FF209",
+        "directory": ".build/LyraValidation/BlueprintPython/20261017-dash-selector/Assets06",
+        "summary_sha256": "D15CC553049ACA5D5532614C3391C7B0F6AA6341A373F3AA307EAD20BF7CF66C",
+        "current_sdk_equivalence_claimed": false,
+        "new_native_execution_claimed": false
+      },
+      {
+        "batch": 63,
+        "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/63-dash-rpc-input-stores.json",
+        "ledger_sha256": "163E65B4C8F4DF2BBE56F06855E79133A4721823297F6F8EC3EE3BD83593419E",
+        "directory": ".build/LyraValidation/BlueprintPython/20261017-dash-rpc-input/Network02",
+        "summary_sha256": "4499D48750C7B1311FDB16B85A5672A3D39D1A1766F14E61BAA39D14751476C2",
+        "current_sdk_equivalence_claimed": false,
+        "new_native_execution_claimed": false
+      },
+      {
+        "batch": 211,
+        "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/211-current-packaged-weapon-presenters-and-controlled-lifetime.json",
+        "ledger_sha256": "D6E6802AF60BE0E346C3375AFF31F165B4F39F2D26F6BEC7B82C7ABBB8BF6471",
+        "directory": ".build/LyraValidation/BlueprintPython/20261021-current-game-package/PackagedWeaponHUD01",
+        "summary_sha256": "745299E5241D499C70E36EAD8F0C1FD1FEF599DF809C869430D0480B20D6484D",
+        "current_sdk_equivalence_claimed": false,
+        "new_native_execution_claimed": false
+      },
+      {
+        "batch": 231,
+        "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/231-explorer-original-follow-map-navigation-cancel-and-travel.json",
+        "ledger_sha256": "55220EEA0A46BA0AA4AF1F944380736D2D32EAE65EEF276FE5F3ECF82BDD7666",
+        "directory": ".build/LyraValidation/BlueprintPython/20261023-explorer-follow/Python03DeferredGC",
+        "summary_sha256": "16254C958750AB3338F8E19A546BA0368A6E78447B9B5507ED9B321B1392EE3A",
+        "current_sdk_equivalence_claimed": false,
+        "new_native_execution_claimed": false
+      },
+      {
+        "batch": 265,
+        "ledger": "Demos/UEPLyraIntegration/Migration/Acceptance/265-original-all-small-batch-comparisons-and-python-business-ownership.json",
+        "ledger_sha256": "82A035E32C4CA0ECB171DD097E586D1282A5C6454260B2DC620F5FF894716B6C",
+        "directory": ".build/LyraValidation/BlueprintPython/20261016-device-color/CombinedNetwork01",
+        "summary_sha256": "9F2E167CDA4F151193F7A7855A8D15181FACAD232C9A51EB328DA1157F8F15AC",
+        "pinned_native_peers": [
+          {
+            "peer": "A",
+            "pid": 46596,
+            "exit_code": 0,
+            "report_sha256": "BFCD48199D27814F640AFC0185B4EE3FE605AB64D6AE03863F843D00D6681CB7",
+            "log_sha256": "2C9D5DA9632A5F08ABC3A77B940547A6CF2EACD191D2D4E77A3977650E20C622"
+          },
+          {
+            "peer": "B0",
+            "pid": 6188,
+            "exit_code": 0,
+            "report_sha256": "A35F2174D1D4298CFAA9FAF0316139D008259B3F51D5348926DC9008F1A4F8DE",
+            "log_sha256": "3C20004D6BFDD6DCA0910F3D5210D6EB605BFC135E88FD4168E533BADE1747AF"
+          },
+          {
+            "peer": "B1",
+            "pid": 49188,
+            "exit_code": 0,
+            "report_sha256": "7779365601C319731DFC9579EAD83FD581262E615B55A7E8939CF66C2FDC1E38",
+            "log_sha256": "E41CF5B8D54968FD81E3F4009FEA9D31C0F21CA99B0BB4AB7A0617CEACF1203C"
+          },
+          {
+            "peer": "server",
+            "pid": 49404,
+            "exit_code": 0,
+            "report_sha256": "F7F3D83AAB932DE589F396F1B06E49E1993054D49A1B927167D4C28F2D7157F3",
+            "log_sha256": "661DCA4B95B161935E06C84E4E8A688320D958DFAE854C13D5D9A893FB046EAE"
+          }
+        ],
+        "current_sdk_equivalence_claimed": false,
+        "new_native_execution_claimed": false
+      }
+    ],
+    "current_generic_call_cases": 11,
+    "new_native_processes": 10,
+    "current_editor_sdk_sha256": "96049A85163F7EBE98CDDBB324BDC7973F640E0CBC13CA758AA8499772F2044F",
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false,
+    "full_version_acceptance": false,
+    "full_migration_acceptance_proven": false,
+    "limits": [
+      "Class-map bypasses and arbitrary recompile/state migration are unsupported contracts, not tested universal interception.",
+      "The experimental body API is tested separately and excluded from production Mixin support.",
+      "Historical Third Person, Dash, packaged reload and Explorer captures retain their own SDK/configuration scope.",
+      "This accepts the checked-in classification/reproducer criterion only; the other 0.9 criteria require separate acceptance."
+    ]
+  },
+  "selected_host_checks": 22,
+  "original_candidates": 246,
+  "original_requirements": 22,
+  "requirements_proven": 16,
+  "incremental_verification": {
+    "artifact": "incremental-acceptance-integrity.json",
+    "sha256": "1D9C8812C528B3D6C52777AC2DA247FFE8EADA43D55BAD492A9357708E3DE491",
+    "status": "passed",
+    "previous_index": {
+      "path": ".build/LyraValidation/BlueprintPython/20261027-small-batch-comparison/acceptance-final.json",
+      "sha256": "903BEE9E1CC817EAF5DE6D9F889AA0052655485BB912A54473CF85E31D935BD3",
+      "requirements_proven": 15
+    },
+    "previous_accepted_criteria_retained": 15,
+    "prior_proof_inputs_unchanged_except_recorded_manifest_metadata": true,
+    "existing_runtime_sources_and_assets_unchanged": true,
+    "original_246_candidates_and_22_texts_unchanged": true,
+    "new_criterion": "A checked-in call/lifecycle matrix labels every path as tested supported, intentionally rejected, or bypass/unsupported, with reproducible fixtures.",
+    "new_criterion_rechecked_from_immutable_tested_tool": true,
+    "unrelated_semantic_gates_reexecuted": false,
+    "selected_host_checks": 22,
+    "new_native_processes": 10,
+    "ordinary_exit_zero_processes": 8,
+    "declared_negative_exit_one_processes": 2,
+    "already_accepted_current_generic_processes_reused": 3,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_regression_executed": false
+  },
+  "production_policy_or_assets_changed": false,
+  "normal_startup_scripts_changed": false,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "full_version_acceptance": false,
+  "full_migration_acceptance_proven": false,
+  "other_original_009_criteria_accepted_by_this_batch": false,
+  "limits": [
+    "Accept only the exact original0.9 checked-in call/lifecycle matrix classification and reproducible-fixture criterion. Preserve all246 original candidate paths/order/version assignments and all22 original checklist texts. Overall acceptance becomes16/22;the remaining0.9 and0.14 criteria require their own evidence.",
+    "The matrix now identifies21 call paths and12 lifecycle paths. Exactly24 are tested supported within their stated fixture/signature scope,six intentionally rejected with explicit boundaries,and three bypass/unsupported production contracts. Each row maps to named checked-in reproducer/source files. Unsupported direct native/cached pointer/other VM dispatch and arbitrary live signature replacement are exclusions,not universal runtime interception claims.",
+    "Correct an old overbroad output-parameter statement. Unmarked outputs and non-const references remain rejected. Explicit Boolean uep_named_outputs=True supports the separately tested non-reference named-output signatures;invalid markers/results are rejected with recovery and original restoration. Add the already tested authored Parent Construction/virtual-helper path. These are documentation/proof changes;existing router/runtime behavior is unchanged.",
+    "Reuse the two current-SDK call cases from batch258 and the current native RPC/delegate/Editor-latent rejection process from batch257. Run only the nine generic call cases still lacking the current SDK236 result. Seven exit0;named-output-negative PID39840 and mixin-exception PID2440 deliberately exit1 and pass only with their exact expected diagnostics,complete reports,recovery/restoration and ordered normal shutdown.",
+    "One additional current-SDK shared-interpreter Editor process PID39448 exits0 after three actual PIE sessions. Each has placed/spawned original classes,Construction,two Begin/two End events,two closed scopes,native GC and restored routers. This is lifecycle matrix evidence;it does not by itself close the separate controlled reload/cleanup/travel criterion.",
+    "All11 generic call cases now have current SDK236 evidence. New commandlet and PIE summaries freeze and recheck current source/binary inputs;the actual DLL hash is96049A85163F7EBE98CDDBB324BDC7973F640E0CBC13CA758AA8499772F2044F. Reuse compiled stages;zero compile/link,cook/package or full-regression actions.",
+    "Pin six supplemental historical references:Third Person NativeFixed05,Dash inheritance Assets06,native RPC gateway Network02,PackagedWeaponHUD01,Explorer Python03DeferredGC and accepted nineteen-phase CombinedNetwork01 owner/travel/rejoin outputs. Keep their original SDK/configuration scope;do not call them fresh current-SDK executions. The packaged reload reference is not the current Editor candidate.",
+    "Ten new fail-closed matrix/counter/signature/exception/PIE/index checks and twelve directly affected migration-index checks pass from an immutable index snapshot. Repeat only those22 checks after correcting the discovered documented output/Construction boundaries. Preserve the earlier snapshot and all native evidence;no native fixture was modified or rerun.",
+    "The prior15 accepted criteria retain unchanged pinned proof inputs and unchanged existing runtime sources/assets. New files only implement the source/evidence audit and tests;core changes document the contract/history. Official Lyra and the previously authorized isolated eight-line initialization guard/binaries still match their frozen fingerprints. Preserve the six unrelated modified files."
+  ]
+}
