@@ -30,7 +30,7 @@
       "incremental_checks_do_not_refresh_unrelated_evidence": true
     },
     "evidence_directory": "Migration/Acceptance",
-    "bounded_evidence_ledgers": 275,
+    "bounded_evidence_ledgers": 276,
     "shared_binary_profile_families_committed_together": true,
     "host_checks_passed": 3510,
     "full_index_python_files_checked": 1027,
@@ -16805,6 +16805,25 @@
     "new_native_processes": 0,
     "cpp_compile_executed": false,
     "cook_package_executed": false,
+    "full_migration_acceptance_proven": false
+  },
+  "rc_api_freeze_acceptance_evidence": {
+    "status": "original_009_supported_api_freeze_reviewed",
+    "criterion": "The supported API inventory and migration/deprecation rules are ready for RC freeze, with no known release-blocking correctness defects.",
+    "evidence_ledger": "274-original-supported-api-freeze-and-correctness-dispositions.json",
+    "completion_proven": true,
+    "supported_inventory_surfaces": 12,
+    "unchanged_registered_methods": 675,
+    "known_release_blocking_supported_api_defects": 0,
+    "isolated_lyra_native_guard_required": true,
+    "official_lyra_issue_remains_recorded": true,
+    "requirements_proven": 21,
+    "original_requirements": 22,
+    "selected_host_checks": 20,
+    "new_native_processes": 0,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "rc_tag_or_release_created": false,
     "full_migration_acceptance_proven": false
   }
 }

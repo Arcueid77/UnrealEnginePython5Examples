@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "batch": 274,
+  "recorded_utc": "2026-10-27T20:27:48.221244+00:00",
+  "status": "original_009_supported_api_freeze_reviewed",
+  "criterion": "The supported API inventory and migration/deprecation rules are ready for RC freeze, with no known release-blocking correctness defects.",
+  "completion_proven": true,
+  "review": {
+    "status": "passed",
+    "criterion": "The supported API inventory and migration/deprecation rules are ready for RC freeze, with no known release-blocking correctness defects.",
+    "completion_proven": true,
+    "scope": "UE5.8 CPython3.11 Win64 Development supported API inventory",
+    "findings": {
+      "candidate_matrix_accepted": true,
+      "other_original_009_criteria_accepted": 6,
+      "supported_capabilities": [
+        "Interpreter",
+        "UObject reflection",
+        "Lazy soft-class input",
+        "Dynamic types",
+        "Production Mixin",
+        "Delegate / Enhanced Input lifetime",
+        "Runtime subscription scope",
+        "Actor / World / exit",
+        "World lookup convenience",
+        "Editor / asset / Slate helpers",
+        "Construction extraction authoring",
+        "Experimental Blueprint body scripting"
+      ],
+      "registration_counts": [
+        213,
+        462
+      ],
+      "known_release_blocking_api_defects": [],
+      "sdk_bootstrap_fix_verified": true,
+      "isolated_lyra_guard_required": true,
+      "official_lyra_issue_retained": true,
+      "original_netshooter_native_discrepancy_retained": true
+    },
+    "source_table_comparison": {
+      "baseline_core_commit": "e1199d2b02937bbddb947d660916a2c5c6b55464",
+      "source_sha256": "2797063492780CF5135F7B17174DCE12511E086BD435EC20ACFC34D49FF3E341",
+      "tables": {
+        "unreal_engine_methods": {
+          "baseline": 213,
+          "current": 213,
+          "removed": [],
+          "added": [],
+          "changed_function_or_flags": []
+        },
+        "ue_PyUObject_methods": {
+          "baseline": 462,
+          "current": 462,
+          "removed": [],
+          "added": [],
+          "changed_function_or_flags": []
+        }
+      },
+      "all_legacy_wrapper_or_abi_certification": false
+    },
+    "reviewed_documents": [
+      {
+        "path": "docs/Supported_API_Inventory.md",
+        "sha256": "76DB5D14A51F598B3BF996AE893666CDD9895B7A86D44B569A54AAA1EE798774"
+      },
+      {
+        "path": "docs/RC_API_Review_0.9.md",
+        "sha256": "222CE61C9082983CE3FE165682CF26B2ACB3B03B0EA083A2073619FB97F91AAC"
+      },
+      {
+        "path": "docs/Mixin_Call_Lifecycle_Matrix.md",
+        "sha256": "8E4AFE918E3E44667735C6A948B1D3FECA207CEFA586B5792D06D30DA0C6368B"
+      }
+    ],
+    "evidence_ledgers": [
+      {
+        "path": "Demos/UEPLyraIntegration/Migration/Acceptance/273-original-candidate-matrix-source-bound-aggregate.json",
+        "sha256": "42E794B5A071F0C300823B5310C310A4E38CA75C1A52E55202627010B643DB3D"
+      },
+      {
+        "path": "Demos/UEPLyraIntegration/Migration/Acceptance/236-python-bootstrap-path-conversion-lifetime-and-sdk-counterfactual.json",
+        "sha256": "001B96057F3B0A0D0B5F1166478C9AB8793C73EF384C169654FAADD5EC5A1592"
+      },
+      {
+        "path": "Demos/UEPLyraIntegration/Migration/Acceptance/246-isolated-native-pawn-init-guard-and-network-regression.json",
+        "sha256": "7F6DA3B5FB99ACCD74CE0FD8CBC1067707A1996AE402E3C446DDF35A9742AE0C"
+      },
+      {
+        "path": "Demos/UEPLyraIntegration/Migration/Acceptance/97-netshooter-native-impact-multicast-component-parity.json",
+        "sha256": "2F70931462DE17F50B39C06E872A682B3F807F23945ADA3F9BCCE816179D69A0"
+      }
+    ],
+    "native_dependency_guard_sha256": "EC5BF1B831EFDF8F120C61C3257ACD675B494E486BA0C620A52F2EB6E6F7ECE1",
+    "new_native_processes": 0,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_migration_regression_executed": false,
+    "full_migration_acceptance_proven": false,
+    "rc_tag_or_release_created": false,
+    "limits": [
+      "Source registration compatibility checks names,function expressions and flags only;runtime coverage retains its individual fixture boundaries.",
+      "No known release-blocking defect is a scoped review of the supported API after explicit findings disposition;unknown defects and every legacy wrapper are not certified.",
+      "The isolated user-approved Hero guard is required for Lyra acceptance. Official Lyra remains unchanged and its original finding stays open.",
+      "Original0.11 NetShooter native baseline discrepancy remains explicit;full0.14 Experience and publication gates stay separate."
+    ]
+  },
+  "core_parent_commit": "add8d5e67eb110e2facc5bd7bcff8689269bca6b",
+  "examples_parent_commit": "d50e75d51ff510bdc5b58d26a9dca27988e46d58",
+  "selected_host_checks": 20,
+  "original_candidates": 246,
+  "original_requirements": 22,
+  "requirements_proven": 21,
+  "new_original_requirements_accepted": 1,
+  "incremental_verification": {
+    "artifact": "incremental-acceptance-integrity.json",
+    "sha256": "99C5A02DBE489A9FB35529819AC951F27EC029967DCDBFBCA95D412913C6AD4C",
+    "status": "passed",
+    "previous_index": {
+      "path": ".build/LyraValidation/BlueprintPython/20261028-candidate-matrix/acceptance-final.json",
+      "sha256": "09863C9A87AB13FDBB5455973E0D37539346BD7BB4A2F3F7CA99A5393B8E980E",
+      "requirements_proven": 20
+    },
+    "previous_accepted_criteria_retained": 20,
+    "new_original_requirements_accepted": 1,
+    "original_246_candidates_and_22_texts_unchanged": true,
+    "production_sources_assets_and_native_binaries_unchanged": true,
+    "selected_host_checks": 20,
+    "new_native_processes": 0,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false,
+    "full_migration_regression_executed": false,
+    "rc_tag_or_release_created": false
+  },
+  "new_native_processes": 0,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "full_version_acceptance": false,
+  "full_migration_acceptance_proven": false,
+  "rc_tag_or_release_created": false,
+  "limits": [
+    "Source registration compatibility checks names,function expressions and flags only;runtime coverage retains its individual fixture boundaries.",
+    "No known release-blocking defect is a scoped review of the supported API after explicit findings disposition;unknown defects and every legacy wrapper are not certified.",
+    "The isolated user-approved Hero guard is required for Lyra acceptance. Official Lyra remains unchanged and its original finding stays open.",
+    "Original0.11 NetShooter native baseline discrepancy remains explicit;full0.14 Experience and publication gates stay separate."
+  ]
+}

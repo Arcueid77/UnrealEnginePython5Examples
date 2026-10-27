@@ -31,6 +31,27 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Original supported API freeze accepted batch274 (2026-10-28):**
+The original0.9 API inventory/migration/deprecation criterion is accepted;
+overall21/22. All seven original0.9 criteria now have scoped evidence. Review
+twelve inventory surfaces,retain experimental exclusions and compare the current
+registration tables with continuation checkpoint e1199d2:213 module plus462
+UObject method names,function expressions and flags are unchanged. This does not
+certify every legacy wrapper,argument behavior,ABI,platform or configuration.
+
+Keep compatibility forms,explicit fallback/exception behavior,controlled reload,
+game-thread ownership,native-GC frame boundaries and signature restart rules.
+Deprecation names the old API,replacement,examples and removal version with a
+compatibility path. SDK236 fixes the bootstrap conversion lifetime defect.
+The Lyra candidate requires the approved isolated eight-line Hero guard246;
+official Lyra remains unpatched and its original finding remains open. Preserve
+the original0.11 NetShooter native component discrepancy97 and its boundary.
+No currently identified release-blocking defect remains in the reviewed supported
+API after these dispositions. Unknown defects are not certified absent.
+Twenty immutable-index checks pass;no new native process,build,cook,tag or release.
+Full original0.14 Explorer/TopDownArena acceptance remains open. Preserve original
+246 paths/22 texts,prior20 accepted criteria,official source and unrelated dirt.
+
 **Original candidate matrix accepted batch273 (2026-10-28):**
 The original0.9 Generic/both Third Person/Lyra candidate criterion is accepted;
 overall20/22. Aggregate the existing clean Generic six-suite70/current11call/

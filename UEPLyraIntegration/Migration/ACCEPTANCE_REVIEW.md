@@ -21,7 +21,7 @@ This index does not execute or semantically revalidate the referenced runtime ev
 - `0.9.0` — Batch 1A has original-BP/Python state and visual comparisons for weapon switching, firing, reload, empty ammo and Pawn replacement. One server and two clients prove that ammo/UI state never crosses local-player ownership. (ROADMAP.md:249; five_directly_reviewed_bp_python_weapon_component_views_and_current_native_two_owner_protocol_verified).
 - `0.9.0` — Normal playable startup does not auto-run validation or request exit; explicitly enabled test modes retain bounded timeouts and cleanup evidence. Focused rendered weapon mode exits cleanly; the no-test-flag Lyra observation is bounded and stopped only by its owning test driver, not by a probe. (ROADMAP.md:252; native_normal_no_probe_observation_and_focused_rendered_probe_cleanup_and_sources_verified).
 - `0.9.0` — Generic, both Third Person variants and Lyra pass the candidate regression matrix; the missing Mixin Third Person visible gate is closed. (ROADMAP.md:256; original_generic_third_person_and_lyra_candidate_cells_source_bound_and_aggregated).
-- `0.9.0` — The supported API inventory and migration/deprecation rules are ready for RC freeze, with no known release-blocking correctness defects. (ROADMAP.md:258; historical_claim_needs_source_and_evidence_review).
+- `0.9.0` — The supported API inventory and migration/deprecation rules are ready for RC freeze, with no known release-blocking correctness defects. (ROADMAP.md:258; supported_api_inventory_compatibility_and_explicit_correctness_dispositions_reviewed_for_rc).
 - `0.10.0` — Each small batch passes original-BP/Python comparison without BP fallthrough. (ROADMAP.md:605; all_original_32_candidates_140_entries_source_bound_native_comparisons_without_bp_business_fallthrough).
 - `0.10.0` — Pickup failure/success, cooldown/respawn and interaction effects match the baseline; two players cannot share another player's UI or claim state. (ROADMAP.md:606; native_pickup_rejection_cooldown_interaction_effects_and_two_owner_ui_claim_sources_verified).
 - `0.10.0` — Widget and Actor lifetime tests leave no owned subscriptions after teardown, travel or profile switching. (ROADMAP.md:608; native_widget_actor_scope_teardown_travel_profile_cleanup_source_verified).
@@ -216,7 +216,7 @@ These are recorded flags requiring requirement and platform review, not automati
 
 ## Next evidence work
 
-Review the supported API inventory and RC migration/deprecation decisions;complete the separate original0.14 Explorer/TopDownArena gameplay,presentation and applicable player comparisons.
+Complete the original0.14 Explorer/TopDownArena gameplay,presentation and applicable multi-client/local-player comparisons. All seven original0.9 criteria are accepted within their explicit Win64 Development scope;no tag or publication is authorized.
 
 Recorded capabilities still need their linked semantic/source evidence reviewed; this index
 does not rerun them. Continue unresolved readiness observations and the original version scope.
@@ -322,3 +322,26 @@ missing-Game, ownership/visual/package cells and production-archive rejection.
 No new native process, build, cook or broad regression. Full Explorer/TopDownArena
 and RC API review remain separate original requirements. Preserve all246 paths,
 22 original texts, prior19 accepted criteria, official Lyra and unrelated dirt.
+
+## Supported API freeze review (batch274)
+
+**Original supported API freeze accepted batch274 (2026-10-28):**
+The original0.9 API inventory/migration/deprecation criterion is accepted;
+overall21/22. All seven original0.9 criteria now have scoped evidence. Review
+twelve inventory surfaces,retain experimental exclusions and compare the current
+registration tables with continuation checkpoint e1199d2:213 module plus462
+UObject method names,function expressions and flags are unchanged. This does not
+certify every legacy wrapper,argument behavior,ABI,platform or configuration.
+
+Keep compatibility forms,explicit fallback/exception behavior,controlled reload,
+game-thread ownership,native-GC frame boundaries and signature restart rules.
+Deprecation names the old API,replacement,examples and removal version with a
+compatibility path. SDK236 fixes the bootstrap conversion lifetime defect.
+The Lyra candidate requires the approved isolated eight-line Hero guard246;
+official Lyra remains unpatched and its original finding remains open. Preserve
+the original0.11 NetShooter native component discrepancy97 and its boundary.
+No currently identified release-blocking defect remains in the reviewed supported
+API after these dispositions. Unknown defects are not certified absent.
+Twenty immutable-index checks pass;no new native process,build,cook,tag or release.
+Full original0.14 Explorer/TopDownArena acceptance remains open. Preserve original
+246 paths/22 texts,prior20 accepted criteria,official source and unrelated dirt.

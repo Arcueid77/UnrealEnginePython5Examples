@@ -300,6 +300,16 @@ def attach_candidate_matrix_review(report,current,initial,repo,path):
     report['candidate_matrix_review']=verified;report['inputs'].append(dict(path=str(path.resolve()),sha256=digest(path)))
 
 
+def attach_rc_api_review(report,current,initial,repo,path):
+    from audit_rc_api_acceptance import REQUIREMENT,verify_documentation
+    path=Path(path);verified=verify_documentation(json.loads(path.read_text(encoding='utf-8-sig')),current,initial,repo)
+    targets=[row for row in report['requirements'] if row['version']=='0.9.0' and row['text']==REQUIREMENT]
+    if len(targets)!=1:raise ValueError('Exact original RC API freeze requirement required')
+    targets[0].update(completion_proven=True,evidence_state='supported_api_inventory_compatibility_and_explicit_correctness_dispositions_reviewed_for_rc',
+        evidence_artifact=str(path.resolve()),full_migration_acceptance_proven=False)
+    report['rc_api_review']=verified;report['inputs'].append(dict(path=str(path.resolve()),sha256=digest(path)))
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--manifest', required=True)
@@ -327,6 +337,7 @@ def main():
     parser.add_argument('--weapon-example-review',help='Recheck visible and actual current-native packaged weapon example plus scoped native owner/signal proof')
     parser.add_argument('--batch1a-review',help='Recheck five directly reviewed original/Python weapon views over the native two-client producer')
     parser.add_argument('--candidate-matrix-review',help='Aggregate source-bound original 0.9 Generic, both Third Person and Lyra candidate cells')
+    parser.add_argument('--rc-api-review',help='Review supported API inventory, registration compatibility and explicit native-game correctness boundaries for RC freeze')
     args = parser.parse_args()
     manifest = Path(args.manifest)
     current = json.loads(manifest.read_text(encoding='utf-8-sig'))
@@ -395,6 +406,8 @@ def main():
         attach_batch1a_review(report,current,initial,manifest.resolve().parents[3],args.batch1a_review)
     if args.candidate_matrix_review:
         attach_candidate_matrix_review(report,current,initial,manifest.resolve().parents[3],args.candidate_matrix_review)
+    if args.rc_api_review:
+        attach_rc_api_review(report,current,initial,manifest.resolve().parents[3],args.rc_api_review)
     Path(args.result).write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     if args.markdown:
         Path(args.markdown).write_text(markdown(report), encoding='utf-8')
