@@ -31,6 +31,43 @@ Existing accepted commits through batch189 have now been pushed in both
 repositories. Preserve unrelated dirt and keep unaccepted work unstaged. No
 force-push,tags,release publication or full-version acceptance is authorized.
 
+**Completed original all-small-batch comparison criterion batch265 (2026-10-27):**
+Accept the exact original0.10 each-small-batch BP/Python comparison without BP
+business fallthrough condition for all32 original candidates. Map30 migrated
+candidates to executed comparison families;retain two touch-region native-parent
+shells with no local BP business. Preserve all140 original entries:93 direct
+Python routes,28 dispatch forwarders,10 parent forwarders,7 empty/unreachable
+entries and two individually reviewed native message/GAS teardown transports.
+All22 selected policy classes have no explicit original-BP business call. Two
+exact OnAnimationFinished calls preserve inherited empty native UUserWidget
+behavior;the frozen widgets have no authored event or BP ancestor override.
+
+Recheck14 pinned native comparison runs,33 clean execution processes and108
+world owner/scenario/Profile rows. Current source dependencies and all30 migrated
+class/Mixin packages match related execution inputs. Reuse the nineteen-phase
+HUD owner/travel/rejoin comparisons;historical SDKs remain historical.
+
+Refresh only observed gaps:OpenMenu01 compares lazy Python/BP/Python native
+push/pop;WeaponReticles01 compares Pistol/Rifle/Shotgun in two native contexts,
+actual ADS and equipped Shotgun fire. HUDInitialization02 creates ten native
+widgets across five original/Python pairs,selecting each Profile before Create.
+Initial and mounted states,exclusive listener ownership,default restoration,
+root release and shutdown match. Together with batch264 QuickBar,all six audited
+initialization-business candidates have independent original-BP baselines.
+
+Preserve HUDInitialization01 as failed:an imported network fixture auto-started
+with missing network arguments. Native exit0 does not make it pass:there is no
+report and its independent gate exits1. Archive the exact old fixture inputs.
+Use the local read-only getter in the successful run;no startup selector edit.
+
+Thirty focused checks pass from an immutable index;the new native driver parses.
+No existing production policy/asset,C++,compile/link,cook/package or full
+regression. Native fixtures do not imply hardware,replicated messages or pixel
+fidelity. Native heal cost/commit refusal remains a separately named path.
+Retain the other14 proofs through unchanged inputs. Acceptance is15/22;each
+original0.10 condition now has evidence,while remaining0.9/whole-Experience and
+complete migration/version/package/release boundaries remain open.
+
 **Completed bounded native QuickBar initialization gap batch264 (2026-10-26):**
 Close the explicitly named original-BP initialization gap without changing the
 production slot policy or Blueprint assets. The earlier baseline had already

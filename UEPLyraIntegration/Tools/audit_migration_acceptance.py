@@ -240,6 +240,16 @@ def attach_widget_actor_lifetime_review(report,current,initial,repo,path):
     report['widget_actor_lifetime_review']=verified;report['inputs'].append(dict(path=str(path.resolve()),sha256=digest(path)))
 
 
+def attach_small_batch_comparison_review(report,current,initial,repo,path):
+    from audit_small_batch_comparison_acceptance import REQUIREMENT,verify_documentation
+    path=Path(path);verified=verify_documentation(json.loads(path.read_text(encoding='utf-8-sig')),current,initial,repo)
+    targets=[row for row in report['requirements'] if row['version']=='0.10.0' and row['text']==REQUIREMENT]
+    if len(targets)!=1:raise ValueError('Exact original small-batch comparison requirement required')
+    targets[0].update(completion_proven=True,evidence_state='all_original_32_candidates_140_entries_source_bound_native_comparisons_without_bp_business_fallthrough',
+        evidence_artifact=str(path.resolve()),full_migration_acceptance_proven=False)
+    report['small_batch_comparison_review']=verified;report['inputs'].append(dict(path=str(path.resolve()),sha256=digest(path)))
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--manifest', required=True)
@@ -261,6 +271,7 @@ def main():
     parser.add_argument('--ability-lifetime-review',help='Recheck source-bound native ability task,delegate,cancellation,latent and timer lifetimes and explicit unsupported signature rejection')
     parser.add_argument('--ability-gameplay-review',help='Recheck original fire,reload,exhaustion,switching,death and respawn comparisons in Standalone and server/two-client play')
     parser.add_argument('--widget-actor-lifetime-review',help='Recheck original 0.10 Widget/Actor owned subscription cleanup after teardown,travel and profile switching')
+    parser.add_argument('--small-batch-comparison-review',help='Recheck all original 0.10 small-batch comparisons and current Python business ownership')
     args = parser.parse_args()
     manifest = Path(args.manifest)
     current = json.loads(manifest.read_text(encoding='utf-8-sig'))
@@ -317,6 +328,8 @@ def main():
         attach_ability_gameplay_review(report,current,initial,manifest.resolve().parents[3],args.ability_gameplay_review)
     if args.widget_actor_lifetime_review:
         attach_widget_actor_lifetime_review(report,current,initial,manifest.resolve().parents[3],args.widget_actor_lifetime_review)
+    if args.small_batch_comparison_review:
+        attach_small_batch_comparison_review(report,current,initial,manifest.resolve().parents[3],args.small_batch_comparison_review)
     Path(args.result).write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     if args.markdown:
         Path(args.markdown).write_text(markdown(report), encoding='utf-8')

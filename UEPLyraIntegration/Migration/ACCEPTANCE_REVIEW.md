@@ -22,7 +22,7 @@ This index does not execute or semantically revalidate the referenced runtime ev
 - `0.9.0` — Normal playable startup does not auto-run validation or request exit; explicitly enabled test modes retain bounded timeouts and cleanup evidence. Focused rendered weapon mode exits cleanly; the no-test-flag Lyra observation is bounded and stopped only by its owning test driver, not by a probe. (ROADMAP.md:252; native_normal_no_probe_observation_and_focused_rendered_probe_cleanup_and_sources_verified).
 - `0.9.0` — Generic, both Third Person variants and Lyra pass the candidate regression matrix; the missing Mixin Third Person visible gate is closed. (ROADMAP.md:256; historical_claim_needs_source_and_evidence_review).
 - `0.9.0` — The supported API inventory and migration/deprecation rules are ready for RC freeze, with no known release-blocking correctness defects. (ROADMAP.md:258; historical_claim_needs_source_and_evidence_review).
-- `0.10.0` — Each small batch passes original-BP/Python comparison without BP fallthrough. (ROADMAP.md:605; unproven).
+- `0.10.0` — Each small batch passes original-BP/Python comparison without BP fallthrough. (ROADMAP.md:605; all_original_32_candidates_140_entries_source_bound_native_comparisons_without_bp_business_fallthrough).
 - `0.10.0` — Pickup failure/success, cooldown/respawn and interaction effects match the baseline; two players cannot share another player's UI or claim state. (ROADMAP.md:606; native_pickup_rejection_cooldown_interaction_effects_and_two_owner_ui_claim_sources_verified).
 - `0.10.0` — Widget and Actor lifetime tests leave no owned subscriptions after teardown, travel or profile switching. (ROADMAP.md:608; native_widget_actor_scope_teardown_travel_profile_cleanup_source_verified).
 - `0.11.0` — Fire, reload, ammo exhaustion, switching, death and respawn pass BP/Python comparison in Standalone and one-server/two-client play. (ROADMAP.md:1705; native_six_behavior_standalone_two_client_source_pins_and_original_python_outcomes_verified).
@@ -216,7 +216,7 @@ These are recorded flags requiring requirement and platform review, not automati
 
 ## Next evidence work
 
-Continue all32 original0.10 small-batch original/Python comparisons without BP fallthrough. The explicitly named QuickBar native-initialization gap is now closed;physical input and remaining0.9/whole-Experience requirements remain separate.
+Continue the remaining original0.9 call/lifecycle/visible/package/ThirdPerson/Lyra matrix and supported API freeze/correctness gates,and both complete Experience comparisons. Preserve all246 original candidates and22 texts.
 
 Recorded capabilities still need their linked semantic/source evidence reviewed; this index
 does not rerun them. Continue unresolved readiness observations and the original version scope.
