@@ -101,3 +101,29 @@ use the existing native output ABI helper to extract ReturnValue explicitly.
 The actual peer run adds `-ValidateSpawning` and spawning asset evidence to the
 shared network entry point. Both profiles enter native start-selection callbacks
 22 times; the CPP01–CPP03 damage/notification/team/bot gates remain enabled.
+
+## CPP05: quickbar selection and pickup grants
+
+[CPP05 acceptance](CPP05-acceptance.json) covers forward/backward cycling, first
+free slot, and template/instance grant ordering. Four policy events retain the
+native server slot RPC, equipment ownership, OnRep broadcasts, inventory fast
+array, and replicated subobjects. The existing quickbar Blueprint keeps its
+graphs/defaults. A thin inventory Blueprint replaces one ShooterCore component
+reference, preserving its role flags and other component data.
+
+Use `Run-UEP58NativeInventoryBuild.ps1`, `Run-UEP58NativeInventoryAuthoring.ps1`,
+`Run-UEP58NativeInventoryValidation.ps1`, and
+`Run-UEP58NativeInventoryNetworkValidation.ps1`. Shared header dependencies require
+all three LyraGame unity units; engine and ShooterCore binaries are reused.
+Fourteen native/Python boundary cases preserve the original unset-backward index
+behavior. Actual static pickup/interface calls preserve template order and stack
+counts. Both profiles pass twelve native GAS event cycles across two actual
+owning clients, matching authority equipment, native OnRep notifications, fast
+array counts, owner isolation, rollback, and real client exit barriers.
+
+The official `FLyraInventoryList::AddEntry(ULyraInventoryItemInstance*)` remains
+`unimplemented()`. Nonempty existing-instance grants retain this original native
+limitation; their forwarding order has a host check, not runtime acceptance.
+The null-inventory guard is exercised natively. The null-interface guard is
+unchanged and source-audited because the current UEP interface converter cannot
+marshal `None` as a script interface. No new package or platform is claimed.

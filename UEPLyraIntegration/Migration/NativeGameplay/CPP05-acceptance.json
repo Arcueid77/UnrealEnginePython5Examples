@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "batch": "CPP05",
+  "candidates": [
+    "CPP-009",
+    "CPP-010"
+  ],
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "policy_events": 4,
+  "asset_family_count": 5,
+  "native_python_inventory_differential": {
+    "status": "passed",
+    "quickbar_cases": 14,
+    "native_template_pickup_entries": 3,
+    "existing_instance_native_unimplemented_retained": true
+  },
+  "actual_dedicated_server_and_two_clients": {
+    "NativeFallback": {
+      "status": "passed",
+      "profile": "NativeFallback",
+      "owning_clients": 2,
+      "native_client_cycles": 12,
+      "native_pickup_grants": 2
+    },
+    "Python": {
+      "status": "passed",
+      "profile": "Python",
+      "owning_clients": 2,
+      "native_client_cycles": 12,
+      "native_pickup_grants": 2
+    }
+  },
+  "native_server_slot_rpc_equipment_onrep_fast_array_and_subobjects_preserved": true,
+  "retained_quickbar_graphs_defaults_and_game_feature_role_flags": true,
+  "native_instance_addentry_unimplemented_retained": true,
+  "existing_instance_forwarding_host_test_only": true,
+  "existing_instance_runtime_acceptance": false,
+  "interface_null_pickup_guard_unchanged_source_audited": true,
+  "interface_null_inventory_guard_runtime_tested": true,
+  "compiled_unity_units": [
+    "Module.LyraGame.1.cpp",
+    "Module.LyraGame.2.cpp",
+    "Module.LyraGame.3.cpp"
+  ],
+  "reused_unity_units": [],
+  "reusable_native_objects": [
+    {
+      "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\CppGameplay\\Stage\\Lyra\\Intermediate\\Build\\Win64\\x64\\UnrealEditor\\Development\\LyraGame\\Module.LyraGame.1.cpp.obj",
+      "sha256": "90723026D5327C73DB1DEF340CB2B1819084CB370795869E0483AD73F8E73EA5"
+    },
+    {
+      "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\CppGameplay\\Stage\\Lyra\\Intermediate\\Build\\Win64\\x64\\UnrealEditor\\Development\\LyraGame\\Module.LyraGame.2.cpp.obj",
+      "sha256": "E7B7E6B1DFFF6AC67811ED59658DB6D31FC97482289A7FC8D17EEA92987A6390"
+    },
+    {
+      "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\CppGameplay\\Stage\\Lyra\\Intermediate\\Build\\Win64\\x64\\UnrealEditor\\Development\\LyraGame\\Module.LyraGame.3.cpp.obj",
+      "sha256": "8BF6B9029B235E378F963E6FB71F027A81BFE968FEE773213014F66C2B938DD1"
+    }
+  ],
+  "official_reference_unchanged": true,
+  "engine_full_compile_executed": false,
+  "cook_package_executed": false,
+  "new_platform_acceptance": false,
+  "full_cpp_migration_acceptance": false,
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP05/Build01/summary.json",
+      "sha256": "1A994752F28F87E4D4CFE9C34F008C23DD883D8ED9589769156B937FF5D8F020"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP05/Assets01/summary.json",
+      "sha256": "A112C6C221286B385F99F4F0845A926C246FB9EDAB10C5BE8E97BA1157472845"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP05/Runtime01/summary.json",
+      "sha256": "72326794CE0D0AAEC84838D351D5D1786DC5F45F7C4317C4CC849182967185D5"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP05/Network01/summary.json",
+      "sha256": "84C6A6A964F95FD8BDF0BB832AE30CC07958E1D417E42584FAE22013B8036901"
+    }
+  ]
+}

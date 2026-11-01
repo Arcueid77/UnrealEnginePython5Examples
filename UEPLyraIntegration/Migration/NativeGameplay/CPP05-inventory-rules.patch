@@ -1,0 +1,119 @@
+--- a/Source/LyraGame/Equipment/LyraQuickBarComponent.h
++++ b/Source/LyraGame/Equipment/LyraQuickBarComponent.h
+@@ -21,10 +21,10 @@
+ public:
+ 	ULyraQuickBarComponent(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
+ 
+-	UFUNCTION(BlueprintCallable, Category="Lyra")
++	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category="Lyra")
+ 	void CycleActiveSlotForward();
+ 
+-	UFUNCTION(BlueprintCallable, Category="Lyra")
++	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category="Lyra")
+ 	void CycleActiveSlotBackward();
+ 
+ 	UFUNCTION(Server, Reliable, BlueprintCallable, Category="Lyra")
+@@ -42,7 +42,7 @@
+ 	UFUNCTION(BlueprintCallable, BlueprintPure = false)
+ 	ULyraInventoryItemInstance* GetActiveSlotItem() const;
+ 
+-	UFUNCTION(BlueprintCallable, BlueprintPure=false)
++	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure=false)
+ 	int32 GetNextFreeItemSlot() const;
+ 
+ 	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly)
+--- a/Source/LyraGame/Equipment/LyraQuickBarComponent.cpp
++++ b/Source/LyraGame/Equipment/LyraQuickBarComponent.cpp
+@@ -43,7 +43,7 @@
+ 	Super::BeginPlay();
+ }
+ 
+-void ULyraQuickBarComponent::CycleActiveSlotForward()
++void ULyraQuickBarComponent::CycleActiveSlotForward_Implementation()
+ {
+ 	if (Slots.Num() < 2)
+ 	{
+@@ -63,7 +63,7 @@
+ 	} while (NewIndex != OldIndex);
+ }
+ 
+-void ULyraQuickBarComponent::CycleActiveSlotBackward()
++void ULyraQuickBarComponent::CycleActiveSlotBackward_Implementation()
+ {
+ 	if (Slots.Num() < 2)
+ 	{
+@@ -151,7 +151,7 @@
+ 	return Slots.IsValidIndex(ActiveSlotIndex) ? Slots[ActiveSlotIndex] : nullptr;
+ }
+ 
+-int32 ULyraQuickBarComponent::GetNextFreeItemSlot() const
++int32 ULyraQuickBarComponent::GetNextFreeItemSlot_Implementation() const
+ {
+ 	int32 SlotIndex = 0;
+ 	for (const TObjectPtr<ULyraInventoryItemInstance>& ItemPtr : Slots)
+--- a/Source/LyraGame/Inventory/LyraInventoryManagerComponent.h
++++ b/Source/LyraGame/Inventory/LyraInventoryManagerComponent.h
+@@ -4,6 +4,7 @@
+ 
+ #include "Components/ActorComponent.h"
+ #include "Net/Serialization/FastArraySerializer.h"
++#include "Inventory/IPickupable.h"
+ 
+ #include "LyraInventoryManagerComponent.generated.h"
+ 
+@@ -131,13 +132,17 @@
+ /**
+  * Manages an inventory
+  */
+-UCLASS(MinimalAPI, BlueprintType)
++UCLASS(MinimalAPI, BlueprintType, Blueprintable)
+ class ULyraInventoryManagerComponent : public UActorComponent
+ {
+ 	GENERATED_BODY()
+ 
+ public:
+ 	UE_API ULyraInventoryManagerComponent(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
++
++	// Native pickup interface resolution stays in PickupableStatics.
++	UFUNCTION(BlueprintNativeEvent, Category="UEP|NativeGameplay")
++	UE_API void UEPGrantPickup(const FInventoryPickup& PickupInventory);
+ 
+ 	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly, Category=Inventory)
+ 	UE_API bool CanAddItemDefinition(TSubclassOf<ULyraInventoryItemDefinition> ItemDef, int32 StackCount = 1);
+--- a/Source/LyraGame/Inventory/LyraInventoryManagerComponent.cpp
++++ b/Source/LyraGame/Inventory/LyraInventoryManagerComponent.cpp
+@@ -318,3 +318,16 @@
+ // };
+ 
+ 
++
++void ULyraInventoryManagerComponent::UEPGrantPickup_Implementation(const FInventoryPickup& PickupInventory)
++{
++	for (const FPickupTemplate& Template : PickupInventory.Templates)
++	{
++		AddItemDefinition(Template.ItemDef, Template.StackCount);
++	}
++
++	for (const FPickupInstance& Instance : PickupInventory.Instances)
++	{
++		AddItemInstance(Instance.Item);
++	}
++}
+--- a/Source/LyraGame/Inventory/IPickupable.cpp
++++ b/Source/LyraGame/Inventory/IPickupable.cpp
+@@ -41,14 +41,6 @@
+ 	{
+ 		const FInventoryPickup& PickupInventory = Pickup->GetPickupInventory();
+ 
+-		for (const FPickupTemplate& Template : PickupInventory.Templates)
+-		{
+-			InventoryComponent->AddItemDefinition(Template.ItemDef, Template.StackCount);
+-		}
+-
+-		for (const FPickupInstance& Instance : PickupInventory.Instances)
+-		{
+-			InventoryComponent->AddItemInstance(Instance.Item);
+-		}
++		InventoryComponent->UEPGrantPickup(PickupInventory);
+ 	}
+ }
