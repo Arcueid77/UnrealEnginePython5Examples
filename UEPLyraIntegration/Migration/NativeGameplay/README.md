@@ -183,3 +183,33 @@ released. Only the ShooterCore unity unit is rebuilt; all LyraGame, SDK, and
 engine objects are reused. Use the main repository's NativeAccolade Build,
 Authoring, Validation, and NetworkValidation entry points. Failed fixture and
 network attempts remain recorded in the acceptance ledger.
+
+## CPP08: native interaction orchestration
+
+[CPP08 acceptance](CPP08-acceptance.json) covers CPP-014. Two native events route
+indicator removal/addition, default/specified soft widget selection, option order,
+and first-option triggering to C++ or Python. Six accepted Blueprint Python
+methods remain fixed in the C++ comparison; the existing Blueprint fallback
+profile and Explorer regression also pass. The retained GA_Interact bytes,
+class defaults, graph semantics, native scan/grant/input tasks, and inheritance
+are unchanged. Only its Set asset gains the native policy profiles.
+
+Native adapters keep the interface opaque, preserve unloaded soft class paths,
+customize the payload, assemble ActorInfo, and trigger GAS. UE5.8.1 currently
+ignores the supplied ActorInfo argument in TriggerAbilityFromGameplayEvent and
+uses the ASC owner/avatar. Both routes preserve that behavior and verify the
+customized payload target separately; this batch does not change the engine.
+
+The isolated native fixtures record actual interface/GAS results. Their input
+adapter performs Lyra's virtual spec-input dispatch once; the generic PressInputID
+path also emits an event and duplicates that dispatch in Lyra. These fixture
+sources are versioned outside the distributable overlay and compiled only into
+the disposable validation stage. SDK/bridge and engine binaries are reused.
+
+Native/Python boundary cases, existing Explorer activation/scan/press/rearm/end,
+and two actual client owners in both profiles pass. Each owner sends three native
+inputs, including one with no options; local prediction and authority each record
+two customized interactions and no foreign target activation. New specs, tasks,
+actors, selectors, and roots are cleaned up. LyraGame units 1/2 are rebuilt and
+unit 3 is reused. The body-only witness repair rebuilt unit 2 alone. No new cook,
+package, physical keyboard, rendering, or platform acceptance is claimed here.

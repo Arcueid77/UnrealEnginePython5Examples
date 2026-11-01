@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "batch": "CPP08",
+  "candidates": [
+    "CPP-014"
+  ],
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "policy_events": 2,
+  "asset_family_count": 2,
+  "native_python_interaction_differential": {
+    "status": "passed",
+    "profiles": 2,
+    "indicator_and_first_option_matrix": true,
+    "native_customized_payload_and_actor_info": true,
+    "native_input_scan_grant_and_cancel": true
+  },
+  "existing_explorer_interact_regression": {
+    "status": "passed",
+    "native_interact_profiles": 2,
+    "full_acceptance": false
+  },
+  "actual_two_owner_prediction_authority_network": [
+    {
+      "status": "passed",
+      "profile": "NativeFallback",
+      "clients": 2,
+      "native_local_prediction_and_authority_match": true,
+      "native_input_events": 6
+    },
+    {
+      "status": "passed",
+      "profile": "Python",
+      "clients": 2,
+      "native_local_prediction_and_authority_match": true,
+      "native_input_events": 6
+    }
+  ],
+  "native_interface_query_soft_class_assignment_payload_customization_actor_info_and_gas_retained": true,
+  "native_scan_grant_and_input_wait_tasks_retained": true,
+  "original_ga_interact_blueprint_graphs_defaults_and_inheritance_preserved": true,
+  "cpp_comparison_holds_accepted_six_blueprint_python_methods": true,
+  "original_blueprint_fallback_profile_retained_and_regressed": true,
+  "stage_only_native_fixture_sources_versioned": true,
+  "native_input_fixture_uses_lyra_virtual_spec_dispatch_once": true,
+  "physical_keyboard_acceptance": false,
+  "ue581_trigger_ability_uses_asc_actor_info": true,
+  "original_actor_info_argument_construction_preserved": true,
+  "effective_native_actor_info_owner_avatar": "ASC owner PlayerState and avatar Pawn",
+  "compiled_unity_units": [
+    "Module.LyraGame.1.cpp",
+    "Module.LyraGame.2.cpp"
+  ],
+  "reused_unity_units": [
+    "Module.LyraGame.3.cpp"
+  ],
+  "reusable_native_objects": [
+    {
+      "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\CppGameplay\\Stage\\Lyra\\Intermediate\\Build\\Win64\\x64\\UnrealEditor\\Development\\LyraGame\\Module.LyraGame.1.cpp.obj",
+      "sha256": "FC3F36E94742A977543BA8A6E3F7EBE9546A3330C2CC9B1070BBC75735DA39FC"
+    },
+    {
+      "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\CppGameplay\\Stage\\Lyra\\Intermediate\\Build\\Win64\\x64\\UnrealEditor\\Development\\LyraGame\\Module.LyraGame.2.cpp.obj",
+      "sha256": "F23C0DD17DB4245CF1C070432A0CF5BF996191C91BE67B267C0FF6758CB4F2EC"
+    },
+    {
+      "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\CppGameplay\\Stage\\Lyra\\Intermediate\\Build\\Win64\\x64\\UnrealEditor\\Development\\LyraGame\\Module.LyraGame.3.cpp.obj",
+      "sha256": "1BCC02BD6951EFEDF4CC1D5AEA2F1D1AFE87C4566E10E93D635FC3BBF94BCAA8"
+    }
+  ],
+  "official_reference_unchanged": true,
+  "engine_full_compile_executed": false,
+  "cook_package_executed": false,
+  "new_platform_acceptance": false,
+  "visible_rendering_acceptance": false,
+  "full_cpp_migration_acceptance": false,
+  "retained_attempts": [
+    "Build01",
+    "Build02",
+    "Build03Fixture",
+    "Build04Input",
+    "Runtime01",
+    "Runtime02",
+    "Runtime03",
+    "Runtime04"
+  ],
+  "retained_notes": [
+    "Build01 stopped before compilation because its selector placed the generated package unit in the wrong partition; actual compiler dependencies select LyraGame units 1/2 and reuse 3.",
+    "Runtime01 exposed that UE5.8.1 TriggerAbilityFromGameplayEvent ignores the supplied ActorInfo argument and activates with ASC ActorInfo. The native witness now records the actual activation and payload; original argument construction remains unchanged.",
+    "Runtime02 used PressInputID, whose base generic-event emission duplicates Lyra AbilitySpecInputPressed dispatch. A stage-only reflected fixture now performs the virtual native spec input dispatch once, preserving WaitInputPress replication.",
+    "Runtime03 diagnostic read CurrentOptions from the readiness ability before assigning Interact. The per-case subject now starts empty.",
+    "Runtime04 passed the native reference matrix and exposed unsupported InterfaceProperty reads in the Python route. The interface remains opaque in a typed native Option-to-Actor query; no SDK changes are required."
+  ],
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP08/Build05Interface/summary.json",
+      "sha256": "A154F32D020D62148D6BEDB9A2BB1A289B86A29624FDFCB304540B127B78B112"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP08/Assets01/summary.json",
+      "sha256": "12F1E1CA1E5DDD0D310D4392277C220ED85713A3A24332A83E4C6C3EBF2A6BE6"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP08/Runtime05/summary.json",
+      "sha256": "8C486D36CD2CAF8F6FDE8F0460CD550DCC40F3831AD5DFB98D7E61A179C45C02"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP08/Legacy01/summary.json",
+      "sha256": "90236081444F45653CF6D64121A106430082AF12B908110D381CD5FE07D62B5D"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP08/Network01/summary.json",
+      "sha256": "18A4428428B341624C3226B1AF2E87174CBDA6B8514F1904621CF767704FA51E"
+    }
+  ]
+}

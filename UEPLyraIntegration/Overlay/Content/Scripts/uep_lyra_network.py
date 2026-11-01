@@ -410,6 +410,6 @@ class NetworkProbe(LyraRuntimeProbe):
             return False
 
 
-if not any(flag in sys.argv for flag in ('-UEPLyraWeaponNetwork', '-UEPEffectPadNetwork', '-UEPInventoryPadNetwork', '-UEPGrantGENetwork', '-UEPLauncherNetwork', '-UEPSpawnerNetwork', '-UEPNativeSpawnerNetwork', '-UEPTeleporterNetwork', '-UEPActionTouchNetwork', '-UEPHealAbilityNetwork')):
+if not any(flag in sys.argv for flag in ('-UEPLyraWeaponNetwork', '-UEPEffectPadNetwork', '-UEPInventoryPadNetwork', '-UEPGrantGENetwork', '-UEPLauncherNetwork', '-UEPSpawnerNetwork', '-UEPNativeSpawnerNetwork', '-UEPNativeInteractionNetwork', '-UEPTeleporterNetwork', '-UEPActionTouchNetwork', '-UEPHealAbilityNetwork')):
     runtime = NetworkProbe()
     ticker = ue.add_ticker(runtime.tick)

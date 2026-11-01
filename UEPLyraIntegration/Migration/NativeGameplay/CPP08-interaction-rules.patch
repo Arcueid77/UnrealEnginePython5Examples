@@ -1,0 +1,176 @@
+--- a/Source/LyraGame/Interaction/Abilities/LyraGameplayAbility_Interact.h
++++ b/Source/LyraGame/Interaction/Abilities/LyraGameplayAbility_Interact.h
+@@ -8,6 +8,7 @@
+ #include "LyraGameplayAbility_Interact.generated.h"
+ 
+ class UIndicatorDescriptor;
++class ULyraIndicatorManagerComponent;
+ class UObject;
+ class UUserWidget;
+ struct FFrame;
+@@ -30,11 +31,33 @@
+ 
+ 	virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData) override;
+ 
+-	UFUNCTION(BlueprintCallable)
++	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+ 	void UpdateInteractions(const TArray<FInteractionOption>& InteractiveOptions);
+ 
++	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
++	void TriggerInteraction();
++
++	// Narrow native facilities for interfaces, soft class paths, and GAS actor info.
+ 	UFUNCTION(BlueprintCallable)
+-	void TriggerInteraction();
++	ULyraIndicatorManagerComponent* UEPGetInteractionIndicatorManager() const;
++
++	UFUNCTION(BlueprintCallable)
++	AActor* UEPGetInteractionTargetActor(const FInteractionOption& Option) const;
++
++	UFUNCTION(BlueprintCallable)
++	bool UEPHasInteractionWidget(const FInteractionOption& Option) const;
++
++	UFUNCTION(BlueprintCallable)
++	void UEPSetInteractionIndicatorClass(UIndicatorDescriptor* Indicator, const FInteractionOption& Option, bool bUseOption);
++
++	UFUNCTION(BlueprintPure)
++	FString UEPInteractionIndicatorPath(UIndicatorDescriptor* Indicator) const;
++
++	UFUNCTION(BlueprintPure)
++	FString UEPDefaultInteractionWidgetPath() const;
++
++	UFUNCTION(BlueprintCallable)
++	void UEPTriggerInteractionOption(const FInteractionOption& Option);
+ 
+ protected:
+ 	UPROPERTY(BlueprintReadWrite)
+--- a/Source/LyraGame/Interaction/Abilities/LyraGameplayAbility_Interact.cpp
++++ b/Source/LyraGame/Interaction/Abilities/LyraGameplayAbility_Interact.cpp
+@@ -38,7 +38,7 @@
+ 	}
+ }
+ 
+-void ULyraGameplayAbility_Interact::UpdateInteractions(const TArray<FInteractionOption>& InteractiveOptions)
++void ULyraGameplayAbility_Interact::UpdateInteractions_Implementation(const TArray<FInteractionOption>& InteractiveOptions)
+ {
+ 	if (ALyraPlayerController* PC = GetLyraPlayerControllerFromActorInfo())
+ 	{
+@@ -75,49 +75,77 @@
+ 	CurrentOptions = InteractiveOptions;
+ }
+ 
+-void ULyraGameplayAbility_Interact::TriggerInteraction()
++void ULyraGameplayAbility_Interact::TriggerInteraction_Implementation()
+ {
+-	if (CurrentOptions.Num() == 0)
++	if (CurrentOptions.Num() == 0) { return; }
++	if (GetAbilitySystemComponentFromActorInfo())
+ 	{
+-		return;
+-	}
+-
+-	UAbilitySystemComponent* AbilitySystem = GetAbilitySystemComponentFromActorInfo();
+-	if (AbilitySystem)
+-	{
+-		const FInteractionOption& InteractionOption = CurrentOptions[0];
+-
+-		AActor* Instigator = GetAvatarActorFromActorInfo();
+-		AActor* InteractableTargetActor = UInteractionStatics::GetActorFromInteractableTarget(InteractionOption.InteractableTarget);
+-
+-		// Allow the target to customize the event data we're about to pass in, in case the ability needs custom data
+-		// that only the actor knows.
+-		FGameplayEventData Payload;
+-		Payload.EventTag = TAG_Ability_Interaction_Activate;
+-		Payload.Instigator = Instigator;
+-		Payload.Target = InteractableTargetActor;
+-
+-		// If needed we allow the interactable target to manipulate the event data so that for example, a button on the wall
+-		// may want to specify a door actor to execute the ability on, so it might choose to override Target to be the
+-		// door actor.
+-		InteractionOption.InteractableTarget->CustomizeInteractionEventData(TAG_Ability_Interaction_Activate, Payload);
+-
+-		// Grab the target actor off the payload we're going to use it as the 'avatar' for the interaction, and the
+-		// source InteractableTarget actor as the owner actor.
+-		AActor* TargetActor = const_cast<AActor*>(ToRawPtr(Payload.Target));
+-
+-		// The actor info needed for the interaction.
+-		FGameplayAbilityActorInfo ActorInfo;
+-		ActorInfo.InitFromActor(InteractableTargetActor, TargetActor, InteractionOption.TargetAbilitySystem);
+-
+-		// Trigger the ability using event tag.
+-		const bool bSuccess = InteractionOption.TargetAbilitySystem->TriggerAbilityFromGameplayEvent(
+-			InteractionOption.TargetInteractionAbilityHandle,
+-			&ActorInfo,
+-			TAG_Ability_Interaction_Activate,
+-			&Payload,
+-			*InteractionOption.TargetAbilitySystem
+-		);
++		UEPTriggerInteractionOption(CurrentOptions[0]);
+ 	}
+ }
+ 
++
++ULyraIndicatorManagerComponent* ULyraGameplayAbility_Interact::UEPGetInteractionIndicatorManager() const
++{
++	return ULyraIndicatorManagerComponent::GetComponent(GetLyraPlayerControllerFromActorInfo());
++}
++
++AActor* ULyraGameplayAbility_Interact::UEPGetInteractionTargetActor(const FInteractionOption& Option) const
++{
++	return UInteractionStatics::GetActorFromInteractableTarget(Option.InteractableTarget);
++}
++
++bool ULyraGameplayAbility_Interact::UEPHasInteractionWidget(const FInteractionOption& Option) const
++{
++	return !Option.InteractionWidgetClass.IsNull();
++}
++
++void ULyraGameplayAbility_Interact::UEPSetInteractionIndicatorClass(UIndicatorDescriptor* Indicator, const FInteractionOption& Option, bool bUseOption)
++{
++	Indicator->SetIndicatorClass(bUseOption ? Option.InteractionWidgetClass : DefaultInteractionWidgetClass);
++}
++
++FString ULyraGameplayAbility_Interact::UEPInteractionIndicatorPath(UIndicatorDescriptor* Indicator) const
++{
++	return Indicator->GetIndicatorClass().ToSoftObjectPath().ToString();
++}
++
++FString ULyraGameplayAbility_Interact::UEPDefaultInteractionWidgetPath() const
++{
++	return DefaultInteractionWidgetClass.ToSoftObjectPath().ToString();
++}
++
++void ULyraGameplayAbility_Interact::UEPTriggerInteractionOption(const FInteractionOption& InteractionOption)
++{
++	AActor* Instigator = GetAvatarActorFromActorInfo();
++	AActor* InteractableTargetActor = UInteractionStatics::GetActorFromInteractableTarget(InteractionOption.InteractableTarget);
++
++	// Allow the target to customize the event data we're about to pass in, in case the ability needs custom data
++	// that only the actor knows.
++	FGameplayEventData Payload;
++	Payload.EventTag = TAG_Ability_Interaction_Activate;
++	Payload.Instigator = Instigator;
++	Payload.Target = InteractableTargetActor;
++
++	// If needed we allow the interactable target to manipulate the event data so that for example, a button on the wall
++	// may want to specify a door actor to execute the ability on, so it might choose to override Target to be the
++	// door actor.
++	InteractionOption.InteractableTarget->CustomizeInteractionEventData(TAG_Ability_Interaction_Activate, Payload);
++
++	// Grab the target actor off the payload we're going to use it as the 'avatar' for the interaction, and the
++	// source InteractableTarget actor as the owner actor.
++	AActor* TargetActor = const_cast<AActor*>(ToRawPtr(Payload.Target));
++
++	// The actor info needed for the interaction.
++	FGameplayAbilityActorInfo ActorInfo;
++	ActorInfo.InitFromActor(InteractableTargetActor, TargetActor, InteractionOption.TargetAbilitySystem);
++
++	// Trigger the ability using event tag.
++	const bool bSuccess = InteractionOption.TargetAbilitySystem->TriggerAbilityFromGameplayEvent(
++		InteractionOption.TargetInteractionAbilityHandle,
++		&ActorInfo,
++		TAG_Ability_Interaction_Activate,
++		&Payload,
++		*InteractionOption.TargetAbilitySystem
++	);
++}

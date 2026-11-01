@@ -2,6 +2,10 @@
 
 
 def validation_module(arguments):
+    if '-UEPNativeInteractionNetwork' in arguments and not any(a.startswith('-run=') for a in arguments):
+        return 'uep_lyra_native.interaction_network_validation'
+    if any(a.startswith('-UEPNativeInteractionResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):
+        return 'uep_lyra_native.interaction_validation'
     if any(a.startswith('-UEPNativeAccoladeResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):
         return 'uep_lyra_native.accolade_validation'
     if '-UEPNativeSpawnerNetwork' in arguments and not any(a.startswith('-run=') for a in arguments):
