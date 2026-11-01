@@ -1,5 +1,6 @@
 """Existing original Lyra level spawners: natural timers and two real owners."""
 import copy
+import sys
 from pathlib import Path
 import time
 import traceback
@@ -19,6 +20,8 @@ from . import spawner_mixin as policy
 from .effect_pad_mixin import valid
 
 class SpawnerNetwork(InventoryNetwork):
+    plan=PLAN
+    case_validator=staticmethod(validate_cases)
     def __init__(self):
         super().__init__()
         self.timeout_seconds=620
@@ -91,7 +94,7 @@ class SpawnerNetwork(InventoryNetwork):
             self.reload_tags=GameplayTagContainer(GameplayTags=[GameplayTag(TagName="Event.Movement.Reload")])
             self.tag_library=ue.find_class("AbilitySystemBlueprintLibrary").get_cdo()
             self.select_level_pads()
-        target,name,profile=PLAN[self.index]
+        target,name,profile=self.plan[self.index]
         self.pad=self.pads["ability" if name.startswith("ability") else "weapon"]
         require(valid(self.pad) and self.pad.bIsWeaponAvailable,"original level pad unavailable before trial")
         ue.set_mixin_profile(self.pad,profile)
@@ -117,7 +120,7 @@ class SpawnerNetwork(InventoryNetwork):
         self.prepared_ready(prepared)
 
     def prepared_ready(self,prepared):
-        target,name,profile=PLAN[self.index]
+        target,name,profile=self.plan[self.index]
         statuses={peer:self._peer_status(peer) for peer in PEERS}
         require(all(statuses.values()),"spawner current peer snapshots missing")
         self.current={"run_id":self.run_id,"case_index":self.index,"target":target,"scenario":name,"profile":profile,
@@ -206,8 +209,8 @@ class SpawnerNetwork(InventoryNetwork):
         elif self.stage=="restored-ack" and self.collect("restored"):
             self.history.append(copy.deepcopy(self.current));ue.log("UEP_SPAWNER_NETWORK_CASE_PASSED "+str(self.index))
             self.index+=1;self.phase_started=time.monotonic()
-            if self.index==len(PLAN):
-                validate_cases(self.history);self.restore()
+            if self.index==len(self.plan):
+                self.case_validator(self.history);self.restore()
                 atomic_write(self.root/"spawner-command.json",{"run_id":self.run_id,"stage":"complete","original":self.pristine,
                     "health":self.original_health,"positions":self.restore_positions,"modes":self.restore_modes})
                 self.stage="complete-ack"
@@ -231,7 +234,7 @@ class SpawnerNetwork(InventoryNetwork):
             movement=pawn.get_component_by_type(ue.find_class("CharacterMovementComponent"))
             if (self.local_inventory==packet["original"][self.peer] and near(self.player["health"],packet["health"][self.peer]) and
                 max(abs(getattr(location,k)-value) for k,value in zip(("x","y","z"),expected))<10.0 and int(movement.MovementMode)==packet["modes"][self.peer]):
-                require(len(self.history)==len(PLAN),"spawner completed before client matrix")
+                require(len(self.history)==len(self.plan),"spawner completed before client matrix")
                 for actor,profile in self.client_saved_profiles.values():
                     ue.set_mixin_profile(actor,profile) if profile is not None else ue.clear_mixin_profile(actor)
                 controller=ue.find_object(self.player["controller_path"])
@@ -267,7 +270,7 @@ class SpawnerNetwork(InventoryNetwork):
         if self.peer!="server" or self.players_restored:return
         self.scope.close()
         if self.reload_added:
-            self.tag_library.call_function("RemoveLooseGameplayTags",self.owners[PLAN[self.index][0]]["pawn"],self.reload_tags,False);self.reload_added=False
+            self.tag_library.call_function("RemoveLooseGameplayTags",self.owners[self.plan[self.index][0]]["pawn"],self.reload_tags,False);self.reload_added=False
         self.rollback();self.restore_positions,self.restore_modes,self.restored_players={},{},{}
         for peer,row in self.owners.items():
             self.set_health(peer,self.original_health[peer]);row["movement"].call_function("StopMovementImmediately")
@@ -339,5 +342,6 @@ class SpawnerNetwork(InventoryNetwork):
             return not self.finished
         except Exception:self.finish(traceback.format_exc());return False
 
-runtime=SpawnerNetwork()
-ticker=ue.add_ticker(runtime.tick)
+if '-UEPSpawnerNetwork' in sys.argv:
+    runtime=SpawnerNetwork()
+    ticker=ue.add_ticker(runtime.tick)

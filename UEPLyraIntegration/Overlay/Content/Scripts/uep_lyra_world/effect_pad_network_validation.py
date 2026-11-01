@@ -285,6 +285,6 @@ class PadNetworkProbe(NetworkProbe):
             return False
 
 
-if not any(flag in sys.argv for flag in ("-UEPGrantGENetwork", "-UEPLauncherNetwork", "-UEPSpawnerNetwork", "-UEPTeleporterNetwork", "-UEPActionTouchNetwork", "-UEPHealAbilityNetwork")):
+if not any(flag in sys.argv for flag in ("-UEPGrantGENetwork", "-UEPLauncherNetwork", "-UEPSpawnerNetwork", "-UEPNativeSpawnerNetwork", "-UEPTeleporterNetwork", "-UEPActionTouchNetwork", "-UEPHealAbilityNetwork")):
     runtime = PadNetworkProbe()
     ticker = ue.add_ticker(runtime.tick)

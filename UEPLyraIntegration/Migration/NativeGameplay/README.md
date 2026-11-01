@@ -127,3 +127,33 @@ limitation; their forwarding order has a host check, not runtime acceptance.
 The null-inventory guard is exercised natively. The null-interface guard is
 unchanged and source-audited because the current UEP interface converter cannot
 marshal `None` as a script interface. No new package or platform is claimed.
+
+## CPP06: native spawner orchestration
+
+[CPP06 acceptance](CPP06-acceptance.json) covers pickup conditions, availability
+and effect order, cooldown reset/completion, and the scheduled overlap retry.
+Native code retains both timer handles, timer scheduling/clearing, replicated
+availability and OnRep, overlap detection, mesh updates, and EndPlay cleanup.
+The original weapon/ability Blueprint assets remain byte-for-byte unchanged;
+their existing Set gains the native policy handlers. Explicit aliases keep all
+eight previously accepted Blueprint Python entrypoints registered.
+
+Use the main repository's `Run-UEP58NativeSpawnerBuild.ps1`,
+`Run-UEP58NativeSpawnerAuthoring.ps1`, `Run-UEP58NativeSpawnerValidation.ps1`, and
+`Run-UEP58NativeSpawnerNetworkValidation.ps1`. Only LyraGame units 1/3 are compiled;
+unit 2, ShooterCore, SDK, and engine binaries are reused. Five guard cases, real
+timer completion, cooldown reentry, a stationary Pawn's scheduled overlap retry,
+and pending-timer destruction pass in both C++ and Python implementations.
+
+Both profiles retain the accepted Blueprint Python layer so this comparison
+isolates the three C++ rules. The C++ Set offers `Python` and `NativeFallback`.
+The earlier full-Blueprint fallback combination is not accepted in the mixed
+C++ stage; its failed runs and recompiled asset snapshot are retained in the
+ledger. The earlier Full-stage Blueprint acceptance remains separate.
+
+A dedicated server and two actual owners pass 36 physical pickup scenarios on
+the original level actors. These cover default ten-second cooldown, full slots,
+duplicate refill/full ammo, reload guards, new duplicate instances, healing,
+failure messages, inventory/equipment replication, native timer dispatch,
+owner isolation, and HUD/observer cleanup. Clients use NullRHI; visible rendering
+and a new package are not claimed by this batch.

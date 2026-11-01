@@ -2,6 +2,10 @@
 
 
 def validation_module(arguments):
+    if '-UEPNativeSpawnerNetwork' in arguments and not any(a.startswith('-run=') for a in arguments):
+        return 'uep_lyra_native.spawner_network_validation'
+    if any(a.startswith('-UEPNativeSpawnerResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):
+        return 'uep_lyra_native.spawner_validation'
     if any(a.startswith('-UEPNativeInventoryNetworkResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):
         return 'uep_lyra_native.inventory_network_validation'
     if any(a.startswith('-UEPNativeInventoryResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):

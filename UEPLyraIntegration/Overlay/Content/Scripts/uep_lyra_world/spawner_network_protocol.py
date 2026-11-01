@@ -47,9 +47,9 @@ def baseline_ready(statuses,inventory,health):
     return all(isinstance(statuses.get(peer),dict) and statuses[peer].get("inventory")==inventory[peer] and
         statuses[peer].get("health_visual") is not None and near(statuses[peer]["player"]["health"],health[peer]) for peer in PEERS)
 
-def validate_cases(cases):
-    require(len(cases)==len(PLAN),"spawner network matrix incomplete")
-    for index,(row,identity) in enumerate(zip(cases,PLAN)):
+def validate_cases(cases,plan=PLAN,python_blueprint_layer=False):
+    require(len(cases)==len(plan),"spawner network matrix incomplete")
+    for index,(row,identity) in enumerate(zip(cases,plan)):
         target,name,profile=identity
         require(row["case_index"]==index and (row["target"],row["scenario"],row["profile"])==identity,"spawner case order differs")
         require(row["physical_events"]==["begin","end"] and row["fixture_scope_closed"] is True and
@@ -73,5 +73,6 @@ def validate_cases(cases):
             require(row["expected"]==previous["expected"] and row["after"]==previous["after"] and row["expected_health"]==previous["expected_health"],
                     "spawner BP/Python network result differs")
             require(row["python_gives"]==1 and row["python_failures"]==int(name==CASES[3]),"Python spawner business bypassed/replayed")
+        elif python_blueprint_layer:require(row["python_gives"]==1 and row['fallback_gives']==0,'accepted Python Blueprint layer bypassed in native C++ reference')
         else:require(row["fallback_gives"]==1,"original BP spawner producer bypassed/replayed")
     return True

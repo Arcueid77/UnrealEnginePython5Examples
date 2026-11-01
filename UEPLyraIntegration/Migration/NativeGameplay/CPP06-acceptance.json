@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "batch": "CPP06",
+  "candidates": [
+    "CPP-011"
+  ],
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "policy_events": 3,
+  "new_policy_events": 2,
+  "asset_family_count": 3,
+  "native_python_timer_and_overlap_differential": {
+    "status": "passed",
+    "guards": 5,
+    "native_timer_completion": true,
+    "stationary_native_overlap_retry": true,
+    "destroy_cancels_callbacks": true
+  },
+  "native_cpp_python_two_owner_same_accepted_blueprint_layer_regression": {
+    "status": "passed",
+    "cases": 36,
+    "clients": 2,
+    "run_id": "afb3fe71579547d8a18e9c1cf1f486c8",
+    "native_spawner_cpp_reference_python_two_owner_same_blueprint_layer": true,
+    "full_acceptance": false
+  },
+  "native_timer_handles_scheduling_replication_onrep_collision_and_mesh_ticks_preserved": true,
+  "existing_spawner_eight_blueprint_entrypoints_preserved": true,
+  "cpp_reference_keeps_accepted_blueprint_python_layer": true,
+  "cpp_profiles": [
+    "Python",
+    "NativeFallback"
+  ],
+  "legacy_full_blueprint_fallback_mixed_stage_acceptance": false,
+  "network_authored_ten_second_cooldowns_preserved": true,
+  "fixture_only_shortened_cooldown": true,
+  "native_endplay_clears_both_handles_unchanged": true,
+  "compiled_unity_units": [
+    "Module.LyraGame.1.cpp",
+    "Module.LyraGame.3.cpp"
+  ],
+  "reused_unity_units": [
+    "Module.LyraGame.2.cpp"
+  ],
+  "reusable_native_objects": [
+    {
+      "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\CppGameplay\\Stage\\Lyra\\Intermediate\\Build\\Win64\\x64\\UnrealEditor\\Development\\LyraGame\\Module.LyraGame.1.cpp.obj",
+      "sha256": "41A8CB3365BE2F24F9E5FFE584C456DFBBA8FC933B53BB3F80A897A2B7E683B4"
+    },
+    {
+      "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\CppGameplay\\Stage\\Lyra\\Intermediate\\Build\\Win64\\x64\\UnrealEditor\\Development\\LyraGame\\Module.LyraGame.2.cpp.obj",
+      "sha256": "E7B7E6B1DFFF6AC67811ED59658DB6D31FC97482289A7FC8D17EEA92987A6390"
+    },
+    {
+      "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\CppGameplay\\Stage\\Lyra\\Intermediate\\Build\\Win64\\x64\\UnrealEditor\\Development\\LyraGame\\Module.LyraGame.3.cpp.obj",
+      "sha256": "1BCC02BD6951EFEDF4CC1D5AEA2F1D1AFE87C4566E10E93D635FC3BBF94BCAA8"
+    }
+  ],
+  "official_reference_unchanged": true,
+  "engine_full_compile_executed": false,
+  "cook_package_executed": false,
+  "new_platform_acceptance": false,
+  "visible_rendering_acceptance": false,
+  "full_cpp_migration_acceptance": false,
+  "retained_attempts": [
+    "Build01",
+    "Assets01",
+    "Assets02",
+    "Assets03",
+    "Assets04",
+    "Assets05",
+    "Runtime01",
+    "Runtime02",
+    "Runtime03",
+    "Runtime04",
+    "Runtime05",
+    "Network01"
+  ],
+  "retained_notes": [
+    "Build01 stopped before C++ compilation because its dependency selector still named inventory headers.",
+    "Assets01 found unregistered inherited Python methods; explicit aliases preserve all eight accepted Blueprint entrypoints.",
+    "Assets02 differed only in sibling component export order; the existing canonical CDO parser preserves object payloads.",
+    "Assets03 rejected direct registration of the inherited-only child interface; only the declaring parent is registered.",
+    "Runtime01-05 attempted to combine original Blueprint fallback bodies with the new C++ stage; a grant could return success without an inventory change and Runtime03 hit an engine object-handle assertion. This full-Blueprint combination is not accepted or offered by the C++ Set.",
+    "Runtime06 compares the original C++ bodies and Python rules with the accepted Blueprint Python layer held constant. Assets06 removes the unused legacy full-Blueprint profile; both selected eleven-function mappings are unchanged and exercised again by Network02.",
+    "Network01 exposed inherited test modules auto-starting extra drivers; the new native lane is excluded from both base auto-start guards, and transient absent JSON is handled. Network02 passed all 36 scenarios."
+  ],
+  "preserved_recompiled_blueprint_stash": "Examples:36819836544ea97c7eca1d3fd0c173c27751562a",
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP06/Build02/summary.json",
+      "sha256": "FF0B1B91F8A349CFA0D36574F9466D8DAFFCE45D3F6D5BC8EDF9DA760736454F"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP06/Assets06/summary.json",
+      "sha256": "156A4C895FFBFAD0AB793BCF7E4C432B5DE2DDB16573C1F4D89643E1501A1AC4"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP06/Runtime06/summary.json",
+      "sha256": "9878A5E2E4DB40F5A1170FCDFD805E61E76CE53FBF8C72651ED05576553AED3D"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP06/Network02/summary.json",
+      "sha256": "E588A96E60282ECFCF25BB2A9A680B916345D05E2FC113ECEDB7A56BF2E23A10"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+--- a/Source/LyraGame/Weapons/LyraWeaponSpawner.h
++++ b/Source/LyraGame/Weapons/LyraWeaponSpawner.h
+@@ -91,14 +91,23 @@
+ 	UFUNCTION(BlueprintImplementableEvent, Category = "Lyra|WeaponPickup")
+ 	UE_API bool GiveWeapon(TSubclassOf<ULyraInventoryItemDefinition> WeaponItemClass, APawn* ReceivingPawn);
+ 
++	UFUNCTION(BlueprintCallable, Category = "Lyra|WeaponPickup")
+ 	UE_API void StartCoolDown();
+ 
+-	UFUNCTION(BlueprintCallable, Category = "Lyra|WeaponPickup")
++	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "Lyra|WeaponPickup")
+ 	UE_API void ResetCoolDown();
+ 
+-	UFUNCTION()
++	UFUNCTION(BlueprintNativeEvent)
+ 	UE_API void OnCoolDownTimerComplete();
+ 
++	// Narrow timer operations; the handles never leave native ownership.
++	UFUNCTION(BlueprintCallable)
++	UE_API void UEPClearSpawnerCooldown();
++
++	UFUNCTION(BlueprintCallable)
++	UE_API void UEPScheduleSpawnerOverlapCheck();
++
++	UFUNCTION(BlueprintCallable, Category = "Lyra|WeaponPickup")
+ 	UE_API void SetWeaponPickupVisibility(bool bShouldBeVisible);
+ 
+ 	UFUNCTION(BlueprintNativeEvent, Category = "Lyra|WeaponPickup")
+--- a/Source/LyraGame/Weapons/LyraWeaponSpawner.cpp
++++ b/Source/LyraGame/Weapons/LyraWeaponSpawner.cpp
+@@ -149,7 +149,7 @@
+ 	}
+ }
+ 
+-void ALyraWeaponSpawner::ResetCoolDown()
++void ALyraWeaponSpawner::ResetCoolDown_Implementation()
+ {
+ 	UWorld* World = GetWorld();
+ 
+@@ -173,7 +173,7 @@
+ 	CoolDownPercentage = 0.0f;
+ }
+ 
+-void ALyraWeaponSpawner::OnCoolDownTimerComplete()
++void ALyraWeaponSpawner::OnCoolDownTimerComplete_Implementation()
+ {
+ 	ResetCoolDown();
+ }
+@@ -256,3 +256,19 @@
+ 
+ 	return 0;
+ }
++
++void ALyraWeaponSpawner::UEPClearSpawnerCooldown()
++{
++	if (UWorld* World = GetWorld())
++	{
++		World->GetTimerManager().ClearTimer(CoolDownTimerHandle);
++	}
++}
++
++void ALyraWeaponSpawner::UEPScheduleSpawnerOverlapCheck()
++{
++	if (UWorld* World = GetWorld())
++	{
++		World->GetTimerManager().SetTimer(CheckOverlapsDelayTimerHandle, this, &ALyraWeaponSpawner::CheckForExistingOverlaps, CheckExistingOverlapDelay);
++	}
++}
