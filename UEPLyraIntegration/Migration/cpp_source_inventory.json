@@ -1,0 +1,5018 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-31",
+  "status": "awaiting_user_confirmation",
+  "approved_candidate_ids": [],
+  "implementation_authorized": false,
+  "implementation_started": false,
+  "runtime_acceptance": false,
+  "reference_root": "F:/LyraStarterGame",
+  "core_head": "269039fc91e7763ba35e4ec8658ca2fbc99a5f95",
+  "examples_head": "275e17359eb89a306a90cd876ed2bd4e048db888",
+  "support_target": "UE5.8.1 / CPython3.11 / Win64 Development; no new platform or build-configuration claim",
+  "existing_blueprint_scope": {
+    "runtime_candidates": 246,
+    "original_requirements": 22,
+    "status": "accepted",
+    "manifest_sha256": "17473973F9625FF22B588FB8C09E83D14DE1D0161EA4D542C4885005939D6105"
+  },
+  "inventory_method": "Complete runtime .cpp/.h/.Build.cs census in the named modules; source-located candidate function groups and role-based native retention. Not an exhaustive semantic audit of every function or runtime reachability proof.",
+  "counts": {
+    "runtime_cpp": 242,
+    "runtime_headers": 251,
+    "runtime_build_rules": 3,
+    "candidate_groups": 30,
+    "recommended_groups": 15,
+    "conditional_groups": 15,
+    "cpp_dispositions": {
+      "retain_native": 215,
+      "conditional_function_groups": 14,
+      "recommended_function_groups": 13
+    },
+    "source_function_anchors": 65
+  },
+  "modules": [
+    {
+      "alias": "LG",
+      "root": "Source/LyraGame",
+      "cpp": 225,
+      "headers": 232,
+      "build": 1
+    },
+    {
+      "alias": "SC",
+      "root": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime",
+      "cpp": 12,
+      "headers": 14,
+      "build": 1
+    },
+    {
+      "alias": "TA",
+      "root": "Plugins/GameFeatures/TopDownArena/Source/TopDownArenaRuntime",
+      "cpp": 5,
+      "headers": 5,
+      "build": 1
+    }
+  ],
+  "feature_source_presence": {
+    "ShooterCore": true,
+    "ShooterExplorer": false,
+    "ShooterMaps": false,
+    "ShooterTests": true,
+    "TopDownArena": true
+  },
+  "proposed_batches": [
+    {
+      "id": "CPP01",
+      "candidates": [
+        "CPP-001",
+        "CPP-002",
+        "CPP-003"
+      ],
+      "status": "awaiting_user_confirmation"
+    },
+    {
+      "id": "CPP02",
+      "candidates": [
+        "CPP-004"
+      ],
+      "status": "awaiting_user_confirmation"
+    },
+    {
+      "id": "CPP03",
+      "candidates": [
+        "CPP-005",
+        "CPP-006"
+      ],
+      "status": "awaiting_user_confirmation"
+    },
+    {
+      "id": "CPP04",
+      "candidates": [
+        "CPP-007",
+        "CPP-008"
+      ],
+      "status": "awaiting_user_confirmation"
+    },
+    {
+      "id": "CPP05",
+      "candidates": [
+        "CPP-009",
+        "CPP-010"
+      ],
+      "status": "awaiting_user_confirmation"
+    },
+    {
+      "id": "CPP06",
+      "candidates": [
+        "CPP-011"
+      ],
+      "status": "awaiting_user_confirmation"
+    },
+    {
+      "id": "CPP07",
+      "candidates": [
+        "CPP-012",
+        "CPP-013"
+      ],
+      "status": "awaiting_user_confirmation"
+    },
+    {
+      "id": "CPP08",
+      "candidates": [
+        "CPP-014"
+      ],
+      "status": "awaiting_user_confirmation"
+    },
+    {
+      "id": "CPP09",
+      "candidates": [
+        "CPP-015"
+      ],
+      "status": "awaiting_user_confirmation"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "CPP-001",
+      "title": "连杀计数",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "recommended",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "SC/Private/MessageProcessors/ElimStreakProcessor.cpp",
+      "reference_path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/MessageProcessors/ElimStreakProcessor.cpp",
+      "sha256": "DD3DCF5A381FE13D6EFC81218E30C4D269B85AA6D1CA8604C9ADCA9034D69216",
+      "functions": [
+        {
+          "symbol": "UElimStreakProcessor::OnEliminationMessage",
+          "line": 22,
+          "definition_lines": [
+            22
+          ]
+        }
+      ],
+      "proposed_batch": "CPP01"
+    },
+    {
+      "id": "CPP-002",
+      "title": "限时连击",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "recommended",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "SC/Private/MessageProcessors/ElimChainProcessor.cpp",
+      "reference_path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/MessageProcessors/ElimChainProcessor.cpp",
+      "sha256": "4E7AD1BCC7D1B6C1268FF33D1B01CDB9DEBBDE8F531AEB627C0711993FCBE54C",
+      "functions": [
+        {
+          "symbol": "UElimChainProcessor::OnEliminationMessage",
+          "line": 22,
+          "definition_lines": [
+            22
+          ]
+        }
+      ],
+      "proposed_batch": "CPP01"
+    },
+    {
+      "id": "CPP-003",
+      "title": "助攻判定",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "recommended",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "SC/Private/MessageProcessors/AssistProcessor.cpp",
+      "reference_path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/MessageProcessors/AssistProcessor.cpp",
+      "sha256": "50E3D257D5FC93ABF2E8A0127B1FA25CCE2446ACBE7164045E208C02893D168D",
+      "functions": [
+        {
+          "symbol": "UAssistProcessor::OnDamageMessage",
+          "line": 23,
+          "definition_lines": [
+            23
+          ]
+        },
+        {
+          "symbol": "UAssistProcessor::OnEliminationMessage",
+          "line": 40,
+          "definition_lines": [
+            40
+          ]
+        }
+      ],
+      "proposed_batch": "CPP01"
+    },
+    {
+      "id": "CPP-004",
+      "title": "队伍分配",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "recommended",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "LG/Teams/LyraTeamCreationComponent.cpp",
+      "reference_path": "Source/LyraGame/Teams/LyraTeamCreationComponent.cpp",
+      "sha256": "895041A4E4CDC39388657A716AD12854B04B899D9900DBC9A31BD1E9DE006A66",
+      "functions": [
+        {
+          "symbol": "ULyraTeamCreationComponent::ServerChooseTeamForPlayer",
+          "line": 87,
+          "definition_lines": [
+            87
+          ]
+        },
+        {
+          "symbol": "ULyraTeamCreationComponent::GetLeastPopulatedTeamID",
+          "line": 132,
+          "definition_lines": [
+            132
+          ]
+        }
+      ],
+      "proposed_batch": "CPP02"
+    },
+    {
+      "id": "CPP-005",
+      "title": "机器人数量策略",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "recommended",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "LG/GameModes/LyraBotCreationComponent.cpp",
+      "reference_path": "Source/LyraGame/GameModes/LyraBotCreationComponent.cpp",
+      "sha256": "AA25E329147D17914F44DA98CEE800E2A9F5BD26BE2D2DEDF6FEB57D2B60CAF1",
+      "functions": [
+        {
+          "symbol": "ULyraBotCreationComponent::ServerCreateBots_Implementation",
+          "line": 44,
+          "definition_lines": [
+            44,
+            167
+          ]
+        }
+      ],
+      "proposed_batch": "CPP03"
+    },
+    {
+      "id": "CPP-006",
+      "title": "机器人命名及移除选择",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "recommended",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "LG/GameModes/LyraBotCreationComponent.cpp",
+      "reference_path": "Source/LyraGame/GameModes/LyraBotCreationComponent.cpp",
+      "sha256": "AA25E329147D17914F44DA98CEE800E2A9F5BD26BE2D2DEDF6FEB57D2B60CAF1",
+      "functions": [
+        {
+          "symbol": "ULyraBotCreationComponent::CreateBotName",
+          "line": 80,
+          "definition_lines": [
+            80
+          ]
+        },
+        {
+          "symbol": "ULyraBotCreationComponent::RemoveOneBot",
+          "line": 131,
+          "definition_lines": [
+            131,
+            177
+          ]
+        }
+      ],
+      "proposed_batch": "CPP03"
+    },
+    {
+      "id": "CPP-007",
+      "title": "TDM 出生点选择",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "recommended",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "SC/Private/TDM_PlayerSpawningManagmentComponent.cpp",
+      "reference_path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/TDM_PlayerSpawningManagmentComponent.cpp",
+      "sha256": "CD6F0DD6125B90655B36C8839A63B12323F9A6493442FAA8712ED868FF5DDE77",
+      "functions": [
+        {
+          "symbol": "UTDM_PlayerSpawningManagmentComponent::OnChoosePlayerStart",
+          "line": 20,
+          "definition_lines": [
+            20
+          ]
+        }
+      ],
+      "proposed_batch": "CPP04"
+    },
+    {
+      "id": "CPP-008",
+      "title": "通用出生点回退",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "recommended",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "LG/Player/LyraPlayerSpawningManagerComponent.cpp",
+      "reference_path": "Source/LyraGame/Player/LyraPlayerSpawningManagerComponent.cpp",
+      "sha256": "89245C3A930473CE93184CF4319325113496D7B149055CB02DC1692594A090D1",
+      "functions": [
+        {
+          "symbol": "ULyraPlayerSpawningManagerComponent::ChoosePlayerStart",
+          "line": 71,
+          "definition_lines": [
+            71
+          ]
+        },
+        {
+          "symbol": "ULyraPlayerSpawningManagerComponent::GetFirstRandomUnoccupiedPlayerStart",
+          "line": 175,
+          "definition_lines": [
+            175
+          ]
+        }
+      ],
+      "proposed_batch": "CPP04"
+    },
+    {
+      "id": "CPP-009",
+      "title": "快捷栏选择规则",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "recommended",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "LG/Equipment/LyraQuickBarComponent.cpp",
+      "reference_path": "Source/LyraGame/Equipment/LyraQuickBarComponent.cpp",
+      "sha256": "3FD7904E3F174B1436423AA2BA7DA5518C9D88CC9493BFA2D01E27B5396FE8B1",
+      "functions": [
+        {
+          "symbol": "ULyraQuickBarComponent::CycleActiveSlotForward",
+          "line": 46,
+          "definition_lines": [
+            46
+          ]
+        },
+        {
+          "symbol": "ULyraQuickBarComponent::CycleActiveSlotBackward",
+          "line": 66,
+          "definition_lines": [
+            66
+          ]
+        },
+        {
+          "symbol": "ULyraQuickBarComponent::GetNextFreeItemSlot",
+          "line": 154,
+          "definition_lines": [
+            154
+          ]
+        }
+      ],
+      "proposed_batch": "CPP05"
+    },
+    {
+      "id": "CPP-010",
+      "title": "拾取入包编排",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "recommended",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "LG/Inventory/IPickupable.cpp",
+      "reference_path": "Source/LyraGame/Inventory/IPickupable.cpp",
+      "sha256": "FA59ADF45107F4857FDE106BD0343A204AFC1F36C8899C4C5D7DBD9CFADD41C7",
+      "functions": [
+        {
+          "symbol": "UPickupableStatics::AddPickupToInventory",
+          "line": 38,
+          "definition_lines": [
+            38
+          ]
+        }
+      ],
+      "proposed_batch": "CPP05"
+    },
+    {
+      "id": "CPP-011",
+      "title": "原生武器刷新台流程",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "recommended",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "LG/Weapons/LyraWeaponSpawner.cpp",
+      "reference_path": "Source/LyraGame/Weapons/LyraWeaponSpawner.cpp",
+      "sha256": "C273E9495C9F5BF11BD489B3EE4D976C6A3BC95D2AECC98C946138B0DFAADE5B",
+      "functions": [
+        {
+          "symbol": "ALyraWeaponSpawner::AttemptPickUpWeapon_Implementation",
+          "line": 124,
+          "definition_lines": [
+            124
+          ]
+        },
+        {
+          "symbol": "ALyraWeaponSpawner::ResetCoolDown",
+          "line": 152,
+          "definition_lines": [
+            152
+          ]
+        },
+        {
+          "symbol": "ALyraWeaponSpawner::OnCoolDownTimerComplete",
+          "line": 176,
+          "definition_lines": [
+            176
+          ]
+        }
+      ],
+      "proposed_batch": "CPP06"
+    },
+    {
+      "id": "CPP-012",
+      "title": "奖励通知过滤及请求顺序",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "recommended",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "SC/Private/Accolades/LyraAccoladeHostWidget.cpp",
+      "reference_path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/Accolades/LyraAccoladeHostWidget.cpp",
+      "sha256": "0D31F20C38298BC0B6C22B937C40DA46AC75EA68846130671D333DA8961A50D0",
+      "functions": [
+        {
+          "symbol": "ULyraAccoladeHostWidget::OnNotificationMessage",
+          "line": 37,
+          "definition_lines": [
+            37
+          ]
+        },
+        {
+          "symbol": "ULyraAccoladeHostWidget::OnRegistryLoadCompleted",
+          "line": 64,
+          "definition_lines": [
+            64
+          ]
+        }
+      ],
+      "proposed_batch": "CPP07"
+    },
+    {
+      "id": "CPP-013",
+      "title": "奖励显示队列",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "recommended",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "SC/Private/Accolades/LyraAccoladeHostWidget.cpp",
+      "reference_path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/Accolades/LyraAccoladeHostWidget.cpp",
+      "sha256": "0D31F20C38298BC0B6C22B937C40DA46AC75EA68846130671D333DA8961A50D0",
+      "functions": [
+        {
+          "symbol": "ULyraAccoladeHostWidget::ConsiderLoadedAccolades",
+          "line": 94,
+          "definition_lines": [
+            94
+          ]
+        },
+        {
+          "symbol": "ULyraAccoladeHostWidget::ProcessLoadedAccolade",
+          "line": 111,
+          "definition_lines": [
+            111
+          ]
+        },
+        {
+          "symbol": "ULyraAccoladeHostWidget::DisplayNextAccolade",
+          "line": 142,
+          "definition_lines": [
+            142
+          ]
+        },
+        {
+          "symbol": "ULyraAccoladeHostWidget::PopDisplayedAccolade",
+          "line": 153,
+          "definition_lines": [
+            153
+          ]
+        }
+      ],
+      "proposed_batch": "CPP07"
+    },
+    {
+      "id": "CPP-014",
+      "title": "交互选项及指示器编排",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "recommended",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "LG/Interaction/Abilities/LyraGameplayAbility_Interact.cpp",
+      "reference_path": "Source/LyraGame/Interaction/Abilities/LyraGameplayAbility_Interact.cpp",
+      "sha256": "E76F50302E918522684D09B0090BC8EC7C15CCAB20D9FFF1748ED7EFC74237D8",
+      "functions": [
+        {
+          "symbol": "ULyraGameplayAbility_Interact::UpdateInteractions",
+          "line": 41,
+          "definition_lines": [
+            41
+          ]
+        },
+        {
+          "symbol": "ULyraGameplayAbility_Interact::TriggerInteraction",
+          "line": 78,
+          "definition_lines": [
+            78
+          ]
+        }
+      ],
+      "proposed_batch": "CPP08"
+    },
+    {
+      "id": "CPP-015",
+      "title": "HUD 菜单入口",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "recommended",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "LG/UI/LyraHUDLayout.cpp",
+      "reference_path": "Source/LyraGame/UI/LyraHUDLayout.cpp",
+      "sha256": "B0746BA2CEAFFDF07B25043C6BAC5572B01D8BAF1C503FE17159EF53EF204CF1",
+      "functions": [
+        {
+          "symbol": "ULyraHUDLayout::HandleEscapeAction",
+          "line": 67,
+          "definition_lines": [
+            67
+          ]
+        }
+      ],
+      "proposed_batch": "CPP09"
+    },
+    {
+      "id": "CPP-016",
+      "title": "物品初始属性规则",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "needs_entry_validation",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "LG/Inventory/InventoryFragment_SetStats.cpp",
+      "reference_path": "Source/LyraGame/Inventory/InventoryFragment_SetStats.cpp",
+      "sha256": "02380C20344AEB34900266AEB3755F8CAEC9F3E091497E1B7C94CB00AC5540A6",
+      "functions": [
+        {
+          "symbol": "UInventoryFragment_SetStats::OnInstanceCreated",
+          "line": 9,
+          "definition_lines": [
+            9
+          ]
+        }
+      ],
+      "proposed_batch": null
+    },
+    {
+      "id": "CPP-017",
+      "title": "物品标签栈消耗",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "needs_entry_validation",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "LG/AbilitySystem/Abilities/LyraAbilityCost_ItemTagStack.cpp",
+      "reference_path": "Source/LyraGame/AbilitySystem/Abilities/LyraAbilityCost_ItemTagStack.cpp",
+      "sha256": "7DAE0886E261D1328D74A661325F36CD903E7C9E4782A64AB3F9DBD06EBA979D",
+      "functions": [
+        {
+          "symbol": "ULyraAbilityCost_ItemTagStack::CheckCost",
+          "line": 19,
+          "definition_lines": [
+            19
+          ]
+        },
+        {
+          "symbol": "ULyraAbilityCost_ItemTagStack::ApplyCost",
+          "line": 42,
+          "definition_lines": [
+            42
+          ]
+        }
+      ],
+      "proposed_batch": null
+    },
+    {
+      "id": "CPP-018",
+      "title": "玩家标签栈消耗",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "needs_entry_validation",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "LG/AbilitySystem/Abilities/LyraAbilityCost_PlayerTagStack.cpp",
+      "reference_path": "Source/LyraGame/AbilitySystem/Abilities/LyraAbilityCost_PlayerTagStack.cpp",
+      "sha256": "9DF4D3261656EC32BD6848B27001DE20672AF167B19BECD7C2734BEEB97B6727",
+      "functions": [
+        {
+          "symbol": "ULyraAbilityCost_PlayerTagStack::CheckCost",
+          "line": 16,
+          "definition_lines": [
+            16
+          ]
+        },
+        {
+          "symbol": "ULyraAbilityCost_PlayerTagStack::ApplyCost",
+          "line": 33,
+          "definition_lines": [
+            33
+          ]
+        }
+      ],
+      "proposed_batch": null
+    },
+    {
+      "id": "CPP-019",
+      "title": "原生跳跃技能编排",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "needs_entry_validation",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "LG/AbilitySystem/Abilities/LyraGameplayAbility_Jump.cpp",
+      "reference_path": "Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility_Jump.cpp",
+      "sha256": "AE85050E8DE0C0BC0BD00782C1141AD76E96E138DB8E71B3EB942A35B0E41C51",
+      "functions": [
+        {
+          "symbol": "ULyraGameplayAbility_Jump::CanActivateAbility",
+          "line": 20,
+          "definition_lines": [
+            20
+          ]
+        },
+        {
+          "symbol": "ULyraGameplayAbility_Jump::CharacterJumpStart",
+          "line": 49,
+          "definition_lines": [
+            49
+          ]
+        },
+        {
+          "symbol": "ULyraGameplayAbility_Jump::CharacterJumpStop",
+          "line": 61,
+          "definition_lines": [
+            61
+          ]
+        }
+      ],
+      "proposed_batch": null
+    },
+    {
+      "id": "CPP-020",
+      "title": "原生死亡技能编排",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "needs_entry_validation",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "LG/AbilitySystem/Abilities/LyraGameplayAbility_Death.cpp",
+      "reference_path": "Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility_Death.cpp",
+      "sha256": "97201AD0EE243B3B879C088536CA379BB47D18094B63848E5C065289336FE9A0",
+      "functions": [
+        {
+          "symbol": "ULyraGameplayAbility_Death::ActivateAbility",
+          "line": 32,
+          "definition_lines": [
+            32
+          ]
+        },
+        {
+          "symbol": "ULyraGameplayAbility_Death::EndAbility",
+          "line": 59,
+          "definition_lines": [
+            59
+          ]
+        },
+        {
+          "symbol": "ULyraGameplayAbility_Death::StartDeath",
+          "line": 70,
+          "definition_lines": [
+            70
+          ]
+        },
+        {
+          "symbol": "ULyraGameplayAbility_Death::FinishDeath",
+          "line": 81,
+          "definition_lines": [
+            81
+          ]
+        }
+      ],
+      "proposed_batch": null
+    },
+    {
+      "id": "CPP-021",
+      "title": "原生重置技能编排",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "needs_entry_validation",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "LG/AbilitySystem/Abilities/LyraGameplayAbility_Reset.cpp",
+      "reference_path": "Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility_Reset.cpp",
+      "sha256": "B66ED1A7178C627C65F21F366CC3BD8DEBD64EA11660795555B48A83C5CF317F",
+      "functions": [
+        {
+          "symbol": "ULyraGameplayAbility_Reset::ActivateAbility",
+          "line": 28,
+          "definition_lines": [
+            28
+          ]
+        }
+      ],
+      "proposed_batch": null
+    },
+    {
+      "id": "CPP-022",
+      "title": "前端启动状态流程",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "needs_entry_validation",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "LG/UI/Frontend/LyraFrontendStateComponent.cpp",
+      "reference_path": "Source/LyraGame/UI/Frontend/LyraFrontendStateComponent.cpp",
+      "sha256": "6D9E372E61C9CD0BEF5223ACE41021A7C88BB12C29B85524B20EA6CBB794CF46",
+      "functions": [
+        {
+          "symbol": "ULyraFrontendStateComponent::OnExperienceLoaded",
+          "line": 67,
+          "definition_lines": [
+            67
+          ]
+        },
+        {
+          "symbol": "ULyraFrontendStateComponent::FlowStep_WaitForUserInitialization",
+          "line": 80,
+          "definition_lines": [
+            80
+          ]
+        },
+        {
+          "symbol": "ULyraFrontendStateComponent::FlowStep_TryShowPressStartScreen",
+          "line": 110,
+          "definition_lines": [
+            110
+          ]
+        },
+        {
+          "symbol": "ULyraFrontendStateComponent::FlowStep_TryJoinRequestedSession",
+          "line": 192,
+          "definition_lines": [
+            192
+          ]
+        },
+        {
+          "symbol": "ULyraFrontendStateComponent::FlowStep_TryShowMainScreen",
+          "line": 228,
+          "definition_lines": [
+            228
+          ]
+        }
+      ],
+      "proposed_batch": null
+    },
+    {
+      "id": "CPP-023",
+      "title": "外观部件随 Pawn 转移",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "needs_entry_validation",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "LG/Cosmetics/LyraControllerComponent_CharacterParts.cpp",
+      "reference_path": "Source/LyraGame/Cosmetics/LyraControllerComponent_CharacterParts.cpp",
+      "sha256": "EDF9CD5D49637061D6C378D1854D10CD4F4C83CC68AE76E5DFAA549FEB9EBB9E",
+      "functions": [
+        {
+          "symbol": "ULyraControllerComponent_CharacterParts::OnPossessedPawnChanged",
+          "line": 106,
+          "definition_lines": [
+            106
+          ]
+        },
+        {
+          "symbol": "ULyraControllerComponent_CharacterParts::AddCharacterPartInternal",
+          "line": 60,
+          "definition_lines": [
+            60
+          ]
+        },
+        {
+          "symbol": "ULyraControllerComponent_CharacterParts::RemoveCharacterPart",
+          "line": 76,
+          "definition_lines": [
+            76
+          ]
+        },
+        {
+          "symbol": "ULyraControllerComponent_CharacterParts::RemoveAllCharacterParts",
+          "line": 93,
+          "definition_lines": [
+            93
+          ]
+        }
+      ],
+      "proposed_batch": null
+    },
+    {
+      "id": "CPP-024",
+      "title": "摄像机模式选择",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "needs_entry_validation",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "LG/Character/LyraHeroComponent.cpp",
+      "reference_path": "Source/LyraGame/Character/LyraHeroComponent.cpp",
+      "sha256": "D036B6BBBF0FC8170CB31D0F3271D887D44F1B683DB564F0E036F74B0E68D3E7",
+      "functions": [
+        {
+          "symbol": "ULyraHeroComponent::DetermineCameraMode",
+          "line": 471,
+          "definition_lines": [
+            471
+          ]
+        }
+      ],
+      "proposed_batch": null
+    },
+    {
+      "id": "CPP-025",
+      "title": "手柄断连提示策略",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "needs_entry_validation",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "LG/UI/LyraHUDLayout.cpp",
+      "reference_path": "Source/LyraGame/UI/LyraHUDLayout.cpp",
+      "sha256": "B0746BA2CEAFFDF07B25043C6BAC5572B01D8BAF1C503FE17159EF53EF204CF1",
+      "functions": [
+        {
+          "symbol": "ULyraHUDLayout::ShouldPlatformDisplayControllerDisconnectScreen",
+          "line": 103,
+          "definition_lines": [
+            103
+          ]
+        },
+        {
+          "symbol": "ULyraHUDLayout::ProcessControllerDevicesHavingChangedForDisconnectScreen",
+          "line": 134,
+          "definition_lines": [
+            134
+          ]
+        },
+        {
+          "symbol": "ULyraHUDLayout::DisplayControllerDisconnectedMenu_Implementation",
+          "line": 175,
+          "definition_lines": [
+            175
+          ]
+        },
+        {
+          "symbol": "ULyraHUDLayout::HideControllerDisconnectedMenu_Implementation",
+          "line": 186,
+          "definition_lines": [
+            186
+          ]
+        }
+      ],
+      "proposed_batch": null
+    },
+    {
+      "id": "CPP-026",
+      "title": "录像保留策略",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "needs_entry_validation",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "LG/Replays/LyraReplaySubsystem.cpp",
+      "reference_path": "Source/LyraGame/Replays/LyraReplaySubsystem.cpp",
+      "sha256": "926622DCA8F007530D84B7E10E32AA60971DCBA646AC54B8F86776B3F37DBD59",
+      "functions": [
+        {
+          "symbol": "ULyraReplaySubsystem::CleanupLocalReplays",
+          "line": 63,
+          "definition_lines": [
+            63
+          ]
+        },
+        {
+          "symbol": "ULyraReplaySubsystem::OnEnumerateStreamsCompleteForDelete",
+          "line": 84,
+          "definition_lines": [
+            84
+          ]
+        },
+        {
+          "symbol": "ULyraReplaySubsystem::OnDeleteReplay",
+          "line": 135,
+          "definition_lines": [
+            135
+          ]
+        }
+      ],
+      "proposed_batch": null
+    },
+    {
+      "id": "CPP-027",
+      "title": "音频混音选择策略",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "needs_entry_validation",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "LG/Audio/LyraAudioMixEffectsSubsystem.cpp",
+      "reference_path": "Source/LyraGame/Audio/LyraAudioMixEffectsSubsystem.cpp",
+      "sha256": "68B667500A45B68CA3279B2CCA0E4750B164B582CEAE4463918F29B604B716DD",
+      "functions": [
+        {
+          "symbol": "ULyraAudioMixEffectsSubsystem::ApplyDynamicRangeEffectsChains",
+          "line": 267,
+          "definition_lines": [
+            267
+          ]
+        },
+        {
+          "symbol": "ULyraAudioMixEffectsSubsystem::ApplyOrRemoveLoadingScreenMix",
+          "line": 332,
+          "definition_lines": [
+            332
+          ]
+        }
+      ],
+      "proposed_batch": null
+    },
+    {
+      "id": "CPP-028",
+      "title": "友伤及自伤规则",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "needs_entry_validation",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "LG/Teams/LyraTeamSubsystem.cpp",
+      "reference_path": "Source/LyraGame/Teams/LyraTeamSubsystem.cpp",
+      "sha256": "11679776C3C0B1C23A718362934182F1144F72FBB9E3CB173DB6D2018ED69786",
+      "functions": [
+        {
+          "symbol": "ULyraTeamSubsystem::CanCauseDamage",
+          "line": 345,
+          "definition_lines": [
+            345
+          ]
+        }
+      ],
+      "proposed_batch": null
+    },
+    {
+      "id": "CPP-029",
+      "title": "Arena 属性约束",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "needs_entry_validation",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "TA/Private/TopDownArenaAttributeSet.cpp",
+      "reference_path": "Plugins/GameFeatures/TopDownArena/Source/TopDownArenaRuntime/Private/TopDownArenaAttributeSet.cpp",
+      "sha256": "AEF650631D5E950DE9B94EEDEB7800310B7A7BB518B4A7AFD9F767D6DDB8DFE5",
+      "functions": [
+        {
+          "symbol": "UTopDownArenaAttributeSet::ClampAttribute",
+          "line": 63,
+          "definition_lines": [
+            63
+          ]
+        }
+      ],
+      "proposed_batch": null
+    },
+    {
+      "id": "CPP-030",
+      "title": "GameMode Pawn 选择及重生许可",
+      "status": "awaiting_scope_confirmation",
+      "proposal": "needs_entry_validation",
+      "implementation_started": false,
+      "runtime_acceptance": false,
+      "source": "LG/GameModes/LyraGameMode.cpp",
+      "reference_path": "Source/LyraGame/GameModes/LyraGameMode.cpp",
+      "sha256": "3E431AA4068A5B0A540945FC00E3E80E171D75A9AC5D6054C53CFCA5A8745095",
+      "functions": [
+        {
+          "symbol": "ALyraGameMode::GetPawnDataForController",
+          "line": 45,
+          "definition_lines": [
+            45
+          ]
+        },
+        {
+          "symbol": "ALyraGameMode::GetDefaultPawnClassForController_Implementation",
+          "line": 332,
+          "definition_lines": [
+            332
+          ]
+        },
+        {
+          "symbol": "ALyraGameMode::ControllerCanRestart",
+          "line": 426,
+          "definition_lines": [
+            426
+          ]
+        }
+      ],
+      "proposed_batch": null
+    }
+  ],
+  "runtime_cpp_files": [
+    {
+      "path": "Source/LyraGame/AbilitySystem/Abilities/LyraAbilityCost_InventoryItem.cpp",
+      "sha256": "FB61937A07F34CA0B5FB922701422CD88B97F4508DBB6FA0A2BEA9B4F6F5516E",
+      "lines": 53,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "现有 CheckCost 返回 false，主体位于 #if 0；按占位实现保留，不虚列为已运行的消耗规则。"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Abilities/LyraAbilityCost_ItemTagStack.cpp",
+      "sha256": "7DAE0886E261D1328D74A661325F36CD903E7C9E4782A64AB3F9DBD06EBA979D",
+      "lines": 60,
+      "module": "LG",
+      "disposition": "conditional_function_groups",
+      "candidate_ids": [
+        "CPP-017"
+      ],
+      "reason": "仅迁移列出的函数组内规则；其余原生实现保留。"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Abilities/LyraAbilityCost_PlayerTagStack.cpp",
+      "sha256": "9DF4D3261656EC32BD6848B27001DE20672AF167B19BECD7C2734BEEB97B6727",
+      "lines": 51,
+      "module": "LG",
+      "disposition": "conditional_function_groups",
+      "candidate_ids": [
+        "CPP-018"
+      ],
+      "reason": "仅迁移列出的函数组内规则；其余原生实现保留。"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility.cpp",
+      "sha256": "91709A3AC50E55D92EBF1684165925C26BF4E29C0A6E356517721DFB2BB7E3FF",
+      "lines": 545,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "GAS 执行、属性、预测、能力集合、阶段和原生生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility_Death.cpp",
+      "sha256": "97201AD0EE243B3B879C088536CA379BB47D18094B63848E5C065289336FE9A0",
+      "lines": 91,
+      "module": "LG",
+      "disposition": "conditional_function_groups",
+      "candidate_ids": [
+        "CPP-020"
+      ],
+      "reason": "仅迁移列出的函数组内规则；其余原生实现保留。"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility_Jump.cpp",
+      "sha256": "AE85050E8DE0C0BC0BD00782C1141AD76E96E138DB8E71B3EB942A35B0E41C51",
+      "lines": 71,
+      "module": "LG",
+      "disposition": "conditional_function_groups",
+      "candidate_ids": [
+        "CPP-019"
+      ],
+      "reason": "仅迁移列出的函数组内规则；其余原生实现保留。"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility_Reset.cpp",
+      "sha256": "B66ED1A7178C627C65F21F366CC3BD8DEBD64EA11660795555B48A83C5CF317F",
+      "lines": 60,
+      "module": "LG",
+      "disposition": "conditional_function_groups",
+      "candidate_ids": [
+        "CPP-021"
+      ],
+      "reason": "仅迁移列出的函数组内规则；其余原生实现保留。"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Attributes/LyraAttributeSet.cpp",
+      "sha256": "0F92BEB20B86A9C456D6D0BAA780419DB34C9789A74189388037B894988629D0",
+      "lines": 28,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "GAS 执行、属性、预测、能力集合、阶段和原生生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Attributes/LyraCombatSet.cpp",
+      "sha256": "F5CA0B9D41329ED1FAB8086BB4DCC68287185001128340A182F6F12DAAA92387",
+      "lines": 36,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "GAS 执行、属性、预测、能力集合、阶段和原生生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Attributes/LyraHealthSet.cpp",
+      "sha256": "01CB2996F6B1B27BD2C14E50F528C3005781EA10C31297CA3B5198768E4A69E6",
+      "lines": 234,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "GAS 执行、属性、预测、能力集合、阶段和原生生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Executions/LyraDamageExecution.cpp",
+      "sha256": "89C451359967677632362E8BDCAFEF7127DCBC76A430A6BDBE311299CA542C0E",
+      "lines": 140,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "GAS 执行、属性、预测、能力集合、阶段和原生生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Executions/LyraHealExecution.cpp",
+      "sha256": "62771E03CA0F5FA6D47274201A1C7EF501074F8D008AD985096F18C6F05BB690",
+      "lines": 56,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "GAS 执行、属性、预测、能力集合、阶段和原生生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/LyraAbilitySet.cpp",
+      "sha256": "5CC3801EDE19551A9CDE1534E75C41B2781AD5E06245FFA343D745AA303D76E8",
+      "lines": 148,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "GAS 执行、属性、预测、能力集合、阶段和原生生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/LyraAbilitySourceInterface.cpp",
+      "sha256": "48E8BB0C54E11A4CB20B3520B615F078AEAAAE87C4D707253B4506834F95B796",
+      "lines": 10,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "GAS 执行、属性、预测、能力集合、阶段和原生生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/LyraAbilitySystemComponent.cpp",
+      "sha256": "F9019AB6219DD508DCFC37C81B2303A437034684F35D07D2231492FB5FCE703F",
+      "lines": 528,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "GAS 执行、属性、预测、能力集合、阶段和原生生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/LyraAbilitySystemGlobals.cpp",
+      "sha256": "46AECE09250B75AF2E8DB23385B9BC68418E917FC65135C56E1CE41E627F92D7",
+      "lines": 20,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "GAS 执行、属性、预测、能力集合、阶段和原生生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/LyraAbilityTagRelationshipMapping.cpp",
+      "sha256": "A848BB3F753BD456A2C45462F783C3C2B370EA56F85F2BDE5863E3B5961D453B",
+      "lines": 63,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "GAS 执行、属性、预测、能力集合、阶段和原生生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/LyraGameplayAbilityTargetData_SingleTargetHit.cpp",
+      "sha256": "F5724CC1D9A9EBD6764085F3687CEEEB3AB93951DB116D9D9F1935A87E4FD950",
+      "lines": 32,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "GAS 执行、属性、预测、能力集合、阶段和原生生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/LyraGameplayCueManager.cpp",
+      "sha256": "C5B74B128FB20ADAC914E94F4D424E70735C420562692BC64D6A49104E71F960",
+      "lines": 406,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "GAS 执行、属性、预测、能力集合、阶段和原生生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/LyraGameplayEffectContext.cpp",
+      "sha256": "25A8CC97688638CCB25C99BA8865420187E50C3E6910981BAA6AC4ED4FAC05F5",
+      "lines": 63,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "GAS 执行、属性、预测、能力集合、阶段和原生生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/LyraGlobalAbilitySystem.cpp",
+      "sha256": "98245EE8BBF7CC54DBC09ADA7130E9A73A1AA7E964BF62766A123237FC9D546A",
+      "lines": 156,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "GAS 执行、属性、预测、能力集合、阶段和原生生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/LyraTaggedActor.cpp",
+      "sha256": "D324A61777698C780CD33DE0A188A743698A59B369B3ADA17EA4369757C0D620",
+      "lines": 30,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "GAS 执行、属性、预测、能力集合、阶段和原生生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Phases/LyraGamePhaseAbility.cpp",
+      "sha256": "E6A8D11775695FA25C1E0DA058AE1236E09CCF40A9496325D5381A6C1D5CF627",
+      "lines": 64,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "GAS 执行、属性、预测、能力集合、阶段和原生生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Phases/LyraGamePhaseSubsystem.cpp",
+      "sha256": "32CDF489141D2EED230D3120FC18AE8CD2253BB508ACFC6DA65F7E506A5B13F1",
+      "lines": 224,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "GAS 执行、属性、预测、能力集合、阶段和原生生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Animation/LyraAnimInstance.cpp",
+      "sha256": "BB72C13F38A760E57BD2D9ABAEBB10BC41BF191CDC788609BD2540602AB97A55",
+      "lines": 65,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "动画系统及原生动画实例实现。"
+    },
+    {
+      "path": "Source/LyraGame/Audio/LyraAudioMixEffectsSubsystem.cpp",
+      "sha256": "68B667500A45B68CA3279B2CCA0E4750B164B582CEAE4463918F29B604B716DD",
+      "lines": 357,
+      "module": "LG",
+      "disposition": "conditional_function_groups",
+      "candidate_ids": [
+        "CPP-027"
+      ],
+      "reason": "仅迁移列出的函数组内规则；其余原生实现保留。"
+    },
+    {
+      "path": "Source/LyraGame/Audio/LyraAudioSettings.cpp",
+      "sha256": "0DE14BF36F99EFEBCC6878E82BFFB4C2BDC821B217D0480DE6DE052F17EB86B8",
+      "lines": 8,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "原生音频设置、资产和设备基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Camera/LyraCameraComponent.cpp",
+      "sha256": "8A10B02EB19D4DB8582FAE93DFB8A682AEF102F70D0575024D6074699B3A3764",
+      "lines": 126,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "原生摄像机更新、混合、碰撞和视图计算。"
+    },
+    {
+      "path": "Source/LyraGame/Camera/LyraCameraMode.cpp",
+      "sha256": "E2D55E4043DFA9FD2A300E4A508F8C8325777E7A4F2A130A56052B2043F450CA",
+      "lines": 465,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "原生摄像机更新、混合、碰撞和视图计算。"
+    },
+    {
+      "path": "Source/LyraGame/Camera/LyraCameraMode_ThirdPerson.cpp",
+      "sha256": "B6BD3E16E4ECF4E21CFA4A0E2F829F37A89D2B729F60AFF0300F2C66F58E7A00",
+      "lines": 373,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "原生摄像机更新、混合、碰撞和视图计算。"
+    },
+    {
+      "path": "Source/LyraGame/Camera/LyraPlayerCameraManager.cpp",
+      "sha256": "DEF40C315BB87E4DD08E8B2D8383DA91462606E346242EC5DA647A070A747FA9",
+      "lines": 66,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "原生摄像机更新、混合、碰撞和视图计算。"
+    },
+    {
+      "path": "Source/LyraGame/Camera/LyraUICameraManagerComponent.cpp",
+      "sha256": "1CC90E45265B184666F0C98BE661E10599EFE4DE8BCD5A134CA3860620372634",
+      "lines": 65,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "原生摄像机更新、混合、碰撞和视图计算。"
+    },
+    {
+      "path": "Source/LyraGame/Character/LyraCharacter.cpp",
+      "sha256": "62A69AD6ABDB9F67282326EC28709068B657878BFA32CADE64002510C2AB36A5",
+      "lines": 682,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "角色、移动、Pawn/ASC 初始化和健康生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Character/LyraCharacterMovementComponent.cpp",
+      "sha256": "E2419401611B4B3A09F68962B0D546AD70C43CF4DFD2D2C85E6ED292780B9288",
+      "lines": 131,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "角色、移动、Pawn/ASC 初始化和健康生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Character/LyraCharacterWithAbilities.cpp",
+      "sha256": "38FE2D2480E65DF8ACDA65F64D73C2CA11624A6E9F7807E656C19561CF4E4DF8",
+      "lines": 39,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "角色、移动、Pawn/ASC 初始化和健康生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Character/LyraHealthComponent.cpp",
+      "sha256": "F1178CF93578DF02B8D30374023CF1D84D8D93999685F2D6F4E5A92C7334EB26",
+      "lines": 312,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "角色、移动、Pawn/ASC 初始化和健康生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Character/LyraHeroComponent.cpp",
+      "sha256": "D036B6BBBF0FC8170CB31D0F3271D887D44F1B683DB564F0E036F74B0E68D3E7",
+      "lines": 512,
+      "module": "LG",
+      "disposition": "conditional_function_groups",
+      "candidate_ids": [
+        "CPP-024"
+      ],
+      "reason": "仅迁移列出的函数组内规则；其余原生实现保留。"
+    },
+    {
+      "path": "Source/LyraGame/Character/LyraPawn.cpp",
+      "sha256": "D690F79CBFD0F25459856499EF042547CDB131D4AF34C1F2B90C6EA4BAB7B87D",
+      "lines": 112,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "角色、移动、Pawn/ASC 初始化和健康生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Character/LyraPawnData.cpp",
+      "sha256": "F2739DABF90A958E4AC0E9F3C6C7881CCF1CD9D976865954032D2D3D1809C158",
+      "lines": 14,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "角色、移动、Pawn/ASC 初始化和健康生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Character/LyraPawnExtensionComponent.cpp",
+      "sha256": "F479C9BC242E93FDF82F3E94B6876A36DDC382448FEAD40781698FAFC4522854",
+      "lines": 312,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "角色、移动、Pawn/ASC 初始化和健康生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Cosmetics/LyraControllerComponent_CharacterParts.cpp",
+      "sha256": "EDF9CD5D49637061D6C378D1854D10CD4F4C83CC68AE76E5DFAA549FEB9EBB9E",
+      "lines": 223,
+      "module": "LG",
+      "disposition": "conditional_function_groups",
+      "candidate_ids": [
+        "CPP-023"
+      ],
+      "reason": "仅迁移列出的函数组内规则；其余原生实现保留。"
+    },
+    {
+      "path": "Source/LyraGame/Cosmetics/LyraCosmeticAnimationTypes.cpp",
+      "sha256": "9B8829203278577CC5ECC3DB6DD38F012F99E5947BC99E3B6843CD02F827CFF0",
+      "lines": 35,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "外观描述、部件 Actor、动画标签、复制及开发配置基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Cosmetics/LyraCosmeticCheats.cpp",
+      "sha256": "9F4CACA59BE615B8BCC2DB7DD0A6C719BC365CCBD3AF647BFCA39B689FAD951A",
+      "lines": 70,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "外观描述、部件 Actor、动画标签、复制及开发配置基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Cosmetics/LyraCosmeticDeveloperSettings.cpp",
+      "sha256": "2143E9527A2DDD9AF2B4689F3D50B6511F91527151C8921CD21D96AC264B8D75",
+      "lines": 96,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "外观描述、部件 Actor、动画标签、复制及开发配置基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Cosmetics/LyraPawnComponent_CharacterParts.cpp",
+      "sha256": "975C2AE1C05DF4CFBB31E47D75E3A2D2640DB2D50A6AED014A7804D23AB8534D",
+      "lines": 357,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "外观描述、部件 Actor、动画标签、复制及开发配置基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Development/LyraBotCheats.cpp",
+      "sha256": "2FC229DFE9C2925320EAF9F12CF67449B5C6C7DDBFCB3D35FFCBA192E707CD4D",
+      "lines": 59,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "开发、调试、作弊或平台模拟工具。"
+    },
+    {
+      "path": "Source/LyraGame/Development/LyraDeveloperSettings.cpp",
+      "sha256": "1E49C2EC8EF5C73A79445AA69F8B0BE9FB3B9599E344181F3059791BA3BDE2D6",
+      "lines": 63,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "开发、调试、作弊或平台模拟工具。"
+    },
+    {
+      "path": "Source/LyraGame/Development/LyraPlatformEmulationSettings.cpp",
+      "sha256": "D00D5D14994A2E882E566FE79316A2D3EC9C7E9CABF604C131B022CFB1E1721A",
+      "lines": 196,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "开发、调试、作弊或平台模拟工具。"
+    },
+    {
+      "path": "Source/LyraGame/Equipment/LyraEquipmentDefinition.cpp",
+      "sha256": "141F8434CF2C745D16F2CFC48B74834A876D0BAA42F0495B56C7EBB5FEA268CD",
+      "lines": 13,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "装备类型、实例、能力授予、组件和网络复制基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Equipment/LyraEquipmentInstance.cpp",
+      "sha256": "8AEC2BF45109B05DFF7EA6A149BD25A304D636340E78959FFF40E0169C37D317",
+      "lines": 115,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "装备类型、实例、能力授予、组件和网络复制基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Equipment/LyraEquipmentManagerComponent.cpp",
+      "sha256": "F94A6C5C10469DF7D53CAF82AA330BA5F03BDC6F4716E2D0A27DFB52DD0D6B3E",
+      "lines": 272,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "装备类型、实例、能力授予、组件和网络复制基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Equipment/LyraGameplayAbility_FromEquipment.cpp",
+      "sha256": "CA6717CF80045CF0093ABF2D2D4653FC4BC5E412BF59F324ECF462AE91A0BC76",
+      "lines": 54,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "装备类型、实例、能力授予、组件和网络复制基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Equipment/LyraPickupDefinition.cpp",
+      "sha256": "25265099BCD999951B72E88D8FC859B7615EB02148F55F4BEB93C43EC9E98C5F",
+      "lines": 8,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "装备类型、实例、能力授予、组件和网络复制基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Equipment/LyraQuickBarComponent.cpp",
+      "sha256": "3FD7904E3F174B1436423AA2BA7DA5518C9D88CC9493BFA2D01E27B5396FE8B1",
+      "lines": 224,
+      "module": "LG",
+      "disposition": "recommended_function_groups",
+      "candidate_ids": [
+        "CPP-009"
+      ],
+      "reason": "仅迁移列出的函数组内规则；其余原生实现保留。"
+    },
+    {
+      "path": "Source/LyraGame/Feedback/ContextEffects/AnimNotify_LyraContextEffects.cpp",
+      "sha256": "449BE6D51BBFB830DD54295669A91C4E5F3256A33AE5DE89052F5E71F1418ACB",
+      "lines": 227,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "效果、资产和显示实现；沿用已迁移的 BP 编排。"
+    },
+    {
+      "path": "Source/LyraGame/Feedback/ContextEffects/LyraContextEffectComponent.cpp",
+      "sha256": "14BD97305BCB37660A209A69460BAC25F91B3793DF75276BB2CCF6EE7C3831F4",
+      "lines": 175,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "效果、资产和显示实现；沿用已迁移的 BP 编排。"
+    },
+    {
+      "path": "Source/LyraGame/Feedback/ContextEffects/LyraContextEffectsInterface.cpp",
+      "sha256": "28B205F7B073897027FA716842806C9E981485119034D68CB9050AFD01B47389",
+      "lines": 7,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "效果、资产和显示实现；沿用已迁移的 BP 编排。"
+    },
+    {
+      "path": "Source/LyraGame/Feedback/ContextEffects/LyraContextEffectsLibrary.cpp",
+      "sha256": "8817A68C029DA50E59AB919411AC919093BF9213ACBE2B7C542B7AA981E64513",
+      "lines": 119,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "效果、资产和显示实现；沿用已迁移的 BP 编排。"
+    },
+    {
+      "path": "Source/LyraGame/Feedback/ContextEffects/LyraContextEffectsSubsystem.cpp",
+      "sha256": "54098D7FC82694C745D85BF0E349804C638D88B67B7797F43D91C754C3D6BF50",
+      "lines": 150,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "效果、资产和显示实现；沿用已迁移的 BP 编排。"
+    },
+    {
+      "path": "Source/LyraGame/Feedback/NumberPops/LyraDamagePopStyle.cpp",
+      "sha256": "8AD802C798F87CFC29D3B885FDA73CC6AF3C8AC73EDAC643015DCBA6052CF7B2",
+      "lines": 12,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "效果、资产和显示实现；沿用已迁移的 BP 编排。"
+    },
+    {
+      "path": "Source/LyraGame/Feedback/NumberPops/LyraNumberPopComponent.cpp",
+      "sha256": "E060DC1D2F639924AFF6D535FBDC5A3BA9CE92F0D75A869D2281B1764CCEBEF3",
+      "lines": 11,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "效果、资产和显示实现；沿用已迁移的 BP 编排。"
+    },
+    {
+      "path": "Source/LyraGame/Feedback/NumberPops/LyraNumberPopComponent_MeshText.cpp",
+      "sha256": "C1F25E9A6E1B9A30E6629A35900D07DB63FEC9AD63060B6A5D1E2708D5CA4398",
+      "lines": 336,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "效果、资产和显示实现；沿用已迁移的 BP 编排。"
+    },
+    {
+      "path": "Source/LyraGame/Feedback/NumberPops/LyraNumberPopComponent_NiagaraText.cpp",
+      "sha256": "74F501AC4AC6AC9535A2C00CE767086043D32CBC799ED200C25FD1D805702117",
+      "lines": 56,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "效果、资产和显示实现；沿用已迁移的 BP 编排。"
+    },
+    {
+      "path": "Source/LyraGame/GameFeatures/GameFeatureAction_AddAbilities.cpp",
+      "sha256": "BC3FE99AF72E0E6BD34B9AF50104CE1C9E50F149E67EF9C2E01060DDE226AB50",
+      "lines": 298,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "GameFeature 加载、能力和输入注入、注册与清理基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/GameFeatures/GameFeatureAction_AddGameplayCuePath.cpp",
+      "sha256": "360D915AFC97DFECFF472A0E949DCA39ACB930576DEB23F5D621CF2787BACBCD",
+      "lines": 38,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "GameFeature 加载、能力和输入注入、注册与清理基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/GameFeatures/GameFeatureAction_AddInputBinding.cpp",
+      "sha256": "5F327E9B46DB15F1E68312A5242A25A1CEF639ECB2388F42D9C625BB25A4B459",
+      "lines": 175,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "GameFeature 加载、能力和输入注入、注册与清理基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/GameFeatures/GameFeatureAction_AddInputContextMapping.cpp",
+      "sha256": "DEF5F7D6A47A2649758D270EFD18D7440AFDF5220389B113769208EBF90110A3",
+      "lines": 286,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "GameFeature 加载、能力和输入注入、注册与清理基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/GameFeatures/GameFeatureAction_AddWidget.cpp",
+      "sha256": "F4A6230C1D874C898CB18A6ED89B4BE992F12BD148C192EBB74183C7A46B09D0",
+      "lines": 193,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "GameFeature 加载、能力和输入注入、注册与清理基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/GameFeatures/GameFeatureAction_SplitscreenConfig.cpp",
+      "sha256": "39889180EDA673DF33F004ACDA76A8F1F5CAA19D986DFF7978E79C6E2BD36791",
+      "lines": 78,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "GameFeature 加载、能力和输入注入、注册与清理基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/GameFeatures/GameFeatureAction_WorldActionBase.cpp",
+      "sha256": "2A10EBF232598BA8BD017B35E96F07F665E4A4771EB3DA17E057A807096FD76F",
+      "lines": 45,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "GameFeature 加载、能力和输入注入、注册与清理基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/GameFeatures/LyraGameFeaturePolicy.cpp",
+      "sha256": "3238CE57BC6E4A49D106976FFF567D164E3E47580C46487F4F662D9D584B9D71",
+      "lines": 159,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "GameFeature 加载、能力和输入注入、注册与清理基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/GameModes/AsyncAction_ExperienceReady.cpp",
+      "sha256": "14263EE9FDD1B93D1E0832014C69BF568C13BD273D3630430EC9C55C5590066E",
+      "lines": 95,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "Experience 加载、游戏状态、声明资产和启动基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/GameModes/LyraBotCreationComponent.cpp",
+      "sha256": "AA25E329147D17914F44DA98CEE800E2A9F5BD26BE2D2DEDF6FEB57D2B60CAF1",
+      "lines": 182,
+      "module": "LG",
+      "disposition": "recommended_function_groups",
+      "candidate_ids": [
+        "CPP-005",
+        "CPP-006"
+      ],
+      "reason": "仅迁移列出的函数组内规则；其余原生实现保留。"
+    },
+    {
+      "path": "Source/LyraGame/GameModes/LyraExperienceActionSet.cpp",
+      "sha256": "60E65F67842F4454E4386E12E7E68108808F7EEAF73BA61046BC4D8E126CEB35",
+      "lines": 60,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "Experience 加载、游戏状态、声明资产和启动基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/GameModes/LyraExperienceDefinition.cpp",
+      "sha256": "9741650E5F23448F3405FAA7ED89DB3ED353A837DDF33233009A1658919474EE",
+      "lines": 82,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "Experience 加载、游戏状态、声明资产和启动基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/GameModes/LyraExperienceManager.cpp",
+      "sha256": "064B44750EF4216A9609C55B98D29BEB0E524A7E3B957AC8F20B02FCF880790B",
+      "lines": 54,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "Experience 加载、游戏状态、声明资产和启动基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/GameModes/LyraExperienceManagerComponent.cpp",
+      "sha256": "87695E320D66175E03BC47315E6272ECDC5826FC2E7095C1290CAC44061EA6C4",
+      "lines": 467,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "Experience 加载、游戏状态、声明资产和启动基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/GameModes/LyraGameMode.cpp",
+      "sha256": "3E431AA4068A5B0A540945FC00E3E80E171D75A9AC5D6054C53CFCA5A8745095",
+      "lines": 522,
+      "module": "LG",
+      "disposition": "conditional_function_groups",
+      "candidate_ids": [
+        "CPP-030"
+      ],
+      "reason": "仅迁移列出的函数组内规则；其余原生实现保留。"
+    },
+    {
+      "path": "Source/LyraGame/GameModes/LyraGameState.cpp",
+      "sha256": "0BD4837FA6AB7C6DD790186F7E5BBDF2B151E05B85E6B2BE08066E7E208919D0",
+      "lines": 145,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "Experience 加载、游戏状态、声明资产和启动基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/GameModes/LyraUserFacingExperienceDefinition.cpp",
+      "sha256": "7AD436A5949F41C6340A925F4D10E104B5877EAB2AAFD9925427854BD76C63CD",
+      "lines": 53,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "Experience 加载、游戏状态、声明资产和启动基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/GameModes/LyraWorldSettings.cpp",
+      "sha256": "CA45E38AE9A0B95DDBAEDC1197390DA468DF0780EEC8C41BB3048BF27B3CE002",
+      "lines": 54,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "Experience 加载、游戏状态、声明资产和启动基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Hotfix/LyraHotfixManager.cpp",
+      "sha256": "C9616A32B209EEF6FD74B678320CE00DB0546D2D395CCB0ABD2A0064263BAB80",
+      "lines": 214,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "配置热修复和平台文件机制；不等于 Python 模块热重载。"
+    },
+    {
+      "path": "Source/LyraGame/Hotfix/LyraRuntimeOptions.cpp",
+      "sha256": "7DD215D42482DEA0C1200508C3D7267D7CDAE96F4056890E1CD1467B0EAE2C81",
+      "lines": 23,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "配置热修复和平台文件机制；不等于 Python 模块热重载。"
+    },
+    {
+      "path": "Source/LyraGame/Hotfix/LyraTextHotfixConfig.cpp",
+      "sha256": "6587A56CEF5439DE7851C99EE87196DED91CE8A3A4275542B659279D472ECCD3",
+      "lines": 38,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "配置热修复和平台文件机制；不等于 Python 模块热重载。"
+    },
+    {
+      "path": "Source/LyraGame/Input/LyraAimSensitivityData.cpp",
+      "sha256": "73D53BD75FAF47387BB44BC2EB57D054D98BE5F98818385478A1CF7D371E261D",
+      "lines": 36,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "原生输入、设备映射及每帧辅助瞄准；Python 调用其能力。"
+    },
+    {
+      "path": "Source/LyraGame/Input/LyraInputComponent.cpp",
+      "sha256": "07128E6F3C2DD2C37115BB60180D0C2AF15D93E3F0819A61F414C19D4259C3E5",
+      "lines": 40,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "原生输入、设备映射及每帧辅助瞄准；Python 调用其能力。"
+    },
+    {
+      "path": "Source/LyraGame/Input/LyraInputConfig.cpp",
+      "sha256": "851357D2734C89D7BA6D12F68E7F6863498D4344BDF3F74131EE2B5D61569B38",
+      "lines": 48,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "原生输入、设备映射及每帧辅助瞄准；Python 调用其能力。"
+    },
+    {
+      "path": "Source/LyraGame/Input/LyraInputModifiers.cpp",
+      "sha256": "D6CACAD147FD5CDE0D388A8756D266D8D77BF20D1FACBEA1FC44AA249B3311BD",
+      "lines": 200,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "原生输入、设备映射及每帧辅助瞄准；Python 调用其能力。"
+    },
+    {
+      "path": "Source/LyraGame/Input/LyraInputUserSettings.cpp",
+      "sha256": "7373EF92CC02DDDD0F8E58360669C29870A28EE1DFD7778DA0037FA742CFDFB7",
+      "lines": 14,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "原生输入、设备映射及每帧辅助瞄准；Python 调用其能力。"
+    },
+    {
+      "path": "Source/LyraGame/Input/LyraPlayerInput.cpp",
+      "sha256": "92E894E5F464579860C7F62D181FEEDC504528984AE91CA55ABA6EB750550B81",
+      "lines": 108,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "原生输入、设备映射及每帧辅助瞄准；Python 调用其能力。"
+    },
+    {
+      "path": "Source/LyraGame/Input/LyraPlayerMappableKeyProfile.cpp",
+      "sha256": "00DEB44A328220093F4A2E3A5BACC49E582E431F5ACA94A9BBBD30493DE7CB4A",
+      "lines": 19,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "原生输入、设备映射及每帧辅助瞄准；Python 调用其能力。"
+    },
+    {
+      "path": "Source/LyraGame/Interaction/Abilities/GameplayAbilityTargetActor_Interact.cpp",
+      "sha256": "5D7B2703CD30A7FA15A2BB2D25F42DABF498D40361083D2998D6F540C849B6BA",
+      "lines": 57,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "交互类型、目标扫描、AbilityTask 和原生 GAS 触发基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Interaction/Abilities/LyraGameplayAbility_Interact.cpp",
+      "sha256": "E76F50302E918522684D09B0090BC8EC7C15CCAB20D9FFF1748ED7EFC74237D8",
+      "lines": 123,
+      "module": "LG",
+      "disposition": "recommended_function_groups",
+      "candidate_ids": [
+        "CPP-014"
+      ],
+      "reason": "仅迁移列出的函数组内规则；其余原生实现保留。"
+    },
+    {
+      "path": "Source/LyraGame/Interaction/InteractionStatics.cpp",
+      "sha256": "FE1833CD7F0C81E78DAEA8347879C714F19BE16DFF9A9344E4B08CD8E8353AF9",
+      "lines": 86,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "交互类型、目标扫描、AbilityTask 和原生 GAS 触发基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Interaction/Tasks/AbilityTask_GrantNearbyInteraction.cpp",
+      "sha256": "DA039185EEDAB332B01EED743BEFF620E46B20660CEA876FF37FBE5AB3CB6328",
+      "lines": 95,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "交互类型、目标扫描、AbilityTask 和原生 GAS 触发基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Interaction/Tasks/AbilityTask_WaitForInteractableTargets.cpp",
+      "sha256": "4F8631B9643BCD30AB9EADB0522D0C6468408518BDAD9048EA13D3CB3BB41405",
+      "lines": 179,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "交互类型、目标扫描、AbilityTask 和原生 GAS 触发基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Interaction/Tasks/AbilityTask_WaitForInteractableTargets_SingleLineTrace.cpp",
+      "sha256": "FB91B94A6D0FFCAD4F78F07185CE5D938D0A65A3DDF7281E6B062C97007EBC13",
+      "lines": 92,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "交互类型、目标扫描、AbilityTask 和原生 GAS 触发基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Inventory/InventoryFragment_EquippableItem.cpp",
+      "sha256": "C6102E09F8D0B9C6BE1150AEE163AD72C9F16DDAD1B592159795226CF1EF93B1",
+      "lines": 6,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "物品类型、片段数据、实例和网络复制基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Inventory/InventoryFragment_PickupIcon.cpp",
+      "sha256": "3B472EE0D8D137102204F03D0DE16CAE0ED55B93D6CC3A113E5156738F0D5AA2",
+      "lines": 10,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "物品类型、片段数据、实例和网络复制基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Inventory/InventoryFragment_QuickBarIcon.cpp",
+      "sha256": "89775F018CA3C429A24656FF548F7FA34788A64BEBD8C3E38E64EBE437967AAF",
+      "lines": 6,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "物品类型、片段数据、实例和网络复制基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Inventory/InventoryFragment_SetStats.cpp",
+      "sha256": "02380C20344AEB34900266AEB3755F8CAEC9F3E091497E1B7C94CB00AC5540A6",
+      "lines": 25,
+      "module": "LG",
+      "disposition": "conditional_function_groups",
+      "candidate_ids": [
+        "CPP-016"
+      ],
+      "reason": "仅迁移列出的函数组内规则；其余原生实现保留。"
+    },
+    {
+      "path": "Source/LyraGame/Inventory/IPickupable.cpp",
+      "sha256": "FA59ADF45107F4857FDE106BD0343A204AFC1F36C8899C4C5D7DBD9CFADD41C7",
+      "lines": 54,
+      "module": "LG",
+      "disposition": "recommended_function_groups",
+      "candidate_ids": [
+        "CPP-010"
+      ],
+      "reason": "仅迁移列出的函数组内规则；其余原生实现保留。"
+    },
+    {
+      "path": "Source/LyraGame/Inventory/LyraInventoryItemDefinition.cpp",
+      "sha256": "6A2846AA0FEE891E7BE84A2EF09FE5251514D60C7454822BCC58015280CA341B",
+      "lines": 45,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "物品类型、片段数据、实例和网络复制基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Inventory/LyraInventoryItemInstance.cpp",
+      "sha256": "15E06D3C85C3349C32C2C4F81AD2B12A761DCEEF682CA61FEC3CB4D150726E56",
+      "lines": 70,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "物品类型、片段数据、实例和网络复制基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Inventory/LyraInventoryManagerComponent.cpp",
+      "sha256": "E34238FD2261DB1311E31C59FB58C1A5AB414E496EEB578BCC6F5BD42DD3AC81",
+      "lines": 320,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "物品类型、片段数据、实例和网络复制基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/LyraGameModule.cpp",
+      "sha256": "25520071471730358BAD101A956E8AB5897CB451EE5CB1D3A3173003408FA9D0",
+      "lines": 20,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "模块启动、日志、标签或数据声明；不承担本次拟迁移的独立规则。"
+    },
+    {
+      "path": "Source/LyraGame/LyraGameplayTags.cpp",
+      "sha256": "0361447153A11619A0628D8B5AD82E5442A14875207CCF8AD014A5CF173212EE",
+      "lines": 99,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "模块启动、日志、标签或数据声明；不承担本次拟迁移的独立规则。"
+    },
+    {
+      "path": "Source/LyraGame/LyraLogChannels.cpp",
+      "sha256": "9A1A8279563EC622C7BB5AC714080B5F255CB7E2D447BD3C6D3B84CEA93918EE",
+      "lines": 40,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "模块启动、日志、标签或数据声明；不承担本次拟迁移的独立规则。"
+    },
+    {
+      "path": "Source/LyraGame/Messages/GameplayMessageProcessor.cpp",
+      "sha256": "E7DF7DE1C1045C4DC366AC8528FE1706F20C97FA8D9B2452916B7C5102E9290F",
+      "lines": 57,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "消息类型、消息复制及监听生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Messages/LyraNotificationMessage.cpp",
+      "sha256": "F57D3FA39450B214C3232EF4DA4C946B8DD9D7017F7D570F1279D461E4048F77",
+      "lines": 9,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "消息类型、消息复制及监听生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Messages/LyraVerbMessageHelpers.cpp",
+      "sha256": "77A190BE3289990CD79C8B38C80F0367F128AD227D9F2A490EF2220296A7FDFA",
+      "lines": 97,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "消息类型、消息复制及监听生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Messages/LyraVerbMessageReplication.cpp",
+      "sha256": "57846A2BDB558D34C693B8EEE752FDFD9EFB9EC45B59878D09FA20BC72849D17",
+      "lines": 60,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "消息类型、消息复制及监听生命周期基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Performance/LyraMemoryDebugCommands.cpp",
+      "sha256": "EF10141A004A59A3C3AB66D70782744A9423C74EE444EE7DA848FE15451CE275",
+      "lines": 156,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "性能统计和诊断基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Performance/LyraPerformanceSettings.cpp",
+      "sha256": "73E14E94130ED6F9E8F802EE5A416B2025060A609840069D1E96FFC8CDA895B0",
+      "lines": 42,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "性能统计和诊断基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Performance/LyraPerformanceStatSubsystem.cpp",
+      "sha256": "F0624DB16FCE70E6508E31C333BA04907DE7A73938742B0ABC66938F8B0AA292",
+      "lines": 179,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "性能统计和诊断基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Physics/PhysicalMaterialWithTags.cpp",
+      "sha256": "1FD2973FCBB6841FF202FA31FB4E9CEAA759E43CEC010D8882F066EF6868D109",
+      "lines": 11,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "物理材质及原生类型。"
+    },
+    {
+      "path": "Source/LyraGame/Player/LyraCheatManager.cpp",
+      "sha256": "A150E41303C83117CE1A04F4D9AD48048F1C50A683EEB5CD2922672B27C8C5BE",
+      "lines": 426,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "模块启动、日志、标签或数据声明；不承担本次拟迁移的独立规则。"
+    },
+    {
+      "path": "Source/LyraGame/Player/LyraDebugCameraController.cpp",
+      "sha256": "8D803045165A62D95A572B0502B5E80054DFBF46599DB2669C62DCC3DC175BE9",
+      "lines": 25,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "模块启动、日志、标签或数据声明；不承担本次拟迁移的独立规则。"
+    },
+    {
+      "path": "Source/LyraGame/Player/LyraLocalPlayer.cpp",
+      "sha256": "4F24064679F1EDA3F8EB16F7F471FC85819B7EC3F29F4B5B5E920DB1DCD0C178",
+      "lines": 166,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "模块启动、日志、标签或数据声明；不承担本次拟迁移的独立规则。"
+    },
+    {
+      "path": "Source/LyraGame/Player/LyraPlayerBotController.cpp",
+      "sha256": "0F7E171946C283950103CDA26646098A704AB92B04719E6F92550891B4EEB3C3",
+      "lines": 182,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "模块启动、日志、标签或数据声明；不承担本次拟迁移的独立规则。"
+    },
+    {
+      "path": "Source/LyraGame/Player/LyraPlayerController.cpp",
+      "sha256": "B727843247252CDC936A56D71D9DA304A9231976BBB3EDBF886E532F68A41D6A",
+      "lines": 624,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "模块启动、日志、标签或数据声明；不承担本次拟迁移的独立规则。"
+    },
+    {
+      "path": "Source/LyraGame/Player/LyraPlayerSpawningManagerComponent.cpp",
+      "sha256": "89245C3A930473CE93184CF4319325113496D7B149055CB02DC1692594A090D1",
+      "lines": 210,
+      "module": "LG",
+      "disposition": "recommended_function_groups",
+      "candidate_ids": [
+        "CPP-008"
+      ],
+      "reason": "仅迁移列出的函数组内规则；其余原生实现保留。"
+    },
+    {
+      "path": "Source/LyraGame/Player/LyraPlayerStart.cpp",
+      "sha256": "1775F5947FE187FA81CB7899E626887EC0F6EA47175DD9C5EE5A7B9782E82258",
+      "lines": 73,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "模块启动、日志、标签或数据声明；不承担本次拟迁移的独立规则。"
+    },
+    {
+      "path": "Source/LyraGame/Player/LyraPlayerState.cpp",
+      "sha256": "9719EA5FD8A390E94601CF6290BA1F5D2B799E9960906213F43C5E1EE439A39B",
+      "lines": 300,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "模块启动、日志、标签或数据声明；不承担本次拟迁移的独立规则。"
+    },
+    {
+      "path": "Source/LyraGame/Replays/AsyncAction_QueryReplays.cpp",
+      "sha256": "B24595FFB0AE3341510274676F7A2A61C2665530BE630879A30D8BFF4E5EF08C",
+      "lines": 60,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "录像查询和流传输基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Replays/LyraReplaySubsystem.cpp",
+      "sha256": "926622DCA8F007530D84B7E10E32AA60971DCBA646AC54B8F86776B3F37DBD59",
+      "lines": 198,
+      "module": "LG",
+      "disposition": "conditional_function_groups",
+      "candidate_ids": [
+        "CPP-026"
+      ],
+      "reason": "仅迁移列出的函数组内规则；其余原生实现保留。"
+    },
+    {
+      "path": "Source/LyraGame/Settings/CustomSettings/LyraSettingAction_HDRCalibrationEditor.cpp",
+      "sha256": "B082E66E1400542FB286FA166CBCD88656F1FA0DF6B0312530B3DF5DE2B489E6",
+      "lines": 31,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "设置定义、持久化、平台查询、原生设置控件和设备适配。"
+    },
+    {
+      "path": "Source/LyraGame/Settings/CustomSettings/LyraSettingAction_SafeZoneEditor.cpp",
+      "sha256": "AFA62C746088FFB58A2E3FE9F1623C922987FB79C3F44AA7AE9906511BA7EC8D",
+      "lines": 46,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "设置定义、持久化、平台查询、原生设置控件和设备适配。"
+    },
+    {
+      "path": "Source/LyraGame/Settings/CustomSettings/LyraSettingKeyboardInput.cpp",
+      "sha256": "104E65F29E8A153965CB0FA97E71FF90BEECA89EBABB754D3E391271928F99FA",
+      "lines": 256,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "设置定义、持久化、平台查询、原生设置控件和设备适配。"
+    },
+    {
+      "path": "Source/LyraGame/Settings/CustomSettings/LyraSettingValueDiscrete_Display.cpp",
+      "sha256": "C0BAEB56E1C6E405B93F4A0D9B326E1252F710F65C858A3ED2E6FD7BF3ADC155",
+      "lines": 124,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "设置定义、持久化、平台查询、原生设置控件和设备适配。"
+    },
+    {
+      "path": "Source/LyraGame/Settings/CustomSettings/LyraSettingValueDiscrete_Language.cpp",
+      "sha256": "60D1E918A8C3CF6D4808B34EAD6C47FEFA9C49EE17C33DA02034E03CF17A8C7B",
+      "lines": 170,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "设置定义、持久化、平台查询、原生设置控件和设备适配。"
+    },
+    {
+      "path": "Source/LyraGame/Settings/CustomSettings/LyraSettingValueDiscrete_MobileFPSType.cpp",
+      "sha256": "ECD5CE6430FA511AC6C0ACB0A2B9565711755BD926872FA1312F89FF3851B181",
+      "lines": 101,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "设置定义、持久化、平台查询、原生设置控件和设备适配。"
+    },
+    {
+      "path": "Source/LyraGame/Settings/CustomSettings/LyraSettingValueDiscrete_OverallQuality.cpp",
+      "sha256": "475607340CEB739BA4127E5BBA8D032BD390E930632AAA40AFD4CBCFAEE614EC",
+      "lines": 104,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "设置定义、持久化、平台查询、原生设置控件和设备适配。"
+    },
+    {
+      "path": "Source/LyraGame/Settings/CustomSettings/LyraSettingValueDiscrete_PerfStat.cpp",
+      "sha256": "CA2CA82A6849A7140BC5E26A7CB965196D8BB969F1A54039C4EC450E3B14319D",
+      "lines": 133,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "设置定义、持久化、平台查询、原生设置控件和设备适配。"
+    },
+    {
+      "path": "Source/LyraGame/Settings/CustomSettings/LyraSettingValueDiscrete_Resolution.cpp",
+      "sha256": "61D95008F6AFE2F3E9F69CEFF7D3CBFFD1835B71133324524601BCB8EA76BB64",
+      "lines": 496,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "设置定义、持久化、平台查询、原生设置控件和设备适配。"
+    },
+    {
+      "path": "Source/LyraGame/Settings/CustomSettings/LyraSettingValueDiscreteDynamic_AudioOutputDevice.cpp",
+      "sha256": "DB998BCE0D0B40D6C7DB9FD8BC7E9E5CAC800979965C67C4DB5E46408857116D",
+      "lines": 136,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "设置定义、持久化、平台查询、原生设置控件和设备适配。"
+    },
+    {
+      "path": "Source/LyraGame/Settings/LyraGameSettingRegistry.cpp",
+      "sha256": "06A9F5881A0BB1C85E8D201B980A9EB3AB415C305387DB1254B92379055E10ED",
+      "lines": 90,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "设置定义、持久化、平台查询、原生设置控件和设备适配。"
+    },
+    {
+      "path": "Source/LyraGame/Settings/LyraGameSettingRegistry_Audio.cpp",
+      "sha256": "875CC5A73778A5044C098BA5F9122D383468767E08FB42599B1DED0FB4429A26",
+      "lines": 316,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "设置定义、持久化、平台查询、原生设置控件和设备适配。"
+    },
+    {
+      "path": "Source/LyraGame/Settings/LyraGameSettingRegistry_DLC.cpp",
+      "sha256": "62BED74B4E942577EAD2B71176DCCB317DDEE48BEFA18F0DEF289C1AD9B28B01",
+      "lines": 271,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "设置定义、持久化、平台查询、原生设置控件和设备适配。"
+    },
+    {
+      "path": "Source/LyraGame/Settings/LyraGameSettingRegistry_Gamepad.cpp",
+      "sha256": "BDA7AE4213592F70F3C96013FF5436851C3C7705301DC71264EF4B2A4A9F84C1",
+      "lines": 281,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "设置定义、持久化、平台查询、原生设置控件和设备适配。"
+    },
+    {
+      "path": "Source/LyraGame/Settings/LyraGameSettingRegistry_Gameplay.cpp",
+      "sha256": "2C9FB038514937A2C075FA43463B019DBAFBE63FD4E61A4DD8BA124ABFAB3294",
+      "lines": 113,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "设置定义、持久化、平台查询、原生设置控件和设备适配。"
+    },
+    {
+      "path": "Source/LyraGame/Settings/LyraGameSettingRegistry_MouseAndKeyboard.cpp",
+      "sha256": "2A5AE0C818C6B3A2B4FEFF07037EECB3265983C495375306A7600EC5263E0130",
+      "lines": 221,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "设置定义、持久化、平台查询、原生设置控件和设备适配。"
+    },
+    {
+      "path": "Source/LyraGame/Settings/LyraGameSettingRegistry_PerfStats.cpp",
+      "sha256": "AD178FF30404ADE4687C1960CC055035CA97C2A9761EDA2195A7DD08932EF051",
+      "lines": 351,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "设置定义、持久化、平台查询、原生设置控件和设备适配。"
+    },
+    {
+      "path": "Source/LyraGame/Settings/LyraGameSettingRegistry_Video.cpp",
+      "sha256": "91FA0240F036727FEE84F262FF98A1A9F361295BC4B3AAEC8D7C9E43F62314D0",
+      "lines": 926,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "设置定义、持久化、平台查询、原生设置控件和设备适配。"
+    },
+    {
+      "path": "Source/LyraGame/Settings/LyraSettingsLocal.cpp",
+      "sha256": "0EAA604B513AD56FD02E3C7979C744D9AAE3306C083F16741E0A81CDC34DAE5D",
+      "lines": 1708,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "设置定义、持久化、平台查询、原生设置控件和设备适配。"
+    },
+    {
+      "path": "Source/LyraGame/Settings/LyraSettingsShared.cpp",
+      "sha256": "D1F981635EE2CFF638B196037BCDBC4013DAC7033ED7AE67DCB7F080A5246925",
+      "lines": 292,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "设置定义、持久化、平台查询、原生设置控件和设备适配。"
+    },
+    {
+      "path": "Source/LyraGame/Settings/Screens/LyraBrightnessEditor.cpp",
+      "sha256": "6B648A57CB7E2CB55DDA8BB35BA02533B379EBEDB139CC38C71699D98C905442",
+      "lines": 109,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "设置定义、持久化、平台查询、原生设置控件和设备适配。"
+    },
+    {
+      "path": "Source/LyraGame/Settings/Screens/LyraHDRCalibrationEditor.cpp",
+      "sha256": "72680A55E08C6973DECC67B019A1F92628939BEECB9B6F4C0493D3F6A0213C50",
+      "lines": 127,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "设置定义、持久化、平台查询、原生设置控件和设备适配。"
+    },
+    {
+      "path": "Source/LyraGame/Settings/Screens/LyraSafeZoneEditor.cpp",
+      "sha256": "B2B1EC4E52201E64151DDBB2810462063A3AE5D141B8A6BF769B93F5005B9455",
+      "lines": 109,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "设置定义、持久化、平台查询、原生设置控件和设备适配。"
+    },
+    {
+      "path": "Source/LyraGame/Settings/Widgets/LyraSettingsListEntrySetting_KeyboardInput.cpp",
+      "sha256": "22DFF0C2B9C9C5DEF92A017B9F481EC9AA5C41DE1585A61A340B7DA4F5B14366",
+      "lines": 171,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "设置定义、持久化、平台查询、原生设置控件和设备适配。"
+    },
+    {
+      "path": "Source/LyraGame/System/GameplayTagStack.cpp",
+      "sha256": "6080F4CD968008FA4042EB25FF9499F5EB2C00D6FB1E279D4E7EC068D3AFB406",
+      "lines": 109,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "资产、引擎、会话、复制、标签容器及系统工具基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/System/LyraActorUtilities.cpp",
+      "sha256": "352924226DEE79F66048FA09BD269384B5F45C8BDC93E0FECEAE1236441FF8FB",
+      "lines": 41,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "资产、引擎、会话、复制、标签容器及系统工具基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/System/LyraAssetManager.cpp",
+      "sha256": "2CE174DAA4E909F25E30F13BB049CF99825358C11FC44C32825269E39B31FB4A",
+      "lines": 273,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "资产、引擎、会话、复制、标签容器及系统工具基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/System/LyraAssetManagerStartupJob.cpp",
+      "sha256": "F335A283989820231BD3A3D243815C11666906245CFC8B24524BF13D009FC9B6",
+      "lines": 25,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "资产、引擎、会话、复制、标签容器及系统工具基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/System/LyraDevelopmentStatics.cpp",
+      "sha256": "7E54B527C368A108EED61FEE13C2B70A518B14AD786F61351415D84E71F004E6",
+      "lines": 200,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "资产、引擎、会话、复制、标签容器及系统工具基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/System/LyraGameData.cpp",
+      "sha256": "BFDF806255D3CBD18D2AF77DF8A429BCF7CAFC771D925A63D1E915018D679F48",
+      "lines": 15,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "资产、引擎、会话、复制、标签容器及系统工具基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/System/LyraGameEngine.cpp",
+      "sha256": "95F15095C96B6D13797EF9AEE90FF344BF42A9E4727A0C14278F3D5CC2FBEFC4",
+      "lines": 19,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "资产、引擎、会话、复制、标签容器及系统工具基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/System/LyraGameInstance.cpp",
+      "sha256": "53AEDF5F67E0F438999E871812E76D37F512F6A9A369BEACC8116D09E0CD7793",
+      "lines": 339,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "资产、引擎、会话、复制、标签容器及系统工具基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/System/LyraGameSession.cpp",
+      "sha256": "34FFB2088CA4E7BA7387C4DD6A0F7E27F6BB7EA8C816C2378A814A0BC0D7E517",
+      "lines": 28,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "资产、引擎、会话、复制、标签容器及系统工具基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/System/LyraReplicationGraph.cpp",
+      "sha256": "2DCD266F8AC8A5F4719A618946C6ECC58285914A8042CC1BD4966F049BD8836F",
+      "lines": 996,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "资产、引擎、会话、复制、标签容器及系统工具基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/System/LyraReplicationGraphSettings.cpp",
+      "sha256": "8F62FE0EFBF8B7E205C97E0ABBF8C157DB0866D2BED5028747C26C7D9DF496F3",
+      "lines": 13,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "资产、引擎、会话、复制、标签容器及系统工具基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/System/LyraSignificanceManager.cpp",
+      "sha256": "946D938BC25396E9338699A56055EE3BBEC171CB801BECC0D50F4E130EC54D23",
+      "lines": 6,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "资产、引擎、会话、复制、标签容器及系统工具基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/System/LyraSystemStatics.cpp",
+      "sha256": "5B9D3B53440EE821738D3E11E2C976CA8E1E067905458E276B6BCB75430AD930",
+      "lines": 112,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "资产、引擎、会话、复制、标签容器及系统工具基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Teams/AsyncAction_ObserveTeam.cpp",
+      "sha256": "2438B31A8AC7E6B60C9881DA1767431A24FE88B058E160E791D97744A26D7690",
+      "lines": 72,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "队伍身份、公开/私有状态、复制、接口、观察器和数据显示基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Teams/AsyncAction_ObserveTeamColors.cpp",
+      "sha256": "CB92C17E0FF4B533010F49ED1C5B4C70B3D3A66246CFFBA78242264F83954528",
+      "lines": 109,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "队伍身份、公开/私有状态、复制、接口、观察器和数据显示基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Teams/LyraTeamAgentInterface.cpp",
+      "sha256": "6B07D98129BEB4552EF4671BAE401ECA0362B4DC446D79930C012C2E9E490FD5",
+      "lines": 28,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "队伍身份、公开/私有状态、复制、接口、观察器和数据显示基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Teams/LyraTeamCheats.cpp",
+      "sha256": "AEF2C644A515CB062C3EACF6EF335702C95455410DEE01DADCB5E500401F37ED",
+      "lines": 65,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "队伍身份、公开/私有状态、复制、接口、观察器和数据显示基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Teams/LyraTeamCreationComponent.cpp",
+      "sha256": "895041A4E4CDC39388657A716AD12854B04B899D9900DBC9A31BD1E9DE006A66",
+      "lines": 190,
+      "module": "LG",
+      "disposition": "recommended_function_groups",
+      "candidate_ids": [
+        "CPP-004"
+      ],
+      "reason": "仅迁移列出的函数组内规则；其余原生实现保留。"
+    },
+    {
+      "path": "Source/LyraGame/Teams/LyraTeamDisplayAsset.cpp",
+      "sha256": "8E5A9AF1C1FCE8A7365622DB0915007867F8C3CD88EBF8AE2324A34102AFC2FC",
+      "lines": 119,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "队伍身份、公开/私有状态、复制、接口、观察器和数据显示基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Teams/LyraTeamInfoBase.cpp",
+      "sha256": "4A3331EF7002FC9E5A34521399B328E0434FDA6A287E2C1FC3D333497D9391AA",
+      "lines": 85,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "队伍身份、公开/私有状态、复制、接口、观察器和数据显示基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Teams/LyraTeamPrivateInfo.cpp",
+      "sha256": "5FD0172FC5CD7759E26CF60B4F121530D25A8147AEE94771A20D17464364E2A0",
+      "lines": 13,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "队伍身份、公开/私有状态、复制、接口、观察器和数据显示基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Teams/LyraTeamPublicInfo.cpp",
+      "sha256": "56862C43D81FE851F0DABAD36D5D8E7F98EB954C7B0D1B49006B29E5A3DADEAA",
+      "lines": 38,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "队伍身份、公开/私有状态、复制、接口、观察器和数据显示基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Teams/LyraTeamStatics.cpp",
+      "sha256": "C177336BAE1F43F41FB230FEB24FA874177E68FB80C741F27B14B6C45B6929AC",
+      "lines": 95,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "队伍身份、公开/私有状态、复制、接口、观察器和数据显示基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Teams/LyraTeamSubsystem.cpp",
+      "sha256": "11679776C3C0B1C23A718362934182F1144F72FBB9E3CB173DB6D2018ED69786",
+      "lines": 405,
+      "module": "LG",
+      "disposition": "conditional_function_groups",
+      "candidate_ids": [
+        "CPP-028"
+      ],
+      "reason": "仅迁移列出的函数组内规则；其余原生实现保留。"
+    },
+    {
+      "path": "Source/LyraGame/Tests/LyraGameplayRpcRegistrationComponent.cpp",
+      "sha256": "17D76799281221EE243BEEA076F9C8A2BA94DE1E6CB13A884CD0A32D880D9F63",
+      "lines": 231,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "自动化测试及测试 RPC；不作为生产玩法迁移候选。"
+    },
+    {
+      "path": "Source/LyraGame/Tests/LyraTestControllerBootTest.cpp",
+      "sha256": "EA7A204FC272D7930C8A648CAB36576D3035304D0A2AF49000D4C3B2503F705B",
+      "lines": 31,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "自动化测试及测试 RPC；不作为生产玩法迁移候选。"
+    },
+    {
+      "path": "Source/LyraGame/Tests/LyraTestControllerStartEliminationTest.cpp",
+      "sha256": "D4FB97305D4A7CBC5B2EC8DF15DAB8F0D4F8595482EA75A655D719FEEFCB65D9",
+      "lines": 29,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "自动化测试及测试 RPC；不作为生产玩法迁移候选。"
+    },
+    {
+      "path": "Source/LyraGame/Tests/MenuStartElimination.spec.cpp",
+      "sha256": "9FE9ECFDC942F7819E9CCA8490B089D435A4F9CEA8020FF007C4B050510A6F95",
+      "lines": 60,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "自动化测试及测试 RPC；不作为生产玩法迁移候选。"
+    },
+    {
+      "path": "Source/LyraGame/UI/Basic/MaterialProgressBar.cpp",
+      "sha256": "945818BC9C4BA014C26C3062A265FE9CC11E505F0CCB1E91957B82D0A0CF8536",
+      "lines": 262,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/Common/LyraBoundActionButton.cpp",
+      "sha256": "C5E09A74CB650BB3A17762A9D687E81A0A18D5196C0B379C4E3C61210D3A6D86",
+      "lines": 45,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/Common/LyraListView.cpp",
+      "sha256": "B1DD568527A88D69E83F7DC30D02B949CFBBFEF3A1493345949F1FAB7A769734",
+      "lines": 54,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/Common/LyraTabButtonBase.cpp",
+      "sha256": "DA20880D53360F0D3AA2EC6E0EFC7E558D2E45529570941CA9DE36DEDF841A5A",
+      "lines": 34,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/Common/LyraTabListWidgetBase.cpp",
+      "sha256": "D5CD10AE388B77FE800537583775C5F411168D65C295DA535081730E44CFF6E7",
+      "lines": 208,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/Common/LyraWidgetFactory.cpp",
+      "sha256": "908B6986B50431BA074D3AB4E7527B9EF1EDFE6D19CD1315F8B96600AADD7EC2",
+      "lines": 13,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/Common/LyraWidgetFactory_Class.cpp",
+      "sha256": "3BC31DC531F259D65E839DD21CF5BC9066AF0854FE689C6E4F9B91BFE2645521",
+      "lines": 22,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/Foundation/LyraActionWidget.cpp",
+      "sha256": "7E87DA2ADA5DB6A6C445B34A26DAD4396220570F10243655B3FA8E9D58106F67",
+      "lines": 43,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/Foundation/LyraButtonBase.cpp",
+      "sha256": "B286BF20DEBDB9CBF9F0FAC82A93D17B8691E04AF9AB673B485855DF85133030",
+      "lines": 54,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/Foundation/LyraConfirmationScreen.cpp",
+      "sha256": "BAD045BF2C2A10CE49689D913763EA88C2AF466CE5C365AFCF82BF6D68DA6050",
+      "lines": 100,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/Foundation/LyraControllerDisconnectedScreen.cpp",
+      "sha256": "1EAD99D79A536C8E90DA3C940291E3F471D70B1A21A3358E6B9DFC1385536D64",
+      "lines": 100,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/Foundation/LyraLoadingScreenSubsystem.cpp",
+      "sha256": "C8F57ADF9CB1C962B5C918FB0E70454119C63ADD6077A45BF0977A572DC62B5C",
+      "lines": 32,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/Frontend/ApplyFrontendPerfSettingsAction.cpp",
+      "sha256": "6EC527AF927660A227938DB42E181B2844817451016360833A78CA1D4364DB6F",
+      "lines": 42,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/Frontend/LyraFrontendStateComponent.cpp",
+      "sha256": "6D9E372E61C9CD0BEF5223ACE41021A7C88BB12C29B85524B20EA6CBB794CF46",
+      "lines": 255,
+      "module": "LG",
+      "disposition": "conditional_function_groups",
+      "candidate_ids": [
+        "CPP-022"
+      ],
+      "reason": "仅迁移列出的函数组内规则；其余原生实现保留。"
+    },
+    {
+      "path": "Source/LyraGame/UI/Frontend/LyraLobbyBackground.cpp",
+      "sha256": "7FCC7BAFBFA8B4F0FBD206F71CDFF842DAC09393B2A3E04B42B520B3B33CFAF5",
+      "lines": 7,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/IndicatorSystem/IndicatorDescriptor.cpp",
+      "sha256": "4CA58C94419A072F62F76E1112F95A4B51D4A8BBFE19650E3E15FE4A02B07708",
+      "lines": 140,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/IndicatorSystem/IndicatorLayer.cpp",
+      "sha256": "A3DD84BEADA1988C5496AACA79E2EB6B2887D0EA45B99E4FD1F2721A0A49B67B",
+      "lines": 44,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/IndicatorSystem/IndicatorLibrary.cpp",
+      "sha256": "8EADD0B832455E1B9EF987ED17D3FB1C50A2FC1C3404F0EF5575E517698D74A9",
+      "lines": 19,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/IndicatorSystem/LyraIndicatorManagerComponent.cpp",
+      "sha256": "4E7B3648E3AB783175AAB13D717DF5517BD4E478301F5F42DC03D11093AA6470",
+      "lines": 42,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/IndicatorSystem/SActorCanvas.cpp",
+      "sha256": "C340787271EA6DE447E23F3E409B6A54AF627F436D014252F9617140870E6079",
+      "lines": 725,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/LyraActivatableWidget.cpp",
+      "sha256": "35E875C49246DAE32A4BE15E018A46B852E861D910F94982F7522CA4F6DEC3DE",
+      "lines": 54,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/LyraGameViewportClient.cpp",
+      "sha256": "FB72566DED94A24F58532ED982D7EEFBB9122EE22780872D6ADFB2575CEABC4F",
+      "lines": 30,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/LyraHUD.cpp",
+      "sha256": "1142798FABC1A923E5B30542A9015DEB9809B764B58C12D92294E3C4383CBD75",
+      "lines": 74,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/LyraHUDLayout.cpp",
+      "sha256": "B0746BA2CEAFFDF07B25043C6BAC5572B01D8BAF1C503FE17159EF53EF204CF1",
+      "lines": 192,
+      "module": "LG",
+      "disposition": "recommended_function_groups",
+      "candidate_ids": [
+        "CPP-015",
+        "CPP-025"
+      ],
+      "reason": "仅迁移列出的函数组内规则；其余原生实现保留。"
+    },
+    {
+      "path": "Source/LyraGame/UI/LyraJoystickWidget.cpp",
+      "sha256": "D117BBD3B3B23A61843B6A761DA9F534A7FC10C475AA3C7103CD054ADE52E6CA",
+      "lines": 108,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/LyraSettingScreen.cpp",
+      "sha256": "1D4CE08F6372A4523075CD118F2184DD97606C2B55F88AA80E7CEB6A6CBF3421",
+      "lines": 74,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/LyraSimulatedInputWidget.cpp",
+      "sha256": "D0D48CB9A8DB426D3C8FBC7DE41C44700B04039EA37BF8C3A8BADAFCADE4396D",
+      "lines": 170,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/LyraTaggedWidget.cpp",
+      "sha256": "95E862CB7F89C33DAAD585F0DD810DF6EAF0328DA1CDF7146A8FB13B5D43B348",
+      "lines": 81,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/LyraTouchRegion.cpp",
+      "sha256": "9F9B1CA52B6E96B47269C3E044FF7F0736B2CD563A6635A532A381AE35258C07",
+      "lines": 40,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/PerformanceStats/LyraPerfStatContainerBase.cpp",
+      "sha256": "B60496A58D3A5525F342E7E61D510C406B6A4125A07A3142C06ADD4E9D18FD12",
+      "lines": 69,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/PerformanceStats/LyraPerfStatWidgetBase.cpp",
+      "sha256": "6422672508CCF3FFCFBA44394A3C90E6C23296FFF68E1E422AF5EC6AA40C174C",
+      "lines": 186,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/Subsystem/LyraUIManagerSubsystem.cpp",
+      "sha256": "2B2E93A27D2EF5512E3B0E648A836417EC7101C4ACBE064F5243CACF01673FAF",
+      "lines": 68,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/Subsystem/LyraUIMessaging.cpp",
+      "sha256": "9B9DCFBE93CFDB1F5BEC80A0FC661BCBE94487A757CC383B895C2A4AF8BA0539",
+      "lines": 49,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "通用 UI 类、布局、Slate 渲染、输入绑定和平台适配；沿用已迁移的 BP 业务。"
+    },
+    {
+      "path": "Source/LyraGame/UI/Weapons/CircumferenceMarkerWidget.cpp",
+      "sha256": "A44335B293EBAAC6DB4265C0932868175235A090EA53ADD70BCE36C55A68CFC0",
+      "lines": 49,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "射线、散布、命中确认、武器状态、实例及武器数据基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/UI/Weapons/HitMarkerConfirmationWidget.cpp",
+      "sha256": "E7D8FB16D1ED2FA8863D45EBBD7FF66077FA1C7954C51A7A44A133983231349E",
+      "lines": 40,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "射线、散布、命中确认、武器状态、实例及武器数据基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/UI/Weapons/LyraReticleWidgetBase.cpp",
+      "sha256": "77CB062B78491895093FCA2E02F8D9CAD0A8CB1D32A06675F382D54701B12218",
+      "lines": 95,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "射线、散布、命中确认、武器状态、实例及武器数据基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/UI/Weapons/LyraWeaponUserInterface.cpp",
+      "sha256": "A97A8C7F51FEF375B6A51C2AA92220B4C304716828F21ECD3202B822EBC1D48E",
+      "lines": 54,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "射线、散布、命中确认、武器状态、实例及武器数据基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/UI/Weapons/SCircumferenceMarkerWidget.cpp",
+      "sha256": "18C9ADA1515CCB12ACC5FE498E2D6EB5771A689D4EC24770182AE1EC74DF9066",
+      "lines": 99,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "射线、散布、命中确认、武器状态、实例及武器数据基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/UI/Weapons/SHitMarkerConfirmationWidget.cpp",
+      "sha256": "4E0A867AC0B8622D863FC63491C4F83BE36DEE254E2D7E64BA573D3A711BC195",
+      "lines": 105,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "射线、散布、命中确认、武器状态、实例及武器数据基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Weapons/InventoryFragment_ReticleConfig.cpp",
+      "sha256": "0A71F987114B87F32B720DC87D5CE6B1623064BF5EA14BC65D20609154019DB4",
+      "lines": 7,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "射线、散布、命中确认、武器状态、实例及武器数据基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Weapons/LyraDamageLogDebuggerComponent.cpp",
+      "sha256": "5934E8AE4BABA5B7D3130BA1A335297C17BE1319BBA55BE7EB8408F7ADC37E6F",
+      "lines": 99,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "射线、散布、命中确认、武器状态、实例及武器数据基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Weapons/LyraGameplayAbility_RangedWeapon.cpp",
+      "sha256": "4BF81F22D1E3C0C31412B078F6A97FCFC20BE347263B4B314B81D3084A8D48DB",
+      "lines": 596,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "射线、散布、命中确认、武器状态、实例及武器数据基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Weapons/LyraRangedWeaponInstance.cpp",
+      "sha256": "15461EC98302950F4ED21CA51B65B4887A2333669F2957BD02641B7F360E59AB",
+      "lines": 218,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "射线、散布、命中确认、武器状态、实例及武器数据基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Weapons/LyraWeaponDebugSettings.cpp",
+      "sha256": "1091C8EF8D65315F4D7F2434E1D16B30833569E7E5F95179602B56FBEDB70B5A",
+      "lines": 16,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "射线、散布、命中确认、武器状态、实例及武器数据基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Weapons/LyraWeaponInstance.cpp",
+      "sha256": "7B574B5355EEA73F59A80F385E9883DA9C335CB2DDF24B5A0590E4E2EC48B228",
+      "lines": 139,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "射线、散布、命中确认、武器状态、实例及武器数据基础设施。"
+    },
+    {
+      "path": "Source/LyraGame/Weapons/LyraWeaponSpawner.cpp",
+      "sha256": "C273E9495C9F5BF11BD489B3EE4D976C6A3BC95D2AECC98C946138B0DFAADE5B",
+      "lines": 258,
+      "module": "LG",
+      "disposition": "recommended_function_groups",
+      "candidate_ids": [
+        "CPP-011"
+      ],
+      "reason": "仅迁移列出的函数组内规则；其余原生实现保留。"
+    },
+    {
+      "path": "Source/LyraGame/Weapons/LyraWeaponStateComponent.cpp",
+      "sha256": "54B2983175B787C115166E12A0533EC3C80D12A4D471255DB5389CEC7E03C173",
+      "lines": 160,
+      "module": "LG",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "射线、散布、命中确认、武器状态、实例及武器数据基础设施。"
+    },
+    {
+      "path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/Accolades/LyraAccoladeDefinition.cpp",
+      "sha256": "999C767369DC0A99833FB2A50A426930DA79C67FBA1089037FB2F98A9995E9F1",
+      "lines": 6,
+      "module": "SC",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "奖励定义及配置数据。"
+    },
+    {
+      "path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/Accolades/LyraAccoladeHostWidget.cpp",
+      "sha256": "0D31F20C38298BC0B6C22B937C40DA46AC75EA68846130671D333DA8961A50D0",
+      "lines": 166,
+      "module": "SC",
+      "disposition": "recommended_function_groups",
+      "candidate_ids": [
+        "CPP-012",
+        "CPP-013"
+      ],
+      "reason": "仅迁移列出的函数组内规则；其余原生实现保留。"
+    },
+    {
+      "path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/Input/AimAssistInputModifier.cpp",
+      "sha256": "EA63761C478571DFD08C7B53E38118D97FBC96104BE1C1400624BED7CB32EA29",
+      "lines": 886,
+      "module": "SC",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "原生输入、设备映射及每帧辅助瞄准；Python 调用其能力。"
+    },
+    {
+      "path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/Input/AimAssistTargetComponent.cpp",
+      "sha256": "6EA0C78857FC93BE61D8E90A770466D0FD34B674F9E5D03FC7522428E6BC5B3A",
+      "lines": 20,
+      "module": "SC",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "原生输入、设备映射及每帧辅助瞄准；Python 调用其能力。"
+    },
+    {
+      "path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/Input/AimAssistTargetManagerComponent.cpp",
+      "sha256": "A2E47A29F1BCF1EEB58DC84BA915EF5EF04D8DFC84E0D46EFFD00AC3267F3B5B",
+      "lines": 489,
+      "module": "SC",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "原生输入、设备映射及每帧辅助瞄准；Python 调用其能力。"
+    },
+    {
+      "path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/LyraWorldCollectable.cpp",
+      "sha256": "3489FA292E28722A253D34AABC21C51BEB1B2862506BF8F9EB9C9B4F1A4B4577",
+      "lines": 23,
+      "module": "SC",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "模块启动、日志、标签或数据声明；不承担本次拟迁移的独立规则。"
+    },
+    {
+      "path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/MessageProcessors/AssistProcessor.cpp",
+      "sha256": "50E3D257D5FC93ABF2E8A0127B1FA25CCE2446ACBE7164045E208C02893D168D",
+      "lines": 74,
+      "module": "SC",
+      "disposition": "recommended_function_groups",
+      "candidate_ids": [
+        "CPP-003"
+      ],
+      "reason": "仅迁移列出的函数组内规则；其余原生实现保留。"
+    },
+    {
+      "path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/MessageProcessors/ElimChainProcessor.cpp",
+      "sha256": "4E7AD1BCC7D1B6C1268FF33D1B01CDB9DEBBDE8F531AEB627C0711993FCBE54C",
+      "lines": 59,
+      "module": "SC",
+      "disposition": "recommended_function_groups",
+      "candidate_ids": [
+        "CPP-002"
+      ],
+      "reason": "仅迁移列出的函数组内规则；其余原生实现保留。"
+    },
+    {
+      "path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/MessageProcessors/ElimStreakProcessor.cpp",
+      "sha256": "DD3DCF5A381FE13D6EFC81218E30C4D269B85AA6D1CA8604C9ADCA9034D69216",
+      "lines": 53,
+      "module": "SC",
+      "disposition": "recommended_function_groups",
+      "candidate_ids": [
+        "CPP-001"
+      ],
+      "reason": "仅迁移列出的函数组内规则；其余原生实现保留。"
+    },
+    {
+      "path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/ShooterCoreRuntimeModule.cpp",
+      "sha256": "9B01BA984AA2DC36A4C1CB3E5A98D72BEB9AF7AAC93DF500B70F7CEC43D422A0",
+      "lines": 19,
+      "module": "SC",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "模块启动、日志、标签或数据声明；不承担本次拟迁移的独立规则。"
+    },
+    {
+      "path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/ShooterCoreRuntimeSettings.cpp",
+      "sha256": "B81DE1EAA560D0A77AD7551F856D4D543ECA1C2A4DD34F463DC3229861A5B658",
+      "lines": 11,
+      "module": "SC",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "模块启动、日志、标签或数据声明；不承担本次拟迁移的独立规则。"
+    },
+    {
+      "path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/TDM_PlayerSpawningManagmentComponent.cpp",
+      "sha256": "CD6F0DD6125B90655B36C8839A63B12323F9A6493442FAA8712ED868FF5DDE77",
+      "lines": 94,
+      "module": "SC",
+      "disposition": "recommended_function_groups",
+      "candidate_ids": [
+        "CPP-007"
+      ],
+      "reason": "仅迁移列出的函数组内规则；其余原生实现保留。"
+    },
+    {
+      "path": "Plugins/GameFeatures/TopDownArena/Source/TopDownArenaRuntime/Private/LyraCameraMode_TopDownArenaCamera.cpp",
+      "sha256": "DA6A884993408ABD3C27B50D92467E1B6A5FBF7B7E5ED7E19F371C4F427D9CEE",
+      "lines": 31,
+      "module": "TA",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "Arena 原生移动、摄像机视图、属性复制、数据声明和模块实现。"
+    },
+    {
+      "path": "Plugins/GameFeatures/TopDownArena/Source/TopDownArenaRuntime/Private/TopDownArenaAttributeSet.cpp",
+      "sha256": "AEF650631D5E950DE9B94EEDEB7800310B7A7BB518B4A7AFD9F767D6DDB8DFE5",
+      "lines": 82,
+      "module": "TA",
+      "disposition": "conditional_function_groups",
+      "candidate_ids": [
+        "CPP-029"
+      ],
+      "reason": "仅迁移列出的函数组内规则；其余原生实现保留。"
+    },
+    {
+      "path": "Plugins/GameFeatures/TopDownArena/Source/TopDownArenaRuntime/Private/TopDownArenaMovementComponent.cpp",
+      "sha256": "810FF1A8A8698D90893E66D48BDBDDBD3C4655F0F1BBEC310797E20E653E8939",
+      "lines": 35,
+      "module": "TA",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "Arena 原生移动、摄像机视图、属性复制、数据声明和模块实现。"
+    },
+    {
+      "path": "Plugins/GameFeatures/TopDownArena/Source/TopDownArenaRuntime/Private/TopDownArenaPickupUIData.cpp",
+      "sha256": "9770A8B7664EC12DDF459B80C25650716685BB9A1AD97E7A465191346BC8B1EA",
+      "lines": 6,
+      "module": "TA",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "Arena 原生移动、摄像机视图、属性复制、数据声明和模块实现。"
+    },
+    {
+      "path": "Plugins/GameFeatures/TopDownArena/Source/TopDownArenaRuntime/Private/TopDownArenaRuntimeModule.cpp",
+      "sha256": "5D2B7AED454C04CC31DB682AFC933006EC0AB9FA77507E94926D4911FF8843E4",
+      "lines": 22,
+      "module": "TA",
+      "disposition": "retain_native",
+      "candidate_ids": [],
+      "reason": "Arena 原生移动、摄像机视图、属性复制、数据声明和模块实现。"
+    }
+  ],
+  "supporting_declarations": [
+    {
+      "path": "Source/LyraGame/AbilitySystem/Abilities/LyraAbilityCost.h",
+      "sha256": "6DF86AF1B73C53C42FBA1B81F80A4E12950708F282C8074DD465FDEC71C18E21",
+      "lines": 60,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Abilities/LyraAbilityCost_InventoryItem.h",
+      "sha256": "5B4120D26FB1105450F5ADD2E2585F88873B467816D10893397D4F20A8B06009",
+      "lines": 44,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Abilities/LyraAbilityCost_ItemTagStack.h",
+      "sha256": "ADC4CA4E4714229111CAD10993994048B5978A098583BF607E9B8227EF54D8C2",
+      "lines": 47,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Abilities/LyraAbilityCost_PlayerTagStack.h",
+      "sha256": "9F481E7F47DB9DF76DA1D4ACE17CDFF3EB9D608DC5826F650061A56A7404E497",
+      "lines": 42,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Abilities/LyraAbilitySimpleFailureMessage.h",
+      "sha256": "E1FB40D589883F64CC8090675E8445961131428CF87C099D3F3520B88D897B41",
+      "lines": 27,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility.h",
+      "sha256": "EE1A90725AAEDF6217947C95A848299B7FF61BD9BECC2E29A4CF556CBCC7DBD2",
+      "lines": 221,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility_Death.h",
+      "sha256": "5D46184874DC7F947D3AAD405177654A06D1E6C341D5FE998CBAE0CEE1FB6F18",
+      "lines": 48,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility_Jump.h",
+      "sha256": "6AABDF83749DD4E1AD7538249BD7AE24A876F0F2A4E71A1D0C84162A32843E1B",
+      "lines": 39,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility_Reset.h",
+      "sha256": "9EB2A9D6A708D4929F5BD7AF4E5399825BFC6DD3A90DF0A6A8BD166E1FC1502D",
+      "lines": 46,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Attributes/LyraAttributeSet.h",
+      "sha256": "CC38F4DCC5E2E8CFB7855B51C43A79E6E5DF70158785F6606B350060A4AC88A3",
+      "lines": 65,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Attributes/LyraCombatSet.h",
+      "sha256": "F05CDBA9AD423B493CB70FA14EBACEB84FBDF3B7AA60AB17D18DFD79BD0C8211",
+      "lines": 49,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Attributes/LyraHealthSet.h",
+      "sha256": "BC953AEA7B43E0F3DFD6FE891E568B1EA4CF8CFBE98BE5A28BA4A9F5213D6D1F",
+      "lines": 101,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Executions/LyraDamageExecution.h",
+      "sha256": "BD27C8C17067D681DC6D9BFB3E95E202DEAFBC6F8476574613F5996C49C4C372",
+      "lines": 29,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Executions/LyraHealExecution.h",
+      "sha256": "37693AD2949B042D9C31CE9462259498C939746D5567C66F4E0409A2E5AFE532",
+      "lines": 29,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/LyraAbilitySet.h",
+      "sha256": "3478B5CA7223B0A575FB0BB5A61BA7B62B85F2C3DBDF7B2A243AEFC9A7C78D04",
+      "lines": 149,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/LyraAbilitySourceInterface.h",
+      "sha256": "2A7D423092B5B3CEF9C21E1B1CCDC07C14E50F9DC0C4930CBC528AEDCDCBC59F",
+      "lines": 36,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/LyraAbilitySystemComponent.h",
+      "sha256": "BC19C49A0C6D73034653F134627E18875A60FD53F503FDB07A30D0F8D5462D43",
+      "lines": 110,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/LyraAbilitySystemGlobals.h",
+      "sha256": "5E362B9C7ACB1EC281781315A9BC2AD9B7A9A578E54B85556A288362C770F567",
+      "lines": 20,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/LyraAbilityTagRelationshipMapping.h",
+      "sha256": "98BCC2ED5D16BDD4C6779549DBABE6E8556F66D574CDA6CBCD0454E5CE1CA9DE",
+      "lines": 60,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/LyraGameplayAbilityTargetData_SingleTargetHit.h",
+      "sha256": "E55DD7762E6AC7BE7C2A8242FCA724F5A671EF5E952ED3F03518EF431F2B5D0B",
+      "lines": 45,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/LyraGameplayCueManager.h",
+      "sha256": "94C1994FEF4EFE70971D3F1D375AB144F75F81D616730D12C77BA3E8FE6B4DFE",
+      "lines": 79,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/LyraGameplayEffectContext.h",
+      "sha256": "FF66636615D15161DC6E5B27342BB29A88A3540513D0232AC48D9A81E4B99EEE",
+      "lines": 82,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/LyraGlobalAbilitySystem.h",
+      "sha256": "5DBB7D4A4DA02833F4B74E016D7162EE7DFD74BDCFA4F121E3C29B5D2AD47095",
+      "lines": 81,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/LyraTaggedActor.h",
+      "sha256": "A7E59F1636D5F1FA9DB5F1728E5BEFDC81454DD0A1E61A0C045F0CE8CD839DA2",
+      "lines": 36,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Phases/LyraGamePhaseAbility.h",
+      "sha256": "EC6F0C7C3283739BDBA20E6EE9CE517D8A1DA777787FEFD8809D2FBC9735658E",
+      "lines": 45,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Phases/LyraGamePhaseLog.h",
+      "sha256": "EC5E2D01977CEED7B221D3F3C15B2140ED60AE33012FE09633FD3888056B2B9C",
+      "lines": 7,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/AbilitySystem/Phases/LyraGamePhaseSubsystem.h",
+      "sha256": "FFD724808944F856EC91C9F147E1159F271DADBC7C0DFB07C8BD9BA1A7AE6563",
+      "lines": 106,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Animation/LyraAnimInstance.h",
+      "sha256": "775A6BB9B90AD7AA44E0FC60AA88E61F8768FA3A075F437DBBB9FFAC4EFEF3DF",
+      "lines": 46,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Audio/LyraAudioMixEffectsSubsystem.h",
+      "sha256": "8C90284178076B468E34D6851AC7863ADAF78632FC72E46E3B322F26258B9C75",
+      "lines": 112,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Audio/LyraAudioSettings.h",
+      "sha256": "F23BA15EDB5D463E25BD938E0658A0379EE20A7C860AC26AA4335FD87D2EE044",
+      "lines": 80,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Camera/LyraCameraAssistInterface.h",
+      "sha256": "F6BDDC75F3287E30E68B8F8FF28596F232A9F1D3B9E1B4438FBCAC543030005A",
+      "lines": 41,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Camera/LyraCameraComponent.h",
+      "sha256": "76F2E4978250906D7119E9F896022CBC368029415D0699D697447531F35FA7EF",
+      "lines": 70,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Camera/LyraCameraMode.h",
+      "sha256": "034C67E62BF00AAB02CC386028368A05CCE7A6430B54EED51E58452A6D3FA485",
+      "lines": 203,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Camera/LyraCameraMode_ThirdPerson.h",
+      "sha256": "9503009382F4C954DF37EF2FD9B5BE129744848BBB4F29600D7E631C19E53EB6",
+      "lines": 114,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Camera/LyraPenetrationAvoidanceFeeler.h",
+      "sha256": "C2273E019CC97D98D269C30E243F42599FEB96A246CCE79AF3922B45D178004D",
+      "lines": 66,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Camera/LyraPlayerCameraManager.h",
+      "sha256": "4241D2D5CA445A15D86A3D5D621A9F6933DF006B58A0D9276E7AF710AFFF5077",
+      "lines": 46,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Camera/LyraUICameraManagerComponent.h",
+      "sha256": "20E48E49C1C3F2A436044E260E65C17B0FD24339AFA58D9EA5A3CF8360266AE7",
+      "lines": 45,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Character/LyraCharacter.h",
+      "sha256": "250483D2EC98FAFFBAF773D3A8DB012F71C9BF77D000A0295477DBEF083EA89F",
+      "lines": 231,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Character/LyraCharacterMovementComponent.h",
+      "sha256": "ECB737D19301EF31579EB9E29D8CDEE9624870C5A2C97AA205E0D60FBDBBCBCD",
+      "lines": 84,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Character/LyraCharacterWithAbilities.h",
+      "sha256": "5543A9A31E9BEB0255E7A4B2DF9CD533736F7285909CBC2704E5A0556097CF8B",
+      "lines": 43,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Character/LyraHealthComponent.h",
+      "sha256": "AB10F775FA23505FE0B8688BEB9A96267D4DF858D925234249D3DEFCFAB84764",
+      "lines": 135,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Character/LyraHeroComponent.h",
+      "sha256": "22C4220E9D344753721468B27588B89D611C5BA4C73DA84B0B90FC03A4F4E8B2",
+      "lines": 108,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Character/LyraPawn.h",
+      "sha256": "291960AE52E54A1B28FF8D0D3728297EE8C0A863F8C73E1C53C990E57D14A248",
+      "lines": 68,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Character/LyraPawnData.h",
+      "sha256": "A56A5B0504247CBF041E24DE1FF9828EC6E0DEFFB1A1C60FF8C9A451BA47F76C",
+      "lines": 56,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Character/LyraPawnExtensionComponent.h",
+      "sha256": "8001F06E491EB42BD28F3C3A53B203C76E3F97274AF536AA7DD8E2C42EB226DF",
+      "lines": 106,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Cosmetics/LyraCharacterPartTypes.h",
+      "sha256": "3CC0C3E5EE32906DDF64A6F4F648A415A2B999FCE67A65E19309AD857453579E",
+      "lines": 77,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Cosmetics/LyraControllerComponent_CharacterParts.h",
+      "sha256": "07BDFDB975D7F87D7A4296F9AA942E8BC4E858195FD7C7A2BB0B10F92C57BD7C",
+      "lines": 98,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Cosmetics/LyraCosmeticAnimationTypes.h",
+      "sha256": "82F1846D09FC12A30A8328ABE8E5C65A35897938724F07BB041EBCBC8841A61A",
+      "lines": 82,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Cosmetics/LyraCosmeticCheats.h",
+      "sha256": "40964C4C106B2F07BBA410C088998EB3C1AF85CDDA04755B206A7BF0C5C35483",
+      "lines": 36,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Cosmetics/LyraCosmeticDeveloperSettings.h",
+      "sha256": "99BBDD5AE5429C5F81FE7FD4229FFC433B5134FAC5CED2C1A14B56C3233560FC",
+      "lines": 66,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Cosmetics/LyraPawnComponent_CharacterParts.h",
+      "sha256": "649BB91743CF4746611D2A55D1A460C2964E09ACA187E3188E354661F7F58103",
+      "lines": 178,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Development/LyraBotCheats.h",
+      "sha256": "B03EE90E5FCC0A209EF4CBCFD37A793267D38E2E0D35266C9E5B3970B1DF478C",
+      "lines": 32,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Development/LyraDeveloperSettings.h",
+      "sha256": "9BB39DE8004B2EB540529DCB72B6B350D331A5B673A8DF0CB6B866B9E01BAAD2",
+      "lines": 111,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Development/LyraPlatformEmulationSettings.h",
+      "sha256": "97CF0E31049F8AAA88AFE0312B406B70E257B2C24920ACE958455C291AEF9B33",
+      "lines": 90,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Equipment/LyraEquipmentDefinition.h",
+      "sha256": "CA9BC1195557B46727CD04C1B7D2762887FBA405664765AE65530C45A9CD1DAD",
+      "lines": 56,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Equipment/LyraEquipmentInstance.h",
+      "sha256": "BD07F9F74DB340FDAB06373D24F7495EAFBCAD3EBFF21E4291DFAF15B1EABF5D",
+      "lines": 72,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Equipment/LyraEquipmentManagerComponent.h",
+      "sha256": "E69895A66555D80D052EA3CE77AAD9963F72AE72FDD74E6C81BB093E5F35ECEB",
+      "lines": 158,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Equipment/LyraGameplayAbility_FromEquipment.h",
+      "sha256": "285DA593209B17B634FA4B51088B805EC7971E466E8771373838445F38213D7E",
+      "lines": 36,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Equipment/LyraPickupDefinition.h",
+      "sha256": "4F5FFFF2F25C374A4C1BC91A15C0E5DB4CE731829C18244B8487AE5C050C3FE7",
+      "lines": 69,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Equipment/LyraQuickBarComponent.h",
+      "sha256": "DB913B4636ECE17AD43AD70783DF4F006274D33D0B8C2FD7791E2857944BE546",
+      "lines": 107,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Feedback/ContextEffects/AnimNotify_LyraContextEffects.h",
+      "sha256": "F86A540169D774FE2CA3C1563A7D959027B2B5A1A834F285F468D2F1A08397E5",
+      "lines": 173,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Feedback/ContextEffects/LyraContextEffectComponent.h",
+      "sha256": "91F9CC7A9CE199CC913555B190708018C0A4D3BDB8A59F6BFD4FA5BCC7D374F5",
+      "lines": 79,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Feedback/ContextEffects/LyraContextEffectsInterface.h",
+      "sha256": "3616AE86BC26D0EB949B92FB7555A04436CE5F967772855C185DB5070EE2CF58",
+      "lines": 60,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Feedback/ContextEffects/LyraContextEffectsLibrary.h",
+      "sha256": "EC7AEB19975C91B75DF8A2B12E69E450B3A50220504AA6A762E24AA4F46FD7C9",
+      "lines": 103,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Feedback/ContextEffects/LyraContextEffectsSubsystem.h",
+      "sha256": "6A66B97A364D6A33F8769C27A903DE0B72ACD2920F4387E6262B47B5CA1FB3FD",
+      "lines": 96,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Feedback/NumberPops/LyraDamagePopStyle.h",
+      "sha256": "F911F869A3456CE7E490B67EA9C82B49D4AE9E8118C93B3E5F1117DB21F21BD5",
+      "lines": 42,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Feedback/NumberPops/LyraDamagePopStyleNiagara.h",
+      "sha256": "DED09FFFBF475BA309E0CB19992380405EBB1D0CCD6C9DFF84783265CF57B62D",
+      "lines": 28,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Feedback/NumberPops/LyraNumberPopComponent.h",
+      "sha256": "A7EC266617602BEF00906236C1E0105C0F7287F179277BDD8D3445DD88CBFB0C",
+      "lines": 57,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Feedback/NumberPops/LyraNumberPopComponent_MeshText.h",
+      "sha256": "CB05A9857A43C6F9D855C89E873415ABAFBAA62DFB36C984C366D8BDF5E49A36",
+      "lines": 140,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Feedback/NumberPops/LyraNumberPopComponent_NiagaraText.h",
+      "sha256": "713ABF3B3FA75371115E9B31C265B2CD44A66202CA4D5CD6CFF091646B811F99",
+      "lines": 37,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/GameFeatures/GameFeatureAction_AddAbilities.h",
+      "sha256": "31D1F65C0F9DC221AD9EA875F8A005B74B5BBF9C2EF2FC8337F00D4CDDA2B8E8",
+      "lines": 127,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/GameFeatures/GameFeatureAction_AddGameplayCuePath.h",
+      "sha256": "00AB84CD4F789280A1B3E082A1C0E3874E67706591D581B332375786C2C1E1AC",
+      "lines": 35,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/GameFeatures/GameFeatureAction_AddInputBinding.h",
+      "sha256": "F834836E850C464DADBA36A14CC1E195FA09482EA8BA04FE038A6A9E72A08325",
+      "lines": 59,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/GameFeatures/GameFeatureAction_AddInputContextMapping.h",
+      "sha256": "3C46178C3C96A4EF23D9AF2BCE5B6A9D04DAC8C769AF52DA39DC892CE219BF84",
+      "lines": 96,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/GameFeatures/GameFeatureAction_AddWidget.h",
+      "sha256": "55E61D85E164ABDB9CF84BC1E710D06A7116D1CE5992718A980D7AEA7584FD8C",
+      "lines": 103,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/GameFeatures/GameFeatureAction_SplitscreenConfig.h",
+      "sha256": "4AD39FC8DA1A81DF0A20344E50F57B5179AD79E1EDF7E27F387E121CFE378460",
+      "lines": 43,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/GameFeatures/GameFeatureAction_WorldActionBase.h",
+      "sha256": "688A602A4EBA858BCECAD10998A7C447CDF2490CA99A1668D47E7751311890DF",
+      "lines": 40,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/GameFeatures/LyraGameFeaturePolicy.h",
+      "sha256": "2AAC677E7797B96C4BF0381A5516E91E6BE5D83F1A46FDF3557804AC64D87F9D",
+      "lines": 63,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/GameModes/AsyncAction_ExperienceReady.h",
+      "sha256": "427839D1E49A645D2B7251A4F213F59B006D6A7B382BCFA7CA0F05F468243EFB",
+      "lines": 45,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/GameModes/LyraBotCreationComponent.h",
+      "sha256": "807B96395EE09A93D7FD0780547A28129B16447A8C5D2DCADC1531CBEB4C5681",
+      "lines": 63,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/GameModes/LyraExperienceActionSet.h",
+      "sha256": "D48195B30636E3E98BDC142251E620CAEA88DF867AD5EFF9E8B3518D1E539A11",
+      "lines": 41,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/GameModes/LyraExperienceDefinition.h",
+      "sha256": "D44EC026B03F517BD85FBE730FD58F1EB0E958AEE09F75BF0C0D86170018D564",
+      "lines": 52,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/GameModes/LyraExperienceManager.h",
+      "sha256": "6E6883DE1055DC7F1C7BB0F393873EBEE073F968D9C72DA2E266EEBDA24C1FED",
+      "lines": 31,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/GameModes/LyraExperienceManagerComponent.h",
+      "sha256": "55F13ECEF9FDA7CCB0B091E6FD86981C895CA6B5FFBDE2365AFA8BAD4B7249DE",
+      "lines": 106,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/GameModes/LyraGameMode.h",
+      "sha256": "588958E7D6BE4EF89EEEA3D8DBAC578C119DC742B3233EE3E6C9FD4314F6BE0A",
+      "lines": 89,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/GameModes/LyraGameState.h",
+      "sha256": "02AF2B603824693731205C64C989125196A1EA039F98B7CE5CEF3C24A5B7A3D7",
+      "lines": 102,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/GameModes/LyraUserFacingExperienceDefinition.h",
+      "sha256": "D15B9E2AC84F0A43EBBD7706A4CA8F3E47524FE7C1FAEBF7409C48188D511AF0",
+      "lines": 75,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/GameModes/LyraWorldSettings.h",
+      "sha256": "735CA695F6459846EC3CB52200327B4E8A00C3C79A4AB9A0CB48450EC1530A66",
+      "lines": 47,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Hotfix/LyraHotfixManager.h",
+      "sha256": "155B04C8B09A0A9E791FCA67842295F7F2D9F66375778CD5DBEB48AB80AB2FCB",
+      "lines": 68,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Hotfix/LyraRuntimeOptions.h",
+      "sha256": "CBD2FE2A9B3B2A54561C908B777093D8BD8C5F630BCC4C5963D7196D80DBDB06",
+      "lines": 41,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Hotfix/LyraTextHotfixConfig.h",
+      "sha256": "9471F39BCE69023907045E6B7FF42257D93FBE140D6F90D59869EECB61B865CB",
+      "lines": 38,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Input/LyraAimSensitivityData.h",
+      "sha256": "C8BA1C718959149A10BBDA220B7967473EEFE6382EFD939AF642F616BCD62709",
+      "lines": 32,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Input/LyraInputComponent.h",
+      "sha256": "24FCA3CB31E5F510BAE3133FED22D90E5958DD7BB8EF6273CA0C20640E65FCBB",
+      "lines": 72,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Input/LyraInputConfig.h",
+      "sha256": "7B313BA8157C2893B489E8CD4E77C827F5E4DCD94EB34D72BC2465D053D38E3E",
+      "lines": 61,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Input/LyraInputModifiers.h",
+      "sha256": "131CA6A19DE14B992588A0510EA745CA5CFAD9656036417FA3A7B312015E5395",
+      "lines": 132,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Input/LyraInputUserSettings.h",
+      "sha256": "48E4F6C1DC28D2867E2701E7958516720071BE6B95880C862D81367948C1FA5C",
+      "lines": 58,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Input/LyraPlayerInput.h",
+      "sha256": "291CEE0EDC8A6E2282292D496B48D44B1F0BB18A725ECC2843C332FB59E31AE1",
+      "lines": 36,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Input/LyraPlayerMappableKeyProfile.h",
+      "sha256": "73F613F0EBFA8CF9AC3CC5C797C5BEE84B64002623E41B2CA6B8D6F7C1E2E888",
+      "lines": 24,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Interaction/Abilities/GameplayAbilityTargetActor_Interact.h",
+      "sha256": "8E994AA51DE8FE38DAC7BDBD83A785E9E473506075D040B034F63CD7AE9EDB31",
+      "lines": 25,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Interaction/Abilities/LyraGameplayAbility_Interact.h",
+      "sha256": "7DC01EEF980DCA01462ACAC8AE3D47EB07408BBE65C904EE0D3B098E4EBD5C77",
+      "lines": 56,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Interaction/IInteractableTarget.h",
+      "sha256": "0AADF5B55305CF5D93D0B8258110138034DFCBBD373A90CE0DB9493884014E2B",
+      "lines": 51,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Interaction/IInteractionInstigator.h",
+      "sha256": "BB73D02A9AD96CA5883572915C07D8CE187FFC79E341246CF580C74D37D9E43E",
+      "lines": 31,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Interaction/InteractionOption.h",
+      "sha256": "6DB3AB0229039A6DE66FA8E973E2EBF8D459FE08AF2BCE0CD4A723B92B7EA316",
+      "lines": 82,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Interaction/InteractionQuery.h",
+      "sha256": "F27D0AED177EDBA9F5150E8C741AA5B1A41AB25A6824AA56BB0FE6BEF164F5BF",
+      "lines": 28,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Interaction/InteractionStatics.h",
+      "sha256": "43A53E93BCD7ABE260D3F70FEABCA1D4FB2DD83358561B0DDD7A252E9C6E3B6C",
+      "lines": 36,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Interaction/LyraInteractionDurationMessage.h",
+      "sha256": "A0D2D9EB73A04C969AEF02BEC0B0898F85B3DB98DEF7C719C480C54424988687",
+      "lines": 24,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Interaction/Tasks/AbilityTask_GrantNearbyInteraction.h",
+      "sha256": "BEF4DC4C6EE86537B654BB1A288B9BEA5342A32F876DF1C3A4049E2CF9D8D7E8",
+      "lines": 37,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Interaction/Tasks/AbilityTask_WaitForInteractableTargets.h",
+      "sha256": "08B60AB0D5F2A0C958BC22E26A7C02935B6DDB63CB8A798390369F9F115D1302",
+      "lines": 46,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Interaction/Tasks/AbilityTask_WaitForInteractableTargets_SingleLineTrace.h",
+      "sha256": "648C33502F97EDE1DB9B6FC88CE47D0C71A41790681233A3C864A0A8DFA893B3",
+      "lines": 43,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Inventory/InventoryFragment_EquippableItem.h",
+      "sha256": "93BBFADF5754E1585732E5D7E297BBD8607E89436A7E0A1E837A3EFBB61644CD",
+      "lines": 21,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Inventory/InventoryFragment_PickupIcon.h",
+      "sha256": "109CC2F49EB63868420BF5C1FAC0843F4DC90DBBD435D8A43CE57BDB3E69EB70",
+      "lines": 29,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Inventory/InventoryFragment_QuickBarIcon.h",
+      "sha256": "E35FF67FDE98719642F7592DF2B218DF0D3089CCCBF7FE8EE330F4ADBD25656B",
+      "lines": 26,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Inventory/InventoryFragment_SetStats.h",
+      "sha256": "0595FAE77B733E0A1B9813B9D73543FE9E176BAC84C2E3B77AA0DC7CE682907F",
+      "lines": 27,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Inventory/IPickupable.h",
+      "sha256": "182C887A6A47F9B2480E1F5DE79E3EFECA1E7FE26F2CF95715B457FFBE79D1D5",
+      "lines": 89,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Inventory/LyraInventoryItemDefinition.h",
+      "sha256": "FAECA215EA622D5EA1956C3E78767D6B012A9682475F44AF5AE376B9FAC6AD0E",
+      "lines": 57,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Inventory/LyraInventoryItemInstance.h",
+      "sha256": "1D3EFA72C9742F8DF226814EAACCF47C184A7E1071EAFFC7D63E1F0E5C4D8269",
+      "lines": 77,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Inventory/LyraInventoryManagerComponent.h",
+      "sha256": "26D7441234985A74F0C305B7A594FDFA18E5FA79BB6D1A34069242061DB93981",
+      "lines": 173,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/LyraGame.Build.cs",
+      "sha256": "17A5933C1D34E3DB571836370466C08EAC1561399C4532F3F05DF644570B6BA4",
+      "lines": 117,
+      "kind": "build_rules"
+    },
+    {
+      "path": "Source/LyraGame/LyraGameplayTags.h",
+      "sha256": "40E8F111C58C8DA2C63D8841E9F4EBACEE0D87207A4C8BC1AF72B8F76ED3226F",
+      "lines": 60,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/LyraLogChannels.h",
+      "sha256": "C7A07BCEB0B87285D01099A8F0FBC85D7A7BDF0AC2BDCBAADFADF139B4A134BB",
+      "lines": 14,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Messages/GameplayMessageProcessor.h",
+      "sha256": "EB063280DFF8A5163777CF5CD9A1DDC8F06FCA788FB717C56E0E810FF91D9A08",
+      "lines": 47,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Messages/LyraNotificationMessage.h",
+      "sha256": "D435D307413639F83011FFFEFFBE9D662D0AF537E002136C27E096AA9E7D9F86",
+      "lines": 40,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Messages/LyraVerbMessage.h",
+      "sha256": "BDA0FEFFBB0666174D5AC3971BCAE312B0022A27CFE5E190DB88739491A81EC7",
+      "lines": 39,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Messages/LyraVerbMessageHelpers.h",
+      "sha256": "A273D270DD42737A9CC3BBA8A15A34D8E56DCE144637CE23A8AF186208C87CC8",
+      "lines": 39,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Messages/LyraVerbMessageReplication.h",
+      "sha256": "542D9052BDB0B8CDD27991E57CBA0B5023688DB8F0A40C7471FBA7B6D7857AD2",
+      "lines": 87,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Performance/LyraPerformanceSettings.h",
+      "sha256": "E859BB6D0BF7A18F81D4DC2EDF4CABD0B7179CCDA0FF881AD056F2DF28BADC68",
+      "lines": 143,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Performance/LyraPerformanceStatSubsystem.h",
+      "sha256": "7EE53FE3F54E2B15E26DE7126A01D4601B305849F4C7580FB61299856A0DFCD6",
+      "lines": 183,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Performance/LyraPerformanceStatTypes.h",
+      "sha256": "59746C9C0C42ACD359189DE3DBCE667B73D9680C6D1C4723A62F09D8FA6BE3CD",
+      "lines": 95,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Physics/LyraCollisionChannels.h",
+      "sha256": "C220B27523FBBF7CF5976C6DDEDCB362FAB8CF31E03ABB464F2FD41D94CBB401",
+      "lines": 24,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Physics/PhysicalMaterialWithTags.h",
+      "sha256": "CD9B285838BF46FD1C831E5EF7C3D5D4416FC06AF5CBA69FA3325A890609299F",
+      "lines": 28,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Player/LyraCheatManager.h",
+      "sha256": "C864E8F203D566FF5C99EBBA19EE902863F7E20932324E7884F67FED9263322F",
+      "lines": 110,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Player/LyraDebugCameraController.h",
+      "sha256": "90DD0E3B77ADC9DD33D043BCCACFA4F358E2D5C2F112D137DD896390A3D492A2",
+      "lines": 29,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Player/LyraLocalPlayer.h",
+      "sha256": "E978C765C1219366D0A46F74F26A4CA362B35CFD51F954934493825C0FF75655",
+      "lines": 94,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Player/LyraPlayerBotController.h",
+      "sha256": "606086F0F5ECA9CDBECB473A0313429B8EB1AC7293D6417E1DD75AAD91E79EC1",
+      "lines": 72,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Player/LyraPlayerController.h",
+      "sha256": "FF96C30F6D8E7E45BEB638D5A77F8D82F524AA42C6D255FB3E1AED1568BAA2F6",
+      "lines": 168,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Player/LyraPlayerSpawningManagerComponent.h",
+      "sha256": "D033BBC1728D59E0AAB46AE3E0E0B08AD1F143347CAEA1038510390D6D38AA94",
+      "lines": 65,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Player/LyraPlayerStart.h",
+      "sha256": "FEAEEE5057AED7A2AD8EBDCC3B9CB448869F61842475260D841E6DA4140B98D9",
+      "lines": 65,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Player/LyraPlayerState.h",
+      "sha256": "B43914FA32419E31DB228E087AAA4261654B2B687B0754731963E47EF8F3C103",
+      "lines": 188,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Replays/AsyncAction_QueryReplays.h",
+      "sha256": "815554D47367F89F580642856263448DBC294F58F64032D5B760E0F5A90D4E08",
+      "lines": 51,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Replays/LyraReplaySubsystem.h",
+      "sha256": "4EB23A9F1F9DD560CE0005BB9E02A943B5C56F8B05EE8C5676A8A81B3CF98419",
+      "lines": 113,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Settings/CustomSettings/LyraSettingAction_HDRCalibrationEditor.h",
+      "sha256": "F0E08DBC196A7EA627ABFE088A3DE4B5F22A874E5216E723B1942815988848D3",
+      "lines": 24,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Settings/CustomSettings/LyraSettingAction_SafeZoneEditor.h",
+      "sha256": "7D83BCBDFA0E7B9AC32DE2BB3346615A9C84E427A7BDC1B841CDAA74AE9B13DF",
+      "lines": 36,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Settings/CustomSettings/LyraSettingKeyboardInput.h",
+      "sha256": "BCA1C1E2DD5EFFCE4CFFBE6A1344D2359DE241DAE85C5284A681747B198A44C1",
+      "lines": 63,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Settings/CustomSettings/LyraSettingValueDiscrete_Display.h",
+      "sha256": "51F68B31F7CDB0654216D2E13087AC259E6B65E680E7AB23717C591D96ED0A88",
+      "lines": 46,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Settings/CustomSettings/LyraSettingValueDiscrete_Language.h",
+      "sha256": "B2BDC480BBBDF135655CCF4CA9EEFA777F5D7C7EAFBC62D2B55D83715DCB0240",
+      "lines": 42,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Settings/CustomSettings/LyraSettingValueDiscrete_MobileFPSType.h",
+      "sha256": "EB2DD21ACE7C1A987F0ED999A613C042F534CC00FAFEB287D2A47495CA92AB9A",
+      "lines": 49,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Settings/CustomSettings/LyraSettingValueDiscrete_OverallQuality.h",
+      "sha256": "1CC5181FFC1EE6C72F0438AE7713A5BE49BCAB3EF1816C3D323DCA94D5A66CC8",
+      "lines": 40,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Settings/CustomSettings/LyraSettingValueDiscrete_PerfStat.h",
+      "sha256": "50842CE89BB2CB5575DB53C043A74745E39C4BF50D771D56318EE795E4EC445D",
+      "lines": 46,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Settings/CustomSettings/LyraSettingValueDiscrete_Resolution.h",
+      "sha256": "6B9088BD26B50F428BA41665535C3CB56F5AED8C1CE126684A399F5CE47E4F80",
+      "lines": 73,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Settings/CustomSettings/LyraSettingValueDiscreteDynamic_AudioOutputDevice.h",
+      "sha256": "6CCA0DFF88B0937FA0EB134B43FBC503C07A00A920E851D84653C6BC8B21D9AA",
+      "lines": 55,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Settings/LyraGameSettingRegistry.h",
+      "sha256": "E071FCD473AABCECDDF0AFC0422441946E438AB4BDF2BE8A8775EF7509EEDD28",
+      "lines": 83,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Settings/LyraSettingsLocal.h",
+      "sha256": "C2B3226C92895AA3FD09D9070700E4C7C7126F534303000DFFC7D4F2BBC9996A",
+      "lines": 463,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Settings/LyraSettingsShared.h",
+      "sha256": "DB217B5CA90B52F71522BBE23592EC8CC5FAEDBB230A98C90214FAD95619A697",
+      "lines": 401,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Settings/Screens/LyraBrightnessEditor.h",
+      "sha256": "87A1ACEC8DA0E702DC2652A55B228DF0C8F86F5FA3809ABD59688D49B0976E31",
+      "lines": 71,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Settings/Screens/LyraHDRCalibrationEditor.h",
+      "sha256": "C01242CE92165B1272875454A147E1C6736DB8359AD2A014F99751FE037555A8",
+      "lines": 65,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Settings/Screens/LyraSafeZoneEditor.h",
+      "sha256": "EFFCE08FB269357B13E6E09480F0A5A1F9CF8EC7F8B2297C5CAD9B0B3446F4AA",
+      "lines": 71,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Settings/Widgets/LyraSettingsListEntrySetting_KeyboardInput.h",
+      "sha256": "7305D1AC013A4E446697D31E6ECD38640EB3F67A1AFCD915D37F876E5CE09D05",
+      "lines": 75,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/System/GameplayTagStack.h",
+      "sha256": "3666869DC4BD91E218C85806A4CA282E32A81F827EA1FE57E241F4FD46E3EC82",
+      "lines": 99,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/System/LyraActorUtilities.h",
+      "sha256": "9C4434364F6C95CE3838A18BBF35BFE20FE5F7FAB53338BA2FC8DD8733DF5F68",
+      "lines": 43,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/System/LyraAssetManager.h",
+      "sha256": "262F4C05EC694CCA579D5C9415712C806FBDA3BCCD42508ABE69B1543E9E695D",
+      "lines": 175,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/System/LyraAssetManagerStartupJob.h",
+      "sha256": "B44837314EE2D88795AD81AB24648CBF0745F00FA7B9D8A0730DAB07BEECB0A0",
+      "lines": 46,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/System/LyraDevelopmentStatics.h",
+      "sha256": "EC671C6A102CD214BB03218C00227AA0A88739E93EBFD0BC895D565FF218EBF4",
+      "lines": 53,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/System/LyraGameData.h",
+      "sha256": "116BAC9604E465744B3C713BFA59DED1E67B4F17BDDA4861E439CEB13D66BE5E",
+      "lines": 46,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/System/LyraGameEngine.h",
+      "sha256": "D206DD16BD8ACDA2D5DCA92482E4E2410F2CF8B40D5E25DBED582BB48BADE24C",
+      "lines": 25,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/System/LyraGameInstance.h",
+      "sha256": "6524CE270E5B867774F58152ED3346BB35329D28C568FE10A0827C43579433E6",
+      "lines": 42,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/System/LyraGameSession.h",
+      "sha256": "92605DACB8E01ABECDDFD41EEE98D266DA475BC355327A268C64C216F57EAEEA",
+      "lines": 28,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/System/LyraReplicationGraph.h",
+      "sha256": "33B25DE7F2B40525EFC469F5FC04CE648FFAB7CEFC29946DC68182F5769CB825",
+      "lines": 123,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/System/LyraReplicationGraphSettings.h",
+      "sha256": "A4A74CB49372A2DF668FC57A86FA175A9537A248E3ADB7D700162D260959E5EE",
+      "lines": 65,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/System/LyraReplicationGraphTypes.h",
+      "sha256": "CDEA00F8E8D5D889F6FA94CBBD61A0582DF35ED66CFC6A1C1FF501EB3B4281A2",
+      "lines": 76,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/System/LyraSignificanceManager.h",
+      "sha256": "6DE521A518652CE84D0A4F76051D167411FD7DD334776E50BD59CF5C3BD1A66F",
+      "lines": 16,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/System/LyraSystemStatics.h",
+      "sha256": "21655536E1AADC18A3AC0B012B59EBE0B81DA2F8EE2EE582732810703F0CCE41",
+      "lines": 49,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Teams/AsyncAction_ObserveTeam.h",
+      "sha256": "35BB2CB237A8D136E24E2B84493FD2E9C4F0F4A2D8EDEDA8D49B6874A63F6CBC",
+      "lines": 51,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Teams/AsyncAction_ObserveTeamColors.h",
+      "sha256": "A5D7FB3603F830978AFB8ABCD794066A85298D0D2D1655F40031A73FF146FADA",
+      "lines": 55,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Teams/LyraTeamAgentInterface.h",
+      "sha256": "E8A814AFD6239714123CC7F368FF2678EEA2619A7ED38CBCD528EFC1075CCCC4",
+      "lines": 50,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Teams/LyraTeamCheats.h",
+      "sha256": "BDF393055FD3B60842A74905688FD6254752770B96CBA50BE9AE440439F40672",
+      "lines": 31,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Teams/LyraTeamCreationComponent.h",
+      "sha256": "6DB749EEA0828B8FCF9A38D6C1D006718ABAD8D56E60A7D48F46A4BFA6F17E8F",
+      "lines": 64,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Teams/LyraTeamDisplayAsset.h",
+      "sha256": "4184D6BCB89DA634328DCCFBF4E348F16986E23EFB22E64C8AB566AF0A808709",
+      "lines": 55,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Teams/LyraTeamInfoBase.h",
+      "sha256": "D8B64108CCA740D0147DDD52A20E46A9FF2489524408B78FEDBED4E7AC0EE0DE",
+      "lines": 51,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Teams/LyraTeamPrivateInfo.h",
+      "sha256": "45BC904502880B3F2888F68D914D55FE3E7182635E23000734AB9E167C66AB3B",
+      "lines": 18,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Teams/LyraTeamPublicInfo.h",
+      "sha256": "D2493A03366F45C84C8A7491B39EA6DAE9804D679CD59E7C4412F8BB8E46EC59",
+      "lines": 35,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Teams/LyraTeamStatics.h",
+      "sha256": "E6F29092B6BB579D5F70F555C4C19A9921937E954364CCE324688427EB3A0A0C",
+      "lines": 37,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Teams/LyraTeamSubsystem.h",
+      "sha256": "8DAC738D6DEBB19E1EA4D64149E54FC3A0360B52F0A5CC50F8D13D33A68EBB94",
+      "lines": 151,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Tests/LyraGameplayRpcRegistrationComponent.h",
+      "sha256": "756B155A30D31E59CE8602565C08387F58F903FE1D3763FC96E875DC2678F2AF",
+      "lines": 64,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Tests/LyraTestControllerBootTest.h",
+      "sha256": "A9F02A17C8D6465A953BF88FE3D02A354046A83BC94B9511566E37A1455CA8E1",
+      "lines": 26,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Tests/LyraTestControllerStartEliminationTest.h",
+      "sha256": "8F14EFE8FC1DE013588B71369D5B8759BD3CC2D574D717EAB50BACF532EB5ED5",
+      "lines": 16,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/Basic/MaterialProgressBar.h",
+      "sha256": "B14631AFF0FF3EA9A06D2394DC147A3589FD8C4852AA0A22A59931F63E51777A",
+      "lines": 146,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/Common/LyraBoundActionButton.h",
+      "sha256": "D65E6896D8A45AEDDF7EBB1E697211ADC48A0602392B0462C97544FA93D20656",
+      "lines": 38,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/Common/LyraListView.h",
+      "sha256": "4F52FB24D66FC9BA5BA8A96888DCDFDCCB2D2675334AFED3E84005DB328748F4",
+      "lines": 36,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/Common/LyraTabButtonBase.h",
+      "sha256": "1D5C0504542BD130991CE94BA155E9841D005E287483FAD794AAE1A9638D9422",
+      "lines": 38,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/Common/LyraTabListWidgetBase.h",
+      "sha256": "F662244B1250F6293E6FD975547ADF9909F0C1A39E9BE59C9047C32CEF6A5ECA",
+      "lines": 132,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/Common/LyraWidgetFactory.h",
+      "sha256": "D07EC7DCA54CCE27D872099533DE4E3F64190501C6A21021A2482BDA77298AEE",
+      "lines": 28,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/Common/LyraWidgetFactory_Class.h",
+      "sha256": "48E4EF8966380B156F1FADA48A77D921AC0C15B23C84DA01737E12B4ED13F25B",
+      "lines": 31,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/Foundation/LyraActionWidget.h",
+      "sha256": "F8FDD8D256F6CC900D4EB1D85A74606F926DE04E80BFFA544E6F0536EE2100C2",
+      "lines": 31,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/Foundation/LyraButtonBase.h",
+      "sha256": "176CE976D17B7AE7D70F321D1B744A135A17BAB67965E8138D3E753939DC5210",
+      "lines": 45,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/Foundation/LyraConfirmationScreen.h",
+      "sha256": "ADA66FAC52B669568187306B0837AC6E93264C7D0DB4A365EEB00D5B35775372",
+      "lines": 59,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/Foundation/LyraControllerDisconnectedScreen.h",
+      "sha256": "A59C4F14C3465EEDB181263B9151E3686C4B3C19A4B8A0FF77D4A41BFF953926",
+      "lines": 67,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/Foundation/LyraLoadingScreenSubsystem.h",
+      "sha256": "BF33BA36718E5E66C4F3822952672534BF96C369F4E743E4CC20C18448AC35A5",
+      "lines": 47,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/Frontend/ApplyFrontendPerfSettingsAction.h",
+      "sha256": "6B4718D3D55D24974046E47190B08FDDFA37576E8F6DB78109FA1511A28E54AE",
+      "lines": 32,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/Frontend/LyraFrontendStateComponent.h",
+      "sha256": "83859A41342A69FDD257BD278E1A41BBF2674E6B5DDBA9B4B1A5CE4FD6939837",
+      "lines": 66,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/Frontend/LyraLobbyBackground.h",
+      "sha256": "548557BD5E4D067F486218D9F9C00D32A5D4AD5CBD695A9782E7FF3A66BD04DF",
+      "lines": 24,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/IndicatorSystem/IActorIndicatorWidget.h",
+      "sha256": "4A8559085DC036BAF7CBC425FC588BC43C8E96FA90059597343504647D09C85C",
+      "lines": 30,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/IndicatorSystem/IndicatorDescriptor.h",
+      "sha256": "CB4273C2366148B38638D9EC69A24104731278675C26625A6CDA5D419A68A25E",
+      "lines": 243,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/IndicatorSystem/IndicatorLayer.h",
+      "sha256": "F426B69E090E758C2F700BA01BCE46914756332D6A508B61C16847BDA690BC69",
+      "lines": 31,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/IndicatorSystem/IndicatorLibrary.h",
+      "sha256": "C43955F41F29803C10256CA0FF48B3051093D113733862A61D74D549FDD0B8D4",
+      "lines": 29,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/IndicatorSystem/LyraIndicatorManagerComponent.h",
+      "sha256": "D15783732CD19B361186AB77E09B26D53D7D30F5D8CB38543C4AF63C8E43F215",
+      "lines": 46,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/IndicatorSystem/SActorCanvas.h",
+      "sha256": "10A22D60F498C250965116FDF41C7337CC2489574772F6E8FF82EE17A1C0500B",
+      "lines": 254,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/LyraActivatableWidget.h",
+      "sha256": "339D75241D0C4AF93FC98B7DE8A8B92FFB46936D95AAA55B632A7F3710BEA684",
+      "lines": 47,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/LyraGameViewportClient.h",
+      "sha256": "688EABECEC476ABEE6771CA9004DA2C4DA2D3C31930E169AC535C44E0EE10766",
+      "lines": 21,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/LyraHUD.h",
+      "sha256": "A5502E74F170D4353AD0FB450875A8C4891CBCE95DBBA91C32C17A10079B352C",
+      "lines": 44,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/LyraHUDLayout.h",
+      "sha256": "28CE7E50B0F5183A7C088B73E4FF04792EC6F04269727940DB86D6E38C721317",
+      "lines": 106,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/LyraJoystickWidget.h",
+      "sha256": "EBCE207DB3DD2587442BB39A9953BCA952EAF8BEC10682C1F22A32835D936F9F",
+      "lines": 80,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/LyraSettingScreen.h",
+      "sha256": "016671B400F1AE5649D50B0151462B370842C519E2FA88E7EE5B0349FAD2C8F5",
+      "lines": 47,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/LyraSimulatedInputWidget.h",
+      "sha256": "34A76B24AAC6CAE97440F8F34629EE2D6E823211BAAFB44DDD9950445C291348",
+      "lines": 97,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/LyraTaggedWidget.h",
+      "sha256": "8B8C7FA27FD5C94A14F0C76DBEA482D46C782239FC71DD2BA534E7D2A3FAD878",
+      "lines": 50,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/LyraTouchRegion.h",
+      "sha256": "4AA1C25AB266B06C83E6C464E39337466D4312944C2837462A56C4092C9BD1A8",
+      "lines": 43,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/PerformanceStats/LyraPerfStatContainerBase.h",
+      "sha256": "09E48F1FF67EED16A9EF7AAB02392C87F11D1CEF8F60A5E148F614413F9CF12D",
+      "lines": 39,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/PerformanceStats/LyraPerfStatWidgetBase.h",
+      "sha256": "FBD8E7AA150F593AFFAEB48E1D7169C595D1BBAFEA5D5CACE2EA2647EDBB14CB",
+      "lines": 194,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/Subsystem/LyraUIManagerSubsystem.h",
+      "sha256": "69BF500EAF8E124448B1DEF2EF4C7341F446DA14F4C9A3C9B5649F48B5FE0DBC",
+      "lines": 30,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/Subsystem/LyraUIMessaging.h",
+      "sha256": "0517FD53352AA7FE5AC169748EFFEF97E71BEFD41E8675C312C81C64BA9B6C8D",
+      "lines": 44,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/Weapons/CircumferenceMarkerWidget.h",
+      "sha256": "29D7B6E224820085A080A526AC4C9022CD074F841F3018E81B20360644C389B1",
+      "lines": 60,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/Weapons/HitMarkerConfirmationWidget.h",
+      "sha256": "4B86EA1D73B91D73C547F78F606DB548C9BBA504A5818305295D6DC565C553DD",
+      "lines": 53,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/Weapons/LyraReticleWidgetBase.h",
+      "sha256": "7F6CFDA2EA5CC54502D3A028B24CCAA22FDF7CFDB8DD83E4EA4BC36511D44AF6",
+      "lines": 49,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/Weapons/LyraWeaponUserInterface.h",
+      "sha256": "E361FACA2901B94400ABD24EEA45C745BEB2E2311C486FD2299D50CF70E39FB7",
+      "lines": 34,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/Weapons/SCircumferenceMarkerWidget.h",
+      "sha256": "DBAF767428F9C664B7A320901859116C3AA17E1C0E266F154A7BC0024583B5B4",
+      "lines": 84,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/UI/Weapons/SHitMarkerConfirmationWidget.h",
+      "sha256": "CD117756F4F18ABEFA39816458C0097F7B797649B055AE34FE1316BBC0A4F017",
+      "lines": 73,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Weapons/InventoryFragment_ReticleConfig.h",
+      "sha256": "5F198334292AF6EEB035B703E8F1620433F07ADFF6AA43A3E3D9D93FDD92A283",
+      "lines": 20,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Weapons/LyraDamageLogDebuggerComponent.h",
+      "sha256": "6D9959E19EEB23B7168FD80D870BF631F6D3AD3CA9BB652564E5C71B5BF2376F",
+      "lines": 47,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Weapons/LyraGameplayAbility_RangedWeapon.h",
+      "sha256": "78780449F5156EAB2F90D25405F1BCA3A0EEDFFEA829DC64F76ADC8EA1D07168",
+      "lines": 123,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Weapons/LyraRangedWeaponInstance.h",
+      "sha256": "5210899D99319A52AF4BA49A931D02A6655BC3728C2F374AB0F824C57B5F520D",
+      "lines": 250,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Weapons/LyraWeaponDebugSettings.h",
+      "sha256": "98B3788515835F75A694681516AC676912497FABE274015B26BD41A24F761DCB",
+      "lines": 38,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Weapons/LyraWeaponInstance.h",
+      "sha256": "E4B8A0DE4596CC2927F27661063810114D7D3AE55954B62D0C20C1F984DB5C21",
+      "lines": 92,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Weapons/LyraWeaponSpawner.h",
+      "sha256": "7E87B951EE3626C4C5F742A94A4FD15C6841FD88B2FF3F3AFE2F127822336BA6",
+      "lines": 118,
+      "kind": "header"
+    },
+    {
+      "path": "Source/LyraGame/Weapons/LyraWeaponStateComponent.h",
+      "sha256": "200BDF690C743620CCFD79F27B3DC9A78F00C92E34AD0E69EDCDB815E82FE8D3",
+      "lines": 92,
+      "kind": "header"
+    },
+    {
+      "path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/TDM_PlayerSpawningManagmentComponent.h",
+      "sha256": "34AFC55F83AF411E5E00D46449BC192EFD63D88196E3785AD74B844C28F5958F",
+      "lines": 31,
+      "kind": "header"
+    },
+    {
+      "path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Public/Accolades/LyraAccoladeDefinition.h",
+      "sha256": "C5B5D7485897FD278BFDF622BC1746D850C566E205B20B53D17F30CD61199A1F",
+      "lines": 75,
+      "kind": "header"
+    },
+    {
+      "path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Public/Accolades/LyraAccoladeHostWidget.h",
+      "sha256": "F59D4EAF76EEC6FF8ADE18706B11A32654514D052C9AC06BC71F6B5F1C0D7E11",
+      "lines": 89,
+      "kind": "header"
+    },
+    {
+      "path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Public/Input/AimAssistInputModifier.h",
+      "sha256": "03F01704A47C9255B2E73D797E23A64898E5F2E22DD8DE7C822EAA7918C4C0CF",
+      "lines": 407,
+      "kind": "header"
+    },
+    {
+      "path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Public/Input/AimAssistTargetComponent.h",
+      "sha256": "FE513B6168955B6DE8568E433B2136478DE97F0020F26B51BB1360F0CE024E06",
+      "lines": 35,
+      "kind": "header"
+    },
+    {
+      "path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Public/Input/AimAssistTargetManagerComponent.h",
+      "sha256": "9C0167AB0BEF137E867A0111768DAC7A6A5547BE1E7E2DAF476A24FC737C026D",
+      "lines": 58,
+      "kind": "header"
+    },
+    {
+      "path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Public/Input/IAimAssistTargetInterface.h",
+      "sha256": "7EDE25984E1F4252E647EC2530AC4B3B2C12173A864D945F35BD4804A6525AE9",
+      "lines": 57,
+      "kind": "header"
+    },
+    {
+      "path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Public/LyraWorldCollectable.h",
+      "sha256": "C0A3F2D2D0D22D7C4475804B23C8E4703AFA1172AE8FD8B210C3532CC0425FD1",
+      "lines": 36,
+      "kind": "header"
+    },
+    {
+      "path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Public/MessageProcessors/AssistProcessor.h",
+      "sha256": "F8DC1D0985B72756668AE1AB9A4A86DC92F5F810D464EE99DE062602A7F7D38F",
+      "lines": 43,
+      "kind": "header"
+    },
+    {
+      "path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Public/MessageProcessors/ElimChainProcessor.h",
+      "sha256": "370E5DC7B47243A8F9AAE7080ECB1408C11E7EEF4108BEB212346CF68AAE0ADA",
+      "lines": 48,
+      "kind": "header"
+    },
+    {
+      "path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Public/MessageProcessors/ElimStreakProcessor.h",
+      "sha256": "FBCA033B2BA19756CEA4218E0391D9577467183E63A902A3783E4347DC09EA36",
+      "lines": 35,
+      "kind": "header"
+    },
+    {
+      "path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Public/Messages/ControlPointStatusMessage.h",
+      "sha256": "0F76B8C76C3472901D26ADFEF9F725E6DFE6669EF45890C5E7D9396EF12CEDC6",
+      "lines": 20,
+      "kind": "header"
+    },
+    {
+      "path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Public/ShooterCoreRuntimeModule.h",
+      "sha256": "BFF11AA5FCBF9B490F3774E5A951B115C839E80011BD8476B615D1D8F4A2E9FC",
+      "lines": 20,
+      "kind": "header"
+    },
+    {
+      "path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Public/ShooterCoreRuntimeSettings.h",
+      "sha256": "B02AD6A55DCBBEFA5BD454D3D0D8FBFCA247AC36AA41025818A3C47380BB04C7",
+      "lines": 31,
+      "kind": "header"
+    },
+    {
+      "path": "Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/ShooterCoreRuntime.Build.cs",
+      "sha256": "43BCAB55E50EC88425754082DCE3C5D898EC74DA6D3546864C24F8F427EB99F5",
+      "lines": 68,
+      "kind": "build_rules"
+    },
+    {
+      "path": "Plugins/GameFeatures/TopDownArena/Source/TopDownArenaRuntime/Private/TopDownArenaAttributeSet.h",
+      "sha256": "B46852A0864BC00B1850463965871C893E4D25EFB46EB286419BBDDCD705FEF8",
+      "lines": 68,
+      "kind": "header"
+    },
+    {
+      "path": "Plugins/GameFeatures/TopDownArena/Source/TopDownArenaRuntime/Private/TopDownArenaMovementComponent.h",
+      "sha256": "FA9C9D37EFF96067A37AF70CA780754F6FF5A925CE745A389F23B20F8194F95B",
+      "lines": 24,
+      "kind": "header"
+    },
+    {
+      "path": "Plugins/GameFeatures/TopDownArena/Source/TopDownArenaRuntime/Private/TopDownArenaPickupUIData.h",
+      "sha256": "AD991F374A340D97EC66BC4DF80669C3970ECECA493409C6DE4C6BEBECE66E9E",
+      "lines": 43,
+      "kind": "header"
+    },
+    {
+      "path": "Plugins/GameFeatures/TopDownArena/Source/TopDownArenaRuntime/Public/LyraCameraMode_TopDownArenaCamera.h",
+      "sha256": "4BDC3474BD3C72D1E822335ED08F3CF11B5F05C0116C1889EEF96AB85A5D031E",
+      "lines": 45,
+      "kind": "header"
+    },
+    {
+      "path": "Plugins/GameFeatures/TopDownArena/Source/TopDownArenaRuntime/Public/TopDownArenaRuntimeModule.h",
+      "sha256": "B4715002B5707FF8F82330158C772971409C4FD5A47794B3FE40D5857E7DB69F",
+      "lines": 14,
+      "kind": "header"
+    },
+    {
+      "path": "Plugins/GameFeatures/TopDownArena/Source/TopDownArenaRuntime/TopDownArenaRuntime.Build.cs",
+      "sha256": "D4757B05071E09E8FDB63AEE26B1996AB62F142B7ED94BFF7C00A6304C759323",
+      "lines": 57,
+      "kind": "build_rules"
+    }
+  ],
+  "excluded_modules": [
+    {
+      "module": "LyraEditor",
+      "reason": "编辑器工具或测试模块，保留原生。",
+      "files": [
+        {
+          "path": "Source/LyraEditor/Commandlets/ContentValidationCommandlet.cpp",
+          "sha256": "961104CA8053EE0530F9DDA29B05A479219E8D7FF45E4FBF403A06F4A885EA2E",
+          "lines": 429
+        },
+        {
+          "path": "Source/LyraEditor/Commandlets/ContentValidationCommandlet.h",
+          "sha256": "4429C6F9FAE9FBE8C8CE84353CB45038371EFD02C3B02D769C668422EC441105",
+          "lines": 35
+        },
+        {
+          "path": "Source/LyraEditor/LyraEditor.Build.cs",
+          "sha256": "D4FBC5C74A3B2F198B2360912FD9B4C725BC6A7DEC699B0784B742B72B37E0DC",
+          "lines": 77
+        },
+        {
+          "path": "Source/LyraEditor/LyraEditor.cpp",
+          "sha256": "75A3F85D443435D7CD7B3AAC513CB40B520591F613BB4DA479445E2C0614265C",
+          "lines": 310
+        },
+        {
+          "path": "Source/LyraEditor/LyraEditor.h",
+          "sha256": "BD0D07F559FFD8F596F62ADFF7E42FCED39BB7C730D5425F9DDCD05FC8F7B749",
+          "lines": 7
+        },
+        {
+          "path": "Source/LyraEditor/LyraEditorEngine.cpp",
+          "sha256": "0182184464A1DF259218E76722DB74DE530CC577F2B6A249F1768214CB388C21",
+          "lines": 85
+        },
+        {
+          "path": "Source/LyraEditor/LyraEditorEngine.h",
+          "sha256": "216F0BD641D83C478974FF787DC80E0A0605AEF06C355A10D40024C53B8CF2CF",
+          "lines": 34
+        },
+        {
+          "path": "Source/LyraEditor/Private/AssetTypeActions_LyraContextEffectsLibrary.cpp",
+          "sha256": "FB8DD64A102E8FF0797D44A8EF17FE8D5A3F412B177EA89CBF710F102324776F",
+          "lines": 16
+        },
+        {
+          "path": "Source/LyraEditor/Private/AssetTypeActions_LyraContextEffectsLibrary.h",
+          "sha256": "A64B56BCAECBECDF1F6BBC348EED00B143A76BC8DC2BD29AEBC5AFCE321D053C",
+          "lines": 18
+        },
+        {
+          "path": "Source/LyraEditor/Private/GameEditorStyle.cpp",
+          "sha256": "F9633D73CBBF7A8CBE9FB2D14F832298941CC03D65E80E19E60475A39AA75ECB",
+          "lines": 69
+        },
+        {
+          "path": "Source/LyraEditor/Private/GameEditorStyle.h",
+          "sha256": "40A47294601ED1B1F851850A8BAA90520D9101ABCA2F64151030FF5932D5BA3F",
+          "lines": 29
+        },
+        {
+          "path": "Source/LyraEditor/Private/LyraContextEffectsLibraryFactory.cpp",
+          "sha256": "958BC50DA51E05309E8151B34A20820A950B2BB6E396DB789409E9A76D4F7C5F",
+          "lines": 28
+        },
+        {
+          "path": "Source/LyraEditor/Private/LyraContextEffectsLibraryFactory.h",
+          "sha256": "A3D663FFA0704A0DDBF72958208940A20C0BAE4B9015F6C08614A745A4A5F19A",
+          "lines": 27
+        },
+        {
+          "path": "Source/LyraEditor/Utilities/CheckChaosMeshCollision.cpp",
+          "sha256": "4619A4BF9890CD76E5B73EC0C199F604AA4B74E41CA920DA815C2024513AD00E",
+          "lines": 89
+        },
+        {
+          "path": "Source/LyraEditor/Utilities/CreateRedirectorPackage.cpp",
+          "sha256": "FA2DEB9653A554A84AC4177CA5A4C44C9AB89414FDD2AB40588E595F2E67E9B2",
+          "lines": 66
+        },
+        {
+          "path": "Source/LyraEditor/Utilities/DiffCollectionReferenceSupport.cpp",
+          "sha256": "A9698C2EE33B06EC1609611C911DEBDFFB80244ED54B68E3531CE5AE4A66DA81",
+          "lines": 169
+        },
+        {
+          "path": "Source/LyraEditor/Validation/EditorValidator.cpp",
+          "sha256": "00F3E57A695EB702D464281F0A28F90A9CBA47CFF448FC38C9F5E81D1725967E",
+          "lines": 499
+        },
+        {
+          "path": "Source/LyraEditor/Validation/EditorValidator.h",
+          "sha256": "D043BDD55EF880A650C8979D2A3600FF8B826037B18CE092321EDD722A6EFCA3",
+          "lines": 108
+        },
+        {
+          "path": "Source/LyraEditor/Validation/EditorValidator_Blueprints.cpp",
+          "sha256": "6DE838DA9D731624697A9708911984393A025A9DF39D66E057F20F0C1A36C8A6",
+          "lines": 118
+        },
+        {
+          "path": "Source/LyraEditor/Validation/EditorValidator_Blueprints.h",
+          "sha256": "26C81508909CB724619DB5EFB3107D72CF1CFD690111D4A92BC0F488A18E635F",
+          "lines": 24
+        },
+        {
+          "path": "Source/LyraEditor/Validation/EditorValidator_Load.cpp",
+          "sha256": "35FE4183E4817AF65ED502ABCBA514F2B5A4C576E4578B29E4FCEAEB33D8D2C4",
+          "lines": 188
+        },
+        {
+          "path": "Source/LyraEditor/Validation/EditorValidator_Load.h",
+          "sha256": "63A1C30E6934BE93D420D70722B30823A475C2949AD7E3ADE986276115FB4EB8",
+          "lines": 31
+        },
+        {
+          "path": "Source/LyraEditor/Validation/EditorValidator_MaterialFunctions.cpp",
+          "sha256": "02A3950CAC590EC6CC818FAF556BDD77A285C0EFC9CC8B54149B7DF91D47A347",
+          "lines": 106
+        },
+        {
+          "path": "Source/LyraEditor/Validation/EditorValidator_MaterialFunctions.h",
+          "sha256": "E115B76ED2FFCB2C15D8F42BCC0BF41558B2C59EDC508A038AC25645546FEC73",
+          "lines": 24
+        },
+        {
+          "path": "Source/LyraEditor/Validation/EditorValidator_SourceControl.cpp",
+          "sha256": "46DCC99C6C5B1A057531FC1A1B07D112F41FABBB73B152EF8F18F7811CBF950D",
+          "lines": 68
+        },
+        {
+          "path": "Source/LyraEditor/Validation/EditorValidator_SourceControl.h",
+          "sha256": "EF39EA3300D68BEC3820954AC486D2C88A11618758AE8D1C4109653D74BD1DC5",
+          "lines": 24
+        }
+      ]
+    },
+    {
+      "module": "ShooterTestsRuntime",
+      "reason": "编辑器工具或测试模块，保留原生。",
+      "files": [
+        {
+          "path": "Plugins/GameFeatures/ShooterTests/Source/ShooterTestsRuntime/Private/ShooterTestAsyncMessageTestActor.cpp",
+          "sha256": "25BD618987CED74733DDE52FFBC353A31438B8865FCD7F7DA6EBCEA1394A4DA2",
+          "lines": 416
+        },
+        {
+          "path": "Plugins/GameFeatures/ShooterTests/Source/ShooterTestsRuntime/Private/ShooterTestAsyncMessageTestActor.h",
+          "sha256": "35B2557F9377E35935B02542A82549503CEB5FE66093D70164D2E1D748467C2D",
+          "lines": 196
+        },
+        {
+          "path": "Plugins/GameFeatures/ShooterTests/Source/ShooterTestsRuntime/Private/ShooterTestsActorAnimationTests.cpp",
+          "sha256": "67F73FC56A1E6591C65704AAC8C01DF2DBEA0256859B3E30E898BEFA5452A85C",
+          "lines": 187
+        },
+        {
+          "path": "Plugins/GameFeatures/ShooterTests/Source/ShooterTestsRuntime/Private/ShooterTestsActorNetworkTests.cpp",
+          "sha256": "EBBD26E26CDBFE907D49DB0DA8DD5D3E6E0A931D8CC1AC278423AC82E0F7D7A7",
+          "lines": 117
+        },
+        {
+          "path": "Plugins/GameFeatures/ShooterTests/Source/ShooterTestsRuntime/Private/ShooterTestsDevicePropertyTester.cpp",
+          "sha256": "D6AFCC320D745144D9117B94D87B6EF3B1AC3C929A2A160F3A0CFC5EA84A039A",
+          "lines": 70
+        },
+        {
+          "path": "Plugins/GameFeatures/ShooterTests/Source/ShooterTestsRuntime/Private/ShooterTestsDevicePropertyTester.h",
+          "sha256": "ECC605AFE415A4445C79E640CE9655687CFFCF931F1CF89A1B1178D95AEC2DFE",
+          "lines": 53
+        },
+        {
+          "path": "Plugins/GameFeatures/ShooterTests/Source/ShooterTestsRuntime/Private/ShooterTestsMapTests.cpp",
+          "sha256": "AC4BB9F253A3D2E6B76720B7CEC5F19793DC9DC8371520C531BF782F9D27485D",
+          "lines": 123
+        },
+        {
+          "path": "Plugins/GameFeatures/ShooterTests/Source/ShooterTestsRuntime/Private/ShooterTestsRuntimeModule.cpp",
+          "sha256": "32F0E960B1356DA975727F3C32522D29988C9B24D22E775D5694C1B69264A3B2",
+          "lines": 15
+        },
+        {
+          "path": "Plugins/GameFeatures/ShooterTests/Source/ShooterTestsRuntime/Private/Utilities/ShooterTestsActorNetworkTest.h",
+          "sha256": "C2F246536B9BBEE7E170E1808085D141D0DDDFF50E167D29FEA696D2A8923325",
+          "lines": 216
+        },
+        {
+          "path": "Plugins/GameFeatures/ShooterTests/Source/ShooterTestsRuntime/Private/Utilities/ShooterTestsActorTest.h",
+          "sha256": "C7EECB1FB2E47D729EC5812EA25F4591465BEFB6086A1CAC16A5681EB792922B",
+          "lines": 219
+        },
+        {
+          "path": "Plugins/GameFeatures/ShooterTests/Source/ShooterTestsRuntime/Private/Utilities/ShooterTestsActorTestHelper.cpp",
+          "sha256": "DBF5F0E46496FFCB1EA9994EE4F0831A99681715568EA94E88C16D6493B645E5",
+          "lines": 72
+        },
+        {
+          "path": "Plugins/GameFeatures/ShooterTests/Source/ShooterTestsRuntime/Private/Utilities/ShooterTestsActorTestHelper.h",
+          "sha256": "BBD4FFF4FB0B81C7A0009766CAC9C5FA2A5CEFC229FB842D4E693094E463774A",
+          "lines": 94
+        },
+        {
+          "path": "Plugins/GameFeatures/ShooterTests/Source/ShooterTestsRuntime/Private/Utilities/ShooterTestsAnimationTestHelper.cpp",
+          "sha256": "B6E95CA199C44530B9585EEA5328085DAF75A65E45EDDE1943D61735549E4E1A",
+          "lines": 98
+        },
+        {
+          "path": "Plugins/GameFeatures/ShooterTests/Source/ShooterTestsRuntime/Private/Utilities/ShooterTestsAnimationTestHelper.h",
+          "sha256": "65853A979CE2DCCC86E107446164A33E2D2C117B80B3846DE42DAE635ACBE518",
+          "lines": 62
+        },
+        {
+          "path": "Plugins/GameFeatures/ShooterTests/Source/ShooterTestsRuntime/Private/Utilities/ShooterTestsInputTestHelper.cpp",
+          "sha256": "30A0C826769D620CA71EC216B505FB94D64C1CADAF02145374242310F96C23DE",
+          "lines": 64
+        },
+        {
+          "path": "Plugins/GameFeatures/ShooterTests/Source/ShooterTestsRuntime/Private/Utilities/ShooterTestsInputTestHelper.h",
+          "sha256": "8EC4BFB06CF1A662470FB54AC3146E7C30451AF93627C5113858DA3A38B0F474",
+          "lines": 169
+        },
+        {
+          "path": "Plugins/GameFeatures/ShooterTests/Source/ShooterTestsRuntime/Private/Utilities/ShooterTestsNetworkComponent.h",
+          "sha256": "B3D41C76EF8E2BD5F8C7C4EAF652FBEB9531C78857E2B5511BC7EE2FB73033B4",
+          "lines": 495
+        },
+        {
+          "path": "Plugins/GameFeatures/ShooterTests/Source/ShooterTestsRuntime/ShooterTestsRuntime.Build.cs",
+          "sha256": "7506FE580B64C5BD29FAB765EC53AF7164A4723EF82B6E891FF2134F55310D3E",
+          "lines": 49
+        }
+      ]
+    }
+  ],
+  "scope_exclusions": [
+    "Engine and general-purpose plugin source",
+    "LyraEditor and ShooterTestsRuntime",
+    "New platforms, Shipping/DebugGame, broader hot reload",
+    "Inactive or empty C++ placeholders are not migrated gameplay"
+  ],
+  "approval_rule": "Wait for the user to confirm candidate scope and order before implementation, native builds, regression execution, commits or pushes. Once approved, complete each bounded batch and push Examples before the core gitlink; do not ask again for routine approved work."
+}
