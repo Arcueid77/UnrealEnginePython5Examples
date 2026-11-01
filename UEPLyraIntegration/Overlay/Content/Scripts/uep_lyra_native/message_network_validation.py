@@ -44,6 +44,15 @@ class Network(Relays):
                 self.boot.append((cls,cls.get_cdo().get_property('PythonMixinProfile')))
                 cls.get_cdo().set_property('PythonMixinProfile',self.team_profile)
             self.report.update(validate_team=True,team_profile=self.team_profile)
+        self.bot_profile=next((v.split('=',1)[1] for v in __import__('sys').argv if v.startswith('-UEPNativeBotProfile=')),None)
+        if self.bot_profile is not None:
+            from . import bot_creation
+            require(self.bot_profile==self.profile,'paired native bot/message profile required')
+            for path in bot_creation.CLASSES:
+                cls=ue.load_class(path);ue.register_declared_mixin(cls)
+                self.boot.append((cls,cls.get_cdo().get_property('PythonMixinProfile')))
+                cls.get_cdo().set_property('PythonMixinProfile',self.bot_profile)
+            self.report.update(validate_bots=True,bot_profile=self.bot_profile)
         atexit.register(self.finalize)
 
     def world_ready(self):
@@ -80,6 +89,15 @@ class Network(Relays):
                 ids=component.get_property('TeamsToCreate')
                 players=[p for p in self.state.get_property('PlayerArray') if valid(p) and p.is_a(ue.find_class('LyraPlayerState')) and not p.get_property('bIsInactive')]
                 self.report['natural_team_populations']={str(team):sum(int(p.call_function('GetTeamId'))==team for p in players) for team in ids}
+        if self.bot_profile is not None:
+            from . import bot_creation
+            cls=ue.load_class(bot_creation.CLASSES[0])
+            natural=[c for c in ue.tobject_iterator(cls) if valid(c) and c.get_world()==self.world and c.call_function('GetOwner')==self.state]
+            self.report['native_bot_component_count']=len(natural)
+            require(len(natural)==(1 if self.peer=='server' else 0),'natural bot authority role differs')
+            if natural:
+                self.report['natural_bot_metrics']=copy.deepcopy(bot_creation.metrics(natural[0]))
+                self.report['natural_bot_count']=len(natural[0].get_property('SpawnedBotList'))
         if self.peer=='server':
             self.report['isolated_bots']=isolate_bots(self.statics,self.world,ue.find_class('AIController'))
             scope=SubscriptionScope();self.scopes.append(scope)

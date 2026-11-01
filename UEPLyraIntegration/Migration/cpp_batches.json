@@ -12,8 +12,8 @@
     "examples": "3e9c68fb10599d292f6e91cc92000d4dedf04086"
   },
   "approved_candidates": 15,
-  "accepted_candidates": 4,
-  "accepted_batches": 2,
+  "accepted_candidates": 6,
+  "accepted_batches": 3,
   "workflow": {
     "regression": "affected incremental checks and actual native/Python comparisons",
     "commit_and_push": "Examples first, then core validation changes and Demos gitlink; verify both remotes",
@@ -47,8 +47,8 @@
         "CPP-005",
         "CPP-006"
       ],
-      "status": "in_progress",
-      "acceptance_ledger": null
+      "status": "accepted",
+      "acceptance_ledger": "NativeGameplay/CPP03-acceptance.json"
     },
     {
       "id": "CPP04",
@@ -56,7 +56,7 @@
         "CPP-007",
         "CPP-008"
       ],
-      "status": "planned",
+      "status": "in_progress",
       "acceptance_ledger": null
     },
     {

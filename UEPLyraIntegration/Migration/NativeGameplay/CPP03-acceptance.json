@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "batch": "CPP03",
+  "candidates": [
+    "CPP-005",
+    "CPP-006"
+  ],
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "new_policy_events": 2,
+  "existing_native_event": "ServerCreateBots",
+  "native_editor_context_accessors": 1,
+  "production_classes": 2,
+  "asset_family_count": 3,
+  "standalone_native_python_differentials": {
+    "TDM": {
+      "status": "passed",
+      "family": "TDM",
+      "native_spawn_name_and_removal": true,
+      "exact_rng_sequence_claim": false,
+      "editor_pie_override_acceptance": false
+    },
+    "CP": {
+      "status": "passed",
+      "family": "CP",
+      "native_spawn_name_and_removal": true,
+      "exact_rng_sequence_claim": false,
+      "editor_pie_override_acceptance": false
+    }
+  },
+  "actual_dedicated_server_and_two_clients": {
+    "NativeFallback": {
+      "status": "passed",
+      "profile": "NativeFallback",
+      "peers": [
+        "server",
+        "A",
+        "B0"
+      ],
+      "actual_damage_and_network": true
+    },
+    "Python": {
+      "status": "passed",
+      "profile": "Python",
+      "peers": [
+        "server",
+        "A",
+        "B0"
+      ],
+      "actual_damage_and_network": true
+    }
+  },
+  "native_controller_spawn_initialization_and_destruction_preserved": true,
+  "native_rng_retained": true,
+  "exact_rng_sequence_claim": false,
+  "editor_pie_override_acceptance": false,
+  "editor_override_ported_with_native_context_reader": true,
+  "native_self_destruct_deaths_per_profile_and_family": 9,
+  "nonempty_python_name_state_teardown_verified": true,
+  "performance_test_class": {
+    "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\CppGameplay\\Stage\\Lyra\\Plugins\\GameFeatures\\ShooterCore\\Content\\Bot\\B_ShooterBotSpawner_Perf.uasset",
+    "sha256": "2539634EBE8B0152485B79FFFFE2C981BAC9CBA13829E33F7BD99AF3B7E7DD1E",
+    "reason": "Original Blueprint scope excludes this performance test; retain its custom ServerCreateBots graph and native fallback."
+  },
+  "affected_cpp01_cpp02_damage_score_notifications_and_team_assignments_passed": true,
+  "compiled_unity_units": [
+    "Module.LyraGame.1.cpp",
+    "Module.LyraGame.2.cpp"
+  ],
+  "reused_unity_units": [
+    "Module.LyraGame.3.cpp (accepted CPP02 stage object)"
+  ],
+  "reusable_native_objects": [
+    {
+      "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\CppGameplay\\Stage\\Lyra\\Intermediate\\Build\\Win64\\x64\\UnrealEditor\\Development\\LyraGame\\Module.LyraGame.1.cpp.obj",
+      "sha256": "582E445A6E6FBCB2E5C1C0F20A34A77B78C3B93EFDAE529CE295E05FD1D26757"
+    },
+    {
+      "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\CppGameplay\\Stage\\Lyra\\Intermediate\\Build\\Win64\\x64\\UnrealEditor\\Development\\LyraGame\\Module.LyraGame.2.cpp.obj",
+      "sha256": "8E0937BCCF780FC92038354EA3A9FE944973E3174AC3E6B88563854D72D58F3B"
+    },
+    {
+      "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\CppGameplay\\Stage\\Lyra\\Intermediate\\Build\\Win64\\x64\\UnrealEditor\\Development\\LyraGame\\Module.LyraGame.3.cpp.obj",
+      "sha256": "A2E1A99372556DC4293599F41F33073DC39E69A17D38479807F5D192C003B253"
+    }
+  ],
+  "official_reference_unchanged": true,
+  "engine_full_compile_executed": false,
+  "cook_package_executed": false,
+  "new_platform_acceptance": false,
+  "full_cpp_migration_acceptance": false,
+  "retained_attempts": [
+    "Inspect01",
+    "Runtime01"
+  ],
+  "retained_notes": [
+    "Runtime01 completed native spawn/name/removal checks but queried a destroyed component during cleanup; Runtime02 retains the Python list before native destruction."
+  ],
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP03/Build01/summary.json",
+      "sha256": "ECCE9CD2D806DD2DF7D94BD3DA54E4F39C1F8F399343BF1F98FE617338C7FD82"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP03/Assets01/summary.json",
+      "sha256": "DA7ADED94047C1CD5602BEB06AA9A2B0B077F34CD1606E326BC51E007306197F"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP03/Runtime02/summary.json",
+      "sha256": "64C8B6811C3946E3554BC69F638C1562D720725BD8871D72F5010842C46479B5"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP03/Network01/summary.json",
+      "sha256": "85AF8196BD87B405DC58D98E2C4D7BC38AE6B6E27904D125063EA98193F26B6E"
+    }
+  ]
+}

@@ -58,3 +58,25 @@ network test. The actual dedicated-server/two-client run uses
 `Run-UEP58NativeMessageNetworkValidation.ps1 -ValidateTeam` with the team asset
 evidence. It verifies eleven natural bot/owner assignments, balanced populations,
 and the affected CPP01 damage, score replication, and notification pipeline.
+
+## CPP03: bot count, names, and removal choice
+
+[CPP03 acceptance](CPP03-acceptance.json) covers the normal and control-point bot
+spawners. Python handles effective count, remaining name selection, fallback
+names, and the random removal index. Native code still creates controllers,
+initializes players, restarts Pawns, applies self-destruct damage, and destroys
+controllers. Random selection calls the native RNG. The performance test spawner
+retains its custom Blueprint creation graph and native fallback, as in the
+original Blueprint test-tooling exclusion.
+
+Use the main repository's `Run-UEP58NativeBotBuild.ps1`,
+`Run-UEP58NativeBotAuthoring.ps1`, and `Run-UEP58NativeBotValidation.ps1` entry
+points. The compile rebuilds LyraGame units 1/2 and reuses the accepted CPP02 team
+object in unit 3. Native/Python runs for both production families verify missing
+controller configuration, default and URL count precedence, zero/negative counts,
+name exhaustion, nine native removals/deaths, and nonempty Python state teardown.
+No exact RNG sequence or separate PIE editor-override acceptance is claimed.
+
+The actual three-peer run adds `-ValidateBots` and the bot asset evidence to
+`Run-UEP58NativeMessageNetworkValidation.ps1`. It verifies nine naturally created
+and named bots, plus the affected CPP01 and CPP02 damage/notification/team gates.
