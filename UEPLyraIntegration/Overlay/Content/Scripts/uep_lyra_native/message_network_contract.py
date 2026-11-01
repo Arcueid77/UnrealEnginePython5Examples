@@ -32,6 +32,14 @@ def validate(r):
             metrics=r['natural_bot_metrics']
             require(r['natural_bot_count']==9 and metrics[selected+'create']==1 and metrics[selected+'name']==9 and metrics[selected+'remove']==0,'natural bot count/name rules bypassed selected profile')
             require(all(metrics[other+k]==0 for k in ('create','name','remove')),'wrong natural bot policy executed')
+    if r.get('validate_spawning'):
+        require(r['spawning_profile']==r['profile'],'native spawning profile differs')
+        require(r['native_spawning_component_count']==(1 if r['peer']=='server' else 0),'spawning authority role differs')
+        if r['peer']=='server':
+            selected='python_' if r['profile']=='Python' else 'native_';other='native_' if selected=='python_' else 'python_'
+            metrics=r['natural_spawning_metrics']
+            require(metrics[selected+'choose']>=11 and metrics[selected+'tdm']>=11,'ordinary native player restart/choose did not enter selected policy')
+            require(metrics[other+'choose']==metrics[other+'tdm']==0,'wrong natural spawning policy executed')
     if r['peer']=='server':
         require(r['server_waited_for_client_process_exit'],'authority exited before actual client exits')
         require(r['native_processor_counts']==dict(streak=1,chain=1,assist=1),'natural authority processors required')

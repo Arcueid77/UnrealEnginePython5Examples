@@ -1,0 +1,142 @@
+--- a/Source/LyraGame/Player/LyraPlayerSpawningManagerComponent.h
++++ b/Source/LyraGame/Player/LyraPlayerSpawningManagerComponent.h
+@@ -32,6 +32,22 @@
+ 	/** ~UActorComponent */
+ 
+ protected:
++	UFUNCTION(BlueprintNativeEvent, Category="UEP|NativeGameplay")
++	UE_API AActor* UEPChooseFromStarts(AController* Player, const TArray<ALyraPlayerStart*>& StarterPoints);
++
++	UFUNCTION(BlueprintCallable, Category="UEP|NativeGameplay")
++	AActor* UEPChooseSpecificStart(AController* Player, const TArray<ALyraPlayerStart*>& StarterPoints);
++
++	UFUNCTION(BlueprintPure, Category="UEP|NativeGameplay")
++	int32 UEPGetStartOccupancy(ALyraPlayerStart* Start, AController* Player) const;
++
++	UFUNCTION(BlueprintPure, Category="UEP|NativeGameplay")
++	bool UEPIsStartClaimed(ALyraPlayerStart* Start) const;
++
++	UFUNCTION(BlueprintCallable, Category="UEP|NativeGameplay")
++	bool UEPTryClaimStart(ALyraPlayerStart* Start, AController* Player);
++
++protected:
+ 	// Utility
+ 	UE_API APlayerStart* GetFirstRandomUnoccupiedPlayerStart(AController* Controller, const TArray<ALyraPlayerStart*>& FoundStartPoints) const;
+ 	
+--- a/Source/LyraGame/Player/LyraPlayerSpawningManagerComponent.cpp
++++ b/Source/LyraGame/Player/LyraPlayerSpawningManagerComponent.cpp
+@@ -92,36 +92,63 @@
+ 			}
+ 		}
+ 
+-		if (APlayerState* PlayerState = Player->GetPlayerState<APlayerState>())
+-		{
+-			// start dedicated spectators at any random starting location, but they do not claim it
+-			if (PlayerState->IsOnlyASpectator())
+-			{
+-				if (!StarterPoints.IsEmpty())
+-				{
+-					return StarterPoints[FMath::RandRange(0, StarterPoints.Num() - 1)];
+-				}
+-
+-				return nullptr;
+-			}
+-		}
+-
+-		AActor* PlayerStart = OnChoosePlayerStart(Player, StarterPoints);
+-
+-		if (!PlayerStart)
+-		{
+-			PlayerStart = GetFirstRandomUnoccupiedPlayerStart(Player, StarterPoints);
+-		}
+-
+-		if (ALyraPlayerStart* LyraStart = Cast<ALyraPlayerStart>(PlayerStart))
+-		{
+-			LyraStart->TryClaim(Player);
+-		}
+-
+-		return PlayerStart;
++		return UEPChooseFromStarts(Player, StarterPoints);
+ 	}
+ 
+ 	return nullptr;
++}
++
++AActor* ULyraPlayerSpawningManagerComponent::UEPChooseFromStarts_Implementation(AController* Player, const TArray<ALyraPlayerStart*>& CandidatePoints)
++{
++	TArray<ALyraPlayerStart*> StarterPoints = CandidatePoints;
++	if (APlayerState* PlayerState = Player->GetPlayerState<APlayerState>())
++	{
++		// start dedicated spectators at any random starting location, but they do not claim it
++		if (PlayerState->IsOnlyASpectator())
++		{
++			if (!StarterPoints.IsEmpty())
++			{
++				return StarterPoints[FMath::RandRange(0, StarterPoints.Num() - 1)];
++			}
++
++			return nullptr;
++		}
++	}
++
++	AActor* PlayerStart = OnChoosePlayerStart(Player, StarterPoints);
++
++	if (!PlayerStart)
++	{
++		PlayerStart = GetFirstRandomUnoccupiedPlayerStart(Player, StarterPoints);
++	}
++
++	if (ALyraPlayerStart* LyraStart = Cast<ALyraPlayerStart>(PlayerStart))
++	{
++		LyraStart->TryClaim(Player);
++	}
++
++	return PlayerStart;
++}
++
++AActor* ULyraPlayerSpawningManagerComponent::UEPChooseSpecificStart(AController* Player, const TArray<ALyraPlayerStart*>& StarterPoints)
++{
++	TArray<ALyraPlayerStart*> MutableStarts = StarterPoints;
++	return OnChoosePlayerStart(Player, MutableStarts);
++}
++
++int32 ULyraPlayerSpawningManagerComponent::UEPGetStartOccupancy(ALyraPlayerStart* Start, AController* Player) const
++{
++	return Start ? static_cast<int32>(Start->GetLocationOccupancy(Player)) : static_cast<int32>(ELyraPlayerStartLocationOccupancy::Full);
++}
++
++bool ULyraPlayerSpawningManagerComponent::UEPIsStartClaimed(ALyraPlayerStart* Start) const
++{
++	return Start && Start->IsClaimed();
++}
++
++bool ULyraPlayerSpawningManagerComponent::UEPTryClaimStart(ALyraPlayerStart* Start, AController* Player)
++{
++	return Start && Start->TryClaim(Player);
+ }
+ 
+ #if WITH_EDITOR
+--- a/Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/TDM_PlayerSpawningManagmentComponent.h
++++ b/Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/TDM_PlayerSpawningManagmentComponent.h
+@@ -27,5 +27,7 @@
+ 	virtual void OnFinishRestartPlayer(AController* Player, const FRotator& StartRotation) override;
+ 
+ protected:
++	UFUNCTION(BlueprintNativeEvent, Category="UEP|NativeGameplay")
++	AActor* UEPChooseTDMStart(AController* Player, const TArray<ALyraPlayerStart*>& PlayerStarts);
+ 
+ };
+--- a/Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/TDM_PlayerSpawningManagmentComponent.cpp
++++ b/Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/TDM_PlayerSpawningManagmentComponent.cpp
+@@ -18,6 +18,11 @@
+ }
+ 
+ AActor* UTDM_PlayerSpawningManagmentComponent::OnChoosePlayerStart(AController* Player, TArray<ALyraPlayerStart*>& PlayerStarts)
++{
++	return UEPChooseTDMStart(Player, PlayerStarts);
++}
++
++AActor* UTDM_PlayerSpawningManagmentComponent::UEPChooseTDMStart_Implementation(AController* Player, const TArray<ALyraPlayerStart*>& PlayerStarts)
+ {
+ 	ULyraTeamSubsystem* TeamSubsystem = GetWorld()->GetSubsystem<ULyraTeamSubsystem>();
+ 	if (!ensure(TeamSubsystem))

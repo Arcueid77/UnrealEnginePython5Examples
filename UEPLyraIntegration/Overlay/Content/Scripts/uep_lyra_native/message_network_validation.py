@@ -53,6 +53,14 @@ class Network(Relays):
                 self.boot.append((cls,cls.get_cdo().get_property('PythonMixinProfile')))
                 cls.get_cdo().set_property('PythonMixinProfile',self.bot_profile)
             self.report.update(validate_bots=True,bot_profile=self.bot_profile)
+        self.spawning_profile=next((v.split('=',1)[1] for v in __import__('sys').argv if v.startswith('-UEPNativeSpawnProfile=')),None)
+        if self.spawning_profile is not None:
+            from . import spawning
+            require(self.spawning_profile==self.profile,'paired native spawning/message profile required')
+            cls=ue.load_class(spawning.CLASS);ue.register_declared_mixin(cls)
+            self.boot.append((cls,cls.get_cdo().get_property('PythonMixinProfile')))
+            cls.get_cdo().set_property('PythonMixinProfile',self.spawning_profile)
+            self.report.update(validate_spawning=True,spawning_profile=self.spawning_profile)
         atexit.register(self.finalize)
 
     def world_ready(self):
@@ -98,6 +106,13 @@ class Network(Relays):
             if natural:
                 self.report['natural_bot_metrics']=copy.deepcopy(bot_creation.metrics(natural[0]))
                 self.report['natural_bot_count']=len(natural[0].get_property('SpawnedBotList'))
+        if self.spawning_profile is not None:
+            from . import spawning
+            cls=ue.load_class(spawning.CLASS)
+            natural=[c for c in ue.tobject_iterator(cls) if valid(c) and c.get_world()==self.world and c.call_function('GetOwner')==self.state]
+            self.report['native_spawning_component_count']=len(natural)
+            require(len(natural)==(1 if self.peer=='server' else 0),'natural spawning authority role differs')
+            if natural:self.report['natural_spawning_metrics']=copy.deepcopy(spawning.metrics(natural[0]))
         if self.peer=='server':
             self.report['isolated_bots']=isolate_bots(self.statics,self.world,ue.find_class('AIController'))
             scope=SubscriptionScope();self.scopes.append(scope)

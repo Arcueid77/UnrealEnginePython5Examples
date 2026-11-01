@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "batch": "CPP04",
+  "candidates": [
+    "CPP-007",
+    "CPP-008"
+  ],
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "policy_events": 2,
+  "native_specific_query_occupancy_and_claim_helpers": 4,
+  "asset_family_count": 2,
+  "native_python_geometry_claim_and_restart_differential": {
+    "status": "passed",
+    "policy_cases": 11,
+    "native_occupancy_claims_and_restart": true,
+    "exact_rng_sequence_claim": false
+  },
+  "actual_dedicated_server_and_two_clients": {
+    "NativeFallback": {
+      "status": "passed",
+      "profile": "NativeFallback",
+      "peers": [
+        "server",
+        "A",
+        "B0"
+      ],
+      "actual_damage_and_network": true
+    },
+    "Python": {
+      "status": "passed",
+      "profile": "Python",
+      "peers": [
+        "server",
+        "A",
+        "B0"
+      ],
+      "actual_damage_and_network": true
+    }
+  },
+  "native_cached_starts_and_pie_preference_preserved": true,
+  "private_cache_not_written": true,
+  "actual_native_occupancy_states": {
+    "empty": 0,
+    "partial": 1,
+    "full": 2
+  },
+  "actual_native_restart_entered_python": true,
+  "native_claim_and_expiration_timer_preserved": true,
+  "native_rng_retained": true,
+  "exact_rng_sequence_claim": false,
+  "affected_cpp01_cpp02_cpp03_damage_notifications_team_and_bot_gates_passed": true,
+  "compiled_unity_units": {
+    "LyraGame": [
+      "Module.LyraGame.1.cpp",
+      "Module.LyraGame.2.cpp"
+    ],
+    "ShooterCoreRuntime": [
+      "Module.ShooterCoreRuntime.cpp"
+    ]
+  },
+  "reused_unity_units": [
+    "Module.LyraGame.3.cpp (accepted CPP02 stage object)"
+  ],
+  "reusable_native_objects": [
+    {
+      "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\CppGameplay\\Stage\\Lyra\\Intermediate\\Build\\Win64\\x64\\UnrealEditor\\Development\\LyraGame\\Module.LyraGame.1.cpp.obj",
+      "sha256": "8F844A15D8F0FA8B641E3BBDEB3D52881E9C7B641AA787599D7DF2CF4E94ED3B"
+    },
+    {
+      "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\CppGameplay\\Stage\\Lyra\\Intermediate\\Build\\Win64\\x64\\UnrealEditor\\Development\\LyraGame\\Module.LyraGame.2.cpp.obj",
+      "sha256": "D15083BAB57D90A7E64F10F9CAB1861B02631E2E5FB5A559B0FF0699E1934E48"
+    },
+    {
+      "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\CppGameplay\\Stage\\Lyra\\Intermediate\\Build\\Win64\\x64\\UnrealEditor\\Development\\LyraGame\\Module.LyraGame.3.cpp.obj",
+      "sha256": "A2E1A99372556DC4293599F41F33073DC39E69A17D38479807F5D192C003B253"
+    }
+  ],
+  "official_reference_unchanged": true,
+  "engine_full_compile_executed": false,
+  "cook_package_executed": false,
+  "new_platform_acceptance": false,
+  "full_cpp_migration_acceptance": false,
+  "retained_attempts": [
+    "Build01",
+    "Runtime01"
+  ],
+  "retained_notes": [
+    "Build01 lacked the MinimalAPI base event export; Build02 exports the implementation for the derived module.",
+    "Runtime01 returned the native const-array output tuple as an actor; Runtime02 explicitly extracts ReturnValue using the existing output ABI helper."
+  ],
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP04/Build02/summary.json",
+      "sha256": "C2E6602DB8FC7DF7AF816A1F268B80CAA9067A29565B754AF1135264F6152CD8"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP04/Assets01/summary.json",
+      "sha256": "0D5569C7F90B98442574F0185C92BF836BC9FD9B8356ECF3F78D5EE9C18DEB0C"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP04/Runtime02/summary.json",
+      "sha256": "D793E4017861ECA8CA8CAD1F1718B1EF04E6E79610A842555F27AE1D79919389"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP04/Network01/summary.json",
+      "sha256": "944E475CC1D8038972C398FBE4256C3C44470546AFDCB22A9172D0991D7C388F"
+    }
+  ]
+}
