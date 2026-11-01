@@ -19,6 +19,16 @@ from .message_network_contract import EXPECTED,validate,require
 DAMAGE='/Game/GameplayEffects/Damage/GE_Damage_Basic_SetByCaller.GE_Damage_Basic_SetByCaller_C'
 
 
+def objects_in_world(cls,world):
+    for obj in ue.tobject_iterator(cls):
+        if not valid(obj):continue
+        try:same=obj.get_world()==world
+        except Exception as exc:
+            if str(exc)!='unable to retrieve UWorld from uobject':raise
+            continue
+        if same:yield obj
+
+
 class Network(Relays):
     attribute_health=Lethal.attribute_health
 
@@ -61,6 +71,16 @@ class Network(Relays):
             self.boot.append((cls,cls.get_cdo().get_property('PythonMixinProfile')))
             cls.get_cdo().set_property('PythonMixinProfile',self.spawning_profile)
             self.report.update(validate_spawning=True,spawning_profile=self.spawning_profile)
+        self.accolade_profile=next((v.split('=',1)[1] for v in __import__('sys').argv if v.startswith('-UEPNativeAccoladeProfile=')),None)
+        if self.accolade_profile is not None:
+            from . import accolades
+            require(self.accolade_profile==self.profile,'paired native accolade/message profile required')
+            self.accolade_cls=ue.load_class(accolades.CLASS);self.accolade_class_was_rooted=self.accolade_cls.is_rooted()
+            if not self.accolade_class_was_rooted:self.accolade_cls.add_to_root()
+            ue.register_declared_mixin(self.accolade_cls)
+            self.boot.append((self.accolade_cls,self.accolade_cls.get_cdo().get_property('PythonMixinProfile')))
+            self.accolade_cls.get_cdo().set_property('PythonMixinProfile',self.accolade_profile)
+            self.report.update(validate_accolades=True,accolade_profile=self.accolade_profile)
         atexit.register(self.finalize)
 
     def world_ready(self):
@@ -71,10 +91,26 @@ class Network(Relays):
             for world in ue.all_worlds():
                 if world.get_world_type() in (1,3,5) and 'L_Expanse' in world.get_name():
                     isolate_bots(self.statics,world,ue.find_class('AIController'))
-        return super().world_ready()
+        ready=super().world_ready()
+        return ready
 
     def setup(self):
         super().setup()
+        if self.accolade_profile is not None:
+            self.report['natural_accolade_host_count']=sum(1 for w in objects_in_world(self.accolade_cls,self.world))
+            self.report['fixture_accolade_host_count']=0
+            if self.peer!='server':
+                from . import accolades
+                from uep_lyra_hud.accolade_widgets_mixin import evidence
+                hosts=[w for w in objects_in_world(self.accolade_cls,self.world) if w.call_function('GetOwningPlayer')==self.controller]
+                require(len(hosts)<=1,'multiple natural owner accolade hosts')
+                self.owns_accolade_fixture=not hosts
+                if not hosts:
+                    host=ue.find_class('WidgetBlueprintLibrary').get_cdo().call_function('Create',self.world,self.accolade_cls,self.controller);host.add_to_root();ue.set_mixin_profile(host,self.profile);host.call_function('AddToPlayerScreen',0);hosts=[host]
+                    self.report['fixture_accolade_host_count']=1
+                self.accolade_host=hosts[0]
+                require(str(ue.get_mixin_profile(self.accolade_host))==self.profile,'natural accolade host profile differs')
+                self.accolade_before=copy.deepcopy(accolades.metrics(self.accolade_host));self.presentation_before=copy.deepcopy(evidence(self.accolade_host))
         counts={}
         for kind,path in policy.CLASSES.items():
             cls=ue.load_class(path)
@@ -231,7 +267,16 @@ class Network(Relays):
             if not hasattr(self,'fired_at'):self.fired_at=time.monotonic()
             row=self.record();self.report['pending_result']=row
             ready=row['stat_delta']==EXPECTED and len(row['kill_notifications'])==5 and len(row['award_messages'])==(4 if self.peer=='A' else 0)
-            require(time.monotonic()-self.fired_at<15.,'actual replicated score/owner notifications missing')
+            require(time.monotonic()-self.fired_at<(35. if self.accolade_profile is not None else 15.),'actual replicated score/owner notifications missing')
+            if self.accolade_profile is not None:
+                from . import accolades
+                from uep_lyra_hud.accolade_widgets_mixin import evidence
+                metrics=accolades.metrics(self.accolade_host);presentation=evidence(self.accolade_host);prefix='python_' if self.profile=='Python' else 'native_';other='native_' if prefix=='python_' else 'python_'
+                delta={k:v-self.accolade_before[k] for k,v in metrics.items()};expected_rows=4 if self.peer=='A' else 0
+                empty=not self.accolade_host.get_property(accolades.LOADS) and not self.accolade_host.get_property(accolades.DISPLAYS)
+                creates=presentation['python_create']-self.presentation_before['python_create'];destroys=presentation['python_destroy']-self.presentation_before['python_destroy']
+                ready=ready and delta[prefix+'row']==expected_rows and delta[prefix+'process']==expected_rows and empty and (creates>=1 and destroys>=1 if expected_rows else creates==destroys==0)
+                self.report['accolade_result']=dict(metrics=delta,queues_empty=empty,presentation_creates=creates,presentation_destroys=destroys)
             if not ready:return
             self.report['result']=row;atomic_write(self.root/(self.peer+'-native-rules-observed.json'),dict(run_id=self.run))
             self.cleanup();self.report['status']='awaiting_release';atomic_write(self.root/('ready-'+self.peer+'.json'),dict(run_id=self.run));self.stage='release'
@@ -239,9 +284,16 @@ class Network(Relays):
 
     def cleanup(self):
         if getattr(self,'cleanup_done',False):return
+        if getattr(self,'owns_accolade_fixture',False):
+            host=self.accolade_host
+            host.call_function('RemoveFromParent');host.remove_from_root()
+            self.report['accolade_fixture_removed_and_unrooted']=not host.is_rooted() and not host.call_function('IsInViewport')
         super().cleanup()
         for cls,previous in self.boot:cls.get_cdo().set_property('PythonMixinProfile',previous)
         self.report['selectors_restored']=all(cls.get_cdo().get_property('PythonMixinProfile')==previous for cls,previous in self.boot)
+        if self.accolade_profile is not None:
+            if not self.accolade_class_was_rooted:self.accolade_cls.remove_from_root()
+            self.report['accolade_class_root_restored']=self.accolade_cls.is_rooted()==self.accolade_class_was_rooted
         self.report['relay_profiles_restored']=self.report['profile_classes_restored'] and self.report['profile_overrides_cleared']
         self.report.pop('original_scores_restored',None)
 

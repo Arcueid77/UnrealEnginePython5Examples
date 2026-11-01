@@ -1,0 +1,248 @@
+--- a/Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Public/Accolades/LyraAccoladeHostWidget.h
++++ b/Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Public/Accolades/LyraAccoladeHostWidget.h
+@@ -32,8 +32,10 @@
+ 	UPROPERTY()
+ 	TObjectPtr<UUserWidget> AllocatedWidget = nullptr;
+ 
++	UPROPERTY(Transient, BlueprintReadOnly)
+ 	int32 SequenceID = 0;
+ 
++	UPROPERTY(Transient, BlueprintReadOnly)
+ 	bool bFinishedLoading = false;
+ 
+ 	void CancelDisplay();
+@@ -65,8 +67,13 @@
+ private:
+ 	FGameplayMessageListenerHandle ListenerHandle;
+ 
++	UPROPERTY(Transient)
+ 	int32 NextDisplaySequenceID = 0;
++	UPROPERTY(Transient)
+ 	int32 AllocatedSequenceID = 0;
++
++	int32 UEPLifetimeGeneration = 0;
++	bool bUEPAcceptingNotifications = false;
+ 
+ 	FTimerHandle NextTimeToReconsiderHandle;
+ 
+@@ -79,11 +86,37 @@
+ 	TArray<FPendingAccoladeEntry> PendingAccoladeDisplays;
+ 
+ 
++	void OnRegistryLoadCompleted(const FDataRegistryAcquireResult& AccoladeHandle, int32 SequenceID, int32 LifetimeGeneration);
++
++public:
++	UFUNCTION(BlueprintNativeEvent)
+ 	void OnNotificationMessage(FGameplayTag Channel, const FLyraNotificationMessage& Notification);
+-	void OnRegistryLoadCompleted(const FDataRegistryAcquireResult& AccoladeHandle, int32 SequenceID);
+ 
++	UFUNCTION(BlueprintNativeEvent)
++	void UEPQueueAccoladeRow(const FLyraAccoladeDefinitionRow& Row, int32 SequenceID);
++
++	UFUNCTION(BlueprintNativeEvent)
+ 	void ConsiderLoadedAccolades();
++
++	UFUNCTION(BlueprintNativeEvent)
+ 	void PopDisplayedAccolade();
++
++	UFUNCTION(BlueprintNativeEvent)
+ 	void ProcessLoadedAccolade(const FPendingAccoladeEntry& Entry);
++
++	UFUNCTION(BlueprintNativeEvent)
+ 	void DisplayNextAccolade();
++
++	UFUNCTION(BlueprintNativeEvent)
++	void UEPClearAccoladeState();
++
++	// Native registry/async/timer facilities retain their object ownership.
++	UFUNCTION(BlueprintCallable)
++	bool UEPRequestAccoladeRow(FGameplayTag PayloadTag, int32 SequenceID);
++
++	UFUNCTION(BlueprintCallable)
++	void UEPStartAccoladeAssetLoad(int32 SequenceID);
++
++	UFUNCTION(BlueprintCallable)
++	void UEPScheduleAccoladePop(float Duration);
+ };
+--- a/Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/Accolades/LyraAccoladeHostWidget.cpp
++++ b/Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/Accolades/LyraAccoladeHostWidget.cpp
+@@ -18,6 +18,8 @@
+ 
+ void ULyraAccoladeHostWidget::NativeConstruct()
+ {
++	++UEPLifetimeGeneration;
++	bUEPAcceptingNotifications = true;
+ 	Super::NativeConstruct();
+ 
+ 	UGameplayMessageSubsystem& MessageSubsystem = UGameplayMessageSubsystem::Get(this);
+@@ -26,15 +28,22 @@
+ 
+ void ULyraAccoladeHostWidget::NativeDestruct()
+ {
++	bUEPAcceptingNotifications = false;
++	++UEPLifetimeGeneration;
+ 	UGameplayMessageSubsystem& MessageSubsystem = UGameplayMessageSubsystem::Get(this);
+ 	MessageSubsystem.UnregisterListener(ListenerHandle);
+ 
+ 	CancelAsyncLoading();
++	if (UWorld* World = GetWorld())
++	{
++		World->GetTimerManager().ClearTimer(NextTimeToReconsiderHandle);
++	}
++	UEPClearAccoladeState();
+ 
+ 	Super::NativeDestruct();
+ }
+ 
+-void ULyraAccoladeHostWidget::OnNotificationMessage(FGameplayTag Channel, const FLyraNotificationMessage& Notification)
++void ULyraAccoladeHostWidget::OnNotificationMessage_Implementation(FGameplayTag Channel, const FLyraNotificationMessage& Notification)
+ {
+ 	if (Notification.TargetChannel == TAG_Lyra_ShooterGame_Accolade)
+ 	{
+@@ -52,38 +61,22 @@
+ 		const int32 NextID = AllocatedSequenceID;
+ 		++AllocatedSequenceID;
+ 
+-		FDataRegistryId ItemID(NAME_AccoladeRegistryID, Notification.PayloadTag.GetTagName());
+-		if (!UDataRegistrySubsystem::Get()->AcquireItem(ItemID, FDataRegistryItemAcquiredCallback::CreateUObject(this, &ThisClass::OnRegistryLoadCompleted, NextID)))
+-		{
+-			UE_LOG(LogLyra, Error, TEXT("Failed to find accolade registry for tag %s, accolades will not appear"), *Notification.PayloadTag.GetTagName().ToString());
++		if (!UEPRequestAccoladeRow(Notification.PayloadTag, NextID))
++		{
+ 			--AllocatedSequenceID;
+ 		}
+ 	}
+ }
+ 
+-void ULyraAccoladeHostWidget::OnRegistryLoadCompleted(const FDataRegistryAcquireResult& AccoladeHandle, int32 SequenceID)
+-{
++void ULyraAccoladeHostWidget::OnRegistryLoadCompleted(const FDataRegistryAcquireResult& AccoladeHandle, int32 SequenceID, int32 LifetimeGeneration)
++{
++	if (!bUEPAcceptingNotifications || LifetimeGeneration != UEPLifetimeGeneration)
++	{
++		return;
++	}
+ 	if (const FLyraAccoladeDefinitionRow* AccoladeRow = AccoladeHandle.GetItem<FLyraAccoladeDefinitionRow>())
+ 	{
+-		FPendingAccoladeEntry& PendingEntry = PendingAccoladeLoads.AddDefaulted_GetRef();
+-		PendingEntry.Row = *AccoladeRow;
+-		PendingEntry.SequenceID = SequenceID;
+-
+-		TArray<FSoftObjectPath> AssetsToLoad;
+-		AssetsToLoad.Add(AccoladeRow->Sound.ToSoftObjectPath());
+-		AssetsToLoad.Add(AccoladeRow->Icon.ToSoftObjectPath());
+-		AsyncLoad(AssetsToLoad, [this, SequenceID]
+-		{
+-			FPendingAccoladeEntry* EntryThatFinishedLoading = PendingAccoladeLoads.FindByPredicate([SequenceID](const FPendingAccoladeEntry& Entry) { return Entry.SequenceID == SequenceID; });
+-			if (ensure(EntryThatFinishedLoading))
+-			{
+-				EntryThatFinishedLoading->Sound = EntryThatFinishedLoading->Row.Sound.Get();
+-				EntryThatFinishedLoading->Icon = EntryThatFinishedLoading->Row.Icon.Get();
+-				EntryThatFinishedLoading->bFinishedLoading = true;
+-				ConsiderLoadedAccolades();
+-			}
+-		});
+-		StartAsyncLoading();
++		UEPQueueAccoladeRow(*AccoladeRow, SequenceID);
+ 	}
+ 	else
+ 	{
+@@ -91,7 +84,7 @@
+ 	}
+ }
+ 
+-void ULyraAccoladeHostWidget::ConsiderLoadedAccolades()
++void ULyraAccoladeHostWidget::ConsiderLoadedAccolades_Implementation()
+ {
+ 	int32 PendingIndexToDisplay;
+ 	do
+@@ -108,7 +101,7 @@
+ 	} while (PendingIndexToDisplay != INDEX_NONE);
+ }
+ 
+-void ULyraAccoladeHostWidget::ProcessLoadedAccolade(const FPendingAccoladeEntry& Entry)
++void ULyraAccoladeHostWidget::ProcessLoadedAccolade_Implementation(const FPendingAccoladeEntry& Entry)
+ {
+ 	if (Entry.Row.LocationTag == LocationName)
+ 	{
+@@ -139,7 +132,7 @@
+ 	}
+ }
+ 
+-void ULyraAccoladeHostWidget::DisplayNextAccolade()
++void ULyraAccoladeHostWidget::DisplayNextAccolade_Implementation()
+ {
+ 	if (PendingAccoladeDisplays.Num() > 0)
+ 	{
+@@ -150,7 +143,7 @@
+ 	}
+ }
+ 
+-void ULyraAccoladeHostWidget::PopDisplayedAccolade()
++void ULyraAccoladeHostWidget::PopDisplayedAccolade_Implementation()
+ {
+ 	if (PendingAccoladeDisplays.Num() > 0)
+ 	{
+@@ -164,3 +157,62 @@
+ 	DisplayNextAccolade();
+ }
+ 
++
++bool ULyraAccoladeHostWidget::UEPRequestAccoladeRow(FGameplayTag PayloadTag, int32 SequenceID)
++{
++	FDataRegistryId ItemID(NAME_AccoladeRegistryID, PayloadTag.GetTagName());
++	if (!UDataRegistrySubsystem::Get()->AcquireItem(ItemID, FDataRegistryItemAcquiredCallback::CreateUObject(this, &ThisClass::OnRegistryLoadCompleted, SequenceID, UEPLifetimeGeneration)))
++	{
++		UE_LOG(LogLyra, Error, TEXT("Failed to find accolade registry for tag %s, accolades will not appear"), *PayloadTag.GetTagName().ToString());
++		return false;
++	}
++	return true;
++}
++
++void ULyraAccoladeHostWidget::UEPQueueAccoladeRow_Implementation(const FLyraAccoladeDefinitionRow& Row, int32 SequenceID)
++{
++	FPendingAccoladeEntry& Entry = PendingAccoladeLoads.AddDefaulted_GetRef();
++	Entry.Row = Row;
++	Entry.SequenceID = SequenceID;
++	UEPStartAccoladeAssetLoad(SequenceID);
++}
++
++void ULyraAccoladeHostWidget::UEPStartAccoladeAssetLoad(int32 SequenceID)
++{
++	const FPendingAccoladeEntry* Entry = PendingAccoladeLoads.FindByPredicate([SequenceID](const FPendingAccoladeEntry& Candidate) { return Candidate.SequenceID == SequenceID; });
++	if (!ensure(Entry)) { return; }
++	TArray<FSoftObjectPath> AssetsToLoad;
++	AssetsToLoad.Add(Entry->Row.Sound.ToSoftObjectPath());
++	AssetsToLoad.Add(Entry->Row.Icon.ToSoftObjectPath());
++	const int32 LifetimeGeneration = UEPLifetimeGeneration;
++	AsyncLoad(AssetsToLoad, [this, SequenceID, LifetimeGeneration]
++	{
++		if (!bUEPAcceptingNotifications || LifetimeGeneration != UEPLifetimeGeneration) { return; }
++		FPendingAccoladeEntry* Finished = PendingAccoladeLoads.FindByPredicate([SequenceID](const FPendingAccoladeEntry& Candidate) { return Candidate.SequenceID == SequenceID; });
++		if (ensure(Finished))
++		{
++			Finished->Sound = Finished->Row.Sound.Get();
++			Finished->Icon = Finished->Row.Icon.Get();
++			Finished->bFinishedLoading = true;
++			ConsiderLoadedAccolades();
++		}
++	});
++	StartAsyncLoading();
++}
++
++void ULyraAccoladeHostWidget::UEPScheduleAccoladePop(float Duration)
++{
++	GetWorld()->GetTimerManager().SetTimer(NextTimeToReconsiderHandle, this, &ThisClass::PopDisplayedAccolade, Duration);
++}
++
++void ULyraAccoladeHostWidget::UEPClearAccoladeState_Implementation()
++{
++	for (const FPendingAccoladeEntry& Entry : PendingAccoladeDisplays)
++	{
++		if (UUserWidget* Widget = Entry.AllocatedWidget) { DestroyAccoladeWidget(Widget); }
++	}
++	PendingAccoladeLoads.Reset();
++	PendingAccoladeDisplays.Reset();
++	NextDisplaySequenceID = 0;
++	AllocatedSequenceID = 0;
++}

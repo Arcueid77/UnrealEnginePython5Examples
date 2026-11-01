@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "batch": "CPP07",
+  "candidates": [
+    "CPP-012",
+    "CPP-013"
+  ],
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "policy_events": 7,
+  "asset_family_count": 2,
+  "native_python_registry_async_timer_lifetime_differential": {
+    "status": "passed",
+    "cases": 11,
+    "native_registry_and_asset_callbacks": true,
+    "original_cpp_python_queue_order_equal": true,
+    "native_timer_and_rebuild_cleanup": true
+  },
+  "actual_native_damage_two_owner_network": [
+    {
+      "status": "passed",
+      "profile": "NativeFallback",
+      "peers": [
+        "server",
+        "A",
+        "B0"
+      ],
+      "actual_damage_and_network": true
+    },
+    {
+      "status": "passed",
+      "profile": "Python",
+      "peers": [
+        "server",
+        "A",
+        "B0"
+      ],
+      "actual_damage_and_network": true
+    }
+  ],
+  "cpp_reference_keeps_accepted_three_blueprint_presentation_methods": true,
+  "native_ftext_and_icon_payloads_preserved": true,
+  "network_host_fixture_per_real_owner": true,
+  "natural_hud_creation_or_rendering_acceptance": false,
+  "cold_native_asset": "/Game/Characters/Heroes/Mannequin_UE4/Materials/Textures/T_ML_Aluminum01.T_ML_Aluminum01",
+  "actual_pending_asset_and_registry_callbacks_cancelled": true,
+  "native_lifetime_fix": [
+    "cancel reconsideration timer and clear queues on destruct",
+    "reject callbacks from a previous widget construction generation"
+  ],
+  "compiled_unity_units": [
+    "Module.ShooterCoreRuntime.cpp"
+  ],
+  "reused_lyra_game_units": [
+    1,
+    2,
+    3
+  ],
+  "native_registry_asset_streaming_timer_and_listener_ownership_preserved": true,
+  "official_reference_unchanged": true,
+  "engine_full_compile_executed": false,
+  "cook_package_executed": false,
+  "new_platform_acceptance": false,
+  "visible_rendering_acceptance": false,
+  "full_cpp_migration_acceptance": false,
+  "retained_attempts": [
+    "Assets01",
+    "Assets02",
+    "Runtime01",
+    "Runtime02",
+    "Runtime03",
+    "Runtime04",
+    "Runtime05",
+    "Runtime06",
+    "Network01",
+    "Network02",
+    "Network03"
+  ],
+  "retained_notes": [
+    "Runtime01 showed SetOwningPlayer(None) does not create an ownerless widget; the fixture now constructs a new widget without a player context.",
+    "Runtime02 exposed use of the tag asset interface query instead of the tag container query; HasAnyTags with hierarchical matching preserves the native HasAny rule.",
+    "Runtime03 passed all eleven behavior cases but correctly rejected a teardown fixture whose assets were already cached and completed inline.",
+    "Runtime04-05 found the first chosen texture already resident. Runtime06 attempted the editor table import from game mode and hit a null editor subsystem in CSVImportFactory. Assets02 exposed missing RowStruct initialization before import. Assets03 prepares the stage-only table in the editor; the game selects an existing unloaded texture without loading it and requires both asset and registry requests pending before teardown.",
+    "Network01 encountered widget default objects without a UWorld. Network02 found no natural HUD hosts in the NullRHI clients and could not pass its host gate; a client later exited through an engine error handler. Network03 was stopped before fixture setup to correct an undefined constructor helper and root the fixture class through the startup GC. The accepted network harness creates one original host widget per actual client owner, retains production native message/registry/timer paths, and claims no natural HUD or rendering acceptance."
+  ],
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP07/Build01/summary.json",
+      "sha256": "0392287A20B19B96C7224907B2F1C0B58DBFB437523CEB557C285C23FFF9EEFE"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP07/Assets03/summary.json",
+      "sha256": "3D9F419EB9AB94C9D733F2BD3B48DB4B8B5852528A48F8938A3B21D1142ACDCE"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP07/Runtime07/summary.json",
+      "sha256": "636909001973A16D4361070DE7EA345876E63099F8B89C3CF87A226E6A05A2F4"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP07/Network04/summary.json",
+      "sha256": "A63A08FF143C6D3B9F60EA66B0D2C2F029F7D85146FDA244A94A3C8C0AF82A01"
+    }
+  ]
+}

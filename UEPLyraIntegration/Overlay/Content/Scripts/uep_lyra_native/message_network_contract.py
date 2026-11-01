@@ -40,6 +40,15 @@ def validate(r):
             metrics=r['natural_spawning_metrics']
             require(metrics[selected+'choose']>=11 and metrics[selected+'tdm']>=11,'ordinary native player restart/choose did not enter selected policy')
             require(metrics[other+'choose']==metrics[other+'tdm']==0,'wrong natural spawning policy executed')
+    if r.get('validate_accolades'):
+        require(r['accolade_class_root_restored'],'native accolade fixture class ownership leaked')
+        require(r['accolade_profile']==r['profile'] and r['natural_accolade_host_count']+r['fixture_accolade_host_count']==(0 if r['peer']=='server' else 1),'native accolade profile/host role differs')
+        if r['peer']!='server':
+            if r['fixture_accolade_host_count']:require(r['accolade_fixture_removed_and_unrooted'],'owner accolade fixture leaked')
+            result=r['accolade_result'];selected='python_' if r['profile']=='Python' else 'native_';other='native_' if selected=='python_' else 'python_';metrics=result['metrics'];expected_rows=4 if r['peer']=='A' else 0
+            require(metrics[selected+'row']==metrics[selected+'process']==expected_rows and result['queues_empty'],'native real-owner award queue did not drain')
+            require(all(metrics[other+k]==0 for k in ('notify','row','consider','process','display','pop','clear')),'wrong native accolade implementation executed')
+            require(result['presentation_creates']>=1 and result['presentation_destroys']>=1 if expected_rows else result['presentation_creates']==result['presentation_destroys']==0,'native award presentation/owner filtering failed')
     if r['peer']=='server':
         require(r['server_waited_for_client_process_exit'],'authority exited before actual client exits')
         require(r['native_processor_counts']==dict(streak=1,chain=1,assist=1),'natural authority processors required')

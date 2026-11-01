@@ -157,3 +157,29 @@ duplicate refill/full ammo, reload guards, new duplicate instances, healing,
 failure messages, inventory/equipment replication, native timer dispatch,
 owner isolation, and HUD/observer cleanup. Clients use NullRHI; visible rendering
 and a new package are not claimed by this batch.
+
+## CPP07: accolade notification and queue policy
+
+[CPP07 acceptance](CPP07-acceptance.json) covers CPP-012/013: channel/player
+filtering, registry sequence allocation, completed-load ordering, location and
+cancellation tags, display/pop order, and teardown queue reset. Seven typed
+native events select the original C++ or Python policy. Both retain the three
+accepted Blueprint Python presentation methods. Registry acquisition, native
+asset streaming, listener ownership, and timer scheduling stay native.
+
+The isolated source patch also clears the display timer at destruction and
+rejects registry/asset callbacks from an earlier widget construction generation.
+Eleven paired cases pass, including actual pending asset and registry requests
+cancelled before a widget rebuild. Original FText, icon, Blueprint graphs,
+defaults, and inheritance are preserved. Only the existing Set asset changes.
+
+The native damage network lane passes both profiles with a dedicated server and
+two actual owners: six GAS damage specs, five deaths, one assist, four awards for
+A and none for B0. Both implementation groups have equal queue and presentation
+counts. Each NullRHI client creates one original host widget owned by its actual
+player; this verifies real production notifications and does not claim natural
+HUD construction or visible rendering. All widget/class roots and listeners are
+released. Only the ShooterCore unity unit is rebuilt; all LyraGame, SDK, and
+engine objects are reused. Use the main repository's NativeAccolade Build,
+Authoring, Validation, and NetworkValidation entry points. Failed fixture and
+network attempts remain recorded in the acceptance ledger.
