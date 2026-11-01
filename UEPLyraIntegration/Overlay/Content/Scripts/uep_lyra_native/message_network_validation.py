@@ -35,6 +35,15 @@ class Network(Relays):
             cls=ue.load_class(path);ue.register_declared_mixin(cls)
             self.boot.append((cls,cls.get_cdo().get_property('PythonMixinProfile')))
             cls.get_cdo().set_property('PythonMixinProfile',self.profile)
+        self.team_profile=next((v.split('=',1)[1] for v in __import__('sys').argv if v.startswith('-UEPNativeTeamProfile=')),None)
+        if self.team_profile is not None:
+            from . import team_creation
+            require(self.team_profile==self.profile,'paired native team/message profile required')
+            for path in team_creation.CLASSES:
+                cls=ue.load_class(path);ue.register_declared_mixin(cls)
+                self.boot.append((cls,cls.get_cdo().get_property('PythonMixinProfile')))
+                cls.get_cdo().set_property('PythonMixinProfile',self.team_profile)
+            self.report.update(validate_team=True,team_profile=self.team_profile)
         atexit.register(self.finalize)
 
     def world_ready(self):
@@ -58,6 +67,19 @@ class Network(Relays):
             if components:
                 self.native_components[kind]=components[0];ue.set_mixin_profile(components[0],self.profile)
         self.report['native_processor_counts']=counts
+        if self.team_profile is not None:
+            from . import team_creation
+            cls=ue.load_class(team_creation.CLASSES[0])
+            natural=[c for c in ue.tobject_iterator(cls) if valid(c) and c.get_world()==self.world and c.call_function('GetOwner')==self.state]
+            self.report['native_team_component_count']=len(natural)
+            require(len(natural)==(1 if self.peer=='server' else 0),'natural team authority role differs')
+            if natural:
+                component=natural[0]
+                require(str(ue.get_mixin_profile(component))==self.team_profile,'natural team profile differs')
+                self.report['natural_team_metrics']=copy.deepcopy(team_creation.metrics(component))
+                ids=component.get_property('TeamsToCreate')
+                players=[p for p in self.state.get_property('PlayerArray') if valid(p) and p.is_a(ue.find_class('LyraPlayerState')) and not p.get_property('bIsInactive')]
+                self.report['natural_team_populations']={str(team):sum(int(p.call_function('GetTeamId'))==team for p in players) for team in ids}
         if self.peer=='server':
             self.report['isolated_bots']=isolate_bots(self.statics,self.world,ue.find_class('AIController'))
             scope=SubscriptionScope();self.scopes.append(scope)

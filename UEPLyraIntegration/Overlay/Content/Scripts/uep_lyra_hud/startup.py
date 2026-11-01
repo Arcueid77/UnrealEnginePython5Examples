@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(a.startswith('-UEPNativeTeamResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):
+        return 'uep_lyra_native.team_validation'
     if any(a.startswith('-UEPNativeMessageNetworkResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):
         return 'uep_lyra_native.message_network_validation'
     if any(a.startswith('-UEPNativeMessageResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):

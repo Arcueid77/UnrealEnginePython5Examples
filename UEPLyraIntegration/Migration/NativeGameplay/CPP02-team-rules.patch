@@ -1,0 +1,76 @@
+--- a/Source/LyraGame/Teams/LyraTeamCreationComponent.h
++++ b/Source/LyraGame/Teams/LyraTeamCreationComponent.h
+@@ -46,6 +46,18 @@
+ 	UPROPERTY(EditDefaultsOnly, Category=Teams)
+ 	TSubclassOf<ALyraTeamPrivateInfo> PrivateTeamInfoClass;
+ 
++protected:
++	// Policy seams; native initialization, authority and team notifications remain native.
++	UFUNCTION(BlueprintNativeEvent, Category="UEP|NativeGameplay")
++	void UEPChooseTeamForPlayer(ALyraPlayerState* PS);
++
++	UFUNCTION(BlueprintNativeEvent, Category="UEP|NativeGameplay")
++	int32 UEPGetLeastPopulatedTeamID() const;
++
++	// Keep the original native setter and its notifications behind reflection.
++	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly, Category="UEP|NativeGameplay")
++	void UEPSetPlayerTeam(ALyraPlayerState* PS, int32 TeamId);
++
+ #if WITH_SERVER_CODE
+ protected:
+ 	virtual void ServerCreateTeams();
+--- a/Source/LyraGame/Teams/LyraTeamCreationComponent.cpp
++++ b/Source/LyraGame/Teams/LyraTeamCreationComponent.cpp
+@@ -54,6 +54,35 @@
+ #endif
+ }
+ 
++void ULyraTeamCreationComponent::UEPChooseTeamForPlayer_Implementation(ALyraPlayerState* PS)
++{
++#if WITH_SERVER_CODE
++	if (PS->IsOnlyASpectator())
++	{
++		PS->SetGenericTeamId(FGenericTeamId::NoTeam);
++	}
++	else
++	{
++		const FGenericTeamId TeamID = IntegerToGenericTeamId(UEPGetLeastPopulatedTeamID());
++		PS->SetGenericTeamId(TeamID);
++	}
++#endif
++}
++
++int32 ULyraTeamCreationComponent::UEPGetLeastPopulatedTeamID_Implementation() const
++{
++#if WITH_SERVER_CODE
++	return GetLeastPopulatedTeamID();
++#else
++	return INDEX_NONE;
++#endif
++}
++
++void ULyraTeamCreationComponent::UEPSetPlayerTeam(ALyraPlayerState* PS, int32 TeamId)
++{
++	PS->SetGenericTeamId(IntegerToGenericTeamId(TeamId));
++}
++
+ #if WITH_SERVER_CODE
+ 
+ void ULyraTeamCreationComponent::ServerCreateTeams()
+@@ -86,15 +115,7 @@
+ 
+ void ULyraTeamCreationComponent::ServerChooseTeamForPlayer(ALyraPlayerState* PS)
+ {
+-	if (PS->IsOnlyASpectator())
+-	{
+-		PS->SetGenericTeamId(FGenericTeamId::NoTeam);
+-	}
+-	else
+-	{
+-		const FGenericTeamId TeamID = IntegerToGenericTeamId(GetLeastPopulatedTeamID());
+-		PS->SetGenericTeamId(TeamID);
+-	}
++	UEPChooseTeamForPlayer(PS);
+ }
+ 
+ void ULyraTeamCreationComponent::OnPlayerInitialized(AGameModeBase* GameMode, AController* NewPlayer)

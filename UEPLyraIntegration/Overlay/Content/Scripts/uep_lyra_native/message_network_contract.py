@@ -16,6 +16,14 @@ def validate(r):
     require(r['observer_scopes_closed'] and r['selectors_restored'] and r['relay_profiles_restored'],'network cleanup incomplete')
     require(r['actual_native_damage_spec_applied']==(r['peer']=='server'),'only authority may apply native damage')
     require(not any(r[k] for k in ('synthetic_verb_messages','health_attribute_writes','score_stat_writes','damage_immunity_writes')),'synthetic health/score/message mutation forbidden')
+    if r.get('validate_team'):
+        require(r['team_profile']==r['profile'],'native team profile differs')
+        require(r['native_team_component_count']==(1 if r['peer']=='server' else 0),'team authority role differs')
+        if r['peer']=='server':
+            selected='python_' if r['profile']=='Python' else 'native_';other='native_' if selected=='python_' else 'python_'
+            metrics=r['natural_team_metrics'];counts=r['natural_team_populations']
+            require(metrics[selected+'choose']>=11 and metrics[selected+'least']>=11 and metrics[other+'choose']==metrics[other+'least']==0,'natural bot/owner team initialization bypassed selected rules')
+            require(len(counts)==2 and sum(counts.values())>=11 and max(counts.values())-min(counts.values())<=1,'native eleven-player assignment not balanced')
     if r['peer']=='server':
         require(r['server_waited_for_client_process_exit'],'authority exited before actual client exits')
         require(r['native_processor_counts']==dict(streak=1,chain=1,assist=1),'natural authority processors required')

@@ -34,3 +34,27 @@ run, with archived scripts and controls. Failed attempts are retained. Live JSON
 must be read through `uep_lyra_network_io.read_json` so observation cannot prevent
 Windows atomic replacement. No test in this batch establishes another platform,
 configuration, package, or the remaining C++ candidates.
+
+## CPP02: team selection
+
+[CPP02 acceptance](CPP02-acceptance.json) covers choosing a player's team and the
+least-populated team calculation. Two native policy events and one thin reflected
+setter are in `CPP02-team-rules.patch`. The setter calls the original native
+`SetGenericTeamId`, preserving its notifications. Team creation, experience
+callbacks, authority rules, and the two/four-team configuration Blueprints remain.
+
+The team validation entry points are `Run-UEP58NativeTeamBuild.ps1`,
+`Run-UEP58NativeTeamAuthoring.ps1`, and `Run-UEP58NativeTeamValidation.ps1` in the
+main repository's `Validation` directory. Only the two affected LyraGame unity
+units are compiled; the unchanged unit is reused. `-Families Four` reruns only
+the four-team family after the two-team family has passed.
+
+Six native/Python cases cover equal population, unequal population, inactive
+players, spectators, the original four-team IDs, and no configured teams. Native
+team notifications and fixture restoration are checked. The four-team map has one
+natural local owner; three temporary native PlayerState actors provide the
+population fixture and are destroyed afterward. This does not claim a four-owner
+network test. The actual dedicated-server/two-client run uses
+`Run-UEP58NativeMessageNetworkValidation.ps1 -ValidateTeam` with the team asset
+evidence. It verifies eleven natural bot/owner assignments, balanced populations,
+and the affected CPP01 damage, score replication, and notification pipeline.

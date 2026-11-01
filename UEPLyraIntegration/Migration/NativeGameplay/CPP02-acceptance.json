@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "batch": "CPP02",
+  "candidates": [
+    "CPP-004"
+  ],
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "native_policy_events": 2,
+  "native_setter_adapters": 1,
+  "persistent_configuration_classes": 2,
+  "asset_family_count": 3,
+  "native_team_creation_and_callbacks_preserved": true,
+  "native_setter_notifications_preserved": true,
+  "standalone_native_python_differentials": {
+    "Two": {
+      "status": "passed",
+      "family": "Two",
+      "cases": 6,
+      "native_setter_notifications_equal": true
+    },
+    "Four": {
+      "status": "passed",
+      "family": "Four",
+      "cases": 6,
+      "native_setter_notifications_equal": true
+    }
+  },
+  "actual_dedicated_server_and_two_clients": {
+    "NativeFallback": {
+      "status": "passed",
+      "profile": "NativeFallback",
+      "peers": [
+        "server",
+        "A",
+        "B0"
+      ],
+      "actual_damage_and_network": true
+    },
+    "Python": {
+      "status": "passed",
+      "profile": "Python",
+      "peers": [
+        "server",
+        "A",
+        "B0"
+      ],
+      "actual_damage_and_network": true
+    }
+  },
+  "natural_eleven_player_assignments_balanced": true,
+  "affected_cpp01_damage_score_and_notifications_passed": true,
+  "compiled_unity_units": [
+    "Module.LyraGame.1.cpp",
+    "Module.LyraGame.3.cpp"
+  ],
+  "reused_unity_units": [
+    "Module.LyraGame.2.cpp"
+  ],
+  "reusable_native_objects": [
+    {
+      "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\CppGameplay\\Stage\\Lyra\\Intermediate\\Build\\Win64\\x64\\UnrealEditor\\Development\\LyraGame\\Module.LyraGame.3.cpp.obj",
+      "sha256": "A2E1A99372556DC4293599F41F33073DC39E69A17D38479807F5D192C003B253"
+    }
+  ],
+  "native_team_metrics": {
+    "NativeFallback": {
+      "python_choose": 0,
+      "python_least": 0,
+      "native_choose": 11,
+      "native_least": 11
+    },
+    "Python": {
+      "python_choose": 11,
+      "python_least": 11,
+      "native_choose": 0,
+      "native_least": 0
+    }
+  },
+  "official_reference_unchanged": true,
+  "engine_full_compile_executed": false,
+  "cook_package_executed": false,
+  "full_cpp_migration_acceptance": false,
+  "new_platform_acceptance": false,
+  "reused_two_team_subset": true,
+  "retained_attempts": [
+    "Build01",
+    "Build02",
+    "Assets01",
+    "Assets02",
+    "Assets03",
+    "Runtime01",
+    "Runtime02",
+    "Runtime03/Four",
+    "Runtime04"
+  ],
+  "retained_notes": [
+    "Build01 compiled the affected units; Build02 fixed only the reused object link path.",
+    "Runtime01 identified the non-reflected setter; Build03 added one thin native setter adapter.",
+    "Runtime02 seeded invalid zero-based fixture IDs; native reference assertion retained; Runtime03 reads original IDs.",
+    "Runtime03 Two passed both profiles and is reused; only Four was restarted.",
+    "Runtime04 local split-screen players produced a native SlateUser ensure under NullRHI; Runtime05 uses three temporary native PlayerState actors with explicit fixture scope."
+  ],
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP02/Build03/summary.json",
+      "sha256": "F0174A48D314F2244FACBFF4231BE60357DB6026F89A57888C4795BFD7683368"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP02/Assets04/summary.json",
+      "sha256": "33A508B2D0DCBC6DCAA81DA0983397EAE612B4D7002F527E83DDCF51C8D55E9B"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP02/Runtime03/Two/comparison.json",
+      "sha256": "0AF860A79D3DF380044EE7FE522BC2BC91C0393C4182F82C02AD5D6CB9C68752"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP02/Runtime05/summary.json",
+      "sha256": "90605BE6BEF1C9D8A45F1247342E0159A4592554E2FEFB3623CBAEC0A919F543"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP02/Network01/summary.json",
+      "sha256": "1E3248C735D32DBFE5A99B0624BEBF3266B8C15A19050673D29F294AAE2C565D"
+    }
+  ]
+}
