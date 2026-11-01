@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "batch": "CPP01",
+  "candidates": [
+    "CPP-001",
+    "CPP-002",
+    "CPP-003"
+  ],
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "production_event_entrypoints": 4,
+  "persistent_processor_classes": 3,
+  "asset_family_count": 7,
+  "native_message_differential": {
+    "status": "passed",
+    "paired_phases": 4,
+    "native_callback_fixture": true,
+    "actual_damage_or_network_acceptance": false
+  },
+  "actual_damage_network": {
+    "NativeFallback": {
+      "status": "passed",
+      "profile": "NativeFallback",
+      "peers": [
+        "server",
+        "A",
+        "B0"
+      ],
+      "actual_damage_and_network": true
+    },
+    "Python": {
+      "status": "passed",
+      "profile": "Python",
+      "peers": [
+        "server",
+        "A",
+        "B0"
+      ],
+      "actual_damage_and_network": true
+    }
+  },
+  "native_python_actual_payload_order_equal": true,
+  "native_processors_server_only": true,
+  "native_damage_specs_per_profile": 6,
+  "native_eliminations_per_profile": 5,
+  "authority_and_two_client_score_delta": {
+    "kills": 5,
+    "deaths": 1,
+    "assists": 1,
+    "team": 5,
+    "other": 0
+  },
+  "native_listener_teardown_verified": true,
+  "official_reference_unchanged": true,
+  "engine_full_compile_executed": false,
+  "cook_package_executed": false,
+  "visible_render_acceptance": false,
+  "full_cpp_migration_acceptance": false,
+  "new_platform_acceptance": false,
+  "retained_attempts": [
+    {
+      "directory": "Build01",
+      "status": "failed",
+      "error": "native-rule-UHT exited 6; F:\\UnrealEnginePython5\\.build\\LyraValidation\\CppGameplay\\20261101-CPP01\\Build01/UHT"
+    },
+    {
+      "directory": "Assets01",
+      "status": "failed",
+      "error": "Native message asset authoring exited 1; F:\\UnrealEnginePython5\\.build\\LyraValidation\\CppGameplay\\20261101-CPP01\\Assets01/assets"
+    },
+    {
+      "directory": "Assets02",
+      "status": "failed",
+      "error": "Native message asset authoring exited 1; F:\\UnrealEnginePython5\\.build\\LyraValidation\\CppGameplay\\20261101-CPP01\\Assets02/assets"
+    },
+    {
+      "directory": "Network01",
+      "status": "failed",
+      "error": "Authority listen timed out"
+    },
+    {
+      "directory": "Network02",
+      "status": "failed",
+      "error": "Native rule peer server exited early"
+    }
+  ],
+  "network_restart_note": "Network02 was stopped during unrelated graphical shader compilation; Network03 uses actual non-rendering clients.",
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP01/Build02/summary.json",
+      "sha256": "D9A405A6A943A765DAAD3BD5328B98644389F011C930E5C76A00D2C1904025A8"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP01/Assets03/summary.json",
+      "sha256": "AFC0BAC07F68909D3599056A51F9D75A69754AF756F64BFE4266B362C52AE87E"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP01/Runtime01/summary.json",
+      "sha256": "932165663B92EBB51DE7A2222FF26D0ADC1CCD44DEEA589EE0696E3EFA43F77B"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP01/Runtime01/comparison.json",
+      "sha256": "CD2E1ACBC768A5B9B2144631ED58AE99B0D8827676FF6DD5D8F58660E35452B5"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP01/Network03/summary.json",
+      "sha256": "7BBB7A79D9B4E4F18864A248A7E032A5334138115814803571FEA4A537E4D9F6"
+    }
+  ]
+}

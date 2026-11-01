@@ -1,0 +1,123 @@
+--- a/Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Public/MessageProcessors/ElimStreakProcessor.h
++++ b/Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Public/MessageProcessors/ElimStreakProcessor.h
+@@ -3,6 +3,8 @@
+ #pragma once
+ 
+ #include "Messages/GameplayMessageProcessor.h"
++
++#include "Messages/LyraVerbMessage.h"
+ 
+ #include "ElimStreakProcessor.generated.h"
+ 
+@@ -26,6 +28,10 @@
+ 	UPROPERTY(EditDefaultsOnly)
+ 	TMap<int32, FGameplayTag> ElimStreakTags;
+ 
++protected:
++	UFUNCTION(BlueprintNativeEvent, Category="UEP|NativeGameplay")
++	void UEPHandleElimination(FGameplayTag Channel, const FLyraVerbMessage& Payload);
++
+ private:
+ 	void OnEliminationMessage(FGameplayTag Channel, const FLyraVerbMessage& Payload);
+ 
+--- a/Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/MessageProcessors/ElimStreakProcessor.cpp
++++ b/Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/MessageProcessors/ElimStreakProcessor.cpp
+@@ -20,6 +20,11 @@
+ }
+ 
+ void UElimStreakProcessor::OnEliminationMessage(FGameplayTag Channel, const FLyraVerbMessage& Payload)
++{
++	UEPHandleElimination(Channel, Payload);
++}
++
++void UElimStreakProcessor::UEPHandleElimination_Implementation(FGameplayTag Channel, const FLyraVerbMessage& Payload)
+ {
+ 	// Track elimination streaks for the attacker (except for self-eliminations)
+ 	if (Payload.Instigator != Payload.Target)
+--- a/Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Public/MessageProcessors/ElimChainProcessor.h
++++ b/Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Public/MessageProcessors/ElimChainProcessor.h
+@@ -3,6 +3,8 @@
+ #pragma once
+ 
+ #include "Messages/GameplayMessageProcessor.h"
++
++#include "Messages/LyraVerbMessage.h"
+ 
+ #include "ElimChainProcessor.generated.h"
+ 
+@@ -39,6 +41,10 @@
+ 	UPROPERTY(EditDefaultsOnly)
+ 	TMap<int32, FGameplayTag> ElimChainTags;
+ 
++protected:
++	UFUNCTION(BlueprintNativeEvent, Category="UEP|NativeGameplay")
++	void UEPHandleElimination(FGameplayTag Channel, const FLyraVerbMessage& Payload);
++
+ private:
+ 	void OnEliminationMessage(FGameplayTag Channel, const FLyraVerbMessage& Payload);
+ 
+--- a/Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/MessageProcessors/ElimChainProcessor.cpp
++++ b/Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/MessageProcessors/ElimChainProcessor.cpp
+@@ -20,6 +20,11 @@
+ }
+ 
+ void UElimChainProcessor::OnEliminationMessage(FGameplayTag Channel, const FLyraVerbMessage& Payload)
++{
++	UEPHandleElimination(Channel, Payload);
++}
++
++void UElimChainProcessor::UEPHandleElimination_Implementation(FGameplayTag Channel, const FLyraVerbMessage& Payload)
+ {
+ 	// Track elimination chains for the attacker (except for self-eliminations)
+ 	if (Payload.Instigator != Payload.Target)
+--- a/Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Public/MessageProcessors/AssistProcessor.h
++++ b/Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Public/MessageProcessors/AssistProcessor.h
+@@ -3,6 +3,8 @@
+ #pragma once
+ 
+ #include "Messages/GameplayMessageProcessor.h"
++
++#include "Messages/LyraVerbMessage.h"
+ 
+ #include "AssistProcessor.generated.h"
+ 
+@@ -32,6 +34,13 @@
+ public:
+ 	virtual void StartListening() override;
+ 
++protected:
++	UFUNCTION(BlueprintNativeEvent, Category="UEP|NativeGameplay")
++	void UEPHandleDamage(FGameplayTag Channel, const FLyraVerbMessage& Payload);
++
++	UFUNCTION(BlueprintNativeEvent, Category="UEP|NativeGameplay")
++	void UEPHandleElimination(FGameplayTag Channel, const FLyraVerbMessage& Payload);
++
+ private:
+ 	void OnDamageMessage(FGameplayTag Channel, const FLyraVerbMessage& Payload);
+ 	void OnEliminationMessage(FGameplayTag Channel, const FLyraVerbMessage& Payload);
+--- a/Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/MessageProcessors/AssistProcessor.cpp
++++ b/Plugins/GameFeatures/ShooterCore/Source/ShooterCoreRuntime/Private/MessageProcessors/AssistProcessor.cpp
+@@ -22,6 +22,11 @@
+ 
+ void UAssistProcessor::OnDamageMessage(FGameplayTag Channel, const FLyraVerbMessage& Payload)
+ {
++	UEPHandleDamage(Channel, Payload);
++}
++
++void UAssistProcessor::UEPHandleDamage_Implementation(FGameplayTag Channel, const FLyraVerbMessage& Payload)
++{
+ 	if (Payload.Instigator != Payload.Target)
+ 	{
+ 		if (APlayerState* InstigatorPS = ULyraVerbMessageHelpers::GetPlayerStateFromObject(Payload.Instigator))
+@@ -38,6 +43,11 @@
+ 
+ 
+ void UAssistProcessor::OnEliminationMessage(FGameplayTag Channel, const FLyraVerbMessage& Payload)
++{
++	UEPHandleElimination(Channel, Payload);
++}
++
++void UAssistProcessor::UEPHandleElimination_Implementation(FGameplayTag Channel, const FLyraVerbMessage& Payload)
+ {
+ 	if (APlayerState* TargetPS = Cast<APlayerState>(Payload.Target))
+ 	{

@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "status": "in_progress",
+  "scope_approved_date": "2026-11-01",
+  "user_authorization": "先提交了然后按之前说的逐步完成cpp替换吧",
+  "scope": "Recommended CPP-001 through CPP-015, in CPP01 through CPP09 order; optional CPP-016 through CPP-030 remain unselected.",
+  "support_target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "inventory": "cpp_source_inventory.json",
+  "inventory_sha256": "13835389ABE1FDBCE0C5D7D3CA4877CF0B2495AB9DB3A4C81E16933A52E9589C",
+  "starting_commits": {
+    "core": "d00bee79afe1b93ee5c6fd14f644a2654fb63a74",
+    "examples": "3e9c68fb10599d292f6e91cc92000d4dedf04086"
+  },
+  "approved_candidates": 15,
+  "accepted_candidates": 3,
+  "accepted_batches": 1,
+  "workflow": {
+    "regression": "affected incremental checks and actual native/Python comparisons",
+    "commit_and_push": "Examples first, then core validation changes and Demos gitlink; verify both remotes",
+    "official_reference_unchanged": true,
+    "one_native_lane": true,
+    "failed_runs_preserved": true,
+    "new_platform_or_configuration_claim": false
+  },
+  "batches": [
+    {
+      "id": "CPP01",
+      "candidates": [
+        "CPP-001",
+        "CPP-002",
+        "CPP-003"
+      ],
+      "status": "accepted",
+      "acceptance_ledger": "NativeGameplay/CPP01-acceptance.json"
+    },
+    {
+      "id": "CPP02",
+      "candidates": [
+        "CPP-004"
+      ],
+      "status": "in_progress",
+      "acceptance_ledger": null
+    },
+    {
+      "id": "CPP03",
+      "candidates": [
+        "CPP-005",
+        "CPP-006"
+      ],
+      "status": "planned",
+      "acceptance_ledger": null
+    },
+    {
+      "id": "CPP04",
+      "candidates": [
+        "CPP-007",
+        "CPP-008"
+      ],
+      "status": "planned",
+      "acceptance_ledger": null
+    },
+    {
+      "id": "CPP05",
+      "candidates": [
+        "CPP-009",
+        "CPP-010"
+      ],
+      "status": "planned",
+      "acceptance_ledger": null
+    },
+    {
+      "id": "CPP06",
+      "candidates": [
+        "CPP-011"
+      ],
+      "status": "planned",
+      "acceptance_ledger": null
+    },
+    {
+      "id": "CPP07",
+      "candidates": [
+        "CPP-012",
+        "CPP-013"
+      ],
+      "status": "planned",
+      "acceptance_ledger": null
+    },
+    {
+      "id": "CPP08",
+      "candidates": [
+        "CPP-014"
+      ],
+      "status": "planned",
+      "acceptance_ledger": null
+    },
+    {
+      "id": "CPP09",
+      "candidates": [
+        "CPP-015"
+      ],
+      "status": "planned",
+      "acceptance_ledger": null
+    }
+  ]
+}

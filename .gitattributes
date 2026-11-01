@@ -1,0 +1,2 @@
+# Unified diff context deliberately contains a prefix before native indentation.
+UEPLyraIntegration/Migration/NativeGameplay/*.patch text eol=lf -whitespace
