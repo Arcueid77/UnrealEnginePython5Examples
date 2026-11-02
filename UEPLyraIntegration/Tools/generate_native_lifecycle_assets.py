@@ -10,10 +10,10 @@ import unreal_engine as ue
 def arg(name):return next(a.split('=',1)[1] for a in sys.argv if a.startswith('-'+name+'='))
 
 
-def generate(stage):
+def generate_one(stage,kind,prefix,name,owner,relative):
     from unreal_engine.classes import UEPPythonMixinSet
     from unreal_engine.structs import UEPPythonMixinProfile
-    kind=arg('UEPNativeLifecycleKind');prefix={'jump':'Jump','death':'Death'}[kind];name={'jump':'JumpAbility','death':'DeathAbility'}[kind];owner='/Game/Characters/Heroes/Abilities/GA_Hero_'+prefix+'.GA_Hero_'+prefix+'_C';relative='Content/Characters/Heroes/Abilities/GA_Hero_'+prefix+'.uasset';asset=stage/relative;before=hashlib.sha256(asset.read_bytes()).hexdigest().upper();cls=ue.load_class(owner)
+    asset=stage/relative;before=hashlib.sha256(asset.read_bytes()).hexdigest().upper();cls=ue.load_class(owner)
     data=ue.load_object(UEPPythonMixinSet,'/Game/UEPMixins/DA_'+name+'Mixin.DA_'+name+'Mixin');ue.register_declared_mixin(cls);old=next(r for r in ue.get_registered_mixins() if r['target_class']==cls);old_count=len(old['profiles']['Python']['functions']);profiles=[p.clone() for p in data.Profiles]
     if {str(p.ProfileName) for p in profiles}!={'Python','BlueprintFallback'}:raise RuntimeError('Fresh lifecycle declaration baseline required')
     legacy=next(p for p in profiles if str(p.ProfileName)=='BlueprintFallback');legacy_values=str(legacy.PythonModule),str(legacy.PythonClass);default=str(data.DefaultProfile)
@@ -24,7 +24,14 @@ def generate(stage):
     if str(data.DefaultProfile)!=default or (str(legacy.PythonModule),str(legacy.PythonClass))!=legacy_values:raise RuntimeError('Original default/fallback modified')
     data.save_package();output='Content/UEPMixins/DA_'+name+'Mixin.uasset'
     if hashlib.sha256(asset.read_bytes()).hexdigest().upper()!=before:raise RuntimeError('Original ability Blueprint bytes changed')
-    return dict(status='passed',assets_saved=True,asset_family_count=1,policy_events=events,kind=kind,assets=[output],fixtures=[],retained_abilities=[dict(relative=relative,sha256=before)],profiles=counts,previous_blueprint_python_fixed=True,runtime_acceptance=False)
+    return dict(assets=[output],retained_abilities=[dict(relative=relative,sha256=before)],profiles=counts,owner=owner)
+
+
+def generate(stage):
+    kind=arg('UEPNativeLifecycleKind');prefix={'jump':'Jump','death':'Death'}[kind];name={'jump':'JumpAbility','death':'DeathAbility'}[kind]
+    rows=[generate_one(stage,kind,prefix,name,'/Game/Characters/Heroes/Abilities/GA_Hero_'+prefix+'.GA_Hero_'+prefix+'_C','Content/Characters/Heroes/Abilities/GA_Hero_'+prefix+'.uasset')]
+    if kind=='death':rows.append(generate_one(stage,kind,'ArenaDeath','ArenaDeathActor','/TopDownArena/Game/GA_ArenaHero_Death.GA_ArenaHero_Death_C','Plugins/GameFeatures/TopDownArena/Content/Game/GA_ArenaHero_Death.uasset'))
+    return dict(status='passed',assets_saved=True,asset_family_count=len(rows),policy_events=4 if kind=='jump' else 5,kind=kind,assets=[p for r in rows for p in r['assets']],fixtures=[],retained_abilities=[p for r in rows for p in r['retained_abilities']],owners=rows,previous_blueprint_python_fixed=True,runtime_acceptance=False)
 
 
 result=Path(arg('UEPNativeLifecycleAssetsResult'))

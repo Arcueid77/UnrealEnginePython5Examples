@@ -9,6 +9,19 @@ from uep_lyra_hud.startup import validation_module
 
 
 class StartupSelectionTests(unittest.TestCase):
+    def test_native_reset_owns_legacy_reset_fixture_startup(self):
+        args=['-UEPNativeResetNetwork','-UEPAutoRespawnResetNetworkResult=report.json']
+        self.assertEqual(validation_module(args),'uep_lyra_native.reset_network_validation')
+        self.assertIsNone(validation_module(['-run=Py']+args))
+
+    def test_native_arena_death_requires_explicit_lane(self):
+        args=['-UEPNativeArenaDeathResult=report.json']
+        self.assertEqual(validation_module(args),'uep_lyra_native.arena_death_validation')
+        self.assertIsNone(validation_module(['-run=Py']+args))
+    def test_native_death_owns_legacy_death_fixture_startup(self):
+        args=['-UEPNativeDeathNetwork','-UEPDeathNetworkResult=report.json']
+        self.assertEqual(validation_module(args),'uep_lyra_native.death_network_validation')
+        self.assertIsNone(validation_module(['-run=Py']+args))
     def test_native_jump_owns_legacy_jump_fixture_startup(self):
         args=['-UEPNativeJumpNetwork','-UEPJumpNetworkResult=report.json']
         self.assertEqual(validation_module(args),'uep_lyra_native.jump_network_validation')

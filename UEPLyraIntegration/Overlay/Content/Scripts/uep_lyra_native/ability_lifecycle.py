@@ -71,6 +71,9 @@ JumpPythonProfile=combined(LyraJumpPythonProfile,JumpPolicyPython,'JumpPythonPro
 JumpNativeProfile=combined(LyraJumpPythonProfile,JumpPolicyNative,'JumpNativeProfile')
 DeathPythonProfile=combined(LyraDeathPythonProfile,DeathPolicyPython,'DeathPythonProfile')
 DeathNativeProfile=combined(LyraDeathPythonProfile,DeathPolicyNative,'DeathNativeProfile')
+from uep_lyra_world.arena_actor_mixin import LyraArenaDeathPythonProfile
+ArenaDeathPythonProfile=combined(LyraArenaDeathPythonProfile,DeathPolicyPython,'ArenaDeathPythonProfile')
+ArenaDeathNativeProfile=combined(LyraArenaDeathPythonProfile,DeathPolicyNative,'ArenaDeathNativeProfile')
 
 
 def install_native_reset(default='Python'):

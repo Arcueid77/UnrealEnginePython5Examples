@@ -371,3 +371,22 @@ patch also provides disabled-by-default death/reset seams for the next batches.
 The interface prototype confirms the current mixin API rejects native UClasses;
 remaining native-only owners require a Blueprint policy carrier. SDK/bridge,
 engine, ShooterCore and the preserved CPP09 stage remain unchanged.
+
+## CPP13-15 accepted lifecycle replacements
+
+[CPP13 acceptance](CPP13-acceptance.json) closes the four real death-cancellation
+and new-Avatar Jump crosschecks after its 28 input/physics trials.
+[CPP14 acceptance](CPP14-acceptance.json) records 20 lethal network trials, four
+native self-destruct trials with active ordinary/protected witnesses, and both
+native/Python original Arena two-second death tasks. Previous BP Python rules
+stay fixed, and native GAS contexts, waits, prediction and replication remain.
+[CPP15 acceptance](CPP15-acceptance.json) records 12 original native Reset requests,
+owning/foreign client isolation, typed original Reset payloads, repeat/pending
+requests, inactive Reset on completion, and protected witnesses across respawn.
+
+The supported adapter is a world-owned Blueprint policy object. Direct native
+UClass mixin registration remains rejected by the SDK; the earlier interface
+probe is retained as failed evidence. Four typed context boundary cases and the
+actual network Reset path validate the replacement. Only LyraGame units 1/2 and
+UHT were rebuilt for this adapter; unit 3, SDK, bridge and engine were reused.
+CPP16-24 continue. CPP09 actual desktop input remains user-deferred.

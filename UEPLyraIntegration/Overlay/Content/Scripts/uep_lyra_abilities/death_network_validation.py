@@ -66,7 +66,7 @@ class Server(NativeDeath):
         if not ready or not (ready[0].bHealthReady and ready[0].Health > 0 and not ready[0].bDamageImmune): return
         self.other = self.fixture.owners[PEERS[1] if self.target == PEERS[0] else PEERS[0]]["controller"]
         self.other_before = pawn_state(self.other.get_controlled_pawn())
-        profile = ("BlueprintFallback", "Python")[self.index % 2]
+        profile = getattr(self,"profile_order",("BlueprintFallback", "Python"))[self.index % 2]
         ue.set_mixin_profile(self.ability, profile)
         atomic_write(self.root/"arm.json", dict(run_id=self.run, position=self.position, target=self.target,
             index=self.index, name=PLAN[self.index//2], profile=profile, player_id=owner["player_id"]))
@@ -174,17 +174,14 @@ class Client:
             self.controller = self.statics.call_function("GetPlayerController", world, 0)
             self.report["player_id"] = int(self.controller.PlayerState.PlayerId)
             self.cls, self.cue_cls = ue.load_class(policy.CLASS), ue.load_class(observation.CUE)
-            require(not any(row["target_class"] == self.cue_cls for row in ue.get_registered_mixins()), "production Death Cue must remain unmixed")
             self.original_cue = self.cue_cls.get_cdo().find_function("OnBurst")
             owner = self
-            class ObserveCue:
-                def OnBurst(self, Target, Parameters, SpawnResults):
-                    try:
-                        if observation.path(Target) == owner.target_path:
-                            owner.cues.append(observation.cue(Target, Parameters))
-                    except Exception: owner.observation_errors.append(traceback.format_exc())
-                    return self.call_mixin_original("OnBurst", Target, Parameters, SpawnResults)
-            ue.register_mixin_profile(self.cue_cls, "UEPDeathNetworkCueObserve", ObserveCue, make_default=True)
+            from .mixin_observation import install
+            def observe_cue(cue,Target,Parameters,SpawnResults):
+                try:
+                    if observation.path(Target)==owner.target_path:owner.cues.append(observation.cue(Target,Parameters))
+                except Exception:owner.observation_errors.append(traceback.format_exc())
+            self.cue_observer=install(self.cue_cls,'OnBurst',observe_cue)
             atomic_write(self.root/(self.peer+"-ready.json"), dict(run_id=self.run, player_id=self.report["player_id"]))
             self.phase = "idle"; return
 
@@ -193,6 +190,7 @@ class Client:
         pawn = self.find_pawn(command["player_id"])
         if not valid(pawn) or pawn_state(pawn)["health"] <= 0: return
         self.is_owner = command["target"] == self.peer
+        if hasattr(self,'before_arm_ready') and not self.before_arm_ready(command,pawn):return
         if self.is_owner:
             snap = self.bridge.call_function("CaptureSnapshot")
             if not (snap.bHeroInputReady and not snap.bDamageImmune): return
@@ -240,6 +238,7 @@ class Client:
             if not (snap.bHeroInputReady and not snap.bDamageImmune): return
             require(not self.ability.get_property("bIsActive"), "owning native Death survived respawn")
             ue.set_mixin_profile(self.ability, "Python")
+        if hasattr(self,'before_respawn_ack') and not self.before_respawn_ack(pawn):return
         self.row.update(native_respawn_seen=True, new_pawn=pawn.get_path_name(), cues=copy.deepcopy(self.cues), counters=delta(self.before))
         require(self.row["native_health_zero_seen"] and len(self.cues) == 1, "real replicated Death/Cue missing or duplicated")
         self.report["cases"].append(copy.deepcopy(self.row))
@@ -269,8 +268,8 @@ class Client:
             self.restore_respawn_fixture()
             if hasattr(self, "ability") and valid(self.ability): ue.set_mixin_profile(self.ability, "Python")
             if hasattr(self, "cue_cls"):
-                require(ue.unregister_mixin(self.cue_cls) and self.cue_cls.get_cdo().find_function("OnBurst") == self.original_cue,
-                    "native Death viewer Cue function not restored")
+                from .mixin_observation import restore
+                require(restore(self.cue_observer),"native Death viewer Cue profile/function not restored")
                 self.report["cue_observer_restored"] = True
         except Exception: error = (error or "")+traceback.format_exc()
         self.report.update(status="failed" if error else "awaiting_shutdown", error=error)
@@ -292,7 +291,7 @@ class Client:
         (ue.log if self.report["status"] == "passed" else ue.log_error)("UEP_DEATH_NETWORK_"+self.report["status"].upper())
 
 
-if any(value.startswith("-UEPDeathNetworkResult=") for value in sys.argv):
+if '-UEPNativeDeathNetwork' not in sys.argv and any(value.startswith("-UEPDeathNetworkResult=") for value in sys.argv):
     result, peer, run = arg("-UEPDeathNetworkResult="), arg("-UEPJumpPeer="), arg("-UEPJumpRun=")
     validation = Server(result, run) if peer == "server" else Client(result, peer, run)
     atexit.register(validation.finalize); ticker = ue.add_ticker(validation.tick)

@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "accepted": true,
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "previous_blueprint_python_fixed": true,
+  "engine_full_compile_executed": false,
+  "sdk_or_bridge_rebuild_executed": false,
+  "cook_package_executed": false,
+  "physical_input_tested": false,
+  "cpp09_actual_window_stage_preserved": true,
+  "batch": "CPP15",
+  "candidates": [
+    "CPP-021"
+  ],
+  "native_reset_network": {
+    "status": "passed",
+    "native_reset_producer_tested": true,
+    "owners": 2,
+    "authority_trials": 12,
+    "owner_trials": 12,
+    "passive_foreign_client_observations": 12,
+    "reset_router_payload_replicated_to_foreign_client": false,
+    "full_auto_respawn_acceptance": false
+  },
+  "typed_context_cases": 4,
+  "native_class_mixin_used": false,
+  "blueprint_policy_owner": "world subsystem / BP_GlobalGameplayPolicy",
+  "original_reset_native_class_and_existing_spec_retained": true,
+  "ordinary_cancelled_protected_survives_respawn": true,
+  "native_reset_message_and_foreign_owner_isolation": true,
+  "fixture_activates_only_ordinary_and_survives_death_witnesses": true,
+  "compile_partition": {
+    "uht_runs": 1,
+    "compiled_units": [
+      "Module.LyraGame.1.cpp",
+      "Module.LyraGame.2.cpp"
+    ],
+    "reused_units": [
+      "Module.LyraGame.3.cpp"
+    ]
+  },
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP15/Build01/summary.json",
+      "sha256": "BEA5AAA25ADE98CE5556B8E522332DF16604B045CDAF2652CB353E5B8262380A"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP15/Assets01/summary.json",
+      "sha256": "C2099F0459AA2D7044C8000BDE9A27CB71B8772108FD2596350DAED0175B08B5"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP15/Contexts01/summary.json",
+      "sha256": "B54793A22B692C8C0462897E02DCE1F8C767D80E9025938B0B592A3AC2B2BBEE"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP15/Network01/summary.json",
+      "sha256": "7C54E53985F6BA2C175B2E6386F64ACA50215C747285F4D591BF60B73935D85A"
+    }
+  ]
+}

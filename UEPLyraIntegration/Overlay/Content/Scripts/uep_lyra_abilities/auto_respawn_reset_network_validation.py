@@ -152,7 +152,7 @@ class Server(ResetTrials):
 
     def prepare(self):
         self.target, self.index = PEERS[self.position//TRIALS], self.position % TRIALS
-        self.name, self.profile = PLAN[self.index//2], ("BlueprintFallback", "Python")[self.index % 2]
+        self.name, self.profile = PLAN[self.index//2], getattr(self,'profile_order',("BlueprintFallback", "Python"))[self.index % 2]
         require(time.monotonic()-self.phase_started < 20, "native Reset authority readiness timeout")
         context = self.contexts.get(self.target)
         for field, key in (("original_profile", "profile"), ("original_specs", "specs"), ("original_delay", "delay")):
@@ -219,7 +219,7 @@ class Server(ResetTrials):
     def finalize(self): finalize_peer(self)
 
 
-if any(value.startswith("-UEPAutoRespawnResetNetworkResult=") for value in sys.argv):
+if '-UEPNativeResetNetwork' not in sys.argv and any(value.startswith("-UEPAutoRespawnResetNetworkResult=") for value in sys.argv):
     path, peer, run = arg("-UEPAutoRespawnResetNetworkResult="), arg("-UEPJumpPeer="), arg("-UEPJumpRun=")
     validation = Server(path, run) if peer == "server" else Client(path, peer, run)
     atexit.register(validation.finalize); ticker = ue.add_ticker(validation.tick)

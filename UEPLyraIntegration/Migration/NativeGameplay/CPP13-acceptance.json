@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "accepted": true,
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "previous_blueprint_python_fixed": true,
+  "engine_full_compile_executed": false,
+  "sdk_or_bridge_rebuild_executed": false,
+  "cook_package_executed": false,
+  "physical_input_tested": false,
+  "cpp09_actual_window_stage_preserved": true,
+  "batch": "CPP13",
+  "candidates": [
+    "CPP-019"
+  ],
+  "native_input_physics_and_prediction": {
+    "status": "passed",
+    "owners": 2,
+    "native_jump_trials": 28,
+    "admission_boundary_calls": 12,
+    "physical_input_tested": false,
+    "previous_blueprint_policy_fixed": "Python",
+    "death_respawn_crosscheck_pending": true
+  },
+  "death_cancel_and_new_avatar_jump_trials": 4,
+  "death_crosscheck": {
+    "status": "passed",
+    "bounded_network_acceptance": true,
+    "authority_trials": 20,
+    "viewers": 2
+  },
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP13/Build02Teardown/summary.json",
+      "sha256": "81E8BD741D7744672D59CAD57155B656EA8B001ABF9708DB3CBA391FD94C9E70"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP13/Assets01/summary.json",
+      "sha256": "4D67AB7CF5DB267C5ABD1BAC9A130D19D076D97FD89EB794774DD0E22569A1FA"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP13/Network03/summary.json",
+      "sha256": "E4B9E40D9CCFFCCFDC3343A7ECA246A79AD8CDFD9923C587C6D66E63602BE3E6"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP14/Network01/summary.json",
+      "sha256": "39746CDFD6C67BE11D37E3FCF678E2C9203376DC2470AF4C7D8B67EFBD62CB90"
+    }
+  ]
+}

@@ -15,6 +15,8 @@ is_commandlet = any(argument.lower().startswith("-run=") for argument in sys.arg
 if is_commandlet:
     ue.log("UEP_LYRA_COMMANDLET_BOOTSTRAP_SKIPPED")
 else:
+    from uep_lyra_native.global_policy import register_if_available
+    register_if_available()
     from uep_lyra_hud import bootstrap  # noqa: E402,F401
     from uep_lyra_hud.startup import validation_module
     selected_validation = validation_module(sys.argv)

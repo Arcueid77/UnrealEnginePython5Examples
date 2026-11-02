@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "accepted": true,
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "previous_blueprint_python_fixed": true,
+  "engine_full_compile_executed": false,
+  "sdk_or_bridge_rebuild_executed": false,
+  "cook_package_executed": false,
+  "physical_input_tested": false,
+  "cpp09_actual_window_stage_preserved": true,
+  "batch": "CPP14",
+  "candidates": [
+    "CPP-020"
+  ],
+  "real_lethal_network_deaths": {
+    "status": "passed",
+    "bounded_network_acceptance": true,
+    "authority_trials": 20,
+    "viewers": 2
+  },
+  "native_self_destruct_and_protected_ability_trials": {
+    "status": "passed",
+    "bounded_network_acceptance": true,
+    "authority_trials": 4,
+    "viewers": 2
+  },
+  "arena_native_death_tasks": [
+    {
+      "status": "passed",
+      "profile": "NativeLifecycleFallback",
+      "native_death_task": true,
+      "native_duration_seconds": 2.0,
+      "previous_blueprint_policy": "Python",
+      "network_acceptance": false
+    },
+    {
+      "status": "passed",
+      "profile": "Python",
+      "native_death_task": true,
+      "native_duration_seconds": 2.0,
+      "previous_blueprint_policy": "Python",
+      "network_acceptance": false
+    }
+  ],
+  "raw_actorinfo_spec_handles_native": true,
+  "native_waits_and_replication_retained": true,
+  "fixture_activates_only_ordinary_and_survives_death_witnesses": true,
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP14/Assets01/summary.json",
+      "sha256": "65246A3A8EA1A870003C676156B83F6EA79928E5E326CDD8B72B21D997518EB2"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP14/Network01/summary.json",
+      "sha256": "39746CDFD6C67BE11D37E3FCF678E2C9203376DC2470AF4C7D8B67EFBD62CB90"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP14/SelfDestruct01/summary.json",
+      "sha256": "4B1B1B62F6604383821F2E14C7A1220C697CEF6510A1FAE84F7ADC39EF7083D1"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP14/ArenaFallback01/summary.json",
+      "sha256": "31DC18625B1D9815E0F9DF8B55DF0037C80AC76E6A98E9A2617A12C44B406F62"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP14/ArenaPython01/summary.json",
+      "sha256": "1A418F89538DA9C700B97C4ED1EEE71E366B6531CFC2149BFB4496AC8B330792"
+    }
+  ]
+}

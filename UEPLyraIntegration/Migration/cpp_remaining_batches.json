@@ -18,7 +18,11 @@
     "CPP-029",
     "CPP-030"
   ],
-  "accepted_candidates": [],
+  "accepted_candidates": [
+    "CPP-019",
+    "CPP-020",
+    "CPP-021"
+  ],
   "prior_scopes": [
     "cpp_batches.json",
     "cpp_extended_batches.json"
@@ -30,8 +34,8 @@
       "candidates": [
         "CPP-019"
       ],
-      "status": "implemented_pending_death_lifecycle_crosscheck",
-      "acceptance_ledger": null,
+      "status": "accepted",
+      "acceptance_ledger": "NativeGameplay/CPP13-acceptance.json",
       "progress_ledger": "NativeGameplay/CPP13-progress.json"
     },
     {
@@ -39,16 +43,16 @@
       "candidates": [
         "CPP-020"
       ],
-      "status": "pending",
-      "acceptance_ledger": null
+      "status": "accepted",
+      "acceptance_ledger": "NativeGameplay/CPP14-acceptance.json"
     },
     {
       "id": "CPP15",
       "candidates": [
         "CPP-021"
       ],
-      "status": "pending",
-      "acceptance_ledger": null
+      "status": "accepted",
+      "acceptance_ledger": "NativeGameplay/CPP15-acceptance.json"
     },
     {
       "id": "CPP16",

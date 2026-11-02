@@ -2,6 +2,12 @@
 
 
 def validation_module(arguments):
+    if '-UEPNativeResetNetwork' in arguments:
+        return None if any(a.startswith('-run=') for a in arguments) else 'uep_lyra_native.reset_network_validation'
+    if any(a.startswith('-UEPNativeArenaDeathResult=') for a in arguments):
+        return None if any(a.startswith('-run=') for a in arguments) else 'uep_lyra_native.arena_death_validation'
+    if '-UEPNativeDeathNetwork' in arguments:
+        return None if any(a.startswith('-run=') for a in arguments) else 'uep_lyra_native.death_network_validation'
     if '-UEPNativeJumpNetwork' in arguments:
         return None if any(a.startswith('-run=') for a in arguments) else 'uep_lyra_native.jump_network_validation'
     if '-UEPNativeCostNetwork' in arguments:

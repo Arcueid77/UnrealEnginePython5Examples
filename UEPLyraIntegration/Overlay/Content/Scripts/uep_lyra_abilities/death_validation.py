@@ -93,7 +93,7 @@ class Validation:
         self.source_task = None
 
     def begin(self):
-        self.name, self.profile = PLAN[self.index//2], ("BlueprintFallback", "Python")[self.index % 2]
+        self.name, self.profile = PLAN[self.index//2], getattr(self,"profile_order",("BlueprintFallback", "Python"))[self.index % 2]
         ue.set_mixin_profile(self.ability, self.profile)
         self.sources, self.cues, self.observation_errors, self.intervened = [], [], [], False
         self.old_pawn = self.pawn.get_path_name()
@@ -120,7 +120,8 @@ class Validation:
         try:
             self.source_owner.set_property("RespawnDelayDuration", delay)
             self._respawn_fixture_pending = True
-            death_damage.apply(self.asc, self.row["health_before"])
+            if hasattr(self,'apply_lethal_damage'):self.apply_lethal_damage(self.asc,self.row['health_before'])
+            else:death_damage.apply(self.asc, self.row["health_before"])
         except Exception:
             self.restore_respawn_fixture(); raise
         finally:
@@ -154,7 +155,7 @@ class Validation:
                 require(self.row["cancel_refused"], "native Death noncancelable rule was bypassed")
             elif self.name == "external-native-end": self.ability.call_function("K2_EndAbility")
             else:
-                ue.set_mixin_profile(self.ability, "Python" if self.profile == "BlueprintFallback" else "BlueprintFallback")
+                order=getattr(self,"profile_order",("BlueprintFallback", "Python"));ue.set_mixin_profile(self.ability,order[1] if self.profile==order[0] else order[0])
                 self.row["profile_switched"] = not self.ability.get_property("bIsActive")
             active = bool(self.ability.get_property("bIsActive"))
         if active:

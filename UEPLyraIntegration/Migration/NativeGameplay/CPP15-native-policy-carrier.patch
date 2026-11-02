@@ -1,0 +1,117 @@
+--- a/Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility_Reset.cpp
++++ b/Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility_Reset.cpp
+@@ -7,6 +7,8 @@
+ #include "GameFramework/GameplayMessageSubsystem.h"
+ #include "LyraGameplayTags.h"
+ 
++#include "UEPPolicy/UEPNativeGameplayPolicy.h"
++#include "UObject/StrongObjectPtr.h"
+ #include UE_INLINE_GENERATED_CPP_BY_NAME(LyraGameplayAbility_Reset)
+ 
+ ULyraGameplayAbility_Reset::ULyraGameplayAbility_Reset(const FObjectInitializer& ObjectInitializer)
+@@ -78,5 +80,19 @@
+ }
+ 
+ 
+-bool ULyraGameplayAbility_Reset::UEPUsesPythonResetPolicy_Implementation() const { return false; }
+-TArray<FName> ULyraGameplayAbility_Reset::UEPResetActivationPlan_Implementation() const { return {}; }
++bool ULyraGameplayAbility_Reset::UEPUsesPythonResetPolicy_Implementation() const
++{
++    UUEPNativeGameplayPolicy* Host = UUEPNativeGameplayPolicySubsystem::GetPolicyForContext(GetWorld());
++    return Host && Host->UEPUsesPythonPolicy(TEXT("Reset.Activate"));
++}
++TArray<FName> ULyraGameplayAbility_Reset::UEPResetActivationPlan_Implementation() const
++{
++    UUEPNativeGameplayPolicy* Host = UUEPNativeGameplayPolicySubsystem::GetPolicyForContext(GetWorld());
++    if (!Host) { return {}; }
++    TStrongObjectPtr<UUEPNativeResetPolicyContext> Context(NewObject<UUEPNativeResetPolicyContext>(Host));
++    Context->Operation = TEXT("Reset.Activate");
++    Context->bHasCharacter = GetLyraCharacterFromActorInfo() != nullptr;
++    Host->UEPApplyPolicy(Context.Get());
++    ensureMsgf(Context->bCompleted, TEXT("Python Reset policy did not complete"));
++    return Context->bCompleted ? Context->Actions : TArray<FName>();
++}
+--- /dev/null
++++ b/Source/LyraGame/UEPPolicy/UEPNativeGameplayPolicy.h
+@@ -0,0 +1,48 @@
++#pragma once
++#include "CoreMinimal.h"
++#include "Subsystems/WorldSubsystem.h"
++#include "UEPNativeGameplayPolicy.generated.h"
++
++UCLASS(BlueprintType)
++class LYRAGAME_API UUEPNativePolicyContext : public UObject
++{
++    GENERATED_BODY()
++public:
++    UPROPERTY(BlueprintReadOnly) FName Operation;
++    UPROPERTY(BlueprintReadWrite) bool bCompleted = false;
++};
++
++UCLASS(BlueprintType)
++class LYRAGAME_API UUEPNativeResetPolicyContext : public UUEPNativePolicyContext
++{
++    GENERATED_BODY()
++public:
++    UPROPERTY(BlueprintReadOnly) bool bHasCharacter = false;
++    UPROPERTY(BlueprintReadWrite) TArray<FName> Actions;
++};
++
++UCLASS(Blueprintable)
++class LYRAGAME_API UUEPNativeGameplayPolicy : public UObject
++{
++    GENERATED_BODY()
++public:
++    virtual UWorld* GetWorld() const override;
++    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
++    bool UEPUsesPythonPolicy(FName Operation) const;
++    UFUNCTION(BlueprintNativeEvent)
++    void UEPApplyPolicy(UUEPNativePolicyContext* Context) const;
++    UFUNCTION(BlueprintNativeEvent)
++    UObject* UEPChooseObject(FName Operation, UObject* Primary, UObject* Secondary) const;
++};
++
++UCLASS()
++class LYRAGAME_API UUEPNativeGameplayPolicySubsystem : public UWorldSubsystem
++{
++    GENERATED_BODY()
++public:
++    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
++    static UUEPNativeGameplayPolicy* GetPolicyForContext(UObject* WorldContext);
++    UUEPNativeGameplayPolicy* GetPolicy();
++private:
++    UPROPERTY(Transient) TObjectPtr<UUEPNativeGameplayPolicy> Policy;
++};
+--- /dev/null
++++ b/Source/LyraGame/UEPPolicy/UEPNativeGameplayPolicy.cpp
+@@ -0,0 +1,30 @@
++#include "UEPNativeGameplayPolicy.h"
++#include "Engine/World.h"
++#include "Misc/PackageName.h"
++#include UE_INLINE_GENERATED_CPP_BY_NAME(UEPNativeGameplayPolicy)
++
++UWorld* UUEPNativeGameplayPolicy::GetWorld() const
++{
++    return HasAnyFlags(RF_ClassDefaultObject) || !GetOuter() ? nullptr : GetOuter()->GetWorld();
++}
++bool UUEPNativeGameplayPolicy::UEPUsesPythonPolicy_Implementation(FName Operation) const { return false; }
++void UUEPNativeGameplayPolicy::UEPApplyPolicy_Implementation(UUEPNativePolicyContext* Context) const {}
++UObject* UUEPNativeGameplayPolicy::UEPChooseObject_Implementation(FName Operation, UObject* Primary, UObject* Secondary) const { return nullptr; }
++UUEPNativeGameplayPolicy* UUEPNativeGameplayPolicySubsystem::GetPolicyForContext(UObject* WorldContext)
++{
++    UWorld* World = WorldContext ? WorldContext->GetWorld() : nullptr;
++    if (!World || World->bIsTearingDown) { return nullptr; }
++    UUEPNativeGameplayPolicySubsystem* Subsystem = World ? World->GetSubsystem<UUEPNativeGameplayPolicySubsystem>() : nullptr;
++    return Subsystem ? Subsystem->GetPolicy() : nullptr;
++}
++UUEPNativeGameplayPolicy* UUEPNativeGameplayPolicySubsystem::GetPolicy()
++{
++    if (!Policy && FPackageName::DoesPackageExist(TEXT("/Game/UEPNative/BP_GlobalGameplayPolicy")))
++    {
++        if (UClass* Class = LoadClass<UUEPNativeGameplayPolicy>(nullptr, TEXT("/Game/UEPNative/BP_GlobalGameplayPolicy.BP_GlobalGameplayPolicy_C")))
++        {
++            Policy = NewObject<UUEPNativeGameplayPolicy>(this, Class);
++        }
++    }
++    return Policy;
++}
