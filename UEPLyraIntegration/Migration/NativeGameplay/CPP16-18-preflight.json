@@ -1,0 +1,400 @@
+{
+  "schema_version": 1,
+  "status": "preflight_complete_plan_for_review",
+  "review_date": "2026-11-02",
+  "candidates": [
+    "CPP-016",
+    "CPP-017",
+    "CPP-018"
+  ],
+  "implementation_started": false,
+  "accepted": false,
+  "runtime_acceptance": false,
+  "existing_cpp_scope": {
+    "approved_candidates": 15,
+    "implemented_candidates": 15,
+    "accepted_candidates": 14,
+    "cpp09_actual_input_pending": true
+  },
+  "counts": {
+    "item_definitions": 8,
+    "ability_definitions": 38,
+    "original_item_definitions": 7,
+    "original_ability_definitions": 37,
+    "stat_fragments": 5,
+    "item_tag_costs": 5,
+    "player_tag_costs": 0
+  },
+  "registry_blueprints": 577,
+  "missing_native_parent_tags": 0,
+  "original_definition_count": 44,
+  "stage_fixture_definition_count": 2,
+  "stat_fragments": [
+    {
+      "owner": "/ShooterCore/Items/HealthPickup_Unused/ID_HealPickup.ID_HealPickup",
+      "slot": 2,
+      "object_path": "/ShooterCore/Items/HealthPickup_Unused/ID_HealPickup.Default__ID_HealPickup_C:InventoryFragment_SetStats_0",
+      "class_path": "/Script/LyraGame.InventoryFragment_SetStats",
+      "map_read_supported": false,
+      "native_exported_initial_stats": [
+        {
+          "tag": "Lyra.ShooterGame.Weapon.MagazineSize",
+          "count": 1
+        },
+        {
+          "tag": "Lyra.ShooterGame.Weapon.MagazineAmmo",
+          "count": 1
+        },
+        {
+          "tag": "Lyra.ShooterGame.Weapon.SpareAmmo",
+          "count": 0
+        }
+      ],
+      "definition_scope": "original_lyra_asset"
+    },
+    {
+      "owner": "/ShooterCore/Weapons/NetShooter_PROTO/ID_NetShooter.ID_NetShooter",
+      "slot": 2,
+      "object_path": "/ShooterCore/Weapons/NetShooter_PROTO/ID_NetShooter.Default__ID_NetShooter_C:InventoryFragment_SetStats_0",
+      "class_path": "/Script/LyraGame.InventoryFragment_SetStats",
+      "map_read_supported": false,
+      "native_exported_initial_stats": [
+        {
+          "tag": "Lyra.ShooterGame.Weapon.MagazineSize",
+          "count": 1
+        },
+        {
+          "tag": "Lyra.ShooterGame.Weapon.MagazineAmmo",
+          "count": 1
+        },
+        {
+          "tag": "Lyra.ShooterGame.Weapon.SpareAmmo",
+          "count": 2
+        }
+      ],
+      "definition_scope": "original_lyra_asset"
+    },
+    {
+      "owner": "/ShooterCore/Weapons/Pistol/ID_Pistol.ID_Pistol",
+      "slot": 2,
+      "object_path": "/ShooterCore/Weapons/Pistol/ID_Pistol.Default__ID_Pistol_C:InventoryFragment_SetStats_0",
+      "class_path": "/Script/LyraGame.InventoryFragment_SetStats",
+      "map_read_supported": false,
+      "native_exported_initial_stats": [
+        {
+          "tag": "Lyra.ShooterGame.Weapon.MagazineSize",
+          "count": 12
+        },
+        {
+          "tag": "Lyra.ShooterGame.Weapon.MagazineAmmo",
+          "count": 12
+        },
+        {
+          "tag": "Lyra.ShooterGame.Weapon.SpareAmmo",
+          "count": 48
+        }
+      ],
+      "definition_scope": "original_lyra_asset"
+    },
+    {
+      "owner": "/ShooterCore/Weapons/Rifle/ID_Rifle.ID_Rifle",
+      "slot": 2,
+      "object_path": "/ShooterCore/Weapons/Rifle/ID_Rifle.Default__ID_Rifle_C:InventoryFragment_SetStats_0",
+      "class_path": "/Script/LyraGame.InventoryFragment_SetStats",
+      "map_read_supported": false,
+      "native_exported_initial_stats": [
+        {
+          "tag": "Lyra.ShooterGame.Weapon.MagazineSize",
+          "count": 30
+        },
+        {
+          "tag": "Lyra.ShooterGame.Weapon.MagazineAmmo",
+          "count": 30
+        },
+        {
+          "tag": "Lyra.ShooterGame.Weapon.SpareAmmo",
+          "count": 60
+        }
+      ],
+      "definition_scope": "original_lyra_asset"
+    },
+    {
+      "owner": "/ShooterCore/Weapons/Shotgun/ID_Shotgun.ID_Shotgun",
+      "slot": 2,
+      "object_path": "/ShooterCore/Weapons/Shotgun/ID_Shotgun.Default__ID_Shotgun_C:InventoryFragment_SetStats_0",
+      "class_path": "/Script/LyraGame.InventoryFragment_SetStats",
+      "map_read_supported": false,
+      "native_exported_initial_stats": [
+        {
+          "tag": "Lyra.ShooterGame.Weapon.MagazineSize",
+          "count": 8
+        },
+        {
+          "tag": "Lyra.ShooterGame.Weapon.MagazineAmmo",
+          "count": 8
+        },
+        {
+          "tag": "Lyra.ShooterGame.Weapon.SpareAmmo",
+          "count": 16
+        }
+      ],
+      "definition_scope": "original_lyra_asset"
+    }
+  ],
+  "item_and_player_costs": [
+    {
+      "owner": "/ShooterCore/Items/HealthPickup_Unused/GA_HealPickup.GA_HealPickup",
+      "slot": 0,
+      "object_path": "/ShooterCore/Items/HealthPickup_Unused/GA_HealPickup.Default__GA_HealPickup_C:LyraAbilityCost_ItemTagStack_0",
+      "class_path": "/Script/LyraGame.LyraAbilityCost_ItemTagStack",
+      "kind": "item",
+      "tag": "Lyra.ShooterGame.Weapon.MagazineAmmo",
+      "quantity_base": 1.0,
+      "quantity_curve_table": null,
+      "quantity_curve_row": "None",
+      "only_apply_on_hit": false,
+      "failure_tag": "Ability.ActivateFail.Cost"
+    },
+    {
+      "owner": "/ShooterCore/Weapons/NetShooter_PROTO/GA_WeaponNetShooter.GA_WeaponNetShooter",
+      "slot": 0,
+      "object_path": "/ShooterCore/Weapons/NetShooter_PROTO/GA_WeaponNetShooter.Default__GA_WeaponNetShooter_C:LyraAbilityCost_ItemTagStack_0",
+      "class_path": "/Script/LyraGame.LyraAbilityCost_ItemTagStack",
+      "kind": "item",
+      "tag": "Lyra.ShooterGame.Weapon.MagazineAmmo",
+      "quantity_base": 1.0,
+      "quantity_curve_table": null,
+      "quantity_curve_row": "None",
+      "only_apply_on_hit": false,
+      "failure_tag": "Ability.ActivateFail.Cost"
+    },
+    {
+      "owner": "/ShooterCore/Weapons/Pistol/GA_Weapon_Fire_Pistol.GA_Weapon_Fire_Pistol",
+      "slot": 0,
+      "object_path": "/ShooterCore/Weapons/Pistol/GA_Weapon_Fire_Pistol.Default__GA_Weapon_Fire_Pistol_C:LyraAbilityCost_ItemTagStack_0",
+      "class_path": "/Script/LyraGame.LyraAbilityCost_ItemTagStack",
+      "kind": "item",
+      "tag": "Lyra.ShooterGame.Weapon.MagazineAmmo",
+      "quantity_base": 1.0,
+      "quantity_curve_table": null,
+      "quantity_curve_row": "None",
+      "only_apply_on_hit": false,
+      "failure_tag": "Ability.ActivateFail.Cost"
+    },
+    {
+      "owner": "/ShooterCore/Weapons/Rifle/GA_Weapon_Fire_Rifle_Auto.GA_Weapon_Fire_Rifle_Auto",
+      "slot": 0,
+      "object_path": "/ShooterCore/Weapons/Rifle/GA_Weapon_Fire_Rifle_Auto.Default__GA_Weapon_Fire_Rifle_Auto_C:LyraAbilityCost_ItemTagStack_0",
+      "class_path": "/Script/LyraGame.LyraAbilityCost_ItemTagStack",
+      "kind": "item",
+      "tag": "Lyra.ShooterGame.Weapon.MagazineAmmo",
+      "quantity_base": 1.0,
+      "quantity_curve_table": null,
+      "quantity_curve_row": "None",
+      "only_apply_on_hit": false,
+      "failure_tag": "Ability.ActivateFail.Cost"
+    },
+    {
+      "owner": "/ShooterCore/Weapons/Shotgun/GA_Weapon_Fire_Shotgun.GA_Weapon_Fire_Shotgun",
+      "slot": 0,
+      "object_path": "/ShooterCore/Weapons/Shotgun/GA_Weapon_Fire_Shotgun.Default__GA_Weapon_Fire_Shotgun_C:LyraAbilityCost_ItemTagStack_0",
+      "class_path": "/Script/LyraGame.LyraAbilityCost_ItemTagStack",
+      "kind": "item",
+      "tag": "Lyra.ShooterGame.Weapon.MagazineAmmo",
+      "quantity_base": 1.0,
+      "quantity_curve_table": null,
+      "quantity_curve_row": "None",
+      "only_apply_on_hit": false,
+      "failure_tag": "Ability.ActivateFail.Cost"
+    }
+  ],
+  "all_selected_asset_hashes_unchanged": true,
+  "original_sources_match_census": true,
+  "sources": [
+    {
+      "relative": "Source/LyraGame/Inventory/InventoryFragment_SetStats.h",
+      "sha256": "0595FAE77B733E0A1B9813B9D73543FE9E176BAC84C2E3B77AA0DC7CE682907F"
+    },
+    {
+      "relative": "Source/LyraGame/Inventory/InventoryFragment_SetStats.cpp",
+      "sha256": "02380C20344AEB34900266AEB3755F8CAEC9F3E091497E1B7C94CB00AC5540A6"
+    },
+    {
+      "relative": "Source/LyraGame/Inventory/LyraInventoryItemDefinition.h",
+      "sha256": "FAECA215EA622D5EA1956C3E78767D6B012A9682475F44AF5AE376B9FAC6AD0E"
+    },
+    {
+      "relative": "Source/LyraGame/Inventory/LyraInventoryItemDefinition.cpp",
+      "sha256": "6A2846AA0FEE891E7BE84A2EF09FE5251514D60C7454822BCC58015280CA341B"
+    },
+    {
+      "relative": "Source/LyraGame/Inventory/LyraInventoryManagerComponent.cpp",
+      "sha256": "E34238FD2261DB1311E31C59FB58C1A5AB414E496EEB578BCC6F5BD42DD3AC81"
+    },
+    {
+      "relative": "Source/LyraGame/AbilitySystem/Abilities/LyraAbilityCost.h",
+      "sha256": "6DF86AF1B73C53C42FBA1B81F80A4E12950708F282C8074DD465FDEC71C18E21"
+    },
+    {
+      "relative": "Source/LyraGame/AbilitySystem/Abilities/LyraAbilityCost_ItemTagStack.h",
+      "sha256": "ADC4CA4E4714229111CAD10993994048B5978A098583BF607E9B8227EF54D8C2"
+    },
+    {
+      "relative": "Source/LyraGame/AbilitySystem/Abilities/LyraAbilityCost_ItemTagStack.cpp",
+      "sha256": "7DAE0886E261D1328D74A661325F36CD903E7C9E4782A64AB3F9DBD06EBA979D"
+    },
+    {
+      "relative": "Source/LyraGame/AbilitySystem/Abilities/LyraAbilityCost_PlayerTagStack.h",
+      "sha256": "9F481E7F47DB9DF76DA1D4ACE17CDFF3EB9D608DC5826F650061A56A7404E497"
+    },
+    {
+      "relative": "Source/LyraGame/AbilitySystem/Abilities/LyraAbilityCost_PlayerTagStack.cpp",
+      "sha256": "9DF4D3261656EC32BD6848B27001DE20672AF167B19BECD7C2734BEEB97B6727"
+    },
+    {
+      "relative": "Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility.h",
+      "sha256": "EE1A90725AAEDF6217947C95A848299B7FF61BD9BECC2E29A4CF556CBCC7DBD2"
+    },
+    {
+      "relative": "Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility.cpp",
+      "sha256": "91709A3AC50E55D92EBF1684165925C26BF4E29C0A6E356517721DFB2BB7E3FF"
+    },
+    {
+      "relative": "Source/LyraGame/Equipment/LyraGameplayAbility_FromEquipment.h",
+      "sha256": "285DA593209B17B634FA4B51088B805EC7971E466E8771373838445F38213D7E"
+    },
+    {
+      "relative": "Source/LyraGame/Equipment/LyraGameplayAbility_FromEquipment.cpp",
+      "sha256": "CA6717CF80045CF0093ABF2D2D4653FC4BC5E412BF59F324ECF462AE91A0BC76"
+    },
+    {
+      "relative": "Source/LyraGame/Inventory/LyraInventoryItemInstance.h",
+      "sha256": "1D3EFA72C9742F8DF226814EAACCF47C184A7E1071EAFFC7D63E1F0E5C4D8269"
+    },
+    {
+      "relative": "Source/LyraGame/Inventory/LyraInventoryItemInstance.cpp",
+      "sha256": "15E06D3C85C3349C32C2C4F81AD2B12A761DCEEF682CA61FEC3CB4D150726E56"
+    },
+    {
+      "relative": "Source/LyraGame/Player/LyraPlayerState.h",
+      "sha256": "B43914FA32419E31DB228E087AAA4261654B2B687B0754731963E47EF8F3C103"
+    },
+    {
+      "relative": "Source/LyraGame/Player/LyraPlayerState.cpp",
+      "sha256": "9719EA5FD8A390E94601CF6290BA1F5D2B799E9960906213F43C5E1EE439A39B"
+    }
+  ],
+  "binding_findings": [
+    {
+      "type": "TMap<FGameplayTag,int32>",
+      "direct_read_supported": false,
+      "observed_failures": 5,
+      "cause": "UScriptStruct keys are unhashable; get_property also returns SystemError after the underlying TypeError",
+      "planned_solution": "copy native map iteration into a typed array of Tag/Count entries; no mutable struct dictionary keys"
+    },
+    {
+      "type": "instanced native fragment and cost objects",
+      "direct_blueprint_mixin_assumption_validated": false,
+      "planned_solution": "prototype policy events on existing item-definition and ability Blueprint owners; retain instanced objects and data"
+    },
+    {
+      "type": "ActorInfo/spec handles and scalable quantities",
+      "expose_raw_pointers": false,
+      "planned_solution": "native context extraction/evaluation and typed value snapshots; native authority checks and writeback"
+    }
+  ],
+  "proposed_batches": [
+    {
+      "batch": "CPP10",
+      "candidates": [
+        "CPP-016"
+      ],
+      "scope": "initial item-stat application",
+      "owner": "ULyraInventoryItemDefinition Blueprint owner",
+      "native_entry": "FLyraInventoryList::AddEntry -> Fragment::OnInstanceCreated",
+      "readiness": "owner-event prototype and typed stat adapter required before replacement",
+      "runtime_examples": [
+        "Pistol",
+        "Rifle",
+        "Shotgun"
+      ],
+      "retained_examples": [
+        "HealthPickup_Unused",
+        "NetShooter_PROTO"
+      ]
+    },
+    {
+      "batch": "CPP11",
+      "candidates": [
+        "CPP-017"
+      ],
+      "scope": "item tag-stack cost decisions",
+      "owner": "existing ULyraGameplayAbility Blueprint instances",
+      "native_entry": "ULyraGameplayAbility::CheckCost/ApplyCost -> AdditionalCosts virtual calls",
+      "readiness": "preserve existing Blueprint policy profiles; explicit native/Python selection before mutation",
+      "runtime_examples": [
+        "Pistol",
+        "Rifle",
+        "Shotgun"
+      ],
+      "retained_examples": [
+        "HealthPickup_Unused",
+        "NetShooter_PROTO"
+      ]
+    },
+    {
+      "batch": "CPP12",
+      "candidates": [
+        "CPP-018"
+      ],
+      "scope": "player tag-stack cost capability",
+      "owner": "dedicated staged LyraGameplayAbility fixture",
+      "readiness": "no configured consumer found in the selected definition census; fixture acceptance must be distinguished from production replacement",
+      "production_replacement_acceptance_available": false
+    }
+  ],
+  "invariants": [
+    "Preserve original Fragments and AdditionalCosts object identities, order and values.",
+    "Keep Super::CheckCost, fail-fast ordering and hit-only filtering in the original native caller.",
+    "Evaluate curves/ability levels and FMath::TruncToInt with native semantics.",
+    "CheckCost may run for prediction; only native authority applies tag-stack writes.",
+    "Item cost failure tags apply only to insufficient valid items, when the optional output exists and FailureTag is valid. Player cost and missing targets add no new failure tag.",
+    "Choose NativeFallback before any business side effects; never execute the native body after a Python business failure.",
+    "Keep previously accepted Blueprint Python methods fixed in the C++ comparison."
+  ],
+  "planned_checks": [
+    "real inventory creation through AddItemDefinition and initial tag-stack replication",
+    "repeat creation and empty/zero/negative stat fixtures",
+    "native/Python cost comparison at below/equal/above quantity",
+    "fractional/zero/negative quantities, ability levels and curve-backed fixtures",
+    "missing/wrong equipment and missing PlayerState",
+    "optional/invalid failure tags and existing caller fail-fast ordering",
+    "authority-only deduction, prediction, hit-only and duplicate-input checks",
+    "two actual client owners, owner isolation, Pawn replacement and cleanup"
+  ],
+  "stage_policy": {
+    "preserve_cpp09_stage": true,
+    "proposed_independent_stage": ".build/LyraValidation/CppGameplayExtended/Stage/Lyra",
+    "independent_copies_required": true,
+    "hardlinks_allowed": false,
+    "cpp_compile_executed": false,
+    "cook_package_executed": false
+  },
+  "retained_attempts": [
+    "Preflight01: UE inspection passed; wrapper incorrectly expected an atexit marker before the in-script commandlet marker. Preflight02 checks marker -> successful commandlet -> Python shutdown -> log close."
+  ],
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261102-CPP16-18/Preflight02/summary.json",
+      "sha256": "5C1B690117268E2FEE9EAB9BBCD6562E90F4436A5CC6EEA2615525A6351D634C"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261102-CPP16-18/Preflight02/assets.json",
+      "sha256": "3CC46AA11843DE31CDC6EC8A3329AA1D291FE9B02E9024DDF30B1444CA7A8E4F"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261102-CPP16-18/Preflight02/assets.log",
+      "sha256": "1B895D33F7069A92483FD1E8039B587535776AB658053CD6378B9346A1E30158"
+    }
+  ]
+}

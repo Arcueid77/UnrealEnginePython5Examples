@@ -3,6 +3,11 @@
 The approved scope is CPP-001 through CPP-015 in `../cpp_batches.json`.
 The earlier Blueprint acceptance remains a separate completed scope.
 
+CPP-016 through CPP-018 now have a separate read-only
+[entry and asset preflight](CPP16-18-preflight.json) and
+[proposed batch plan](../CPP16_18_PREFLIGHT_REVIEW.md). No business replacement or
+runtime acceptance is claimed there; the first-stage counts remain unchanged.
+
 CPP01 replaces elimination streak, elimination chain, and assist rules. Native
 Gameplay Message subscriptions and their shutdown remain in C++. Four native
 callbacks enter reflected `BlueprintNativeEvent` functions; persistent classes
