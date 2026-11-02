@@ -9,6 +9,14 @@ from uep_lyra_hud.startup import validation_module
 
 
 class StartupSelectionTests(unittest.TestCase):
+    def test_parts_network_owns_reset_fixture_startup(self):
+        args=['-UEPNativePartsNetwork','-UEPNativeResetNetwork','-UEPAutoRespawnResetNetworkResult=report.json']
+        self.assertEqual(validation_module(args),'uep_lyra_native.parts_network_validation')
+        self.assertIsNone(validation_module(['-run=Py']+args))
+    def test_native_world_policy_requires_explicit_lane(self):
+        args=['-UEPNativeWorldPolicyResult=report.json']
+        self.assertEqual(validation_module(args),'uep_lyra_native.world_validation')
+        self.assertIsNone(validation_module(['-run=Py']+args))
     def test_native_reset_owns_legacy_reset_fixture_startup(self):
         args=['-UEPNativeResetNetwork','-UEPAutoRespawnResetNetworkResult=report.json']
         self.assertEqual(validation_module(args),'uep_lyra_native.reset_network_validation')

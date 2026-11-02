@@ -1,6 +1,7 @@
 """Original native Reset GAS event, owner messages and cancellation witnesses."""
 import atexit
 import copy
+import sys
 import unreal_engine as ue
 from uep_lyra_abilities import auto_respawn_reset_network_validation as original
 from . import global_policy
@@ -88,6 +89,7 @@ class Server(original.Server):
         (ue.log if self.report['status']=='passed' else ue.log_error)('UEP_NATIVE_RESET_NETWORK_SHUTDOWN_'+self.report['status'].upper())
 
 
-result,peer,run=(original.arg(flag) for flag in ('-UEPAutoRespawnResetNetworkResult=','-UEPJumpPeer=','-UEPJumpRun='))
-validation=Server(result,run) if peer=='server' else Client(result,peer,run)
-atexit.register(validation.finalize);ticker=ue.add_ticker(validation.tick)
+if '-UEPNativePartsNetwork' not in sys.argv:
+    result,peer,run=(original.arg(flag) for flag in ('-UEPAutoRespawnResetNetworkResult=','-UEPJumpPeer=','-UEPJumpRun='))
+    validation=Server(result,run) if peer=='server' else Client(result,peer,run)
+    atexit.register(validation.finalize);ticker=ue.add_ticker(validation.tick)

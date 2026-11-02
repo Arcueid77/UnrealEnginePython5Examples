@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "accepted": true,
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "previous_reset_python_fixed": true,
+  "engine_full_compile_executed": false,
+  "sdk_or_bridge_rebuild_executed": false,
+  "cook_package_executed": false,
+  "physical_input_tested": false,
+  "default_profile_promoted": true,
+  "cpp09_actual_window_stage_preserved": true,
+  "compile_partition": {
+    "uht_modules": [
+      "LyraGame"
+    ],
+    "compiled_units": [
+      1,
+      3
+    ],
+    "reused_units": [
+      2
+    ]
+  },
+  "shared_adapter_candidates": [
+    "CPP-022",
+    "CPP-023",
+    "CPP-024"
+  ],
+  "batch": "CPP17",
+  "candidates": [
+    "CPP-023"
+  ],
+  "typed_boundary_cases": 28,
+  "native_and_python_possession": [
+    {
+      "status": "passed",
+      "kind": "parts",
+      "profile": "PartsNative",
+      "online_service_tested": false,
+      "network_replication_tested": false
+    },
+    {
+      "status": "passed",
+      "kind": "parts",
+      "profile": "PartsPython",
+      "online_service_tested": false,
+      "network_replication_tested": false
+    }
+  ],
+  "actual_network_actor_mesh_and_reset": {
+    "status": "passed",
+    "replicated_part_trials": 4,
+    "independent_client_views": 8,
+    "native_reset_producer_tested": true,
+    "owners": 2,
+    "authority_trials": 4,
+    "owner_trials": 4,
+    "passive_foreign_client_observations": 4,
+    "reset_router_payload_replicated_to_foreign_client": false,
+    "full_auto_respawn_acceptance": false
+  },
+  "natural_suppression_developer_and_cheat_sources_distinguished": true,
+  "original_part_templates_restored_before_client_release": true,
+  "native_actor_creation_fast_array_replication_and_handles_retained": true,
+  "retained_failed_fixture_attempts": [
+    "Owned temporary PlayerState was destroyed while a spawn-effect spec remained active. The test now uses the original native Reset/respawn route and restores original parts.",
+    "Network01 used a non-reflected component query; corrected to native LyraSystemStatics.FindComponentsByClass.",
+    "Network02/03 exposed observer/restoration scheduling races. Hooks now run inside the existing owner/foreign acknowledgement barriers."
+  ],
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP16/Build01/summary.json",
+      "sha256": "9DE1F3C6009F78F59307413F974503CBF0C567850B85D2DDBD54301BFB6AE07F"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP16/Boundaries01/summary.json",
+      "sha256": "E6FC720AEC62AAA38E7114FD8EFD1CDC8E2176EE7808AC62BE04D63C73EE6FFE"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP16/PartsNative03/summary.json",
+      "sha256": "1E2F0B0E3652F3E1BDAA520FE71F78DAA1F85443F41273F355E68E17E42F271A"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP16/PartsPython01/summary.json",
+      "sha256": "4CFEDDF948320E919FB032FEBC4EA8E179C94D696DDA83309DFBC1DF2162DBD1"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP17/Network04/summary.json",
+      "sha256": "D6827B9DCA9B6856F511C7602F767E9AC4759F43513D636EB86BF7D278503E12"
+    }
+  ]
+}

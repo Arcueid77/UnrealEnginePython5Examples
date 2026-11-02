@@ -106,6 +106,7 @@ class Client(ResetTrials):
             elif self.phase == "foreign":
                 require(owner_state(self.controller) == self.foreign_before, "foreign native Reset changed this client's owner state")
                 if token(self.root, "trial-complete.json", self.run, self.position) is not None:
+                    if hasattr(self,'before_foreign_ack') and not self.before_foreign_ack():return True
                     self.close_observer()
                     row = dict(position=self.position, target=self.command["target"], local_owner_unchanged=True,
                         reset_messages=copy.deepcopy(self.reset_messages), event_messages=copy.deepcopy(self.event_messages),
@@ -203,6 +204,7 @@ class Server(ResetTrials):
                 own = token(self.root, self.target+"-"+str(self.position)+"-ack.json", self.run, self.position)
                 foreign = token(self.root, self.other_peer+"-"+str(self.position)+"-foreign-ack.json", self.run, self.position)
                 if own is not None and foreign is not None:
+                    if hasattr(self,'before_authority_ack'):self.before_authority_ack()
                     self.row.update(owner_ack=own, foreign_ack=foreign); self.report["cases"].append(copy.deepcopy(self.row)); self.write()
                     self.position += 1; self.enter("release" if self.position == TOTAL else "prepare")
             elif self.phase == "release":

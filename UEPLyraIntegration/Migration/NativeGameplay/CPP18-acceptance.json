@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "accepted": true,
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "previous_reset_python_fixed": true,
+  "engine_full_compile_executed": false,
+  "sdk_or_bridge_rebuild_executed": false,
+  "cook_package_executed": false,
+  "physical_input_tested": false,
+  "default_profile_promoted": true,
+  "cpp09_actual_window_stage_preserved": true,
+  "compile_partition": {
+    "uht_modules": [
+      "LyraGame"
+    ],
+    "compiled_units": [
+      1,
+      3
+    ],
+    "reused_units": [
+      2
+    ]
+  },
+  "shared_adapter_candidates": [
+    "CPP-022",
+    "CPP-023",
+    "CPP-024"
+  ],
+  "batch": "CPP18",
+  "candidates": [
+    "CPP-024"
+  ],
+  "typed_boundary_cases": 8,
+  "actual_native_ability_camera_lifecycle": [
+    {
+      "status": "passed",
+      "kind": "camera",
+      "profile": "CameraNative",
+      "online_service_tested": false,
+      "network_replication_tested": false
+    },
+    {
+      "status": "passed",
+      "kind": "camera",
+      "profile": "CameraPython",
+      "online_service_tested": false,
+      "network_replication_tested": false
+    },
+    {
+      "status": "passed",
+      "kind": "camera",
+      "profile": "Python",
+      "online_service_tested": false,
+      "network_replication_tested": false
+    }
+  ],
+  "default_pawndata_camera_and_actual_ability_end_restore": true,
+  "wrong_owner_handle_preserves_override": true,
+  "missing_pawn_and_data_return_null": true,
+  "native_camera_blending_collision_and_owning_spec_handles_retained": true,
+  "pixels_tested": false,
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP16/Build01/summary.json",
+      "sha256": "9DE1F3C6009F78F59307413F974503CBF0C567850B85D2DDBD54301BFB6AE07F"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP16/Boundaries01/summary.json",
+      "sha256": "E6FC720AEC62AAA38E7114FD8EFD1CDC8E2176EE7808AC62BE04D63C73EE6FFE"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP16/CameraNative02/summary.json",
+      "sha256": "A68EE774DCAE4EF82286C41A9C63A48A96BDAB4B46CCC02B94357CCF96C828A3"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP16/CameraPython01/summary.json",
+      "sha256": "287F005300CC5C3AA90130390C83E43D3C0F976BA3AAA1BC195A7C5CD614D799"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP16/Defaultcamera01/summary.json",
+      "sha256": "3BAD9D3695529342EB9E5CC71C7F397A3115FA25B5665832B6661377356EA6ED"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP16/Assets03Promote/summary.json",
+      "sha256": "4119B76A639BC01CAC7CCD65258D3659D3701A192D7DD64E87716C6EEEE9E12D"
+    }
+  ]
+}

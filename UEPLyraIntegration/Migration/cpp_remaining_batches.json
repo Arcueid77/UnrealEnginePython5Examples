@@ -21,7 +21,10 @@
   "accepted_candidates": [
     "CPP-019",
     "CPP-020",
-    "CPP-021"
+    "CPP-021",
+    "CPP-022",
+    "CPP-023",
+    "CPP-024"
   ],
   "prior_scopes": [
     "cpp_batches.json",
@@ -59,31 +62,31 @@
       "candidates": [
         "CPP-022"
       ],
-      "status": "pending",
-      "acceptance_ledger": null
+      "status": "accepted",
+      "acceptance_ledger": "NativeGameplay/CPP16-acceptance.json"
     },
     {
       "id": "CPP17",
       "candidates": [
         "CPP-023"
       ],
-      "status": "pending",
-      "acceptance_ledger": null
+      "status": "accepted",
+      "acceptance_ledger": "NativeGameplay/CPP17-acceptance.json"
     },
     {
       "id": "CPP18",
       "candidates": [
         "CPP-024"
       ],
-      "status": "pending",
-      "acceptance_ledger": null
+      "status": "accepted",
+      "acceptance_ledger": "NativeGameplay/CPP18-acceptance.json"
     },
     {
       "id": "CPP19",
       "candidates": [
         "CPP-025"
       ],
-      "status": "pending",
+      "status": "in_progress",
       "acceptance_ledger": null
     },
     {
@@ -91,7 +94,7 @@
       "candidates": [
         "CPP-026"
       ],
-      "status": "pending",
+      "status": "in_progress",
       "acceptance_ledger": null
     },
     {
@@ -99,7 +102,7 @@
       "candidates": [
         "CPP-027"
       ],
-      "status": "pending",
+      "status": "in_progress",
       "acceptance_ledger": null
     },
     {
@@ -107,7 +110,7 @@
       "candidates": [
         "CPP-028"
       ],
-      "status": "pending",
+      "status": "in_progress",
       "acceptance_ledger": null
     },
     {
@@ -115,7 +118,7 @@
       "candidates": [
         "CPP-029"
       ],
-      "status": "pending",
+      "status": "in_progress",
       "acceptance_ledger": null
     },
     {
@@ -123,7 +126,7 @@
       "candidates": [
         "CPP-030"
       ],
-      "status": "pending",
+      "status": "in_progress",
       "acceptance_ledger": null
     }
   ]

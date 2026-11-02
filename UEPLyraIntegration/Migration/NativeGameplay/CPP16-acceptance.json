@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "accepted": true,
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "previous_reset_python_fixed": true,
+  "engine_full_compile_executed": false,
+  "sdk_or_bridge_rebuild_executed": false,
+  "cook_package_executed": false,
+  "physical_input_tested": false,
+  "default_profile_promoted": true,
+  "cpp09_actual_window_stage_preserved": true,
+  "compile_partition": {
+    "uht_modules": [
+      "LyraGame"
+    ],
+    "compiled_units": [
+      1,
+      3
+    ],
+    "reused_units": [
+      2
+    ]
+  },
+  "shared_adapter_candidates": [
+    "CPP-022",
+    "CPP-023",
+    "CPP-024"
+  ],
+  "batch": "CPP16",
+  "candidates": [
+    "CPP-022"
+  ],
+  "typed_boundary_cases": 70,
+  "actual_offline_frontend": [
+    {
+      "status": "passed",
+      "kind": "frontend",
+      "profile": "FrontendNative",
+      "online_service_tested": false,
+      "network_replication_tested": false
+    },
+    {
+      "status": "passed",
+      "kind": "frontend",
+      "profile": "FrontendPython",
+      "online_service_tested": false,
+      "network_replication_tested": false
+    },
+    {
+      "status": "passed",
+      "kind": "frontend",
+      "profile": "Python",
+      "online_service_tested": false,
+      "network_replication_tested": false
+    }
+  ],
+  "native_user_initialization_success_failure_callbacks_supplied_by_fixture": true,
+  "join_success_failure_and_widget_cancel_policy_checked_by_typed_context": true,
+  "actual_online_service_results_tested": false,
+  "native_flow_handles_weak_widget_callbacks_and_delegate_removal_retained": true,
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP16/Build01/summary.json",
+      "sha256": "9DE1F3C6009F78F59307413F974503CBF0C567850B85D2DDBD54301BFB6AE07F"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP16/Boundaries01/summary.json",
+      "sha256": "E6FC720AEC62AAA38E7114FD8EFD1CDC8E2176EE7808AC62BE04D63C73EE6FFE"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP16/FrontendNative01/summary.json",
+      "sha256": "D09217B01E67C33319952EF004C7A38774EC9C41D7E63E510E22B438F3679638"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP16/FrontendPython01/summary.json",
+      "sha256": "BFCFE0D6F21509D53F659AB18A07591216C6E51144CB152F4D0E1F5E9B102438"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP16/Defaultfrontend01/summary.json",
+      "sha256": "1CC91F0AFFB30E296CB1D087E5440914EB73E1E953DC9EB4D339196475443B95"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP16/Assets03Promote/summary.json",
+      "sha256": "4119B76A639BC01CAC7CCD65258D3659D3701A192D7DD64E87716C6EEEE9E12D"
+    }
+  ]
+}

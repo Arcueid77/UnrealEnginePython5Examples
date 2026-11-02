@@ -390,3 +390,26 @@ probe is retained as failed evidence. Four typed context boundary cases and the
 actual network Reset path validate the replacement. Only LyraGame units 1/2 and
 UHT were rebuilt for this adapter; unit 3, SDK, bridge and engine were reused.
 CPP16-24 continue. CPP09 actual desktop input remains user-deferred.
+
+## CPP16-18 accepted world policies
+
+[CPP16](CPP16-acceptance.json) records 70 frontend context cases, actual offline
+startup in native/Python/default profiles, and native initialization success/
+failure callbacks supplied by the fixture. Online session results are untested;
+join-result and cancellation choices are bounded typed-context checks. Native
+flow handles, async widget pushes, weak callbacks and delegate removal remain.
+
+[CPP17](CPP17-acceptance.json) records 28 part-selection cases, natural/developer/
+cheat suppression, first-equivalent removal, actual Reset/possession, duplicate
+notifications and cleanup. Four network Reset trials provide eight independent
+client observations of actual cosmetic actors and meshes. Templates are restored
+inside the authority acknowledgement barrier, before either client is released.
+The failed temporary-PlayerState cleanup and observer-race attempts remain.
+
+[CPP18](CPP18-acceptance.json) records eight class/null boundary cases, original
+PawnData defaults, actual ability camera priority, foreign handle protection and
+restoration on native GAS ability end. Camera blend/collision implementation stays
+native. Default frontend and camera smokes pass after promoting the tested policy
+classes. The shared build compiles LyraGame units 1/3 and reuses unit 2. SDK, bridge
+and engine are unchanged. Startup selection passes 48 focused tests.
+CPP19-24 remain in progress; CPP09 desktop input remains user-deferred.

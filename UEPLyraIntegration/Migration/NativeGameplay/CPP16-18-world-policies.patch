@@ -1,0 +1,595 @@
+--- a/Source/LyraGame/UI/Frontend/LyraFrontendStateComponent.cpp
++++ b/Source/LyraGame/UI/Frontend/LyraFrontendStateComponent.cpp
+@@ -12,6 +12,7 @@
+ #include "PrimaryGameLayout.h"
+ #include "Widgets/CommonActivatableWidgetContainer.h"
+ 
++#include "UEPPolicy/UEPNativeWorldPolicies.h"
+ #include UE_INLINE_GENERATED_CPP_BY_NAME(LyraFrontendStateComponent)
+ 
+ namespace FrontendTags
+@@ -66,19 +67,46 @@
+ 
+ void ULyraFrontendStateComponent::OnExperienceLoaded(const ULyraExperienceDefinition* Experience)
+ {
+-	FControlFlow& Flow = FControlFlowStatics::Create(this, TEXT("FrontendFlow"))
+-		.QueueStep(TEXT("Wait For User Initialization"), this, &ThisClass::FlowStep_WaitForUserInitialization)
+-		.QueueStep(TEXT("Try Show Press Start Screen"), this, &ThisClass::FlowStep_TryShowPressStartScreen)
+-		.QueueStep(TEXT("Try Join Requested Session"), this, &ThisClass::FlowStep_TryJoinRequestedSession)
+-		.QueueStep(TEXT("Try Show Main Screen"), this, &ThisClass::FlowStep_TryShowMainScreen);
+-
+-	Flow.ExecuteFlow();
+-
+-	FrontEndFlow = Flow.AsShared();
++    TArray<FName> Steps = {TEXT("Initialize"),TEXT("PressStart"),TEXT("JoinRequested"),TEXT("Main")};
++    if (auto Context = UEPMakeFrontendContext(this, TEXT("Frontend.Plan")))
++    {
++        if (!UEPApplyWorldPolicy(Context.Get())) { return; }
++        Steps = Context->Actions;
++    }
++    FControlFlow& Flow = FControlFlowStatics::Create(this, TEXT("FrontendFlow"));
++    for (FName Step : Steps)
++    {
++        if (Step == TEXT("Initialize")) { Flow.QueueStep(TEXT("Wait For User Initialization"), this, &ThisClass::FlowStep_WaitForUserInitialization); }
++        else if (Step == TEXT("PressStart")) { Flow.QueueStep(TEXT("Try Show Press Start Screen"), this, &ThisClass::FlowStep_TryShowPressStartScreen); }
++        else if (Step == TEXT("JoinRequested")) { Flow.QueueStep(TEXT("Try Join Requested Session"), this, &ThisClass::FlowStep_TryJoinRequestedSession); }
++        else if (Step == TEXT("Main")) { Flow.QueueStep(TEXT("Try Show Main Screen"), this, &ThisClass::FlowStep_TryShowMainScreen); }
++        else { ensureMsgf(false, TEXT("Invalid Python frontend step")); return; }
++    }
++    Flow.ExecuteFlow();
++    FrontEndFlow = Flow.AsShared();
+ }
+ 
+ void ULyraFrontendStateComponent::FlowStep_WaitForUserInitialization(FControlFlowNodeRef SubFlow)
+ {
++    if (auto Context = UEPMakeFrontendContext(this, TEXT("Frontend.Initialize")))
++    {
++        AGameModeBase* GameMode = GetWorld()->GetAuthGameMode<AGameModeBase>();
++        UGameInstance* GameInstance = UGameplayStatics::GetGameInstance(this);
++        UCommonUserSubsystem* Users = GameInstance->GetSubsystem<UCommonUserSubsystem>();
++        UCommonSessionSubsystem* Sessions = GameInstance->GetSubsystem<UCommonSessionSubsystem>();
++        Context->bHardDisconnect = ensure(GameMode) && UGameplayStatics::HasOption(GameMode->OptionsString, TEXT("closed"));
++        Context->bHasUser = ensure(Users); Context->bHasSession = ensure(Sessions);
++        if (!UEPApplyWorldPolicy(Context.Get())) { return; }
++        for (FName Action : Context->Actions)
++        {
++            if (Action == TEXT("ResetUsers") && Users) { Users->ResetUserState(); }
++            else if (Action == TEXT("CleanSessions") && Sessions) { Sessions->CleanUpSessions(); }
++            else if (Action == TEXT("Continue")) { SubFlow->ContinueFlow(); return; }
++            else { ensureMsgf(false, TEXT("Invalid Python frontend initialization action")); return; }
++        }
++        return;
++    }
++
+ 	// If this was a hard disconnect, explicitly destroy all user and session state
+ 	// TODO: Refactor the engine disconnect flow so it is more explicit about why it happened
+ 	bool bWasHardDisconnect = false;
+@@ -105,6 +133,7 @@
+ 	}
+ 
+ 	SubFlow->ContinueFlow();
++
+ }
+ 
+ void ULyraFrontendStateComponent::FlowStep_TryShowPressStartScreen(FControlFlowNodeRef SubFlow)
+@@ -113,20 +142,26 @@
+ 	UCommonUserSubsystem* UserSubsystem = GameInstance->GetSubsystem<UCommonUserSubsystem>();
+ 
+ 	// Check to see if the first player is already logged in, if they are, we can skip the press start screen.
+-	if (const UCommonUserInfo* FirstUser = UserSubsystem->GetUserInfoForLocalPlayerIndex(0))
+-	{
+-		if (FirstUser->InitializationState == ECommonUserInitializationState::LoggedInLocalOnly ||
+-			FirstUser->InitializationState == ECommonUserInitializationState::LoggedInOnline)
+-		{
+-			SubFlow->ContinueFlow();
+-			return;
+-		}
+-	}
++    const UCommonUserInfo* UEPFirstUser = UserSubsystem->GetUserInfoForLocalPlayerIndex(0);
++    const bool UEPLoggedIn = UEPFirstUser && (UEPFirstUser->InitializationState == ECommonUserInitializationState::LoggedInLocalOnly || UEPFirstUser->InitializationState == ECommonUserInitializationState::LoggedInOnline);
++    bool UEPAutoLogin = !UEPLoggedIn && !UserSubsystem->ShouldWaitForStartInput();
++    bool UEPSkipStart = UEPLoggedIn;
++    if (auto Context = UEPMakeFrontendContext(this, TEXT("Frontend.PressStart")))
++    {
++        Context->bLoggedIn = UEPLoggedIn; Context->bWaitForStart = !UEPAutoLogin;
++        Context->bHasRootLayout = UPrimaryGameLayout::GetPrimaryGameLayoutForPrimaryPlayer(this) != nullptr;
++        if (!UEPApplyWorldPolicy(Context.Get())) { return; }
++        UEPSkipStart = Context->Actions.Contains(TEXT("Continue"));
++        UEPAutoLogin = Context->Actions.Contains(TEXT("AutoLogin"));
++        if (!UEPSkipStart && !UEPAutoLogin && !Context->Actions.Contains(TEXT("PushStart"))) { return; }
++    }
++    if (UEPSkipStart) { SubFlow->ContinueFlow(); return; }
++
+ 
+ 	// Check to see if the platform actually requires a 'Press Start' screen.  This is only
+ 	// required on platforms where there can be multiple online users where depending on what player's
+ 	// controller presses 'Start' establishes the player to actually login to the game with.
+-	if (!UserSubsystem->ShouldWaitForStartInput())
++	if (UEPAutoLogin)
+ 	{
+ 		// Start the auto login process, this should finish quickly and will use the default input device id
+ 		InProgressPressStartScreen = SubFlow;
+@@ -146,6 +181,20 @@
+ 			{
+ 				if (WeakThis.IsValid())
+ 				{
++                    if (auto Context = UEPMakeFrontendContext(this, TEXT("Frontend.StartWidget")))
++                    {
++                        Context->bWidgetReady = State == EAsyncWidgetLayerState::AfterPush;
++                        Context->bWidgetCanceled = State == EAsyncWidgetLayerState::Canceled;
++                        if (!UEPApplyWorldPolicy(Context.Get())) { return; }
++                        for (FName Action : Context->Actions)
++                        {
++                            if (Action == TEXT("ClearLoading")) { bShouldShowLoadingScreen = false; }
++                            else if (Action == TEXT("WaitForDeactivate")) { Screen->OnDeactivated().AddWeakLambda(this, [SubFlow]() { SubFlow->ContinueFlow(); }); }
++                            else if (Action == TEXT("Continue")) { SubFlow->ContinueFlow(); return; }
++                            else { ensureMsgf(false, TEXT("Invalid Python start-widget action")); return; }
++                        }
++                        return;
++                    }
+ 					switch (State)
+ 					{
+ 					case EAsyncWidgetLayerState::AfterPush:
+@@ -176,23 +225,26 @@
+ 		UserSubsystem->OnUserInitializeComplete.RemoveDynamic(this, &ULyraFrontendStateComponent::OnUserInitialized);
+ 		InProgressPressStartScreen.Reset();
+ 
+-		if (bSuccess)
+-		{
+-			// On success continue flow normally
+-			FlowToContinue->ContinueFlow();
+-		}
+-		else
+-		{
+-			// TODO: Just continue for now, could go to some sort of error screen
+-			FlowToContinue->ContinueFlow();
+-		}
++        if (auto Context = UEPMakeFrontendContext(this, TEXT("Frontend.UserInitialized")))
++        {
++            Context->bSuccess = bSuccess;
++            if (!UEPApplyWorldPolicy(Context.Get()) || !Context->Actions.Contains(TEXT("Continue"))) { return; }
++        }
++        FlowToContinue->ContinueFlow();
+ 	}
+ }
+ 
+ void ULyraFrontendStateComponent::FlowStep_TryJoinRequestedSession(FControlFlowNodeRef SubFlow)
+ {
+ 	UCommonGameInstance* GameInstance = Cast<UCommonGameInstance>(UGameplayStatics::GetGameInstance(this));
+-	if (GameInstance->GetRequestedSession() != nullptr && GameInstance->CanJoinRequestedSession())
++    bool UEPJoin = GameInstance->GetRequestedSession() != nullptr && GameInstance->CanJoinRequestedSession();
++    if (auto Context = UEPMakeFrontendContext(this, TEXT("Frontend.JoinRequested")))
++    {
++        Context->bRequestedSession = GameInstance->GetRequestedSession() != nullptr; Context->bCanJoin = UEPJoin;
++        if (!UEPApplyWorldPolicy(Context.Get())) { return; }
++        UEPJoin = Context->Actions.Contains(TEXT("Join"));
++    }
++    if (UEPJoin)
+ 	{
+ 		UCommonSessionSubsystem* SessionSubsystem = GameInstance->GetSubsystem<UCommonSessionSubsystem>();
+ 		if (ensure(SessionSubsystem))
+@@ -205,7 +257,14 @@
+ 				SessionSubsystem->OnJoinSessionCompleteEvent.Remove(OnJoinSessionCompleteEventHandle);
+ 				OnJoinSessionCompleteEventHandle.Reset();
+ 
+-				if (Result.bWasSuccessful)
++                bool UEPCancel = Result.bWasSuccessful;
++                if (auto Context = UEPMakeFrontendContext(this, TEXT("Frontend.JoinResult")))
++                {
++                    Context->bSuccess = Result.bWasSuccessful;
++                    if (!UEPApplyWorldPolicy(Context.Get())) { return; }
++                    UEPCancel = Context->Actions.Contains(TEXT("Cancel"));
++                }
++                if (UEPCancel)
+ 				{
+ 					// No longer transitioning to the main menu
+ 					SubFlow->CancelFlow();
+@@ -227,6 +286,12 @@
+ 
+ void ULyraFrontendStateComponent::FlowStep_TryShowMainScreen(FControlFlowNodeRef SubFlow)
+ {
++    if (auto Context = UEPMakeFrontendContext(this, TEXT("Frontend.Main")))
++    {
++        Context->bHasRootLayout = UPrimaryGameLayout::GetPrimaryGameLayoutForPrimaryPlayer(this) != nullptr;
++        if (!UEPApplyWorldPolicy(Context.Get()) || !Context->Actions.Contains(TEXT("PushMain"))) { return; }
++    }
++
+ 	if (UPrimaryGameLayout* RootLayout = UPrimaryGameLayout::GetPrimaryGameLayoutForPrimaryPlayer(this))
+ 	{
+ 		constexpr bool bSuspendInputUntilComplete = true;
+@@ -236,6 +301,20 @@
+ 		    {
+ 			    if (WeakThis.IsValid())
+ 			    {
++                    if (auto Context = UEPMakeFrontendContext(this, TEXT("Frontend.MainWidget")))
++                    {
++                        Context->bWidgetReady = State == EAsyncWidgetLayerState::AfterPush;
++                        Context->bWidgetCanceled = State == EAsyncWidgetLayerState::Canceled;
++                        if (!UEPApplyWorldPolicy(Context.Get())) { return; }
++                        for (FName Action : Context->Actions)
++                        {
++                            if (Action == TEXT("ClearLoading")) { bShouldShowLoadingScreen = false; }
++                            
++                            else if (Action == TEXT("Continue")) { SubFlow->ContinueFlow(); return; }
++                            else { ensureMsgf(false, TEXT("Invalid Python start-widget action")); return; }
++                        }
++                        return;
++                    }
+ 				    switch (State)
+ 				    {
+ 				    case EAsyncWidgetLayerState::AfterPush:
+@@ -251,5 +330,6 @@
+ 		    }
+ 		);
+ 	}
+-}
+-
++
++}
++
+--- a/Source/LyraGame/UI/Frontend/LyraFrontendStateComponent.h
++++ b/Source/LyraGame/UI/Frontend/LyraFrontendStateComponent.h
+@@ -24,6 +24,7 @@
+ class ULyraFrontendStateComponent : public UGameStateComponent, public ILoadingProcessInterface
+ {
+ 	GENERATED_BODY()
++	friend class UUEPNativeWorldPolicyFixture;
+ 
+ public:
+ 
+--- a/Source/LyraGame/Cosmetics/LyraControllerComponent_CharacterParts.cpp
++++ b/Source/LyraGame/Cosmetics/LyraControllerComponent_CharacterParts.cpp
+@@ -7,6 +7,7 @@
+ #include "LyraCosmeticDeveloperSettings.h"
+ #include "GameFramework/Pawn.h"
+ 
++#include "UEPPolicy/UEPNativeWorldPolicies.h"
+ #include UE_INLINE_GENERATED_CPP_BY_NAME(LyraControllerComponent_CharacterParts)
+ 
+ //////////////////////////////////////////////////////////////////////
+@@ -59,22 +60,28 @@
+ 
+ void ULyraControllerComponent_CharacterParts::AddCharacterPartInternal(const FLyraCharacterPart& NewPart, ECharacterPartSource Source)
+ {
+-	FLyraControllerCharacterPartEntry& NewEntry = CharacterParts.AddDefaulted_GetRef();
+-	NewEntry.Part = NewPart;
+-	NewEntry.Source = Source;
+-
+-	if (ULyraPawnComponent_CharacterParts* PawnCustomizer = GetPawnCustomizer())
+-	{
+-		if (NewEntry.Source != ECharacterPartSource::NaturalSuppressedViaCheat)
+-		{
+-			NewEntry.Handle = PawnCustomizer->AddCharacterPart(NewPart);
+-		}
+-	}
++    FLyraControllerCharacterPartEntry& Entry = CharacterParts.AddDefaulted_GetRef();
++    Entry.Part = NewPart; Entry.Source = Source;
++    ULyraPawnComponent_CharacterParts* Customizer = GetPawnCustomizer();
++    TArray<int32> Indices;
++    if (UEPSelectCharacterPartIndices(this, TEXT("Parts.Add"), Customizer != nullptr, CharacterParts, nullptr, false, Indices))
++    {
++        for (int32 Index : Indices) { if (Customizer) { CharacterParts[Index].Handle = Customizer->AddCharacterPart(CharacterParts[Index].Part); } }
++        return;
++    }
++    if (Customizer && Entry.Source != ECharacterPartSource::NaturalSuppressedViaCheat) { Entry.Handle = Customizer->AddCharacterPart(NewPart); }
+ 
+ }
+ 
+ void ULyraControllerComponent_CharacterParts::RemoveCharacterPart(const FLyraCharacterPart& PartToRemove)
+ {
++    TArray<int32> Indices; ULyraPawnComponent_CharacterParts* Customizer = GetPawnCustomizer();
++    if (UEPSelectCharacterPartIndices(this, TEXT("Parts.Remove"), Customizer != nullptr, CharacterParts, &PartToRemove, false, Indices))
++    {
++        if (!Indices.IsEmpty()) { const int32 Index = Indices[0]; if (Customizer) { Customizer->RemoveCharacterPart(CharacterParts[Index].Handle); } CharacterParts.RemoveAt(Index); }
++        return;
++    }
++
+ 	for (auto EntryIt = CharacterParts.CreateIterator(); EntryIt; ++EntryIt)
+ 	{
+ 		if (FLyraCharacterPart::AreEquivalentParts(EntryIt->Part, PartToRemove))
+@@ -88,10 +95,18 @@
+ 			break;
+ 		}
+ 	}
++
+ }
+ 
+ void ULyraControllerComponent_CharacterParts::RemoveAllCharacterParts()
+ {
++    TArray<int32> Indices; ULyraPawnComponent_CharacterParts* Customizer = GetPawnCustomizer();
++    if (UEPSelectCharacterPartIndices(this, TEXT("Parts.RemoveAll"), Customizer != nullptr, CharacterParts, nullptr, false, Indices))
++    {
++        for (int32 Index : Indices) { if (Customizer) { Customizer->RemoveCharacterPart(CharacterParts[Index].Handle); } }
++        CharacterParts.Reset(); return;
++    }
++
+ 	if (ULyraPawnComponent_CharacterParts* PawnCustomizer = GetPawnCustomizer())
+ 	{
+ 		for (FLyraControllerCharacterPartEntry& Entry : CharacterParts)
+@@ -101,10 +116,25 @@
+ 	}
+ 
+ 	CharacterParts.Reset();
++
+ }
+ 
+ void ULyraControllerComponent_CharacterParts::OnPossessedPawnChanged(APawn* OldPawn, APawn* NewPawn)
+ {
++    ULyraPawnComponent_CharacterParts* Old = OldPawn ? OldPawn->FindComponentByClass<ULyraPawnComponent_CharacterParts>() : nullptr;
++    ULyraPawnComponent_CharacterParts* New = NewPawn ? NewPawn->FindComponentByClass<ULyraPawnComponent_CharacterParts>() : nullptr;
++    TArray<int32> Indices;
++    if (UEPSelectCharacterPartIndices(this, TEXT("Parts.Detach"), Old != nullptr, CharacterParts, nullptr, false, Indices))
++    {
++        for (int32 Index : Indices) { if (Old) { Old->RemoveCharacterPart(CharacterParts[Index].Handle); CharacterParts[Index].Handle.Reset(); } }
++        Indices.Reset();
++        if (UEPSelectCharacterPartIndices(this, TEXT("Parts.Attach"), New != nullptr, CharacterParts, nullptr, false, Indices))
++        {
++            for (int32 Index : Indices) { if (New) { CharacterParts[Index].Handle = New->AddCharacterPart(CharacterParts[Index].Part); } }
++        }
++        return;
++    }
++
+ 	// Remove from the old pawn
+ 	if (ULyraPawnComponent_CharacterParts* OldCustomizer = OldPawn ? OldPawn->FindComponentByClass<ULyraPawnComponent_CharacterParts>() : nullptr)
+ 	{
+@@ -127,6 +157,7 @@
+ 			}
+ 		}
+ 	}
++
+ }
+ 
+ void ULyraControllerComponent_CharacterParts::ApplyDeveloperSettings()
+@@ -194,6 +225,20 @@
+ void ULyraControllerComponent_CharacterParts::SetSuppressionOnNaturalParts(bool bSuppressed)
+ {
+ #if UE_WITH_CHEAT_MANAGER
++    TArray<int32> Indices; ULyraPawnComponent_CharacterParts* Customizer = GetPawnCustomizer();
++    if (UEPSelectCharacterPartIndices(this, TEXT("Parts.Suppress"), Customizer != nullptr, CharacterParts, nullptr, bSuppressed, Indices))
++    {
++        for (int32 Index : Indices)
++        {
++            FLyraControllerCharacterPartEntry& Entry = CharacterParts[Index];
++            if (bSuppressed) { if (Customizer) { Customizer->RemoveCharacterPart(Entry.Handle); Entry.Handle.Reset(); } Entry.Source = ECharacterPartSource::NaturalSuppressedViaCheat; }
++            else { if (Customizer) { Entry.Handle = Customizer->AddCharacterPart(Entry.Part); } Entry.Source = ECharacterPartSource::Natural; }
++        }
++        return;
++    }
++#endif
++
++#if UE_WITH_CHEAT_MANAGER
+ 	ULyraPawnComponent_CharacterParts* PawnCustomizer = GetPawnCustomizer();
+ 
+ 	for (FLyraControllerCharacterPartEntry& Entry : CharacterParts)
+@@ -219,5 +264,6 @@
+ 		}
+ 	}
+ #endif
+-}
+-
++
++}
++
+--- a/Source/LyraGame/Cosmetics/LyraControllerComponent_CharacterParts.h
++++ b/Source/LyraGame/Cosmetics/LyraControllerComponent_CharacterParts.h
+@@ -53,6 +53,7 @@
+ class ULyraControllerComponent_CharacterParts : public UControllerComponent
+ {
+ 	GENERATED_BODY()
++	friend class UUEPNativeWorldPolicyFixture;
+ 
+ public:
+ 	ULyraControllerComponent_CharacterParts(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
+--- a/Source/LyraGame/Character/LyraHeroComponent.cpp
++++ b/Source/LyraGame/Character/LyraHeroComponent.cpp
+@@ -22,6 +22,7 @@
+ #include "UserSettings/EnhancedInputUserSettings.h"
+ #include "InputMappingContext.h"
+ 
++#include "UEPPolicy/UEPNativeWorldPolicies.h"
+ #include UE_INLINE_GENERATED_CPP_BY_NAME(LyraHeroComponent)
+ 
+ #if WITH_EDITOR
+@@ -478,6 +479,22 @@
+ 
+ TSubclassOf<ULyraCameraMode> ULyraHeroComponent::DetermineCameraMode() const
+ {
++    UUEPNativeGameplayPolicy* Host = UUEPNativeGameplayPolicySubsystem::GetPolicyForContext(GetWorld());
++    if (Host && Host->UEPUsesPythonPolicy(TEXT("Camera.Determine")))
++    {
++        UClass* DefaultMode = nullptr;
++        if (const APawn* Pawn = GetPawn<APawn>())
++        {
++            if (const ULyraPawnExtensionComponent* Extension = ULyraPawnExtensionComponent::FindPawnExtensionComponent(Pawn))
++            {
++                if (const ULyraPawnData* Data = Extension->GetPawnData<ULyraPawnData>()) { DefaultMode = Data->DefaultCameraMode.Get(); }
++            }
++        }
++        UClass* Selected = Cast<UClass>(Host->UEPChooseObject(TEXT("Camera.Determine"), AbilityCameraMode.Get(), DefaultMode));
++        if (ensureMsgf(!Selected || Selected->IsChildOf(ULyraCameraMode::StaticClass()), TEXT("Invalid Python camera mode class"))) { return Selected; }
++        return nullptr;
++    }
++
+ 	if (AbilityCameraMode)
+ 	{
+ 		return AbilityCameraMode;
+@@ -498,6 +515,7 @@
+ 	}
+ 
+ 	return nullptr;
++
+ }
+ 
+ void ULyraHeroComponent::SetAbilityCameraMode(TSubclassOf<ULyraCameraMode> CameraMode, const FGameplayAbilitySpecHandle& OwningSpecHandle)
+--- a/Source/LyraGame/Character/LyraHeroComponent.h
++++ b/Source/LyraGame/Character/LyraHeroComponent.h
+@@ -32,6 +32,7 @@
+ class ULyraHeroComponent : public UPawnComponent, public IGameFrameworkInitStateInterface
+ {
+ 	GENERATED_BODY()
++	friend class UUEPNativeWorldPolicyFixture;
+ 
+ public:
+ 
+--- /dev/null
++++ b/Source/LyraGame/UEPPolicy/UEPNativeWorldPolicies.h
+@@ -0,0 +1,74 @@
++#pragma once
++#include "UEPNativeGameplayPolicy.h"
++#include "Cosmetics/LyraCharacterPartTypes.h"
++#include "GameplayAbilitySpecHandle.h"
++#include "Kismet/BlueprintFunctionLibrary.h"
++#include "UObject/StrongObjectPtr.h"
++#include "UEPNativeWorldPolicies.generated.h"
++class ULyraHeroComponent;
++class ULyraCameraMode;
++class ULyraFrontendStateComponent;
++class ULyraControllerComponent_CharacterParts;
++class APawn;
++struct FLyraControllerCharacterPartEntry;
++
++UCLASS(BlueprintType)
++class LYRAGAME_API UUEPNativeFrontendPolicyContext : public UUEPNativePolicyContext
++{
++    GENERATED_BODY()
++public:
++    UPROPERTY(BlueprintReadOnly) bool bHardDisconnect = false;
++    UPROPERTY(BlueprintReadOnly) bool bHasUser = false;
++    UPROPERTY(BlueprintReadOnly) bool bHasSession = false;
++    UPROPERTY(BlueprintReadOnly) bool bLoggedIn = false;
++    UPROPERTY(BlueprintReadOnly) bool bWaitForStart = false;
++    UPROPERTY(BlueprintReadOnly) bool bHasRootLayout = false;
++    UPROPERTY(BlueprintReadOnly) bool bRequestedSession = false;
++    UPROPERTY(BlueprintReadOnly) bool bCanJoin = false;
++    UPROPERTY(BlueprintReadOnly) bool bSuccess = false;
++    UPROPERTY(BlueprintReadOnly) bool bWidgetReady = false;
++    UPROPERTY(BlueprintReadOnly) bool bWidgetCanceled = false;
++    UPROPERTY(BlueprintReadWrite) TArray<FName> Actions;
++};
++
++USTRUCT(BlueprintType)
++struct FUEPNativeCharacterPartPolicyRow
++{
++    GENERATED_BODY()
++    UPROPERTY(BlueprintReadOnly) int32 Index = INDEX_NONE;
++    UPROPERTY(BlueprintReadOnly) int32 Source = 0;
++    UPROPERTY(BlueprintReadOnly) bool bHandleValid = false;
++    UPROPERTY(BlueprintReadOnly) bool bEquivalent = false;
++    UPROPERTY(BlueprintReadOnly) TObjectPtr<UClass> PartClass = nullptr;
++};
++
++UCLASS(BlueprintType)
++class LYRAGAME_API UUEPNativeCharacterPartPolicyContext : public UUEPNativePolicyContext
++{
++    GENERATED_BODY()
++public:
++    UPROPERTY(BlueprintReadOnly) bool bHasCustomizer = false;
++    UPROPERTY(BlueprintReadOnly) bool bSuppressed = false;
++    UPROPERTY(BlueprintReadOnly) TArray<FUEPNativeCharacterPartPolicyRow> Entries;
++    UPROPERTY(BlueprintReadWrite) TArray<int32> Indices;
++};
++
++LYRAGAME_API TStrongObjectPtr<UUEPNativeFrontendPolicyContext> UEPMakeFrontendContext(UObject* Owner, FName Operation);
++LYRAGAME_API bool UEPApplyWorldPolicy(UUEPNativePolicyContext* Context);
++LYRAGAME_API bool UEPSelectCharacterPartIndices(UObject* Owner, FName Operation, bool bHasCustomizer, const TArray<FLyraControllerCharacterPartEntry>& Entries, const FLyraCharacterPart* EquivalentTo, bool bSuppressed, TArray<int32>& OutIndices);
++
++UCLASS()
++class UUEPNativeWorldPolicyFixture : public UBlueprintFunctionLibrary
++{
++    GENERATED_BODY()
++public:
++    UFUNCTION(BlueprintCallable) static TSubclassOf<ULyraCameraMode> CameraChoice(ULyraHeroComponent* Hero);
++    UFUNCTION(BlueprintCallable) static void SetCamera(ULyraHeroComponent* Hero, TSubclassOf<ULyraCameraMode> Mode, FGameplayAbilitySpecHandle Handle);
++    UFUNCTION(BlueprintCallable) static void ClearCamera(ULyraHeroComponent* Hero, FGameplayAbilitySpecHandle Handle);
++    UFUNCTION(BlueprintCallable) static TArray<FUEPNativeCharacterPartPolicyRow> PartRows(ULyraControllerComponent_CharacterParts* Parts);
++    UFUNCTION(BlueprintCallable) static void AddSourcePart(ULyraControllerComponent_CharacterParts* Parts, FLyraCharacterPart Part, int32 Source);
++    UFUNCTION(BlueprintCallable) static void SuppressParts(ULyraControllerComponent_CharacterParts* Parts, bool bSuppress);
++    UFUNCTION(BlueprintCallable) static void NotifyPossession(ULyraControllerComponent_CharacterParts* Parts, APawn* OldPawn, APawn* NewPawn);
++    UFUNCTION(BlueprintCallable) static bool FrontendLoading(ULyraFrontendStateComponent* Frontend);
++    UFUNCTION(BlueprintCallable) static bool UserInitializationCallback(ULyraFrontendStateComponent* Frontend, bool bSuccess);
++};
+--- /dev/null
++++ b/Source/LyraGame/UEPPolicy/UEPNativeWorldPolicies.cpp
+@@ -0,0 +1,82 @@
++#include "UEPNativeWorldPolicies.h"
++#include "Camera/LyraCameraMode.h"
++#include "Character/LyraHeroComponent.h"
++#include "Cosmetics/LyraControllerComponent_CharacterParts.h"
++#include "UI/Frontend/LyraFrontendStateComponent.h"
++#include "CommonUserSubsystem.h"
++#include "ControlFlow.h"
++#include "Kismet/GameplayStatics.h"
++#include UE_INLINE_GENERATED_CPP_BY_NAME(UEPNativeWorldPolicies)
++
++TStrongObjectPtr<UUEPNativeFrontendPolicyContext> UEPMakeFrontendContext(UObject* Owner, FName Operation)
++{
++    UUEPNativeGameplayPolicy* Host = UUEPNativeGameplayPolicySubsystem::GetPolicyForContext(Owner);
++    if (!Host || !Host->UEPUsesPythonPolicy(Operation)) { return TStrongObjectPtr<UUEPNativeFrontendPolicyContext>(); }
++    TStrongObjectPtr<UUEPNativeFrontendPolicyContext> Context(NewObject<UUEPNativeFrontendPolicyContext>(Host));
++    Context->Operation = Operation;
++    return Context;
++}
++
++bool UEPApplyWorldPolicy(UUEPNativePolicyContext* Context)
++{
++    check(Context);
++    CastChecked<UUEPNativeGameplayPolicy>(Context->GetOuter())->UEPApplyPolicy(Context);
++    return ensureMsgf(Context->bCompleted, TEXT("Python world policy did not complete: %s"), *Context->Operation.ToString());
++}
++
++static TArray<FUEPNativeCharacterPartPolicyRow> UEPPartRows(const TArray<FLyraControllerCharacterPartEntry>& Entries, const FLyraCharacterPart* EquivalentTo)
++{
++    TArray<FUEPNativeCharacterPartPolicyRow> Rows;
++    for (int32 Index = 0; Index < Entries.Num(); ++Index)
++    {
++        const FLyraControllerCharacterPartEntry& Entry = Entries[Index];
++        FUEPNativeCharacterPartPolicyRow& Row = Rows.AddDefaulted_GetRef();
++        Row.Index = Index; Row.Source = static_cast<int32>(Entry.Source); Row.bHandleValid = Entry.Handle.IsValid();
++        Row.bEquivalent = EquivalentTo && FLyraCharacterPart::AreEquivalentParts(Entry.Part, *EquivalentTo);
++        Row.PartClass = Entry.Part.PartClass.Get();
++    }
++    return Rows;
++}
++
++bool UEPSelectCharacterPartIndices(UObject* Owner, FName Operation, bool bHasCustomizer, const TArray<FLyraControllerCharacterPartEntry>& Entries, const FLyraCharacterPart* EquivalentTo, bool bSuppressed, TArray<int32>& OutIndices)
++{
++    UUEPNativeGameplayPolicy* Host = UUEPNativeGameplayPolicySubsystem::GetPolicyForContext(Owner);
++    if (!Host || !Host->UEPUsesPythonPolicy(Operation)) { return false; }
++    TStrongObjectPtr<UUEPNativeCharacterPartPolicyContext> Context(NewObject<UUEPNativeCharacterPartPolicyContext>(Host));
++    Context->Operation = Operation; Context->bHasCustomizer = bHasCustomizer; Context->bSuppressed = bSuppressed;
++    Context->Entries = UEPPartRows(Entries, EquivalentTo);
++    if (UEPApplyWorldPolicy(Context.Get()))
++    {
++        TSet<int32> Seen;
++        for (int32 Index : Context->Indices)
++        {
++            if (!ensureMsgf(Entries.IsValidIndex(Index) && !Seen.Contains(Index), TEXT("Invalid or duplicate Python character-part index"))) { OutIndices.Reset(); return true; }
++            Seen.Add(Index);
++        }
++        OutIndices = Context->Indices;
++    }
++    return true;
++}
++
++TSubclassOf<ULyraCameraMode> UUEPNativeWorldPolicyFixture::CameraChoice(ULyraHeroComponent* Hero) { return Hero ? Hero->DetermineCameraMode() : nullptr; }
++void UUEPNativeWorldPolicyFixture::SetCamera(ULyraHeroComponent* Hero, TSubclassOf<ULyraCameraMode> Mode, FGameplayAbilitySpecHandle Handle) { check(Hero); Hero->SetAbilityCameraMode(Mode, Handle); }
++void UUEPNativeWorldPolicyFixture::ClearCamera(ULyraHeroComponent* Hero, FGameplayAbilitySpecHandle Handle) { check(Hero); Hero->ClearAbilityCameraMode(Handle); }
++TArray<FUEPNativeCharacterPartPolicyRow> UUEPNativeWorldPolicyFixture::PartRows(ULyraControllerComponent_CharacterParts* Parts) { return Parts ? UEPPartRows(Parts->CharacterParts, nullptr) : TArray<FUEPNativeCharacterPartPolicyRow>(); }
++void UUEPNativeWorldPolicyFixture::AddSourcePart(ULyraControllerComponent_CharacterParts* Parts, FLyraCharacterPart Part, int32 Source) { check(Parts && Source >= 0 && Source <= 3); Parts->AddCharacterPartInternal(Part, static_cast<ECharacterPartSource>(Source)); }
++void UUEPNativeWorldPolicyFixture::SuppressParts(ULyraControllerComponent_CharacterParts* Parts, bool bSuppress) { check(Parts); Parts->SetSuppressionOnNaturalParts(bSuppress); }
++void UUEPNativeWorldPolicyFixture::NotifyPossession(ULyraControllerComponent_CharacterParts* Parts, APawn* OldPawn, APawn* NewPawn) { check(Parts); Parts->OnPossessedPawnChanged(OldPawn, NewPawn); }
++bool UUEPNativeWorldPolicyFixture::FrontendLoading(ULyraFrontendStateComponent* Frontend) { FString Reason; return Frontend && Frontend->ShouldShowLoadingScreen(Reason); }
++bool UUEPNativeWorldPolicyFixture::UserInitializationCallback(ULyraFrontendStateComponent* Frontend, bool bSuccess)
++{
++    check(Frontend && !Frontend->InProgressPressStartScreen.IsValid());
++    bool bContinued = false;
++    TSharedRef<FControlFlow> Flow = MakeShared<FControlFlow>(TEXT("UEP owned initialization callback"));
++    Flow->QueueWait().BindLambda([Frontend](FControlFlowNodeRef Node) { Frontend->InProgressPressStartScreen = Node; });
++    Flow->QueueFunction().BindLambda([&bContinued]() { bContinued = true; });
++    Flow->ExecuteFlow();
++    UCommonUserSubsystem* Users = UGameplayStatics::GetGameInstance(Frontend)->GetSubsystem<UCommonUserSubsystem>();
++    check(Users);
++    Users->OnUserInitializeComplete.AddDynamic(Frontend, &ULyraFrontendStateComponent::OnUserInitialized);
++    Frontend->OnUserInitialized(nullptr, bSuccess, FText(), ECommonUserPrivilege::CanPlay, ECommonUserOnlineContext::Default);
++    return bContinued && !Frontend->InProgressPressStartScreen.IsValid() && !Users->OnUserInitializeComplete.IsAlreadyBound(Frontend, &ULyraFrontendStateComponent::OnUserInitialized);
++}
