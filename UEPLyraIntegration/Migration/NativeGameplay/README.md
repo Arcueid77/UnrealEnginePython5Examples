@@ -269,3 +269,33 @@ The full uncooked shooter scene previously failed before Python initialization
 inside the unchanged original rifle Niagara asset. UI-only worlds isolate this
 batch's behavior; they do not establish full shooter rendering or repair that
 asset. No new cook, package, engine compilation, or platform acceptance is made.
+
+## CPP10: native initial item-stat application
+
+[CPP10 acceptance](CPP10-acceptance.json) covers CPP-016. The original inventory
+creation callback selects the native loop or two Const item-definition events
+before applying any stats. Python reads a typed Tag/Count array in native map
+iteration order, avoiding unsupported mutable struct keys in Python dictionaries.
+The original instanced fragments, their order, defaults, graphs, and parent
+classes are preserved. Five item definitions use a constant profile selector.
+
+Twenty definition/repeat creations, ten staged empty/zero/negative/duplicate/max
+cases, two missing-definition native callbacks, and a handled-callback no-replay
+guard pass. The three production weapons and two retained unused/prototype
+definitions are distinguished; the latter do not claim natural gameplay coverage.
+The disposable boundary fixture is versioned outside Overlay. No exception
+injection acceptance is claimed.
+
+The dedicated server and two actual clients pass both initialization profiles.
+Four server pickup creations per profile each enter the selected callback once;
+the clients receive equal native replicated tag stacks without running local
+initialization. Twelve native quickbar cycles per profile retain owner isolation,
+OnRep/equipment behavior, and inventory restoration. The previously accepted
+inventory and quickbar policies stay fixed in Python during this comparison.
+
+An independent stage preserves CPP09 for its pending window acceptance. Compiler
+dependencies require the three LyraGame units for the two shared declaration
+headers. Adding the staged fixture rebuilds units 1/2; its body repair rebuilds
+unit 2 alone, reusing UHT and units 1/3. SDK, bridge, ShooterCore, and engine
+binaries are reused. Use the main repository's NativeStats Build, Authoring,
+FixtureBuild/FixtureRepair, Validation, and NetworkValidation entry points.

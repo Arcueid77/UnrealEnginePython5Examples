@@ -1,6 +1,7 @@
 """Native gameplay events -> quickbar policy -> Server RPC -> replicated equip."""
 import atexit
 import copy
+import sys
 from pathlib import Path
 import time
 import traceback
@@ -166,4 +167,5 @@ class Network:
         atomic_write(self.path,self.report);(ue.log if self.report['status']=='passed' else ue.log_error)('UEP_NATIVE_INVENTORY_NETWORK_SHUTDOWN_'+self.report['status'].upper())
 
 
-network=Network();ticker=ue.add_ticker(network.tick)
+if '-UEPNativeStatsNetwork' not in sys.argv:
+    network=Network();ticker=ue.add_ticker(network.tick)

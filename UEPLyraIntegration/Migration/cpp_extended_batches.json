@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "status": "in_progress",
+  "scope_approved_date": "2026-11-02",
+  "user_authorization": "继续吧",
+  "authorization_context": "Continue the explicitly proposed CPP-016 through CPP-018; CPP-018 has no configured original consumer and will distinguish capability validation from production replacement.",
+  "preflight": "NativeGameplay/CPP16-18-preflight.json",
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "approved_candidates": [
+    "CPP-016",
+    "CPP-017",
+    "CPP-018"
+  ],
+  "accepted_production_candidates": [
+    "CPP-016"
+  ],
+  "accepted_capability_only_candidates": [],
+  "prior_stage": "cpp_batches.json",
+  "prior_cpp09_actual_input_still_pending": true,
+  "independent_stage": ".build/LyraValidation/CppGameplayExtended/Stage/Lyra",
+  "batches": [
+    {
+      "id": "CPP10",
+      "candidates": [
+        "CPP-016"
+      ],
+      "status": "accepted",
+      "acceptance_ledger": "NativeGameplay/CPP10-acceptance.json"
+    },
+    {
+      "id": "CPP11",
+      "candidates": [
+        "CPP-017"
+      ],
+      "status": "in_progress",
+      "acceptance_ledger": null
+    },
+    {
+      "id": "CPP12",
+      "candidates": [
+        "CPP-018"
+      ],
+      "status": "pending_capability_only",
+      "acceptance_ledger": null
+    }
+  ]
+}

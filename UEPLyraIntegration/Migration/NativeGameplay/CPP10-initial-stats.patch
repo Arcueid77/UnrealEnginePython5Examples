@@ -1,0 +1,100 @@
+--- a/Source/LyraGame/Inventory/InventoryFragment_SetStats.h
++++ b/Source/LyraGame/Inventory/InventoryFragment_SetStats.h
+@@ -10,6 +10,14 @@
+ class ULyraInventoryItemInstance;
+ class UObject;
+ struct FGameplayTag;
++
++USTRUCT(BlueprintType)
++struct LYRAGAME_API FUEPInitialItemStat
++{
++	GENERATED_BODY()
++	UPROPERTY(BlueprintReadOnly) FGameplayTag Tag;
++	UPROPERTY(BlueprintReadOnly) int32 Count = 0;
++};
+ 
+ UCLASS()
+ class UInventoryFragment_SetStats : public ULyraInventoryItemFragment
+@@ -24,4 +32,7 @@
+ 	virtual void OnInstanceCreated(ULyraInventoryItemInstance* Instance) const override;
+ 
+ 	int32 GetItemStatByTag(FGameplayTag Tag) const;
++
++	UFUNCTION(BlueprintCallable)
++	TArray<FUEPInitialItemStat> UEPGetInitialStats() const;
+ };
+--- a/Source/LyraGame/Inventory/InventoryFragment_SetStats.cpp
++++ b/Source/LyraGame/Inventory/InventoryFragment_SetStats.cpp
+@@ -8,6 +8,16 @@
+ 
+ void UInventoryFragment_SetStats::OnInstanceCreated(ULyraInventoryItemInstance* Instance) const
+ {
++	if (Instance && Instance->GetItemDef())
++	{
++		const ULyraInventoryItemDefinition* Definition = GetDefault<ULyraInventoryItemDefinition>(Instance->GetItemDef());
++		if (Definition->UEPUsesPythonInitialStats())
++		{
++			Definition->UEPInitializeItemStats(this, Instance);
++			return; // A failed Python policy must never run the native loop again.
++		}
++	}
++
+ 	for (const auto& KVP : InitialItemStats)
+ 	{
+ 		Instance->AddStatTagStack(KVP.Key, KVP.Value);
+@@ -23,3 +33,16 @@
+ 
+ 	return 0;
+ }
++
++TArray<FUEPInitialItemStat> UInventoryFragment_SetStats::UEPGetInitialStats() const
++{
++	TArray<FUEPInitialItemStat> Result;
++	Result.Reserve(InitialItemStats.Num());
++	for (const auto& Entry : InitialItemStats)
++	{
++		FUEPInitialItemStat& Row = Result.AddDefaulted_GetRef();
++		Row.Tag = Entry.Key;
++		Row.Count = Entry.Value;
++	}
++	return Result;
++}
+--- a/Source/LyraGame/Inventory/LyraInventoryItemDefinition.h
++++ b/Source/LyraGame/Inventory/LyraInventoryItemDefinition.h
+@@ -9,6 +9,7 @@
+ template <typename T> class TSubclassOf;
+ 
+ class ULyraInventoryItemInstance;
++class UInventoryFragment_SetStats;
+ struct FFrame;
+ 
+ //////////////////////////////////////////////////////////////////////
+@@ -36,6 +37,12 @@
+ public:
+ 	ULyraInventoryItemDefinition(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
+ 
++	UFUNCTION(BlueprintNativeEvent, BlueprintPure)
++	bool UEPUsesPythonInitialStats() const;
++
++	UFUNCTION(BlueprintNativeEvent)
++	void UEPInitializeItemStats(const UInventoryFragment_SetStats* Fragment, ULyraInventoryItemInstance* Instance) const;
++
+ 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category=Display)
+ 	FText DisplayName;
+ 
+--- a/Source/LyraGame/Inventory/LyraInventoryItemDefinition.cpp
++++ b/Source/LyraGame/Inventory/LyraInventoryItemDefinition.cpp
+@@ -43,3 +43,13 @@
+ 	return nullptr;
+ }
+ 
++
++bool ULyraInventoryItemDefinition::UEPUsesPythonInitialStats_Implementation() const
++{
++	return false;
++}
++
++void ULyraInventoryItemDefinition::UEPInitializeItemStats_Implementation(const UInventoryFragment_SetStats* Fragment, ULyraInventoryItemInstance* Instance) const
++{
++	ensureMsgf(false, TEXT("Initial-stat Python route selected without its handler"));
++}
