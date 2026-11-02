@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "accepted": true,
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "previous_blueprint_and_cpp_policies_retained": true,
+  "engine_full_compile_executed": false,
+  "sdk_or_bridge_rebuild_executed": false,
+  "cook_package_executed": false,
+  "physical_input_tested": false,
+  "default_profile_promoted": true,
+  "cpp09_actual_window_stage_preserved": true,
+  "protected_original_and_native_inputs_verified": 972,
+  "default_offline_frontend": {
+    "status": "passed",
+    "kind": "frontend",
+    "profile": "Python",
+    "online_service_tested": false,
+    "network_replication_tested": false
+  },
+  "compile_partition": {
+    "uht_modules": [
+      "LyraGame"
+    ],
+    "lyra_compiled_units": [
+      1,
+      2,
+      3
+    ],
+    "topdown_compiled_units": [
+      1
+    ],
+    "body_repair_reused_lyra_units": [
+      1,
+      2
+    ],
+    "body_repair_reused_uht": true
+  },
+  "batch": "CPP19",
+  "candidates": [
+    "CPP-025"
+  ],
+  "typed_boundary_cases": 56,
+  "actual_native_and_python": [
+    {
+      "status": "passed",
+      "family": "Device",
+      "profile": "DeviceNative",
+      "physical_input_tested": false,
+      "online_service_tested": false,
+      "audio_playback_tested": false
+    },
+    {
+      "status": "passed",
+      "family": "Device",
+      "profile": "DevicePython",
+      "physical_input_tested": false,
+      "online_service_tested": false,
+      "audio_playback_tested": false
+    }
+  ],
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/Build02BodyRepair/summary.json",
+      "sha256": "DD7F39BEFDB9C4539733250C56F3FD554842F7C454A099DC65409102548B3A7F"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/Boundaries02/summary.json",
+      "sha256": "8F7C12FCCAE6F67C5E575B3DD2B83588B8F4076C194B26D5C88B036153BAB3B3"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/Assets02Promote/summary.json",
+      "sha256": "8224F43B6EF64D1CCA3C8EE924D6D3D287DB145FF4B0EB13354851FCBEAE48EF"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/DefaultPawn01/summary.json",
+      "sha256": "3A1B0CBE19E089B56F09BA7AF70E5AA34C4FD883E9336DB8D8293127D6766650"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/DefaultFrontend01/summary.json",
+      "sha256": "0218A32FE2A11191ADDDDD30230C881D484EBCAEDB266DC838633D2702434123"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/DefaultPistolNetwork01/summary.json",
+      "sha256": "B383EA7AE418901F3C332F7C87B4C5A084E12183A00497184E909591FD0BFF64"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP23/DefaultAttribute01/summary.json",
+      "sha256": "82CF2726192324039678F052180A0795E513E99D970D2386D4B7C49B6A17F19D"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/DeviceNative03/summary.json",
+      "sha256": "23F17585BA1F544AC66382E4DEE002E84CDB1712CF511EB3CA1FE27CB4A19D9B"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/DevicePython01/summary.json",
+      "sha256": "8FEA26E9B31C8F51C194E1BBC5A08CB3AC336CBFE74A6C9704B1A7E88DD77886"
+    }
+  ],
+  "native_device_connection_and_pairing_callback_inputs_supplied_by_fixture": true,
+  "unrelated_users_filtered_duplicate_ticker_coalesced_and_traits_restored": true,
+  "physical_device_disconnect_tested": false,
+  "retained_failed_fixture_attempts": [
+    "DeviceNative01/02 used widget.GetWorld, which the SDK did not expose. Ownership is now checked through the original native GetOwningPlayer."
+  ],
+  "native_weak_ticker_dialog_delegate_lifetimes_retained": true
+}

@@ -89,7 +89,7 @@ class Server(original.Server):
         (ue.log if self.report['status']=='passed' else ue.log_error)('UEP_NATIVE_RESET_NETWORK_SHUTDOWN_'+self.report['status'].upper())
 
 
-if '-UEPNativePartsNetwork' not in sys.argv:
+if '-UEPNativePartsNetwork' not in sys.argv and '-UEPNativeRuleNetwork' not in sys.argv:
     result,peer,run=(original.arg(flag) for flag in ('-UEPAutoRespawnResetNetworkResult=','-UEPJumpPeer=','-UEPJumpRun='))
     validation=Server(result,run) if peer=='server' else Client(result,peer,run)
     atexit.register(validation.finalize);ticker=ue.add_ticker(validation.tick)

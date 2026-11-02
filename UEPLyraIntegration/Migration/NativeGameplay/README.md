@@ -413,3 +413,42 @@ native. Default frontend and camera smokes pass after promoting the tested polic
 classes. The shared build compiles LyraGame units 1/3 and reuses unit 2. SDK, bridge
 and engine are unchanged. Startup selection passes 48 focused tests.
 CPP19-24 remain in progress; CPP09 desktop input remains user-deferred.
+
+## CPP19-24 accepted remaining policies
+
+The last six approved groups are accepted and enabled by the default `Python`
+profile (`rule_policies.PawnPython`). The previous world policies, Reset and
+Blueprint replacements remain enabled. All 600 typed boundaries pass, including
+exact int64 replay timestamps, unknown-operation native routing and bounded traces.
+
+| Ledger | Native lifecycle evidence | Explicit limits |
+| --- | --- | --- |
+| [CPP19](CPP19-acceptance.json) | Actual connection/pairing callbacks, own/foreign users, coalesced native ticker and restored traits | Callback inputs supplied by fixture; no physical controller disconnect |
+| [CPP20](CPP20-acceptance.json) | Temporary native memory streams at retention 0/1/2/5, delete/requery, genuine failure-stop callback and cleanup | Keep/live markers use typed contexts; no existing recordings or gameplay playback |
+| [CPP21](CPP21-acceptance.json) | Actual HDR/LDR and loading-mix methods, native readonly resource and state guards | No audible-output acceptance |
+| [CPP22](CPP22-acceptance.json) | Friendly damage blocked, enemy damage 10; four authority trials and eight independent client health views | Native GAS/transport retained; default pistol separately proves real prediction and replicated damage |
+| [CPP23](CPP23-acceptance.json) | Two real local players, 16 native GAS clamps per profile, original bomb input/cost/repeat/refund | Fixture attribute writes are restored before the unchanged input phase; no OS input |
+| [CPP24](CPP24-acceptance.json) | Actual PlayerState/Experience data and human/bot permissions; four native Reset trials, eight independent spawn-class views | Native spawning, loading, ownership and initialization retained |
+
+Default frontend, Pawn selection, two-player attributes/input and four original
+pistol prediction/damage trials pass together. Startup selection passes 51 tests.
+The private attribute fixture records Slate's reply and verifies unchanged bombs/
+attributes: a zero-extent headless SceneViewport can return Handled for its neutral
+character setup. It then enters the original Enhanced Input action independently.
+The legacy input harness itself is unchanged. Python replay policy explicitly
+rejects invalid negative retention instead of attempting deletion.
+
+The shared native build changes all three LyraGame units, one TopDownArena unit
+and LyraGame UHT output. The body repair reuses UHT and successful Lyra units 1/2.
+The optional memory streamer left in the engine directory is an unregistered
+5.8.0 binary; it is never loaded or registered. Its current 5.8.1 source is compiled
+as one private test module and registered only in the advancing stage. An initial
+link failure reuses the compiled object after adding the required native imports.
+Engine manifest/binaries, SDK, bridge and the old CPP09 stage remain unchanged;
+972 protected inputs are verified. No full-engine build, cook/package, new
+platform, physical device or audible-output claim is added.
+
+All 30 selected candidates are implemented. Twenty-nine are accepted within
+their recorded scope; CPP-018 remains capability-only with zero original consumers.
+Only CPP09's actual desktop Escape/Menu gate remains user-deferred. The remaining
+scope tracker is accepted independently of that earlier pending gate.

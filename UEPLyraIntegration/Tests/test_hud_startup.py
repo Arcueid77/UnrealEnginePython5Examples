@@ -9,6 +9,20 @@ from uep_lyra_hud.startup import validation_module
 
 
 class StartupSelectionTests(unittest.TestCase):
+    def test_native_rule_network_owns_shared_reset_fixture(self):
+        args=['-UEPNativeRuleNetwork','-UEPNativeResetNetwork','-UEPAutoRespawnResetNetworkResult=report.json']
+        self.assertEqual(validation_module(args),'uep_lyra_native.rule_network_validation')
+        self.assertIsNone(validation_module(['-run=Py']+args))
+
+    def test_native_rule_runtime_requires_explicit_lane(self):
+        args=['-UEPNativeRuleResult=report.json']
+        self.assertEqual(validation_module(args),'uep_lyra_native.rule_validation')
+        self.assertIsNone(validation_module(['-run=Py']+args))
+
+    def test_native_attribute_runtime_requires_explicit_lane(self):
+        args=['-UEPNativeAttributeResult=report.json']
+        self.assertEqual(validation_module(args),'uep_lyra_native.attribute_validation')
+        self.assertIsNone(validation_module(['-run=Py']+args))
     def test_parts_network_owns_reset_fixture_startup(self):
         args=['-UEPNativePartsNetwork','-UEPNativeResetNetwork','-UEPAutoRespawnResetNetworkResult=report.json']
         self.assertEqual(validation_module(args),'uep_lyra_native.parts_network_validation')

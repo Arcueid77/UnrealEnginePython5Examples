@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "in_progress",
+  "status": "accepted",
   "scope_approved_date": "2026-11-02",
   "user_authorization": "为啥不继续了，持续推进直到全部完成",
   "target": "UE5.8.1 / CPython3.11 / Win64 Development",
@@ -24,7 +24,13 @@
     "CPP-021",
     "CPP-022",
     "CPP-023",
-    "CPP-024"
+    "CPP-024",
+    "CPP-025",
+    "CPP-026",
+    "CPP-027",
+    "CPP-028",
+    "CPP-029",
+    "CPP-030"
   ],
   "prior_scopes": [
     "cpp_batches.json",
@@ -86,48 +92,63 @@
       "candidates": [
         "CPP-025"
       ],
-      "status": "in_progress",
-      "acceptance_ledger": null
+      "status": "accepted",
+      "acceptance_ledger": "NativeGameplay/CPP19-acceptance.json"
     },
     {
       "id": "CPP20",
       "candidates": [
         "CPP-026"
       ],
-      "status": "in_progress",
-      "acceptance_ledger": null
+      "status": "accepted",
+      "acceptance_ledger": "NativeGameplay/CPP20-acceptance.json"
     },
     {
       "id": "CPP21",
       "candidates": [
         "CPP-027"
       ],
-      "status": "in_progress",
-      "acceptance_ledger": null
+      "status": "accepted",
+      "acceptance_ledger": "NativeGameplay/CPP21-acceptance.json"
     },
     {
       "id": "CPP22",
       "candidates": [
         "CPP-028"
       ],
-      "status": "in_progress",
-      "acceptance_ledger": null
+      "status": "accepted",
+      "acceptance_ledger": "NativeGameplay/CPP22-acceptance.json"
     },
     {
       "id": "CPP23",
       "candidates": [
         "CPP-029"
       ],
-      "status": "in_progress",
-      "acceptance_ledger": null
+      "status": "accepted",
+      "acceptance_ledger": "NativeGameplay/CPP23-acceptance.json"
     },
     {
       "id": "CPP24",
       "candidates": [
         "CPP-030"
       ],
-      "status": "in_progress",
-      "acceptance_ledger": null
+      "status": "accepted",
+      "acceptance_ledger": "NativeGameplay/CPP24-acceptance.json"
     }
+  ],
+  "accepted_date": "2026-11-03",
+  "implemented_candidates": [
+    "CPP-019",
+    "CPP-020",
+    "CPP-021",
+    "CPP-022",
+    "CPP-023",
+    "CPP-024",
+    "CPP-025",
+    "CPP-026",
+    "CPP-027",
+    "CPP-028",
+    "CPP-029",
+    "CPP-030"
   ]
 }

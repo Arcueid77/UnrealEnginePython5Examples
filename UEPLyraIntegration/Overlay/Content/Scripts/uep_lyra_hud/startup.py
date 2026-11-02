@@ -2,6 +2,12 @@
 
 
 def validation_module(arguments):
+    if '-UEPNativeRuleNetwork' in arguments:
+        return None if any(a.startswith('-run=') for a in arguments) else 'uep_lyra_native.rule_network_validation'
+    if any(a.startswith('-UEPNativeAttributeResult=') for a in arguments):
+        return None if any(a.startswith('-run=') for a in arguments) else 'uep_lyra_native.attribute_validation'
+    if any(a.startswith('-UEPNativeRuleResult=') for a in arguments):
+        return None if any(a.startswith('-run=') for a in arguments) else 'uep_lyra_native.rule_validation'
     if '-UEPNativePartsNetwork' in arguments:
         return None if any(a.startswith('-run=') for a in arguments) else 'uep_lyra_native.parts_network_validation'
     if any(a.startswith('-UEPNativeWorldPolicyResult=') for a in arguments):

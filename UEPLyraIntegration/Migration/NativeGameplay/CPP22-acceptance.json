@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "accepted": true,
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "previous_blueprint_and_cpp_policies_retained": true,
+  "engine_full_compile_executed": false,
+  "sdk_or_bridge_rebuild_executed": false,
+  "cook_package_executed": false,
+  "physical_input_tested": false,
+  "default_profile_promoted": true,
+  "cpp09_actual_window_stage_preserved": true,
+  "protected_original_and_native_inputs_verified": 972,
+  "default_offline_frontend": {
+    "status": "passed",
+    "kind": "frontend",
+    "profile": "Python",
+    "online_service_tested": false,
+    "network_replication_tested": false
+  },
+  "compile_partition": {
+    "uht_modules": [
+      "LyraGame"
+    ],
+    "lyra_compiled_units": [
+      1,
+      2,
+      3
+    ],
+    "topdown_compiled_units": [
+      1
+    ],
+    "body_repair_reused_lyra_units": [
+      1,
+      2
+    ],
+    "body_repair_reused_uht": true
+  },
+  "batch": "CPP22",
+  "candidates": [
+    "CPP-028"
+  ],
+  "typed_boundary_cases": 256,
+  "actual_native_and_python": [
+    {
+      "status": "passed",
+      "family": "Damage",
+      "profile": "DamageNative",
+      "physical_input_tested": false,
+      "online_service_tested": false,
+      "audio_playback_tested": false
+    },
+    {
+      "status": "passed",
+      "family": "Damage",
+      "profile": "DamagePython",
+      "physical_input_tested": false,
+      "online_service_tested": false,
+      "audio_playback_tested": false
+    }
+  ],
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/Build02BodyRepair/summary.json",
+      "sha256": "DD7F39BEFDB9C4539733250C56F3FD554842F7C454A099DC65409102548B3A7F"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/Boundaries02/summary.json",
+      "sha256": "8F7C12FCCAE6F67C5E575B3DD2B83588B8F4076C194B26D5C88B036153BAB3B3"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/Assets02Promote/summary.json",
+      "sha256": "8224F43B6EF64D1CCA3C8EE924D6D3D287DB145FF4B0EB13354851FCBEAE48EF"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/DefaultPawn01/summary.json",
+      "sha256": "3A1B0CBE19E089B56F09BA7AF70E5AA34C4FD883E9336DB8D8293127D6766650"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/DefaultFrontend01/summary.json",
+      "sha256": "0218A32FE2A11191ADDDDD30230C881D484EBCAEDB266DC838633D2702434123"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/DefaultPistolNetwork01/summary.json",
+      "sha256": "B383EA7AE418901F3C332F7C87B4C5A084E12183A00497184E909591FD0BFF64"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP23/DefaultAttribute01/summary.json",
+      "sha256": "82CF2726192324039678F052180A0795E513E99D970D2386D4B7C49B6A17F19D"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/DamageNative01/summary.json",
+      "sha256": "9EC8DBD1B06D1BB1FF62ECC1398418EA41B6EA5800C1BDAC61B24D7A46C6FA12"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/DamagePython01/summary.json",
+      "sha256": "E2F982AD83C0CD2E8F0B1F2969472B39704971DBFB9F607BB2344D8ED19B0942"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/DamageNetwork01/summary.json",
+      "sha256": "FA638E3E8EAD604F81A655AB77A0C3E753EDF27F1C7840F68FA449019C57ADEB"
+    }
+  ],
+  "actual_native_damage_effect_respects_enemy_and_friendly_rules": true,
+  "actual_authority_and_two_client_damage": {
+    "status": "passed",
+    "native_rule_family": "Damage",
+    "independent_client_views": 8,
+    "native_reset_producer_tested": true,
+    "owners": 2,
+    "authority_trials": 4,
+    "owner_trials": 4,
+    "passive_foreign_client_observations": 4,
+    "reset_router_payload_replicated_to_foreign_client": false,
+    "full_auto_respawn_acceptance": false
+  },
+  "default_original_weapon_prediction_damage_and_replication": {
+    "status": "passed",
+    "weapon": "pistol",
+    "native_owner_input_shots": 4,
+    "native_prediction_key_pairs": 4,
+    "native_damage_replica_observations": 8,
+    "full_acceptance": false,
+    "item_cost_production": true,
+    "player_cost_capability_only": true,
+    "native_player_cost_commits": 4,
+    "native_item_cost_commits": 4,
+    "previous_weapon_policy_fixed": "Python",
+    "player_respawn_and_avatar_lifecycle": false
+  },
+  "native_damage_execution_gas_tags_and_replication_retained": true
+}

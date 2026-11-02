@@ -1,0 +1,724 @@
+--- a/Source/LyraGame/UI/LyraHUDLayout.cpp
++++ b/Source/LyraGame/UI/LyraHUDLayout.cpp
+@@ -20,6 +20,7 @@
+ #include "CommonUIVisibilitySubsystem.h"
+ #endif	// WITH_EDITOR
+ 
++#include "UEPPolicy/UEPNativeRulePolicies.h"
+ #include UE_INLINE_GENERATED_CPP_BY_NAME(LyraHUDLayout)
+ 
+ UE_DEFINE_GAMEPLAY_TAG_STATIC(TAG_UI_LAYER_MENU, "UI.Layer.Menu");
+@@ -81,7 +82,13 @@
+ 	ensure(OwningLocalPlayerId.IsValid());
+ 
+ 	// This device connection change happened to a different player, ignore it for us.
+-	if (PlatformUserId != OwningLocalPlayerId)
++    bool UEPNotify = PlatformUserId == OwningLocalPlayerId;
++    if (auto Context = UEPMakeRuleContext<UUEPNativeDevicePolicyContext>(this, TEXT("Device.Connection")))
++    {
++        Context->OwnerUser = OwningLocalPlayerId.GetInternalId(); Context->ChangedUser = PlatformUserId.GetInternalId();
++        if (!UEPApplyWorldPolicy(Context.Get())) { return; } UEPNotify = Context->bAct;
++    }
++    if (!UEPNotify)
+ 	{
+ 		return;
+ 	}
+@@ -96,7 +103,13 @@
+ 	ensure(OwningLocalPlayerId.IsValid());
+ 
+ 	// If this pairing change was related to our local player, notify of a change.
+-	if (NewUserPlatformId == OwningLocalPlayerId || OldUserPlatformId == OwningLocalPlayerId)
++    bool UEPNotify = NewUserPlatformId == OwningLocalPlayerId || OldUserPlatformId == OwningLocalPlayerId;
++    if (auto Context = UEPMakeRuleContext<UUEPNativeDevicePolicyContext>(this, TEXT("Device.Pairing")))
++    {
++        Context->OwnerUser = OwningLocalPlayerId.GetInternalId(); Context->NewUser = NewUserPlatformId.GetInternalId(); Context->OldUser = OldUserPlatformId.GetInternalId();
++        if (!UEPApplyWorldPolicy(Context.Get())) { return; } UEPNotify = Context->bAct;
++    }
++    if (UEPNotify)
+ 	{
+ 		NotifyControllerStateChangeForDisconnectScreen();	
+ 	}
+@@ -107,12 +120,20 @@
+ 	// We only want this menu on primarily controller platforms
+ 	bool bHasAllRequiredTags = ICommonUIModule::GetSettings().GetPlatformTraits().HasAll(PlatformRequiresControllerDisconnectScreen);
+ 
++    const bool UEPPlatformTraits = bHasAllRequiredTags;
++    bool UEPEditorTraits = false;
+ 	// Check the tags that we may be emulating in the editor too
+ #if WITH_EDITOR
+ 	const FGameplayTagContainer& PlatformEmulationTags = UCommonUIVisibilitySubsystem::Get(GetOwningLocalPlayer())->GetVisibilityTags();
+-	bHasAllRequiredTags |= PlatformEmulationTags.HasAll(PlatformRequiresControllerDisconnectScreen);
++	UEPEditorTraits = PlatformEmulationTags.HasAll(PlatformRequiresControllerDisconnectScreen);
++    bHasAllRequiredTags |= UEPEditorTraits;
+ #endif	// WITH_EDITOR
+ 
++    if (auto Context = UEPMakeRuleContext<UUEPNativeDevicePolicyContext>(GetWorld(), TEXT("Device.Platform")))
++    {
++        Context->bPlatformTraits = UEPPlatformTraits; Context->bEditorTraits = UEPEditorTraits;
++        if (UEPApplyWorldPolicy(Context.Get())) { return Context->bAct; } return false;
++    }
+ 	return bHasAllRequiredTags;
+ }
+ 
+@@ -122,7 +143,13 @@
+ 	ensure(ShouldPlatformDisplayControllerDisconnectScreen());
+ 
+ 	// If we haven't already, queue the processing of device state for next tick.
+-	if (!RequestProcessControllerStateHandle.IsValid())
++    bool UEPSchedule = !RequestProcessControllerStateHandle.IsValid();
++    if (auto Context = UEPMakeRuleContext<UUEPNativeDevicePolicyContext>(this, TEXT("Device.Schedule")))
++    {
++        Context->bPendingProcess = RequestProcessControllerStateHandle.IsValid();
++        if (!UEPApplyWorldPolicy(Context.Get())) { return; } UEPSchedule = Context->bAct;
++    }
++    if (UEPSchedule)
+ 	{
+ 		RequestProcessControllerStateHandle = FTSTicker::GetCoreTicker().AddTicker(FTickerDelegate::CreateWeakLambda(this, [this](float DeltaTime)
+ 		{
+@@ -147,6 +174,21 @@
+     TArray<FInputDeviceId> MappedInputDevices;
+     const int32 NumDevicesMappedToUser = DeviceMapper.GetAllInputDevicesForUser(OwningLocalPlayerId, OUT MappedInputDevices);
+ 
++    if (auto Context = UEPMakeRuleContext<UUEPNativeDevicePolicyContext>(this, TEXT("Device.Process")))
++    {
++        Context->OwnerUser = OwningLocalPlayerId.GetInternalId(); Context->bScreenPresent = SpawnedControllerDisconnectScreen != nullptr;
++        for (FInputDeviceId Device : MappedInputDevices)
++        {
++            FUEPNativeInputDeviceRow& Row = Context->Devices.AddDefaulted_GetRef(); Row.DeviceId = Device.GetId();
++            Row.bConnected = DeviceMapper.GetInputDeviceConnectionState(Device) == EInputDeviceConnectionState::Connected;
++            Row.bGamepad = Row.bConnected && UInputDeviceSubsystem::Get()->GetInputDeviceHardwareIdentifier(Device).PrimaryDeviceType == EHardwareDevicePrimaryType::Gamepad;
++        }
++        if (!UEPApplyWorldPolicy(Context.Get())) { return; }
++        if (Context->Action == TEXT("Show")) { DisplayControllerDisconnectedMenu(); }
++        else if (Context->Action == TEXT("Hide")) { HideControllerDisconnectedMenu(); }
++        else { ensure(Context->Action == TEXT("None")); }
++        return;
++    }
+     // Check if there are any other connected GAMEPAD devices mapped to this platform user. 
+     bool bHasConnectedController = false;
+ 
+--- a/Source/LyraGame/Replays/LyraReplaySubsystem.cpp
++++ b/Source/LyraGame/Replays/LyraReplaySubsystem.cpp
+@@ -13,6 +13,7 @@
+ #include "Settings/LyraSettingsLocal.h"
+ #include "Templates/Greater.h"
+ 
++#include "UEPPolicy/UEPNativeRulePolicies.h"
+ #include UE_INLINE_GENERATED_CPP_BY_NAME(LyraReplaySubsystem)
+ 
+ UE_DEFINE_GAMEPLAY_TAG_STATIC(TAG_Platform_Trait_ReplaySupport, "Platform.Trait.ReplaySupport");
+@@ -65,7 +66,13 @@
+ 	// TODO this was only tested with the generic file streamer and may not fully work with the save game streamer
+ 	// This only handles one delete at a time, and will loop until it gets an error or goes below NumReplaysToKeep
+ 	// It does it this way because each delete may involve a server or save game query that invalidates the replay list
+-	if (LocalPlayer != nullptr && LocalPlayerDeletingReplays == nullptr && NumReplaysToKeep != 0)
++    bool UEPStart = LocalPlayer != nullptr && LocalPlayerDeletingReplays == nullptr && NumReplaysToKeep != 0;
++    if (auto Context = UEPMakeRuleContext<UUEPNativeReplayPolicyContext>(this, TEXT("Replay.Start")))
++    {
++        Context->bHasLocalPlayer = LocalPlayer != nullptr; Context->bBusy = LocalPlayerDeletingReplays != nullptr; Context->NumberToKeep = NumReplaysToKeep;
++        if (!UEPApplyWorldPolicy(Context.Get())) { return; } UEPStart = Context->bAct;
++    }
++    if (UEPStart)
+ 	{
+ 		LocalPlayerDeletingReplays = LocalPlayer;
+ 		DeletingReplaysNumberToKeep = NumReplaysToKeep;
+@@ -83,6 +90,33 @@
+ 
+ void ULyraReplaySubsystem::OnEnumerateStreamsCompleteForDelete(const FEnumerateStreamsResult& Result)
+ {
++    if (auto Context = UEPMakeRuleContext<UUEPNativeReplayPolicyContext>(this, TEXT("Replay.Select")))
++    {
++        Context->bHasLocalPlayer = IsValid(LocalPlayerDeletingReplays); Context->bHasStreamer = CurrentReplayStreamer.IsValid(); Context->NumberToKeep = DeletingReplaysNumberToKeep;
++        if (!Context->bHasLocalPlayer || !Context->bHasStreamer) { return; }
++        UDemoNetDriver* Driver = GetDemoDriver(); Context->bRecording = Driver && Driver->IsRecording();
++        // Native sorting preserves the original engine's tie order. Python
++        // filters keep flags and selects one deletion from this typed snapshot.
++        TArray<FNetworkReplayStreamInfo> Ordered = Result.FoundStreams;
++        Algo::SortBy(Ordered, [](const FNetworkReplayStreamInfo& Info) { return Info.Timestamp.GetTicks(); }, TGreater<>());
++        for (int32 Index = 0; Index < Ordered.Num(); ++Index)
++        {
++            const FNetworkReplayStreamInfo& Info = Ordered[Index];
++            FUEPNativeReplayPolicyRow& Row = Context->Streams.AddDefaulted_GetRef();
++            Row.Index = Index; Row.Name = Info.Name; Row.TimestampTicks = Info.Timestamp.GetTicks(); Row.bShouldKeep = Info.bShouldKeep; Row.bIsLive = Info.bIsLive;
++        }
++        if (!UEPApplyWorldPolicy(Context.Get())) { return; }
++        if (Context->DeleteIndex != INDEX_NONE)
++        {
++            if (!ensure(Ordered.IsValidIndex(Context->DeleteIndex))) { return; }
++            const FNetworkReplayStreamInfo& Info = Ordered[Context->DeleteIndex];
++            if (!ensure(!Info.bShouldKeep && !Info.bIsLive)) { return; }
++            CurrentReplayStreamer->DeleteFinishedStream(Info.Name, LocalPlayerDeletingReplays->GetPlatformUserIndex(), FDeleteFinishedStreamCallback::CreateUObject(this, &ThisClass::OnDeleteReplay));
++        }
++        else { CurrentReplayStreamer = nullptr; LocalPlayerDeletingReplays = nullptr; DeletingReplaysNumberToKeep = 0; }
++        return;
++    }
++
+ 	if (!CurrentReplayStreamer.IsValid() || !IsValid(LocalPlayerDeletingReplays))
+ 	{
+ 		// Lost context, don't do anything
+@@ -130,6 +164,7 @@
+ 		LocalPlayerDeletingReplays = nullptr;
+ 		DeletingReplaysNumberToKeep = 0;
+ 	}
++
+ }
+ 
+ void ULyraReplaySubsystem::OnDeleteReplay(const FDeleteFinishedStreamResult& DeleteResult)
+@@ -140,7 +175,13 @@
+ 		return;
+ 	}
+ 
+-	if (DeleteResult.WasSuccessful())
++    bool UEPRepeat = DeleteResult.WasSuccessful();
++    if (auto Context = UEPMakeRuleContext<UUEPNativeReplayPolicyContext>(this, TEXT("Replay.Deleted")))
++    {
++        Context->bDeleteSucceeded = DeleteResult.WasSuccessful();
++        if (!UEPApplyWorldPolicy(Context.Get())) { return; } UEPRepeat = Context->bAct;
++    }
++    if (UEPRepeat)
+ 	{
+ 		// Enumerate list again to see if we're under the limit yet
+ 		FNetworkReplayVersion EnumerateStreamsVersion;
+--- a/Source/LyraGame/Audio/LyraAudioMixEffectsSubsystem.cpp
++++ b/Source/LyraGame/Audio/LyraAudioMixEffectsSubsystem.cpp
+@@ -14,6 +14,7 @@
+ #include "SoundControlBus.h"
+ #include "SoundControlBusMix.h"
+ 
++#include "UEPPolicy/UEPNativeRulePolicies.h"
+ #include UE_INLINE_GENERATED_CPP_BY_NAME(LyraAudioMixEffectsSubsystem)
+ 
+ class FSubsystemCollectionBase;
+@@ -266,9 +267,24 @@
+ 
+ void ULyraAudioMixEffectsSubsystem::ApplyDynamicRangeEffectsChains(bool bHDRAudio)
+ {
++
+ 	TArray<FLyraAudioSubmixEffectsChain> AudioSubmixEffectsChainToApply;
+ 	TArray<FLyraAudioSubmixEffectsChain> AudioSubmixEffectsChainToClear;
+ 
++    TArray<USoundSubmix*> SubmixesLeftToClear;
++    if (auto Context = UEPMakeRuleContext<UUEPNativeAudioPolicyContext>(this, TEXT("Audio.DynamicRange")))
++    {
++        Context->bHDR = bHDRAudio;
++        for (const auto& Chain : HDRSubmixEffectChain) { Context->HDRSubmixes.Add(Chain.Submix.Get()); }
++        for (const auto& Chain : LDRSubmixEffectChain) { Context->LDRSubmixes.Add(Chain.Submix.Get()); }
++        if (!UEPApplyWorldPolicy(Context.Get())) { return; }
++        const TArray<FLyraAudioSubmixEffectsChain>& Apply = bHDRAudio ? HDRSubmixEffectChain : LDRSubmixEffectChain;
++        const TArray<FLyraAudioSubmixEffectsChain>& Clear = bHDRAudio ? LDRSubmixEffectChain : HDRSubmixEffectChain;
++        for (int32 Index : Context->ApplyIndices) { if (!ensure(Apply.IsValidIndex(Index))) { return; } AudioSubmixEffectsChainToApply.Add(Apply[Index]); }
++        for (int32 Index : Context->ClearIndices) { if (!ensure(Clear.IsValidIndex(Index))) { return; } SubmixesLeftToClear.Add(Clear[Index].Submix); }
++    }
++    else
++    {
+ 	// If HDR Audio is selected, then we clear out any existing LDR Submix Effect Chain Overrides
+ 	// otherwise the reverse is the case.
+ 	if (bHDRAudio)
+@@ -283,7 +299,7 @@
+ 	}
+ 
+ 	// We want to collect just the submixes we need to actually clear, otherwise they'll be overridden by the new settings
+-	TArray<USoundSubmix*> SubmixesLeftToClear;
++
+ 
+ 	// We want to get the submixes that are not being overridden by the new effect chains, so we can clear those out separately
+ 	for (const FLyraAudioSubmixEffectsChain& EffectChainToClear : AudioSubmixEffectsChainToClear)
+@@ -307,6 +323,7 @@
+ 	}
+ 
+ 
++    }
+ 	// Override submixes
+ 	for (const FLyraAudioSubmixEffectsChain& SubmixEffectChain : AudioSubmixEffectsChainToApply)
+ 	{
+@@ -322,6 +339,7 @@
+ 	{
+ 		UAudioMixerBlueprintLibrary::ClearSubmixEffectChainOverride(GetWorld(), Submix, 0.1f);
+ 	}
++
+ }
+ 
+ void ULyraAudioMixEffectsSubsystem::OnLoadingScreenStatusChanged(bool bShowingLoadingScreen)
+@@ -333,7 +351,13 @@
+ {
+ 	UWorld* World = GetWorld();
+ 
+-	if (bAppliedLoadingScreenMix != bWantsLoadingScreenMix && LoadingScreenMix && World)
++    bool UEPChange = bAppliedLoadingScreenMix != bWantsLoadingScreenMix && LoadingScreenMix && World;
++    if (auto Context = UEPMakeRuleContext<UUEPNativeAudioPolicyContext>(this, TEXT("Audio.Loading")))
++    {
++        Context->bAppliedLoading = bAppliedLoadingScreenMix; Context->bWantsLoading = bWantsLoadingScreenMix; Context->bHasMix = LoadingScreenMix != nullptr; Context->bHasWorld = World != nullptr;
++        if (!UEPApplyWorldPolicy(Context.Get())) { return; } UEPChange = Context->bAct;
++    }
++    if (UEPChange)
+ 	{
+ 		if (bWantsLoadingScreenMix)
+ 		{
+--- a/Source/LyraGame/Teams/LyraTeamSubsystem.cpp
++++ b/Source/LyraGame/Teams/LyraTeamSubsystem.cpp
+@@ -13,6 +13,7 @@
+ #include "Player/LyraPlayerState.h"
+ #include "Teams/LyraTeamInfoBase.h"
+ 
++#include "UEPPolicy/UEPNativeRulePolicies.h"
+ #include UE_INLINE_GENERATED_CPP_BY_NAME(LyraTeamSubsystem)
+ 
+ class FSubsystemCollectionBase;
+@@ -344,6 +345,22 @@
+ 
+ bool ULyraTeamSubsystem::CanCauseDamage(const UObject* Instigator, const UObject* Target, bool bAllowDamageToSelf) const
+ {
++    if (auto Context = UEPMakeRuleContext<UUEPNativeDamagePolicyContext>(GetWorld(), TEXT("Damage.CanCause")))
++    {
++        Context->bAllowSelf = bAllowDamageToSelf; Context->bSameObject = Instigator == Target;
++        Context->bSamePlayerState = FindPlayerStateFromActor(Cast<AActor>(Instigator)) == FindPlayerStateFromActor(Cast<AActor>(Target));
++        if (!(bAllowDamageToSelf && (Context->bSameObject || Context->bSamePlayerState)))
++        {
++            int32 InstigatorTeam = INDEX_NONE, TargetTeam = INDEX_NONE;
++            const ELyraTeamComparison Relationship = CompareTeams(Instigator, Target, InstigatorTeam, TargetTeam);
++            Context->bDifferentTeams = Relationship == ELyraTeamComparison::DifferentTeams;
++            Context->bInvalidRelationship = Relationship == ELyraTeamComparison::InvalidArgument;
++            Context->bInstigatorHasTeam = InstigatorTeam != INDEX_NONE;
++            if (Context->bInvalidRelationship && Context->bInstigatorHasTeam) { Context->bTargetHasASC = UAbilitySystemGlobals::GetAbilitySystemComponentFromActor(Cast<const AActor>(Target)) != nullptr; }
++        }
++        if (!UEPApplyWorldPolicy(Context.Get())) { return false; } return Context->bAllowed;
++    }
++
+ 	if (bAllowDamageToSelf)
+ 	{
+ 		if ((Instigator == Target) || (FindPlayerStateFromActor(Cast<AActor>(Instigator)) == FindPlayerStateFromActor(Cast<AActor>(Target))))
+@@ -367,6 +384,7 @@
+ 	}
+ 
+ 	return false;
++
+ }
+ 
+ ULyraTeamDisplayAsset* ULyraTeamSubsystem::GetTeamDisplayAsset(int32 TeamId, int32 ViewerTeamId)
+--- a/Source/LyraGame/GameModes/LyraGameMode.cpp
++++ b/Source/LyraGame/GameModes/LyraGameMode.cpp
+@@ -28,6 +28,7 @@
+ #include "TimerManager.h"
+ #include "GameMapsSettings.h"
+ 
++#include "UEPPolicy/UEPNativeRulePolicies.h"
+ #include UE_INLINE_GENERATED_CPP_BY_NAME(LyraGameMode)
+ 
+ ALyraGameMode::ALyraGameMode(const FObjectInitializer& ObjectInitializer)
+@@ -44,6 +45,23 @@
+ 
+ const ULyraPawnData* ALyraGameMode::GetPawnDataForController(const AController* InController) const
+ {
++    if (auto Context = UEPMakeRuleContext<UUEPNativePawnPolicyContext>(GetWorld(), TEXT("Pawn.Data")))
++    {
++        if (const ALyraPlayerState* State = InController ? InController->GetPlayerState<ALyraPlayerState>() : nullptr) { Context->PlayerStateData = const_cast<ULyraPawnData*>(State->GetPawnData<ULyraPawnData>()); }
++        if (!Context->PlayerStateData)
++        {
++            check(GameState); ULyraExperienceManagerComponent* Component = GameState->FindComponentByClass<ULyraExperienceManagerComponent>(); check(Component);
++            Context->bExperienceLoaded = Component->IsExperienceLoaded();
++            if (Context->bExperienceLoaded)
++            {
++                Context->ExperienceData = const_cast<ULyraPawnData*>(Component->GetCurrentExperienceChecked()->DefaultPawnData.Get());
++                if (!Context->ExperienceData) { Context->AssetManagerData = const_cast<ULyraPawnData*>(ULyraAssetManager::Get().GetDefaultPawnData()); }
++            }
++        }
++        if (!UEPApplyWorldPolicy(Context.Get())) { return nullptr; }
++        return Cast<ULyraPawnData>(Context->SelectedData.Get());
++    }
++
+ 	// See if pawn data is already set on the player state
+ 	if (InController != nullptr)
+ 	{
+@@ -75,6 +93,7 @@
+ 
+ 	// Experience not loaded yet, so there is no pawn data to be had
+ 	return nullptr;
++
+ }
+ 
+ void ALyraGameMode::InitGame(const FString& MapName, const FString& Options, FString& ErrorMessage)
+@@ -331,6 +350,16 @@
+ 
+ UClass* ALyraGameMode::GetDefaultPawnClassForController_Implementation(AController* InController)
+ {
++    UUEPNativeGameplayPolicy* Host = UUEPNativeGameplayPolicySubsystem::GetPolicyForContext(GetWorld());
++    if (Host && Host->UEPUsesPythonPolicy(TEXT("Pawn.Class")))
++    {
++        const ULyraPawnData* Data = GetPawnDataForController(InController);
++        UClass* Primary = Data ? Data->PawnClass.Get() : nullptr;
++        UClass* Secondary = Primary ? nullptr : Super::GetDefaultPawnClassForController_Implementation(InController);
++        UClass* Selected = Cast<UClass>(Host->UEPChooseObject(TEXT("Pawn.Class"), Primary, Secondary));
++        return ensure(!Selected || Selected->IsChildOf(APawn::StaticClass())) ? Selected : nullptr;
++    }
++
+ 	if (const ULyraPawnData* PawnData = GetPawnDataForController(InController))
+ 	{
+ 		if (PawnData->PawnClass)
+@@ -340,6 +369,7 @@
+ 	}
+ 
+ 	return Super::GetDefaultPawnClassForController_Implementation(InController);
++
+ }
+ 
+ APawn* ALyraGameMode::SpawnDefaultPawnAtTransform_Implementation(AController* NewPlayer, const FTransform& SpawnTransform)
+@@ -425,6 +455,19 @@
+ 
+ bool ALyraGameMode::ControllerCanRestart(AController* Controller)
+ {
++    if (auto Context = UEPMakeRuleContext<UUEPNativePawnPolicyContext>(this, TEXT("Pawn.Restart")))
++    {
++        APlayerController* Player = Cast<APlayerController>(Controller);
++        Context->bBaseRestartAllowed = Player ? Super::PlayerCanRestart_Implementation(Player) : Controller && !Controller->IsPendingKillPending();
++        if (Context->bBaseRestartAllowed)
++        {
++            ULyraPlayerSpawningManagerComponent* Manager = GameState->FindComponentByClass<ULyraPlayerSpawningManagerComponent>();
++            Context->bHasSpawningManager = Manager != nullptr;
++            Context->bManagerRestartAllowed = Manager && Manager->ControllerCanRestart(Controller);
++        }
++        if (!UEPApplyWorldPolicy(Context.Get())) { return false; } return Context->bAllowed;
++    }
++
+ 	if (APlayerController* PC = Cast<APlayerController>(Controller))
+ 	{	
+ 		if (!Super::PlayerCanRestart_Implementation(PC))
+@@ -447,6 +490,7 @@
+ 	}
+ 
+ 	return true;
++
+ }
+ 
+ void ALyraGameMode::InitGameState()
+--- a/Plugins/GameFeatures/TopDownArena/Source/TopDownArenaRuntime/Private/TopDownArenaAttributeSet.cpp
++++ b/Plugins/GameFeatures/TopDownArena/Source/TopDownArenaRuntime/Private/TopDownArenaAttributeSet.cpp
+@@ -4,6 +4,7 @@
+ 
+ #include "Net/UnrealNetwork.h"
+ 
++#include "UEPPolicy/UEPNativeRulePolicies.h"
+ #include UE_INLINE_GENERATED_CPP_BY_NAME(TopDownArenaAttributeSet)
+ 
+ class FLifetimeProperty;
+@@ -62,6 +63,13 @@
+ 
+ void UTopDownArenaAttributeSet::ClampAttribute(const FGameplayAttribute& Attribute, float& NewValue) const
+ {
++    if (auto Context = UEPMakeRuleContext<UUEPNativeAttributePolicyContext>(GetWorld(), TEXT("Attribute.Clamp")))
++    {
++        Context->Attribute = FName(*Attribute.GetName()); Context->Input = NewValue; Context->BombCapacity = GetBombCapacity();
++        if (UEPApplyWorldPolicy(Context.Get())) { NewValue = Context->Result; }
++        return;
++    }
++
+ 	if (Attribute == GetBombsRemainingAttribute())
+ 	{
+ 		NewValue = FMath::Clamp(NewValue, 0.0f, GetBombCapacity());
+@@ -78,5 +86,6 @@
+ 	{
+ 		NewValue = FMath::Clamp(NewValue, 200.0f, 800.0f);
+ 	}
++
+ }
+ 
+--- /dev/null
++++ b/Source/LyraGame/UEPPolicy/UEPNativeRulePolicies.h
+@@ -0,0 +1,163 @@
++#pragma once
++#include "UEPNativeWorldPolicies.h"
++#include "AttributeSet.h"
++#include "UEPNativeRulePolicies.generated.h"
++
++template<typename T>
++TStrongObjectPtr<T> UEPMakeRuleContext(UObject* Owner, FName Operation)
++{
++    UUEPNativeGameplayPolicy* Host = UUEPNativeGameplayPolicySubsystem::GetPolicyForContext(Owner);
++    if (!Host || !Host->UEPUsesPythonPolicy(Operation)) { return TStrongObjectPtr<T>(); }
++    TStrongObjectPtr<T> Context(NewObject<T>(Host));
++    Context->Operation = Operation;
++    return Context;
++}
++
++USTRUCT(BlueprintType)
++struct FUEPNativeInputDeviceRow
++{
++    GENERATED_BODY()
++    UPROPERTY(BlueprintReadOnly) int32 DeviceId = INDEX_NONE;
++    UPROPERTY(BlueprintReadOnly) bool bConnected = false;
++    UPROPERTY(BlueprintReadOnly) bool bGamepad = false;
++};
++
++UCLASS(BlueprintType)
++class LYRAGAME_API UUEPNativeDevicePolicyContext : public UUEPNativePolicyContext
++{
++    GENERATED_BODY()
++public:
++    UPROPERTY(BlueprintReadOnly) int32 OwnerUser = INDEX_NONE;
++    UPROPERTY(BlueprintReadOnly) int32 ChangedUser = INDEX_NONE;
++    UPROPERTY(BlueprintReadOnly) int32 NewUser = INDEX_NONE;
++    UPROPERTY(BlueprintReadOnly) int32 OldUser = INDEX_NONE;
++    UPROPERTY(BlueprintReadOnly) bool bPlatformTraits = false;
++    UPROPERTY(BlueprintReadOnly) bool bEditorTraits = false;
++    UPROPERTY(BlueprintReadOnly) bool bPendingProcess = false;
++    UPROPERTY(BlueprintReadOnly) bool bScreenPresent = false;
++    UPROPERTY(BlueprintReadOnly) TArray<FUEPNativeInputDeviceRow> Devices;
++    UPROPERTY(BlueprintReadWrite) bool bAct = false;
++    UPROPERTY(BlueprintReadWrite) FName Action;
++};
++
++USTRUCT(BlueprintType)
++struct FUEPNativeReplayPolicyRow
++{
++    GENERATED_BODY()
++    UPROPERTY(BlueprintReadOnly) int32 Index = INDEX_NONE;
++    UPROPERTY(BlueprintReadOnly) FString Name;
++    UPROPERTY(BlueprintReadOnly) int64 TimestampTicks = 0;
++    UPROPERTY(BlueprintReadOnly) bool bShouldKeep = false;
++    UPROPERTY(BlueprintReadOnly) bool bIsLive = false;
++};
++
++UCLASS(BlueprintType)
++class LYRAGAME_API UUEPNativeReplayPolicyContext : public UUEPNativePolicyContext
++{
++    GENERATED_BODY()
++public:
++    UPROPERTY(BlueprintReadOnly) bool bHasLocalPlayer = false;
++    UPROPERTY(BlueprintReadOnly) bool bBusy = false;
++    UPROPERTY(BlueprintReadOnly) bool bHasStreamer = false;
++    UPROPERTY(BlueprintReadOnly) bool bRecording = false;
++    UPROPERTY(BlueprintReadOnly) bool bDeleteSucceeded = false;
++    UPROPERTY(BlueprintReadOnly) int32 NumberToKeep = 0;
++    UPROPERTY(BlueprintReadOnly) TArray<FUEPNativeReplayPolicyRow> Streams;
++    UPROPERTY(BlueprintReadWrite) bool bAct = false;
++    UPROPERTY(BlueprintReadWrite) int32 DeleteIndex = INDEX_NONE;
++};
++
++UCLASS(BlueprintType)
++class LYRAGAME_API UUEPNativeAudioPolicyContext : public UUEPNativePolicyContext
++{
++    GENERATED_BODY()
++public:
++    UPROPERTY(BlueprintReadOnly) bool bHDR = false;
++    UPROPERTY(BlueprintReadOnly) bool bAppliedLoading = false;
++    UPROPERTY(BlueprintReadOnly) bool bWantsLoading = false;
++    UPROPERTY(BlueprintReadOnly) bool bHasMix = false;
++    UPROPERTY(BlueprintReadOnly) bool bHasWorld = false;
++    UPROPERTY(BlueprintReadOnly) TArray<TObjectPtr<UObject>> HDRSubmixes;
++    UPROPERTY(BlueprintReadOnly) TArray<TObjectPtr<UObject>> LDRSubmixes;
++    UPROPERTY(BlueprintReadWrite) TArray<int32> ApplyIndices;
++    UPROPERTY(BlueprintReadWrite) TArray<int32> ClearIndices;
++    UPROPERTY(BlueprintReadWrite) bool bAct = false;
++};
++
++UCLASS(BlueprintType)
++class LYRAGAME_API UUEPNativeDamagePolicyContext : public UUEPNativePolicyContext
++{
++    GENERATED_BODY()
++public:
++    UPROPERTY(BlueprintReadOnly) bool bAllowSelf = false;
++    UPROPERTY(BlueprintReadOnly) bool bSameObject = false;
++    UPROPERTY(BlueprintReadOnly) bool bSamePlayerState = false;
++    UPROPERTY(BlueprintReadOnly) bool bDifferentTeams = false;
++    UPROPERTY(BlueprintReadOnly) bool bInvalidRelationship = false;
++    UPROPERTY(BlueprintReadOnly) bool bInstigatorHasTeam = false;
++    UPROPERTY(BlueprintReadOnly) bool bTargetHasASC = false;
++    UPROPERTY(BlueprintReadWrite) bool bAllowed = false;
++};
++
++UCLASS(BlueprintType)
++class LYRAGAME_API UUEPNativeAttributePolicyContext : public UUEPNativePolicyContext
++{
++    GENERATED_BODY()
++public:
++    UPROPERTY(BlueprintReadOnly) FName Attribute;
++    UPROPERTY(BlueprintReadOnly) float Input = 0.f;
++    UPROPERTY(BlueprintReadOnly) float BombCapacity = 1.f;
++    UPROPERTY(BlueprintReadWrite) float Result = 0.f;
++};
++
++UCLASS(BlueprintType)
++class LYRAGAME_API UUEPNativePawnPolicyContext : public UUEPNativePolicyContext
++{
++    GENERATED_BODY()
++public:
++    UPROPERTY(BlueprintReadOnly) TObjectPtr<UObject> PlayerStateData = nullptr;
++    UPROPERTY(BlueprintReadOnly) TObjectPtr<UObject> ExperienceData = nullptr;
++    UPROPERTY(BlueprintReadOnly) TObjectPtr<UObject> AssetManagerData = nullptr;
++    UPROPERTY(BlueprintReadOnly) bool bExperienceLoaded = false;
++    UPROPERTY(BlueprintReadOnly) bool bBaseRestartAllowed = false;
++    UPROPERTY(BlueprintReadOnly) bool bHasSpawningManager = false;
++    UPROPERTY(BlueprintReadOnly) bool bManagerRestartAllowed = false;
++    UPROPERTY(BlueprintReadWrite) TObjectPtr<UObject> SelectedData = nullptr;
++    UPROPERTY(BlueprintReadWrite) bool bAllowed = false;
++};
++
++class ULyraHUDLayout;
++class ULyraReplaySubsystem;
++class ULyraAudioMixEffectsSubsystem;
++class ULyraTeamSubsystem;
++class ALyraGameMode;
++class UAbilitySystemComponent;
++
++USTRUCT(BlueprintType)
++struct FUEPNativeReplayFixtureResult
++{
++    GENERATED_BODY()
++    UPROPERTY(BlueprintReadOnly) int32 Created = 0;
++    UPROPERTY(BlueprintReadOnly) int32 Remaining = 0;
++    UPROPERTY(BlueprintReadOnly) bool bNativeFailureStopped = false;
++    UPROPERTY(BlueprintReadOnly) bool bTemporaryMemoryStreamsOnly = false;
++    UPROPERTY(BlueprintReadOnly) bool bCleaned = false;
++};
++
++UCLASS()
++class UUEPNativeRuleFixture : public UBlueprintFunctionLibrary
++{
++    GENERATED_BODY()
++public:
++    UFUNCTION(BlueprintCallable) static FGameplayTagContainer EnableDeviceFixture(ULyraHUDLayout* Layout);
++    UFUNCTION(BlueprintCallable) static void RestoreDeviceFixture(ULyraHUDLayout* Layout, FGameplayTagContainer Tags);
++    UFUNCTION(BlueprintCallable) static bool DeviceEvent(ULyraHUDLayout* Layout, int32 Case);
++    UFUNCTION(BlueprintCallable) static bool DevicePending(ULyraHUDLayout* Layout);
++    UFUNCTION(BlueprintCallable) static FUEPNativeReplayFixtureResult ReplayRetention(UObject* WorldContext, int32 NumberToKeep);
++    UFUNCTION(BlueprintCallable) static void AudioLoading(ULyraAudioMixEffectsSubsystem* Audio, bool bWants);
++    UFUNCTION(BlueprintCallable) static void AudioRange(ULyraAudioMixEffectsSubsystem* Audio, bool bHDR);
++    UFUNCTION(BlueprintCallable) static bool DamageAllowed(ULyraTeamSubsystem* Teams, UObject* Instigator, UObject* Target, bool bAllowSelf);
++    UFUNCTION(BlueprintCallable) static float SetAttributeBase(UAbilitySystemComponent* ASC, FGameplayAttribute Attribute, float Value);
++    UFUNCTION(BlueprintCallable) static UObject* PawnData(ALyraGameMode* GameMode, AController* Controller);
++    UFUNCTION(BlueprintCallable) static bool RestartAllowed(ALyraGameMode* GameMode, AController* Controller);
++};
+--- /dev/null
++++ b/Source/LyraGame/UEPPolicy/UEPNativeRulePolicies.cpp
+@@ -0,0 +1,102 @@
++#include "UEPNativeRulePolicies.h"
++#include "AbilitySystemComponent.h"
++#include "Audio/LyraAudioMixEffectsSubsystem.h"
++#include "Engine/GameInstance.h"
++#include "Engine/LocalPlayer.h"
++#include "Engine/World.h"
++#include "GameModes/LyraGameMode.h"
++#include "Character/LyraPawnData.h"
++#include "Kismet/GameplayStatics.h"
++#include "Misc/CommandLine.h"
++#include "Misc/Guid.h"
++#include "Modules/ModuleManager.h"
++#include "Replays/LyraReplaySubsystem.h"
++#include "Teams/LyraTeamSubsystem.h"
++#include "UI/LyraHUDLayout.h"
++#include UE_INLINE_GENERATED_CPP_BY_NAME(UEPNativeRulePolicies)
++
++FGameplayTagContainer UUEPNativeRuleFixture::EnableDeviceFixture(ULyraHUDLayout* Layout)
++{
++    check(Layout); const FGameplayTagContainer Original = Layout->PlatformRequiresControllerDisconnectScreen;
++    Layout->PlatformRequiresControllerDisconnectScreen.Reset(); return Original;
++}
++void UUEPNativeRuleFixture::RestoreDeviceFixture(ULyraHUDLayout* Layout, FGameplayTagContainer Tags)
++{
++    check(Layout && !Layout->RequestProcessControllerStateHandle.IsValid());
++    if (Layout->SpawnedControllerDisconnectScreen) { Layout->HideControllerDisconnectedMenu(); }
++    Layout->PlatformRequiresControllerDisconnectScreen = MoveTemp(Tags);
++}
++bool UUEPNativeRuleFixture::DeviceEvent(ULyraHUDLayout* Layout, int32 Case)
++{
++    check(Layout && Layout->GetOwningLocalPlayer());
++    const FPlatformUserId Owner = Layout->GetOwningLocalPlayer()->GetPlatformUserId();
++    const FPlatformUserId Other = FPlatformUserId::CreateFromInternalId(Owner.GetInternalId() + 1);
++    const FInputDeviceId Device = FInputDeviceId::CreateFromInternalId(0);
++    if (Case < 2) { Layout->HandleInputDeviceConnectionChanged(EInputDeviceConnectionState::Disconnected, Case == 0 ? Owner : Other, Device); }
++    else { Layout->HandleInputDevicePairingChanged(Device, Case == 2 ? Owner : Other, Case == 3 ? Owner : Other); }
++    return Layout->RequestProcessControllerStateHandle.IsValid();
++}
++bool UUEPNativeRuleFixture::DevicePending(ULyraHUDLayout* Layout) { return Layout && Layout->RequestProcessControllerStateHandle.IsValid(); }
++
++FUEPNativeReplayFixtureResult UUEPNativeRuleFixture::ReplayRetention(UObject* WorldContext, int32 NumberToKeep)
++{
++    FUEPNativeReplayFixtureResult Result;
++    FString Override;
++    check(FParse::Value(FCommandLine::Get(), TEXT("-REPLAYSTREAMEROVERRIDE="), Override) && Override == TEXT("InMemoryNetworkReplayStreaming"));
++    INetworkReplayStreamingFactory& Factory = FModuleManager::LoadModuleChecked<INetworkReplayStreamingFactory>(TEXT("InMemoryNetworkReplayStreaming"));
++    UGameInstance* Game = UGameplayStatics::GetGameInstance(WorldContext); check(Game && Game->GetFirstGamePlayer());
++    ULocalPlayer* Player = Game->GetFirstGamePlayer();
++    TSharedPtr<INetworkReplayStreamer> Reader = Factory.CreateReplayStreamer(); check(Reader.IsValid());
++    bool bEmpty = false;
++    Reader->EnumerateStreams(FNetworkReplayVersion(), Player->GetPlatformUserIndex(), FString(), {}, FEnumerateStreamsCallback::CreateLambda([&bEmpty](const FEnumerateStreamsResult& Found) { bEmpty = Found.FoundStreams.IsEmpty(); }));
++    if (!bEmpty) { return Result; }
++    const FString Prefix = TEXT("UEP_POLICY_") + FGuid::NewGuid().ToString(EGuidFormats::Digits);
++    for (int32 Index = 0; Index < 4; ++Index)
++    {
++        TSharedPtr<INetworkReplayStreamer> Stream = Factory.CreateReplayStreamer();
++        FStartStreamingParameters Params; Params.CustomName = Prefix + FString::FromInt(Index); Params.FriendlyName = Params.CustomName; Params.bRecord = true; Params.UserIndices.Add(Player->GetPlatformUserIndex());
++        bool bStarted = false;
++        Stream->StartStreaming(Params, FStartStreamingCallback::CreateLambda([&bStarted](const FStartStreamingResult& Started) { bStarted = Started.WasSuccessful(); }));
++        check(bStarted && Stream->GetHeaderArchive());
++        uint32 Header = 0x55455031; *Stream->GetHeaderArchive() << Header; Stream->StopStreaming();
++        ++Result.Created; FPlatformProcess::SleepNoStats(0.002f);
++    }
++    TStrongObjectPtr<ULyraReplaySubsystem> Target(NewObject<ULyraReplaySubsystem>(Game));
++    Target->CleanupLocalReplays(Player, NumberToKeep);
++    TArray<FString> Remaining;
++    Reader->EnumerateStreams(FNetworkReplayVersion(), Player->GetPlatformUserIndex(), FString(), {}, FEnumerateStreamsCallback::CreateLambda([&Remaining, &Prefix](const FEnumerateStreamsResult& Found) {
++        for (const FNetworkReplayStreamInfo& Info : Found.FoundStreams) { check(Info.Name.StartsWith(Prefix)); Remaining.Add(Info.Name); }
++    }));
++    Result.Remaining = Remaining.Num(); Result.bTemporaryMemoryStreamsOnly = true;
++    // Exercise a genuine failure result from the native temporary streamer.
++    Target->CurrentReplayStreamer = Reader; Target->LocalPlayerDeletingReplays = Player; Target->DeletingReplaysNumberToKeep = 2;
++    Reader->DeleteFinishedStream(Prefix + TEXT("_missing"), Player->GetPlatformUserIndex(), FDeleteFinishedStreamCallback::CreateUObject(Target.Get(), &ULyraReplaySubsystem::OnDeleteReplay));
++    Result.bNativeFailureStopped = !Target->CurrentReplayStreamer.IsValid() && !Target->LocalPlayerDeletingReplays && Target->DeletingReplaysNumberToKeep == 0;
++    for (const FString& Name : Remaining)
++    {
++        bool bDeleted = false;
++        Reader->DeleteFinishedStream(Name, Player->GetPlatformUserIndex(), FDeleteFinishedStreamCallback::CreateLambda([&bDeleted](const FDeleteFinishedStreamResult& Deleted) { bDeleted = Deleted.WasSuccessful(); })); check(bDeleted);
++    }
++    int32 Left = 0;
++    Reader->EnumerateStreams(FNetworkReplayVersion(), Player->GetPlatformUserIndex(), FString(), {}, FEnumerateStreamsCallback::CreateLambda([&Left](const FEnumerateStreamsResult& Found) { Left = Found.FoundStreams.Num(); }));
++    Result.bCleaned = Left == 0; return Result;
++}
++
++void UUEPNativeRuleFixture::AudioLoading(ULyraAudioMixEffectsSubsystem* Audio, bool bWants)
++{
++    check(Audio); const bool Before = Audio->bAppliedLoadingScreenMix;
++    const bool Expected = Before != bWants && Audio->LoadingScreenMix && Audio->GetWorld() ? bWants : Before;
++    Audio->ApplyOrRemoveLoadingScreenMix(bWants); check(Audio->bAppliedLoadingScreenMix == Expected);
++}
++void UUEPNativeRuleFixture::AudioRange(ULyraAudioMixEffectsSubsystem* Audio, bool bHDR)
++{
++    check(Audio); const auto HDR = Audio->HDRSubmixEffectChain; const auto LDR = Audio->LDRSubmixEffectChain;
++    Audio->ApplyDynamicRangeEffectsChains(bHDR);
++    check(HDR.Num() == Audio->HDRSubmixEffectChain.Num() && LDR.Num() == Audio->LDRSubmixEffectChain.Num());
++    for (int32 Index = 0; Index < HDR.Num(); ++Index) { check(HDR[Index].Submix == Audio->HDRSubmixEffectChain[Index].Submix && HDR[Index].SubmixEffectChain == Audio->HDRSubmixEffectChain[Index].SubmixEffectChain); }
++    for (int32 Index = 0; Index < LDR.Num(); ++Index) { check(LDR[Index].Submix == Audio->LDRSubmixEffectChain[Index].Submix && LDR[Index].SubmixEffectChain == Audio->LDRSubmixEffectChain[Index].SubmixEffectChain); }
++}
++bool UUEPNativeRuleFixture::DamageAllowed(ULyraTeamSubsystem* Teams, UObject* Instigator, UObject* Target, bool bAllowSelf) { check(Teams); return Teams->CanCauseDamage(Instigator, Target, bAllowSelf); }
++float UUEPNativeRuleFixture::SetAttributeBase(UAbilitySystemComponent* ASC, FGameplayAttribute Attribute, float Value) { check(ASC); ASC->SetNumericAttributeBase(Attribute, Value); return ASC->GetNumericAttribute(Attribute); }
++UObject* UUEPNativeRuleFixture::PawnData(ALyraGameMode* GameMode, AController* Controller) { check(GameMode); return const_cast<ULyraPawnData*>(GameMode->GetPawnDataForController(Controller)); }
++bool UUEPNativeRuleFixture::RestartAllowed(ALyraGameMode* GameMode, AController* Controller) { check(GameMode); return GameMode->ControllerCanRestart(Controller); }
+--- a/Source/LyraGame/UI/LyraHUDLayout.h
++++ b/Source/LyraGame/UI/LyraHUDLayout.h
+@@ -21,6 +21,7 @@
+ class ULyraHUDLayout : public ULyraActivatableWidget
+ {
+ 	GENERATED_BODY()
++	friend class UUEPNativeRuleFixture;
+ 
+ public:
+ 
+--- a/Source/LyraGame/Replays/LyraReplaySubsystem.h
++++ b/Source/LyraGame/Replays/LyraReplaySubsystem.h
+@@ -61,6 +61,7 @@
+ class ULyraReplaySubsystem : public UGameInstanceSubsystem
+ {
+ 	GENERATED_BODY()
++	friend class UUEPNativeRuleFixture;
+ 
+ public:
+ 	UE_API ULyraReplaySubsystem();
+--- a/Source/LyraGame/Audio/LyraAudioMixEffectsSubsystem.h
++++ b/Source/LyraGame/Audio/LyraAudioMixEffectsSubsystem.h
+@@ -41,6 +41,7 @@
+ class ULyraAudioMixEffectsSubsystem : public UWorldSubsystem
+ {
+ 	GENERATED_BODY()
++	friend class UUEPNativeRuleFixture;
+ 
+ public:
+ 	// USubsystem implementation Begin
