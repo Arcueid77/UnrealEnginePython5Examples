@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "status": "implemented_headless_passed_actual_input_pending",
+  "batch": "CPP09",
+  "candidates": [
+    "CPP-015"
+  ],
+  "accepted": false,
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "policy_events": 1,
+  "asset_family_count": 5,
+  "native_python_headless_policy": {
+    "status": "passed",
+    "profiles": 2,
+    "escape_open_close_cycles": 7,
+    "direct_policy_calls": 7,
+    "direct_deactivate_calls": 7,
+    "native_desired_menu_input_config_verified": true,
+    "native_input_state_observed_and_restored": true,
+    "native_menu_mode_transition_acceptance": false,
+    "native_travel_cleanup": true,
+    "zero_duration_runtime_stack_fixture": true,
+    "stack_transitions_restored_or_released": true,
+    "actual_window_input_acceptance": false,
+    "visible_ui_acceptance": false,
+    "full_shooter_scene_rendering_acceptance": false
+  },
+  "headless_evidence_rejected_by_actual_window_gate": [
+    {
+      "case": "headless_report",
+      "rejected": true,
+      "reason": "headless calls cannot accept actual Escape input"
+    },
+    {
+      "case": "changed_mode",
+      "rejected": true,
+      "reason": "actual-window input cannot use the headless animation fixture"
+    },
+    {
+      "case": "changed_mode_and_fixture",
+      "rejected": true,
+      "reason": "actual-window native input did not enter Menu mode"
+    }
+  ],
+  "original_hud_defaults_graphs_visual_trees_and_inheritance_preserved": true,
+  "native_common_ui_binding_streamed_loading_and_input_ownership_preserved": true,
+  "native_menu_layer_class_owner_and_cleanup_verified": true,
+  "native_desired_menu_input_config_verified": true,
+  "actual_menu_input_mode_transition_acceptance": false,
+  "native_hud_destruct_and_rebuild_across_two_level_travels": true,
+  "compiled_unity_units": [
+    "Module.LyraGame.1.cpp",
+    "Module.LyraGame.3.cpp"
+  ],
+  "reused_unity_units": [
+    "Module.LyraGame.2.cpp"
+  ],
+  "headless_run_cpp_compile_executed": false,
+  "actual_os_keyboard_input_acceptance": false,
+  "visible_ui_window_and_menu_acceptance": false,
+  "full_shooter_scene_rendering_acceptance": false,
+  "pending_acceptance": [
+    "14 real Escape key presses in an unlocked actual game window",
+    "native input router entering Menu mode and restoring the original state",
+    "visible original Menu and final restored UI state"
+  ],
+  "official_reference_unchanged": true,
+  "engine_full_compile_executed": false,
+  "cook_package_executed": false,
+  "new_platform_acceptance": false,
+  "full_cpp_migration_acceptance": false,
+  "review_patch_reproduces_compiled_sources": true,
+  "patch_eof_format_only_repair": true,
+  "retained_attempts": [
+    "20261101-CPP09/Runtime01",
+    "20261101-CPP09/Runtime02",
+    "20261101-CPP09/Runtime03"
+  ],
+  "retained_headless_attempts": [
+    "20261102-CPP09/Headless01",
+    "20261102-CPP09/Headless02",
+    "20261102-CPP09/Headless03"
+  ],
+  "retained_notes": [
+    "Unchanged original rifle Niagara asset failed during uncooked full shooter rendering before UI validation. UI-only worlds isolate the policy; no Niagara repair or shooter rendering acceptance is claimed.",
+    "Runtime02 used the wrong fixture stack name; corrected to the original GameLayer_Stack.",
+    "Runtime03 reached input step one but the desktop was locked. No keyboard input was sent. Its identified process was stopped and operator-stop.json preserves that prerequisite.",
+    "Headless01-03 observed an active original Menu with its desired Menu configuration while the offscreen action router stayed in All mode, even after waiting and disabling stack transitions. The headless lane checks native/Python observed-state equality and restoration; it explicitly does not accept the Menu-mode transition. The original actual-window gate still requires that transition."
+  ],
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/Build01/summary.json",
+      "sha256": "F1CB4278796E460E9F7B57C97283C8A019469FD2D35498B1D05A32CDFC29AAB4"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/Assets01/summary.json",
+      "sha256": "86BA8AB4F3AB870BB5784EF17444DFF972B3E02B1E3A4E2BF0A8352723DB6436"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/Fixtures01/summary.json",
+      "sha256": "0BFDB93715B28B3BF48474A0FB1A2E818D463DE79EAAA43EB3615B913F7270F1"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/PatchFormat01/summary.json",
+      "sha256": "3AC608654043B03FAF8E2B8093E71DF8D587187EDC4A4F67CB1AEC5B084B1400"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261102-CPP09/Headless04/summary.json",
+      "sha256": "5E154254A602C43697885D4358E3736EC75EF30FFDC75014640445CBE3652B71"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261102-CPP09/Headless04/runtime.json",
+      "sha256": "CD8B89CAFD691D93AB1FDC67046C4B3EA0E4F328E17FFB7F3C85497CF2E1CE8C"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261102-CPP09/Headless04/comparison.json",
+      "sha256": "7109D43BF3203B54C8C20723422D5BFA4466C40725781C78F200EB7BEA145618"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261102-CPP09/Headless04/negative-gates.json",
+      "sha256": "F3E9E776989DF371F60E540599354E35F6ED79AE5DD5334DDA1B1242586FDCF7"
+    }
+  ]
+}

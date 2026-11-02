@@ -1,0 +1,63 @@
+--- a/Source/LyraGame/UI/LyraHUDLayout.h
++++ b/Source/LyraGame/UI/LyraHUDLayout.h
+@@ -30,7 +30,17 @@
+ 	virtual void NativeDestruct() override;
+ 
+ protected:
++	UFUNCTION(BlueprintNativeEvent)
+ 	void HandleEscapeAction();
++
++	UFUNCTION(BlueprintCallable)
++	FString UEPGetEscapeMenuPath() const;
++
++	UFUNCTION(BlueprintPure)
++	int32 UEPGetCurrentUIInputMode() const;
++
++	UFUNCTION(BlueprintCallable)
++	void UEPPushEscapeMenu(TSoftClassPtr<UCommonActivatableWidget> MenuClass);
+ 	
+ 	/** 
+ 	* Callback for when controllers are disconnected. This will check if the player now has 
+--- a/Source/LyraGame/UI/LyraHUDLayout.cpp
++++ b/Source/LyraGame/UI/LyraHUDLayout.cpp
+@@ -3,6 +3,8 @@
+ #include "LyraHUDLayout.h"
+ 
+ #include "CommonUIExtensions.h"
++#include "Engine/LocalPlayer.h"
++#include "Input/CommonUIActionRouterBase.h"
+ #include "CommonUISettings.h"
+ #include "GameFramework/InputDeviceSubsystem.h"
+ #include "GameFramework/InputSettings.h"
+@@ -64,7 +66,7 @@
+ 	}
+ }
+ 
+-void ULyraHUDLayout::HandleEscapeAction()
++void ULyraHUDLayout::HandleEscapeAction_Implementation()
+ {
+ 	if (ensure(!EscapeMenuClass.IsNull()))
+ 	{
+@@ -189,4 +191,20 @@
+ 	
+ 	UCommonUIExtensions::PopContentFromLayer(SpawnedControllerDisconnectScreen);
+ 	SpawnedControllerDisconnectScreen = nullptr;
+-}
+\ No newline at end of file
++}
++FString ULyraHUDLayout::UEPGetEscapeMenuPath() const
++{
++	return ensure(!EscapeMenuClass.IsNull()) ? EscapeMenuClass.ToSoftObjectPath().ToString() : FString();
++}
++
++void ULyraHUDLayout::UEPPushEscapeMenu(TSoftClassPtr<UCommonActivatableWidget> MenuClass)
++{
++	UCommonUIExtensions::PushStreamedContentToLayer_ForPlayer(GetOwningLocalPlayer(), TAG_UI_LAYER_MENU, MenuClass);
++}
++
++int32 ULyraHUDLayout::UEPGetCurrentUIInputMode() const
++{
++	const ULocalPlayer* Player = GetOwningLocalPlayer();
++	const UCommonUIActionRouterBase* Router = Player ? Player->GetSubsystem<UCommonUIActionRouterBase>() : nullptr;
++	return Router ? static_cast<int32>(Router->GetActiveInputMode()) : -1;
++}

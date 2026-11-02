@@ -213,3 +213,54 @@ two customized interactions and no foreign target activation. New specs, tasks,
 actors, selectors, and roots are cleaned up. LyraGame units 1/2 are rebuilt and
 unit 3 is reused. The body-only witness repair rebuilt unit 2 alone. No new cook,
 package, physical keyboard, rendering, or platform acceptance is claimed here.
+
+## CPP09: Escape request policy (actual input pending)
+
+`CPP09-escape-rules.patch` exposes the native HUD's Escape request as one
+`BlueprintNativeEvent`. The retained C++ body and Python policy use the original
+soft menu class and native `UI.Layer.Menu` streamed push. CommonUI's action
+binding, asynchronous loading, player ownership, input router, and device/lifetime
+delegates remain native. All four original HUD configuration shells keep their
+defaults, graphs, visual trees, and inheritance; they share one new Mixin Set.
+
+[CPP09 progress](CPP09-progress.json) records the implementation checkpoint;
+its `accepted` value is false. Seven headless open/close cycles across both
+profiles and two native level travels passed menu class/layer/owner, activation,
+deactivation, desired Menu configuration, observed input-state equivalence,
+HUD destruction/rebuild, and restoration checks.
+
+The local build compiles LyraGame units 1/3 and reuses unit 2, SDK, bridge,
+ShooterCore, and engine binaries. The review patch includes the original source's
+missing-EOF-newline marker and reproduces the compiled source byte for byte when
+applied with `core.autocrlf=false`. Its format-only repair retains the initial
+build patch in the evidence archive.
+
+`Validation/Run-UEP58NativeEscapeValidation.ps1 -Headless` runs a separate policy
+lane in two disposable CommonUI worlds. It calls the selected native/Python
+event and native widget deactivation directly. Only this headless fixture sets
+the runtime Game/Menu stack transitions to zero duration, restoring them or
+verifying that their worlds released them on exit. Authored resources are not
+changed. Its contract cannot satisfy the actual-window input gate.
+The offscreen action router stayed in `All` despite the Menu's desired `Menu`
+configuration. Menu-mode input takeover remains pending; the actual-window gate
+still requires it and cannot accept a headless report.
+
+Run the same entry point without `-Headless` for the actual-window lane, using
+fresh evidence and the existing Build01, Assets01, and Fixtures01 summaries.
+That lane preserves the original transition durations and requires fourteen
+real Escape key presses, visible Menu observations, two travels, native input
+restoration, and HUD destruction/rebuild. It remains pending while the desktop
+is locked. CPP09 is not accepted and the accepted count remains 14/15.
+
+```powershell
+$root = 'F:/UnrealEnginePython5/.build/LyraValidation/CppGameplay/20261101-CPP09'
+& Validation/Run-UEP58NativeEscapeValidation.ps1 -Headless `
+  -BuildEvidenceDirectory "$root/Build01" -AssetEvidenceDirectory "$root/Assets01" `
+  -FixtureEvidenceDirectory "$root/Fixtures01" `
+  -OutputDirectory 'F:/UnrealEnginePython5/.build/LyraValidation/CppGameplay/20261102-CPP09/HeadlessNew'
+```
+
+The full uncooked shooter scene previously failed before Python initialization
+inside the unchanged original rifle Niagara asset. UI-only worlds isolate this
+batch's behavior; they do not establish full shooter rendering or repair that
+asset. No new cook, package, engine compilation, or platform acceptance is made.

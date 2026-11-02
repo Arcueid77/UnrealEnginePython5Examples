@@ -98,8 +98,14 @@
       "candidates": [
         "CPP-015"
       ],
-      "status": "in_progress",
-      "acceptance_ledger": null
+      "status": "implemented_pending_actual_input",
+      "acceptance_ledger": null,
+      "progress_ledger": "NativeGameplay/CPP09-progress.json"
     }
+  ],
+  "implemented_candidates": 15,
+  "implemented_batches": 9,
+  "pending_actual_input_candidates": [
+    "CPP-015"
   ]
 }
