@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if '-UEPNativeCostNetwork' in arguments:
+        return None if any(a.startswith('-run=') for a in arguments) else 'uep_lyra_native.tag_stack_cost_network_validation'
     if '-UEPNativeStatsNetwork' in arguments and not any(a.startswith('-run=') for a in arguments):
         return 'uep_lyra_native.item_stats_network_validation'
     if any(a.startswith('-UEPNativeEscapeResult=') for a in arguments) and not any(a.startswith('-run=') for a in arguments):

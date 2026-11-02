@@ -1,12 +1,14 @@
 # Native gameplay migration
 
-The approved scope is CPP-001 through CPP-015 in `../cpp_batches.json`.
+The first approved scope is CPP-001 through CPP-015 in `../cpp_batches.json`.
 The earlier Blueprint acceptance remains a separate completed scope.
 
 CPP-016 through CPP-018 now have a separate read-only
 [entry and asset preflight](CPP16-18-preflight.json) and
 [proposed batch plan](../CPP16_18_PREFLIGHT_REVIEW.md). No business replacement or
 runtime acceptance is claimed there; the first-stage counts remain unchanged.
+The user subsequently selected these three groups; their execution and separate
+production/capability counts live in [the extended tracker](../cpp_extended_batches.json).
 
 CPP01 replaces elimination streak, elimination chain, and assist rules. Native
 Gameplay Message subscriptions and their shutdown remain in C++. Four native
@@ -299,3 +301,53 @@ headers. Adding the staged fixture rebuilds units 1/2; its body repair rebuilds
 unit 2 alone, reusing UHT and units 1/3. SDK, bridge, ShooterCore, and engine
 binaries are reused. Use the main repository's NativeStats Build, Authoring,
 FixtureBuild/FixtureRepair, Validation, and NetworkValidation entry points.
+
+## CPP11/CPP12: native tag-stack costs
+
+[The shared seven-file patch](CPP11-12-tag-stack-costs.patch) retains native cost
+objects and routes numeric decisions through the owning Blueprint ability. The
+context contains typed values, with no ActorInfo/spec pointer crossing into
+Python. Native code still evaluates quantity curves/levels, truncates quantities,
+resolves the item or PlayerState, writes failure tags, and removes stacks on the
+authority. The original AdditionalCosts caller controls ordering, fail-fast
+checks and OnlyApplyOnHit. A handled Python apply returns without native replay.
+
+Three existing mixin sets retain their previously accepted Python behavior and
+add `NativeCostFallback` for cost-only comparisons. The legacy `BlueprintFallback`
+and five configured original item-cost subobjects remain intact. Three actual
+weapon types have network coverage; HealthPickup_Unused and NetShooter_PROTO have
+direct native-cost configuration coverage, without natural-play claims.
+
+The matrix has 18 scenarios per kind in two profiles, including missing targets,
+native curve/truncation, failure output, non-authority, hit filtering and multiple
+costs. The server and two clients then exercise real predicted firing, native
+damage, single authority deductions, stack replication and owner isolation while
+the prior weapon Python implementation stays fixed.
+
+CPP12 has no configured original player consumer. Its acceptance covers staged
+cost-only abilities and temporary player costs attached to actual owned weapons.
+An additional lane observes lethal GAS death, native respawn, forced Avatar
+EndPlay, a second Pawn replacement, preserved PlayerState/stacks, and the native
+ASC Avatar binding. It repeats the cost comparison on the new Pawn. The known
+forced-Avatar equipment gap uses native quickbar empty/back selection, retaining
+slot membership. Inventory restoration uses the actual post-lifecycle baseline;
+no original respawn/inventory repair is claimed.
+
+Native compiler dependencies select all three LyraGame units once. The fixture
+body repair completes units 2/3; the standalone USTRUCT registration include then
+requires unit 1 alone, reusing UHT and units 2/3. Both batches share that binary.
+Later Python-only repairs reuse it. Diagnostic history has a 128-entry limit,
+checked by 320 native callbacks; previous matrices are reused after verifying
+that their only policy-file difference is this exact diagnostic-bound line.
+
+Use the main repository's NativeCost Build, Authoring, Validation,
+ProductionValidation, DiagnosticsValidation and NetworkValidation entry points.
+`-Weapons pistol -Respawn` selects the extra lifecycle lane. FixtureRepair and
+RegistrationRepair preserve failed build evidence and reuse successful outputs.
+The native fixtures and generated disposable assets stay outside Overlay.
+CPP09's exact actual-window stage remains preserved. No exception-injection,
+new platform, full engine build, cook/package or physical input claim is added.
+
+[CPP11 acceptance](CPP11-acceptance.json) records production item-cost replacement.
+[CPP12 capability acceptance](CPP12-acceptance.json) records zero original player
+consumers and successful independent/native-network lifecycle fixtures.

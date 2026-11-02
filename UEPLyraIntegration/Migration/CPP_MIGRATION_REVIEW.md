@@ -187,3 +187,8 @@ CPP-014 是原生交互技能的选项编排。原来已迁移的刷新台蓝图
 - [现有 Mixin 调用与生命周期边界](../../../docs/Mixin_Call_Lifecycle_Matrix.md)
 - [现有消息适配和订阅规则](../../../docs/Runtime_Subscriptions_API.md)
 - [现有隔离 Hero 初始化补丁](NativeFixes/README.md)
+
+2026-11-02 第二阶段所选三组已完成：CPP-016 初始化、CPP-017 物品消耗按生产替换验收；
+CPP-018 玩家消耗按独立夹具及联网生命周期能力验收，原配置消费者为0，不计为生产替换。
+见 [CPP11 账本](NativeGameplay/CPP11-acceptance.json) 与 [CPP12 账本](NativeGameplay/CPP12-acceptance.json)。
+第一阶段 CPP09 仍保留真实窗口 Escape/Menu 输入待验收，CPP-019～030 继续待选。

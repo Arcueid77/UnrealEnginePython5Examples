@@ -9,6 +9,11 @@ from uep_lyra_hud.startup import validation_module
 
 
 class StartupSelectionTests(unittest.TestCase):
+    def test_cost_network_owns_shared_weapon_fixture_startup(self):
+        args=['-UEPNativeCostNetwork','-UEPWeaponAbilityFireNetworkResult=report.json']
+        self.assertEqual(validation_module(args),'uep_lyra_native.tag_stack_cost_network_validation')
+        self.assertIsNone(validation_module(['-run=Py']+args))
+
     def test_native_inventory_and_spawner_lanes_require_explicit_flags(self):
         for flag,module in (('UEPNativeInventoryResult','inventory_validation'),('UEPNativeInventoryNetworkResult','inventory_network_validation'),('UEPNativeSpawnerResult','spawner_validation')):
             self.assertEqual(validation_module(['-'+flag+'=report.json']),'uep_lyra_native.'+module)

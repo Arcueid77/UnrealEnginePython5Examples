@@ -415,7 +415,7 @@ class Server(Witness,Playing):
         self.write();(ue.log if self.report["status"]=="passed" else ue.log_error)("UEP_WEAPON_FIRE_NETWORK_"+self.report["status"].upper())
 
 
-if any(value.startswith("-UEPWeaponAbilityFireNetworkResult=") for value in sys.argv):
+if '-UEPNativeCostNetwork' not in sys.argv and any(value.startswith("-UEPWeaponAbilityFireNetworkResult=") for value in sys.argv):
     result,peer,run=arg("-UEPWeaponAbilityFireNetworkResult="),arg("-UEPJumpPeer="),arg("-UEPJumpRun=")
     validation=Server(result,run) if peer=="server" else Client(result,peer,run)
     atexit.register(validation.finalize);ticker=ue.add_ticker(validation.tick)

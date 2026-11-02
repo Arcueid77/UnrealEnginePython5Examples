@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "policy_events": 3,
+  "asset_family_count": 3,
+  "network_weapons": {
+    "pistol": {
+      "status": "passed",
+      "weapon": "pistol",
+      "native_owner_input_shots": 4,
+      "native_prediction_key_pairs": 4,
+      "native_damage_replica_observations": 8,
+      "full_acceptance": false,
+      "item_cost_production": true,
+      "player_cost_capability_only": true,
+      "native_player_cost_commits": 4,
+      "native_item_cost_commits": 4,
+      "previous_weapon_policy_fixed": "Python",
+      "player_respawn_and_avatar_lifecycle": false
+    },
+    "rifle": {
+      "status": "passed",
+      "weapon": "rifle",
+      "native_owner_input_shots": 4,
+      "native_prediction_key_pairs": 4,
+      "native_damage_replica_observations": 8,
+      "full_acceptance": false,
+      "item_cost_production": true,
+      "player_cost_capability_only": true,
+      "native_player_cost_commits": 4,
+      "native_item_cost_commits": 4,
+      "previous_weapon_policy_fixed": "Python",
+      "player_respawn_and_avatar_lifecycle": false
+    },
+    "shotgun": {
+      "status": "passed",
+      "weapon": "shotgun",
+      "native_owner_input_shots": 4,
+      "native_prediction_key_pairs": 4,
+      "native_damage_replica_observations": 8,
+      "full_acceptance": false,
+      "item_cost_production": true,
+      "player_cost_capability_only": true,
+      "native_player_cost_commits": 4,
+      "native_item_cost_commits": 4,
+      "previous_weapon_policy_fixed": "Python",
+      "player_respawn_and_avatar_lifecycle": false
+    }
+  },
+  "previous_weapon_blueprint_policy_fixed_to_python": true,
+  "native_instanced_cost_subobjects_preserved": true,
+  "native_quantity_curve_level_and_truncation_preserved": true,
+  "native_additional_cost_order_fail_fast_and_hit_only_filter_preserved": true,
+  "native_authority_only_tag_stack_writes_and_replication_preserved": true,
+  "no_raw_actor_info_or_spec_pointer_exposed": true,
+  "no_native_replay_after_handled_python_apply": true,
+  "python_exception_injection_tested": false,
+  "shared_native_binary_for_both_batches": true,
+  "diagnostic_history_limit": 128,
+  "final_native_diagnostic_checks": 320,
+  "prior_matrices_reused_after_exact_one_line_diagnostic_history_bound": true,
+  "native_player_lifecycle": {
+    "status": "passed",
+    "weapon": "pistol",
+    "native_owner_input_shots": 4,
+    "native_prediction_key_pairs": 4,
+    "native_damage_replica_observations": 8,
+    "full_acceptance": false,
+    "item_cost_production": true,
+    "player_cost_capability_only": true,
+    "native_player_cost_commits": 4,
+    "native_item_cost_commits": 4,
+    "previous_weapon_policy_fixed": "Python",
+    "player_respawn_and_avatar_lifecycle": true
+  },
+  "preserved_cpp09_actual_input_stage": true,
+  "official_reference_unchanged": true,
+  "sdk_or_bridge_rebuild_executed": false,
+  "engine_full_compile_executed": false,
+  "cook_package_executed": false,
+  "new_platform_acceptance": false,
+  "native_compile_partition": {
+    "initial": [
+      "Module.LyraGame.1.cpp",
+      "Module.LyraGame.2.cpp",
+      "Module.LyraGame.3.cpp"
+    ],
+    "fixture_body_repair": [
+      "Module.LyraGame.2.cpp",
+      "Module.LyraGame.3.cpp"
+    ],
+    "registration_include_repair": [
+      "Module.LyraGame.1.cpp"
+    ],
+    "uht_runs": 1
+  },
+  "retained_attempts": [
+    "Build01: test fixture called protected Lyra overrides; public base virtual call repaired fixture body only.",
+    "Build02/03: planner rejected mutable compiler dependency output and old UHT generated headers; guards now archive dependency inputs and retain the successful new UHT hashes.",
+    "Build04: standalone policy USTRUCT generated registration was missing; added its inline generated include in the item-cost unit, reused units 2/3 and UHT.",
+    "Runtime01: unsaved post-compilation fixture CDO cost edits were absent from new instance; test script explicitly initializes the fixture instance.",
+    "Runtime02: destroying a controller also destroys its player state; reverse actor cleanup skips already removed actors.",
+    "Diagnostics01/02: editor fixture setup could not increment player stacks outside the authority probe; bounded-history lane now checks unchanged native balances without setup mutations.",
+    "Lifecycle01/02: actual death/endplay/stack preservation and firing passed, but pre-transition or already half-magazine inventory expectations blocked cleanup; Lifecycle03 compares each native post-lifecycle baseline without applying any values from files."
+  ],
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP11/Build01/summary.json",
+      "sha256": "6A635B9EB012C45ED464A8C2ECE296DB08BF0E8BFE09CF617245853DA6DD730F"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP11/Build04FixtureBody/summary.json",
+      "sha256": "0A6259F53450D9B7F603A18D60E2FC0B6943AC53DA54E841DFA5CE0AAC65C579"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP11/Build05Registration/summary.json",
+      "sha256": "5EBAE832F241CAE17ABD3AA91AC48C770BE0C69112B666CF6135489A04277758"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP11/Assets01/summary.json",
+      "sha256": "DCF022509A8DB47DEE116A1DF944B7F48174317A555285F30E4529B66FC3CFAE"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP11/Runtime03/summary.json",
+      "sha256": "C192856A144272DDF16AF7DCEAD47A05A2ED2E50E998165F95ABE54BA1D0AB7B"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP12/Runtime01/summary.json",
+      "sha256": "38A7C8EF0C1FEEC67614DEC6E7CFC38B45B143594E395366C4E42A51EC86949B"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP11/Production01/summary.json",
+      "sha256": "FC1BA2E50B1646EE5493286351169781D4B6F33ACB976776751816C6126C816D"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP11/Network01/summary.json",
+      "sha256": "CBAD962D3DE83E04569EF20D074D0556C43F87409D8AF6E341D07C07BA963372"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP11/Diagnostics03/summary.json",
+      "sha256": "2629E013B7015BEEBAE5BE96170B39376FAB151EA7C78A9364E83B9D44A1FB36"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP12/Lifecycle03/summary.json",
+      "sha256": "10A4A91F66811EAE12BD5BC670FF087A885381484FA01CB524783D152CC5D956"
+    }
+  ],
+  "status": "capability_accepted",
+  "batch": "CPP12",
+  "candidates": [
+    "CPP-018"
+  ],
+  "production_replacement_accepted": false,
+  "configured_original_consumers": 0,
+  "native_cost_boundaries": {
+    "status": "passed",
+    "kind": "player",
+    "profiles": 2,
+    "boundary_scenarios": 18,
+    "native_gas_owned_ability_instances": true,
+    "actual_network_acceptance": false
+  },
+  "temporary_player_cost_consumers_only": true
+}

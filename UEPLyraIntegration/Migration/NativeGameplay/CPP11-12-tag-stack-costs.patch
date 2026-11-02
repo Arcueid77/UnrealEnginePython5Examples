@@ -1,0 +1,253 @@
+--- a/Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility.h
++++ b/Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility.h
+@@ -4,6 +4,7 @@
+ 
+ #include "Abilities/GameplayAbility.h"
+ 
++#include "LyraTagStackCostPolicy.h"
+ #include "LyraGameplayAbility.generated.h"
+ 
+ #define UE_API LYRAGAME_API
+@@ -107,6 +108,14 @@
+ 
+ 	UE_API ULyraGameplayAbility(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
+ 
++	UFUNCTION(BlueprintNativeEvent, BlueprintPure)
++	UE_API bool UEPUsesPythonTagStackCosts(bool bPlayerStack) const;
++	UFUNCTION(BlueprintNativeEvent)
++	UE_API FUEPTagStackCostCheckResult UEPCheckTagStackCost(const FUEPTagStackCostContext& Context) const;
++	UFUNCTION(BlueprintNativeEvent)
++	UE_API int32 UEPApplyTagStackCost(const FUEPTagStackCostContext& Context) const;
++
++
+ 	UFUNCTION(BlueprintCallable, Category = "Lyra|Ability")
+ 	UE_API ULyraAbilitySystemComponent* GetLyraAbilitySystemComponentFromActorInfo() const;
+ 
+--- a/Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility.cpp
++++ b/Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility.cpp
+@@ -543,3 +543,16 @@
+ 	}
+ }
+ 
++
++bool ULyraGameplayAbility::UEPUsesPythonTagStackCosts_Implementation(bool bPlayerStack) const
++{
++    return false;
++}
++FUEPTagStackCostCheckResult ULyraGameplayAbility::UEPCheckTagStackCost_Implementation(const FUEPTagStackCostContext& Context) const
++{
++    return FUEPTagStackCostCheckResult();
++}
++int32 ULyraGameplayAbility::UEPApplyTagStackCost_Implementation(const FUEPTagStackCostContext& Context) const
++{
++    return 0;
++}
+--- a/Source/LyraGame/AbilitySystem/Abilities/LyraAbilityCost_ItemTagStack.h
++++ b/Source/LyraGame/AbilitySystem/Abilities/LyraAbilityCost_ItemTagStack.h
+@@ -6,12 +6,14 @@
+ #include "LyraAbilityCost.h"
+ #include "ScalableFloat.h"
+ 
++#include "LyraTagStackCostPolicy.h"
+ #include "LyraAbilityCost_ItemTagStack.generated.h"
+ 
+ struct FGameplayAbilityActivationInfo;
+ struct FGameplayAbilitySpecHandle;
+ 
+ class ULyraGameplayAbility;
++class ULyraInventoryItemInstance;
+ class UObject;
+ struct FGameplayAbilityActorInfo;
+ 
+@@ -33,6 +35,8 @@
+ 	//~End of ULyraAbilityCost interface
+ 
+ protected:
++	FUEPTagStackCostContext UEPBuildCostContext(const ULyraGameplayAbility* Ability, FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const ULyraInventoryItemInstance* Target, bool bCollectFailure) const;
++
+ 	/** How much of the tag to spend (keyed on ability level) */
+ 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Costs)
+ 	FScalableFloat Quantity;
+--- a/Source/LyraGame/AbilitySystem/Abilities/LyraAbilityCost_ItemTagStack.cpp
++++ b/Source/LyraGame/AbilitySystem/Abilities/LyraAbilityCost_ItemTagStack.cpp
+@@ -7,6 +7,7 @@
+ #include "NativeGameplayTags.h"
+ 
+ #include UE_INLINE_GENERATED_CPP_BY_NAME(LyraAbilityCost_ItemTagStack)
++#include UE_INLINE_GENERATED_CPP_BY_NAME(LyraTagStackCostPolicy)
+ 
+ UE_DEFINE_GAMEPLAY_TAG(TAG_ABILITY_FAIL_COST, "Ability.ActivateFail.Cost");
+ 
+@@ -18,6 +19,16 @@
+ 
+ bool ULyraAbilityCost_ItemTagStack::CheckCost(const ULyraGameplayAbility* Ability, const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, FGameplayTagContainer* OptionalRelevantTags) const
+ {
++    if (Ability->UEPUsesPythonTagStackCosts(false))
++    {
++        ULyraInventoryItemInstance* Target = nullptr;
++        if (const ULyraGameplayAbility_FromEquipment* EquipmentAbility = Cast<const ULyraGameplayAbility_FromEquipment>(Ability)) { Target = EquipmentAbility->GetAssociatedItem(); }
++        const FUEPTagStackCostContext Context = UEPBuildCostContext(Ability, Handle, ActorInfo, Target, OptionalRelevantTags != nullptr);
++        const FUEPTagStackCostCheckResult Decision = Ability->UEPCheckTagStackCost(Context);
++        if (!Decision.bCanPay && Decision.bAddFailureTag && Target && OptionalRelevantTags && FailureTag.IsValid()) { OptionalRelevantTags->AddTag(FailureTag); }
++        return Decision.bCanPay;
++    }
++
+ 	if (const ULyraGameplayAbility_FromEquipment* EquipmentAbility = Cast<const ULyraGameplayAbility_FromEquipment>(Ability))
+ 	{
+ 		if (ULyraInventoryItemInstance* ItemInstance = EquipmentAbility->GetAssociatedItem())
+@@ -41,6 +52,19 @@
+ 
+ void ULyraAbilityCost_ItemTagStack::ApplyCost(const ULyraGameplayAbility* Ability, const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo)
+ {
++    if (ActorInfo->IsNetAuthority() && Ability->UEPUsesPythonTagStackCosts(false))
++    {
++        ULyraInventoryItemInstance* Target = nullptr;
++        if (const ULyraGameplayAbility_FromEquipment* EquipmentAbility = Cast<const ULyraGameplayAbility_FromEquipment>(Ability)) { Target = EquipmentAbility->GetAssociatedItem(); }
++        if (Target)
++        {
++            const FUEPTagStackCostContext Context = UEPBuildCostContext(Ability, Handle, ActorInfo, Target, false);
++            const int32 Amount = Ability->UEPApplyTagStackCost(Context);
++            Target->RemoveStatTagStack(Tag, Amount);
++        }
++        return; // Never replay a failed/handled Python operation through native cost code.
++    }
++
+ 	if (ActorInfo->IsNetAuthority())
+ 	{
+ 		if (const ULyraGameplayAbility_FromEquipment* EquipmentAbility = Cast<const ULyraGameplayAbility_FromEquipment>(Ability))
+@@ -58,3 +82,21 @@
+ 	}
+ }
+ 
++
++FUEPTagStackCostContext ULyraAbilityCost_ItemTagStack::UEPBuildCostContext(const ULyraGameplayAbility* Ability, FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const ULyraInventoryItemInstance* Target, bool bCollectFailure) const
++{
++    FUEPTagStackCostContext Context;
++    Context.bPlayerStack = false;
++    Context.bAuthority = ActorInfo->IsNetAuthority();
++    Context.bHasFailureTagOutput = bCollectFailure;
++    Context.Tag = Tag;
++    Context.FailureTag = FailureTag;
++
++    if (Target)
++    {
++        Context.bHasTarget = true;
++        Context.Quantity = FMath::TruncToInt(Quantity.GetValueAtLevel(Ability->GetAbilityLevel(Handle, ActorInfo)));
++        Context.Available = Target->GetStatTagStackCount(Tag);
++    }
++    return Context;
++}
+--- a/Source/LyraGame/AbilitySystem/Abilities/LyraAbilityCost_PlayerTagStack.h
++++ b/Source/LyraGame/AbilitySystem/Abilities/LyraAbilityCost_PlayerTagStack.h
+@@ -6,12 +6,14 @@
+ #include "LyraAbilityCost.h"
+ #include "ScalableFloat.h"
+ 
++#include "LyraTagStackCostPolicy.h"
+ #include "LyraAbilityCost_PlayerTagStack.generated.h"
+ 
+ struct FGameplayAbilityActivationInfo;
+ struct FGameplayAbilitySpecHandle;
+ 
+ class ULyraGameplayAbility;
++class ALyraPlayerState;
+ class UObject;
+ struct FGameplayAbilityActorInfo;
+ 
+@@ -32,6 +34,8 @@
+ 	//~End of ULyraAbilityCost interface
+ 
+ protected:
++	FUEPTagStackCostContext UEPBuildCostContext(const ULyraGameplayAbility* Ability, FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const ALyraPlayerState* Target, bool bCollectFailure) const;
++
+ 	/** How much of the tag to spend (keyed on ability level) */
+ 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Costs)
+ 	FScalableFloat Quantity;
+--- a/Source/LyraGame/AbilitySystem/Abilities/LyraAbilityCost_PlayerTagStack.cpp
++++ b/Source/LyraGame/AbilitySystem/Abilities/LyraAbilityCost_PlayerTagStack.cpp
+@@ -15,6 +15,15 @@
+ 
+ bool ULyraAbilityCost_PlayerTagStack::CheckCost(const ULyraGameplayAbility* Ability, const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, FGameplayTagContainer* OptionalRelevantTags) const
+ {
++    if (Ability->UEPUsesPythonTagStackCosts(true))
++    {
++        ALyraPlayerState* Target = nullptr;
++        if (AController* Controller = Ability->GetControllerFromActorInfo()) { Target = Cast<ALyraPlayerState>(Controller->PlayerState); }
++        const FUEPTagStackCostContext Context = UEPBuildCostContext(Ability, Handle, ActorInfo, Target, OptionalRelevantTags != nullptr);
++        const FUEPTagStackCostCheckResult Decision = Ability->UEPCheckTagStackCost(Context);
++        return Decision.bCanPay;
++    }
++
+ 	if (AController* PC = Ability->GetControllerFromActorInfo())
+ 	{
+ 		if (ALyraPlayerState* PS = Cast<ALyraPlayerState>(PC->PlayerState))
+@@ -32,6 +41,19 @@
+ 
+ void ULyraAbilityCost_PlayerTagStack::ApplyCost(const ULyraGameplayAbility* Ability, const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo)
+ {
++    if (ActorInfo->IsNetAuthority() && Ability->UEPUsesPythonTagStackCosts(true))
++    {
++        ALyraPlayerState* Target = nullptr;
++        if (AController* Controller = Ability->GetControllerFromActorInfo()) { Target = Cast<ALyraPlayerState>(Controller->PlayerState); }
++        if (Target)
++        {
++            const FUEPTagStackCostContext Context = UEPBuildCostContext(Ability, Handle, ActorInfo, Target, false);
++            const int32 Amount = Ability->UEPApplyTagStackCost(Context);
++            Target->RemoveStatTagStack(Tag, Amount);
++        }
++        return; // Never replay a failed/handled Python operation through native cost code.
++    }
++
+ 	if (ActorInfo->IsNetAuthority())
+ 	{
+ 		if (AController* PC = Ability->GetControllerFromActorInfo())
+@@ -49,3 +71,20 @@
+ 	}
+ }
+ 
++
++FUEPTagStackCostContext ULyraAbilityCost_PlayerTagStack::UEPBuildCostContext(const ULyraGameplayAbility* Ability, FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const ALyraPlayerState* Target, bool bCollectFailure) const
++{
++    FUEPTagStackCostContext Context;
++    Context.bPlayerStack = true;
++    Context.bAuthority = ActorInfo->IsNetAuthority();
++    Context.bHasFailureTagOutput = bCollectFailure;
++    Context.Tag = Tag;
++
++    if (Target)
++    {
++        Context.bHasTarget = true;
++        Context.Quantity = FMath::TruncToInt(Quantity.GetValueAtLevel(Ability->GetAbilityLevel(Handle, ActorInfo)));
++        Context.Available = Target->GetStatTagStackCount(Tag);
++    }
++    return Context;
++}
+--- /dev/null
++++ b/Source/LyraGame/AbilitySystem/Abilities/LyraTagStackCostPolicy.h
+@@ -0,0 +1,26 @@
++#pragma once
++#include "CoreMinimal.h"
++#include "GameplayTagContainer.h"
++#include "LyraTagStackCostPolicy.generated.h"
++
++USTRUCT(BlueprintType)
++struct LYRAGAME_API FUEPTagStackCostContext
++{
++    GENERATED_BODY()
++    UPROPERTY(BlueprintReadOnly) bool bHasTarget = false;
++    UPROPERTY(BlueprintReadOnly) bool bPlayerStack = false;
++    UPROPERTY(BlueprintReadOnly) bool bAuthority = false;
++    UPROPERTY(BlueprintReadOnly) bool bHasFailureTagOutput = false;
++    UPROPERTY(BlueprintReadOnly) int32 Available = 0;
++    UPROPERTY(BlueprintReadOnly) int32 Quantity = 0;
++    UPROPERTY(BlueprintReadOnly) FGameplayTag Tag;
++    UPROPERTY(BlueprintReadOnly) FGameplayTag FailureTag;
++};
++
++USTRUCT(BlueprintType)
++struct LYRAGAME_API FUEPTagStackCostCheckResult
++{
++    GENERATED_BODY()
++    UPROPERTY(BlueprintReadWrite) bool bCanPay = false;
++    UPROPERTY(BlueprintReadWrite) bool bAddFailureTag = false;
++};
