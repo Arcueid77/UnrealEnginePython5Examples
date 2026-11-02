@@ -351,3 +351,23 @@ new platform, full engine build, cook/package or physical input claim is added.
 [CPP11 acceptance](CPP11-acceptance.json) records production item-cost replacement.
 [CPP12 capability acceptance](CPP12-acceptance.json) records zero original player
 consumers and successful independent/native-network lifecycle fixtures.
+
+## Remaining approved groups and CPP13 checkpoint
+
+The user explicitly requested continued work until all confirmed replacements are
+complete. CPP-019 through CPP-030 are selected in `../cpp_remaining_batches.json`.
+CPP09 actual-window input is deferred by the user; other groups continue.
+
+[CPP13 progress](CPP13-progress.json) records 28 actual network input Jump trials
+and 12 native null/valid ActorInfo/Avatar admission probes. The previous Blueprint
+Python policy stays fixed while new native Jump rules switch. The Character
+observer augments and restores existing production profiles. Explicit native
+teardown guards avoid reentering the stopped Python router during profile cleanup.
+The private body repair reuses UHT and units 2/3, compiling unit 1 alone.
+
+This is an implemented checkpoint, not final CPP-019 acceptance: the next death
+batch must verify cancellation and operation after respawn. The six-file shared
+patch also provides disabled-by-default death/reset seams for the next batches.
+The interface prototype confirms the current mixin API rejects native UClasses;
+remaining native-only owners require a Blueprint policy carrier. SDK/bridge,
+engine, ShooterCore and the preserved CPP09 stage remain unchanged.

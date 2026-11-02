@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "status": "implemented_pending_death_lifecycle_crosscheck",
+  "accepted": false,
+  "batch": "CPP13",
+  "candidates": [
+    "CPP-019"
+  ],
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "native_input_physics_and_prediction": {
+    "status": "passed",
+    "owners": 2,
+    "native_jump_trials": 28,
+    "admission_boundary_calls": 12,
+    "physical_input_tested": false,
+    "previous_blueprint_policy_fixed": "Python",
+    "death_respawn_crosscheck_pending": true
+  },
+  "shared_native_adapter_candidates": [
+    "CPP-019",
+    "CPP-020",
+    "CPP-021"
+  ],
+  "death_and_reset_bindings_enabled": false,
+  "cpp14_death_respawn_crosscheck_pending": true,
+  "previous_jump_blueprint_python_fixed": true,
+  "original_jump_blueprint_bytes_preserved": true,
+  "explicit_teardown_guard_uses_original_native_stop": true,
+  "compile_partition": {
+    "initial_units": [
+      "Module.LyraGame.1.cpp",
+      "Module.LyraGame.2.cpp"
+    ],
+    "reused": [
+      "Module.LyraGame.3.cpp"
+    ],
+    "private_body_repair": [
+      "Module.LyraGame.1.cpp"
+    ],
+    "uht_runs": 1
+  },
+  "engine_full_compile_executed": false,
+  "sdk_or_bridge_rebuild_executed": false,
+  "cook_package_executed": false,
+  "physical_input_tested": false,
+  "retained_attempts": [
+    "Network01: old observer assumed the Character had no registered production mixins; observer now wraps and restores those profiles.",
+    "Network02: all 28 movement trials completed, but profile teardown reentered a stopped native policy router; explicit native teardown guards repaired Jump and Death bodies without rerunning UHT."
+  ],
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP13/Build01/summary.json",
+      "sha256": "A5D723D5572BC8798870AFD634136FF8C4FA2814478ECFFFF21829A9D65B2336"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP13/Build02Teardown/summary.json",
+      "sha256": "81E8BD741D7744672D59CAD57155B656EA8B001ABF9708DB3CBA391FD94C9E70"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP13/Assets01/summary.json",
+      "sha256": "4D67AB7CF5DB267C5ABD1BAC9A130D19D076D97FD89EB794774DD0E22569A1FA"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP13/Network03/summary.json",
+      "sha256": "E4B9E40D9CCFFCCFDC3343A7ECA246A79AD8CDFD9923C587C6D66E63602BE3E6"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP13/Network03/jump/independent-gate-stdout.log",
+      "sha256": "F1DD176484AC9221395CD8AA93D3D405818F7ED75A8C1A4572644C4CF381A67D"
+    }
+  ]
+}

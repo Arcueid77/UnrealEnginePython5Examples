@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "status": "entry_prototype_rejected",
+  "native_class_mixin_supported": false,
+  "error": "0.7 mixins are limited to Blueprint-generated classes",
+  "scope": [
+    "CPP-020",
+    "CPP-021"
+  ],
+  "next_step": "Use a Blueprint-derived policy carrier; keep native gameplay owners and GAS context.",
+  "evidence": {
+    "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\CppGameplayExtended\\20261102-CPP14\\Interfaces01\\runtime.json",
+    "sha256": "5C8F01844A351BD99FE76B58F6ED78CB0693C8216A5E253FF82E3D0BEB3A31ED"
+  },
+  "accepted": false
+}

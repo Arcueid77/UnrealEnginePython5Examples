@@ -58,20 +58,31 @@ class Validation:
                 aim=self.controller.call_function("GetControlRotation"), mode=int(self.movement.MovementMode),
                 custom=int(self.movement.CustomMovementMode))
             self.player_class, self.original_jump = self.pawn.get_class(), self.pawn.find_function("OnJumped")
-            require(not any(row["target_class"] == self.player_class for row in ue.get_registered_mixins()),
-                    "test observer must not replace a production Character mixin")
+            existing=next((row for row in ue.get_registered_mixins() if row['target_class']==self.player_class),None)
+            self.original_character_profiles={name:value['python_class'] for name,value in existing['profiles'].items()} if existing else {}
             owner = self
             class ObserveJump:
                 def OnJumped(self):
                     if self == owner.pawn: owner.events.append(self.get_path_name())
                     self.call_mixin_original("OnJumped")
-            ue.register_mixin_profile(self.player_class, "UEPJumpObserve", ObserveJump, make_default=True)
+            if self.original_character_profiles:
+                for name,base in self.original_character_profiles.items():
+                    attributes={k:v for parent in reversed(base.__mro__) if parent is not object for k,v in vars(parent).items() if k not in ('__dict__','__weakref__','__module__','__doc__','__qualname__')}
+                    key=next((k for k,v in attributes.items() if callable(v) and getattr(v,'override',k)=='OnJumped'),'OnJumped');handler=attributes.get(key)
+                    def observe(previous):
+                        def invoke(character):
+                            if character==owner.pawn:owner.events.append(character.get_path_name())
+                            if previous is not None:return previous(character)
+                            return character.call_mixin_original('OnJumped')
+                        invoke.override='OnJumped';return invoke
+                    attributes[key]=observe(handler);ue.register_mixin_profile(self.player_class,name,type('ObservedNativeJump'+name,(),attributes))
+            else:ue.register_mixin_profile(self.player_class, "UEPJumpObserve", ObserveJump, make_default=True)
             self.report.update(native_gas_instance=True, pawn=self.pawn.get_path_name(),
                 ability=self.ability.get_path_name(), ability_class=self.cls.get_path_name())
             self.begin(); return
 
     def begin(self):
-        self.name, self.profile = PLAN[self.index//2], ("BlueprintFallback", "Python")[self.index % 2]
+        self.name, self.profile = PLAN[self.index//2], getattr(self,"profile_order",("BlueprintFallback", "Python"))[self.index % 2]
         require(not self.ability.get_property("bIsActive") and int(self.movement.MovementMode) == 1,
                 "jump trial starts active/airborne")
         ue.set_mixin_profile(self.ability, self.profile)
@@ -101,7 +112,7 @@ class Validation:
         if self.name == "native-cancel": self.ability.call_function("K2_CancelAbility")
         elif self.name == "external-native-end": self.ability.call_function("K2_EndAbility")
         elif self.name == "active-profile-switch":
-            ue.set_mixin_profile(self.ability, "Python" if self.profile == "BlueprintFallback" else "BlueprintFallback")
+            order=getattr(self,"profile_order",("BlueprintFallback", "Python"));ue.set_mixin_profile(self.ability,order[1] if self.profile==order[0] else order[0])
         elif self.name == "native-state-end":
             self.ability.call_function("EndAbilityState", "Jumping")
             self.state_stopped = bool(self.ability.get_property("bIsActive")) and not self.pawn.get_property("bPressedJump")
@@ -171,8 +182,12 @@ class Validation:
                 ue.set_mixin_profile(self.ability, "Python")
             self.restore_player()
             if hasattr(self, "original_jump"):
-                require(ue.unregister_mixin(self.player_class) and self.pawn.find_function("OnJumped") == self.original_jump,
-                        "native Jump observer not restored")
+                if self.original_character_profiles:
+                    for name,base in self.original_character_profiles.items():ue.register_mixin_profile(self.player_class,name,base)
+                    restored=next(row for row in ue.get_registered_mixins() if row['target_class']==self.player_class)
+                    require(all(restored['profiles'][name]['python_class'] is base for name,base in self.original_character_profiles.items()),'original Character profiles not restored')
+                else:require(ue.unregister_mixin(self.player_class),'native Jump observer not unregistered')
+                require(self.pawn.find_function("OnJumped") == self.original_jump,"native Jump function observer not restored")
                 self.report["jump_observer_closed"] = True
         except Exception: failure = (failure or "")+traceback.format_exc()
         self.report.update(status="failed" if failure else "awaiting_shutdown", error=failure)

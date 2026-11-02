@@ -156,7 +156,7 @@ class Server:
         require(request["run_id"] == self.run, "foreign native Jump request")
         if not all(int(owner["pawn"].CharacterMovement.MovementMode) == 1 and
                    not owner["ability"].get_property("bIsActive") for owner in self.owners.values()): return
-        profile = ("BlueprintFallback", "Python")[index % 2]
+        profile = getattr(self,"profile_order",("BlueprintFallback", "Python"))[index % 2]
         ability = self.owners[peer]["ability"]
         ue.set_mixin_profile(ability, profile)
         require(str(ue.get_mixin_profile(ability)) == profile, "authority Jump Profile not selected")
@@ -249,7 +249,7 @@ class Server:
         (ue.log if self.report["status"] == "passed" else ue.log_error)("UEP_JUMP_NETWORK_"+self.report["status"].upper())
 
 
-if any(value.startswith("-UEPJumpNetworkResult=") for value in sys.argv):
+if '-UEPNativeJumpNetwork' not in sys.argv and any(value.startswith("-UEPJumpNetworkResult=") for value in sys.argv):
     path, peer, run = arg("-UEPJumpNetworkResult="), arg("-UEPJumpPeer="), arg("-UEPJumpRun=")
     validation = Server(path, run) if peer == "server" else Client(path, peer, run)
     atexit.register(validation.finalize)

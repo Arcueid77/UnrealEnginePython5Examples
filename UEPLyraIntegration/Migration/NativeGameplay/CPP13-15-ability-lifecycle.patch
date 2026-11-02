@@ -1,0 +1,296 @@
+--- a/Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility_Jump.h
++++ b/Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility_Jump.h
+@@ -7,6 +7,7 @@
+ #include "LyraGameplayAbility_Jump.generated.h"
+ 
+ class UObject;
++class ALyraCharacter;
+ struct FFrame;
+ struct FGameplayAbilityActorInfo;
+ struct FGameplayTagContainer;
+@@ -27,6 +28,11 @@
+ 	ULyraGameplayAbility_Jump(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
+ 
+ protected:
++    UFUNCTION(BlueprintNativeEvent, BlueprintPure) bool UEPUsesPythonJumpPolicy() const;
++    UFUNCTION(BlueprintNativeEvent, BlueprintPure) bool UEPShouldCheckJumpSuper(bool bHasAvatar, bool bHasCharacter, bool bCanJump) const;
++    UFUNCTION(BlueprintNativeEvent) void UEPRunJumpStart(ALyraCharacter* Character, bool bLocal, bool bPressed);
++    UFUNCTION(BlueprintNativeEvent) void UEPRunJumpStop(ALyraCharacter* Character, bool bLocal, bool bPressed);
++
+ 
+ 	virtual bool CanActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayTagContainer* SourceTags, const FGameplayTagContainer* TargetTags, FGameplayTagContainer* OptionalRelevantTags) const override;
+ 	virtual void EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled) override;
+--- a/Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility_Jump.cpp
++++ b/Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility_Jump.cpp
+@@ -5,10 +5,18 @@
+ #include "AbilitySystem/Abilities/LyraGameplayAbility.h"
+ #include "Character/LyraCharacter.h"
+ 
++#include "UObject/UnrealType.h"
++
+ #include UE_INLINE_GENERATED_CPP_BY_NAME(LyraGameplayAbility_Jump)
+ 
+ struct FGameplayTagContainer;
+ 
++
++static bool UEPJumpPolicyTearingDown(const UObject* Ability)
++{
++    const FBoolProperty* Flag = FindFProperty<FBoolProperty>(Ability->GetClass(), TEXT("UEPJumpTearingDown"));
++    return Flag && Flag->GetPropertyValue_InContainer(Ability);
++}
+ 
+ ULyraGameplayAbility_Jump::ULyraGameplayAbility_Jump(const FObjectInitializer& ObjectInitializer)
+ 	: Super(ObjectInitializer)
+@@ -19,6 +27,15 @@
+ 
+ bool ULyraGameplayAbility_Jump::CanActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayTagContainer* SourceTags, const FGameplayTagContainer* TargetTags, FGameplayTagContainer* OptionalRelevantTags) const
+ {
++    if (!UEPJumpPolicyTearingDown(this) && UEPUsesPythonJumpPolicy())
++    {
++        const bool bHasAvatar = ActorInfo && ActorInfo->AvatarActor.IsValid();
++        const ALyraCharacter* Character = bHasAvatar ? Cast<ALyraCharacter>(ActorInfo->AvatarActor.Get()) : nullptr;
++        const bool bContinue = UEPShouldCheckJumpSuper(bHasAvatar, Character != nullptr, Character && Character->CanJump());
++        if (!bContinue || !ActorInfo || !Character) { return false; }
++        return Super::CanActivateAbility(Handle, ActorInfo, SourceTags, TargetTags, OptionalRelevantTags);
++    }
++
+ 	if (!ActorInfo || !ActorInfo->AvatarActor.IsValid())
+ 	{
+ 		return false;
+@@ -36,6 +53,7 @@
+ 	}
+ 
+ 	return true;
++
+ }
+ 
+ void ULyraGameplayAbility_Jump::EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled)
+@@ -48,6 +66,13 @@
+ 
+ void ULyraGameplayAbility_Jump::CharacterJumpStart()
+ {
++    if (!UEPJumpPolicyTearingDown(this) && UEPUsesPythonJumpPolicy())
++    {
++        ALyraCharacter* Character = GetLyraCharacterFromActorInfo();
++        UEPRunJumpStart(Character, Character && Character->IsLocallyControlled(), Character && Character->bPressedJump);
++        return;
++    }
++
+ 	if (ALyraCharacter* LyraCharacter = GetLyraCharacterFromActorInfo())
+ 	{
+ 		if (LyraCharacter->IsLocallyControlled() && !LyraCharacter->bPressedJump)
+@@ -56,10 +81,18 @@
+ 			LyraCharacter->Jump();
+ 		}
+ 	}
++
+ }
+ 
+ void ULyraGameplayAbility_Jump::CharacterJumpStop()
+ {
++    if (!UEPJumpPolicyTearingDown(this) && UEPUsesPythonJumpPolicy())
++    {
++        ALyraCharacter* Character = GetLyraCharacterFromActorInfo();
++        UEPRunJumpStop(Character, Character && Character->IsLocallyControlled(), Character && Character->bPressedJump);
++        return;
++    }
++
+ 	if (ALyraCharacter* LyraCharacter = GetLyraCharacterFromActorInfo())
+ 	{
+ 		if (LyraCharacter->IsLocallyControlled() && LyraCharacter->bPressedJump)
+@@ -67,5 +100,11 @@
+ 			LyraCharacter->StopJumping();
+ 		}
+ 	}
++
+ }
+ 
++
++bool ULyraGameplayAbility_Jump::UEPUsesPythonJumpPolicy_Implementation() const { return false; }
++bool ULyraGameplayAbility_Jump::UEPShouldCheckJumpSuper_Implementation(bool bHasAvatar, bool bHasCharacter, bool bCanJump) const { return false; }
++void ULyraGameplayAbility_Jump::UEPRunJumpStart_Implementation(ALyraCharacter* Character, bool bLocal, bool bPressed) {}
++void ULyraGameplayAbility_Jump::UEPRunJumpStop_Implementation(ALyraCharacter* Character, bool bLocal, bool bPressed) {}
+--- a/Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility_Death.h
++++ b/Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility_Death.h
+@@ -28,6 +28,12 @@
+ 	ULyraGameplayAbility_Death(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
+ 
+ protected:
++    UFUNCTION(BlueprintNativeEvent, BlueprintPure) bool UEPUsesPythonDeathPolicy() const;
++    UFUNCTION(BlueprintNativeEvent) TArray<FName> UEPDeathActivationPlan(bool bAutoStart) const;
++    UFUNCTION(BlueprintNativeEvent) TArray<FName> UEPDeathEndPlan() const;
++    UFUNCTION(BlueprintNativeEvent, BlueprintPure) bool UEPShouldStartDeath(bool bHasHealth, int32 State) const;
++    UFUNCTION(BlueprintNativeEvent, BlueprintPure) bool UEPShouldFinishDeath(bool bHasHealth, int32 State) const;
++
+ 
+ 	virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData) override;
+ 	virtual void EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled) override;
+--- a/Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility_Death.cpp
++++ b/Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility_Death.cpp
+@@ -9,7 +9,15 @@
+ #include "LyraLogChannels.h"
+ #include "Trace/Trace.inl"
+ 
++#include "UObject/UnrealType.h"
++
+ #include UE_INLINE_GENERATED_CPP_BY_NAME(LyraGameplayAbility_Death)
++
++static bool UEPDeathPolicyTearingDown(const UObject* Ability)
++{
++    const FBoolProperty* Flag = FindFProperty<FBoolProperty>(Ability->GetClass(), TEXT("UEPDeathTearingDown"));
++    return Flag && Flag->GetPropertyValue_InContainer(Ability);
++}
+ 
+ ULyraGameplayAbility_Death::ULyraGameplayAbility_Death(const FObjectInitializer& ObjectInitializer)
+ 	: Super(ObjectInitializer)
+@@ -31,6 +39,23 @@
+ 
+ void ULyraGameplayAbility_Death::ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData)
+ {
++    check(ActorInfo);
++    if (!UEPDeathPolicyTearingDown(this) && UEPUsesPythonDeathPolicy())
++    {
++        ULyraAbilitySystemComponent* LyraASC = CastChecked<ULyraAbilitySystemComponent>(ActorInfo->AbilitySystemComponent.Get());
++        for (FName Action : UEPDeathActivationPlan(bAutoStartDeath))
++        {
++            if (Action == TEXT("CancelOthers")) { FGameplayTagContainer Ignore; Ignore.AddTag(LyraGameplayTags::Ability_Behavior_SurvivesDeath); LyraASC->CancelAbilities(nullptr, &Ignore, this); }
++            else if (Action == TEXT("MakeUncancelable")) { SetCanBeCanceled(false); }
++            else if (Action == TEXT("BlockAbilities")) { if (!ChangeActivationGroup(ELyraAbilityActivationGroup::Exclusive_Blocking)) { UE_LOG(LogLyraAbilitySystem, Error, TEXT("UEP death activation group failed")); } }
++            else if (Action == TEXT("StartDeath")) { StartDeath(); }
++            else if (Action == TEXT("ActivateBlueprint")) { Super::ActivateAbility(Handle, ActorInfo, ActivationInfo, TriggerEventData); return; }
++            else { ensureMsgf(false, TEXT("Unknown UEP death activation command")); return; }
++        }
++        ensureMsgf(false, TEXT("UEP death plan did not execute its terminal action"));
++        return; // A handled Python plan never replays the native body.
++    }
++
+ 	check(ActorInfo);
+ 
+ 	ULyraAbilitySystemComponent* LyraASC = CastChecked<ULyraAbilitySystemComponent>(ActorInfo->AbilitySystemComponent.Get());
+@@ -54,10 +79,24 @@
+ 	}
+ 
+ 	Super::ActivateAbility(Handle, ActorInfo, ActivationInfo, TriggerEventData);
++
+ }
+ 
+ void ULyraGameplayAbility_Death::EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled)
+ {
++    check(ActorInfo);
++    if (!UEPDeathPolicyTearingDown(this) && UEPUsesPythonDeathPolicy())
++    {
++        for (FName Action : UEPDeathEndPlan())
++        {
++            if (Action == TEXT("FinishDeath")) { FinishDeath(); }
++            else if (Action == TEXT("EndBlueprint")) { Super::EndAbility(Handle, ActorInfo, ActivationInfo, bReplicateEndAbility, bWasCancelled); return; }
++            else { ensureMsgf(false, TEXT("Unknown UEP death end command")); return; }
++        }
++        ensureMsgf(false, TEXT("UEP death plan did not execute its terminal action"));
++        return; // A handled Python plan never replays the native body.
++    }
++
+ 	check(ActorInfo);
+ 
+ 	// Always try to finish the death when the ability ends in case the ability doesn't.
+@@ -65,10 +104,19 @@
+ 	FinishDeath();
+ 
+ 	Super::EndAbility(Handle, ActorInfo, ActivationInfo, bReplicateEndAbility, bWasCancelled);
++
+ }
+ 
+ void ULyraGameplayAbility_Death::StartDeath()
+ {
++    if (!UEPDeathPolicyTearingDown(this) && UEPUsesPythonDeathPolicy())
++    {
++        ULyraHealthComponent* Health = ULyraHealthComponent::FindHealthComponent(GetAvatarActorFromActorInfo());
++        const bool bApply = UEPShouldStartDeath(Health != nullptr, Health ? static_cast<int32>(Health->GetDeathState()) : -1);
++        if (Health && bApply) { Health->StartDeath(); }
++        return;
++    }
++
+ 	if (ULyraHealthComponent* HealthComponent = ULyraHealthComponent::FindHealthComponent(GetAvatarActorFromActorInfo()))
+ 	{
+ 		if (HealthComponent->GetDeathState() == ELyraDeathState::NotDead)
+@@ -76,10 +124,19 @@
+ 			HealthComponent->StartDeath();
+ 		}
+ 	}
++
+ }
+ 
+ void ULyraGameplayAbility_Death::FinishDeath()
+ {
++    if (!UEPDeathPolicyTearingDown(this) && UEPUsesPythonDeathPolicy())
++    {
++        ULyraHealthComponent* Health = ULyraHealthComponent::FindHealthComponent(GetAvatarActorFromActorInfo());
++        const bool bApply = UEPShouldFinishDeath(Health != nullptr, Health ? static_cast<int32>(Health->GetDeathState()) : -1);
++        if (Health && bApply) { Health->FinishDeath(); }
++        return;
++    }
++
+ 	if (ULyraHealthComponent* HealthComponent = ULyraHealthComponent::FindHealthComponent(GetAvatarActorFromActorInfo()))
+ 	{
+ 		if (HealthComponent->GetDeathState() == ELyraDeathState::DeathStarted)
+@@ -87,5 +144,12 @@
+ 			HealthComponent->FinishDeath();
+ 		}
+ 	}
++
+ }
+ 
++
++bool ULyraGameplayAbility_Death::UEPUsesPythonDeathPolicy_Implementation() const { return false; }
++TArray<FName> ULyraGameplayAbility_Death::UEPDeathActivationPlan_Implementation(bool bAutoStart) const { return {}; }
++TArray<FName> ULyraGameplayAbility_Death::UEPDeathEndPlan_Implementation() const { return {}; }
++bool ULyraGameplayAbility_Death::UEPShouldStartDeath_Implementation(bool bHasHealth, int32 State) const { return false; }
++bool ULyraGameplayAbility_Death::UEPShouldFinishDeath_Implementation(bool bHasHealth, int32 State) const { return false; }
+--- a/Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility_Reset.h
++++ b/Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility_Reset.h
+@@ -28,6 +28,9 @@
+ 	UE_API ULyraGameplayAbility_Reset(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
+ 
+ protected:
++    UFUNCTION(BlueprintNativeEvent, BlueprintPure) UE_API bool UEPUsesPythonResetPolicy() const;
++    UFUNCTION(BlueprintNativeEvent) UE_API TArray<FName> UEPResetActivationPlan() const;
++
+ 	
+ 	UE_API virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData) override;
+ };
+--- a/Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility_Reset.cpp
++++ b/Source/LyraGame/AbilitySystem/Abilities/LyraGameplayAbility_Reset.cpp
+@@ -27,6 +27,24 @@
+ 
+ void ULyraGameplayAbility_Reset::ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData)
+ {
++    check(ActorInfo);
++    if (UEPUsesPythonResetPolicy())
++    {
++        ULyraAbilitySystemComponent* LyraASC = CastChecked<ULyraAbilitySystemComponent>(ActorInfo->AbilitySystemComponent.Get());
++        for (FName Action : UEPResetActivationPlan())
++        {
++            if (Action == TEXT("CancelOthers")) { FGameplayTagContainer Ignore; Ignore.AddTag(LyraGameplayTags::Ability_Behavior_SurvivesDeath); LyraASC->CancelAbilities(nullptr, &Ignore, this); }
++            else if (Action == TEXT("MakeUncancelable")) { SetCanBeCanceled(false); }
++            else if (Action == TEXT("ResetCharacter")) { if (ALyraCharacter* Character = Cast<ALyraCharacter>(CurrentActorInfo->AvatarActor.Get())) { Character->Reset(); } }
++            else if (Action == TEXT("BroadcastReset")) { FLyraPlayerResetMessage Message; Message.OwnerPlayerState = CurrentActorInfo->OwnerActor.Get(); UGameplayMessageSubsystem::Get(this).BroadcastMessage(LyraGameplayTags::GameplayEvent_Reset, Message); }
++            else if (Action == TEXT("ActivateBlueprint")) { Super::ActivateAbility(Handle, ActorInfo, ActivationInfo, TriggerEventData); }
++            else if (Action == TEXT("EndAbility")) { EndAbility(CurrentSpecHandle, CurrentActorInfo, CurrentActivationInfo, true, false); return; }
++            else { ensureMsgf(false, TEXT("Unknown UEP reset command")); return; }
++        }
++        ensureMsgf(false, TEXT("UEP reset plan did not execute its terminal action"));
++        return;
++    }
++
+ 	check(ActorInfo);
+ 
+ 	ULyraAbilitySystemComponent* LyraASC = CastChecked<ULyraAbilitySystemComponent>(ActorInfo->AbilitySystemComponent.Get());
+@@ -56,5 +74,9 @@
+ 	const bool bReplicateEndAbility = true;
+ 	const bool bWasCanceled = false;
+ 	EndAbility(CurrentSpecHandle, CurrentActorInfo, CurrentActivationInfo, bReplicateEndAbility, bWasCanceled);
++
+ }
+ 
++
++bool ULyraGameplayAbility_Reset::UEPUsesPythonResetPolicy_Implementation() const { return false; }
++TArray<FName> ULyraGameplayAbility_Reset::UEPResetActivationPlan_Implementation() const { return {}; }

@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "status": "in_progress",
+  "scope_approved_date": "2026-11-02",
+  "user_authorization": "为啥不继续了，持续推进直到全部完成",
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "approved_candidates": [
+    "CPP-019",
+    "CPP-020",
+    "CPP-021",
+    "CPP-022",
+    "CPP-023",
+    "CPP-024",
+    "CPP-025",
+    "CPP-026",
+    "CPP-027",
+    "CPP-028",
+    "CPP-029",
+    "CPP-030"
+  ],
+  "accepted_candidates": [],
+  "prior_scopes": [
+    "cpp_batches.json",
+    "cpp_extended_batches.json"
+  ],
+  "cpp09_actual_input_pending": true,
+  "batches": [
+    {
+      "id": "CPP13",
+      "candidates": [
+        "CPP-019"
+      ],
+      "status": "implemented_pending_death_lifecycle_crosscheck",
+      "acceptance_ledger": null,
+      "progress_ledger": "NativeGameplay/CPP13-progress.json"
+    },
+    {
+      "id": "CPP14",
+      "candidates": [
+        "CPP-020"
+      ],
+      "status": "pending",
+      "acceptance_ledger": null
+    },
+    {
+      "id": "CPP15",
+      "candidates": [
+        "CPP-021"
+      ],
+      "status": "pending",
+      "acceptance_ledger": null
+    },
+    {
+      "id": "CPP16",
+      "candidates": [
+        "CPP-022"
+      ],
+      "status": "pending",
+      "acceptance_ledger": null
+    },
+    {
+      "id": "CPP17",
+      "candidates": [
+        "CPP-023"
+      ],
+      "status": "pending",
+      "acceptance_ledger": null
+    },
+    {
+      "id": "CPP18",
+      "candidates": [
+        "CPP-024"
+      ],
+      "status": "pending",
+      "acceptance_ledger": null
+    },
+    {
+      "id": "CPP19",
+      "candidates": [
+        "CPP-025"
+      ],
+      "status": "pending",
+      "acceptance_ledger": null
+    },
+    {
+      "id": "CPP20",
+      "candidates": [
+        "CPP-026"
+      ],
+      "status": "pending",
+      "acceptance_ledger": null
+    },
+    {
+      "id": "CPP21",
+      "candidates": [
+        "CPP-027"
+      ],
+      "status": "pending",
+      "acceptance_ledger": null
+    },
+    {
+      "id": "CPP22",
+      "candidates": [
+        "CPP-028"
+      ],
+      "status": "pending",
+      "acceptance_ledger": null
+    },
+    {
+      "id": "CPP23",
+      "candidates": [
+        "CPP-029"
+      ],
+      "status": "pending",
+      "acceptance_ledger": null
+    },
+    {
+      "id": "CPP24",
+      "candidates": [
+        "CPP-030"
+      ],
+      "status": "pending",
+      "acceptance_ledger": null
+    }
+  ]
+}

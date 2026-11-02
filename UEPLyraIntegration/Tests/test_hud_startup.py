@@ -9,6 +9,10 @@ from uep_lyra_hud.startup import validation_module
 
 
 class StartupSelectionTests(unittest.TestCase):
+    def test_native_jump_owns_legacy_jump_fixture_startup(self):
+        args=['-UEPNativeJumpNetwork','-UEPJumpNetworkResult=report.json']
+        self.assertEqual(validation_module(args),'uep_lyra_native.jump_network_validation')
+        self.assertIsNone(validation_module(['-run=Py']+args))
     def test_cost_network_owns_shared_weapon_fixture_startup(self):
         args=['-UEPNativeCostNetwork','-UEPWeaponAbilityFireNetworkResult=report.json']
         self.assertEqual(validation_module(args),'uep_lyra_native.tag_stack_cost_network_validation')
