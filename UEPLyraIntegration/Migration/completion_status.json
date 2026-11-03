@@ -1,0 +1,1221 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-11-03T15:01:49.426444+00:00",
+  "status": "implemented_pending_user_deferred_actual_input",
+  "full_objective_achieved": false,
+  "objective": "完成之前确认的所有的替换",
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "source_inventory_is_historical_proposal": true,
+  "source_inventory_unchanged_sha256": "13835389ABE1FDBCE0C5D7D3CA4877CF0B2495AB9DB3A4C81E16933A52E9589C",
+  "blueprint": {
+    "runtime_candidates": 246,
+    "configuration_only": 182,
+    "retained": 63,
+    "scope_review_candidates": 11,
+    "accepted_original_requirements": 22,
+    "source": {
+      "path": "Demos/UEPLyraIntegration/Migration/Acceptance/275-original-explorer-arena-and-final-migration-acceptance.json",
+      "sha256": "9DBBBCF5C623230737C1DD1085680DA907A656AA9D5D38A49471175128149573"
+    }
+  },
+  "cpp": {
+    "approved_candidates": 30,
+    "implemented_candidates": 30,
+    "accepted_production_candidates": [
+      "CPP-001",
+      "CPP-002",
+      "CPP-003",
+      "CPP-004",
+      "CPP-005",
+      "CPP-006",
+      "CPP-007",
+      "CPP-008",
+      "CPP-009",
+      "CPP-010",
+      "CPP-011",
+      "CPP-012",
+      "CPP-013",
+      "CPP-014",
+      "CPP-016",
+      "CPP-017",
+      "CPP-019",
+      "CPP-020",
+      "CPP-021",
+      "CPP-022",
+      "CPP-023",
+      "CPP-024",
+      "CPP-025",
+      "CPP-026",
+      "CPP-027",
+      "CPP-028",
+      "CPP-029",
+      "CPP-030"
+    ],
+    "accepted_capability_only_candidates": [
+      "CPP-018"
+    ],
+    "pending_actual_input_candidates": [
+      "CPP-015"
+    ],
+    "batches": [
+      {
+        "batch": "CPP01",
+        "candidates": [
+          "CPP-001",
+          "CPP-002",
+          "CPP-003"
+        ],
+        "status": "accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP01-acceptance.json",
+          "sha256": "571620EA4497A2223C9815A587530DAB2A543AC954324AAABCF7B21A4103F69D"
+        }
+      },
+      {
+        "batch": "CPP02",
+        "candidates": [
+          "CPP-004"
+        ],
+        "status": "accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP02-acceptance.json",
+          "sha256": "674074D959159174F14DAB8CC85661360BED20C5328FFF38ABA8AB3E1F83B021"
+        }
+      },
+      {
+        "batch": "CPP03",
+        "candidates": [
+          "CPP-005",
+          "CPP-006"
+        ],
+        "status": "accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP03-acceptance.json",
+          "sha256": "BC06C767AECAE01EA0FAE6F73A4B90FE392FB87F6E218DB1F1EEF2978F2D2257"
+        }
+      },
+      {
+        "batch": "CPP04",
+        "candidates": [
+          "CPP-007",
+          "CPP-008"
+        ],
+        "status": "accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP04-acceptance.json",
+          "sha256": "54896D81F8AFFC342E27E78F4CE59D10A0403A2B475D6785A307A057E020A10A"
+        }
+      },
+      {
+        "batch": "CPP05",
+        "candidates": [
+          "CPP-009",
+          "CPP-010"
+        ],
+        "status": "accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP05-acceptance.json",
+          "sha256": "FFF169D5EDBEF2200431F067D6F90D50A27049DB568E3154F5C83034249FB2C9"
+        }
+      },
+      {
+        "batch": "CPP06",
+        "candidates": [
+          "CPP-011"
+        ],
+        "status": "accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP06-acceptance.json",
+          "sha256": "FEDD672C3FA090772B4674A08AED813CE3760B3BF87F93F438D1C534311320D0"
+        }
+      },
+      {
+        "batch": "CPP07",
+        "candidates": [
+          "CPP-012",
+          "CPP-013"
+        ],
+        "status": "accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP07-acceptance.json",
+          "sha256": "4DDA4C1D264E8D91319CC325732CE32E62D891F5298F1CC4ED04133840CF43FD"
+        }
+      },
+      {
+        "batch": "CPP08",
+        "candidates": [
+          "CPP-014"
+        ],
+        "status": "accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP08-acceptance.json",
+          "sha256": "FA386EBD9FA1820700D4C645DB93106BD418C2C8DECEFEE338AF5867E6269E5D"
+        }
+      },
+      {
+        "batch": "CPP09",
+        "candidates": [
+          "CPP-015"
+        ],
+        "status": "implemented_pending_actual_input",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP09-progress.json",
+          "sha256": "1EC37A2313D98CC8FB23D8FF85AA0397DE2AAD3A4F842DC4237A71A1F38E2869"
+        }
+      },
+      {
+        "batch": "CPP10",
+        "candidates": [
+          "CPP-016"
+        ],
+        "status": "accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP10-acceptance.json",
+          "sha256": "31FF2299B02F19A822B275D3BE2B46AEAC5872699426D02622A7A51A845AA5FF"
+        }
+      },
+      {
+        "batch": "CPP11",
+        "candidates": [
+          "CPP-017"
+        ],
+        "status": "accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP11-acceptance.json",
+          "sha256": "E59F0648E8F474966007D74C9B26501E9185C703301DA5706117A4317D6E8027"
+        }
+      },
+      {
+        "batch": "CPP12",
+        "candidates": [
+          "CPP-018"
+        ],
+        "status": "capability_accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP12-acceptance.json",
+          "sha256": "84FFAC8D2711D734E19D0617E15EC2718205C3E68FB97DD7BD899DED48AD4B52"
+        }
+      },
+      {
+        "batch": "CPP13",
+        "candidates": [
+          "CPP-019"
+        ],
+        "status": "accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP13-acceptance.json",
+          "sha256": "AACF1597D168B5BE98FEC72A3A19D5B66FE13DABE1C2B0DFECF4E41875AB1F7A"
+        }
+      },
+      {
+        "batch": "CPP14",
+        "candidates": [
+          "CPP-020"
+        ],
+        "status": "accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP14-acceptance.json",
+          "sha256": "4B5F89E4B2FCDAD63A0C07B7057DE4F30DD85DA6FAA153E42AB616A967622A76"
+        }
+      },
+      {
+        "batch": "CPP15",
+        "candidates": [
+          "CPP-021"
+        ],
+        "status": "accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP15-acceptance.json",
+          "sha256": "3729633EF581D3D8D1272DF88E5711316309B589690BD9E9358E3EDB36CB79A2"
+        }
+      },
+      {
+        "batch": "CPP16",
+        "candidates": [
+          "CPP-022"
+        ],
+        "status": "accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP16-acceptance.json",
+          "sha256": "68B143FCD5946D35BE2A3279DAB607C454B09A96DD5EB05992E1A06F004F559E"
+        }
+      },
+      {
+        "batch": "CPP17",
+        "candidates": [
+          "CPP-023"
+        ],
+        "status": "accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP17-acceptance.json",
+          "sha256": "F1F7D691D2D511322C201AEFDC44EEDC54A4E2884B305C45CBC4A23C4EE2390A"
+        }
+      },
+      {
+        "batch": "CPP18",
+        "candidates": [
+          "CPP-024"
+        ],
+        "status": "accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP18-acceptance.json",
+          "sha256": "7086ACAB03573A641DB0412DE7E346AF72B2E8AEDBE30F80BAB221039EC5A135"
+        }
+      },
+      {
+        "batch": "CPP19",
+        "candidates": [
+          "CPP-025"
+        ],
+        "status": "accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP19-acceptance.json",
+          "sha256": "ABADAF67AD78259D363E5875E51250CE93E4AD1F38DEE303020CF7235A60DD90"
+        }
+      },
+      {
+        "batch": "CPP20",
+        "candidates": [
+          "CPP-026"
+        ],
+        "status": "accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP20-acceptance.json",
+          "sha256": "5EAA2F9E9E7F115922F4ABF5A6872D1F3E96EC91213E7B1F2C9AF4C8823EE793"
+        }
+      },
+      {
+        "batch": "CPP21",
+        "candidates": [
+          "CPP-027"
+        ],
+        "status": "accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP21-acceptance.json",
+          "sha256": "2181E9DA1744F660C4010D4BAC1B9E74F1E216BE60E22CDF9F5102EDB2790E4F"
+        }
+      },
+      {
+        "batch": "CPP22",
+        "candidates": [
+          "CPP-028"
+        ],
+        "status": "accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP22-acceptance.json",
+          "sha256": "2E7EBE792563A003F2174974AAEA849368BA73A16E124596EFB0BFA9293A42D1"
+        }
+      },
+      {
+        "batch": "CPP23",
+        "candidates": [
+          "CPP-029"
+        ],
+        "status": "accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP23-acceptance.json",
+          "sha256": "071D11842640C33F0B96DD22E32C32C03B96848A886D2E31DCE96B967A364882"
+        }
+      },
+      {
+        "batch": "CPP24",
+        "candidates": [
+          "CPP-030"
+        ],
+        "status": "accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP24-acceptance.json",
+          "sha256": "4ECA374D1309CC623F5A32F5BA3FDD10DF776499A54BFFE860315A9447005528"
+        }
+      }
+    ],
+    "trackers": [
+      {
+        "path": "Demos/UEPLyraIntegration/Migration/cpp_batches.json",
+        "sha256": "2A0EB5C22CA476271B128DB43AED76A62DBA6F9FAF57958EC11D11F1100740D3"
+      },
+      {
+        "path": "Demos/UEPLyraIntegration/Migration/cpp_extended_batches.json",
+        "sha256": "94218B9819E6C0C6C0E17776FD23FCC2B472C2382BD55C0A098ACC52BB3F9615"
+      },
+      {
+        "path": "Demos/UEPLyraIntegration/Migration/cpp_remaining_batches.json",
+        "sha256": "0ACE2550D25C13D4D03EA3F16D65CFE65E361FA1CF85DFF01FB13F5A5AFC6E89"
+      }
+    ]
+  },
+  "hardening": {
+    "accepted_groups": [
+      {
+        "batch": "H01",
+        "status": "accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/H01-acceptance.json",
+          "sha256": "55A629EA85A0027DC46FBF09342A18A00330A51FC29E28DF608BF7ED90FFFF30"
+        }
+      },
+      {
+        "batch": "H02",
+        "status": "accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/H02-acceptance.json",
+          "sha256": "CE2D1B71F5F2FF74622C2A92E16F80B0F5D9B8EFBEAD845C32DF137627E44940"
+        }
+      },
+      {
+        "batch": "H03",
+        "status": "accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/H03-acceptance.json",
+          "sha256": "8536B24AAA9DE27C24C5B74AABFC5E2C7727BBE48CCBBA482E87CCEDF2529E37"
+        }
+      },
+      {
+        "batch": "H04",
+        "status": "accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/H04-acceptance.json",
+          "sha256": "5343FCF3F04C8A73B06304B13FC4EF2C5B84431D85531348804ACA1FF00DCCC2"
+        }
+      },
+      {
+        "batch": "H05",
+        "status": "accepted",
+        "evidence": {
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/H05-acceptance.json",
+          "sha256": "19E02869D349DCBCE7837E186EF2675E22A702EB7F7E816000D25389297727B3"
+        }
+      }
+    ],
+    "source": {
+      "path": "Demos/UEPLyraIntegration/Migration/hardening_batches.json",
+      "sha256": "CF17ECB62E5A8CA387B8B651AC262231687B56549A3386A38DF9030A114F5DF2"
+    }
+  },
+  "evidence_integrity": {
+    "verified_closed_json_reports": 168,
+    "verified_referenced_files": 195,
+    "missing_files": 0,
+    "unexpected_hash_mismatches": 0,
+    "verified_references": [
+      {
+        "path": ".build/LyraValidation/BlueprintPython/20261028-experience-acceptance/ExplorerExperience-BlueprintFallback-02/Runtime/failure.json",
+        "sha256": "5809527740F9F7FBC42C5FED0680AD5A5C7D4A3F9333E9990D1DA1B3859D01FE"
+      },
+      {
+        "path": ".build/LyraValidation/BlueprintPython/20261028-experience-acceptance/ExplorerExperience-Python-02/Runtime/failure.json",
+        "sha256": "8DE592C1205243058DB9639EEBD1FC25957B3F4C5E9DDF1330AFFA7645F28FBB"
+      },
+      {
+        "path": ".build/LyraValidation/BlueprintPython/20261028-experience-acceptance/ExplorerGameplay-BlueprintFallback-01/Runtime/failure.json",
+        "sha256": "7141CD7E28F3D7FFE19D12DB7B62C2DA4B3CAD0C51700CB5525F0ADEAF848D09"
+      },
+      {
+        "path": ".build/LyraValidation/BlueprintPython/20261028-experience-acceptance/ExplorerGameplay-Python-01/Runtime/failure.json",
+        "sha256": "A37BD17A905F3D330C5EC78D79BE227104D32494F865BB2804C405E840B58A2F"
+      },
+      {
+        "path": ".build/LyraValidation/BlueprintPython/20261028-experience-acceptance/ExplorerFollow-BlueprintFallback-01/Runtime/failure.json",
+        "sha256": "3F62ECA8C5185F5EFF4DB710858334248BFFD730676D475BD387570F8FF14FA2"
+      },
+      {
+        "path": ".build/LyraValidation/BlueprintPython/20261028-experience-acceptance/ExplorerFollow-Python-01/Runtime/failure.json",
+        "sha256": "45017D7A73578771B605DBC9E55245952857594174C9E122C9A76408E368F62B"
+      },
+      {
+        "path": ".build/LyraValidation/BlueprintPython/20261028-experience-acceptance/ExplorerActionsNetwork-BlueprintFallback-05/Runtime/server.json",
+        "sha256": "7E0F02DEA1AB8DFA1545C1BE513B1624CFB1C6B4E075BA120D4EFB7B975AC927"
+      },
+      {
+        "path": ".build/LyraValidation/BlueprintPython/20261028-experience-acceptance/ExplorerActionsNetwork-BlueprintFallback-05/Runtime/A.json",
+        "sha256": "DFA0C21F98FF4AE2FBABAB034AC2AB75324696455A68930102C77E9E27511A19"
+      },
+      {
+        "path": ".build/LyraValidation/BlueprintPython/20261028-experience-acceptance/ExplorerActionsNetwork-BlueprintFallback-05/Runtime/B0.json",
+        "sha256": "DCE187C0BC5DE09D86F11693D3159D413B021F07DAEA0D41E2CC3E11562C7051"
+      },
+      {
+        "path": ".build/LyraValidation/BlueprintPython/20261028-experience-acceptance/ExplorerActionsNetwork-Python-05/Runtime/server.json",
+        "sha256": "367D923B8D30C3ED555EB7EED01BE7F91C1C9C494262CF7A644F8954A861FB26"
+      },
+      {
+        "path": ".build/LyraValidation/BlueprintPython/20261028-experience-acceptance/ExplorerActionsNetwork-Python-05/Runtime/A.json",
+        "sha256": "16E7CE95899148DFD7DEE2F1E046B7EE792AAB88EF87A107CC60CC5A4D6CAE94"
+      },
+      {
+        "path": ".build/LyraValidation/BlueprintPython/20261028-experience-acceptance/ExplorerActionsNetwork-Python-05/Runtime/B0.json",
+        "sha256": "AE6032D19230E4311622EA32CB44780C308544D8F5587CA0C2A5546FF1EFA86B"
+      },
+      {
+        "path": ".build/LyraValidation/BlueprintPython/20261028-experience-acceptance/ArenaLocalInput-BlueprintFallback-02/Runtime/result.json",
+        "sha256": "954606C659498BD562690239CE20ADE4D3352148231B0F79007852E07236B254"
+      },
+      {
+        "path": ".build/LyraValidation/BlueprintPython/20261028-experience-acceptance/ArenaLocalInput-Python-02/Runtime/result.json",
+        "sha256": "0A087BD34218069648A1F2835C33CD3CD68ECAE618D04E116B3C91BF7321D08C"
+      },
+      {
+        "path": ".build/LyraValidation/BlueprintPython/20261028-experience-acceptance/ArenaOpponentBomb-BlueprintFallback-02/Runtime/result.json",
+        "sha256": "CB2CD446497C0EC817D6B1150F4B27DD0A9FB8306E6640AD44B866311DAE42EF"
+      },
+      {
+        "path": ".build/LyraValidation/BlueprintPython/20261028-experience-acceptance/ArenaOpponentBomb-Python-02/Runtime/result.json",
+        "sha256": "93E514F23505A1556B2FE61EA1AD38150DE5C260F4BD450953A10D3CCF7BCBDC"
+      },
+      {
+        "path": ".build/LyraValidation/BlueprintPython/20261028-experience-acceptance/ArenaLocalInput-BlueprintFallback-02/Runtime/before.png",
+        "sha256": "6284D51EC1C13AE963C469E174F8FF6C506031D497585EBABD94E655C1ACD91C"
+      },
+      {
+        "path": ".build/LyraValidation/BlueprintPython/20261028-experience-acceptance/ArenaLocalInput-BlueprintFallback-02/Runtime/spent.png",
+        "sha256": "2FE7263026827D5FF4B1A2C2009A6202DEE92EA658A1B115092255C368D0748F"
+      },
+      {
+        "path": ".build/LyraValidation/BlueprintPython/20261028-experience-acceptance/ArenaLocalInput-BlueprintFallback-02/Runtime/refunded.png",
+        "sha256": "5B5612910CD4147E36A6CE3994BB1709BDE821A7CA4A1A6ECA316DB09C144B1C"
+      },
+      {
+        "path": ".build/LyraValidation/BlueprintPython/20261028-experience-acceptance/ArenaLocalInput-Python-02/Runtime/before.png",
+        "sha256": "F717F7385331EA12E12F9AD1F43BBCACC0D088FC06B8942BEB4A44B3FFC95FC8"
+      },
+      {
+        "path": ".build/LyraValidation/BlueprintPython/20261028-experience-acceptance/ArenaLocalInput-Python-02/Runtime/spent.png",
+        "sha256": "D90DFA1276F87E889E5C421B5ADAEBE47DEA887DC4216D10366358526D7F0A58"
+      },
+      {
+        "path": ".build/LyraValidation/BlueprintPython/20261028-experience-acceptance/ArenaLocalInput-Python-02/Runtime/refunded.png",
+        "sha256": "E60BD1218FD9E55D5CDFA887EAE392F1BBE15DE24F4381EB31F69BF9E4616A35"
+      },
+      {
+        "path": ".build/LyraValidation/BlueprintPython/20261028-experience-acceptance/accepted-baseline.json",
+        "sha256": "1D84746644671F9032736263B11443BAD85E3D360C68C1648984952D94FA4AD5"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP01/Build02/summary.json",
+        "sha256": "D9A405A6A943A765DAAD3BD5328B98644389F011C930E5C76A00D2C1904025A8"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP01/Assets03/summary.json",
+        "sha256": "AFC0BAC07F68909D3599056A51F9D75A69754AF756F64BFE4266B362C52AE87E"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP01/Runtime01/summary.json",
+        "sha256": "932165663B92EBB51DE7A2222FF26D0ADC1CCD44DEEA589EE0696E3EFA43F77B"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP01/Runtime01/comparison.json",
+        "sha256": "CD2E1ACBC768A5B9B2144631ED58AE99B0D8827676FF6DD5D8F58660E35452B5"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP01/Network03/summary.json",
+        "sha256": "7BBB7A79D9B4E4F18864A248A7E032A5334138115814803571FEA4A537E4D9F6"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP02/Build03/summary.json",
+        "sha256": "F0174A48D314F2244FACBFF4231BE60357DB6026F89A57888C4795BFD7683368"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP02/Assets04/summary.json",
+        "sha256": "33A508B2D0DCBC6DCAA81DA0983397EAE612B4D7002F527E83DDCF51C8D55E9B"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP02/Runtime03/Two/comparison.json",
+        "sha256": "0AF860A79D3DF380044EE7FE522BC2BC91C0393C4182F82C02AD5D6CB9C68752"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP02/Runtime05/summary.json",
+        "sha256": "90605BE6BEF1C9D8A45F1247342E0159A4592554E2FEFB3623CBAEC0A919F543"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP02/Network01/summary.json",
+        "sha256": "1E3248C735D32DBFE5A99B0624BEBF3266B8C15A19050673D29F294AAE2C565D"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/Stage/Lyra/Plugins/GameFeatures/ShooterCore/Content/Bot/B_ShooterBotSpawner_Perf.uasset",
+        "sha256": "2539634EBE8B0152485B79FFFFE2C981BAC9CBA13829E33F7BD99AF3B7E7DD1E"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/Stage/Lyra/Intermediate/Build/Win64/x64/UnrealEditor/Development/LyraGame/Module.LyraGame.2.cpp.obj",
+        "sha256": "F23C0DD17DB4245CF1C070432A0CF5BF996191C91BE67B267C0FF6758CB4F2EC"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP03/Build01/summary.json",
+        "sha256": "ECCE9CD2D806DD2DF7D94BD3DA54E4F39C1F8F399343BF1F98FE617338C7FD82"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP03/Assets01/summary.json",
+        "sha256": "DA7ADED94047C1CD5602BEB06AA9A2B0B077F34CD1606E326BC51E007306197F"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP03/Runtime02/summary.json",
+        "sha256": "64C8B6811C3946E3554BC69F638C1562D720725BD8871D72F5010842C46479B5"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP03/Network01/summary.json",
+        "sha256": "85AF8196BD87B405DC58D98E2C4D7BC38AE6B6E27904D125063EA98193F26B6E"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP04/Build02/summary.json",
+        "sha256": "C2E6602DB8FC7DF7AF816A1F268B80CAA9067A29565B754AF1135264F6152CD8"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP04/Assets01/summary.json",
+        "sha256": "0D5569C7F90B98442574F0185C92BF836BC9FD9B8356ECF3F78D5EE9C18DEB0C"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP04/Runtime02/summary.json",
+        "sha256": "D793E4017861ECA8CA8CAD1F1718B1EF04E6E79610A842555F27AE1D79919389"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP04/Network01/summary.json",
+        "sha256": "944E475CC1D8038972C398FBE4256C3C44470546AFDCB22A9172D0991D7C388F"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP05/Build01/summary.json",
+        "sha256": "1A994752F28F87E4D4CFE9C34F008C23DD883D8ED9589769156B937FF5D8F020"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP05/Assets01/summary.json",
+        "sha256": "A112C6C221286B385F99F4F0845A926C246FB9EDAB10C5BE8E97BA1157472845"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP05/Runtime01/summary.json",
+        "sha256": "72326794CE0D0AAEC84838D351D5D1786DC5F45F7C4317C4CC849182967185D5"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP05/Network01/summary.json",
+        "sha256": "84C6A6A964F95FD8BDF0BB832AE30CC07958E1D417E42584FAE22013B8036901"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP06/Build02/summary.json",
+        "sha256": "FF0B1B91F8A349CFA0D36574F9466D8DAFFCE45D3F6D5BC8EDF9DA760736454F"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP06/Assets06/summary.json",
+        "sha256": "156A4C895FFBFAD0AB793BCF7E4C432B5DE2DDB16573C1F4D89643E1501A1AC4"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP06/Runtime06/summary.json",
+        "sha256": "9878A5E2E4DB40F5A1170FCDFD805E61E76CE53FBF8C72651ED05576553AED3D"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP06/Network02/summary.json",
+        "sha256": "E588A96E60282ECFCF25BB2A9A680B916345D05E2FC113ECEDB7A56BF2E23A10"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP07/Build01/summary.json",
+        "sha256": "0392287A20B19B96C7224907B2F1C0B58DBFB437523CEB557C285C23FFF9EEFE"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP07/Assets03/summary.json",
+        "sha256": "3D9F419EB9AB94C9D733F2BD3B48DB4B8B5852528A48F8938A3B21D1142ACDCE"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP07/Runtime07/summary.json",
+        "sha256": "636909001973A16D4361070DE7EA345876E63099F8B89C3CF87A226E6A05A2F4"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP07/Network04/summary.json",
+        "sha256": "A63A08FF143C6D3B9F60EA66B0D2C2F029F7D85146FDA244A94A3C8C0AF82A01"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP08/Build05Interface/summary.json",
+        "sha256": "A154F32D020D62148D6BEDB9A2BB1A289B86A29624FDFCB304540B127B78B112"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP08/Assets01/summary.json",
+        "sha256": "12F1E1CA1E5DDD0D310D4392277C220ED85713A3A24332A83E4C6C3EBF2A6BE6"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP08/Runtime05/summary.json",
+        "sha256": "8C486D36CD2CAF8F6FDE8F0460CD550DCC40F3831AD5DFB98D7E61A179C45C02"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP08/Legacy01/summary.json",
+        "sha256": "90236081444F45653CF6D64121A106430082AF12B908110D381CD5FE07D62B5D"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP08/Network01/summary.json",
+        "sha256": "18A4428428B341624C3226B1AF2E87174CBDA6B8514F1904621CF767704FA51E"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/Build01/summary.json",
+        "sha256": "F1CB4278796E460E9F7B57C97283C8A019469FD2D35498B1D05A32CDFC29AAB4"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/Assets01/summary.json",
+        "sha256": "86BA8AB4F3AB870BB5784EF17444DFF972B3E02B1E3A4E2BF0A8352723DB6436"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/Fixtures01/summary.json",
+        "sha256": "0BFDB93715B28B3BF48474A0FB1A2E818D463DE79EAAA43EB3615B913F7270F1"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/PatchFormat01/summary.json",
+        "sha256": "3AC608654043B03FAF8E2B8093E71DF8D587187EDC4A4F67CB1AEC5B084B1400"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261102-CPP09/Headless04/summary.json",
+        "sha256": "5E154254A602C43697885D4358E3736EC75EF30FFDC75014640445CBE3652B71"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261102-CPP09/Headless04/runtime.json",
+        "sha256": "CD8B89CAFD691D93AB1FDC67046C4B3EA0E4F328E17FFB7F3C85497CF2E1CE8C"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261102-CPP09/Headless04/comparison.json",
+        "sha256": "7109D43BF3203B54C8C20723422D5BFA4466C40725781C78F200EB7BEA145618"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261102-CPP09/Headless04/negative-gates.json",
+        "sha256": "F3E9E776989DF371F60E540599354E35F6ED79AE5DD5334DDA1B1242586FDCF7"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP10/stage-copy.json",
+        "sha256": "8ED51A1D51D86EBFA12366FB26829B0C7183230A97592289C3B098507B1AE08B"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP10/Build01/summary.json",
+        "sha256": "65E9A1C301149920751ED1B2E713B17D2FD4B389FEFDF0B06E7B24DBB2A83A4E"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP10/Build03FixtureBody/summary.json",
+        "sha256": "55657256E62BD045897F14CE94F343B5F6D504935F340F593FD6BB5F8F27F8DC"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP10/Assets01/summary.json",
+        "sha256": "2E7DEE2C6C6DCB8C74602005CE879480CA5A2EAF13E247916328B73D293382C7"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP10/Runtime02/summary.json",
+        "sha256": "CA8BBFAD6A88EB7BB97772773BD89FB3290F3F8965BD1311C20069641B0C2BB4"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP10/Runtime02/comparison.json",
+        "sha256": "25F8C83C8D02E80189BF8D35EDBF79049794BCD11C4A3EBE04F6EDA1CE81979B"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP10/Network02/summary.json",
+        "sha256": "E2BFAA3D50DD02C018DC3014701F7390C9B7C7FE491E9E5E2E57E6B28FF03DC0"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP11/Build01/summary.json",
+        "sha256": "6A635B9EB012C45ED464A8C2ECE296DB08BF0E8BFE09CF617245853DA6DD730F"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP11/Build04FixtureBody/summary.json",
+        "sha256": "0A6259F53450D9B7F603A18D60E2FC0B6943AC53DA54E841DFA5CE0AAC65C579"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP11/Build05Registration/summary.json",
+        "sha256": "5EBAE832F241CAE17ABD3AA91AC48C770BE0C69112B666CF6135489A04277758"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP11/Assets01/summary.json",
+        "sha256": "DCF022509A8DB47DEE116A1DF944B7F48174317A555285F30E4529B66FC3CFAE"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP11/Runtime03/summary.json",
+        "sha256": "C192856A144272DDF16AF7DCEAD47A05A2ED2E50E998165F95ABE54BA1D0AB7B"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP12/Runtime01/summary.json",
+        "sha256": "38A7C8EF0C1FEEC67614DEC6E7CFC38B45B143594E395366C4E42A51EC86949B"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP11/Production01/summary.json",
+        "sha256": "FC1BA2E50B1646EE5493286351169781D4B6F33ACB976776751816C6126C816D"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP11/Network01/summary.json",
+        "sha256": "CBAD962D3DE83E04569EF20D074D0556C43F87409D8AF6E341D07C07BA963372"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP11/Diagnostics03/summary.json",
+        "sha256": "2629E013B7015BEEBAE5BE96170B39376FAB151EA7C78A9364E83B9D44A1FB36"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP12/Lifecycle03/summary.json",
+        "sha256": "10A4A91F66811EAE12BD5BC670FF087A885381484FA01CB524783D152CC5D956"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP13/Build02Teardown/summary.json",
+        "sha256": "81E8BD741D7744672D59CAD57155B656EA8B001ABF9708DB3CBA391FD94C9E70"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP13/Assets01/summary.json",
+        "sha256": "4D67AB7CF5DB267C5ABD1BAC9A130D19D076D97FD89EB794774DD0E22569A1FA"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP13/Network03/summary.json",
+        "sha256": "E4B9E40D9CCFFCCFDC3343A7ECA246A79AD8CDFD9923C587C6D66E63602BE3E6"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP14/Network01/summary.json",
+        "sha256": "39746CDFD6C67BE11D37E3FCF678E2C9203376DC2470AF4C7D8B67EFBD62CB90"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP14/Assets01/summary.json",
+        "sha256": "65246A3A8EA1A870003C676156B83F6EA79928E5E326CDD8B72B21D997518EB2"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP14/SelfDestruct01/summary.json",
+        "sha256": "4B1B1B62F6604383821F2E14C7A1220C697CEF6510A1FAE84F7ADC39EF7083D1"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP14/ArenaFallback01/summary.json",
+        "sha256": "31DC18625B1D9815E0F9DF8B55DF0037C80AC76E6A98E9A2617A12C44B406F62"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP14/ArenaPython01/summary.json",
+        "sha256": "1A418F89538DA9C700B97C4ED1EEE71E366B6531CFC2149BFB4496AC8B330792"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP15/Build01/summary.json",
+        "sha256": "BEA5AAA25ADE98CE5556B8E522332DF16604B045CDAF2652CB353E5B8262380A"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP15/Assets01/summary.json",
+        "sha256": "C2099F0459AA2D7044C8000BDE9A27CB71B8772108FD2596350DAED0175B08B5"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP15/Contexts01/summary.json",
+        "sha256": "B54793A22B692C8C0462897E02DCE1F8C767D80E9025938B0B592A3AC2B2BBEE"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP15/Network01/summary.json",
+        "sha256": "7C54E53985F6BA2C175B2E6386F64ACA50215C747285F4D591BF60B73935D85A"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP16/Build01/summary.json",
+        "sha256": "9DE1F3C6009F78F59307413F974503CBF0C567850B85D2DDBD54301BFB6AE07F"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP16/Boundaries01/summary.json",
+        "sha256": "E6FC720AEC62AAA38E7114FD8EFD1CDC8E2176EE7808AC62BE04D63C73EE6FFE"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP16/FrontendNative01/summary.json",
+        "sha256": "D09217B01E67C33319952EF004C7A38774EC9C41D7E63E510E22B438F3679638"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP16/FrontendPython01/summary.json",
+        "sha256": "BFCFE0D6F21509D53F659AB18A07591216C6E51144CB152F4D0E1F5E9B102438"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP16/Defaultfrontend01/summary.json",
+        "sha256": "1CC91F0AFFB30E296CB1D087E5440914EB73E1E953DC9EB4D339196475443B95"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP16/Assets03Promote/summary.json",
+        "sha256": "4119B76A639BC01CAC7CCD65258D3659D3701A192D7DD64E87716C6EEEE9E12D"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP16/PartsNative03/summary.json",
+        "sha256": "1E2F0B0E3652F3E1BDAA520FE71F78DAA1F85443F41273F355E68E17E42F271A"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP16/PartsPython01/summary.json",
+        "sha256": "4CFEDDF948320E919FB032FEBC4EA8E179C94D696DDA83309DFBC1DF2162DBD1"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP17/Network04/summary.json",
+        "sha256": "D6827B9DCA9B6856F511C7602F767E9AC4759F43513D636EB86BF7D278503E12"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP16/CameraNative02/summary.json",
+        "sha256": "A68EE774DCAE4EF82286C41A9C63A48A96BDAB4B46CCC02B94357CCF96C828A3"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP16/CameraPython01/summary.json",
+        "sha256": "287F005300CC5C3AA90130390C83E43D3C0F976BA3AAA1BC195A7C5CD614D799"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP16/Defaultcamera01/summary.json",
+        "sha256": "3BAD9D3695529342EB9E5CC71C7F397A3115FA25B5665832B6661377356EA6ED"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/Build02BodyRepair/summary.json",
+        "sha256": "DD7F39BEFDB9C4539733250C56F3FD554842F7C454A099DC65409102548B3A7F"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/Boundaries02/summary.json",
+        "sha256": "8F7C12FCCAE6F67C5E575B3DD2B83588B8F4076C194B26D5C88B036153BAB3B3"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/Assets02Promote/summary.json",
+        "sha256": "8224F43B6EF64D1CCA3C8EE924D6D3D287DB145FF4B0EB13354851FCBEAE48EF"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/DefaultPawn01/summary.json",
+        "sha256": "3A1B0CBE19E089B56F09BA7AF70E5AA34C4FD883E9336DB8D8293127D6766650"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/DefaultFrontend01/summary.json",
+        "sha256": "0218A32FE2A11191ADDDDD30230C881D484EBCAEDB266DC838633D2702434123"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/DefaultPistolNetwork01/summary.json",
+        "sha256": "B383EA7AE418901F3C332F7C87B4C5A084E12183A00497184E909591FD0BFF64"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP23/DefaultAttribute01/summary.json",
+        "sha256": "82CF2726192324039678F052180A0795E513E99D970D2386D4B7C49B6A17F19D"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/DeviceNative03/summary.json",
+        "sha256": "23F17585BA1F544AC66382E4DEE002E84CDB1712CF511EB3CA1FE27CB4A19D9B"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/DevicePython01/summary.json",
+        "sha256": "8FEA26E9B31C8F51C194E1BBC5A08CB3AC336CBFE74A6C9704B1A7E88DD77886"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/ReplayNative02/summary.json",
+        "sha256": "825D33424E4A2E597BB50934253AAED0CC2BCE7C812598C2860E1288D9976BDC"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/ReplayPython01/summary.json",
+        "sha256": "BF467A7F1D6D694E3D46391834E99CE25B4887EC4D9DE4F260EF639E21D41EBF"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP20/ReplayDependency02/summary.json",
+        "sha256": "F761ACB4E7378303D71FD803F43E4641B0B440B36456C1E97EA2B1C864FE3F9D"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/AudioNative01/summary.json",
+        "sha256": "00CDB4C8F5389994E26FF70334DB0A2AFA072384C4D2F7F2D2406466BDD7EA40"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/AudioPython01/summary.json",
+        "sha256": "9D42F0173571EF615804C762E18B7BCC856DFC4C6B893E8E1352BF71659BC330"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/DamageNative01/summary.json",
+        "sha256": "9EC8DBD1B06D1BB1FF62ECC1398418EA41B6EA5800C1BDAC61B24D7A46C6FA12"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/DamagePython01/summary.json",
+        "sha256": "E2F982AD83C0CD2E8F0B1F2969472B39704971DBFB9F607BB2344D8ED19B0942"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/DamageNetwork01/summary.json",
+        "sha256": "FA638E3E8EAD604F81A655AB77A0C3E753EDF27F1C7840F68FA449019C57ADEB"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP23/AttributeNative02/summary.json",
+        "sha256": "855023A9663A22A5BAF2EA6438980407D6B630BD80D5C3F5905A75D216330E52"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP23/AttributePython01/summary.json",
+        "sha256": "24AEE9453B31B3D27C4D0BEDECD47BC3862C887A03A744CA629CD7C51AA1230C"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/PawnNative01/summary.json",
+        "sha256": "72510022BC26853060FE97C166480601C25DDEDB210C63904133E1AAAE977824"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/PawnPython01/summary.json",
+        "sha256": "002560C71123CF42D6964377C4D7F09F706C83817C028F65D6AA11700D3F2860"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplayExtended/20261102-CPP19/PawnNetwork01/summary.json",
+        "sha256": "1811CB821705AA2C30A71094B04185F41A9C8E226559FAB7270905BA4A1817E4"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H01-BodyBuild01/summary.json",
+        "sha256": "2E92824B5875DA7A00AF285F5201AEE391404B240D55BCD92EA118F4D9489A3F"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H01-ResetBuild01/summary.json",
+        "sha256": "D8542527D520DD4C4793F7368064DDAC27C5D2C4C6A784E3D2E34F6450710B28"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H01-Exceptions05/summary.json",
+        "sha256": "DFFF95689936F15AA122128BA53332FA9E3AB58F335A48F47D79E45AE740A085"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H01-Exceptions05/runtime.json",
+        "sha256": "39B29ACEA5F5A1FE891518D79836940C22721F3C05295E72A936BC9B6197EF9D"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H01-DefaultFrontend01/summary.json",
+        "sha256": "7B5789A6B0438CF81591431C8F013F32B027B3AFC903DEDF3B59697C9F66E8E8"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H02-Benchmark02/summary.json",
+        "sha256": "8F1CD77EB77D8627BA5FB850E8350CA956FF1F497E9419FC6FB7F00036E86D1A"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H02-Benchmark02/runtime.json",
+        "sha256": "903E16A643EDBF191021DF08A2F2F690C0F47330590CF7C8AC2029ACD7C6E66F"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H02-TravelPilot01/summary.json",
+        "sha256": "57199CAD7F3D317D29425111C504EB2573310F69B6A99E685E2894564E799922"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H02-TravelPilot01/runtime.json",
+        "sha256": "3F49F111D68760EA5E74A6D98ADCBB3E06CEC6BEF4E61D8D2C795075A117E66B"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H02-SdkGuardBuild01/summary.json",
+        "sha256": "27DD6FF7B7ED55BA52E784F68DEE883617E454FB04E30F7596B59238E6BBBEB2"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H02-SdkTransfer01/summary.json",
+        "sha256": "9B89BDDA2D0E6AFDB0B6204FE2F2780B2476725A2D644DBA0E212948A5192F68"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H02-Soak20Minutes01/summary.json",
+        "sha256": "40CF1A6CAAE05F08790916CE90BA5229B7792D1B9793F5EBE6B570B1BD0E0F4C"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H02-Soak20Minutes02/summary.json",
+        "sha256": "7C16B7A5CC879282BF233E9B46B5C84D85D5AB362216257C4D20B09485A058E9"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H02-Soak20Minutes02/runtime.json",
+        "sha256": "042DC9C35EDCA3ADAA12058156B39815971E14AE230225771CAD85DFA17A36DE"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H02-Soak20Minutes02/os-samples.json",
+        "sha256": "EB2341CAEBF6943558EA0FE56804AFC236FBF075B1ABECD94419B9652E6A7D8C"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H03-Prepare03/prepare.json",
+        "sha256": "0ED792012724B60750B8297002A5498B79FF504630056B578408E31298A5B188"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H03-Reproduce05/summary.json",
+        "sha256": "1C4B9BE4E36C20A4E3603C54C9638FE8AC5C1E598DAB6E2DB7841DE7C3208BC9"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H03-Reproduce05/editor-modules.json",
+        "sha256": "9BF2116D354428097C80A9A8D86E2C521C9848D32795CDD02033429AF2F9D165"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H03-Reproduce05/ProjectPlan/actions.json",
+        "sha256": "367A5060BA77FEEF984B38C71BBF469DE71C1E353EAB21A30DC29CCD77364711"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H03-Reproduce05/ActualExceptions/summary.json",
+        "sha256": "A37CD5C6EF9D8EB26A4B69730846B26386A0A7A5540A96B0A456D01A4BE22846"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H03-Reproduce05/ActualExceptions/runtime.json",
+        "sha256": "B7F61DEB7FB53E791FD1E5377DDEE87E2E355355366B4D8E228AEC9B8E2E8FA5"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-Cook02/Archive/Windows/LyraStarterGame/Binaries/Win64/LyraGame.exe",
+        "sha256": "3DB6C163B0356F5FBC132AAC3B5A5DBFA3F5F6DAB61067FBBC93C649BCF8D629"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-Cook02/Archive/Windows/LyraStarterGame/Binaries/Win64/python311.dll",
+        "sha256": "2835E0F24FB13EF019608B13817F3ACF8735FBC5F786D00501C4A151226BDFF1"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedExceptions01/dependencies-review02.json",
+        "sha256": "9BA10A1415DE7C094FA1E40E35D861DC2C9E7510F6839E30BE1BEC9A84EF23BA"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedFrontend01/dependencies.json",
+        "sha256": "9BA10A1415DE7C094FA1E40E35D861DC2C9E7510F6839E30BE1BEC9A84EF23BA"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedDamageNetwork02/rule/server-dependencies.json",
+        "sha256": "9BA10A1415DE7C094FA1E40E35D861DC2C9E7510F6839E30BE1BEC9A84EF23BA"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedDamageNetwork02/rule/A-dependencies.json",
+        "sha256": "9BA10A1415DE7C094FA1E40E35D861DC2C9E7510F6839E30BE1BEC9A84EF23BA"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedDamageNetwork02/rule/B0-dependencies.json",
+        "sha256": "9BA10A1415DE7C094FA1E40E35D861DC2C9E7510F6839E30BE1BEC9A84EF23BA"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedPawnNetwork01/rule/server-dependencies.json",
+        "sha256": "9BA10A1415DE7C094FA1E40E35D861DC2C9E7510F6839E30BE1BEC9A84EF23BA"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedPawnNetwork01/rule/A-dependencies.json",
+        "sha256": "9BA10A1415DE7C094FA1E40E35D861DC2C9E7510F6839E30BE1BEC9A84EF23BA"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedPawnNetwork01/rule/B0-dependencies.json",
+        "sha256": "9BA10A1415DE7C094FA1E40E35D861DC2C9E7510F6839E30BE1BEC9A84EF23BA"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-GameBuild01/summary.json",
+        "sha256": "187736998F8A032A77423C004CCBAD91B9520108034ECD575C3CD51B7BE905C3"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-GameBuild01/scoped-output-final.json",
+        "sha256": "F71DEEC5309AB0F24BCED55632C8527A316F3B75DC64038049F5410801B383D4"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-Fixtures01/summary.json",
+        "sha256": "68BFE9D89A881EFECAF6BC7E3C8B97454CBB96742DB83270F33278FD301C65A1"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-Cook02/summary.json",
+        "sha256": "7D09444F23521A266EC10910105B8C6591733A3B7059EB14CE66BDAC486F0F49"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-Cook02/package-inventory.json",
+        "sha256": "81BE3E9F5CC1169C8B22CED677056F79B1DF78E8C8C4840A6049C591F46A4C72"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-package-plan.json",
+        "sha256": "73DCC5B01E676731B41409142583454BE6285706D934D2528E9C4FEC21554A91"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedExceptions01/summary.json",
+        "sha256": "C45BBD699687D487EFB84D9453C1F43AF8EF7F5AEE12EB3DF2C40274728549DE"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedFrontend01/summary.json",
+        "sha256": "A88DB3E4FCD2BC8B12C317CE8AD9B0BA21AE37E18E77AC4778A494C46746AA27"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedExceptions01/summary-reviewed.json",
+        "sha256": "5008CBAD652E94F8BA9D66D9E149350BFF38C7892085786C05CA0296BD5D557E"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedDamageNetwork02/summary.json",
+        "sha256": "A571CFB19C5136732D6B51B74449BC8D6B786864CBA77E3BE1D1B6725B2EB3BE"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedDamageNetwork02/summary-reviewed.json",
+        "sha256": "B4627221E8C9AF3B0CCDC9502B602CB630895A94416984307906601CED195AE5"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedPawnNetwork01/summary.json",
+        "sha256": "308C6178687A5241F567BF0A57C6F8523BC0C794D4AECDB4C1E87A56653C880F"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedDamageNetwork02/rule/listen-independent-gate.json",
+        "sha256": "3FFCAA1A8993336EA54ED9A7F92F7ABBD3AA98B25606AF8212CFF820509059A8"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedPawnNetwork01/rule/listen-independent-gate.json",
+        "sha256": "D374360D9A1A0D46ED3A3DB470FD8D9748DD6B4123C9B02F86A8F102D80D4016"
+      },
+      {
+        "path": "Demos/UEPLyraIntegration/Tools/analyze_rendered_performance.py",
+        "sha256": "EC3772F556F4BA5024DCF061C8E28D73E2A7B9DB6EF2FA3D35F2FAA436F51000"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/summary.json",
+        "sha256": "1630513B590EF31818F61AFBF8EB17A6138B5FB65CECF1D466FE47FEF29A03A2"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/runtime.json",
+        "sha256": "D17417ED5FE5D087638DA5EF43E19CC4EDB723E8871E091F704E82151AFB834D"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_00_Scene_Native.csv",
+        "sha256": "1DCD9159CF185A3789F2F6F2170C9DEA6421191A7EC1E9EE9090E20A769BCD14"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_01_Scene_Python.csv",
+        "sha256": "5366426D3FF1E5355619250C40910A658AB9026E26D947660D4E878A7C02FABD"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_02_Scene_Python.csv",
+        "sha256": "DAF5C21B75AF5E3372FA0D7DDB62E0383D31B5D3C0D727E006A2F5D395359BF3"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_03_Scene_Native.csv",
+        "sha256": "D00EDCE0D7D93CC6CFB960F8366F4E66DEF2E227BAB3BE08807C4E1EDB7531EE"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_04_Scene_Python.csv",
+        "sha256": "D037551F5412050126103315CE94E2EF560FDA092DF264082DD93FB76E2E32EC"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_05_Scene_Native.csv",
+        "sha256": "0F84E8CD2F9214A6ACEC4B81730CBA12635B6F4AAFD7D1034BDA3E6CD1B75063"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_06_Scene_Native.csv",
+        "sha256": "5FCCCB315697E39382EF32E372E063D9AEE1A157F2D92E848F948B50F0BE208D"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_07_Scene_Python.csv",
+        "sha256": "E3241CC698F09920A44DB9243B52D51663D408993EF7BF126C355EEC51A14335"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_08_RuleStress_Native.csv",
+        "sha256": "90A0F1995E39FA0E8680597AD0C87E7EC5A7FEE3B9633F1D3485BB4891625854"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_09_RuleStress_Python.csv",
+        "sha256": "CA4EE6C835F0CBCB4FDD9548C5D65077D851BFEFFAFAF1B9BF18D2F058549846"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_10_RuleStress_Python.csv",
+        "sha256": "1FDA0E4045EB7938461C6B49D9112835B76C3F86AFEECEF56BDB15CAA023040A"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_11_RuleStress_Native.csv",
+        "sha256": "5BAB8BFD6E04351946E281D3EFFCFEACCA75A29E76A68867B07BB0FD84A4E32A"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_12_RuleStress_Python.csv",
+        "sha256": "4D9E1F2D9C6F79022D6F9699448575C6B1B88A5DEEA2FA1A345AD9511D1991B8"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_13_RuleStress_Native.csv",
+        "sha256": "24DD1AAAEDFDB62400E448BE1A05DA6A52A90F0D1DF1684DDF1B80DB7DA90131"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_14_RuleStress_Native.csv",
+        "sha256": "3C903CCAB66D282BFE7CDED84F588D7E5C6EAC59060FC81C6BEE62AA87A60C4E"
+      },
+      {
+        "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_15_RuleStress_Python.csv",
+        "sha256": "03F0C489730878BB063A66D209E71A3FE5A16DE87EE8D994B871559C36D6687B"
+      }
+    ],
+    "evolved_live_compiler_intermediates": [
+      {
+        "path": ".build/LyraValidation/CppGameplay/Stage/Lyra/Intermediate/Build/Win64/x64/UnrealEditor/Development/LyraGame/Module.LyraGame.3.cpp.obj",
+        "captured_sha256": "1BCC02BD6951EFEDF4CC1D5AEA2F1D1AFE87C4566E10E93D635FC3BBF94BCAA8",
+        "current_sha256": "F7C321CFF92C12BFAB9E59A81081F4E231F5C62FBCB23699887B8D821E1865CC",
+        "kind": "live compiler intermediate from an earlier batch; closed report is verified separately"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/Stage/Lyra/Intermediate/Build/Win64/x64/UnrealEditor/Development/LyraGame/Module.LyraGame.1.cpp.obj",
+        "captured_sha256": "FC3F36E94742A977543BA8A6E3F7EBE9546A3330C2CC9B1070BBC75735DA39FC",
+        "current_sha256": "8B72EB6F54027F9E8CB9490293EB366316F4B530DB5AFBDC69D3C3BDD728C57E",
+        "kind": "live compiler intermediate from an earlier batch; closed report is verified separately"
+      }
+    ],
+    "earlier_live_compiler_outputs_claimed_unchanged": false
+  },
+  "remaining_acceptance": [
+    {
+      "candidate": "CPP-015",
+      "batch": "CPP09",
+      "user_deferred": true,
+      "requirements": [
+        "14 real Escape key presses in an unlocked actual game window",
+        "native input router entering Menu mode and restoring the original state",
+        "visible original Menu and final restored UI state"
+      ],
+      "headless_proof_replaces_actual_input": false,
+      "progress_ledger": {
+        "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP09-progress.json",
+        "sha256": "1EC37A2313D98CC8FB23D8FF85AA0397DE2AAD3A4F842DC4237A71A1F38E2869"
+      }
+    }
+  ],
+  "reviewed_without_native_rerun": true,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "full_regression_executed": false,
+  "desktop_or_keyboard_operation_performed": false,
+  "other_platform_shipping_hardware_audio_or_rc_release_claimed": false
+}
