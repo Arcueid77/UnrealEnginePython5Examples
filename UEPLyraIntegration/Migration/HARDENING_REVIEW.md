@@ -155,3 +155,22 @@ All four selected groups are accepted for UE5.8.1 / CPython3.11 / Win64 Developm
 CPP09 physical Escape/Menu remains user-deferred. Packaged Dedicated Server,
 Shipping, additional platforms, rendered graphics and hardware/audio acceptance
 are outside these results.
+
+## H05 rendered frame rate and CPU follow-up accepted
+
+The user subsequently requested actual FPS and CPU comparisons.
+[H05](NativeGameplay/H05-acceptance.json) and
+[its method/results](RENDERED_PERFORMANCE.md) add an actual D3D12 offscreen
+comparison on the current package, without compilation or recooking. This
+compares only the shared native world-policy carrier; other migrated layers stay
+fixed. At 1080p Medium, four balanced pairs per workload provide 38,274 analyzed
+frames. Windows CPU snapshots independently check process CPU accounting.
+
+The fixed noncombat scene gives Native/Python 120.56/120.39 average FPS,
+79.36/78.52 low FPS, 36.92%/36.72% whole-machine CPU and 3.30/3.32 ms GameThread.
+Its paired local intervals include zero; this does not distinguish an effect.
+With 200 additional reflected rule queries per frame, Native/Python give
+120.23/118.26 FPS, 71.29/66.44 low FPS, 37.28%/39.85% CPU and 4.54/8.25 ms
+GameThread. The pressure test adds 3.71 ms to Python GameThread and 2.57 CPU
+percentage points, reducing FPS by 1.64%. This is a separate synthetic workload,
+not a normal gameplay or universal performance claim. CPP09 remains deferred.

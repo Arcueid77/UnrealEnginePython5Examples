@@ -31,6 +31,13 @@
       "scope": "Current Win64 Development game build, cooked script/asset/dependency inventory and actual packaged standalone/network execution",
       "status": "accepted",
       "acceptance_ledger": "NativeGameplay/H04-acceptance.json"
+    },
+    {
+      "id": "H05",
+      "scope": "Actual offscreen D3D12 FPS, low frames, native thread/GPU time and Windows CPU comparison for fixed world-policy routes",
+      "user_authorization": "只看内存吗，帧率也看看，cpu也对比下呢",
+      "status": "accepted",
+      "acceptance_ledger": "NativeGameplay/H05-acceptance.json"
     }
   ]
 }

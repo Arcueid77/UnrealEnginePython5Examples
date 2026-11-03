@@ -1,0 +1,646 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "group": "H05",
+  "pilot": false,
+  "analysis_tool": {
+    "path": "Demos/UEPLyraIntegration/Tools/analyze_rendered_performance.py",
+    "sha256": "EC3772F556F4BA5024DCF061C8E28D73E2A7B9DB6EF2FA3D35F2FAA436F51000"
+  },
+  "comparison_scope": "NativeGameplayFallback versus Python on the shared native world policy carrier; other Blueprint/native mixins remain fixed",
+  "hardware": {
+    "gpu": [
+      {
+        "Name": "MuMu Virtual Display Adapter",
+        "DriverVersion": "20.36.41.498"
+      },
+      {
+        "Name": "NVIDIA GeForce RTX 3080",
+        "DriverVersion": "32.0.16.1742"
+      }
+    ],
+    "cpu": {
+      "Name": "AMD Ryzen 7 5800X3D 8-Core Processor           ",
+      "NumberOfCores": 8,
+      "NumberOfLogicalProcessors": 16
+    }
+  },
+  "settings": {
+    "r.VSync": 0.0,
+    "t.MaxFPS": 0.0,
+    "t.IdleWhenNotForeground": 0.0,
+    "r.ScreenPercentage": 100.0,
+    "sg.ViewDistanceQuality": 1.0,
+    "sg.AntiAliasingQuality": 1.0,
+    "sg.ShadowQuality": 1.0,
+    "sg.GlobalIlluminationQuality": 1.0,
+    "sg.ReflectionQuality": 1.0,
+    "sg.PostProcessQuality": 1.0,
+    "sg.TextureQuality": 1.0,
+    "sg.EffectsQuality": 1.0,
+    "sg.FoliageQuality": 1.0,
+    "sg.ShadingQuality": 1.0
+  },
+  "viewport": [
+    1920,
+    1080
+  ],
+  "successful_native_process": true,
+  "actual_D3D12_GPU_frames_verified": true,
+  "logical_processors": 16,
+  "cpu_normalization": "process user+kernel CPU time / elapsed wall time / 16 logical processors; 0-100 percent of whole machine",
+  "fps_definition": "1000 / mean native CSV frame time; two frames trimmed at each capture boundary",
+  "one_percent_low_definition": "1000 / mean slowest ceil(1 percent) native frame times",
+  "source_engine_or_original_project_modified": false,
+  "cpp_compile_executed": false,
+  "cook_package_executed": false,
+  "physical_input_tested": false,
+  "normal_scene_is_fixed_noncombat": true,
+  "other_blueprint_and_native_mixin_implementations_fixed": true,
+  "stress_scope": "200 additional reflected native Damage/Pawn queries per frame; a synthetic stress workload, not normal player activity",
+  "universal_fps_or_full_game_migration_performance_claimed": false,
+  "blocks": [
+    {
+      "frames": 2421,
+      "fps": 121.33448264803381,
+      "one_percent_low_fps": 81.90724626855157,
+      "mean_frame_ms": 8.241680173482033,
+      "p95_frame_ms": 9.2178,
+      "p99_frame_ms": 9.8967,
+      "mean_game_thread_ms": 3.3521736059479554,
+      "mean_render_thread_ms": 8.235753035935565,
+      "mean_gpu_ms": 7.527620570012392,
+      "index": 0,
+      "workload": "Scene",
+      "profile": "Native",
+      "cpu_machine_percent": 38.61328125,
+      "cpu_one_core_equivalent_percent": 617.8125,
+      "independent_os_cpu_machine_percent": 38.00698006451272,
+      "process_cpu_seconds": 123.5625,
+      "ticker_frames": 2424,
+      "process_cpu_ms_per_frame": 50.97462871287129,
+      "requests_per_frame": 0,
+      "query_pairs": 0,
+      "wall_seconds": 20.0
+    },
+    {
+      "frames": 2412,
+      "fps": 120.81315487761098,
+      "one_percent_low_fps": 78.39539060189786,
+      "mean_frame_ms": 8.277244320066336,
+      "p95_frame_ms": 9.329,
+      "p99_frame_ms": 10.2692,
+      "mean_game_thread_ms": 3.3528353648424543,
+      "mean_render_thread_ms": 8.271848548922057,
+      "mean_gpu_ms": 7.54120684079602,
+      "index": 1,
+      "workload": "Scene",
+      "profile": "Python",
+      "cpu_machine_percent": 35.771484375,
+      "cpu_one_core_equivalent_percent": 572.34375,
+      "independent_os_cpu_machine_percent": 35.56971520401724,
+      "process_cpu_seconds": 114.46875,
+      "ticker_frames": 2415,
+      "process_cpu_ms_per_frame": 47.399068322981364,
+      "requests_per_frame": 0,
+      "query_pairs": 0,
+      "wall_seconds": 20.0
+    },
+    {
+      "frames": 2402,
+      "fps": 120.37539784457375,
+      "one_percent_low_fps": 78.49175271455877,
+      "mean_frame_ms": 8.307345337218985,
+      "p95_frame_ms": 9.3897,
+      "p99_frame_ms": 10.151,
+      "mean_game_thread_ms": 3.2819199000832637,
+      "mean_render_thread_ms": 8.298340133222315,
+      "mean_gpu_ms": 7.585250041631974,
+      "index": 2,
+      "workload": "Scene",
+      "profile": "Python",
+      "cpu_machine_percent": 36.81640625,
+      "cpu_one_core_equivalent_percent": 589.0625,
+      "independent_os_cpu_machine_percent": 36.93008382785421,
+      "process_cpu_seconds": 117.8125,
+      "ticker_frames": 2405,
+      "process_cpu_ms_per_frame": 48.986486486486484,
+      "requests_per_frame": 0,
+      "query_pairs": 0,
+      "wall_seconds": 20.0
+    },
+    {
+      "frames": 2397,
+      "fps": 120.13984879851205,
+      "one_percent_low_fps": 79.11804478213197,
+      "mean_frame_ms": 8.323632916145181,
+      "p95_frame_ms": 9.3126,
+      "p99_frame_ms": 10.4935,
+      "mean_game_thread_ms": 3.241926741760534,
+      "mean_render_thread_ms": 8.319066416353776,
+      "mean_gpu_ms": 7.5884807676262,
+      "index": 3,
+      "workload": "Scene",
+      "profile": "Native",
+      "cpu_machine_percent": 35.8740234375,
+      "cpu_one_core_equivalent_percent": 573.984375,
+      "independent_os_cpu_machine_percent": 35.80129996055745,
+      "process_cpu_seconds": 114.796875,
+      "ticker_frames": 2400,
+      "process_cpu_ms_per_frame": 47.83203125,
+      "requests_per_frame": 0,
+      "query_pairs": 0,
+      "wall_seconds": 20.0
+    },
+    {
+      "frames": 2401,
+      "fps": 120.28865449484759,
+      "one_percent_low_fps": 78.73904149390009,
+      "mean_frame_ms": 8.313335985006248,
+      "p95_frame_ms": 9.3659,
+      "p99_frame_ms": 10.2486,
+      "mean_game_thread_ms": 3.35966622240733,
+      "mean_render_thread_ms": 8.304938983756768,
+      "mean_gpu_ms": 7.594737234485631,
+      "index": 4,
+      "workload": "Scene",
+      "profile": "Python",
+      "cpu_machine_percent": 38.251953125,
+      "cpu_one_core_equivalent_percent": 612.03125,
+      "independent_os_cpu_machine_percent": 38.411252567951955,
+      "process_cpu_seconds": 122.40625,
+      "ticker_frames": 2404,
+      "process_cpu_ms_per_frame": 50.91774126455907,
+      "requests_per_frame": 0,
+      "query_pairs": 0,
+      "wall_seconds": 20.0
+    },
+    {
+      "frames": 2408,
+      "fps": 120.6546440393379,
+      "one_percent_low_fps": 79.70073331050703,
+      "mean_frame_ms": 8.288118604651164,
+      "p95_frame_ms": 9.3064,
+      "p99_frame_ms": 10.0721,
+      "mean_game_thread_ms": 3.2953533222591362,
+      "mean_render_thread_ms": 8.281090240863787,
+      "mean_gpu_ms": 7.5719177325581395,
+      "index": 5,
+      "workload": "Scene",
+      "profile": "Native",
+      "cpu_machine_percent": 36.5869140625,
+      "cpu_one_core_equivalent_percent": 585.390625,
+      "independent_os_cpu_machine_percent": 36.41132449156551,
+      "process_cpu_seconds": 117.078125,
+      "ticker_frames": 2411,
+      "process_cpu_ms_per_frame": 48.55998548320199,
+      "requests_per_frame": 0,
+      "query_pairs": 0,
+      "wall_seconds": 20.0
+    },
+    {
+      "frames": 2398,
+      "fps": 120.12687822920198,
+      "one_percent_low_fps": 78.32484052736115,
+      "mean_frame_ms": 8.324531651376146,
+      "p95_frame_ms": 9.3589,
+      "p99_frame_ms": 10.3747,
+      "mean_game_thread_ms": 3.3066144286905756,
+      "mean_render_thread_ms": 8.31923953294412,
+      "mean_gpu_ms": 7.5879988323603005,
+      "index": 6,
+      "workload": "Scene",
+      "profile": "Native",
+      "cpu_machine_percent": 36.5966796875,
+      "cpu_one_core_equivalent_percent": 585.546875,
+      "independent_os_cpu_machine_percent": 36.65908176855319,
+      "process_cpu_seconds": 117.109375,
+      "ticker_frames": 2401,
+      "process_cpu_ms_per_frame": 48.77524989587672,
+      "requests_per_frame": 0,
+      "query_pairs": 0,
+      "wall_seconds": 20.0
+    },
+    {
+      "frames": 2397,
+      "fps": 120.08874543257586,
+      "one_percent_low_fps": 79.88945961770897,
+      "mean_frame_ms": 8.327175010429704,
+      "p95_frame_ms": 9.2677,
+      "p99_frame_ms": 10.098,
+      "mean_game_thread_ms": 3.2859985815602837,
+      "mean_render_thread_ms": 8.321681309970797,
+      "mean_gpu_ms": 7.598155444305382,
+      "index": 7,
+      "workload": "Scene",
+      "profile": "Python",
+      "cpu_machine_percent": 36.0205078125,
+      "cpu_one_core_equivalent_percent": 576.328125,
+      "independent_os_cpu_machine_percent": 36.265111664820964,
+      "process_cpu_seconds": 115.265625,
+      "ticker_frames": 2400,
+      "process_cpu_ms_per_frame": 48.02734375,
+      "requests_per_frame": 0,
+      "query_pairs": 0,
+      "wall_seconds": 20.0
+    },
+    {
+      "frames": 2406,
+      "fps": 120.58932453984886,
+      "one_percent_low_fps": 78.31717075774682,
+      "mean_frame_ms": 8.292608021612635,
+      "p95_frame_ms": 9.262,
+      "p99_frame_ms": 10.2837,
+      "mean_game_thread_ms": 4.517178927680798,
+      "mean_render_thread_ms": 8.277728844555279,
+      "mean_gpu_ms": 7.559220698254364,
+      "index": 8,
+      "workload": "RuleStress",
+      "profile": "Native",
+      "cpu_machine_percent": 37.5439453125,
+      "cpu_one_core_equivalent_percent": 600.703125,
+      "independent_os_cpu_machine_percent": 37.57826880094662,
+      "process_cpu_seconds": 120.140625,
+      "ticker_frames": 2409,
+      "process_cpu_ms_per_frame": 49.87157534246575,
+      "requests_per_frame": 200,
+      "query_pairs": 240900,
+      "wall_seconds": 20.0
+    },
+    {
+      "frames": 2365,
+      "fps": 118.51293457434066,
+      "one_percent_low_fps": 66.78515466189599,
+      "mean_frame_ms": 8.43789754756871,
+      "p95_frame_ms": 10.2354,
+      "p99_frame_ms": 12.5629,
+      "mean_game_thread_ms": 8.25378245243129,
+      "mean_render_thread_ms": 7.22355399577167,
+      "mean_gpu_ms": 7.595534503171248,
+      "index": 9,
+      "workload": "RuleStress",
+      "profile": "Python",
+      "cpu_machine_percent": 38.7255859375,
+      "cpu_one_core_equivalent_percent": 619.609375,
+      "independent_os_cpu_machine_percent": 38.72415852727464,
+      "process_cpu_seconds": 123.921875,
+      "ticker_frames": 2368,
+      "process_cpu_ms_per_frame": 52.331872888513516,
+      "requests_per_frame": 200,
+      "query_pairs": 236800,
+      "wall_seconds": 20.0
+    },
+    {
+      "frames": 2404,
+      "fps": 120.46338113651687,
+      "one_percent_low_fps": 70.62599776878348,
+      "mean_frame_ms": 8.301277870216307,
+      "p95_frame_ms": 9.8296,
+      "p99_frame_ms": 11.5452,
+      "mean_game_thread_ms": 7.9244711730449255,
+      "mean_render_thread_ms": 7.635493552412646,
+      "mean_gpu_ms": 7.587276206322795,
+      "index": 10,
+      "workload": "RuleStress",
+      "profile": "Python",
+      "cpu_machine_percent": 39.7412109375,
+      "cpu_one_core_equivalent_percent": 635.859375,
+      "independent_os_cpu_machine_percent": 39.48426607788668,
+      "process_cpu_seconds": 127.171875,
+      "ticker_frames": 2407,
+      "process_cpu_ms_per_frame": 52.834181553801415,
+      "requests_per_frame": 200,
+      "query_pairs": 240700,
+      "wall_seconds": 20.0
+    },
+    {
+      "frames": 2404,
+      "fps": 120.43033626544465,
+      "one_percent_low_fps": 79.00741405573498,
+      "mean_frame_ms": 8.303555657237936,
+      "p95_frame_ms": 9.242,
+      "p99_frame_ms": 10.0172,
+      "mean_game_thread_ms": 4.540803743760399,
+      "mean_render_thread_ms": 8.289056239600665,
+      "mean_gpu_ms": 7.565148460898502,
+      "index": 11,
+      "workload": "RuleStress",
+      "profile": "Native",
+      "cpu_machine_percent": 37.3583984375,
+      "cpu_one_core_equivalent_percent": 597.734375,
+      "independent_os_cpu_machine_percent": 37.36430964440223,
+      "process_cpu_seconds": 119.546875,
+      "ticker_frames": 2407,
+      "process_cpu_ms_per_frame": 49.666337764852514,
+      "requests_per_frame": 200,
+      "query_pairs": 240700,
+      "wall_seconds": 20.0
+    },
+    {
+      "frames": 2362,
+      "fps": 118.35067501422738,
+      "one_percent_low_fps": 67.58764216286087,
+      "mean_frame_ms": 8.449465961049958,
+      "p95_frame_ms": 10.1964,
+      "p99_frame_ms": 12.4089,
+      "mean_game_thread_ms": 8.251114225232854,
+      "mean_render_thread_ms": 7.210856223539373,
+      "mean_gpu_ms": 7.623254572396275,
+      "index": 12,
+      "workload": "RuleStress",
+      "profile": "Python",
+      "cpu_machine_percent": 40.2392578125,
+      "cpu_one_core_equivalent_percent": 643.828125,
+      "independent_os_cpu_machine_percent": 40.34009101236395,
+      "process_cpu_seconds": 128.765625,
+      "ticker_frames": 2365,
+      "process_cpu_ms_per_frame": 54.446353065539114,
+      "requests_per_frame": 200,
+      "query_pairs": 236500,
+      "wall_seconds": 20.0
+    },
+    {
+      "frames": 2389,
+      "fps": 119.68419564034511,
+      "one_percent_low_fps": 58.52001421061012,
+      "mean_frame_ms": 8.355322059439096,
+      "p95_frame_ms": 9.4378,
+      "p99_frame_ms": 10.2473,
+      "mean_game_thread_ms": 4.590471243197991,
+      "mean_render_thread_ms": 8.300538844704898,
+      "mean_gpu_ms": 7.576035914608623,
+      "index": 13,
+      "workload": "RuleStress",
+      "profile": "Native",
+      "cpu_machine_percent": 36.630859375,
+      "cpu_one_core_equivalent_percent": 586.09375,
+      "independent_os_cpu_machine_percent": 36.85286876084784,
+      "process_cpu_seconds": 117.21875,
+      "ticker_frames": 2392,
+      "process_cpu_ms_per_frame": 49.00449414715719,
+      "requests_per_frame": 200,
+      "query_pairs": 239200,
+      "wall_seconds": 20.0
+    },
+    {
+      "frames": 2399,
+      "fps": 120.22455019292532,
+      "one_percent_low_fps": 74.91160430691784,
+      "mean_frame_ms": 8.317768695289704,
+      "p95_frame_ms": 9.3608,
+      "p99_frame_ms": 10.2769,
+      "mean_game_thread_ms": 4.5172157565652356,
+      "mean_render_thread_ms": 8.30147248853689,
+      "mean_gpu_ms": 7.587414089203835,
+      "index": 14,
+      "workload": "RuleStress",
+      "profile": "Native",
+      "cpu_machine_percent": 37.59765625,
+      "cpu_one_core_equivalent_percent": 601.5625,
+      "independent_os_cpu_machine_percent": 37.4497241824214,
+      "process_cpu_seconds": 120.3125,
+      "ticker_frames": 2402,
+      "process_cpu_ms_per_frame": 50.088467943380515,
+      "requests_per_frame": 200,
+      "query_pairs": 240200,
+      "wall_seconds": 20.0
+    },
+    {
+      "frames": 2309,
+      "fps": 115.71013257745267,
+      "one_percent_low_fps": 63.520345169555654,
+      "mean_frame_ms": 8.642285491554786,
+      "p95_frame_ms": 10.9715,
+      "p99_frame_ms": 13.0957,
+      "mean_game_thread_ms": 8.594330272845388,
+      "mean_render_thread_ms": 6.797113339107839,
+      "mean_gpu_ms": 7.606224036379385,
+      "index": 15,
+      "workload": "RuleStress",
+      "profile": "Python",
+      "cpu_machine_percent": 40.6982421875,
+      "cpu_one_core_equivalent_percent": 651.171875,
+      "independent_os_cpu_machine_percent": 41.011596660320485,
+      "process_cpu_seconds": 130.234375,
+      "ticker_frames": 2312,
+      "process_cpu_ms_per_frame": 56.32974697231834,
+      "requests_per_frame": 200,
+      "query_pairs": 231200,
+      "wall_seconds": 20.0
+    }
+  ],
+  "comparisons": {
+    "Scene": {
+      "native": {
+        "frames": 9624,
+        "fps": 120.56392603837588,
+        "one_percent_low_fps": 79.359923762112,
+        "mean_frame_ms": 8.294354977140483,
+        "p95_frame_ms": 9.2909,
+        "p99_frame_ms": 10.2274,
+        "mean_game_thread_ms": 3.2991461866167913,
+        "mean_render_thread_ms": 8.288649418121363,
+        "mean_gpu_ms": 7.568906577306733,
+        "cpu_machine_percent": 36.917724609375,
+        "process_cpu_ms_per_frame": 49.03973381070984
+      },
+      "python": {
+        "frames": 9612,
+        "fps": 120.39151289934566,
+        "one_percent_low_fps": 78.52180833943699,
+        "mean_frame_ms": 8.306233354140657,
+        "p95_frame_ms": 9.3422,
+        "p99_frame_ms": 10.1783,
+        "mean_game_thread_ms": 3.320152694548481,
+        "mean_render_thread_ms": 8.299161496046608,
+        "mean_gpu_ms": 7.579786121514773,
+        "cpu_machine_percent": 36.715087890625,
+        "process_cpu_ms_per_frame": 48.83137209060682
+      },
+      "paired": {
+        "fps_percent": {
+          "pairs": 4,
+          "paired_mean": -0.14216988453703006,
+          "bootstrap_95_low": -0.36649907510886703,
+          "bootstrap_95_high": 0.08215930603480692,
+          "values": [
+            -0.4296616749379423,
+            0.196062379316575,
+            -0.3033364752797918,
+            -0.03174376724696115
+          ],
+          "inference": "descriptive paired block bootstrap; small local sample, not a universal confidence guarantee"
+        },
+        "cpu_percentage_points": {
+          "pairs": 4,
+          "paired_mean": -0.20263671875,
+          "bootstrap_95_low": -1.895751953125,
+          "bootstrap_95_high": 1.3037109375,
+          "values": [
+            -2.841796875,
+            0.9423828125,
+            1.6650390625,
+            -0.576171875
+          ],
+          "inference": "descriptive paired block bootstrap; small local sample, not a universal confidence guarantee"
+        },
+        "game_thread_ms": {
+          "pairs": 4,
+          "paired_mean": 0.021087992558782576,
+          "bootstrap_95_low": -0.009977044117896572,
+          "bootstrap_95_high": 0.05215302923546172,
+          "values": [
+            0.0006617588944988206,
+            0.03999315832272954,
+            0.06431290014819391,
+            -0.020615847130291964
+          ],
+          "inference": "descriptive paired block bootstrap; small local sample, not a universal confidence guarantee"
+        }
+      }
+    },
+    "RuleStress": {
+      "native": {
+        "frames": 9598,
+        "fps": 120.23206487152001,
+        "one_percent_low_fps": 71.28716400354654,
+        "mean_frame_ms": 8.31724882267139,
+        "p95_frame_ms": 9.315,
+        "p99_frame_ms": 10.2457,
+        "mean_game_thread_ms": 4.541348312148364,
+        "mean_render_thread_ms": 8.292178224630131,
+        "mean_gpu_ms": 7.571937705772036,
+        "cpu_machine_percent": 37.28271484375,
+        "process_cpu_ms_per_frame": 49.65855879292404
+      },
+      "python": {
+        "frames": 9440,
+        "fps": 118.25931977552452,
+        "one_percent_low_fps": 66.43637255727445,
+        "mean_frame_ms": 8.455993167372881,
+        "p95_frame_ms": 10.3363,
+        "p99_frame_ms": 12.5867,
+        "mean_game_thread_ms": 8.252549216101695,
+        "mean_render_thread_ms": 7.220975508474576,
+        "mean_gpu_ms": 7.602981959745763,
+        "cpu_machine_percent": 39.85107421875,
+        "process_cpu_ms_per_frame": 53.96675306813373
+      },
+      "paired": {
+        "fps_percent": {
+          "pairs": 4,
+          "paired_mean": -1.640904349534908,
+          "bootstrap_95_low": -3.094790971561176,
+          "bootstrap_95_high": -0.40988795763915453,
+          "values": [
+            -1.7218688083969313,
+            0.02743899261343774,
+            -1.1141994304118552,
+            -3.754988151944283
+          ],
+          "inference": "descriptive paired block bootstrap; small local sample, not a universal confidence guarantee"
+        },
+        "cpu_percentage_points": {
+          "pairs": 4,
+          "paired_mean": 2.568359375,
+          "bootstrap_95_low": 1.661376953125,
+          "bootstrap_95_high": 3.3544921875,
+          "values": [
+            1.181640625,
+            2.3828125,
+            3.6083984375,
+            3.1005859375
+          ],
+          "inference": "descriptive paired block bootstrap; small local sample, not a universal confidence guarantee"
+        },
+        "game_thread_ms": {
+          "pairs": 4,
+          "paired_mean": 3.7145071130875085,
+          "bootstrap_95_low": 3.4719014531510175,
+          "bootstrap_95_high": 3.9729966327188304,
+          "values": [
+            3.7366035247504916,
+            3.383667429284526,
+            3.6606429820348634,
+            4.077114516280153
+          ],
+          "inference": "descriptive paired block bootstrap; small local sample, not a universal confidence guarantee"
+        }
+      }
+    }
+  },
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/summary.json",
+      "sha256": "1630513B590EF31818F61AFBF8EB17A6138B5FB65CECF1D466FE47FEF29A03A2"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/runtime.json",
+      "sha256": "D17417ED5FE5D087638DA5EF43E19CC4EDB723E8871E091F704E82151AFB834D"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_00_Scene_Native.csv",
+      "sha256": "1DCD9159CF185A3789F2F6F2170C9DEA6421191A7EC1E9EE9090E20A769BCD14"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_01_Scene_Python.csv",
+      "sha256": "5366426D3FF1E5355619250C40910A658AB9026E26D947660D4E878A7C02FABD"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_02_Scene_Python.csv",
+      "sha256": "DAF5C21B75AF5E3372FA0D7DDB62E0383D31B5D3C0D727E006A2F5D395359BF3"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_03_Scene_Native.csv",
+      "sha256": "D00EDCE0D7D93CC6CFB960F8366F4E66DEF2E227BAB3BE08807C4E1EDB7531EE"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_04_Scene_Python.csv",
+      "sha256": "D037551F5412050126103315CE94E2EF560FDA092DF264082DD93FB76E2E32EC"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_05_Scene_Native.csv",
+      "sha256": "0F84E8CD2F9214A6ACEC4B81730CBA12635B6F4AAFD7D1034BDA3E6CD1B75063"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_06_Scene_Native.csv",
+      "sha256": "5FCCCB315697E39382EF32E372E063D9AEE1A157F2D92E848F948B50F0BE208D"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_07_Scene_Python.csv",
+      "sha256": "E3241CC698F09920A44DB9243B52D51663D408993EF7BF126C355EEC51A14335"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_08_RuleStress_Native.csv",
+      "sha256": "90A0F1995E39FA0E8680597AD0C87E7EC5A7FEE3B9633F1D3485BB4891625854"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_09_RuleStress_Python.csv",
+      "sha256": "CA4EE6C835F0CBCB4FDD9548C5D65077D851BFEFFAFAF1B9BF18D2F058549846"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_10_RuleStress_Python.csv",
+      "sha256": "1FDA0E4045EB7938461C6B49D9112835B76C3F86AFEECEF56BDB15CAA023040A"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_11_RuleStress_Native.csv",
+      "sha256": "5BAB8BFD6E04351946E281D3EFFCFEACCA75A29E76A68867B07BB0FD84A4E32A"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_12_RuleStress_Python.csv",
+      "sha256": "4D9E1F2D9C6F79022D6F9699448575C6B1B88A5DEEA2FA1A345AD9511D1991B8"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_13_RuleStress_Native.csv",
+      "sha256": "24DD1AAAEDFDB62400E448BE1A05DA6A52A90F0D1DF1684DDF1B80DB7DA90131"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_14_RuleStress_Native.csv",
+      "sha256": "3C903CCAB66D282BFE7CDED84F588D7E5C6EAC59060FC81C6BEE62AA87A60C4E"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_15_RuleStress_Python.csv",
+      "sha256": "03F0C489730878BB063A66D209E71A3FE5A16DE87EE8D994B871559C36D6687B"
+    }
+  ]
+}
