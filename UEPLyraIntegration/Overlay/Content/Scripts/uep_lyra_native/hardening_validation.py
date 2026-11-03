@@ -115,7 +115,7 @@ class Validation:
             ue.unregister_mixin(cls);ue.register_declared_mixin(cls)
         self.report['declarations_restored']=all(not any(str(n).startswith('Hardening') for n in r['profiles']) for r in ue.get_registered_mixins() if r['target_class'] in set(self.registrations))
         self.report['owned_cases_released']=not self.owned
-        self.report['selector_restored']=not hasattr(self,'host') or str(ue.get_mixin_profile(self.host))==self.original_profile
+        self.report['selector_restored']=not hasattr(self,'host') or (valid(self.host) and str(ue.get_mixin_profile(self.host))==self.original_profile)
     def finish(self,error=None):
         if self.finished:return
         self.finished=True
@@ -126,7 +126,7 @@ class Validation:
     def tick(self,delta):
         if self.finished:return False
         try:
-            limit=float(arg('UEPHardeningDuration','1200'))+180. if self.mode=='Soak' else 300.
+            limit=float(arg('UEPHardeningDuration','1200'))+300. if self.mode=='Soak' else 300.
             require(time.monotonic()-self.started<limit,'hardening startup/runtime timeout: '+self.phase)
             if self.phase=='ready':self.ready()
             elif self.phase=='soak':self.soak_step()

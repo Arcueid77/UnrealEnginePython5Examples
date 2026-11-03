@@ -10,7 +10,7 @@ def require(v,m):
 def validate(report,samples):
     require(report['status']=='passed' and report['mode']=='Soak','closed actual soak required')
     start=report['runtime_started_seconds'];warm=report['warmup_seconds'] if report['duration_requested']>=1200 else 10.
-    rows=[r for r in samples if start+warm<=r['elapsed_seconds']<=start+report['runtime_elapsed_seconds']]
+    rows=[r for r in samples if start+warm<=r['elapsed_seconds']<=start+report['runtime_elapsed_seconds']+report.get('travel_wait_seconds',0.)]
     require(len(rows)>=3,'post-warmup operating-system samples missing')
     first,last=rows[:3],rows[-3:];private_growth=statistics.median(r['private_bytes'] for r in last)-statistics.median(r['private_bytes'] for r in first)
     handle_growth=statistics.median(r['handles'] for r in last)-statistics.median(r['handles'] for r in first)

@@ -54,3 +54,19 @@ UHT, unit 2, TopDownArena, SDK, bridge and Engine are retained. Reward inputs ar
 explicit callback fixtures. Tags are detached value snapshots before replacing
 their source native map. This does not claim that every game operation is
 transactional after arbitrary user-code side effects. H02-H04 continue separately.
+
+## H02 incremental world-lifetime repair
+
+The first full-length run exposed the original twelve-minute match ending and
+seamless travel invalidating the cached world. Mixin get/set/clear selectors
+accepted a retained wrapper without first checking its tracked weak owner. The
+shared conversion helpers now reject that wrapper before inspecting its raw
+native pointer. Only `UEPyMixin.cpp` and the SDK import-library/DLL links rebuild.
+
+[The selector guard acceptance](NativeGameplay/H02-selector-guard-acceptance.json)
+records ninety seconds of active native gameplay, one actual early server travel,
+three safe get/set/clear rejections, three original Reset/respawns and 4,250 native
+queries. The harness reacquires the ready world and excludes travel waits from
+its active duration. Post-GC actor/router populations remain constant. Engine,
+game/bridge DLLs and the preserved CPP09 checkpoint keep their protected hashes.
+The complete twenty-minute run is rerunning and remains an independent H02 gate.

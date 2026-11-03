@@ -17,7 +17,8 @@
       "id": "H02",
       "scope": "Native/Python performance comparison and sustained gameplay memory/object/handle stability",
       "status": "in_progress",
-      "acceptance_ledger": null
+      "acceptance_ledger": null,
+      "incremental_selector_guard_ledger": "NativeGameplay/H02-selector-guard-acceptance.json"
     },
     {
       "id": "H03",

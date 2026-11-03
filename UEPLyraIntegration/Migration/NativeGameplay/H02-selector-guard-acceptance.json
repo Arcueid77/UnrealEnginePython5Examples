@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "group": "H02Guard",
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "cpp09_actual_desktop_input_user_deferred": true,
+  "physical_input_tested": false,
+  "new_migration_candidates_claimed": false,
+  "engine_full_compile_executed": false,
+  "cook_package_executed": false,
+  "scope": "expired Mixin selector targets after actual world teardown; full twenty-minute H02 gate still pending",
+  "actual_runtime": {
+    "status": "passed",
+    "sustained_seconds": 90.0,
+    "native_reset_respawns": 3,
+    "native_queries": 4250,
+    "long_soak": false
+  },
+  "world_transitions": [
+    {
+      "active_elapsed": 26.43799999996554,
+      "wait_seconds": 33.53099999995902,
+      "old_world_invalid": true,
+      "new_world": "/ShooterMaps/Maps/L_Expanse.L_Expanse"
+    }
+  ],
+  "expired_get_set_clear_rejections": 3,
+  "compiled_sdk_sources": [
+    "UEPyMixin.cpp"
+  ],
+  "guard_source": {
+    "path": "Source/UnrealEnginePython/Private/UEPyMixin.cpp",
+    "sha256": "1686D3F2F075ACC9A4BAE17D075CB61C90E63829A3F97D46C3C6432441EE5BA7"
+  },
+  "engine_and_preserved_cpp09_products_unchanged": true,
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H02-SdkGuardPlan01/summary.json",
+      "sha256": "12F3E543F11B37FAAB244EBABD8A05F5915CBB4B84AFCEF4DFB3CC7DD6DB5DDD"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H02-SdkGuardPlan01/actions.json",
+      "sha256": "9D7E40164E6A6A1B071796DF6F04D91E28EE48BDBF26B39DF93FE9D65DDF39A5"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H02-SdkGuardBuild01/summary.json",
+      "sha256": "27DD6FF7B7ED55BA52E784F68DEE883617E454FB04E30F7596B59238E6BBBEB2"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H02-SdkTransfer01/summary.json",
+      "sha256": "9B89BDDA2D0E6AFDB0B6204FE2F2780B2476725A2D644DBA0E212948A5192F68"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H02-TravelPilot01/summary.json",
+      "sha256": "57199CAD7F3D317D29425111C504EB2573310F69B6A99E685E2894564E799922"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H02-TravelPilot01/runtime.json",
+      "sha256": "3F49F111D68760EA5E74A6D98ADCBB3E06CEC6BEF4E61D8D2C795075A117E66B"
+    }
+  ]
+}

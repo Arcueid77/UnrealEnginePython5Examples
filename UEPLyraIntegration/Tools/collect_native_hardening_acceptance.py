@@ -23,7 +23,20 @@ def collect(root,group,output):
     root,output=root.resolve(),output.resolve()
     require(root.is_relative_to(REPO/'.build') and output.is_relative_to(REPO/'Demos') and not output.exists(),'owned closed evidence and fresh acceptance ledger required')
     common=dict(schema_version=1,status='accepted',group=group,target='UE5.8.1 / CPython3.11 / Win64 Development',cpp09_actual_desktop_input_user_deferred=True,physical_input_tested=False,new_migration_candidates_claimed=False,engine_full_compile_executed=False,cook_package_executed=False)
-    if group=='H01':
+    if group=='H02Guard':
+        run=root/'H02-TravelPilot01';closed(run);runtime=load(run/'runtime.json');actual=validate(runtime)
+        log_gate((run/'runtime.log').read_text(encoding='utf-8-sig'),0)
+        require(len(runtime['world_transitions'])==1 and runtime['world_transitions'][0]['old_world_invalid'] and runtime['expired_selector_rejections']==3,'actual travel/expired get/set/clear validation missing')
+        sdk=load(root/'H02-SdkGuardBuild01/summary.json');require(sdk['status']=='built_requires_native_acceptance' and sdk['checked_engine_files_unchanged'],'reviewed SDK guard compile missing')
+        require(sorted(sdk['reviewed_actions'])==sorted(['UEPyMixin.cpp','UnrealEditor-UnrealEnginePython.dll','UnrealEditor-UnrealEnginePython.lib']),'SDK rebuild exceeded single affected source')
+        transfer=load(root/'H02-SdkTransfer01/summary.json');require(transfer['status']=='passed','private current SDK transfer failed')
+        for row in transfer['protected']:require(sha(Path(row['path']))==row['sha256'],'protected native or CPP09 checkpoint changed')
+        require(sha(Path(transfer['target']))==transfer['sha256'],'current advancing SDK differs')
+        ledger=dict(common,scope='expired Mixin selector targets after actual world teardown; full twenty-minute H02 gate still pending',
+            actual_runtime=actual,world_transitions=runtime['world_transitions'],expired_get_set_clear_rejections=3,compiled_sdk_sources=['UEPyMixin.cpp'],
+            guard_source=evidence(REPO/'Source/UnrealEnginePython/Private/UEPyMixin.cpp'),engine_and_preserved_cpp09_products_unchanged=True,
+            evidence=[evidence(root/p) for p in ('H02-SdkGuardPlan01/summary.json','H02-SdkGuardPlan01/actions.json','H02-SdkGuardBuild01/summary.json','H02-SdkTransfer01/summary.json','H02-TravelPilot01/summary.json','H02-TravelPilot01/runtime.json')])
+    elif group=='H01':
         run=root/'H01-Exceptions05';closed(run);result=load(run/'runtime.json');actual=validate(result);log_gate((run/'runtime.log').read_text(encoding='utf-8-sig'),13)
         normal=root/'H01-DefaultFrontend01';closed(normal)
         from uep_lyra_native.world_validation_contract import validate as frontend_gate
@@ -43,20 +56,24 @@ def collect(root,group,output):
             evidence=[evidence(root/p) for p in ('H01-BodyBuild01/summary.json','H01-ResetBuild01/summary.json','H01-Exceptions05/summary.json','H01-Exceptions05/runtime.json','H01-DefaultFrontend01/summary.json')])
     else:
         require(group=='H02','supported hardening ledger group required')
-        run=root/'H02-Soak20Minutes01';summary=closed(run);runtime=load(run/'runtime.json');soak=validate(runtime)
+        run=root/'H02-Soak20Minutes02';summary=closed(run);runtime=load(run/'runtime.json');soak=validate(runtime)
         require(soak['long_soak'] and runtime['duration_requested']>=1200,'primary twenty-minute activity required')
+        require(len(runtime.get('world_transitions',[]))>=1 and runtime.get('expired_selector_rejections',0)>=3,'actual world travel and expired selector rejection required')
         log_gate((run/'runtime.log').read_text(encoding='utf-8-sig'),0);stability=stability_gate(runtime,load(run/'os-samples.json'))
-        bench=root/'H02-Benchmark01';closed(bench);timing=load(bench/'runtime.json')
+        bench=root/'H02-Benchmark02';closed(bench);timing=load(bench/'runtime.json')
         contract=bench/'Inputs/Overlay/Content/Scripts/uep_lyra_native/hardening_validation_contract.py';archived=runpy.run_path(str(contract));archived['validate'](timing)
         def function(path,name):return ast.dump(next(n for n in ast.parse(path.read_text(encoding='utf-8-sig')).body if isinstance(n,ast.FunctionDef) and n.name==name),include_attributes=False)
         old=bench/'Inputs/Overlay/Content/Scripts/uep_lyra_native/hardening_activity.py';current=SCRIPTS/'uep_lyra_native/hardening_activity.py'
         require(function(old,'start_benchmark')==function(current,'start_benchmark'),'timing algorithm changed after its run')
+        sdk=load(root/'H02-SdkGuardBuild01/summary.json');require(sdk['status']=='built_requires_native_acceptance' and sdk['checked_engine_files_unchanged'],'reviewed SDK guard compile missing')
+        require(sorted(sdk['reviewed_actions'])==sorted(['UEPyMixin.cpp','UnrealEditor-UnrealEnginePython.dll','UnrealEditor-UnrealEnginePython.lib']),'SDK rebuild exceeded single affected source')
         ledger=dict(common,actual_sustained_gameplay=soak,post_warmup_stability=stability,benchmarks=timing['benchmarks'],timing_scope=timing['timing_scope'],timing_function_unchanged=True,
+            world_transitions=runtime['world_transitions'],travel_wait_excluded_from_activity_seconds=runtime['travel_wait_seconds'],expired_selector_rejections=runtime['expired_selector_rejections'],sdk_single_source_guard_compile=True,
             reset_body_only_change_after_benchmark_did_not_recompile_benchmark_units_2_or_3=True,rendered_frame_rate_or_universal_memory_guarantee_claimed=False,
-            retained_attempts=['H02-SoakPilot01 completed two native respawns but its sample raced newly allocated query/respawn contexts. Work is now paused through two full scheduled GC passes, outside respawn setup.','H02-SoakPilot02 passed sixty seconds, two original native Reset/respawns and quiescent context bounds.'],
-            evidence=[evidence(root/p) for p in ('H02-Benchmark01/summary.json','H02-Benchmark01/runtime.json','H02-SoakPilot02/summary.json','H02-Soak20Minutes01/summary.json','H02-Soak20Minutes01/runtime.json','H02-Soak20Minutes01/os-samples.json','H01-ResetBuild01/summary.json')])
+            retained_attempts=['H02-SoakPilot01 completed two native respawns but its sample raced newly allocated query/respawn contexts. Work is now paused through two full scheduled GC passes, outside respawn setup.','H02-SoakPilot02 passed sixty seconds, two original native Reset/respawns and quiescent context bounds.','H02-Soak20Minutes01 crashed after the original twelve-minute match ended and seamless travel destroyed its cached world. Public Mixin selectors now reject invalid wrappers using the tracked weak owner; the harness reacquires the ready world and excludes travel waits from activity.','H02-TravelPilot01 exercised actual early server travel and all three expired-selector rejections before the new full-length run.'],
+            evidence=[evidence(root/p) for p in ('H02-Benchmark02/summary.json','H02-Benchmark02/runtime.json','H02-TravelPilot01/summary.json','H02-TravelPilot01/runtime.json','H02-SdkGuardBuild01/summary.json','H02-SdkTransfer01/summary.json','H02-Soak20Minutes01/summary.json','H02-Soak20Minutes02/summary.json','H02-Soak20Minutes02/runtime.json','H02-Soak20Minutes02/os-samples.json','H01-ResetBuild01/summary.json')])
     output.write_text(json.dumps(ledger,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     return dict(status='accepted',group=group,ledger=str(output))
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--group',choices=('H01','H02'),required=True);p.add_argument('--output',type=Path,required=True);a=p.parse_args();print(json.dumps(collect(a.root,a.group,a.output)))
+    p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--group',choices=('H01','H02','H02Guard'),required=True);p.add_argument('--output',type=Path,required=True);a=p.parse_args();print(json.dumps(collect(a.root,a.group,a.output)))
