@@ -69,4 +69,26 @@ three safe get/set/clear rejections, three original Reset/respawns and 4,250 nat
 queries. The harness reacquires the ready world and excludes travel waits from
 its active duration. Post-GC actor/router populations remain constant. Engine,
 game/bridge DLLs and the preserved CPP09 checkpoint keep their protected hashes.
-The complete twenty-minute run is rerunning and remains an independent H02 gate.
+The subsequent full-length H02 run passes the independent operational gate below.
+
+## H02 accepted within its operational budgets
+
+[H02 acceptance](NativeGameplay/H02-acceptance.json) records 1,200 seconds of
+active gameplay, 58 original native Reset/respawns, 57,250 native queries and one
+natural match-ending seamless travel. Its 34.843-second travel/readiness wait is
+excluded from activity time. The three expired selectors are safely rejected.
+
+After the declared 120-second warmup, 111 OS samples and 103 quiescent native-GC
+samples pass the budgets set before the run. Median private bytes grow by
+217,219,072 bytes (207.16 MiB; limit 256 MiB), handles by four (limit 32), actor
+population ranges by one (limit 25), router population stays constant, and at most
+two temporary native policy contexts remain (limit eight). This is a bounded
+twenty-minute observation, with measurable memory growth; it is not a proof of
+unlimited stability or leak freedom.
+
+The current SDK benchmark interleaves twelve 300-call batches per route/family:
+14,400 timed calls total after separate warmups. Damage admission medians are
+6.18 microseconds native and 17.22 Python; Pawn data medians are 4.70 and 15.43.
+Both use the same reflected fixture entrypoint; the native fallback includes
+the installed bridge admission. These figures do not measure rendered frame rate.
+H03 and H04 remain separate fresh-build and actual-package gates.

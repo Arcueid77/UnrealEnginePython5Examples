@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "group": "H02",
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "cpp09_actual_desktop_input_user_deferred": true,
+  "physical_input_tested": false,
+  "new_migration_candidates_claimed": false,
+  "engine_full_compile_executed": false,
+  "cook_package_executed": false,
+  "actual_sustained_gameplay": {
+    "status": "passed",
+    "sustained_seconds": 1200.000999999931,
+    "native_reset_respawns": 58,
+    "native_queries": 57250,
+    "long_soak": true
+  },
+  "post_warmup_stability": {
+    "status": "passed",
+    "long_soak": true,
+    "post_warmup_os_samples": 111,
+    "post_warmup_gc_samples": 103,
+    "private_growth_bytes": 217219072,
+    "handle_growth": 4,
+    "actor_population_range": 1,
+    "mixin_registration_range": 0,
+    "maximum_quiescent_contexts": 2,
+    "budgets": {
+      "private_growth_bytes": 268435456,
+      "handle_growth": 32,
+      "actor_population_range": 25,
+      "mixin_registration_range": 0,
+      "quiescent_contexts": 8
+    },
+    "limits": "bounded twenty-minute headless workload; no universal leak-freedom or rendered-frame performance claim"
+  },
+  "benchmarks": [
+    {
+      "family": "Damage",
+      "order_interleaved": true,
+      "batch_calls": 300,
+      "native": {
+        "samples": 12,
+        "calls": 3600,
+        "median_ns_per_call": 6183.166666666667,
+        "p95_batch_ns_per_call": 6867.333333333333,
+        "minimum_ns_per_call": 5837.0,
+        "maximum_ns_per_call": 6867.333333333333
+      },
+      "python": {
+        "samples": 12,
+        "calls": 3600,
+        "median_ns_per_call": 17223.0,
+        "p95_batch_ns_per_call": 19146.666666666668,
+        "minimum_ns_per_call": 16793.0,
+        "maximum_ns_per_call": 19146.666666666668
+      },
+      "python_to_native_ratio": 2.7854659155233294
+    },
+    {
+      "family": "Pawn",
+      "order_interleaved": true,
+      "batch_calls": 300,
+      "native": {
+        "samples": 12,
+        "calls": 3600,
+        "median_ns_per_call": 4703.333333333334,
+        "p95_batch_ns_per_call": 9063.666666666666,
+        "minimum_ns_per_call": 4233.0,
+        "maximum_ns_per_call": 9063.666666666666
+      },
+      "python": {
+        "samples": 12,
+        "calls": 3600,
+        "median_ns_per_call": 15426.833333333334,
+        "p95_batch_ns_per_call": 26950.333333333332,
+        "minimum_ns_per_call": 13985.0,
+        "maximum_ns_per_call": 26950.333333333332
+      },
+      "python_to_native_ratio": 3.279978738483345
+    }
+  ],
+  "timing_scope": "same native reflected fixture entrypoint; native fallback includes installed bridge admission; no bare-engine or rendered-FPS claim",
+  "timing_function_unchanged": true,
+  "world_transitions": [
+    {
+      "active_elapsed": 727.3129999999655,
+      "wait_seconds": 34.84299999999348,
+      "old_world_invalid": true,
+      "new_world": "/ShooterMaps/Maps/L_Expanse.L_Expanse"
+    }
+  ],
+  "travel_wait_excluded_from_activity_seconds": 34.84299999999348,
+  "expired_selector_rejections": 3,
+  "sdk_single_source_guard_compile": true,
+  "reset_body_only_change_after_benchmark_did_not_recompile_benchmark_units_2_or_3": true,
+  "rendered_frame_rate_or_universal_memory_guarantee_claimed": false,
+  "retained_attempts": [
+    "H02-SoakPilot01 completed two native respawns but its sample raced newly allocated query/respawn contexts. Work is now paused through two full scheduled GC passes, outside respawn setup.",
+    "H02-SoakPilot02 passed sixty seconds, two original native Reset/respawns and quiescent context bounds.",
+    "H02-Soak20Minutes01 crashed after the original twelve-minute match ended and seamless travel destroyed its cached world. Public Mixin selectors now reject invalid wrappers using the tracked weak owner; the harness reacquires the ready world and excludes travel waits from activity.",
+    "H02-TravelPilot01 exercised actual early server travel and all three expired-selector rejections before the new full-length run."
+  ],
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H02-Benchmark02/summary.json",
+      "sha256": "8F1CD77EB77D8627BA5FB850E8350CA956FF1F497E9419FC6FB7F00036E86D1A"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H02-Benchmark02/runtime.json",
+      "sha256": "903E16A643EDBF191021DF08A2F2F690C0F47330590CF7C8AC2029ACD7C6E66F"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H02-TravelPilot01/summary.json",
+      "sha256": "57199CAD7F3D317D29425111C504EB2573310F69B6A99E685E2894564E799922"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H02-TravelPilot01/runtime.json",
+      "sha256": "3F49F111D68760EA5E74A6D98ADCBB3E06CEC6BEF4E61D8D2C795075A117E66B"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H02-SdkGuardBuild01/summary.json",
+      "sha256": "27DD6FF7B7ED55BA52E784F68DEE883617E454FB04E30F7596B59238E6BBBEB2"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H02-SdkTransfer01/summary.json",
+      "sha256": "9B89BDDA2D0E6AFDB0B6204FE2F2780B2476725A2D644DBA0E212948A5192F68"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H02-Soak20Minutes01/summary.json",
+      "sha256": "40CF1A6CAAE05F08790916CE90BA5229B7792D1B9793F5EBE6B570B1BD0E0F4C"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H02-Soak20Minutes02/summary.json",
+      "sha256": "7C16B7A5CC879282BF233E9B46B5C84D85D5AB362216257C4D20B09485A058E9"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H02-Soak20Minutes02/runtime.json",
+      "sha256": "042DC9C35EDCA3ADAA12058156B39815971E14AE230225771CAD85DFA17A36DE"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H02-Soak20Minutes02/os-samples.json",
+      "sha256": "EB2341CAEBF6943558EA0FE56804AFC236FBF075B1ABECD94419B9652E6A7D8C"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H01-ResetBuild01/summary.json",
+      "sha256": "D8542527D520DD4C4793F7368064DDAC27C5D2C4C6A784E3D2E34F6450710B28"
+    }
+  ]
+}

@@ -16,14 +16,14 @@
     {
       "id": "H02",
       "scope": "Native/Python performance comparison and sustained gameplay memory/object/handle stability",
-      "status": "in_progress",
-      "acceptance_ledger": null,
+      "status": "accepted",
+      "acceptance_ledger": "NativeGameplay/H02-acceptance.json",
       "incremental_selector_guard_ledger": "NativeGameplay/H02-selector-guard-acceptance.json"
     },
     {
       "id": "H03",
       "scope": "Unified reproducible setup from a fresh independent stage with committed production patches and assets",
-      "status": "planned",
+      "status": "in_progress",
       "acceptance_ledger": null
     },
     {
