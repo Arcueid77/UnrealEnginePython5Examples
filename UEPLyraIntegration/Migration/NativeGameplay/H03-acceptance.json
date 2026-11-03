@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "group": "H03",
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "physical_input_tested": false,
+  "cpp09_actual_desktop_input_user_deferred": true,
+  "engine_full_compile_executed": false,
+  "other_platforms_or_shipping_build_claimed": false,
+  "rendered_graphics_audio_or_hardware_input_claimed": false,
+  "fresh_preparation": {
+    "status": "passed",
+    "production_sources": 63,
+    "reference_inputs": 9702,
+    "versioned_inputs": 1871,
+    "verified_staged_files": 11341,
+    "old_stage_or_compiler_outputs_reused": false
+  },
+  "actual_engine_version": {
+    "MajorVersion": 5,
+    "MinorVersion": 8,
+    "PatchVersion": 1
+  },
+  "actual_native_failure_recovery": {
+    "status": "passed",
+    "actual_native_exception_cases": 13,
+    "recovered": true,
+    "no_duplicate_native_payment_or_reward": true,
+    "native_reset_ends_on_exception": true,
+    "subscriptions_closed": true
+  },
+  "current_editor_products": 40,
+  "all_frozen_source_and_engine_inputs_verified": true,
+  "production_recipes_composed_from_versioned_sources": true,
+  "old_stage_or_compiler_outputs_reused": false,
+  "cook_package_executed": false,
+  "project_module_count": 23,
+  "reviewed_project_actions": 289,
+  "all_project_action_outputs_inside_stage": true,
+  "production_test_plugins_disabled": [
+    "RuntimeTests",
+    "ShooterTests"
+  ],
+  "retained_attempts": [
+    "H03-Reproduce01/02: the NoEngineChanges guard refused a full-target refresh of existing Engine modules/metadata before project compilation. Selecting all project modules scopes every action to the stage.",
+    "H03-Reproduce03: content-only plugin descriptors omitted Modules; the entry point now skips those descriptors.",
+    "H03-Reproduce04 compiled all 24 initial project modules. Startup exposed the original RuntimeTests/ShooterTests settings enabling an unavailable Engine test plugin. The owned descriptor now matches the prior production configuration, disabling only those test plugins. The plugin graph change regenerated shared headers, so UBT rebuilt the affected project modules in H03-Reproduce05; no Engine build or source change was allowed."
+  ],
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H03-Prepare03/prepare.json",
+      "sha256": "0ED792012724B60750B8297002A5498B79FF504630056B578408E31298A5B188"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H03-Reproduce05/summary.json",
+      "sha256": "1C4B9BE4E36C20A4E3603C54C9638FE8AC5C1E598DAB6E2DB7841DE7C3208BC9"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H03-Reproduce05/editor-modules.json",
+      "sha256": "9BF2116D354428097C80A9A8D86E2C521C9848D32795CDD02033429AF2F9D165"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H03-Reproduce05/ProjectPlan/actions.json",
+      "sha256": "367A5060BA77FEEF984B38C71BBF469DE71C1E353EAB21A30DC29CCD77364711"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H03-Reproduce05/ActualExceptions/summary.json",
+      "sha256": "A37CD5C6EF9D8EB26A4B69730846B26386A0A7A5540A96B0A456D01A4BE22846"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H03-Reproduce05/ActualExceptions/runtime.json",
+      "sha256": "B7F61DEB7FB53E791FD1E5377DDEE87E2E355355366B4D8E228AEC9B8E2E8FA5"
+    }
+  ]
+}

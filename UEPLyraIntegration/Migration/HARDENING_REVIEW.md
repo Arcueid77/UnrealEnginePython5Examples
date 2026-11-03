@@ -91,4 +91,28 @@ The current SDK benchmark interleaves twelve 300-call batches per route/family:
 6.18 microseconds native and 17.22 Python; Pawn data medians are 4.70 and 15.43.
 Both use the same reflected fixture entrypoint; the native fallback includes
 the installed bridge admission. These figures do not measure rendered frame rate.
-H03 and H04 remain separate fresh-build and actual-package gates.
+H04 remains a separate actual-package gate.
+
+## H03 accepted
+
+[H03 acceptance](NativeGameplay/H03-acceptance.json) closes the independent
+[reproduction entry point](REPRODUCE_NATIVE.md): fifteen versioned recipes compose
+63 production C++ outputs, 9,702 original and 1,871 versioned inputs are pinned,
+and 11,341 final staged files match the ordered copy/overlay/patch composition.
+No old project binaries or intermediate build directories are imported. The
+owned production descriptor disables only the reference test plugins in addition
+to the existing SDK/bridge and AndroidFileServer settings.
+
+The reviewed project build contains 23 modules and 289 compile/link actions,
+with every output inside the fresh stage. Local loader manifests use the unchanged
+Engine BuildId; Engine source/binaries/manifests and the original Lyra project are
+preserved. Thirteen actual native exception/recovery cases pass on these new
+DLLs, with independent result/log gates and normal interpreter shutdown. Initial
+guarded full-target attempts, the content-only descriptor fix, and the missing
+reference test-plugin setup are retained in the ledger. The latter configuration
+change regenerated shared compiler headers and rebuilt the affected project
+modules before final runtime acceptance.
+
+H04 now builds the Game target and its runtime dependencies in the same isolated
+project. That is a separate compilation configuration from the Editor target;
+its first runtime-library build is not a routine full regression after an edit.

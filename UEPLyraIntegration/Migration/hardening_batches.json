@@ -23,13 +23,13 @@
     {
       "id": "H03",
       "scope": "Unified reproducible setup from a fresh independent stage with committed production patches and assets",
-      "status": "in_progress",
-      "acceptance_ledger": null
+      "status": "accepted",
+      "acceptance_ledger": "NativeGameplay/H03-acceptance.json"
     },
     {
       "id": "H04",
       "scope": "Current Win64 Development game build, cooked script/asset/dependency inventory and actual packaged standalone/network execution",
-      "status": "planned",
+      "status": "in_progress",
       "acceptance_ledger": null
     }
   ]
