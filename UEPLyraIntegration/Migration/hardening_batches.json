@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "in_progress",
+  "status": "accepted",
   "scope_approved_date": "2026-11-03",
   "user_authorization": "都干了",
   "target": "UE5.8.1 / CPython3.11 / Win64 Development",
@@ -29,8 +29,8 @@
     {
       "id": "H04",
       "scope": "Current Win64 Development game build, cooked script/asset/dependency inventory and actual packaged standalone/network execution",
-      "status": "in_progress",
-      "acceptance_ledger": null
+      "status": "accepted",
+      "acceptance_ledger": "NativeGameplay/H04-acceptance.json"
     }
   ]
 }

@@ -68,8 +68,42 @@ Game delivery uses the same resulting stage through the following separate gates
 6. `Run-UEP58PackagedNativeNetwork.ps1` executes that same package as an authority
    and two real clients for each of the Damage and Pawn policy families.
 
+After the fresh Editor stage passes, the following prepares the observers and
+Game build, then runs the package-delivery entry point. Use unused evidence paths;
+the entry point refuses to replace closed evidence.
+
+```powershell
+$nativeStage = 'F:/UnrealEnginePython5/.build/LyraValidation/CppGameplayExtended/FreshRun/Lyra/LyraStarterGame.uproject'
+$nativeEvidence = 'F:/UnrealEnginePython5/.build/LyraValidation/Hardening/FreshRun'
+./Validation/Run-UEP58PackagedNativeFixtureAuthoring.ps1 `
+  -StageProject $nativeStage -OutputDirectory "$nativeEvidence/H04-Fixtures01"
+./Validation/Run-UEP58CurrentLyraGameBuild.ps1 `
+  -StageProject $nativeStage -OutputDirectory "$nativeEvidence/H04-GameBuild01" `
+  -MaxParallelActions 3
+./Validation/Run-UEP58NativePackageDelivery.ps1 `
+  -StageProject $nativeStage -OutputDirectory $nativeEvidence
+```
+
+The first Game configuration compiles its runtime libraries inside the project,
+separately from Editor modules. Subsequent package/runtime checks reuse that build.
+The cook selects the reviewed `UnrealEditor-Cmd.exe` explicitly, rather than requiring
+an Editor target receipt from the module-only reproduction build. A failed cook
+can keep its frozen plan and use a fresh `-CookAttempt` with `-ReusePackagePlan`;
+successful native runtime leaves are not repeated to repair only a pure gate.
+
+The packaged Game executable supports a listen authority via `?listen`; its
+`-server` switch does not provide an Editor dedicated process. The driver removes
+the host LocalPlayer with the native Development command and keeps two real remote
+clients. A separate pure checker expects preserved listen UI/local cosmetic
+completion while retaining every other Reset, RPC, ownership, restoration and
+independent client-view assertion. These results make no Dedicated Server target
+claim. Gameplay transport uses native RPCs; files only schedule trials and ACKs.
+
 The packaged checks compare current Python payloads, the Game executable and
 containers. They also inspect the actual loaded CPython DLL, its configured home
 and staged runtime receipt files to reject a source-engine runtime fallback.
+Every dependency hash is strict except exact UTF-8 BOM/CRLF equivalence for staged
+INI text. Original failed summaries and raw native reports remain intact when
+only a pure contract needs a separate review; no peer report is rewritten.
 Cooked presence alone does not prove the behavior of every original candidate.
 CPP09 actual desktop Escape/Menu acceptance remains user-deferred.

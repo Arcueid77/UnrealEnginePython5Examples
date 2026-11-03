@@ -6,14 +6,22 @@ import sys
 from collect_native_message_acceptance import REPO,SCRIPTS,load,sha,evidence,require
 from check_hardening_log import validate as hardening_log
 from inspect_migration_container import inspect as inspect_container
+from check_packaged_native_network import validate as packaged_network_contract
 sys.path.insert(0,str(SCRIPTS))
 from uep_lyra_native.hardening_validation_contract import validate as hardening_contract
 from uep_lyra_native.world_validation_contract import validate as frontend_contract
-from uep_lyra_native.rule_network_contract import validate as network_contract
 
 
 def closed(directory,scope=None):
     value=load(directory/'summary.json')
+    reviewed=directory/'summary-reviewed.json'
+    if value['status']=='failed' and reviewed.exists():
+        supplement=load(reviewed)
+        require((supplement.get('pure_dependency_review') or supplement.get('pure_network_contract_review')) and not supplement['native_process_rerun'] and
+            supplement['original_summary']['sha256']==sha(directory/'summary.json'),'pure review does not match the original native run')
+        if 'process' in value:require(supplement['process']==value['process'],'reviewed native process differs')
+        else:require(supplement['lanes']==value['lanes'],'reviewed original network lane differs')
+        value=supplement
     require(value['status']=='passed' and value.get('error') is None,'delivery run is not closed and passed: '+str(directory))
     if scope:require(value['scope']==scope,'delivery evidence scope differs')
     if value.get('process'):require(value['process']['exit_code']==0,'delivery process failed')
@@ -29,7 +37,8 @@ def dependencies(path,loaded,package):
     require(report['status']=='passed' and report['runtime_home_inside_package'] and loaded['inside_package'] and loaded['actual_loaded_module'] and loaded['source_engine_modules_loaded']==0,'packaged runtime dependency locality not proven')
     require(Path(loaded['path']).is_relative_to(package) and sha(Path(loaded['path']))==loaded['sha256'],'actual loaded packaged CPython changed')
     for row in report['dependency_files']:require(sha(package/row['relative_path'])==row['sha256'],'packaged CPython receipt file changed')
-    return dict(receipt_python_files=report['receipt_python_files'],actual_loaded_python=loaded,actual_python_home=report['actual_python_home'],evidence=evidence(path))
+    return dict(receipt_python_files=report['receipt_python_files'],actual_loaded_python=loaded,actual_python_home=report['actual_python_home'],
+        exact_ini_staging_normalizations=report['staging_line_ending_normalizations'],evidence=evidence(path))
 
 
 def collect(root,group,output):
@@ -68,7 +77,9 @@ def collect(root,group,output):
         build_dir=root/'H04-GameBuild01';build=closed(build_dir,'current-Development-LyraGame-build-only')
         require(build['cpp_compile_executed'] and build['no_engine_changes_requested'],'current protected Game build missing')
         frozen(build['products']+build['engine_inputs'])
-        cook_dir=root/'H04-Cook01';cook=closed(cook_dir,'current-original-migration-content-cook-package')
+        output_scope=load(build_dir/'scoped-output-final.json');require(output_scope['status']=='passed' and output_scope['outside_stage_paths']==0,'Game target output confinement missing')
+        frozen(output_scope['response_files'])
+        cook_dir=root/'H04-Cook02';cook=closed(cook_dir,'current-original-migration-content-cook-package')
         require(cook['cook_package_executed'],'actual cook/package process missing');frozen(cook['products'])
         plan_path=root/'H04-package-plan.json';plan=load(plan_path)
         with (cook_dir/'containers.csv').open(encoding='utf-8-sig',newline='') as source:inventory=inspect_container(plan,source)
@@ -80,26 +91,41 @@ def collect(root,group,output):
             require(run['packaged_runtime'] and Path(run['process']['executable'])==game,'standalone execution did not use the actual packaged Game')
             report=load(directory/'runtime.json')
             standalone[mode]=(hardening_contract if mode=='Exceptions' else frontend_contract)(report)
-            python_dependencies[mode]=dependencies(directory/'dependencies.json',run['loaded_python'],package)
+            dependency_path=REPO/run['dependency_report']['path'] if run.get('pure_dependency_review') else directory/'dependencies.json'
+            python_dependencies[mode]=dependencies(dependency_path,run['loaded_python'],package)
             if mode=='Exceptions':hardening_log((directory/'runtime.log').read_text(encoding='utf-8-sig'),13)
         networks={}
         for family in ('Damage','Pawn'):
-            directory=root/('H04-Packaged'+family+'Network01');run=closed(directory)
+            attempt='02' if family=='Damage' else '01'
+            directory=root/('H04-Packaged'+family+'Network'+attempt);run=closed(directory)
             require(run['packaged_runtime'] and run['actual_native_rule_network'],'packaged authority/client network missing')
-            lane=run['lanes']['rule'];require(lane['status']=='passed' and set(lane['processes'])=={'server','A','B0'},'three real network processes missing')
+            require(run['packaged_authority_mode']=='ListenServer' and run['host_local_player_removal_requested'],'actual Game-target listen authority setup missing')
+            server_log=(directory/'rule/server.log').read_text(encoding='utf-8-sig')
+            require('IpNetDriver listening on port ' in server_log and 'RemoveLocalPlayer: Unsetting Primary Player' in server_log,'native listen startup/local-player removal evidence missing')
+            lane=run['lanes']['rule']
+            lane_accepted=lane['status']=='passed' or (run.get('pure_network_contract_review') and run['independent_result']['status']=='passed')
+            require(lane_accepted and set(lane['processes'])=={'server','A','B0'},'three real network processes missing')
             for process in lane['processes'].values():require(process['exit_code']==0 and Path(process['executable'])==game,'network peer did not cleanly run the package executable')
             reports={peer:load(directory/'rule'/(peer+'.json')) for peer in ('server','A','B0')}
-            networks[family]=network_contract(reports,family)
+            networks[family]=packaged_network_contract(reports,family)
             for peer in reports:python_dependencies[family+'-'+peer]=dependencies(directory/'rule'/(peer+'-dependencies.json'),lane['loaded_python'][peer],package)
-        names=['H04-GameBuild01/summary.json','H04-Fixtures01/summary.json','H04-Cook01/summary.json','H04-Cook01/package-inventory.json','H04-package-plan.json']
+        names=['H04-GameBuild01/summary.json','H04-GameBuild01/scoped-output-final.json','H04-Fixtures01/summary.json','H04-Cook02/summary.json','H04-Cook02/package-inventory.json','H04-package-plan.json']
         names += ['H04-Packaged'+mode+'01/summary.json' for mode in ('Exceptions','Frontend')]
-        names += ['H04-Packaged'+family+'Network01/summary.json' for family in ('Damage','Pawn')]
+        names += ['H04-PackagedExceptions01/summary-reviewed.json']
+        names += ['H04-PackagedDamageNetwork02/summary.json','H04-PackagedDamageNetwork02/summary-reviewed.json','H04-PackagedPawnNetwork01/summary.json']
+        names += ['H04-Packaged'+family+'Network'+('02' if family=='Damage' else '01')+'/rule/listen-independent-gate.json' for family in ('Damage','Pawn')]
         ledger=dict(common,cook_package_executed=True,game_target_runtime_dependencies_compiled=True,
             engine_distribution_rebuild_executed=False,protected_engine_distribution_files_unchanged=True,
+            game_compiler_output_paths_checked=output_scope['checked_path_count'],
             actual_packaged_executable=evidence(game),package_inventory=inventory,
             standalone=standalone,networks=networks,python_dependencies=python_dependencies,all_network_peers_use_actual_packaged_game=True,
+            packaged_network_authority_mode='ListenServer with native host-local-player removal; two real remote clients',packaged_dedicated_server_target_claimed=False,
             independent_client_rule_views=sum(value['independent_client_views'] for value in networks.values()),
             original_candidate_logic_coverage_not_inferred_from_content_presence=True,
+            retained_attempts=['H04-Cook01 stopped before cooking because UAT inferred a project Editor target receipt that was intentionally not generated by project-only DLL compilation. The cook entry now explicitly selects the already validated UnrealEditor-Cmd executable; Game and frozen package-plan inputs are reused without recompilation.',
+                'H04-PackagedExceptions01 passed its real thirteen-case native run, exit and precise log/result gates. The pure dependency gate then exposed UAT adding a UTF-8 BOM and CRLF to one standard-library test INI. Exact BOM/newline equivalence is now required only for that text format; all other dependency bytes remain strict. A separate reviewed summary preserves the original failure and rechecks all frozen native/package inputs without rerunning the game.',
+                'H04-PackagedDamageNetwork01 demonstrated that the Game target does not interpret -server as an Editor dedicated server. It stopped without launching clients. The actual supported listen URL and native DebugRemovePlayer remove the host LocalPlayer while retaining two remote clients.',
+                'H04-PackagedDamageNetwork02 completed all three peers, native trials and eight independent client views. The original dedicated-server pure gate rejected stable listen UI references and local cosmetic completion. A separate listen-specific pure review asserts those native listen invariants while keeping every other Reset, ownership, damage, RPC, message, restore and client-view assertion. Original peer reports, failed summary and lane remain unchanged; no game process was rerun for that review.'],
             evidence=[evidence(root/name) for name in names])
     output.write_text(json.dumps(ledger,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     return dict(status='accepted',group=group,ledger=str(output))

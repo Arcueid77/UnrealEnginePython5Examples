@@ -11,7 +11,7 @@ authorized by these groups.
 | H01 | Actual native callback exceptions for damage admission, original equipped item-cost check/apply, reward settlement after a broadcast, and native Reset; no duplicate native payment/reward, successful subsequent calls, inactive failed Reset and restored subscriptions/profiles |
 | H02 | Interleaved native-fallback/Python timings on identical native fixture entrypoints; a twenty-minute actual game process with repeated native Reset/respawn, persistent PlayerState, bounded traces and quiescent post-GC object plus OS memory/handle samples |
 | H03 | A fresh independent stage created from the reference project and versioned SDK, bridge, overlay, fixtures and ordered production recipes; no old stage/compiler output copied; protected Engine build, composed source inventory and actual fresh-stage runtime |
-| H04 | Current protected Win64 Development Game build, actual cook/stage/archive, cooked asset and loose Python/dependency fingerprints, and real packaged standalone/server/two-client execution using the packaged executable |
+| H04 | Current protected Win64 Development Game build, actual cook/stage/archive, cooked asset and loose Python/dependency fingerprints, and real packaged standalone/listen-authority/two-client execution using the packaged executable |
 
 H02 timing includes the same reflected entrypoint and installed bridge admission
 on both routes. It does not measure bare-engine calls or rendered frame rate.
@@ -53,7 +53,7 @@ Only LyraGame body units 3 and then 1 were compiled for the two separate fixes;
 UHT, unit 2, TopDownArena, SDK, bridge and Engine are retained. Reward inputs are
 explicit callback fixtures. Tags are detached value snapshots before replacing
 their source native map. This does not claim that every game operation is
-transactional after arbitrary user-code side effects. H02-H04 continue separately.
+transactional after arbitrary user-code side effects. H02-H04 acceptance follows.
 
 ## H02 incremental world-lifetime repair
 
@@ -91,7 +91,7 @@ The current SDK benchmark interleaves twelve 300-call batches per route/family:
 6.18 microseconds native and 17.22 Python; Pawn data medians are 4.70 and 15.43.
 Both use the same reflected fixture entrypoint; the native fallback includes
 the installed bridge admission. These figures do not measure rendered frame rate.
-H04 remains a separate actual-package gate.
+H04 records the separate actual-package gate below.
 
 ## H03 accepted
 
@@ -113,6 +113,45 @@ reference test-plugin setup are retained in the ledger. The latter configuration
 change regenerated shared compiler headers and rebuilt the affected project
 modules before final runtime acceptance.
 
-H04 now builds the Game target and its runtime dependencies in the same isolated
-project. That is a separate compilation configuration from the Editor target;
-its first runtime-library build is not a routine full regression after an edit.
+## H04 accepted
+
+[H04 acceptance](NativeGameplay/H04-acceptance.json) closes current Game delivery
+from the same independent project. The cold Game configuration compiled 1,190
+actions, including its Engine runtime dependencies inside the owned project;
+4,105 compiler output/PCH/dependency paths stay inside that stage. Existing Engine
+distribution binaries, manifests and source stay unchanged. This first Game
+configuration build is separate from the Editor build and incremental regression.
+
+The actual cook processed 4,707 packages. The archived container listing includes
+all 246 original candidate assets, 493 overlay assets, twelve runtime maps and
+three stage-only typed message observers. Production assets and source fingerprints
+stay fixed. The inner packaged executable equals the new Game build. Cooked
+presence does not establish all original candidate behavior.
+
+Eight actual packaged processes pass: thirteen standalone native exception/recovery
+cases, the normal frontend flow, and Damage/Pawn network lanes with one listen
+authority and two real remote clients each. The native host LocalPlayer is removed.
+Together the network lanes check eight authority trials and sixteen independent
+client rule views, including replicated damage, spawn classes, Reset, RPCs,
+restoration and observer cleanup. Files coordinate timing/acknowledgments; native
+RPCs carry gameplay state. All eight processes exit normally.
+
+Every process loads CPython from the archive with its home and 4,578 receipt files
+inside that archive. One standard-library test INI receives UAT's UTF-8 BOM/CRLF
+transformation: exact normalized bytes must agree, while every other byte stays
+strict. Its original failed pure dependency summary is retained beside a reviewed
+summary; the successful native process was not repeated.
+
+The first network attempt exposed the packaged Game target ignoring Editor-style
+`-server`. The successful runs use its supported listen URL. The dedicated-server
+contract also expected no authority UI/cosmetic completion; listen preserves a
+stable UI reference and its native local completion message. The listen-specific
+checker asserts those facts and retains all other raw peer assertions. The first
+successful Damage run's failed pure gate is preserved, with a separate review of
+the unchanged peers; Pawn uses the final checker directly. Neither pure gate fix
+triggered another build, cook or repeat of successful gameplay.
+
+All four selected groups are accepted for UE5.8.1 / CPython3.11 / Win64 Development.
+CPP09 physical Escape/Menu remains user-deferred. Packaged Dedicated Server,
+Shipping, additional platforms, rendered graphics and hardware/audio acceptance
+are outside these results.

@@ -1,0 +1,362 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "group": "H04",
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "physical_input_tested": false,
+  "cpp09_actual_desktop_input_user_deferred": true,
+  "other_platforms_or_shipping_build_claimed": false,
+  "rendered_graphics_audio_or_hardware_input_claimed": false,
+  "cook_package_executed": true,
+  "game_target_runtime_dependencies_compiled": true,
+  "engine_distribution_rebuild_executed": false,
+  "protected_engine_distribution_files_unchanged": true,
+  "game_compiler_output_paths_checked": 4105,
+  "actual_packaged_executable": {
+    "path": ".build/LyraValidation/Hardening/20261103/H04-Cook02/Archive/Windows/LyraStarterGame/Binaries/Win64/LyraGame.exe",
+    "sha256": "3DB6C163B0356F5FBC132AAC3B5A5DBFA3F5F6DAB61067FBBC93C649BCF8D629"
+  },
+  "package_inventory": {
+    "schema_version": 1,
+    "status": "passed",
+    "scope": "actual-cooked-package-presence-only",
+    "runtime_acceptance": false,
+    "full_acceptance": false,
+    "csv_rows": 9665,
+    "unique_content_packages": 3675,
+    "coverage": {
+      "candidate_assets": {
+        "expected": 246,
+        "present": 246,
+        "missing": []
+      },
+      "overlay_assets": {
+        "expected": 493,
+        "present": 493,
+        "missing": []
+      },
+      "runtime_maps": {
+        "expected": 12,
+        "present": 12,
+        "missing": []
+      },
+      "validation_fixture_assets": {
+        "expected": 3,
+        "present": 3,
+        "missing": []
+      }
+    }
+  },
+  "standalone": {
+    "Exceptions": {
+      "status": "passed",
+      "actual_native_exception_cases": 13,
+      "recovered": true,
+      "no_duplicate_native_payment_or_reward": true,
+      "native_reset_ends_on_exception": true,
+      "subscriptions_closed": true
+    },
+    "Frontend": {
+      "status": "passed",
+      "kind": "frontend",
+      "profile": "Python",
+      "online_service_tested": false,
+      "network_replication_tested": false
+    }
+  },
+  "networks": {
+    "Damage": {
+      "status": "passed",
+      "native_rule_family": "Damage",
+      "independent_client_views": 8,
+      "native_reset_producer_tested": true,
+      "owners": 2,
+      "authority_trials": 4,
+      "owner_trials": 4,
+      "passive_foreign_client_observations": 4,
+      "reset_router_payload_replicated_to_foreign_client": false,
+      "full_auto_respawn_acceptance": false,
+      "packaged_authority_mode": "ListenServer",
+      "native_listen_ui_reference_preserved": true,
+      "raw_peer_reports_rewritten": false
+    },
+    "Pawn": {
+      "status": "passed",
+      "native_rule_family": "Pawn",
+      "independent_client_views": 8,
+      "native_reset_producer_tested": true,
+      "owners": 2,
+      "authority_trials": 4,
+      "owner_trials": 4,
+      "passive_foreign_client_observations": 4,
+      "reset_router_payload_replicated_to_foreign_client": false,
+      "full_auto_respawn_acceptance": false,
+      "packaged_authority_mode": "ListenServer",
+      "native_listen_ui_reference_preserved": true,
+      "raw_peer_reports_rewritten": false
+    }
+  },
+  "python_dependencies": {
+    "Exceptions": {
+      "receipt_python_files": 4578,
+      "actual_loaded_python": {
+        "actual_loaded_module": true,
+        "sha256": "2835E0F24FB13EF019608B13817F3ACF8735FBC5F786D00501C4A151226BDFF1",
+        "loaded_modules_at_inspection": 62,
+        "inside_package": true,
+        "source_engine_modules_loaded": 0,
+        "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Hardening\\20261103\\H04-Cook02\\Archive\\Windows\\LyraStarterGame\\Binaries\\Win64\\python311.dll"
+      },
+      "actual_python_home": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Hardening\\20261103\\H04-Cook02\\Archive\\Windows\\Engine\\Binaries\\ThirdParty\\Python3\\Win64",
+      "exact_ini_staging_normalizations": [
+        {
+          "relative_path": "Engine/Binaries/ThirdParty/Python3/Win64/Lib/test/libregrtest/mypy.ini",
+          "source_sha256": "B5A9DB29BF39B8FE8538163BEC99DED8B084F0AE7878DC006455B8AF2AE1ECE9",
+          "packaged_sha256": "F1499B8B808E8B17AF0F153B240DA73EAF8A047CE4BC97334B0E7CAA2245FBB8",
+          "transformation": "UAT INI UTF-8 BOM and line endings only"
+        }
+      ],
+      "evidence": {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedExceptions01/dependencies-review02.json",
+        "sha256": "9BA10A1415DE7C094FA1E40E35D861DC2C9E7510F6839E30BE1BEC9A84EF23BA"
+      }
+    },
+    "Frontend": {
+      "receipt_python_files": 4578,
+      "actual_loaded_python": {
+        "sha256": "2835E0F24FB13EF019608B13817F3ACF8735FBC5F786D00501C4A151226BDFF1",
+        "inside_package": true,
+        "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Hardening\\20261103\\H04-Cook02\\Archive\\Windows\\LyraStarterGame\\Binaries\\Win64\\python311.dll",
+        "actual_loaded_module": true,
+        "loaded_modules_at_inspection": 56,
+        "source_engine_modules_loaded": 0
+      },
+      "actual_python_home": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Hardening\\20261103\\H04-Cook02\\Archive\\Windows\\Engine\\Binaries\\ThirdParty\\Python3\\Win64",
+      "exact_ini_staging_normalizations": [
+        {
+          "relative_path": "Engine/Binaries/ThirdParty/Python3/Win64/Lib/test/libregrtest/mypy.ini",
+          "source_sha256": "B5A9DB29BF39B8FE8538163BEC99DED8B084F0AE7878DC006455B8AF2AE1ECE9",
+          "packaged_sha256": "F1499B8B808E8B17AF0F153B240DA73EAF8A047CE4BC97334B0E7CAA2245FBB8",
+          "transformation": "UAT INI UTF-8 BOM and line endings only"
+        }
+      ],
+      "evidence": {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedFrontend01/dependencies.json",
+        "sha256": "9BA10A1415DE7C094FA1E40E35D861DC2C9E7510F6839E30BE1BEC9A84EF23BA"
+      }
+    },
+    "Damage-server": {
+      "receipt_python_files": 4578,
+      "actual_loaded_python": {
+        "sha256": "2835E0F24FB13EF019608B13817F3ACF8735FBC5F786D00501C4A151226BDFF1",
+        "source_engine_modules_loaded": 0,
+        "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Hardening\\20261103\\H04-Cook02\\Archive\\Windows\\LyraStarterGame\\Binaries\\Win64\\python311.dll",
+        "loaded_modules_at_inspection": 98,
+        "actual_loaded_module": true,
+        "inside_package": true
+      },
+      "actual_python_home": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Hardening\\20261103\\H04-Cook02\\Archive\\Windows\\Engine\\Binaries\\ThirdParty\\Python3\\Win64",
+      "exact_ini_staging_normalizations": [
+        {
+          "relative_path": "Engine/Binaries/ThirdParty/Python3/Win64/Lib/test/libregrtest/mypy.ini",
+          "source_sha256": "B5A9DB29BF39B8FE8538163BEC99DED8B084F0AE7878DC006455B8AF2AE1ECE9",
+          "packaged_sha256": "F1499B8B808E8B17AF0F153B240DA73EAF8A047CE4BC97334B0E7CAA2245FBB8",
+          "transformation": "UAT INI UTF-8 BOM and line endings only"
+        }
+      ],
+      "evidence": {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedDamageNetwork02/rule/server-dependencies.json",
+        "sha256": "9BA10A1415DE7C094FA1E40E35D861DC2C9E7510F6839E30BE1BEC9A84EF23BA"
+      }
+    },
+    "Damage-A": {
+      "receipt_python_files": 4578,
+      "actual_loaded_python": {
+        "sha256": "2835E0F24FB13EF019608B13817F3ACF8735FBC5F786D00501C4A151226BDFF1",
+        "source_engine_modules_loaded": 0,
+        "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Hardening\\20261103\\H04-Cook02\\Archive\\Windows\\LyraStarterGame\\Binaries\\Win64\\python311.dll",
+        "loaded_modules_at_inspection": 98,
+        "actual_loaded_module": true,
+        "inside_package": true
+      },
+      "actual_python_home": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Hardening\\20261103\\H04-Cook02\\Archive\\Windows\\Engine\\Binaries\\ThirdParty\\Python3\\Win64",
+      "exact_ini_staging_normalizations": [
+        {
+          "relative_path": "Engine/Binaries/ThirdParty/Python3/Win64/Lib/test/libregrtest/mypy.ini",
+          "source_sha256": "B5A9DB29BF39B8FE8538163BEC99DED8B084F0AE7878DC006455B8AF2AE1ECE9",
+          "packaged_sha256": "F1499B8B808E8B17AF0F153B240DA73EAF8A047CE4BC97334B0E7CAA2245FBB8",
+          "transformation": "UAT INI UTF-8 BOM and line endings only"
+        }
+      ],
+      "evidence": {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedDamageNetwork02/rule/A-dependencies.json",
+        "sha256": "9BA10A1415DE7C094FA1E40E35D861DC2C9E7510F6839E30BE1BEC9A84EF23BA"
+      }
+    },
+    "Damage-B0": {
+      "receipt_python_files": 4578,
+      "actual_loaded_python": {
+        "sha256": "2835E0F24FB13EF019608B13817F3ACF8735FBC5F786D00501C4A151226BDFF1",
+        "source_engine_modules_loaded": 0,
+        "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Hardening\\20261103\\H04-Cook02\\Archive\\Windows\\LyraStarterGame\\Binaries\\Win64\\python311.dll",
+        "loaded_modules_at_inspection": 98,
+        "actual_loaded_module": true,
+        "inside_package": true
+      },
+      "actual_python_home": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Hardening\\20261103\\H04-Cook02\\Archive\\Windows\\Engine\\Binaries\\ThirdParty\\Python3\\Win64",
+      "exact_ini_staging_normalizations": [
+        {
+          "relative_path": "Engine/Binaries/ThirdParty/Python3/Win64/Lib/test/libregrtest/mypy.ini",
+          "source_sha256": "B5A9DB29BF39B8FE8538163BEC99DED8B084F0AE7878DC006455B8AF2AE1ECE9",
+          "packaged_sha256": "F1499B8B808E8B17AF0F153B240DA73EAF8A047CE4BC97334B0E7CAA2245FBB8",
+          "transformation": "UAT INI UTF-8 BOM and line endings only"
+        }
+      ],
+      "evidence": {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedDamageNetwork02/rule/B0-dependencies.json",
+        "sha256": "9BA10A1415DE7C094FA1E40E35D861DC2C9E7510F6839E30BE1BEC9A84EF23BA"
+      }
+    },
+    "Pawn-server": {
+      "receipt_python_files": 4578,
+      "actual_loaded_python": {
+        "sha256": "2835E0F24FB13EF019608B13817F3ACF8735FBC5F786D00501C4A151226BDFF1",
+        "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Hardening\\20261103\\H04-Cook02\\Archive\\Windows\\LyraStarterGame\\Binaries\\Win64\\python311.dll",
+        "source_engine_modules_loaded": 0,
+        "inside_package": true,
+        "loaded_modules_at_inspection": 98,
+        "actual_loaded_module": true
+      },
+      "actual_python_home": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Hardening\\20261103\\H04-Cook02\\Archive\\Windows\\Engine\\Binaries\\ThirdParty\\Python3\\Win64",
+      "exact_ini_staging_normalizations": [
+        {
+          "relative_path": "Engine/Binaries/ThirdParty/Python3/Win64/Lib/test/libregrtest/mypy.ini",
+          "source_sha256": "B5A9DB29BF39B8FE8538163BEC99DED8B084F0AE7878DC006455B8AF2AE1ECE9",
+          "packaged_sha256": "F1499B8B808E8B17AF0F153B240DA73EAF8A047CE4BC97334B0E7CAA2245FBB8",
+          "transformation": "UAT INI UTF-8 BOM and line endings only"
+        }
+      ],
+      "evidence": {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedPawnNetwork01/rule/server-dependencies.json",
+        "sha256": "9BA10A1415DE7C094FA1E40E35D861DC2C9E7510F6839E30BE1BEC9A84EF23BA"
+      }
+    },
+    "Pawn-A": {
+      "receipt_python_files": 4578,
+      "actual_loaded_python": {
+        "sha256": "2835E0F24FB13EF019608B13817F3ACF8735FBC5F786D00501C4A151226BDFF1",
+        "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Hardening\\20261103\\H04-Cook02\\Archive\\Windows\\LyraStarterGame\\Binaries\\Win64\\python311.dll",
+        "source_engine_modules_loaded": 0,
+        "inside_package": true,
+        "loaded_modules_at_inspection": 98,
+        "actual_loaded_module": true
+      },
+      "actual_python_home": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Hardening\\20261103\\H04-Cook02\\Archive\\Windows\\Engine\\Binaries\\ThirdParty\\Python3\\Win64",
+      "exact_ini_staging_normalizations": [
+        {
+          "relative_path": "Engine/Binaries/ThirdParty/Python3/Win64/Lib/test/libregrtest/mypy.ini",
+          "source_sha256": "B5A9DB29BF39B8FE8538163BEC99DED8B084F0AE7878DC006455B8AF2AE1ECE9",
+          "packaged_sha256": "F1499B8B808E8B17AF0F153B240DA73EAF8A047CE4BC97334B0E7CAA2245FBB8",
+          "transformation": "UAT INI UTF-8 BOM and line endings only"
+        }
+      ],
+      "evidence": {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedPawnNetwork01/rule/A-dependencies.json",
+        "sha256": "9BA10A1415DE7C094FA1E40E35D861DC2C9E7510F6839E30BE1BEC9A84EF23BA"
+      }
+    },
+    "Pawn-B0": {
+      "receipt_python_files": 4578,
+      "actual_loaded_python": {
+        "sha256": "2835E0F24FB13EF019608B13817F3ACF8735FBC5F786D00501C4A151226BDFF1",
+        "path": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Hardening\\20261103\\H04-Cook02\\Archive\\Windows\\LyraStarterGame\\Binaries\\Win64\\python311.dll",
+        "source_engine_modules_loaded": 0,
+        "inside_package": true,
+        "loaded_modules_at_inspection": 98,
+        "actual_loaded_module": true
+      },
+      "actual_python_home": "F:\\UnrealEnginePython5\\.build\\LyraValidation\\Hardening\\20261103\\H04-Cook02\\Archive\\Windows\\Engine\\Binaries\\ThirdParty\\Python3\\Win64",
+      "exact_ini_staging_normalizations": [
+        {
+          "relative_path": "Engine/Binaries/ThirdParty/Python3/Win64/Lib/test/libregrtest/mypy.ini",
+          "source_sha256": "B5A9DB29BF39B8FE8538163BEC99DED8B084F0AE7878DC006455B8AF2AE1ECE9",
+          "packaged_sha256": "F1499B8B808E8B17AF0F153B240DA73EAF8A047CE4BC97334B0E7CAA2245FBB8",
+          "transformation": "UAT INI UTF-8 BOM and line endings only"
+        }
+      ],
+      "evidence": {
+        "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedPawnNetwork01/rule/B0-dependencies.json",
+        "sha256": "9BA10A1415DE7C094FA1E40E35D861DC2C9E7510F6839E30BE1BEC9A84EF23BA"
+      }
+    }
+  },
+  "all_network_peers_use_actual_packaged_game": true,
+  "packaged_network_authority_mode": "ListenServer with native host-local-player removal; two real remote clients",
+  "packaged_dedicated_server_target_claimed": false,
+  "independent_client_rule_views": 16,
+  "original_candidate_logic_coverage_not_inferred_from_content_presence": true,
+  "retained_attempts": [
+    "H04-Cook01 stopped before cooking because UAT inferred a project Editor target receipt that was intentionally not generated by project-only DLL compilation. The cook entry now explicitly selects the already validated UnrealEditor-Cmd executable; Game and frozen package-plan inputs are reused without recompilation.",
+    "H04-PackagedExceptions01 passed its real thirteen-case native run, exit and precise log/result gates. The pure dependency gate then exposed UAT adding a UTF-8 BOM and CRLF to one standard-library test INI. Exact BOM/newline equivalence is now required only for that text format; all other dependency bytes remain strict. A separate reviewed summary preserves the original failure and rechecks all frozen native/package inputs without rerunning the game.",
+    "H04-PackagedDamageNetwork01 demonstrated that the Game target does not interpret -server as an Editor dedicated server. It stopped without launching clients. The actual supported listen URL and native DebugRemovePlayer remove the host LocalPlayer while retaining two remote clients.",
+    "H04-PackagedDamageNetwork02 completed all three peers, native trials and eight independent client views. The original dedicated-server pure gate rejected stable listen UI references and local cosmetic completion. A separate listen-specific pure review asserts those native listen invariants while keeping every other Reset, ownership, damage, RPC, message, restore and client-view assertion. Original peer reports, failed summary and lane remain unchanged; no game process was rerun for that review."
+  ],
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H04-GameBuild01/summary.json",
+      "sha256": "187736998F8A032A77423C004CCBAD91B9520108034ECD575C3CD51B7BE905C3"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H04-GameBuild01/scoped-output-final.json",
+      "sha256": "F71DEEC5309AB0F24BCED55632C8527A316F3B75DC64038049F5410801B383D4"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H04-Fixtures01/summary.json",
+      "sha256": "68BFE9D89A881EFECAF6BC7E3C8B97454CBB96742DB83270F33278FD301C65A1"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H04-Cook02/summary.json",
+      "sha256": "7D09444F23521A266EC10910105B8C6591733A3B7059EB14CE66BDAC486F0F49"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H04-Cook02/package-inventory.json",
+      "sha256": "81BE3E9F5CC1169C8B22CED677056F79B1DF78E8C8C4840A6049C591F46A4C72"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H04-package-plan.json",
+      "sha256": "73DCC5B01E676731B41409142583454BE6285706D934D2528E9C4FEC21554A91"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedExceptions01/summary.json",
+      "sha256": "C45BBD699687D487EFB84D9453C1F43AF8EF7F5AEE12EB3DF2C40274728549DE"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedFrontend01/summary.json",
+      "sha256": "A88DB3E4FCD2BC8B12C317CE8AD9B0BA21AE37E18E77AC4778A494C46746AA27"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedExceptions01/summary-reviewed.json",
+      "sha256": "5008CBAD652E94F8BA9D66D9E149350BFF38C7892085786C05CA0296BD5D557E"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedDamageNetwork02/summary.json",
+      "sha256": "A571CFB19C5136732D6B51B74449BC8D6B786864CBA77E3BE1D1B6725B2EB3BE"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedDamageNetwork02/summary-reviewed.json",
+      "sha256": "B4627221E8C9AF3B0CCDC9502B602CB630895A94416984307906601CED195AE5"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedPawnNetwork01/summary.json",
+      "sha256": "308C6178687A5241F567BF0A57C6F8523BC0C794D4AECDB4C1E87A56653C880F"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedDamageNetwork02/rule/listen-independent-gate.json",
+      "sha256": "3FFCAA1A8993336EA54ED9A7F92F7ABBD3AA98B25606AF8212CFF820509059A8"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H04-PackagedPawnNetwork01/rule/listen-independent-gate.json",
+      "sha256": "D374360D9A1A0D46ED3A3DB470FD8D9748DD6B4123C9B02F86A8F102D80D4016"
+    }
+  ]
+}

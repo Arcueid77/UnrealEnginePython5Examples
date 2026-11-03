@@ -46,6 +46,8 @@ def inspect(plan, listing):
         return [row['relative_path'] for row in group if row['relative_path'].casefold() not in packages]
     groups = {'candidate_assets': plan['candidate_assets'], 'overlay_assets': plan['accepted_overlay_assets'],
               'runtime_maps': plan['runtime_maps']}
+    if 'validation_fixture_assets' in plan:
+        groups['validation_fixture_assets'] = plan['validation_fixture_assets']
     coverage = {name: dict(expected=len(group), present=len(group)-len(missing(group)), missing=missing(group))
                 for name, group in groups.items()}
     return dict(schema_version=1, status='passed' if not any(row['missing'] for row in coverage.values()) else 'review_required',
