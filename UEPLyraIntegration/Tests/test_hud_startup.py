@@ -9,6 +9,10 @@ from uep_lyra_hud.startup import validation_module
 
 
 class StartupSelectionTests(unittest.TestCase):
+    def test_hardening_runtime_requires_explicit_lane_and_skips_commandlets(self):
+        args=['-UEPHardeningResult=report.json','-UEPHardeningMode=Exceptions']
+        self.assertEqual(validation_module(args),'uep_lyra_native.hardening_validation')
+        self.assertIsNone(validation_module(['-run=Py']+args))
     def test_native_rule_network_owns_shared_reset_fixture(self):
         args=['-UEPNativeRuleNetwork','-UEPNativeResetNetwork','-UEPAutoRespawnResetNetworkResult=report.json']
         self.assertEqual(validation_module(args),'uep_lyra_native.rule_network_validation')

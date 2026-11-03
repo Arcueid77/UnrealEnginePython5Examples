@@ -21,8 +21,14 @@ def sources():
     Context->Operation = TEXT("Reset.Activate");
     Context->bHasCharacter = GetLyraCharacterFromActorInfo() != nullptr;
     Host->UEPApplyPolicy(Context.Get());
-    ensureMsgf(Context->bCompleted, TEXT("Python Reset policy did not complete"));
-    return Context->bCompleted ? Context->Actions : TArray<FName>();
+    if (!Context->bCompleted)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("UEP_NATIVE_POLICY_ABORTED: Reset.Activate"));
+        // A failed plan must end its GAS instance without resetting the Pawn,
+        // broadcasting a reset, or falling through to the native reset body.
+        return { TEXT("EndAbility") };
+    }
+    return Context->Actions;
 }''')
     rows=[dict(relative=reset['relative'],before=before,after=after,original_sha256=reset['original_sha256'])]
     for suffix in ('.h','.cpp'):

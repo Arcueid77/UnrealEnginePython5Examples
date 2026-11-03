@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "in_progress",
+  "scope_approved_date": "2026-11-03",
+  "user_authorization": "都干了",
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "cpp09_desktop_acceptance_user_deferred": true,
+  "workflow": "Affected checks; one native lane; explicit paths; Examples commit/push before core and gitlink; protected original Engine, Lyra and CPP09 stage.",
+  "batches": [
+    {
+      "id": "H01",
+      "scope": "Actual Python callback exceptions, no duplicate native cost/settlement, recovery and teardown",
+      "status": "accepted",
+      "acceptance_ledger": "NativeGameplay/H01-acceptance.json"
+    },
+    {
+      "id": "H02",
+      "scope": "Native/Python performance comparison and sustained gameplay memory/object/handle stability",
+      "status": "in_progress",
+      "acceptance_ledger": null
+    },
+    {
+      "id": "H03",
+      "scope": "Unified reproducible setup from a fresh independent stage with committed production patches and assets",
+      "status": "planned",
+      "acceptance_ledger": null
+    },
+    {
+      "id": "H04",
+      "scope": "Current Win64 Development game build, cooked script/asset/dependency inventory and actual packaged standalone/network execution",
+      "status": "planned",
+      "acceptance_ledger": null
+    }
+  ]
+}

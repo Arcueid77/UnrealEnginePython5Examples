@@ -21,7 +21,14 @@ bool UEPApplyWorldPolicy(UUEPNativePolicyContext* Context)
 {
     check(Context);
     CastChecked<UUEPNativeGameplayPolicy>(Context->GetOuter())->UEPApplyPolicy(Context);
-    return ensureMsgf(Context->bCompleted, TEXT("Python world policy did not complete: %s"), *Context->Operation.ToString());
+    if (!Context->bCompleted)
+    {
+        // Script failure is already logged by the router. Reject incomplete
+        // output without an engine ensure or replaying the native policy.
+        UE_LOG(LogTemp, Warning, TEXT("UEP_NATIVE_POLICY_ABORTED: %s"), *Context->Operation.ToString());
+        return false;
+    }
+    return true;
 }
 
 static TArray<FUEPNativeCharacterPartPolicyRow> UEPPartRows(const TArray<FLyraControllerCharacterPartEntry>& Entries, const FLyraCharacterPart* EquivalentTo)

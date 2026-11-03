@@ -9,7 +9,7 @@
  #include UE_INLINE_GENERATED_CPP_BY_NAME(LyraGameplayAbility_Reset)
  
  ULyraGameplayAbility_Reset::ULyraGameplayAbility_Reset(const FObjectInitializer& ObjectInitializer)
-@@ -78,5 +80,19 @@
+@@ -78,5 +80,25 @@
  }
  
  
@@ -28,8 +28,14 @@
 +    Context->Operation = TEXT("Reset.Activate");
 +    Context->bHasCharacter = GetLyraCharacterFromActorInfo() != nullptr;
 +    Host->UEPApplyPolicy(Context.Get());
-+    ensureMsgf(Context->bCompleted, TEXT("Python Reset policy did not complete"));
-+    return Context->bCompleted ? Context->Actions : TArray<FName>();
++    if (!Context->bCompleted)
++    {
++        UE_LOG(LogTemp, Warning, TEXT("UEP_NATIVE_POLICY_ABORTED: Reset.Activate"));
++        // A failed plan must end its GAS instance without resetting the Pawn,
++        // broadcasting a reset, or falling through to the native reset body.
++        return { TEXT("EndAbility") };
++    }
++    return Context->Actions;
 +}
 --- /dev/null
 +++ b/Source/LyraGame/UEPPolicy/UEPNativeGameplayPolicy.h

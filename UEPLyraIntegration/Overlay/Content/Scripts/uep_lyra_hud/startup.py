@@ -2,6 +2,8 @@
 
 
 def validation_module(arguments):
+    if any(a.startswith('-UEPHardeningResult=') for a in arguments):
+        return None if any(a.startswith('-run=') for a in arguments) else 'uep_lyra_native.hardening_validation'
     if '-UEPNativeRuleNetwork' in arguments:
         return None if any(a.startswith('-run=') for a in arguments) else 'uep_lyra_native.rule_network_validation'
     if any(a.startswith('-UEPNativeAttributeResult=') for a in arguments):

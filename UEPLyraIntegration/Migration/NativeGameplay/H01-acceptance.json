@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "group": "H01",
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "cpp09_actual_desktop_input_user_deferred": true,
+  "physical_input_tested": false,
+  "new_migration_candidates_claimed": false,
+  "engine_full_compile_executed": false,
+  "cook_package_executed": false,
+  "actual_native_failure_recovery": {
+    "status": "passed",
+    "actual_native_exception_cases": 13,
+    "recovered": true,
+    "no_duplicate_native_payment_or_reward": true,
+    "native_reset_ends_on_exception": true,
+    "subscriptions_closed": true
+  },
+  "normal_default_frontend": {
+    "status": "passed",
+    "kind": "frontend",
+    "profile": "Python",
+    "online_service_tested": false,
+    "network_replication_tested": false
+  },
+  "compiled_body_units": [
+    {
+      "unit": 3,
+      "uht_reused": true,
+      "summary": {
+        "path": ".build/LyraValidation/Hardening/20261103/H01-BodyBuild01/summary.json",
+        "sha256": "2E92824B5875DA7A00AF285F5201AEE391404B240D55BCD92EA118F4D9489A3F"
+      }
+    },
+    {
+      "unit": 1,
+      "uht_reused": true,
+      "summary": {
+        "path": ".build/LyraValidation/Hardening/20261103/H01-ResetBuild01/summary.json",
+        "sha256": "D8542527D520DD4C4793F7368064DDAC27C5D2C4C6A784E3D2E34F6450710B28"
+      }
+    }
+  ],
+  "sdk_bridge_and_other_units_reused": true,
+  "real_equipped_item_spec_actorinfo_and_magazine_used": true,
+  "original_editor_only_fixture_factory_not_used_in_final_game_test": true,
+  "native_world_policy_incomplete_outputs_rejected_without_engine_ensure": true,
+  "native_reset_incomplete_plan_ends_without_resetting_or_broadcasting_pawn": true,
+  "reward_payload_supplied_by_fixture": true,
+  "reward_tag_snapshots_detached_before_native_map_mutation": true,
+  "retained_attempts": [
+    "H01-Exceptions01: incomplete policy emitted an engine ensure; the test also incorrectly called the editor-only cost factory in a game world and asserted.",
+    "H01-Exceptions02: damage and real equipped-item cost exception/recovery passed nine cases.",
+    "H01-Exceptions03/04: the reward observer exposed borrowed tag-map values invalidated by replacing their source map. Detached value snapshots restore the native observation baseline."
+  ],
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H01-BodyBuild01/summary.json",
+      "sha256": "2E92824B5875DA7A00AF285F5201AEE391404B240D55BCD92EA118F4D9489A3F"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H01-ResetBuild01/summary.json",
+      "sha256": "D8542527D520DD4C4793F7368064DDAC27C5D2C4C6A784E3D2E34F6450710B28"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H01-Exceptions05/summary.json",
+      "sha256": "DFFF95689936F15AA122128BA53332FA9E3AB58F335A48F47D79E45AE740A085"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H01-Exceptions05/runtime.json",
+      "sha256": "39B29ACEA5F5A1FE891518D79836940C22721F3C05295E72A936BC9B6197EF9D"
+    },
+    {
+      "path": ".build/LyraValidation/Hardening/20261103/H01-DefaultFrontend01/summary.json",
+      "sha256": "7B5789A6B0438CF81591431C8F013F32B027B3AFC903DEDF3B59697C9F66E8E8"
+    }
+  ]
+}
