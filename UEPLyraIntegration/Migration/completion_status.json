@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "reviewed_utc": "2026-11-03T15:01:49.426444+00:00",
-  "status": "implemented_pending_user_deferred_actual_input",
-  "full_objective_achieved": false,
+  "reviewed_utc": "2026-11-04T17:31:17.646429+00:00",
+  "status": "accepted",
+  "full_objective_achieved": true,
   "objective": "完成之前确认的所有的替换",
   "target": "UE5.8.1 / CPython3.11 / Win64 Development",
   "source_inventory_is_historical_proposal": true,
@@ -36,6 +36,7 @@
       "CPP-012",
       "CPP-013",
       "CPP-014",
+      "CPP-015",
       "CPP-016",
       "CPP-017",
       "CPP-019",
@@ -54,9 +55,7 @@
     "accepted_capability_only_candidates": [
       "CPP-018"
     ],
-    "pending_actual_input_candidates": [
-      "CPP-015"
-    ],
+    "pending_actual_input_candidates": [],
     "batches": [
       {
         "batch": "CPP01",
@@ -157,10 +156,10 @@
         "candidates": [
           "CPP-015"
         ],
-        "status": "implemented_pending_actual_input",
+        "status": "accepted",
         "evidence": {
-          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP09-progress.json",
-          "sha256": "1EC37A2313D98CC8FB23D8FF85AA0397DE2AAD3A4F842DC4237A71A1F38E2869"
+          "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP09-acceptance.json",
+          "sha256": "147108E15DB9FDE535DB25990CD1691520B34BEEE40411EF8144525D47102F2D"
         }
       },
       {
@@ -332,15 +331,15 @@
     "trackers": [
       {
         "path": "Demos/UEPLyraIntegration/Migration/cpp_batches.json",
-        "sha256": "2A0EB5C22CA476271B128DB43AED76A62DBA6F9FAF57958EC11D11F1100740D3"
+        "sha256": "C4A3230650E6BD9F17F1F9421D4838418C26E121671A8E62A2A7F4AF4151787D"
       },
       {
         "path": "Demos/UEPLyraIntegration/Migration/cpp_extended_batches.json",
-        "sha256": "94218B9819E6C0C6C0E17776FD23FCC2B472C2382BD55C0A098ACC52BB3F9615"
+        "sha256": "E260C80BE37E66F7877AC1DA9FC83D0ACC42FC485014E15EE12366EC1170CED3"
       },
       {
         "path": "Demos/UEPLyraIntegration/Migration/cpp_remaining_batches.json",
-        "sha256": "0ACE2550D25C13D4D03EA3F16D65CFE65E361FA1CF85DFF01FB13F5A5AFC6E89"
+        "sha256": "5B9E13A36AAF66646C714FC8A045D3659FEFC2ADA2FCBA52241696585BBD42EE"
       }
     ]
   },
@@ -389,12 +388,12 @@
     ],
     "source": {
       "path": "Demos/UEPLyraIntegration/Migration/hardening_batches.json",
-      "sha256": "CF17ECB62E5A8CA387B8B651AC262231687B56549A3386A38DF9030A114F5DF2"
+      "sha256": "E6ABF162499C4E7E03BFF1BCF61D9D4955EB36F1682657EDBEEDA5256C123EA0"
     }
   },
   "evidence_integrity": {
-    "verified_closed_json_reports": 168,
-    "verified_referenced_files": 195,
+    "verified_closed_json_reports": 172,
+    "verified_referenced_files": 230,
     "missing_files": 0,
     "unexpected_hash_mismatches": 0,
     "verified_references": [
@@ -1177,6 +1176,146 @@
       {
         "path": ".build/LyraValidation/Hardening/20261103/H05-Rendered01/Captures/H05_f73df9816636401c8025983e80b30ff1_15_RuleStress_Python.csv",
         "sha256": "03F0C489730878BB063A66D209E71A3FE5A16DE87EE8D994B871559C36D6687B"
+      },
+      {
+        "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP09-UI/NativeMenu.jpg",
+        "sha256": "82F2C47BCB8E4C8870231BF9CCBFEFC808573324CB81B546AF7CA4F588F9F669"
+      },
+      {
+        "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP09-UI/PythonMenu.jpg",
+        "sha256": "D76437168DC277727E4533502A9E5DCBA20D32A13BE5FCE5FD7C9E97A8EF7367"
+      },
+      {
+        "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP09-UI/RestoredHUD.jpg",
+        "sha256": "5CA1CE1B1C1BA15AE16B73A5BAB97DE604DC64EBC09D13C1EBCA0DB55DCA898D"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/summary.json",
+        "sha256": "4258740B01CFDEA08F4BAA53168694F3051829BE0E40719288952551E75BD9F6"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/runtime.json",
+        "sha256": "6E38D4F4D1BA9FABC7203A24F5C948462DF136C802613F874BE1662FE64B1310"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/comparison.json",
+        "sha256": "A7FC236FD362C67E961328B5E9EA9E0BD5A0CE8B778CECBBE7316ADE65DCEDC3"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/ui-actions.json",
+        "sha256": "4AF22B6686B6B237B6706FAFD723CE13C2C506733F931BF7289525421EF0F452"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/01-before.jpg",
+        "sha256": "CC2512189FB129A5031BF48B09C73AABF0360AE9BCC95786A09E8A51059077A8"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/01-after.jpg",
+        "sha256": "82F2C47BCB8E4C8870231BF9CCBFEFC808573324CB81B546AF7CA4F588F9F669"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/02-before.jpg",
+        "sha256": "82F2C47BCB8E4C8870231BF9CCBFEFC808573324CB81B546AF7CA4F588F9F669"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/02-after.jpg",
+        "sha256": "91DEDB7ED8E9C4E8175AF8B262043BD17F64F99CD1A82B72EE1F9C3403B40CEF"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/03-before.jpg",
+        "sha256": "91DEDB7ED8E9C4E8175AF8B262043BD17F64F99CD1A82B72EE1F9C3403B40CEF"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/03-after.jpg",
+        "sha256": "A73B2C5C9E3B3035B46AA60088E1CE5215D131E6A97E874EFC30303672531A02"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/04-before.jpg",
+        "sha256": "A73B2C5C9E3B3035B46AA60088E1CE5215D131E6A97E874EFC30303672531A02"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/04-after.jpg",
+        "sha256": "2FCDE84CBEC7B07265C3CB55CF30582B5115F577DAD2F10BE5E2D141FABA3FA8"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/05-before.jpg",
+        "sha256": "2FCDE84CBEC7B07265C3CB55CF30582B5115F577DAD2F10BE5E2D141FABA3FA8"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/05-after.jpg",
+        "sha256": "6D0573F64C444E324C8F2B8EE2824C64D532F851A1E9D9EE30E92C5D81B830CC"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/06-before.jpg",
+        "sha256": "D76437168DC277727E4533502A9E5DCBA20D32A13BE5FCE5FD7C9E97A8EF7367"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/06-after.jpg",
+        "sha256": "2FCDE84CBEC7B07265C3CB55CF30582B5115F577DAD2F10BE5E2D141FABA3FA8"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/07-before.jpg",
+        "sha256": "2FCDE84CBEC7B07265C3CB55CF30582B5115F577DAD2F10BE5E2D141FABA3FA8"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/07-after.jpg",
+        "sha256": "3621E9FABDCC1455145F7F01096C167FD82909734B79C21FE7A55E1685953C22"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/08-before.jpg",
+        "sha256": "3621E9FABDCC1455145F7F01096C167FD82909734B79C21FE7A55E1685953C22"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/08-after.jpg",
+        "sha256": "6A75A2C245FCE0D597DEDE1CD75C2AD0A0220F6417C31441568B6620CB2FFF41"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/09-before.jpg",
+        "sha256": "DF94515DD923EA0E36DF427571805DAA86D3682E44535963F61CBF27C3D13881"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/09-after.jpg",
+        "sha256": "D76437168DC277727E4533502A9E5DCBA20D32A13BE5FCE5FD7C9E97A8EF7367"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/10-before.jpg",
+        "sha256": "D76437168DC277727E4533502A9E5DCBA20D32A13BE5FCE5FD7C9E97A8EF7367"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/10-after.jpg",
+        "sha256": "2FCDE84CBEC7B07265C3CB55CF30582B5115F577DAD2F10BE5E2D141FABA3FA8"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/11-before.jpg",
+        "sha256": "2FCDE84CBEC7B07265C3CB55CF30582B5115F577DAD2F10BE5E2D141FABA3FA8"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/11-after.jpg",
+        "sha256": "60DA1E1D1364B2699944D402593DC8BCE7F4C69F8FF71DB935724B0DECF96144"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/12-before.jpg",
+        "sha256": "60DA1E1D1364B2699944D402593DC8BCE7F4C69F8FF71DB935724B0DECF96144"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/12-after.jpg",
+        "sha256": "411034DBE14872AF5289B35D8A1BECF892A21EA2B6E97D6046266E30C8D163DD"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/13-before.jpg",
+        "sha256": "2FCDE84CBEC7B07265C3CB55CF30582B5115F577DAD2F10BE5E2D141FABA3FA8"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/13-after.jpg",
+        "sha256": "396949768B3C7C08301B4FAB8D674A5FE1710F663E88EF0D8406B37EF759958F"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/14-before.jpg",
+        "sha256": "396949768B3C7C08301B4FAB8D674A5FE1710F663E88EF0D8406B37EF759958F"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/14-after.jpg",
+        "sha256": "5CA1CE1B1C1BA15AE16B73A5BAB97DE604DC64EBC09D13C1EBCA0DB55DCA898D"
       }
     ],
     "evolved_live_compiler_intermediates": [
@@ -1195,27 +1334,72 @@
     ],
     "earlier_live_compiler_outputs_claimed_unchanged": false
   },
-  "remaining_acceptance": [
-    {
-      "candidate": "CPP-015",
-      "batch": "CPP09",
-      "user_deferred": true,
-      "requirements": [
-        "14 real Escape key presses in an unlocked actual game window",
-        "native input router entering Menu mode and restoring the original state",
-        "visible original Menu and final restored UI state"
-      ],
-      "headless_proof_replaces_actual_input": false,
-      "progress_ledger": {
-        "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP09-progress.json",
-        "sha256": "1EC37A2313D98CC8FB23D8FF85AA0397DE2AAD3A4F842DC4237A71A1F38E2869"
-      }
-    }
-  ],
-  "reviewed_without_native_rerun": true,
+  "remaining_acceptance": [],
+  "reviewed_without_native_rerun": false,
   "cpp_compile_executed": false,
   "cook_package_executed": false,
   "full_regression_executed": false,
-  "desktop_or_keyboard_operation_performed": false,
-  "other_platform_shipping_hardware_audio_or_rc_release_claimed": false
+  "desktop_or_keyboard_operation_performed": true,
+  "other_platform_shipping_hardware_audio_or_rc_release_claimed": false,
+  "completion_date": "2026-11-05",
+  "completion_scope": "All confirmed original Blueprint criteria, CPP-001 through CPP-030 in their approved production/capability scopes, and H01-H05; UE5.8.1 / CPython3.11 / Win64 Development",
+  "previous_review": {
+    "path": "Demos/UEPLyraIntegration/Migration/completion_status.json",
+    "sha256": "5116A094E00026C2270FA6947DAB4C09C6CEEFDBDACE9ECE240D099E3627F6B4",
+    "examples_commit": "8e0023b5a472f08633c9e59eb5e3071d4123c28b"
+  },
+  "cpp09_actual_window_acceptance": {
+    "ledger": {
+      "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP09-acceptance.json",
+      "sha256": "147108E15DB9FDE535DB25990CD1691520B34BEEE40411EF8144525D47102F2D"
+    },
+    "rules": {
+      "status": "passed",
+      "profiles": 2,
+      "escape_open_close_cycles": 7,
+      "actual_window_escape_inputs": 14,
+      "native_input_modes_and_travel_cleanup": true,
+      "isolated_common_ui_worlds": true,
+      "full_shooter_scene_rendering_acceptance": false
+    },
+    "native_process_exit_code": 0,
+    "menu_mode_per_cycle": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "input_state_restored_per_cycle": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "native_travels": 2,
+    "screenshots": 28,
+    "visible_original_UI_and_final_restore_observed": true,
+    "protected_game_and_sdk": [
+      {
+        "path": ".build/LyraValidation/CppGameplay/Stage/Lyra/Binaries/Win64/UnrealEditor-LyraGame.dll",
+        "sha256": "0C7BC68D7C8B71E9C7BEE8E0403AB3A5111A61C1C1C708A1CD773602A045E5BE"
+      },
+      {
+        "path": ".build/LyraValidation/CppGameplay/Stage/Lyra/Plugins/UnrealEnginePython/Binaries/Win64/UnrealEditor-UnrealEnginePython.dll",
+        "sha256": "96049A85163F7EBE98CDDBB324BDC7973F640E0CBC13CA758AA8499772F2044F"
+      }
+    ]
+  },
+  "desktop_authorization": {
+    "date": "2026-11-05",
+    "user_instruction": "屏幕解锁了，继续吧",
+    "scope": "Isolated CPP09 game window; fourteen real Escape keys and window captures"
+  },
+  "cpp09_actual_window_run_executed": true,
+  "other_accepted_native_suites_rerun": false
 }

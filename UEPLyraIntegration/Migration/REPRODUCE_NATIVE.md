@@ -106,4 +106,5 @@ Every dependency hash is strict except exact UTF-8 BOM/CRLF equivalence for stag
 INI text. Original failed summaries and raw native reports remain intact when
 only a pure contract needs a separate review; no peer report is rewritten.
 Cooked presence alone does not prove the behavior of every original candidate.
-CPP09 actual desktop Escape/Menu acceptance remains user-deferred.
+CPP09's separate actual desktop Escape/Menu acceptance passed on 2026-11-05;
+these headless/package gates retain their own scope.

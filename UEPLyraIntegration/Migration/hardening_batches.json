@@ -4,7 +4,8 @@
   "scope_approved_date": "2026-11-03",
   "user_authorization": "都干了",
   "target": "UE5.8.1 / CPython3.11 / Win64 Development",
-  "cpp09_desktop_acceptance_user_deferred": true,
+  "cpp09_desktop_acceptance_user_deferred": false,
+  "cpp09_actual_input_acceptance_ledger": "NativeGameplay/CPP09-acceptance.json",
   "workflow": "Affected checks; one native lane; explicit paths; Examples commit/push before core and gitlink; protected original Engine, Lyra and CPP09 stage.",
   "batches": [
     {

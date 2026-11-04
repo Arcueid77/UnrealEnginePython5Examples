@@ -1,6 +1,7 @@
 {
   "schema_version": 1,
-  "status": "in_progress",
+  "status": "accepted",
+  "accepted_date": "2026-11-05",
   "scope_approved_date": "2026-11-01",
   "user_authorization": "先提交了然后按之前说的逐步完成cpp替换吧",
   "scope": "Initial CPP-001 through CPP-015, in CPP01 through CPP09 order. Subsequent approved CPP-016 through CPP-030 selections are tracked in cpp_extended_batches.json and cpp_remaining_batches.json; counts in this file cover only the initial fifteen candidates.",
@@ -12,8 +13,8 @@
     "examples": "3e9c68fb10599d292f6e91cc92000d4dedf04086"
   },
   "approved_candidates": 15,
-  "accepted_candidates": 14,
-  "accepted_batches": 8,
+  "accepted_candidates": 15,
+  "accepted_batches": 9,
   "workflow": {
     "regression": "affected incremental checks and actual native/Python comparisons",
     "commit_and_push": "Examples first, then core validation changes and Demos gitlink; verify both remotes",
@@ -98,14 +99,12 @@
       "candidates": [
         "CPP-015"
       ],
-      "status": "implemented_pending_actual_input",
-      "acceptance_ledger": null,
+      "status": "accepted",
+      "acceptance_ledger": "NativeGameplay/CPP09-acceptance.json",
       "progress_ledger": "NativeGameplay/CPP09-progress.json"
     }
   ],
   "implemented_candidates": 15,
   "implemented_batches": 9,
-  "pending_actual_input_candidates": [
-    "CPP-015"
-  ]
+  "pending_actual_input_candidates": []
 }

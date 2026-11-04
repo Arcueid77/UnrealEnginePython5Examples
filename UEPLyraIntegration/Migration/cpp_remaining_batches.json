@@ -36,7 +36,7 @@
     "cpp_batches.json",
     "cpp_extended_batches.json"
   ],
-  "cpp09_actual_input_pending": true,
+  "cpp09_actual_input_pending": false,
   "batches": [
     {
       "id": "CPP13",

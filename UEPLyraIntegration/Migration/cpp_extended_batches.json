@@ -19,7 +19,7 @@
     "CPP-018"
   ],
   "prior_stage": "cpp_batches.json",
-  "prior_cpp09_actual_input_still_pending": true,
+  "prior_cpp09_actual_input_still_pending": false,
   "independent_stage": ".build/LyraValidation/CppGameplayExtended/Stage/Lyra",
   "batches": [
     {

@@ -2,9 +2,10 @@
 
 The user selected all four follow-up groups on 2026-11-03. Progress is tracked in
 [hardening_batches.json](hardening_batches.json). This work keeps the selected
-UE5.8.1 / CPython3.11 / Win64 Development target. CPP09 actual desktop Escape/Menu
-acceptance remains explicitly deferred; no computer or OS keyboard operation is
-authorized by these groups.
+UE5.8.1 / CPython3.11 / Win64 Development target. H01-H05 kept CPP09 desktop input
+separate. On 2026-11-05 the user unlocked the screen and authorized continuation;
+[CPP09 actual-window acceptance](NativeGameplay/CPP09-acceptance.json) now closes
+that input gate. The earlier scope and capture limitations below remain historical.
 
 | Group | Required evidence |
 | --- | --- |
@@ -152,7 +153,8 @@ the unchanged peers; Pawn uses the final checker directly. Neither pure gate fix
 triggered another build, cook or repeat of successful gameplay.
 
 All four selected groups are accepted for UE5.8.1 / CPython3.11 / Win64 Development.
-CPP09 physical Escape/Menu remains user-deferred. Packaged Dedicated Server,
+CPP09 physical Escape/Menu was deferred at this capture and completed separately
+on 2026-11-05. Packaged Dedicated Server,
 Shipping, additional platforms, rendered graphics and hardware/audio acceptance
 are outside these results.
 
@@ -173,4 +175,5 @@ With 200 additional reflected rule queries per frame, Native/Python give
 120.23/118.26 FPS, 71.29/66.44 low FPS, 37.28%/39.85% CPU and 4.54/8.25 ms
 GameThread. The pressure test adds 3.71 ms to Python GameThread and 2.57 CPU
 percentage points, reducing FPS by 1.64%. This is a separate synthetic workload,
-not a normal gameplay or universal performance claim. CPP09 remains deferred.
+not a normal gameplay or universal performance claim. CPP09's separate actual-window
+input gate subsequently passed on 2026-11-05.

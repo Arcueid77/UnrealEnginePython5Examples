@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "status": "accepted",
+  "batch": "CPP09",
+  "candidates": [
+    "CPP-015"
+  ],
+  "target": "UE5.8.1 / CPython3.11 / Win64 Development",
+  "policy_events": 1,
+  "asset_family_count": 5,
+  "native_python_actual_escape_and_ui_input": {
+    "status": "passed",
+    "profiles": 2,
+    "escape_open_close_cycles": 7,
+    "actual_window_escape_inputs": 14,
+    "native_input_modes_and_travel_cleanup": true,
+    "isolated_common_ui_worlds": true,
+    "full_shooter_scene_rendering_acceptance": false
+  },
+  "actual_os_keyboard_events_via_computer_use": true,
+  "visible_ui_window_and_menu_observed": true,
+  "isolated_common_ui_worlds": true,
+  "full_shooter_scene_rendering_acceptance": false,
+  "actual_os_keyboard_input_acceptance": true,
+  "actual_menu_input_mode_transition_acceptance": true,
+  "visible_ui_window_and_menu_acceptance": true,
+  "original_final_UI_restoration_observed": true,
+  "actual_window_screenshot_count": 28,
+  "review_screenshots": [
+    {
+      "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP09-UI/NativeMenu.jpg",
+      "sha256": "82F2C47BCB8E4C8870231BF9CCBFEFC808573324CB81B546AF7CA4F588F9F669"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP09-UI/PythonMenu.jpg",
+      "sha256": "D76437168DC277727E4533502A9E5DCBA20D32A13BE5FCE5FD7C9E97A8EF7367"
+    },
+    {
+      "path": "Demos/UEPLyraIntegration/Migration/NativeGameplay/CPP09-UI/RestoredHUD.jpg",
+      "sha256": "5CA1CE1B1C1BA15AE16B73A5BAB97DE604DC64EBC09D13C1EBCA0DB55DCA898D"
+    }
+  ],
+  "all_four_original_hud_layout_defaults_graphs_visual_trees_and_inheritance_preserved": true,
+  "native_common_ui_action_binding_streamed_loading_input_and_lifetime_ownership_preserved": true,
+  "native_menu_layer_class_owner_input_mode_and_cleanup_verified": true,
+  "native_hud_destruct_and_rebuild_across_two_level_travels": true,
+  "compiled_unity_units": [
+    "Module.LyraGame.1.cpp",
+    "Module.LyraGame.3.cpp"
+  ],
+  "reused_unity_units": [
+    "Module.LyraGame.2.cpp"
+  ],
+  "review_patch_reproduces_compiled_sources": true,
+  "patch_eof_format_only_repair": true,
+  "official_reference_unchanged": true,
+  "engine_full_compile_executed": false,
+  "cook_package_executed": false,
+  "new_platform_acceptance": false,
+  "full_cpp_migration_acceptance": false,
+  "retained_attempts": [
+    "Runtime01",
+    "Runtime02",
+    "Runtime03"
+  ],
+  "retained_notes": [
+    "The unchanged NS_WeaponFire_MuzzleFlash_Rifle asset hit NiagaraEditor graph pin assertions during uncooked shooter-level rendering before Python/UI validation initialized. Its official/Full-stage/CPP-stage SHA256 is DC29A749455F4FB4198F3BAE014EE182F75DC9459BF234BC11CB9B5C893720CB. This batch uses isolated UI worlds, the original game instance/UI policy, original HUD layouts, native Menu layers and real OS Escape input; no shooter/Niagara rendering repair is claimed.",
+    "Runtime02 rendered the isolated world and found the fixture used a guessed Game_Stack name; the original layout and its existing policy name the stack GameLayer_Stack.",
+    "Runtime03 reached actual-input step one, but Windows was locked (LockApp and LogonUI active). No Escape input was sent. Only its identified test process was stopped; operator-stop.json records the external prerequisite."
+  ],
+  "evidence": [
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/Build01/summary.json",
+      "sha256": "F1CB4278796E460E9F7B57C97283C8A019469FD2D35498B1D05A32CDFC29AAB4"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/Assets01/summary.json",
+      "sha256": "86BA8AB4F3AB870BB5784EF17444DFF972B3E02B1E3A4E2BF0A8352723DB6436"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/Fixtures01/summary.json",
+      "sha256": "0BFDB93715B28B3BF48474A0FB1A2E818D463DE79EAAA43EB3615B913F7270F1"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/PatchFormat01/summary.json",
+      "sha256": "3AC608654043B03FAF8E2B8093E71DF8D587187EDC4A4F67CB1AEC5B084B1400"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/summary.json",
+      "sha256": "4258740B01CFDEA08F4BAA53168694F3051829BE0E40719288952551E75BD9F6"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/runtime.json",
+      "sha256": "6E38D4F4D1BA9FABC7203A24F5C948462DF136C802613F874BE1662FE64B1310"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/comparison.json",
+      "sha256": "A7FC236FD362C67E961328B5E9EA9E0BD5A0CE8B778CECBBE7316ADE65DCEDC3"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/ui-actions.json",
+      "sha256": "4AF22B6686B6B237B6706FAFD723CE13C2C506733F931BF7289525421EF0F452"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/01-before.jpg",
+      "sha256": "CC2512189FB129A5031BF48B09C73AABF0360AE9BCC95786A09E8A51059077A8"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/01-after.jpg",
+      "sha256": "82F2C47BCB8E4C8870231BF9CCBFEFC808573324CB81B546AF7CA4F588F9F669"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/02-before.jpg",
+      "sha256": "82F2C47BCB8E4C8870231BF9CCBFEFC808573324CB81B546AF7CA4F588F9F669"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/02-after.jpg",
+      "sha256": "91DEDB7ED8E9C4E8175AF8B262043BD17F64F99CD1A82B72EE1F9C3403B40CEF"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/03-before.jpg",
+      "sha256": "91DEDB7ED8E9C4E8175AF8B262043BD17F64F99CD1A82B72EE1F9C3403B40CEF"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/03-after.jpg",
+      "sha256": "A73B2C5C9E3B3035B46AA60088E1CE5215D131E6A97E874EFC30303672531A02"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/04-before.jpg",
+      "sha256": "A73B2C5C9E3B3035B46AA60088E1CE5215D131E6A97E874EFC30303672531A02"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/04-after.jpg",
+      "sha256": "2FCDE84CBEC7B07265C3CB55CF30582B5115F577DAD2F10BE5E2D141FABA3FA8"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/05-before.jpg",
+      "sha256": "2FCDE84CBEC7B07265C3CB55CF30582B5115F577DAD2F10BE5E2D141FABA3FA8"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/05-after.jpg",
+      "sha256": "6D0573F64C444E324C8F2B8EE2824C64D532F851A1E9D9EE30E92C5D81B830CC"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/06-before.jpg",
+      "sha256": "D76437168DC277727E4533502A9E5DCBA20D32A13BE5FCE5FD7C9E97A8EF7367"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/06-after.jpg",
+      "sha256": "2FCDE84CBEC7B07265C3CB55CF30582B5115F577DAD2F10BE5E2D141FABA3FA8"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/07-before.jpg",
+      "sha256": "2FCDE84CBEC7B07265C3CB55CF30582B5115F577DAD2F10BE5E2D141FABA3FA8"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/07-after.jpg",
+      "sha256": "3621E9FABDCC1455145F7F01096C167FD82909734B79C21FE7A55E1685953C22"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/08-before.jpg",
+      "sha256": "3621E9FABDCC1455145F7F01096C167FD82909734B79C21FE7A55E1685953C22"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/08-after.jpg",
+      "sha256": "6A75A2C245FCE0D597DEDE1CD75C2AD0A0220F6417C31441568B6620CB2FFF41"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/09-before.jpg",
+      "sha256": "DF94515DD923EA0E36DF427571805DAA86D3682E44535963F61CBF27C3D13881"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/09-after.jpg",
+      "sha256": "D76437168DC277727E4533502A9E5DCBA20D32A13BE5FCE5FD7C9E97A8EF7367"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/10-before.jpg",
+      "sha256": "D76437168DC277727E4533502A9E5DCBA20D32A13BE5FCE5FD7C9E97A8EF7367"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/10-after.jpg",
+      "sha256": "2FCDE84CBEC7B07265C3CB55CF30582B5115F577DAD2F10BE5E2D141FABA3FA8"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/11-before.jpg",
+      "sha256": "2FCDE84CBEC7B07265C3CB55CF30582B5115F577DAD2F10BE5E2D141FABA3FA8"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/11-after.jpg",
+      "sha256": "60DA1E1D1364B2699944D402593DC8BCE7F4C69F8FF71DB935724B0DECF96144"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/12-before.jpg",
+      "sha256": "60DA1E1D1364B2699944D402593DC8BCE7F4C69F8FF71DB935724B0DECF96144"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/12-after.jpg",
+      "sha256": "411034DBE14872AF5289B35D8A1BECF892A21EA2B6E97D6046266E30C8D163DD"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/13-before.jpg",
+      "sha256": "2FCDE84CBEC7B07265C3CB55CF30582B5115F577DAD2F10BE5E2D141FABA3FA8"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/13-after.jpg",
+      "sha256": "396949768B3C7C08301B4FAB8D674A5FE1710F663E88EF0D8406B37EF759958F"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/14-before.jpg",
+      "sha256": "396949768B3C7C08301B4FAB8D674A5FE1710F663E88EF0D8406B37EF759958F"
+    },
+    {
+      "path": ".build/LyraValidation/CppGameplay/20261101-CPP09/ActualWindow-20261105-01/Screenshots/14-after.jpg",
+      "sha256": "5CA1CE1B1C1BA15AE16B73A5BAB97DE604DC64EBC09D13C1EBCA0DB55DCA898D"
+    }
+  ]
+}

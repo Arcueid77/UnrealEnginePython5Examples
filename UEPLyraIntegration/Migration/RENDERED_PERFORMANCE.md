@@ -93,6 +93,6 @@ command/GC methods and the registered typed console getters. The first successfu
 pilot also exposed the CSV writer's expanding headers; only its pure parser was
 corrected, without repeating that native process.
 
-CPP09 actual physical Escape/Menu input remains user-deferred. This measurement
+CPP09 physical Escape/Menu input passed separately on 2026-11-05. This measurement
 does not establish combat, another map, graphics preset, GPU, operating system,
 Shipping, hardware audio or universal gameplay performance.

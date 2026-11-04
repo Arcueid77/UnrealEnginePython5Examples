@@ -3,6 +3,13 @@
 The first approved scope is CPP-001 through CPP-015 in `../cpp_batches.json`.
 The earlier Blueprint acceptance remains a separate completed scope.
 
+Current closure: all thirty subsequently selected candidates are accepted within
+their confirmed scope (twenty-nine production replacements and one capability
+case). [CPP09 actual-window acceptance](CPP09-acceptance.json) completed on
+2026-11-05 after the user unlocked the desktop. The batch notes retain their
+historical validation boundaries; [the completion index](../completion_status.json)
+records the current combined result.
+
 CPP-016 through CPP-018 now have a separate read-only
 [entry and asset preflight](CPP16-18-preflight.json) and
 [proposed batch plan](../CPP16_18_PREFLIGHT_REVIEW.md). No business replacement or
@@ -221,7 +228,7 @@ actors, selectors, and roots are cleaned up. LyraGame units 1/2 are rebuilt and
 unit 3 is reused. The body-only witness repair rebuilt unit 2 alone. No new cook,
 package, physical keyboard, rendering, or platform acceptance is claimed here.
 
-## CPP09: Escape request policy (actual input pending)
+## CPP09: Escape request policy (actual input accepted)
 
 `CPP09-escape-rules.patch` exposes the native HUD's Escape request as one
 `BlueprintNativeEvent`. The retained C++ body and Python policy use the original
@@ -230,8 +237,17 @@ binding, asynchronous loading, player ownership, input router, and device/lifeti
 delegates remain native. All four original HUD configuration shells keep their
 defaults, graphs, visual trees, and inheritance; they share one new Mixin Set.
 
-[CPP09 progress](CPP09-progress.json) records the implementation checkpoint;
-its `accepted` value is false. Seven headless open/close cycles across both
+[CPP09 acceptance](CPP09-acceptance.json) closes fourteen real OS Escape inputs
+via the uniquely selected isolated game window. Seven native/Python menu cycles
+enter native Menu input mode and restore the original mode and ignored-input
+flags. Two level travels destroy/rebuild the native HUD. All fourteen before/after
+window pairs are hash-pinned; native and Python menus plus the final restored HUD
+are also included as review images. The process exits normally, restores the
+selectors/profile classes/roots, and empties the Menu stack. No build or cook is
+repeated for this acceptance.
+
+[CPP09 progress](CPP09-progress.json) preserves the earlier implementation
+checkpoint with `accepted=false`. Seven headless open/close cycles across both
 profiles and two native level travels passed menu class/layer/owner, activation,
 deactivation, desired Menu configuration, observed input-state equivalence,
 HUD destruction/rebuild, and restoration checks.
@@ -249,15 +265,16 @@ the runtime Game/Menu stack transitions to zero duration, restoring them or
 verifying that their worlds released them on exit. Authored resources are not
 changed. Its contract cannot satisfy the actual-window input gate.
 The offscreen action router stayed in `All` despite the Menu's desired `Menu`
-configuration. Menu-mode input takeover remains pending; the actual-window gate
-still requires it and cannot accept a headless report.
+configuration. Actual-window acceptance separately verifies Menu-mode takeover;
+the headless report cannot establish it.
 
 Run the same entry point without `-Headless` for the actual-window lane, using
 fresh evidence and the existing Build01, Assets01, and Fixtures01 summaries.
 That lane preserves the original transition durations and requires fourteen
 real Escape key presses, visible Menu observations, two travels, native input
-restoration, and HUD destruction/rebuild. It remains pending while the desktop
-is locked. CPP09 is not accepted and the accepted count remains 14/15.
+restoration, and HUD destruction/rebuild. The previously locked-desktop attempt
+remains preserved. The successful 2026-11-05 run closes CPP09 and all fifteen
+first-stage candidates.
 
 ```powershell
 $root = 'F:/UnrealEnginePython5/.build/LyraValidation/CppGameplay/20261101-CPP09'
@@ -448,7 +465,7 @@ Engine manifest/binaries, SDK, bridge and the old CPP09 stage remain unchanged;
 972 protected inputs are verified. No full-engine build, cook/package, new
 platform, physical device or audible-output claim is added.
 
-All 30 selected candidates are implemented. Twenty-nine are accepted within
-their recorded scope; CPP-018 remains capability-only with zero original consumers.
-Only CPP09's actual desktop Escape/Menu gate remains user-deferred. The remaining
-scope tracker is accepted independently of that earlier pending gate.
+All 30 selected candidates are implemented and accepted within their recorded
+scope; CPP-018 remains capability-only with zero original consumers. CPP09's
+actual desktop Escape/Menu gate was completed on 2026-11-05. All three scope
+trackers now agree with the combined completion index.
