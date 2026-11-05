@@ -28,7 +28,7 @@ class PlayableStartupAcceptanceTests(unittest.TestCase):
         catalogue,_=audit.selector_catalogue(source);self.assertEqual(catalogue['returned_module_count'],2)
     def test_outer_commandlet_guard_and_import_boundary_stay_exact(self):
         source=(BASE/'Overlay/Content/Scripts/ue_site.py').read_text(encoding='utf-8-sig');audit.site_guard(source)
-        for changed in (source.replace('if is_commandlet:','if False:'),source+'ue.request_exit()\n'):
+        for changed in (source.replace('if is_commandlet:','if False:'),source+'ue.request_exit()\n',source+'register_if_available()\n'):
             with self.assertRaises(ValueError):audit.site_guard(changed)
     def test_normal_and_explicit_native_processes_have_distinct_exit_contracts(self):
         args=fixture();self.assertEqual(audit.report_gate(*args)['normal_intentional_owned_stop_exit_code'],-1)

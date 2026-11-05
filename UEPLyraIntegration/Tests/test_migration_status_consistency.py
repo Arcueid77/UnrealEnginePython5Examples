@@ -36,7 +36,11 @@ class MigrationStatusConsistency(unittest.TestCase):
     def test_static_scope_counts_are_not_migration_percentages(self):
         self.assertEqual((self.manifest["runtime_candidates"], self.manifest["configuration_only"], self.manifest["retained"]), (246, 182, 63))
         self.assertIs(self.manifest["counts_are_static_candidates"], True)
-        self.assertIs(self.manifest["migration_complete"], False)
+        completion = self.manifest["original_migration_acceptance"]
+        self.assertIs(self.manifest["migration_complete"], completion["completion_proven"])
+        ledger = json.loads((ROOT/"Acceptance"/completion["evidence_ledger"]).read_text(encoding="utf-8-sig"))
+        self.assertEqual(ledger["requirements_proven"], ledger["original_requirements"])
+        self.assertEqual(ledger["requirements_proven"], 22)
 
     def test_unrun_widget_hardware_and_full_version_gates_stay_open(self):
         self.assertIs(self.manifest["pressed_widget_ability_pilot"]["inventory_map_widget_business_migrated"], False)
