@@ -37,7 +37,9 @@ def virtual_file(relative):
     raise ValueError('unsupported overlay asset layout')
 
 
-def inspect(stage, overlay, manifest):
+def inspect(stage, overlay, manifest, configuration='Development'):
+    if configuration not in ('Development', 'Shipping'):
+        raise ValueError('supported Game configuration required')
     if not (stage/'.uep-lyra-full-stage.json').is_file():
         raise ValueError('marked Lyra stage required')
     projects = list(stage.glob('*.uproject'))
@@ -77,7 +79,13 @@ def inspect(stage, overlay, manifest):
     descriptor = stage/'Plugins/UnrealEnginePython/UnrealEnginePython.uplugin'
     version = json.loads(descriptor.read_text(encoding='utf-8-sig'))
     scripts = sorted((overlay/'Content/Scripts').rglob('*.py'))
+    receipt_name = 'LyraGame-Win64-Shipping.target' if configuration == 'Shipping' else 'LyraGame.target'
+    receipt_path = stage/'Binaries/Win64'/receipt_name
+    receipt = json.loads(receipt_path.read_text(encoding='utf-8-sig'))
+    if receipt.get('Configuration', 'Development') != configuration:
+        raise ValueError('Game receipt configuration differs from package plan')
     return dict(schema_version=1, status='passed', inspection_only=True, build_executed=False,
+        configuration=configuration, game_receipt=dict(path=str(receipt_path.resolve()), sha256=sha(receipt_path)),
         cook_package_executed=False, runtime_acceptance=False, full_acceptance=False,
         static_scope=list(COUNTS), project_name=projects[0].stem, candidate_paths_in_original_order=[r['path'] for r in candidates],
         candidate_assets=candidates, accepted_overlay_assets=assets, runtime_maps=maps,
@@ -89,7 +97,7 @@ def inspect(stage, overlay, manifest):
         scripts_nonufs_directory='Content/Scripts', script_files=len(scripts),
         script_hashes=[dict(relative_path=p.relative_to(overlay).as_posix(), sha256=sha(p)) for p in scripts],
         staged_plugin_descriptor=dict(path=str(descriptor.resolve()), sha256=sha(descriptor), version_name=version.get('VersionName')),
-        previous_game_receipt=json.loads((stage/'Binaries/Win64/LyraGame.target').read_text(encoding='utf-8-sig'))['Version'],
+        previous_game_receipt=receipt['Version'],
         notes=['This inventory does not assert that current Game binaries match current source.',
                'The old Expanse-only cook is insufficient for the original Explorer/Arena/frontend scope.',
                'Always-cook directory semantics and editor-only dependencies still need an actual protected cook gate.',
@@ -99,7 +107,8 @@ def inspect(stage, overlay, manifest):
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--stage',required=True);parser.add_argument('--overlay',required=True);parser.add_argument('--manifest',required=True);parser.add_argument('--result',required=True)
-    args=parser.parse_args();report=inspect(Path(args.stage).resolve(),Path(args.overlay).resolve(),Path(args.manifest).resolve())
+    parser.add_argument('--configuration', choices=('Development', 'Shipping'), default='Development')
+    args=parser.parse_args();report=inspect(Path(args.stage).resolve(),Path(args.overlay).resolve(),Path(args.manifest).resolve(),args.configuration)
     Path(args.result).write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(dict(status=report['status'],candidates=len(report['candidate_assets']),overlay_assets=len(report['accepted_overlay_assets']),runtime_maps=len(report['runtime_maps']),cook_directories=len(report['proposed_always_cook_directories']),cook_executed=False)))
 
