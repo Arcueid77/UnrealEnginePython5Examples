@@ -660,10 +660,14 @@ class MixinThirdPersonSmoke:
             elif self.phase == "profile_fallback_move":
                 if "W" not in self.held_keys:
                     self._set_key(controller, "W", PRESSED, 1.0)
+                    # A startup render hitch can be included in this tick's
+                    # delta before the key has reached a native world update.
+                    self.phase_elapsed = 0.0
+                    self.phase_ticks = 0
                 self.profile_fallback_move_distance = (
                     pawn.get_actor_location() - self.start_location
                 ).length()
-                if self.phase_elapsed >= 0.8:
+                if self.phase_elapsed >= 0.8 and self.phase_ticks >= 2:
                     self._set_key(controller, "W", RELEASED, 0.0)
                     snapshot = pawn.mixin_snapshot()
                     if snapshot["profile"] != BLUEPRINT_FALLBACK_PROFILE:
@@ -691,10 +695,12 @@ class MixinThirdPersonSmoke:
             elif self.phase == "moving":
                 if "W" not in self.held_keys:
                     self._set_key(controller, "W", PRESSED, 1.0)
+                    self.phase_elapsed = 0.0
+                    self.phase_ticks = 0
                 self.movement_distance = (
                     pawn.get_actor_location() - self.start_location
                 ).length()
-                if self.phase_elapsed >= 0.8:
+                if self.phase_elapsed >= 0.8 and self.phase_ticks >= 2:
                     self._set_key(controller, "W", RELEASED, 0.0)
                     snapshot = pawn.mixin_snapshot()
                     if snapshot["move"] <= 0 or self.movement_distance <= 25.0:
