@@ -28,10 +28,19 @@ class Validation:
         self.statics=ue.find_class('GameplayStatics').get_cdo();self.fixture=ue.find_class('UEPNativeRuleFixture').get_cdo();self.cls=ue.load_class(global_policy.CLASS)
         self.report=dict(status='running',error=None,mode=self.mode,physical_input_tested=False,cpp_compile_executed=False,expected_exception_marker=MARKER,cases=[],samples=[])
         self.last_write=0.
+        self.entry_travel_requested=False
         atomic_write(self.path,self.report)
     def ready(self):
         for world in ue.all_worlds():
-            if world.get_world_type() not in (1,3) or 'L_Expanse' not in world.get_name():continue
+            if world.get_world_type() not in (1,3):continue
+            if 'L_Expanse' not in world.get_name():
+                if '-UEPHardeningTravelFromFrontend' in sys.argv and not self.entry_travel_requested and 'L_LyraFrontEnd' in world.get_name():
+                    controller=self.statics.call_function('GetPlayerController',world,0)
+                    if valid(controller):
+                        self.entry_travel_requested=True
+                        self.report['startup_gameplay_travel']=dict(entry_world=world.get_path_name(),destination='/ShooterMaps/Maps/L_Expanse',options='NumBots=3',native_entry='GameplayStatics.OpenLevel')
+                        self.statics.call_function('OpenLevel',world,'/ShooterMaps/Maps/L_Expanse',True,'NumBots=3')
+                continue
             bridge=ue.find_class('UEPLyraBridgeLibrary').get_cdo().call_function('GetBridgeForWorld',world)
             if not valid(bridge):continue
             snap=bridge.call_function('CaptureSnapshot')
