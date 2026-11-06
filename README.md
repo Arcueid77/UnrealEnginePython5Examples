@@ -1,15 +1,25 @@
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 # UnrealEnginePython5 Examples
 
 This is the companion examples repository for
 [`Arcueid77/UnrealEnginePython5`](https://github.com/Arcueid77/UnrealEnginePython5).
-Its history was split from the core repository, so the 0.1.0 through 0.7.0
+Its history was split from the core repository, so the 0.1.0 through 0.8.0
 sample evolution remains available without keeping demo projects in the plugin
 source tree.
+
+**Stable release — 1.0.0.** The matching core and Examples tags are `v1.0.0`. Validation targets UE 5.8.1 and engine CPython 3.11.8 on Win64. The release records Development and Shipping evidence separately.
+
+The confirmed migration scope is accepted through 22 original Blueprint criteria, 30 game-C++ candidates and H01-H05. [Completion and evidence](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/completion_status.json) records the scope of each accepted batch.
+
+[Core release and installation](https://github.com/Arcueid77/UnrealEnginePython5/blob/dev/release-1.0.0/README.md) · [Documentation index](docs/README.md)
+
+The milestone sections and dated batch records below retain their original scope. The completion index and versioned release record provide the combined status.
 
 The demo driver stages assets from Unreal Engine's official Blueprint Third
 Person template under `.build/Demos`, copies the current plugin into that
 disposable project and builds it against the configured engine. It never edits
-the engine, the engine template, or the reference assets in place. Packaging
+Engine source, the engine template, or the reference assets in place. Packaging
 uses UE's loose cooked-package writer so Cook and Stage are not coupled to a
 transient local Zen process.
 
@@ -26,6 +36,71 @@ Three variants are intentionally kept:
 | `Overlay` | 0.1.0 compatibility sample | Official Blueprint template plus Python pickups and companion |
 | `PythonFirst` | 0.6.0 playable sample | Dynamic Python gameplay classes, collectible loop and viewport HUD |
 | `Mixin` | 0.7.0 retained-class sample | Official Blueprint classes with per-instance Python profiles, BP fallback, collectible loop and viewport HUD |
+
+## Lyra Python health bar
+
+The 0.8.0 Lyra overlay keeps the official `/Game/UI/Hud/W_Healthbar` path and
+`W_Healthbar_C` runtime type. Its example-owned copy adds
+`UEPPythonMixinInterface`, a `PythonMixinProfile` selector and
+`DA_LyraHealthbarMixin`; all existing Blueprint graphs remain available. Lyra's
+Game Feature `Add Widgets` action and CommonUI still create/remove the widget.
+
+The default Python profile owns `Construct`/`Destruct`, follows
+`OnPossessedPawnChanged`, binds the active `ULyraHealthComponent`, normalizes
+health and decides when to refresh. Its current Python `SetDynamicMaterials`,
+`ResetAnimatedState` and `InitializeBarVisuals` methods call native UMG/material
+primitives, retaining the authored material and animation assets.
+The `BlueprintFallback` profile runs the preserved Blueprint Construct instead.
+Gameplay Effects, authority and replication remain native Lyra behavior.
+
+Health data, damage/heal/death/respawn animation selection and numeric
+interpolation are implemented and pass an isolated real-UMG rendered fixture.
+Exactly-one presenter and post-shutdown zero owned callbacks now have explicit
+probe/driver checks, host tests and a current-script Unreal Standalone pass;
+current-source combined network/package acceptance remains pending.
+
+The core repository's full-content driver stages this overlay into a disposable
+copy of `F:\LyraStarterGame`, so neither the reference project nor Engine source
+is edited. The core `GenerateHUDAssets` lane authors the two health-bar overlay
+assets; the separate stage-guarded weapon authoring tool creates four BP copies
+and four Mixin Sets. Focused runtime lanes never save assets. `Standalone`,
+`Network`, `Package` and `All`
+exercise runtime lanes; `All` includes the heavy Win64 cook/package step.
+HUD-enabled `All` now runs `HUDAudit`, a precompiled cross-Actor caller fixture
+and rendered UMG checks; each can also run independently. The old
+green `full_acceptance` flag did not include that audit and cannot close the
+corrected 0.8 release gates.
+
+The runtime code is under
+`UEPLyraIntegration/Overlay/Content/Scripts/uep_lyra_hud`; the clean-base
+authoring and read-only audit scripts are under `UEPLyraIntegration/Tools`, and host-side
+presenter contracts are under `UEPLyraIntegration/Tests`.
+
+Closeout checks pass 29 Python tests plus 40 core-side PowerShell checks. Schema
+5 keeps the active HUD snapshot and only promotes `awaiting_shutdown` after a
+Python exit snapshot proves zero owned callbacks/widget references; the driver
+also requires clean process exit and ordered markers. After official UBT's
+two metadata-only repair actions, a fresh strict audit and current-script
+NullRHI Standalone passed on 2026-09-07: one active presenter, zero final
+presenters/references, controller bindings 3/3 and health bindings 6/6. No C++
+compile, package or asset save was needed. Integrated `All`, synchronized
+network and package gates still require fresh evidence. On 2026-09-10, the
+cross-Actor routing and eight rendered frames passed with final zero owned
+widget/callback state. The core `Run-UEP58FocusedHUDValidation.ps1` reproduces
+these checks on an already-built marked stage without UBT/cook/package or
+asset saves (a test window and shader-cache work are possible). Its focused
+`All` is not the full driver's `All` and always reports `full_acceptance: false`.
+It also runs a separate mid-animation profile-switch case. Cleanup pauses
+without invoking a completion event during router mutation; the core plugin
+additionally fixes zero-sized native fallback frames exposed by that test.
+
+The agreed next scope is 0.8 health-bar closeout, 0.9 Mixin engineering plus one
+weapon/ammo HUD chain and bounded message subscriptions, runtime BP business
+migration in 0.10–0.14, then an RC freeze and 1.0 supported binding. Every small
+behavior batch adds original-BP/Python comparisons and real-UE/two-client checks.
+Animation and editor/test tools remain; game-project C++ migration is later. Candidate
+records must identify both Examples and core commits; a core `Demos` pin must
+match the tested Examples commit. This is release policy, not a new test run.
 
 ## Blueprint mixin gameplay
 
