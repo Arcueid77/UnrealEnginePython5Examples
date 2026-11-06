@@ -1,6 +1,8 @@
+[English](RENDERED_PERFORMANCE.md) | [简体中文](RENDERED_PERFORMANCE.zh-CN.md)
+
 # Rendered frame rate and CPU comparison
 
-[H05 acceptance](NativeGameplay/H05-acceptance.json) records the completed local
+[H05 acceptance](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/H05-acceptance.json) records the completed local
 comparison: one actual packaged process, sixteen twenty-second sampling blocks,
 and 38,274 analyzed GPU-rendered frames after boundary trimming. The native
 process, independent profiler/CPU checks and restored selector all pass.

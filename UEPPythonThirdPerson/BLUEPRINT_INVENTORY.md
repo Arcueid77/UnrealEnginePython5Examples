@@ -1,3 +1,5 @@
+[English](BLUEPRINT_INVENTORY.md) | [简体中文](BLUEPRINT_INVENTORY.zh-CN.md)
+
 # Third Person Blueprint migration inventory
 
 This inventory compares the unchanged Unreal Engine 5.8 Blueprint Third Person

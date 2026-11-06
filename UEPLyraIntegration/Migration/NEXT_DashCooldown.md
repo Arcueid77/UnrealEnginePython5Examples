@@ -1,3 +1,5 @@
+[English](NEXT_DashCooldown.md) | [简体中文](NEXT_DashCooldown.zh-CN.md)
+
 # 0.10-2I Dash cooldown
 
 Historical batch plan/checkpoint. Current accepted work and remaining gaps are

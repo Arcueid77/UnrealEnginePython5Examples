@@ -1,3 +1,5 @@
+[English](ACCEPTANCE_REVIEW.md) | [简体中文](ACCEPTANCE_REVIEW.zh-CN.md)
+
 # Migration acceptance review
 
 The original 246 candidate paths, order and version assignments are preserved.

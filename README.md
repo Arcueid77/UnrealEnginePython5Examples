@@ -1,3 +1,5 @@
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 # UnrealEnginePython5 Examples
 
 This is the companion examples repository for
@@ -6,17 +8,13 @@ Its history was split from the core repository, so the 0.1.0 through 0.8.0
 sample evolution remains available without keeping demo projects in the plugin
 source tree.
 
-As of the 2026-10-16 review, 0.7.0 is the latest locally tagged release.
-The current `dev/lyra-blueprint-python` work starts from the unreleased 0.8
-baseline and advances bounded 0.9–0.11 runtime BP batches. Neither implementation
-nor retained test runs alone establish release acceptance.
+**Stable release — 1.0.0.** The matching core and Examples tags are `v1.0.0`. Validation targets UE 5.8.1 and engine CPython 3.11.8 on Win64. The release records Development and Shipping evidence separately.
 
-Accepted work is split into coherent local commits, each checked using only
-the staged Examples tree plus committed core. The
-[progress log](UEPLyraIntegration/Migration/PROGRESS.md) and
-[per-batch evidence](UEPLyraIntegration/Migration/Acceptance/) distinguish newly
-run checks from historical native evidence. Validation now uses upstream
-UE 5.8.1 and bundled Python 3.11; no release or push is implied.
+The confirmed migration scope is accepted through 22 original Blueprint criteria, 30 game-C++ candidates and H01-H05. [Completion and evidence](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/completion_status.json) records the scope of each accepted batch.
+
+[Core release and installation](https://github.com/Arcueid77/UnrealEnginePython5/blob/dev/release-1.0.0/README.md) · [Documentation index](docs/README.md)
+
+The milestone sections and dated batch records below retain their original scope. The completion index and versioned release record provide the combined status.
 
 The demo driver stages assets from Unreal Engine's official Blueprint Third
 Person template under `.build/Demos`, copies the current plugin into that

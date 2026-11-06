@@ -1,3 +1,5 @@
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 # Isolated Lyra simulated-proxy initialization guard
 
 The user approved this native game-C++ followup on 2026-10-26. It is separate

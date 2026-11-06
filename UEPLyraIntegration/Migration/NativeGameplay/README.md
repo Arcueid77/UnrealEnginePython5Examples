@@ -1,3 +1,5 @@
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 # Native gameplay migration
 
 The first approved scope is CPP-001 through CPP-015 in `../cpp_batches.json`.
@@ -5,17 +7,17 @@ The earlier Blueprint acceptance remains a separate completed scope.
 
 Current closure: all thirty subsequently selected candidates are accepted within
 their confirmed scope (twenty-nine production replacements and one capability
-case). [CPP09 actual-window acceptance](CPP09-acceptance.json) completed on
+case). [CPP09 actual-window acceptance](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP09-acceptance.json) completed on
 2026-11-05 after the user unlocked the desktop. The batch notes retain their
-historical validation boundaries; [the completion index](../completion_status.json)
+historical validation boundaries; [the completion index](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/completion_status.json)
 records the current combined result.
 
 CPP-016 through CPP-018 now have a separate read-only
-[entry and asset preflight](CPP16-18-preflight.json) and
+[entry and asset preflight](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP16-18-preflight.json) and
 [proposed batch plan](../CPP16_18_PREFLIGHT_REVIEW.md). No business replacement or
 runtime acceptance is claimed there; the first-stage counts remain unchanged.
 The user subsequently selected these three groups; their execution and separate
-production/capability counts live in [the extended tracker](../cpp_extended_batches.json).
+production/capability counts live in [the extended tracker](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/cpp_extended_batches.json).
 
 CPP01 replaces elimination streak, elimination chain, and assist rules. Native
 Gameplay Message subscriptions and their shutdown remain in C++. Four native
@@ -51,7 +53,7 @@ configuration, package, or the remaining C++ candidates.
 
 ## CPP02: team selection
 
-[CPP02 acceptance](CPP02-acceptance.json) covers choosing a player's team and the
+[CPP02 acceptance](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP02-acceptance.json) covers choosing a player's team and the
 least-populated team calculation. Two native policy events and one thin reflected
 setter are in `CPP02-team-rules.patch`. The setter calls the original native
 `SetGenericTeamId`, preserving its notifications. Team creation, experience
@@ -75,7 +77,7 @@ and the affected CPP01 damage, score replication, and notification pipeline.
 
 ## CPP03: bot count, names, and removal choice
 
-[CPP03 acceptance](CPP03-acceptance.json) covers the normal and control-point bot
+[CPP03 acceptance](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP03-acceptance.json) covers the normal and control-point bot
 spawners. Python handles effective count, remaining name selection, fallback
 names, and the random removal index. Native code still creates controllers,
 initializes players, restarts Pawns, applies self-destruct damage, and destroys
@@ -97,7 +99,7 @@ and named bots, plus the affected CPP01 and CPP02 damage/notification/team gates
 
 ## CPP04: player start selection
 
-[CPP04 acceptance](CPP04-acceptance.json) covers TDM distance selection and the
+[CPP04 acceptance](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP04-acceptance.json) covers TDM distance selection and the
 general spectator/fallback selection rules. Two policy events preserve native
 start discovery, weak-cache pruning, Play From Here preference, collision queries,
 and TryClaim/expiration timers. The retained TDM maximum-distance behavior and tie
@@ -118,7 +120,7 @@ shared network entry point. Both profiles enter native start-selection callbacks
 
 ## CPP05: quickbar selection and pickup grants
 
-[CPP05 acceptance](CPP05-acceptance.json) covers forward/backward cycling, first
+[CPP05 acceptance](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP05-acceptance.json) covers forward/backward cycling, first
 free slot, and template/instance grant ordering. Four policy events retain the
 native server slot RPC, equipment ownership, OnRep broadcasts, inventory fast
 array, and replicated subobjects. The existing quickbar Blueprint keeps its
@@ -144,7 +146,7 @@ marshal `None` as a script interface. No new package or platform is claimed.
 
 ## CPP06: native spawner orchestration
 
-[CPP06 acceptance](CPP06-acceptance.json) covers pickup conditions, availability
+[CPP06 acceptance](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP06-acceptance.json) covers pickup conditions, availability
 and effect order, cooldown reset/completion, and the scheduled overlap retry.
 Native code retains both timer handles, timer scheduling/clearing, replicated
 availability and OnRep, overlap detection, mesh updates, and EndPlay cleanup.
@@ -174,7 +176,7 @@ and a new package are not claimed by this batch.
 
 ## CPP07: accolade notification and queue policy
 
-[CPP07 acceptance](CPP07-acceptance.json) covers CPP-012/013: channel/player
+[CPP07 acceptance](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP07-acceptance.json) covers CPP-012/013: channel/player
 filtering, registry sequence allocation, completed-load ordering, location and
 cancellation tags, display/pop order, and teardown queue reset. Seven typed
 native events select the original C++ or Python policy. Both retain the three
@@ -200,7 +202,7 @@ network attempts remain recorded in the acceptance ledger.
 
 ## CPP08: native interaction orchestration
 
-[CPP08 acceptance](CPP08-acceptance.json) covers CPP-014. Two native events route
+[CPP08 acceptance](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP08-acceptance.json) covers CPP-014. Two native events route
 indicator removal/addition, default/specified soft widget selection, option order,
 and first-option triggering to C++ or Python. Six accepted Blueprint Python
 methods remain fixed in the C++ comparison; the existing Blueprint fallback
@@ -237,7 +239,7 @@ binding, asynchronous loading, player ownership, input router, and device/lifeti
 delegates remain native. All four original HUD configuration shells keep their
 defaults, graphs, visual trees, and inheritance; they share one new Mixin Set.
 
-[CPP09 acceptance](CPP09-acceptance.json) closes fourteen real OS Escape inputs
+[CPP09 acceptance](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP09-acceptance.json) closes fourteen real OS Escape inputs
 via the uniquely selected isolated game window. Seven native/Python menu cycles
 enter native Menu input mode and restore the original mode and ignored-input
 flags. Two level travels destroy/rebuild the native HUD. All fourteen before/after
@@ -246,7 +248,7 @@ are also included as review images. The process exits normally, restores the
 selectors/profile classes/roots, and empties the Menu stack. No build or cook is
 repeated for this acceptance.
 
-[CPP09 progress](CPP09-progress.json) preserves the earlier implementation
+[CPP09 progress](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP09-progress.json) preserves the earlier implementation
 checkpoint with `accepted=false`. Seven headless open/close cycles across both
 profiles and two native level travels passed menu class/layer/owner, activation,
 deactivation, desired Menu configuration, observed input-state equivalence,
@@ -291,7 +293,7 @@ asset. No new cook, package, engine compilation, or platform acceptance is made.
 
 ## CPP10: native initial item-stat application
 
-[CPP10 acceptance](CPP10-acceptance.json) covers CPP-016. The original inventory
+[CPP10 acceptance](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP10-acceptance.json) covers CPP-016. The original inventory
 creation callback selects the native loop or two Const item-definition events
 before applying any stats. Python reads a typed Tag/Count array in native map
 iteration order, avoiding unsupported mutable struct keys in Python dictionaries.
@@ -321,7 +323,7 @@ FixtureBuild/FixtureRepair, Validation, and NetworkValidation entry points.
 
 ## CPP11/CPP12: native tag-stack costs
 
-[The shared seven-file patch](CPP11-12-tag-stack-costs.patch) retains native cost
+[The shared seven-file patch](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP11-12-tag-stack-costs.patch) retains native cost
 objects and routes numeric decisions through the owning Blueprint ability. The
 context contains typed values, with no ActorInfo/spec pointer crossing into
 Python. Native code still evaluates quantity curves/levels, truncates quantities,
@@ -365,8 +367,8 @@ The native fixtures and generated disposable assets stay outside Overlay.
 CPP09's exact actual-window stage remains preserved. No exception-injection,
 new platform, full engine build, cook/package or physical input claim is added.
 
-[CPP11 acceptance](CPP11-acceptance.json) records production item-cost replacement.
-[CPP12 capability acceptance](CPP12-acceptance.json) records zero original player
+[CPP11 acceptance](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP11-acceptance.json) records production item-cost replacement.
+[CPP12 capability acceptance](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP12-acceptance.json) records zero original player
 consumers and successful independent/native-network lifecycle fixtures.
 
 ## Remaining approved groups and CPP13 checkpoint
@@ -375,7 +377,7 @@ The user explicitly requested continued work until all confirmed replacements ar
 complete. CPP-019 through CPP-030 are selected in `../cpp_remaining_batches.json`.
 CPP09 actual-window input is deferred by the user; other groups continue.
 
-[CPP13 progress](CPP13-progress.json) records 28 actual network input Jump trials
+[CPP13 progress](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP13-progress.json) records 28 actual network input Jump trials
 and 12 native null/valid ActorInfo/Avatar admission probes. The previous Blueprint
 Python policy stays fixed while new native Jump rules switch. The Character
 observer augments and restores existing production profiles. Explicit native
@@ -391,13 +393,13 @@ engine, ShooterCore and the preserved CPP09 stage remain unchanged.
 
 ## CPP13-15 accepted lifecycle replacements
 
-[CPP13 acceptance](CPP13-acceptance.json) closes the four real death-cancellation
+[CPP13 acceptance](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP13-acceptance.json) closes the four real death-cancellation
 and new-Avatar Jump crosschecks after its 28 input/physics trials.
-[CPP14 acceptance](CPP14-acceptance.json) records 20 lethal network trials, four
+[CPP14 acceptance](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP14-acceptance.json) records 20 lethal network trials, four
 native self-destruct trials with active ordinary/protected witnesses, and both
 native/Python original Arena two-second death tasks. Previous BP Python rules
 stay fixed, and native GAS contexts, waits, prediction and replication remain.
-[CPP15 acceptance](CPP15-acceptance.json) records 12 original native Reset requests,
+[CPP15 acceptance](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP15-acceptance.json) records 12 original native Reset requests,
 owning/foreign client isolation, typed original Reset payloads, repeat/pending
 requests, inactive Reset on completion, and protected witnesses across respawn.
 
@@ -410,20 +412,20 @@ CPP16-24 continue. CPP09 actual desktop input remains user-deferred.
 
 ## CPP16-18 accepted world policies
 
-[CPP16](CPP16-acceptance.json) records 70 frontend context cases, actual offline
+[CPP16](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP16-acceptance.json) records 70 frontend context cases, actual offline
 startup in native/Python/default profiles, and native initialization success/
 failure callbacks supplied by the fixture. Online session results are untested;
 join-result and cancellation choices are bounded typed-context checks. Native
 flow handles, async widget pushes, weak callbacks and delegate removal remain.
 
-[CPP17](CPP17-acceptance.json) records 28 part-selection cases, natural/developer/
+[CPP17](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP17-acceptance.json) records 28 part-selection cases, natural/developer/
 cheat suppression, first-equivalent removal, actual Reset/possession, duplicate
 notifications and cleanup. Four network Reset trials provide eight independent
 client observations of actual cosmetic actors and meshes. Templates are restored
 inside the authority acknowledgement barrier, before either client is released.
 The failed temporary-PlayerState cleanup and observer-race attempts remain.
 
-[CPP18](CPP18-acceptance.json) records eight class/null boundary cases, original
+[CPP18](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP18-acceptance.json) records eight class/null boundary cases, original
 PawnData defaults, actual ability camera priority, foreign handle protection and
 restoration on native GAS ability end. Camera blend/collision implementation stays
 native. Default frontend and camera smokes pass after promoting the tested policy
@@ -440,12 +442,12 @@ exact int64 replay timestamps, unknown-operation native routing and bounded trac
 
 | Ledger | Native lifecycle evidence | Explicit limits |
 | --- | --- | --- |
-| [CPP19](CPP19-acceptance.json) | Actual connection/pairing callbacks, own/foreign users, coalesced native ticker and restored traits | Callback inputs supplied by fixture; no physical controller disconnect |
-| [CPP20](CPP20-acceptance.json) | Temporary native memory streams at retention 0/1/2/5, delete/requery, genuine failure-stop callback and cleanup | Keep/live markers use typed contexts; no existing recordings or gameplay playback |
-| [CPP21](CPP21-acceptance.json) | Actual HDR/LDR and loading-mix methods, native readonly resource and state guards | No audible-output acceptance |
-| [CPP22](CPP22-acceptance.json) | Friendly damage blocked, enemy damage 10; four authority trials and eight independent client health views | Native GAS/transport retained; default pistol separately proves real prediction and replicated damage |
-| [CPP23](CPP23-acceptance.json) | Two real local players, 16 native GAS clamps per profile, original bomb input/cost/repeat/refund | Fixture attribute writes are restored before the unchanged input phase; no OS input |
-| [CPP24](CPP24-acceptance.json) | Actual PlayerState/Experience data and human/bot permissions; four native Reset trials, eight independent spawn-class views | Native spawning, loading, ownership and initialization retained |
+| [CPP19](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP19-acceptance.json) | Actual connection/pairing callbacks, own/foreign users, coalesced native ticker and restored traits | Callback inputs supplied by fixture; no physical controller disconnect |
+| [CPP20](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP20-acceptance.json) | Temporary native memory streams at retention 0/1/2/5, delete/requery, genuine failure-stop callback and cleanup | Keep/live markers use typed contexts; no existing recordings or gameplay playback |
+| [CPP21](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP21-acceptance.json) | Actual HDR/LDR and loading-mix methods, native readonly resource and state guards | No audible-output acceptance |
+| [CPP22](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP22-acceptance.json) | Friendly damage blocked, enemy damage 10; four authority trials and eight independent client health views | Native GAS/transport retained; default pistol separately proves real prediction and replicated damage |
+| [CPP23](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP23-acceptance.json) | Two real local players, 16 native GAS clamps per profile, original bomb input/cost/repeat/refund | Fixture attribute writes are restored before the unchanged input phase; no OS input |
+| [CPP24](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP24-acceptance.json) | Actual PlayerState/Experience data and human/bot permissions; four native Reset trials, eight independent spawn-class views | Native spawning, loading, ownership and initialization retained |
 
 Default frontend, Pawn selection, two-player attributes/input and four original
 pistol prediction/damage trials pass together. Startup selection passes 51 tests.

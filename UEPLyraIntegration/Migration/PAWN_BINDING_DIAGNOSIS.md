@@ -1,9 +1,11 @@
+[English](PAWN_BINDING_DIAGNOSIS.md) | [简体中文](PAWN_BINDING_DIAGNOSIS.zh-CN.md)
+
 # Pawn binding investigation and Spawn Cue cleanup
 
 The original intermittent canonical-Pawn empty-ASC/Health0 issue remains
 **open, not fixed**. Batch233 fixes a separate Spawn Cue lifetime error found
 while running the current melee matrix. See
-[the evidence ledger](Acceptance/233-spawning-cached-target-cleanup-and-current-melee-diagnosis.json).
+[the evidence ledger](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/Acceptance/233-spawning-cached-target-cleanup-and-current-melee-diagnosis.json).
 
 ## Historical binding evidence
 
@@ -80,7 +82,7 @@ was observed in this healthy capture. This does not rule out those mechanisms
 in a failing run. No canonical empty-binding/takeover row was reproduced,so the
 original issue remains **open,not fixed**. The capture is available for a future
 affected reproduction;no repeated full build or broad regression is required.
-See [ledger235](Acceptance/235-native-pawn-construction-and-retirement-stack-provenance.json).
+See [ledger235](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/Acceptance/235-native-pawn-construction-and-retirement-stack-provenance.json).
 
 ## Historical SDK counterfactual and separate bootstrap repair (batch236)
 
@@ -101,7 +103,7 @@ real native reflection. The fixed SDK's melee group also passes with all three
 exits0. This fixes startup paths,not the original **open,not fixed** binding issue.
 Earlier candidate census evidence remains historical pending SDK provenance
 refresh;neither this bounded check nor a healthy retry closes full migration.
-See [ledger236](Acceptance/236-python-bootstrap-path-conversion-lifetime-and-sdk-counterfactual.json).
+See [ledger236](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/Acceptance/236-python-bootstrap-path-conversion-lifetime-and-sdk-counterfactual.json).
 
 ## Current delayed-client reproduction and retired-Pawn identity (batch240)
 
@@ -133,4 +135,4 @@ guard adds that wait;the existing native OnRep callback rechecks initialization.
 candidate is not applied or compiled. Game-project C++ is reserved for a later
 phase by the current migration scope,so isolated validation of this repair is
 pending the user's scope decision. No manual ASC/Health repair is introduced.
-See [ledger240](Acceptance/240-delayed-client-retired-pawn-guid-takeover-reproduction.json).
+See [ledger240](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/Acceptance/240-delayed-client-retired-pawn-guid-takeover-reproduction.json).

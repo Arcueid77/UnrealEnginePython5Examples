@@ -1,4 +1,11 @@
+[English](PROGRESS.md) | [简体中文](PROGRESS.zh-CN.md)
+
 # Runtime BP migration work checkpoint
+
+> Current release — **1.0.0**, UE **5.8.1**, engine CPython **3.11.8**, Win64 **Development / Shipping**. [Release record](https://github.com/Arcueid77/UnrealEnginePython5/blob/dev/release-1.0.0/docs/Release_1.0.0.md) and [supported API](https://github.com/Arcueid77/UnrealEnginePython5/blob/dev/release-1.0.0/docs/Supported_API_Inventory.md) define the release scope.
+> The dated sections below retain their capture-time evidence and limitations.
+
+This is the chronological batch ledger. [The completion index](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/completion_status.json) records the final approved migration result.
 
 **Original migration scope accepted batch275 (2026-10-28):22/22,246 candidates.**
 All original0.9-0.14 criteria are accepted within UE5.8/CPython3.11 Win64 Development.

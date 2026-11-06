@@ -1,3 +1,5 @@
+[English](NEXT_QuickBarSlot.md) | [简体中文](NEXT_QuickBarSlot.zh-CN.md)
+
 # 0.10-2K Quickbar slot
 
 Historical batch plan/checkpoint. Current accepted work and remaining gaps are

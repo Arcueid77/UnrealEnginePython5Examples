@@ -1,10 +1,12 @@
+[English](CPP16_18_PREFLIGHT_REVIEW.en.md) | [简体中文](CPP16_18_PREFLIGHT_REVIEW.md)
+
 # CPP-016～018 接入口预检与分批方案
 
 2026-11-02。此轮先核查入口、依赖和验证条件；尚未替换游戏业务，也不计入迁移验收。
 第一轮15组的实现、14组验收和 CPP09 的真实输入待验收状态保持原记录。
 
 下文保留预检时的方案与限制。随后用户回复“继续吧”，已选入这三组，实际执行状态见
-[第二阶段进度](cpp_extended_batches.json)。CPP10 已通过库存创建、边界和双客户端验收；
+[第二阶段进度](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/cpp_extended_batches.json)。CPP10 已通过库存创建、边界和双客户端验收；
 CPP11 的原有物品消耗已通过生产替换验收；CPP12 已通过独立夹具、双客户端及真实重生/Pawn 更换能力验证。
 CPP-018 没有原有配置消费者，仍不计作生产替换。
 
@@ -84,5 +86,5 @@ CPP-017/018 的真实入口是 `ULyraGameplayAbility` 的 AdditionalCosts 遍历
 
 预检未保存或修改任何被检查的资产，未编译 C++，未 Cook，未操作桌面。
 官方参考源码的18份相关文件与10月31日台账指纹一致。
-证据和完整配置见 [预检账本](NativeGameplay/CPP16-18-preflight.json)，
+证据和完整配置见 [预检账本](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP16-18-preflight.json)，
 可复现入口为主仓 `Validation/Run-UEP58NativeStatsCostPreflight.ps1`。

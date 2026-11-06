@@ -1,3 +1,5 @@
+[English](CPP_MIGRATION_REVIEW.en.md) | [简体中文](CPP_MIGRATION_REVIEW.md)
+
 # Lyra C++ 业务迁移确认清单
 
 候选清单日期：2026-10-31。2026-11-01 用户确认先提交现有改动，再按推荐顺序逐步执行。
@@ -7,11 +9,11 @@ CPP-016 至 CPP-030 是另外15个需要先验证入口或运行条件的候选�
 CPP-016～018，见第二阶段进度。随后用户要求持续推进直到全部完成，CPP-019～030 已全部选入，见第三阶段进度。
 这里的候选按业务函数组计数，同一 C++ 文件可以包含多个候选；文件中的其他实现继续承担原生职责。
 
-当前执行范围、批次状态和验收账本见 [C++ 批次进度](cpp_batches.json)。
-三阶段及后续验证的统一状态见 [完成情况与证据索引](completion_status.json)：
+当前执行范围、批次状态和验收账本见 [C++ 批次进度](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/cpp_batches.json)。
+三阶段及后续验证的统一状态见 [完成情况与证据索引](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/completion_status.json)：
 30个候选均已实现并按确认范围验收：29个生产替换、1个能力验证。2026-11-05用户解锁
 屏幕后，CPP09通过14次真实Escape输入、7次菜单开关、2次地图切换及界面/输入恢复。
-完整记录及代表截图见[CPP09验收](NativeGameplay/CPP09-acceptance.json)。统一索引复核所有
+完整记录及代表截图见[CPP09验收](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP09-acceptance.json)。统一索引复核所有
 引用文件；两份早期编译中间文件保留历史和后续批次指纹。以下分阶段记录保留当时的范围。
 源码台账保留10月31日候选提案的初始状态和指纹；实际实施状态以批次进度为准。
 原246个蓝图候选及22项验收保留原记录，新阶段独立统计。
@@ -33,7 +35,7 @@ ShooterExplorer 和 ShooterMaps 没有独立 Source 目录。LyraEditor 的26个
 ShooterTestsRuntime 的18个源码及构建文件按编辑器或测试模块保留。
 Engine 和 CommonGame、CommonUser、GameplayMessageRouter、GameSettings 等通用插件继续提供原生能力。
 
-[源码台账](cpp_source_inventory.json)逐文件记录路径、SHA256、行数、候选归属与保留理由，
+[源码台账](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/cpp_source_inventory.json)逐文件记录路径、SHA256、行数、候选归属与保留理由，
 并定位30个候选的65个函数符号。242个实现文件中，13个包含建议先执行的候选，
 14个仅包含条件候选，215个按模块职责归为原生保留。
 
@@ -175,32 +177,32 @@ CPP-014 是原生交互技能的选项编排。原来已迁移的刷新台蓝图
 
 已确认 CPP-001 至 CPP-015，按 CPP01 至 CPP09 顺序推进。
 2026-11-02 用户回复“继续吧”后，CPP-016～018 纳入第二阶段，见
-[第二阶段进度](cpp_extended_batches.json)。随后用户要求持续推进，CPP-019～030
-全部纳入并已完成，见[剩余批次验收进度](cpp_remaining_batches.json)。
+[第二阶段进度](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/cpp_extended_batches.json)。随后用户要求持续推进，CPP-019～030
+全部纳入并已完成，见[剩余批次验收进度](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/cpp_remaining_batches.json)。
 普通的接口适配、定向验证和该批提交推送按已确认范围持续执行。
 
 2026-11-02 已完成 CPP-016～018 的只读入口及资产预检，见
-[下一轮分批方案](CPP16_18_PREFLIGHT_REVIEW.md)和[预检证据](NativeGameplay/CPP16-18-preflight.json)。
+[下一轮分批方案](CPP16_18_PREFLIGHT_REVIEW.md)和[预检证据](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP16-18-preflight.json)。
 发现初始属性表的 GameplayTag 结构键读取限制，且本次定义扫描没有玩家标签消耗配置。
 这份预检不等于业务替换或运行验收，不改变第一轮已确认范围和完成计数。
 
 相关记录：
 
-- [逐文件源码及候选函数台账](cpp_source_inventory.json)
-- [C++ 批次进度](cpp_batches.json)
+- [逐文件源码及候选函数台账](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/cpp_source_inventory.json)
+- [C++ 批次进度](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/cpp_batches.json)
 - [已完成的原定蓝图迁移验收](ACCEPTANCE_REVIEW.md)
-- [原蓝图清单和增量回归约定](batches.json)
-- [现有 Mixin 调用与生命周期边界](../../../docs/Mixin_Call_Lifecycle_Matrix.md)
-- [现有消息适配和订阅规则](../../../docs/Runtime_Subscriptions_API.md)
+- [原蓝图清单和增量回归约定](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/batches.json)
+- [现有 Mixin 调用与生命周期边界](https://github.com/Arcueid77/UnrealEnginePython5/blob/dev/release-1.0.0/docs/Mixin_Call_Lifecycle_Matrix.md)
+- [现有消息适配和订阅规则](https://github.com/Arcueid77/UnrealEnginePython5/blob/dev/release-1.0.0/docs/Runtime_Subscriptions_API.md)
 - [现有隔离 Hero 初始化补丁](NativeFixes/README.md)
 
 2026-11-02 第二阶段所选三组已完成：CPP-016 初始化、CPP-017 物品消耗按生产替换验收；
 CPP-018 玩家消耗按独立夹具及联网生命周期能力验收，原配置消费者为0，不计为生产替换。
-见 [CPP11 账本](NativeGameplay/CPP11-acceptance.json) 与 [CPP12 账本](NativeGameplay/CPP12-acceptance.json)。
+见 [CPP11 账本](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP11-acceptance.json) 与 [CPP12 账本](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP12-acceptance.json)。
 第一阶段 CPP09 仍保留真实窗口 Escape/Menu 输入待验收，CPP-019～030 继续待选。
 
 2026-11-02 用户明确要求“持续推进直到全部完成”，剩余 CPP-019～030 全部进入执行范围，见
-[剩余批次进度](cpp_remaining_batches.json)。CPP13 跳跃已通过12次上下文边界和双客户端28次原生输入/预测/落地验证，
+[剩余批次进度](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/cpp_remaining_batches.json)。CPP13 跳跃已通过12次上下文边界和双客户端28次原生输入/预测/落地验证，
 死亡/重生联动验证保留给紧接着的 CPP14，不提前计为该组全部验收。
 用户选择暂不操作桌面，因此 CPP09 的实际窗口输入继续待办，其余迁移持续推进。
 
@@ -242,5 +244,5 @@ CPP-018 玩家消耗按独立夹具及联网生命周期能力验收，原配置
 
 上述第三阶段结束时，已确认30项均已实现，CPP09真实输入仍待验收。
 该最后缺口于2026-11-05补齐；目前30项均按各自范围验收，其中CPP-018是零原配置消费者的能力验收。
-六组独立账本见[CPP19](NativeGameplay/CPP19-acceptance.json)至
-[CPP24](NativeGameplay/CPP24-acceptance.json)。
+六组独立账本见[CPP19](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP19-acceptance.json)至
+[CPP24](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP24-acceptance.json)。

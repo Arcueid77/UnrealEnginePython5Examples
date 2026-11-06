@@ -1,10 +1,12 @@
+[English](HARDENING_REVIEW.md) | [简体中文](HARDENING_REVIEW.zh-CN.md)
+
 # Native migration hardening and delivery
 
 The user selected all four follow-up groups on 2026-11-03. Progress is tracked in
-[hardening_batches.json](hardening_batches.json). This work keeps the selected
+[hardening_batches.json](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/hardening_batches.json). This work keeps the selected
 UE5.8.1 / CPython3.11 / Win64 Development target. H01-H05 kept CPP09 desktop input
 separate. On 2026-11-05 the user unlocked the screen and authorized continuation;
-[CPP09 actual-window acceptance](NativeGameplay/CPP09-acceptance.json) now closes
+[CPP09 actual-window acceptance](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/CPP09-acceptance.json) now closes
 that input gate. The earlier scope and capture limitations below remain historical.
 
 | Group | Required evidence |
@@ -40,7 +42,7 @@ validation scripts and Demos pointer, with both remote heads verified.
 
 ## H01 accepted
 
-[H01 acceptance](NativeGameplay/H01-acceptance.json) closes thirteen real native
+[H01 acceptance](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/H01-acceptance.json) closes thirteen real native
 exception/recovery cases: damage admission three times, original equipped-item
 cost check/apply six times, a reward callback failing after its native broadcast,
 and three Reset failures followed by actual new-Pawn recovery. Failed payment
@@ -64,7 +66,7 @@ accepted a retained wrapper without first checking its tracked weak owner. The
 shared conversion helpers now reject that wrapper before inspecting its raw
 native pointer. Only `UEPyMixin.cpp` and the SDK import-library/DLL links rebuild.
 
-[The selector guard acceptance](NativeGameplay/H02-selector-guard-acceptance.json)
+[The selector guard acceptance](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/H02-selector-guard-acceptance.json)
 records ninety seconds of active native gameplay, one actual early server travel,
 three safe get/set/clear rejections, three original Reset/respawns and 4,250 native
 queries. The harness reacquires the ready world and excludes travel waits from
@@ -74,7 +76,7 @@ The subsequent full-length H02 run passes the independent operational gate below
 
 ## H02 accepted within its operational budgets
 
-[H02 acceptance](NativeGameplay/H02-acceptance.json) records 1,200 seconds of
+[H02 acceptance](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/H02-acceptance.json) records 1,200 seconds of
 active gameplay, 58 original native Reset/respawns, 57,250 native queries and one
 natural match-ending seamless travel. Its 34.843-second travel/readiness wait is
 excluded from activity time. The three expired selectors are safely rejected.
@@ -96,7 +98,7 @@ H04 records the separate actual-package gate below.
 
 ## H03 accepted
 
-[H03 acceptance](NativeGameplay/H03-acceptance.json) closes the independent
+[H03 acceptance](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/H03-acceptance.json) closes the independent
 [reproduction entry point](REPRODUCE_NATIVE.md): fifteen versioned recipes compose
 63 production C++ outputs, 9,702 original and 1,871 versioned inputs are pinned,
 and 11,341 final staged files match the ordered copy/overlay/patch composition.
@@ -116,7 +118,7 @@ modules before final runtime acceptance.
 
 ## H04 accepted
 
-[H04 acceptance](NativeGameplay/H04-acceptance.json) closes current Game delivery
+[H04 acceptance](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/H04-acceptance.json) closes current Game delivery
 from the same independent project. The cold Game configuration compiled 1,190
 actions, including its Engine runtime dependencies inside the owned project;
 4,105 compiler output/PCH/dependency paths stay inside that stage. Existing Engine
@@ -161,7 +163,7 @@ are outside these results.
 ## H05 rendered frame rate and CPU follow-up accepted
 
 The user subsequently requested actual FPS and CPU comparisons.
-[H05](NativeGameplay/H05-acceptance.json) and
+[H05](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/NativeGameplay/H05-acceptance.json) and
 [its method/results](RENDERED_PERFORMANCE.md) add an actual D3D12 offscreen
 comparison on the current package, without compilation or recooking. This
 compares only the shared native world-policy carrier; other migrated layers stay

@@ -1,3 +1,5 @@
+[English](NEXT_NameplateComponents.md) | [简体中文](NEXT_NameplateComponents.zh-CN.md)
+
 # Next bounded nameplate group: Source and Manager
 
 Historical batch plan/checkpoint. Source/Manager follow-up is now separately

@@ -1,12 +1,13 @@
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 # UEP Lyra integration
 
-Current development covers bounded 0.9–0.11 BP-business batches on upstream
-UE 5.8.1/CPython 3.11; the latest release tag remains 0.7.0. See
-[PROGRESS](Migration/PROGRESS.md), the static [inventory](Migration/batches.json)
-and [per-batch acceptance ledgers](Migration/Acceptance/) for current scope.
-Earlier milestone sections below preserve their original qualification and
-must not be read as a fresh current-DLL result. Accepted batches receive an
-isolated staged-tree check and local commit; unfinished drafts remain out.
+> Current release — **1.0.0**, UE **5.8.1**, engine CPython **3.11.8**, Win64 **Development / Shipping**. [Release record](https://github.com/Arcueid77/UnrealEnginePython5/blob/dev/release-1.0.0/docs/Release_1.0.0.md) and [supported API](https://github.com/Arcueid77/UnrealEnginePython5/blob/dev/release-1.0.0/docs/Supported_API_Inventory.md) define the release scope.
+> The dated sections below retain their capture-time evidence and limitations.
+
+The approved Blueprint and game-C++ migration is accepted. [Completion index](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/completion_status.json), [progress history](Migration/PROGRESS.md) and per-batch acceptance ledgers record the accepted scope and actual runtime provenance.
+
+## Historical integration milestones
 
 This integration is staged into a disposable Lyra copy; neither Lyra nor
 Unreal Engine source is edited. `UEPLyraBridge` translates the few native Lyra
@@ -46,7 +47,7 @@ paths/logs do not establish an observed leak.
 
 ## 0.9 first runtime BP batch (in development)
 
-The inventory at [`Migration/batches.json`](Migration/batches.json) assigns
+The inventory at [`Migration/batches.json`](https://github.com/Arcueid77/UnrealEnginePython5Examples/blob/dev/release-1.0.0/UEPLyraIntegration/Migration/batches.json) assigns
 246 runtime business candidates to 0.9–0.14, separately retaining animation,
 editor/test tools and 182 configuration/layout shells. These are static
 candidates, not a migrated or reachable-asset count. Batch 1A is the health bar
